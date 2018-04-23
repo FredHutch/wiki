@@ -1,0 +1,34 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Topnav
+  items:
+    - title: GitHub
+      external_url: https://github.com/FredHutch/wiki
+    - title: Domain1
+      url: /domain1
+    - title: Domain2
+      url: /domain2
+    - title: Domain3
+      url: /domain3
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: Existing resources
+      folderitems:
+        - title: CYOA
+          external_url: https://translationalgenomics.fredhutch.org
+        - title: SciComp
+          external_url: https://scicomp.fredhutch.org
+        - title: CenterNet
+          external_url: https://centernet.fredhutch.org
+    - title: Outside Links
+      folderitems:
+        - title: Github
+          external_url: https://github.com
+        - title: IMDb
+          url: https://imdb.com
+        - title: The Guardian
+          url: https://guardian.co.uk
