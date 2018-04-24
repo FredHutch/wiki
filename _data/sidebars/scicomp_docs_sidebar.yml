@@ -1,0 +1,116 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: SciComp Docs
+  folders:
+
+  - title: Overview of Fred Hutch Computing
+    output: web, pdf
+    folderitems:
+
+    - title: Get started
+      url: /scicomp_docs/index.html
+      output: web, pdf
+      type: homepage
+
+    - title: More Help
+      url: /scicomp_docs/more_help.html
+      output: web, pdf
+
+  - title: Access
+    output: web, pdf
+    folderitems:
+
+    - title: Networks & VPN
+      url: /scicomp_docs/access/networks.html
+      output: web, pdf
+
+    - title: Terminal
+      url: /scicomp_docs/access/terminal.html
+      output: web, pdf
+
+    - title: Devices
+      url: /scicomp_docs/access/devices.html
+      output: web, pdf
+
+  - title: Storage
+    output: web, pdf
+    folderitems:
+
+    - title: Basics
+      url: /scicomp_docs/storage/basics.html
+      output: web, pdf
+
+    - title: Costs
+      url: /scicomp_docs/storage/costs.html
+      output: web, pdf
+
+    - title: Chart
+      url: /scicomp_docs/storage/chart.html
+      output: web, pdf
+
+  - title: HPC
+    output: web, pdf
+    folderitems:
+
+    - title: Gizmo Cluster
+      url: /scicomp_docs/hpc/gizmo.html
+      output: web, pdf
+
+    - title: Rhino Servers
+      url: /scicomp_docs/hpc/rhino.html
+      output: web, pdf
+
+    - title: Beagle Cluster
+      url: /scicomp_docs/hpc/beagle.html
+      output: web, pdf
+
+    - title: AWS Batch
+      url: /scicomp_docs/hpc/aws_batch.html
+      output: web, pdf
+
+    - title: R with Azure Batch 
+      url: /scicomp_docs/hpc/azure_batch.html
+      output: web, pdf
+
+  - title: Software
+    output: web, pdf
+    folderitems:
+
+    - title: Environment Modules
+      url: /scicomp_docs/software/environment_modules.html
+      output: web, pdf
+
+    - title: EasyBuild
+      url: /scicomp_docs/software/easybuild.html
+      output: web, pdf
+
+  - title: Test Folder
+    output: web
+    folderitems:
+
+    - title: Folder in test folder
+      url: /mydoc_tag_archives_overview.html
+      output: web
+
+      subfolders:
+      - title: subfolder
+        output: web
+        subfolderitems:
+
+        - title: italian
+          url: /tag_formatting.html
+          output: web
+
+        - title: philly cheesesteak
+          url: /tag_navigation.html
+          output: web
+
+        - title: ruben
+          url: /tag_content_types.html
+          output: web
+
+        - title: BLT
+          url: /tag_publishing.html
+          output: web

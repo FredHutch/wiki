@@ -102,10 +102,9 @@ defaults:
 
 sidebars:
 - home_sidebar
-- mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
-- other
+- domain_one_sidebar
+- domain_two_sidebar
+- scicomp_docs_sidebar
 
 description: "Collective Documentation"
 # the description is used in the feed.xml file

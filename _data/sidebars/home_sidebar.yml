@@ -5,18 +5,15 @@ entries:
   levels: one
   folders:
 
-  - title: Products
+  - title: Domains
     output: web
     folderitems:
-    - title: News
-      url: /news.html
+    - title: Domain One
+      url: /domain_one
       output: web
-    - title: Theme instructions
-      url: /mydoc_introduction.html
+    - title: Domain Two
+      url: /domain_two
       output: web
-    - title: Product 1
-      url: /p1_landing_page.html
-      output: web
-    - title: Product 2
-      url: /p2_landing_page.html
+    - title: SciComp Docs
+      url: /scicomp_docs
       output: web
