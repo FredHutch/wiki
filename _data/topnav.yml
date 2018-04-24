@@ -16,9 +16,10 @@ topnav_dropdowns:
   folders:
     - title: Contributing
       folderitems:
-        - title Github
+        - title: Github
           external_url: https://github.com/FredHutch/wiki
-        - title Second item
+        - title: IMDb
+          external_url: https://imdb.com
     - title: Existing resources
       folderitems:
         - title: CYOA
