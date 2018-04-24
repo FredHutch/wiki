@@ -9,36 +9,36 @@ h3 {color: #ED1951; }
 h4 {color: #808080; }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    background-color: #248ec2;
+    background-color: #207c7e;
     color: white;
 }
 
 .nav > li.active > a {
-    background-color: #347DBE;
+    background-color: #123054;
 }
 
 .nav > li > a:hover {
-    background-color: #248ec2;
+    background-color: #207c7e;
 }
 
 div.navbar-collapse .dropdown-menu > li > a:hover {
-    background-color: #347DBE;
+    background-color: #123054;
 }
 
 .nav li.thirdlevel > a {
     background-color: #FAFAFA !important;
-    color: #248EC2;
+    color: #207c7e;
     font-weight: bold;
 }
 
 a[data-toggle="tooltip"] {
-    color: #649345;
+    color: #89c348;
     font-style: italic;
     cursor: default;
 }
 
 .navbar-inverse {
-    background-color: #347DBE;
+    background-color: #123054;
     border-color: #015CAE;
 }
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
@@ -58,22 +58,22 @@ a.navbar-brand:hover {
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #015CAE;
+    background-color: #39b6b9;
     color: #ffffff;
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #248ec2 !important;
+    border-color: #207c7e !important;
 }
 
 .btn-primary {
     color: #ffffff;
-    background-color: #347DBE;
-    border-color: #347DBE;
+    background-color: #123054;
+    border-color: #123054;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #347DBE;
+    background-color: #123054;
 }
 
 .btn-primary:hover,
@@ -81,12 +81,12 @@ a.navbar-brand:hover {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    background-color: #248ec2;
-    border-color: #347DBE;
+    background-color: #207c7e;
+    border-color: #123054;
 }
 
 .printTitle {
-    color: #015CAE !important;
+    color: #39b6b9 !important;
 }
 
 body.print h1 {color: #015CAE !important; font-size:28px !important;}
@@ -99,7 +99,7 @@ body.print h4 {color: #679DCE !important; font-size:14px; font-style: italic !im
 }
 
 div.sidebarTitle {
-    color: #015CAE;
+    color: #39b6b9;
 }
 
 li.sidebarTitle {
@@ -113,9 +113,9 @@ li.sidebarTitle {
 }
 
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
-    background-color: #015CAE;
+    background-color: #39b6b9;
 }
 
 .navbar-inverse .navbar-toggle {
-    border-color: #015CAE;
+    border-color: #39b6b9;
 }
