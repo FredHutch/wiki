@@ -54,7 +54,7 @@ a.navbar-brand:hover {
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #015CAE;
+    color: #123054;
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
@@ -89,13 +89,13 @@ a.navbar-brand:hover {
     color: #39b6b9 !important;
 }
 
-body.print h1 {color: #015CAE !important; font-size:28px !important;}
+body.print h1 {color: #123054 !important; font-size:28px !important;}
 body.print h2 {color: #595959 !important; font-size:20px !important;}
-body.print h3 {color: #E50E51 !important; font-size:14px !important;}
-body.print h4 {color: #679DCE !important; font-size:14px; font-style: italic !important;}
+body.print h3 {color: #207c7e !important; font-size:14px !important;}
+body.print h4 {color: #39b6b9 !important; font-size:14px; font-style: italic !important;}
 
 .anchorjs-link:hover {
-    color: #216f9b;
+    color: #123054;
 }
 
 div.sidebarTitle {
@@ -106,7 +106,7 @@ li.sidebarTitle {
   margin-top:20px;
     font-weight:normal;
     font-size:130%;
-    color: #ED1951;
+    color: #89c348;
     margin-bottom:10px;
     margin-left: 5px;
 

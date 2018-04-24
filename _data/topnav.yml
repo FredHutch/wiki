@@ -3,8 +3,6 @@
 topnav:
 - title: Topnav
   items:
-    - title: GitHub
-      external_url: https://github.com/FredHutch/wiki
     - title: Data Analysis
       url: /domain_one
     - title: Data Production
@@ -16,6 +14,10 @@ topnav:
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
+    - title: Contributing
+      folderitems:
+        - title Github
+          external_url: https://github.com/FredHutch/wiki
     - title: Existing resources
       folderitems:
         - title: CYOA
@@ -29,6 +31,6 @@ topnav_dropdowns:
         - title: Github
           external_url: https://github.com
         - title: IMDb
-          url: https://imdb.com
+          external_url: https://imdb.com
         - title: The Guardian
-          url: https://guardian.co.uk
+          external_url: https://guardian.co.uk
