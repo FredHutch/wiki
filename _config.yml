@@ -6,7 +6,7 @@ output: web
 topnav_title: Fred Hutch Collective Wiki
 # this appears on the top navigation bar next to the home button
 
-site_title: Collective KnowledgeBase for Science
+site_title: Collective KnowledgeBase for Large Scale Data Generation, Bioinformatics and Scientific Computing
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Fred Hutch

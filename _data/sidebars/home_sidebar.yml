@@ -8,12 +8,12 @@ entries:
   - title: Domains
     output: web
     folderitems:
-    - title: Domain One
+    - title: Data Generation
       url: /domain_one
       output: web
-    - title: Domain Two
+    - title: Bioinformatics
       url: /domain_two
       output: web
-    - title: SciComp Docs
+    - title: Scientific Computing
       url: /scicomp_docs
       output: web

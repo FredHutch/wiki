@@ -1,9 +1,9 @@
 ---
-title: Domain One
+title: Data Generation
 layout: page
 author: bmcgough
 ---
 
-# Domain One
+# Large Scale Data Generation
 
-This would be the landing site for the first domain.
+This would be the landing site for the first domain, for all things data generation
