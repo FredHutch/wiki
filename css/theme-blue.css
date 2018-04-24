@@ -5,7 +5,7 @@
 }
 
 
-h3 {color: #ED1951; }
+h3 {color: #39b6b9; }
 h4 {color: #808080; }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -39,7 +39,7 @@ a[data-toggle="tooltip"] {
 
 .navbar-inverse {
     background-color: #123054;
-    border-color: #015CAE;
+    border-color: #39b6b9;
 }
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
     color: white;
