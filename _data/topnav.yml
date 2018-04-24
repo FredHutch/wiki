@@ -5,12 +5,12 @@ topnav:
   items:
     - title: GitHub
       external_url: https://github.com/FredHutch/wiki
-    - title: Domain1
-      url: /domain1
-    - title: Domain2
-      url: /domain2
-    - title: Domain3
-      url: /domain3
+    - title: Data Analysis
+      url: /domain_one
+    - title: Data Production
+      url: /domain_two
+    - title: SciComp Docs
+      url: /scicomp_docs
 
 #Topnav dropdowns
 topnav_dropdowns:
