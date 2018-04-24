@@ -18,6 +18,7 @@ topnav_dropdowns:
       folderitems:
         - title Github
           external_url: https://github.com/FredHutch/wiki
+        - title Second item
     - title: Existing resources
       folderitems:
         - title: CYOA
