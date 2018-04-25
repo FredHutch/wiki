@@ -2,40 +2,40 @@
 
 
 entries:
-- title: Data Generation
+- title: Sidebar
   product: Large Scale Data Generation
-  #version: 1.0
+  version: 1.0
   folders:
 
   - title: Overview
     output: web
     folderitems:
+      - title: IRB and Human Subjects
+        url: /generation/IRBlanding.html
+        output: web
+      subfolders:
+        - title: IRB ahd Data Use
+          output: web
+          subfolderitems:
 
-  - title: IRB and Human Subjects
-    url: /mydoc_tag_archives_overview.html
-    output: web
+        - title: IRB Protocols
+          url: /tag_formatting.html
+          output: web
 
-    subfolders:
-    - title: IRB ahd Data Use
-      output: web
+        - title: Data Use Agreements
+          url: /tag_navigation.html
+          output: web
+
+        - title: Data Sharing
+          url: /tag_content_types.html
+          output: web
+
+      - title: Specimen Banking/Acquisition
+        url: /generation/specimen.html
+        output: web
       subfolderitems:
 
-      - title: IRB Protocols
-        url: /tag_formatting.html
-        output: web
-
-      - title: Data Use Agreements
-        url: /tag_navigation.html
-        output: web
-
-      - title: Data Sharing
-        url: /tag_content_types.html
-        output: web
-    - title: Specimen Banking/Acquisition
-      output: web
-      subfolderitems:
-
-      - title: Banking Human Specimens
+        - title: Banking Human Specimens
         url: /tag_formatting.html
         output: web
 
@@ -75,8 +75,6 @@ entries:
       - title: Software Available
         url: /tag_content_types.html
         output: web
-
-
 
 
   - title: Large Scale Data Generation
