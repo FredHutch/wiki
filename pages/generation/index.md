@@ -1,8 +1,8 @@
 ---
 title: Data Generation
-tags: [formatting]
-keywords: notes, tips, cautions, warnings, admonitions
-last_updated: April 15, 2019
+#tags:
+#keywords:
+last_updated: April 25, 2018
 summary: "Landing page for Large Scale Data Generation Resources at the Fred Hutch"
 sidebar: generation_sidebar
 permalink: /generation/index.html
