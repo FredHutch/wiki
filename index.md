@@ -1,11 +1,15 @@
 ---
 title: "Fred Hutch Wiki Home"
-#keywords: homepage
+#tags:
+#keywords:
+last_updated: April 25, 2018
 sidebar: home_sidebar
 permalink: index.html
+layout: page
 ---
 
 This is a placeholder for the main landing page.
+
 ## Overview of Content Planned
 
 Three Domains:

@@ -18,6 +18,8 @@ topnav_dropdowns:
   folders:
     - title: Contributing
       folderitems:
+        - title: How-To
+          url: /CONTRIBUTING.html
         - title: Github
           external_url: https://github.com/FredHutch/wiki
     - title: FH Resources

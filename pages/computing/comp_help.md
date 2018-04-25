@@ -6,6 +6,7 @@ last_updated: April 25, 2018
 summary: "How to get additional scientific computing help"
 sidebar: scicomp_docs_sidebar
 permalink: /comp_help.html
+layout: page
 ---
 
 # Getting additional Help

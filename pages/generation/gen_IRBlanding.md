@@ -6,6 +6,7 @@ last_updated: April 25, 2018
 summary: "Landing page for IRB Resources at the Fred Hutch"
 sidebar: generation_sidebar
 permalink: /gen_IRBlanding.html
+layout: page
 ---
 
 # IRB Intro
