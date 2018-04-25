@@ -2,29 +2,28 @@
 
 entries:
 - title: sidebar
-  product: SciComp Docs
+  product: Scientific Computing
   folders:
 
-  - title: Overview of Fred Hutch Computing
-    output: web, pdf
+  - title: Overview of Scientific Computing
+    output: web
     folderitems:
 
     - title: Get started
-      url: /scicomp_docs/index.html
-      output: web, pdf
-      type: homepage
+      url: /comp_index.html
+      output: web
 
     - title: More Help
-      url: /scicomp_docs/more_help.html
-      output: web, pdf
+      url: /comp_help.html
+      output: web
 
   - title: Access
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: Networks & VPN
-      url: /scicomp_docs/access/networks.html
-      output: web, pdf
+      url: /comp_networks.html
+      output: web
 
     - title: Terminal
       url: /scicomp_docs/access/terminal.html
@@ -95,22 +94,14 @@ entries:
       output: web
 
       subfolders:
-      - title: subfolder
+      - title: Not sure we should go this deep
         output: web
         subfolderitems:
 
-        - title: italian
+        - title: Pros?
           url: /tag_formatting.html
           output: web
 
-        - title: philly cheesesteak
+        - title: Cons?
           url: /tag_navigation.html
-          output: web
-
-        - title: ruben
-          url: /tag_content_types.html
-          output: web
-
-        - title: BLT
-          url: /tag_publishing.html
           output: web

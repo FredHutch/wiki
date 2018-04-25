@@ -3,6 +3,8 @@
 topnav:
 - title: Topnav
   items:
+    - title: Home
+      url: /index.html
     - title: Data Generation
       url: /gen_index.html
     - title: Bioinformatics
@@ -18,7 +20,7 @@ topnav_dropdowns:
       folderitems:
         - title: Github
           external_url: https://github.com/FredHutch/wiki
-    - title: Available FH resources
+    - title: FH Resources
       folderitems:
 
         - title: SciComp Wiki

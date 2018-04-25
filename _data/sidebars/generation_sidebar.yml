@@ -1,78 +1,76 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
-
 entries:
-- title: Sidebar
-  product: Large Scale Data Generation
-  version: 1.0
+- title: sidebar
+  product: Data Generation
   folders:
 
-    - title: IRB and Human Subjects
-      output: web
+  - title: IRB and Human Subjects
+    output: web
 
-      folderitems:
-        - title: IRB and Data Use
-          url: /gen_IRBlanding.html
-          output: web
+    folderitems:
+      - title: IRB and Data Use
+        url: /gen_IRBlanding.html
+        output: web
 
-        - title: IRB Protocols
-          url: /gen_index.html
-          output: web
+      - title: IRB Protocols
+        url: /gen_index.html
+        output: web
 
-        - title: Data Use Agreements
-          url: /gen_index.html
-          output: web
+      - title: Data Use Agreements
+        url: /gen_index.html
+        output: web
 
-        - title: Data Sharing
-          url: /gen_index.html
-          output: web
+      - title: Data Sharing
+        url: /gen_index.html
+        output: web
 
-    - title: Specimen Banking/Acquisition
-      output: web
+  - title: Specimen Banking/Acquisition
+    output: web
 
-      folderitems:
-        - title: Banking Human Specimens
-          url: /gen_index.html
-          output: web
+    folderitems:
+      - title: Banking Human Specimens
+        url: /gen_index.html
+        output: web
 
-        - title: Obtaining Specimens from a Repository
-          url: /gen_index.html
-          output: web
+      - title: Obtaining Specimens from a Repository
+        url: /gen_index.html
+        output: web
 
-        - title: Software Available
-          url: /gen_index.html
-          output: web
+      - title: Software Available
+        url: /gen_index.html
+        output: web
 
-    - title: Clinical Data Covariate Management
-      output: web
+  - title: Clinical Data Covariate Management
+    output: web
 
-      folderitems:
-        - title: Approaches Overview
-          url: /gen_index.html
-          output: web
+    folderitems:
+      - title: Approaches Overview
+        url: /gen_index.html
+        output: web
 
-        - title: Software Available
-          url: /gen_index.html
-          output: web
+      - title: Software Available
+        url: /gen_index.html
+        output: web
 
-    - title: Laboratory Data Covariate Management
-      output: web
-      folderitems:
-        - title: Approaches Overview
-          url: /gen_index.html
-          output: web
+  - title: Laboratory Data Covariate Management
+    output: web
+    folderitems:
+      - title: Approaches Overview
+        url: /gen_index.html
+        output: web
 
-        - title: Software Available
-          url: /gen_index.html
-          output: web
+      - title: Software Available
+        url: /gen_index.html
+        output: web
 
-    - title: Large Scale Data Generation
-      output: web
-      folderitems:
-        - title: Fred Hutch Genomics Core
-          url: /gen_index.html
-          output: web
+  - title: Large Scale Data Generation
+    output: web
+    folderitems:
+      - title: Fred Hutch Genomics Core
+        url: /gen_index.html
+        output: web
 
-        - title: External Genomics Vendors
-          url: /gen_index.html
-          output: web
+      - title: External Genomics Vendors
+        url: /gen_index.html
+        output: web
