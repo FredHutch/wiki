@@ -7,16 +7,13 @@ entries:
   version: 1.0
   folders:
 
-  - title: Overview
-    output: web
-    folderitems:
-      - title: IRB and Human Subjects
-        url: /generation/IRBlanding.html
-        output: web
-      subfolders:
-        - title: IRB ahd Data Use
+    - title: IRB and Human Subjects
+      output: web
+
+      folderitems:
+        - title: IRB and Data Use
+          url: /generation/IRBlanding.html
           output: web
-          subfolderitems:
 
         - title: IRB Protocols
           url: /tag_formatting.html
@@ -30,78 +27,52 @@ entries:
           url: /tag_content_types.html
           output: web
 
-      - title: Specimen Banking/Acquisition
-        url: /generation/specimen.html
-        output: web
-      subfolderitems:
+    - title: Specimen Banking/Acquisition
+      output: web
 
+      folderitems:
         - title: Banking Human Specimens
-        url: /tag_formatting.html
-        output: web
+          url: /tag_formatting.html
+          output: web
 
-      - title: Obtaining Specimens from a Repository
-        url: /tag_navigation.html
-        output: web
+        - title: Obtaining Specimens from a Repository
+          url: /tag_navigation.html
+          output: web
 
-      - title: Software Available
-        url: /tag_content_types.html
-        output: web
+        - title: Software Available
+          url: /tag_content_types.html
+          output: web
 
-  - title: Clinical and Laboratory Covariates
-    url: /mydoc_tag_archives_overview.html
-    output: web
-
-    subfolders:
-    - title: Associated Clinical Data Management
+    - title: Clinical Data Covariate Management
       output: web
-      subfolderitems:
 
-      - title: Approaches Overview
-        url: /tag_formatting.html
-        output: web
+      folderitems:
+        - title: Approaches Overview
+          url: /tag_navigation.html
+          output: web
 
-      - title: Software Available
-        url: /tag_content_types.html
-        output: web
+        - title: Software Available
+          url: /tag_content_types.html
+          output: web
 
-
-    - title: Associated Laboratory Data Management
+    - title: Laboratory Data Covariate Management
       output: web
-      subfolderitems:
-      - title: Approaches Overview
-        url: /tag_navigation.html
-        output: web
+      folderitems:
+        - title: Approaches Overview
+          url: /tag_navigation.html
+          output: web
 
-      - title: Software Available
-        url: /tag_content_types.html
-        output: web
+        - title: Software Available
+          url: /tag_content_types.html
+          output: web
 
-
-  - title: Large Scale Data Generation
-    url: /mydoc_tag_archives_overview.html
-    output: web
-
-    subfolders:
-    - title: Genomics
+    - title: Large Scale Data Generation
       output: web
-      subfolderitems:
+      folderitems:
+        - title: Fred Hutch Genomics Core
+          url: /tag_navigation.html
+          output: web
 
-      - title: Fred Hutch Genomics Core
-        url: /tag_formatting.html
-        output: web
-
-      - title: External Vendors
-        url: /tag_content_types.html
-        output: web
-
-
-    - title: Other Techniques
-      output: web
-      subfolderitems:
-      - title: Proteomics
-        url: /tag_navigation.html
-        output: web
-
-      - title: Microbiome
-        url: /tag_content_types.html
-        output: web
+        - title: External Genomics Vendors
+          url: /tag_content_types.html
+          output: web

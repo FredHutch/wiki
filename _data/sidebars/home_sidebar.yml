@@ -4,11 +4,10 @@
 entries:
 - title: sidebar
   folders:
-    
+
   - title: Overview
     output: web
     folderitems:
-
     - title: Data Generation
       url: /generation/index.html
       output: web
