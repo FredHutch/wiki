@@ -16,15 +16,15 @@ entries:
           output: web
 
         - title: IRB Protocols
-          url: /tag_formatting.html
+          url: /generation/index.html
           output: web
 
         - title: Data Use Agreements
-          url: /tag_navigation.html
+          url: /generation/index.html
           output: web
 
         - title: Data Sharing
-          url: /tag_content_types.html
+          url: /generation/index.html
           output: web
 
     - title: Specimen Banking/Acquisition
@@ -32,15 +32,15 @@ entries:
 
       folderitems:
         - title: Banking Human Specimens
-          url: /tag_formatting.html
+          url: /generation/index.html
           output: web
 
         - title: Obtaining Specimens from a Repository
-          url: /tag_navigation.html
+          url: /generation/index.html
           output: web
 
         - title: Software Available
-          url: /tag_content_types.html
+          url: /generation/index.html
           output: web
 
     - title: Clinical Data Covariate Management
@@ -48,31 +48,31 @@ entries:
 
       folderitems:
         - title: Approaches Overview
-          url: /tag_navigation.html
+          url: /generation/index.html
           output: web
 
         - title: Software Available
-          url: /tag_content_types.html
+          url: /generation/index.html
           output: web
 
     - title: Laboratory Data Covariate Management
       output: web
       folderitems:
         - title: Approaches Overview
-          url: /tag_navigation.html
+          url: /generation/index.html
           output: web
 
         - title: Software Available
-          url: /tag_content_types.html
+          url: /generation/index.html
           output: web
 
     - title: Large Scale Data Generation
       output: web
       folderitems:
         - title: Fred Hutch Genomics Core
-          url: /tag_navigation.html
+          url: /generation/index.html
           output: web
 
         - title: External Genomics Vendors
-          url: /tag_content_types.html
+          url: /generation/index.html
           output: web

@@ -4,11 +4,11 @@ topnav:
 - title: Topnav
   items:
     - title: Data Generation
-      url: /domain_one
+      url: /generation/index.html
     - title: Bioinformatics
-      url: /domain_two
+      url: /bioinformatics/index.html
     - title: Scientific Computing
-      url: /scicomp_docs
+      url: /scicomp_docs/index.html
 
 #Topnav dropdowns
 topnav_dropdowns:

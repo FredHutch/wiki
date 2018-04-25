@@ -11,15 +11,15 @@ entries:
 
       folderitems:
         - title: R and Bioconductor
-          url: /dontknowyet.html
+          url: /bioinformatics/index.html
           output: web
 
         - title: Python and Anaconda
-          url: /tag_formatting.html
+          url: /bioinformatics/index.html
           output: web
 
         - title: Galaxy and Globus
-          url: /tag_content_types.html
+          url: /bioinformatics/index.html
           output: web
 
     - title: Tools
@@ -27,9 +27,9 @@ entries:
 
       folderitems:
         - title: GATK Suite
-          url: /tag_formatting.html
+          url: /bioinformatics/index.html
           output: web
 
         - title: ITH Tools
-          url: /tag_navigation.html
+          url: /bioinformatics/index.html
           output: web
