@@ -11,7 +11,7 @@ entries:
 
     folderitems:
       - title: Consenting and Large Scale Data
-        url: IRB/consenting.html
+        url: IRB_consenting.html
         output: web
 
       - title: Deidentification
@@ -31,7 +31,7 @@ entries:
 
     folderitems:
       - title: Specimen Processing and Banking
-        url: clinSpec/specimenbanking.html
+        url: clinSpec_specimenbanking.html
         output: web
 
       - title: Obtaining Specimens from a Repository
@@ -39,7 +39,7 @@ entries:
         output: web
 
       - title: Clinical Data Covariate Management
-        url: clinSpec/clinicalcov.html
+        url: clinSpec_clinicalcov.html
         output: web
 
       - title: Software Available

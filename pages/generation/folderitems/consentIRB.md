@@ -5,7 +5,7 @@ keywords: Susan Glick, Amy Paguirigan
 last_updated: April 25, 2018
 #summary: "Landing page for IRB Resources at the Fred Hutch"
 sidebar: generation_sidebar
-permalink: IRB/consenting.html
+permalink: IRB_consenting.html
 layout: page
 search: include
 published: true
