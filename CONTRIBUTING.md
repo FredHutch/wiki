@@ -1,3 +1,13 @@
+---
+title: Contributing How-To
+#tags:
+#keywords:
+last_updated: April 25, 2018
+#summary: ""
+sidebar: home_sidebar
+permalink: /CONTRIBUTING.html
+layout: page
+---
 ## How to Contribute:
 Steps to contribute content to the Fred Hutch Wiki Pages
 
