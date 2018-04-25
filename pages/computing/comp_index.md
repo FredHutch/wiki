@@ -5,8 +5,10 @@ title: Scientific Computing
 last_updated: April 25, 2018
 summary: "Landing page for Scientific Computing Resources at the Fred Hutch"
 sidebar: scicomp_docs_sidebar
-permalink: /comp_index.html
+permalink: comp_index.html
 layout: page
+search: include
+published: true
 ---
 # Scientific Computing (SciComp)
 

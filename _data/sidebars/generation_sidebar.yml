@@ -6,57 +6,50 @@ entries:
   folders:
 
   - title: IRB and Human Subjects
+    url: gen_IRBlanding.html
     output: web
 
     folderitems:
-      - title: IRB and Data Use
-        url: /gen_IRBlanding.html
+      - title: Consenting and Large Scale Data
+        url: IRB/consenting.html
         output: web
 
-      - title: IRB Protocols
-        url: /gen_index.html
+      - title: Deidentification
+        url: gen_index.html
         output: web
 
-      - title: Data Use Agreements
-        url: /gen_index.html
+      - title: Privacy and Security
+        url: gen_index.html
         output: web
 
       - title: Data Sharing
-        url: /gen_index.html
+        url: gen_index.html
         output: web
 
-  - title: Specimen Banking/Acquisition
+  - title: Clinical Covariates and Specimen Banking
     output: web
 
     folderitems:
-      - title: Banking Human Specimens
-        url: /gen_index.html
+      - title: Specimen Processing and Banking
+        url: clinSpec/specimenbanking.html
         output: web
 
       - title: Obtaining Specimens from a Repository
         url: /gen_index.html
         output: web
 
-      - title: Software Available
-        url: /gen_index.html
-        output: web
-
-  - title: Clinical Data Covariate Management
-    output: web
-
-    folderitems:
-      - title: Approaches Overview
-        url: /gen_index.html
+      - title: Clinical Data Covariate Management
+        url: clinSpec/clinicalcov.html
         output: web
 
       - title: Software Available
         url: /gen_index.html
         output: web
 
-  - title: Laboratory Data Covariate Management
+  - title: Laboratory and Experimental Data
     output: web
     folderitems:
-      - title: Approaches Overview
+      - title: Laboratory Covariates Management
         url: /gen_index.html
         output: web
 

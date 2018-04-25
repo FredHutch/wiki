@@ -5,8 +5,10 @@ title: More help
 last_updated: April 25, 2018
 summary: "How to get additional scientific computing help"
 sidebar: scicomp_docs_sidebar
-permalink: /comp_help.html
+permalink: comp_help.html
 layout: page
+search: include
+published: true
 ---
 
 # Getting additional Help
