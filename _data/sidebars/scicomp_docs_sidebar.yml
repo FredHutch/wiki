@@ -70,7 +70,7 @@ entries:
       url: /scicomp_docs/hpc/aws_batch.html
       output: web, pdf
 
-    - title: R with Azure Batch 
+    - title: R with Azure Batch
       url: /scicomp_docs/hpc/azure_batch.html
       output: web, pdf
 

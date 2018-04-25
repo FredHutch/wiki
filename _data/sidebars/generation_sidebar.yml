@@ -12,19 +12,19 @@ entries:
 
       folderitems:
         - title: IRB and Data Use
-          url: /generation/IRBlanding.html
+          url: /gen_IRBlanding.html
           output: web
 
         - title: IRB Protocols
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
         - title: Data Use Agreements
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
         - title: Data Sharing
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
     - title: Specimen Banking/Acquisition
@@ -32,15 +32,15 @@ entries:
 
       folderitems:
         - title: Banking Human Specimens
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
         - title: Obtaining Specimens from a Repository
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
         - title: Software Available
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
     - title: Clinical Data Covariate Management
@@ -48,31 +48,31 @@ entries:
 
       folderitems:
         - title: Approaches Overview
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
         - title: Software Available
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
     - title: Laboratory Data Covariate Management
       output: web
       folderitems:
         - title: Approaches Overview
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
         - title: Software Available
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
     - title: Large Scale Data Generation
       output: web
       folderitems:
         - title: Fred Hutch Genomics Core
-          url: /generation/index.html
+          url: /gen_index.html
           output: web
 
         - title: External Genomics Vendors
-          url: /generation/index.html
+          url: /gen_index.html
           output: web

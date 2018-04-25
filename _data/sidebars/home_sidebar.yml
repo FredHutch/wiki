@@ -9,13 +9,13 @@ entries:
     output: web
     folderitems:
     - title: Data Generation
-      url: /generation/index.html
+      url: /gen_index.html
       output: web
 
     - title: Bioinformatics
-      url: /bioinformatics/index.html
+      url: /inf_index.html
       output: web
 
     - title: Scientific Computing
-      url: /computing/index.html
+      url: /comp_index.html
       output: web

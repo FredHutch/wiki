@@ -5,7 +5,7 @@ title: Bioinformatics
 last_updated: April 25, 2018
 summary: "Landing page for Bioinformatics Resources at the Fred Hutch"
 sidebar: bioinformatics_sidebar
-permalink: /bioinformatics/index.html
+permalink: /inf_index.html
 ---
 
 # Bioinformatics and Analytics
