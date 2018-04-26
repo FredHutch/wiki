@@ -1,8 +1,13 @@
 ---
-title: Study Types
-permalink: nodeContent/subnodeContent/studyTypes.html
-layout: plain
-reviewers:  Isaac Jenkins, Jordan Smith and Amy Paguirigan
+title: Study Design
+#tags: [formatting]
+keywords: Jordan Smith, Amy Paguirigan
+last_updated: April 26, 2018
+sidebar: generation_sidebar
+permalink: gen_studydesign.html
+layout: page
+search: include
+published: true
 ---
 One of the most important first steps in your study design is to **identify the primary experimental objective**.
 
@@ -19,9 +24,3 @@ More details about study design using large scale molecular datasets is to come.
   - [University of Oregon's RNA-seqlopedia: Experimental Design](https://rnaseq.uoregon.edu/#exp-design-experimental-objectives){:target="_blank"}<!--_-->: a more in-depth description of considerations for sequencing experimental design, focusing on RNA-sequencing.
   - Fred Hutch Biostatistics Resource: Email FH username **biostatistics**
   - Fred Hutch Bioinformatics Core:  Email FH username **bioinformatics**
-
-
-
-    ---
-
-    Latest Edit: Mar 29, 2018

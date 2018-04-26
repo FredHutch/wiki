@@ -30,7 +30,7 @@ topnav_dropdowns:
         - title: CenterNet
           external_url: https://centernet.fredhutch.org
         - title: Fredhutch.io for in-person training
-          external_url: https://http://www.fredhutch.io
+          external_url: https://www.fredhutch.io
         - title: FHBig (Bioinformatics Interest Group) Site
           external_url: https://fredhutch.github.io/FHBig
         - title: FHBig Slack Workspace

@@ -1,12 +1,18 @@
 ---
 title: DNA Analysis Approaches
-permalink: nodeContent/subnodeContent/dnaApproaches.html
-layout: plain
-reviewers:  Genomics Core, Amy Paguirigan, Jordan Smith
+#tags: [formatting]
+keywords: Genomics Core, Amy Paguirigan, Jordan Smith
+last_updated: April 25, 2018
+sidebar: generation_sidebar
+permalink: lsgen_dna.html
+layout: page
+search: include
+published: true
 ---
+
 This page contains an outline of the platforms and approaches used to produce various types of large scale data sets from DNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource, and example cost estimates and read depth, etc will vary study to study. To answer any questions specific to your study, please contact the staff at the [Genomics Core](https://sharedresources.fredhutch.org/core-facilities/genomics](https://sharedresources.fredhutch.org/core-facilities/genomics){:target="_blank"}<!--_--> to describe the basics of your study, such as the sample types, numbers, goal datasets, and proposed platforms of interest.  
 
-## 1. DNA Sequencing for Variant Analysis
+## DNA Sequencing for Variant Analysis
 
 #### Capture-Based Sequencing - Example:  Whole Exome Sequencing
 
@@ -127,7 +133,7 @@ More to come about approaches to obtain and evaluate the logistics involved in u
 
     * Link: [PacBio SMRT](http://www.pacb.com/smrt-science/smrt-sequencing/){:target="_blank"}<!--_-->
 
-## 2. DNA Microarrays
+## DNA Microarrays
 
 For quantitative studies of known targets, microarrays can be a very useful alternative to sequencing. The Genomics Core offers SNP and methylation arrays.
 
@@ -149,7 +155,7 @@ More to come
 
     * Link: [Illumina Methylation Microarrays](https://www.illumina.com/techniques/microarrays/methylation-arrays.html){:target="_blank"}<!--_-->
 
-## 3. DNA Sequencing for other analysis types
+## DNA Sequencing for other analysis types
 
 Another use of DNA sequencing is as part of another analysis involving upstream processing of the DNA in order to then interpret the DNA Sequencing results as part of an experimental condition such as looking at epigenetics or DNA-protein interactions.  These types of projects are even more study-specific but can be performed with the Fred Hutch Genomics Core as well.  
 
@@ -178,7 +184,3 @@ Please email FH username **dharmaproject** if you are interested in this type of
 * The Babraham Institute has a brief guide to the biology and bioinformatics of RRBS.
 
     * Link: [Babraham Institute's Brief Guide to RRBS](http://www.bioinformatics.babraham.ac.uk/projects/bismark/RRBS_Guide.pdf){:target="_blank"}<!--_-->
-
----
-
-Latest Edit: Mar 29, 2018

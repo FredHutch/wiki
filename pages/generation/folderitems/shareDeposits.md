@@ -1,10 +1,15 @@
 ---
 title: Data Sharing and Public Repositories
-permalink: nodeContent/subnodeContent/shareDeposits.html
-layout: plain
-reviewers:  Amy Paguirigan, Susan Glick
+#tags: [formatting]
+keywords: Susan Glick, Amy Paguirigan
+last_updated: April 28, 2018
+sidebar: generation_sidebar
+permalink: IRB_sharing.html
+layout: page
+search: include
+published: true
 ---
-### What are the overarching benefits of data sharing?
+## What are the overarching benefits of data sharing?
 - reinforcing open scientific inquiry
 - encouraging diversity of analysis and opinion
 - promoting new research, testing of new or alternative hypotheses and methods of analysis
@@ -16,7 +21,7 @@ reviewers:  Amy Paguirigan, Susan Glick
 - increasing the visibility and credibility of one's own research based on the data
 - opening opportunities for developing new collaborations and for access to complementary data sets
 
-## 1. Data Sharing and Management Plans
+## Data Sharing and Management Plans
 
 A good resource for data sharing management plan development is [DMPTool,](https://dmptool.org){:target="_blank"}<!--_--> sponsored by the University of California.  DMPTool lets data owners create, review and share data management plans and provides ancillary knowledge to support sharing and management.
 
@@ -42,7 +47,7 @@ The following should be considered when developing a data sharing plan:
 - NIAID Sample Data Sharing Plan (Link to come)
 
 
-## 2. Data Sharing as Part of the Research Process
+## Data Sharing as Part of the Research Process
 Data can be shared before publication, such as to collaborate in joint studies or to supplement an investigator’s data resources, or after publication.  Data can be shared within the Fred Hutch Cancer Consortium, as well as nationally and globally between individual investigators or groups or on an a web-based open data sharing platform.
 
 When, how and in what context data are shared will often dictate restrictions or requirements on sharing data.  While the underlying goal of sharing is to further research and its benefits, the underlying tenants of data sharing processes are to ensure:
@@ -61,11 +66,11 @@ Before sharing data, it is prudent to determine if sharing is permitted. Below a
 - If the data was collected pursuant to a sponsored research project, has the sponsor placed restrictions on the subsequent transfer of the data? Stipulations may prevent sharing or require specific sharing restrictions.
 - If the data was initially received from, or derived from data received from a third party pursuant to a contract, does that contract place restrictions on the subsequent transfer of the data? Stipulations may prevent sharing or require specific sharing restrictions.
 
-## 3. Required Data Sharing
-**ClinicalTrials.gov**
+## Required Data Sharing
+### ClinicalTrials.gov
 HHS developed a final rule, Clinical Trials Registration and Results Information Submission, made publicly available on September 16, 2016 and the NIH issued a complementary final policy, under which NIH-funded awardees and investigators are to submit registration and results information for all NIH-funded clinical trials, whether or not the trials are covered by the FDAAA requirements. Details are [here.](https://clinicaltrials.gov/ct2/manage-recs/background){:target="_blank"}<!--_-->
 
-**Funding Agencies**
+### Funding Agencies
 Many (but not all) federal funding agencies require data management plans and data sharing plans as part of a grant proposal application.  Persons seeking to make a grant application to a federal funding source should ascertain the data sharing plan requirements.  
 Some of the US federal granting agencies that require funded projects to provide some form of data management planning include NIH, NSF, DOE, DOD, HHS, and FDA.
 
@@ -77,7 +82,7 @@ Funding agencies may want to know:
 
 A helpful website is [SPRAC Research Funder Data Sharing Policies (NIH Not Currently listed).](http://datasharing.sparcopen.org/){:target="_blank"}<!--_-->)
 
-## 4. Data Sharing as Part of Publications
+### Data Sharing as Part of Publications
 As of 1 July 2018, manuscripts submitted to journals within the International Committee of Medical Journal Editors ([ICJME](http://www.icmje.org){:target="_blank"}<!--_-->) reporting clinical trial data must contain a data sharing statement, indicating:
 
 - whether the authors intend to share individual de-identified participant data
@@ -90,7 +95,7 @@ The statement may then be taken into account by ICMJE editors when considering t
 
 ICMJE believe that scientists have a moral obligation to share clinical data to maximize the knowledge obtained from these research efforts. The committee is working with a number of groups to solve the various practical issues that they acknowledge still exist to in order to achieve their goal of universal data sharing.
 
-## 5.  Genomic Data Sharing
+## Genomic Data Sharing
 American College of Medical Genetics and Genomics Board of Directors suggests that broad data sharing is necessary and will improve care by making available the best data possible by which:
 
 - Key clinical attributes of the phenotype of those with genetic diseases can be described;
@@ -135,15 +140,9 @@ NOTE:  If you are generating genomic data that does not meet the definition of �
 - The NIH Genomic Data Sharing Policy is [here,](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/){:target="_blank"}<!--_--> and a useful FAQ is [here.](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing-faqs/){:target="_blank"}<!--_-->
 - Large-scale genomic data include genome-wide association studies (GWAS), single nucleotide polymorphisms (SNP) arrays, and genome sequence, transcriptomic, metagenomic, epigenomic, and gene expression data.  Examples of research that are subject to the GDS Policy include, but are not limited to, projects that involve generating the whole genome sequence data for more than one gene from more than 1,000 individuals, or analyzing 300,000 or more genetic variants in more than 1,000 individuals, or sequencing more than a 100 isolates of infectious organisms such as bacteria. The [Supplemental Information to the NIH Genomic Data Sharing Policy](https://osp.od.nih.gov/wp-content/uploads/Supplemental_Info_GDS_Policy.pdf){:target="_blank"}<!--_--> includes detailed description of research under scope of the policy and data submission expectations.
 
-## 6.  Public Genomic Data Repositories
+## Public Genomic Data Repositories
 NIH is committed to respecting the privacy and intentions of research participants with regard to how data pertaining to their individual information is used. Data access is therefore intended only for scientific investigators pursuing research questions that are consistent with the informed consent agreements provided by individual research participants. Furthermore, investigators provided access will be expected to utilize appropriate controls and abide by Data Use Limitation.
 
 The dbGAP has two repositories into which researchers can deposit or withdraw de-identified data:
 - Public Access:  Non-individual genomic data can be publicly accessed through the dbGAP website.
 - Controlled Access (Individual-level data):  Individual-level data submitted to the dbGaP is required to be de-identified. No names or identifiable information is attached to the data. The genetic fingerprint however is embedded in individual’s genotype data, which is not de-identifiable. That is why, to protect individual’s privacy, all individual level data is only distributed through the NIH Authorized Access System.
-
-
-
-  ---
-
-  Latest Edit: Apr 7, 2018

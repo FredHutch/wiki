@@ -1,12 +1,17 @@
 ---
 title: RNA Analysis Approaches
-permalink: nodeContent/subnodeContent/rnaApproaches.html
-layout: plain
-reviewers:  Genomics Core, Amy Paguirigan, Jordan Smith
+#tags: [formatting]
+keywords: Genomics Core, Amy Paguirigan, Jordan Smith
+last_updated: April 25, 2018
+sidebar: generation_sidebar
+permalink: lsgen_rna.html
+layout: page
+search: include
+published: true
 ---
 This page contains an outline of the platforms and approaches used to produce various types of large scale data sets from RNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource and example cost estimates and read depth, etc will vary study to study. To answer any questions specific to your study, please contact the staff at the [Genomics Core](https://sharedresources.fredhutch.org/core-facilities/genomics){:target="_blank"}<!--_-->) to describe the basics of your study, such as the sample types, numbers, goal datasets, and proposed platforms of interest.
 
-## 1. Quantitative Approaches: Gene Expression
+## Quantitative Approaches: Gene Expression
 Often, researchers want to answer what seems to be a very simple question--what is different between the treatment groups?  In an RNA context, this approach is called differential gene expression (DGE). DGE quantitatively measures differences in the levels of gene expression between two or more treatments or groups.
 
 ### RNA Sequencing
@@ -33,7 +38,7 @@ The analysis of the resulting count data is processed via Nanostring's proprieta
 
 
 
-## 2.  Qualitative Approaches: Transcript and Splicing Discovery
+## Qualitative Approaches: Transcript and Splicing Discovery
 The goal of a qualitative approach is to identify (or annotate) genes and gene structures.  Here, the most important parameter is that the sequence reads evenly cover each transcript, including both ends.  One only needs to sequence at a depth that ensures all target areas are represented in the sequencing output.
 
 Qualitative approaches allow the discovery of novel transcripts and alternatives splicing events.  But, to be clear:the design of such experiments will most likely be different from those aimed at quantification of transcripts. For novel transcripts and splicing, longer reads are often favored, at lower read depth.  This increases the probability  that reads will contain the alternative splicing sites.  
@@ -41,7 +46,7 @@ Qualitative approaches allow the discovery of novel transcripts and alternatives
 The raw files produced from this type of sequencing are similar to those made in quantitative analysis. However, bioinformatic analyses for transcript and splicing discovery will differ from quantitative analyses.
 
 
-## 3. Other RNA Based Research Approaches
+## Other RNA Based Research Approaches
 
 ### Example:  Small RNAs (e.g., miRNA)
 
@@ -55,8 +60,3 @@ The workflows necessary for small RNA sequencing often differ from other RNA seq
 
 ### Available Resources
 - Genohub (a general resource for NGS information) has a short guide to special considerations for small RNA sequencing. [Genohub's Guide to Small RNA sequencing](https://genohub.com/services/sequencing/illumina-miRNA-sequencing-services/){:target="_blank"}<!--_-->)
-
-
-  ---
-
-  Latest Edit: Apr 7, 2018

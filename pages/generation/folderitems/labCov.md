@@ -1,15 +1,21 @@
 ---
 title: Laboratory Covariates
-permalink: nodeContent/subnodeContent/labCov.html
-layout: plain
-reviewers:  Lisa McFerrin, Jordan Smith and Amy Paguirigan
+#tags: [formatting]
+keywords: Lisa McFerrin, Jordan Smith and Amy Paguirigan
+last_updated: April 25, 2018
+sidebar: generation_sidebar
+permalink: lsgen_labcov.html
+layout: page
+search: include
+published: true
 ---
+
 While clinical covariates (like age, race, or disease type) are often part of a study's experimental design, additional covariates may be of interest that originate from laboratory based processes.  There are two main sources of laboratory based covariates that are important to track and consider when using large scale molecular data in a study:  Experimental and Process-Related.  
 
-## 1. Experimental Laboratory covariates
+## Experimental Laboratory covariates
 These are the laboratory descriptions of each specimen that part of the experimental design.  Examples of this type of covariate would be whether a specimen expressed a certain marker or not, or whether the specimen was exposed to a drug or the control condition.  
 
-## 2. Process-Related Laboratory Covariates
+## Process-Related Laboratory Covariates
 Because large scale molecular datasets can measure so many targets simultaneously, it becomes important to record sample processing information for each specimen, so that any variables that might create a "batch effect" can be addressed in the final analysis.  [This review](https://www.nature.com/articles/nrg2825){:target="_blank"}<!--_-->) highlights the need to include processing data in analyses, to assess the impact of batch effects on downstream results.
 
 The following list is far from exhaustive, but here are a few important process-related covariates to consider:
@@ -32,7 +38,3 @@ The tools to capture laboratory covariates depend on the workflow needs.  Any ty
   - [REDCap](https://projectredcap.org){:target="_blank"}<!--_-->): REDCap projects are flexible and secure ways to capture multiple types of data. REDCap includes version-control and access-restriction features.Fred Hutch has its [own instance](https://cdsweb07.fhcrc.org/redcap/){:target="_blank"}<!--_-->) of REDCap to support researchers.
 
   - [LabArchives Electronic Lab Notebooks](https://centernet.fredhutch.org/cn/u/center-it/projects/eln-project.html){:target="_blank"}<!--_-->): as an alternative to paper lab notebooks, electronic notebooks can be quite useful in capturing and sharing laboratory covariates. Currently, Center IT is supporting LabArchives as a Fred Hutch ELN solution.
-
-    ---
-
-    Latest Edit: Mar 29, 2018

@@ -1,15 +1,21 @@
 ---
 title: Hypotheses in the Era of Large Scale Molecular Data
-permalink: nodeContent/subnodeContent/hypothesis.html
-layout: plain
-reviewers:  Isaac Jenkins
+#tags: [formatting]
+keywords: Amy Paguirigan
+last_updated: April 25, 2018
+sidebar: generation_sidebar
+permalink: study_hypo.html
+layout: page
+search: include
+published: true
 ---
+
 Develop a hypothesis that will have reasonable statistical power and feasible sets of samples.  Then analyze the data collected with the original hypothesis in mind and then stop.  Don't mine the data indefinitely, because while you'll find something eventually, it may not mean anything.
 
-## 1. Sample Sizes:  Power calculations in the 'omics setting
+## Sample Sizes:  Power calculations in the 'omics setting
 More to come about how to identify what types of hypotheses have the possibility to be addressed with what sample sizes.  
 
-## 2. Significance in the 'omics setting:  Multiple Testing
+## Significance in the 'omics setting:  Multiple Testing
 More to come.  Statistically, this is defined as the testing of more than one hypothesis at a time.  Pragmatically, this changes 'omics significance levels based on the breadth of your assay and the number of different cohort arrangements on which statistical tests are run.
 
 The resources below will help you understand the broad strokes before consulting with a statistician about your project's specific details.
@@ -24,7 +30,3 @@ The resources below will help you understand the broad strokes before consulting
 - [Power and sample size calculations for high-throughput sequencing-based experiments](https://academic.oup.com/bib/article-lookup/doi/10.1093/bib/bbx061){:target="_blank"}<!--_--> (Li et al 2017):  Figure 1 and Table 1 have references to papers on computational bioinformatics tools for various power calculations
 
 - [How does multiple testing correction work?](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2907892/){:target="_blank"}<!--_--> (Noble 2010)
-
-  ---
-
-  Latest Edit: Mar 29, 2018

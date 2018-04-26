@@ -1,12 +1,17 @@
 ---
 title: Genomics Platforms and Data Types
-permalink: nodeContent/subnodeContent/platformsData.html
-layout: plain
-reviewers:  Genomics Core staff, Jordan Smith and Amy Paguirigan
+#tags: [formatting]
+keywords: Genomics Core, Amy Paguirigan, Jordan Smith
+last_updated: April 25, 2018
+sidebar: generation_sidebar
+permalink: lsgen_core.html
+layout: page
+search: include
+published: true
 ---
 This guide highlights some of the genomics platforms available through the Genomics Core at Fred Hutch.  This guide is intended to give general context to each platform.
 
-## 1. Sequencing Based Platforms
+## Sequencing Based Platforms
 Sequencing based platforms currently available via the Genomics Core at the Fred Hutch include the Illumina sequencers (HiSeq/MiSeq) and the Pacific Biosciences Long Range sequencer.  These platforms can be used to sequence a variety of assay material types via different library preparation processes. In the RNA or DNA Approaches pages, we discuss different options for the creation of libraries for sequencing from either nucleic acid type and for different research questions.  Choosing the appropriate assay material QC and library preparation reagents depends in part on how the libraries will be sequenced.  Thus is it important to verify that all phases of the process are using compatible techniques.  
 
 ### Illumina Sequencers
@@ -48,7 +53,7 @@ The PacBio SMRT sequencer works differently than the Illumina sequencers in that
 [PacBio SMRT Sequencing](http://www.pacb.com/smrt-science/smrt-sequencing/){:target="_blank"}<!--_-->
 
 
-## 2. Array Based Platforms
+## Array Based Platforms
  Microarrays are a sometimes less costly option that can in some cases be substituted for a wide variety of sequencing types; for example, there are SNP, gene expression, and whole exome arrays. While microarrays are not useful for discovery of novel targets, for well-established targets, assay chemistries and data analysis pipelines are well-vetted.  A discussion with the Genomics Core can be useful in helping you decide the best technologies for your work.
 
 ### Single Nucleotide Polymorphism (SNP) Arrays or Methylation Arrays
@@ -67,7 +72,7 @@ Typical use case, advantages and disadvantages
 [Nanostring](https://www.nanostring.com){:target="_blank"}<!--_-->
 
 
-## 3. Library Preparation Reagents and Methods
+## Library Preparation Reagents and Methods
 The choice of genomics platform will dictate the needs of the library preparation method.  It is important to understand how library preparation can impact the final data, for example if biases towards detection of specific types of nucleic acids are introduced.  Meeting with an NGS specialist at the Genomics Core will help to guide your path.  
 
 ### Library Preparation for Sequencing
@@ -89,7 +94,7 @@ To obtain single cell gene expression data from RNA-seq, the Genomics lab uses t
 4. Fluorescently-labeled nucleotides and sequencing reagents are added; the flow cell is fluorescently imaged after the incorporation of each nucleotide. The color of the fluorescent dyes identifies which base was incorporated. This cycle of nucleotide incorporation and imaging is repeated n times for a n-reads of sequence.
 
 
-## 4.  Data types and sizes for common platforms
+## Data types and sizes for common platforms
 What file-types are generated from each of the platforms listed above, and what is the expected file size per sample
 ### Illumina
 More to come.
@@ -112,8 +117,3 @@ The genomics core is VERY helpful if you need guidance about reagent and platfor
 - Genohub has a compendium of library prep kits, organized by NGS application type [here](https://genohub.com/ngs-library-preparation-kit-guide/){:target="_blank"}<!--_-->.
 - Illumina has a few interactive methods guides to help you find the most appropriate [library prep reagents](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html){:target="_blank"}<!--_--> and [sequencing methods](https://www.illumina.com/science/sequencing-method-explorer.html){:target="_blank"}<!--_--> to use in your experiments.
 - A helpful reference in considering library prep methods is [Ordoukhanian's 2014 paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351865/){:target="_blank"}<!--_-->.
-
-
-  ---
-
-  Latest Edit: Mar 29, 2018
