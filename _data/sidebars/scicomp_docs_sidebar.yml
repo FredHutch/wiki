@@ -84,24 +84,3 @@ entries:
     - title: EasyBuild
       url: /scicomp_docs/software/easybuild.html
       output: web, pdf
-
-  - title: Test Folder
-    output: web
-    folderitems:
-
-    - title: Folder in test folder
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-      subfolders:
-      - title: Not sure we should go this deep
-        output: web
-        subfolderitems:
-
-        - title: Pros?
-          url: /tag_formatting.html
-          output: web
-
-        - title: Cons?
-          url: /tag_navigation.html
-          output: web

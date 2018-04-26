@@ -3,7 +3,6 @@ title: Specimen Processing and Banking
 #tags: [formatting]
 keywords: Lisa McFerrin, Jordan Smith, Amy Paguirigan
 last_updated: April 25, 2018
-#summary: "Landing page for IRB Resources at the Fred Hutch"
 sidebar: generation_sidebar
 permalink: clinSpec_specimenbanking.html
 layout: page

@@ -1,8 +1,13 @@
 ---
 title: Data Privacy and Security
-permalink: nodeContent/subnodeContent/privacySecurity.html
-layout: plain
-reviewers:  Susan Glick
+#tags: [formatting]
+keywords: Susan Glick, Amy Paguirigan
+last_updated: April 28, 2018
+sidebar: generation_sidebar
+permalink: IRB_privacy.html
+layout: page
+search: include
+published: true
 ---
 Every effort must be made to protect the identity of participants.  A key protective measure is to de-identify information.  Typically, this involves removing 18 key direct identifiers as described under HIPAA and indirect identifiers, such as age, gender, location, etc.  Further description of de-identification is under De-Identification of Specimens and Data.  The aim of de-identification is to maintain privacy through elimination of identifiers in a way that eliminates or greatly diminishes the risk of re-identification.  Maintaining strong data security processes is an additional key measure.  Sharing data should be done securely, after the information is de-identified and within a data management and sharing plan.  This plan should delineate data security, restrictions on data which can not be sufficiently de-identified, data use agreements, naming conventions and other clearly specified requirements.  In most instances, sharing data should be possible without compromising the confidentiality of participants.
 
