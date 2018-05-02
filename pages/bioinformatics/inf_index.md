@@ -3,7 +3,6 @@ title: Bioinformatics
 #tags:
 #keywords:
 last_updated: April 25, 2018
-summary: "Landing page for Bioinformatics Resources at the Fred Hutch"
 sidebar: bioinformatics_sidebar
 permalink: inf_index.html
 layout: page

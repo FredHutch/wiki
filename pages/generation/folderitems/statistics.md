@@ -10,6 +10,15 @@ search: include
 published: true
 ---
 
+
+## Study Types
+There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however can be very different, and the details specific to each are best addressed prior to beginning a process involved in generating materials or data sets.  
+
+## Preparing your Study Proposal
+You could design a house without an architect, but the time and money you would spend while trying to do so are effectively wasted because there are people for whom this procedural and rote knowledge is their job.  The same is true for large scale molecular datasets as there is an incredible quantity of study design, sample preparation, genomics data production, bioinformatics and statistics that goes into this process. To give your study the best chance of succeeding (both in getting funding and scientifically), it's best to identify a set of collaborators familiar with the aspects of the research for which your team does not already have expertise.  
+
+The Translational Genomics Data Coordination Center is available for collaboration in grant supported projects to provide access to a system of data management tools they manage to facilitate translational studies using large scale molecular data.  Also, we can help facilitate as-needed collaborations with various affiliated members of the Fred Hutch community with expertise in sample banking, assay material preparation, genomics data generation, bioinformatics and statistics.  If your study needs some support in these areas, we can work with you to both incorporate material into your application and also support your study over the course of the phases of research in areas where your team does not have expertise.  The project team that leads this effort has "boilerplate" NIH grant materials that we will provide after consultation to tailor the material to your particular study.  
+
 Finding a collaborator to help identify if any biological feature supports or rejects your hypothesis using large scale molecular data is important because of the issues of multiple testing, determining biological significance and power issues unique to large data sets where the number of measurements (p) is much larger than the sample size (n).  The statistics required when n>>p are very different than those when p>>n and finding someone who is well versed in the specific issues that arise in this context is important.  
 
 More to come on the following topics.  
