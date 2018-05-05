@@ -86,7 +86,7 @@ defaults:
       topnav: topnav
   -
     scope:
-      path: "/_generation"
+      path: "_generation"
       type: "page"
     values:
       layout: "page"
@@ -97,7 +97,7 @@ defaults:
       topnav: topnav
   -
     scope:
-      path: "/_bioinformatics"
+      path: "_bioinformatics"
       type: "page"
     values:
       layout: "page"
@@ -108,7 +108,7 @@ defaults:
       topnav: topnav
   -
     scope:
-      path: "/_computing"
+      path: "_computing"
       type: "page"
     values:
       layout: "page"
