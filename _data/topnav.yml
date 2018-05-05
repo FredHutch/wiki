@@ -3,7 +3,7 @@
 topnav:
 - title: Topnav
   items:
-    - title: Home
+    - title: Project Overview
       url: /index.html
     - title: Data Generation
       url: /gen_index.html
@@ -13,34 +13,34 @@ topnav:
       url: /comp_index.html
 
 #Topnav dropdowns
-topnav_dropdowns:
-- title: Topnav dropdowns
-  folders:
-    - title: Contributing
-      folderitems:
-        - title: How-To
-          url: /CONTRIBUTING.html
-        - title: Github
-          external_url: https://github.com/FredHutch/wiki
-    - title: FH Resources
-      folderitems:
-
-        - title: SciComp Wiki
-          external_url: https://scicomp.fhcrc.org
-        - title: CenterNet
-          external_url: https://centernet.fredhutch.org
-        - title: Fredhutch.io for in-person training
-          external_url: https://www.fredhutch.io
-        - title: FHBig (Bioinformatics Interest Group) Site
-          external_url: https://fredhutch.github.io/FHBig
-        - title: FHBig Slack Workspace
-          external_url: https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg
-        - title: Translational Genomics (new site)
-          external_url: https://fredhutch.github.io/trgen-dcc
-        - title: CYOA Resource Pages (old site)
-          external_url: https://translationalgenomics.fredhutch.org
-        - title: Fred Hutch Shared Resources
-          external_url: https://sharedresources.fredhutch.org
+# topnav_dropdowns:
+# - title: Topnav dropdowns
+#   folders:
+#     - title: Contributing
+#       folderitems:
+#         - title: How-To
+#           url: /CONTRIBUTING.html
+#         - title: Github
+#           external_url: https://github.com/FredHutch/wiki
+#     - title: FH Resources
+#       folderitems:
+#
+#         - title: SciComp Wiki
+#           external_url: https://scicomp.fhcrc.org
+#         - title: CenterNet
+#           external_url: https://centernet.fredhutch.org
+#         - title: Fredhutch.io for in-person training
+#           external_url: https://www.fredhutch.io
+#         - title: FHBig (Bioinformatics Interest Group) Site
+#           external_url: https://fredhutch.github.io/FHBig
+#         - title: FHBig Slack Workspace
+#           external_url: https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg
+#         - title: Translational Genomics (new site)
+#           external_url: https://fredhutch.github.io/trgen-dcc
+#         - title: CYOA Resource Pages (old site)
+#           external_url: https://translationalgenomics.fredhutch.org
+#         - title: Fred Hutch Shared Resources
+#           external_url: https://sharedresources.fredhutch.org
 #    - title: Outside Links
 #      folderitems:
 #        - title: Github
