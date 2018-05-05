@@ -62,8 +62,15 @@ kramdown:
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
 collections:
-  tooltips:
-    output: false
+  generation:
+    output: true
+    permalink: /generation/:path/
+  bioinformatics:
+    output: true
+    permalink: /bioinformatics/:path/
+  computing:
+    output: true
+    permalink: /computing/:path/
 # collections are declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true
 
 defaults:
@@ -79,24 +86,38 @@ defaults:
       topnav: topnav
   -
     scope:
-      path: ""
-      type: "tooltips"
+      path: "/_generation"
+      type: "page"
     values:
       layout: "page"
       comments: true
       search: true
-      tooltip: true
-
+      generation: true
+      sidebar: generation_sidebar
+      topnav: topnav
   -
     scope:
-      path: ""
-      type: "posts"
+      path: "/_bioinformatics"
+      type: "page"
     values:
-      layout: "post"
+      layout: "page"
       comments: true
       search: true
-      sidebar: home_sidebar
+      informatics: true
+      sidebar: bioinformatics_sidebar
       topnav: topnav
+  -
+    scope:
+      path: "/_computing"
+      type: "page"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+      computing: true
+      sidebar: computing_sidebar
+      topnav: topnav
+
 
 # these are defaults used for the frontmatter for these file types
 
@@ -104,7 +125,7 @@ sidebars:
 - home_sidebar
 - generation_sidebar
 - bioinformatics_sidebar
-- scicomp_docs_sidebar
+- computing_sidebar
 
 description: "Collective Documentation"
 # the description is used in the feed.xml file

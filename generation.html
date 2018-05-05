@@ -1,0 +1,10 @@
+---
+layout: page
+title: Data Generation
+search: include
+---
+{% for generation in site.generation %}
+  <div class="generation">
+    <h2><a href="{{ cookie.url }}">{{ generation.title }}</h2>
+  </div>
+{% endfor %}
