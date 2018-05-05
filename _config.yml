@@ -64,6 +64,18 @@ kramdown:
 
 # collections are declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true
 
+collections:
+  generation:
+    output: true
+    permalink: /generation/:name
+  bioinformatics:
+    output: true
+    permalink: /bioinformatics/:name
+  computing:
+    output: true
+    permalink: /computing/:name
+
+
 defaults:
   -
     scope:
@@ -106,7 +118,7 @@ defaults:
       comments: true
       search: true
       computing: true
-      sidebar: computing_sidebar
+      sidebar: scicomp_docs_sidebar
       topnav: topnav
 
 
@@ -116,7 +128,7 @@ sidebars:
 - home_sidebar
 - generation_sidebar
 - bioinformatics_sidebar
-- computing_sidebar
+- scicomp_docs_sidebar
 
 description: "Collective Documentation"
 # the description is used in the feed.xml file
