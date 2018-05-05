@@ -65,10 +65,13 @@ collections:
 collections_dir: curatedContent
   generation:
     output: true
+    permalink: /:collection/:name
   bioinformatics:
     output: true
+    permalink: /:collection/:name
   computing:
     output: true
+    permalink: /:collection/:name
 # collections are declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true
 
 defaults:
