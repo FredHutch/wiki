@@ -62,15 +62,16 @@ kramdown:
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
 collections:
+collections_dir: curatedContent
   generation:
     output: true
-    permalink: /generation/:path/
+    permalink: /:collection/:name
   bioinformatics:
     output: true
-    permalink: /bioinformatics/:path/
+    permalink: /:collection/:name
   computing:
     output: true
-    permalink: /computing/:path/
+    permalink: /:collection/:name
 # collections are declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true
 
 defaults:
@@ -86,8 +87,8 @@ defaults:
       topnav: topnav
   -
     scope:
-      path: "/_generation"
-      type: "page"
+      path: ""
+      type: generation
     values:
       layout: "page"
       comments: true
@@ -97,8 +98,8 @@ defaults:
       topnav: topnav
   -
     scope:
-      path: "/_bioinformatics"
-      type: "page"
+      path: ""
+      type: bioinformatics
     values:
       layout: "page"
       comments: true
@@ -108,8 +109,8 @@ defaults:
       topnav: topnav
   -
     scope:
-      path: "/_computing"
-      type: "page"
+      path: ""
+      type: computing
     values:
       layout: "page"
       comments: true

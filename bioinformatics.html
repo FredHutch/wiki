@@ -1,0 +1,9 @@
+---
+layout: page
+search: include
+---
+{% for bioinformatics in site.bioinformatics %}
+  <div class="bioinformatics">
+    <h2><a href="{{ bioinformatics.url }}">{{ bioinformatics.title }}</h2>
+  </div>
+{% endfor %}

@@ -1,10 +1,12 @@
 ---
-title: Test Page 1
+title: Bioinformatics
 tags:
 keywords:
 last_updated: April 25, 2018
+permalink: inf_index.html
 layout: page
 search: include
 published: true
 ---
-## Test page 1
+
+Get this done - bioinformatics  
