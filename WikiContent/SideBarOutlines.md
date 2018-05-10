@@ -33,7 +33,7 @@ Remember, each domain will have a landing page with overview text and the outlin
 
 
 
-# Bioinformatics Domain
+# Bioinformatics Domain Sidebar Outline: 
 
 ## Genomics Analysis Approaches
 ### Overview
@@ -64,7 +64,7 @@ Serverless (since this isn't really a pipelining-specific topic but rather an HP
 
 
 
-# Computing Domain
+# Computing Domain Sidebar Outline:
 
 ## Access Points
 ### Getting Started
