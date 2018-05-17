@@ -1,6 +1,7 @@
 ---
 title: User Hardware
 author: bmcgough
+description: How to access compute resources from your hardware
 ---
 
 # User Hardware

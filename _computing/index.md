@@ -3,12 +3,14 @@ author: bmcgough
 description: Scientific Computing Landing Page
 ---
 
-# Scientific Computing
+# SciComp Docs
 
-## Overview
+{% for scd in site.computing %}
 
-Some stuff.
+<a href="{{ scd.url | prepend: site.baseurl }}">
+        {{ scd.title }}
+</a>
 
-## Details
+<p class="post-excerpt">{{ scd.description | truncate: 160 }}</p>
 
-Some more detailed stuff.
+{% endfor %} 
