@@ -40,27 +40,38 @@ Remember, each domain will have a landing page with overview text and the outlin
 These are common workflows/examples of tools used and best practices when/if applicable for a given approach.  Additionally these sections include links to publications, web-based resources and/or on-campus experts should they choose to be included.  
 ### Variant Calling and Analysis
 ### Gene Expression and Transcript Analysis
-### Microbiome
+### Microbiome Analysis and Microbial Genomics
 ### GWAS
 
 ## Pipelining and Workflows
 ### Overview
-Why, how in what cases?  Issues of reproducibility and how to approach pipelining, etc.  
+When executing computational analyses it can be difficult to keep track of what
+analyses have been run, with what parameters, and on what files. In order to keep
+track of this information and make it easier to reproduce your results, people
+often turn to computational tools for "pipelines" and "workflows." In this section
+we address the relative merits of a range tools that are used for pipelines and workflows.
 ### Docker
 ### Globus - tied to AWS
-### Shell Scripting/Bash
+### Shell Scripting / Bash
 ### AWS Batch
 ### Other Cloud Compute Options (Azure, etc)
-### Sci Luigi
+### Sciluigi
+### Other Common Workflow Systems
+#### Toil
+#### SCONS
+#### Snakemake
 
 
 ## Computing Platforms
 ### Overview
-INTRO information (definitions, on prem vs in cloud, cloud options, onramps, etc)
+Sometimes the most basic question for computational analysis is "what computer can
+I use to run my code?" In this section we briefly describe a range of options, all
+the way from a single laptop to the FH on prem cluster (`gizmo`), to various "cloud"
+options, with a brief description and links for further onramping materials.
 ### Low Compute Resources
 ### Intermediate Compute Resources
 ### High Compute Resources
-Serverless (since this isn't really a pipelining-specific topic but rather an HPC topic)
+#### Serverless (since this isn't really a pipelining-specific topic but rather an HPC topic)
 
 
 
