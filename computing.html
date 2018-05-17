@@ -1,9 +1,8 @@
 ---
-layout: page
 search: include
 ---
 {% for computing in site.computing %}
   <div class="computing">
-    <h2><a href="{{ computing.url | prepend site.baseurl }}">{{ computing.title }}</h2>
+    <h2><a href="{{ computing.url | prepend: site.baseurl }}">{{ computing.title }}</h2>
   </div>
 {% endfor %}
