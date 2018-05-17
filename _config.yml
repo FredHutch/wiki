@@ -73,7 +73,8 @@ collections:
     permalink: /bioinformatics/:name
   computing:
     output: true
-    permalink: /computing/:name
+    sidebar: scicomp_docs_sidebar
+    permalink: /:collection/:path
 
 
 defaults:
