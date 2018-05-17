@@ -76,6 +76,7 @@ collections:
   computing:
     output: true
     sidebar: scicomp_docs_sidebar
+    layout: default
     permalink: /:collection/:path
 
 
