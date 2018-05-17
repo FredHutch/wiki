@@ -14,7 +14,7 @@ Remember, each domain will have a landing page with overview text and the outlin
 ### Consenting and Big Molecular Data
 ### Privacy and Security
 ### De-identification
-### Data Sharing
+### Data Sharing and Public Repositories
 
 ## Clinical Covariates and Specimen Banking
 ### Overview
@@ -33,15 +33,16 @@ Remember, each domain will have a landing page with overview text and the outlin
 
 
 
-# Bioinformatics Domain Sidebar Outline: 
+# Bioinformatics Domain Sidebar Outline:
 
 ## Genomics Analysis Approaches
 ### Overview
 These are common workflows/examples of tools used and best practices when/if applicable for a given approach.  Additionally these sections include links to publications, web-based resources and/or on-campus experts should they choose to be included.  
-### Variant Calling and Analysis
+### Human Variant Calling and Analysis
 ### Gene Expression and Transcript Analysis
 ### Microbiome Analysis and Microbial Genomics
 ### GWAS
+### Copy Number Analysis
 
 ## Pipelining and Workflows
 ### Overview
@@ -50,16 +51,18 @@ analyses have been run, with what parameters, and on what files. In order to kee
 track of this information and make it easier to reproduce your results, people
 often turn to computational tools for "pipelines" and "workflows." In this section
 we address the relative merits of a range tools that are used for pipelines and workflows.
+#### Shell Scripting / Bash
+#### Serverless (since this isn't really a pipelining-specific topic but rather an HPC topic)
+
 ### Docker
-### Globus - tied to AWS
-### Shell Scripting / Bash
+### Globus
 ### AWS Batch
-### Other Cloud Compute Options (Azure, etc)
-### Sciluigi
-### Other Common Workflow Systems
+### Other workflow Systems
+#### Sciluigi
 #### Toil
 #### SCONS
 #### Snakemake
+
 
 
 ## Computing Platforms
@@ -68,10 +71,17 @@ Sometimes the most basic question for computational analysis is "what computer c
 I use to run my code?" In this section we briefly describe a range of options, all
 the way from a single laptop to the FH on prem cluster (`gizmo`), to various "cloud"
 options, with a brief description and links for further onramping materials.
+
 ### Low Compute Resources
+#### Privacy and Security
 ### Intermediate Compute Resources
+#### Privacy and Security
 ### High Compute Resources
-#### Serverless (since this isn't really a pipelining-specific topic but rather an HPC topic)
+#### Privacy and Security
+
+
+
+
 
 
 
@@ -86,6 +96,7 @@ All things credentials and the basics.
 ## Data Storage and Access
 ### Overview
 Costs and basics for researchers to know
+### Privacy and Security
 ### On Prem Storage
 What are the systems, how are they backed up, how do you access them, PHI or no?, what compute resources connect to these storage locations and how?
 ### Cloud Storage
@@ -93,6 +104,7 @@ What are the systems, how are they backed up, how do you access them, PHI or no?
 
 ## Compute Platforms and Access
 ### Overview
+#### Privacy and Security
 ### Rhino
 ### Gizmo
 ### AWS
