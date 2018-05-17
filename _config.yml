@@ -76,7 +76,7 @@ collections:
   computing:
     output: true
     sidebar: scicomp_docs_sidebar
-    permalink: /:collection/:path
+    permalink: /{{ site.baseurl }}/:collection/:path
 
 
 defaults:
