@@ -1,5 +1,7 @@
 repository: FredHutch/wiki
 
+baseurl: /wiki
+
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
@@ -73,7 +75,9 @@ collections:
     permalink: /bioinformatics/:name
   computing:
     output: true
-    permalink: /computing/:name
+    sidebar: scicomp_docs_sidebar
+    layout: default
+    permalink: /:collection/:path
 
 
 defaults:

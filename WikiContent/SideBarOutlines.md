@@ -14,7 +14,7 @@ Remember, each domain will have a landing page with overview text and the outlin
 ### Consenting and Big Molecular Data
 ### Privacy and Security
 ### De-identification
-### Data Sharing
+### Data Sharing and Public Repositories
 
 ## Clinical Covariates and Specimen Banking
 ### Overview
@@ -23,44 +23,49 @@ Remember, each domain will have a landing page with overview text and the outlin
 ### Laboratory Covariates
 ### Nucleic Acid Omnibus
 
+## Laboratory and Experimental Data
+### Overview
+### Laboratory Covariates Management
+### Nucleic Acid Omnibus
+
 ## Large Scale Data Generation
 ### Overview
 ### DNA Approaches
 ### RNA Approaches
-### Platforms Available
-### Data Types
+### Genomics Platforms Available
 
 
 
 
-# Bioinformatics Domain Sidebar Outline: 
+
+# Bioinformatics Domain Sidebar Outline:
+
+## Programming and Bioinformatics
+### Overview
+### R, RStudio and Bioconductor
+### Python and the Condas
+### Unix/Bash (for the command line work)
+### Other Common Languages
 
 ## Genomics Analysis Approaches
 ### Overview
-These are common workflows/examples of tools used and best practices when/if applicable for a given approach.  Additionally these sections include links to publications, web-based resources and/or on-campus experts should they choose to be included.  
-### Variant Calling and Analysis
+### Human Variant Calling and Analysis
 ### Gene Expression and Transcript Analysis
-### Microbiome
-### GWAS
+### Microbiome Analysis and Microbial Genomics
+### Traditional GWAS
+### Mammalian Copy Number Analysis
 
 ## Pipelining and Workflows
 ### Overview
-Why, how in what cases?  Issues of reproducibility and how to approach pipelining, etc.  
 ### Docker
-### Globus - tied to AWS
-### Shell Scripting/Bash
+### Globus
 ### AWS Batch
-### Other Cloud Compute Options (Azure, etc)
-### Sci Luigi
+### Other workflow Systems
 
-
-## Computing Platforms
+## Computing Platforms and Training (how to choose/know which to use/which to look up in computing domain!!)
 ### Overview
-INTRO information (definitions, on prem vs in cloud, cloud options, onramps, etc)
-### Low Compute Resources
-### Intermediate Compute Resources
-### High Compute Resources
-Serverless (since this isn't really a pipelining-specific topic but rather an HPC topic)
+### Training Opportunities
+
 
 
 
@@ -75,6 +80,7 @@ All things credentials and the basics.
 ## Data Storage and Access
 ### Overview
 Costs and basics for researchers to know
+### Privacy and Security
 ### On Prem Storage
 What are the systems, how are they backed up, how do you access them, PHI or no?, what compute resources connect to these storage locations and how?
 ### Cloud Storage
@@ -82,6 +88,7 @@ What are the systems, how are they backed up, how do you access them, PHI or no?
 
 ## Compute Platforms and Access
 ### Overview
+#### Privacy and Security
 ### Rhino
 ### Gizmo
 ### AWS
