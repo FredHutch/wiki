@@ -12,12 +12,12 @@ Serverless falls into the category between PaaS and SaaS, another name for it is
 
 ## Advantages and Disadvantages
 
-- Advantages:
+### Advantages:
     - Users do not need to manage servers
     - The cost is based on the usage
     - Highly available, with high concurrent rate
     - Highly scalable 
-- Disadvantages:
+### Disadvantages:
     - limitation on resources based on the framework 
     - debugging could be less straightforward
 
@@ -40,7 +40,7 @@ Severless functions tend to be triggered by event. For example, AWS lambda funct
 - Data transformation
 - HTTP APIs/integration
 
-##### Reference
+### Available Resources and links
 - https://www.logicworks.com/blog/2018/02/kubernetes-vs-aws-ecs-vs-docker-swarm-vs-serverless/
 - https://serverless.com/blog/why-we-switched-from-docker-to-serverless/
 https://stxnext.com/blog/2017/12/06/serverless-computing-explained-comparing-features-and-pricing-saas-iaas-paas/
