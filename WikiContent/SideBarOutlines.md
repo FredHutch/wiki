@@ -23,64 +23,48 @@ Remember, each domain will have a landing page with overview text and the outlin
 ### Laboratory Covariates
 ### Nucleic Acid Omnibus
 
+## Laboratory and Experimental Data
+### Overview
+### Laboratory Covariates Management
+### Nucleic Acid Omnibus
+
 ## Large Scale Data Generation
 ### Overview
 ### DNA Approaches
 ### RNA Approaches
-### Platforms Available
-### Data Types
+### Genomics Platforms Available
+
 
 
 
 
 # Bioinformatics Domain Sidebar Outline:
 
+## Programming and Bioinformatics
+### Overview
+### R, RStudio and Bioconductor
+### Python and the Condas
+### Unix/Bash (for the command line work)
+### Other Common Languages
+
 ## Genomics Analysis Approaches
 ### Overview
-These are common workflows/examples of tools used and best practices when/if applicable for a given approach.  Additionally these sections include links to publications, web-based resources and/or on-campus experts should they choose to be included.  
 ### Human Variant Calling and Analysis
 ### Gene Expression and Transcript Analysis
 ### Microbiome Analysis and Microbial Genomics
-### GWAS
-### Copy Number Analysis
+### Traditional GWAS
+### Mammalian Copy Number Analysis
 
 ## Pipelining and Workflows
 ### Overview
-When executing computational analyses it can be difficult to keep track of what
-analyses have been run, with what parameters, and on what files. In order to keep
-track of this information and make it easier to reproduce your results, people
-often turn to computational tools for "pipelines" and "workflows." In this section
-we address the relative merits of a range tools that are used for pipelines and workflows.
-#### Shell Scripting / Bash
-#### Serverless (since this isn't really a pipelining-specific topic but rather an HPC topic)
-
 ### Docker
 ### Globus
 ### AWS Batch
 ### Other workflow Systems
-#### Sciluigi
-#### Toil
-#### SCONS
-#### Snakemake
 
-
-
-## Computing Platforms
+## Computing Platforms and Training (how to choose/know which to use/which to look up in computing domain!!)
 ### Overview
-Sometimes the most basic question for computational analysis is "what computer can
-I use to run my code?" In this section we briefly describe a range of options, all
-the way from a single laptop to the FH on prem cluster (`gizmo`), to various "cloud"
-options, with a brief description and links for further onramping materials.
-
-### Low Compute Resources
-#### Privacy and Security
-### Intermediate Compute Resources
-#### Privacy and Security
-### High Compute Resources
-#### Privacy and Security
-
-
-
+### Training Opportunities
 
 
 
