@@ -1,15 +1,4 @@
----
-title: Specimen Processing and Banking
-#tags: [formatting]
-keywords: Lisa McFerrin, Jordan Smith, Amy Paguirigan
-last_updated: April 25, 2018
-sidebar: generation_sidebar
-permalink: clinSpec_specimenbanking.html
-layout: page
-search: include
-published: true
----
-
+# Specimen Processing and Banking
 ## STTR Supported LabMatrix for Specimen Banking
 More to come about guidance for data management tools specifically tailored for prospective specimen banking, as well as transfer of existing data to facilitate ongoing research using retrospectively banked specimens.  
 

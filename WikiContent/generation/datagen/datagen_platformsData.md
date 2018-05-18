@@ -1,14 +1,4 @@
----
-title: Genomics Platforms and Data Types
-#tags: [formatting]
-keywords: Genomics Core, Amy Paguirigan, Jordan Smith
-last_updated: April 25, 2018
-sidebar: generation_sidebar
-permalink: lsgen_core.html
-layout: page
-search: include
-published: true
----
+# Genomics Platforms and Data Types
 This guide highlights some of the genomics platforms available through the Genomics Core at Fred Hutch.  This guide is intended to give general context to each platform.
 
 ## Sequencing Based Platforms

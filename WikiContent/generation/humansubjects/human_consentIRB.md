@@ -1,14 +1,4 @@
----
-title: Consenting and Large Scale Data
-#tags: [formatting]
-keywords: Susan Glick, Amy Paguirigan
-last_updated: April 25, 2018
-sidebar: generation_sidebar
-permalink: IRB_consenting.html
-layout: page
-search: include
-published: true
----
+# Consenting and Large Scale Data
 
 Before beginning a study and during the proposal preparation process, an important issue to consider is whether the research proposed qualifies as human subjects research as defined by the National Institutes of Health.  Take a look at the [NIH questionnaire to find out.](https://humansubjects.nih.gov/questionnaire){:target="_blank"}<!--_-->
 

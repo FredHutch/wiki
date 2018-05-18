@@ -1,14 +1,5 @@
----
-title: Nucleic Acid Omnibus
-#tags: [formatting]
-keywords: Genomics Core, Amy Paguirigan, Jordan Smith
-last_updated: April 25, 2018
-sidebar: generation_sidebar
-permalink: lsgen_omnibus.html
-layout: page
-search: include
-published: true
----
+# Nucleic Acid Omnibus
+
 Multiple processes can be involved in the isolation, quality assessment and preparation of biological materials upstream of large scale data collection. For many types of datasets, the particulars of the method of nucleic acid extraction and quality assessment process can have a large impact on the quality, relevance, and interpretability of the resulting data. Thus, it is critical to ensure that a correct set of conditions are chosen before any specimens are prepared for analysis.
 
 The sections below contain an array of background information about isolation and quality control (QC) of nucleic acids when the downstream application is a large scale molecular data type.

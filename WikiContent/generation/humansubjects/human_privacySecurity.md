@@ -1,17 +1,7 @@
----
-title: Data Privacy and Security
-#tags: [formatting]
-keywords: Susan Glick, Amy Paguirigan
-last_updated: April 28, 2018
-sidebar: generation_sidebar
-permalink: IRB_privacy.html
-layout: page
-search: include
-published: true
----
+# Data Privacy and Security
 Every effort must be made to protect the identity of participants.  A key protective measure is to de-identify information.  Typically, this involves removing 18 key direct identifiers as described under HIPAA and indirect identifiers, such as age, gender, location, etc.  Further description of de-identification is under De-Identification of Specimens and Data.  The aim of de-identification is to maintain privacy through elimination of identifiers in a way that eliminates or greatly diminishes the risk of re-identification.  Maintaining strong data security processes is an additional key measure.  Sharing data should be done securely, after the information is de-identified and within a data management and sharing plan.  This plan should delineate data security, restrictions on data which can not be sufficiently de-identified, data use agreements, naming conventions and other clearly specified requirements.  In most instances, sharing data should be possible without compromising the confidentiality of participants.
 
-## 1. Preserving Patient/Participant Privacy
+## Preserving Patient/Participant Privacy
 If you are sharing data that includes a third party’s proprietary data or has third party commercial restrictions, please call Fred Hutch Business Development and Strategy.  Where research is funded by a commercial sponsor, restrictions on data sharing may apply in arrangements agreed with the sponsor. Any such restriction(s) should be highlighted in the data management and sharing plan. In the event that you apply for or receive commercial funding for any part of research, you should advise Business Dev of the situation without delay.
 
 ### Patient Consent – Privacy Protection
@@ -51,7 +41,7 @@ Whether for inbound or outbound materials, MTAs are critical documents that requ
 Fred Hutch is a signatory to the Uniform Biological Material Transfer Agreement (UBMTA) Master Agreement, a contracting mechanism published by NIH on behalf of the U.S. Public Health Service (PHS) to facilitate the transfer of biological materials between academic institutions.  For institutions which have agreed to the terms of the UBMTA Master Agreement, it is not necessary to negotiate individualized terms for each transfer of a biological material.  Instead, an Implementing Letter is executed, which denotes the biological material as well as the providing institution and receiving institution.  The Fred Hutch scientist/investigator and a Fred Hutch institutional representative both sign the UBMTA.
 
 
-## 2. Data Sharing and Security
+## Data Sharing and Security
 Generally:
   - Some federal agencies and journals have prescriptive instructions to portals or other data sharing platforms.
   - Posted online via a project or personal web site
@@ -70,8 +60,3 @@ Fred Hutch data should not be stored or shared via personal applications such as
 Generally, Investigators can share their data by transferring it to a data archive facility to distribute more widely to the scientific community, to maintain documentation and meet reporting requirements. Data archives are particularly attractive for investigators concerned about managing a large volume of requests for data, vetting frivolous or inappropriate requests, or providing technical assistance for users seeking to help with analyses.
 
 Datasets that cannot be distributed to the general public due to confidentially concerns, or third-party licensing or use agreements that prohibit redistribution, can be accessed through a data enclave. Fred Hutch does not have a data enclave and does not have a preferred recommendation for one. A data enclave provides a controlled secure environment in which eligible researchers can perform analyses using restricted data resources.
-
-
-  ---
-
-  Latest Edit: Mar 29, 2018

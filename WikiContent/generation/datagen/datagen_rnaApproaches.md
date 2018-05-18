@@ -1,14 +1,4 @@
----
-title: RNA Analysis Approaches
-#tags: [formatting]
-keywords: Genomics Core, Amy Paguirigan, Jordan Smith
-last_updated: April 25, 2018
-sidebar: generation_sidebar
-permalink: lsgen_rna.html
-layout: page
-search: include
-published: true
----
+# RNA Analysis Approaches
 This page contains an outline of the platforms and approaches used to produce various types of large scale data sets from RNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource and example cost estimates and read depth, etc will vary study to study. To answer any questions specific to your study, please contact the staff at the [Genomics Core](https://sharedresources.fredhutch.org/core-facilities/genomics){:target="_blank"}<!--_-->) to describe the basics of your study, such as the sample types, numbers, goal datasets, and proposed platforms of interest.
 
 ## Quantitative Approaches: Gene Expression

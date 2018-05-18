@@ -1,14 +1,4 @@
----
-title: Data Sharing and Public Repositories
-#tags: [formatting]
-keywords: Susan Glick, Amy Paguirigan
-last_updated: April 28, 2018
-sidebar: generation_sidebar
-permalink: IRB_sharing.html
-layout: page
-search: include
-published: true
----
+# Data Sharing and Public Repositories
 ## What are the overarching benefits of data sharing?
 - reinforcing open scientific inquiry
 - encouraging diversity of analysis and opinion
@@ -39,7 +29,7 @@ The following should be considered when developing a data sharing plan:
 11.	Archiving, Preservation, Long-term Access: What plans do you have to archive the data and other research products? Will it have long-term accessibility?
 12.	Adherence: How will you check for adherence of this plan?
 
-### Resources
+### Available Resources
 - [Dataverse](http://best-practices.dataverse.org/data-management/index.html){:target="_blank"}<!--_--> has basic best practices guidance for data management plans.  
 - [DMPTool](https://dmptool.org){:target="_blank"}<!--_--> from University of California
 - Data Management Guide -- Duke Libraries (Link to come)

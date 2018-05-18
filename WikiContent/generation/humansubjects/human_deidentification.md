@@ -1,14 +1,4 @@
----
-title: De-identification of Specimens and Data
-#tags: [formatting]
-keywords: Susan Glick, Amy Paguirigan, Jordan Smith
-last_updated: April 28, 2018
-sidebar: generation_sidebar
-permalink: IRB_deidentify.html
-layout: page
-search: include
-published: true
----
+# De-identification of Specimens and Data
 
 ## What is de-identification?
 De-identification refers to the removal or dissociation of direct patient identifiers from a research specimen or data set in order to inhibit the ability to deduce an individual identity.  Ideally after de-identification, it would not be possible to use any remaining information alone or in combination with other readily available information to identify the subject from which the data originated.  Furthermore, Human Subjects Protection dictates the identifiers of source subjects cannot be readily ascertained or otherwise associated with the data by the research staff or secondary data users (45 CFR46.102(f)).  The goal of de-identification is to reduce, to the greatest extent possible, the risk of identifying individuals from which specimens are obtained or associated genomic datasets are generated. In the setting of genomics, this would include considerations for the condition where genomic datasets generated from a human specimen may be deposited in a publicly available setting for the purposes of data sharing for further research. The most common method is the Safe Harbor method, removal of 18 identifiers as listed in [HIPAA regulation (45 CFR 164.514(b)(2).](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html){:target="_blank"}<!--_-->.   <!-- I would suggest we actually just list the 18 identifiers here rather than linking to them.  I think this section could be streamlined a bit.  -->
