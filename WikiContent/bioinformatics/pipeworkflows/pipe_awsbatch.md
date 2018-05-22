@@ -17,7 +17,7 @@ with (3) a specified amount of compute resources. For example, a
 trivial job that you could run would be:
 
   * 1. A command to print some text ("echo Hello World"), on
-  * 2. A Docker image that's able to run the command (`ubuntu/16:04`), with
+  * 2. A Docker image that's able to run the command (`ubuntu:16.04`), with
   * 3. A specified number of CPUs (e.g. 1) and memory (e.g. 1Gb)
 
 Based on those parameters, Batch will **automatically**:
