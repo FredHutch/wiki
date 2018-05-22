@@ -4,7 +4,7 @@ At its core, Docker is a tool that lets you run code inside a
 totally fixed and reproducible computational environment. If
 you have used virtual machines, then you can think of Docker
 as being a lightweight, portable, intuitive system for building
-and running virtual machines.
+and running virtual machines. The major difference between Docker container and virtual machine is Docker doesn't come with operating system, which makes it more lightweighted and portable. Docker containers require docker engine, which is a client-side application. 
 
 The folks at Docker are probably the best ones to answer the
 question, ["What is Docker?"](https://www.docker.com/what-docker).
@@ -25,15 +25,11 @@ about Docker:
 
 #### Image
 
-A Docker image is basically a virtual machine that's ready to
-be started. You can think of it like a machine image (if that's
-helpful). It has an operating system, a file system, executable
-files, libraries, and basically everything you need to do anything
-useful with a computer.
+A Docker image is basically a file. Itself is built from a [Dockerfile](https://docs.docker.com/engine/reference/builder/). It functions like a recipe for the Docker container. It specify all the details of the Docker container that could be created from. 
 
 #### Container
 
-Once you launch an image and start doing things (writing files,
+The container is the instance of a Docker image. Once you launch an image and start doing things (writing files,
 running commands, etc.) it becomes a container. The useful reason
 behind the distinction between images and containers is that once
 you are done using a container, you usually delete it. However,
@@ -52,7 +48,7 @@ allowing you to read and write data.
 #### Pull / Push
 
 Docker images can be stored either locally (on your laptop or desktop)
-or on a remote Docker server (such as Docker Hub). Moving the
+or on a remote Docker server (such as [Docker Hub](https://hub.docker.com/)). Moving the
 Docker image to and from a remote server is called "pushing" and
 "pulling." The nice thing about this feature is that you can pull
 down an image that was used by another scientist and run all of
