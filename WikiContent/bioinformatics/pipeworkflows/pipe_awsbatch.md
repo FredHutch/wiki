@@ -2,12 +2,24 @@
 
 The Amazon Web Service (AWS) is a "cloud" computing provider which
 sells access to computational resources on a minute-by-minute basis.
+
+> Before going any further, let's just quickly demystify this term "cloud."
+> The "cloud" is actually just a simple idea that you can buy *access*
+> to computers, instead of buying the computers themselves. Anytime you
+> have a bunch of computers sitting in a warehouse running code for a
+> bunch of different users around the world, that's the "cloud."
+
 Among the different products that you can purchase from AWS, the
 three most relevant are *EC2*, which provides access to computers; *S3*,
 which provides long term data storage; and *Batch*, which wraps around
 and makes it easy to use both of those resources.
 
 Full details on AWS Batch can be found in their [documentation](https://aws.amazon.com/batch/).
+
+### Essential terms
+
+  * Docker image: lightweight operating system / virtual machine [see Docker documentation](link)
+  * CPU: Central processing unit, basically just a unit of computation. Your laptop probably has 4 CPUs, while large servers have dozens.
 
 ### How it works
 
