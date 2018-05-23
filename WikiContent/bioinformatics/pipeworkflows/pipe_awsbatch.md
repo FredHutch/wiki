@@ -1,19 +1,19 @@
-# AWS Batch
+# Amazon Web Service (AWS) Batch
 
 The Amazon Web Service (AWS) is a "cloud" computing provider which
 sells access to computational resources on a minute-by-minute basis.
-Among the different products that you can purchase from AWS, the
-three most relevant are *EC2*, which provides access to computers; *S3*,
-which provides long term data storage; and *Batch*, which wraps around
-and makes it easy to use both of those resources.
-
-Full details on AWS Batch can be found in their [documentation](https://aws.amazon.com/batch/).
+Among the different products offered by AWS, the
+three most relevant to bioinformatics are:
+- [Amazon Elastic Compute Cloud](https://aws.amazon.com/ec2/), or *EC2*: a service that provides access to cloud-based computers of various sizes that allow temporary use by researchers to run computing jobs that require larger processors (CPU's) or more memory than is typically available on a land-based computer.  The computing resources available for a task depend on the choices made about the CPU's or memory allocation in the specific EC2 instance (a virtual computing environment).  
+- [Amazon Simple Storage Service](https://aws.amazon.com/s3/), or *S3*:
+a service that provides cloud-based data storage in the form of "buckets", or a pool of data that can be accessed anywhere, anytime via the web by users with credentials allowing the access to that specific bucket. The size and particular security and credentials associated with individual S3 buckets are particularly well suited to scaling and flexibility with respect to access.
+- [*AWS Batch*](https://aws.amazon.com/batch/): a service which wraps around AWS EC2 resources such that researchers can more easily do computing processes with EC2 instances on data stored in S3.  
 
 ### How it works
 
 The basic idea behind AWS Batch is that it allows you to run a job,
-which consists of (1) a command inside (2) a Docker image on a machine
-with (3) a specified amount of compute resources. For example, a 
+which consists of (1) a command, inside of a (2) Docker image on a machine,
+with a (3) specified amount of compute resources. For example, a
 trivial job that you could run would be:
 
   * 1. A command to print some text ("echo Hello World"), on
@@ -44,7 +44,7 @@ your data from S3 before analyzing it, and then upload the results back to
 S3 when you are done. All data within the Docker image when the command is
 complete will be deleted -- we refer to this type of storage as "ephemeral."
 
-It's very easy to download and upload from S3, but it just means that you 
+It's very easy to download and upload from S3, but it just means that you
 have to get used to keeping your data there in order to use AWS Batch
 effectively. As a benefit, it's must cheaper to store data there compared
 to `/fh/fast`, and just as stable.
