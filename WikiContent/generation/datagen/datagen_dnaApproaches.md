@@ -91,6 +91,8 @@ Both exome and targeted approaches rely on short length sequencing reads that ar
 
 #### Whole Genome Guidance
 More to come about approaches to obtain and evaluate the logistics involved in using whole genome sequencing data in a research study.  
+<!-- Patty please write here what issues are the most important to think about before endeavoring into a WGS project.  Such as:  Do I really need this data?  How do I decide between WGS NGS providers?  What should I prepare ahead of time so I know I can import, store and re-access that data after it's been made and provided back to us?-->
+
 
 ### Available Resources
 
