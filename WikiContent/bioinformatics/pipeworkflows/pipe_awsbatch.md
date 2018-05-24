@@ -42,6 +42,8 @@ the most cost effective combination of EC2 instances.
 
 ### Analyzing and storing data
 
+<!-- INSERT INTERNAL LINK - Please put links to the SciComp documentation about how it is sooo easy to upload and download from S3.  -->
+
 Coming from Fred Hutch, one of the biggest things to transition is how you
 access and store data. While we are very used to the shared filesystem on
 `gizmo`, you have none of that available on Batch. Instead, you must download
@@ -51,7 +53,7 @@ complete will be deleted -- we refer to this type of storage as "ephemeral."
 
 It's very easy to download and upload from S3, but it just means that you
 have to get used to keeping your data there in order to use AWS Batch
-effectively. As a benefit, it's must cheaper to store data there compared
+effectively. As a benefit, it's much cheaper to store data there compared
 to `/fh/fast`, and just as stable.
 
 
