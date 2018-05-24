@@ -21,7 +21,7 @@ which consists of (1) a command, inside of a (2) Docker image on a machine,
 with a (3) specified amount of compute resources. For example, a
 trivial job that you could run would be:
 
-  1. A command to print some text ("echo Hello World"), on
+  1. A command to print some text (`echo Hello World`), on
   2. A Docker image that's able to run the command (`ubuntu:16.04`), with
   3. A specified number of CPUs (e.g. 1) and memory (e.g. 1Gb)
 
