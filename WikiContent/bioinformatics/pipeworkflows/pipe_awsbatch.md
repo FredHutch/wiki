@@ -3,8 +3,7 @@
 The Amazon Web Service (AWS) is a "cloud" computing provider which sells access to computational resources on a minute-by-minute basis. The "cloud" is actually just a simple idea that you can buy *access* to computers, instead of buying the computers themselves. Anytime you have a bunch of computers sitting in a warehouse running code for a bunch of different users around the world, that's the "cloud."
 
 
-Among the different products offered by AWS, the
-three most relevant to bioinformatics are:
+Among the different products offered by AWS, the three most relevant to bioinformatics are:
 - [Amazon Elastic Compute Cloud](https://aws.amazon.com/ec2/), or *EC2*: a service that provides access to cloud-based computers of various sizes that allow temporary use by researchers to run computing jobs that require larger processors (CPU's) or more memory than is typically available on a land-based computer.  The computing resources available for a task depend on the choices made about the CPU's or memory allocation in the specific EC2 instance (a virtual computing environment).  
 - [Amazon Simple Storage Service](https://aws.amazon.com/s3/), or *S3*:
 a service that provides cloud-based data storage in the form of "buckets", or a pool of data that can be accessed anywhere, anytime via the web by users with credentials allowing the access to that specific bucket. The size and particular security and credentials associated with individual S3 buckets are particularly well suited to scaling and flexibility with respect to access.
