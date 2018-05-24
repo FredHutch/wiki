@@ -21,17 +21,17 @@ which consists of (1) a command, inside of a (2) Docker image on a machine,
 with a (3) specified amount of compute resources. For example, a
 trivial job that you could run would be:
 
-  * 1. A command to print some text ("echo Hello World"), on
-  * 2. A Docker image that's able to run the command (`ubuntu:16.04`), with
-  * 3. A specified number of CPUs (e.g. 1) and memory (e.g. 1Gb)
+  1. A command to print some text ("echo Hello World"), on
+  2. A Docker image that's able to run the command (`ubuntu:16.04`), with
+  3. A specified number of CPUs (e.g. 1) and memory (e.g. 1Gb)
 
 Based on those parameters, Batch will **automatically**:
 
-  * 1. Find a machine with the required number of CPUs and memory
-  * 2. Download the Docker image
-  * 3. Run the command within the Docker image
-  * 4. Shut down the Docker container
-  * 5. Shut down the machine if it is no longer needed
+  1. Find a machine with the required number of CPUs and memory
+  2. Download the Docker image
+  3. Run the command within the Docker image
+  4. Shut down the Docker container
+  5. Shut down the machine if it is no longer needed
 
 Batch will often combine multiple jobs onto a single machine, if that is
 the most cost effective approach, with all jobs effectively isolated from
