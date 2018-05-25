@@ -36,13 +36,12 @@ Remember, each domain will have a landing page with overview text and the outlin
 
 
 
-
-
 # Bioinformatics Domain Sidebar Outline:
 
 ## Programming and Bioinformatics
 ### Overview
-### R, RStudio and Bioconductor
+### R, RStudio 
+### Bioconductor
 ### Python and the Condas
 ### Unix/Bash (for the command line work)
 ### Other Common Languages
