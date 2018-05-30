@@ -5,5 +5,3 @@ We will describe what data management systems are available to Fred Hutch resear
 - [LabMatrix](http://www.biofortis.com/labmatrix){:target="_blank"}<!--_-->): LabMatrix is a specimen tracking platform that can be used to capture clinical and laboratory covariates. One of its main strengths is the ability to capture lineage of specimen processing steps in a workflow (for example, multiple nucleic acid types could be extracted from the same tissue). Currently, the [STTR group](https://www.fredhutch.org/en/labs/seattle-translational-tumor-research.html){:target="_blank"}<!--_-->) is piloting a LabMatrix project at the Hutch.
 
 - REDCap is an online data capture system used by the Fred Hutch via STTR and includes version-control and access-restriction features.  [Here](https://research.fhcrc.org/cds/en/redcap.html){:target="_blank"}<!--_--> is the Hutch's Collaborative Data Services (CDS) page for REDCap.
-
-- Caisis? DIAMOND? More to come on these resources.
