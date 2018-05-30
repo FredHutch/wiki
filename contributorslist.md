@@ -9,8 +9,7 @@ show_excerpts:  true #(default), false
 sort_by: title # date (default)
 sort_order:  forward # (default), reverse
 sidebar:
-  - title: "Who We Are"
-    text: "A collaboratively curated wiki from Fred Hutch investigators.  This project team is lead by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan at apaguiri@fredhutch.org."
-  - title: "Contributors List"
-    url: /contributors/
+- title: "Who We Are"
+  text: "A collaboratively curated wiki from Fred Hutch investigators.  This project team is lead by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri).
+  [Contributors List](https://fredhutch.github.io/wiki/contributors/)"
 ---
