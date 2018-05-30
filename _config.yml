@@ -246,7 +246,8 @@ defaults:
       path: ""
       type: infdemos
     values:
-      layout: wide
+      layout: single
+      classes: wide
       share: true
       sidebar:
         nav: "bioinformatics"
@@ -268,7 +269,8 @@ defaults:
       path: ""
       type: contributors
     values:
-      layout: wide
+      layout: single
+      classes: wide
       share: true
       sidebar:
         nav: "about"
