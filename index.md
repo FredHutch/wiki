@@ -8,6 +8,7 @@ toc_label: "On This Page"
 sidebar:
  - title: "Who We Are"
    text: "A collaboratively curated wiki from Fred Hutch investigators"
+author_profile: true
 ---
 # Introduction
 This site contains a curated collection of Fred Hutch oriented documentation regarding the generation of large scale molecular data (such as genomics, transcriptomics, etc.), bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  Each domain has an overview page accessible via the top navigation bar that serves as an introduction the material covered in more detail by the individual topic pages.  These materials are intended to serve as an 'on ramp' for researchers at the Fred Hutch to get up to speed on current best practices, links to on-campus resources that are relevant to a specific domain,  as well as useful links to other external content about specific topics.  This site serves as a starting place where the Fred Hutch community can document the information and resources common to many types of research happening at the Center and to communicate more effectively how to access and employ new or changing resources in an ongoing manner.  
