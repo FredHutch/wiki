@@ -17,18 +17,23 @@ collections:
   generation:
     output: true
     permalink: /:collection/:path/
+    
   bioinformatics:
     output: true
     permalink: /:collection/:path/
+
   infdemos:
     output: true
     permalink: /:collection/:path/
+
   computing:
     output: true
     permalink: /:collection/:path/
+
   contributors:
     output: true
     permalink: /:collection/:path/
+
 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
