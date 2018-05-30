@@ -26,6 +26,7 @@ collections:
   computing:
     output: true
     permalink: /:collection/:path/
+
   contributors:
     output: true
     permalink: /:collection/:path/
@@ -246,7 +247,11 @@ defaults:
       path: ""
       type: infdemos
     values:
+<<<<<<< HEAD
       classes: wide
+=======
+      layout: single
+>>>>>>> parent of bd49857... ugh
       share: true
       sidebar:
         nav: "bioinformatics"
@@ -268,7 +273,11 @@ defaults:
       path: ""
       type: contributors
     values:
+<<<<<<< HEAD
       classes: wide
+=======
+      layout: splash
+>>>>>>> parent of bd49857... ugh
       share: true
       sidebar:
         nav: "about"
