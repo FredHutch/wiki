@@ -111,8 +111,8 @@ bioinformatics:
 
   - title: "How-To's and Training"
     children:
-      - title: "Overview"
-        url: /bioinformatics/howto_overview/
+      - title: "Demos and Example Collection"
+        url: /inf_demos/
       - title: "Intro to FH Scientific Computing"
         url: /bioinformatics/howto_fhhpc/
       - title: "Training Opportunities"
