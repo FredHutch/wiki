@@ -6,11 +6,11 @@ minimal_mistakes_skin: "contrast"
 
 # Site Settings
 locale: en-US
-title: "Fred Hutch Collaborative Wiki"
+title: "Fred Hutch Biomedical Data Wiki"
 description: "Collective documentation for Genomics, Bioinformatics and Scientific Computing at the Fred Hutch"
 url                      : https://fredhutch.github.io
-baseurl                  : "/vortexing-wiki"
-repository               : "FredHutch/vortexing-wiki"
+baseurl                  : "/wiki"
+repository               : "FredHutch/wiki"
 
 
 collections:
@@ -18,6 +18,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   bioinformatics:
+    output: true
+    permalink: /:collection/:path/
+  infdemos:
     output: true
     permalink: /:collection/:path/
   computing:
