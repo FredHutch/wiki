@@ -1,0 +1,134 @@
+
+main:
+  - title: "About"
+    url: /
+  - title: "Data Generation"
+    url: /generation/gen_index/
+  - title: "Bioinformatics"
+    url: /bioinformatics/inf_index/
+  - title: "Scientific Computing"
+    url: /computing/comp_index/
+
+generation:
+  - title: "Study Design"
+    children:
+      - title: "Overview"
+        url: /generation/study_overview/
+      - title: "Proposal Materials and Support"
+        url: /generation/study_proposal/
+      - title: "Hypothesis Development and Big Molecular Data"
+        url: /generation/study_hypothesis/
+      - title: "Statistics"
+        url: /generation/study_statistics/
+
+  - title: "IRB and Human Subjects"
+    children:
+      - title: "Overview"
+        url: /generation/human_overview/
+      - title: "Consenting and Big Molecular Data"
+        url: /generation/human_consentIRB/
+      - title: "Privacy and Security"
+        url: /generation/human_privacySecurity/
+      - title: "De-identification"
+        url: /generation/human_deidentification/
+      - title: "Data Sharing and Public Repositories"
+        url: /generation/human_shareDeposits/
+
+  - title: "Clinical Covariates and Specimen Banking"
+    children:
+      - title: "Overview"
+        url: /generation/clsp_overview/
+      - title: "Clinical Covariates"
+        url: /generation/clsp_clinicalCov/
+      - title: "Specimen Banking"
+        url: /generation/clsp_specimenBanking/
+
+  - title: "Laboratory and Experimental Data"
+    children:
+      - title: "Overview"
+        url: /generation/lab_overview/
+      - title: "Laboratory Covariates Management"
+        url: /generation/lab_labCov/
+      - title: "Nucleic Acid Omnibus"
+        url: /generation/lab_naQComnibus/
+
+  - title: "Large Scale Data Generation"
+    children:
+      - title: "Overview"
+        url: /generation/datagen_overview/
+      - title: "DNA Approaches"
+        url: /generation/datagen_dnaApproaches/
+      - title: "RNA Approaches"
+        url: /generation/datagen_rnaApproaches/
+      - title: "Genomics Platforms Available"
+        url: /generation/datagen_platformsData/
+
+
+
+bioinformatics:
+  - title: "Programming and Bioinformatics"
+    children:
+      - title: "Overview"
+        url: /bioinformatics/prog_overview/
+      - title: "R, RStudio"
+        url: /bioinformatics/prog_R/
+      - title: "Bioconductor"
+        url: /bioinformatics/prog_bioconductor/
+      - title: "Python and the Condas"
+        url: /bioinformatics/prog_python/
+      - title: "Unix/Bash"
+        url: /bioinformatics/prog_unixbash/
+      - title: "Other Common Languages"
+        url: /bioinformatics/prog_other/
+
+  - title: "Genomics Analysis Approaches"
+    children:
+      - title: "Overview"
+        url: /bioinformatics/aa_overview/
+      - title: "Human Genetic Variant Calling and Analysis"
+        url: /bioinformatics/aa_humanvariant/
+      - title: "Gene Expression and Transcript Analysis"
+        url: /bioinformatics/aa_geneexpression/
+      - title: "Microbiome Analysis and Microbial Genomics"
+        url: /bioinformatics/aa_microbiome/
+      - title: "Traditional GWAS"
+        url: /bioinformatics/aa_tradgwas/
+      - title: "Mammalian Copy Number Analysis"
+        url: /bioinformatics/aa_mammcopynumber/
+
+  - title: "Pipelining and Workflows"
+    children:
+      - title: "Overview"
+        url: /bioinformatics/pipe_overview/
+      - title: "Docker"
+        url: /bioinformatics/pipe_docker/
+      - title: "Globus"
+        url: /bioinformatics/pipe_globus/
+      - title: "AWS Batch"
+        url: /bioinformatics/pipe_awsbatch/
+      - title: "Other workflow Systems"
+        url: /bioinformatics/pipe_other/
+
+  - title: "How-To's and Training"
+    children:
+      - title: "Overview"
+        url: /bioinformatics/howto_overview/
+      - title: "Intro to FH Scientific Computing"
+        url: /bioinformatics/howto_fhhpc/
+      - title: "Training Opportunities"
+        url: /bioinformatics/howto_training/
+
+
+computing:
+  - title: "Data Management for Researchers"
+    children:
+      - title: "Overview"
+        url: /computing/comp_index/
+      - title: "Data Storage Best Practices"
+        url: /computing/dm_storage/
+      - title: "Data Archiving"
+        url: /computing/dm_archive/
+      - title: "Data Ingestion and Public Datasets"
+        url: /computing/dm_ingest/
+      - title: "Data Privacy and Security"
+        url: /computing/comp_index/

@@ -1,142 +1,244 @@
-repository: FredHutch/wiki
+plugins:
+  - jekyll-remote-theme
+remote_theme: "mmistakes/minimal-mistakes"
 
-baseurl: /wiki
+minimal_mistakes_skin: "contrast"
 
-output: web
-# this property is useful for conditional filtering of content that is separate from the PDF.
+# Site Settings
+locale: en-US
+title: "Fred Hutch Collaborative Wiki"
+description: "Collective documentation for Genomics, Bioinformatics and Scientific Computing at the Fred Hutch"
+url                      : https://fredhutch.github.io
+baseurl                  : "/vortexing-wiki"
+repository               : "FredHutch/vortexing-wiki"
 
-topnav_title: Fred Hutch Collective Wiki
-# this appears on the top navigation bar next to the home button
-
-site_title: Collective KnowledgeBase for Large Scale Data Generation, Bioinformatics and Scientific Computing
-# this appears in the html browser tab for the site title (seen mostly by search engines, not users)
-
-company_name: Fred Hutch
-# this appears in the footer
-
-#github_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
-# if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
-
-# gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
-# if you're using GitLab, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
-
-#disqus_shortname: idratherbewriting
-# if you're using disqus for comments, add the shortname here. if not, leave this value blank.
-
-#google_analytics: UA-66296557-1
-# if you have google-analytics ID, put it in. if not, edit this value to blank.
-
-host: 127.0.0.1
-# the preview server used. Leave as is.
-
-port: 4000
-# the port where the preview is rendered. You can leave this as is unless you have other Jekyll builds using this same port that might cause conflicts. in that case, use another port such as 4006.
-
-exclude:
-  - .idea/
-  - .gitignore
-# these are the files and directories that jekyll will exclude from the build
-
-feedback_subject_line: FHWiki Feedback
-
-feedback_email: bmcgough@fredhutch.org
-# used as a contact email for the Feedback link in the top navigation bar
-
-# feedback_disable: true
-# if you uncomment the previous line, the Feedback link gets removed
-
-# feedback_text: "Need help?"
-# if you uncomment the previous line, it changes the Feedback text
-
-# feedback_link: "http://helpy.io/"
-# if you uncomment the previous line, it changes where the feedback link points to
-
-highlighter: rouge
-# library used for syntax highlighting
-
-markdown: kramdown
-kramdown:
- input: GFM
- auto_ids: true
- hard_wrap: false
- syntax_highlighter: rouge
-
-# filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
-
-
-# collections are declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true
 
 collections:
   generation:
     output: true
-    permalink: /generation/:name
+    permalink: /:collection/:path/
   bioinformatics:
     output: true
-    permalink: /bioinformatics/:name
+    permalink: /:collection/:path/
   computing:
     output: true
-    sidebar: scicomp_docs_sidebar
-    layout: default
-    permalink: /:collection/:path
+    permalink: /:collection/:path/
 
 
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 200
+comments:
+  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  disqus:
+    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+staticman:
+  allowedFields          : # ['name', 'email', 'url', 'message']
+  branch                 : # "master"
+  commitMessage          : # "New comment."
+  filename               : # comment-{@timestamp}
+  format                 : # "yml"
+  moderation             : # true
+  path                   : # "/_data/comments/{options.slug}" (default)
+  requiredFields         : # ['name', 'email', 'message']
+  transforms:
+    email                : # "md5"
+  generatedFields:
+    date:
+      type               : # "date"
+      options:
+        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+reCaptcha:
+  siteKey                :
+  secret                 :
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+search                   :  true #, false (default)
+search_full_content      :  true #, false (default)
+search_provider          :  lunr #(default), algolia
+algolia:
+  application_id         : # YOUR_APPLICATION_ID
+  index_name             : # YOUR_INDEX_NAME
+  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
+  powered_by             : # true (default), false
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+yandex_site_verification :
+naver_site_verification  :
+
+# Social Sharing
+twitter:
+  username               :
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+
+# Analytics
+analytics:
+  provider               : false # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          :
+
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - _data
+  - assets
+  - _layouts
+exclude:
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /wiki-content/
+tag_archive:
+  type: liquid
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
+#     tag: /tags/:name/
+
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+
+# Defaults
 defaults:
-  -
-    scope:
+  # _posts
+  - scope:
       path: ""
-      type: "pages"
+      type: pages
     values:
-      layout: "page"
-      comments: true
-      search: true
-      sidebar: home_sidebar
-      topnav: topnav
-  -
-    scope:
+      layout: single
+
+  # _generation
+  - scope:
       path: ""
       type: generation
     values:
-      layout: "page"
-      comments: true
-      search: true
-      generation: true
-      sidebar: generation_sidebar
-      topnav: topnav
-  -
-    scope:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "generation"
+
+  # _bioinformatics
+  - scope:
       path: ""
       type: bioinformatics
     values:
-      layout: "page"
-      comments: true
-      search: true
-      informatics: true
-      sidebar: bioinformatics_sidebar
-      topnav: topnav
-  -
-    scope:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "bioinformatics"
+
+  # _computing
+  - scope:
       path: ""
       type: computing
     values:
-      layout: "page"
-      comments: true
-      search: true
-      computing: true
-      sidebar: scicomp_docs_sidebar
-      topnav: topnav
-
-
-# these are defaults used for the frontmatter for these file types
-
-sidebars:
-- home_sidebar
-- generation_sidebar
-- bioinformatics_sidebar
-- scicomp_docs_sidebar
-
-description: "Collective Documentation"
-# the description is used in the feed.xml file
-
-# needed for sitemap.xml file only
-url: http://fredhutch.github.io
-baseurl: /wiki
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "computing"

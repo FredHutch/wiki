@@ -1,14 +1,11 @@
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-                  <img src="{{ "images/FredHutch-h-tag-4col-rgb.png" }}" width="250" align="left" alt="Fred Hutch"/>
-               &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />
+<div class="page__footer-follow">
+  <ul class="social-icons">
+          <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/images/FredHutch-h-tag-4col-rgb.png" alt="fredhutch" width="150" align="left|middle" hspace="0" style="border:5px solid white"></a>
 
-{% if page.last_updated %}<span>Page last updated:</span> {{page.last_updated}}<br/>{% endif %} Site last updated: {{ site.time | date: "%b %-d, %Y"  }} <br />
+          <li><a href="https://github.com/FredHutch/trgen-dcc"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
 
-<!-- toggle sidebar button -->
-<li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
-			{% include feedback.html %}
-                </div>
-            </div>
-</footer>
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>

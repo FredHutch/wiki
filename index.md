@@ -1,11 +1,13 @@
 ---
-title: "Fred Hutch Wiki Home"
-#tags:
-#keywords:
-last_updated: April 25, 2018
-sidebar: home_sidebar
-permalink: index.html
-layout: page
+title: ""
+permalink: /
+layout: single
+#classes: wide
+toc: true
+toc_label: "On This Page"
+sidebar:
+ - title: "Who We Are"
+   text: "A collaboratively curated wiki from Fred Hutch investigators"
 ---
 # Introduction
 This site contains a curated collection of Fred Hutch oriented documentation regarding the generation of large scale molecular data (such as genomics, transcriptomics, etc.), bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  Each domain has an overview page accessible via the top navigation bar that serves as an introduction the material covered in more detail by the individual topic pages.  These materials are intended to serve as an 'on ramp' for researchers at the Fred Hutch to get up to speed on current best practices, links to on-campus resources that are relevant to a specific domain,  as well as useful links to other external content about specific topics.  This site serves as a starting place where the Fred Hutch community can document the information and resources common to many types of research happening at the Center and to communicate more effectively how to access and employ new or changing resources in an ongoing manner.  
@@ -16,108 +18,10 @@ The site will include documentation in three general domains:
 ### Data Generation
 This section will contain information that ranges from important IRB and human subjects privacy matters that are important for large scale molecular profiling projects, through tools useful for collection of clinical, specimen and laboratory covariates, as well as the types and modes of large scale molecular data generation commonly undertaken.  
 
-#### Data Generation Sidebar Outline
-
-##### Study Design
-###### Overview
-###### Proposal Materials and Support
-###### Hypothesis Development and Big Molecular Data
-
-##### IRB and Human Subjects
-###### Overview
-###### Consenting and Big Molecular Data
-###### Privacy and Security
-###### De-identification
-###### Data Sharing and Public Repositories
-
-##### Clinical Covariates and Specimen Banking
-###### Overview
-###### Clinical Covariates
-###### Specimen Banking
-###### Laboratory Covariates
-###### Nucleic Acid Omnibus
-
-##### Laboratory and Experimental Data
-###### Overview
-###### Laboratory Covariates Management
-###### Nucleic Acid Omnibus
-
-##### Large Scale Data Generation
-###### Overview
-###### DNA Approaches
-###### RNA Approaches
-###### Genomics Platforms Available
-
-
-
-You should read it if you....
-
 ### Bioinformatics
-This section will contain....  
-
-#### Bioinformatics Domain Sidebar Outline:
-
-##### Programming and Bioinformatics
-###### Overview
-###### R, RStudio 
-###### Bioconductor
-###### Python and the Condas
-###### Unix/Bash (for the command line work)
-###### Other Common Languages
-
-##### Genomics Analysis Approaches
-###### Overview
-###### Human Variant Calling and Analysis
-###### Gene Expression and Transcript Analysis
-###### Microbiome Analysis and Microbial Genomics
-###### Traditional GWAS
-###### Mammalian Copy Number Analysis
-
-##### Pipelining and Workflows
-###### Overview
-###### Docker
-###### Globus
-###### AWS Batch
-###### Other workflow Systems
-
-##### Computing Platforms and Training (how to choose/know which to use/which to look up in computing domain!!)
-###### Overview
-###### Training Opportunities
-
-
-You should read it if you....
-
+Overview.
 ### Scientific Computing
-This section will contain...  
-
-#### Computing Domain Sidebar Outline:
-
-##### Access Points
-###### Getting Started
-All things credentials and the basics.  
-###### Web-based Platforms
-###### Command line-based Platforms
-
-##### Data Storage and Access
-###### Overview
-Costs and basics for researchers to know
-###### Privacy and Security
-###### On Prem Storage
-What are the systems, how are they backed up, how do you access them, PHI or no?, what compute resources connect to these storage locations and how?
-###### Cloud Storage
-What are the systems, how are they backed up, how do you access them, PHI or no?, what compute resources connect to these storage locations and how?
-
-##### Compute Platforms and Access
-###### Overview
-####### Privacy and Security
-###### Rhino
-###### Gizmo
-###### AWS
-###### Globus Genomics
-###### Other
-
-You should read it if you...
-
+Overview.
 
 ## Contributing
 ### How to contribute
@@ -142,4 +46,20 @@ We manage the content of this site via a set of markdown files that
 - Take 30 minutes and find as many typo's and poor grammar as you can! #my-typo-branch
 
 ### Contributors list:
-We will include a list of documentation contributors here.  Considering a report generated from the GitHub repo commit data.  
+We will include a list of documentation contributors here.
+
+#### Authors:
+- Amy Paguirigan
+- Jordan Smith
+- Sam Minot
+- Jenny Smith
+- Patricia Galipeau
+- Jenny Zhang
+
+#### Reviewers:
+- Amy Paguirigan
+- Jordan Smith
+- Sam Minot
+- Jenny Smith
+- Patricia Galipeau
+- Jenny Zhang
