@@ -261,5 +261,3 @@ defaults:
     values:
       layout: single
       share: true
-      sidebar:
-        nav: "about"
