@@ -26,7 +26,6 @@ collections:
   computing:
     output: true
     permalink: /:collection/:path/
-
   contributors:
     output: true
     permalink: /:collection/:path/

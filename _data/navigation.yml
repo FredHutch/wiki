@@ -10,11 +10,11 @@ main:
     url: /computing/comp_index/
 
 about:
- - title: "Who We Are"
-   children:
-     - title: "A collaboratively curated wiki from Fred Hutch investigators.  This project team is lead by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan at apaguiri@fredhutch.org."
-- title: "Contributors List"
-  url: /contributors/
+  - title: "Who We Are"
+    children:
+      - title: "A collaboratively curated wiki from Fred Hutch investigators.  This project team is lead by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan at apaguiri@fredhutch.org."
+  - title: "Contributors List"
+    url: /contributors/
 
 
 generation:
