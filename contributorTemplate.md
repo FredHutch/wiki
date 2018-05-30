@@ -1,6 +1,5 @@
 ---
-#title: Your Name
-#output: false #delete this line when the file should be published on the web
+title: Your Name
 ---
 ## Affiliation
 Clinical Research Division

@@ -27,17 +27,17 @@ Overview.
 ### Scientific Computing
 Overview.
 
-## Contributing
-### How to contribute
+# Contributing
+## How to contribute
 The documentation provided by this site is a collective project in which researchers who are both experts in some of the research domains included and perhaps novices in others contribute to both spread the labor and improve the documentation.  To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below.  
 
 The Wiki team has ongoing, weekly Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions!  To get involved there are many ways to find us:
 
 - Please email Amy Paguirigan (apaguiri) if you have comments about the Wiki documentation as it stands now, questions about getting set up with contributing (via GitHub or via an in-person meeting or Google document) or if you'd like to get current time/place information for the next Wiki Working meeting.  
 - Join the **FHBig** Slack workspace via [this link, and use your fredhutch.org email to join.](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg)  In this Slack workspace we have a #wikicontributors channel where you can chime in with edits, get updates about next meetings, goals and our next steps.  
-- Follow along in our GitHub repository where we are curating this content [if you have gotten set up to use the Fred Hutch GitHub organization account.](https://github.com/FredHutch/wiki)
+- Follow along in our GitHub repository where we are curating this content [if you have gotten set up to use the Fred Hutch GitHub organization account, see below for instructions.](https://github.com/FredHutch/wiki)
 
-#### Types of Contributions
+## Types of Contributions
 - Write new content on an existing or new topic.
 - Be an expert or novice reviewer to one of our pull requests.
 - File issues for suggested new site content.
@@ -45,10 +45,10 @@ The Wiki team has ongoing, weekly Wiki Working meetings that you can stop by and
 - Chime in on Slack about what you like or what you see is missing.  
 - Meet with Amy Paguirigan or other Wiki team members to collaboratively curate content about your research domain even without using GitHub.  
 
-#### GitHub access
+## Contributing Directly Via GitHub
 In order to access the GitHub repository to provide new content or edit existing content, Fred Hutch researchers need a GitHub user account (if you do not already have one, you can [obtain one here via GitHub.](https://github.com/join)).  Once a user has a GitHub user account, access to the Fred Hutch institution and the FHBig GitHub team can be granted by IT (email Fred Hutch username scicomp and send your GitHub username to do this).  
 
-#### Providing your contribution
+### Providing your contribution
 We manage the content of this site via a set of markdown files that
   1. Create a branch off the master branch for your edits.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "computing-newcontent").  
   2. Commit any edits or new material to only the markdown files in the "pages" directory.  
