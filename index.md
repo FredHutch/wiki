@@ -45,6 +45,10 @@ The Wiki team has ongoing, weekly Wiki Working meetings that you can stop by and
 - Chime in on Slack about what you like or what you see is missing.  
 - Meet with Amy Paguirigan or other Wiki team members to collaboratively curate content about your research domain even without using GitHub.  
 
+
+### Wiki Content Style Guide
+Go to [this link](https://fredhutch.github.io/wiki/styleguide/) to see the current, and continually growing style guide for content in this Wiki.  As the community decides upon certain styles, flags, and structures we will continually update this document to reflect the current Wiki Best Practices.  
+
 ### Contributing Directly Via GitHub
 In order to access the GitHub repository to provide new content or edit existing content, Fred Hutch researchers need a GitHub user account (if you do not already have one, you can [obtain one here via GitHub.](https://github.com/join)).  Once a user has a GitHub user account, access to the Fred Hutch institution and the FHBig GitHub team can be granted by IT (email Fred Hutch username scicomp and send your GitHub username to do this).  
 
