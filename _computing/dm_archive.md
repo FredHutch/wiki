@@ -23,7 +23,7 @@ The term 'preservation' means ensuring something can still be seen or used over 
   - storage media may have been degraded, scratched or broken, especially if they are portable, such as external hard drives, so information might be lost; and
   - the files or data will not be understood because there is no supporting documentation or metadata, or this has not been preserved correctly.
 
-#### What can I do to ensure my data are usable in the future?
+## What can I do to ensure my data are usable in the future?
 When creating, organizing and storing your data you can take a few initial steps to try and ensure your data remain useable and understandable for the future: 
   - effectively document the critical metadata describing how and why the data were generated so that it can be understood and interpreted in the future.
   - keep more than one copy of data, and on a variety of storage media or spaces.
@@ -31,7 +31,7 @@ When creating, organizing and storing your data you can take a few initial steps
 
 Ideally, this should be covered in a data management plan at the start of a project to protect the research work and capture any associated time and resources into your budget.
 
-#### Data Storage Considerations for Archiving Data at Fred Hutch
+## Data Storage Considerations for Archiving Data at Fred Hutch
 One issue to consider is that it may be desired to have two copies of irreplaceable (either physically irreplaceable or infeasible to replace datasets), one in the local filesystem (location determined in part by the data size, frequency of access needed, type of access needed and cost considerations), and one in a managed cloud-based system (such as the PI Amazon Web Services s3 buckets managed by Fred Hutch).  Resources to obtain permissions, assistance in managing copying and data quality assessment, and information on accessing data in various locations can be obtained through Scientific Computing and Center IT Helpdesk below.  The Data Storage resource page discusses the various Fred Hutch managed storage locations available to researchers and the associated ease of access and costs associated (if applicable) with them.  
 
 ### Available Resources
@@ -49,7 +49,7 @@ The use of consistent metadata improves the infrastructure supporting the reuse 
 
 The intent behind the FORCE11 effort to generate and document best practices for annotation of research data is that the FAIR guiding principles may act as a guideline for those wishing to enhance the reusability of their data holdings. These principles are instructive when developing a plan for large scale molecular dataset metadata documentation when obtaining, generating, storing or archiving the data themselves.  
 
-#### The FAIR Guiding Principles
+### The FAIR Guiding Principles
 To be Findable:
 - F1. (meta)data are assigned a globally unique and persistent identifier
 - F2. data are described with rich metadata (defined by R1 below)
