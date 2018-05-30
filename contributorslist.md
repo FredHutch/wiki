@@ -1,5 +1,5 @@
 ---
-title: "Fred Hutch Biomedical Data Science Wiki Contributors List"
+title: "Wiki Contributors List"
 layout: collection
 classes: wide
 permalink: /contributors/
