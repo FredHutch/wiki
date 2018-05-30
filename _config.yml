@@ -238,8 +238,6 @@ defaults:
       type: infdemos
     values:
       layout: single
-      toc: true
-      toc_label: "On This Page"
       share: true
       sidebar:
         nav: "bioinformatics"
