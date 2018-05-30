@@ -2,7 +2,7 @@
 title: "Bioinformatics Demos and Example Collection"
 layout: collection
 classes: wide
-permalink: /inf_demos/
+permalink: /bioinformaticsdemos/
 collection: infdemos # collection name
 entries_layout: grid # list (default),
 show_excerpts:  true #(default), false

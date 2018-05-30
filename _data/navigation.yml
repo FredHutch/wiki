@@ -68,6 +68,7 @@ generation:
 
 
 bioinformatics:
+
   - title: "Programming and Bioinformatics"
     children:
       - title: "Overview"
@@ -114,7 +115,7 @@ bioinformatics:
   - title: "How-To's and Training"
     children:
       - title: "Demos and Example Collection"
-        url: /inf_demos/
+        url: /bioinformaticsdemos/
       - title: "Intro to FH Scientific Computing"
         url: /bioinformatics/howto_fhhpc/
       - title: "Training Opportunities"
@@ -134,3 +135,12 @@ computing:
         url: /computing/dm_ingest/
       - title: "Data Privacy and Security"
         url: /computing/comp_index/
+
+  - title: "How-To's and Training"
+    children:
+      - title: "Demos and Example Collection"
+        #url: /computingdemos/
+      - title: "On Ramp to Scientific Computing"
+        #url: /bioinformatics/howto_fhhpc/
+      - title: "Training Opportunities"
+        #url: /bioinformatics/howto_training/
