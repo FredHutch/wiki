@@ -246,7 +246,6 @@ defaults:
       path: ""
       type: infdemos
     values:
-      layout: single
       classes: wide
       share: true
       sidebar:
@@ -269,7 +268,6 @@ defaults:
       path: ""
       type: contributors
     values:
-      layout: single
       classes: wide
       share: true
       sidebar:
