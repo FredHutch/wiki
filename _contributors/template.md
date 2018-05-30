@@ -1,5 +1,6 @@
 ---
-title: Amy Paguirigan
+title: Your Name
+share: false #delete this line when the file should be published on the web
 ---
 ## Affiliation
 Clinical Research Division
