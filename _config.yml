@@ -6,7 +6,7 @@ minimal_mistakes_skin: "contrast"
 
 # Site Settings
 locale: en-US
-title: "Fred Hutch Biomedical Data Wiki"
+title: "Fred Hutch Biomedical Data Science Wiki"
 description: "Collective documentation for Genomics, Bioinformatics and Scientific Computing at the Fred Hutch"
 url                      : https://fredhutch.github.io
 baseurl                  : "/wiki"
@@ -27,6 +27,9 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+  contributors:
+    output: true
+    permalink: /:collection/:path/
 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
@@ -245,8 +248,6 @@ defaults:
       type: infdemos
     values:
       layout: single
-      toc: true
-      toc_label: "On This Page"
       share: true
       sidebar:
         nav: "bioinformatics"
@@ -262,3 +263,13 @@ defaults:
       share: true
       sidebar:
         nav: "computing"
+
+# _contributors
+  - scope:
+      path: ""
+      type: contributors
+    values:
+      layout: splash
+      share: true
+      sidebar:
+        nav: "about"
