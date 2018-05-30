@@ -26,7 +26,6 @@ collections:
   computing:
     output: true
     permalink: /:collection/:path/
-
   contributors:
     output: true
     permalink: /:collection/:path/
@@ -247,7 +246,7 @@ defaults:
       path: ""
       type: infdemos
     values:
-      layout: single
+      layout: wide
       share: true
       sidebar:
         nav: "bioinformatics"
@@ -269,7 +268,7 @@ defaults:
       path: ""
       type: contributors
     values:
-      layout: splash
+      layout: wide
       share: true
       sidebar:
         nav: "about"
