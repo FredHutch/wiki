@@ -208,16 +208,6 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      toc: true
-      toc_label: "On This Page"
-      share: true
-
   # _generation
   - scope:
       path: ""
@@ -241,11 +231,15 @@ defaults:
       share: true
       sidebar:
         nav: "bioinformatics"
+
 # _infdemos
   - scope:
       path: ""
       type: infdemos
     values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
       share: true
       sidebar:
         nav: "bioinformatics"
@@ -267,6 +261,7 @@ defaults:
       path: ""
       type: contributors
     values:
+      layout: single
       share: true
       sidebar:
         nav: "about"
