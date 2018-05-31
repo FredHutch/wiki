@@ -2,34 +2,39 @@
 title: "About this Site"
 permalink: /
 layout: single
-#classes: wide
 toc: true
 toc_label: "On This Page"
 sidebar:
   - title: "Wiki Authors and Reviewers"
     text: "This collaboratively curated wiki was created by contributors from Fred Hutch investigators. See our current contributors list  [here.](https://fredhutch.github.io/wiki/contributors/)"
   - title: "Who We Are"
-    text: "This project team is lead by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri) or go to our [homepage.](https://fredhutch.github.io/trgen-dcc/)"
+    text: "The Wiki curation project team is lead by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri) or go to our [homepage.](https://fredhutch.github.io/trgen-dcc/)"
 ---
-This site contains a curated collection of Fred Hutch oriented documentation regarding the generation of large scale molecular data (such as genomics, transcriptomics, etc.), bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  Each domain has an overview page accessible via the top navigation bar that serves as an introduction the material covered in more detail by the individual topic pages.  
+This site contains a curated collection of Fred Hutch oriented documentation regarding the generation of large scale molecular data (such as genomics, transcriptomics, etc.), the bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  To be effective and successful in biomedical research, these three realms are continuing to require researchers themselves to be adept data stewards as well as integrate data management tools into their every day research processes.  This overlap between biomedical research and the data it generates constitutes what is essentially Biomedical Data Science.  Thus the Fred Hutch Biomedical Data Science Wiki aims to provide an 'on-ramp' to the necessary biomedical data science skills and Fred Hutch-based infrastructure required to support ongoing biomedical research now and in the future.  The ongoing contribution and curation of the content in the Wiki by the Fred Hutch researcher community itself is intended two serve two purposes:  
+
+a) create an evolving source of documentation that grows and changes along with the particular interests and research tools available to Fred Hutch researchers over time, and
+
+b) tailors and unifies content that bridges the divide between how research processes are performed *in general* and how those processes are performed at the Fred Hutch *specifically.*
 
 
-These materials are intended to serve as an 'on ramp' for researchers at the Fred Hutch to get up to speed on current best practices, links to on-campus resources that are relevant to a specific domain,  as well as useful links to other external content about specific topics.  This site serves as a starting place where the Fred Hutch community can document the information and resources common to many types of research happening at the Center and to communicate more effectively how to access and employ new or changing resources in an ongoing manner.  
 
 ## Overview of Content Planned
-The site will include documentation in three general domains:  
+As the Wiki content is intended to serve as an 'on ramp' for researchers at the Fred Hutch, the material is oriented toward helping researchers to get up to speed on current best practices, links to on-campus resources that are relevant to a specific domain,  as well as useful links to other external content about specific topics.  The three domains of biomedical research this Wiki is intended to serve include: Data Generation, Bioinformatics and High Performance Computing.  
 
 ### Data Generation
-This section will contain information that ranges from important IRB and human subjects privacy matters that are important for large scale molecular profiling projects, through tools useful for collection of clinical, specimen and laboratory covariates, as well as the types and modes of large scale molecular data generation commonly undertaken.  
+This domain contains information that ranges from important IRB and human subjects privacy matters that are important for large scale molecular profiling projects, through data management tools and resources useful for collection of clinical, specimen and laboratory covariates, as well as the types and modes of large scale molecular data generation commonly undertaken.  
 
 ### Bioinformatics
-Overview.
+This domain contains information about the bioinformatic and analytic processes required to transform data generated in the context of biomedical research into interpretable, actionable, and/or shareable scientific findings.  Topics range from background on various common computing languages used in the domain, to research topic oriented process information and tool descriptions, to worked examples of bioinformatic analyses using Fred Hutch based infrastructure.  
+
 ### Scientific Computing
-Overview.
+This domain houses researcher-oriented documentation for high performance computing and data management tools supported by Fred Hutch IT as provided by the Scientific Computing group.  Topics include get started guides for the various computing and software tools supported by IT, guidance for data infrastructure best practices, and advanced computing worked examples and guides on a variety of topics.  
 
 ## Contributing
+This curated Wiki is just that, curated and a wiki, and as such relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the content of this Wiki spans a wide range of research realms, we need and welcome contributions from a similarly wide range of researchers whether as novice reviewers for a topic outside of their particular domain of expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large), and this section describes the various modes and types of contributions each researcher on the Fred Hutch campus can make to this effort.  
+
 ### How to contribute
-The documentation provided by this site is a collective project in which researchers who are both experts in some of the research domains included and perhaps novices in others contribute to both spread the labor and improve the documentation.  To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below.  
+The documentation provided by this site is a collective project in which researchers who are both experts in some of the research domains included and perhaps novices in others contribute to both spread the labor and improve the documentation. The strength of the Wiki lies in it's collaborative and unified approach. To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below.  
 
 The Wiki team has ongoing, weekly Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions!  To get involved there are many ways to find us:
 
@@ -47,7 +52,7 @@ The Wiki team has ongoing, weekly Wiki Working meetings that you can stop by and
 
 
 ### Wiki Content Style Guide
-Go to [this link](https://fredhutch.github.io/wiki/styleguide/) to see the current, and continually growing style guide for content in this Wiki.  As the community decides upon certain styles, flags, and structures we will continually update this document to reflect the current Wiki Best Practices.  
+Go to [this link](https://fredhutch.github.io/wiki/styleguide/) to see the current, and continually growing, style guide for content in this Wiki as decided upon by the Wiki Contributors group.  As the community decides upon certain styles, flags, and structures we will continually update this document to reflect the current Wiki Best Practices.  
 
 ### Contributing Directly Via GitHub
 In order to access the GitHub repository to provide new content or edit existing content, Fred Hutch researchers need a GitHub user account (if you do not already have one, you can [obtain one here via GitHub.](https://github.com/join)).  Once a user has a GitHub user account, access to the Fred Hutch institution and the FHBig GitHub team can be granted by IT (email Fred Hutch username scicomp and send your GitHub username to do this).  
