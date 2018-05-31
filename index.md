@@ -10,11 +10,13 @@ sidebar:
   - title: "Who We Are"
     text: "The Wiki curation project team is lead by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri) or go to our [homepage.](https://fredhutch.github.io/trgen-dcc/)"
 ---
-This site contains a curated collection of Fred Hutch oriented documentation regarding the generation of large scale molecular data (such as genomics, transcriptomics, etc.), the bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  To be effective and successful in biomedical research, these three realms are continuing to require researchers themselves to be adept data stewards as well as integrate data management tools into their every day research processes.  This overlap between biomedical research and the data it generates constitutes what is essentially Biomedical Data Science.  Thus the Fred Hutch Biomedical Data Science Wiki aims to provide an 'on-ramp' to the necessary biomedical data science skills and Fred Hutch-based infrastructure required to support ongoing biomedical research now and in the future.  The ongoing contribution and curation of the content in the Wiki by the Fred Hutch researcher community itself is intended two serve two purposes:  
+This site contains a curated collection of Fred Hutch oriented documentation regarding the generation of large scale molecular data (such as genomics, transcriptomics, etc.), the bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  To be effective and successful in biomedical research, these three realms are continuing to require researchers themselves to be adept data stewards as well as integrate data management tools into their every day research processes.  
 
-a) create an evolving source of documentation that grows and changes along with the particular interests and research tools available to Fred Hutch researchers over time, and
+This overlap between biomedical research and the data it generates constitutes what is essentially Biomedical Data Science.  Thus the Fred Hutch Biomedical Data Science Wiki aims to provide an 'on-ramp' to the necessary biomedical data science skills and Fred Hutch-based infrastructure required to support ongoing biomedical research now and in the future.  The ongoing contribution and curation of the content in the Wiki by the Fred Hutch researcher community itself is intended two serve two purposes:  
 
-b) tailors and unifies content that bridges the divide between how research processes are performed *in general* and how those processes are performed at the Fred Hutch *specifically.*
+- create an evolving source of documentation that grows and changes along with the particular interests and research tools available to Fred Hutch researchers over time, and
+
+- tailors and unifies content that bridges the divide between how research processes are performed *in general* and how those processes are performed at the Fred Hutch *specifically.*
 
 
 
@@ -33,14 +35,17 @@ This domain houses researcher-oriented documentation for high performance comput
 ## Contributing
 This curated Wiki is just that, curated and a wiki, and as such relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the content of this Wiki spans a wide range of research realms, we need and welcome contributions from a similarly wide range of researchers whether as novice reviewers for a topic outside of their particular domain of expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large), and this section describes the various modes and types of contributions each researcher on the Fred Hutch campus can make to this effort.  
 
-### How to contribute
-The documentation provided by this site is a collective project in which researchers who are both experts in some of the research domains included and perhaps novices in others contribute to both spread the labor and improve the documentation. The strength of the Wiki lies in it's collaborative and unified approach. To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below.  
+The strength of the Wiki lies in it's collaborative and unified approach. To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below as well as additional information about the ways to communicate with and participate in the Wiki Contributor team in other ways as well.
 
-The Wiki team has ongoing, weekly Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions!  To get involved there are many ways to find us:
+#### Communication and Events
+To get involved there are many ways to find us:
+- The Wiki team has weekly, "office hours" style Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions when time permits!  Currently this meeting is **1:10-2pm on Thursdays**, and please email Amy Paguirigan (apaguiri) for location information.   
 
-- Please email Amy Paguirigan (apaguiri) if you have comments about the Wiki documentation as it stands now, questions about getting set up with contributing (via GitHub or via an in-person meeting or Google document) or if you'd like to get current time/place information for the next Wiki Working meeting.  
 - Join the **FHBig** Slack workspace via [this link, and use your fredhutch.org email to join.](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg)  In this Slack workspace we have a #wikicontributors channel where you can chime in with edits, get updates about next meetings, goals and our next steps.  
+
 - Follow along in our GitHub repository where we are curating this content [if you have gotten set up to use the Fred Hutch GitHub organization account, see below for instructions.](https://github.com/FredHutch/wiki)
+
+- Please email Amy Paguirigan (apaguiri) if you have comments about the Wiki documentation as it stands now, questions about getting set up with contributing (via GitHub or via an in-person meeting or Google document).  
 
 ### Types of Contributions
 - Write new content on an existing or new topic.

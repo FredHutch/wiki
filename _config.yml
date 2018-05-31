@@ -29,6 +29,9 @@ collections:
   contributors:
     output: true
     permalink: /:collection/:path/
+  compdemos:
+    output: true
+    permalink: /:collection/:path/
 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
@@ -241,6 +244,16 @@ defaults:
       share: true
       sidebar:
         nav: "bioinformatics"
+
+# _icompdemos
+  - scope:
+      path: ""
+      type: compdemos
+    values:
+      layout: single
+      share: true
+      sidebar:
+        nav: "computing"
 
   # _computing
   - scope:

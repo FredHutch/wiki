@@ -139,7 +139,7 @@ computing:
   - title: "How-To's and Training"
     children:
       - title: "Demos and Example Collection"
-        #url: /computingdemos/
+        url: /compdemos/
       - title: "On Ramp to Scientific Computing"
         #url: /bioinformatics/howto_fhhpc/
       - title: "Training Opportunities"
