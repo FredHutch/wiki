@@ -37,7 +37,7 @@ This curated Wiki is just that, curated and a wiki, and as such relies upon the 
 
 The strength of the Wiki lies in it's collaborative and unified approach. To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below as well as additional information about the ways to communicate with and participate in the Wiki Contributor team in other ways as well.
 
-#### Communication and Events
+### Communication and Events
 To get involved there are many ways to find us:
 - The Wiki team has weekly, "office hours" style Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions when time permits!  Currently this meeting is **1:10-2pm on Thursdays**, and please email Amy Paguirigan (apaguiri) for location information.   
 
