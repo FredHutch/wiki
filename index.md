@@ -1,5 +1,5 @@
 ---
-title: "About this Site"
+title: "About the Wiki"
 permalink: /
 layout: single
 toc: true
@@ -20,7 +20,7 @@ This overlap between biomedical research and the data it generates constitutes w
 
 
 
-## Overview of Content Planned
+## Overview of Wiki Content
 As the Wiki content is intended to serve as an 'on ramp' for researchers at the Fred Hutch, the material is oriented toward helping researchers to get up to speed on current best practices, links to on-campus resources that are relevant to a specific domain,  as well as useful links to other external content about specific topics.  The three domains of biomedical research this Wiki is intended to serve include: Data Generation, Bioinformatics and High Performance Computing.  
 
 ### Data Generation
