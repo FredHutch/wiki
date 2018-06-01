@@ -1,7 +1,7 @@
 ---
 title: Overview of Clinical Covariates and Specimen Banking
 ---
-# Overview of Clinical Covariates and Specimen Banking
+
 The particular covariates that will be associated with large scale data sets that are part of a study typically come from clinical or laboratory data. When these data originate from human samples, certain protections need to be in place to ensure patient privacy. There are resources at the Fred Hutch which can help researchers effectively manage these data so that they can be associated with downstream molecular data sets more consistently and securely.  
 
 ## Clinical Covariates

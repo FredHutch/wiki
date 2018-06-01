@@ -1,5 +1,5 @@
 ---
-title: Laboratory Covariate Management
+title: Experimental Data Management
 ---
 
 While clinical covariates (like age, race, or disease type) are often part of a study's experimental design, additional covariates may be of interest that originate from laboratory based processes.  There are two main sources of laboratory based covariates that are important to track and consider when using large scale molecular data in a study:  Experimental and Process-Related.  
@@ -22,7 +22,7 @@ The following list is far from exhaustive, but here are a few important process-
   - processing procedure dates
   - technician performing each procedure
 
-## Available Resources
+### Available Resources
 The tools to capture laboratory covariates depend on the workflow needs.  Any type of data capture (lab notebooks, excel spreadsheets, etc.) is better than nothing; however, there are some tools that make the downstream utilization of those laboratory data easier. We have a few suggestions of platforms here at Fred Hutch:
 
   - [LabMatrix](http://www.biofortis.com/labmatrix){:target="_blank"}<!--_-->): LabMatrix is a specimen tracking platform that can be used to capture clinical and laboratory covariates. One of its main strengths is the ability to capture lineage of specimen processing steps in a workflow (for example, multiple nucleic acid types could be extracted from the same tissue). Currently, the [STTR group](https://www.fredhutch.org/en/labs/seattle-translational-tumor-research.html){:target="_blank"}<!--_-->) is piloting a LabMatrix project at the Hutch.

@@ -44,7 +44,7 @@ generation:
         url: /generation/clsp_clinicalCov/
       - title: "Specimen Banking"
         url: /generation/clsp_specimenBanking/
-      - title: "Experimental Covariates Management"
+      - title: "Experimental Covariates"
         url: /generation/clsp_labCov/
 
 
