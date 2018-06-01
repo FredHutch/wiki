@@ -9,3 +9,6 @@ More to come, though we intend to describe in more depth what data management sy
 
 ## Specimen Banking
 More to come, though we intend to describe the best practices for using the software LabMatrix for prospective specimen banking and laboratory organization of retrospectively banked human specimens.  The ability to identify if there are suitable biospecimens associated with that cohort available via collaboration with other researchers or via a specimen repository is critical to being able to then generate large scale data sets associated with those patient phenotypes.
+
+## Experimental Covariate Management Approaches
+More to come, though we intend to provide more in depth guidance for tools of particular utility to documenting, organizing and linking descriptions of laboratory based processes or experimental conditions in such a way as to provide accurate and easy linking of these data to the downstream large data sets.  The possibility of using customized REDCap projects or electronic laboratory notebook systems will be discussed.  

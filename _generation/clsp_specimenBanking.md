@@ -5,10 +5,10 @@ title: Specimen Processing and Banking
 More to come about guidance for data management tools specifically tailored for prospective specimen banking, as well as transfer of existing data to facilitate ongoing research using retrospectively banked specimens.  
 
 ### Available Resources
-  - [LabMatrix](http://www.biofortis.com/labmatrix){:target="_blank"}<!--_--> is supported for check-in and laboratory data management.  It deals well with hierarchical samples (i.e., a sub-population of flow-sorted cells)
+  - [LabMatrix](http://www.biofortis.com/labmatrix){:target="_blank"}<!--_-->): LabMatrix is a specimen tracking platform that can be used to capture clinical and laboratory covariates. One of its main strengths is the ability to capture lineage of specimen processing steps in a workflow (for example, multiple nucleic acid types could be extracted from the same tissue). Currently, the [STTR group](https://www.fredhutch.org/en/labs/seattle-translational-tumor-research.html){:target="_blank"}<!--_-->) is piloting a LabMatrix project at the Hutch.
 
 ## Fred Hutch Specimen Processing Shared Resources
-Fred Hutch researchers have access to both retrospectively banked specimens through Northwest Biotrust.  Additionally, the two previous shared resources called Specimen Processing and Research Cell Bank have merged and now the group is available to provide services such as receipt and processing of biospecimens with existing or researcher-defined protocols, nucleic acid extractions, DNA fingerprinting (e.g. for confirmation of cell line identities as required now by many funding agencies), to specimen storage resources.  
+Fred Hutch researchers have access to retrospectively banked specimens through Northwest Biotrust.  Additionally, the two previous shared resources called Specimen Processing and Research Cell Bank have merged and now the group is available to provide services such as receipt and processing of biospecimens with existing or researcher-defined protocols, nucleic acid extractions, DNA fingerprinting (e.g. for confirmation of cell line identities as required now by many funding agencies), to specimen storage resources.  
 
 ### Available Resources
   - Shared Resources link to how to contact Northwest Biotrust about previously banked specimens is [here.](https://sharedresources.fredhutch.org/services/access-biospecimen-samples){:target="_blank"}<!--_-->

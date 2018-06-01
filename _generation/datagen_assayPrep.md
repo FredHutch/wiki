@@ -1,5 +1,5 @@
 ---
-title: Nucleic Acid Omnibus
+title: Assay Material Prep and QC
 ---
 
 Multiple processes can be involved in the isolation, quality assessment and preparation of biological materials upstream of large scale data collection. For many types of datasets, the particulars of the method of nucleic acid extraction and quality assessment process can have a large impact on the quality, relevance, and interpretability of the resulting data. Thus, it is critical to ensure that a correct set of conditions are chosen before any specimens are prepared for analysis.
