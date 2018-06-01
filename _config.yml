@@ -275,4 +275,4 @@ defaults:
       type: contributors
     values:
       layout: single
-      share: true
+      share: false
