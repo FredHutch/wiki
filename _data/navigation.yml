@@ -36,7 +36,7 @@ generation:
       - title: "Data Sharing and Public Repositories"
         url: /generation/human_shareDeposits/
 
-  - title: "Clinical Covariates and Specimen Banking"
+  - title: "Clinical and Experimental Data"
     children:
       - title: "Overview"
         url: /generation/clsp_overview/
@@ -44,23 +44,19 @@ generation:
         url: /generation/clsp_clinicalCov/
       - title: "Specimen Banking"
         url: /generation/clsp_specimenBanking/
-
-  - title: "Laboratory and Experimental Data"
-    children:
-      - title: "Overview"
-        url: /generation/lab_overview/
-      - title: "Laboratory Covariates Management"
+      - title: "Experimental Covariates Management"
         url: /generation/lab_labCov/
-      - title: "Nucleic Acid Omnibus"
-        url: /generation/lab_naQComnibus/
+
 
   - title: "Large Scale Data Generation"
     children:
       - title: "Overview"
         url: /generation/datagen_overview/
-      - title: "DNA Approaches"
+      - title: "Assay Material Prep and QC"
+        url: /generation/lab_naQComnibus/
+      - title: "DNA-Based Approaches"
         url: /generation/datagen_dnaApproaches/
-      - title: "RNA Approaches"
+      - title: "RNA-Based Approaches"
         url: /generation/datagen_rnaApproaches/
       - title: "Genomics Platforms Available"
         url: /generation/datagen_platformsData/
@@ -84,6 +80,19 @@ bioinformatics:
       - title: "Other Common Languages"
         url: /bioinformatics/prog_other/
 
+  - title: "Pipelining and Workflows"
+    children:
+      - title: "Overview"
+        url: /bioinformatics/pipe_overview/
+      - title: "Docker"
+        url: /bioinformatics/pipe_docker/
+      - title: "Globus"
+        url: /bioinformatics/pipe_globus/
+      - title: "AWS Batch"
+        url: /bioinformatics/pipe_awsbatch/
+      - title: "Other workflow Systems"
+        url: /bioinformatics/pipe_other/
+
   - title: "Genomics Analysis Approaches"
     children:
       - title: "Overview"
@@ -99,25 +108,10 @@ bioinformatics:
       - title: "Mammalian Copy Number Analysis"
         url: /bioinformatics/aa_mammcopynumber/
 
-  - title: "Pipelining and Workflows"
-    children:
-      - title: "Overview"
-        url: /bioinformatics/pipe_overview/
-      - title: "Docker"
-        url: /bioinformatics/pipe_docker/
-      - title: "Globus"
-        url: /bioinformatics/pipe_globus/
-      - title: "AWS Batch"
-        url: /bioinformatics/pipe_awsbatch/
-      - title: "Other workflow Systems"
-        url: /bioinformatics/pipe_other/
-
   - title: "How-To's and Training"
     children:
-      - title: "Demos and Example Collection"
+      - title: "How-To's Collection"
         url: /bioinformaticsdemos/
-      - title: "Intro to FH Scientific Computing"
-        url: /bioinformatics/howto_fhhpc/
       - title: "Training Opportunities"
         url: /bioinformatics/howto_training/
 
@@ -136,11 +130,32 @@ computing:
       - title: "Data Privacy and Security"
         url: /computing/comp_index/
 
+  - title: "Infrastructure Components"
+    children:
+      - title: "Overview"
+        #url: /computing/comp_index/
+      - title: "Getting Started with Scientific Computing"
+        #url: /bioinformatics/howto_fhhpc/
+      - title: "AWS S3 and Batch"
+        #url: /computing/dm_storage/
+      - title: "Azure and Other Cloud Services"
+        #url: /computing/dm_archive/
+      - title: "On-Campus Cluster"
+        #url: /computing/comp_index/
+
+
+  - title: "Supported Resources"
+    children:
+      - title: "Overview"
+        #url: /computing/comp_index/
+      - title: "Shiny"
+        #url: /computing/dm_storage/
+
+
+
   - title: "How-To's and Training"
     children:
       - title: "Demos and Example Collection"
         url: /compdemos/
-      - title: "On Ramp to Scientific Computing"
-        #url: /bioinformatics/howto_fhhpc/
       - title: "Training Opportunities"
         #url: /bioinformatics/howto_training/
