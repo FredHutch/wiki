@@ -128,7 +128,7 @@ computing:
       - title: "Data Ingestion and Public Datasets"
         url: /computing/dm_ingest/
       - title: "Data Privacy and Security"
-        url: /computing/comp_index/
+        #url: /computing/comp_index/
 
   - title: "Infrastructure Components"
     children:
