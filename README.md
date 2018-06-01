@@ -19,23 +19,25 @@ We manage the content of this site via a set of markdown files that
 ## Repo structure
 
 ### Folders and Files that may be Edited:
-####  Templates for New Content
-For Content: https://github.com/FredHutch/wiki/blob/master/contentTemplate.md
+####  Draft Folders with Templates for New Content
+NOTE:  All draft content should be stored in the `draft` folder until it is ready for publication, and then an admin will move it to where it needs to go if it is new content, OR the writer can move demo's themselves when they are ready to go live.  
 
-For Contributor Entry:  https://github.com/FredHutch/wiki/blob/master/contributorTemplate.md
+For new content: https://github.com/FredHutch/wiki/blob/master/draft/contentTemplate.md
 
-####  Folders with Existing Content:
-Data Generation Content: https://github.com/FredHutch/wiki/tree/master/_generation
+For new contributor entries: https://github.com/FredHutch/wiki/blob/master/draft/contributorTemplate.md
 
-Bioinformatics Content: https://github.com/FredHutch/wiki/tree/master/_bioinformatics
+####  Folders with Existing Content
+Data Generation Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_generation
 
-Bioinformatics Demos: https://github.com/FredHutch/wiki/tree/master/_infdemos
+Bioinformatics Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_bioinformatics
 
-Computing Content: https://github.com/FredHutch/wiki/tree/master/_computing
+Bioinformatics Demos (note all markdowns in this folder will be rendered as demo's): https://github.com/FredHutch/wiki/tree/master/_infdemos
 
-Computing Demos: https://github.com/FredHutch/wiki/tree/master/_compdemos
+Computing Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_computing
 
-Contributors List: https://github.com/FredHutch/wiki/tree/master/_contributors
+Computing Demos (note all markdowns in this folder will be rendered as demo's): https://github.com/FredHutch/wiki/tree/master/_compdemos
+
+Contributors List (note all markdowns in this folder will be rendered as contributors): https://github.com/FredHutch/wiki/tree/master/_contributors
 
 ### Please Do Not Edit these folders and files:
 ####  Pages that run Demo and Contributors Collection pages:
@@ -46,12 +48,12 @@ Bioinformatics:  https://github.com/FredHutch/wiki/blob/master/informaticsdemos.
 Contributors list: https://github.com/FredHutch/wiki/blob/master/contributorslist.md
 
 #### Folders containing website configuration files
-main website cofiguration file: https://github.com/FredHutch/wiki/blob/master/_config.yml
+Main website configuration file: https://github.com/FredHutch/wiki/blob/master/_config.yml
 
 Navigation yml:
 https://github.com/FredHutch/wiki/tree/master/_data
 
-Styling contents:
+Custom styling that overrides the remote theme:
 https://github.com/FredHutch/wiki/tree/master/assets/css
 
 Header and footer configs:
