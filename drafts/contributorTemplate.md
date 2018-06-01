@@ -5,7 +5,7 @@ title: Your Name
 Clinical Research Division
 ## Title
 Senior Staff Scientist and Wiki Lead
-## Primary Contribution Domain
-Data Generation
-## Github
-[vortexing](https://github.com/vortexing)
+## Contribution Domain and Type
+Data Generation - writing and editing
+Bioinformatics - editing
+Computing - demos

@@ -5,5 +5,5 @@ title: Dirk Petersen
 Scientific Computing
 ## Title
 Director
-## Primary Contribution Domain
-Scientific Computing
+## Contribution Domain and Type
+Computing - curation lead, writing, editing

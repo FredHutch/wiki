@@ -5,7 +5,9 @@ title: Jordan Smith
 Clinical Research Division
 ## Title
 Research Technician III, Biomedical Data Scientist
-## Primary Contribution Domain
-Data Generation
+## Contribution Domain and Type
+Data Generation - writing and editing
+Bioinformatics - editing
+
 ## Github
 [jordanlsmith](https://github.com/jordanlsmith)

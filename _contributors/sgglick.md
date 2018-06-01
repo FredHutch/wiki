@@ -5,5 +5,5 @@ title: Susan Glick
 Hutch Data Commonwealth
 ## Title
 Research Compliance Specialist
-## Primary Contribution Domain
-Data Generation
+## Contribution Domain and Type
+Data Generation - writing and editing

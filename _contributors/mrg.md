@@ -5,5 +5,5 @@ title: Micheal Gutteridge
 Scientific Computing
 ## Title
 HPC Systems Engineer
-## Primary Contribution Domain
-Scientific Computing
+## Contribution Domain and Type
+Logistics!
