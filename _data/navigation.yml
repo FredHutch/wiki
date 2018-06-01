@@ -45,7 +45,7 @@ generation:
       - title: "Specimen Banking"
         url: /generation/clsp_specimenBanking/
       - title: "Experimental Covariates Management"
-        url: /generation/lab_labCov/
+        url: /generation/clsp_labCov/
 
 
   - title: "Large Scale Data Generation"
@@ -53,7 +53,7 @@ generation:
       - title: "Overview"
         url: /generation/datagen_overview/
       - title: "Assay Material Prep and QC"
-        url: /generation/lab_naQComnibus/
+        url: /generation/datagen_assayPrep/
       - title: "DNA-Based Approaches"
         url: /generation/datagen_dnaApproaches/
       - title: "RNA-Based Approaches"
