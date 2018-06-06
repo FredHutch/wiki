@@ -1,5 +1,6 @@
 ---
 title: Genomics Platforms and Data Types
+last_modified_at: 2018-06-06
 ---
 
 This guide highlights some of the genomics platforms available through the Genomics Core at Fred Hutch.  This guide is intended to give general context to each platform.

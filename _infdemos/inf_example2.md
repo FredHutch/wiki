@@ -1,5 +1,6 @@
 ---
 title: Bioinformatics Example 2
+last_modified_at: 2018-06-06
 #excerpt: "put something else here if you want something other then the first few lines of the text to show up in the Demo page"
 ---
 

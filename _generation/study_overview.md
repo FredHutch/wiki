@@ -1,5 +1,6 @@
 ---
 title: Overview of Study Design in the Era of Genomics
+last_modified_at: 2018-06-06
 ---
 One of the most important first steps in your study design is to **identify the primary experimental objective**.
 

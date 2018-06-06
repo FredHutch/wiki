@@ -1,5 +1,6 @@
 ---
 title: Data Storage Best Practices
+last_modified_at: 2018-06-06
 ---
 
 Most Fred Hutch based researchers using large scale biomedical data sets initially store their data using the *Fast File* service alongside their smaller scale laboratory data.  This provides direct, rapid access to files both manually (e.g., via mapping a drive to a workstation) and to local computing resources (via our HPC cluster, see below).

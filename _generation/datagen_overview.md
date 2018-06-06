@@ -1,5 +1,6 @@
 ---
 title: Overview of Data Generation
+last_modified_at: 2018-06-06
 ---
 
 The decisions required when generating large scale data sets themselves are informed by an understanding of the specimen cohort, any limitations imposed by the consent of the patients from which those specimens were obtained, and the specific hypothesis the researcher is intending to address.  The following pages describe important considerations that range from the particular specimen and nucleic acid isolation to quality control approaches to the platforms available at the Fred Hutch Genomics Shared Resource.  Additionally, there are some specific considerations tailored to either RNA or DNA based genomic data approaches.  While these pages are currently focused on nucleic acid based technologies, we hope to add more in the future regarding other data types generated from other assay materials or using other large scale molecular technologies such as proteomics or metabolomics, etc.  

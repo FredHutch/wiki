@@ -1,5 +1,6 @@
 ---
 title: Data Archiving Best Practices
+last_modified_at: 2018-06-06
 ---
 Once large scale data sets are generated, annotating those datasets, using a working copy for analysis and simultaneously retaining the archived versions until they are no longer required is a unique challenge.  The file types involved, the required degrees of processing of the raw data and the overall size of the datasets can require a different approach to annotation and archiving than for smaller scale research data.  The need to address the best practices for research data of any size has been a focus of a national working group aiming to design and jointly endorse a concise and measurable set of principles, referred to as the FAIR Data Principles. The intent is for these principles to act as a guideline for those wishing to enhance the reusability of their data by themselves or others.  Specifically, the FAIR Principles are the ideas that data should be:  Findable, Accessible, Interoperable, and Reusable.  
 

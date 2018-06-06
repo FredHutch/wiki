@@ -1,5 +1,6 @@
 ---
 title: Experimental Data Management
+last_modified_at: 2018-06-06
 ---
 
 While clinical covariates (like age, race, or disease type) are often part of a study's experimental design, additional covariates may be of interest that originate from laboratory based processes.  There are two main sources of laboratory based covariates that are important to track and consider when using large scale molecular data in a study:  Experimental and Process-Related.  

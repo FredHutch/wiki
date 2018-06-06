@@ -1,5 +1,6 @@
 ---
 title: Overview of Fred Hutch Computing Platforms for Bioinformatics
+last_modified_at: 2018-06-06
 ---
 
 Sometimes the most basic question for computational analysis is "what computer can

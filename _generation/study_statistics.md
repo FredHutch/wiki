@@ -1,5 +1,6 @@
 ---
 title: Statistics and Analytics
+last_modified_at: 2018-06-06
 ---
 ## Study Design and Data Types
 You could design a house without an architect, but the time and money you would spend while trying to do so are effectively wasted because there are people for whom this procedural and rote knowledge is their job.  The same is true for 'omics - there is an incredible quantity of statistics, bioinformatics and sample preparation that goes into this process. To give a study the best chance of succeeding (and being possible with the $ resources available in a suitable amount of time), identify a set of collaborators familiar with the experimental design and statistics required for a study of this kind.  

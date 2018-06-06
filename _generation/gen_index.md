@@ -1,5 +1,6 @@
 ---
 title: Data Generation Overview
+last_modified_at: 2018-06-06
 ---
 
 "The data may not contain the answer. The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data." - John Tukey  
