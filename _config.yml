@@ -32,6 +32,9 @@ collections:
   compdemos:
     output: true
     permalink: /:collection/:path/
+  scicompannounce:
+    output: true
+    permalink: /:collection/:path/
 
 
 
@@ -247,7 +250,7 @@ defaults:
       sidebar:
         nav: "bioinformatics"
 
-# _icompdemos
+# _compdemos
   - scope:
       path: ""
       type: compdemos
@@ -276,3 +279,13 @@ defaults:
     values:
       layout: single
       share: false
+
+  # _scicompannounce
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      share: false
+      sidebar:
+        nav: "computing"
