@@ -283,7 +283,7 @@ defaults:
   # _scicompannounce
   - scope:
       path: ""
-      type: posts
+      type: scicompannounce
     values:
       layout: single
       share: false

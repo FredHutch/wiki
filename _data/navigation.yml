@@ -130,7 +130,7 @@ computing:
       - title: "Data Privacy and Security"
         #url: /computing/comp_index/
 
-  - title: "Infrastructure Components"
+  - title: "Supported Resources"
     children:
       - title: "Overview"
         #url: /computing/comp_index/
@@ -139,14 +139,6 @@ computing:
       - title: "Azure and Other Cloud Services"
         #url: /computing/dm_archive/
       - title: "On-Campus Cluster"
-        #url: /computing/comp_index/
-      - title: "On-Campus Cluster"
-        #url: /computing/comp_index/
-
-
-  - title: "Supported Resources"
-    children:
-      - title: "Overview"
         #url: /computing/comp_index/
       - title: "Shiny"
         #url: /computing/dm_storage/
