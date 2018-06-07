@@ -141,7 +141,7 @@ computing:
       - title: "On-Campus Cluster"
         #url: /computing/comp_index/
       - title: "Shiny"
-        #url: /computing/dm_storage/
+        url: /computing/shiny/
       - title: "Current Software and Announcements"
         url: /scicompannounce/
 
