@@ -117,36 +117,47 @@ bioinformatics:
 
 
 computing:
-  - title: "Data Management for Researchers"
+  - title: "Best Practices for Data Management"
     children:
       - title: "Overview"
-        #url: /computing/comp_index/
-      - title: "Data Storage Best Practices"
+        url: /computing/dm_overview/
+      - title: "Data Storage"
         url: /computing/dm_storage/
       - title: "External Data Ingestion and Public Datasets"
         url: /computing/dm_ingest/
       - title: "Data Archiving"
         url: /computing/dm_archive/
       - title: "Data Privacy and Security"
-        #url: /computing/comp_index/
+        url: /computing/dm_privacy/
 
-  - title: "Supported Resources"
+  - title: "Data Storage"
     children:
       - title: "Overview"
-        #url: /computing/comp_index/
-      - title: "AWS S3 and Batch"
-        #url: /computing/dm_storage/
-      - title: "Azure and Other Cloud Services"
-        #url: /computing/dm_archive/
-      - title: "On-Campus Cluster"
-        #url: /computing/comp_index/
+        url: /computing/store_overview/
+      - title: "POSIX"
+        url: /computing/store_posix/
+      - title: "Object Stores"
+        url: /computing/store_objectstore/
+      - title: "Databases"
+        url: /computing/store_databases/
+
+
+  - title: "Resources and Services"
+    children:
+      - title: "Overview"
+        url: /computing/resser_overview/
+      - title: "AWS Batch"
+        url: /computing/resser_awsbatch/
       - title: "Shiny"
-        #url: /computing/dm_storage/
+        url: /computing/shiny/
+      - title: "Software Supported"
+        url: /computing/resser_softwaresupported/
+
+
+  - title: "Training and Annoucements"
+    children:
       - title: "Current Software and Announcements"
         url: /scicompannounce/
-
-  - title: "How-To's and Training"
-    children:
       - title: "Demos and Example Collection"
         url: /compdemos/
       - title: "Training Opportunities"
