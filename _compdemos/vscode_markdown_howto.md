@@ -1,20 +1,20 @@
 ---
-title: Markdown howto with Visual Studio Code
+title: Using Markdown with Visual Studio Code
 last_modified_at: 2018-06-07
 ---
 
 ![](assets/2018-06-01-12-46-59.png)
 
-# **Creating Markdown Documents with Visual Studio Code**
+# Creating Markdown Documents with Visual Studio Code
 
 The following documents how to create Markdown documentation using Visual Studio Code (commonly referred to as VS Code). There are many editors that can be used to write Markdown, if you are already using another tool and are comfortable with it you can continue to do so if you like.
 
-## **Downloading and Installation**
+## Downloading and Installation
 
 VSCode is freely available and is supported on all major operating systems (Windows, macOS & Linux). If you don't already have VSCode installed, navigate to **https://code.visualstudio.com/Download** and download the correct version for your platform and install it.
 
 
-## **Creating and Editing Markdown documents**
+## Creating and Editing Markdown documents
 
 To get started creating or editing markdown files, you should already have folder (cloned repo) on your workstation, that has exiting markdown files or will contain your new markdown files. From the VSCode "File" menu, select "Open Folder" and navigate to the folder containing files you wish to edit, or to the empty folder you will be creating new documents in. The image below shows and open folder with some markdown files to edit.
 
@@ -28,7 +28,7 @@ To see a live side-by-side preview of the rendered markdown document to check th
 
 ***Note:** While it's possible to edit markdown files from random locations in your file system in a one-off manner without opening the folder in VSCode, opening the folder is required for the features of some plugins and linters to work correctly.*
 
-## **Git Integration**
+## Git Integration
 
 VSCode has built-in support for Git repositories (you still need Git installed on your workstation if it's not already present).
 
@@ -41,7 +41,7 @@ To push your changes to a remote repository, pull in any new changes from the re
 ![](assets/2018-06-01-15-19-56.png)
 
 
-## **Installing Plugins**
+## Installing Plugins
 
 After you have VSCode in stalled, you can start creating and editing markdown files right away, but there are a few VSCode plugins that will be very helpful. These plugins will allow you to easily paste images into your documents and check the spelling.
 
@@ -51,7 +51,7 @@ to install a plugin, in VSCode, click on the square extensions icon in the upper
 
 Below are the recommended plugins for authoring Markdown:
 
-### **Plugin: Paste Image**
+### Plugin: Paste Image
 
 The "Paste Image" plugin is a huge time saver if your documentation will contain lots of images. Install the Paste Image plugin from "mushan".
 
@@ -78,7 +78,7 @@ More information about this plugin is available [**here**](https://marketplace.v
 
 ***NOTE:** To get the Paste Image working on Linux, I had to install the "**xclip**" package on my Workstation (sudo apt install xclip)*
 
-### **Plugin: Spellchecker**
+### Plugin: Spellchecker
 
 VSCode doesn't include a built-in spell checker. To add a spell checker to VSCode, install the "Code Spell Checker" plugin from "Street Side Software". After the plugin is installed (and VSCode reloaded) it should automatically start finding typos. There will be a green squiggly line under the suspect word. If the word is misspelled you can click on the word and a yellow light bulb icon will appear. Click on the light bulb icon and a menu should appear offering you suggestions. If the suspected work is in fact spelled correctly you can use the same context menu to add it to your local dictionary.
 
@@ -88,7 +88,7 @@ VSCode doesn't include a built-in spell checker. To add a spell checker to VSCod
 More information about this plugin is available [**here**](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
 
-### **Plugin: MarkdownLint**
+### Plugin: MarkdownLint
 
 A markdown linter may also be useful to help you write correctly formated makrdown. Install the "markdownlist" plugin from David Anson. It works exactly like the Spellchecker plugin. Hovering your cursor over the green squiggly underline will reveal the warning from the linter; clicking on the light bulb will reveal a click you can click to learn more about what you are doing wrong.
 
