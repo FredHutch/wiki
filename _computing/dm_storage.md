@@ -3,12 +3,12 @@ title: Data Storage Best Practices
 last_modified_at: 2018-06-06
 ---
 
-Most Fred Hutch based researchers using large scale biomedical data sets initially store their data using the *Fast File* service alongside their smaller scale laboratory data.  This provides direct, rapid access to files both manually (e.g., via mapping a drive to a workstation) and to local computing resources (via our HPC cluster, see below).
+Most Fred Hutch based researchers using large scale biomedical data sets initially store their data using the *Fast File* service alongside their smaller scale laboratory data.  This provides direct, rapid access to files both manually (e.g., via mapping a drive to a workstation) and to local computing resources (via our HPC cluster, see below).  However, a strategy for where, when and for how long to store what size data is important to create to ensure that data access by researcher or compute resource, transfer and archiving are not unnecessarily complicated thus hindering the research process.  
 
-## PI Allocations
+## Fast File PI Allocations
 Each PI is provided with 5TB of storage space via the *Fast File* service which can be accessed by mapping the drive to their workstation (using "//center/fh/fast/lastname_f" on a Mac or "\\center\fh\fast\lastname_f" a PC). This storage space access point can provide members of research groups access to groups of datasets that can have different types of permissions.  Within a PI's *Fast File* directory, directories can exist for data shared to any Fred Hutch user (/pub), to any member of the PI's immediate research group (/grp), or private to each individual user in a PI's immediate research group (/user).  Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (/SR).  This can be customized for a given researcher in conjunction with Scientific Computing (see Available Resources).
 
-## Archive Allocations
+## Archive Storage PI Allocations
 As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the *Fast File* system, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.
 
 Currently it is recommended to use a combination of *Economy File*,
@@ -16,7 +16,7 @@ Currently it is recommended to use a combination of *Economy File*,
 
 *Economy File* is less expensive than *Fast File* and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, *Economy File* would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  *Economy File* serves as an archive for these data, and typically compute processes do not directly access these files.
 
-## Temporary Storage
+## Temporary Storage 
 *Scratch* serves as a temporary location for large data sets that ideally reside in an archive space like *Economy File*, to be transferred to when compute processes are applied to them.  Data in *Scratch* are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in *Scratch* as well, and then the final data resulting from the compute process can be written to the *Fast File* locations for the researcher.  This allows large data to be archived in *Economy File*, accessed by HPC when it is temporarily housed in *Scratch* and only the (typically smaller) resulting data are written to the more accessible, but more costly *Fast File* system.
 
 ## Overview of Storage Resources for Genomics

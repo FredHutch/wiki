@@ -117,29 +117,29 @@ bioinformatics:
 
 
 computing:
-  - title: "Best Practices for Data Management"
+  - title: "Best Practices for Research Data Management"
     children:
       - title: "Overview"
         url: /computing/dm_overview/
       - title: "Data Storage"
         url: /computing/dm_storage/
-      - title: "External Data Ingestion and Public Datasets"
+      - title: "Data Ingestion and Public Datasets"
         url: /computing/dm_ingest/
       - title: "Data Archiving"
         url: /computing/dm_archive/
       - title: "Data Privacy and Security"
         url: /computing/dm_privacy/
 
-  - title: "Data Storage"
+  - title: "Data Storage Systems"
     children:
       - title: "Overview"
         url: /computing/store_overview/
-      - title: "POSIX"
-        url: /computing/store_posix/
-      - title: "Object Stores"
-        url: /computing/store_objectstore/
-      - title: "Databases"
+      - title: "Database Systems"
         url: /computing/store_databases/
+      - title: "POSIX Style Systems"
+        url: /computing/store_posix/
+      - title: "Object Storage Systems"
+        url: /computing/store_objectstore/
 
 
   - title: "Resources and Services"
