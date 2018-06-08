@@ -6,7 +6,7 @@ main:
     url: /generation/gen_index/
   - title: "Bioinformatics"
     url: /bioinformatics/inf_index/
-  - title: "Scientific Computing"
+  - title: "Computing"
     url: /computing/comp_index/
 
 
