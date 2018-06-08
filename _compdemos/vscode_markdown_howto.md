@@ -12,22 +12,22 @@ There are multiple "flavors" of markdown, for example, this site is rendered usi
 
 # Visual Studio Code for Working with Markdowns
 
-VSCode is freely available and is supported on all major operating systems (Windows, macOS & Linux). If you don't already have VSCode installed, navigate to **https://code.visualstudio.com/Download** and download the correct version for your platform and install it.
+VSCode is [freely available here](https://code.visualstudio.com/Download) and is supported on all major operating systems (Windows, macOS & Linux). Download the correct version for your platform and install it.  Note, on a Mac you may need to drag the application icon from wherever you unpacked the zip to your Applications folder.  This editor has a variety of features that are useful for editing markdowns including an option to toggle a preview pane to view the rendered markdown as you edit.  Then there are user developed plugins that can be installed when needed to tailor the editor to your specific needs.  
 
 
 ## Creating and Editing Markdown documents
 
-To get started creating or editing markdown files, you should already have a folder setup (e.g., a cloned GitHub repo like the one this site is generated from) on your workstation, that has existing markdown files or will contain your new markdown files. From the VSCode "File" menu, select "Open Folder" and navigate to the folder containing the files you wish to edit, or to the empty folder you will be creating new documents in. The image below shows and open folder with some markdown files to edit.
+To get started creating or editing markdown files, you should already have a folder set up where you will be working wiht your markdown files (e.g., a cloned GitHub repo like the one this site is generated from, a folder containing your documentation) on your workstation. From the VSCode "File" menu, select "Open Folder" or "Open" (on a Mac) and navigate to the folder containing the files you wish to edit, or to the empty folder you will be creating new documents in. The image below shows and open folder with some markdown files to edit. If you open a folder then all available documents in the folder will show up in the left sidebar, allowing you to switch between documents by simply selecting the files.  
 
 ![](assets/2018-06-01-14-15-23.png)
 
-Select an existing file or create a new file (File --> New File) and save it with the .md extension. When you click on the file name it will open a tab and display the contents of the file.
+Select an existing file or create a new file (File --> New File) and save it with the `.md` extension. When you click on the file name it will open a tab and display the contents of the file.
 
-To see a live side-by-side preview of the rendered markdown document to check the formatting and see any images, you can click on the split window with magnifying glass icon in the upper right of the open files' tab. After clicking on this tab, a new window will appear on the right and display the rendered markdown.
+To see a live side-by-side preview of the rendered markdown document to check the formatting and see any images, you can click on the split window with magnifying glass icon in the upper right of the `open files` tab. After clicking on this tab, a new pane will appear on the right and display the rendered markdown.
 
 ![](assets/2018-06-01-14-23-54.png)
 
-***Note:** While it's possible to edit markdown files from random locations in your file system in a one-off manner without opening the folder in VSCode, opening the folder is required for the features of some plugins and linters to work correctly.  
+**Note:** While it's possible to edit markdown files from random locations in your file system in a one-off manner without opening the folder in VSCode, opening the folder is required for the features of some plugins and linters to work correctly.  
 
 ## Git Integration
 
@@ -56,7 +56,7 @@ Below are the recommended plugins for authoring Markdown:
 
 The "Paste Image" plugin is a huge time saver if your documentation will contain lots of images. Install the Paste Image plugin from "mushan".
 
-By default, Paste Image will create (if it doesn't already exist) a single "images" folder at the root of your open directory structure for all images pasted. If you would like to keep your images folder at the same level of the directory structure as your markdown document (to keep them together), you can make the following configuration change. Go to **"File"** --> **"Preferences"** --> **"Settings"** and in the **"User Settings"** configuration section, add the following "pasteImage.*  entries between the curly braces like this: 
+By default, Paste Image will create (if it doesn't already exist) a single "images" folder at the root of your open directory structure for all images pasted. If you would like to keep your images folder at the same level of the directory structure as your markdown document (to keep them together), you can make the following configuration change. Go to **"File"** --> **"Preferences"** --> **"Settings"** and in the **"User Settings"** configuration section, add the following "pasteImage.*  entries between the curly braces like this:
 
 ```json
 {
