@@ -6,19 +6,17 @@ last_modified_at: 2018-06-07
 [Markdown](https://en.wikipedia.org/wiki/Markdown) is a formatting language used when the resulting document will be rendered or converted into html documents for web-viewable material.  The format is commonly used to generate documents like readme's in GitHub or blog posts and even this website.  Markdown documents are written in plain text, and thus are often simpler to create, edit and manage using text editors intended for writing code.  This page includes a how-to discussion of using VSCode, a software package (and associated customizing plugins) intended for writing code that lends itself well to markdowns as well.  
 
 ## Markdown References
-There are multiple "flavors" of markdown, for example, this site is rendered using GitHub-flavored markdown. More detailed isntructions for the various types of formatting possible using GitHub flavored markdown can be found [here.](https://help.github.com/categories/writing-on-github/)  A handy Markdown Cheatsheet is also available [here,](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and can serve as a useful refresher for the formatting required in your markdown in order to use automatic formatting features such as headings, table of contents, tables, links, image embedding and comments.  
+There are multiple "flavors" of markdown, for example, this site is rendered using GitHub-flavored markdown. More detailed instructions for the various types of formatting possible using GitHub flavored markdown can be found [here.](https://help.github.com/categories/writing-on-github/)  A handy Markdown Cheatsheet is also available [here,](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and can serve as a useful refresher for the formatting required in your markdown in order to use automatic formatting features such as headings, table of contents, tables, links, image embedding and comments.  
 
 # Visual Studio Code for Working with Markdowns
 ![](assets/2018-06-01-12-46-59.png)
-
-
 
 VSCode is [freely available here](https://code.visualstudio.com/Download) and is supported on all major operating systems (Windows, macOS & Linux). Download the correct version for your platform and install it.  Note, on a Mac you may need to drag the application icon from wherever you unpacked the zip to your Applications folder.  This editor has a variety of features that are useful for editing markdowns including an option to toggle a preview pane to view the rendered markdown as you edit.  There are also user-developed plugins that can be installed when needed to tailor the editor to your specific needs.  
 
 
 ## Creating and Editing Markdown documents
 
-To get started creating or editing markdown files, you should already have a folder set up where you will be working wiht your markdown files (e.g., a cloned GitHub repo like the one this site is generated from, a folder containing your documentation) on your workstation. From the VSCode "File" menu, select "Open Folder" or "Open" (on macOS) and navigate to the folder containing the files you wish to edit, or to the empty folder you will be creating new documents in. The image below shows and open folder with some markdown files to edit. If you open a folder then all available documents in the folder will show up in the left sidebar, allowing you to switch between documents by simply selecting the files.  
+To get started creating or editing markdown files, you should already have a folder set up where you will be working with your markdown files (e.g., a cloned GitHub repo like the one this site is generated from, a folder containing your documentation) on your workstation. From the VSCode "File" menu, select "Open Folder" or "Open" (on macOS) and navigate to the folder containing the files you wish to edit, or to the empty folder you will be creating new documents in. The image below shows and open folder with some markdown files to edit. If you open a folder then all available documents in the folder will show up in the left sidebar, allowing you to switch between documents by simply selecting the files.  
 
 ![](assets/2018-06-01-14-15-23.png)
 
@@ -41,7 +39,6 @@ If the folder you have open to edit files is a Git repo, any changes made to fil
 To push your changes to a remote repository, pull in any new changes from the remote repository or other git functions, click on the "**...**" icon **(5)** to reveal the full Git menu.
 
 ![](assets/2018-06-01-15-19-56.png)
-
 
 ## Installing Plugins
 
@@ -67,7 +64,7 @@ By default, Paste Image will create (if it doesn't already exist) a single "imag
 ```
 In this example the sub-folder that will be created in the folder you are working in will be called "assets," but this folder name could be anything.  **Note:** if you are editing markdown that is destined for the [Fred Hutch Wiki,](https://fredhutch.github.io/wiki/) you must use "assets" for the folder name. However in other contexts, you may need to use another folder name like `images` in order for certain processes to function. 
 
-After the `Paste Image` plugin is installed and configured, you can simply copy your prepared image or screenshot, insert the cursor where you want to insert the image in the document and use **Ctrl+Alt+V** on Windows or Linux and **Cmd+Alt+V** on macOS. This will automatically create the assets (or whatever you've named it) folder if doesn't already exist and place your image there naming it with a date/timestamp. The inserted text in the editor will look like the following:
+After the `Paste Image` plugin is installed and configured, you can simply copy your prepared image or screenshot, insert the cursor where you want to insert the image in the document and use **Ctr+Alt+V** on Windows or Linux and **Command+Alt+V** on macOS. This will automatically create the assets (or whatever you've named it) folder if doesn't already exist and place your image there naming it with a date/timestamp. The inserted text in the editor will look like the following:
 
 ```
 ![](assets/2018-06-01-12-34-51.png)
