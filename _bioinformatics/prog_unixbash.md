@@ -9,5 +9,6 @@ tools. In order to navigate a Unix-based operating system and execute commands,
 it is extremely useful to use the command line interface, which is generally
 referred to as BASH (Bourne-Again SHell). 
 
+## Resources
 Some basic commands using BASH can be found [here](https://whatbox.ca/wiki/Bash_Shell_Commands),
 and more detailed documentation can be found [here](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html).
