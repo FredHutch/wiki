@@ -110,10 +110,11 @@ bioinformatics:
 
   - title: "How-To's and Training"
     children:
+      - title: "Overview"
+        url: /bioinformatics/howto_overview/
       - title: "How-To's Collection"
         url: /bioinformaticsdemos/
-      - title: "Training Opportunities"
-        url: /bioinformatics/howto_training/
+
 
 
 computing:
