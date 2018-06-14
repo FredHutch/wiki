@@ -252,7 +252,7 @@ defaults:
 
 # _compdemos
   - scope:
-      path: ""
+      path: "compdemos"
       type: compdemos
     values:
       layout: single
