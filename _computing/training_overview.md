@@ -1,6 +1,6 @@
 ---
-title: Scientific Computing Training Opportunities
-last_modified_at: 2018-06-06
+title: training_overview
+last_modified_at: 2018-06-14
 ---
 While the content of this wiki aims to provide background information and basic knowledge of the systems and uses of Fred Hutch resources, it cannot address all the unique challenges involved in scientific research using these resources.  Various groups offer on campus training and there are also many external training resources.  
 
