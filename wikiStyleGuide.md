@@ -39,3 +39,21 @@ If you want to insert links to publications as references, put:
 
 
 These flags will alert contributors, admin and reviewers to the need for another round of edits.  Internal links can be set up by Wiki admins, but other types of insertions can be done by anyone.  
+
+
+## In-text Images Temporary (hopefully) Hack
+If you'd like to add images to your text, use Atom or VSCode both have packages/plugins that can allow for copy/paste accessibility for easy adding and organizing of images.  You can read some instructions on how to get set up with VSCode in one of the Computing Demo's.  
+
+One edit is that in order for Jekyll to correctly render the images in a page, the following text is the example format that that call to the image needs to be in for a markdown in the "_compdemos" folder:
+```
+![]({{ site.baseurl }}/compdemos/assets/2018-06-13-16-47-59.png)
+```
+If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is.  
+
+Both Atom and VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  However, for now, when pull requests get merged, if a file is added to an asset folder in the pull request then that file needs to be COPIED to the main directory `assets` folder.  **NOTE:** Please don't MOVE the file there.  Amy will go back and clean up any files that are in both the main assets folder AND a subfolder's asset folder when we fix this hack.  
+
+## Referencing a Fred Hutch username
+Please if you need to reference a Fred Hutch username, do not write the entire email address out, just put the username in backticks like this:
+```
+`username`
+```

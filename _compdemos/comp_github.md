@@ -31,7 +31,7 @@ When the software is being developed as part of an institution, such as at Fred 
 
 ## Available Resources and links
 There a wide variety of resources on the web for learning to use the various forms of GitHub.  
-- Get a [GitHub username here.https://github.com/join]
+- Get a [GitHub username here.](https://github.com/join)
 - Join the Fred Hutch GitHub institution by sending your username to `helpdesk` and request to be added.  
 - Getting started with [GitHub Desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
 - How to [contribute to projects with GitHub](https://help.github.com/desktop/guides/contributing-to-projects/)
