@@ -31,7 +31,7 @@ collections:
     permalink: /:collection/:path/
   compdemos:
     output: true
-    permalink: /:name
+    permalink: /:collection/:path/
   scicompannounce:
     output: true
     permalink: /:collection/:path/
