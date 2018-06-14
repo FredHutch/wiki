@@ -14,10 +14,10 @@ Put more detailed content here.
 For many users, command line git is not the ideal mode of interacting with version control software.  As an example, if the majority of the code produced by a user is originating from interfaces such as RStudio, it may be much simpler and more straightforward to use GitHub via the desktop client.  You can download the desktop client for your system for free [here.](https://desktop.github.com/)
 
 The desktop client will allow you to "clone" repositories from the web based GitHub source and allow you to work on those files locally.  Then when edits have been made to files in those repositories, those edits will be shown in the GitHub Desktop client for the user to then comment on and commit those changes to the version of the repository on the web.
-![](assets/comp_github-96005f6a.png)
+![]({{ site.baseurl }}/compdemos/assets/comp_github-96005f6a.png)
 
 There are many different ways of working with multiple people on multiple files in a GitHub repository, and there are many places on the web that can provide some insight into how to use it's many features.  However, [this GitHub Guide for the flow of using GitHub is useful for understanding the basics.](https://guides.github.com/introduction/flow/)
-![](assets/comp_github-5c26f4cd.png)
+![]({{ site.baseurl }}/compdemos/assets/comp_github-5c26f4cd.png)
 
 
 ## Sharing with GitHub
