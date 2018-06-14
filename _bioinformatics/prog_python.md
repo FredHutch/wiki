@@ -14,8 +14,8 @@ years has been that there is a large community of software developers contributi
 highly efficient code as installable modules, which makes the entire codebase
 more valuable for your average user. 
 
-Links:
-
+## Resources
+There are some publicly accessible resources available to assist in getting started learning and using Python for scienctific research computing.  Note the **How-To's and Training** section in the sidebar for additional details and in-person training opportunities.   
   * [Getting started with Python](https://www.python.org/about/gettingstarted/)
   * [Python scientific computing with Scipy](https://www.scipy.org/getting-started.html)
   * [Python Data Analysis Library](http://pandas.pydata.org/pandas-docs/stable/10min.html)
