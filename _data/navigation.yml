@@ -154,11 +154,11 @@ computing:
         url: /computing/resser_softwaresupported/
 
 
-  - title: "Training and Annoucements"
+  - title: "Training and Announcements"
     children:
       - title: "Current Software and Announcements"
         url: /scicompannounce/
-      - title: "Demos and Example Collection"
+      - title: "How-To Collection"
         url: /compdemos/
       - title: "Training Opportunities"
         url: /computing/training_opportunities/
