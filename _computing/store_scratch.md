@@ -9,13 +9,18 @@ In bioinformatics workflows we are often using pipelines with many execution ste
 
 Informaticians often do not delete this data after this step because they are already off to the next task. Even worse, if temporary data is created in a standard file system such as "Fast File" it will be picked up by the backup system and copied to the cloud the next night. If data is frequently created and deleted the backup data can grow to **5 or even 10 times the size** of the primary data which is an enormous waste. To prevent this waste every Informatician or Data Scientist working with large datasets should use **Scratch** as part of their routine.
 
-For this purpose we have a scratch file systems attached to the Gizmo, Beagle and Koshu clusters. There is a different scratch file system mounted on each cluster.  
+For this purpose we have a scratch file systems attached to the Gizmo, Beagle and Koshu clusters. There is a different scratch file system mounted on each cluster.  Using a scratch resource has several advantages:
 
+- The scratch file system is free of charge
+- It is the most performant storage system connected to Rhino/Gizmo
+- You do not have to clean up your temporary data because the system does it for you
+- It reduces Fred Hutch computing expenses because the data is not backed up to tape
 
-## Using Scratch Storage 
+## Types of Scratch Storage Available
 
 On Gizmo there are three forms of scratch space available: "node local job scratch", "network job scratch" and "network monthly scratch".  The "network job scratch"  and  "node local"  scratch directories and their contents exist only for the duration of the job- when the job exits, the directory and its contents are removed.  
 For more persistent scratch space, ​please see the persistent / monthly Scratch section.
+
 
 ### Node local Job Scratch
 
@@ -35,42 +40,36 @@ Partition global scratch space is a scratch directory is created on storage that
 Sometimes you need to work with temporary data that is not part of a specific pipeline, for example if you are doing manual QA on data for a few days or even weeks.
 
 
-For this purpose we have a scratch file system attached to the Gizmo cluster. Using the scratch file system has several advantages:
+## How can I use Scratch?
 
-The scratch file system is free of charge
-It is the most performant storage system connected to Rhino/Gizmo
-You do not have to clean up your temporary data because the system does it for you
-It saves the center extra money on tapes because the data is not backed up to tape.
-​
-How can I use it?
-
-There are multiple types of scratch  but here we focus on monthly scratch. You can reach it via environment variable $DELETE30 (which currently points to /fh/scratch/delete30), for example
+There are multiple types of scratch but here we focus on monthly scratch. You can reach it via environment variable $DELETE30 (which currently points to /fh/scratch/delete30), for example:
 
 in your Shell
-
+```
     $ ls -l $DELETE30/
     $ ls -l $DELETE30/lastname_f
     $ runprog.R > $DELETE30/lastname_f/datafile.dat
-
+```
 in Python
-
+```
     #! /usr/bin/env python3
     import os
     MYSCRATCH = os.getenv('DELETE30', '.')
     myfile = os.path.join(MYSCRATCH,'lastname_f','datafile.dat')
     with open(myfile, 'w') as f:
         f.write('line in file')
-
+```
 in R
-
+```
     #! /usr/bin/env Rscript
     MYSCRATCH <- Sys.getenv('DELETE30')
     MYSCRATCH[is.na(MYSCRATCH)] <- '.'​
     save('line in file', file=paste0(MYSCRATCH,'/lastname_f/datafile.dat'))
+```
 
-lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
+**Note:** lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
 
-​How long will my data stay in monthly scratch?
+## How long will my data stay in monthly scratch?
 
 The data will stay on the file system for 30 days after you have stopped accessing it. 3 days before the data is deleted you (the owner of the files created)  will receive an email with a final warning:
 
@@ -91,10 +90,10 @@ The data will stay on the file system for 30 days after you have stopped accessi
     on each file. This will reset the access time of the file to the current date.
 
 
-    as an alternative to the environment variable $DELETE30 you can also reach scratch through the file system at /fh/scratch/delete30, however the file system may be subject to change whereas the environment variable will be supported forever.
+As an alternative to the environment variable $DELETE30 you can also reach scratch through the file system at /fh/scratch/delete30, however the file system may be subject to change whereas the environment variable will be supported forever.
 
 
-### Examples
+## Examples
 Python example.
 
     #! /usr/bin/env python3
