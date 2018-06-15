@@ -5,7 +5,12 @@ title: Amy Paguirigan
 Clinical Research Division
 ## Title
 Senior Staff Scientist and Wiki Lead
-## Primary Contribution Domain
-Data Generation
+## Contribution Domain and Type
+Wiki team leader
+Postdoc Writer-Editor leader
+Data Generation - writing and editing
+Bioinformatics - editing
+Computing - writing and editing
+
 ## Github
 [vortexing](https://github.com/vortexing)

@@ -1,11 +1,13 @@
 ---
-title: Micheal Gutteridge
+title: Robert McDermott
 ---
 ## Affiliation
 Scientific Computing
 
+
 ## Title
-HPC Systems Engineer
+IT Solutions Architect
+
 
 ## Contribution Domain and Type
-Computing - writing and editing
+Computing - editing and editing

@@ -37,6 +37,9 @@ This curated Wiki is just that, curated and a wiki, and as such relies upon the 
 
 The strength of the Wiki lies in its collaborative and unified approach. To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below as well as additional information about the ways to communicate with and participate in the Wiki Contributor team in other ways as well.
 
+### Current Contributors List
+[Go here](https://fredhutch.github.io/wiki/contributors/) to see our current list of contributors.  
+
 ### Communication and Events
 To get involved there are many ways to find us:
 - The Wiki team has weekly, "office hours" style Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions when time permits!  Currently this meeting is **1:10-2pm on Thursdays**, and please email Amy Paguirigan (apaguiri) for location information.   
@@ -55,7 +58,10 @@ To get involved there are many ways to find us:
 - Chime in on Slack about what you like or what you see is missing.  
 - Meet with Amy Paguirigan or other Wiki team members to collaboratively curate content about your research domain even without using GitHub.  
 
+### Postdoc Wiki Writer-Editor Program
+The Postdoc Writer-Editor program is intended to engage current Fred Hutch based postdocs as writer-editor contributors in an ongoing manner in order to ensure that the resource continues to evolve and grow.  We aim to incorporate more information relevant to new and emerging projects or technologies in which Fred Hutch postdocs are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research.  To learn more about the program, contact Amy Paguirigan, or [see more information here.](https://fredhutch.github.io/wiki/outreach/)
 
+## Contributing Logistics
 ### Wiki Content Style Guide
 Go to [this link](https://fredhutch.github.io/wiki/styleguide/) to see the current, and continually growing, style guide for content in this Wiki as decided upon by the Wiki Contributors group.  As the community decides upon certain styles, flags, and structures we will continually update this document to reflect the current Wiki Best Practices.  
 
@@ -69,4 +75,4 @@ We manage the content of this site via a set of markdown files that
   3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
   4. When done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.
   5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  
-  6. Once pull requests are merged, then any edits go live to the site [here.](https://fredhutch.github.io/wiki/)
+  6. Once pull requests are merged, then any edits go live to the site.  
