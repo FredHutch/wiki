@@ -141,6 +141,8 @@ computing:
         url: /computing/store_posix/
       - title: "Object Storage Systems"
         url: /computing/store_objectstore/
+      - title: "Scratch (Temporary) Storage"
+        url: /computing/store_scratch/        
 
 
   - title: "Resources and Services"
