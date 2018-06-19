@@ -49,8 +49,4 @@ A good tutorial slide deck on how to use GitHub with command line can be found [
 
 - [Which GitHub protocol should I use?](https://gist.github.com/grawity/4392747)
 - [Get invitation to FH Binformatic Interest Group (BIG) Slack Channel](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg) to participate with Shiny App co-working group? 
-<<<<<<< HEAD
 - [Join FH BIG mailing list?](https://lists.fhcrc.org/mailman/listinfo/fhbig)
-=======
-- [Join FH BIG mailing list?](https://lists.fhcrc.org/mailman/listinfo/fhbig)
->>>>>>> 3306723f9729d36a1c3ee75a8b0d6bdaf9e083c4
