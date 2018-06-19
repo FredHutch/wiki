@@ -1,13 +1,13 @@
 ---
-title: Dirk Petersen
+title: John Dey
 ---
 ## Affiliation
 Scientific Computing
 
 
 ## Title
-Director
+HPC Systems Engineer
 
 
 ## Contribution Domain and Type
-Computing - curation lead, writing, editing
+Computing - editing and editing

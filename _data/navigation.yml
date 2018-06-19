@@ -6,7 +6,7 @@ main:
     url: /generation/gen_index/
   - title: "Bioinformatics"
     url: /bioinformatics/inf_index/
-  - title: "Scientific Computing"
+  - title: "Computing"
     url: /computing/comp_index/
 
 
@@ -110,44 +110,63 @@ bioinformatics:
 
   - title: "How-To's and Training"
     children:
+      - title: "Overview"
+        url: /bioinformatics/howto_overview/
       - title: "How-To's Collection"
         url: /bioinformaticsdemos/
-      - title: "Training Opportunities"
-        url: /bioinformatics/howto_training/
+
 
 
 computing:
-  - title: "Data Management for Researchers"
+  - title: "Best Practices for Research Data Management"
     children:
       - title: "Overview"
-        #url: /computing/comp_index/
-      - title: "Data Storage Best Practices"
+        url: /computing/dm_overview/
+      - title: "Data Storage"
         url: /computing/dm_storage/
-      - title: "External Data Ingestion and Public Datasets"
+      - title: "Data Ingestion and Public Datasets"
         url: /computing/dm_ingest/
       - title: "Data Archiving"
         url: /computing/dm_archive/
       - title: "Data Privacy and Security"
-        #url: /computing/comp_index/
+        url: /computing/dm_privacy/
 
-  - title: "Supported Resources"
+  - title: "Data Storage Systems"
     children:
       - title: "Overview"
-        #url: /computing/comp_index/
-      - title: "AWS S3 and Batch"
-        #url: /computing/dm_storage/
-      - title: "Azure and Other Cloud Services"
-        #url: /computing/dm_archive/
-      - title: "On-Campus Cluster"
-        #url: /computing/comp_index/
+        url: /computing/store_overview/
+      - title: "Database Systems"
+        url: /computing/store_databases/
+      - title: "POSIX Style Systems"
+        url: /computing/store_posix/
+      - title: "Object Storage Systems"
+        url: /computing/store_objectstore/
+      - title: "Scratch (Temporary) Storage"
+        url: /computing/store_scratch/        
+
+
+  - title: "Resources and Services"
+    children:
+      - title: "Overview"
+        url: /computing/resser_overview/
+      - title: "AWS Batch"
+        url: /computing/resser_awsbatch/
       - title: "Shiny"
         url: /computing/shiny/
+<<<<<<< HEAD
       - title: "Current Software and Announcements"
         url: /scicompannounce/
+=======
+      - title: "Software Supported"
+        url: /computing/resser_softwaresupported/
+>>>>>>> 223ae9633bfcf3412e71fa3f0632e4d3d86fc3db
 
-  - title: "How-To's and Training"
+
+  - title: "Training, How-To's and Announcements"
     children:
-      - title: "Demos and Example Collection"
+      - title: "Overview"
+        url: /computing/training_overview/
+      - title: "Current Software and Announcements"
+        url: /scicompannounce/
+      - title: "How-To's Collection"
         url: /compdemos/
-      - title: "Training Opportunities"
-        url: /computing/training_opportunities/

@@ -10,9 +10,9 @@ sidebar:
   - title: "Who We Are"
     text: "The Wiki curation project team is lead by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri) or go to our [homepage.](https://fredhutch.github.io/trgen-dcc/)"
 ---
-This site contains a curated collection of Fred Hutch oriented documentation regarding the generation of large scale molecular data (such as genomics, transcriptomics, etc.), the bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  To be effective and successful in biomedical research, these three realms are continuing to require researchers themselves to be adept data stewards as well as integrate data management tools into their every day research processes.  
+This site contains a curated collection of Fred Hutch oriented documentation regarding the use of large clinical or behavioral datasets, the generation of large scale molecular data (such as genomics, transcriptomics, etc.), the bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  To be effective and successful in biomedical research, these three realms are continuing to require researchers themselves to be adept data stewards as well as integrate data management tools into their every day research processes.  
 
-This overlap between biomedical research and the data it generates constitutes what is essentially Biomedical Data Science.  Thus the Fred Hutch Biomedical Data Science Wiki aims to provide an 'on-ramp' to the necessary biomedical data science skills and Fred Hutch-based infrastructure required to support ongoing biomedical research now and in the future.  The ongoing contribution and curation of the content in the Wiki by the Fred Hutch researcher community itself is intended two serve two purposes:  
+This overlap between biomedical research and the data it generates constitutes what is essentially Biomedical Data Science.  Thus the Fred Hutch Biomedical Data Science Wiki aims to provide an 'on-ramp' to the necessary biomedical data science skills and Fred Hutch-based infrastructure required to support ongoing biomedical research now and in the future.  The ongoing contribution and curation of the content in the Wiki by the Fred Hutch researcher community itself is intended to serve two purposes:  
 
 - create an evolving source of documentation that grows and changes along with the particular interests and research tools available to Fred Hutch researchers over time, and
 
@@ -24,7 +24,7 @@ This overlap between biomedical research and the data it generates constitutes w
 As the Wiki content is intended to serve as an 'on ramp' for researchers at the Fred Hutch, the material is oriented toward helping researchers to get up to speed on current best practices, links to on-campus resources that are relevant to a specific domain,  as well as useful links to other external content about specific topics.  The three domains of biomedical research this Wiki is intended to serve include: Data Generation, Bioinformatics and High Performance Computing.  
 
 ### Data Generation
-This domain contains information that ranges from important IRB and human subjects privacy matters that are important for large scale molecular profiling projects, through data management tools and resources useful for collection of clinical, specimen and laboratory covariates, as well as the types and modes of large scale molecular data generation commonly undertaken.  
+This domain contains information that ranges from important IRB and human subjects privacy matters that are important for clinical and behavioral data analysis, human specimen banking, large scale molecular profiling projects, through data management tools and resources useful for collection of clinical, specimen and laboratory covariates, as well as the types and modes of large scale molecular data generation commonly undertaken.  
 
 ### Bioinformatics
 This domain contains information about the bioinformatic and analytic processes required to transform data generated in the context of biomedical research into interpretable, actionable, and/or shareable scientific findings.  Topics range from background on various common computing languages used in the domain, to research topic oriented process information and tool descriptions, to worked examples of bioinformatic analyses using Fred Hutch based infrastructure.  
@@ -35,7 +35,10 @@ This domain houses researcher-oriented documentation for high performance comput
 ## Contributing
 This curated Wiki is just that, curated and a wiki, and as such relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the content of this Wiki spans a wide range of research realms, we need and welcome contributions from a similarly wide range of researchers whether as novice reviewers for a topic outside of their particular domain of expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large), and this section describes the various modes and types of contributions each researcher on the Fred Hutch campus can make to this effort.  
 
-The strength of the Wiki lies in it's collaborative and unified approach. To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below as well as additional information about the ways to communicate with and participate in the Wiki Contributor team in other ways as well.
+The strength of the Wiki lies in its collaborative and unified approach. To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below as well as additional information about the ways to communicate with and participate in the Wiki Contributor team in other ways as well.
+
+### Current Contributors List
+[Go here](https://fredhutch.github.io/wiki/contributors/) to see our current list of contributors.  
 
 ### Communication and Events
 To get involved there are many ways to find us:
@@ -55,7 +58,10 @@ To get involved there are many ways to find us:
 - Chime in on Slack about what you like or what you see is missing.  
 - Meet with Amy Paguirigan or other Wiki team members to collaboratively curate content about your research domain even without using GitHub.  
 
+### Postdoc Wiki Writer-Editor Program
+The Postdoc Writer-Editor program is intended to engage current Fred Hutch based postdocs as writer-editor contributors in an ongoing manner in order to ensure that the resource continues to evolve and grow.  We aim to incorporate more information relevant to new and emerging projects or technologies in which Fred Hutch postdocs are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research.  To learn more about the program, contact Amy Paguirigan, or [see more information here.](https://fredhutch.github.io/wiki/outreach/)
 
+## Contributing Logistics
 ### Wiki Content Style Guide
 Go to [this link](https://fredhutch.github.io/wiki/styleguide/) to see the current, and continually growing, style guide for content in this Wiki as decided upon by the Wiki Contributors group.  As the community decides upon certain styles, flags, and structures we will continually update this document to reflect the current Wiki Best Practices.  
 
@@ -69,4 +75,4 @@ We manage the content of this site via a set of markdown files that
   3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
   4. When done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.
   5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  
-  6. Once pull requests are merged, then any edits go live to the site [here.](https://fredhutch.github.io/wiki/)
+  6. Once pull requests are merged, then any edits go live to the site.  
