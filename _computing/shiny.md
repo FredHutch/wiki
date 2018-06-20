@@ -43,7 +43,7 @@ Below is a step-by-step walk through of pushing your existing shiny app to your 
 (not the email address used to register). Include you lab/department name so SciComp can
 create a group to hold all the members of your team.
 
-##### Step 3. [Get Electron from this link](https://github.com/electron/electron-api-demos/releases)
+##### Step 3. [Get Electron from this link](https://electronjs.org/apps/github-desktop)
 ![](/assets/shiny-app/electron-bla.png)
 
 ##### Step 4. [Using command line] Download Shiny App Template from [FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)
