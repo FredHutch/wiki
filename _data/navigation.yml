@@ -153,8 +153,6 @@ computing:
         url: /computing/resser_awsbatch/
       - title: "Shiny"
         url: /computing/shiny/
-      - title: "Software Supported"
-        url: /computing/resser_softwaresupported/
 
 
   - title: "Training, Announcements and How-To's"
