@@ -7,9 +7,8 @@ last_modified_at: 2018-06-19
 
 #### [Why Shiny App](http://zevross.com/blog/2016/04/19/r-powered-web-applications-with-shiny-a-tutorial-and-cheat-sheet-with-40-example-apps/)
 
-> Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.
-
-#### [Shiny site](https://shiny.rstudio.com)
+> [Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.](https://shiny.rstudio.com)
+s
 
 ####  [How to Build a Shiny App](https://shiny.rstudio.com/articles/build.html)
 
@@ -105,7 +104,7 @@ You can further examine and adjust those changes by click the yellow dot or righ
 ![](/assets/shiny-app/electron-push.png) 
 
 #### Step 8. Go to GitHub FredHutch Page
-- You should be able to find your apps:
+- You should be able to find your apps within the repo you created under FredHutch group:
 ![](/assets/shiny-app/GitHub-repo.png) 
 
 - Please also add topics 'r' and 'shiny':
