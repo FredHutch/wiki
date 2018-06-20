@@ -107,7 +107,7 @@ You can further examine and adjust those changes by click the yellow dot or righ
 ![](/assets/shiny-app/github-repo_s.png) 
 
 - Please also add topics 'r' and 'shiny':
-![](/assets/shiny-app/GitHub-add-labels.png) 
+![](/assets/shiny-app/GitHub-add-labels-2.png) 
 
 
 ## Deployment Service from SciComp
