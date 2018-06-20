@@ -127,10 +127,6 @@ You can further examine and adjust those changes by click the yellow dot or righ
 
 5. Does your application contain PHI? Please remove PHI from your application. 
 
-## [Optional] Testing locally
-
-- Are you able to create a Dockerfile at the root of your application and run a docker container? 
-
 ## More questions? 
 
 - [Which GitHub protocol should I use?](https://gist.github.com/grawity/4392747)
