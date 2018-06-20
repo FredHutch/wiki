@@ -8,7 +8,6 @@ last_modified_at: 2018-06-19
 #### [Why Shiny App](http://zevross.com/blog/2016/04/19/r-powered-web-applications-with-shiny-a-tutorial-and-cheat-sheet-with-40-example-apps/)
 
 > [Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.](https://shiny.rstudio.com)
-s
 
 ####  [How to Build a Shiny App](https://shiny.rstudio.com/articles/build.html)
 
@@ -26,13 +25,13 @@ A good tutorial slide deck on how to use GitHub with command line can be found [
 
 #### [Optional] To read more about [Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) and [GitHub](www.github.com)
 
-#### [Recommended] [Electron](https://electronjs.org/apps/github-desktop) - A desktop application for GitHub
+#### [Recommended] [GitHub Desktop Application](https://desktop.github.com/)
 
 #### Below is a step-by-step walk through of pushing your existing shiny app to your FredHutch GitHub repo.
 
 #### Step 1. Sign up a GitHub Account
 
-![](/assets/shiny-app/GitHub_signUp.png)
+![https://github.com/join?source=header-home](/assets/shiny-app/rsz_github_signUp.png)
 
 #### Step 2. Join FredHutch GitHub Account
 
@@ -46,8 +45,8 @@ A good tutorial slide deck on how to use GitHub with command line can be found [
 (not the email address used to register). Include you lab/department name so SciComp can
 create a group to hold all the members of your team.
 
-##### Step 3. [Get Electron from this link](https://electronjs.org/apps/github-desktop)
-![](/assets/shiny-app/electron-bla.png)
+##### Step 3. [Get GitHub Desktop Application from this link](https://desktop.github.com/)
+![](/assets/shiny-app/electro-b.png)
 
 #### Step 4. [Using command line] Download Shiny App Template from [FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)
 ![](/assets/shiny-app/com-com.png)
@@ -70,13 +69,15 @@ After the steps above from a terminal, you have achieved these steps:
 
 Now it's time to inject your wonderful shiny app to this template. The goal is to put all your app code base to template's subfolder 'app'.  
 
-#### Step 5. [Using Electron] to track local file changes in this repo
-- To keep track of file changes within a local repo, first add this folder to Electron: 
-![](/assets/shiny-app/electron-add-repo.png)
-![](/assets/shiny-app/electron-add-repo-2.png)
+#### Step 5. [Using GitHub Desktop Application] to track local file changes in this repo
+- To keep track of file changes within a local repo, first add this folder to GitHub Desktop Application: 
+    - Click 'Add Local repository'
+    ![](/assets/shiny-app/electro-add-repo.png)
+    - Select folders from the local file system:
+    ![](/assets/shiny-app/rsz_1electron-add-repo-2.png)
 
 - You can create a remote repo by clicking on the 'Publish repository' and select the correct branch (in this case 'master' is the branch name). You can specify if you want this repo to be private or not. Also, please make sure this repo is under FredHutch as the organization.
-![](/assets/shiny-app/electron-create-remote-repo.png)
+![](/assets/shiny-app/electro-create-remote-repo.png)
 
 #### Step 6. Use your favorite code editor to add your own shiny app content to this template.
 
@@ -89,7 +90,7 @@ Here are a few reminders for the shiny apps with a single R script:
 
 #### Step 7. After you added your own content to this repo, you are ready to commit the changes and push the changes to the remote repo.
 
-- Now your electron console looks like this: 
+- Now your GitHub Desktop Application console looks like this: 
 ![](/assets/shiny-app/electron-before-commit.png)
 
 - Two files with green crosses on the right have been added as new files.
@@ -105,7 +106,7 @@ You can further examine and adjust those changes by click the yellow dot or righ
 
 #### Step 8. Go to GitHub FredHutch Page
 - You should be able to find your apps within the repo you created under FredHutch group:
-![](/assets/shiny-app/GitHub-repo.png) 
+![](/assets/shiny-app/github-repo.png) 
 
 - Please also add topics 'r' and 'shiny':
 ![](/assets/shiny-app/GitHub-add-labels.png) 
