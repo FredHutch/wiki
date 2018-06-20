@@ -3,7 +3,14 @@ title: Shiny
 last_modified_at: 2018-06-19
 ---
 
-## [R Shiny Application](https://shiny.rstudio.com)
+## R Shiny Application
+
+#### [Why Shiny App](http://zevross.com/blog/2016/04/19/r-powered-web-applications-with-shiny-a-tutorial-and-cheat-sheet-with-40-example-apps/)
+
+> [Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.](https://shiny.rstudio.com)
+s
+
+####  [How to Build a Shiny App](https://shiny.rstudio.com/articles/build.html)
 
 ## Version Control Tool required to deploy your R Shiny Application to Fred Hutch deployment
 
@@ -97,7 +104,7 @@ You can further examine and adjust those changes by click the yellow dot or righ
 ![](/assets/shiny-app/electron-push.png) 
 
 #### Step 8. Go to GitHub FredHutch Page
-- You should be able to find your apps:
+- You should be able to find your apps within the repo you created under FredHutch group:
 ![](/assets/shiny-app/GitHub-repo.png) 
 
 - Please also add topics 'r' and 'shiny':
@@ -120,12 +127,19 @@ You can further examine and adjust those changes by click the yellow dot or righ
 
 5. Does your application contain PHI? Please remove PHI from your application. 
 
-## [Optional] Testing locally
-
-- Are you able to create a Dockerfile at the root of your application and run a docker container? 
-
 ## More questions? 
 
 - [Which GitHub protocol should I use?](https://gist.github.com/grawity/4392747)
 - [Get invitation to FH Binformatic Interest Group (BIG) Slack Channel](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg) to participate with Shiny App co-working group? 
 - [Join FH BIG mailing list?](https://lists.fhcrc.org/mailman/listinfo/fhbig)
+
+
+## More links
+
+- [Tutorial](http://shiny.rstudio.com/tutorial/)
+- [Shiny cheatsheet](http://shiny.rstudio.com/images/shiny-cheatsheet.pdf)
+- [Shiny articles](http://shiny.rstudio.com/articles/)
+- [Show me shiny](http://www.showmeshiny.com/.)
+- [Shinyapps.io](http://www.shinyapps.io/)
+- [Gallery](http://shiny.rstudio.com/gallery/google-charts.html)
+- [Shiny Google User Group](https://groups.google.com/forum/#!forum/shiny-discuss)
