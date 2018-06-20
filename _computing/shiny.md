@@ -61,7 +61,7 @@ After the steps above from a terminal, you have achieved these steps:
 - Created your own repo
 - Add a new git control to this repo
 
-Now it's time to inject your wonderful shiny app to this template. 
+Now it's time to inject your wonderful shiny app to this template. The goal is to put all your app code base to template's subfolder 'app'.  
 
 #### Step 5. [Using Electron] to track local file changes in this repo
 - To keep track of file changes within a local repo, first add this folder to Electron: 
