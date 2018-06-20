@@ -4,14 +4,16 @@ last_modified_at: 2018-06-07
 ---
 
 
-Three main types of data storage systems exist at the Hutch.
+Four main types of data storage systems exist at the Hutch.
 
 
 ## Database Storage Systems
 
 
-## POSIX Storage Systems
+## File-Based Storage Systems (POSIX)
 Unix/Linux style filesystems
 
 ## Object Storage Systems
 S3, Swift, style filesystems
+
+## Temporary Storage: Scratch
