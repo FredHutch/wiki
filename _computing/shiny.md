@@ -109,6 +109,15 @@ You can further examine and adjust those changes by click the yellow dot or righ
 - Please also add topics 'r' and 'shiny':
 ![](/assets/shiny-app/GitHub-add-labels-3.png) 
 
+## Test You Application Locally
+- Open an R console
+![](/assets/shiny-app/r.png) 
+
+- [R console] ``` source('start.r') ```
+
+- Then go to browser to check http://localhost:7777
+
+**Hopefully, you can see your app working as expected in the browser. Please keep a good record of all your dependencies. You may have all the necessary R packages installed on your local machine but SciComp deployment platform needs to know those dependencies.**
 
 ## Deployment Service from SciComp
 
