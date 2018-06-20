@@ -7,31 +7,27 @@ last_modified_at: 2018-06-19
 
 ## Version Control Tool required to deploy your R Shiny Application to Fred Hutch deployment
 
-If you do not have a GitHub account, please [register one](https://github.com/join?source=header-home). 
+A good tutorial slide deck on how to use GitHub with command line can be found [here](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf). 
+- Signing up for a GitHub account - Slide 12
+- How to be part of Fred Hutch GitHub Organization - Slide 13
+- Creating a new GitHub Repo - Slide 14
+- Cloning repository (repo) to local machine - Slide 19
+- Keep your local repo up to date, in the scenario of collaboration with others or moveing to a different machine. - Slide 21
+- Make change to files locally and commit the changes - Slide 23 ~ 27
+- Push the local committed changes to the remote GitHub repo - Slide 28
+- Collaborations internally and externally - Slide 31 ~ 43
 
-A good tutorial slide deck on how to use GitHub with command line can be found [here](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf).
-- Slide 12 - Signing up for a GitHub account
-- Slide 13 - How to be part of Fred Hutch GitHub Organization
-- Slide 14 - Creating a new GitHub Repo
-- Slide 19 - Cloning repository (repo) to local machine
-- Slide 21 - Keep your local repo up to date, in the scenario of collaboration with others or moveing to a different machine. 
-- Slide 23 ~ 27 - Make change to files locally and commit the changes
-- Slide 28 - Push the local committed changes to the remote GitHub repo
-- Slide 31 ~ 43 - Collaborations internally and externally
+#### [Optional] To read more about [Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) and [GitHub](www.github.com)
 
-#### [Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
+#### [Recommended] [Electron](https://electronjs.org/apps/github-desktop) - A desktop application for GitHub
 
-#### [GitHub](www.github.com)
+#### Below is a step-by-step walk through of pushing your existing shiny app to your FredHutch GitHub repo.
 
-#### [Electron](https://electronjs.org/apps/github-desktop) - A desktop application for GitHub
-
-Below is a step-by-step walk through of pushing your existing shiny app to your FredHutch GitHub repo.
-
-##### Step 1. Sign up a GitHub Account
+#### Step 1. Sign up a GitHub Account
 
 ![](/assets/shiny-app/GitHub_signUp.png)
 
-##### Step 2. Join FredHutch GitHub Account
+#### Step 2. Join FredHutch GitHub Account
 
 [According to this doc](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf)
 - Fred Hutch GitHub Account open to all Fred Hutch staff
@@ -43,11 +39,11 @@ Below is a step-by-step walk through of pushing your existing shiny app to your 
 (not the email address used to register). Include you lab/department name so SciComp can
 create a group to hold all the members of your team.
 
-##### Step 3. [Get Electron from this link](https://github.com/electron/electron-api-demos/releases)
+#### Step 3. [Get Electron from this link](https://github.com/electron/electron-api-demos/releases)
 ![](/assets/shiny-app/electron-bla.png)
 
-##### Step 4. [Using command line] Download Shiny App Template from [FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)
-![](/assets/shiny-app/clone-command.png)
+#### Step 4. [Using command line] Download Shiny App Template from [FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)
+![](/assets/shiny-app/com-com.png)
 
 ```
     git clone https://github.com/FredHutch/shiny-app-template.git jzhang23-shiny-app
@@ -67,7 +63,7 @@ After the steps above from a terminal, you have achieved these steps:
 
 Now it's time to inject your wonderful shiny app to this template. 
 
-##### Step 5. [Using Electron] to track local file changes in this repo
+#### Step 5. [Using Electron] to track local file changes in this repo
 - To keep track of file changes within a local repo, first add this folder to Electron: 
 ![](/assets/shiny-app/electron-add-repo.png)
 ![](/assets/shiny-app/electron-add-repo-2.png)
@@ -75,7 +71,7 @@ Now it's time to inject your wonderful shiny app to this template.
 - You can create a remote repo by clicking on the 'Publish repository' and select the correct branch (in this case 'master' is the branch name). You can specify if you want this repo to be private or not. Also, please make sure this repo is under FredHutch as the organization.
 ![](/assets/shiny-app/electron-create-remote-repo.png)
 
-##### Step 6. Use your favorite code editor to add your own shiny app content to this template.
+#### Step 6. Use your favorite code editor to add your own shiny app content to this template.
 
 Here are a few reminders for the shiny apps with a single R script: 
 
@@ -84,7 +80,7 @@ Here are a few reminders for the shiny apps with a single R script:
 - In server.R, please remove 'shinyApp(ui, server)'
 - You can add your data to a data folder under app folder
 
-##### Step 7. After you added your own content to this repo, you are ready to commit the changes and push the changes to the remote repo.
+#### Step 7. After you added your own content to this repo, you are ready to commit the changes and push the changes to the remote repo.
 
 - Now your electron console looks like this: 
 ![](/assets/shiny-app/electron-before-commit.png)
@@ -100,7 +96,7 @@ You can further examine and adjust those changes by click the yellow dot or righ
 - Push committed change from local files to remote repo
 ![](/assets/shiny-app/electron-push.png) 
 
-##### Step 8. Go to GitHub FredHutch Page
+#### Step 8. Go to GitHub FredHutch Page
 - You should be able to find your apps:
 ![](/assets/shiny-app/GitHub-repo.png) 
 
