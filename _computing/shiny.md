@@ -52,13 +52,13 @@ create a group to hold all the members of your team.
 ![](/assets/shiny-app/com-com.png)
 
 ```
-    git clone https://github.com/FredHutch/shiny-app-template.git jzhang23-shiny-app
-    cd jzhang23-shiny-app
+    git clone https://github.com/FredHutch/shiny-app-template.git <your_app_folder>
+    cd <your_app_folder>
     ls -al
     rm -rf .git
     ls -al
     git init
-    echo "# jzhang23-shiny-app" > README.md
+    echo "# <your_app_folder>" > README.md
     git add .
     git commit -m 'initial commit'
 ```
@@ -96,7 +96,7 @@ Two existing files have been modified with yellow dots on the right.
 You can further examine and adjust those changes by click the yellow dot or right click: 
 ![](/assets/shiny-app/electron-mod.png)
 
-- Put in the commit message and click on 'commit to master' if you want to commit change to your master branch: 
+- Writea commit message and click on 'commit to master' if you want to commit change to your master branch: 
 ![](/assets/shiny-app/electron-com.png) 
 
 - Push committed change from local files to remote repo
@@ -112,6 +112,8 @@ You can further examine and adjust those changes by click the yellow dot or righ
 
 ## Deployment Service from SciComp
 
+You also want to be ready to answer all the questions below before you contact Scientific Computing team.  If you feel ready with your **codebase** as well as the **below information required by deployment**, contact Scientific Computing at <scicomp@fredhutch.org> to start the process of deploying your application on a server so others can access it. 
+
 1. **a.** Is your application codebase version-controlled by Git and in a GitHub repository (repo) ? 
 
    **b.** If so, is it under FredHutch account? 
@@ -125,6 +127,8 @@ You can further examine and adjust those changes by click the yellow dot or righ
 4. Does your application require authorization (log in), that only your collaborators have access? 
 
 5. Does your application contain PHI? Please remove PHI from your application. 
+
+6. Please list out all the dependencies (R packages you used)
 
 ## More questions? 
 
