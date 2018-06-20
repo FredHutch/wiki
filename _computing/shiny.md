@@ -31,7 +31,7 @@ A good tutorial slide deck on how to use GitHub with command line can be found [
 
 #### Step 1. Sign up a GitHub Account
 
-![https://github.com/join?source=header-home](/assets/shiny-app/rsz_github_signUp.png)
+![https://github.com/join?source=header-home](/assets/shiny-app/rsz_github_signup.png)
 
 #### Step 2. Join FredHutch GitHub Account
 
