@@ -24,7 +24,7 @@ A good tutorial slide deck on how to use GitHub with command line can be found [
 - Push the local committed changes to the remote GitHub repo - Slide 28
 - Collaborations internally and externally - Slide 31 ~ 43
 
-#### [Optional] To read more about [Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) and [GitHub](www.github.com)
+#### [Optional] To read more about [Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) and [GitHub](https://github.com)
 
 #### [Recommended] [Electron](https://electronjs.org/apps/github-desktop) - A desktop application for GitHub
 
