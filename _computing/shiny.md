@@ -71,9 +71,7 @@ Now it's time to inject your wonderful shiny app to this template. The goal is t
 
 #### Step 5. [Using GitHub Desktop Application] to track local file changes in this repo
 - To keep track of file changes within a local repo, first add this folder to GitHub Desktop Application: 
-    - Click 'Add Local repository'
     ![](/assets/shiny-app/electro-add-repo.png)
-    - Select folders from the local file system:
     ![](/assets/shiny-app/rsz_1electron-add-repo-2.png)
 
 - You can create a remote repo by clicking on the 'Publish repository' and select the correct branch (in this case 'master' is the branch name). You can specify if you want this repo to be private or not. Also, please make sure this repo is under FredHutch as the organization.
