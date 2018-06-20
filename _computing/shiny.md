@@ -106,7 +106,7 @@ You can further examine and adjust those changes by click the yellow dot or righ
 
 #### Step 8. Go to GitHub FredHutch Page
 - You should be able to find your apps within the repo you created under FredHutch group:
-![](/assets/shiny-app/github-repo.png) 
+![](/assets/shiny-app/github-repo_s.png) 
 
 - Please also add topics 'r' and 'shiny':
 ![](/assets/shiny-app/GitHub-add-labels.png) 
