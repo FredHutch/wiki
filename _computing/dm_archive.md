@@ -2,7 +2,7 @@
 title: Data Archiving Best Practices
 last_modified_at: 2018-06-20
 ---
-Typically the need to actively archive data is fairly rare, but as research datasets and digital research assets become larger and larger such as for imaging or genomics data, a strategy for managing data archiving becomes important.  Also, as data management plans and public repository deposition of data increasingly require researchers to steward larger and larger data sets in a more active manner.  Thus prioritizing active data management during the research process can be important in order to avoid massive loss of time and resources due to the need to slog through old data to comply with current funding or publication requirements. 
+Typically the need to actively archive data is fairly rare, but as research datasets and digital research assets become larger and larger such as for imaging or genomics data, a strategy for managing data archiving becomes important.  Also, as data management plans and public repository deposition of data increasingly require researchers to steward larger and larger data sets in a more active manner.  Thus prioritizing active data management during the research process can be important in order to avoid massive loss of time and resources due to the need to slog through old data to comply with current funding or publication requirements.
 
 Once large scale data sets are generated, annotating those datasets, using a working copy for analysis and simultaneously retaining the archived versions until they are no longer required is a unique challenge.  The file types involved, the required degrees of processing of the raw data and the overall size of the datasets can require a different approach to annotation and archiving than for smaller scale research data.  The need to address the best practices for research data of any size has been a focus of a national working group aiming to design and jointly endorse a concise and measurable set of principles, referred to as the FAIR Data Principles. The intent is for these principles to act as a guideline for those wishing to enhance the reusability of their data by themselves or others.  Specifically, the FAIR Principles are the ideas that data should be:  Findable, Accessible, Interoperable, and Reusable.  
 
@@ -26,7 +26,7 @@ The term 'preservation' means ensuring something can still be seen or used over 
   - storage media may have been degraded, scratched or broken, especially if they are portable, such as external hard drives, so information might be lost; and
   - the files or data will not be understood because there is no supporting documentation or metadata, or this has not been preserved correctly.
 
-## What can I do to ensure my data are usable in the future?
+### What can I do to ensure my data are usable in the future?
 When creating, organizing and storing your data you can take a few initial steps to try and ensure your data remain useable and understandable for the future: 
   - effectively document the critical metadata describing how and why the data were generated so that it can be understood and interpreted in the future.
   - keep more than one copy of data, and on a variety of storage media or spaces.
