@@ -1,6 +1,6 @@
 ---
 title: GitHub
-last_modified_at: 2018-06-14
+last_modified_at: 2018-06-20
 ---
 While version control software has evolved over time, a new evolution that is happening more and more is the need for a wider group of researchers to actively use version control resources to manage their code and documentation of processes that are ongoing in their research.  From the perspective of reproducibility, shareability and interoperability, the need for a sharing platform that integrates version control and collaboration is becoming more and more a critical part of a researcher's toolkit.  Thus, regardless of the degree to which code plays a direct role in a research project, more and more often at least a cursory understanding of what GitHub is and how it can be utilized in scientific research is important.  
 
@@ -8,9 +8,9 @@ While version control software has evolved over time, a new evolution that is ha
 GitHub at it's core is a Git repository hosting service.  While Git is a command line tool, GitHub provides a Web-based graphical interface as well as access control and several collaboration features, such as wiki's and basic task management tools for projects.  GitHub is a free service that individuals can make their own usernames to join the service and begin hosting publicly accessible repositories containing code they have produced or edited.  As GitHub was originally intended to facilitate open source software development, the basic resources available to users are only public, but free, repositories in order to continue to encourage developers to keep their code in the open and shared.  There are a wide variety of ever-changing features that GitHub provides that facilitates code sharing, communication, version control, project management, and software development tools such as facilitating software release and documentation.  
 
 ### Command Line Git
-To read more about command line [Git, follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) 
+To read more about command line [Git, follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
 
-A good tutorial slide deck on how to use GitHub with command line can be found [here](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf). 
+A good tutorial slide deck on how to use GitHub with command line can be found [here](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf).
 - Signing up for a GitHub account - Slide 12
 - How to be part of Fred Hutch GitHub Organization - Slide 13
 - Creating a new GitHub Repo - Slide 14
@@ -19,9 +19,6 @@ A good tutorial slide deck on how to use GitHub with command line can be found [
 - Make change to files locally and commit the changes - Slide 23 ~ 27
 - Push the local committed changes to the remote GitHub repo - Slide 28
 - Collaborations internally and externally - Slide 31 ~ 43
-
-
-#### Below is a step-by-step walk through of pushing your existing shiny app to your FredHutch GitHub repo.
 
 ### GitHub Desktop Client
 For many users, command line git is not the ideal mode of interacting with version control software.  As an example, if the majority of the code produced by a user is originating from interfaces such as RStudio, it may be much simpler and more straightforward to use GitHub via the desktop client.  You can download the desktop client for your system for free [here.](https://desktop.github.com/)

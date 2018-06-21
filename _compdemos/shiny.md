@@ -16,7 +16,7 @@ The template for your app can be found in this GitHub Repo (accessible after log
 [FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)
 
 ### Using Command Line Git
-![](/assets/shiny-app/com-com.png)
+![](/assets/com-com.png)
 ```
     git clone https://github.com/FredHutch/shiny-app-template.git <your_app_folder>
     cd <your_app_folder>
@@ -37,17 +37,17 @@ Now it's time to inject your wonderful shiny app to this template. The goal is t
 
 ### Using the GitHub Desktop Application
 
-To keep track of file changes within a local repo, first add this folder to GitHub Desktop Application: 
-    ![](/assets/shiny-app/electro-add-repo.png)
-    ![](/assets/shiny-app/rsz_1electron-add-repo-2.png)
+To keep track of file changes within a local repo, first add this folder to GitHub Desktop Application:
+![](/assets/electro-add-repo.png)
+![](/assets/rsz_1electron-add-repo-2.png)
 
 You can create a remote repo by clicking on the 'Publish repository' and select the correct branch (in this case 'master' is the branch name). You can specify if you want this repo to be private or not. Also, please make sure this repo is under FredHutch as the organization.
-![](/assets/shiny-app/electro-create-remote-repo.png)
+![](/assets/electro-create-remote-repo.png)
 
 ## Insert Your App into the Template
 Use your favorite code editor to add your own shiny app content to this template.
 
-Here are a few reminders for the shiny apps with a single R script: 
+Here are a few reminders for the shiny apps with a single R script:
 
 - Please split your app.R to ui.R and server.R according to the template app subfolder's file structure.
 - Make sure you include 'library(shiny)' to both ui.R and server.R files
@@ -57,31 +57,31 @@ Here are a few reminders for the shiny apps with a single R script:
 ## Push Edits to GitHub
 After you added your own content to this repo, you are ready to commit the changes and push the changes to the remote repo.
 
-- Now your GitHub Desktop Application console looks like this: 
-![](/assets/shiny-app/electron-before-commit.png)
+- Now your GitHub Desktop Application console looks like this:
+![](/assets/electron-before-commit.png)
 
 - Two files with green crosses on the right have been added as new files.
-Two existing files have been modified with yellow dots on the right. 
-You can further examine and adjust those changes by click the yellow dot or right click: 
-![](/assets/shiny-app/electron-mod.png)
+Two existing files have been modified with yellow dots on the right.
+You can further examine and adjust those changes by click the yellow dot or right click:
+![](/assets/electron-mod.png)
 
-- Writea commit message and click on 'commit to master' if you want to commit change to your master branch: 
-![](/assets/shiny-app/electron-com.png) 
+- Writea commit message and click on 'commit to master' if you want to commit change to your master branch:
+![](/assets/electron-com.png)
 
 - Push committed change from local files to remote repo
-![](/assets/shiny-app/electron-push.png) 
+![](/assets/electron-push.png)
 
 ## Viewing Your App
 
 - You should be able to find your apps within the repo you created under FredHutch group:
-![](/assets/shiny-app/github-repo_s.png) 
+![](/assets/github-repo_s.png)
 
 - Please also add topics 'r' and 'shiny':
-![](/assets/shiny-app/GitHub-add-labels-3.png) 
+![](/assets/GitHub-add-labels-3.png)
 
 ## Test You Application Locally
 - Open an R console
-![](/assets/shiny-app/r.png) 
+![](/assets/r.png)
 
 - [R console] ``` source('start.r') ```
 
@@ -91,21 +91,21 @@ You can further examine and adjust those changes by click the yellow dot or righ
 
 ## Deployment Service from SciComp
 
-You also want to be ready to answer all the questions below before you contact Scientific Computing team.  If you feel ready with your **codebase** as well as the **below information required by deployment**, contact Scientific Computing at <scicomp@fredhutch.org> to start the process of deploying your application on a server so others can access it. 
+You also want to be ready to answer all the questions below before you contact Scientific Computing team.  If you feel ready with your **codebase** as well as the **below information required by deployment**, contact Scientific Computing at <scicomp@fredhutch.org> to start the process of deploying your application on a server so others can access it.
 
-1. **a.** Is your application codebase version-controlled by Git and in a GitHub repository (repo) ? 
+1. **a.** Is your application codebase version-controlled by Git and in a GitHub repository (repo) ?
 
-   **b.** If so, is it under FredHutch account? 
+   **b.** If so, is it under FredHutch account?
 
 2. How do you want to name (DNS name) your application? So the it will look something like **<your_application_DNS_name>.fredhutch.org**
 
-3. Is your application facing Fred Hutch **internally** or **externally**? 
+3. Is your application facing Fred Hutch **internally** or **externally**?
     - internally means the app is open to the Fred Hutch campus
-    - externally means the app is facing the entire internet 
+    - externally means the app is facing the entire internet
 
-4. Does your application require authorization (log in), that only your collaborators have access? 
+4. Does your application require authorization (log in), that only your collaborators have access?
 
-5. Does your application contain PHI? Please remove PHI from your application. 
+5. Does your application contain PHI? Please remove PHI from your application.
 
 6. Please list out all the dependencies (R packages you used)
 
