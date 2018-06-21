@@ -8,17 +8,7 @@ While version control software has evolved over time, a new evolution that is ha
 GitHub at it's core is a Git repository hosting service.  While Git is a command line tool, GitHub provides a Web-based graphical interface as well as access control and several collaboration features, such as wiki's and basic task management tools for projects.  GitHub is a free service that individuals can make their own usernames to join the service and begin hosting publicly accessible repositories containing code they have produced or edited.  As GitHub was originally intended to facilitate open source software development, the basic resources available to users are only public, but free, repositories in order to continue to encourage developers to keep their code in the open and shared.  There are a wide variety of ever-changing features that GitHub provides that facilitates code sharing, communication, version control, project management, and software development tools such as facilitating software release and documentation.  
 
 ### Command Line Git
-To read more about command line [Git, follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
-
-A good tutorial slide deck on how to use GitHub with command line can be found [here](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf).
-- Signing up for a GitHub account - Slide 12
-- How to be part of Fred Hutch GitHub Organization - Slide 13
-- Creating a new GitHub Repo - Slide 14
-- Cloning repository (repo) to local machine - Slide 19
-- Keep your local repo up to date, in the scenario of collaboration with others or moveing to a different machine. - Slide 21
-- Make change to files locally and commit the changes - Slide 23 ~ 27
-- Push the local committed changes to the remote GitHub repo - Slide 28
-- Collaborations internally and externally - Slide 31 ~ 43
+The original command-line tool, git is the only place you can run all Git commands — most of the GUIs implement only a partial subset of git functionality for simplicity. If you tend to do the majority of your work via the command line, the logical way to interact with git and version control is likely via the command line version of Git.  Access to the command line version of Git is through Terminal in Mac or Command Prompt or Powershell in Windows.  To read more about command line [Git, follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)  To download a version of git to your local machine, [follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ### GitHub Desktop Client
 For many users, command line git is not the ideal mode of interacting with version control software.  As an example, if the majority of the code produced by a user is originating from interfaces such as RStudio, it may be much simpler and more straightforward to use GitHub via the desktop client.  You can download the desktop client for your system for free [here.](https://desktop.github.com/)
@@ -45,3 +35,12 @@ There a wide variety of resources on the web for learning to use the various for
 - Join the Fred Hutch GitHub institution by sending your username to `helpdesk` and request to be added.  
 - Getting started with [GitHub Desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
 - How to [contribute to projects with GitHub](https://help.github.com/desktop/guides/contributing-to-projects/)
+- A good tutorial slide deck on how to use GitHub with command line can be found [here](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf).
+  - Signing up for a GitHub account - Slide 12
+  - How to be part of Fred Hutch GitHub Organization - Slide 13
+  - Creating a new GitHub Repo - Slide 14
+  - Cloning repository (repo) to local machine - Slide 19
+  - Keep your local repo up to date, in the scenario of collaboration with others or moving to a different machine. - Slide 21
+  - Make change to files locally and commit the changes - Slide 23 ~ 27
+  - Push the local committed changes to the remote GitHub repo - Slide 28
+  - Collaborations internally and externally - Slide 31 ~ 43
