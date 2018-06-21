@@ -13,7 +13,7 @@ The template for your app can be found in this GitHub Repo (accessible after log
 [FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)
 
 ### Using Command Line Git
-![](/assets/com-com.png)
+![](_compdemos/assets/com-com.png)
 ```
     git clone https://github.com/FredHutch/shiny-app-template.git <your_app_folder>
     cd <your_app_folder>
