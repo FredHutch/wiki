@@ -101,7 +101,7 @@ Hopefully, you can see your app working as expected in the browser. Please keep 
 
 
 ## Available Resources
-- [Introduction to Shiny with a cheatsheet and some example apps]((http://zevross.com/blog/2016/04/19/r-powered-web-applications-with-shiny-a-tutorial-and-cheat-sheet-with-40-example-apps/)
+- [Introduction to Shiny with a cheatsheet and some example apps](http://zevross.com/blog/2016/04/19/r-powered-web-applications-with-shiny-a-tutorial-and-cheat-sheet-with-40-example-apps/)
 - [How to get started with Shiny apps](https://shiny.rstudio.com/articles/build.html)
 - [Which GitHub protocol should I use?](https://gist.github.com/grawity/4392747)
 - [Tutorial](http://shiny.rstudio.com/tutorial/)
