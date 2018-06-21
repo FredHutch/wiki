@@ -151,15 +151,8 @@ computing:
         url: /computing/resser_overview/
       - title: "AWS Batch"
         url: /computing/resser_awsbatch/
-      - title: "Shiny"
-        url: /computing/shiny/
-<<<<<<< HEAD
       - title: "Current Software and Announcements"
         url: /scicompannounce/
-=======
-      - title: "Software Supported"
-        url: /computing/resser_softwaresupported/
->>>>>>> 223ae9633bfcf3412e71fa3f0632e4d3d86fc3db
 
 
   - title: "Training, How-To's and Announcements"
