@@ -67,42 +67,37 @@ You can further examine and adjust those changes by click the yellow dot or righ
 ![](/assets/electron-push.png)
 
 ## Viewing Your App
-
-- You should be able to find your apps within the repo you created under FredHutch group:
+You should be able to find your app within the repo you created
 ![](/assets/github-repo_s.png)
 
-- Please also add topics 'r' and 'shiny':
-![](/assets/GitHub-add-labels-3.png)
+<!--Please also add topics 'r' and 'shiny'
+![](/assets/GitHub-add-labels-3.png)-->
 
-## Test You Application Locally
-- Open an R console
+## Test Your Application Locally
+Open the app in an R console.
 ![](/assets/r.png)
 
-- [R console] ``` source('start.r') ```
+Via the R console. 
+``` source('start.r') ```
 
-- Then go to browser to check http://localhost:7777
+Then go to a browser to check the url: http://localhost:7777
 
-**Hopefully, you can see your app working as expected in the browser. Please keep a good record of all your dependencies. You may have all the necessary R packages installed on your local machine but SciComp deployment platform needs to know those dependencies.**
+
 
 ## Deployment Service from SciComp
+Hopefully, you can see your app working as expected in the browser. Please keep a good record of all your dependencies. You may have all the necessary R packages installed on your local machine but SciComp deployment platform needs to know those dependencies.  You also want to be ready to answer all the questions below before you contact Scientific Computing team.  If you feel ready with your **codebase** as well as the **below information required by deployment**, contact Scientific Computing at `scicomp` to start the process of deploying your application on a server so others can access it.
 
-You also want to be ready to answer all the questions below before you contact Scientific Computing team.  If you feel ready with your **codebase** as well as the **below information required by deployment**, contact Scientific Computing at <scicomp@fredhutch.org> to start the process of deploying your application on a server so others can access it.
-
-1. **a.** Is your application codebase version-controlled by Git and in a GitHub repository (repo) ?
-
-   **b.** If so, is it under FredHutch account?
+1.  Is your application codebase version-controlled by Git and in a GitHub repository (repo) ?  If so, is it under FredHutch account?
 
 2. How do you want to name (DNS name) your application? So the it will look something like **<your_application_DNS_name>.fredhutch.org**
 
-3. Is your application facing Fred Hutch **internally** or **externally**?
-    - internally means the app is open to the Fred Hutch campus
-    - externally means the app is facing the entire internet
+3. Is your application facing Fred Hutch **internally** (open to the Fred Hutch campus) or **externally** (open to the entire internet)?
 
 4. Does your application require authorization (log in), that only your collaborators have access?
 
-5. Does your application contain PHI? Please remove PHI from your application.
+5. Does your application contain PHI? Please remove PHI from your application?
 
-6. Please list out all the dependencies (R packages you used)
+6. Please list out all the dependencies (R packages you used).
 
 
 ## Available Resources
