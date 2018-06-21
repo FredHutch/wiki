@@ -3,9 +3,6 @@ title: Shiny Applications
 last_modified_at: 2018-06-20
 ---
 
-## R Shiny Application
-
-#### [Why Shiny App]
 Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions. For more information about Shiny, [go to Rstudio's Shiny page.](https://shiny.rstudio.com)
 
 ## GitHub Setup
@@ -45,9 +42,7 @@ You can create a remote repo by clicking on the 'Publish repository' and select 
 ![](/assets/electro-create-remote-repo.png)
 
 ## Insert Your App into the Template
-Use your favorite code editor to add your own shiny app content to this template.
-
-Here are a few reminders for the shiny apps with a single R script:
+Use your favorite code editor to add your own shiny app content to this template.  Here are a few reminders for the shiny apps with a single R script:
 
 - Please split your app.R to ui.R and server.R according to the template app subfolder's file structure.
 - Make sure you include 'library(shiny)' to both ui.R and server.R files
