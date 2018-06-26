@@ -1,13 +1,13 @@
 ---
-title: Dirk Petersen
+title: Ben McGough
 ---
 ## Affiliation
 Scientific Computing
 
 
 ## Title
-Director
+HPC Systems Engineer
 
 
 ## Contribution Domain and Type
-Computing - curation lead, writing, editing
+Computing - editing and editing

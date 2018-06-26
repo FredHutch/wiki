@@ -108,12 +108,13 @@ bioinformatics:
       - title: "Mammalian Copy Number Analysis"
         url: /bioinformatics/aa_mammcopynumber/
 
-  - title: "How-To's and Training"
+  - title: "Training and How-To's"
     children:
+      - title: "Overview"
+        url: /bioinformatics/howto_overview/
       - title: "How-To's Collection"
         url: /bioinformaticsdemos/
-      - title: "Training Opportunities"
-        url: /bioinformatics/howto_training/
+
 
 
 computing:
@@ -140,6 +141,8 @@ computing:
         url: /computing/store_posix/
       - title: "Object Storage Systems"
         url: /computing/store_objectstore/
+      - title: "Scratch (Temporary) Storage"
+        url: /computing/store_scratch/        
 
 
   - title: "Resources and Services"
@@ -150,15 +153,15 @@ computing:
         url: /computing/resser_awsbatch/
       - title: "Shiny"
         url: /computing/shiny/
-      - title: "Software Supported"
-        url: /computing/resser_softwaresupported/
 
 
-  - title: "Training and Annoucements"
+  - title: "Training, Announcements and How-To's"
     children:
-      - title: "Current Software and Announcements"
+      - title: "Overview"
+        url: /computing/training_overview/
+      - title: "Current Software"
+        url: http://fredhutch.github.io/easybuild-life-sciences/
+      - title: "Updates and Announcements"
         url: /scicompannounce/
-      - title: "Demos and Example Collection"
+      - title: "How-To's Collection"
         url: /compdemos/
-      - title: "Training Opportunities"
-        url: /computing/training_opportunities/

@@ -1,9 +1,15 @@
 ---
 title: Overview of Data Storage at Fred Hutch
-last_modified_at: 2018-06-21
+last_modified_at: 2018-06-25
 ---
 
-Three main types of data storage systems exist at the Hutch.
+The Hutch, through Center IT and Scientific Computing, support a number of options for storing your data.  These can be categorized as:
+
+ - database storage
+ - block storage
+ - object storage
+
+The service you use to store your data will depend on the nature of the data and the anticipated use.  Provided here is a summary of the different options- this is a very high-level overview, so feel free to reach out to Scientific Computing or the FHBig group for assistance on selecting the service best suited to your data and investigations.
 
 ## Database Storage Systems
 
