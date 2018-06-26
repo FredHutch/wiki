@@ -60,3 +60,27 @@ The _economy_ file store is a nearline object storage system like Amazon's S3 st
 This storage system is a good place for preserving data.  For example: if you've completed a project and no longer need to work with a set of files, move those to the economy file store.  Should you need to go back to those files at a later date those can easily be pulled back to online storage (local disk or the other file stores above).  Advanced workflows are possible with this storage system- Scientific Computing can help you create those.
 
 Economy file storage can be used to store sensitive data (dbGap) and protected health information (PHI).  Data is encrypted both during transfer and when "at-rest" in the system.  The Hutch funds the first 5 terabytes of storage for each investigator.  Above this threshold the investigator is charged $3 per terabyte per month.
+
+## Collaboration Storage Options
+
+These storage systems have capabilities allowing you to share data with people outside the Hutch- with or without a HutchnetID.
+
+### Aspera
+
+The Aspera is a storage appliance that runs a heavily tuned storage server and client that enables fast transfer of large data between this system and a host using the Aspera client (either command line or via a browser).  The primary method of operation is to upload the data to the server, then use the web interface to create an email with a link you would then send to those outide the Hutch network.
+
+> NOTE: space is limited. Because of this, data stored here is deleted after a short period of time making the Aspera inappropriate for primary storage.  Always keep the primary source on one of the other options above (fast, economy, etc.)
+
+Visit [the Aspera information page](https://aspera.fhcrc.org/index.html) for more details and information on using this storage service.
+
+> #FIXME: is this suitable for PHI? Restricted?
+
+### AWS S3
+
+> NOTE: this is a very new service and may be subject to frequent changes
+
+S3 (the Simple Storage Service) is an object store very much like the Economy file service described above.  The storage here is organized much like the other systems, with a "PI directory" for each investigator at the Hutch.  This service can be used to distribute data to individuals outside the Hutch- for any object in one of these PI directories ("buckets", in cloud parlance) a temporary URL is created that has the necessary credentials embedded within.  This URL is shared with those needing access who then use a secure (HTTPS) connection to download the data.  This URL is temporary and set with a date after which the generated URL is no longer able to access the data.
+
+Data here is not removed as with the Aspera.  However, while this storage is very robust, it is not backed up.  Thus it is possible for data to be lost to deletion or overwrites.
+
+> #FIXME: is this suitable for PHI? Restricted?
