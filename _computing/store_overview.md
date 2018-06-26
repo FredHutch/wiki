@@ -79,7 +79,9 @@ Visit [the Aspera information page](https://aspera.fhcrc.org/index.html) for mor
 
 > NOTE: this is a very new service and may be subject to frequent changes
 
-S3 (the Simple Storage Service) is an object store very much like the Economy file service described above.  The storage here is organized much like the other systems, with a "PI directory" for each investigator at the Hutch.  This service can be used to distribute data to individuals outside the Hutch- for any object in one of these PI directories ("buckets", in cloud parlance) a temporary URL is created that has the necessary credentials embedded within.  This URL is shared with those needing access who then use a secure (HTTPS) connection to download the data.  This URL is temporary and set with a date after which the generated URL is no longer able to access the data.
+S3 (the Simple Storage Service) is an object store very much like the Economy file service described above.  The storage here is organized much like the other systems, with a "PI directory" for each investigator at the Hutch.  This service can be used to distribute data to individuals outside the Hutch.  A specialized client (the AWS command line interface) is used to upload the data.  Once there, a temporary URL is created that has the necessary credentials embedded within and is then shared with those needing access.  A secure (HTTPS) connection is then used to download the data (via browser or other client like `wget` or `curl`).
+
+This URL is temporary and set with a date after which the generated URL is no longer able to access the data.  It can be refreshed as needed.
 
 Data here is not removed as with the Aspera.  However, while this storage is very robust, it is not backed up.  Thus it is possible for data to be lost to deletion or overwrites.
 
