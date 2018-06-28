@@ -43,12 +43,11 @@ Python/Jupyter Notebooks | Via Rhino (CLI, FH credentials on campus/VPN off camp
 R/R Studio | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
 
 ### Interactive Computing: Command Line Interface (CLI), Moderate to High Capability
-These systems are provided by the Fred Hutch to serve needs that rise above those that can be met using the above listed platforms.  Often reasons to move to these HPC resources include the need for version controlled, specialized package/module/tool configurations, higher compute resource needs, or rapid access to large data sets in data storage locations not accessible with the required security for the data type by the above systems. 
+These systems are provided by the Fred Hutch to serve needs that rise above those that can be met using the above listed platforms.  Often reasons to move to these HPC resources include the need for version controlled, specialized package/module/tool configurations, higher compute resource needs, or rapid access to large data sets in data storage locations not accessible with the required security for the data type by the above systems.
 
 Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
 --- | --- | --- | ---
 Gizmo | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
-AWS Batch | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Scientific Computing |Direct to all local storage types
 
 ### Interactive Computing: Future Systems Currently Under Development
 These systems are provided by the Fred Hutch to serve needs that rise above those that can be met using the above listed platforms.
@@ -58,5 +57,19 @@ Compute Resource | Access Interface | Resource Admin | Connection to FH Data Sto
 Beagle | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Center IT | _home_, _fast_, _economy_, and S3 access. Beagle has its own _scratch_
 Globus Genomics | web, FH credentials after being linked to Globus | HDC (Bret Dodson) | Economy Cloud ONLY, Requires specific data organization
 Zeppelin | - | Center IT | -
+
+### Batch Computing
+
+_Batch computing_ allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop should be disconnected for any reason the job will be terminated.
+
+The batch system used at the Hutch is (Slurm)[http://schedmd.com].  Slurm provides a set of commands for submitting and managing jobs on the gizmo and beagle clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.
+
+Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
+--- | --- | --- | ---
+Gizmo | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
+Beagle | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Center IT | _home_, _fast_, _economy_, and S3 access. Beagle has its own _scratch_
+AWS Batch | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Scientific Computing |Direct to all local storage types
+
+
 
 ---
