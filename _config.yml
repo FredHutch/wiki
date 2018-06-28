@@ -8,8 +8,8 @@ minimal_mistakes_skin: "contrast"
 locale: en-US
 title: "Fred Hutch Biomedical Data Science Wiki"
 description: "Collective documentation for Genomics, Bioinformatics and Scientific Computing at the Fred Hutch"
-url                      : https://fredhutch.github.io
-baseurl                  : "/wiki"
+url                      : https://sciwiki.fredhutch.org/
+baseurl                  : "/"
 repository               : "FredHutch/wiki"
 
 
