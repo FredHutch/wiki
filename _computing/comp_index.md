@@ -7,6 +7,8 @@ Researchers are more and more likely to need to analyze raw data sets using some
 The first step in doing this work is often as simple as "what computing resource do I need to use for this task?"  This section contains articles that describe a range of computing resource options available to Fred Hutch researchers, all the way from a single laptop to the FH on prem high performance computing cluster (`gizmo`), to various cloud-based options, as well as how to get started using each platform.  
 
 ### Desktop computing platforms
+![](/assets/comp_index/2018-06-28-12-56-21.png)
+
 While most bioinformatic analysis of genomics data, for example, will likely require more compute resources than are typically available in a desktop computer around campus, some smaller compute jobs can be done on a desktop or laptop.  For these smaller compute jobs, scientific computing languages [R](https://www.r-project.org) or [Python](https://www.python.org) may be useful (see [the Bioinformatics page for more information about these computing languages).](http://sciwiki.fredhutch.org/bioinformatics/inf_index/) You can obtain assistance in installing a copy of R and RStudio on PC's through the Center IT desktop software resource.  Macs come with an installation of Python 2 that is used by the operating system and can be accessed by using the Terminal application.  Also, the installation of a commonly used Python and R package management system called Conda can be done on either PCs or Macs and more information about Anaconda and Miniconda (two versions of the Python oriented version of Conda package manager) can be found [here.](https://conda.io/docs/glossary.html#anaconda)
 
 ---
@@ -51,6 +53,6 @@ Compute Resource | Access Interface | Resource Admin | Connection to FH Data Sto
 --- | --- | --- | --- 
 Beagle | CLI | Center IT | - 
 Globus Genomics | web, FH credentials after being linked to Globus | HDC (Bret Dodson) | Economy Cloud ONLY, Requires specific data organization 
-Zeppelin | - | Center IT | - 
+Zeppelin | - | Center IT | - dremio odbc
 
 ---
