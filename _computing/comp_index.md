@@ -18,7 +18,6 @@ These systems are provided by the Fred Hutch to serve the community with the int
 
  These systems are best used for situations such as training of new users in development of R or python code or curation of Galaxy-style workflows that need connectivity to our local filesystem in a way not accessible via the [public instance of Galaxy.](https://usegalaxy.org/)  These systems also provide compute resources that serve as a step above a typical desktop computer, thus are good systems for slightly more compute-intensive jobs that still require interactivity.  Each is a managed resource with actively managed packages/modules/tools depending on the system, and thus work well for fairly standard platforms for interactive computing that does not require highly specialized software components.  Additionally, these systems may not be appropriate for analyses that require a higher level of data security, please contact FH username `scicomp` to inquire.
 
-
 Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
 --- | --- | --- | ---
 [RStudio Server](http://rstudio.fhcrc.org) | web, FH credentials, no setup required | Center IT | Native to python, default access to /fh/fast
@@ -28,13 +27,20 @@ Compute Resource | Access Interface | Resource Admin | Connection to FH Data Sto
 #### Meet Rhino (technically all the Rhinos)
 The specific resources listed below are actually not stand alone systems like the above section; instead, they are all based on the Rhino platform supported by Center IT.  Rhino, or more specifically the Rhinos are the locally managed HPC resources that are actually three different servers all accessed via the name _rhino_. Together, they function as a data and compute hub for a variety of data storage resources and high performance computing.  The specific guidance for the use of each of the approaches to HPC access are slightly different, but will all require the user to learn how to access and interact with Rhino.  Any user interacting with the following systems will be dependent on being proficient with the care and keeping of the Rhinos.
 
+#### The NoMachine Cluster
+
+[NoMachine](https://www.nomachine.com/) is a software suite that allows you to run a Linux desktop session remotely- the session runs on the NoMachine server but is displayed on your desktop or laptop using the NoMachine client.  NoMachine (also abbreviated _NX_)is installed on CIT supported desktops and laptops.
+
+NX has the particular advantage of maintaining your session even when you disconnect or lose connectivity.  All that is required is to restart the client and your session will be as you'd last left it.
+
+There are three systems you can use for NX sessions- _lynx_, _manx_, and _sphinx_.  These are not computational systems- these hosts must only be used as launch-points for sessions on gizmo or rhino. Running computational tools on this system will get you a warning from SciComp.
+
 Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
 --- | --- | --- | ---
 Rhino | CLI, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
-NoMachine/Linux Session Servers | CLI, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
+NoMachine | NX Client, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
 Python/Jupyter Notebooks | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
 R/R Studio | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
-
 
 ### Interactive Computing: Command Line Interface (CLI), Moderate to High Capability
 These systems are provided by the Fred Hutch to serve needs that rise above those that can be met using the above listed platforms.  Often reasons to move to these HPC resources include the need for version controlled, specialized package/module/tool configurations, higher compute resource needs, or rapid access to large data sets in data storage locations not accessible with the required security for the data type by the above systems. 
