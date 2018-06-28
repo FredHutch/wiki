@@ -1,7 +1,17 @@
 ---
-title: Temporary Storage: Scratch
+title: Data Storage: Temporary Storage/Scratch
 last_modified_at: 2018-06-20
 ---
+
+The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
+
+Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).
+
+**Data on this platform is not backed up.**  This storage is _not_ appropriate for storing the primary or only copy of any data.
+
+Similar to the Fast File system above, the scratch file system is available on the path `/fh/scratch` on SciComp supported Linux systems, `\\center.fhcrc.org\fh\scratch` on Windows, and `smb://center.fhcrc.org/fh/scratch` on OSX.
+
+There is no charge to the investigator for data stored here.
 
 ## Why use Scratch Storage for temporary data?
 
