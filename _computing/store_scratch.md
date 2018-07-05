@@ -1,6 +1,6 @@
 ---
 title: Scratch Storage
-last_modified_at: 2018-06-14
+last_modified_at: 2018-07-04
 ---
 
 ## Quick reminder if you have been here before
@@ -34,27 +34,20 @@ There are varying volumes of local storage depending on node configuration and u
     sbatch -n 2 -t 1-0 --tmp=4096 # requests 4GB of disk space
 
 Note that this only ensures that the disk is available when the job starts.  Other processes may fill up this scratch space, causing problems with your job.
-The location of this local scratch space is stored in the environment variable "TMPDIR" and "SCRATCH_LOCAL- use this environment variable if you need local storage on the node- do not use "/tmp" for storage of files or for scratch space.
+The location of this local scratch space is stored in the environment variable "TMPDIR" and "SCRATCH_LOCAL- use this environment variable if you need local storage on the node- **do not use "/tmp"** for storage of files or for scratch space. Node local job scratch spaces are only available on gizmo nodes, not on rhino.
 
 ### Network Job Scratch
 
-Network global scratch space is a scratch directory that is created on storage that is available to all nodes in your job's allocation.  The directory is based on the job ID.  You should access the job scratch directory by using the environment variable "$SCRATCH" in your scripts.
+Network global scratch space is a scratch directory that is created on storage that is available to all nodes in your job's allocation.  The directory is based on the job ID.  You should access the job scratch directory by using the environment variable "$SCRATCH" in your shell scripts, for example use $SCRATCH/myfile.csv to write to a file. Node local job scratch spaces are only available on gizmo nodes, not on rhino.
 
 ### Persistent scratch
 
 Sometimes you need to work with temporary data that is not part of a specific pipeline, for example if you are doing manual QA on data for a few days or even weeks. The persistent scratch file system is accessible via environment variables $DELETE10, $DELETE30 and $DELETE90 and the files in these folders will be removed after 10, 30 or 90 days of inactivity. The $DELETE30 folder is currently available on Gizmo and $DELETE10 folders are currently avialble on Beagle and Koshu. These folders can also be reached from other operating systems: In Windows you can select (x:\scratch\delete30 ) and on Mac you select smb://center.fhcrc.org/fh/scratch/delete30.
 
 
-## How can I use Scratch?
-
-There are multiple types of scratch but here we focus on monthly scratch. You can reach it via environment variable $DELETE30 (which currently points to /fh/scratch/delete30), for example:
-
-
-**Note:** lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
-
 ## How long will my data stay in persistent scratch?
 
-In delete30 the data will stay on the file system for 30 days after you have stopped accessing it. 3 days before the data is deleted you (the owner of the files created) will receive an email with a final warning:
+In $DELETE30 the data will stay on the file system for 30 days after you have stopped accessing it. 3 days before the data is deleted you (the owner of the files created) will receive an email with a final warning:
 
     From: fs-cleaner.py-no-reply@fhcrc.org [mailto:fs-cleaner.py-no-reply@fhcrc.org] 
     Sent: Tuesday, August 23, 2016 11:32 PM
@@ -76,6 +69,13 @@ In delete30 the data will stay on the file system for 30 days after you have sto
 As an alternative to the environment variable $DELETE30 you can also reach scratch through the file system at /fh/scratch/delete30, however the file system may be subject to change whereas the environment variable will be supported forever.
 
 
+## How can I use Scratch?
+
+In this section we focus on persistent scratch. You can reach it via environment variable $DELETE30 (which currently points to /fh/scratch/delete30), for example: use $DELETE30/lastname_f/myfile.csv
+
+**Note:** lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
+
+
 ## Examples
 
 in your Bash Shell
@@ -94,14 +94,11 @@ in Python
 
     #! /usr/bin/env python3
     import os
-    MYSCRATCH = os.getenv('DELETE30', '.')
-    myfile = os.path.join(MYSCRATCH,'lastname_f','datafile.dat')
-    with open(myfile, 'w') as f:
-        f.write('line in file')
 
     print("Network Job Scratch: %s" % (os.environ['SCRATCH']))
     print("Node Local Job Scratch: %s" % (os.environ['SCRATCH_LOCAL']))
     print("Node Local Job Scratch: %s" % (os.environ['TMPDIR']))
+    print("Persistent Scratch: %s" % (os.environ['DELETE30']))
 
     MYSCRATCH = os.getenv('DELETE30', '.')
     myfile = os.path.join(MYSCRATCH,'lastname_f','datafile.dat')
@@ -116,4 +113,3 @@ in R
     save('line in file', file=paste0(MYSCRATCH,'/lastname_f/datafile.dat'))
 
 
- 
