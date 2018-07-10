@@ -1,12 +1,7 @@
 ---
-title: Scratch Storage
+title: Temporary (Scratch) Storage
 last_modified_at: 2018-07-04
 ---
-
-## Quick reminder if you have been here before
-
-In jobs on Gizmo you can use environment variables to write and then read temporary files, e.g. $SCRATCH/myfile.csv, $SCRATCH_LOC/myfile.csv or $DELETE30/lastname_f/myfile.csv ($DELETE10 and $DELETE90 are in preparation) and in jobs on Beagle you can currently use $SCRATCH/myfile.csv and $DELETE10/lastname_f/myfile.csv. The files under $SCRATCH_LOC and $SCRATCH are automatically deleted when your Gizmo or Beagle job ends. You can also reach scratch via Windows (x: drive) or Mac, e.g. smb://center.fhcrc.org/fh/scratch.
-
 ## Why use Scratch Storage for temporary data?
 
 In bioinformatics workflows we are often using pipelines with many execution steps. Each of these steps can create a large amount of temporary data, for example extracting information from genomics data (BAM files). This data often needs to be kept for a short period of time to allow for quality assurance.
@@ -18,7 +13,7 @@ For this purpose we have a scratch file systems attached to the Gizmo, Beagle an
 - The scratch file system is free of charge
 - It is the most performant storage system connected to Rhino/Gizmo
 - You do not have to clean up your temporary data because the system does it for you
-- It reduces Fred Hutch storage expenses because the data is not backed up to the cloud. 
+- It reduces Fred Hutch storage expenses because the data is not backed up to the cloud.
   (**Note: even if you delete data from fast file one day after creation it will be kept in the backup system for a long time**)
 
 ## Types of Scratch Storage Available
@@ -27,7 +22,7 @@ On Gizmo there are three forms of scratch space available: "node local job scrat
 For more persistent scratch space, ​please see the persistent Scratch section.
 
 
-### Node local Job Scratch
+### Node Local Job Scratch
 
 There are varying volumes of local storage depending on node configuration and utilization by other jobs.  If you require a large volume of local disk, request it with the "--tmp" argument:
 
@@ -45,11 +40,11 @@ Network global scratch space is a scratch directory that is created on storage t
 Sometimes you need to work with temporary data that is not part of a specific pipeline, for example if you are doing manual QA on data for a few days or even weeks. The persistent scratch file system is accessible via environment variables $DELETE10, $DELETE30 and $DELETE90 and the files in these folders will be removed after 10, 30 or 90 days of inactivity. The $DELETE30 folder is currently available on Gizmo and $DELETE10 folders are currently avialble on Beagle and Koshu. These folders can also be reached from other operating systems: In Windows you can select (x:\scratch\delete30 ) and on Mac you select smb://center.fhcrc.org/fh/scratch/delete30.
 
 
-## How long will my data stay in persistent scratch?
+#### How long will my data stay in persistent scratch?
 
 In $DELETE30 the data will stay on the file system for 30 days after you have stopped accessing it. 3 days before the data is deleted you (the owner of the files created) will receive an email with a final warning:
 
-    From: fs-cleaner.py-no-reply@fhcrc.org [mailto:fs-cleaner.py-no-reply@fhcrc.org] 
+    From: fs-cleaner.py-no-reply@fhcrc.org [mailto:fs-cleaner.py-no-reply@fhcrc.org]
     Sent: Tuesday, August 23, 2016 11:32 PM
     To: Doe, Jane <jdoe@fredhutch.org>
     Subject: WARNING: In 3 days will delete files in /fh/scratch/delete30!
@@ -71,15 +66,19 @@ As an alternative to the environment variable $DELETE30 you can also reach scrat
 
 ## How can I use Scratch?
 
-In this section we focus on persistent scratch. You can reach it via environment variable $DELETE30 (which currently points to /fh/scratch/delete30), for example: use $DELETE30/lastname_f/myfile.csv
+In jobs on `Gizmo`, environment variables can be used to write and then read temporary files, e.g. $SCRATCH/myfile.csv, $SCRATCH_LOC/myfile.csv or $DELETE30/lastname_f/myfile.csv ($DELETE10 and $DELETE90 are in preparation).  Similarly, jobs on Beagle can currently use $SCRATCH/myfile.csv and $DELETE10/lastname_f/myfile.csv.
+
+
+The files under $SCRATCH_LOC and $SCRATCH are automatically deleted when your Gizmo or Beagle job ends. You can also reach Scratch storage space via Windows (via the X: drive) or Mac, e.g. smb://center.fhcrc.org/fh/scratch.
+
 
 **Note:** lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
 
 
 ## Examples
 
-in your Bash Shell
-
+In your Bash Shell:
+```
    #! /bin/bash
     echo -e $TMPDIR
     echo -e "Network Job Scratch:​ $SCRATCH"
@@ -88,10 +87,11 @@ in your Bash Shell
     echo -e "Persistent Scratch: $DELETE30"
 
     runprog.R > $DELETE30/lastname_f/datafile.dat
+```
 
+In Python:
 
-in Python
-
+```
     #! /usr/bin/env python3
     import os
 
@@ -104,12 +104,12 @@ in Python
     myfile = os.path.join(MYSCRATCH,'lastname_f','datafile.dat')
     with open(myfile, 'w') as f:
         f.write('line in file')
+```
 
-in R
-
+In R:
+```
     #! /usr/bin/env Rscript
     MYSCRATCH <- Sys.getenv('DELETE30')
     MYSCRATCH[is.na(MYSCRATCH)] <- '.'​
     save('line in file', file=paste0(MYSCRATCH,'/lastname_f/datafile.dat'))
-
-
+```
