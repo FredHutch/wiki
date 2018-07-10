@@ -109,8 +109,6 @@ df <- s3read_using(read.csv, object="foo/bar/baz/df.csv", bucket=b)
 head(df)
 ```
 
-Additional arguments to the read function 
-
 
 ### Download a file from S3
 
