@@ -50,7 +50,7 @@ library(aws.s3)
 ### List all buckets
 
 ```R
-bucketlist()
+blist <- bucketlist()
 ```
 
 ### List all objects in a bucket:
@@ -59,7 +59,7 @@ The bucket name you supply must be one you have access to.
 
 ```R
 b <- 'fh-pi-doe-j'
-get_bucket(b)
+objects <- get_bucket(b)
 ```
 
 Or get bucket contents as a data frame:
