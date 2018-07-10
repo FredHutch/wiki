@@ -121,7 +121,7 @@ save_object("foo/bar/baz/df.csv", b)
 ### Work with object names matching a pattern
 
 Assume your S3 bucket has three objects whose keys start with
-`foo/bar/baz` and end with one of `d`, `e`, or `f`. You want to read each object into memory and end up with 
+`foo/bar/baz/` and end with one of `d`, `e`, or `f`. You want to read each object into memory and end up with 
 `d`, `e`, and `f` objects in your R session.
 
 ```R
