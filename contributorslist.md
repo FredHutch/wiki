@@ -10,7 +10,7 @@ sort_by: title # date (default)
 sort_order:  forward # (default), reverse
 sidebar:
 - title: "Wiki Authors and Reviewers"
-  text: "This collaboratively curated wiki was created by contributors from Fred Hutch investigators. See our current contributors list  [here.](https://fredhutch.github.io/wiki/contributors/)"
+  text: "This collaboratively curated wiki was created by contributors from Fred Hutch investigators. See our current contributors list  [here.](http://sciwiki.fredhutch.org/contributors/)"
 - title: "Who We Are"
-  text: "This project team is lead by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri) or go to our [homepage.](https://fredhutch.github.io/trgen-dcc/)"
+  text: "This project team is led by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri) or go to our [homepage.](https://fredhutch.github.io/trgen-dcc/)"
 ---

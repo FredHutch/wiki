@@ -14,7 +14,7 @@ We manage the content of this site via a set of markdown files that
   3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
   4. When done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.
   5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  
-  6. Once pull requests are merged, then any edits go live to the site [here.](https://fredhutch.github.io/wiki/)
+  6. Once pull requests are merged, then any edits go live to the site [here.](http://sciwiki.fredhutch.org/)
 
 ## Repo structure
 

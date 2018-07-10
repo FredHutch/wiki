@@ -1,13 +1,13 @@
 ---
-title: Dirk Petersen
+title: Robert McDermott
 ---
 ## Affiliation
 Scientific Computing
 
 
 ## Title
-Director
+IT Solutions Architect
 
 
 ## Contribution Domain and Type
-Computing - curation lead, writing, editing
+Computing - editing and editing

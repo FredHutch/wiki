@@ -8,8 +8,8 @@ minimal_mistakes_skin: "contrast"
 locale: en-US
 title: "Fred Hutch Biomedical Data Science Wiki"
 description: "Collective documentation for Genomics, Bioinformatics and Scientific Computing at the Fred Hutch"
-url                      : https://fredhutch.github.io
-baseurl                  : "/wiki"
+url                      : http://sciwiki.fredhutch.org
+baseurl                  : "/"
 repository               : "FredHutch/wiki"
 
 
@@ -117,7 +117,6 @@ analytics:
 # Reading Files
 include:
   - .htaccess
-  - _pages
   - _data
   - assets
   - _layouts
@@ -159,7 +158,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
