@@ -133,22 +133,3 @@ for (match in matches) {
    s3load(object=match, bucket=b) 
 }
 ```
-
-# AUTHOR TODOS:
-
-csv
-Rdata file
-read and write
-list
-list of objects that matches a pattern, and then iterate over them
-    load each file into an R object
-
-python - boto3 - all the same
-    read s3 object into pandas data frame (?)
-    dask - read("s3://.....")
-    https://github.com/FredHutch/IT/blob/master/py/pwalk-summary.py
-
-python library for sci stuff (for hutch use):
-    https://github.com/FredHutch/sci-pkg
-
-
