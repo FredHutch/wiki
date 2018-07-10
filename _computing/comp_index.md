@@ -7,7 +7,11 @@ Researchers are more and more likely to need to analyze raw data sets using some
 The first step in doing this work is often as simple as "what computing resource do I need to use for this task?"  This section contains articles that describe a range of computing resource options available to Fred Hutch researchers, all the way from a single laptop to the Fred Hutch on-premise high performance computing cluster (`gizmo`) to various cloud-based options, as well as how to get started using each platform.
 
 ### Desktop computing platforms
+
 While most bioinformatic analysis of genomics data, for example, will likely require more compute resources than are typically available in a desktop computer around campus, some smaller analysis jobs or training can be done on a desktop or laptop.  For these smaller compute jobs, scientific computing languages [R](https://www.r-project.org) or [Python](https://www.python.org) may be useful (see [the Bioinformatics page for more information about these computing languages).](https://fredhutch.github.io/wiki/bioinformatics/inf_index/) You can obtain assistance in installing a copy of R and RStudio on PC's through the Center IT desktop software resource. The installation of a commonly used Python and R package management system called Conda can be done on either PCs or Macs and more information about Anaconda and Miniconda (two versions of the Python oriented version of Conda package manager) can be found [here.](https://conda.io/docs/glossary.html#anaconda)
+
+![](/assets/comp_index/2018-06-28-12-56-21.png)
+
 
 ### Interactive Computing:  Easy Access, Moderate Capability
 These systems are provided by the Fred Hutch to serve the community with the intention of:
@@ -58,6 +62,7 @@ Compute Resource | Access Interface | Resource Admin | Connection to FH Data Sto
 Beagle | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Center IT | _home_, _fast_, _economy_, AWS-S3, and Beagle-specific _scratch_
 <!-- Globus Genomics | web, FH credentials after being linked to Globus | HDC (Bret Dodson) | Economy Cloud ONLY, Requires specific data organization
 Zeppelin | - | Center IT | -->
+
 
 ### Batch Computing
 
