@@ -1,34 +1,18 @@
 ---
-<<<<<<< HEAD
-title: Temporary (Scratch) Storage
-last_modified_at: 2018-07-04
----
-=======
-<<<<<<< HEAD
-title: Scratch Storage
-last_modified_at: 2018-07-04
----
-
-## Quick reminder if you have been here before
-
-In jobs on Gizmo you can use environment variables to write and then read temporary files, e.g. $SCRATCH/myfile.csv, $SCRATCH_LOC/myfile.csv or $DELETE30/lastname_f/myfile.csv ($DELETE10 and $DELETE90 are in preparation) and in jobs on Beagle you can currently use $SCRATCH/myfile.csv and $DELETE10/lastname_f/myfile.csv. The files under $SCRATCH_LOC and $SCRATCH are automatically deleted when your Gizmo or Beagle job ends. You can also reach scratch via Windows (x: drive) or Mac, e.g. smb://center.fhcrc.org/fh/scratch.
-=======
 title: Data Storage: Temporary Storage/Scratch
-last_modified_at: 2018-06-20
+last_modified_at: 2018-07-09
 ---
 
-The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
+The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the _home_ or _fast_ file systems meant for long term data storage (these features were traded for lower cost and greater volume).
 
 Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).
 
 **Data on this platform is not backed up.**  This storage is _not_ appropriate for storing the primary or only copy of any data.
 
-Similar to the Fast File system above, the scratch file system is available on the path `/fh/scratch` on SciComp supported Linux systems, `\\center.fhcrc.org\fh\scratch` on Windows, and `smb://center.fhcrc.org/fh/scratch` on OSX.
+Similar to the Fast File system above, the scratch file system is available on the path `/fh/scratch` on SciComp supported Linux systems, `\\center.fhcrc.org\fh\scratch` on Windows, and `smb://center.fhcrc.org/fh/scratch` on Mac.  
 
 There is no charge to the investigator for data stored here.
->>>>>>> master
 
->>>>>>> parent of 8ff1f16... Revert "Merge branch 'master' into dirks"
 ## Why use Scratch Storage for temporary data?
 
 In bioinformatics workflows we are often using pipelines with many execution steps. Each of these steps can create a large amount of temporary data, for example extracting information from genomics data (BAM files). This data often needs to be kept for a short period of time to allow for quality assurance.
@@ -62,52 +46,15 @@ The location of this local scratch space is stored in the environment variable "
 
 Network global scratch space is a scratch directory that is created on storage that is available to all nodes in your job's allocation.  The directory is based on the job ID.  You should access the job scratch directory by using the environment variable "$SCRATCH" in your shell scripts, for example use $SCRATCH/myfile.csv to write to a file. Node local job scratch spaces are only available on gizmo nodes, not on rhino.
 
-<<<<<<< HEAD
 ### Persistent scratch
 
 Sometimes you need to work with temporary data that is not part of a specific pipeline, for example if you are doing manual QA on data for a few days or even weeks. The persistent scratch file system is accessible via environment variables $DELETE10, $DELETE30 and $DELETE90 and the files in these folders will be removed after 10, 30 or 90 days of inactivity. The $DELETE30 folder is currently available on Gizmo and $DELETE10 folders are currently avialble on Beagle and Koshu. These folders can also be reached from other operating systems: In Windows you can select (x:\scratch\delete30 ) and on Mac you select smb://center.fhcrc.org/fh/scratch/delete30.
-=======
-There are multiple types of scratch but here we focus on monthly scratch. You can reach it via environment variable $DELETE30 (which currently points to `/fh/scratch/delete30`), for example:
-
-in your Shell
-```
-$ ls -l $DELETE30/
-$ ls -l $DELETE30/lastname_f
-$ runprog.R > $DELETE30/lastname_f/datafile.dat
-```
-in Python
-```
-#! /usr/bin/env python3
-import os
-MYSCRATCH = os.getenv('DELETE30', '.')
-myfile = os.path.join(MYSCRATCH,'lastname_f','datafile.dat')
-with open(myfile, 'w') as f:
-    f.write('line in file')
-```
-in R
-```
-#! /usr/bin/env Rscript
-MYSCRATCH <- Sys.getenv('DELETE30')
-MYSCRATCH[is.na(MYSCRATCH)] <- '.'​
-save('line in file', file=paste0(MYSCRATCH,'/lastname_f/datafile.dat'))
-```
->>>>>>> master
-
 
 #### How long will my data stay in persistent scratch?
 
-<<<<<<< HEAD
 In $DELETE30 the data will stay on the file system for 30 days after you have stopped accessing it. 3 days before the data is deleted you (the owner of the files created) will receive an email with a final warning:
-=======
-The data will stay on the file system for 30 days after you have stopped accessing it. 3 days before the data is deleted you (the owner of the files created)  will receive an email with a final warning:
-```
-From: fs-cleaner.py-no-reply@fhcrc.org [mailto:fs-cleaner.py-no-reply@fhcrc.org]
-Sent: Tuesday, August 23, 2016 11:32 PM
-To: Doe, Jane <jdoe@fredhutch.org>
-Subject: WARNING: In 3 days will delete files in /fh/scratch/delete30!
->>>>>>> master
 
-<<<<<<< HEAD
+```
     From: fs-cleaner.py-no-reply@fhcrc.org [mailto:fs-cleaner.py-no-reply@fhcrc.org]
     Sent: Tuesday, August 23, 2016 11:32 PM
     To: Doe, Jane <jdoe@fredhutch.org>
@@ -116,11 +63,6 @@ Subject: WARNING: In 3 days will delete files in /fh/scratch/delete30!
     This is a notification message from fs-cleaner.py, Please review the following message:
 
     Please see attached list of files!
-=======
-This is a notification message from fs-cleaner.py, Please review the following message:
->>>>>>> parent of 8ff1f16... Revert "Merge branch 'master' into dirks"
-
-Please see attached list of files!
 
 The files listed in the attached text file will be deleted in 3 days when they will not have been touched for 30 days:
 
@@ -133,7 +75,6 @@ on each file. This will reset the access time of the file to the current date.
 As an alternative to the environment variable $DELETE30 you can also reach scratch through the file system at `/fh/scratch/delete30`, however the file system may be subject to change whereas the environment variable will be supported forever.
 
 
-<<<<<<< HEAD
 ## How can I use Scratch?
 
 In jobs on `Gizmo`, environment variables can be used to write and then read temporary files, e.g. $SCRATCH/myfile.csv, $SCRATCH_LOC/myfile.csv or $DELETE30/lastname_f/myfile.csv ($DELETE10 and $DELETE90 are in preparation).  Similarly, jobs on Beagle can currently use $SCRATCH/myfile.csv and $DELETE10/lastname_f/myfile.csv.
@@ -144,29 +85,11 @@ The files under $SCRATCH_LOC and $SCRATCH are automatically deleted when your Gi
 
 **Note:** lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
 
-=======
-## Examples
-Python example.
-```
-#! /usr/bin/env python3
-import os
 
-print("Network Job Scratch: %s" % (os.environ['SCRATCH']))
-print("Node Local Job Scratch: %s" % (os.environ['SCRATCH_LOCAL']))
-print("Node Local Job Scratch: %s" % (os.environ['TMPDIR']))
-```
->>>>>>> master
+### Examples
 
-## Examples
-
-<<<<<<< HEAD
 In your Bash Shell:
 ```
-=======
-<<<<<<< HEAD
-in your Bash Shell
-
->>>>>>> parent of 8ff1f16... Revert "Merge branch 'master' into dirks"
    #! /bin/bash
     echo -e $TMPDIR
     echo -e "Network Job Scratch:​ $SCRATCH"
@@ -200,26 +123,5 @@ In R:
     MYSCRATCH <- Sys.getenv('DELETE30')
     MYSCRATCH[is.na(MYSCRATCH)] <- '.'​
     save('line in file', file=paste0(MYSCRATCH,'/lastname_f/datafile.dat'))
-<<<<<<< HEAD
+
 ```
-=======
-
-
-=======
-```
-#! /bin/bash
-echo -e $TMPDIR
-echo -e "Network Job Scratch:​ $SCRATCH"
-echo -e "Node Local Job Scratch: $SCRATCH_LOCAL"
-echo -e "Node Local Job Scratch: $TMPDIR"
-
-cd $TMPDIR
-cp $HOME/some_file.txt .
-file ./some_file.txt
-wc -l ./some_file.txt > line_count.txt
-cp ./line_count.txt $HOME
-
-exit 0   # $TMPDIR/some_file.txt is removed along with $TMPDIR
-```
->>>>>>> master
->>>>>>> parent of 8ff1f16... Revert "Merge branch 'master' into dirks"
