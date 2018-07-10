@@ -1,8 +1,10 @@
 ---
 title: Data Archiving Best Practices
-last_modified_at: 2018-06-06
+last_modified_at: 2018-06-20
 ---
-Typically the need to actively archive data is fairly rare, but as research datasets and digital research assets become larger and larger such as for imaging or genomics data, a strategy for managing data archiving becomes important.  Once large scale data sets are generated, annotating those datasets, using a working copy for analysis and simultaneously retaining the archived versions until they are no longer required is a unique challenge.  The file types involved, the required degrees of processing of the raw data and the overall size of the datasets can require a different approach to annotation and archiving than for smaller scale research data.  The need to address the best practices for research data of any size has been a focus of a national working group aiming to design and jointly endorse a concise and measurable set of principles, referred to as the FAIR Data Principles. The intent is for these principles to act as a guideline for those wishing to enhance the reusability of their data by themselves or others.  Specifically, the FAIR Principles are the ideas that data should be:  Findable, Accessible, Interoperable, and Reusable.  
+Typically the need to actively archive data is fairly rare, but as research datasets and digital research assets become larger and larger such as for imaging or genomics data, a strategy for managing data archiving becomes important.  Also, as data management plans and public repository deposition of data increasingly require researchers to steward larger and larger data sets in a more active manner.  Thus prioritizing active data management during the research process can be important in order to avoid massive loss of time and resources due to the need to slog through old data to comply with current funding or publication requirements.
+
+Once large scale data sets are generated, annotating those datasets, using a working copy for analysis and simultaneously retaining the archived versions until they are no longer required is a unique challenge.  The file types involved, the required degrees of processing of the raw data and the overall size of the datasets can require a different approach to annotation and archiving than for smaller scale research data.  The need to address the best practices for research data of any size has been a focus of a national working group aiming to design and jointly endorse a concise and measurable set of principles, referred to as the FAIR Data Principles. The intent is for these principles to act as a guideline for those wishing to enhance the reusability of their data by themselves or others.  Specifically, the FAIR Principles are the ideas that data should be:  Findable, Accessible, Interoperable, and Reusable.  
 
 ## What to Archive:  Raw versus Processed Data
 Depending on the type of large scale molecular data generated, the particular set of data files that are of most importance to archive may be different.  For the study of interest, consider questions such as:
@@ -24,7 +26,7 @@ The term 'preservation' means ensuring something can still be seen or used over 
   - storage media may have been degraded, scratched or broken, especially if they are portable, such as external hard drives, so information might be lost; and
   - the files or data will not be understood because there is no supporting documentation or metadata, or this has not been preserved correctly.
 
-## What can I do to ensure my data are usable in the future?
+### What can I do to ensure my data are usable in the future?
 When creating, organizing and storing your data you can take a few initial steps to try and ensure your data remain useable and understandable for the future: 
   - effectively document the critical metadata describing how and why the data were generated so that it can be understood and interpreted in the future.
   - keep more than one copy of data, and on a variety of storage media or spaces.
@@ -36,13 +38,7 @@ Ideally, this should be covered in a data management plan at the start of a proj
 One issue to consider is that it may be desired to have two copies of irreplaceable (either physically irreplaceable or infeasible to replace datasets), one in the local filesystem (location determined in part by the data size, frequency of access needed, type of access needed and cost considerations), and one in a managed cloud-based system (such as the PI Amazon Web Services s3 buckets managed by Fred Hutch).  Resources to obtain permissions, assistance in managing copying and data quality assessment, and information on accessing data in various locations can be obtained through Scientific Computing and Center IT Helpdesk below.  The Data Storage resource page discusses the various Fred Hutch managed storage locations available to researchers and the associated ease of access and costs associated (if applicable) with them.  
 
 ### Available Resources
-  - Email FH username **helpdesk** for questions or assistance with managing local filesystem based data, and email FH username **scicomp** for questions or assistance withe managing cloud-based data and services.  
-  - Scientific Computing's wiki pages contain information about:
-    - How to connect to economy file storage [here. (on campus/VPN, signin required)](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/All-Pages.aspx?Community=Scientific%20Programmers){:target="_blank"}<!--_-->
-    -  More on how to use [Economy File Storage. (on campus/VPN, signin required)](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/How%20to%20use%20Economy%20File%20Storage.aspx){:target="_blank"}<!--_-->
-    - How to migrate large data to [Economy File Storage.  (on campus/VPN, signin required)](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/How%20to%20migrate%20large%20data%20to%20Economy%20File.aspx){:target="_blank"}<!--_-->
-    - For instructions on how to get credentials for your [Fred Hutch managed Amazon S3 (cloud storage) PI bucket are here. (on campus/VPN, signin required)](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/Getting%20AWS%20Credentials.aspx){:target="_blank"}<!--_-->
-    - To retrieve a text copy of your credentials for S3 buckets you have access to [login here. (on campus/VPN, signin required)](https://toolbox.fhcrc.org/sw2srv/aws/account){:target="_blank"}<!--_-->
+- Email FH username `helpdesk` for questions or assistance with managing local filesystem based data, and email FH username `scicomp` for questions or assistance withe managing cloud-based data and services.  
 
 
 ## Metadata Standards References and Resources

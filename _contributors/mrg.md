@@ -1,5 +1,5 @@
 ---
-title: Micheal Gutteridge
+title: Michael Gutteridge
 ---
 ## Affiliation
 Scientific Computing

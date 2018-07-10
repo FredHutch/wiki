@@ -1,7 +1,17 @@
 ---
-title: Scratch Storage
-last_modified_at: 2018-06-14
+title: Data Storage: Temporary Storage/Scratch
+last_modified_at: 2018-06-20
 ---
+
+The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
+
+Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).
+
+**Data on this platform is not backed up.**  This storage is _not_ appropriate for storing the primary or only copy of any data.
+
+Similar to the Fast File system above, the scratch file system is available on the path `/fh/scratch` on SciComp supported Linux systems, `\\center.fhcrc.org\fh\scratch` on Windows, and `smb://center.fhcrc.org/fh/scratch` on OSX.
+
+There is no charge to the investigator for data stored here.
 
 ## Why use Scratch Storage for temporary data?
 
@@ -25,9 +35,9 @@ For more persistent scratch space, ​please see the persistent / monthly Scratc
 ### Node local Job Scratch
 
 There are varying volumes of local storage depending on node configuration and utilization by other jobs.  If you require a large volume of local disk, request it with the "--tmp" argument:
-
-    sbatch -n 2 -t 1-0 --tmp=4096 # requests 4GB of disk space
-
+```
+sbatch -n 2 -t 1-0 --tmp=4096 # requests 4GB of disk space
+```
 Note that this only ensures that the disk is available when the job starts.  Other processes may fill up this scratch space, causing problems with your job.
 The location of this local scratch space is stored in the environment variable "TMPDIR" and "SCRATCH_LOCAL- use this environment variable if you need local storage on the node- do not use "/tmp" for storage of files or for scratch space.
 
@@ -42,29 +52,29 @@ Sometimes you need to work with temporary data that is not part of a specific pi
 
 ## How can I use Scratch?
 
-There are multiple types of scratch but here we focus on monthly scratch. You can reach it via environment variable $DELETE30 (which currently points to /fh/scratch/delete30), for example:
+There are multiple types of scratch but here we focus on monthly scratch. You can reach it via environment variable $DELETE30 (which currently points to `/fh/scratch/delete30`), for example:
 
 in your Shell
 ```
-    $ ls -l $DELETE30/
-    $ ls -l $DELETE30/lastname_f
-    $ runprog.R > $DELETE30/lastname_f/datafile.dat
+$ ls -l $DELETE30/
+$ ls -l $DELETE30/lastname_f
+$ runprog.R > $DELETE30/lastname_f/datafile.dat
 ```
 in Python
 ```
-    #! /usr/bin/env python3
-    import os
-    MYSCRATCH = os.getenv('DELETE30', '.')
-    myfile = os.path.join(MYSCRATCH,'lastname_f','datafile.dat')
-    with open(myfile, 'w') as f:
-        f.write('line in file')
+#! /usr/bin/env python3
+import os
+MYSCRATCH = os.getenv('DELETE30', '.')
+myfile = os.path.join(MYSCRATCH,'lastname_f','datafile.dat')
+with open(myfile, 'w') as f:
+    f.write('line in file')
 ```
 in R
 ```
-    #! /usr/bin/env Rscript
-    MYSCRATCH <- Sys.getenv('DELETE30')
-    MYSCRATCH[is.na(MYSCRATCH)] <- '.'​
-    save('line in file', file=paste0(MYSCRATCH,'/lastname_f/datafile.dat'))
+#! /usr/bin/env Rscript
+MYSCRATCH <- Sys.getenv('DELETE30')
+MYSCRATCH[is.na(MYSCRATCH)] <- '.'​
+save('line in file', file=paste0(MYSCRATCH,'/lastname_f/datafile.dat'))
 ```
 
 **Note:** lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
@@ -72,53 +82,52 @@ in R
 ## How long will my data stay in monthly scratch?
 
 The data will stay on the file system for 30 days after you have stopped accessing it. 3 days before the data is deleted you (the owner of the files created)  will receive an email with a final warning:
+```
+From: fs-cleaner.py-no-reply@fhcrc.org [mailto:fs-cleaner.py-no-reply@fhcrc.org]
+Sent: Tuesday, August 23, 2016 11:32 PM
+To: Doe, Jane <jdoe@fredhutch.org>
+Subject: WARNING: In 3 days will delete files in /fh/scratch/delete30!
 
-    From: fs-cleaner.py-no-reply@fhcrc.org [mailto:fs-cleaner.py-no-reply@fhcrc.org] 
-    Sent: Tuesday, August 23, 2016 11:32 PM
-    To: Doe, Jane <jdoe@fredhutch.org>
-    Subject: WARNING: In 3 days will delete files in /fh/scratch/delete30!
+This is a notification message from fs-cleaner.py, Please review the following message:
 
-    This is a notification message from fs-cleaner.py, Please review the following message:
+Please see attached list of files!
 
-    Please see attached list of files!
+The files listed in the attached text file will be deleted in 3 days when they will not have been touched for 30 days:
 
-    The files listed in the attached text file will be deleted in 3 days when they will not have been touched for 30 days:
+# of files: 247, total space: 807 GB
+You can prevent deletion of these files
+by using the command 'touch -a filename'
+on each file. This will reset the access time of the file to the current date.
+```
 
-    # of files: 247, total space: 807 GB
-    You can prevent deletion of these files
-    by using the command 'touch -a filename'
-    on each file. This will reset the access time of the file to the current date.
-
-
-As an alternative to the environment variable $DELETE30 you can also reach scratch through the file system at /fh/scratch/delete30, however the file system may be subject to change whereas the environment variable will be supported forever.
+As an alternative to the environment variable $DELETE30 you can also reach scratch through the file system at `/fh/scratch/delete30`, however the file system may be subject to change whereas the environment variable will be supported forever.
 
 
 ## Examples
 Python example.
+```
+#! /usr/bin/env python3
+import os
 
-    #! /usr/bin/env python3
-
-    import os
-
-    print("Network Job Scratch: %s" % (os.environ['SCRATCH']))
-    print("Node Local Job Scratch: %s" % (os.environ['SCRATCH_LOCAL']))
-    print("Node Local Job Scratch: %s" % (os.environ['TMPDIR']))
-
+print("Network Job Scratch: %s" % (os.environ['SCRATCH']))
+print("Node Local Job Scratch: %s" % (os.environ['SCRATCH_LOCAL']))
+print("Node Local Job Scratch: %s" % (os.environ['TMPDIR']))
+```
 
 Bash shell example.
 
+```
+#! /bin/bash
+echo -e $TMPDIR
+echo -e "Network Job Scratch:​ $SCRATCH"
+echo -e "Node Local Job Scratch: $SCRATCH_LOCAL"
+echo -e "Node Local Job Scratch: $TMPDIR"
 
-    #! /bin/bash
-    echo -e $TMPDIR
-    echo -e "Network Job Scratch:​ $SCRATCH"
-    echo -e "Node Local Job Scratch: $SCRATCH_LOCAL"
-    echo -e "Node Local Job Scratch: $TMPDIR"
+cd $TMPDIR
+cp $HOME/some_file.txt .
+file ./some_file.txt
+wc -l ./some_file.txt > line_count.txt
+cp ./line_count.txt $HOME
 
-    cd $TMPDIR
-    cp $HOME/some_file.txt .
-    file ./some_file.txt
-    wc -l ./some_file.txt > line_count.txt
-    cp ./line_count.txt $HOME
-
-    exit 0   # $TMPDIR/some_file.txt is removed along with $TMPDIR
-
+exit 0   # $TMPDIR/some_file.txt is removed along with $TMPDIR
+```

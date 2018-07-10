@@ -58,11 +58,13 @@ By default, Paste Image will create (if it doesn't already exist) a single "imag
 
 ```json
 {
-    "pasteImage.basePath": "${currentFileDir}",
-    "pasteImage.path": "assets",
+    "pasteImage.path": "${projectRoot}/assets/${currentFileNameWithoutExt}/",
+    "pasteImage.basePath": "${projectRoot}/assets",
+    "pasteImage.forceUnixStyleSeparator": true,
+    "pasteImage.prefix": "/assets/"
 }
 ```
-In this example the sub-folder that will be created in the folder you are working in will be called "assets," but this folder name could be anything.  **Note:** if you are editing markdown that is destined for the [Fred Hutch Wiki,](https://fredhutch.github.io/wiki/) you must use "assets" for the folder name. However in other contexts, you may need to use another folder name like `images` in order for certain processes to function.
+In this example the sub-folder that will be created in the assets folder named after your file name (this just lets us avoid a single huge assets folder in the long run).  **Note:** if you are editing markdown that is destined for the [Fred Hutch Wiki,](http://sciwiki.fredhutch.org) you must use the above configuration. However in other contexts, you may need to use another folder name like `images` in order for certain processes to function.
 
 After the `Paste Image` plugin is installed and configured, you can simply copy your prepared image or screenshot, insert the cursor where you want to insert the image in the document and use **Ctr+Alt+V** on Windows or Linux and **Command+Alt+V** on macOS. This will automatically create the assets (or whatever you've named it) folder if doesn't already exist and place your image there naming it with a date/timestamp. The inserted text in the editor will look like the following:
 
