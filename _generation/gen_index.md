@@ -9,8 +9,24 @@ last_modified_at: 2018-06-06
 
 Large scale molecular data such as next generation sequencing or array based data is becoming ever more accessible and useful for translational research. However, while many of the fundamental aspects of biology that these tools assess are familiar, there are unique issues that arise when hundreds to thousands of data points are collected simultaneously that must be considered during the experimental design phase.  Not every question about every cohort or sample set can be answered using a given large molecular data set, and the sentiment to "sequence it and find out" can be an appealing, but ultimately risky (and costly) approach.
 
+## Study Design
+In this section we will provide some guidance for researchers looking to develop a hypothesis that will have reasonable statistical power and a feasible set of samples and execute a large scale data production from them.
+There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however can be very different, and the details specific to each are best addressed prior to beginning a process involved in generating materials or data sets.  
+
+### Proposal Materials and Support
+You could design a house without an architect, but the time and money you would spend while trying to do so are effectively wasted because there are people for whom this procedural and rote knowledge is their job.  The same is true for large scale molecular datasets as there is an incredible quantity of study design, sample preparation, genomics data production, bioinformatics and statistics that goes into this process. To give your study the best chance of succeeding (both in getting funding and scientifically), it's best to identify a set of collaborators familiar with the aspects of the research for which your team does not already have expertise.  
+
+The Translational Genomics Data Coordination Center is available for collaboration in grant supported projects to provide access to a system of data management tools they manage to facilitate translational studies using large scale molecular data.  Also, we can help facilitate as-needed collaborations with various affiliated members of the Fred Hutch community with expertise in sample banking, assay material preparation, genomics data generation, bioinformatics and statistics.  If your study needs some support in these areas, we can work with you to both incorporate material into your application and also support your study over the course of the phases of research in areas where your team does not have expertise.  The project team that leads this effort has "boilerplate" NIH grant materials that we will provide after consultation to tailor the material to your particular study.
+
+### Hypothesis Development and Big Molecular Data
+
+### Statistics
+Finding a collaborator to help identify if any biological feature supports or rejects your hypothesis using large scale molecular data is important because of the issues of multiple testing, determining biological significance and power issues unique to large data sets where the number of measurements (p) is much larger than the sample size (n).  The statistics required when n>>p are very different than those when p>>n and finding someone who is well versed in the specific issues that arise in this context is important.  
+
+There are different groups available at the Fred Hutch who collaborate with researchers using large scale datasets and can provide valuable insight into study design, data types and hypothesis generation as well as assistance with downstream analytics.  
+
 ## IRB and Human Subjects
-### Consenting
+### Consenting and Big Molecular Data
 Informed consent is a cornerstone of the ethical conduct of research involving humans. A goal of informed consent is to ensure that subjects are aware of the risks and potential benefits of proposed research and to make an informed and voluntary decision about participating in a research study.  Unlike the risks presented by many biomedical research protocols considered by IRBs, the risks involved with genetic information can reach beyond the boundary of physical injury, and also include risks of social and psychological harm. Some types of genetic information alone can identify a single individual, and in turn have implications for family members and levy broader social considerations.  IRB review of research protocol consent(s), structure and safeguards is a critical step in genomics research.
 
 ### Privacy and Security
@@ -24,21 +40,7 @@ Data Sharing in the realm of genomics and large scale datasets has highlighted s
 
 The tendency to guard research data to retain ownership and property rights, avoid competition, protect confidentiality and privacy, or avoid misuse by unqualified persons can be justified in some cases.  However, our evolving collective understanding of data sharing practices when large scale datasets are involved can tend to result in unnecessary burden on the research(ers) that is actually counterproductive and may not necessarily make the patient or researcher any safer.  The following pages can help guide decision making and actions to successfully share and manage research data to allow for the most productivity and facilitation of the original research itself while balancing the data privacy and security needs of those involved.
 
-## Study Design and Preparation
-In this section we will provide some guidance for researchers looking to develop a hypothesis that will have reasonable statistical power and a feasible set of samples and execute a large scale data production from them.
-There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however can be very different, and the details specific to each are best addressed prior to beginning a process involved in generating materials or data sets.  
-
-### Statistics
-Finding a collaborator to help identify if any biological feature supports or rejects your hypothesis using large scale molecular data is important because of the issues of multiple testing, determining biological significance and power issues unique to large data sets where the number of measurements (p) is much larger than the sample size (n).  The statistics required when n>>p are very different than those when p>>n and finding someone who is well versed in the specific issues that arise in this context is important.  
-
-There are different groups available at the Fred Hutch who collaborate with researchers using large scale datasets and can provide valuable insight into study design, data types and hypothesis generation as well as assistance with downstream analytics.  
-
-### Proposal Materials
-You could design a house without an architect, but the time and money you would spend while trying to do so are effectively wasted because there are people for whom this procedural and rote knowledge is their job.  The same is true for large scale molecular datasets as there is an incredible quantity of study design, sample preparation, genomics data production, bioinformatics and statistics that goes into this process. To give your study the best chance of succeeding (both in getting funding and scientifically), it's best to identify a set of collaborators familiar with the aspects of the research for which your team does not already have expertise.  
-
-The Translational Genomics Data Coordination Center is available for collaboration in grant supported projects to provide access to a system of data management tools they manage to facilitate translational studies using large scale molecular data.  Also, we can help facilitate as-needed collaborations with various affiliated members of the Fred Hutch community with expertise in sample banking, assay material preparation, genomics data generation, bioinformatics and statistics.  If your study needs some support in these areas, we can work with you to both incorporate material into your application and also support your study over the course of the phases of research in areas where your team does not have expertise.  The project team that leads this effort has "boilerplate" NIH grant materials that we will provide after consultation to tailor the material to your particular study.
-
-## Clinical and Specimen Data
+## Clinical and Experimental Data
 The particular covariates that will be associated with large scale data sets that are part of a study typically come from clinical or laboratory data. When these data are originating from human samples, certain protections need to be in place to ensure patient privacy, but also there are resources at the Fred Hutch which can help researchers effectively manage these data so that they can be associated with downstream molecular data sets more consistently and securely.  
 
 The data dictionary being used in the Translational Genomics Data Commons can be [viewed here](https://translationalgenomics.fredhutch.org/annotations.html){:target="_blank"}<!--_--> as it is expanded and developed to reflect the contributions of more participants.  We have developed a data management system that uses modules that are discussed in the associated pages and can facilitate data management via collaboration.  Email Amy Paguirigan to set up an evaluation to see if our system can meet your needs.  
@@ -49,21 +51,20 @@ More to come, though we intend to describe in more depth what data management sy
 ### Specimen Banking
 More to come, though we intend to describe the best practices for using the software LabMatrix for prospective specimen banking and laboratory organization of retrospectively banked human specimens.  
 
-### Laboratory Covariates
+### Experimental Covariates
 More to come, though we intend to provide more in depth guidance for tools of particular utility to documenting, organizing and linking descriptions of laboratory based processes or experimental conditions in such a way as to provide accurate and easy linking of these data to the downstream large data sets.  The possibility of using customized REDCap projects or electronic laboratory notebook systems will be discussed.
-### Nucleic Acid Omnibus
-A critical component of quality large scale molecular data is quality assay material, in this case, the nucleic acid itself. Multiple processes are involved in the isolation and preparation of specimens and nucleic acids upstream of data generation that can impact both what types of data are feasible to generate, as well as what types of hypotheses the data can be used to address. Different data-generating platforms are sensitive to certain types of specimen quality and quantity. While the hypothesis for a study will narrow the choices for data types required, the quality and quantity of nucleic acids from a cohort of specimens can have an even larger impact on what data types are feasible, as well as the relevance and interpretability of the resulting data sets to the intended question.  This page contains a summary of the types of nucleic acid isolation for different specimen types, the types of quality and quantity assessments and how these impact what downstream data generation process is applicable to the specimens of interest.
 
-## Data Generation
+## Large-Scale Data Generation
 The decisions required when generating large scale data sets themselves are informed by an understanding of the specimen cohort, any limitations imposed by the consent of the patients from which those specimens were obtained, and the specific hypothesis the researcher is intending to address.  The following pages describe important considerations that range from the particular specimen and nucleic acid isolation to quality control approaches to the platforms available at the Fred Hutch Genomics Shared Resource.  Additionally, there are some specific considerations tailored to either RNA or DNA based genomic data approaches.  While these pages are currently focused on nucleic acid based technologies, we hope to add more in the future regarding other data types generated from other assay materials or using other large scale molecular technologies such as proteomics or metabolomics, etc.  
 
-### DNA Approaches
+### Assay Material Prep and QC
+A critical component of quality large scale molecular data is quality assay material, in this case, the nucleic acid itself. Multiple processes are involved in the isolation and preparation of specimens and nucleic acids upstream of data generation that can impact both what types of data are feasible to generate, as well as what types of hypotheses the data can be used to address. Different data-generating platforms are sensitive to certain types of specimen quality and quantity. While the hypothesis for a study will narrow the choices for data types required, the quality and quantity of nucleic acids from a cohort of specimens can have an even larger impact on what data types are feasible, as well as the relevance and interpretability of the resulting data sets to the intended question.  This page contains a summary of the types of nucleic acid isolation for different specimen types, the types of quality and quantity assessments and how these impact what downstream data generation process is applicable to the specimens of interest.
+
+### DNA-Based Approaches
 Here we summarize some specific approaches to specimen processing, nucleic acid quality and quantity assessments, genomics platforms types, reagents, costs and data analysis requirements for **DNA** based data types such as hybridization or sequencing based techniques.  We outline a few types of projects and give examples of the particular scientific considerations involved as well as some general guidelines about the costs of different approaches. We focus on non-whole genome studies but intend to provide some guidance from Fred Hutch researchers about this type of project in the future.
 
-### RNA Approaches
+### RNA-Based Approaches
 Here we summarize some specific approaches to specimen processing, nucleic acid quality and quantity assessments, genomics platforms types, reagents, costs and data analysis requirements for **RNA** based data types such as hybridization or sequencing based techniques.  We outline a few types of projects and give examples of the particular scientific considerations involved as well as some general guidelines about the costs of different approaches.
 
-### Platforms Available
+### Genomics Platforms Available
 The Fred Hutch Genomics Shared Resource offers researchers, both at the Fred Hutch and externally, access to a wide range of genomics platforms in a fee for service context.  Services that are available range from nucleic acid quality assessment, to sample or library preparation, to data generation and basic bioinformatics. This page provides an overview of the currently available platforms, the types of support available through Genomics, strengths and weaknesses of each technology, and guidance for who to contact for consulting about your specific project.  The Fred Hutch Genomics Shared Resource is a valuable wealth of knowledge about all types of genomic assays and are a first stop for more detailed experimental design advice and support for particular projects.  
-
-### Data Types
