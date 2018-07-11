@@ -7,7 +7,7 @@ last_modified_at: 2018-06-06
 
 "If you torture the data, it will confess to anything" - Ronald Coase.
 
-Large scale molecular data such as next generation sequencing or array based data is becoming ever more accessible and useful for translational research. However, while many of the fundamental aspects of biology that these tools assess are familiar, there are unique issues that arise when hundreds to thousands of data points are collected simultaneously that must be considered during the experimental design phase.  Not every question about every cohort or sample set can be answered using a given large molecular data set, and the sentiment to "sequence it and find out" can be an appealing, but ultimately risky (and costly) approach.
+Upfront consideration to the design and execution of data generation can help to prevent unfortunate or costly outcomes.  This section provides guidance on study design, human subjects research, management of clinical and experimental data, and a review of factors to consider when choosing from the common next-generation sequencing or array based techniques.  
 
 ## Study Design
 In this section we will provide some guidance for researchers looking to develop a hypothesis that will have reasonable statistical power and a feasible set of samples and execute a large scale data production from them.
