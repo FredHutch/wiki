@@ -13,7 +13,7 @@ The template for your app can be found in this GitHub Repo (accessible after log
 [FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)
 
 ### Using Command Line Git
-![](assets/com-com.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/com-com.png)
 ```
     git clone https://github.com/FredHutch/shiny-app-template.git <your_app_folder>
     cd <your_app_folder>
@@ -35,11 +35,11 @@ Now it's time to inject your wonderful shiny app to this template. The goal is t
 ### Using the GitHub Desktop Application
 
 To keep track of file changes within a local repo, first add this folder to GitHub Desktop Application:
-![](assets/electro-add-repo.png)
-![](assets/rsz_1electron-add-repo-2.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electro-add-repo.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/rsz_1electron-add-repo-2.png)
 
 You can create a remote repo by clicking on the 'Publish repository' and select the correct branch (in this case 'master' is the branch name). You can specify if you want this repo to be private or not. Also, please make sure this repo is under FredHutch as the organization.
-![](assets/electro-create-remote-repo.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electro-create-remote-repo.png)
 
 ## Insert Your App into the Template
 Use your favorite code editor to add your own shiny app content to this template.  Here are a few reminders for the shiny apps with a single R script:
@@ -53,29 +53,29 @@ Use your favorite code editor to add your own shiny app content to this template
 After you added your own content to this repo, you are ready to commit the changes and push the changes to the remote repo.
 
 - Now your GitHub Desktop Application console looks like this:
-![](assets/electron-before-commit.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electron-before-commit.png)
 
 - Two files with green crosses on the right have been added as new files.
 Two existing files have been modified with yellow dots on the right.
 You can further examine and adjust those changes by click the yellow dot or right click:
-![](assets/electron-mod.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electron-mod.png)
 
 - Writea commit message and click on 'commit to master' if you want to commit change to your master branch:
-![](assets/electron-com.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electron-com.png)
 
 - Push committed change from local files to remote repo
-![](assets/electron-push.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electron-push.png)
 
 ## Viewing Your App
 You should be able to find your app within the repo you created
-![](assets/github-repo_s.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/github-repo_s.png)
 
 <!--Please also add topics 'r' and 'shiny'
-![](/assets/GitHub-add-labels-3.png)-->
+![](/https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/GitHub-add-labels-3.png)-->
 
 ## Test Your Application Locally
 Open the app in an R console.
-![](assets/r.png)
+![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/r.png)
 
 - Change directory to subfolder 'app' under your app root:
 ``` 
