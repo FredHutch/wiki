@@ -153,6 +153,8 @@ computing:
         url: /computing/resser_overview/
       - title: "AWS Batch"
         url: /computing/resser_awsbatch/
+      - title: "Shiny"	
+-       url: /computing/shiny/
 
   - title: "Training, Announcements and How-To's"
     children:
