@@ -1,17 +1,8 @@
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
-<script>
-$(function() {
-  $("h1").first().html("Using S3 with Cyberduck at Fred Hutch");
-  //$(".page-header").hide();
-  $("a").first().hide();
-});
-</script>
 
 
 ## Step 1: Obtain your AWS Credentials
 
-To use Cyberduck with S3, you will need AWS credentials. You can obtain them by going to
+To use Cyberduck with S3, you will need to obtain AWS credentials. You can obtain them by going 
 
 [https://toolbox.fhcrc.org/sw2srv/aws/account](https://toolbox.fhcrc.org/sw2srv/aws/account)
 
