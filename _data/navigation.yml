@@ -144,7 +144,7 @@ computing:
       - title: "Temporary (Scratch) Storage"
         url: /computing/store_scratch/
       - title: "Collaborative Storage Systems"
-        url: /computing/store_collaboration/      
+        url: /computing/store_collaboration/
 
 
   - title: "Resources and Services"
@@ -153,8 +153,8 @@ computing:
         url: /computing/resser_overview/
       - title: "AWS Batch"
         url: /computing/resser_awsbatch/
-      - title: "Shiny"	
--       url: /computing/shiny/
+      - title: "Shiny"
+        url: /computing/shiny/
 
   - title: "Training, Announcements and How-To's"
     children:
