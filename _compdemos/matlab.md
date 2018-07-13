@@ -3,17 +3,17 @@ title: Matlab
 last_modified_at: 2018-07-05
 ---
 
-### Desktop Usage
-The majority of Matlab users at the Hutch have Matlab installed on their desktop system. Most users have dedicated licenses for there desktop installs Matlab. Dedicated licenses offer the flexibility to use Matlab with a laptop on or off campus. The center has a limited number of shared network licenses. Users are allowed to use a maximum of 4 concurrent Matlab licenses from the license manager. The shared network licenses can be used with the centers Linux cluster. This document describes how to use Matlab on the Gizmo cluster.
+## Desktop Usage
+The majority of Matlab users at the Hutch have Matlab installed on their desktop system. Most users have dedicated licenses for their desktop installs Matlab. Dedicated licenses offer the flexibility to use Matlab with a laptop on or off campus. The center has a limited number of shared network licenses. Users are allowed to use a maximum of 4 concurrent Matlab licenses from the license manager. The shared network licenses can be used with the centers Linux cluster. This document describes how to use Matlab on the Gizmo cluster.
 
-### Interactive Matlab on Linux
+## Interactive Matlab on Linux
 If you have a Windows or Mac desktop and want to run Matlab interactively on a Linux server, you will need to map the display from Linux to your Windows system.  We recommend using noMachine for both display mapping and session management. Do not run Matlab directly from the noMachine servers or from a Rhino.  Use grabnode to allocate a cluster node for starting a Matlab session.
 
 - From your Linux session manager, start a terminal.
-- ```ssh rhino```
-- Type ```grabnode``` Answer the questions about how many CPUs and Memory you require. When your ```grabnode`` is successful you will have a Linux command prompt on a gizmo cluster node.
-- ```module load matlab/R2017a```
-- Type ```matlab``` and press enter.  The Matlab window should open in your Linux session. Success!
+- `ssh rhino`
+- Type `grabnode` Answer the questions about how many CPUs and Memory you require. When your `grabnode` is successful you will have a Linux command prompt on a gizmo cluster node.
+- `module load matlab/R2017a`
+- Type `matlab` and press enter.  The Matlab window should open in your Linux session. Success!
 
 ### Running Matlab batch jobs on Linux
 Matlab programs can be run on the gizmo cluster. The cluster supports additional resources that are not available to a desktop install. 
