@@ -94,16 +94,12 @@ bioinformatics:
         url: /bioinformatics/prog_overview/
       - title: "R, RStudio"
         url: /bioinformatics/prog_R/
-      - title: "Bioconductor"
-        url: /bioinformatics/prog_bioconductor/
-      - title: "Python and the Condas"
+      - title: "Python"
         url: /bioinformatics/prog_python/
-      - title: "Unix/Bash"
+      - title: "Unix/Bash and Other Languages"
         url: /bioinformatics/prog_unixbash/
-      - title: "Other Common Languages"
-        url: /bioinformatics/prog_other/
 
-  - title: "Working with Compute Resources"
+  - title: "Managing Code and Computing"
     children:
       - title: "Overview"
         url: /bioinformatics/compute_overview/
@@ -111,23 +107,18 @@ bioinformatics:
         url: /bioinformatics/compute_docker/
       - title: "AWS Batch"
         url: /bioinformatics/compute_awsbatch/
+      - title: "GitHub, Versioning and Sharing"
+        url: /bioinformatics/compute_github/
+      - title: "Notebooks and UIs"
+        url: /bioinformatics/compute_uis/
 
-  - title: "Training and How-To's"
+  - title: "Training and References"
     children:
-      - title: "Overview"
-        url: /bioinformatics/howto_overview/
-      - title: "How-To's Collection"
+      - title: "Training Opportunties"
+        url: /bioinformatics/howto_training/
+      - title: "Research Topic Articles"
         url: /bioinformaticsdemos/
-      - title: "Human Genetic Variant Calling and Analysis"
-        url: /bioinformatics/aa_humanvariant/
-      - title: "Gene Expression and Transcript Analysis"
-        url: /bioinformatics/aa_geneexpression/
-      - title: "Microbiome Analysis and Microbial Genomics"
-        url: /bioinformatics/aa_microbiome/
-      - title: "Traditional GWAS"
-        url: /bioinformatics/aa_tradgwas/
-      - title: "Mammalian Copy Number Analysis"
-        url: /bioinformatics/aa_mammcopynumber/
+
 
 
 computing:
@@ -169,7 +160,7 @@ computing:
 
   - title: "Software, Resources and Updates"
     children:
-      - title: "Overview"
+      - title: "In-Person Training and Office Hours"
         url: /computing/training_overview/
       - title: "Current Software"
         url: http://fredhutch.github.io/easybuild-life-sciences/
