@@ -23,6 +23,7 @@ generation:
       - title: "Statistics"
         url: /generation/study_statistics/
 
+
   - title: "IRB and Human Subjects"
     children:
       - title: "Overview"
@@ -35,6 +36,7 @@ generation:
         url: /generation/human_deidentification/
       - title: "Data Sharing and Public Repositories"
         url: /generation/human_shareDeposits/
+
 
   - title: "Clinical and Experimental Data"
     children:
@@ -60,6 +62,7 @@ generation:
         url: /generation/datagen_rnaApproaches/
       - title: "Genomics Platforms Available"
         url: /generation/datagen_platformsData/
+
 
   - title: "Laboratory Management Resources"
     children:
