@@ -61,9 +61,29 @@ generation:
       - title: "Genomics Platforms Available"
         url: /generation/datagen_platformsData/
 
+  - title: "Laboratory Management Resources"
+    children:
+      - title: "Support Software"
+        url: /generation/labman_software/
+      - title: "Shared Equipment and Wisdom"
+        url: /generation/labman_sharedequip/
+
 
 
 bioinformatics:
+  - title: "Best Practices for Research Data Management"
+    children:
+      - title: "Overview"
+        url: /bioinformatics/dm_overview/
+      - title: "Data Storage"
+        url: /bioinformatics/dm_storage/
+      - title: "Data Ingestion and Public Datasets"
+        url: /bioinformatics/dm_ingest/
+      - title: "Data Archiving"
+        url: /bioinformatics/dm_archive/
+      - title: "Data Privacy and Security"
+        url: /bioinformatics/dm_privacy/
+
 
   - title: "Programming and Bioinformatics"
     children:
@@ -80,23 +100,21 @@ bioinformatics:
       - title: "Other Common Languages"
         url: /bioinformatics/prog_other/
 
-  - title: "Pipelining and Workflows"
+  - title: "Working with Compute Resources"
     children:
       - title: "Overview"
-        url: /bioinformatics/pipe_overview/
+        url: /bioinformatics/compute_overview/
       - title: "Docker"
-        url: /bioinformatics/pipe_docker/
-      - title: "Globus"
-        url: /bioinformatics/pipe_globus/
+        url: /bioinformatics/compute_docker/
       - title: "AWS Batch"
-        url: /bioinformatics/pipe_awsbatch/
-      - title: "Other workflow Systems"
-        url: /bioinformatics/pipe_other/
+        url: /bioinformatics/compute_awsbatch/
 
-  - title: "Genomics Analysis Approaches"
+  - title: "Training and How-To's"
     children:
       - title: "Overview"
-        url: /bioinformatics/aa_overview/
+        url: /bioinformatics/howto_overview/
+      - title: "How-To's Collection"
+        url: /bioinformaticsdemos/
       - title: "Human Genetic Variant Calling and Analysis"
         url: /bioinformatics/aa_humanvariant/
       - title: "Gene Expression and Transcript Analysis"
@@ -108,30 +126,19 @@ bioinformatics:
       - title: "Mammalian Copy Number Analysis"
         url: /bioinformatics/aa_mammcopynumber/
 
-  - title: "Training and How-To's"
-    children:
-      - title: "Overview"
-        url: /bioinformatics/howto_overview/
-      - title: "How-To's Collection"
-        url: /bioinformaticsdemos/
-
-
 
 computing:
-  - title: "Best Practices for Research Data Management"
+  - title: "Access"
     children:
       - title: "Overview"
-        url: /computing/dm_overview/
-      - title: "Data Storage"
-        url: /computing/dm_storage/
-      - title: "Data Ingestion and Public Datasets"
-        url: /computing/dm_ingest/
-      - title: "Data Archiving"
-        url: /computing/dm_archive/
-      - title: "Data Privacy and Security"
-        url: /computing/dm_privacy/
+        url: /computing/access_overview/
 
-  - title: "Data Storage Systems"
+  - title: "Resources"
+    children:
+      - title: "Overview"
+        url: /computing/resource_overview/
+
+  - title: "Data Storage"
     children:
       - title: "Overview"
         url: /computing/store_overview/
@@ -147,15 +154,17 @@ computing:
         url: /computing/store_collaboration/
 
 
-  - title: "Resources and Services"
+  - title: "Cluster"
     children:
       - title: "Overview"
-        url: /computing/resser_overview/
-      - title: "AWS Batch"
-        url: /computing/resser_awsbatch/
+        url: /computing/cluster_overview/
 
+  - title: "Linux"
+    children:
+      - title: "Overview"
+        url: /computing/linux_overview/
 
-  - title: "Training, Announcements and How-To's"
+  - title: "Software, Resources and Updates"
     children:
       - title: "Overview"
         url: /computing/training_overview/
@@ -163,5 +172,5 @@ computing:
         url: http://fredhutch.github.io/easybuild-life-sciences/
       - title: "Updates and Announcements"
         url: /scicompannounce/
-      - title: "How-To's Collection"
+      - title: "Resource Libarary"
         url: /compdemos/
