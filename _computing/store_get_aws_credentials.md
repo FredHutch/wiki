@@ -18,7 +18,7 @@ There are two ways to get credentials. Which one to use depends on how you will 
 If you are going to use AWS from the command line or scripts, follow the 
 [command-line instructions](#command-line-instructions).
 
-If you are going to use AWS from graphical programs such as Cyberduck, follow the [gui-instructions](GUI Instructions).
+If you are going to use AWS from graphical programs such as Cyberduck, follow the [gui-instructions](#gui-instructions).
 
 ## Command-line instructions
 
@@ -126,4 +126,13 @@ aws s3 help cp
 S3 is the only service you can access immediately after creating your credentials.​
 
 For questions about accessing other services, please contact [Help Desk​](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html).
+
+## GUI Instructions
+
+Open a web browser and navigate to [https://toolbox.fhcrc.org/sw2srv/aws/account](https://toolbox.fhcrc.org/sw2srv/aws/account). 
+This page is only accessible within the Hutch network.
+
+When prompted, enter your HutchNet ID and password.
+
+Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck.
 
