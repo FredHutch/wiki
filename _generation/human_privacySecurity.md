@@ -1,6 +1,6 @@
 ---
 title: Data Privacy and Security
-last_modified_at: 2018-06-06
+last_modified_at: 2018-07-19
 ---
 
 Every effort must be made to protect the identity of participants.  A key protective measure is to de-identify information.  Typically, this involves removing 18 key direct identifiers as described under HIPAA and indirect identifiers, such as age, gender, location, etc.  Further description of de-identification is under De-Identification of Specimens and Data.  The aim of de-identification is to maintain privacy through elimination of identifiers in a way that eliminates or greatly diminishes the risk of re-identification.  Maintaining strong data security processes is an additional key measure.  Sharing data should be done securely, after the information is de-identified and within a data management and sharing plan.  This plan should delineate data security, restrictions on data which can not be sufficiently de-identified, data use agreements, naming conventions and other clearly specified requirements.  In most instances, sharing data should be possible without compromising the confidentiality of participants.
@@ -25,7 +25,7 @@ Data Use Agreements (DUAs) are contractual documents used for the transfer of no
 
   - The Privacy Rule permits sharing of a Limited Data Set. A  LDS maybe disclosed for research activities if the disclosing entity and the LDS recipient enter into a data use agreement. Limited Data Sets may be used or disclosed only for purposes of research, public health, or health care operation.  
 
-  - A sample Fred Hutch MTA can be found [here (signin required if off campus).](http://www.compass.fhcrc.org/caretweb/requests/caret%20dua%20final%20201405.pdf){:target="_blank"}<!--_-->  Contact Fred Hutch Business Development and Strategies for more information on Fred Hutch DUAs.
+  - A sample Fred Hutch MTA can be found [here (signin required if off campus).](http://www.compass.fhcrc.org/caretweb/requests/caret%20dua%20final%20201405.pdf) Contact Fred Hutch Business Development and Strategies for more information on Fred Hutch DUAs.
 
 ### Material Transfer Agreement (MTA)
 A Material Transfer Agreement (MTA) is a contract used to govern the exchange of research data or materials between organizations. Examples include:
@@ -53,11 +53,11 @@ Generally:
   - Deposited in an open repository or archive
   - Deposited in an open repository and publish a "data paper" describing the data
   - Emailed to individual requesters (Discouraged)
-  - Use [Fred Hutch resources described at the IT Collaboration Tools site](https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html){:target="_blank"}<!--_-->
+  - Use [Fred Hutch resources described at the IT Collaboration Tools site](https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html)
   - The Fred Hutch Translational Genomics Data Coordination Center (the provider of this site) is currently building a system that uses Sage Bionetwork's Synapse platform to facilitate the annotation and sharing of genomic datasets.  Email username: dharmaproject for more information.  
 
 Fred Hutch does not currently provide a secure/encrypted exchange portal available enterprise-wide.  Typically, reciprocation should take place in an encrypted environment.  Below are various options for Fred Hutch members.
-[Here,](https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html){:target="_blank"}<!--_--> CIT lists various options for sharing data.  Using regular Fred Hutch is highly discouraged as, generally, it is not encrypted. The standard solution for data exchange that is a little more secure than email is [Aspera.](https://aspera.fhcrc.org/){:target="_blank"}<!--_--> You can use Aspera to send large amounts data through an email like interface. The recipient receives an email with a complex link URL and can then download the data. It’s a little more secure than email because you can only download the data once. If the recipient cannot get the data it likely means that security was breached and someone else got hold of that email that was sent. So you can’t prevent the breach, but at least know if one happens.
+[Here,](https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html) CIT lists various options for sharing data.  Using regular Fred Hutch is highly discouraged as, generally, it is not encrypted. The standard solution for data exchange that is a little more secure than email is [Aspera.](https://aspera.fhcrc.org/) You can use Aspera to send large amounts data through an email like interface. The recipient receives an email with a complex link URL and can then download the data. It’s a little more secure than email because you can only download the data once. If the recipient cannot get the data it likely means that security was breached and someone else got hold of that email that was sent. So you can’t prevent the breach, but at least know if one happens.
 
 Fred Hutch data should not be stored or shared via personal applications such as DrobBox, GoogleBox. Properly licensed, corporate tools can be considered, such as Box or G-Suite with guidance from the Information Security Office.
 

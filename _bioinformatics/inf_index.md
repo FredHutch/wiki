@@ -12,23 +12,31 @@ in which some form of high-throughput, large scale data collection instrument
 a large amount of information about such biological entities as
 genes, organisms, transcripts, etc.  Large scale data generation approaches like this can be referred to as molecular profiling, and can be applied to a variety of biological and biomedical research contexts from model organism studies (e.g., yeast strains) to human specimens in the context of a clinical assay.  
 
-## Sequencing
-Genome sequencing can be used for a variety of purposes (RNA sequencing,
-whole exome sequencing, microbiome profiling, etc.), but all of
-those applications result in a large amount of genomic sequence
-data that is produced. It can be highly time-consuming and resource
-intensive to analyze those datasets, each of which may represent
-hundreds or thousands of samples, with a single sample ranging from
-10Mb to 10Gb depending on the experiment. 
+## Best Practices for Research Data Management
 
-Given the size and complexity of these genomic datasets, the
-software used for analysis is typically highly specialized for each 
-data type and output format. To execute those bioinformatic software
-tools it is often necessary to use a large amount of computational
-resources, such as High-Performance Computing (HPC) clusters or 
-cloud-based resources (Azure, AWS EC2, Google Cloud, etc.). This
-wiki will provide details and guidance on using those bioinformatic
-software tools, as well as the computational resources needed to
-execute those tools.
+- Data Storage
+- Data Ingestion and Public Datasets
+- Data Archiving
+- Data Privacy and Security
 
-<!--## Imaging and Arrays-->
+## Programming and Bioinformatics
+
+- R, RStudio
+- Bioconductor
+- Python and the Condas
+- Unix/Bash
+- Other Common Languages
+
+## Working with Compute Resources
+
+- Docker
+- AWS Batch
+
+## Training and How-To's
+
+- How-To's Collection
+- Human Genetic Variant Calling and Analysis
+- Gene Expression and Transcript Analysis
+- Microbiome Analysis and Microbial Genomics
+- Traditional GWAS
+- Mammalian Copy Number Analysis
