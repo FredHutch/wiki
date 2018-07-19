@@ -1,6 +1,6 @@
 ---
 title: Statistics and Analytics
-last_modified_at: 2018-06-06
+last_modified_at: 2018-07-19
 ---
 ## Study Design and Data Types
 You could design a house without an architect, but the time and money you would spend while trying to do so are effectively wasted because there are people for whom this procedural and rote knowledge is their job.  The same is true for 'omics - there is an incredible quantity of statistics, bioinformatics and sample preparation that goes into this process. To give a study the best chance of succeeding (and being possible with the $ resources available in a suitable amount of time), identify a set of collaborators familiar with the experimental design and statistics required for a study of this kind.  
@@ -8,7 +8,7 @@ You could design a house without an architect, but the time and money you would 
 ### Available Resources
 - The Clinical Biostatistics Shared Resource can also help with study design and guide in what is realistic statistically.  Email FH username **biostatistics**.
 - The Bioinformatics Shared Resource associated with the Fred Hutch Genomics Shared Resource is a valuable source of guidance for developing a plan for a study and with the Genomics group can provide detailed information about available platforms, estimated costs and process-specific issues to be accounted for when choosing the type of data to acquire. Email FH username **bioinformatics**.
-- Translational Genomics Data Coordination Center for Data Coordination/Data Sharing Plan text for grants, including NIH standard requirement.  Email Amy at FH username **dharmaproject**.
+
 
 ## Study Types
 There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however can be very different, and the details specific to each are best addressed prior to beginning a process involved in generating materials or data sets.  
