@@ -39,5 +39,5 @@ last_modified_at: 2018-06-20
         url: http://fredhutch.github.io/easybuild-life-sciences/
       - title: "Updates and Announcements"
         url: /scicompannounce/
-      - title: "Resource Libarary"
+      - title: "Resource Library"
         url: /compdemos/
