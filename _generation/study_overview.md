@@ -1,6 +1,6 @@
 ---
 title: Overview of Study Design
-last_modified_at: 2018-06-06
+last_modified_at: 2018-07-19
 ---
 In this section we will provide some guidance for researchers looking to develop a hypothesis that will have reasonable statistical power, identify the appropriate set of samples, and execute a large scale data production from those samples.  
 
@@ -24,6 +24,6 @@ Finding a collaborator to help identify if any biological feature supports or re
 There are different groups available at the Fred Hutch who collaborate with researchers using large scale datasets and can provide valuable insight into study design, data types and hypothesis generation as well as assistance with downstream analytics.  
 
 ## Available Resources
-  - [University of Oregon's RNA-seqlopedia: Experimental Design](https://rnaseq.uoregon.edu/#exp-design-experimental-objectives){:target="_blank"}<!--_-->: a more in-depth description of considerations for sequencing experimental design, focusing on RNA-sequencing.
+  - [University of Oregon's RNA-seqlopedia: Experimental Design](https://rnaseq.uoregon.edu/#exp-design-experimental-objectives): a more in-depth description of considerations for sequencing experimental design, focusing on RNA-sequencing.
   - Fred Hutch Biostatistics Resource: Email FH username **biostatistics**
   - Fred Hutch Bioinformatics Core:  Email FH username **bioinformatics**
