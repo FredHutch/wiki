@@ -2,24 +2,7 @@
 
 ## Step 1: Obtain your AWS Credentials
 
-To use Cyberduck with S3, you will need to obtain AWS credentials. You can obtain them by going 
-
-[https://toolbox.fhcrc.org/sw2srv/aws/account](https://toolbox.fhcrc.org/sw2srv/aws/account)
-
-Notes:
-
-* This page will prompt you for your HutchNet ID and password.
-* You can only access this page from the Fred Hutch network (or when connected via VPN).
-
-This page will display your Access Key and Secret Key. Please keep this page open for use in the next step.
-
-**NOTE**: Do NOT share these credentials with any other user, inside or outside of Fred Hutch. If another Fred Hutch
-employee needs credentials, they can obtain their own credentials in this same manner. If you need credentials for an
-external collaborator, or if you are having a permissions issue,
-please contact [Scientific Computing](https://centernet.fredhutch.org/cn/u/center-it/cio/scicomp.html).
-
-
-
+To use Cyberduck with S3, you will need to [obtain AWS credentials](/computing/access_get_aws_credentials/##gui-instructions).
 
 ## Step 2: Install Cyberduck
 
@@ -62,7 +45,8 @@ Buckets are organized by lab and department. If you work in a lab and your PI is
 * Click the `Bookmark` menu and choose `New Bookmark`.
 * In the dropdown at the top, choose `Amazon S3`.
 
-![AmazonS3](assets/images/AmazonS3.jpg)
+![](/assets/store_use_cyberduck/2018-07-19-10-56-28.png)
+
 
 * Copy your Access Key from the web page you opened in Step 1.
 * Paste it into the `Access Key ID` box in the Cyberduck "Open Connection" dialog box.
@@ -85,7 +69,9 @@ This image shows a user dragging a file (`hello.txt`) from the Finder
 window at right to the Cyberduck window on the left. When the mouse button
 is released, the file will be copied.
 
-<img border="0" src="assets/images/DragToCyberduck.jpeg">
+
+![](/assets/store_use_cyberduck/2018-07-19-10-56-49.png)
+
 
 ## Copying files from your bucket to your computer
 
@@ -96,13 +82,8 @@ to the `adir` directory in Finder (at right). When the mouse button is released,
 the file will be copied.
 
 
-<img border="0" src="assets/images/DragToFinder.jpeg">
+![](/assets/store_use_cyberduck/2018-07-19-10-57-05.png)
 
 
 
 
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>

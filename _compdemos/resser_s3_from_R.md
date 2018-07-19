@@ -15,7 +15,7 @@ and the `gizmo` and `beagle` clusters.
 
 ### Get your AWS credentials
 
-Follow the ["Getting AWS Credentials"](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/Getting%20AWS%20Credentials.aspx) instructions on the SciComp wiki (must be on campus; sign in with HutchNet ID and password).
+Follow the ["Getting AWS Credentials"](/computing/access_get_aws_credentials/#command-line-instructions) instructions.
 
 This will create credentials (in the `.aws` directory of your home directory)
 that can be used by R (as well as Python and the AWS command line client)
