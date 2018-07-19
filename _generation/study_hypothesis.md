@@ -1,6 +1,6 @@
 ---
 title: Hypotheses in the Era of Large Scale Molecular Data
-last_modified_at: 2018-06-06
+last_modified_at: 2018-07-19
 ---
 
 Develop a hypothesis that will have reasonable statistical power and feasible sets of samples.  Then analyze the data collected with the original hypothesis in mind and then stop.  Don't mine the data indefinitely, because while you'll find something eventually, it may not mean anything.
@@ -14,15 +14,15 @@ More to come.  Statistically, this is defined as the testing of more than one hy
 The resources below will help you understand the broad strokes before consulting with a statistician about your project's specific details.
 
 ## Available Resources:
- - [Defining the scientific method](https://www.nature.com/articles/nmeth0409-237.pdf?origin=ppub){:target="_blank"}<!--_-->, an editorial published in Nature Methods in 2009.  "Science, it turns out, is whatever scientists do." - David Goodstein
+ - [Defining the scientific method](https://www.nature.com/articles/nmeth0409-237.pdf?origin=ppub), an editorial published in Nature Methods in 2009.  "Science, it turns out, is whatever scientists do." - David Goodstein
 
-- [Wikipedia's page on statistical power](https://en.wikipedia.org/wiki/Statistical_power){:target="_blank"}<!--_-->
+- [Wikipedia's page on statistical power](https://en.wikipedia.org/wiki/Statistical_power)
 
-- [GPower](http://www.gpower.hhu.de/){:target="_blank"}<!--_-->:  Downloadable software for a variety of tests, including graphical power analysis results.  Not 'omics-specific, but a good reference.
+- [GPower](http://www.gpower.hhu.de/):  Downloadable software for a variety of tests, including graphical power analysis results.  Not 'omics-specific, but a good reference.
 
-- [Power and sample size calculations for high-throughput sequencing-based experiments](https://academic.oup.com/bib/article-lookup/doi/10.1093/bib/bbx061){:target="_blank"}<!--_--> (Li et al 2017):  Figure 1 and Table 1 have references to papers on computational bioinformatics tools for various power calculations
+- [Power and sample size calculations for high-throughput sequencing-based experiments](https://academic.oup.com/bib/article-lookup/doi/10.1093/bib/bbx061)(Li et al 2017):  Figure 1 and Table 1 have references to papers on computational bioinformatics tools for various power calculations
 
-- [How does multiple testing correction work?](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2907892/){:target="_blank"}<!--_--> (Noble 2010)
+- [How does multiple testing correction work?](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2907892/) (Noble 2010)
 
 
 ## Study Design and Data Types
@@ -31,7 +31,7 @@ You could design a house without an architect, but the time and money you would 
 ### Available Resources
 - The Clinical Biostatistics Shared Resource can also help with study design and guide in what is realistic statistically.  Email FH username **biostatistics**.
 - The Bioinformatics Shared Resource associated with the Fred Hutch Genomics Shared Resource is a valuable source of guidance for developing a plan for a study and with the Genomics group can provide detailed information about available platforms, estimated costs and process-specific issues to be accounted for when choosing the type of data to acquire. Email FH username **bioinformatics**.
-- Translational Genomics Data Coordination Center for Data Coordination/Data Sharing Plan text for grants, including NIH standard requirement.  Email Amy at FH username **dharmaproject**.
+
 
 ## Study Types
 There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however can be very different, and the details specific to each are best addressed prior to beginning a process involved in generating materials or data sets.  

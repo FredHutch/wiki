@@ -1,6 +1,6 @@
 ---
-title: Assay Material Prep and QC:  The Nucleic Acid Omnibus
-last_modified_at: 2018-06-06
+title: Assay Material Prep and QC
+last_modified_at: 2018-07-19
 ---
 
 Multiple processes can be involved in the isolation, quality assessment and preparation of biological materials upstream of large scale data collection. For many types of datasets, the particulars of the method of nucleic acid extraction and quality assessment process can have a large impact on the quality, relevance, and interpretability of the resulting data. Thus, it is critical to ensure that a correct set of conditions are chosen before any specimens are prepared for analysis.
@@ -13,7 +13,7 @@ There is a tradeoff between purity and yield when it comes to nucleic acid isola
 
 ### RNA Considerations
 
-RNA extraction kits will typically isolate total RNA (small RNAs, mRNAs, rRNAs among [other types of RNA](https://en.wikipedia.org/wiki/RNA#Types_of_RNA){:target="_blank"}<!--_-->) or are moiety-specific (such as mRNAs only). Depending on the downstream application, one approach may be more successful than another despite the intended target. An example is in the case of cDNA preparation for mRNA sequencing via Illumina's TruSeq reagent set. While the final cDNA that is sequenced is enriched for mRNA, the first step in the sample preparation is an mRNA bead based isolation, which means upstream, the ideal sample would be intact, pure total RNA of sufficient quantity and isolating mRNA specifically can be redundant and can result in insufficient yields. Thus, matching isolation approaches to the downstream sample preparation and data type is important to consider prior to beginning a project.
+RNA extraction kits will typically isolate total RNA (small RNAs, mRNAs, rRNAs among [other types of RNA](https://en.wikipedia.org/wiki/RNA#Types_of_RNA) or are moiety-specific (such as mRNAs only). Depending on the downstream application, one approach may be more successful than another despite the intended target. An example is in the case of cDNA preparation for mRNA sequencing via Illumina's TruSeq reagent set. While the final cDNA that is sequenced is enriched for mRNA, the first step in the sample preparation is an mRNA bead based isolation, which means upstream, the ideal sample would be intact, pure total RNA of sufficient quantity and isolating mRNA specifically can be redundant and can result in insufficient yields. Thus, matching isolation approaches to the downstream sample preparation and data type is important to consider prior to beginning a project.
 
 ### DNA considerations
 
@@ -21,11 +21,11 @@ DNA extraction from samples of varying quantities and preservation methods can b
 
 ### Available Resources:
 
-* Some summaries of extraction kits can be found at the following links:
+Some summaries of extraction kits can be found at the following links:
 
-    * DNA extraction - [Labome overview of DNA extraction kits and applications](https://www.labome.com/method/DNA-Extraction-and-Purification.html){:target="_blank"}<!--_-->
+  * DNA extraction - [Labome overview of DNA extraction kits and applications](https://www.labome.com/method/DNA-Extraction-and-Purification.html)
 
-    * RNA extraction - [Labome overview of RNA extraction kits and application*s](https://www.labome.com/method/RNA-Extraction.html){:target="_blank"}<!--_-->
+  * RNA extraction - [Labome overview of RNA extraction kits and application*s](https://www.labome.com/method/RNA-Extraction.html)
 
 ## Quantification Methods
 
@@ -33,13 +33,13 @@ There are two main approaches to quantifying nucleic acids in solution after iso
 
 ### Spectrophotometric analysis
 
-Spectrophotometic analysis (e.g. via [NanoDrop systems](https://www.thermofisher.com/us/en/home/industrial/spectroscopy-elemental-isotope-analysis/molecular-spectroscopy/ultraviolet-visible-visible-spectrophotometry-uv-vis-vis/uv-vis-vis-instruments/nanodrop-microvolume-spectrophotometers/nanodrop-products-guide.html){:target="_blank"}<!--_-->) is a common quantification method that allows measurement of quantity and purity of nucleic acid samples, via their absorbance of light. Total amount of nucleic acid is determined by the absorbance at 260nm. Amounts of common contaminants can also be measured with this method - remaining protein is measured via absorbance at 280nm; remaining organic solvents and salts are measured via absorbance at 230nm. Purity of the sample is assessed by calculating ratios of absorbances: 260/280 and 260/230. Nucleic acid samples are generally considered pure enough for sequencing if 260/280 > 1.8 and 260/230 > 1.7.
+Spectrophotometic analysis (e.g. via [NanoDrop systems](https://www.thermofisher.com/us/en/home/industrial/spectroscopy-elemental-isotope-analysis/molecular-spectroscopy/ultraviolet-visible-visible-spectrophotometry-uv-vis-vis/uv-vis-vis-instruments/nanodrop-microvolume-spectrophotometers/nanodrop-products-guide.html) is a common quantification method that allows measurement of quantity and purity of nucleic acid samples, via their absorbance of light. Total amount of nucleic acid is determined by the absorbance at 260nm. Amounts of common contaminants can also be measured with this method - remaining protein is measured via absorbance at 280nm; remaining organic solvents and salts are measured via absorbance at 230nm. Purity of the sample is assessed by calculating ratios of absorbances: 260/280 and 260/230. Nucleic acid samples are generally considered pure enough for sequencing if 260/280 > 1.8 and 260/230 > 1.7.
 
 **Of Important Note:** Both RNA and DNA absorb light at 260nm. Spectrophotometric analysis will tell you the **total** amount of nucleic acid (all moieties) in your sample. Also, this analysis does not give information about the quality of the nucleic acid in the sample. To assess amounts of specific nucleic acid, use a fluorescent dye-tagging quantification (fluorimetric) method; in addition, assessment of nucleic acid quality requires electrophoresis via TapeStation (see below).
 
 ### Fluorimetric analysis
 
-Fluorometric analysis (e.g. via a [Qubit](https://www.thermofisher.com/us/en/home/industrial/spectroscopy-elemental-isotope-analysis/molecular-spectroscopy/fluorometers/qubit.html){:target="_blank"}<!--_-->)) relies on fluorescent dyes that bind to specific types of nucleic acid (RNA, dsDNA, ssDNA) or protein. Fluorescence assays can thus be more sensitive than spectrophotometric assays for nucleic acid quantification, can provide quantitation of specific moieties of nucleic acids even in mixed solutions, but do not give any information about nucleic acid purity or quality. Qubit systems are often in many labs around the Hutch and consist of a base reader as well as specific assays for the different types and concentrations of nucleic acid.
+Fluorometric analysis (e.g. via a [Qubit](https://www.thermofisher.com/us/en/home/industrial/spectroscopy-elemental-isotope-analysis/molecular-spectroscopy/fluorometers/qubit.html)) relies on fluorescent dyes that bind to specific types of nucleic acid (RNA, dsDNA, ssDNA) or protein. Fluorescence assays can thus be more sensitive than spectrophotometric assays for nucleic acid quantification, can provide quantitation of specific moieties of nucleic acids even in mixed solutions, but do not give any information about nucleic acid purity or quality. Qubit systems are often in many labs around the Hutch and consist of a base reader as well as specific assays for the different types and concentrations of nucleic acid.
 
 ## Quality Assessment Methods
 
@@ -53,10 +53,10 @@ For RNA samples, you can use the results of electrophoresis to calculate an RNA 
 
 * Consider emailing the reagents listserv in order to find laboratories near you that have a Qubit reader.
 
-* The Fred Hutch Genomics lab members are very helpful and can provide guidance for what works best for different types of genomics assays. [The Hutch Genomics Core site is here along with the relevant contact info for the group.](https://sharedresources.fredhutch.org/core-facilities/genomics){:target="_blank"}<!--_-->)
+* The Fred Hutch Genomics lab members are very helpful and can provide guidance for what works best for different types of genomics assays. [The Hutch Genomics Core site is here along with the relevant contact info for the group.](https://sharedresources.fredhutch.org/core-facilities/genomics)
 
 * The Fred Hutch Genomics lab also provides access to TapeStation analysis for nucleic acids (to determine RIN for RNA or fragment sizes for DNA). Samples can be submitted for fee-for-service via Hutchbase. Check in with the Genomics lab members for specific instructions on sample concentration and volume requirements as well as assay choice (there are several different assays that can be run on the TapeStation).
 
-* For more information on [RIN definition and background for why it is important to consider when using RNA as an assay material, this article provides additional information.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1413964/){:target="_blank"}<!--_-->)
+* For more information on [RIN definition and background for why it is important to consider when using RNA as an assay material, this article provides additional information.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1413964/)
 
-* [Here is a useful reference outlining the amount/quality of a few FFPE nucleic acid extraction kits.](https://doi.org/10.1016/j.ab.2010.01.014){:target="_blank"}<!--_-->)
+* Here is a useful reference outlining the amount/quality of a few [FFPE nucleic acid extraction kits.](https://doi.org/10.1016/j.ab.2010.01.014)
