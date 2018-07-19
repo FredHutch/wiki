@@ -12,11 +12,11 @@ main:
 
 
 generation:
-  - title: "Study Design"
+  - title: "Study Design and Funding"
     children:
       - title: "Overview"
         url: /generation/study_overview/
-      - title: "Proposal Materials and Support"
+      - title: "Proposals and Funding"
         url: /generation/study_proposal/
       - title: "Hypothesis Development and Big Molecular Data"
         url: /generation/study_hypothesis/
@@ -168,5 +168,5 @@ computing:
         url: http://fredhutch.github.io/easybuild-life-sciences/
       - title: "Updates and Announcements"
         url: /scicompannounce/
-      - title: "Resource Libarary"
+      - title: "Resource Library"
         url: /compdemos/

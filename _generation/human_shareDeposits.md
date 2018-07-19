@@ -1,6 +1,6 @@
 ---
 title: Data Sharing and Public Repositories
-last_modified_at: 2018-06-06
+last_modified_at: 2018-07-19
 ---
 
 ## What are the overarching benefits of data sharing?
@@ -17,7 +17,7 @@ last_modified_at: 2018-06-06
 
 ## Data Sharing and Management Plans
 
-A good resource for data sharing management plan development is [DMPTool,](https://dmptool.org){:target="_blank"}<!--_--> sponsored by the University of California.  DMPTool lets data owners create, review and share data management plans and provides ancillary knowledge to support sharing and management.
+A good resource for data sharing management plan development is [DMPTool,](https://dmptool.org) sponsored by the University of California.  DMPTool lets data owners create, review and share data management plans and provides ancillary knowledge to support sharing and management.
 
 The following should be considered when developing a data sharing plan:
 1.	Data Description: What data will be generated? How will you create the data? (simulated, observed, experimental, software, physical collections)
@@ -34,8 +34,8 @@ The following should be considered when developing a data sharing plan:
 12.	Adherence: How will you check for adherence of this plan?
 
 ### Available Resources
-- [Dataverse](http://best-practices.dataverse.org/data-management/index.html){:target="_blank"}<!--_--> has basic best practices guidance for data management plans.  
-- [DMPTool](https://dmptool.org){:target="_blank"}<!--_--> from University of California
+- [Dataverse](http://best-practices.dataverse.org/data-management/index.html) has basic best practices guidance for data management plans.  
+- [DMPTool](https://dmptool.org) from University of California
 - Data Management Guide -- Duke Libraries (Link to come)
 - NIH Examples of Data Sharing Plans (Link to come)
 - NIAID Sample Data Sharing Plan (Link to come)
@@ -62,7 +62,7 @@ Before sharing data, it is prudent to determine if sharing is permitted. Below a
 
 ## Required Data Sharing
 ### ClinicalTrials.gov
-HHS developed a final rule, Clinical Trials Registration and Results Information Submission, made publicly available on September 16, 2016 and the NIH issued a complementary final policy, under which NIH-funded awardees and investigators are to submit registration and results information for all NIH-funded clinical trials, whether or not the trials are covered by the FDAAA requirements. Details are [here.](https://clinicaltrials.gov/ct2/manage-recs/background){:target="_blank"}<!--_-->
+HHS developed a final rule, Clinical Trials Registration and Results Information Submission, made publicly available on September 16, 2016 and the NIH issued a complementary final policy, under which NIH-funded awardees and investigators are to submit registration and results information for all NIH-funded clinical trials, whether or not the trials are covered by the FDAAA requirements. Details are [here.](https://clinicaltrials.gov/ct2/manage-recs/background)
 
 ### Funding Agencies
 Many (but not all) federal funding agencies require data management plans and data sharing plans as part of a grant proposal application.  Persons seeking to make a grant application to a federal funding source should ascertain the data sharing plan requirements.  
@@ -74,10 +74,10 @@ Funding agencies may want to know:
 •	How will you make accessible? Will there be restrictions to some or all the data and if so how do people obtain access?
 •	How will you make it useable/reusable?  Will there be documentation, definitions, descriptions of methodology, use of standard terminology, etc.
 
-A helpful website is [SPRAC Research Funder Data Sharing Policies (NIH Not Currently listed).](http://datasharing.sparcopen.org/){:target="_blank"}<!--_-->)
+A helpful website is [SPRAC Research Funder Data Sharing Policies (NIH Not Currently
 
 ### Data Sharing as Part of Publications
-As of 1 July 2018, manuscripts submitted to journals within the International Committee of Medical Journal Editors ([ICJME](http://www.icmje.org){:target="_blank"}<!--_-->) reporting clinical trial data must contain a data sharing statement, indicating:
+As of 1 July 2018, manuscripts submitted to journals within the International Committee of Medical Journal Editors ([ICJME](http://www.icmje.org)) reporting clinical trial data must contain a data sharing statement, indicating:
 
 - whether the authors intend to share individual de-identified participant data
 - what specific data they intend to share
@@ -131,8 +131,8 @@ The GDS Policy expects that large-scale genomic research data from NIH-supported
 NOTE:  If you are generating genomic data that does not meet the definition of “large-scale,” consider including a section in your Resource Sharing Plan that says, “Genomic Data Sharing: Not Applicable” with a brief explanation. Grant applications are not always sufficiently detailed for staff to determine whether the GDS policy applies, in which case staff must contact the PI, which can cause delays.
 
 ### NIH GDS Resources
-- The NIH Genomic Data Sharing Policy is [here,](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/){:target="_blank"}<!--_--> and a useful FAQ is [here.](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing-faqs/){:target="_blank"}<!--_-->
-- Large-scale genomic data include genome-wide association studies (GWAS), single nucleotide polymorphisms (SNP) arrays, and genome sequence, transcriptomic, metagenomic, epigenomic, and gene expression data.  Examples of research that are subject to the GDS Policy include, but are not limited to, projects that involve generating the whole genome sequence data for more than one gene from more than 1,000 individuals, or analyzing 300,000 or more genetic variants in more than 1,000 individuals, or sequencing more than a 100 isolates of infectious organisms such as bacteria. The [Supplemental Information to the NIH Genomic Data Sharing Policy](https://osp.od.nih.gov/wp-content/uploads/Supplemental_Info_GDS_Policy.pdf){:target="_blank"}<!--_--> includes detailed description of research under scope of the policy and data submission expectations.
+- The NIH Genomic Data Sharing Policy is [here,](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/)and a useful FAQ is [here.](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing-faqs/)
+- Large-scale genomic data include genome-wide association studies (GWAS), single nucleotide polymorphisms (SNP) arrays, and genome sequence, transcriptomic, metagenomic, epigenomic, and gene expression data.  Examples of research that are subject to the GDS Policy include, but are not limited to, projects that involve generating the whole genome sequence data for more than one gene from more than 1,000 individuals, or analyzing 300,000 or more genetic variants in more than 1,000 individuals, or sequencing more than a 100 isolates of infectious organisms such as bacteria. The [Supplemental Information to the NIH Genomic Data Sharing Policy](https://osp.od.nih.gov/wp-content/uploads/Supplemental_Info_GDS_Policy.pdf) includes detailed description of research under scope of the policy and data submission expectations.
 
 ## Public Genomic Data Repositories
 NIH is committed to respecting the privacy and intentions of research participants with regard to how data pertaining to their individual information is used. Data access is therefore intended only for scientific investigators pursuing research questions that are consistent with the informed consent agreements provided by individual research participants. Furthermore, investigators provided access will be expected to utilize appropriate controls and abide by Data Use Limitation.

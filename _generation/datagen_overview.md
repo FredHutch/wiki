@@ -1,18 +1,18 @@
 ---
-title: Overview of Data Generation
+title: Overview of Large Scale Data Generation
 last_modified_at: 2018-06-06
 ---
 
 The decisions required when generating large scale data sets themselves are informed by an understanding of the specimen cohort, any limitations imposed by the consent of the patients from which those specimens were obtained, and the specific hypothesis the researcher is intending to address.  The following pages describe important considerations that range from the particular specimen and nucleic acid isolation to quality control approaches to the platforms available at the Fred Hutch Genomics Shared Resource.  Additionally, there are some specific considerations tailored to either RNA or DNA based genomic data approaches.  While these pages are currently focused on nucleic acid based technologies, we hope to add more in the future regarding other data types generated from other assay materials or using other large scale molecular technologies such as proteomics or metabolomics, etc.  
 
-## Assay Material Prep and QC:  The Nucleic Acid QC Omnibus
+## Assay Material Prep and QC
 A critical component of quality large scale molecular data is quality assay material, in this case, the nucleic acid itself. Multiple processes are involved in the isolation and preparation of specimens and nucleic acids upstream of data generation that can impact both what types of data are feasible to generate, as well as what types of hypotheses the data can be used to address. Different data-generating platforms are sensitive to certain types of specimen quality and quantity. While the hypothesis for a study will narrow the choices for data types required, the quality and quantity of nucleic acids from a cohort of specimens can have an even larger impact on what data types are feasible, as well as the relevance and interpretability of the resulting data sets to the intended question.  This page contains a summary of the types of nucleic acid isolation for different specimen types, the types of quality and quantity assessments and how these impact what downstream data generation process is applicable to the specimens of interest.
 
-## RNA Analysis Approaches
+## RNA-Based Approaches
 Here we summarize some specific approaches to specimen processing, nucleic acid quality and quantity assessments, genomics platforms types, reagents, costs and data analysis requirements for **RNA** based data types such as hybridization or sequencing based techniques.  We outline a few types of projects and give examples of the particular scientific considerations involved as well as some general guidelines about the costs of different approaches.
 
-## DNA Analysis Approaches
+## DNA-Based Approaches
 Here we summarize some specific approaches to specimen processing, nucleic acid quality and quantity assessments, genomics platforms types, reagents, costs and data analysis requirements for **DNA** based data types such as hybridization or sequencing based techniques.  We outline a few types of projects and give examples of the particular scientific considerations involved as well as some general guidelines about the costs of different approaches. We focus on non-whole genome studies but intend to provide some guidance from Fred Hutch researchers about this type of project in the future.  
 
-## Genomics Platforms and Data Types
+## Genomics Platforms Available
 The Fred Hutch Genomics Shared Resource offers researchers, both at the Fred Hutch and externally, access to a wide range of genomics platforms in a fee for service context.  Services that are available range from nucleic acid quality assessment, to sample or library preparation, to data generation and basic bioinformatics. This page provides an overview of the currently available platforms, the types of support available through Genomics, strengths and weaknesses of each technology, and guidance for who to contact for consulting about your specific project.  The Fred Hutch Genomics Shared Resource is a valuable wealth of knowledge about all types of genomic assays and are a first stop for more detailed experimental design advice and support for particular projects.  
