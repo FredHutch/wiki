@@ -1,5 +1,5 @@
 ---
-title: Overview of Human Subjects and Genomics Research
+title: Overview of IRB and Human Subjects
 last_modified_at: 2018-06-06
 ---
 This section contains a variety of types of information about relevant regulations and also guidance for implementing studies using human subjects, human data and/or human specimens.  Given the evolving conditions and rules surrounding studies using genetic and genomic datasets, we aim to provide an up-to-date resource about the current state of the field relating to consenting, privacy, and data management.  

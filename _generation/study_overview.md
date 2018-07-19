@@ -1,5 +1,5 @@
 ---
-title: Overview of Study Design in the Era of Genomics
+title: Overview of Study Design
 last_modified_at: 2018-06-06
 ---
 In this section we will provide some guidance for researchers looking to develop a hypothesis that will have reasonable statistical power, identify the appropriate set of samples, and execute a large scale data production from those samples.  
