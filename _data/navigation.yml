@@ -12,6 +12,7 @@ main:
 
 
 generation:
+  - title: "Data Generation"
   - title: "Study Design and Funding"
     children:
       - title: "Overview"
@@ -74,6 +75,7 @@ generation:
 
 
 bioinformatics:
+  - title: "Bioinformatics"
   - title: "Best Practices for Research Data Management"
     children:
       - title: "Overview"
@@ -124,6 +126,7 @@ bioinformatics:
 
 
 computing:
+  - title: "Computing"
   - title: "Access"
     children:
       - title: "Overview"
