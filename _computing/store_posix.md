@@ -10,7 +10,7 @@ There are multiple resources available to researchers that are Block storage inc
 - _fast_ for shared data, including the majority of research data
 - _secure_ for data with higher-level security needs
 
-### Home
+## Home
 
 The _home_ file server is your own personal file storage space at the FredHutch.  It is a default place for your Linux login files (profiles &c) as well as an appropriate place to store your own private information.
 
@@ -18,7 +18,7 @@ While you are allowed up to 100GB of storage in this home directory, it is not t
 
 There is no charge for this storage.
 
-### Fast File
+## Fast File
 
 The _fast file_ service is a large high-performance system that holds the bulk of the scientific data at the FredHutch.  The data here is organized by investigator- each folder at the top level is named using the investigators last name and first initial: investigator "Sneezy Smith" would have a directory on fast called `smith_s`.
 
@@ -26,7 +26,7 @@ On SciComp supported Linux systems you will see this storage in the path `/fh/fa
 
 This storage platform is appropriate for most scientific data- particularly large data sets.  There is no charge for the first 5TB of storage on this system: there is a $30 per-month charge for every terabyte above this.
 
-### Secure File
+## Secure File
 
 The _Secure File_ system provides a higher-level of security controls than available on other services- the key difference is access auditing.  This is also organized by investigator.
 
