@@ -13,7 +13,7 @@ The template for your app can be found in this GitHub Repo (accessible after log
 [FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)
 
 ### Using Command Line Git
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/com-com.png)
+![]({{ site.baseurl }}/compdemos/assets/com-com.png)
 ```
     git clone https://github.com/FredHutch/shiny-app-template.git <your_app_folder>
     cd <your_app_folder>
@@ -35,11 +35,11 @@ Now it's time to inject your wonderful shiny app to this template. The goal is t
 ### Using the GitHub Desktop Application
 
 To keep track of file changes within a local repo, first add this folder to GitHub Desktop Application:
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electro-add-repo.png)
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/rsz_1electron-add-repo-2.png)
+![]({{ site.baseurl }}/compdemos/assets/electro-add-repo.png)
+![]({{ site.baseurl }}/compdemos/assets/rsz_1electron-add-repo-2.png)
 
 You can create a remote repo by clicking on the 'Publish repository' and select the correct branch (in this case 'master' is the branch name). You can specify if you want this repo to be private or not. Also, please make sure this repo is under FredHutch as the organization.
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electro-create-remote-repo.png)
+![]({{ site.baseurl }}/compdemos/assets/electro-create-remote-repo.png)
 
 ## Insert Your App into the Template
 Use your favorite code editor to add your own shiny app content to this template.  Here are a few reminders for the shiny apps with a single R script:
@@ -53,29 +53,29 @@ Use your favorite code editor to add your own shiny app content to this template
 After you added your own content to this repo, you are ready to commit the changes and push the changes to the remote repo.
 
 - Now your GitHub Desktop Application console looks like this:
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electron-before-commit.png)
+![]({{ site.baseurl }}/compdemos/assets/electron-before-commit.png)
 
 - Two files with green crosses on the right have been added as new files.
 Two existing files have been modified with yellow dots on the right.
 You can further examine and adjust those changes by click the yellow dot or right click:
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electron-mod.png)
+![]({{ site.baseurl }}/compdemos/assets/electron-mod.png)
 
 - Writea commit message and click on 'commit to master' if you want to commit change to your master branch:
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electron-com.png)
+![]({{ site.baseurl }}/compdemos/assets/electron-com.png)
 
 - Push committed change from local files to remote repo
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/electron-push.png)
+![]({{ site.baseurl }}/compdemos/assets/electron-push.png)
 
 ## Viewing Your App
 You should be able to find your app within the repo you created
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/github-repo_s.png)
+![]({{ site.baseurl }}/compdemos/assets/github-repo_s.png)
 
 <!--Please also add topics 'r' and 'shiny'
-![](/https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/GitHub-add-labels-3.png)-->
+![](/{{ site.baseurl }}/compdemos/assets/GitHub-add-labels-3.png)-->
 
 ## Test Your Application Locally
 Open the app in an R console.
-![](https://raw.githubusercontent.com/FredHutch/wiki/master/_compdemos/assets/r.png)
+![]({{ site.baseurl }}/compdemos/assets/r.png)
 
 - Change directory to subfolder 'app' under your app root:
 ``` 
@@ -97,11 +97,11 @@ Hopefully, you can see your app working as expected in the browser. Please keep 
 
 1.  Is your application codebase version-controlled by Git and in a GitHub repository (repo) ?  If so, is it under FredHutch account?
 
-2. How do you want to name (DNS name) your application? So the it will look something like **<your_application_DNS_name>.fredhutch.org**
+2. How do you want to name (DNS name) your application? So the it will look something like <your_application_DNS_name>.fredhutch.org
 
 3. Is your application facing Fred Hutch **internally** (open to the Fred Hutch campus) or **externally** (open to the entire internet)?
 
-4. Does your application require authorization (log in), that only your collaborators have access?
+4. Does your application require authorization (password protection), that only your collaborators have access?
 
 5. Does your application contain PHI? Please remove PHI from your application?
 
