@@ -1,9 +1,9 @@
 ---
 title: Data Storage and Collaboration
-last_modified_at: 2018-06-28
+last_modified_at: 2018-07-19
 ---
 
-There are data storage systems that have capabilities allowing you to share data with people outside the Hutch- with or without a Hutch ID.
+There are Fred Hutch supported data storage systems that allow you to share data with people outside the Hutch, with or without a Hutch ID in order to facilitate data transfer and reciept in collaborations within or outside of the Fred Hutch.  
 
 ## Aspera
 
@@ -17,30 +17,26 @@ Visit [the Aspera information page](https://aspera.fhcrc.org/index.html) for mor
 
 > NOTE: this is a very new service and may be subject to frequent changes.  Additionally, while S3 storage can be used for many other purposes, only its capabilities for collaboration are discussed here.  Refer to the documentation on cloud computing for more information on using S3 in its other capacities.
 
-S3 (the Simple Storage Service) is an object store very much like the Economy file service- though this one provided by Amazon Web Services.  The storage here is organized much like the other systems, with a "PI bucket" for each investigator at the Hutch (a bucket can be compared to a directory on a traditional file system).  This service can be used to distribute data to individuals outside the Hutch.  A specialized client (the AWS command line interface) is used to upload the data.  Once there, a temporary URL is created that has the necessary credentials embedded within and is then shared with those needing access.  A secure (HTTPS) connection is then used to download the data (via browser or other client like `wget` or `curl`).
+S3 (the Simple Storage Service) is an object store very much like the Economy file service, though provided by Amazon Web Services.  Storage resources in S3 are organized much like the other Fred Hutch Object and Block systems, with a "PI bucket" for each investigator at the Hutch which is analagous to the investigator directories available in the traditional file system. A specialized client (the AWS command line interface) is used to upload the data from local storage to S3 storage.  Once there, a temporary URL is created that has the necessary credentials embedded within and is then shared with those needing access.  A secure (HTTPS) connection is then used to download the data (via browser or other client like `wget` or `curl`). This URL is temporary and set with a date after which the generated URL is no longer able to access the data, though the data stored here is not removed as with the Aspera.  That temporary URL can be regenerated as necessary.
 
-This URL is temporary and set with a date after which the generated URL is no longer able to access the data, though the data stored here is not removed as with the Aspera.  That temporary URL can be regenerated as necessary.
+Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
 
-Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved.
-
-S3 is appropriate for storage of restricted data, including PHI.
-
-Once you have [obtained S3 credentials](/computing/access/), you can use them to transfer files from/to the Center's Economy Cloud file service which is currently implemented using  S3​ buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using these examples.
+Once you have [obtained S3 credentials](/computing/access_overview/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples below.
 
 
 ### Using Amazon S3 from the Command Line
 
 #### Copy a file to your lab's S3 bucket
 This command will copy the file `hello.txt` from your current directory to the top-level folder of your lab's S3 bucket:
-​
-```
-aws s3 cp hello.txt ​s3://fh-pi-doe-j/
-```
-
-​You can also copy files to folders within your bucket. Folders do not have to be created beforehand. This examples copies the file `hello.txt` to the folder path `a/b/c`:
 
 ```
-aws s3 cp hello.txt s3://fh-pi-doe-j/a/b/c/
+aws s3 cp hello.txt s3://fh-pi-doe-j/
+```
+
+You can also copy files to folders within your bucket. Folders do not have to be created beforehand. This examples copies the file `hello.txt` to the folder path `a/b/c`:
+
+```
+aws s3 cp s3://fh-pi-doe-j/hello.txt s3://fh-pi-doe-j/a/b/c/
 ```
 
 Copying files from your lab's S3 bucket to the machine you are logged into
@@ -77,9 +73,9 @@ To list t​he contents of a specific folder, just add the folder path to the en
 aws s3 ls s3://fh-pi-doe-j/a/b/c/
 ```
 
-#### ​More S3 Commands
+#### More S3 Commands
 
-​The complete set of aws s3 commands is documented [here​](https://docs.aws.amazon.com/cli/latest/reference/s3/index.html), and you can also type
+The complete set of aws s3 commands is documented [here](https://docs.aws.amazon.com/cli/latest/reference/s3/index.html), and you can also type:
 
 ```
 aws s3 help
@@ -93,11 +89,11 @@ aws s3 help cp
 ```
 
 
-## Using Amazon S3 via Cyberduck (a client)
+### Using Amazon S3 via Cyberduck (desktop client)
 
 You can get Cyberduck at [https://cyberduck.io/](https://cyberduck.io/). If you are on a Windows system, click the "Download Cyberduck for Windows" link on the left side of the page. If you are on a Mac, click the "Download Cyberduck for Mac" link on the left side of the page.
 
-### Windows Installation
+#### Windows Installation
 
 * Double-click the file that was downloaded in the previous step. Click "Install".
 Click "Yes" when asked if you want to allow the program to make changes on the computer.
@@ -105,11 +101,11 @@ If all goes well, after a short installation, you should see "Installation Succe
 
 * To run Cyberduck, click the Start button, then click the Search (magnifying glass) icon in the upper right, and type `cyberduck` into the search box that shows up, and press Enter. Cyberduck will start. To make it easier to start in the future, locate the Cyberduck icon in your task bar at the bottom of the screen, and right-click on it, then select "Pin this program to taskbar". You'll now be able to start Cyberduck just by clicking on that icon, will will remain there even when Cyberduck is not running.
 
-### Mac Installation
+#### Mac Installation
 
 * Double-click on the zip file that was downloaded in the previous step. This will open a Finder menu showing the default download directory (usually `Downloads` under your home directory) with the Cyberduck application selected. At this point you could go ahead and start Cyberduck by double-clicking on it, but it will be easier to find Cyberduck in future if it is installed in `/Applications` with your other apps.
 
-#### Moving Cyberduck to `/Applications`
+##### Moving Cyberduck to `/Applications`
 
 * Go to Finder.
 * Click on the `File` menu at the top of your screen and choose `New Finder Window`. (You can also accomplish this by pressing ⌘N (Command-N)).
@@ -164,12 +160,9 @@ the file will be copied.
 
 ![](/assets/store_use_cyberduck/2018-07-19-10-57-05.png)
 
-## Using S3 from R
+### Using S3 from R
 
-You can use [Amazon Web Services' S3](https://aws.amazon.com/s3/) (Simple Storage Service) directly from `R`.
-
-The `R` package which facilitates this, `aws.s3`, is included in recent builds of `R` available on the `rhino` systems
-and the `gizmo` and `beagle` clusters.
+You can use [Amazon Web Services' S3](https://aws.amazon.com/s3/) (Simple Storage Service) directly from `R`.  The `R` package which facilitates this, `aws.s3`, is included in recent builds of `R` available on the `rhino` systems and the `gizmo` and `beagle` clusters.
 
 The first step is to load a recent R module:
 
@@ -212,7 +205,7 @@ Or get bucket contents as a data frame:
 df <- get_bucket_df(b)
 ```
 
-### Saving objects to S3
+#### Saving objects to S3
 
 Create a data frame of random numbers and save it to S3:
 
@@ -221,7 +214,7 @@ df <- data.frame(replicate(10,sample(0:1,1000,rep=TRUE)))
 s3save(df, bucket=b, object="foo/bar/baz/df")
 ```
 
-### Loading objects from S3
+#### Loading objects from S3
 
 ```R
 # first remove the object from memory if it's there:
@@ -232,7 +225,7 @@ s3load(object="foo/bar/baz/df", bucket=b)
 head(df)
 ```
 
-### Upload a file to S3
+#### Upload a file to S3
 
 First, write the existing `df` data
 frame to a csv file on your local disk:
@@ -243,7 +236,7 @@ write.csv(df, file="df.csv")
 put_object("df.csv", "foo/bar/baz/df.csv", b)
 ```
 
-### Read a CSV in S3 into a data frame
+#### Read a CSV in S3 into a data frame
 
 ```R
 # first remove the object from memory if it's there:
@@ -254,7 +247,7 @@ head(df)
 ```
 
 
-### Download a file from S3
+#### Download a file from S3
 
 This will create the file `df.csv` in the current directory:
 
@@ -262,7 +255,7 @@ This will create the file `df.csv` in the current directory:
 save_object("foo/bar/baz/df.csv", b)
 ```
 
-### Work with object names matching a pattern
+#### Work with object names matching a pattern
 
 Assume your S3 bucket has three objects whose keys start with
 `foo/bar/baz/` and end with one of `d`, `e`, or `f`. You want to read each object into memory and end up with
@@ -278,7 +271,7 @@ for (match in matches) {
 
 
 
-### ​Accessing other AWS Services
-S3 is the only service you can access immediately after creating your credentials.​
+### Accessing other AWS Services
+S3 is the only service you can access immediately after creating your credentials.
 
-For questions about accessing other services, please contact [Help Desk​](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html).
+For questions about accessing other services, please contact [Help Desk](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html).
