@@ -1,6 +1,6 @@
 ---
 title: Genomics Platforms and Data Types
-last_modified_at: 2018-06-06
+last_modified_at: 2018-07-19
 ---
 
 This guide highlights some of the genomics platforms available through the Genomics Core at Fred Hutch.  This guide is intended to give general context to each platform.
@@ -24,7 +24,7 @@ MiSeq | Version 3 Reagents | up to 300 | 25M | 1 | $1,200-$2,700
 ---
 When deciding how much sequencing is needed for a set of libraries to provide sufficient read depth (number of reads per genomic location in the genome covered in the library), issues such as the intended data type, sample type and quality, library preparation type, number of total samples, and the applicability of multiplexing approaches need to be considered.  Consulting with the Genomics Core can help provide more clarity for individual projects.  
 
-[Illumina Sequencing](https://www.illumina.com/techniques/sequencing.html){:target="_blank"}<!--_-->
+[Illumina Sequencing](https://www.illumina.com/techniques/sequencing.html)
 
 ### Pacific Biosciences (PacBio) Long Range Sequencer
 The PacBio SMRT sequencer works differently than the Illumina sequencers in that the read length is not specified by the platform, but is limited by the library itself, with an associated reduction in confidence of the sequence as reads get longer and longer.  However, instead of being limited to sequencing only fragments of DNA, PacBio sequencing can provide long stretches of sequencing data that occur in the same fragment.  This allow for analyses such as full length isoform discovery, de novo small genome sequencing, assessing structural variants/translocations, and allele phasing.  On average the PacBio sequencer aims to provide up to 15kb of read length.  
@@ -44,7 +44,7 @@ The PacBio SMRT sequencer works differently than the Illumina sequencers in that
 - Multiple multiplexing schemas (in-line or ligated) - discuss details with Genomics Lab to plan the approach.  
 ---
 
-[PacBio SMRT Sequencing](http://www.pacb.com/smrt-science/smrt-sequencing/){:target="_blank"}<!--_-->
+[PacBio SMRT Sequencing](http://www.pacb.com/smrt-science/smrt-sequencing/)
 
 
 ## Array Based Platforms
@@ -58,12 +58,12 @@ Genotyping BeadChip kits vary in price ($50/sample - $600/sample), depending on 
 
 The EPIC Methylation beadchip kit is ~$375/sample.  Our processing fee for DNA that is already bisulfite converted is $100/sample.  If conversion is needed, we offer that service for an additional $50/sample.
 
-[Illumina Microarrays](https://www.illumina.com/techniques/microarrays.html){:target="_blank"}<!--_-->
+[Illumina Microarrays](https://www.illumina.com/techniques/microarrays.html)
 
 ### Nanostring Hybridization Arrays for Gene Expression
 Typical use case, advantages and disadvantages
 
-[Nanostring](https://www.nanostring.com){:target="_blank"}<!--_-->
+[Nanostring](https://www.nanostring.com)
 
 
 ## Library Preparation Reagents and Methods
@@ -79,7 +79,7 @@ The four main steps in preparing RNA or DNA for NGS analysis are:
 
 ### 10x Genomics Single Cell Library Preparation System
 To obtain single cell gene expression data from RNA-seq, the Genomics lab uses the 10x Genomics Single Cell Expression platform.  Starting with a cell suspension, this process partitions cells into droplets for cDNA library preparation.  After library prep, the droplets are pooled, then sequenced on an Illumina sequencer. Unique molecular identifiers used in the library prep allow the sequencing results to be computationally traced back to individual cells.
-[10X Genomics](https://www.10xgenomics.com){:target="_blank"}<!--_-->
+[10X Genomics](https://www.10xgenomics.com)
 
 ### Overview of the Sequencing Process
 1. the adapter-ligated DNA library is loaded onto a flowcell.
@@ -89,7 +89,7 @@ To obtain single cell gene expression data from RNA-seq, the Genomics lab uses t
 
 
 ## Data types and sizes for common platforms
-What file-types are generated from each of the platforms listed above, and what is the expected file size per sample
+What file-types are generated from each of the platforms listed above, and what is the expected file size per sample?
 ### Illumina
 More to come.
 
@@ -106,8 +106,8 @@ More to come.
 More to come.
 
 ### Available Resources
- - [The Hutch Genomics Core:](https://sharedresources.fredhutch.org/core-facilities/genomics){:target="_blank"}<!--_-->
+ - [The Hutch Genomics Core:](https://sharedresources.fredhutch.org/core-facilities/genomics)
 The genomics core is VERY helpful if you need guidance about reagent and platform choice for your samples.
-- Genohub has a compendium of library prep kits, organized by NGS application type [here](https://genohub.com/ngs-library-preparation-kit-guide/){:target="_blank"}<!--_-->.
-- Illumina has a few interactive methods guides to help you find the most appropriate [library prep reagents](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html){:target="_blank"}<!--_--> and [sequencing methods](https://www.illumina.com/science/sequencing-method-explorer.html){:target="_blank"}<!--_--> to use in your experiments.
-- A helpful reference in considering library prep methods is [Ordoukhanian's 2014 paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351865/){:target="_blank"}<!--_-->.
+- Genohub has a compendium of library prep kits, organized by NGS application type [here](https://genohub.com/ngs-library-preparation-kit-guide/).
+- Illumina has a few interactive methods guides to help you find the most appropriate [library prep reagents](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html) and [sequencing methods](https://www.illumina.com/science/sequencing-method-explorer.html) to use in your experiments.
+- A helpful reference in considering library prep methods is [Ordoukhanian's 2014 paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351865/).
