@@ -28,7 +28,7 @@ Terminal/SSH including X11, NoMachine, and browser-based services access
 ### Access Requirements
 HutchnetID, cluster account. Include a way to check on these.
 
-### GettingAWS S3 Credentials
+### Getting AWS S3 Credentials
 You can obtain [Amazon Web Services](https://aws.amazon.com/) (AWS) credentials ​​to make use of the Center's AWS account. By default this will give you access to your lab's S3 bucket, but you can request permission to use other services.
 
 **NOTE**: Do NOT share these credentials with any other user, inside or outside of Fred Hutch. If another Fred Hutch
