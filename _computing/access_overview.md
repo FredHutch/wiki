@@ -1,5 +1,5 @@
 ---
-title: Scientific Computer Access Information
+title: Computing Access Overview
 last_modified_at: 2018-07-19
 ---
 
@@ -14,7 +14,6 @@ Overview of supported client devices.
 ### Laptops and Desktops
 Laptops: Windows, MacOS
 Desktops: Windows, MacOS, Ubuntu Linux
-![](/assets/comp_index/2018-06-28-12-56-21.png)
 
 ### Mobile Devices
 Link to CIT resources.
@@ -25,7 +24,7 @@ Overview of available OSes (perhaps comparison table?)
 ## Access Methods
 Terminal/SSH including X11, NoMachine, and browser-based services access
 
-### Access Requirements
+## Access Requirements or Credentials
 HutchnetID, cluster account. Include a way to check on these.
 
 ### Getting AWS S3 Credentials
@@ -57,12 +56,10 @@ This will prompt you for your HutchNet password, which will not echo to the scre
 awscreds --help
 ```
 
-See the [S3 Page](...) for documentation on accessing AWS S3 from the command line.
+See more about accessing AWS S3 via the command line [here.](/computing/store_collaboration/)
 
 
 #### GUI Instructions
 
 Open a web browser and navigate to [https://toolbox.fhcrc.org/sw2srv/aws/account](https://toolbox.fhcrc.org/sw2srv/aws/account).
-This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck.
-
-See the [Cyberduck Page](...) for documentation on using Cyberduck.
+This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck. See the more about how to use Cyberduck to connect to AWS S3 [here.](/computing/store_collaboration/)

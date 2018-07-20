@@ -1,12 +1,11 @@
 ---
 title: Overview of Computing at Fred Hutch
-last_modified_at: 2018-06-20
+last_modified_at: 2018-07-19
 ---
 
 ## Access
 
 ## Resources
-
 
 ## Data Storage
 - Database Systems
@@ -16,13 +15,14 @@ last_modified_at: 2018-06-20
 - Collaborative Storage Systems
 
 
-## Cluster
+## High Performance Computing
 
 
 ## Linux
 
 
 ## Software, Resources and Updates
+- In-Person Training and Office Hours
 - Current Software
 - Updates and Announcements
 - Resource Library
