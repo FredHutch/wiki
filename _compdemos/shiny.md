@@ -10,7 +10,7 @@ Shiny is an R package that makes it easy to build interactive web apps straight 
 ### If you:
 - Use Github as version control system
 - Do NOT want to pay 
-- Can endure a few lines of shell scripts with or without understanding the meaning this tutorial may work for you. 
+- Can endure the command line with or without understanding the meaning this tutorial may work for you. 
 
 
 ### Pros of Using Application deployment pipeline developed by Hutch Scientific Computing:
@@ -18,7 +18,7 @@ Shiny is an R package that makes it easy to build interactive web apps straight 
 - Integration with data sources within Hutch campus. For example, the application can be connected to a campus based database system (Postgres, mysql, etc…) without exposing it to the entire internet. 
 - There is a template repository (https://github.com/FredHutch/shiny-app-template) to help users to assemble your own shiny app
 - Once the application is deployed, no manual deployment is required when new changes are made as the pipeline includes continuous integration/continuous delivery (CI/CD) feature. 
-- Users can specify their own domain name ending with fredhutch.org
+- Users can pick their own custom site URL in the fredhutch.org domain (example: 'myshinyapp.fredhutch.org')"
 - User can specify if their app is only facing campus within the firewall or being exposed to the entire internet. Authorization feature can also be included upon request. 
 - The last one is, all the features mentioned above are completely free to campus users. 
 
