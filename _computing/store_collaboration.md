@@ -116,7 +116,7 @@ If all goes well, after a short installation, you should see "Installation Succe
 * When you see the dialog box that says "Cyberduck is an application downloaded from the Internet. Are you sure you want to open it?", click "Open".
 
 
-### Configure Cyberduck for use with your bucket
+#### Configure Cyberduck for use with your bucket
 
 * Click the `Bookmark` menu and choose `New Bookmark`.
 * In the dropdown at the top, choose `Amazon S3`.
@@ -164,6 +164,8 @@ the file will be copied.
 
 You can use [Amazon Web Services' S3](https://aws.amazon.com/s3/) (Simple Storage Service) directly from `R`.  The `R` package which facilitates this, `aws.s3`, is included in recent builds of `R` available on the `rhino` systems and the `gizmo` and `beagle` clusters.
 
+#### Getting Started
+
 The first step is to load a recent R module:
 
 ```
@@ -184,13 +186,13 @@ library(aws.s3)
 
 **NOTE:** The example fragments from this point on assume you are in an `R` session with `aws.s3` loaded.
 
-List all buckets:
+#### List all buckets
 
 ```R
 blist <- bucketlist()
 ```
 
-List all objects in a bucket:
+#### List all objects in a bucket
 
 The bucket name you supply must be one you have access to.
 
@@ -199,7 +201,7 @@ b <- 'fh-pi-doe-j'
 objects <- get_bucket(b)
 ```
 
-Or get bucket contents as a data frame:
+#### Get bucket contents as a data frame
 
 ```R
 df <- get_bucket_df(b)
@@ -269,9 +271,171 @@ for (match in matches) {
 }
 ```
 
+### Using S3 from Python
 
+From any of the `rhino` systems you can see which python
+builds are available by typing `ml Python/3.` and pressing the `TAB` key twice. Choose the most recent version 
+(at the time of writing it is `Python/3.6.5-foss-2016b-fh3`).
+
+You can then get to an interactive Python prompt with the 
+`python` command, but many prefer to use `ipython` 
+to work with Python interactively. 
+
+Once you have loaded a python module with `ml`, the Python
+libraries you will need 
+([boto3](https://boto3.readthedocs.io/en/latest/index.html), 
+[pandas](https://pandas.pydata.org/pandas-docs/stable/), etc.) will be
+available.
+
+#### Getting Started
+
+From within `python` (or `ipython`) do the following to
+get started:
+
+```python
+import boto3
+import numpy as np
+import pandas as pd
+import dask.dataframe as dd
+from io import StringIO, BytesIO
+
+s3 = boto3.client("s3")
+s3_resource = boto3.resource('s3')
+
+bucket_name = "fh-pi-doe-j" # substitute your actual bucket name
+```
+
+The following fragments all assume that these lines above 
+have been run.
+
+#### List all buckets in our account
+
+```python
+response = s3.list_buckets()
+```
+
+The command above returns a lot of metadata about the buckets. 
+If you just want to see the bucket names, do this as well:
+
+```python
+for bucket in response['Buckets']:
+    print(bucket['Name'])
+```
+
+#### List all objects in a bucket
+
+```python
+response = s3.list_objects_v2(Bucket=bucket_name)
+```
+
+Again, this response contains a lot of metadata. 
+To view just the object names (keys), do this as well:
+
+```python
+for item in response['Contents']:
+    print(item['Key'])
+```
+
+Note that this method only returns the first 1000 items
+in the bucket. If there are more items to be shown, 
+`response['IsTruncated']` will be `True`. If this is the 
+case, you can retrieve the full object listing as follows:
+
+```python
+paginator = s3.get_paginator('list_objects_v2')
+page_iterator = paginator.paginate(Bucket=bucket_name)
+for page in page_iterator:
+    for item in page['Contents']:
+        print(item['Key'])
+```
+
+
+#### Read object listing into Pandas data frame
+
+```python
+response = s3.list_objects_v2(Bucket=bucket_name)
+df = pd.DataFrame.from_dict(response['Contents'])
+```
+
+#### About `pandas` and `dask`
+
+There are two implementations of data frames in python:
+[pandas](https://pandas.pydata.org/pandas-docs/stable/)
+and 
+[dask](https://dask.pydata.org/en/latest/docs.html).
+Use `pandas` when the data you are working with is 
+small and will fit in memory. If it's too big 
+to fit in memory, use `dask` (it's easy to convert
+between the two, and `dask` uses the `pandas` API, so
+it's easy to work with both kinds of data frame). 
+We'll show examples of
+reading and writing both kinds of data frames 
+to and from S3. 
+
+
+**NOTE**: `Pandas` dataframes are usually written out 
+(and read in) as CSV files. `Dask` dataframes are written out
+in parts, and the parts can only be read back in with `dask`.
+
+
+
+
+#### Saving objects to S3
+
+```python
+# generate a pandas data frame of random numbers:
+df = pd.DataFrame(np.random.randint(0,100,size=(100, 4)), columns=list('ABCD'))
+
+# save it in s3:
+csv_buffer = StringIO()
+df.to_csv(csv_buffer)
+s3_resource.Object(bucket_name, 'df.csv').put(Body=csv_buffer.getvalue())
+
+# convert data frame to dask:
+dask_df = dd.from_pandas(df, 3)
+
+# save dask data frame to s3 in parts:
+dask_df.to_csv("s3://{}/dask_data_parts".format(bucket_name))
+
+```
+
+#### Reading objects from S3
+
+To read the csv file from the previous example into a `pandas`
+data frame:
+
+```python
+obj = s3.get_object(Bucket=bucket_name, Key="df.csv")
+df2 = pd.read_csv(BytesIO(obj['Body'].read()))
+```
+
+To read the parts written out in the previous example 
+back into a `dask` data frame:
+
+```python
+dask_df2 = dd.read_csv("s3://{}/dask_data_parts/*".format(bucket_name))
+```
+
+#### Upload a file to S3
+
+```python
+# write the example data frame to a local file
+df.to_csv("df.csv")
+
+# upload file:
+s3.upload_file("df.csv", Bucket=bucket_name, "df.csv")
+```
+
+
+#### Download a file from S3
+
+```python
+# second argument is the remote name/key, third argument is local name
+s3.download_file(bucket_name, "df.csv", "df.csv")
+```
 
 ### Accessing other AWS Services
+
 S3 is the only service you can access immediately after creating your credentials.
 
 For questions about accessing other services, please contact [Help Desk](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html).
