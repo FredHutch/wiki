@@ -150,7 +150,7 @@ computing:
         url: /computing/store_collaboration/
 
 
-  - title: "Cluster"
+  - title: "High Performance Computing"
     children:
       - title: "Overview"
         url: /computing/cluster_overview/
@@ -162,6 +162,8 @@ computing:
 
   - title: "Software, Resources and Updates"
     children:
+      - title: "Overview"
+        url: /computing/software_overview/
       - title: "In-Person Training and Office Hours"
         url: /computing/training_overview/
       - title: "Current Software"

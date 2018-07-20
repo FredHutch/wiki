@@ -29,4 +29,3 @@ Compute Resource | Access Interface | Resource Admin | Connection to FH Data Sto
 Beagle | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Center IT | _home_, _fast_, _economy_, AWS-S3, and Beagle-specific _scratch_
 <!-- Globus Genomics | web, FH credentials after being linked to Globus | HDC (Bret Dodson) | Economy Cloud ONLY, Requires specific data organization
 Zeppelin | - | Center IT | -->
-
