@@ -12,16 +12,17 @@ main:
 
 
 generation:
-  - title: "Study Design"
+  - title: "Study Design and Funding"
     children:
       - title: "Overview"
         url: /generation/study_overview/
-      - title: "Proposal Materials and Support"
+      - title: "Proposals and Funding"
         url: /generation/study_proposal/
       - title: "Hypothesis Development and Big Molecular Data"
         url: /generation/study_hypothesis/
       - title: "Statistics"
         url: /generation/study_statistics/
+
 
   - title: "IRB and Human Subjects"
     children:
@@ -35,6 +36,7 @@ generation:
         url: /generation/human_deidentification/
       - title: "Data Sharing and Public Repositories"
         url: /generation/human_shareDeposits/
+
 
   - title: "Clinical and Experimental Data"
     children:
@@ -62,8 +64,29 @@ generation:
         url: /generation/datagen_platformsData/
 
 
+  - title: "Laboratory Management Resources"
+    children:
+      - title: "Support Software"
+        url: /generation/labman_software/
+      - title: "Shared Equipment and Wisdom"
+        url: /generation/labman_sharedequip/
+
+
 
 bioinformatics:
+  - title: "Best Practices for Research Data Management"
+    children:
+      - title: "Overview"
+        url: /bioinformatics/dm_overview/
+      - title: "Data Storage"
+        url: /bioinformatics/dm_storage/
+      - title: "Data Ingestion and Public Datasets"
+        url: /bioinformatics/dm_ingest/
+      - title: "Data Archiving"
+        url: /bioinformatics/dm_archive/
+      - title: "Data Privacy and Security"
+        url: /bioinformatics/dm_privacy/
+
 
   - title: "Programming and Bioinformatics"
     children:
@@ -71,97 +94,79 @@ bioinformatics:
         url: /bioinformatics/prog_overview/
       - title: "R, RStudio"
         url: /bioinformatics/prog_R/
-      - title: "Bioconductor"
-        url: /bioinformatics/prog_bioconductor/
-      - title: "Python and the Condas"
+      - title: "Python"
         url: /bioinformatics/prog_python/
-      - title: "Unix/Bash"
+      - title: "Unix/Bash and Other Languages"
         url: /bioinformatics/prog_unixbash/
-      - title: "Other Common Languages"
-        url: /bioinformatics/prog_other/
 
-  - title: "Pipelining and Workflows"
+  - title: "Managing Code and Computing"
     children:
       - title: "Overview"
-        url: /bioinformatics/pipe_overview/
+        url: /bioinformatics/compute_overview/
+      - title: "Overview of Compute Resources"
+        url: /bioinformatics/compute_resoverview/
+      - title: "Accessing Compute Resources"
+        url: /bioinformatics/compute_accessing/
+      - title: "GitHub, Versioning and Sharing"
+        url: /bioinformatics/compute_github/
+      - title: "Notebooks and UIs"
+        url: /bioinformatics/compute_uis/
       - title: "Docker"
-        url: /bioinformatics/pipe_docker/
-      - title: "Globus"
-        url: /bioinformatics/pipe_globus/
-      - title: "AWS Batch"
-        url: /bioinformatics/pipe_awsbatch/
-      - title: "Other workflow Systems"
-        url: /bioinformatics/pipe_other/
+        url: /bioinformatics/compute_docker/
 
-  - title: "Genomics Analysis Approaches"
+  - title: "Training and References"
     children:
-      - title: "Overview"
-        url: /bioinformatics/aa_overview/
-      - title: "Human Genetic Variant Calling and Analysis"
-        url: /bioinformatics/aa_humanvariant/
-      - title: "Gene Expression and Transcript Analysis"
-        url: /bioinformatics/aa_geneexpression/
-      - title: "Microbiome Analysis and Microbial Genomics"
-        url: /bioinformatics/aa_microbiome/
-      - title: "Traditional GWAS"
-        url: /bioinformatics/aa_tradgwas/
-      - title: "Mammalian Copy Number Analysis"
-        url: /bioinformatics/aa_mammcopynumber/
-
-  - title: "Training and How-To's"
-    children:
-      - title: "Overview"
-        url: /bioinformatics/howto_overview/
-      - title: "How-To's Collection"
+      - title: "Training Opportunties"
+        url: /bioinformatics/howto_training/
+      - title: "Research Topic Articles"
         url: /bioinformaticsdemos/
 
 
 
 computing:
-  - title: "Best Practices for Research Data Management"
+  - title: "Access"
     children:
       - title: "Overview"
-        url: /computing/dm_overview/
-      - title: "Data Storage"
-        url: /computing/dm_storage/
-      - title: "Data Ingestion and Public Datasets"
-        url: /computing/dm_ingest/
-      - title: "Data Archiving"
-        url: /computing/dm_archive/
-      - title: "Data Privacy and Security"
-        url: /computing/dm_privacy/
+        url: /computing/access_overview/
 
-  - title: "Data Storage Systems"
+  - title: "Resources"
+    children:
+      - title: "Overview"
+        url: /computing/resource_overview/
+
+  - title: "Data Storage"
     children:
       - title: "Overview"
         url: /computing/store_overview/
       - title: "Database Systems"
         url: /computing/store_databases/
-      - title: "POSIX Style Systems"
+      - title: "Block Storage Systems"
         url: /computing/store_posix/
       - title: "Object Storage Systems"
         url: /computing/store_objectstore/
-      - title: "Scratch (Temporary) Storage"
-        url: /computing/store_scratch/        
+      - title: "Temporary (Scratch) Storage"
+        url: /computing/store_scratch/
+      - title: "Collaborative Storage Systems"
+        url: /computing/store_collaboration/
 
 
-  - title: "Resources and Services"
+  - title: "Cluster"
     children:
       - title: "Overview"
-        url: /computing/resser_overview/
-      - title: "AWS Batch"
-        url: /computing/resser_awsbatch/
-      - title: "Shiny"
-        url: /computing/shiny/
+        url: /computing/cluster_overview/
 
-
-  - title: "Training, Announcements and How-To's"
+  - title: "Linux"
     children:
       - title: "Overview"
+        url: /computing/linux_overview/
+
+  - title: "Software, Resources and Updates"
+    children:
+      - title: "In-Person Training and Office Hours"
         url: /computing/training_overview/
       - title: "Current Software"
         url: http://fredhutch.github.io/easybuild-life-sciences/
       - title: "Updates and Announcements"
         url: /scicompannounce/
-      - title: "How-To's Collection"
+      - title: "Resource Library"
         url: /compdemos/
