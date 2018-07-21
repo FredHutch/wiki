@@ -3,14 +3,15 @@ title: Shiny Applications
 last_modified_at: 2018-06-20
 ---
 
+# Introduction
+
 Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions. For more information about Shiny, [go to Rstudio's Shiny page.](https://shiny.rstudio.com)
 
 ## Options to deploy Shiny App
-- Using Shinyapps.io to deploy Shiny Apps
-- Using Application deployment pipeline developed by Hutch Scientific Computing
+1. Using Shinyapps.io to deploy Shiny Apps
+2. Using Application deployment pipeline developed by Hutch Scientific Computing
 
-
-1. Pros of Using Shinyapps.io to deploy Shiny Apps
+- Pros of Using Shinyapps.io to deploy Shiny Apps
     - It streamlines with RStudio. 
     - The free plan with **25 hours activity per month**. 
     - The ‘standard’ plan including password protection costs **$99/month**.
@@ -19,7 +20,7 @@ Shiny is an R package that makes it easy to build interactive web apps straight 
     - Shinyapps.io also provides web analytics feature showing app activities. 
     - The auto-deployment occurs within RStudio by clicking one while the SciComp’s pipeline auto-deployment occurs at pushing codebase changes to remote GitHub repo. 
 
-2. Pros of Using Application deployment pipeline developed by Hutch Scientific Computing:
+- Pros of Using Application deployment pipeline developed by Hutch Scientific Computing:
     - SciComp’s pipeline is more generic than Shinyapps.io can offer. As the later provides a streamlined deployment service with a cost. The former has capacity of hosting applications written in other languages as long as the application itself can be containerized. 
     - Integration with data sources within Hutch campus. For example, the application can be connected to a campus based database system (Postgres, mysql, etc…) without exposing it to the entire internet. 
     - There is a template repository (https://github.com/FredHutch/shiny-app-template) to help users to assemble your own shiny app
@@ -28,12 +29,12 @@ Shiny is an R package that makes it easy to build interactive web apps straight 
     - User can specify if their app is only facing campus within the firewall or being exposed to the entire internet. Authorization feature can also be included upon request. 
     - The last one is, all the features mentioned above are completely free to campus users. 
 
-## This tutorial may work for you if you: 
+## Prerequisit of using SciComp deployment pipeline:
 - Use Github as version control system
 - Do NOT want to pay 
-- Can endure the command line with or without understanding the meaning 
+- Comfortable of using command line with understanding the meaning or not
 
-## SciComp App Deployment Pipeine Tutorial
+# SciComp App Deployment Pipeine Tutorial
 
 ## GitHub Setup
 To deploy a Shiny app via the Fred Hutch system, you must first have access to the Fred Hutch institution GitHub.  [You can find GitHub instructions in this demo.](https://fredhutch.github.io/wiki/compdemos/comp_github/)
