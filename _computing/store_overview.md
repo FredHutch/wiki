@@ -1,6 +1,6 @@
 ---
 title: Overview of Data Storage at Fred Hutch
-last_modified_at: 2018-06-25
+last_modified_at: 2018-07-19
 ---
 
 The Hutch, through Center IT and Scientific Computing, support a number of options for storing your data.  These can be categorized as:
@@ -8,19 +8,17 @@ The Hutch, through Center IT and Scientific Computing, support a number of optio
  - database storage
  - block storage
  - object storage
+ - collaborative storage
 
 The service you use to store your data will depend on the nature of the data and the anticipated use.  Provided here is a summary of the different options to provide a basic overview of what resources are available to researchers for data storage. For more detailed information on each of these topics summarized here including setup instructions and limitations, please refer to each of the articles in this section of the sidebar.  
 
-## Database Storage Systems
+## Database Storage Systems: MyDB
 
-### MyDB
-_MyDB_ is a service supported by Scientific Computing (SciComp) that allows you to provision a dedicated database by logging into the [MyDB console](https://mydb.fredhutch.org/login) and choosing the kind of database you want to set up.  Four database types are available:
+_MyDB_ is a service supported by Scientific Computing (SciComp) that allows you to provision a dedicated database and choose the kind of database you want to set up.  Four database types are available:
 - Postgres,
 - MariaDB,
 - MongoDB, and
 - Neo4j.
-
-More detailed information about getting set up with _MyDB_ is included in the Database article in the sidebar.  There is currently no charge for this service.  MyDB should not be used for protected data.
 
 
 
@@ -34,19 +32,19 @@ There are multiple resources available to researchers that are Block storage inc
 - _secure_ for data with higher-level security needs
 
 
-### Scratch (Temporary) Storage
+### Temporary Storage: Scratch
 
 The scratch file system is a Block storage system that works differently than those systems intended for long term data storage.  It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
 
 Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).  **Data on this platform is not backed up.**  This storage is _not_ appropriate for storing the primary or only copy of any data.
 
 
-## Object Storage:  Economy
+## Object Storage: Economy
 
 The _economy_ file store is a nearline object storage system like Amazon's S3 storage or Google's Cloud Storage.  Unlike your the hard drive on your personal computer or the other file storage systems described above, access to data on this system requires that you retrieve the data prior to using it, copying data from the economy store to your hard drive or one of the file storage systems described above.  Unlike the other systems, this storage requires special tools to access data.
 
 
-## Collaboration Storage Options
+## Collaboration Storage: Aspera, AWS S3
 
 These storage systems have capabilities allowing you to share data with people outside the Hutch- with or without a HutchnetID.
 
