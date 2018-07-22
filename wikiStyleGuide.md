@@ -7,12 +7,12 @@ toc_label: "On This Page"
 sidebar:
   - title: "Who We Are"
     text: "This collaboratively curated wiki was created by contributions from Fred Hutch investigators and staff.  The project team is led by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri)."
-  - title: "Links"
-    text: "[Contributors List](https://fredhutch.github.io/trgen-dcc/contributors/)"
-  - title: ""
-    text: "[Outreach Programs](https://fredhutch.github.io/trgen-dcc/outreach/)"
-  - title: ""
-    text: "[Style Guide](https://fredhutch.github.io/trgen-dcc/styleguide/)"
+    - title: "Links"
+      text: "[Contributors List](http://sciwiki.fredhutch.org/contributors/)"
+    - title: ""
+      text: "[Outreach Programs](http://sciwiki.fredhutch.org/outreach/)"
+    - title: ""
+      text: "[Style Guide](http://sciwiki.fredhutch.org/styleguide/)"
 ---
 ## Github-Flavored Markdown
 The content of this site is generated using GitHub "flavored" markdown.  A cheat sheet for the code required to use things like headings and table is [here.](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Our page TOC's are generated from these headings, so use ## H2 as your first level, and headings H2, H3 and H4 show up automatically in our TOC's).

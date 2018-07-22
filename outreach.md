@@ -8,11 +8,11 @@ sidebar:
   - title: "Who We Are"
     text: "This collaboratively curated wiki was created by contributions from Fred Hutch investigators and staff.  The project team is led by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri)."
   - title: "Links"
-    text: "[Contributors List](https://fredhutch.github.io/trgen-dcc/contributors/)"
+    text: "[Contributors List](http://sciwiki.fredhutch.org/contributors/)"
   - title: ""
-    text: "[Outreach Programs](https://fredhutch.github.io/trgen-dcc/outreach/)"
+    text: "[Outreach Programs](http://sciwiki.fredhutch.org/outreach/)"
   - title: ""
-    text: "[Style Guide](https://fredhutch.github.io/trgen-dcc/styleguide/)"
+    text: "[Style Guide](http://sciwiki.fredhutch.org/styleguide/)"
 ---
 
 ## FH Biomedical Data Science Wiki Writer-Editor Program
