@@ -5,8 +5,6 @@ layout: single
 toc: true
 toc_label: "On This Page"
 sidebar:
-  - title: "Wiki Authors and Reviewers"
-    text: "
   - title: "Who We Are"
     text: "This collaboratively curated wiki was created by contributors from Fred Hutch investigators and staff.  The project team is led by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri) or go to our [homepage.](https://fredhutch.github.io/trgen-dcc/)"
   - title: "Links"
