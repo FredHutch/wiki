@@ -18,4 +18,3 @@ More to come here about all the labels that stay on in liquid nitrogen and solve
 - [Fred Hutch Resources for International Scientists](http://www.fredhutch.org/en/education-training/oscd/international-scientists.html)
 - [Fred Hutch New Scientist Resources](http://www.fredhutch.org/en/education-training/oscd/planning.html)
 - [Fred Hutch Resources for Travel or Off-site Work](https://centernet.fredhutch.org/cn/u/center-it/help-desk/offsite.html)
-- [Fred Hutch Grants Training and Resources](https://centernet.fredhutch.org/cn/u/osr/hutch-grants/hutch-grants-training.html)
