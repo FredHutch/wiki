@@ -3,7 +3,11 @@ title: Data Sharing and Public Repositories
 last_modified_at: 2018-07-19
 ---
 
-## What are the overarching benefits of data sharing?
+Whether required for funding and publication or desired for its beneficial impact on research progress, understanding the why and how of data sharing is essential for modern biomedical research programs.
+
+## Benefits of Data Sharing
+
+Some of the benefits of data sharing include:
 - reinforcing open scientific inquiry
 - encouraging diversity of analysis and opinion
 - promoting new research, testing of new or alternative hypotheses and methods of analysis
@@ -41,11 +45,10 @@ The following should be considered when developing a data sharing plan:
 - NIAID Sample Data Sharing Plan (Link to come)
 
 
-## Data Sharing as Part of the Research Process
-Data can be shared before publication, such as to collaborate in joint studies or to supplement an investigator’s data resources, or after publication.  Data can be shared within the Fred Hutch Cancer Consortium, as well as nationally and globally between individual investigators or groups or on an a web-based open data sharing platform.
+## Data Sharing Responsibilities
+The context of a data sharing project can mandate certain safety requirements and restrictions.  Some of these considerations may include whether the data is shared pre- or post- publication, or whether the data is shared locally within the Fred Hutch Cancer Consortium or to a larger national or international audience.   
 
-When, how and in what context data are shared will often dictate restrictions or requirements on sharing data.  While the underlying goal of sharing is to further research and its benefits, the underlying tenants of data sharing processes are to ensure:
-
+While the underlying goal of sharing is to further research and its benefits, the underlying tenants of data sharing processes are to ensure:
 - Identification of who shall have access to the data
 - Data sharing does not compromise individual subjects' rights and privacy, regardless of whether the data have been used in a publication
 - Data shared is restricted to only that data appropriate for a specific line of inquiry
