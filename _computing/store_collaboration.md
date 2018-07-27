@@ -26,7 +26,7 @@ S3 (the Simple Storage Service) is an object store very much like the Economy fi
 Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
 
 ### Credentials and Permissions
-Once you have [obtained S3 credentials](/computing/access_overview/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples below.
+Once you have [obtained S3 credentials](/computing/access_overview/#getting-aws-s3-credentials), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples below.
 
 
 ### Using Amazon S3 from the Command Line
@@ -294,7 +294,7 @@ Then start Python:
 python
 ```
 
-#### Import Libararies
+#### Import Libraries
 From within `python` (or `ipython`) do the following to
 get started:
 
