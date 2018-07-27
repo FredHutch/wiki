@@ -16,18 +16,22 @@ Visit [the Aspera information page](https://aspera.fhcrc.org/index.html) for mor
 ## AWS S3 (Amazon Web Services: Simple Storage Service)
 
 > NOTE: this is a very new service and may be subject to frequent changes.  Additionally, while S3 storage can be used for many other purposes, only its capabilities for collaboration are discussed here.  Refer to the documentation on cloud computing for more information on using S3 in its other capacities.
+>
+### How it Works
 
-S3 (the Simple Storage Service) is an object store very much like the Economy file service, though provided by Amazon Web Services.  Storage resources in S3 are organized much like the other Fred Hutch Object and Block systems, with a "PI bucket" for each investigator at the Hutch which is analagous to the investigator directories available in the traditional file system. A specialized client (the AWS command line interface) is used to upload the data from local storage to S3 storage.  Once there, a temporary URL is created that has the necessary credentials embedded within and is then shared with those needing access.  A secure (HTTPS) connection is then used to download the data (via browser or other client like `wget` or `curl`). This URL is temporary and set with a date after which the generated URL is no longer able to access the data, though the data stored here is not removed as with the Aspera.  That temporary URL can be regenerated as necessary.
+S3 (the Simple Storage Service) is an object store very much like the Economy file service, though provided by Amazon Web Services.  Storage resources in S3 are organized much like the other Fred Hutch Object and Block systems, with a "PI bucket" for each investigator at the Hutch which is analogous to the investigator directories available in the traditional file system. A specialized client (the AWS command line interface) is used to upload the data from local storage to S3 storage.  Once there, a temporary URL is created that has the necessary credentials embedded within and is then shared with those needing access.  A secure (HTTPS) connection is then used to download the data (via browser or other client like `wget` or `curl`). This URL is temporary and set with a date after which the generated URL is no longer able to access the data, though the data stored here is not removed as with the Aspera.  That temporary URL can be regenerated as necessary.
 
+### Backup and Security
 Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
 
+### Credentials and Permissions
 Once you have [obtained S3 credentials](/computing/access_overview/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples below.
 
 
 ### Using Amazon S3 from the Command Line
 
-#### Copy a file to your lab's S3 bucket
-This command will copy the file `hello.txt` from your current directory to the top-level folder of your lab's S3 bucket:
+#### Copy a file to an S3 bucket
+This command will copy the file `hello.txt` from your current directory to the top-level folder of an S3 bucket:
 
 ```
 aws s3 cp hello.txt s3://fh-pi-doe-j/
@@ -39,7 +43,7 @@ You can also copy files to folders within your bucket. Folders do not have to be
 aws s3 cp s3://fh-pi-doe-j/hello.txt s3://fh-pi-doe-j/a/b/c/
 ```
 
-Copying files from your lab's S3 bucket to the machine you are logged into
+Copying files from an S3 bucket to the machine you are logged into
 This example copies the file hello.txt from the top level of your lab's S3 bucket, to the current directory on the (`rhino` or `gizmo`) system you are logged into. The current directory is represented by the dot (`.`) character.
 
 ```
@@ -57,11 +61,9 @@ aws s3 cp s3://fh-pi-doe-j/a/b/c/hello.txt .
 ```
 
 
-#### Listing Bucket Contents
-
+#### Listing bucket contents
 
 This example will list the contents of your lab's bucket:
-
 
 ```
 aws s3 ls s3://fh-pi-doe-j/
@@ -75,7 +77,7 @@ aws s3 ls s3://fh-pi-doe-j/a/b/c/
 
 #### More S3 Commands
 
-The complete set of aws s3 commands is documented [here](https://docs.aws.amazon.com/cli/latest/reference/s3/index.html), and you can also type:
+The complete set of AWS S3 commands is documented [here](https://docs.aws.amazon.com/cli/latest/reference/s3/index.html), and you can also type:
 
 ```
 aws s3 help
@@ -116,7 +118,7 @@ If all goes well, after a short installation, you should see "Installation Succe
 * When you see the dialog box that says "Cyberduck is an application downloaded from the Internet. Are you sure you want to open it?", click "Open".
 
 
-#### Configure Cyberduck for use with your bucket
+#### Configure Cyberduck for use with a bucket
 
 * Click the `Bookmark` menu and choose `New Bookmark`.
 * In the dropdown at the top, choose `Amazon S3`.
@@ -178,9 +180,8 @@ Then start R:
 R
 ```
 
-
-```
-R
+Load the `aws.s3` R package:
+```r
 library(aws.s3)
 ```
 
@@ -188,7 +189,7 @@ library(aws.s3)
 
 #### List all buckets
 
-```R
+```r
 blist <- bucketlist()
 ```
 
@@ -196,14 +197,14 @@ blist <- bucketlist()
 
 The bucket name you supply must be one you have access to.
 
-```R
+```r
 b <- 'fh-pi-doe-j'
 objects <- get_bucket(b)
 ```
 
 #### Get bucket contents as a data frame
 
-```R
+```r
 df <- get_bucket_df(b)
 ```
 
@@ -211,14 +212,14 @@ df <- get_bucket_df(b)
 
 Create a data frame of random numbers and save it to S3:
 
-```R
+```r
 df <- data.frame(replicate(10,sample(0:1,1000,rep=TRUE)))
 s3save(df, bucket=b, object="foo/bar/baz/df")
 ```
 
 #### Loading objects from S3
 
-```R
+```r
 # first remove the object from memory if it's there:
 if ("df" %in% ls()) rm("df")
 # now load it:
@@ -232,7 +233,7 @@ head(df)
 First, write the existing `df` data
 frame to a csv file on your local disk:
 
-```R
+```r
 write.csv(df, file="df.csv")
 # copy the csv to s3:
 put_object("df.csv", "foo/bar/baz/df.csv", b)
@@ -240,7 +241,7 @@ put_object("df.csv", "foo/bar/baz/df.csv", b)
 
 #### Read a CSV in S3 into a data frame
 
-```R
+```r
 # first remove the object from memory if it's there:
 if ("df" %in% ls()) rm("df")
 df <- s3read_using(read.csv, object="foo/bar/baz/df.csv", bucket=b)
@@ -253,7 +254,7 @@ head(df)
 
 This will create the file `df.csv` in the current directory:
 
-```R
+```r
 save_object("foo/bar/baz/df.csv", b)
 ```
 
@@ -263,7 +264,7 @@ Assume your S3 bucket has three objects whose keys start with
 `foo/bar/baz/` and end with one of `d`, `e`, or `f`. You want to read each object into memory and end up with
 `d`, `e`, and `f` objects in your R session.
 
-```R
+```r
 bdf <- get_bucket_df(b)
 matches <- bdf$Key[grep("^foo/bar/baz/", bdf$Key)]
 for (match in matches) {
@@ -272,23 +273,27 @@ for (match in matches) {
 ```
 
 ### Using S3 from Python
+From any of the `rhino` systems you can see which Python builds are available by typing `ml Python/3.` and pressing the `TAB` key twice. Choose the most recent version (at the time of writing it is `Python/3.6.5-foss-2016b-fh3`). Once you have loaded a python module with `ml`, the Python libraries you will need ([boto3](https://boto3.readthedocs.io/en/latest/index.html), [pandas](https://pandas.pydata.org/pandas-docs/stable/), etc.) will be available.
 
-From any of the `rhino` systems you can see which python
-builds are available by typing `ml Python/3.` and pressing the `TAB` key twice. Choose the most recent version 
-(at the time of writing it is `Python/3.6.5-foss-2016b-fh3`).
-
-You can then get to an interactive Python prompt with the 
-`python` command, but many prefer to use `ipython` 
-to work with Python interactively. 
-
-Once you have loaded a python module with `ml`, the Python
-libraries you will need 
-([boto3](https://boto3.readthedocs.io/en/latest/index.html), 
-[pandas](https://pandas.pydata.org/pandas-docs/stable/), etc.) will be
-available.
+You can then get to an interactive Python prompt with the
+`python` command, but many prefer to use `ipython`
+to work with Python interactively.  
 
 #### Getting Started
 
+The first step is to load a recent Python module:
+
+```
+ml Python/3.6.5-foss-2016b-fh3
+```
+
+Then start Python:
+
+```
+python
+```
+
+#### Import Libararies
 From within `python` (or `ipython`) do the following to
 get started:
 
@@ -305,7 +310,7 @@ s3_resource = boto3.resource('s3')
 bucket_name = "fh-pi-doe-j" # substitute your actual bucket name
 ```
 
-The following fragments all assume that these lines above 
+The following fragments all assume that these lines above
 have been run.
 
 #### List all buckets in our account
@@ -314,8 +319,7 @@ have been run.
 response = s3.list_buckets()
 ```
 
-The command above returns a lot of metadata about the buckets. 
-If you just want to see the bucket names, do this as well:
+The command above returns a lot of metadata about the buckets. If you just want to see the bucket names, do this as well:
 
 ```python
 for bucket in response['Buckets']:
@@ -328,18 +332,14 @@ for bucket in response['Buckets']:
 response = s3.list_objects_v2(Bucket=bucket_name)
 ```
 
-Again, this response contains a lot of metadata. 
-To view just the object names (keys), do this as well:
+Again, this response contains a lot of metadata. To view just the object names (keys), do this as well:
 
 ```python
 for item in response['Contents']:
     print(item['Key'])
 ```
 
-Note that this method only returns the first 1000 items
-in the bucket. If there are more items to be shown, 
-`response['IsTruncated']` will be `True`. If this is the 
-case, you can retrieve the full object listing as follows:
+Note that this method only returns the first 1000 items in the bucket. If there are more items to be shown, `response['IsTruncated']` will be `True`. If this is the case, you can retrieve the full object listing as follows:
 
 ```python
 paginator = s3.get_paginator('list_objects_v2')
@@ -359,25 +359,10 @@ df = pd.DataFrame.from_dict(response['Contents'])
 
 #### About `pandas` and `dask`
 
-There are two implementations of data frames in python:
-[pandas](https://pandas.pydata.org/pandas-docs/stable/)
-and 
-[dask](https://dask.pydata.org/en/latest/docs.html).
-Use `pandas` when the data you are working with is 
-small and will fit in memory. If it's too big 
-to fit in memory, use `dask` (it's easy to convert
-between the two, and `dask` uses the `pandas` API, so
-it's easy to work with both kinds of data frame). 
-We'll show examples of
-reading and writing both kinds of data frames 
-to and from S3. 
+There are two implementations of data frames in python: [pandas](https://pandas.pydata.org/pandas-docs/stable/) and [dask](https://dask.pydata.org/en/latest/docs.html). Use `pandas` when the data you are working with is small and will fit in memory. If it's too big to fit in memory, use `dask` (it's easy to convert between the two, and `dask` uses the `pandas` API, so it's easy to work with both kinds of data frame). We'll show examples of reading and writing both kinds of data frames to and from S3.
 
 
-**NOTE**: `Pandas` dataframes are usually written out 
-(and read in) as CSV files. `Dask` dataframes are written out
-in parts, and the parts can only be read back in with `dask`.
-
-
+**NOTE**: `Pandas` dataframes are usually written out (and read in) as CSV files. `Dask` dataframes are written out in parts, and the parts can only be read back in with `dask`.
 
 
 #### Saving objects to S3
@@ -409,7 +394,7 @@ obj = s3.get_object(Bucket=bucket_name, Key="df.csv")
 df2 = pd.read_csv(BytesIO(obj['Body'].read()))
 ```
 
-To read the parts written out in the previous example 
+To read the parts written out in the previous example
 back into a `dask` data frame:
 
 ```python
