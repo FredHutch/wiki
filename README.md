@@ -4,7 +4,7 @@ This curated Wiki is just that, curated and a wiki, and as such relies upon the 
 The strength of the Wiki lies in it's collaborative and unified approach. To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below as well as additional information about the ways to communicate with and participate in the Wiki Contributor team in other ways as well.
 
 ### Wiki Content Style Guide
-Go here: https://github.com/FredHutch/wiki/blob/master/wikiStyleGuide.md, to see the current, and continually growing, style guide for content in this Wiki as decided upon by the Wiki Contributors group.  
+Go [here](https://github.com/FredHutch/wiki/blob/master/wikiStyleGuide.md), to see the current, and continually growing, style guide for content in this Wiki as decided upon by the Wiki Contributors group.  
 
 ### Contributing Directly Via GitHub
 

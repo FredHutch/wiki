@@ -9,12 +9,12 @@ last_modified_at: 2018-07-19
 
 Upfront consideration to the design and execution of data generation can help to prevent unfortunate or costly outcomes.  This section provides guidance on study design, human subjects research, management of clinical and experimental data, and a review of factors to consider when choosing from some of the common large scale molecular data generating platforms.
 
-## Study Design
+## Study Design and Funding
 In this section we will provide some guidance for researchers looking to develop a hypothesis that will have reasonable statistical power, identify the appropriate set of samples, and execute a large scale data production from those samples.  
 There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however, can be very different.  The details specific to each study type are best addressed prior to generating materials or data sets.  
 
 
-* Proposal Materials and Support
+* Proposals and Funding
 * Hypothesis Development and Big Molecular Data
 * Statistics
 

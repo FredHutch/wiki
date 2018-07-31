@@ -5,10 +5,14 @@ layout: single
 toc: true
 toc_label: "On This Page"
 sidebar:
-  - title: "Wiki Authors and Reviewers"
-    text: "This collaboratively curated wiki was created by contributors from Fred Hutch investigators. See our current contributors list  [here.](https://fredhutch.github.io/wiki/contributors/)"
   - title: "Who We Are"
-    text: "The Wiki curation project team is led by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri) or go to our [homepage.](https://fredhutch.github.io/trgen-dcc/)"
+    text: "This collaboratively curated wiki was created by contributions from Fred Hutch investigators and staff.  The project team is led by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri)."
+  - title: "Links"
+    text: "[Contributors List](http://sciwiki.fredhutch.org/contributors/)"
+  - title: ""
+    text: "[Outreach Programs](http://sciwiki.fredhutch.org/outreach/)"
+  - title: ""
+    text: "[Style Guide](http://sciwiki.fredhutch.org/styleguide/)"
 ---
 This site contains a curated collection of Fred Hutch oriented documentation regarding the use of large clinical or behavioral datasets, the generation of large scale molecular data (such as genomics, transcriptomics, etc.), the bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  To be effective and successful in biomedical research, these three realms are continuing to require researchers themselves to be adept data stewards as well as integrate data management tools into their every day research processes.  
 
