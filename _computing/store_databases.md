@@ -18,14 +18,15 @@ To access [DB4Sci](https://mydb.fredhutch.org/login) click the link and use your
 relational database that supports SQL. MariaDB has an option
 for data encryption and data encryption in transit (TLS).  If your project
 requires encryption at rest you should use MariaDB. For more information
-visit [MariaDB official site]( https://mariadb.org/)
+visit the [MariaDB official site](https://mariadb.org/)
 - _Postgres_ Postgres is a very popular open source relational database.
-Postgres is very performant and capable of storing large databases.
-[Postgres official site.](https://www.postgresql.org]
+Postgres is very performant and capable of storing large databases. For more information
+visit the [Postgres official site.](https://www.postgresql.org)
 - _MongoDB_ Mongo is a specialized database for storing JSON documents. Mongo
-is a NoSQL database.  [MongoDB official site](https://mongodb.org)
-- _Neo4j_ is a NoSQL database for representing graph data. 
-[Neo4j official site](https://neo4j.com)
+is a NoSQL database. For more information
+visit the [MongoDB official site](https://mongodb.org)
+- _Neo4j_ is a NoSQL database for representing graph data. For more information
+visit the [Neo4j official site](https://neo4j.com)
 
 More detailed information about _DB4Sci_ can be found on the application
 website. DB4Sci is and open source project that is under development.
