@@ -70,13 +70,4 @@ The Postdoc Writer-Editor program is intended to engage current Fred Hutch based
 Go to [this link](https://fredhutch.github.io/wiki/styleguide/) to see the current, and continually growing, style guide for content in this Wiki as decided upon by the Wiki Contributors group.  As the community decides upon certain styles, flags, and structures we will continually update this document to reflect the current Wiki Best Practices.  
 
 ### Contributing Directly Via GitHub
-In order to access the GitHub repository to provide new content or edit existing content, Fred Hutch researchers need a GitHub user account (if you do not already have one, you can [obtain one here via GitHub.](https://github.com/join)).  Once a user has a GitHub user account, access to the Fred Hutch institution and the FHBig GitHub team can be granted by IT (email Fred Hutch username scicomp and send your GitHub username to do this).  
-
-
-We manage the content of this site via a set of markdown files that
-  1. Create a branch off the master branch for your edits.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "computing-newcontent").  
-  2. Commit any edits or new material to only the markdown files in the "pages" directory.  
-  3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
-  4. When done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.
-  5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  
-  6. Once pull requests are merged, then any edits go live to the site.  
+In order to access the GitHub repository to provide new content or edit existing content, Fred Hutch researchers need a GitHub user account (if you do not already have one, you can [obtain one here via GitHub.](https://github.com/join)).  Once a user has a GitHub user account, access to the Fred Hutch institution and the FHBig GitHub team can be granted by IT (email Fred Hutch username `scicomp` and send your GitHub username to them to add you).  Once you have an account that is linked to Fred Hutch, you can find our detailed instructions for contributing [here.](https://github.com/FredHutch/wiki/blob/master/README.md)

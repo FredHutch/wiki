@@ -8,13 +8,19 @@ Go [here](https://github.com/FredHutch/wiki/blob/master/wikiStyleGuide.md), to s
 
 ### Contributing Directly Via GitHub
 
-We manage the content of this site via a set of markdown files that
-  1. Create a branch off the master branch for your edits.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "computing-newcontent").  
-  2. Commit any edits or new material to only the markdown files in the "pages" directory.  
+We manage the content of this site via a set of markdown files that contain long article-style text with an emphasis on the use of outline structures to allow related content to show up near each other but with the ability to use the automatically rendered Table of Contents to allow users to jump around the documents.  
+
+To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are), the process for each user is:
+
+  1. Create a branch off the master branch for your edits (do not fork the repo or create branches of branches).  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names if at all possible, as in order for your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your content.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
+  2. Commit your edits to existing markdowns as you go, and update from the master branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the master and committing frequently.  
   3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
-  4. When done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.
-  5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  
-  6. Once pull requests are merged, then any edits go live to the site [here.](http://sciwiki.fredhutch.org/)
+  4. When you are done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging vortexing or bmcgough for a review).  
+  5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
+  6. An Admin will merge the pull request into the master and then any edits go live to the site [here.](http://sciwiki.fredhutch.org/)
+
+
+Afterwards:  Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/draft/contributorTemplate.md) in our `contributors` directory so that we can give you credit for your contributions publicly on the site.
 
 ## Repo structure
 
@@ -38,6 +44,8 @@ Computing Content, organized with filenames that start with xxx_ based on what s
 Computing Demos (note all markdowns in this folder will be rendered as demo's): https://github.com/FredHutch/wiki/tree/master/_compdemos
 
 Contributors List (note all markdowns in this folder will be rendered as contributors): https://github.com/FredHutch/wiki/tree/master/_contributors
+
+
 
 ### Please Do Not Edit these folders and files:
 ####  Pages that run Demo and Contributors Collection pages:
