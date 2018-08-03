@@ -10,33 +10,31 @@ used application of bioinformatics is genomic sequence analysis,
 in which some form of high-throughput, large scale data collection instrument
 (such as a genome sequencer or a DNA microarray) is used to collect
 a large amount of information about such biological entities as
-genes, organisms, transcripts, etc.  Large scale data generation approaches like this can be referred to as molecular profiling, and can be applied to a variety of biological and biomedical research contexts from model organism studies (e.g., yeast strains) to human specimens in the context of a clinical assay.  
+genes or transcripts, etc.  Large scale data generation approaches like this can be referred to as molecular profiling, and can be applied to a variety of biological and biomedical research contexts from model organism studies (e.g., yeast strains) to human specimens in the context of a clinical assay.  
 
-## Best Practices for Research Data Management
+## [Best Practices for Research Data Management]({{ site.baseurl }}/bioinformatics/dm_overview/)
 
-- Data Storage
-- Data Ingestion and Public Datasets
-- Data Archiving
-- Data Privacy and Security
+- [Data Storage]({{ site.baseurl }}/bioinformatics/dm_storage/)
+- [Data Ingestion and Public Datasets]({{ site.baseurl }}/bioinformatics/dm_ingest/)
+- [Data Archiving]({{ site.baseurl }}/bioinformatics/dm_archive/)
+- [Data Privacy and Security]({{ site.baseurl }}/bioinformatics/dm_privacy/)
 
-## Programming and Bioinformatics
+## [Programming and Bioinformatics]({{ site.baseurl }}/bioinformatics/prog_overview/)
 
-- R, RStudio
-- Bioconductor
-- Python and the Condas
-- Unix/Bash
-- Other Common Languages
+- [R, RStudio]({{ site.baseurl }}/bioinformatics/prog_R/)
+- [Python]({{ site.baseurl }}/bioinformatics/prog_python/)
+- [Unix/Bash and Other Common Languages]({{ site.baseurl }}/bioinformatics/prog_unixbash/)
 
-## Working with Compute Resources
+## [Managing Code and Computing]({{ site.baseurl }}/bioinformatics/compute_overview/)
 
-- Docker
-- AWS Batch
+- [Overview of Compute Resources]({{ site.baseurl }}/bioinformatics/compute_resoverview/)
+- [Accessing Compute Resources]({{ site.baseurl }}/bioinformatics/compute_accessing/)
+- [GitHub, Versioning and Sharing]({{ site.baseurl }}/bioinformatics/compute_github/)
+- [Notebooks and UIs]({{ site.baseurl }}/bioinformatics/compute_uis/)
+- [Docker]({{ site.baseurl }}/bioinformatics/compute_docker/)
 
-## Training and How-To's
 
-- How-To's Collection
-- Human Genetic Variant Calling and Analysis
-- Gene Expression and Transcript Analysis
-- Microbiome Analysis and Microbial Genomics
-- Traditional GWAS
-- Mammalian Copy Number Analysis
+## [Training and How-To's](({{ site.baseurl }}/bioinformatics/howto_training/))
+
+- [Training Opportunities](({{ site.baseurl }}/bioinformatics/howto_training/))
+- [Research Topic Articles]({{ site.baseurl }}/infdemos/)

@@ -3,11 +3,11 @@ title: Overview of Computing at Fred Hutch
 last_modified_at: 2018-07-19
 ---
 
-## Access
+## [Access]({{ site.baseurl }}/computing/access_overview/)
 
-## Resources
+## [Resources]({{ site.baseurl }}/computing/resource_overview/)
 
-## Data Storage
+## [Data Storage]({{ site.baseurl }}/computing/store_overview/)
 - Database Systems
 - Block Storage Systems
 - Object Storage Systems
@@ -15,13 +15,13 @@ last_modified_at: 2018-07-19
 - Collaborative Storage Systems
 
 
-## High Performance Computing
+## [High Performance Computing]({{ site.baseurl }}/computing/hpc/)
 
 
-## Linux
+## [Linux]({{ site.baseurl }}/computing/linux_overview/)
 
 
-## Software, Resources and Updates
+## [Software, Resources and Updates]({{ site.baseurl }}/computing/training_overview/)
 - In-Person Training and Office Hours
 - Current Software
 - Updates and Announcements
