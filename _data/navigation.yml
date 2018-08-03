@@ -157,6 +157,10 @@ computing:
     children:
       - title: "Overview"
         url: /computing/cluster_overview/
+      - title: "Rhino/Gizmo"
+        url: /computing/cluster_rhinoGizmo/
+      - title: "Cloud Computing"
+        url: /computing/cluster_cloudCompute/
 
   - title: "Linux"
     children:

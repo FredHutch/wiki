@@ -15,7 +15,9 @@ last_modified_at: 2018-07-19
 - Collaborative Storage Systems
 
 
-## [High Performance Computing]({{ site.baseurl }}/computing/hpc/)
+## [High Performance Computing]({{ site.baseurl }}/computing/cluster_overview/)
+- [On-Premise HPC (Rhino/Gizmo)]({{ site.baseurl }}/computing/cluster_rhinoGizmo/)
+- [Cloud Computing]({{ site.baseurl }}/computing/cluster_cloudCompute/)
 
 
 ## [Linux]({{ site.baseurl }}/computing/linux_overview/)
