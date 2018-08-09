@@ -3,30 +3,31 @@ resources:
   type: web
   location: FHCRC
   access:
-    type: web
-    url: https://rstudio.fhcrc.org
-    auth: hutchnetID
-    auth_type: pam
+    - type: web
+    - url: https://rstudio.fhcrc.org
+    - auth: hutchnetID
+    - auth_type: pam
 - proxmox:
   type: VM cluster
   location: FHCRC
   access:
-    type: web
-    url: https://proxa1.fhcrc.org:8000
-    auth: hutchnetID
-    auth_type: pam
+    - type: web
+    - url: https://proxa1.fhcrc.org:8000
+    - auth: hutchnetID
+    - auth_type: pam
 - gizmo:
   type: HPC
   location: FHCRC
-  - access:
-    type: terminal
-    url: ssh://rhino
-    auth: hutchnetID
-    auth_type: LDAP
-  - scheduler:
-    name: slurm
-    version: 1
-  - nodes: f
+  access:
+    - type: terminal
+    - url: ssh://rhino
+    - auth: hutchnetID
+    - auth_type: LDAP
+  scheduler:
+    - name: slurm
+    - version: 1
+  nodes:
+  - f:
     cores: 4
     sockets: 1
     memory_gb: 32
@@ -35,14 +36,14 @@ resources:
     manufacturer: SuperMicro
     vendor: Silicon Mechanics
     model: Rackform iServ R4920
-    - local_storage:
-      type: hard drive
-      disks: 1
-      size_gb: 800
-      filesystem: ext4
-      mount: /loc
+    local_storage:
+      - type: hard drive
+      - disks: 1
+      - size_gb: 800
+      - filesystem: ext4
+      - mount: /loc
     node_count: 456
-  - nodes: g
+  - g:
     cores: 6
     sockets: 2
     memory_gb: 256
@@ -51,14 +52,14 @@ resources:
     manufacturer: SuperMicro
     vendor: SiliconMechanics
     model: 6028U 2U Ultra NVMe Server
-    - local_storage:
-      type: hard drive
-      disks: 6
-      size_gb: 5300
-      filesystem: zfs
-      mount: /loc
+    local_storage:
+      - type: hard drive
+      - disks: 6
+      - size_gb: 5300
+      - filesystem: zfs
+      - mount: /loc
     node_count: 18
-  - nodes: h
+  - h:
     cores: 14
     sockets: 2
     memory_gb: 768
@@ -67,14 +68,14 @@ resources:
     manufacturer: SuperMicro
     vendor: Silicon Mechanics
     model: 6028U 2U Ultra NVMe Server
-    - local_storage:
-      type: hard disk
-      disks: 6
-      size_gb: 5300
-      filesystem: zfs
-      mount: /loc
+    local_storage:
+      - type: hard disk
+      - disks: 6
+      - size_gb: 5300
+      - filesystem: zfs
+      - mount: /loc
     node_count: 3
-  - nodes: rhino
+  - rhino:
     cores: 14
     sockets: 2
     memory_gb: 384
@@ -83,25 +84,25 @@ resources:
     manufacturer: SuperMicro
     vendor: Silicon Mechanics
     model: Super Server
-    - local_storage:
-      type: hard disk
-      disks: 6
-      size_gb: 5300
-      filesystem: zfs
-      mount: /loc
+    local_storage:
+      - type: hard disk
+      - disks: 6
+      - size_gb: 5300
+      - filesystem: zfs
+      - mount: /loc
     node_count: 3
 - beagle
   type: HPC
   location: AWS
-  - access:
-    type: terminal
-    url:  ssh://rhino
-    auth: hutchnetID
-    auth_type: LDAP
-  - scheduler:
-    name: slurm
-    version: 1
-  - nodes: f
+  access:
+    - type: terminal
+    - url:  ssh://rhino
+    - auth: hutchnetID
+    - auth_type: LDAP
+  scheduler:
+    - name: slurm
+    - version: 1
+  - f:
     cores: 8
     sockets: n/a
     memory_gb: 16
@@ -111,7 +112,7 @@ resources:
     vendor: Amazon
     model: c5.2xlarge
     node_count: 777
-  - nodes: g
+  - g:
     cores: 36
     sockets: n/a
     memory_gb: 72
@@ -121,7 +122,7 @@ resources:
     vendor: Amazon
     model: c5.9xlarge
     node_count: 103
-  - nodes: h
+  - h:
     cores: 32
     sockets: n/a
     memory_gb: 244
