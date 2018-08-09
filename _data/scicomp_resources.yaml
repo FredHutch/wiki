@@ -91,7 +91,7 @@ resources:
       - filesystem: zfs
       - mount: /loc
     node_count: 3
-- beagle
+- beagle:
   type: HPC
   location: AWS
   access:
