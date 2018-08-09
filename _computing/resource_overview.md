@@ -31,6 +31,6 @@ This table is auto-generated based on the yaml in _data/scicomp_resources.yaml:
 
 Resource Name | Resources Type | Resource Access | Required Account | Resource Details
 --- | --- | --- | --- | ---
-{% for resource in site.data.scicomp_resources %}
-      <TR><TD>{{ resource.name }} <TD>{{ resource.type }} <TD>{{ resource.access.type }} <TD>{{ resource.access.auth }} <TD>{{ resource }}
+{% for resource in site.data.scicomp_resources.resources %}
+      {{ resource.name }} | {{ resource.type }} | {{ resource.access.type }} | {{ resource.access.auth }} | {{ resource }}
 {% endfor %}
