@@ -14,6 +14,7 @@ Rhino | CLI, FH credentials on campus/VPN off campus | Scientific Computing | Di
 NoMachine | NX Client, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
 Python/Jupyter Notebooks | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
 R/R Studio | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
+Beagle | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Center IT | _home_, _fast_, _economy_, AWS-S3, and Beagle-specific _scratch_
 
 ## Meet `Rhino`
 `Gizmo` is actually not a stand alone system, instead, access to the resource is based on the Rhino platform supported by Center IT.  `Rhino`, or more specifically the Rhinos are the locally managed HPC resources that are actually three different servers all accessed via the name `rhino`. Together, they function as a data and compute hub for a variety of data storage resources and high performance computing (HPC).  The specific guidance for the use of each of the approaches to HPC access are slightly different, but will all require the user to learn how to access and interact with `Rhino`.  Any user interacting with the following systems will be dependent on being proficient with the care and keeping of the Rhinos.
