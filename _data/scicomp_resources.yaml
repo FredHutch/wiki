@@ -21,6 +21,11 @@ date: 2018-07-05
 - resource: gizmo
   type: HPC
   location: FHCRC
+  - access:
+    type: terminal
+    url: ssh://rhino
+    auth: hutchnetID
+    auth_type: LDAP
   - scheduler:
     name: slurm
     version: 1
@@ -91,6 +96,11 @@ date: 2018-07-05
 - resource: beagle
   type: HPC
   location: AWS
+  - access:
+    type: terminal
+    url:  ssh://rhino
+    auth: hutchnetID
+    auth_type: LDAP
   - scheduler:
     name: slurm
     version: 1
