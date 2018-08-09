@@ -1,7 +1,3 @@
----
-title: gizmo
-date: 2018-07-05
----
 - resource: rstudio
   type: web
   location: FHCRC
