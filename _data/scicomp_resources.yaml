@@ -102,6 +102,7 @@ resources:
   scheduler:
     - name: slurm
     - version: 1
+  nodes:
   - f:
     cores: 8
     sockets: n/a
