@@ -1,6 +1,6 @@
 ---
 title: Scientific Computing Supported Resources
-last_modified_at: 2018-07-12
+last_modified_at: 2018-08-08
 ---
 
 ## Batch Computing
@@ -25,3 +25,12 @@ VMs, shiny, rancher, data transfer
 
 ### Community Resources (not specifically supported by IT)
 Are there things people use that we don't really support?
+
+## Auto-generated Table
+This table is auto-generated based on the yaml in _data/scicomp_resources.yaml:
+
+Resource Name | Resources Type | Resource Access | Required Account | Resource Details
+--- | --- | --- | --- | ---
+{% for resource in site.data.scicomp_resources %}
+      {{ resource.name }} | {{ resource.type }} | {{ resource.access.type }} | {{ resource.access.auth }} | {{ resource }}
+{% endfor %}
