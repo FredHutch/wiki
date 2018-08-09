@@ -1,0 +1,126 @@
+---
+title: gizmo
+date: 2018-07-05
+---
+- resource: rstudio
+  type: web
+  location: FHCRC
+  - access:
+    type: web
+    url: https://rstudio.fhcrc.org
+    auth: hutchnetID
+    auth_type: pam
+- resource: proxmox
+  type: VM cluster
+  location: FHCRC
+  - access:
+    type: web
+    url: https://proxa1.fhcrc.org:8000
+    auth: hutchnetID
+    auth_type: pam
+- resource: gizmo
+  type: HPC
+  location: FHCRC
+  - scheduler:
+    name: slurm
+    version: 1
+  - nodes: f
+    cores: 4
+    sockets: 1
+    memory_gb: 32
+    processor_model: E3-1270v3
+    processor_manufacturer: Intel
+    manufacturer: SuperMicro
+    vendor: Silicon Mechanics
+    model: Rackform iServ R4920
+    - local_storage:
+      type: hard drive
+      disks: 1
+      size_gb: 800
+      filesystem: ext4
+      mount: /loc
+    node_count: 456
+  - nodes: g
+    cores: 6
+    sockets: 2
+    memory_gb: 256
+    processor_model: E5-1234v666
+    processor_manufacturer: Intel
+    manufacturer: SuperMicro
+    vendor: SiliconMechanics
+    model: 6028U 2U Ultra NVMe Server
+    - local_storage:
+      type: hard drive
+      disks: 6
+      size_gb: 5300
+      filesystem: zfs
+      mount: /loc
+    node_count: 18
+  - nodes: h
+    cores: 14
+    sockets: 2
+    memory_gb: 768
+    processor_model: E5-1234v666
+    processor_manufacturer: Intel
+    manufacturer: SuperMicro
+    vendor: Silicon Mechanics
+    model: 6028U 2U Ultra NVMe Server
+    - local_storage:
+      type: hard disk
+      disks: 6
+      size_gb: 5300
+      filesystem: zfs
+      mount: /loc
+    node_count: 3
+  - nodes: rhino
+    cores: 14
+    sockets: 2
+    memory_gb: 384
+    processor_model: E5-1234v666
+    processor_manufacturer: Intel
+    manufacturer: SuperMicro
+    vendor: Silicon Mechanics
+    model: Super Server
+    - local_storage:
+      type: hard disk
+      disks: 6
+      size_gb: 5300
+      filesystem: zfs
+      mount: /loc
+    node_count: 3
+- resource: beagle
+  type: HPC
+  location: AWS
+  - scheduler:
+    name: slurm
+    version: 1
+  - nodes: f
+    cores: 8
+    sockets: n/a
+    memory_gb: 16
+    processor_model: c5
+    processor_manufacturer: Intel
+    manufacturer: EC2
+    vendor: Amazon
+    model: c5.2xlarge
+    node_count: 777
+  - nodes: g
+    cores: 36
+    sockets: n/a
+    memory_gb: 72
+    processor_model: c5
+    processor_manufacturer: Intel
+    manufacturer: EC2
+    vendor: Amazon
+    model: c5.9xlarge
+    node_count: 103
+  - nodes: h
+    cores: 32
+    sockets: n/a
+    memory_gb: 244
+    processor_model: r4
+    processor_manufacturer: Intel
+    manufacturer: EC2
+    vendor: amazon
+    model: r4.8xlarge
+    node_count: 34
