@@ -1,5 +1,5 @@
 resources:
-- name: rstudio
+- rstudio:
   type: web
   location: FHCRC
   access:
@@ -7,7 +7,7 @@ resources:
     url: https://rstudio.fhcrc.org
     auth: hutchnetID
     auth_type: pam
-- name: proxmox
+- proxmox:
   type: VM cluster
   location: FHCRC
   access:
@@ -15,7 +15,7 @@ resources:
     url: https://proxa1.fhcrc.org:8000
     auth: hutchnetID
     auth_type: pam
-- name: gizmo
+- gizmo:
   type: HPC
   location: FHCRC
   - access:
@@ -90,7 +90,7 @@ resources:
       filesystem: zfs
       mount: /loc
     node_count: 3
-- name: beagle
+- beagle
   type: HPC
   location: AWS
   - access:
