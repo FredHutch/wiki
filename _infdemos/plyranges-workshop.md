@@ -7,7 +7,9 @@ last_modified_at: 2018-08-09
 ## Getting started
 `plyranges` is a Bioconductor package that offers `dplyr`-style operations on the `GRanges` class.
 
-- [Workshop Material](https://bioconductor.github.io/BiocWorkshops/fluent-genomic-data-analysis-with-plyranges.html)
+- Bioconductor [plyranges Workshop book](https://bioconductor.github.io/BiocWorkshops/fluent-genomic-data-analysis-with-plyranges.html)
+
+Note that the code chuck below are all from Bioconductor 2018 conference workshop book.
 
 ## Setup
 Require R >= 3.5.0
