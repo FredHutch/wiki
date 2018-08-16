@@ -79,7 +79,7 @@ mcols(gr) <-
                       "YFL063W", "YFL062W", "YFL067W"))
 ```
 
-Now we can use `plyranges::as_granges()` to create a `GRanges` object:
+Or we can use `plyranges::as_granges()` to create a `GRanges` object:
 
 ``` r
 library(plyranges, quietly = TRUE)
