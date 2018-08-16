@@ -1,7 +1,7 @@
 ---
 title: Intro to plyranges (Bioconductor)
 author: Chao-Jen Wong
-last_modified_at: 2018-08-016
+last_modified_at: 2018-08-16
 ---
 Getting started
 ---------------
