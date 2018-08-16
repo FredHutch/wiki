@@ -10,7 +10,9 @@ Research Technician III, Biomedical Data Scientist
 
 
 ## Contribution Domain and Type
+
 Data Generation - writing and editing
+
 Bioinformatics - editing
 
 
