@@ -1,6 +1,6 @@
 ---
 title: Overview of Data Storage at Fred Hutch
-last_modified_at: 2018-07-19
+last_modified_at: 2018-08-16
 ---
 
 The Hutch, through Center IT and Scientific Computing, support a number of options for storing your data.  These can be categorized as:
@@ -12,15 +12,15 @@ The Hutch, through Center IT and Scientific Computing, support a number of optio
 
 The service you use to store your data will depend on the nature of the data and the anticipated use.  Provided here is a summary of the different options to provide a basic overview of what resources are available to researchers for data storage. For more detailed information on each of these topics summarized here including setup instructions and limitations, please refer to each of the articles in this section of the sidebar.  
 
-## Database Storage Systems: MyDB
+## Database Storage Systems: DB4Sci and SQL
 
-_MyDB_ is a service supported by Scientific Computing (SciComp) that allows you to provision a dedicated database and choose the kind of database you want to set up.  Four database types are available:
+_DB4Sci_ is a service supported by Scientific Computing (SciComp) that allows you to provision a dedicated database and choose the kind of database you want to set up.  Four database types are available:
 - Postgres,
 - MariaDB,
 - MongoDB, and
 - Neo4j.
 
-
+Access to Microsoft SQL databases can be obtained via [Center IT.]( https://centernet.fredhutch.org/cn/u/center-it/services/database_hosting.html)
 
 ## Block Storage: Home, Fast, Secure, Scratch
 
