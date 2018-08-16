@@ -26,9 +26,9 @@ The Writer-Editor program is intended to engage current Fred Hutch based postdoc
 
 ### Requirements
 The requirements for participation as a postdoc writer-editor include:
-- An initial meeting for training in how to manage contributions and editing via GitHub (web OR desktop client training will be provided).  
+- An initial meeting for training in how to manage contributions and editing via GitHub (web OR desktop client training will be provided, no previous experience needed).  
 - Participation in the weekly in-person meeting of larger Wiki Contributors group (1hr)
-~3 hours per week of writing documentation in your primary area of expertise and/or editing existing documents both in and outside of your primary area of expertise.  This work is done remotely, anytime during the week, and contributions are submitted regularly via GitHub.  Contributions are then reviewed and incorporated along with all other contributions at the weekly Wiki Contributors meeting.  
+- ~3 hours per week of writing documentation in your primary area of expertise and/or editing existing documents both in and outside of your primary area of expertise.  This work is done remotely, anytime during the week, and contributions are submitted regularly via GitHub.  Contributions are then reviewed and incorporated along with all other contributions at the weekly Wiki Contributors meeting.  
 - Other considerations:
   - Ability to write clearly and concisely for a wide range of scientific audiences and levels of expertise.  
   - Ability to self-direct and time manage to make your contributions have the most value as well as coordinate with your research.  
