@@ -300,4 +300,4 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
-      share: true
+      share: false
