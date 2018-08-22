@@ -1,7 +1,7 @@
 
 main:
   - title: "About"
-    url: /
+    url: /about/
   - title: "Data Generation"
     url: /generation/gen_index/
   - title: "Bioinformatics"
