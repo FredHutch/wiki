@@ -5,15 +5,11 @@ layout: single
 toc: true
 toc_label: "On This Page"
 sidebar:
-  - title: "Who We Are"
-    text: "This collaboratively curated wiki was created by contributions from Fred Hutch investigators and staff.  The project team is led by the Translational Genomics Data Coordination Center.  For more information about this project or contributing, email Amy Paguirigan (apaguiri)."
-  - title: "Links"
-    text: "[Contributors List](http://sciwiki.fredhutch.org/contributors/)"
-  - title: ""
-    text: "[Outreach Programs](http://sciwiki.fredhutch.org/outreach/)"
-  - title: ""
-    text: "[Style Guide](http://sciwiki.fredhutch.org/styleguide/)"
+  nav: "frontpage"
 ---
+## Translational Genomics Pop Up Events
+Starting in Fall of 2018 we will begin hosting Pop Up workshops!!!  You can find up to date events by going to [the FHBig Google Calendar](https://calendar.google.com/calendar?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) and looking for those events labeled "Pop Up:...".  If you'd like to get on the roster, please email Amy Paguirigan (`apaguiri`) or go chat about it on [Slack.](https://fhbig.slack.com)  
+
 
 ## FH Biomedical Data Science Wiki Writer-Editor Program
 
