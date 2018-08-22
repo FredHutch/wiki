@@ -1,5 +1,5 @@
 ---
-title: Wiki Outreach and Programs
+title: Wiki Outreach and Events
 permalink: /outreach/
 layout: single
 toc: true

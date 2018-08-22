@@ -35,6 +35,9 @@ collections:
   scicompannounce:
     output: true
     permalink: /:collection/:path/
+  drafts:
+    output: true
+    permalink: /:collection/:path/
 
 
 
@@ -279,7 +282,7 @@ defaults:
       layout: single
       share: false
 
-  # _scicompannounce
+# _scicompannounce
   - scope:
       path: ""
       type: scicompannounce
@@ -288,3 +291,13 @@ defaults:
       share: false
       sidebar:
         nav: "computing"
+
+  # _drafts
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true

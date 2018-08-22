@@ -1,6 +1,6 @@
 ---
-title: "About the Wiki"
-permalink: /
+title: About this Wiki
+permalink: /index/
 layout: single
 toc: true
 toc_label: "On This Page"
