@@ -1,6 +1,6 @@
 ---
 title: About this Wiki
-permalink: /index/
+permalink: /
 layout: single
 toc: true
 toc_label: "On This Page"
