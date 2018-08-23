@@ -118,7 +118,7 @@ bioinformatics:
     children:
       - title: "Overview"
         url: /bioinformatics/compute_overview/
-      - title: "Overview of Compute Resources"
+      - title: "Fred Hutch Compute Resources"
         url: /bioinformatics/compute_resoverview/
       - title: "Accessing Compute Resources"
         url: /bioinformatics/compute_accessing/
