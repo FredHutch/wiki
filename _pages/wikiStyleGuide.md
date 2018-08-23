@@ -1,11 +1,6 @@
 ---
 title: Fred Hutch Biomedical Data Science Wiki Style Guide
 permalink: /styleguide/
-layout: single
-toc: true
-toc_label: "On This Page"
-sidebar:
-  nav: "frontpage"
 ---
 ## Github-Flavored Markdown
 The content of this site is generated using GitHub "flavored" markdown.  A cheat sheet for the code required to use things like headings and table is [here.](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Our page TOC's are generated from these headings, so use ## H2 as your first level, and headings H2, H3 and H4 show up automatically in our TOC's).

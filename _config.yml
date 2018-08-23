@@ -123,6 +123,8 @@ include:
   - _data
   - assets
   - _layouts
+
+
 exclude:
 keep_files:
   - .git
@@ -218,6 +220,17 @@ compress_html:
 
 # Defaults
 defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: page
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "frontpage"
   # _generation
   - scope:
       path: ""

@@ -1,11 +1,6 @@
 ---
 title: Wiki Outreach and Events
 permalink: /outreach/
-layout: single
-toc: true
-toc_label: "On This Page"
-sidebar:
-  nav: "frontpage"
 ---
 ## Translational Genomics Pop Up Events
 Starting in Fall of 2018 we will begin hosting Pop Up workshops!!!  You can find up to date events by going to [the FHBig Google Calendar](https://calendar.google.com/calendar?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) and looking for those events labeled "Pop Up:...".  If you'd like to get on the roster, please email Amy Paguirigan (`apaguiri`) or go chat about it on [Slack.](https://fhbig.slack.com)  
