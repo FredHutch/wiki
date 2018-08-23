@@ -217,6 +217,7 @@ compress_html:
 
 
 # Defaults
+###NOTE:  for sciwiki, share: true will turn on the "Edit this page" function at the bottom of the pages
 defaults:
   # _generation
   - scope:
@@ -300,4 +301,4 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
-      share: false
+      share: true
