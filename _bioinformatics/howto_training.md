@@ -24,6 +24,7 @@ last_modified_at: 2018-06-14
 - [DataQuest](https://www.dataquest.io/home)
 - [edX](https://www.edx.org), including courses in [Data Analysis and Statistics](https://www.edx.org/course/subject/data-analysis-statistics) and [Bioinformatics](https://www.edx.org/learn/bioinformatics)
 - [The Open Source Data Science Masters](http://datasciencemasters.org)
+- [ROSALIND interactive bioinformatics problem set](http://rosalind.info/)
 - [Udacity](https://www.udacity.com) has courses on [Data Science](https://www.udacity.com/courses/school-of-data-science)
 
 
