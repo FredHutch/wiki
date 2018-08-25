@@ -9,7 +9,7 @@ locale: en-US
 title: "Fred Hutch Biomedical Data Science Wiki"
 description: "Collective documentation for Genomics, Bioinformatics and Scientific Computing at the Fred Hutch"
 url                      : http://sciwiki.fredhutch.org
-baseurl                  : "/"
+baseurl                  : ""
 repository               : "FredHutch/wiki"
 
 
