@@ -5,17 +5,7 @@ layout: single
 toc: true
 toc_label: "On This Page"
 sidebar:
- - title: "Who We Are"
-   children:
-     - title: "This collaboratively curated wiki was created by contributions from Fred Hutch investigators and staff.  For more information about this project or contributing, email Amy Paguirigan (apaguiri)."
- - title: "Links"
-   children:
-     - title: "Contributors List"
-       url: /contributors/
-     - title: "Outreach and Events"
-       url: /outreach/
-     - title: "Style Guide"
-       url: /styleguide/
+  nav: "frontpage"
 ---
 To be effective and successful in realms of biomedical research involving large scale biomedical datasets, researchers themselves are increasingly being required to become more adept data stewards as well as better integrate data management tools into their every day research processes. The Biomedical Data Science Wiki project aims to create a curated collection of Fred Hutch oriented documentation regarding the generation of large scale molecular data from human specimens, the bioinformatics and analytics required to interpret those data, and the high performance computing infrastructure available for managing both data storage and computing tasks.  This overlap between biomedical research and the data it generates constitutes what is essentially biomedical data science.  
 
