@@ -1,17 +1,16 @@
 ---
 title: Data Generation Overview
-last_modified_at: 2018-07-19
+last_modified_at: 2018-08-25
 ---
 
 "The data may not contain the answer. The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data." - John Tukey  
 
 "If you torture the data, it will confess to anything" - Ronald Coase.
 
-Upfront consideration to the design and execution of data generation can help to prevent unfortunate or costly outcomes.  This section provides guidance on study design, human subjects research, management of clinical and experimental data, and a review of factors to consider when choosing from some of the common large scale molecular data generating platforms.
+Upfront consideration to the design and execution of large scale data generating research projects can help to prevent unfortunate or costly outcomes.  This section provides guidance on and resources related to study design, human subjects research, management of clinical and experimental data, and a review of factors to consider when choosing from some of the common large scale molecular data generating platforms.
 
 ## [Study Design and Funding]({{ site.baseurl }}/generation/study_overview/)
-This section provides guidance for researchers looking to develop a hypothesis that will have reasonable statistical power, identify the appropriate set of samples, and execute a large scale data production from those samples.  
-There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however, can be very different.  The details specific to each study type are best addressed prior to generating materials or data sets.  
+This section provides guidance for researchers looking to develop a hypothesis that will have reasonable statistical power, identify the appropriate set of samples, and execute a large scale data production from those samples.  There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however, can be very different.  The details specific to each study type are best addressed prior to generating materials or data sets.  
 
 
 * [Proposals and Funding]({{ site.baseurl }}/generation/study_proposal/)
@@ -19,6 +18,7 @@ There are the two general types of studies using large scale molecular data sets
 * [Statistics]({{ site.baseurl }}/generation/study_statistics/)
 
 ## [IRB and Human Subjects]({{ site.baseurl }}/generation/human_overview/)
+The policies and processes that relate to the human subject components of any large scale data generating or analyzing study are continually evolving as new issues arise and become more clear.  Keeping up with the particular issues that do or do not apply to a given research project can sometimes be a challenge, and these pages contain relevant guidance and links to the necessary information researchers need before, during and after a research project involving human specimens or data.  
 
 * [Consenting and Big Molecular Data]({{ site.baseurl }}/generation/human_consentIRB/)
 * [Privacy and Security]({{ site.baseurl }}/generation/human_privacySecurity/)
@@ -42,8 +42,8 @@ The decisions required when generating large scale data sets themselves are info
 * [RNA-Based Approaches]({{ site.baseurl }}/generation/datagen_dnaApproaches/)
 * [Genomics Platforms Available]({{ site.baseurl }}/generation/datagen_platformsData/)
 
-## [Laboratory Management Resources]({{ site.baseurl }}/generation/labman_overview/)
-
+## [Laboratory and Data Management Resources]({{ site.baseurl }}/generation/labman_overview/)
+Some of the challenges associated with executing large scale data projects can be mitigated by implementing good laboratory management and data systems before beginning the project.  These sections relate to the particular systems available to Fred Hutch researchers that help them manage data generated in laboratories.  
 
 * [Support Software]({{ site.baseurl }}/generation/labman_software/)
 * [Shared Equipment and Wisdom]({{ site.baseurl }}/generation/labman_sharedequip/)
