@@ -172,7 +172,7 @@ computing:
       - title: "Rhino/Gizmo/Beagle"
         url: /computing/cluster_rhinoGizmo/
       - title: "Cluster Software"
-        url: /computing/cluster_rhinoGizmo/
+        url: /computing/cluster_software/
       - title: "Cloud Computing"
         url: /computing/cluster_cloudCompute/
 
