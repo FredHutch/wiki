@@ -41,8 +41,8 @@ This table is auto-generated based on the yaml in _data/scicomp_resources.yaml:
 <tr>
   <td>{{ resource.name }}</td>
   <td>{{ resource.type }}</td>
-  <td>{{ resource.access.type }}</td>
-  <td>{{ resource.access.auth }}</td>
+  <td>{{ resource.access[type] }}</td>
+  <td>{{ resource.access[auth] }}</td>
   <Td>{{ resource.location }}</td>
 </tr>
 {%- endfor -%}
