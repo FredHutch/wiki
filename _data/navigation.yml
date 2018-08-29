@@ -140,15 +140,10 @@ bioinformatics:
 
 computing:
   - title: "Computing"
-  - title: "Access"
+  - title: "Access and Credentials"
     children:
       - title: "Overview"
         url: /computing/access_overview/
-
-  - title: "Resources"
-    children:
-      - title: "Overview"
-        url: /computing/resource_overview/
 
   - title: "Data Storage"
     children:
@@ -166,19 +161,20 @@ computing:
         url: /computing/store_collaboration/
 
 
-  - title: "High Performance Computing"
+  - title: "Scientific Computing"
     children:
       - title: "Overview"
         url: /computing/cluster_overview/
-      - title: "Rhino/Gizmo"
+      - title: "Resources Available"
+        url: /computing/resource_overview/
+      - title: "Linux 101"
+        url: /computing/linux_linux101/
+      - title: "Rhino/Gizmo/Beagle"
+        url: /computing/cluster_rhinoGizmo/
+      - title: "Cluster Software"
         url: /computing/cluster_rhinoGizmo/
       - title: "Cloud Computing"
         url: /computing/cluster_cloudCompute/
-
-  - title: "Linux"
-    children:
-      - title: "Overview"
-        url: /computing/linux_overview/
 
   - title: "Software, Resources and Updates"
     children:

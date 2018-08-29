@@ -5,8 +5,6 @@ last_modified_at: 2018-07-19
 
 ## [Access]({{ site.baseurl }}/computing/access_overview/)
 
-## [Resources]({{ site.baseurl }}/computing/resource_overview/)
-
 ## [Data Storage]({{ site.baseurl }}/computing/store_overview/)
 - Database Systems
 - Block Storage Systems
@@ -15,12 +13,12 @@ last_modified_at: 2018-07-19
 - Collaborative Storage Systems
 
 
-## [High Performance Computing]({{ site.baseurl }}/computing/cluster_overview/)
-- [On-Premise HPC (Rhino/Gizmo)]({{ site.baseurl }}/computing/cluster_rhinoGizmo/)
-- [Cloud Computing]({{ site.baseurl }}/computing/cluster_cloudCompute/)
-
-
-## [Linux]({{ site.baseurl }}/computing/linux_overview/)
+## [Scientific Computing]({{ site.baseurl }}/computing/cluster_overview/)
+- Resources Available
+- Linux 101
+- Rhino/Gizmo/Beagle
+- Cluster Software
+- Cloud Computing
 
 
 ## [Software, Resources and Updates]({{ site.baseurl }}/computing/training_overview/)
