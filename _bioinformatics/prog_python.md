@@ -19,6 +19,8 @@ There are some publicly accessible resources available to assist in getting star
   * [Getting started with Python](https://www.python.org/about/gettingstarted/)
   * [Python scientific computing with Scipy](https://www.scipy.org/getting-started.html)
   * [Python Data Analysis Library](http://pandas.pydata.org/pandas-docs/stable/10min.html)
+  * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
+  * [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
 
 
 ### Current Python Builds on Gizmo
