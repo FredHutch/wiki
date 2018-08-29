@@ -7,10 +7,7 @@ last_modified_at: 2018-08-29
 SciComp provides in-person training via weekly office hours; this page contains the current times and locations.
 
 ## [Current Software](http://sciwiki.fredhutch.org/computing/software_overview/)
-For software running on your Windows or Mac laptop or desktop, please contact your [Division IT support.](https://centernet.fredhutch.org/cn/u/center-it/contact-us.html)  When running software on our Linux servers (including Ubuntu Desktops), we have a system of pre-compiled software packages that should be your first stop when using a new software package.  This links directly to the most updated software catalog for these servers.
-
-## [Linux Software (rhino, cluster, Ubuntu)](http://sciwiki.fredhutch.org/computing/linux_overview/)
-SciComp offers over 1300 software package versions for your use.  We use two open source projects to help manage and use software packages on Linux at Fred Hutch.
+For software running on your Windows or Mac laptop or desktop, please contact your [Division IT support.](https://centernet.fredhutch.org/cn/u/center-it/contact-us.html)  However, when running software on our Linux servers (including Ubuntu Desktops), we have a system of pre-compiled software packages that should be your first stop when using a new software package.  This links directly to the most updated software catalog for these servers.
 
 ## [Updates and Announcements](http://sciwiki.fredhutch.org/scicompannounce/)
 Notifications related to Scientific Computing changes and announcements can be seen here.  
