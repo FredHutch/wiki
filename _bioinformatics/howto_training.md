@@ -1,17 +1,15 @@
 ---
 title: Overview of How-To and Training
-last_modified_at: 2018-06-14
+last_modified_at: 2018-08-29
 ---
-
-
+There are a variety of resources for training on various aspects of Bioinformatics and data skills available at the Fred Hutch, in the Seattle area as well as online resources. 
 
 ## Local Training and Resources
-- [fredhutch.io](http://www.fredhutch.io/)
+- [fredhutch.io](http://www.fredhutch.io/) offers frequent, on campus courses on a topics such as R, python or GitHub, and information about previous and upcoming courses is on their site.  In order to sign up for courses, go to [MyHutch](https://fredhutch.okta.com/) and click on Hutch Learning to see currently available courses and register for them.  
 - [Bioinformatics Shared Resources](http://sharedresources.fhcrc.org/core-facilities/computational-biology)
-- [Scientific Computing training materials](https://teams.fhcrc.org/sites/citwiki/SciComp/Training%20Materials/Forms/AllItems.aspx) (requires login)
-- [Scientific Computing discussion forum](http://discourse.fhcrc.org)
-- FHBig [website](https://fredhutch.github.io/FHBig/) and [slack workspace](https://fredhutch.github.io/FHBig/resources/)
-- [UW Biostatistics Summer Institutes](https://www.biostat.washington.edu/suminst)
+- [Scientific Computing training materials](https://teams.fhcrc.org/sites/citwiki/SciComp/Training%20Materials/Forms/AllItems.aspx) (requires login), related to introduction to Unix and Gizmo, though additional, more recent, information can be see in the Computing section of this site. 
+- FHBig (Fred Hutch Bioinformatics Interest Group), is a Fred Hutch based community group that has created the [FHBig website](https://fredhutch.github.io/FHBig/) and maintains a [slack workspace](https://fredhutch.github.io/FHBig/resources/) to support communication between staff at the Hutch.  
+- [UW Biostatistics Summer Institutes](https://www.biostat.washington.edu/suminst) offer yearly intensive courses over the summers on a wide variety of topics. 
 
 ## Online Learning
 - [Biostar Handbook: A Beginner's Guide to Bioinformatics](https://www.biostarhandbook.com)
@@ -26,7 +24,3 @@ last_modified_at: 2018-06-14
 - [The Open Source Data Science Masters](http://datasciencemasters.org)
 - [ROSALIND interactive bioinformatics problem set](http://rosalind.info/)
 - [Udacity](https://www.udacity.com) has courses on [Data Science](https://www.udacity.com/courses/school-of-data-science)
-
-
-## Ask a Fred Hutch Expert
-Coming Soon.
