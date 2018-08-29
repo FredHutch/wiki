@@ -33,4 +33,5 @@ Resource Name | Resources Type | Resource Access | Required Account | Resource L
 --- | --- | --- | --- | ---
 {% for resource in site.data.scicomp_resources -%}
 {{ resource.name }} | {{ resource.type }} | {{ resource.access.type }} | {{ resource.access.auth }} | {{ resource.location }}
+
 {%- endfor -%}
