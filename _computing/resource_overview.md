@@ -29,8 +29,21 @@ Are there things people use that we don't really support?
 ## Auto-generated Table
 This table is auto-generated based on the yaml in _data/scicomp_resources.yaml:
 
-|Name|Type|Authentication|Authorization|Location|
-|---|---|---|---|---|
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Authentication</th>
+    <th>Authorization</th>
+    <th>Location</th>
+  </tr>
 {% for resource in site.data.scicomp_resources -%}
-|{{ resource.name }} |{{ resource.type }} |{{ resource.access.type }} |{{ resource.access.auth }} |{{ resource.location }}|
+<tr>
+  <td>{{ resource.name }}</td>
+  <td>{{ resource.type }}</td>
+  <td>{{ resource.access.type }}</td>
+  <td>{{ resource.access.auth }}</td>
+  <Td>{{ resource.location }}</td>
+</tr>
 {%- endfor -%}
+</table>
