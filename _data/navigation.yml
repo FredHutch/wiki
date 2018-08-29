@@ -179,6 +179,8 @@ computing:
     children:
       - title: "Overview"
         url: /computing/linux_overview/
+      - title: "Linux 101"
+        url: /computing/linux_linux101/
 
   - title: "Software, Resources and Updates"
     children:
