@@ -1,6 +1,6 @@
 ---
 title: Shiny Applications
-last_modified_at: 2018-08-16
+last_modified_at: 2018-08-29
 ---
 
 Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions. For more information about Shiny, [go to Rstudio's Shiny page.](https://shiny.rstudio.com)
@@ -27,13 +27,20 @@ There are currently two approaches available for deploying Shiny apps, either ma
 ## Deploying Shiny Apps via SciComp
 
 ### GitHub Setup
-To deploy a Shiny app via the Fred Hutch system, you must first have access to the Fred Hutch institution GitHub.  [You can find GitHub instructions in this demo.](https://fredhutch.github.io/wiki/compdemos/comp_github/)
+To deploy a Shiny app via the Fred Hutch system, you must first have access to the Fred Hutch institution GitHub.  You can find more information about [getting set up with GitHub at Fred Hutch here.](https://fredhutch.github.io/wiki/compdemos/comp_github/)  As an overview, you must first create a GitHub username, and then have `scicomp` connect it to the Fred Hutch institution.  
 
-#### Download the Template
+### Set up your Repository
+There are two ways to set up your repository, and either is suitable.  Note:  Documentation for using GitHub at the Fred Hutch is being generated [here,](http://sciwiki.fredhutch.org/bioinformatics/compute_github/) and it is a good place to start to find the necessary help you may need to use GitHub to set up your Shiny app.  
+
+#### Basic Set Up
+To do a basic set up via the web, go to GitHub and create a new repository in the Fred Hutch institution for your app.  Then clone your new repository to your local computer. In the local folder created, create a folder called `app` and put your shiny app files (either app.R, or ui.r/server.R) and any other associated data files needed for the app in the `app` directory.  (Once you are finished and have tested your app locally, either via R or RStudio, push your edits to GitHub. )
+
+#### Cloning the Template Set Up
 The template for your app can be found in this GitHub Repo (accessible after login):
-[FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)
+[FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)  
+Clone this repository, remove the unnecessary files listed and add your Shiny app files to the `app` directory, before pushing your changes to a new repo on GitHub.  
 
-#### Using Command Line Git
+###### Using Command Line Git
 
 ![]({{ site.baseurl }}/compdemos/assets/com-com.png)
 
@@ -55,7 +62,7 @@ After the steps above from a terminal, you have achieved these steps:
 
 Now it's time to inject your wonderful shiny app to this template. The goal is to put all your app code base to template's subfolder 'app'.  
 
-#### Using the GitHub Desktop Application
+###### Using the GitHub Desktop Application
 
 To keep track of file changes within a local repo, first add this folder to GitHub Desktop Application:
 
@@ -70,10 +77,9 @@ You can create a remote repo by clicking on the 'Publish repository' and select 
 ### Insert Your App into the Template
 Use your favorite code editor to add your own shiny app content to this template.  Here are a few reminders for the shiny apps with a single R script:
 
-- Please split your app.R to ui.R and server.R according to the template app subfolder's file structure.  
-- Make sure you include 'library(shiny)' to both ui.R and server.R files
-- In server.R, please remove 'shinyApp(ui, server)'
-- You can add your data to a data folder under app folder
+- Please split your app.R or ui.R/server.R in the `app` directory in the local cloned repository
+- If you are using the ui.R/server.R structure, make sure you include 'library(shiny)' to both ui.R and server.R files, and in server.R, please remove 'shinyApp(ui, server)'
+- Make sure all files (data, etc) needed by the app are also in the `app` directory or a subdirectory thereof
 
 ### Push Edits to GitHub
 After you added your own content to this repo, you are ready to commit the changes and push the changes to the remote repo.

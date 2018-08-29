@@ -15,6 +15,10 @@ SciComp maintains a current list of the various builds of R available on `gizmo`
 
 
 ## Bioconductor
-
+[R/Bioconductor events page](http://www.bioconductor.org/help/events/)
 
 ## The Tidyverse
+
+
+## Local resources
+- [Seattle useR group](http://www.meetup.com/Seattle-useR/)
