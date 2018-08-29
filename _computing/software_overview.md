@@ -1,25 +1,17 @@
 ---
 title: Scientific Software Overview
-last_modified_at: 2018-07-12
+last_modified_at: 2018-08-29
 ---
 
-## In-Person Training and Office Hours
+## [In-Person Training and Office Hours](http://sciwiki.fredhutch.org/computing/training_overview/)
+SciComp provides in-person training via weekly office hours; this page contains the current times and locations.
 
-## Current Software
-Overview of scientific software support program (builds for HPC/linux, other builds)
+## [Current Software](http://sciwiki.fredhutch.org/computing/software_overview/)
+For software running on your Windows or Mac laptop or desktop, please contact your [Division IT support.](https://centernet.fredhutch.org/cn/u/center-it/contact-us.html)  However, when running software on our Linux servers (including Ubuntu Desktops), we have a system of pre-compiled software packages that should be your first stop when using a new software package.  This links directly to the most updated software catalog for these servers.
 
-## HPC/Linux Software
-Overview of cluster/rhino software packages.
-### Environment Modules
-Discussion of Environment Modules and how to use them in scripts and interactively, as well as Best Practices.
-### EasyBuild
-Brief overview of EasyBuild with explanation of toolchains in packages names.
-
-## Resources
-Lists of available software packages and how to find them. (Popularity tag-cloud?)
-How to request new software.
-Basic software policies (like updating, licensing, etc.)
+## [Updates and Announcements](http://sciwiki.fredhutch.org/scicompannounce/)
+Notifications related to Scientific Computing changes and announcements can be seen here.  
 
 
-## Resource Library
-A collection of demo's and "how-to's" about tasks or resources commonly asked for by researchers.  
+## [Resource Library](http://sciwiki.fredhutch.org/compdemos/)
+This section contains short demo examples regarding a variety of supported resources supported at the Fred Hutch.  Check back here for ongoing additions of new demo's and examples.  
