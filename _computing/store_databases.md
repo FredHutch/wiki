@@ -18,13 +18,13 @@ REDCap, or Research Electronic Data Capture, is an open source, mature, secure w
 
 The beauty of REDCap is that it's easy to get started but it also has advanced features and programming hooks to serve researchers needs when creating simple surveys all the way to conducting large complex research studies and projects.  For other types of research data, the ability to customize the data dictionary to meet the needs of a particular use make it an excellent option to consider when multiple users need to have a common data source with easy access and no database management knowledge is required.  
 
-REDCap has been used by thousands of non-profit institutions throughout the world on hundreds of thousands of projects. The REDCap group at Vanderbilt University manages the development of the REDCap code base; new features are being added every month that make REDCap better and better. The the Fred Hutch, the instance of REDCap is supported by Collaborative Data Services (CDS), which is an active member of the REDCap consortium, regularly maintains our REDCap installation so that it remains up-to-date.
+REDCap has been used by thousands of non-profit institutions throughout the world on hundreds of thousands of projects. The REDCap group at Vanderbilt University manages the development of the REDCap code base; new features are being added every month that make REDCap better and better. At Fred Hutch, the instance of REDCap is supported by Collaborative Data Services (CDS), which is an active member of the REDCap consortium, regularly maintains our REDCap installation so that it remains up-to-date.
 
-REDCap via the Fred Hutch provides backup services, database maintenance, support for developing REDCap projects, and is very accessible for staff without previous database experience.  
+CDS provides backup services, database maintenance, support for developing REDCap projects, and is very accessible for staff without previous database experience.  
 
 For more information about REDCap at the Fred Hutch, training materials and documentation provided by CDS, [visit their site here.](http://research.fhcrc.org/cds/en/redcap.html.)  
 
-Look for in-person trainings available on a regular basis around campus, [here.](http://research.fhcrc.org/cds/en/redcap-training.html)
+Look for in-person trainings available on a regular basis around campus, [here.](http://research.fhcrc.org/cds/en/redcap-training.html) You will also find recorded training videos and presentation materials at this [url.](http://research.fhcrc.org/cds/en/redcap-training.html). 
 
 The login page for the Fred Hutch instance is [here.](http://redcap.fredhutch.org/)
 
