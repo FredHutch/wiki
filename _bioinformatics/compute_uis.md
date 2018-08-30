@@ -1,7 +1,7 @@
 ---
 title: Notebooks and User Interfaces for R, Python and Other Computing Languages
 last_modified_at: 2018-08-29
-author: Dirk Petersen
+author_list: Dirk Petersen
 ---
 While programming in R, Python or other languages is an important skill to learn, another layer of how to actually implement and manage processes you have developed in the code you've written can be useful.  To manage the interface between code and environments, versioning and more integrated features (e.g. git or multi-langage processes), various Notebook or User Interfaces exist.  This document is an overview of common user interfaces commonly used to manage or interact with code.  
 
@@ -14,6 +14,8 @@ RStudio has a few particularly useful features, that include:
 - Concurrent views of code, plots, files, and environment variables with customized panels.  
 - Direct deployment of Shiny apps via Shinyapps.io
 - R package management and direct installation capabilities
+
+RStudio is typically run locally on desktop computers, but as compute resources for the tasks involved increase, it is possible to run RStudio off the Rhino's.  Documentation about how this works is still to come.  
 
 ## Jupyter Notebooks
 
