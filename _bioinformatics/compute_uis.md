@@ -3,7 +3,7 @@ title: Notebooks and User Interfaces for R, Python and Other Computing Languages
 last_modified_at: 2018-08-29
 author: Dirk Petersen
 ---
-While programming in R, Python or other languages is an important skill to learn, another layer of how to actually implement processes you have developed in the code you've written can be useful.  To manage the interface between code and environments, versioning and more integrated features (e.g. git or multi-langage processes), various Notebook or User Interfaces exist.  This document is an overview of common user interfaces commonly used to manage or interact with code.  
+While programming in R, Python or other languages is an important skill to learn, another layer of how to actually implement and manage processes you have developed in the code you've written can be useful.  To manage the interface between code and environments, versioning and more integrated features (e.g. git or multi-langage processes), various Notebook or User Interfaces exist.  This document is an overview of common user interfaces commonly used to manage or interact with code.  
 
 ## RStudio IDE
 The RStudio IDE is a free and open source, commonly used interface to R, which supports a number of added features including a GUI that can be customized to view aspects of your work of most importance (such as plots, files, environment variables, scripts, workspaces, etc).  RStudio is free and can be [downloaded here](https://www.rstudio.com/), and requires an installation of R itself, which can be [downloaded here, or obtained via Center IT's Self Service tools.](https://cran.r-project.org/)
