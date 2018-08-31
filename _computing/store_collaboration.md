@@ -1,6 +1,6 @@
 ---
-title: Data Storage and Collaboration
-last_modified_at: 2018-07-19
+title: Data Storage for Collaboration
+last_modified_at: 2018-08-31
 ---
 
 There are Fred Hutch supported data storage systems that allow you to share data with people outside the Hutch, with or without a Hutch ID in order to facilitate data transfer and receipt in collaborations within or outside of the Fred Hutch.  
