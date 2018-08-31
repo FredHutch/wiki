@@ -1,5 +1,5 @@
 ---
-title: Data Storage: Temporary Storage/Scratch
+title: Data Storage in Temporary Storage (Scratch)
 last_modified_at: 2018-07-09
 ---
 
