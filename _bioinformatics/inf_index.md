@@ -19,7 +19,7 @@ While the primary focus of research is the processes more clearly involved in th
 - [Data Ingestion and Public Datasets]({{ site.baseurl }}/bioinformatics/dm_ingest/)
 - [Data Archiving]({{ site.baseurl }}/bioinformatics/dm_archive/)
 
-## [Programming and Bioinformatics]({{ site.baseurl }}/bioinformatics/prog_overview/)
+## [Programming]({{ site.baseurl }}/bioinformatics/prog_overview/)
 While there are many types of programming languages various software used in scientific research are written in, there are a handful of specific languages that are commonly used in the process of doing a wide range of research tasks. We will introduce the most common here.
 
 - [R, RStudio]({{ site.baseurl }}/bioinformatics/prog_R/)
