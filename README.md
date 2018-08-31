@@ -20,7 +20,7 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
   6. An Admin will merge the pull request into the master and then any edits go live to the site [here.](http://sciwiki.fredhutch.org/)
 
 
-Afterwards:  Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/draft/contributorTemplate.md) in our `contributors` directory so that we can give you credit for your contributions publicly on the site.
+Afterwards:  Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site.
 
 ## Repo structure
 
