@@ -103,8 +103,7 @@ bioinformatics:
         url: /bioinformatics/dm_ingest/
       - title: "Data Archiving"
         url: /bioinformatics/dm_archive/
-      - title: "Data Privacy and Security"
-        url: /bioinformatics/dm_privacy/
+
 
 
   - title: "Programming and Bioinformatics"
