@@ -1,5 +1,5 @@
 ---
-title: "Scientific Computing Demos and Example Collection"
+title: "Scientific Computing Resource Library"
 layout: collection
 classes: wide
 permalink: /compdemos/
