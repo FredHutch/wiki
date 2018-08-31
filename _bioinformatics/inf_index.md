@@ -27,7 +27,7 @@ genes or transcripts, etc.  Large scale data generation approaches like this can
 
 ## [Managing Code and Computing]({{ site.baseurl }}/bioinformatics/compute_overview/)
 
-- [Overview of Compute Resources]({{ site.baseurl }}/bioinformatics/compute_resoverview/)
+- [Fred Hutch Compute Resources]({{ site.baseurl }}/bioinformatics/compute_resoverview/)
 - [Accessing Compute Resources]({{ site.baseurl }}/bioinformatics/compute_accessing/)
 - [GitHub, Versioning and Sharing]({{ site.baseurl }}/bioinformatics/compute_github/)
 - [Notebooks and UIs]({{ site.baseurl }}/bioinformatics/compute_uis/)
