@@ -4,7 +4,7 @@ last_modified_at: 2018-08-31
 ---
 
 
-## Hypothesese in the Era of Large Scale Molecular Data
+## Hypotheses in the Era of Large Scale Molecular Data
 Develop a hypothesis that will have reasonable statistical power and feasible sets of samples for a specific type of data.  Then analyze the data collected with the original hypothesis in mind and then stop.  Don't mine the data indefinitely, because while you'll find something eventually, it may not mean anything.
 
 ### Sample Sizes:  Power calculations in the 'omics setting
