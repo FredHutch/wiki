@@ -34,8 +34,6 @@ generation:
         url: /generation/study_proposal/
       - title: "Hypothesis Development and Big Molecular Data"
         url: /generation/study_hypothesis/
-      - title: "Statistics"
-        url: /generation/study_statistics/
 
 
   - title: "IRB and Human Subjects"
