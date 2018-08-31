@@ -27,10 +27,10 @@ There are currently two approaches available for deploying Shiny apps, either ma
 ## Deploying Shiny Apps via SciComp
 
 ### GitHub Setup
-To deploy a Shiny app via the Fred Hutch system, you must first have access to the Fred Hutch institution GitHub.  You can find more information about [getting set up with GitHub at Fred Hutch here.](https://fredhutch.github.io/wiki/compdemos/comp_github/)  As an overview, you must first create a GitHub username, and then have `scicomp` connect it to the Fred Hutch institution.  
+To deploy a Shiny app via the Fred Hutch system, you must first have access to the Fred Hutch institution GitHub.  You can find more information about [getting set up with GitHub at Fred Hutch here.](http://sciwiki.fredhutch.org/bioinformatics/compute_github/)  As an overview, you must first create a GitHub username, and then have `scicomp` connect it to the Fred Hutch institution.  
 
 ### Set up your Repository
-There are two ways to set up your repository, and either is suitable.  Note:  Documentation for using GitHub at the Fred Hutch is being generated [here,](http://sciwiki.fredhutch.org/bioinformatics/compute_github/) and it is a good place to start to find the necessary help you may need to use GitHub to set up your Shiny app.  
+There are two ways to set up your repository, and either is suitable.  Note:  Documentation for using GitHub at the Fred Hutch is being generated [here](http://sciwiki.fredhutch.org/bioinformatics/compute_github/), and it is a good place to start to find the necessary help you may need to use GitHub to set up your Shiny app.  
 
 #### Basic Set Up
 To do a basic set up via the web, go to GitHub and create a new repository in the Fred Hutch institution for your app.  Then clone your new repository to your local computer. In the local folder created, create a folder called `app` and put your shiny app files (either app.R, or ui.r/server.R) and any other associated data files needed for the app in the `app` directory.  (Once you are finished and have tested your app locally, either via R or RStudio, push your edits to GitHub. )
@@ -129,7 +129,7 @@ Open the app in an R console.
 
 
 ## Deployment Service from SciComp
-Hopefully, you can see your app working as expected in the browser. Please keep a good record of all your dependencies. You may have all the necessary R packages installed on your local machine but SciComp deployment platform needs to know those dependencies.  You also want to be ready to answer all the questions below before you contact Scientific Computing team.  If you feel ready with your **codebase** as well as the **below information required by deployment**, contact Scientific Computing at FH username `scicomp` to start the process of deploying your application on a server so others can access it.
+Hopefully, you can see your app working as expected in the browser. Please keep a good record of all your dependencies. You may have all the necessary R packages installed on your local machine but SciComp deployment platform needs to know those dependencies.  You also want to be ready to answer all the questions below before you contact Scientific Computing team.  If you are ready with your **codebase**  and have the answers for the **below information required by deployment**, then go to https://getshiny.fredhutch.org (accessbile within Hutch campus network) to submit the application deployment request.
 
 1.  Is your application codebase version-controlled by Git and in a GitHub repository (repo) ?  If so, is it under FredHutch account?
 
