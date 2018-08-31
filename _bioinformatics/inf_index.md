@@ -34,7 +34,7 @@ genes or transcripts, etc.  Large scale data generation approaches like this can
 - [Docker]({{ site.baseurl }}/bioinformatics/compute_docker/)
 
 
-## [Training and How-To's](({{ site.baseurl }}/bioinformatics/howto_training/))
+## [Training and References](({{ site.baseurl }}/bioinformatics/howto_training/))
 
 - [Training Opportunities](({{ site.baseurl }}/bioinformatics/howto_training/))
 - [Research Topic Articles]({{ site.baseurl }}/infdemos/)
