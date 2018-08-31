@@ -106,7 +106,7 @@ bioinformatics:
 
 
 
-  - title: "Programming and Bioinformatics"
+  - title: "Programming"
     children:
       - title: "Overview"
         url: /bioinformatics/prog_overview/
