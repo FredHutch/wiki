@@ -1,6 +1,6 @@
 ---
 title: Bioinformatics Overview
-last_modified_at: 2018-06-14
+last_modified_at: 2018-08-31
 ---
 
 Bioinformatics refers to the computational analysis of raw biological
@@ -28,7 +28,6 @@ genes or transcripts, etc.  Large scale data generation approaches like this can
 ## [Managing Code and Computing]({{ site.baseurl }}/bioinformatics/compute_overview/)
 
 - [Fred Hutch Compute Resources]({{ site.baseurl }}/bioinformatics/compute_resoverview/)
-- [Accessing Compute Resources]({{ site.baseurl }}/bioinformatics/compute_accessing/)
 - [GitHub, Versioning and Sharing]({{ site.baseurl }}/bioinformatics/compute_github/)
 - [Notebooks and UIs]({{ site.baseurl }}/bioinformatics/compute_uis/)
 - [Docker]({{ site.baseurl }}/bioinformatics/compute_docker/)
