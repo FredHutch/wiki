@@ -4,7 +4,7 @@ last_modified_at: 2018-08-31
 ---
 Center IT supports a wide array of resources made available to researchers.  Much of the basic computing information needed on an ongoing basis can be found via Centernet and the Center IT pages.  However, much of the scientific computing resource documentation beyond this material is provided in this section of the Wiki, and links to existing resources and documentation are provided when available.  
 
-## [Access]({{ site.baseurl }}/computing/access_overview/)
+## [Access and Credentials]({{ site.baseurl }}/computing/access_overview/)
 This section includes a variety of information about accessing computing resources at the Fred Hutch, including managing credentials for services when required.  Currently this is a one page section. 
 
 ## [Data Storage]({{ site.baseurl }}/computing/store_overview/)
