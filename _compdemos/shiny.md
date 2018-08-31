@@ -1,6 +1,7 @@
 ---
 title: Shiny Applications
 last_modified_at: 2018-08-29
+main_author: Jenny Zhang
 ---
 
 Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions. For more information about Shiny, [go to Rstudio's Shiny page.](https://shiny.rstudio.com)
@@ -14,14 +15,14 @@ There are currently two approaches available for deploying Shiny apps, either ma
     - Deploying shiny apps on Shinyapps.io does not require the use of GitHub or allows you to include multiple applications within a single GitHub repository if you have many apps to manage.
     - Provides a web analytics feature showing app activity.
 
-    
+
 2. Using the application deployment pipeline developed by Fred Hutch Scientific Computing
-    - SciComp’s pipeline has the capability to host applications written in other languages as long as the application itself can be containerized. 
-    - Integrates with data sources within Hutch campus. For example, the application can be connected to a campus based database system (Postgres, mysql, etc…) without exposing it to the entire internet. 
+    - SciComp’s pipeline has the capability to host applications written in other languages as long as the application itself can be containerized.
+    - Integrates with data sources within Hutch campus. For example, the application can be connected to a campus based database system (Postgres, mysql, etc…) without exposing it to the entire internet.
     - There is a template repository (https://github.com/FredHutch/shiny-app-template) to help users to assemble your own shiny app.
-    - Once the application is deployed, updates/re-deploying is done by committing changes to GitHub, as the pipeline is based on a continuous integration/continuous delivery (CI/CD) feature. 
+    - Once the application is deployed, updates/re-deploying is done by committing changes to GitHub, as the pipeline is based on a continuous integration/continuous delivery (CI/CD) feature.
     - Users can pick their own custom site URL in the fredhutch.org domain (example: 'myshinyapp.fredhutch.org').
-    - User can specify if their app is only facing campus within the firewall or being exposed to the entire internet. Authorization feature can also be included upon request. 
+    - User can specify if their app is only facing campus within the firewall or being exposed to the entire internet. Authorization feature can also be included upon request.
     - This service is completely free to campus users regardless of usage hours or number of apps.
 
 ## Deploying Shiny Apps via SciComp
@@ -114,14 +115,14 @@ Open the app in an R console.
 ![]({{ site.baseurl }}/compdemos/assets/r.png)
 
 - Change directory to subfolder 'app' under your app root:
-``` 
+```
     cd <your_app_folder>
     cd app
     R
 ```
-- Via R console, 
-``` 
-    source('start.r') 
+- Via R console,
+```
+    source('start.r')
 ```
 
 - Then go to a browser to check the url: http://localhost:7777

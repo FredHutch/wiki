@@ -1,11 +1,8 @@
 ---
-title: Accessing High Performance Computing Resources
+title: AWS Batch
 last_modified_at: 2018-07-12
+main_author: Sam Minot
 ---
-
-## Rhino/Gizmo
-More to come on how to access Rhino/Gizmo. 
-
 
 ## Amazon Web Service (AWS) Batch
 The Amazon Web Service (AWS) is a "cloud" computing provider which sells access to computational resources on a minute-by-minute basis. The "cloud" is actually just a simple idea that you can buy *access* to computers, instead of buying the computers themselves. Anytime you have a bunch of computers sitting in a warehouse running code for a bunch of different users around the world, that's the "cloud."

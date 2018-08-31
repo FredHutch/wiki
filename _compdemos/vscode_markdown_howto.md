@@ -1,6 +1,7 @@
 ---
 title: Using Markdown with Visual Studio Code
 last_modified_at: 2018-06-07
+main_author: Robert McDermott
 ---
 # What is Markdown?
 [Markdown](https://en.wikipedia.org/wiki/Markdown) is a formatting language used when the resulting document will be rendered or converted into html documents for web-viewable material.  The format is commonly used to generate documents like readme's in GitHub or blog posts and even this website.  Markdown documents are written in plain text, and thus are often simpler to create, edit and manage using text editors intended for writing code.  This page includes a how-to discussion of using VSCode, a software package (and associated customizing plugins) intended for writing code that lends itself well to markdowns as well.  

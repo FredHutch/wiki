@@ -26,6 +26,9 @@ frontpage:
 
 generation:
   - title: "Data Generation"
+    children:
+      - title: "Overview"
+        url: /generation/gen_index/
   - title: "Study Design and Funding"
     children:
       - title: "Overview"
@@ -87,6 +90,9 @@ generation:
 
 bioinformatics:
   - title: "Bioinformatics"
+    children:
+      - title: "Overview"
+        url: /bioinformatics/inf_index/
   - title: "Best Practices for Research Data Management"
     children:
       - title: "Overview"
@@ -118,8 +124,6 @@ bioinformatics:
         url: /bioinformatics/compute_overview/
       - title: "Fred Hutch Compute Resources"
         url: /bioinformatics/compute_resoverview/
-      - title: "Accessing Compute Resources"
-        url: /bioinformatics/compute_accessing/
       - title: "GitHub, Versioning and Sharing"
         url: /bioinformatics/compute_github/
       - title: "Notebooks and UIs"
@@ -138,6 +142,9 @@ bioinformatics:
 
 computing:
   - title: "Computing"
+    children:
+      - title: "Overview"
+        url: /computing/comp_index/
   - title: "Access and Credentials"
     children:
       - title: "Overview"

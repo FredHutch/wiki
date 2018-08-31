@@ -1,6 +1,7 @@
 ---
 title: Matlab
 last_modified_at: 2018-07-05
+main_author: 
 ---
 
 ## Desktop Usage
@@ -16,11 +17,11 @@ If you have a Windows or Mac desktop and want to run Matlab interactively on a L
 - Type `matlab` and press enter.  The Matlab window should open in your Linux session. Success!
 
 ### Running Matlab batch jobs on Linux
-Matlab programs can be run on the gizmo cluster. The cluster supports additional resources that are not available to a desktop install. 
+Matlab programs can be run on the gizmo cluster. The cluster supports additional resources that are not available to a desktop install.
 
 - Start a terminal session on a Rhino
-- Your Matlab program and data need to be available to the Gizmo/Rhino systems. 
-- Create a batch script to run your Matlab program 
+- Your Matlab program and data need to be available to the Gizmo/Rhino systems.
+- Create a batch script to run your Matlab program
 
 ```
 #!/bin/bash
