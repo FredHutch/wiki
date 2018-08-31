@@ -46,6 +46,7 @@ When connecting to a rhino with ssh always use the -X flag to forward your Xsess
 
 ```ssh -X jfdey@rhino2
 ```
+
 After connecting to a Rhino verify that your X11 client is working by typing
 `xeyes`.
 
