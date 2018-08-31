@@ -2,9 +2,13 @@
 title: Computing Access Overview
 last_modified_at: 2018-07-19
 ---
+This section contains a variety of frequently updated sections where you can find current information about office hours, current software builds, recent notifications, and the Resource Library which contains a growing list of short demo's and articles about a variety of topics not addressed elsewhere in the site.  
+
+Note:  This section is still under construction.  If you have any input for what you'd like to see addressed here, please email your suggestions to `sciwiki`.
 
 ## Our Network
 Overview of physical network and datacenter.
+
 ### VPN
 Describe the VPN and link to helpdesk.
 
