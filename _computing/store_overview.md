@@ -34,7 +34,7 @@ The particular location where data should be stored in Block storage depends on 
 The _economy_ file store is a nearline object storage system like Amazon's S3 storage or Google's Cloud Storage.  Unlike your the hard drive on your personal computer or the other file storage systems described above, access to data on this system requires that you retrieve the data prior to using it, copying data from the economy store to your hard drive or one of the file storage systems described above.  Unlike the other systems, this storage requires special tools to access data. Storing data in _economy_ is well suited for low-cost, long-term storage of data such as those that require archiving for a period of time after studies are published, or those from which a working copy has been generated for use in ongoing analyses.  
 
 
-### Temporary (Scratch) Storage
+## Temporary (Scratch) Storage
 
 The scratch file system is a Block storage system that works differently than those systems intended for long term data storage.  It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
 
