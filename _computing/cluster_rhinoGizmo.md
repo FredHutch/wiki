@@ -2,6 +2,7 @@
 title: On-Premise HPC at Fred Hutch
 last_modified_at: 2018-08-02
 ---
+>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
 
 ## Interactive Computing: Command Line Interface (CLI), Moderate to High Capability
 
@@ -58,13 +59,3 @@ way to go.
 
 > NOTE: at this time we aren't running interactive jobs on Beagle nodes.  If
 > you have a need for this, please contact scicomp.
-
-## RStudio
-
-RStudio is an IDE for the R programming language.  It supports many features
-that make development and reproducing R tasks very easy.  At the Hutch we have
-the desktop version available on the rhino and gizmo nodes and an [RStudio server](http://rstudio.fhcrc.org)
-
-## Jupyter Notebooks
-
-Jupyter is a project that enables the creation of an interactive document blending code and compute with text and graphics.  The Hutch has a [Jupyterhub server](https://jupyterhub.fhcrc.org)  available to all researchers.

@@ -11,3 +11,4 @@ sort_order:  forward # (default), reverse
 sidebar:
   nav: "bioinformatics"
 ---
+> Note:  If you would like to request content for this section or are interested in writing content, please email `sciwiki`.

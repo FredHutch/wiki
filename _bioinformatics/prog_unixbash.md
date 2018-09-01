@@ -2,6 +2,8 @@
 title: Unix and Bash
 last_modified_at: 2018-06-14
 ---
+>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
+
 
 Unix is the foundation for both Linux and macOS, and is the operating system
 that is most commonly used for developing and executing bioinformatic software

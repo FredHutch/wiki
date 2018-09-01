@@ -1,16 +1,15 @@
 ---
 title: Intro to plyranges (Bioconductor)
-author: Chao-Jen Wong
+main_author: Chao-Jen Wong
 last_modified_at: 2018-08-16
 ---
-Getting started
----------------
 
-`plyranges` provides `dplyr`-style operations to genomic range data infastructure in Bioconductor. Spending 15 - 20 minutes going over this demo, you may find how `plyranges` enables us to creat more clean, readible and reproducible codes for genomic data analysis.
 
-This demo is extracted from a chapter in Biocondcuctor 2018 Workshop Compilation - [Fluent Genomic Data Analysis with Plyranges](https://bioconductor.github.io/BiocWorkshops/fluent-genomic-data-analysis-with-plyranges.html).
+`plyranges` provides `dplyr`-style operations to genomic range data infastructure in Bioconductor. Spending 15 - 20 minutes going over this demo, you may find how `plyranges` enables us to create more clean, readable and reproducible codes for genomic data analysis.
 
-### Setup
+This demo is extracted from a chapter in Bioconductor 2018 Workshop Compilation - [Fluent Genomic Data Analysis with Plyranges](https://bioconductor.github.io/BiocWorkshops/fluent-genomic-data-analysis-with-plyranges.html).
+
+## Setup
 
 It requires R &gt;= 3.5.0 to install `BiocManager` and `plyanges`. `BiocManager` is a new package for Bioconductor package management.
 
@@ -20,7 +19,7 @@ library(BiocManager)
 install("plyranges"")
 ```
 
-### Invoke R or Rstudio on rhino
+## Invoke R or Rstudio on rhino
 
 If you intend to work on rhino, `ml` R and Rstudio.
 
@@ -40,16 +39,15 @@ If you intend to work on rhino, `ml` R and Rstudio.
 library(plyranges, quietly=TRUE)
 ```
 
-Start with GRanges
-------------------
+## Start with GRanges
+
 
 `GRanges` is the basic, core genomic range data structure of Bioconductor. It has two core components:
 
 -   seqname, ranges, strands columns (left side of the dotted line)
-
 -   metadata columns: annotation, covariates (right side of the dotted line)
 
-<!-- -->
+
 
     ## GRanges object with 6 ranges and 1 metadata column:
     ##       seqnames    ranges strand |     gene_id
@@ -74,7 +72,7 @@ gr <- GRanges(seqnames="VI",
                       end = c(3846, 3338, 2615, 5521, 7565, 1363)),
               strand = c("-", "-", "-", "+", "+", "+"))
 #' define the metadata columns
-mcols(gr) <- 
+mcols(gr) <-
   DataFrame(gene_id=c("YFL064C", "YFL065C", "YFL066C",
                       "YFL063W", "YFL062W", "YFL067W"))
 ```
@@ -87,7 +85,7 @@ genes <- data.frame(seqnames = "VI",
                     start = c(3322, 3030, 1437,  5066, 6426, 836),
                     end = c(3846, 3338, 2615, 5521, 7565, 1363),
                     strand = c("-", "-", "-", "+", "+", "+"),
-                    gene_id=c("YFL064C", "YFL065C", "YFL066C", 
+                    gene_id=c("YFL064C", "YFL065C", "YFL066C",
                               "YFL063W", "YFL062W", "YFL067W"),
                     stringsAsFactors = FALSE)
 gr <- as_granges(genes)
@@ -156,7 +154,7 @@ gr2 %>%
 
 ``` r
 gr2 %>%
-  summarise(avg_gc = mean(gc_content), 
+  summarise(avg_gc = mean(gc_content),
             n = n())
 ```
 
@@ -376,7 +374,7 @@ gr %>% reduce_ranges()
 Find out which genes are overlapping each other by aggregating over the gene\_id column and storing the result in a List column:
 
 ``` r
-gr %>% 
+gr %>%
   reduce_ranges(gene_id = List(gene_id))
 ```
 
@@ -396,7 +394,7 @@ gr %>%
 `disjoin_ranges()` takes the union of end points over all ranges, and results in an expanded range:
 
 ``` r
-gr %>% 
+gr %>%
   disjoin_ranges(gene_id = List(gene_id))
 ```
 
@@ -430,7 +428,7 @@ rep2 <- data.frame(chrom = "VI", st = pos,
                   width = size,
                   X = rnorm(100, mean = 0.5, sd = 3),
                   Y = rnorm(100, sd = 2))
-rep3 <- data.frame(chromosome = "VI", 
+rep3 <- data.frame(chromosome = "VI",
                   start = pos, width = size,
                   X = rnorm(100, mean = 2, sd = 3),
                   Y = rnorm(100, mean = 4, sd = 0.5))
@@ -439,7 +437,7 @@ rep3 <- data.frame(chromosome = "VI",
 Next convert `data.frame` to `GRanges`:
 
 ``` r
-rep1 <- as_granges(rep1, seqnames = chr, 
+rep1 <- as_granges(rep1, seqnames = chr,
                    start = pos, width = size)
 rep2 <- as_granges(rep2, seqnames = chrom, start = st)
 rep3 <- as_granges(rep3, seqnames = chromosome)
@@ -449,7 +447,7 @@ Finally, constuct the final GRanges using `arrange()` and `bind_ranges()`.
 
 ``` r
 #' construct the final GRanges
-intensities <- bind_ranges(rep1, rep2, rep3, 
+intensities <- bind_ranges(rep1, rep2, rep3,
                            .id = "replicate")
 arrange(intensities, start)
 ```
@@ -497,7 +495,7 @@ length(olap)
 
 `intensities` has 300 ranges and 108 are overlapping with `gr`.
 
-### More oerlap actions
+### More overlap actions
 
 `join_overlap_*(query, subject)`: how query and subject overlap: `join_overlap_inner(query, subject)`, `join_overlap_left()` and `join_overlap_intersect()`.
 
@@ -517,10 +515,10 @@ sessionInfo()
     ## R version 3.5.0 (2018-04-23)
     ## Platform: x86_64-pc-linux-gnu (64-bit)
     ## Running under: Ubuntu 14.04.5 LTS
-    ## 
+    ##
     ## Matrix products: default
     ## BLAS/LAPACK: /app/easybuild/software/OpenBLAS/0.2.18-GCC-5.4.0-2.26-LAPACK-3.6.1/lib/libopenblas_prescottp-r0.2.18.so
-    ## 
+    ##
     ## locale:
     ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
     ##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
@@ -528,16 +526,16 @@ sessionInfo()
     ##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
     ##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
     ## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-    ## 
+    ##
     ## attached base packages:
-    ## [1] stats4    parallel  stats     graphics  grDevices utils     datasets 
+    ## [1] stats4    parallel  stats     graphics  grDevices utils     datasets
     ## [8] methods   base     
-    ## 
+    ##
     ## other attached packages:
-    ## [1] plyranges_1.0.3      GenomicRanges_1.32.2 GenomeInfoDb_1.16.0 
-    ## [4] IRanges_2.14.6       S4Vectors_0.18.1     BiocGenerics_0.26.0 
+    ## [1] plyranges_1.0.3      GenomicRanges_1.32.2 GenomeInfoDb_1.16.0
+    ## [4] IRanges_2.14.6       S4Vectors_0.18.1     BiocGenerics_0.26.0
     ## [7] BiocInstaller_1.30.0
-    ## 
+    ##
     ## loaded via a namespace (and not attached):
     ##  [1] Rcpp_0.12.16                pillar_1.2.2               
     ##  [3] compiler_3.5.0              XVector_0.20.0             

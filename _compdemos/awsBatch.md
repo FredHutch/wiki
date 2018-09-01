@@ -1,10 +1,9 @@
 ---
-title: AWS Batch
+title: Amazon Web Service (AWS) Batch
 last_modified_at: 2018-07-12
 main_author: Sam Minot
 ---
 
-## Amazon Web Service (AWS) Batch
 The Amazon Web Service (AWS) is a "cloud" computing provider which sells access to computational resources on a minute-by-minute basis. The "cloud" is actually just a simple idea that you can buy *access* to computers, instead of buying the computers themselves. Anytime you have a bunch of computers sitting in a warehouse running code for a bunch of different users around the world, that's the "cloud."
 
 
@@ -14,12 +13,12 @@ Among the different products offered by AWS, the three most relevant to bioinfor
 a service that provides cloud-based data storage in the form of "buckets", or a pool of data that can be accessed anywhere, anytime via the web by users with credentials allowing the access to that specific bucket. The size and particular security and credentials associated with individual S3 buckets are particularly well suited to scaling and flexibility with respect to access.
 - [*AWS Batch*](https://aws.amazon.com/batch/): a service which wraps around AWS EC2 resources such that researchers can more easily do computing processes with EC2 instances on data stored in S3.  
 
-### Essential terms
+## Essential terms
 
   * Docker image: lightweight operating system / virtual machine [see Docker documentation](link)
   * CPU: Central processing unit, basically just a unit of computation. Your laptop probably has 4 CPUs, while large servers have dozens.
 
-### How it works
+## How it works
 
 The basic idea behind AWS Batch is that it allows you to run a job,
 which consists of (1) a command, inside of a (2) Docker image on a machine,
@@ -45,9 +44,7 @@ The big idea here is that you can save money by only paying for compute
 resources at the exact time you need it, without worrying about how to pick
 the most cost effective combination of EC2 instances.
 
-### Analyzing and storing data
-
-<!-- INSERT INTERNAL LINK - Please put links to the SciComp documentation about how it is sooo easy to upload and download from S3.  -->
+## Analyzing and storing data
 
 Coming from Fred Hutch, one of the biggest things to transition is how you
 access and store data. While we are very used to the shared filesystem on
@@ -62,7 +59,7 @@ effectively. As a benefit, it's much cheaper to store data there compared
 to `/fh/fast`, and just as stable.
 
 
-### Using Docker images
+## Using Docker images
 
 In order to run your code, you must have it packaged up in a Docker image.
 While this may be slightly difficult at first, it has the added benefit
@@ -73,8 +70,7 @@ definitive record of all of the dependencies and software needed to run your
 analysis and generate the published results.
 
 
-### Using AWS Batch at Fred Hutch
+## Using AWS Batch at Fred Hutch
 
 AWS Batch has not yet been fully rolled out at Fred Hutch, but it is anticipated
-that it will be available in the not-too-distant future [[ these comments
-have not been approved by SciComp and are the personal opinion of the author ]].
+that it will be available in the not-too-distant future.

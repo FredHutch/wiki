@@ -3,6 +3,9 @@ title: Python and the Condas
 last_modified_at: 2018-06-20
 ---
 
+>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
+
+
 Python is one of the many programming languages that can be used to execute
 computational analyses, and it is used extensively within the bioinformatic
 community. A very high-level comparison of Python to other commonly used

@@ -2,6 +2,10 @@
 title: Scientific Computing Supported Resources
 last_modified_at: 2018-08-31
 ---
+
+>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
+
+
 ## Self Service Resources
 Jupyterhub, RStudio, db4sci, Galaxy, etc.
 

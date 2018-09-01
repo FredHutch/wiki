@@ -2,7 +2,9 @@
 title: Data Storage in Object Storage Systems
 last_modified_at: 2018-07-19
 ---
-<!-- what IS an object storage system?????-->
+
+>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
+
 
 The _economy_ file store is a nearline object storage system like Amazon's S3 storage or Google's Cloud Storage.  Unlike your the hard drive on your personal computer or the other file storage systems, access to data on this system requires that you retrieve the data prior to using it, copying data from the economy store to your hard drive or one of the file storage systems.  Unlike the other systems, this storage requires special tools to access data.
 

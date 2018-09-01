@@ -1,6 +1,6 @@
 ---
 title: Docker
-last_modified_at: 2018-06-06
+last_modified_at: 2018-08-31
 ---
 
 At its core, Docker is a tool that lets you run code inside a
@@ -21,16 +21,16 @@ to achieve with any other tool apart from full virtual machines.
 It also neatly solves the problem of having to install dependencies
 in order to run a new tool in the right way.
 
-### Common Terms
+## Common Terms
 
 There are a few basic terms that will make it easier to learn
 about Docker:
 
-#### Image
+### Image
 
 A Docker image is basically a file that is built from a [Dockerfile](https://docs.docker.com/engine/reference/builder/). The image functions like a recipe for the process you want to have the Docker container execute. It specifies all the details, such as tools, processes and parameters needed for the process to occur in the Docker container that could be created from it.  
 
-#### Container
+### Container
 
 A Docker container is a Docker image that is being executed or actively applied. Once you launch an image and start doing things (writing files,
 running commands, etc.) it becomes a container. The useful reason
@@ -39,7 +39,7 @@ you are done using a container, you usually delete it. However,
 the image that you launched the container from remains untouched,
 and can be used to launch more containers in the future should the same exact process be needed again for different data sets.  
 
-#### Mount Point
+### Mount Point
 
 By default, Docker containers do not have access to the file system
 for the computer that they are being run on. In order to pass
@@ -48,7 +48,7 @@ filesystem, you must make a "mount point." The mount point is a folder
 that is shared between the Docker container and the host filesystem,
 allowing you to read and write data.
 
-#### Pull / Push
+### Pull / Push
 
 Docker images can be stored either locally (on your laptop or desktop)
 or on a remote Docker server (such as [Docker Hub](https://hub.docker.com/)). Moving the Docker image to and from a remote server is called "pushing" and
@@ -57,7 +57,7 @@ down an image that was used by another scientist and run all of
 the same commands that they did using the exact same computational
 environment.
 
-### Using Docker at Fred Hutch
+## Using Docker at Fred Hutch
 
 The easiest way to run Docker is on your laptop or desktop. You can
 download Docker and read instructions on how to run it
@@ -76,7 +76,7 @@ on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch,
 Docker images can be used to save and version the code that is
 executed with that system.
 
-### Other Docker Resources
+## Other Docker Resources
 
   * The most commonly used server to share Docker images is called [Docker Hub](https://hub.docker.com/).
   * Another commonly used server to share Docker images is called [Quay](https://quay.io/).
