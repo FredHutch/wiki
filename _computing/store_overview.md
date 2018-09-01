@@ -1,6 +1,6 @@
 ---
 title: Overview of Data Storage at Fred Hutch
-last_modified_at: 2018-08-29
+last_modified_at: 2018-08-31
 ---
 
 The Hutch, through Center IT and Scientific Computing, support a number of options for storing your data.  These can be categorized as:
@@ -23,21 +23,22 @@ There are multiple resources available to researchers that are Block storage inc
 - _home_ for personal files
 - _fast_ for shared data, including the majority of research data
 - _secure_ for data with higher-level security needs
-- Scratch for temporary, working copies of data, which can be easily reproduced or are backed up elsewhere
+
 
 The particular location where data should be stored in Block storage depends on a variety of issues, which are discussed in more detail on this page.  
 
-### Note: Scratch Temporary Storage
-
-The scratch file system is a Block storage system that works differently than those systems intended for long term data storage.  It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
-
-Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).  **Data on this platform is not backed up.**  This storage is _not_ appropriate for storing the primary or only copy of any data or data which cannot be easily re-generated (such as an intermediate file in a workflow).
 
 
 ## Object Storage: Economy
 
 The _economy_ file store is a nearline object storage system like Amazon's S3 storage or Google's Cloud Storage.  Unlike your the hard drive on your personal computer or the other file storage systems described above, access to data on this system requires that you retrieve the data prior to using it, copying data from the economy store to your hard drive or one of the file storage systems described above.  Unlike the other systems, this storage requires special tools to access data. Storing data in _economy_ is well suited for low-cost, long-term storage of data such as those that require archiving for a period of time after studies are published, or those from which a working copy has been generated for use in ongoing analyses.  
 
+
+### Temporary (Scratch) Storage
+
+The scratch file system is a Block storage system that works differently than those systems intended for long term data storage.  It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
+
+Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).  **Data on this platform is not backed up.**  This storage is _not_ appropriate for storing the primary or only copy of any data or data which cannot be easily re-generated (such as an intermediate file in a workflow).
 
 ## Collaboration Storage: Aspera, AWS S3
 
