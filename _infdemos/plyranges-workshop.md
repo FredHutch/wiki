@@ -47,7 +47,7 @@ library(plyranges, quietly=TRUE)
 -   seqname, ranges, strands columns (left side of the dotted line)
 -   metadata columns: annotation, covariates (right side of the dotted line)
 
-
+``` r
 
     ## GRanges object with 6 ranges and 1 metadata column:
     ##       seqnames    ranges strand |     gene_id
@@ -60,6 +60,7 @@ library(plyranges, quietly=TRUE)
     ##   [6]       VI  836-1363      + |     YFL067W
     ##   -------
     ##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+```
 
 ### Construct a GRanges object
 
