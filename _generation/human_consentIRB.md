@@ -1,4 +1,4 @@
----
+
 title: Consenting and Large Scale Data
 last_modified_at: 2018-09-06
 main_authors: Jason Major, Jennifer Kogut, Karen Hansen
@@ -26,9 +26,9 @@ and how those data can be used and shared.
 
 In some cases, the use of
 human specimens to generate large-scale molecular datasets is not
-considered human subjects research and thus not subject to specific
-requirements that human subjects research is, even though the dataset
-uses human data. This distinction can allow studies that only use human specimens/data to not be subjected to the relatively high level of documentation and reporting requirements that a study that does involve human subjects would be.  
+considered human subjects research, and thus not subject to the specific
+requirements of human subjects research, even though the dataset
+uses human data. This distinction allows studies which use human specimens/data and deemed not human subjects research to avoid the relatively high level of documentation and reporting requirements of human subjects research.
 
 For NIH grant applications submitted after January 25,
 2018, a new required form allows for more clarity if a study does not
@@ -37,9 +37,8 @@ More about this form, the PHS Human Subject and Clinical Trial
 Information form can be found
 [here.](https://grants.nih.gov/policy/clinical-trials/new-human-subject-clinical-trial-info-form.html)
 This form requires the investigator to have reviewed the NIH
-questionnaire and if the study does involved human specimens and/or data
-(but not human subjects) an additional document is required to address
-why the study does not qualify as human subjects according to the NIH. .
+questionnaire; if the study does involve human specimens and/or data, but is not deemed human subjects research,
+additional documentation or justification is required. An example of the Research Involving Private Information or Biological Specimens flowchart is [here.] (https://grants.nih.gov/grants/policy/hs/PrivateInfoOrBioSpecimensDecisionChart.pdf)
 
 ### Available Resources
 
