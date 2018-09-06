@@ -13,7 +13,7 @@ etc.
 The aim of de-identification is to maintain confidentiality through
 elimination of identifiers in a way that eliminates or greatly
 diminishes the risk of re-identification of an individual patient (also
-see our page on [de-identification](LINK HERE)). Maintaining strong
+see our page on [de-identification]({{ site.baseurl }}/generation/human_deidentification/)). Maintaining strong
 data security processes is an additional key measure. Sharing data
 should be done securely, after the information is de-identified and
 within a data management and sharing plan. This plan should delineate
@@ -42,7 +42,7 @@ in the data management and sharing plan. In the event that you apply for
 or receive commercial funding for any part of research, you should
 advise BD&S of the situation without delay.
 
-### Patient Consent -- Protection against Patient Harms
+## Patient Consent -- Protection against Patient Harms
 
 All research involving 1) human subject participants, 2) patient
 information, or 3) tissue samples derived from patients/human
@@ -92,7 +92,7 @@ A Material Transfer Agreement (MTA) is a contract used to govern the
 exchange of research data or materials between organizations. Examples
 include:
 
->cell lines, cultures, bacteria, nucleotides, proteins, transgenic
+> Cell lines, cultures, bacteria, nucleotides, proteins, transgenic
 animals, pharmaceuticals, and chemicals, or data cell lines, cultures,
 bacteria, nucleotides, proteins, transgenic animals, pharmaceuticals,
 and chemicals, or data software, models, robots tangible research
@@ -133,7 +133,7 @@ providing institution and receiving institution. The Fred Hutch
 scientist/investigator and a Fred Hutch institutional representative
 both sign the UBMTA.
 
-### Security
+## Security
 
 Common mechanisms for sharing genomic data:
 
@@ -149,7 +149,7 @@ Common mechanisms for sharing genomic data:
 
 -   Emailed to individual requesters (Discouraged)
 
--   Shared using [Fred Hutch resources described at the IT Collaboration Tools site](MISSING LINK)
+-   Shared using [Fred Hutch resources described at the IT Collaboration Tools site](https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html)
 
 The Fred Hutch Data Classification standard addresses appropriate levels
 of security. Fred Hutch does not currently provide a secure/encrypted
