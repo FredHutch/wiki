@@ -1,6 +1,6 @@
 ---
 title: Shiny Applications
-last_modified_at: 2018-08-29
+last_modified_at: 2018-09-06
 main_author: Jenny Zhang
 ---
 
@@ -12,6 +12,7 @@ There are currently two approaches available for deploying Shiny apps, either ma
 1. Using Shinyapps.io to deploy Shiny Apps
     - It streamlines with RStudio allowing auto-deployment in the interface.
     - There are multiple plans, such as the free plan which currently includes **25 hours activity per month**, or the ‘standard’ and 'professional' plans which include password protection (both) and custom domain/urls (professional only), for a monthly subscription fee.   
+    - The free plan currently limits users to 5 apps per account!
     - Deploying shiny apps on Shinyapps.io does not require the use of GitHub or allows you to include multiple applications within a single GitHub repository if you have many apps to manage.
     - Provides a web analytics feature showing app activity.
 
