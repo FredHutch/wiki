@@ -15,9 +15,10 @@ talk over options, Scientific Computing hosts a cloud-specific office hours
 every week.  Dates and details for SciComp office hours can be found in
 [Centernet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html).
 
-Here are the areas where we are actively developing solutions:
+Here are the areas where we are actively developing modern cloud solutions and
+capabilities:
 
-# Batch Computing
+## Batch Computing
 
 _AWS Batch_ is an AWS service that uses Docker containers to build a batch
 computing system.  Batch is made up of a queueing system where jobs are defined
@@ -35,6 +36,7 @@ As _Batch_ is very much a cloud service, some familiar resources aren't
 available when using this.  Our ubiquitous file systems (home directories,
 fast-file, scratch) are not available- data used in _Batch_ is typically stored
 in S3 or some other web-available source.  There have been some recent changes which
-expand options for data storage which may make some workloads more accessible to _Batch_.
+expand options for data storage which may make some workloads more accessible
+to _Batch_.
 
 If you think your work might benefit from using _Batch_, please contact Scientific Computing or come to cloud office hours.
