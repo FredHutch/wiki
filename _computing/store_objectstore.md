@@ -7,9 +7,7 @@ last_modified_at: 2018-09-06
 
 ## Object Storage: Economy File
 
-### Introduction
-
-Object Storage systems are not directly attached to your computer (via drive mapping, mount point or the Mac Finder) so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an Object Storage system. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than tradional file storage systems. Cloud Computing depends very much on Object Storage systems such as Amazon's AWS S3 or Google Cloud Storage.
+Object Storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an Object Storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than tradional file storage systems. Cloud Computing depends very much on Object Storage systems such as Amazon's AWS S3 or Google Cloud Storage.
 
 
 ### Features & Benefits
@@ -29,12 +27,12 @@ Today Fred Hutch offers access to 2 different Object Storage systems through the
 In the future Fred Hutch Shared Resources data deliverty processes (e.g. through  HutchBase) will be modified to deliver data directly to _Economy File_ and Scratch File systems as opposed to Fast File as it happens today.
 
 
-### Economy Cloud (S3)
+## Economy Cloud (S3)
 
 _Economy Cloud_ is a public cloud based object storage service that uses Amazon S3 to offer managed and secure (encrypted) AWS S3 buckets to Hutch investigators. You can access it with the `aws s3` or `rclone` command line tools or with GUI tools such as _Cyberduck_ or _Mountainduck_ or libraries such as _boto3_ for _Python_ or _aws.s3_ for R.
 While it is not accesible by non-Hutch investigators by default, you can contact SciComp to allow access for external research groups. _Economy Cloud_ is the default choice for Object Storage for every Hutch investigator who does not have any specific requirements.
 
-### Economy Local (Swift)
+## Economy Local (Swift)
 
 _Economy local_ is an object storage system based on Openstack Swift. It is largely compatible with AWS S3 and you can access it with command line tools such as `swc`, `swift`, `aws s3` or `rclone` or GUI tools such as _Cyberduck_ or _Mountainduck_ or libraries such as _swiftclient_ or _boto3_ for _Python_ or _aws.s3_ for R. _Economy Local_ is recommended for research groups who keep large amounts of data (>100TB) on Hutch campus and frequently use the Gizmo cluster with local storage. We also recommend it for data that is explicitly forbidden to be stored in public cloud.
 In the near future Economy Local will be retrofitted to become a _Hybrid Storage_ solution. You will be able to access your data convienently through a file access mount point such as /fh/economy/ in addition to the faster object storage access.
