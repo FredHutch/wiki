@@ -16,13 +16,12 @@ human subjects research has resulted in some changes when submitting
 proposals for funding. NIH provides the Infopath Questionnaire, [found
 here.](https://humansubjects.nih.gov/questionnaire) which
 can help determine if the study would need to be categorized as Human
-Subjects Research, or if it is exempt in some way. For those studies
+Subjects Research, or if it is exempt in some way. For Fred Hutch studies
 that propose to generate or use data generated from human specimens for
 which neither the investigator nor anyone on the team can re-identify
-the specimens, a new document (the [Human Subjects Research determination form](https://extranet.fredhutch.org/en/f/irb/human-subjects-research.html),
+the specimens, a new Fred Hutch document helping explain why data does not qualify as Human Subjects (the [Human Subjects Research determination form](https://extranet.fredhutch.org/en/f/irb/human-subjects-research.html),
 to be submitted along with a [Human Specimens/Data Application](https://centernet.fredhutch.org/cn/f/irb/applications-for-review.html))
-is required when submitting a protocol to FH review explaining why
-data does not qualify as Human Subjects.
+is required when submitting a protocol to FH review.
 
 Use the information in the Infopath Questionnaire to describe why your
 particular study is not required to be subjected to Human Subjects based
@@ -70,7 +69,7 @@ above and beyond NIH GDS. NIAID expectations can be found
 ## NIH Funding of Research Involving Genomic Data
 ### Data Sharing Plan and the NIH Genomic Data Sharing Policy
 
-For non-NIH intramural investigators, genomic data sharing plans are required to be submitted as part of an application for funding if the project proposed will entail using or generating large scale genomic data sets.
+For NIH extramural investigators, genomic data sharing plans are required to be submitted as part of an application for funding if the project proposed will entail using or generating large scale genomic data sets.
 
 *Elements of a Genomic Data Sharing Plan:*
 
