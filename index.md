@@ -1,5 +1,4 @@
 ---
-title: About this Wiki
 permalink: /
 layout: single
 toc: true
