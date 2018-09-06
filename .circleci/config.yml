@@ -10,7 +10,6 @@ jobs: # a collection of steps
           BUNDLE_PATH: vendor/bundle
     steps: # a collection of executable commands
       - checkout # special step to check out source code to working directory
-      - rake test
       # Which version of bundler?
       - run:
           name: Which bundler?
@@ -21,9 +20,9 @@ jobs: # a collection of steps
           name: Bundle Install
           command: bundle check || bundle install
 
-      # - run:
-      #     name: Check for broken links
-      #     command: rake test
+      - run:
+          name: Check for broken links
+          command: rake test
 
       # Save test results for timing analysis
       - store_test_results:
