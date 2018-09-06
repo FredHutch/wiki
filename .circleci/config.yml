@@ -24,7 +24,3 @@ jobs: # a collection of steps
           name: Check for broken links
           command: rake test
 
-      # Save test results for timing analysis
-      - store_test_results:
-          path: test_results
-      # See https://circleci.com/docs/2.0/deployment-integrations/ for example deploy configs    
