@@ -1,4 +1,4 @@
-
+---
 title: Consenting and Large Scale Data
 last_modified_at: 2018-09-06
 main_authors: Jason Major, Jennifer Kogut, Karen Hansen
@@ -8,7 +8,7 @@ important issue to consider is whether the proposed research qualifies
 as human subjects research as defined by the Department of Health and
 Human Services Office for Human Research Protections ([OHRP](https://www.hhs.gov/ohrp/)) and/or the National Institutes of Health.
 Take a look at the [OHRP decision charts](https://www.hhs.gov/ohrp/regulations-and-policy/decision-charts/index.html)
-and/or the [NIH questionnaire to find out what aspects of human subjects research may apply.](MISSING LINK)
+and/or the [NIH questionnaire to find out what aspects of human subjects research may apply.](https://humansubjects.nih.gov/questionnaire)
 
 ## IRB Approval in Human Subjects Research
 
@@ -38,7 +38,7 @@ Information form can be found
 [here.](https://grants.nih.gov/policy/clinical-trials/new-human-subject-clinical-trial-info-form.html)
 This form requires the investigator to have reviewed the NIH
 questionnaire; if the study does involve human specimens and/or data, but is not deemed human subjects research,
-additional documentation or justification is required. An example of the Research Involving Private Information or Biological Specimens flowchart is [here.] (https://grants.nih.gov/grants/policy/hs/PrivateInfoOrBioSpecimensDecisionChart.pdf)
+additional documentation or justification is required. An example of the Research Involving Private Information or Biological Specimens flowchart is [here.](https://grants.nih.gov/grants/policy/hs/PrivateInfoOrBioSpecimensDecisionChart.pdf)
 
 ### Available Resources
 
