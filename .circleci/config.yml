@@ -21,9 +21,9 @@ jobs: # a collection of steps
           name: Bundle Install
           command: bundle check || bundle install
 
-      - run:
-          name: Check for broken links
-          command: rake test
+      # - run:
+      #     name: Check for broken links
+      #     command: rake test
 
       # Save test results for timing analysis
       - store_test_results:
