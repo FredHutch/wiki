@@ -53,7 +53,7 @@ Postgres is very performant and capable of storing large databases. For more inf
 visit the [Postgres official site.](https://www.postgresql.org)
 - _MongoDB_ Mongo is a specialized database for storing JSON documents. Mongo
 is a NoSQL database. For more information
-visit the [MongoDB official site](https://mongodb.org)
+visit the [MongoDB official site](https://mongodb.com/)
 - _Neo4j_ is a NoSQL database for representing graph data. For more information
 visit the [Neo4j official site](https://neo4j.com)
 
