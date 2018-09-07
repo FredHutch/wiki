@@ -12,3 +12,13 @@ task :test do
                     /lists.fhcrc.org/, /slack.com/]}
   HTMLProofer.check_directory("./_site", options).run
 end
+
+task :testlocal do
+  sh "bundle exec jekyll build"
+  options = { :assume_extension => true,
+    :empty_alt_ignore => true, 
+    # still excluding internal URLs that require authentication
+    :url_ignore => [/teams.fhcrc.org/, /feed.xml/, "#", /slack.com/,
+                    /sw2srv/]}
+  HTMLProofer.check_directory("./_site", options).run
+end
