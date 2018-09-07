@@ -4,7 +4,7 @@ last_modified_at: 2018-08-29
 ---
 
 
->NOTE: This article is a work in progress. If you have suggestions or would like to contribute email [sciwiki@fredhutch.org](mailto://sciwiki@fredhutch.org).  
+>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.
 
 ## Software and Scientific Computing
 Scientific Computing supports software used in science. A large number of pre-compiled packages are already available on our HPC cluster and Linux systems. Individual installation of packages and language modules is also supported.
