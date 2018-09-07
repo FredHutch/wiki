@@ -35,7 +35,7 @@ For NIH grant applications submitted after January 25,
 qualify as human subjects, but does use human specimens and/or data.
 More about this form, the PHS Human Subject and Clinical Trial
 Information form can be found
-[here.](https://grants.nih.gov/policy/clinical-trials/new-human-subject-clinical-trial-info-form.html)
+[here.](https://grants.nih.gov/policy/clinical-trials/new-human-subject-clinical-trial-info-form.htm)
 This form requires the investigator to have reviewed the NIH
 questionnaire; if the study does involve human specimens and/or data, but is not deemed human subjects research,
 additional documentation or justification is required. An example of the Research Involving Private Information or Biological Specimens flowchart is [here.](https://grants.nih.gov/grants/policy/hs/PrivateInfoOrBioSpecimensDecisionChart.pdf)
@@ -142,11 +142,10 @@ the following lines:
 -   See also [National Institutes of Health Points to Consider in Developing Effective Data Use Limitation Statements,](https://osp.od.nih.gov/wp-content/uploads/NIH_PTC_in_Developing_DUL_Statements.pdf) prepared by the Office of Science Policy July 13, 2015).
 
 -   The national Human Genome Research Institute has a page for
- [Informed Consent for Genomic Research.](MISING LINK)
+ [Informed Consent for Genomic Research.](https://www.genome.gov/27026588/informed-consent-for-genomics-research/)
 
 -   The NIH Genomic Data Sharing Policy is
- [[here,]{.underline}](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/)
- and a useful FAQ is [here.](MISING LINK)
+ [here,](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/).  
 
 -   Large-scale genomic data include genome-wide association studies
  (GWAS), single nucleotide polymorphisms (SNP) arrays, and genome

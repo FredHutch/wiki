@@ -13,8 +13,7 @@ This section will more specifically provide information related to this process 
 For funding agencies like the NIH, the increased use of genomic data
 sets from human specimens outside of the context of the definition of
 human subjects research has resulted in some changes when submitting
-proposals for funding. NIH provides the Infopath Questionnaire, [found
-here.](https://humansubjects.nih.gov/questionnaire) which
+proposals for funding. NIH provides the Infopath Questionnaire, [found here.](https://humansubjects.nih.gov/questionnaire) which
 can help determine if the study would need to be categorized as Human
 Subjects Research, or if it is exempt in some way. For Fred Hutch studies
 that propose to generate or use data generated from human specimens for
@@ -38,32 +37,27 @@ The NIH currently (as of 7/12/2018) requests assurance through an
 Institutional Certification that investigators intend to submit any
 datasets generated to the appropriate public repository, such as dbGaP.
 For those NIH grants that specify genomic data sets will be generated
-from human specimens, the [requirement for submitting an institutional
-certification will be requested as part of the
-JIT](https://osp.od.nih.gov/scientific-sharing/institutional-certifications/).
+from human specimens, the [requirement for submitting an institutional certification will be requested as part of the JIT](https://osp.od.nih.gov/scientific-sharing/institutional-certifications/).
 NIH information for **dbGaP Study Registration and Data Submission to an
 NIH Designated Controlled-Access Data Repository** can be found
 [here](https://osp.od.nih.gov/scientific-sharing/researchers-institutional-certifications/).
 In the JIT information the investigator will see this request:
 
-![]({{ site.baseurl }}/generation/assets/study\_proposal-e39798c8.png)
+![]({{ site.baseurl }}/generation/assets/study_proposal-e39798c8.png)
 
 The current policy behind this request seems to be an ever-changing set
 of guidelines that depending on the type of data generated as part of
 the study, the date upon which the human specimen was collected, and the
 details of the consent in place at that time all currently have
 implications for the process the investigator needs to address. At the
-time of this writing, the NIH Office of Science Policy [provides this
-site describing Institutional Certifications, though again, even the
-links in the JIT document from the NIH itself are already broken, so
-additional searching may be
-required](https://osp.od.nih.gov/scientific-sharing/researchers-institutional-certifications/)
+time of this writing, the NIH Office of Science Policy [provides this site](https://osp.od.nih.gov/scientific-sharing/researchers-institutional-certifications/) describing Institutional Certifications, though again, even the
+links in the JIT document from the NIH itself are already broken, so additional searching may be required.
 
 For NIH Submissions, it is also prudent to check GDS requirements within
 the specific institutes within NIH. For example, The National Institute
 of Allergy and Infectious Diseases (NIAID) has data sharing requirements
 above and beyond NIH GDS. NIAID expectations can be found
-[here](https://www.niaid.nih.gov/research/gds-expectations.).
+[here](https://www.niaid.nih.gov/research/gds-expectations).
 
 
 ## NIH Funding of Research Involving Genomic Data

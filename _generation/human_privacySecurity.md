@@ -64,7 +64,7 @@ transfer of nonpublic data that is subject to some restriction on its
 use. The data provider typically originates DUAs. Contact Fred Hutch
 Business Development & Strategy to initiate a DUA or review a received
 DUA, using this
-[questionairre](https://centernet.fredhutch.org/cn/u/business-dev/form-questionnaire.html).
+[questionnaire](https://centernet.fredhutch.org/cn/u/business-dev/form-questionnaire.html).
 DUAs serve to outline the terms and conditions of the transfer.
 Specifically, DUAs address important issues such as limitations on use
 of the data, obligations to safeguard the data, liability for harm
