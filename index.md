@@ -18,13 +18,13 @@ The ongoing engagement, contribution and curation of the content in the Biomedic
 ## Overview of Wiki Content
 As the Wiki content is intended to serve as an 'on ramp' for researchers at the Fred Hutch, the material is oriented toward helping researchers to get up to speed on current best practices, links to on-campus resources that are relevant to a specific domain,  as well as useful links to other external content about specific topics.  The three domains of biomedical research this Wiki is intended to serve include: **Data Generation**, **Bioinformatics** and **High Performance Computing**.  
 
-### [Data Generation](http://sciwiki.fredhutch.org/generation/gen_index/)
+### [Data Generation](/generation/gen_index/)
 This domain contains information that ranges from important IRB and human subjects privacy matters that are important for clinical and behavioral data analysis, human specimen banking, large scale molecular profiling projects, through data management tools and resources useful for collection of clinical, specimen and laboratory covariates, as well as the types and modes of large scale molecular data generation commonly undertaken.  
 
-### [Bioinformatics](http://sciwiki.fredhutch.org/bioinformatics/inf_index/)
+### [Bioinformatics](/bioinformatics/inf_index/)
 This domain contains information about the bioinformatic and analytic processes required to transform data generated in the context of biomedical research into interpretable, actionable, and/or shareable scientific findings.  Topics range from background on various common computing languages used in the domain, to research topic oriented process information and tool descriptions, to worked examples of bioinformatic analyses using Fred Hutch based infrastructure.  
 
-### [Scientific Computing](http://sciwiki.fredhutch.org/computing/comp_index/)
+### [Scientific Computing](/computing/comp_index/)
 This domain houses researcher-oriented documentation for high performance computing and data management tools supported by Fred Hutch Center IT as provided by the Scientific Computing group (SciComp).  Topics include get started guides for the various computing and software tools supported by IT, guidance for data infrastructure best practices, and advanced computing worked examples and guides on a variety of topics.  
 
 ## Contributing
