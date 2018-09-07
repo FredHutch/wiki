@@ -34,7 +34,7 @@ Researchers are more and more likely to need to analyze raw data sets using some
 - [Docker]({{ site.baseurl }}/bioinformatics/compute_docker/)
 
 
-## [Training and References](({{ site.baseurl }}/bioinformatics/howto_training/))
+## [Training and References]({{ site.baseurl }}/bioinformatics/howto_training/)
 These sections include a resource list of good opportunities for training from on-campus options to web-based learning options.  Additionally, the Research Topic Articles are a work in progress, where we can host short demo's or articles about common questions or approaches as written by Fred Hutch based researchers and staff.  
-- [Training Opportunities](({{ site.baseurl }}/bioinformatics/howto_training/))
+- [Training Opportunities](/bioinformatics/howto_training/)
 - [Research Topic Articles]({{ site.baseurl }}/infdemos/)

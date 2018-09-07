@@ -22,7 +22,7 @@ REDCap has been used by thousands of non-profit institutions throughout the worl
 
 CDS provides backup services, database maintenance, support for developing REDCap projects, and is very accessible for staff without previous database experience.  
 
-For more information about REDCap at the Fred Hutch, training materials and documentation provided by CDS, [visit their site here.](http://research.fhcrc.org/cds/en/redcap.html.)  
+For more information about REDCap at the Fred Hutch, training materials and documentation provided by CDS, [visit their site here.](http://research.fhcrc.org/cds/en/redcap.html)  
 
 Look for in-person trainings available on a regular basis around campus, [here.](http://research.fhcrc.org/cds/en/redcap-training.html) You will also find recorded training videos and presentation materials at this [url.](http://research.fhcrc.org/cds/en/redcap-training.html). 
 
@@ -59,4 +59,4 @@ visit the [Neo4j official site](https://neo4j.com)
 
 More detailed information about _DB4Sci_ can be found on the application website. DB4Sci is and open source project that is under development.
 Future features are: Self serve restore
-and Point in Time recovery. Project web site [DB4Sci.org](https://db4sci.org)
+and Point in Time recovery. Project web site [DB4Sci.org](http://db4sci.org)
