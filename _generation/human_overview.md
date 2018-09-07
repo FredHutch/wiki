@@ -4,15 +4,13 @@ last_modified_at: 2018-09-06
 ---
 
 This section contains a variety of types of information about relevant
-regulations and also guidance for implementing studies using human subjects,
+regulations and guidance for implementing studies using human subjects,
 human data and/or human specimens. Given the evolving conditions and rules
 surrounding studies using genetic and genomic datasets, we aim to provide an
 up-to-date resource about the current state of the field relating to consenting,
-privacy, and data management.
+privacy, and data management. However, as this field is changing rapidly, if there are changes not reflected here, please email `sciwiki` to highlight issues for additional review.  
 
-The FH Policy on IRB Review of Genomic Data Sharing Policies can be found
-[here](https://centernet.fredhutch.org/cn/u/irb/policies-and-procedures/_jcr_content/leftParsys/download_27/file.res/Review-Genomic-Data-Sharing.pdf).
-This policy provides an overview of FH requirements and pathways for submitting
+>The Fred Hutch Policy on IRB Review of Genomic Data Sharing Policies can be found [here](https://centernet.fredhutch.org/cn/u/irb/policies-and-procedures/_jcr_content/leftParsys/download_27/file.res/Review-Genomic-Data-Sharing.pdf).  This policy provides an overview of Fred Hutch requirements and pathways for submitting
 for review proposals including genomic data.
 
 ## [Consenting and the IRB]({{ site.baseurl }}/generation/human_consentIRB/)
@@ -23,21 +21,15 @@ risks and potential benefits of proposed research and to make an informed and
 voluntary decision about participating in a research study. Unlike the risks
 presented by many biomedical research protocols considered by IRBs, the risks
 involved with genetic information can reach beyond the boundary of physical
-injury, and also include risks of social and psychological harm. Some types of
-genetic information alone can identify a single individual, and in turn have
-implications for family members and levy broader social considerations. IRB
-review of research protocol consent(s), structure and safeguards is a critical
-step in genomics research.
+injury, and also include risks of social and psychological harm. This section highlights some of the issues and resources available to address the unique issues associated with consenting and human specimen/genomics research.  
 
 ## [Data Privacy and Security]({{ site.baseurl }}/generation/human_privacySecurity/)
 
-Every effort must be made to protect the identity of participants. Prior to
-sharing, data should be anonymized and any features that may lead to deductive
-disclosures should be removed to reduce the risk of identification. In most
+Every effort must be made to protect the identity of participants when human subjects, specimens or data are involved in a research project. In most
 instances, sharing data should be possible without compromising the
-confidentiality of participants. If there are circumstances where data needs to
+confidentiality of participants, but if there are circumstances where data needs to
 be restricted due to the inability to protect confidentiality, this should be
-fully addressed in the data management and sharing plan.
+fully addressed in the data management and sharing plan.  This section addresses various aspects of data privacy and security tailored to large scale data involving human subjects.  
 
 ## [De-Identification of Specimens and Data]({{ site.baseurl }}/generation/human_deidentification/)
 
@@ -61,14 +53,10 @@ research data has potential to strengthen academic medical research, the
 practice of medicine, and the integrity of the clinical trial system. Some
 benefits are obvious: when researchers have access to complete data, they can
 answer new questions, explore different lines of analysis, and more efficiently
-conduct large-scale analyses across trials or projects.
-
-The tendency to guard research data to retain ownership and property rights,
-avoid competition, protect confidentiality and privacy, or avoid misuse by
-unqualified persons can be justified in some cases. However, our evolving
+conduct large-scale analyses across trials or projects. However, our evolving
 collective understanding of data sharing practices when large-scale datasets are
-involved is that these precautions tend to result in unnecessary burden on the
-research(ers) that is actually counterproductive and may not necessarily make
+involved can tend to result in an unnecessary burden on the
+research(ers) that is actually both counterproductive and may not necessarily make
 the patient or researcher any safer. This section can help guide decision making
 and actions to successfully share and manage research data to allow for the most
 productivity and facilitation of the original research itself while balancing

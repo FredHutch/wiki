@@ -8,7 +8,7 @@ important issue to consider is whether the proposed research qualifies
 as human subjects research as defined by the Department of Health and
 Human Services Office for Human Research Protections ([OHRP](https://www.hhs.gov/ohrp/)) and/or the National Institutes of Health.
 Take a look at the [OHRP decision charts](https://www.hhs.gov/ohrp/regulations-and-policy/decision-charts/index.html)
-and/or the [NIH questionnaire to find out what aspects of human subjects research may apply.](MISSING LINK)
+and/or the [NIH questionnaire to find out what aspects of human subjects research may apply.](https://humansubjects.nih.gov/questionnaire)
 
 ## IRB Approval in Human Subjects Research
 
@@ -20,32 +20,35 @@ will look at whether the research involves human subjects.
 
 When starting a research project that may involve the generation of
 large-scale genetic or other large-scale molecular datasets, a first
-step is to ensure that the consent forms involved in the study include
+step is to ensure that the consent forms involved in the study or studies during which the intended specimens were collected include
 language specific to the possibility of generating these types of data
-and how those data can be used and shared. In some cases, the use of
+and how those data can be used and shared.
+
+In some cases, the use of
 human specimens to generate large-scale molecular datasets is not
-considered human subjects research and thus not subject to specific
-requirements that human subjects research is, even though the dataset
-uses human data. For NIH grant applications submitted after January 25,
+considered human subjects research, and thus not subject to the specific
+requirements of human subjects research, even though the dataset
+uses human data. This distinction allows studies which use human specimens/data and deemed not human subjects research to avoid the relatively high level of documentation and reporting requirements of human subjects research.
+
+For NIH grant applications submitted after January 25,
 2018, a new required form allows for more clarity if a study does not
 qualify as human subjects, but does use human specimens and/or data.
 More about this form, the PHS Human Subject and Clinical Trial
 Information form can be found
-[here.]([[https://grants.nih.gov/policy/clinical-trials/new-human-subject-clinical-trial-info-form.htm]{.underline}](https://grants.nih.gov/policy/clinical-trials/new-human-subject-clinical-trial-info-form.htm))
+[here.](https://grants.nih.gov/policy/clinical-trials/new-human-subject-clinical-trial-info-form.html)
 This form requires the investigator to have reviewed the NIH
-questionnaire and if the study does involved human specimens and/or data
-(but not human subjects) an additional document is required to address
-why the study does not qualify as human subjects according to the NIH. .
+questionnaire; if the study does involve human specimens and/or data, but is not deemed human subjects research,
+additional documentation or justification is required. An example of the Research Involving Private Information or Biological Specimens flowchart is [here.](https://grants.nih.gov/grants/policy/hs/PrivateInfoOrBioSpecimensDecisionChart.pdf)
 
 ### Available Resources
 
--   If you are affiliated with the the Fred Hutchinson Cancer Research Center or Seattle Cancer Care Alliance, a good place to start is the [Fred Hutch IRB.](MISSING LINK)
+-   If you are affiliated with the the Fred Hutchinson Cancer Research Center or Seattle Cancer Care Alliance, a good place to start is the [Fred Hutch IRB.](https://centernet.fredhutch.org/cn/u/irb.html)
 
 -   Similarly, if you work for the University of Washington, the [UW IRB](https://www.washington.edu/research/hsd/) curates that information.
 
--   If you currently have an NIH grant, are considering applying for one, or are in the process of writing one, consider taking a look at [the NIH's website.]{.underline}
+-   If you currently have an NIH grant, are considering applying for one, or are in the process of writing one, consider taking a look at [the NIH's human subjects research site.](https://humansubjects.nih.gov/)
 
--   For more information about using human specimens, cell lines or data in the context of a non-human subjects study, [here is a pdf of a decision tree provided by the NIH.]{.underline}
+-   For more information about using human specimens, cell lines or data in the context of a non-human subjects study, [here is a pdf of a decision tree provided by the NIH.](https://humansubjects.nih.gov/sites/hs/public_files/privateinfoorbiospecimensdecisionchart.pdf)
 
 ## Retrospectively Banked Specimens and IRB Review
 

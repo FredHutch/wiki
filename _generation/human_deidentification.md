@@ -19,7 +19,7 @@ datasets are generated. In the setting of genomics, this would include
 considerations for the condition where genomic datasets generated from a human
 specimen may be deposited in a publicly available setting for the purposes of
 data sharing for further research. The most common method is the Safe Harbor
-method, removal of 18 identifiers as listed in [HIPAA regulation (45 CFR 164.514(b)(2).](MISSING LINK)
+method, removal of 18 identifiers as listed in [HIPAA regulation (45 CFR 164.514(b)(2).](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html)
 
 Ethnicity, gender, age, marital status, geographical location, and preferred
 language are types of descriptors (indirect identifiers) which when combined can
