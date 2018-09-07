@@ -9,10 +9,11 @@ Seattle Translational Tumor Research Group
 
 ## Members/Titles
 
-Kara Colevas, Clinical Coordinator
-Rachel Galbraith, Program Operations Director
-Kylie McCloskey, Program Assistant
-Jenny Zhang, Research Technician
+Rachel Galbraith, Program Operations Director<br />
+Nola Klemfuss, Program Manager<br />
+Kara Colevas, Clinical Coordinator<br />
+Kylie McCloskey, Program Assistant<br />
+Jenny Zhang, Research Technician<br />
 
 
 ## Contribution Domain and Type
