@@ -9,7 +9,6 @@ task :test do
                     /rstudio.fhcrc.org/, /jupyterhub.fhcrc.org/,
                     /aspera.fhcrc.org/, /mydb.fredhutch.org/,
                     /translationalgenomics.fredhutch.org/,
-                    /lists.fhcrc.org/, /fhbig.slack.com/,
-                    /join.slack.com/]}
+                    /lists.fhcrc.org/, /slack.com/]}
   HTMLProofer.check_directory("./_site", options).run
 end
