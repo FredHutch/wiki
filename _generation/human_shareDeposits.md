@@ -275,7 +275,7 @@ with a brief explanation. Grant applications are not always sufficiently
 detailed for staff to determine whether the GDS policy applies, in which
 case staff must contact the PI, which can cause delays.
 
--   The NIH Genomic Data Sharing Policy is [here,](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/) and a useful FAQ is [here.](MISSINGLINK)
+-   The NIH Genomic Data Sharing Policy is [here.](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/)
 
 -   Large-scale genomic data include genome-wide association studies (GWAS), single nucleotide polymorphisms (SNP) arrays, and genome sequence, transcriptomic, metagenomic, epigenomic, and gene expression data. Examples of research that are subject to the GDS Policy include, but are not limited to, projects that involve generating the whole genome sequence data for more than one gene from more than 1,000 individuals, or analyzing 300,000 or more genetic variants in more than 1,000 individuals, or sequencing more than a 100 isolates of infectious organisms such as bacteria. The [Supplemental Information to the NIH Genomic Data Sharing Policy](https://osp.od.nih.gov/wp-content/uploads/Supplemental_Info_GDS_Policy.pdf) includes detailed description of research under scope of the policy and data submission expectations.
 

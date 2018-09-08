@@ -22,9 +22,9 @@ REDCap has been used by thousands of non-profit institutions throughout the worl
 
 CDS provides backup services, database maintenance, support for developing REDCap projects, and is very accessible for staff without previous database experience.  
 
-For more information about REDCap at the Fred Hutch, training materials and documentation provided by CDS, [visit their site here.](http://research.fhcrc.org/cds/en/redcap.html.)  
+For more information about REDCap at the Fred Hutch, training materials and documentation provided by CDS, [visit their site here.](http://research.fhcrc.org/cds/en/redcap.html)  
 
-Look for in-person trainings available on a regular basis around campus, [here.](http://research.fhcrc.org/cds/en/redcap-training.html) You will also find recorded training videos and presentation materials at this [url.](http://research.fhcrc.org/cds/en/redcap-training.html). 
+Look for in-person trainings available on a regular basis around campus, [here.](http://research.fhcrc.org/cds/en/redcap-training.html) You will also find recorded training videos and presentation materials at this [url.](http://research.fhcrc.org/cds/en/redcap-training.html).
 
 The login page for the Fred Hutch instance is [here.](http://redcap.fredhutch.org/)
 
@@ -47,7 +47,7 @@ To access [DB4Sci](https://mydb.fredhutch.org/) click the link and use your Hutc
 relational database that supports SQL. MariaDB has an option
 for data encryption and data encryption in transit (TLS).  If your project
 requires encryption at rest you should use MariaDB. For more information
-visit the [MariaDB official site](https://mariadb.org/)
+visit the [MariaDB official site](https://mariadb.org)
 - _Postgres_ Postgres is a very popular open source relational database.
 Postgres is very performant and capable of storing large databases. For more information
 visit the [Postgres official site.](https://www.postgresql.org)
