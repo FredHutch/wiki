@@ -1,17 +1,16 @@
 ---
 title: Cluster Software
-last_modified_at: 2018-08-29
+last_modified_at: 2018-09-07
 ---
 
 
 >NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.
 
-## Software and Scientific Computing
-Scientific Computing supports software used in science. A large number of pre-compiled packages are already available on our HPC cluster and Linux systems. Individual installation of packages and language modules is also supported.
+The Scientific Computing Center IT group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
 ## Linux at Fred Hutch
 <!--Brief description of Fred Hutch policies and choices around Linux.-->
-At Fred Hutch, we use the Ubuntu distribution of Linux. The HPC cluster and support systems currently run {{site.data.scicomp_versions.ubuntu}}. For many reasons we do not use OS packages for scientific software. We have a separate system that provides software packages, which is detailed below.
+At Fred Hutch, we use the Ubuntu distribution of Linux. The HPC cluster and support systems currently run {{site.data.scicomp_versions.ubuntu}}. For many reasons we do not use OS packages for scientific software. <!-- What are "OS packages? I have no idea what you are meaning here so I don't know why this is important for me to know that you do not do. --> We have a separate system that provides software packages, which is detailed below.
 
 ### Environment Modules
 Environment Modules are a mechanism to provide modular software packages in shell and other languages. Environment Modules are similar to Python virtualenvs or Conda envs. As there are many Environment Modules already built, users only need to load them, not write or create them.
@@ -36,7 +35,7 @@ source /app/Lmod/lmod/lmod/init/bash
 module use /app/easybuild/modules/all
 ```
 
-##### Questions
+##### Frequently Asked Questions
 <!--We should have a single "how to get help from SciComp page" and link here.-->
 1. *Only bash?*
   - Our recommendation is to use bash as your shell. If you wish to use a different shell, please get in touch with SciComp and we will help you with terminal sessions and/or scripts.
@@ -67,6 +66,7 @@ The EasyBuild system provides recipes for automatically building common software
 More info on EasyBuild(s [here]https://easybuilders.github.io/easybuild/).
 
 ### DIY Software
+When existing modules do not include specific packages or modules you need, it is possible to install those packages on the HPC cluster.  
 
 #### Packages/Modules for Python and R
 Normal install methods work fine after loading an Environment Module:
