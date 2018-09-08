@@ -87,7 +87,7 @@ it can be found [here](https://www.ruby-lang.org/en/downloads/).
    If that fails, try `sudo gem install bundler`.
 
 1. To build and view the site locally, type
-   `bundle install jekyll serve`. Once the
+   `bundle install`  then enter `bundle exec jekyll serve`. Once the
    site is built you can view it at
    [http://localhost:4000](http://localhost:4000).
 
