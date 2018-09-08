@@ -22,7 +22,7 @@ A group would like to begin data abstraction and wants the benefits of standardi
 
 If a group starts abstraction using REDCap, but would like to contribute the data back to the institutional database in Caisis at a later date: When the group has finished their data entry into REDCap for their specific project, STTR will provide auditing services to determine the accuracy of the entered data and, if it passes our threshold, we can push the data into Caisis.  
 
-If your team has questions about Caisis, the STTR REDCap template, or data abstraction, please reach out to us at [STTRCancer](mailto://sttrcancer@fredhutch.org).
+If your team has questions about Caisis, the STTR REDCap template, or data abstraction, please reach out to us at [STTRCancer](mailto:sttrcancer@fredhutch.org).
 
 ## Data Requests
 To request data which has been abstracted into Caisis and/or data from the Hutch Data Repository, investigators or research coordinators need to fill in the data request form available [here](https://cdsweb07.fhcrc.org/redcap/surveys/?s=WM3CAN33YY). Requests can be made for evaluation of data preparatory to research without an active IRB, however for research projects, IRB documentation will be requested to verify whether the requestor should be granted access to the requested data.

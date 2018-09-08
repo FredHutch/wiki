@@ -58,7 +58,7 @@ Check out [our EasyBuild repo](https://fredhutch.github.io/easybuild-life-scienc
 
 ### How to request new software
 - Send an email to scicomp@
-- File an issue at [out EasyBuild repo](https://fredhutch.github.io/easybuild-list-sciences).
+- File an issue at [our EasyBuild repo](https://github.com/FredHutch/easybuild-life-sciences/issues/new).
 
 ### When should ask us for software?
 Always!
