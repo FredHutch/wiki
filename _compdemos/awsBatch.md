@@ -15,7 +15,7 @@ a service that provides cloud-based data storage in the form of "buckets", or a 
 
 ## Essential terms
 
-  * Docker image: lightweight operating system / virtual machine [see Docker documentation](link)
+  * Docker image: lightweight operating system / virtual machine [see Docker documentation](https://docs.docker.com/glossary/?term=image)
   * CPU: Central processing unit, basically just a unit of computation. Your laptop probably has 4 CPUs, while large servers have dozens.
 
 ## How it works
