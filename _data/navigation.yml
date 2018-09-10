@@ -155,7 +155,7 @@ computing:
         url: /computing/store_overview/
       - title: "Database Systems"
         url: /computing/store_databases/
-      - title: "Block Storage Systems"
+      - title: "File Storage Systems"
         url: /computing/store_posix/
       - title: "Object Storage Systems"
         url: /computing/store_objectstore/
