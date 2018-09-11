@@ -10,10 +10,10 @@ The Scientific Computing Center IT group supports additional software used in sc
 
 ## Linux at Fred Hutch
 <!--Brief description of Fred Hutch policies and choices around Linux.-->
-At Fred Hutch, we use the Ubuntu distribution of Linux. The HPC cluster and support systems currently run {{site.data.scicomp_versions.ubuntu}}. For many reasons we do not use OS packages for scientific software. <!-- What are "OS packages? I have no idea what you are meaning here so I don't know why this is important for me to know that you do not do. --> We have a separate system that provides software packages, which is detailed below.
+At Fred Hutch, we use the Ubuntu distribution of Linux. The HPC cluster and support systems currently run {{site.data.scicomp_versions.ubuntu}}.  We use the _long term support_ (or LTS) releases to ensure a stable platform that is well-supported.
 
 ### Environment Modules
-Environment Modules are a mechanism to provide modular software packages in shell and other languages. Environment Modules are similar to Python virtualenvs or Conda envs. As there are many Environment Modules already built, users only need to load them, not write or create them.
+Environment Modules are a mechanism to provide software packages, including scientific software and tools. Environment Modules are similar to Python virtualenvs or Conda envs. As there are many Environment Modules already built, users only need to load them, not write or create them.
 
 #### How to Use Environment Modules
 ##### Interactively
@@ -22,10 +22,12 @@ Command | Action
 --- | ---
 `module avail` | List modules available to load
 `module avail <pattern>` | Filter available modules based on pattern (ex: `module avail SAMtools`)
-`module load <modelename>` | Load an Environment Module into your environment (ex: `module load Python/3.6.5-foss-2016b-fh1`)
+`module load <packagename>/<version>` | Load a specific version of a module into your environment (ex: `module load Python/3.6.5-foss-2016b-fh1`)
 `module load <packagename>` | Load a default Environment Module *see below* (ex: `module load Perl`)
 `module list` | List currently loaded Environment Modules
 `module purge` | Unload all currently loaded Environment Modules
+
+There is also a short version of the `module` command: `ml`.  You can substitute `ml` for `module` in any of the commands above.
 
 ##### Scripting with Environment Modules
 To use Environment Modules in a bash script, it is best to explicitly activate the `module` command and load exact versions of modules. To activate Environment Modules, add the follow lines to the top of your script:
@@ -43,11 +45,8 @@ module use /app/easybuild/modules/all
   - The command `ml` is a shortcut for `module` and implies `module load` but will work with other `module` subcommands (ex: `ml R/3.5.0-foss-2016b-fh1`)
 1. *What is this "foss-2016b" stuff?*
   - The EasyBuild project supports many different toolchains. The toolchain defines a compiler and library set, and also has a number of common support libraries (things like libTIFF) associated with it.
-1. *What is the benefit of the "foss-2016b" toolchain?*
-  - EasyBuild toolchains are optimized and include accelerated libraries by default. Binaries are often much faster when compiled with these toolchains.
-  - OS compilers and libraries are updated infrequently - usually only with major OS version upgrades.
 1. *Should I load default modules?*
-  - It is faster and easier to type `ml R` than the entire Environment Module name (though, tab-completion does work in this case). However, the default version loaded by a generic `module load <pkg>` command will change over time.
+  - It is faster and easier to type `ml R` than specifying the full package and version. However, the default version loaded by a generic `module load <pkg>` command will change over time.  If maintaining a specific version of a package is important to your work, you will want to specify the version.
 1. *Is there a list of included language libraries/modules/packages?*
   - Yes! For R, Python, and some additional packages, look [here](https://fredhutch.gihub.io/easybuild-life-sciences).
 1. *What about Bioconductor for R?*
@@ -76,7 +75,7 @@ Normal install methods work fine after loading an Environment Module:
 
 This is safe as the package will be installed in your home directory, not the site or source directory.
 
-However, you must manage your Environment Module versions as some packages compile binary code, and will only work after you have loaded the same Environment Module you used to compile/install the package.
+For these packages or modules you must specify the Environment Module version(s) as some packages compile binary code and will only work after you have loaded the same Environment Module you used to compile/install the package. For example, if you load `Python/3.6.9` and use `pip install` to install a module into your home directory, you will need to load `Python/3.6.9` every time you wish to use that module.
 
 #### Other software installs and builds
 If you want to use a non-R/Python software package, you are also welcome to install into your home directory, with the following caveats:
