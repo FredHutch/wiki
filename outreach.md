@@ -7,8 +7,20 @@ toc_label: "On This Page"
 sidebar:
   nav: "frontpage"
 ---
-## Translational Genomics Pop Up Events
+
+## Communication and Events
+### Wiki Contributors
+To get involved there are many ways to find us:
+- The Wiki team has weekly, "office hours" style Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions when time permits!  The current schedule can be found on the [FHBig Google calendar,](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) just look for "Wiki Working Meeting" in the event name, or please email `sciwiki` for more information.  
+
+- Join the **FHBig** Slack workspace via [this link, and use your fredhutch.org email to join.](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg)  In this Slack workspace we have a #wikicontributors channel where you can chime in with edits, get updates about next meetings, goals and our next steps.  
+
+- Follow along in our GitHub repository where we are curating this content [if you have gotten set up to use the Fred Hutch GitHub organization account, see below for instructions.](https://github.com/FredHutch/wiki)
+
+
+### Translational Genomics Pop Up Events
 Starting in Fall of 2018 we will begin hosting Pop Up workshops!!!  You can find up to date events by going to [the FHBig Google Calendar](https://calendar.google.com/calendar?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) and looking for those events labeled "Pop Up:...".  If you'd like to get on the roster, please email Amy Paguirigan (`apaguiri`) or go chat about it on [Slack.](https://fhbig.slack.com)  
+
 
 
 ## FH Biomedical Data Science Wiki Writer-Editor Program

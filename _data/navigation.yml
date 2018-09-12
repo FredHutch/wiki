@@ -13,8 +13,12 @@ frontpage:
       - title: "This collaboratively curated wiki was created by contributions from Fred Hutch investigators and staff. For more information about this project or contributing, email Amy Paguirigan (apaguiri)."
   - title: "Links"
     children:
+      - title: "Our CenterNet page"
+        url: https://centernet.fredhutch.org/cn/u/sciwiki.html
       - title: "Contributors List"
         url: /contributors/
+      - title: "Contributing Instructions"
+        url: https://github.com/FredHutch/wiki/blob/master/README.md
       - title: "Outreach and Events"
         url: /outreach/
       - title: "Style Guide"
