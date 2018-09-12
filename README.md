@@ -66,3 +66,43 @@ https://github.com/FredHutch/wiki/tree/master/assets/css
 
 Header and footer configs:
 https://github.com/FredHutch/wiki/tree/master/_includes
+
+## Building the site locally
+
+You may want to build the site locally
+(on your own computer) to make sure
+that it looks like you expect it to
+before pushing your changes.
+
+### Steps
+
+1. Install Ruby (version 1.9.2 or later).
+**Note**: most modern Mac computers already have Ruby installed. If you still need Ruby,
+it can be found [here](https://www.ruby-lang.org/en/downloads/).
+
+1. You may need to install `bundler`. Type
+   `which bundler` to see if it is already
+   installed. If nothing is returned, then
+   install `bundler` with `gem install bundler`. 
+   If that fails, try `sudo gem install bundler`.
+
+1. To build and view the site locally, type
+   `bundle install`  then enter `bundle exec jekyll serve`. Once the
+   site is built you can view it at
+   [http://localhost:4000](http://localhost:4000).
+
+To check for broken links, you can type
+`rake test`. This will exit with an error if there
+are any broken links, and list the broken
+links and the files they are found in.
+
+If you are inside the Fred Hutch network, you can type
+`rake testlocal` and that will include internal URLs
+in the check (these are normally excluded because CircleCI does
+not have access to them).
+
+You can also look at the most recent
+[CircleCI build](https://circleci.com/gh/FredHutch/wiki) to see
+the list of broken links.
+
+   

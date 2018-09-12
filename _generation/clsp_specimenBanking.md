@@ -1,12 +1,22 @@
 ---
 title: Specimen Processing and Banking
-last_modified_at: 2018-07-19
+last_modified_at: 2018-09-11
+main_authors: Kylie McCloskey
 ---
-## STTR Supported LabMatrix for Specimen Banking
-More to come about guidance for data management tools specifically tailored for prospective specimen banking, as well as transfer of existing data to facilitate ongoing research using retrospectively banked specimens.  
 
-### Available Resources
-  - [LabMatrix](http://www.biofortis.com/labmatrix): LabMatrix is a specimen tracking platform that can be used to capture clinical and laboratory covariates. One of its main strengths is the ability to capture lineage of specimen processing steps in a workflow (for example, multiple nucleic acid types could be extracted from the same tissue). Currently, the [STTR group](https://www.fredhutch.org/en/labs/seattle-translational-tumor-research.html) is piloting a LabMatrix project at the Hutch.
+## Labmatrix For Specimen Management
+[Labmatrix](http://www.biofortis.com/labmatrix) is a web-based biospecimen management system that allows researchers to track their biospecimens and associated data in discrete fields through a relational database. [STTR](http://www.sttrcancer.org/), with input from representatives from solid and liquid tumors, infectious disease, and other research areas developed a disease-agnostic data model that can work for any researcher using specimens. Having a standardized data model is beneficial for collaborations and downstream research. This model also provides a framework for investigators to collect the information necessary to determine whether a specimen has value in answering a research question.
+
+### Key Features
+Lineage tracking of specimens and detailed audit trails allow users to have an accurate record of the life of the specimens and what was done to them at what time. Participant or patient information can be linked directly to the specimens collected from an individual at a specific point in time, along with other important information about the patient and specimen at the time of collection. Labmatrix automatically generates a unique, customizable barcode for each specimen logged and enables results storage can link out to other databases that house larger data, such as genomic testing results or staining images.
+
+The storage module allows a lab to track the exact storage locations of their specimens, so you always know where your specimens are and the status of specimens. Labmatrix can also connect with barcode scanners and print unique, customizable barcodes for all specimens and participants. The system’s robust querying abilities also enable researchers to easily ask questions of their specimen inventory and export reports of the results. Labmatrix connects with other databases through their Rest API, which supports seamless integration of Labmatrix into the current systems used at Fred Hutch.
+
+### Getting Started
+If you are looking for a new specimen management system or have questions about Labmatrix, please email `STTRCancer` and we are happy to further discuss Labmatrix and how to implement the system in your lab.
+
+### Costs
+Labmatrix offers only single-user, named licenses at a rate of $5,000 per year per license at the time of this writing. The accounts are assigned to an individual and can only be accessed by that person. There are no floating or lab licenses. If you are interested in purchasing a Labmatrix license, you will need to send an email to `STTRCancer` outlining your request and including the project ID that the license can be charged to. Fred Hutch will work with Labmatrix to put in the purchase order the license and STTR can assist in setting up the environment.   
 
 ## Fred Hutch Specimen Processing Shared Resources
 Fred Hutch researchers have access to retrospectively banked specimens through Northwest Biotrust.  Additionally, the two previous shared resources called Specimen Processing and Research Cell Bank have merged and now the group is available to provide services such as receipt and processing of biospecimens with existing or researcher-defined protocols, nucleic acid extractions, DNA fingerprinting (e.g. for confirmation of cell line identities as required now by many funding agencies), to specimen storage resources.  
