@@ -1,9 +1,9 @@
 version: 2 # use CircleCI 2.0
 jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
-    # branches:
-    #   only:
-    #     - master
+    branches:
+      only:
+        - master
     parallelism: 1 # run three instances of this job in parallel
     docker: # run the steps with Docker
       - image: circleci/ruby:2.4.2-jessie-node # ...with this image as the primary container; this is where all `steps` will run
@@ -26,8 +26,8 @@ jobs: # a collection of steps
       - run:
           name: Check for broken links
           command: rake test
-general:
-  branches:
-    only:
-      - master
+# general:
+#   branches:
+#     only:
+#       - master
       
