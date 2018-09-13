@@ -18,14 +18,15 @@ Environment Modules are a mechanism to provide modular software packages in shel
 #### How to Use Environment Modules
 ##### Interactively
 When you log in to a SciComp server (or Ubuntu desktop) your terminal session has Lmod pre-loaded. Common shell commands:
-Command | Action
---- | ---
-`module avail` | List modules available to load
-`module avail <pattern>` | Filter available modules based on pattern (ex: `module avail SAMtools`)
-`module load <modelename>` | Load an Environment Module into your environment (ex: `module load Python/3.6.5-foss-2016b-fh1`)
-`module load <packagename>` | Load a default Environment Module *see below* (ex: `module load Perl`)
-`module list` | List currently loaded Environment Modules
-`module purge` | Unload all currently loaded Environment Modules
+
+| Command | Action |
+| --- | --- |
+| `module avail` | List modules available to load |
+| `module avail <pattern>` | Filter available modules based on pattern (ex: `module avail SAMtools`) |
+| `module load <modelename>` | Load an Environment Module into your environment (ex: `module load Python/3.6.5-foss-2016b-fh1`) |
+| `module load <packagename>` | Load a default Environment Module *see below* (ex: `module load Perl`) |
+| `module list` | List currently loaded Environment Modules |
+| `module purge` | Unload all currently loaded Environment Modules |
 
 ##### Scripting with Environment Modules
 To use Environment Modules in a bash script, it is best to explicitly activate the `module` command and load exact versions of modules. To activate Environment Modules, add the follow lines to the top of your script:
