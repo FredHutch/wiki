@@ -17,7 +17,7 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
   3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
   4. When you are done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging vortexing or bmcgough for a review).  
   5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
-  6. An Admin will merge the pull request into the master and then any edits go live to the site [here.](http://sciwiki.fredhutch.org/)
+  6. Once reviews have been obtained, the pull request can be merged into the master and then any edits go live to the site [here.](http://sciwiki.fredhutch.org/)
 
 
 Afterwards:  Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site.
@@ -83,7 +83,7 @@ it can be found [here](https://www.ruby-lang.org/en/downloads/).
 1. You may need to install `bundler`. Type
    `which bundler` to see if it is already
    installed. If nothing is returned, then
-   install `bundler` with `gem install bundler`. 
+   install `bundler` with `gem install bundler`.
    If that fails, try `sudo gem install bundler`.
 
 1. To build and view the site locally, type
@@ -91,6 +91,8 @@ it can be found [here](https://www.ruby-lang.org/en/downloads/).
    site is built you can view it at
    [http://localhost:4000](http://localhost:4000).
 
+
+## Checking for broken links
 To check for broken links, you can type
 `rake test`. This will exit with an error if there
 are any broken links, and list the broken
@@ -104,5 +106,3 @@ not have access to them).
 You can also look at the most recent
 [CircleCI build](https://circleci.com/gh/FredHutch/wiki) to see
 the list of broken links.
-
-   
