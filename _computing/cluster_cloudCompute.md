@@ -5,7 +5,7 @@ last_modified_at: 2018-08-31
 >NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
 
 The Hutch is just getting started with cloud computing.  Options like the
-beagle and koshu clusters, while built _in_ the cloud, are very much a simple
+`beagle` and `koshu` clusters, while built _in_ the cloud, are very much a simple
 extension of existing infrastructure into cloud providers but does not fully or
 particularly efficiently utilize the real capabilities and advantages provided
 by cloud services.
@@ -20,7 +20,7 @@ capabilities:
 
 ## Batch Computing
 
-_AWS Batch_ is an AWS service that uses Docker containers to build a batch
+AWS _Batch_ is an AWS service that uses Docker containers to build a batch
 computing system.  Batch is made up of a queueing system where jobs are defined
 and queued, and a computational resource made up of Docker containers to
 process those jobs.  Resources are provisioned when there are jobs to be
@@ -39,4 +39,4 @@ in S3 or some other web-available source.  There have been some recent changes w
 expand options for data storage which may make some workloads more accessible
 to _Batch_.
 
-If you think your work might benefit from using _Batch_, please contact Scientific Computing or come to cloud office hours.
+We have an entry in the Resource Library [here](/compdemos/awsBatch/) to learn more about this emerging resource.  If you think your work might benefit from using _Batch_, please contact Scientific Computing or come to cloud office hours.
