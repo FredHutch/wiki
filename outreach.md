@@ -2,10 +2,9 @@
 title: Wiki Outreach and Events
 permalink: /outreach/
 layout: single
+classes: wide
 toc: true
 toc_label: "On This Page"
-sidebar:
-  nav: "frontpage"
 ---
 
 ## Communication and Events
