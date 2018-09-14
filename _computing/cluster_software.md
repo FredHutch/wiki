@@ -10,7 +10,7 @@ The Scientific Computing Center IT group supports additional software used in sc
 
 ## Linux at Fred Hutch
 <!--Brief description of Fred Hutch policies and choices around Linux.-->
-At Fred Hutch, we use the Ubuntu distribution of Linux. The HPC cluster and support systems currently run {{ site.data.scicomp_versions.ubuntu }}. For many reasons we do not use OS packages for scientific software. <!-- What are "OS packages? I have no idea what you are meaning here so I don't know why this is important for me to know that you do not do. --> We have a separate system that provides software packages, which is detailed below.
+At Fred Hutch, we use the Ubuntu distribution of Linux. The HPC cluster and support systems currently run {{ site.data.scicomp_versions[ubuntu] }}. For many reasons we do not use OS packages for scientific software. <!-- What are "OS packages? I have no idea what you are meaning here so I don't know why this is important for me to know that you do not do. --> We have a separate system that provides software packages, which is detailed below.
 
 ### Environment Modules
 Environment Modules are a mechanism to provide modular software packages in shell and other languages. Environment Modules are similar to Python virtualenvs or Conda envs. As there are many Environment Modules already built, users only need to load them, not write or create them.
