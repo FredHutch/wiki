@@ -156,8 +156,8 @@ the following lines:
  from more than 1,000 individuals, or analyzing 300,000 or more
  genetic variants in more than 1,000 individuals, or sequencing
  more than a 100 isolates of infectious organisms such as bacteria.
- The [[Supplemental Information to the NIH Genomic Data Sharing
- Policy]{.underline}](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html)
+ The [Supplemental Information to the NIH Genomic Data Sharing
+ Policy](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html)
  includes detailed description of research under scope of the
  policy and data submission expectations.
 
