@@ -23,13 +23,13 @@ most popular tools only run on Linux.  Thus, it's important that you become at l
 
 Learning Linux means learning the shell.  The most common shell is _bash_ and the one we'll be assuming is in use here. A good way to get started learning Linux is going through some of the many tutorials that have been developed and are readily available from various providers:
 
- - The ["Unix Shell"](http://swcarpentry.github.io/shell-novice/) course from Software Carpentry (note, this organization has a number of different software oriented tutorials and resources as well).
- - The ["Introduction to Linux"](https://www.tldp.org/LDP/intro-linux/html/index.html) guide from The Linux Documentation Project
+ - The [Unix Shell](http://swcarpentry.github.io/shell-novice/) course from Software Carpentry (note, this organization has a number of different software oriented tutorials and resources as well).
+ - The [Introduction to Linux](https://www.tldp.org/LDP/intro-linux/html/index.html) guide from The Linux Documentation Project
 
 The rest of this document will expect you've gone through either one of the basic introductions above.  For more advanced use of the shell, tasks like scripting or programming, see:
 
  - [Unix/Bash and Other Languages]({{ site.baseurl }}/bioinformatics/prog_unixbash/) in this wiki
- - The ["Bash Beginner's Guide](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/index.html) from the Linux Documentation Project
+ - The [Bash Beginner's Guide](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/index.html) from the Linux Documentation Project
 
 
 ## Linux at the Fred Hutch
