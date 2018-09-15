@@ -6,63 +6,33 @@ This section contains a variety of frequently updated sections where you can fin
 
 Note:  This section is still under construction.  If you have any input for what you'd like to see addressed here, please email your suggestions to `sciwiki`.
 
-## Our Network
-Overview of physical network and datacenter.
+## What accounts do I need ?
 
-### VPN
-Describe the VPN and link to helpdesk.
+This section describes how to get access and credentials to computing systems on campus and in the cloud.
 
-## Client Devices
-Overview of supported client devices.
+### HutchNet ID 
 
-### Laptops and Desktops
-Laptops: Windows, MacOS
-Desktops: Windows, MacOS, Ubuntu Linux
+a HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate. It is also called Network login or Active Directory credentials. You can use it to login to most resources at the Center (Desktop Computer, Employee Self Service, VPN, Webmail) as well to Scientific Computing systems such as Rhino (`ssh rhino`), which is the login system to large scale cluster computing resources like Gizmo, Beagle and Koshu.
 
-### Mobile Devices
-Link to CIT resources.
+If one of your collaborators requires access to the Fred Hutch network you can submit a [non-employee action form](https://centernet.fredhutch.org/cn/f/hr/lcex/non-employee-action-form.html). Non-employees is a generic term for affiliates, students, contractors, etc.
 
-### Operating Systems
-Overview of available OSes (perhaps comparison table?)
-
-## Access Methods
-Terminal/SSH including X11, NoMachine, and browser-based services access
-
-## Using Linux Resources from a Mac
-### Terminal
-The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources. If you are using to using the features of screen I would recommend using [iTerm2](https://www.iterm2.com/) for your local terminal program on your Mac.  iTerm2 is fully integrated with tmux. Tmux provides most of the same features as GNU Screen.  Run tmux from one of the Linux session servers like lynx, manx, sphinx.
-
-```
-module load tmux
-```
+Please see the Service Desk site on CenterNet for more information about [HutchNet ID](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html)
 
 
-### X11 for Mac
-The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](http://xquartz.macosforge.org), and download and install the latest version of XQuartz.
+### `GitHub.com`
 
-After installing XQuartz just start the app. The XQuartz icon will appear in the toolbar showing that it is running. XQuartz is now running an X11 client and that is the only interaction that you need to do with XQuartz. After XQuartz is running, open the Mac terminal. The latest version of XQuartz sets the DISPLAY environment with the default Mac terminal window.  I do not recommend using the terminal that comes with XQuartz.
+The FredHutch GitHub organization at https://github.com/FredHutch offers free access to public and private git repostories to all FredHutch staff and collaborators. If you are a Fred Hutch employee working with source code and don't have a github.com account yet, please [create one](https://github.com/join) and ask SciComp: "Please add my github user id xyz to organization github.com/FredHutch". Once you are a member of the organization you can create repostories, teams and invite external collaborators to share and edit code.
 
-When connecting to a rhino with ssh always use the -X flag to forward your Xsession to your Mac.
+Note: github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch.
 
-```
-ssh -X jfdey@rhino2
-```
+### Amazon Web Services (AWS)
 
-After connecting to a Rhino verify that your X11 client is working by typing
-`xeyes`.
-
-## Access Requirements or Credentials
-HutchnetID, cluster account. Include a way to check on these.
-
-### Getting AWS S3 Credentials
-You can obtain [Amazon Web Services](https://aws.amazon.com/) (AWS) credentials ​​to make use of the Center's AWS account. By default this will give you access to your lab's S3 bucket, but you can request permission to use other services.
+You can obtain [Amazon Web Services](https://aws.amazon.com/) (AWS) credentials ​​to make use of the Center's AWS account. By default this will give you access to your lab's S3 bucket, but you can request permission to use other services such as AWS Batch.
 
 **NOTE**: Do NOT share these credentials with any other user, inside or outside of Fred Hutch. If another Fred Hutch
-employee needs credentials, they can obtain their own credentials in this same manner. If you need credentials for an
-external collaborator, or if you are having a permissions issue,
-please contact [Scientific Computing](https://centernet.fredhutch.org/cn/u/center-it/cio/scicomp.html).
+employee needs credentials, they can obtain their own credentials in this same manner. If you need credentials for an external collaborator, or if you are having a permissions issue, please contact [Scientific Computing](https://centernet.fredhutch.org/cn/u/center-it/cio/scicomp.html).
 
-There are two ways to get credentials. Which one to use depends on how you will use AWS, either via the command line on Rhino/Gizmo or via graphical programs on your local computer such as via Cyberduck.  
+There are two ways to get credentials. Which one to use depends on how you will use AWS, either via the command line on Rhino/Gizmo or via graphical programs on your local computer such as via Cyberduck or Mountainduck.
 
 #### Command Line (Rhino/Gizmo) Instructions
 First, `ssh` to one of the `rhino machines` (or use NoMachine):
@@ -90,3 +60,60 @@ See more about accessing AWS S3 via the command line [here.](/computing/store_co
 
 Open a web browser and navigate to [https://toolbox.fhcrc.org/sw2srv/aws/account](https://toolbox.fhcrc.org/sw2srv/aws/account).
 This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck. See the more about how to use Cyberduck to connect to AWS S3 [here.](/computing/store_collaboration/)
+
+
+
+
+
+
+## How can I get access from remote ?
+
+### VPN 
+
+Connecting 
+
+### ssh to `snail.fhcrc.org`
+
+Snail is a SSH gateway you can use to get access to Center Resources if you do not require the features that VPN provides.
+
+
+## Client Devices
+Overview of supported client devices.
+
+### Laptops and Desktops
+Laptops: Windows, MacOS
+Desktops: Windows, MacOS, Ubuntu Linux
+
+### Mobile Devices
+Link to CIT resources.
+
+### Operating Systems
+Overview of available OSes (perhaps comparison table?)
+
+## Access Methods
+Terminal/SSH including X11, NoMachine, and browser-based services access
+
+## Using Linux Resources from a Mac
+
+### Terminal
+
+The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources. If you are using to using the features of screen we recommend using [iTerm2](https://www.iterm2.com/) for your local terminal program on your Mac.  iTerm2 is fully integrated with tmux. Tmux provides most of the same features as GNU Screen.  If you run tmux on rhino you must remember on which of the 3 rhinos you ran it and the connect directly to that machine using SSH.  
+
+```
+module load tmux
+```
+
+
+### X11 for Mac
+The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](http://xquartz.macosforge.org), and download and install the latest version of XQuartz.
+
+After installing XQuartz just start the app. The XQuartz icon will appear in the toolbar showing that it is running. XQuartz is now running an X11 client and that is the only interaction that you need to do with XQuartz. After XQuartz is running, open the Mac terminal. The latest version of XQuartz sets the DISPLAY environment with the default Mac terminal window.  I do not recommend using the terminal that comes with XQuartz.
+
+When connecting to a rhino with ssh always use the -X flag to forward your Xsession to your Mac.
+
+```
+ssh -X jfdey@rhino2
+```
+
+After connecting to a Rhino verify that your X11 client is working by typing
+`xeyes`.
