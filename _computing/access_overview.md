@@ -6,17 +6,20 @@ This section contains a variety of frequently updated sections where you can fin
 
 Note:  This section is still under construction.  If you have any input for what you'd like to see addressed here, please email your suggestions to `sciwiki`.
 
-## What accounts do I need ?
+## What accounts / credentials do I need ?
 
 This section describes how to get access and credentials to computing systems on campus and in the cloud.
 
-### HutchNet ID 
+### `HutchNet ID` 
 
 a HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate. It is also called Network login or Active Directory credentials. You can use it to login to most resources at the Center (Desktop Computer, Employee Self Service, VPN, Webmail) as well to Scientific Computing systems such as Rhino (`ssh rhino`), which is the login system to large scale cluster computing resources like Gizmo, Beagle and Koshu.
 
 If one of your collaborators requires access to the Fred Hutch network you can submit a [non-employee action form](https://centernet.fredhutch.org/cn/f/hr/lcex/non-employee-action-form.html). Non-employees is a generic term for affiliates, students, contractors, etc.
 
-Please see the Service Desk site on CenterNet for more information about [HutchNet ID](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html)
+Please see the Service Desk site on CenterNet for more information about [HutchNet ID], password rotation, etc.(https://centernet.fredhutch.org/cn/u/center-it/help-desk.html)
+
+#### `Login to Rhino`
+
 
 
 ### `GitHub.com`
@@ -25,7 +28,9 @@ The FredHutch GitHub organization at https://github.com/FredHutch offers free ac
 
 Note: github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch.
 
-### Amazon Web Services (AWS)
+A github account is different from other accounts. If you leave the Hutch you keep your github account, you will just be removed from the FredHutch organization on GitHub.
+
+### `Amazon Web Services (AWS)`
 
 You can obtain [Amazon Web Services](https://aws.amazon.com/) (AWS) credentials ​​to make use of the Center's AWS account. By default this will give you access to your lab's S3 bucket, but you can request permission to use other services such as AWS Batch.
 
@@ -63,18 +68,24 @@ This page is only accessible within the Hutch network. When prompted, enter your
 
 
 
-
-
-
 ## How can I get access from remote ?
+
+The Fred Hutch network is protected by a firewall and there are currently 2 options to get access to resources inside the network 
 
 ### VPN 
 
-Connecting 
+Connecting
 
 ### ssh to `snail.fhcrc.org`
 
-Snail is a SSH gateway you can use to get access to Center Resources if you do not require the features that VPN provides.
+Snail is a SSH gateway (also called bastion host or jump host) you can use to get remote access if you do not require the features that VPN provides. By default you login to snail.fhcrc.org first and then to rhino. However, if you add these 2 lines your ~/.ssh/config file you only have to type `ssh` once
+
+    Host rhino*.fhcrc.org
+    ProxyCommand ssh yourusername@snail.fhcrc.org exec nc %h %p 2> /dev/nul
+
+if you are outside the Fred Hutch network type `ssh rhino.fhcrc.org` to use the snail gateway and if you are inside type `ssh rhino` to bypass the gateway.
+ 
+Please see [this page](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts) to learn more about ProxyCommand 
 
 
 ## Client Devices
