@@ -23,11 +23,12 @@ jobs: # a collection of steps
       - run:
           name: Check for broken links
           command: rake test
-    # branches:
-    #   ignore:
-    #     - /nothing/
-general:
-  branches:
-    only:
-      - master
       
+workflows:
+  version: 2
+  main:
+    jobs:
+    - build:
+        filters:
+          branches:
+            only: master
