@@ -6,29 +6,31 @@ This section contains a variety of frequently updated sections where you can fin
 
 Note:  This section is still under construction.  If you have any input for what you'd like to see addressed here, please email your suggestions to `sciwiki`.
 
-## What accounts / credentials do I need ?
+## Which accounts / credentials do I need ?
 
 This section describes how to get access and credentials to computing systems on campus and in the cloud.
 
-### `HutchNet ID` 
+### `HutchNet ID`
 
 a HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate. It is also called Network login or Active Directory credentials. You can use it to login to most resources at the Center (Desktop Computer, Employee Self Service, VPN, Webmail) as well to Scientific Computing systems such as Rhino (`ssh rhino`), which is the login system to large scale cluster computing resources like Gizmo, Beagle and Koshu.
 
-If one of your collaborators requires access to the Fred Hutch network you can submit a [non-employee action form](https://centernet.fredhutch.org/cn/f/hr/lcex/non-employee-action-form.html). Non-employees is a generic term for affiliates, students, contractors, etc.
+If one of your collaborators requires access to the Fred Hutch network you can submit a [non-employee action form](https://centernet.fredhutch.org/cn/f/hr/lcex/non-employee-action-form.html). Non-employees is a generic administrative term for affiliates, students, contractors, etc.
 
-Please see the Service Desk site on CenterNet for more information about [HutchNet ID], password rotation, etc.(https://centernet.fredhutch.org/cn/u/center-it/help-desk.html)
+Please see the Service Desk site on CenterNet for more information about [HutchNet ID](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) incl. password rotation, etc.
 
 #### `Login to Rhino`
 
-
+A working HutchNet ID is all you need to login to Rhino (`ssh rhino`). Some users will see an error message that their home directory was not found. This can happen if you are in a newly created department or in one that is typically not working with SciComp resources. Please contact SciComp to have your home directory created.
 
 ### `GitHub.com`
 
 The FredHutch GitHub organization at https://github.com/FredHutch offers free access to public and private git repostories to all FredHutch staff and collaborators. If you are a Fred Hutch employee working with source code and don't have a github.com account yet, please [create one](https://github.com/join) and ask SciComp: "Please add my github user id xyz to organization github.com/FredHutch". Once you are a member of the organization you can create repostories, teams and invite external collaborators to share and edit code.
 
-Note: github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch.
+Note: github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch. It has security features that are otherwise not available. 
 
-A github account is different from other accounts. If you leave the Hutch you keep your github account, you will just be removed from the FredHutch organization on GitHub.
+A GitHub account is different from other accounts. If you leave the Hutch you keep your GitHub account, however you will just be removed from the FredHutch organization on GitHub and your former colleagues can still add you as an external collaborator to their GitHub repositories.
+
+More information about [git and GitHub](/bioinformatics/compute_github/)
 
 ### `Amazon Web Services (AWS)`
 
@@ -67,18 +69,18 @@ Open a web browser and navigate to [https://toolbox.fhcrc.org/sw2srv/aws/account
 This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck. See the more about how to use Cyberduck to connect to AWS S3 [here.](/computing/store_collaboration/)
 
 
-
 ## How can I get access from remote ?
 
 The Fred Hutch network is protected by a firewall and there are currently 2 options to get access to resources inside the network 
 
 ### VPN 
 
-Connecting
+The Fred Hutch desktop VPN service is the default choice for all remote coennections. Please see the [VPN page on Centernet](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html for more details.
 
 ### ssh to `snail.fhcrc.org`
 
-Snail is a SSH gateway (also called bastion host or jump host) you can use to get remote access if you do not require the features that VPN provides. By default you login to snail.fhcrc.org first and then to rhino. However, if you add these 2 lines your ~/.ssh/config file you only have to type `ssh` once
+Snail is a SSH gateway (also called bastion host or jump host) you can use to get remote access if you do not require the features that VPN provides. Using SSH can be easier for some users, for example if you have a network printer at home you cannot use it while connected to VPN. 
+By default you login to snail.fhcrc.org first and then to rhino. However, if you add these 2 lines your ~/.ssh/config file you only have to type `ssh` once
 
     Host rhino*.fhcrc.org
     ProxyCommand ssh yourusername@snail.fhcrc.org exec nc %h %p 2> /dev/nul
@@ -104,6 +106,10 @@ Overview of available OSes (perhaps comparison table?)
 ## Access Methods
 Terminal/SSH including X11, NoMachine, and browser-based services access
 
+### NoMachine NX access
+
+Please see [NoMachine access](/computing/access_nomachine/)
+
 ## Using Linux Resources from a Mac
 
 ### Terminal
@@ -113,7 +119,6 @@ The default Mac terminal is a good choice for connecting to and using SciComp Li
 ```
 module load tmux
 ```
-
 
 ### X11 for Mac
 The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](http://xquartz.macosforge.org), and download and install the latest version of XQuartz.
