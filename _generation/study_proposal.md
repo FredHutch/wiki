@@ -148,3 +148,5 @@ Form E highlights include:
 
 
 - Boilerplate text for proposals that require a description of what facilities, shared resources, instruments and services are available at the Fred Hutch can be obtained at the [Shared Resources site](https://sharedresources.fredhutch.org/grant-writers#cf-922).
+
+- Description of [computational and storage resources from Scientific Computing](/computing/grants_publications/)
