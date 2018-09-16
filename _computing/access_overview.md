@@ -106,6 +106,16 @@ Overview of available OSes (perhaps comparison table?)
 ## Access Methods
 Terminal/SSH including X11, NoMachine, and browser-based services access
 
+### Terminals 
+
+#### Terminator
+
+Terminator is a convenient terminal emulator that can have multiple terminals in a single window. After starting Terminator you can right click on the terminal window and either split it horizontally or vertically. This 1 min video shows you how it works:
+
+[![Terminator](https://img.youtube.com/vi/OmkkbvH_JZU/0.jpg)](https://youtu.be/OmkkbvH_JZU "See how Terminator works")
+
+You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend [NoMachine NX](/computing/access_nomachine/) to connect to a Linux machine with Terminator
+
 ### NoMachine NX access
 
 Please see [NoMachine access](/computing/access_nomachine/)
