@@ -63,6 +63,17 @@ If the markdown you are editing is in one of the other folders you'll need to ch
 
 Both Atom and VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
 
+### External Videos and Images
+
+#### Youtube
+
+When linking to videos such as screencasts you typically want to show an image screenshot and clicking on that screenshot starts the video. Images of videos are stored at https://img.youtube.com/vi and they use the same video id you find in Youtube URLs, for example if you have a kitten video ```https://youtu.be/8HVWitAW-Qg``` you need to insert this into markdown:
+
+    [![Da Kitten](https://img.youtube.com/vi/8HVWitAW-Qg/0.jpg)](https://youtu.be/8HVWitAW-Qg "Click to see the amazing kitten")
+
+A good free screen cast tool (for Windows) is https://www.apowersoft.com/free-online-screen-recorder
+
+
 ### Referencing a Fred Hutch username
 Please if you need to reference a Fred Hutch username, do not write the entire email address out, just put the username in backticks like this:
 ```
