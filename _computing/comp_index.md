@@ -11,9 +11,9 @@ This section includes a variety of information about accessing computing resourc
 The Hutch, through Center IT and Scientific Computing, support a number of options for storing your data. The service you use to store your data will depend on the nature of the data and the anticipated use. 
 
 - [Database Systems]({{ site.baseurl }}/computing/store_databases/)
-- [Block Storage Systems]({{ site.baseurl }}/computing/store_posix/)
-- [Object Storage Systems]({{ site.baseurl }}/computing/store_objectstore/)
+- [File Storage Systems]({{ site.baseurl }}/computing/store_posix/)
 - [Temporary (Scratch) Storage]({{ site.baseurl }}/computing/store_scratch/)
+- [Object Storage Systems]({{ site.baseurl }}/computing/store_objectstore/)
 - [Collaborative Storage Systems]({{ site.baseurl }}/computing/store_collaboration/)
 
 
