@@ -28,7 +28,7 @@ Learning Linux means learning the shell.  The most common shell is _bash_ and th
 
 The rest of this document will expect you've gone through either one of the basic introductions above.  For more advanced use of the shell, tasks like scripting or programming, see:
 
- - [Unix/Bash and Other Languages]({{ site.baseurl }}/bioinformatics/prog_unixbash/) in this wiki
+ - [Unix/Bash and Other Languages](/bioinformatics/prog_unixbash/) in this wiki
  - The [Bash Beginner's Guide](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/index.html) from the Linux Documentation Project
 
 
@@ -38,10 +38,11 @@ With these skills in hand, we will now discuss how to navigate the various
 Linux-based computational resources available to you in the Hutch computing
 environment.
 
+### Using the Network
 These systems all live remotely: either in a server room on campus or possibly
 in a cloud provider's datacenter.  Thus, we need to use the network to connect
 to them.  Most of our systems require that you are connected to the Campus
-network, either via wired network connection in your office, the Marconi wifi
+network, either via wired network connection at a workstation, the Marconi wifi
 network, or via VPN from off-campus networks.
 
 The next requirement is that you have a tool called "SSH" (for *S*ecure
@@ -53,11 +54,11 @@ An alternative is using a NoMachine client to start a graphical session.  That
 process is described
 [here](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx).  Within these NoMachine sessions you can start a terminal on the NoMachine server from whence you can start an SSH session.
 
-With those tools, you are now ready to connect to one of the session servers described in [Using the Cluster]({{ site.baseurl }}/computing/cluster_rhinoGizmo/).  Most commonly you will connect to the host "rhino".
+With those tools, you are now ready to connect to one of the session servers described in [Using the Cluster](/computing/cluster_rhinoGizmo/).  Most commonly you will connect to the host `rhino`.
 
 ### Setting up your Account
 
-For the most part, your HutchNetID and password are all that are required to access the computational environment here.  If you do have trouble accessing hosts, contact Scientific Computing.
+For the most part, your HutchNetID and password are all that are required to access the computational environment here.  If you do have trouble accessing hosts, contact Scientific Computing (`scicomp`).
 
 ### Finding Data
 
@@ -78,4 +79,4 @@ Home    | /home/<your username>
 
 ### Next Steps
 
-What you do next will depend on the direction your work will take you.  At a minimum, become familiar with our [Using Computing]({{ site.baseurl }}/computing/cluster_rhinoGizmo/) page.  The Scientific Computing [Resource Overview]({{ site.baseurl }}/computing/resource_overview/) will have more details about the technologies available for your use.
+What you do next will depend on the direction your work will take you.  At a minimum, become familiar with our under-development [Using Computing](/computing/cluster_rhinoGizmo/) page.  The Scientific Computing [Resource Overview](/computing/resource_overview/) will have more details about the technologies available for your use.
