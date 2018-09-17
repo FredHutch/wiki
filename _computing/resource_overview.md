@@ -1,10 +1,11 @@
 ---
 title: Scientific Computing Supported Resources
-last_modified_at: 2018-08-31
+last_modified_at: 2018-09-14
 ---
 
 >NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
 
+A description of computational and storage resources from Scientific Computing for grant writers can be found [here.](/computing/grants_publications/)
 
 ## Self Service Resources
 Jupyterhub, RStudio, db4sci, Galaxy, etc.
