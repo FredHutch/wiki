@@ -1,6 +1,6 @@
 ---
 title: Overview of Computing at Fred Hutch
-last_modified_at: 2018-08-31
+last_modified_at: 2018-09-18
 ---
 Center IT supports a wide array of resources made available to researchers.  Much of the basic computing information needed on an ongoing basis can be found via Centernet and the Center IT pages.  However, much of the scientific computing resource documentation beyond this material is provided in this section of the Wiki, and links to existing resources and documentation are provided when available.  
 
