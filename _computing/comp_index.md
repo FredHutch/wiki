@@ -12,8 +12,8 @@ The Hutch, through Center IT and Scientific Computing, support a number of optio
 
 - [Database Systems]({{ site.baseurl }}/computing/store_databases/)
 - [File Storage Systems]({{ site.baseurl }}/computing/store_posix/)
-- [Temporary (Scratch) Storage]({{ site.baseurl }}/computing/store_scratch/)
 - [Object Storage Systems]({{ site.baseurl }}/computing/store_objectstore/)
+- [Temporary (Scratch) Storage]({{ site.baseurl }}/computing/store_scratch/)
 - [Collaborative Storage Systems]({{ site.baseurl }}/computing/store_collaboration/)
 
 
