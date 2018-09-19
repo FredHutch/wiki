@@ -1,7 +1,8 @@
 ---
 title: Clinical Data Management
-last_modified_at: 2018-09-06
+last_modified_at: 2018-09-19
 main_authors: Rachel Galbraith
+primary_reviewers: Rachierizz
 ---
 
 We will describe what data management systems are available to Fred Hutch researchers, to access and interpret clinical data for a select cohort.  The ability to identify suitable biospecimens associated with a cohort--available via collaboration with other researchers or via a specimen repository--is critical to enable the generation of large-scale data sets associated with patient phenotypes.
