@@ -1,6 +1,7 @@
 ---
 title: Experimental Data Management
-last_modified_at: 2018-07-19
+last_modified_at: 2018-09-20
+primary_reviewers: anupulletikurti
 ---
 
 While clinical covariates (like age, race, or disease type) are often part of a study's experimental design, additional covariates may be of interest that originate from laboratory based processes.  There are two main sources of laboratory based covariates that are important to track and consider when using large scale molecular data in a study:  Experimental and Process-Related.  
@@ -29,15 +30,12 @@ The tools to capture laboratory covariates depend on the workflow needs.  Any ty
   
 ## Laboratory Data Management
 
-  - [LabArchives Electronic Lab Notebooks](https://centernet.fredhutch.org/cn/u/center-it/projects/eln-project.html): as an alternative to paper lab notebooks, electronic notebooks can be quite useful in capturing and collaborating on lab projects. Currently, Center IT is supporting LabArchives as a Fred Hutch ELN solution.
+[LabArchives Electronic Lab Notebooks](https://centernet.fredhutch.org/cn/u/center-it/projects/eln-project.html) is an alternative to paper lab notebooks to record and share laboratory data.  Electronic notebooks can be quite useful in capturing and collaborating on lab projects. Currently, Center IT is supporting LabArchives as a Fred Hutch ELN solution.
   
-  - LabArchives (Professional Edition) electronic lab notebook software is a secure, browser-based, and collaborative research-specific workflow tool that was designed for the storage, organization, sharing, and publishing of laboratory research and data for scientific research.
-  
-    You can create a free trial account at Labarchives to explore more.
+LabArchives (Professional Edition) electronic lab notebook software is a secure, browser-based, and collaborative research-specific workflow tool that was designed for the storage, organization, sharing, and publishing of laboratory research and data for scientific research. You can create a free trial account at LabArchives to explore more.
  
-    - Account Creattion for Non-Fred Hutch users: [Register Here](https://mynotebook.labarchives.com/sitesignup?stay=here)
- 
-    - Account creation for Fred Hutch users: [Register Here](https://mynotebook.labarchives.com/sitesignup?stay=here) Register using your HutchNetID@Fredhutch.org email and you will be able to access your secure account through your MyHutch login. the registration will route you to access the application through your MyHutch page. for additional details on Fred Hutch ELN access, please refer to [LabArchives Electronic Lab Notebooks](https://centernet.fredhutch.org/cn/u/center-it/projects/eln-project.html)
+- Account creation for Non-Fred Hutch users: [Register Here](https://mynotebook.labarchives.com/sitesignup?stay=here)
+- Account creation for Fred Hutch users: [Register Here](https://mynotebook.labarchives.com/sitesignup?stay=here) Register using your HutchNetID@Fredhutch.org email and you will be able to access your secure account through your MyHutch login. the registration will route you to access the application through your MyHutch page. For additional details on Fred Hutch ELN access, please refer to [additional documentation in CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/projects/eln-project.html)
  
 
   
