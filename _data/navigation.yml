@@ -150,6 +150,10 @@ computing:
     children:
       - title: "Overview"
         url: /computing/access_overview/
+      - title: "Credentials"
+        url: /computing/access_credentials/
+      - title: "Methods"
+        url: /computing/access_methods/
 
   - title: "Data Storage"
     children:
