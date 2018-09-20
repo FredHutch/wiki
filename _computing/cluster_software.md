@@ -64,7 +64,7 @@ The EasyBuild system provides recipes for automatically building common software
 - Better performing binaries
 - Ability to reproduce bit-for-bit any Environment Module
 
-More info on EasyBuild(s [here](https://easybuilders.github.io/easybuild/).
+More info on EasyBuild is [here](https://easybuilders.github.io/easybuild/).
 
 ### DIY Software
 When existing modules do not include specific packages or modules you need, it is possible to install those packages on the HPC cluster.  
