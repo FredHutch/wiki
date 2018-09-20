@@ -12,8 +12,9 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
   1. Create a branch off the master branch for your edits (do not fork the repo or create branches of branches).  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names if at all possible, as in order for your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your content.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
   2. Commit your edits to existing markdowns as you go, and update from the master branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the master and committing frequently.  
   3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
-  4. When you are done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging vortexing or bmcgough for a review).  
-  5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
+  4. When you are done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
+    >Note: If you are editing existing content and the page has a listing for the Primary Reviewers like this:  `primary_reviewers: somegithubusername` then when you submit the pull request please request a review from those usernames.  
+  5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  If there is a `primary_reviewer` listed for content then one of the reviews must be from one of those members.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
   6. Once reviews have been obtained, the pull request can be merged into the master and then any edits go live to the site [here.](http://sciwiki.fredhutch.org/)
 
 
@@ -62,6 +63,25 @@ One edit is that in order for Jekyll to correctly render the images in a page, t
 If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is.  
 
 Both Atom and VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
+
+### External Videos and Images
+
+#### Youtube
+
+When linking to videos such as screencasts you typically want to show an image screenshot and clicking on that screenshot starts the video. Images of videos are stored at https://img.youtube.com/vi and they use the same video id you find in Youtube URLs, so The Gift of Time is ```https://youtu.be/rN7cmb1K2yA```. To embed, insert this into markdown:
+
+    [![The Gift of Time](https://img.youtube.com/vi/rN7cmb1K2yA/0.jpg)](https://youtu.be/rN7cmb1K2yA "Click to see The Gift of Time")
+
+It is also important to consider the following parameters for videos from outside sources:
+* `rel=0` - this restricts the related videos shown at the end of payback to videos from the same channel rather than account-based recommendations
+* `iv_load-policy` - set to *1* to display video annotations by default and *3* to disable annotations
+
+So the above link modified would be:
+
+    [![The Gift of Time](https://img.youtube.com/vi/rN7cmb1K2yA/0.jpg)](https://youtu.be/rN7cmb1K2yA?rel=0&iv_load_policy=3 "Click to see the amazing kitten")
+
+A good free screen cast tool (for Windows) is https://www.apowersoft.com/free-online-screen-recorder
+
 
 ### Referencing a Fred Hutch username
 Please if you need to reference a Fred Hutch username, do not write the entire email address out, just put the username in backticks like this:
