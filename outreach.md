@@ -29,7 +29,7 @@ The Biomedical Data Science Wiki aims to support ongoing biomedical research now
 - tailors and unifies content that bridges the divide between how research processes are performed *in general* and how those processes are performed at the Fred Hutch *specifically.*
 
 
-The Wiki Writer-Editor program is intended to engage current Fred Hutch based postdocs, staff scientists and research specialists in order to ensure that the resource achieves those two goals.  We aim to incorporate more information relevant to new and emerging projects or technologies in which Fred Hutch researchers are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research.  The Wiki Writer-Editor program engages current Fred Hutch postdocs, staff scientists and research specialists from each of the Divisions for 3 month positions, and a stipend is provided.  
+The Wiki Writer-Editor program is intended to engage current Fred Hutch based postdocs, staff scientists and research specialists in order to ensure that the resource achieves those two goals.  We aim to incorporate more information relevant to new and emerging projects or technologies in which Fred Hutch researchers are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research.  The Wiki Writer-Editor program engages current staff from each of the Divisions for 3 month positions to both write and edit content, and a stipend is provided.  
 
 ### Responsibilities
 Responsibilities for a Wiki Writer-Editor include:
