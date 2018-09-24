@@ -23,6 +23,7 @@ Starting in Fall of 2018 we will begin hosting Pop Up workshops!!!  You can find
 
 
 ## FH Biomedical Data Science Wiki Writer-Editor Program
+>Note:  Applications are currently being accepted until Oct 19th for the Nov-Jan term.  Join us for this inaugural session and have the opportunity to influence how this project evolves!  Please contact Amy Paguirigan for additional information.  
 
 The Biomedical Data Science Wiki aims to support ongoing biomedical research now and in the future. The ongoing contribution and curation of the content in the Wiki by the Fred Hutch researcher community itself is intended to serve two purposes:
 - create an evolving source of documentation that grows and changes along with the particular interests and research tools available to Fred Hutch researchers over time, and
