@@ -1,0 +1,6 @@
+{
+    "pasteImage.path": "${projectRoot}/assets/${currentFileNameWithoutExt}/",
+    "pasteImage.basePath": "${projectRoot}/assets",
+    "pasteImage.forceUnixStyleSeparator": true,
+    "pasteImage.prefix": "/assets/"
+}
