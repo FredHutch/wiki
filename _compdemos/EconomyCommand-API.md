@@ -4,35 +4,28 @@ last_modified_at: 2018-09-27
 main_author: Dirk Peterson
 primary_reviewers: dirkpetersen
 ---
-Access to data stored in Fred Hutch resources that are [object stores](/computing/store_objectstore/) can be achieved via command line tools or the API.  Economy File local is implemented using a cloud storage system called Openstack Swift (similar to Amazon S3) and is supported by www.swiftstack.com. It is suited to store petabytes of data at low cost and a high level of data protection. Economy File does not require tape backup as data is replicated to multiple sites. If you accidentially delete data it wil be held in a "Trash can" for multiple months during which you have read-only access to the deleted data. Economy File is approved for PHI / PII data.  You can store genomic data that is governed by dbGap. See Contact information for dbGap Applications (e.g. TCGA)
+Access to data stored in Fred Hutch resources that are [object stores](/computing/store_objectstore/) can be achieved via command line tools or the API.
 
-Object storage systems are different from file storage systems. Before you continue please make sure you read the [summary page](/computing/store_objectstore/) and the introduction to [Economy File local](/computing/store_objectstore_swift/)
-
-## A​ccessing 'Economy File' directly via Object API
-
-Economy file uses the SwiftStack Object Store which is a cloud storage system that works similar as Amazon S3. SwiftStack builds upon openstack swift and has a wide range of tools, scripts and development libraries to store and retrieve files. it is also S3 compatible which allows you to use many tools that work with the Amazon S3 cloud storage service.
+## A​ccessing `Economy File` directly via Object API
 
 This is an overview available tools starting with the ones you will most likely use and that are best supported.
 
 ## swc (swift commander - simple access)
-
-[check out this video how to the swc command](https://asciinema.org/a/17172)​
-
-using the swc command is the simplest way of accessing the swift object store. The tool includes easy to use sub commands such as swc upload and swc download as well as simplified versions of standard unix tools such as ls, cd, rm, etc. By using swc you can ignore most of the peculiarities of the swift object storage system and (almost) work with it like a traditional file system. It is the best option for HPC scripting and automation.
+Using the swc command is the simplest way of accessing the swift object store. The tool includes easy to use sub commands such as swc upload and swc download as well as simplified versions of standard unix tools such as ls, cd, rm, etc. By using swc you can ignore most of the peculiarities of the swift object storage system and (almost) work with it like a traditional file system. It is the best option for HPC scripting and automation.
 
 First, let's invoke the swc command and see what it has to offer:​
-
+```
     gizmod16:~> swc
     *** Swift credentials not set. ***
     Please execute 'sw2account <accountname>' to get credentials.
     Use 'sw2account --save <accountname>' to set them as default.
-
+```
 Swift requires certain environment variables to be set for each PI.  You can easily set them by using the 'sw2account' command which asks for your HutchNet password:​​​​
-
+```
     rhino04:~> sw2account groudine_m
-
+```
 now let's try running 'swc' again, still without any command options, you are prompted for your hutchnet password:
-
+```
     petersen@rhino:~$ swc
 
     Swift Commander (swc) allows you to easily work with a swift object store.
@@ -76,11 +69,11 @@ now let's try running 'swc' again, still without any command options, you are pr
     swc rm /archive/some_prefix
     swc more /folder/some_file.txt
     swc openwith emacs /folder/some_file.txt
-
+```
 
 OK, we see that there are some options, the swc command has nearly 30 sub commands. Let's upload a folder called 'testing' that is stored somewhere on fast file. The target folder on economy file is called /test:​​​​​​​​​​​
 
-    petersen@rhino04:~/sc$ swc upload ./testing /test
+```    petersen@rhino04:~/sc$ swc upload ./testing /test
     *** uploading ./test ***
     *** to Swift__ADM_SciComp:/test/ ***
     executing:swift upload --changed --segment-size=2147483648 --use-slo --segment-container=".segments_test" --header="X-Object-Meta-Uploaded-by:petersen" --object-name="" "test" "./test"
@@ -93,18 +86,18 @@ OK, we see that there are some options, the swc command has nearly 30 sub comman
     .
     .
     /test
-
+```
 let's make sure that the data is really there by comparing the size of the local folder with the swift folder:​
-
+```
     petersen@rhino02:~/sc$ swc compare ./testing /test
         checking swift folder test ...
         3,180,498,696 bytes (2.962 GB) in test (swift)
         checking posix folder ./testing/ ...
         3,180,498,696 bytes (2.962 GB) in ./testing
     OK! The size of ./testing and /test is identical!
-
+```
 now let's download a subfolder of that folder /test to our scratch file system for further processing:
-
+```
     petersen@rhino04:~/sc$ swc download /test/fld1 /fh/scratch/delete30/lastname_f/tmp
     ...downloading /test/fld1, please wait...
     executing:swift download --prefix="fld1" test
@@ -114,13 +107,14 @@ now let's download a subfolder of that folder /test to our scratch file system f
     .
     .
     /fh/scratch/delete30/lastname_f/tmp/
-
+```
 please check our HPC and data migration tutorials in the scicomp wiki at http://scicomp.fhcrc.org and the swc page on github for additional details:
 
 
 - How to migrate large data to Economy File
 - How to use Economy File and Scratch with Sequencing Data
 - [swift commander on github](https://github.com/FredHutch/swift-commander)​
+- [Check out this video how to the swc command](https://asciinema.org/a/17172)​
 - HPC: using Economy File and Scratch on Gizmo
 
 
@@ -128,7 +122,7 @@ please check our HPC and data migration tutorials in the scicomp wiki at http://
 
 The R swift package allows to upload and download files to swift directly from R. This greatly improves usability from interactive R sessions
 ​​​​if you do *not* work on a SciComp supported Linux computer you need to install the R swift package first:
-
+```
     > install.packages('devtools',repos='http://cran.fhcrc.org')
     > devtools::install_github("mtmorgan/swift")
     interacting with the object stop is pretty easy. If your credentials are set (see above) you can start right away. In this case we (1) list the content of the SciComp swift container, (2) download a file and (3) upload a results file.​​​
@@ -156,7 +150,7 @@ The R swift package allows to upload and download files to swift directly from R
     # a csv file always loads into a dataframe
     Limitations and Notes:
     only supports files with sizes less than 5GB
-
+```
 
 ## Swift standard client (python)
 
@@ -176,8 +170,9 @@ The swift client operates similar to ftp or scp and can be used in batch mode.  
 You can supply your credentials on the command line, but this is discouraged as it can expose your password to any other user on the system.  
 The easiest way to get credentials to Swift Economy File storage on SciComp system is using the command sw2account with the id of the PI as an argument (sw2account lastname_f) . It is recommend that you use the sw2account command to save the credentials of the PI account you mostly work with.
 
-
+```
 $ sw2account --save groudine_m
+```
 With those environment variables set, the connection can be tested with the "stat" subcommand:
     $ swift stat
     Account: AUTH_username
@@ -189,7 +184,7 @@ With those environment variables set, the connection can be tested with the "sta
     X-Trans-Id: tx93f905a47d044277b276c-0052a0ca26
     Content-Type: text/plain; charset=utf-8
 The "post" subcommand creates a new container into which we can "upload" a file.  The "list" subcommand rather obviously displays the contents of the indicated object:
-
+```
     $ ls -l samplefile.tgz
     -rw-rw-r-- 1 user group 8134841 Nov 12 09:12 samplefile.tgz
     $ swift post newcontainer
@@ -200,7 +195,7 @@ The "post" subcommand creates a new container into which we can "upload" a file.
     samplefile.tgz
     $ swift list newcontainer
     samplefile.tgz
-
+```
 you can upload an entire folder structure using the swift upload command. swift will recreate the entire folder structure you send on the command line. If you run "swift upload -S 2g newcontainer /fh/fast/lastname_f/myfolder" it will create the entire folder structure /fh/fast... under newcontainer. if you just want myfolder to show up under mycontainer you need to cd to  /fh/fast/lastname_f  and then run  "swift upload newcontainer myfolder"
 
 "download" and "delete work as you might expect:
@@ -312,4 +307,25 @@ instead of using the swift command from the unix shell one can also access swift
 
 
 
-​
+​## access from the command line or Rest API
+
+Economy File supports several access methods:​​
+Direct Access / Linux / Rhino
+Please see How to Access the Swiftstack Object store to learn about direct Access via API or command line tools. If you want to use data from Economy File on the Gizmo cluster or from the Rhinos this is your preferred access method.  
+
+
+## other access methods
+
+There are many other tools out there that support object storage systems. Swiftstack supports the swift API but also the more common S3 API. To get your credentials for these access methods please use this link https://toolbox.fhcrc.org/sw2srv/swift/account and enter the name of the PI or department account account (e.g. lastname_f).  You may be prompted for your hutchnet ID password.
+
+If you have permissions to see the credentials you will get 3 entries:
+
+    {
+     "account": "Swift_lastname_f",
+     "key": "abf47sfj48sfrjsrg8usrgj",
+     "password": "Huew4jv&jfwvjsdg"
+    }
+
+For tools that use S3 protocol you need 'account' and 'key'. Use the entry in account for "access key id" and the entry in 'key' for "secret key id". Connect these tools to https://s3.fhcrc.org
+
+For tools that use the Swift protocol you need 'account' and 'password'. In addition you need an authentical url which is also called authentication endpoint. Use https://tin.fhcrc.org/auth/v1.0 for this.
