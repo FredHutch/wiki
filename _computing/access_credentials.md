@@ -1,16 +1,13 @@
 ---
-title: Computing Access  Overview
-last_modified_at: 2018-09-20
+title: Computing Credentials
+last_modified_at: 2018-09-27
 ---
-This section contains a variety of frequently updated sections where you can find current information about office hours, current software builds, recent notifications, and the Resource Library which contains a growing list of short demo's and articles about a variety of topics not addressed elsewhere in the site.  
 
 >Note:  This section is still under construction.  If you have any input for what you'd like to see addressed here, please email your suggestions to `sciwiki`.
 
-## Credentials
-
 This section describes how to get access and credentials to computing systems on campus and in the cloud.
 
-### HutchNet ID
+## HutchNet ID
 
 A HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate. It is also called Network login or Active Directory credentials. You can use it to login to most resources at the Center (Desktop Computer, Employee Self Service, VPN, Webmail) as well to Scientific Computing systems such as Rhino (`ssh rhino`), which is the login system to large scale cluster computing resources like Gizmo, Beagle and Koshu.
 
@@ -22,7 +19,7 @@ Please see the Service Desk site on CenterNet for more information about [HutchN
 
 A working HutchNet ID is all you need to login to `rhino` (`ssh rhino`). Some users will see an error message that their home directory was not found. This can happen if you are in a newly created department or in one that is typically not working with SciComp resources. Please contact `SciComp` to have your home directory created.
 
-### GitHub.com
+## GitHub.com
 
 The Fred Hutch GitHub organization at https://github.com/FredHutch offers free access to public and private git repostories to all Fred Hutch staff and collaborators. If you are a Fred Hutch employee working with source code and don't have a github.com account yet, please [create one](https://github.com/join) and email `SciComp`: "Please add my GitHub user id `xyz` to organization github.com/FredHutch". Once you are a member of the organization you can create repostories, teams and invite external collaborators to share and edit code.
 
@@ -32,7 +29,7 @@ A GitHub account is different from other accounts. If you leave the Hutch you ke
 
 We have an entry in the Bioinformatics Resource library that provides more information about [git and GitHub](/bioinformatics/compute_github/) in general and specifically here at the Fred Hutch.  
 
-### Amazon Web Services (AWS)
+## Amazon Web Services (AWS)
 
 You can obtain [Amazon Web Services](https://aws.amazon.com/) (AWS) credentials to make use of the Center's AWS account. By default this will give you access to your lab's S3 bucket, but you can request permission to use other services such as _AWS Batch_.  AWS credentials are designated per user, so any Fred Hutch employee should obtain their own credentials.
 
@@ -40,7 +37,7 @@ You can obtain [Amazon Web Services](https://aws.amazon.com/) (AWS) credentials 
 
 There are two ways to get AWS credentials. Which one to use depends on how you will use AWS, either via the command line on `rhino`/`gizmo` or via graphical programs on your local computer such as via Cyberduck or Mountainduck.
 
-#### Command Line (Rhino/Gizmo) Instructions
+### Command Line (Rhino/Gizmo) Instructions
 First, `ssh` to one of the `rhino machines` (or use NoMachine):
 
 ```
@@ -62,7 +59,7 @@ awscreds --help
 See more about accessing AWS S3 via the command line [here.](/computing/store_collaboration/)
 
 
-#### GUI Instructions
+### GUI Instructions
 
 Open a web browser and navigate to [https://toolbox.fhcrc.org/sw2srv/aws/account](https://toolbox.fhcrc.org/sw2srv/aws/account).
 This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck. See the more about how to use Cyberduck to connect to AWS S3 [here.](/computing/store_collaboration/)
