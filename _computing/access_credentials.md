@@ -1,6 +1,8 @@
 ---
 title: Computing Credentials
 last_modified_at: 2018-09-27
+main_authors:
+primary_reviewers:
 ---
 
 >Note:  This section is still under construction.  If you have any input for what you'd like to see addressed here, please email your suggestions to `sciwiki`.
