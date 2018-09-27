@@ -1,6 +1,6 @@
 ---
 title: Cluster Software
-last_modified_at: 2018-09-07
+last_modified_at: 2018-09-27
 ---
 
 
@@ -10,14 +10,17 @@ The Scientific Computing Center IT group supports additional software used in sc
 
 ## Linux at Fred Hutch
 <!--Brief description of Fred Hutch policies and choices around Linux.-->
+
 At Fred Hutch, we use the Ubuntu distribution of Linux. The HPC cluster and support systems currently run {{site.data.scicomp_versions.ubuntu}}.  We use the _long term support_ (or LTS) releases to ensure a stable platform that is well-supported.
 
 ### Environment Modules
 Environment Modules are a mechanism to provide software packages, including scientific software and tools. Environment Modules are similar to Python virtualenvs or Conda envs. As there are many Environment Modules already built, users only need to load them, not write or create them.
 
+
 #### How to Use Environment Modules
 ##### Interactively
 When you log in to a SciComp server (or Ubuntu desktop) your terminal session has Lmod pre-loaded. Common shell commands:
+
 Command | Action
 --- | ---
 `module avail` | List modules available to load
@@ -28,6 +31,7 @@ Command | Action
 `module purge` | Unload all currently loaded Environment Modules
 
 There is also a short version of the `module` command: `ml`.  You can substitute `ml` for `module` in any of the commands above.
+
 
 ##### Scripting with Environment Modules
 To use Environment Modules in a bash script, it is best to explicitly activate the `module` command and load exact versions of modules. To activate Environment Modules, add the follow lines to the top of your script:
@@ -62,14 +66,13 @@ The EasyBuild system provides recipes for automatically building common software
 - Better performing binaries
 - Ability to reproduce bit-for-bit any Environment Module
 
-### List of packages/modules in Python and R builds
-Check out [our EasyBuild repo](https://fredhutch.github.io/easybuild-life-sciences).
+### EasyBuild
+The EasyBuild system provides recipes for automatically building common software packages and creating Environment Modules for all of them. It provides:
+- Faster and more reliable software builds
+- Better performing binaries
+- Ability to reproduce bit-for-bit any Environment Module
 
-### How to request new software
-- Send an email to scicomp@
-- File an issue at [our EasyBuild repo](https://github.com/FredHutch/easybuild-life-sciences/issues/new).
-
-More info on EasyBuild(s [here]https://easybuilders.github.io/easybuild/).
+More info on EasyBuild is [here](https://easybuilders.github.io/easybuild/).
 
 ### DIY Software
 When existing modules do not include specific packages or modules you need, it is possible to install those packages on the HPC cluster.  

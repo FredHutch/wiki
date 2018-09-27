@@ -3,7 +3,7 @@ title: Scientific Software Overview
 last_modified_at: 2018-08-29
 ---
 
-## [In-Person Training and Office Hours]/computing/training_overview/)
+## [In-Person Training and Office Hours](/computing/training_overview/)
 SciComp provides in-person training via weekly office hours; this page contains the current times and locations.
 
 ## [Current Software](/computing/software_overview/)

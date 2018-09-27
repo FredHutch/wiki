@@ -8,7 +8,7 @@ There are a variety of resources for training on various aspects of Bioinformati
 - [fredhutch.io](http://www.fredhutch.io/) offers frequent, on campus courses on a topics such as R, python or GitHub, and information about previous and upcoming courses is on their site.  In order to sign up for courses, go to [MyHutch](https://fredhutch.okta.com/) and click on Hutch Learning to see currently available courses and register for them.  
 - [Bioinformatics Shared Resources](http://sharedresources.fhcrc.org/core-facilities/computational-biology)
 - [Scientific Computing training materials](https://teams.fhcrc.org/sites/citwiki/SciComp/Training%20Materials/Forms/AllItems.aspx) (requires login), related to introduction to Unix and Gizmo, though additional, more recent, information can be see in the Computing section of this site. 
-- FHBig (Fred Hutch Bioinformatics Interest Group), is a Fred Hutch based community group that has created the [FHBig website](https://fredhutch.github.io/FHBig/) and maintains a [slack workspace](https://fredhutch.github.io/FHBig/resources/) to support communication between staff at the Hutch.  
+- FHBig (Fred Hutch Bioinformatics Interest Group), is a Fred Hutch based community group that has created the [FHBig website](https://fredhutch.github.io/FHBig/) and maintains a [slack workspace](https://fhbig.slack.com/) to support communication between staff at the Hutch.  
 - [UW Biostatistics Summer Institutes](https://www.biostat.washington.edu/suminst) offer yearly intensive courses over the summers on a wide variety of topics. 
 
 ## Online Learning
