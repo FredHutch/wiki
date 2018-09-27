@@ -17,6 +17,9 @@ collections:
   generation:
     output: true
     permalink: /:collection/:path/
+  gendemos:
+    output: true
+    permalink: /:collection/:path/
   bioinformatics:
     output: true
     permalink: /:collection/:path/
@@ -230,7 +233,7 @@ defaults:
       share: true
       sidebar:
         nav: "generation"
-        
+
   # _gendemos
   - scope:
       path: ""
