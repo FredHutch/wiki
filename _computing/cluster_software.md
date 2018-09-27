@@ -62,6 +62,13 @@ The EasyBuild system provides recipes for automatically building common software
 - Better performing binaries
 - Ability to reproduce bit-for-bit any Environment Module
 
+### List of packages/modules in Python and R builds
+Check out [our EasyBuild repo](https://fredhutch.github.io/easybuild-life-sciences).
+
+### How to request new software
+- Send an email to scicomp@
+- File an issue at [our EasyBuild repo](https://github.com/FredHutch/easybuild-life-sciences/issues/new).
+
 More info on EasyBuild(s [here]https://easybuilders.github.io/easybuild/).
 
 ### DIY Software

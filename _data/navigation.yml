@@ -1,7 +1,5 @@
 
 main:
-  - title: "About"
-    url: /
   - title: "Data Generation"
     url: /generation/gen_index/
   - title: "Bioinformatics"
@@ -114,7 +112,7 @@ bioinformatics:
         url: /bioinformatics/prog_R/
       - title: "Python"
         url: /bioinformatics/prog_python/
-      - title: "Unix/Bash and Other Languages"
+      - title: "Other Languages"
         url: /bioinformatics/prog_unixbash/
 
   - title: "Managing Code and Computing"
@@ -155,7 +153,7 @@ computing:
         url: /computing/store_overview/
       - title: "Database Systems"
         url: /computing/store_databases/
-      - title: "Block Storage Systems"
+      - title: "File Storage Systems"
         url: /computing/store_posix/
       - title: "Object Storage Systems"
         url: /computing/store_objectstore/
@@ -171,12 +169,12 @@ computing:
         url: /computing/cluster_overview/
       - title: "Resources Available"
         url: /computing/resource_overview/
-      - title: "Linux 101"
+      - title: "Linux"
         url: /computing/linux_linux101/
-      - title: "Rhino/Gizmo/Beagle"
-        url: /computing/cluster_rhinoGizmo/
       - title: "Cluster Software"
         url: /computing/cluster_software/
+      - title: "Using the Cluster"
+        url: /computing/cluster_rhinoGizmo/
       - title: "Cloud Computing"
         url: /computing/cluster_cloudCompute/
 

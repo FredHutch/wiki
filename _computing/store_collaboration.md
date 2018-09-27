@@ -17,6 +17,8 @@ Visit [the Aspera information page](https://aspera.fhcrc.org/index.html) for mor
 
 > NOTE: this is a very new service and may be subject to frequent changes.  Additionally, while S3 storage can be used for many other purposes, only its capabilities for collaboration are discussed here.  Refer to the documentation on cloud computing for more information on using S3 in its other capacities.
 
+You can use the _Economy Cloud_ S3 buckets created for each PI to collaborate with external research groups. In addition to the _Economy Cloud_ S3 buckets SciComp maintains S3 transfer buckets for external institutions and sequencing centers. These buckets may not be encrypted to increase interoperability. Please ask your PI to contact SciComp to enable the bucket of your PI for external collaboration or to enable a transfer bucket into which your sequencing center or other large scale data provider can drop large files.
+
 
 ### How it Works
 
