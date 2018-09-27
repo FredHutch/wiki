@@ -52,7 +52,7 @@ module use /app/easybuild/modules/all
 1. *Should I load default modules?*
   - It is faster and easier to type `ml R` than specifying the full package and version. However, the default version loaded by a generic `module load <pkg>` command will change over time.  If maintaining a specific version of a package is important to your work, you will want to specify the version.
 1. *Is there a list of included language libraries/modules/packages?*
-  - Yes! For R, Python, and some additional packages, look [here](https://fredhutch.gihub.io/easybuild-life-sciences).
+  - Yes! For R, Python, and some additional packages, look [here](https://fredhutch.github.io/easybuild-life-sciences).
 1. *What about Bioconductor for R?*
   - Starting with R/3.4.3-foss-2016b-fh2 we include Bioconductor and many Bioc packages with the standard R Environment Module.
 1. *What are Best Practices with Environment Modules?*
