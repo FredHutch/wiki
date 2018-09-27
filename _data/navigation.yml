@@ -32,7 +32,7 @@ generation:
       - title: "Overview"
         url: /generation/gen_index/
       - title: "Resource Library"
-        url: /gendemos/
+        url: /generationdemos/
   - title: "Study Design and Funding"
     children:
       - title: "Overview"

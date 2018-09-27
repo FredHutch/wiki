@@ -230,6 +230,18 @@ defaults:
       share: true
       sidebar:
         nav: "generation"
+        
+  # _gendemos
+  - scope:
+      path: ""
+      type: gendemos
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "generation"
 
   # _bioinformatics
   - scope:
@@ -297,17 +309,6 @@ defaults:
   - scope:
       path: ""
       type: drafts
-    values:
-      layout: single
-      toc: true
-      toc_label: "On This Page"
-      share: true
-
-
-  # _gendemos
-  - scope:
-      path: ""
-      type: gendemos
     values:
       layout: single
       toc: true
