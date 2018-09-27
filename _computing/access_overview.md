@@ -1,10 +1,10 @@
 ---
 title: Computing Access Overview
-last_modified_at: 2018-09-20
+last_modified_at: 2018-09-27
 ---
->NOTE: The majority of the articles in this section are a work in progress. If you have suggestions for content you'd like to see or would like to contribute email `sciwiki`.  
+>NOTE: This section is a work in progress. If you have suggestions for content you'd like to see or would like to contribute email `sciwiki`.  
 
-This section contains articles that describe a range of high performance computing resource options available to Fred Hutch researchers.
+This secition focuses on information describing what types of credentials are needed for various Center IT supported computing resources, as well as instructions for accessing those resources.  
 
 ## [Credentials](/computing/access_credentials/)
 An oveverview of what credentials you need for which resource, and how to get them.
