@@ -58,7 +58,7 @@ module use /app/easybuild/modules/all
 1. *What are Best Practices with Environment Modules?*
   - Specify the full Module name when loading, especially in scripts.
   - Avoid mixing Modules from different toolchains at the same time (unloading one and loading another works well if you need to).
-  - If you can't find a package you want, send an [email](mailto://scicomp@fredhutch.org) us or file an [issue](https://github.com/FredHutch/easybuild-life-sciences) requesting a new or updated package.
+  - If you can't find a package you want, send an email us or file an [issue](https://github.com/FredHutch/easybuild-life-sciences) requesting a new or updated package.
 
 ### EasyBuild
 The EasyBuild system provides recipes for automatically building common software packages and creating Environment Modules for all of them. It provides:
