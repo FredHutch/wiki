@@ -42,11 +42,7 @@ Putty is the most widely used secure shell software for Windows. You can install
 
 ### iTerm2 (Mac OSX)
 
-The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources. If you are using to using the features of `screen` we recommend using [iTerm2](https://www.iterm2.com/) for your local terminal program on your Mac.  iTerm2 is fully integrated with tmux. Tmux provides most of the same features as GNU Screen.  If you run tmux on `rhino` you must remember on which of the 3 rhinos you ran it and the connect directly to that machine using SSH.  
-
-```
-ml tmux
-```
+The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources.  We also recommend using [iTerm2](https://www.iterm2.com/) for your local terminal program on your Mac- it has a richer feature set that comes in handy as your computing needs grow.
 
 ### xquartz X11 (Mac OSX)
 
