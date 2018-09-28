@@ -18,6 +18,11 @@ this system.  Thus, your files- shared fast directories, your home directory,
 the shared app tools directory- are all available at the same paths as on the
 gizmo compute nodes.
 
+One significant difference in file systems is that the scratch file system is
+unique to beagle and is in a different path.  The scratch directory created by
+slurm is in `/mnt/beagle/scratch`.  Temporary storage is available in
+`/mnt/beagle/delete10` with subdirectories based on PI or group name.
+
 Thus, all that is typically necessary are small changes to the Slurm commands to
 enable your jobs to run on beagle nodes.  
 
@@ -102,6 +107,9 @@ This assigns four cores to your job.  Without using `--exclusive` the job may sh
 ```
 sbatch -M beagle --mem=200G -p largenode my_job.sh
 ```
+
+Note that when you add the memory request your job will be limited to that amount- if it should exceed 200GB, the job will be terminated.
+
 
 Please edit this page if you have more useful information.
 
