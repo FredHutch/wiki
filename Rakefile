@@ -9,7 +9,8 @@ task :test do
                     /rstudio.fhcrc.org/, /jupyterhub.fhcrc.org/,
                     /aspera.fhcrc.org/, /mydb.fredhutch.org/,
                     /translationalgenomics.fredhutch.org/,
-                    /lists.fhcrc.org/, /slack.com/]}
+                    /lists.fhcrc.org/, /slack.com/],
+      :typhoeus => {:connecttimeout => 30, :timeout => 60}}
   HTMLProofer.check_directory("./_site", options).run
 end
 
