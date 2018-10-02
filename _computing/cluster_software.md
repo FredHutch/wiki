@@ -66,12 +66,6 @@ The EasyBuild system provides recipes for automatically building common software
 - Better performing binaries
 - Ability to reproduce bit-for-bit any Environment Module
 
-### EasyBuild
-The EasyBuild system provides recipes for automatically building common software packages and creating Environment Modules for all of them. It provides:
-- Faster and more reliable software builds
-- Better performing binaries
-- Ability to reproduce bit-for-bit any Environment Module
-
 More info on EasyBuild is [here](https://easybuilders.github.io/easybuild/).
 
 ### DIY Software
