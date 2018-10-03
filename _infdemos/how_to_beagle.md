@@ -24,15 +24,15 @@ slurm is in `/mnt/beagle/scratch`.  Temporary storage is available in
 `/mnt/beagle/delete10` with subdirectories based on PI or group name.
 
 Thus, all that is typically necessary are small changes to the Slurm commands to
-enable your jobs to run on beagle nodes.  
+enable your jobs to run on beagle nodes.
 
 However: it needs to be noted that as access to data is much slower than your
 access here on campus.  On IO intensive workloads you may see up to a 3x
-slowdown on overall time to complete a job.  ```
+slowdown on overall time to complete a job. 
 
 ## Basic use
 
-To summit a job, use `sbatch` in a similar manner as on gizmo and add `-M beagle` to the commend:
+To summit a job, use `sbatch` in a similar manner as on gizmo and add `-M beagle` to the command:
 
 ```
 sbatch -M beagle -n1 my_job.sh
