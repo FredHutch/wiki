@@ -28,7 +28,8 @@ enable your jobs to run on beagle nodes.
 
 However: it needs to be noted that as access to data is much slower than your
 access here on campus.  On IO intensive workloads you may see up to a 3x
-slowdown on overall time to complete a job. 
+slowdown on overall time to complete a job. See the section "Improving Data
+Performance" for further information on addressing this performance bottleneck.
 
 ## Basic use
 
@@ -75,6 +76,31 @@ available on the G class.
 Limits on beagle are enforced in the same way as they are on gizmo: 300 core
 limit per PI.  The limits are typically higher and can be increased upon
 request.
+
+## Improving Data Performance
+
+### Cache-Fast
+
+I indicated earlier that access to data in beagle is a significant bottleneck
+for job performance.  To address this we are making available what we're
+calling _cache-fast_ on the beagle nodes.  This is a _read only_ and _day old_
+copy of some fast-file directories.  The primary purpose of this file server is
+as a disaster-recovery copy of data, but we've re-purposed it to improve data
+access performance.  It's available under the path /fh/cache-fast and from that
+point has the same structure as fast-file.
+
+The real problem with using fast-file in Beagle is read performance- write
+performance is actually quite reasonable.  Thus, you will see significant
+improvement by using the "cache-fast" directory to read in data and the "fast"
+directory to write out results.  The process would be something like:
+
+ - read in data from /fh/cache-fast/directory_p/path/to/data/file
+ - process data
+ - write data out to /fh/fast/directory_p/path/to/results
+
+Read performance is significantly improved- up to 10 times faster.  However, it
+is important to note that this cached view can be up to 24 hours old- there is
+a nightly process that syncronizes fast-file to the cache.
 
 ## Examples
 
