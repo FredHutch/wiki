@@ -102,6 +102,15 @@ Read performance is significantly improved- up to 10 times faster.  However, it
 is important to note that this cached view can be up to 24 hours old- there is
 a nightly process that syncronizes fast-file to the cache.
 
+### Staging into Scratch
+
+There is scratch space available in the path `/mnt/beagle/delete10` that can be
+used to stage data into and out of beagle.  This is a file server that is in
+the same location as beagle so we have much better performance compared to
+accessing fast directly.
+
+> Monitor this space- more information and examples to come
+
 ## Examples
 
 ### Basic: partition on _campus_  (F class)
