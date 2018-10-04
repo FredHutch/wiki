@@ -14,24 +14,24 @@ Client devices are supported by Center IT (ADM, CRD, VIDD) as well as Division I
 
 Center IT supports 3 different operating systems:
 
-- Laptops: 
+- Laptops:
     - Windows
     - MacOS
-- Desktops: 
+- Desktops:
     - Windows
     - MacOS
     - Ubuntu Linux LTS
 
-Please see Center IT's page in CenterNet about [Laptops and Desktops](https://centernet.fredhutch.org/cn/u/center-it/help-desk/laptops-and-desktops.html) for more information about suppport.  
+Please see Center IT's page in CenterNet about [Laptops and Desktops](https://centernet.fredhutch.org/cn/u/center-it/help-desk/laptops-and-desktops.html) for more information about support.  
 
 >Note: If you request a Linux Desktop, Center IT will recommend that you use NoMachine from a Windows or Mac system instead as this is the most appropriate choice for most users but not all. If it is required for your work, it can be supported.  
 
 ### Mobile Devices
 
-Please see Center IT pages for more informaiton on [Mobile Device Services](https://centernet.fredhutch.org/cn/u/center-it/services/mobile_device_service.html) or contact [Help Desk](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) with questions or problems.  
+Please see Center IT pages for more information on [Mobile Device Services](https://centernet.fredhutch.org/cn/u/center-it/services/mobile_device_service.html) or contact [Help Desk](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) with questions or problems.  
 
 
-## Access Methods (Terminals, X11, ssh & tmux)
+## Access Methods (Terminals, X11, ssh)
 
 There are multiple ways you can get access Scientific Computing resources which are all running on a supported version of Ubuntu Linux. The most simple form of access is using a secure shell terminal software such as `ssh` or `putty`. You may also need graphical output (GUI), for example to use tools like R Studio or advanced text editors. For this you will need X11 tools which can either be installed as add-ons to your ssh program or a dedicated tool such as NoMachine.
 
@@ -61,7 +61,7 @@ After connecting to a Rhino verify that your X11 client is working by typing `xe
 
 ### Terminator (Linux)
 
-Terminator is a convenient terminal emulator that can have multiple terminals in a single window. You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend [NoMachine NX](/computing/access_nomachine/) to connect to a Linux machine with Terminator.  
+Terminator is a convenient terminal emulator that can have multiple terminals in a single window. You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend [NoMachine NX](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx) to connect to a Linux machine with Terminator.  
 
 After starting Terminator you can right click on the terminal window and either split it horizontally or vertically. This 1 min video shows you how it works:
 
@@ -86,7 +86,7 @@ The Fred Hutch network is protected by a firewall and there are currently 2 opti
 
 ### VPN
 
-The Fred Hutch desktop VPN service is the default choice for all remote coennections. Please see the [VPN page on Centernet](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html) for more details.
+The Fred Hutch desktop VPN service is the default choice for all remote connections. Please see the [VPN page on CenterNet](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html) for more details.
 
 ### ssh to `snail.fhcrc.org`
 
@@ -99,5 +99,3 @@ By default you login to `snail.fhcrc.org` first and then to `rhino`. However, if
 If you are outside the Fred Hutch network type `ssh rhino.fhcrc.org` to use the snail gateway and if you are inside type `ssh rhino` to bypass the gateway.
 
 Please see [this page](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts) to learn more about ProxyCommand.
-
-
