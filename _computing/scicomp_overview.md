@@ -11,7 +11,7 @@ introductory materials about those resources and services.
 The basic list of what SciComp provides and supports.  Start here to see if
 we've already built it.
 
-## [Getting Access to SciComp Resources](/computing/access_overview/)
+## [Getting Access](/computing/access_overview/)
 
 Now that you know what and where, how do you get to these resources?  This page
 willdescribe what you need to access and use the various resources.

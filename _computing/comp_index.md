@@ -18,13 +18,14 @@ The Hutch, through Center IT and Scientific Computing, support a number of optio
 
 
 ## [Scientific Computing]({{ site.baseurl }}/computing/scicomp_overview/)
-This section contains articles that describe a range of scientific computing resources and services available to Fred Hutch researchers.
-- [Resources Available]({{ site.baseurl }}/computing/resource_overview/)
-- [Linux 101]({{ site.baseurl }}/computing/linux_linux101/)
-- [Rhino/Gizmo/Beagle]({{ site.baseurl }}/computing/cluster_rhinoGizmo/)
-- [Cluster Software]({{ site.baseurl }}/computing/cluster_software/)
-- [Cloud Computing]({{ site.baseurl }}/computing/cluster_cloudCompute/)
 
+These articles describe scientific computing resources and services available to Fred Hutch researchers, including on-premises and in-the-cloud.
+
+- [Resources Available]({{ site.baseurl }}/computing/resource_overview/)
+- [Getting Access]({{ site.baseurl }}/computing/access_overview/)
+- [Storing and Using Data]({{ site.baseurl }}/computing/store_overview/)
+- [HPC Resource Overview]({{ site.baseurl }}/computing/cluster_overview/)
+- [Scientific Software and Tools]({{ site.baseurl }}/computing/software_overview/)
 
 ## [Software, Resources and Updates]({{ site.baseurl }}/computing/training_overview/)
 This section contains a variety of frequently updated sections where you can find current information about office hours, current software builds, recent notifications, and the Resource Library which contains a growing list of short demo's and articles about a variety of topics not addressed elsewhere in the site.  
