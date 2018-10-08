@@ -17,8 +17,8 @@ The Hutch, through Center IT and Scientific Computing, support a number of optio
 - [Collaborative Storage Systems]({{ site.baseurl }}/computing/store_collaboration/)
 
 
-## [Scientific Computing]({{ site.baseurl }}/computing/cluster_overview/)
-This section contains articles that describe a range of high performance computing resource options available to Fred Hutch researchers.
+## [Scientific Computing]({{ site.baseurl }}/computing/scicomp_overview/)
+This section contains articles that describe a range of scientific computing resources and services available to Fred Hutch researchers.
 - [Resources Available]({{ site.baseurl }}/computing/resource_overview/)
 - [Linux 101]({{ site.baseurl }}/computing/linux_linux101/)
 - [Rhino/Gizmo/Beagle]({{ site.baseurl }}/computing/cluster_rhinoGizmo/)
