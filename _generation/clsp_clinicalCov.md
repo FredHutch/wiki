@@ -38,7 +38,7 @@ The [Fred Hutch Ontology Browser](https://ontology.fredhutch.org) can be a usefu
 4. 	Broadly describe the request. If you are requesting CAISIS data from an STTR supported group (Lymphoma, Myeloma, etc) then you can  select “Yes” to the STTR question. This just means someone on the STTR team will help with identifying the data from our data dictionary.
 5.	PHI: Select whether you need identified data or de-identified data
 6.	Identify how you intend to use the data, whether for research (or activities preparatory to research), clinical care, etc.
-7.	Include the IRB number related to this work. You can search CORE FYI to find the appropriate IRB number.
+7.	Include the IRB number related to this work. If requested, include the IRB number related to this work. You can search CORE FYI to find the appropriate IRB number.
 8.	For the question relating to the confidentiality pledge, this can be found from the link on the page, [which is here](https://centernet.fredhutch.org/cn/f/hdc/lcex/confidentiality-mou.html). The confidentiality pledge can also be attained through a link within the electronic survey.
 9. The data element categories listed in the red box correlate with how CAISIS is structured, so it will align with our data dictionary. You can check the existing fields in the Fred Hutch Ontology Browser under CAISIS [here](https://translationalgenomics.shinyapps.io/FHOntologyBrowser/)
 10. For the question related to the HDC PHI Data Training Verification, you can get more information [here.](https://centernet.fredhutch.org/cn/f/hdc/lcex/hdc-training.html)
