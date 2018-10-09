@@ -179,7 +179,7 @@ computing:
   - title: "Scientific Computing"
     children:
       - title: "Overview"
-        url: /computing/cluster_overview/
+        url: /computing/scicomp_overview/
       - title: "Resources Available"
         url: /computing/resource_overview/
       - title: "Linux"
