@@ -1,6 +1,6 @@
 ---
 title: Overview of Computing at Fred Hutch
-last_modified_at: 2018-08-31
+last_modified_at: 2018-09-18
 ---
 Center IT supports a wide array of resources made available to researchers.  Much of the basic computing information needed on an ongoing basis can be found via Centernet and the Center IT pages.  However, much of the scientific computing resource documentation beyond this material is provided in this section of the Wiki, and links to existing resources and documentation are provided when available.  
 
@@ -11,7 +11,7 @@ This section includes a variety of information about accessing computing resourc
 The Hutch, through Center IT and Scientific Computing, support a number of options for storing your data. The service you use to store your data will depend on the nature of the data and the anticipated use. 
 
 - [Database Systems]({{ site.baseurl }}/computing/store_databases/)
-- [Block Storage Systems]({{ site.baseurl }}/computing/store_posix/)
+- [File Storage Systems]({{ site.baseurl }}/computing/store_posix/)
 - [Object Storage Systems]({{ site.baseurl }}/computing/store_objectstore/)
 - [Temporary (Scratch) Storage]({{ site.baseurl }}/computing/store_scratch/)
 - [Collaborative Storage Systems]({{ site.baseurl }}/computing/store_collaboration/)

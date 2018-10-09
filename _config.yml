@@ -17,6 +17,9 @@ collections:
   generation:
     output: true
     permalink: /:collection/:path/
+  gendemos:
+    output: true
+    permalink: /:collection/:path/
   bioinformatics:
     output: true
     permalink: /:collection/:path/
@@ -223,6 +226,18 @@ defaults:
   - scope:
       path: ""
       type: generation
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "generation"
+
+  # _gendemos
+  - scope:
+      path: ""
+      type: gendemos
     values:
       layout: single
       toc: true

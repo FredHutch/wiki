@@ -28,7 +28,7 @@ S3 (the Simple Storage Service) is an object store very much like the Economy fi
 Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
 
 ### Credentials and Permissions
-Once you have [obtained S3 credentials](/computing/access_overview/#getting-aws-s3-credentials), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples below.
+Once you have [obtained S3 credentials](/computing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples below.
 
 
 ### Using Amazon S3 from the Command Line
@@ -362,7 +362,7 @@ df = pd.DataFrame.from_dict(response['Contents'])
 
 #### About `pandas` and `dask`
 
-There are two implementations of data frames in python: [pandas](https://pandas.pydata.org/pandas-docs/stable/) and [dask](https://dask.pydata.org/en/latest/docs.html). Use `pandas` when the data you are working with is small and will fit in memory. If it's too big to fit in memory, use `dask` (it's easy to convert between the two, and `dask` uses the `pandas` API, so it's easy to work with both kinds of data frame). We'll show examples of reading and writing both kinds of data frames to and from S3.
+There are two implementations of data frames in python: [pandas](https://pandas.pydata.org/pandas-docs/stable/) and dask). Use `pandas` when the data you are working with is small and will fit in memory. If it's too big to fit in memory, use `dask` (it's easy to convert between the two, and `dask` uses the `pandas` API, so it's easy to work with both kinds of data frame). We'll show examples of reading and writing both kinds of data frames to and from S3.
 
 
 **NOTE**: `Pandas` dataframes are usually written out (and read in) as CSV files. `Dask` dataframes are written out in parts, and the parts can only be read back in with `dask`.

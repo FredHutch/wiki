@@ -31,6 +31,8 @@ generation:
     children:
       - title: "Overview"
         url: /generation/gen_index/
+      - title: "Resource Library"
+        url: /generationdemos/
   - title: "Study Design and Funding"
     children:
       - title: "Overview"
@@ -95,6 +97,8 @@ bioinformatics:
     children:
       - title: "Overview"
         url: /bioinformatics/inf_index/
+      - title: "Resource Library"
+        url: /bioinformaticsdemos/
   - title: "Best Practices for Research Data Management"
     children:
       - title: "Overview"
@@ -136,8 +140,7 @@ bioinformatics:
     children:
       - title: "Training Opportunties"
         url: /bioinformatics/howto_training/
-      - title: "Resource Library"
-        url: /bioinformaticsdemos/
+
 
 
 
@@ -146,10 +149,16 @@ computing:
     children:
       - title: "Overview"
         url: /computing/comp_index/
+      - title: "Resource Library"
+        url: /compdemos/
   - title: "Access and Credentials"
     children:
       - title: "Overview"
         url: /computing/access_overview/
+      - title: "Credentials"
+        url: /computing/access_credentials/
+      - title: "Methods"
+        url: /computing/access_methods/
 
   - title: "Data Storage"
     children:
@@ -192,5 +201,3 @@ computing:
         url: http://fredhutch.github.io/easybuild-life-sciences/
       - title: "Updates and Announcements"
         url: /scicompannounce/
-      - title: "Resource Library"
-        url: /compdemos/
