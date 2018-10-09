@@ -39,9 +39,9 @@ The [Fred Hutch Ontology Browser](https://ontology.fredhutch.org) can be a usefu
 5.	PHI: Select whether you need identified data or de-identified data
 6.	Identify how you intend to use the data, whether for research (or activities preparatory to research), clinical care, etc.
 7.	Include the IRB number related to this work. You can search CORE FYI to find the appropriate IRB number.
-8.	For the question relating to the confidentiality pledge, this can be found from the link on the page, [which is here]https://centernet.fredhutch.org/cn/f/hdc/lcex/confidentiality-mou.html. The confidentiality pledge can also be attained through a link within the electronic survey.
+8.	For the question relating to the confidentiality pledge, this can be found from the link on the page, [which is here](https://centernet.fredhutch.org/cn/f/hdc/lcex/confidentiality-mou.html). The confidentiality pledge can also be attained through a link within the electronic survey.
 9. The data element categories listed in the red box correlate with how CAISIS is structured, so it will align with our data dictionary. You can check the existing fields in the Fred Hutch Ontology Browser under CAISIS [here](https://translationalgenomics.shinyapps.io/FHOntologyBrowser/)
-10. For the question related to the HDC PHI Data Training Verification, you can get more information here: https://centernet.fredhutch.org/cn/f/hdc/lcex/hdc-training.html
+10. For the question related to the HDC PHI Data Training Verification, you can get more information [here.](https://centernet.fredhutch.org/cn/f/hdc/lcex/hdc-training.html)
 11. That’s it! A data analyst from HDC will contact you to discuss the specifics.
 
 
