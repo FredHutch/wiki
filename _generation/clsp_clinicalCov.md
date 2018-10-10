@@ -1,7 +1,8 @@
 ---
 title: Clinical Data Management
-last_modified_at: 2018-09-06
+last_modified_at: 2018-09-19
 main_authors: Rachel Galbraith
+primary_reviewers: Rachierizz
 ---
 
 We will describe what data management systems are available to Fred Hutch researchers, to access and interpret clinical data for a select cohort.  The ability to identify suitable biospecimens associated with a cohort--available via collaboration with other researchers or via a specimen repository--is critical to enable the generation of large-scale data sets associated with patient phenotypes.
@@ -30,16 +31,19 @@ To request data which has been abstracted into Caisis and/or data from the Hutch
 The [Fred Hutch Ontology Browser](https://ontology.fredhutch.org) can be a useful tool in developing data requests as it will help researchers understand how, when and in what format each data element is collected. It will also allow investigators to create an excel document containing their fields of interest which they can submit within their data request.
 
 ### Detailed Instructions
-1.	On Centernet, search for “HDC Data Services Request”.
-2.	Select “Complete User Access Request VIA REDCap”, as indicated by the red arrow.
-3.	Broadly describe the request. If you are requesting CAISIS data from an STTR supported group (Lymphoma, Myeloma, etc) then you can select “Yes” to the STTR question. This just means someone on the STTR team will help with identifying the data from our data dictionary.
-4.	PHI: Select whether you need identified data or de-identified data
-5.	Identify how you intend to use the data, whether for research (or activities preparatory to research), clinical care, etc.
-6.	Include the IRB number related to this work. You can search CORE FYI to find the appropriate IRB number.
-7.	For the question relating to the confidentiality pledge, this can be found from the link on the page, [which is here](https://share.fhcrc.org/sites/center-it/informatics/SiteAssets/Pages/Data-Request-Forms/MOU%20Repository%20Confidentiality%20Pledge.pdf).
-8. The data element categories listed in the red box correlate with how CAISIS is structured, so it will align with our data dictionary. You can check the existing fields in the Fred Hutch Ontology Browser under CAISIS [here.](https://ontology.fredhutch.org)
-9. For the question related to the HDC PHI Data Training Verification, you can get more information [here.](https://centernet.fredhutch.org/cn/f/hdc/lcex/hdc-training.html)
-10. That’s it! A data analyst from HDC will contact you to discuss the specifics.
+
+1.	On Centernet, search for and select “HDC Data Services Request”.
+2.  This page will provide an FAQ, instructions and related documents or forms which may need to be downloaded.
+3.  Select the box “Complete User Access Request VIA REDCap” to open access to the electronic submission form.
+4. 	Broadly describe the request. If you are requesting CAISIS data from an STTR supported group (Lymphoma, Myeloma, etc) then you can  select “Yes” to the STTR question. This just means someone on the STTR team will help with identifying the data from our data dictionary.
+5.	PHI: Select whether you need identified data or de-identified data
+6.	Identify how you intend to use the data, whether for research (or activities preparatory to research), clinical care, etc.
+7.	Include the IRB number related to this work. If requested, include the IRB number related to this work. You can search CORE FYI to find the appropriate IRB number.
+8.	For the question relating to the confidentiality pledge, this can be found from the link on the page, [which is here](https://centernet.fredhutch.org/cn/f/hdc/lcex/confidentiality-mou.html). The confidentiality pledge can also be attained through a link within the electronic survey.
+9. The data element categories listed in the red box correlate with how CAISIS is structured, so it will align with our data dictionary. You can check the existing fields in the Fred Hutch Ontology Browser under CAISIS [here](https://translationalgenomics.shinyapps.io/FHOntologyBrowser/)
+10. For the question related to the HDC PHI Data Training Verification, you can get more information [here.](https://centernet.fredhutch.org/cn/f/hdc/lcex/hdc-training.html)
+11. That’s it! A data analyst from HDC will contact you to discuss the specifics.
+
 
 
 
