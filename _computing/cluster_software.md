@@ -9,7 +9,7 @@ last_modified_at: 2018-10-11
 The Scientific Computing Center IT group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
 ## Environment Modules
-Environment Modules are a mechanism to provide software package versions. Environment Modules are similar to Python virtualenvs or Conda envs and allow you to choose between many software packages and versions of those packages. We use a system called EasyBuild to create modules for everyone to use - there are hundreds of modules already available.
+On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and maleable way. Environment Modules are similar to Python virtualenvs or Conda envs and allow you to choose between many software packages and versions of those packages. We use a system called EasyBuild to create modules for everyone to use - there are hundreds of modules already available.
 
 ### How to Use Environment Modules
 #### Interactively
@@ -24,8 +24,24 @@ Command | Action
 `module list` | List currently loaded Environment Modules
 `module purge` | Unload all currently loaded Environment Modules
 
-There is also a short version of the `module` command: `ml`.  You can substitute `ml` for `module` in any of the commands above.
+There is also a short version of the `module` command: `ml`.  You can substitute `ml` for `module` in any of the commands above (`ml` = `module list` `ml <pkg>` = `module load <pkg>`).
 
+Ex:
+```
+$ which python
+/usr/bin/python
+$ ml avail Python/2.7.15
+
+-------------------------- /app/easybuild/modules/all --------------------------
+   Python/2.7.15-foss-2016b-fh1    Python/2.7.15-foss-2016b
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching
+any of the "keys".
+
+$ which python
+/app/easybuild/software/Python/2.7.15-foss-2016b-fh1/bin/python
+```
 
 #### Scripting with Environment Modules
 To use Environment Modules in a bash script, it is best to explicitly activate the `module` command and load exact versions of modules. To activate Environment Modules, add the follow lines to the top of your script:
