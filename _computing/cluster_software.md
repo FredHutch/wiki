@@ -9,7 +9,7 @@ last_modified_at: 2018-10-11
 The Scientific Computing Center IT group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
 ## Environment Modules
-On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and maleable way. Environment Modules are similar to Python virtualenvs or Conda envs and allow you to choose between many software packages and versions of those packages. We use a system called EasyBuild to create modules for everyone to use - there are hundreds of modules already available.
+On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules are similar to Python virtualenvs or Conda envs and allow you to choose between many software packages and versions of those packages. We use a system called EasyBuild to create modules for everyone to use- there are hundreds of modules already available.
 
 ### How to Use Environment Modules
 #### Interactively
