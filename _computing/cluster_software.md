@@ -4,8 +4,6 @@ last_modified_at: 2018-10-11
 ---
 
 
->NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.
-
 The Scientific Computing Center IT group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
 ## Environment Modules
@@ -13,7 +11,7 @@ On the command line and in scripts, we use the Environment Module system to make
 
 ### How to Use Environment Modules
 #### Interactively
-When you log in to a SciComp server (or Ubuntu desktop) your terminal session has Lmod pre-loaded. Common shell commands:
+When you log in to a SciComp server (or Ubuntu desktop) your terminal session has Lmod pre-loaded. Commonly used shell commands include:
 
 Command | Action
 --- | ---
@@ -26,7 +24,7 @@ Command | Action
 
 There is also a short version of the `module` command: `ml`.  You can substitute `ml` for `module` in any of the commands above (`ml` = `module list` `ml <pkg>` = `module load <pkg>`).
 
-Ex:
+Example:
 ```
 $ which python
 /usr/bin/python
@@ -108,3 +106,4 @@ The EasyBuild system provides recipes for automatically building common software
 More info on EasyBuild is [here](https://easybuilders.github.io/easybuild/).
 
 
+>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.
