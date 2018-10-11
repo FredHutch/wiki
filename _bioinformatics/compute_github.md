@@ -20,7 +20,7 @@ There are many different ways of working with multiple people on multiple files 
 ![]({{ site.baseurl }}/compdemos/assets/comp_github-5c26f4cd.png)
 
 ### Git Kraken
-More to come on [Git Kraken](https://www.gitkraken.com/) as a Desktop client option is to come, but to summarize, it is another desktop application that runs more consistently on Mac, PC, and Linux, and allows for greater control and granularity than GitHub Desktop.  It is good for advanced beginners and beyond.    
+[Git Kraken](https://www.gitkraken.com/) is a desktop client (Mac, PC, and Linux) available for free use to academics. It allows greater control and granularity than GitHub Desktop, especially when dealing with collaborative projects involving lots of branching and forking.  It is good for advanced beginners and beyond.    
 
 ## Sharing with GitHub
 Given the history of GitHub being linked with open source software development, it is set up with the intention to prioritize publicly accessible code.   However, given the need to limit access to code under development and not ready for public input, or other situations such as in the context of biomedical research, private repositories are available.  
