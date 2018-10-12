@@ -6,7 +6,7 @@ Version control software allows anyone using a computer to track changes made to
 
 ## What is Git and Github?
 Git is the name of a free, open source version control software commonly used among academics and software developers. GitHub is a web-based hosting service for projects managed with Git version control software, and includes a wide variety of additional tools which allows users to collaborate, publish files, release new versions of software, and even create webpages (in fact, this wiki is published through GitHub!). Some relevant terminology associated with Git and GitHub includes:
-- **repository:** a project folder including all files and their history as tracked with Git
+- **repository:** a project folder including all files and their history as tracked with Git. A repository can represent a variety of projects, including a piece of software, quarterly report, or research manuscript.
   - **local:** exists on your own computer
   - **remote:** exists somewhere besides your own computer and must be accessed over a network, such as on GitHub, the cloud, or a shared computer cluster
 - **clone:** a copy of a repository (e.g., you may clone a repository from GitHub onto your own local computer)
