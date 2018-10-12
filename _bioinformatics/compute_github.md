@@ -15,16 +15,16 @@ Git is the name of a free, open source version control software commonly used am
 - **fork:** a copy of someone else's repository in which you can make changes (and submit a request for the original repository owner to accept these changes)
 Additional terms are defined in [GitHub's Glossary](https://help.github.com/articles/github-glossary/).
 
+There are many different ways of sharing projects collaboratively in a GitHub repository. [This GitHub Guide for using GitHub is useful for understanding the basics.](https://guides.github.com/introduction/flow/)
+![]({{ site.baseurl }}/compdemos/assets/comp_github-5c26f4cd.png)
+
 There are many different ways to interact with Git and GitHub. Choosing which approach to use depends on whether you're collaborating, if you are an experienced programmer, and how complex your work in Git will be; the advantages of each of these methods are described below. fredhutch.io's recommended methods for beginners are described on their [software page](http://www.fredhutch.io/software/). In general, a good place to start is the GitHub Desktop client.
 
 ### GitHub Desktop Client
-For many users, command line git is not the ideal mode of interacting with version control software.  As an example, if the majority of the code produced by a user is originating from interfaces such as RStudio, it may be much simpler and more straightforward to use GitHub via the desktop client.  You can download the desktop client for your system for free [here.](https://desktop.github.com/)
+Developers at Git have developed a desktop application with a graphical user interface that will allow you to accomplish most of the common tasks associated with Git version control and collaboration with GitHub. This is a great place for new Git users to learn about version control; you can download the desktop client for your system for free [here.](https://desktop.github.com/)
 
-The desktop client will allow you to "clone" repositories from the web based GitHub source and allow you to work on those files locally.  Then when edits have been made to files in those repositories, those edits will be shown in the GitHub Desktop client for the user to then comment on and commit those changes to the version of the repository on the web.
+This desktop client will allow you to perform the basic Git workflow of making changes that are documented with Git version control. Additionally, the desktop client will allow you to clone repositories from web-based GitHub so that you can work on the project on your own computer.  After you have modified the file or files in your project, you can document and commit those changes back to the remote repository.
 ![]({{ site.baseurl }}/compdemos/assets/comp_github-96005f6a.png)
-
-There are many different ways of working with multiple people on multiple files in a GitHub repository, and there are many places on the web that can provide some insight into how to use it's many features.  However, [this GitHub Guide for the flow of using GitHub is useful for understanding the basics.](https://guides.github.com/introduction/flow/)
-![]({{ site.baseurl }}/compdemos/assets/comp_github-5c26f4cd.png)
 
 ### Command Line Git
 Git was originally written, and continues to be developed, as a command-line tool accessible through Terminal (Mac) and Command Prompt or Powers\Shell (Windows). This version of Git is the only way you can run all available Git commands, and is appropriate if you are already familiar with the command line and consistently perform work using it. Additionally, you will likely need to use the command line version if you are connecting to remote computational resources like a cluster or cloud. To read more about command line [Git, follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)  To download a version of git to your local machine, [follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
