@@ -35,6 +35,9 @@ Git was originally written, and continues to be developed, as a command-line too
 ### Git Kraken
 [Git Kraken](https://www.gitkraken.com/) is a desktop client (Mac, PC, and Linux) available for free use to academics. It allows greater control and granularity than GitHub Desktop, especially when dealing with collaborative projects involving lots of branching and forking.  It is good for advanced beginners and beyond.    
 
+### Git Integration with RStudio
+If you are working with R statistical programming, the [RStudio](https://www.rstudio.com) interface possesses robust [integration with version control](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
+
 ## Additional options available in GitHub
 GitHub is a free service that individuals can make their own usernames to join the service and begin hosting publicly accessible repositories containing code they have produced or edited.  As GitHub was originally intended to facilitate open source software development, the basic resources available to users are only public, but free, repositories in order to continue to encourage developers to keep their code in the open and shared.
 
