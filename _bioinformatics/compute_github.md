@@ -7,12 +7,6 @@ Version control software allows anyone using a computer to track changes made to
 ## What is Git and Github?
 Git is the name of a free, open source version control software commonly used among academics and software developers. GitHub is a web-based hosting service for projects managed with Git version control software, and includes a wide variety of additional tools which allows users to collaborate, publish files, release new versions of software, and even create webpages (in fact, this wiki is published through GitHub!). There are many different ways to interact with Git and GitHub. Choosing which approach to use depends on whether you're collaborating, if you are an experienced programmer, and how complex your work in Git will be; the advantages of each of these methods are described below. fredhutch.io's recommended methods for beginners are described on their [software page](http://www.fredhutch.io/software/). In general, a good place to start is the GitHub Desktop client.
 
-### Command Line Git
-Git was originally written, and continues to be developed, as a command-line tool accessible through Terminal (Mac) and Command Prompt or Powers\Shell (Windows). This version of Git is the only way you can run all available Git commands, and is appropriate if you are already familiar with the command line and consistently perform work using it. Additionally, you will likely need to use the command line version if you are connecting to remote computational resources like a cluster or cloud. To read more about command line [Git, follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)  To download a version of git to your local machine, [follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
-### GitHub on the Web
-[GitHub](https://github.com) provides a web-based graphical interface for interacting with projects that are published through GitHub. While GitHub's interface limits your ability to perform more advanced version control operations, there are additional tools available for collaborating, publishing wikis, and managing projects (see section below on "Additional options available in GitHub").
-
 ### GitHub Desktop Client
 For many users, command line git is not the ideal mode of interacting with version control software.  As an example, if the majority of the code produced by a user is originating from interfaces such as RStudio, it may be much simpler and more straightforward to use GitHub via the desktop client.  You can download the desktop client for your system for free [here.](https://desktop.github.com/)
 
@@ -21,6 +15,12 @@ The desktop client will allow you to "clone" repositories from the web based Git
 
 There are many different ways of working with multiple people on multiple files in a GitHub repository, and there are many places on the web that can provide some insight into how to use it's many features.  However, [this GitHub Guide for the flow of using GitHub is useful for understanding the basics.](https://guides.github.com/introduction/flow/)
 ![]({{ site.baseurl }}/compdemos/assets/comp_github-5c26f4cd.png)
+
+### Command Line Git
+Git was originally written, and continues to be developed, as a command-line tool accessible through Terminal (Mac) and Command Prompt or Powers\Shell (Windows). This version of Git is the only way you can run all available Git commands, and is appropriate if you are already familiar with the command line and consistently perform work using it. Additionally, you will likely need to use the command line version if you are connecting to remote computational resources like a cluster or cloud. To read more about command line [Git, follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)  To download a version of git to your local machine, [follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+### GitHub on the Web
+[GitHub](https://github.com) provides a web-based graphical interface for interacting with projects that are published through GitHub. While GitHub's interface limits your ability to perform more advanced version control operations, there are additional tools available for collaborating, publishing wikis, and managing projects (see section below on "Additional options available in GitHub").
 
 ### Git Kraken
 [Git Kraken](https://www.gitkraken.com/) is a desktop client (Mac, PC, and Linux) available for free use to academics. It allows greater control and granularity than GitHub Desktop, especially when dealing with collaborative projects involving lots of branching and forking.  It is good for advanced beginners and beyond.    
