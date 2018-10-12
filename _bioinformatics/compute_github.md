@@ -39,15 +39,13 @@ Git was originally written, and continues to be developed, as a command-line too
 If you are working with R statistical programming, the [RStudio](https://www.rstudio.com) interface possesses robust [integration with version control](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
 
 ## Additional options available in GitHub
-GitHub is a free service that individuals can make their own usernames to join the service and begin hosting publicly accessible repositories containing code they have produced or edited.  As GitHub was originally intended to facilitate open source software development, the basic resources available to users are only public, but free, repositories in order to continue to encourage developers to keep their code in the open and shared.
+Anyone may create an individual GitHub account and username for free. These individual accounts allow creation of repositories that are by default published publicly for anyone to view and use. This supports the goal of GitHub to facilitate open, reproducible science and collaboration. Collaborative options include forking repositories belonging to other people and allowing other people to collaborate on your own projects. Depending on the content and nature of your repositories, however, you may require additional flexibility in sharing and collaboration. Some of these options are described below.
 
-Given the history of GitHub being linked with open source software development, it is set up with the intention to prioritize publicly accessible code.   However, given the need to limit access to code under development and not ready for public input, or other situations such as in the context of biomedical research, private repositories are available.  
+### Private Repositories
+Repositories are publicly available by default. While this supports open science practices, there are also cases in which code or data in a repository needs to be kept private, such as when data or code are proprietary or need to be kept secure for other legal or ethical reasons. Although GitHub provides unlimited free public repositories to all users, private repositories owned by individuals require a developer (paid, upgraded/premium) account (but see section below for information on obtaining private repositories through the Fred Hutch GitHub Organization).
 
-### Public vs Private Repositories
-When creating a repository the user chooses whether it should be public or private.  Private repositories require payment, but GitHub provides unlimited, free public repositories.  
-
-### Individual vs Institution GitHub Repositories
-When the software is being developed as part of an institution, such as at Fred Hutch, users can use repositories that are their individual repositories OR their username can be associated with an institution.  The Fred Hutch supports the use of GitHub for research via this institutional account which allows all Fred Hutch employees to create public *or* private repositories.  This wiki itself is developed and managed via a Fred Hutch institution [GitHub repository.](https://github.com/FredHutch/wiki)  This resource is a valuable tool for researchers looking to manage, communicate and document code or analysis processes in a platform that can be both private or public, and where they can manage permissions to their repositories.
+### GitHub Organizations
+GitHub Organizations are accounts shared by individuals that assist in coordinating large collaborative projects. Scientific Computing maintains a [Fred Hutch GitHub Organization](https://github.com/fredhutch) through which affiliated employees can create public *or* private repositories and share access with collaborators external to the Hutch. For more information on our GitHub Organization, please see this wiki's section on GitHub in [Computing Credentials]({{ site.baseurl }}/computing/access_credentials).
 
 ### GitHub API
 An API (Application Programming Interface) is a tool that allows you to communicate, or pass information between, two pieces of software. GitHub has an API that you can read more about [here](https://developer.github.com/v3/), which is useful for developing software that needs to reference information embedded in GitHub repositories.
@@ -55,7 +53,7 @@ An API (Application Programming Interface) is a tool that allows you to communic
 ## Available Resources and links
 There a wide variety of resources on the web for learning to use the various forms of GitHub.  
 - Get a [GitHub username here.](https://github.com/join)
-- Join the Fred Hutch GitHub institution by sending your username to `helpdesk` and request to be added.  
+- Join the Fred Hutch GitHub organization by sending your username to `helpdesk` and request to be added.  
 - Getting started with [GitHub Desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
 - How to [contribute to projects with GitHub](https://help.github.com/desktop/guides/contributing-to-projects/)
 - A good tutorial slide deck on how to use GitHub with command line can be found [here](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf).
