@@ -50,7 +50,7 @@ When creating a repository the user chooses whether it should be public or priva
 When the software is being developed as part of an institution, such as at Fred Hutch, users can use repositories that are their individual repositories OR their username can be associated with an institution.  The Fred Hutch supports the use of GitHub for research via this institutional account which allows all Fred Hutch employees to create public *or* private repositories.  This wiki itself is developed and managed via a Fred Hutch institution [GitHub repository.](https://github.com/FredHutch/wiki)  This resource is a valuable tool for researchers looking to manage, communicate and document code or analysis processes in a platform that can be both private or public, and where they can manage permissions to their repositories.
 
 ### GitHub API
-More to come about using the GitHub API
+An API (Application Programming Interface) is a tool that allows you to communicate, or pass information between, two pieces of software. GitHub has an API that you can read more about [here](https://developer.github.com/v3/), which is useful for developing software that needs to reference information embedded in GitHub repositories.
 
 ## Available Resources and links
 There a wide variety of resources on the web for learning to use the various forms of GitHub.  
