@@ -1,6 +1,7 @@
 ---
 title: Data Storage in Block Storage Systems
-last_modified_at: 2018-06-07
+last_modified_at: 2018-10-10
+primary_reviewer: dirkpetersen
 ---
 
 Block storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools.  These storage systems are similar to the hard drive on your computer, just typically larger and faster.
@@ -30,6 +31,6 @@ This storage platform is appropriate for most scientific data- particularly larg
 
 The _Secure File_ system provides a higher-level of security controls than available on other services- the key difference is access auditing.  This is also organized by investigator.
 
-Secure file is available via the path `/fh/fast/secure/researcher` on SciComp Linux systems, `\\center.fhcrc.org\fh\secure` on Windows hosts, and `smb://center.fhcrc.org` on OSX.
+Secure file is available via the path `/fh/fast/secure/research/lastname_f` on SciComp Linux systems, `\\center.fhcrc.org\fh\secure\research\lastname_f` on Windows hosts, and `smb://center/fh/secure/research/lastname_f` on OSX.
 
 This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data.  The first terabyte of data is provided by CIT with a charge of $50 per-terabyte for any amount above that.

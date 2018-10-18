@@ -8,7 +8,7 @@ minimal_mistakes_skin: "contrast"
 locale: en-US
 title: "Fred Hutch Biomedical Data Science Wiki"
 description: "Collective documentation for Genomics, Bioinformatics and Scientific Computing at the Fred Hutch"
-url                      : http://sciwiki.fredhutch.org
+url                      : https://sciwiki.fredhutch.org
 baseurl                  : ""
 repository               : "FredHutch/wiki"
 
@@ -173,6 +173,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jemoji
+  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -180,6 +181,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jemoji
+  - jekyll-include-cache
 
 
 # Archives

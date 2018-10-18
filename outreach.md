@@ -14,7 +14,7 @@ To get involved there are many ways to find us:
 
 - Join the **FHBig** Slack workspace via [this link, and use your fredhutch.org email to join.](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg)  In this Slack workspace we have a #wikicontributors channel where you can chime in with edits, get updates about next meetings, goals and our next steps.  
 
-- Follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content if you have had your GitHub username linked to the Fred Hutch GitHub organization account. If you have not done this yet, please see more about using GitHub at the Fred Hutch [here](/bioinformatics/compute_github/) and specific instructions for joining the Fred Hutch organization [here.](http://sciwiki.fredhutch.org/bioinformatics/compute_github/#available-resources-and-links)
+- Follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content if you have had your GitHub username linked to the Fred Hutch GitHub organization account. If you have not done this yet, please see more about using GitHub at the Fred Hutch [here](/bioinformatics/compute_github/) and specific instructions for joining the Fred Hutch organization [here.](/bioinformatics/compute_github/#available-resources-and-links)
 
 
 ### Translational Genomics Pop Up Events
