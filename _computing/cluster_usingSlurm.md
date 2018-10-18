@@ -11,15 +11,25 @@ and the resources available in the cluster.  There are two main clusters in use 
 
 ## Basic Slurm Terminology
 
-**Cluster** A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case)
+### Cluster
 
-**Partition** A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required.
+A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case)
 
-**Node** A node is the basic computing unit that shares processors, memory, and some (limited) local disk.
+### Partition
 
-**Job** A job is a collection of tasks, typically implemented as a shell script.
+A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required.
 
-**Account** When we refer to an "account" in the context of Slurm, we are referring to the PI account used to enforce limits and priority and _not_ your HutchNet ID.  Your HutchNet ID is associated with an account.
+### Node
+
+A node is the basic computing unit that shares processors, memory, and some (limited) local disk.
+
+### Job
+
+A job is a collection of tasks, typically implemented as a shell script.
+
+### Account
+
+When we refer to an "account" in the context of Slurm, we are referring to the PI account used to enforce limits and priority and _not_ your HutchNet ID.  Your HutchNet ID is associated with an account.
 
 ## Commands for Managing Jobs
 
