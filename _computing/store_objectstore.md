@@ -1,10 +1,8 @@
 ---
 title: Data Storage in Object Storage Systems
-last_modified_at: 2018-09-06
+last_modified_at: 2018-10-18
+primary_reviewers: dirkpetersen, dtenenba
 ---
-
->NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
-
 Object Storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an Object Storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud Computing depends very much on Object Storage systems such as Amazon's AWS S3 or Google Cloud Storage.
 
 
@@ -53,4 +51,10 @@ S3 (the Simple Storage Service) is an object store very much like the Economy fi
 Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
 
 #### Credentials and Permissions
-Once you have [obtained S3 credentials](/computing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples below.
+Once you have [obtained S3 credentials](/computing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  
+
+#### User Demos
+We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-Cyberduck/), [via the AWS CLI](/compdemos/aws-cli/), [via R](/compdemos/aws-R/), or [via Python](/compdemos/aws-python/).
+
+
+>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
