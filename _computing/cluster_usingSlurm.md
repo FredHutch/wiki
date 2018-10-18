@@ -4,7 +4,7 @@ last_modified_at: 2018-09-27
 ---
 >NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
 
-## Slurm 
+## Slurm
 
 Slurm is the workload manager for Scicomp clusters.  It manages both your jobs
 and the resources available in the cluster.  There are two main clusters in use today- the on-campus _gizmo_ cluster and the cloud-based _beagle_ cluster.  Commands work the same in either environment.
