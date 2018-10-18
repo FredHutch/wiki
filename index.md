@@ -5,7 +5,7 @@ permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: http://mkweb.bcgsc.ca/images/masthead/erica-savig-cytometry.png
+  overlay_image: /images/erica-savig-cytometry.png
 excerpt: "The Biomedical Data Science Wiki project aims to create a curated collection of Fred Hutch oriented documentation regarding policies, resources and tools available to our researchers supporting the generation, analysis and sharing of research data. The content is intended to serve as an 'on ramp' to get up to speed on current best practices, communicate common procedures, and provide links to on-campus and external data science resources."
 feature_row:
   - title: "Data Generation"
