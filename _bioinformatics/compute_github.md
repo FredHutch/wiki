@@ -1,51 +1,70 @@
 ---
-title: GitHub
-last_modified_at: 2018-06-20
+title: Git and GitHub for Computational Research
+last_modified_at: 2018-10-19
+primary_reviewers: k8hertweck
 ---
-While version control software has evolved over time, a new evolution that is happening more and more is the need for a wider group of researchers to actively use version control resources to manage their code and documentation of processes that are ongoing in their research.  From the perspective of reproducibility, share-ability and interoperability, the need for a sharing platform that integrates version control and collaboration is becoming more and more a critical part of a researcher's toolkit.  Thus, regardless of the degree to which code plays a direct role in a research project, more and more often at least a cursory understanding of what GitHub is and how it can be utilized in scientific research is important.  
+Version control software allows anyone using a computer to track changes made to computer files over time, which allows both referencing and reverting back to earlier work. Such software is becoming increasingly common among scientists, academics, and other researchers to manage computational work. While originally developed to support code development, version control software is useful for not just computer code, but also data, documentation, or any other files associated with a project. Moreover, version control software streamlines collaborative editing of documents, allowing changes to be easily identified and attribution of changes to be assigned to individual contributors.   
 
-## What is Github?
-GitHub at it's core is a Git repository hosting service.  While Git is a command line tool, GitHub provides a Web-based graphical interface as well as access control and several collaboration features, such as wiki's and basic task management tools for projects.  GitHub is a free service that individuals can make their own usernames to join the service and begin hosting publicly accessible repositories containing code they have produced or edited.  As GitHub was originally intended to facilitate open source software development, the basic resources available to users are only public, but free, repositories in order to continue to encourage developers to keep their code in the open and shared.  There are a wide variety of ever-changing features that GitHub provides that facilitates code sharing, communication, version control, project management, and software development tools such as facilitating software release and documentation.  
+## What is Git and Github?
+Git is the name of a free, open source version control software commonly used among academics and software developers. GitHub is a web-based hosting service for projects managed with Git version control software, and includes a wide variety of additional tools which allows users to collaborate, publish files, release new versions of software, and even create webpages (in fact, this wiki is published through GitHub!). Some relevant terminology associated with Git and GitHub includes:
+- **repository:** a project folder including all files and their history as tracked with Git. A repository can represent a variety of projects, including a piece of software, quarterly report, or research manuscript.
+  - **local:** exists on your own computer
+  - **remote:** exists somewhere besides your own computer and must be accessed over a network, such as on GitHub, the cloud, or a shared computer cluster
+- **clone:** a copy of a repository (e.g., you may clone a repository from GitHub onto your own local computer)
+- **commit:** a change to a file (or set of files) that represents a revision to previous versions
+- **branch:** a parallel version of the "master" repository that allows you to test changes without affecting the original (or live) version; changes in a branch can be merged back to the "master" when a particular task has been completed
+- **fork:** a copy of someone else's repository in which you can make changes (and submit a request for the original repository owner to accept these changes)
+Additional terms are defined in [GitHub's Glossary](https://help.github.com/articles/github-glossary/).
 
-### Command Line Git
-The original command-line tool, git is the only place you can run all Git commands — most of the GUIs implement only a partial subset of git functionality for simplicity. If you tend to do the majority of your work via the command line, the logical way to interact with git and version control is likely via the command line version of Git.  Access to the command line version of Git is through Terminal in Mac or Command Prompt or Powershell in Windows.  To read more about command line [Git, follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)  To download a version of git to your local machine, [follow this link.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
-### GitHub Desktop Client
-For many users, command line git is not the ideal mode of interacting with version control software.  As an example, if the majority of the code produced by a user is originating from interfaces such as RStudio, it may be much simpler and more straightforward to use GitHub via the desktop client.  You can download the desktop client for your system for free [here.](https://desktop.github.com/)
-
-The desktop client will allow you to "clone" repositories from the web based GitHub source and allow you to work on those files locally.  Then when edits have been made to files in those repositories, those edits will be shown in the GitHub Desktop client for the user to then comment on and commit those changes to the version of the repository on the web.
-![]({{ site.baseurl }}/compdemos/assets/comp_github-96005f6a.png)
-
-There are many different ways of working with multiple people on multiple files in a GitHub repository, and there are many places on the web that can provide some insight into how to use it's many features.  However, [this GitHub Guide for the flow of using GitHub is useful for understanding the basics.](https://guides.github.com/introduction/flow/)
+## Using GitHub
+There are many different ways of sharing projects collaboratively in a GitHub repository. [This GitHub Guide for using GitHub is useful for understanding the basics.](https://guides.github.com/introduction/flow/)
 ![]({{ site.baseurl }}/compdemos/assets/comp_github-5c26f4cd.png)
 
+There are many different ways to interact with Git and GitHub. Choosing which approach to use depends on whether you're collaborating, if you are an experienced programmer, and how complex your work in Git will be; the advantages of each of these methods are described below. fredhutch.io's recommended methods for beginners are described on their [software page](http://www.fredhutch.io/software/). In general, a good place to start is the GitHub Desktop client.
+
+### GitHub Desktop Client
+Developers at Git have developed a desktop application with a graphical user interface that will allow you to accomplish most of the common tasks associated with Git version control and collaboration with GitHub. This is a great place for new Git users to learn about version control; you can download the desktop client for your system for free [here.](https://desktop.github.com/)
+
+This desktop client will allow you to perform the basic Git workflow of making changes that are documented with Git version control. Additionally, the desktop client will allow you to clone repositories from web-based GitHub so that you can work on the project on your own computer.  After you have modified the file or files in your project, you can document and commit those changes back to the remote repository.
+![]({{ site.baseurl }}/compdemos/assets/comp_github-96005f6a.png)
+
+### Command Line Git
+Git was originally written, and continues to be developed, as a command-line tool accessible through Terminal (Mac) and Command Prompt or PowerShell (Windows). This version of Git is the only way you can run all available Git commands, and is appropriate if you are already familiar with the command line and consistently perform work using it. Additionally, you will likely need to use the command line version if you are connecting to remote computational resources like a cluster or cloud. You can learn more about command line Git [here](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) and download the command line software [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+### GitHub on the Web
+[GitHub](https://github.com) provides a web-based graphical interface for interacting with projects that are published through GitHub. While GitHub's interface limits your ability to perform more advanced version control operations, there are additional tools available for collaborating, publishing wikis, and managing projects (see section below on "Additional options available in GitHub").
+
 ### Git Kraken
-More to come on [Git Kraken](https://www.gitkraken.com/) as a Desktop client option is to come, but to summarize, it is another desktop application that runs more consistently on Mac, PC, and Linux, and allows for greater control and granularity than GitHub Desktop.  It is good for advanced beginners and beyond.    
+[Git Kraken](https://www.gitkraken.com/) is a desktop client (Mac, PC, and Linux) available for free use to academics. It allows greater control and granularity than GitHub Desktop, especially when dealing with collaborative projects involving lots of branching and forking.  It is good for advanced beginners and beyond.    
 
-## Sharing with GitHub
-Given the history of GitHub being linked with open source software development, it is set up with the intention to prioritize publicly accessible code.   However, given the need to limit access to code under development and not ready for public input, or other situations such as in the context of biomedical research, private repositories are available.  
+### Git Integration with RStudio
+If you are working with R statistical programming, the [RStudio](https://www.rstudio.com) interface possesses robust [integration with version control](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
 
-### Public vs Private Repositories
-When creating a repository the user chooses whether it should be public or private.  Private repositories require payment, but GitHub provides unlimited, free public repositories.  
+## Additional options available in GitHub
+Anyone may create an individual GitHub account and username for free. These individual accounts allow creation of repositories that are by default published publicly for anyone to view and use. This supports the goal of GitHub to facilitate open, reproducible science and collaboration. Collaborative options include forking repositories belonging to other people and allowing other people to collaborate on your own projects. Depending on the content and nature of your repositories, however, you may require additional flexibility in sharing and collaboration. Some of these options are described below.
 
-### Individual vs Institution GitHub Repositories
-When the software is being developed as part of an institution, such as at Fred Hutch, users can use repositories that are their individual repositories OR their username can be associated with an institution.  The Fred Hutch supports the use of GitHub for research via this institutional account which allows all Fred Hutch employees to create public *or* private repositories.  This wiki itself is developed and managed via a Fred Hutch institution [GitHub repository.](https://github.com/FredHutch/wiki)  This resource is a valuable tool for researchers looking to manage, communicate and document code or analysis processes in a platform that can be both private or public, and where they can manage permissions to their repositories.
+### Private Repositories
+Repositories are publicly available by default. While this supports open science practices, there are also cases in which code or data in a repository needs to be kept private, such as when data or code are proprietary or need to be kept secure for other legal or ethical reasons. Although GitHub provides unlimited free public repositories to all users, private repositories owned by individuals require a developer (paid, upgraded/premium) account (but see section below for information on obtaining private repositories through the Fred Hutch GitHub Organization).
+
+### GitHub Organizations
+GitHub Organizations are accounts shared by individuals that assist in coordinating large collaborative projects. Scientific Computing maintains a [Fred Hutch GitHub Organization](https://github.com/fredhutch) through which affiliated employees can create public *or* private repositories and share access with collaborators external to the Hutch. For more information on our GitHub Organization, please see this wiki's section on GitHub in [Computing Credentials]({{ site.baseurl }}/computing/access_credentials).
 
 ### GitHub API
-More to come about using the GitHub API
+An API (Application Programming Interface) is a tool that allows you to communicate, or pass information between, two pieces of software. GitHub has an API that you can read more about [here](https://developer.github.com/v3/), which is useful for developing software that needs to reference information embedded in GitHub repositories.
+
+## GitHub and Information Security
+With open, agile, collaborative research rapidly becoming the preferred model for scientific inquiry, many researchers at Fred Hutch and elsewhere are adopting Git and GitHub as an essential part of their analytic and publishing workflow. Combining code, data, documentation, and visualizations together in a GitHub repository along with an interactive notebook application provides an enhanced platform for reproducible research and dynamic, computational narratives. However, the same flexibility, ease-of-use, and openness that are major benefits in research collaboration can introduce serious risks when Git is used by design or unintentionally to maintain sensitive data such as protected health information (PHI) or data storage credentials. Git does not provide the same granular access controls, audit logging capabilities, and data encryption available with a database or filesystem certified for HIPAA compliance. A user with read access to a Git repository can readily clone the entire repository, including all current and previous versions of datasets and freely distribute the data through another repository or other communication channels with no record of such activity. While a GitHub repository containing sensitive data can be made “private,” simple misconfiguration or oversight can expose it to the public. 
+
+
+Considering both the large potential benefits and risks of using GitHub and Git, it is imporant for researchers at Fred Hutch to use these tools effectively while protecting the privacy of patients and Fred Hutch data resources. It is important to understand the types of sensitive information related to security which should never be put on GitHub.  Examples include server names, database or data storage credentials (i.e., usernames, passwords, tokens, acess keys, etc), IP address, name of networks, etc.
+
+
+Given the potential risk associated with even a private repository, however, you should carefully consider alternatives to maintaining any level of sensitive data in public or private GitHub repositories. The preferred method for ensuring privacy and security is keeping all potentially sensitive data out of GitHub repositories. Options for helping accomplish this while realizing the benefits of Git include restructuring workflows to preprocess and sanitize sensitive data in secure backend systems prior to it being posted to Git and storing secrets such as access keys and database credentials in the Vault secrets management system, accessing them when needed from Git using a secure API. For more guidance about how to structure your code or content you are putting in GitHub to ensure security, email `scicomp`.  
 
 ## Available Resources and links
-There a wide variety of resources on the web for learning to use the various forms of GitHub.  
-- Get a [GitHub username here.](https://github.com/join)
-- Join the Fred Hutch GitHub institution by sending your username to `helpdesk` and request to be added.  
+ There a wide variety of resources on the web for learning to use the various forms of GitHub.  
+ -Get a [GitHub username here.](https://github.com/join)
+- Join the Fred Hutch GitHub organization by sending your GitHub username to `helpdesk` and request to be added.  
 - Getting started with [GitHub Desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
 - How to [contribute to projects with GitHub](https://help.github.com/desktop/guides/contributing-to-projects/)
-- A good tutorial slide deck on how to use GitHub with command line can be found [here](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf).
-  - Signing up for a GitHub account - Slide 12
-  - How to be part of Fred Hutch GitHub Organization - Slide 13
-  - Creating a new GitHub Repo - Slide 14
-  - Cloning repository (repo) to local machine - Slide 19
-  - Keep your local repo up to date, in the scenario of collaboration with others or moving to a different machine. - Slide 21
-  - Make change to files locally and commit the changes - Slide 23 ~ 27
-  - Push the local committed changes to the remote GitHub repo - Slide 28
-  - Collaborations internally and externally - Slide 31 ~ 43
+
