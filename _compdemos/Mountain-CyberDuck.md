@@ -1,7 +1,7 @@
 ---
-title: Using Mountain Duck or Cyberduck for Accessing Economy Local Storage
+title: Using Mountain Duck or Cyberduck for Accessing Economy Storage
 last_modified_at: 2018-09-27
-main_author: Dirk Peterson
+main_author: Dirk Petersen
 primary_reviewers: dirkpetersen
 ---
 Access to data stored in Fred Hutch resources that are [object stores](/computing/store_objectstore/) can be achieved using clients.  As of March 2016 Center IT officially supports Mountain Duck and Cyberduck clients for this purpose. You can use these Windows or Mac clients to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing.
