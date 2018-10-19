@@ -1,6 +1,7 @@
 ---
-title: Git and GitHub
-last_modified_at: 2018-06-20
+title: Git and GitHub for Computational Research
+last_modified_at: 2018-10-19
+primary_reviewers: k8hertweck
 ---
 Version control software allows anyone using a computer to track changes made to computer files over time, which allows both referencing and reverting back to earlier work. Such software is becoming increasingly common among scientists, academics, and other researchers to manage computational work. While originally developed to support code development, version control software is useful for not just computer code, but also data, documentation, or any other files associated with a project. Moreover, version control software streamlines collaborative editing of documents, allowing changes to be easily identified and attribution of changes to be assigned to individual contributors.   
 
@@ -15,6 +16,7 @@ Git is the name of a free, open source version control software commonly used am
 - **fork:** a copy of someone else's repository in which you can make changes (and submit a request for the original repository owner to accept these changes)
 Additional terms are defined in [GitHub's Glossary](https://help.github.com/articles/github-glossary/).
 
+## Using GitHub
 There are many different ways of sharing projects collaboratively in a GitHub repository. [This GitHub Guide for using GitHub is useful for understanding the basics.](https://guides.github.com/introduction/flow/)
 ![]({{ site.baseurl }}/compdemos/assets/comp_github-5c26f4cd.png)
 
@@ -51,52 +53,18 @@ GitHub Organizations are accounts shared by individuals that assist in coordinat
 An API (Application Programming Interface) is a tool that allows you to communicate, or pass information between, two pieces of software. GitHub has an API that you can read more about [here](https://developer.github.com/v3/), which is useful for developing software that needs to reference information embedded in GitHub repositories.
 
 ## GitHub and Information Security
-With open, agile, collaborative research rapidly becoming the preferred model for scientific inquiry, many researchers at Fred Hutch and elsewhere are adopting Git and GitHub as an essential part of their analytic and publishing workflow. Combining code, data, documentation, and visualizations together in a GitHub repository along with an interactive notebook application provides an enhanced platform for reproducible research and dynamic, computational narratives. However, the same flexibility, ease-of-use, and openness that are major benefits in research collaboration can introduce serious risks when Git is used by design or unintentionally to maintain sensitive data such as protected health information (PHI) or database credentials. Git does not provide the same granular access controls, audit logging capabilities, and data encryption available with a database or filesystem certified for HIPAA compliance. A user with read access to a Git repository can readily clone the entire repository, including all current and previous versions of datasets and freely distribute the data through another repository or other communication channels with no record of such activity. While a GitHub repository containing sensitive data can be made “private,” simple misconfiguration or oversight can expose it to the public. 
+With open, agile, collaborative research rapidly becoming the preferred model for scientific inquiry, many researchers at Fred Hutch and elsewhere are adopting Git and GitHub as an essential part of their analytic and publishing workflow. Combining code, data, documentation, and visualizations together in a GitHub repository along with an interactive notebook application provides an enhanced platform for reproducible research and dynamic, computational narratives. However, the same flexibility, ease-of-use, and openness that are major benefits in research collaboration can introduce serious risks when Git is used by design or unintentionally to maintain sensitive data such as protected health information (PHI) or data storage credentials. Git does not provide the same granular access controls, audit logging capabilities, and data encryption available with a database or filesystem certified for HIPAA compliance. A user with read access to a Git repository can readily clone the entire repository, including all current and previous versions of datasets and freely distribute the data through another repository or other communication channels with no record of such activity. While a GitHub repository containing sensitive data can be made “private,” simple misconfiguration or oversight can expose it to the public. 
 
-The widespread popularity of GitHub and users’ tendency to mistakenly expose sensitive information have made it a prominent target for hackers. Large scale GitHub security incidents have included the theft of more than 50 million users’ personal data in one breach, the exposure of access keys for cloud data resources through more than 10,000 GitHub accounts, and use of stolen access keys within five minutes of their being inadvertently exposed to enable unauthorized administrative access of cloud computing accounts and generating thousands of dollars of charges while creating computing resources in cryptocurrency mining.   Moreover, unlike services available through cloud providers such as AWS and Azure, the access controls for private repositories available with GitHub have not been certified under compliance frameworks such as HIPAA and FISMA for the protection of sensitive data.
 
- Guidelines
+Considering both the large potential benefits and risks of using GitHub and Git, it is imporant for researchers at Fred Hutch to use these tools effectively while protecting the privacy of patients and Fred Hutch data resources. It is important to understand the types of sensitive information related to security which should never be put on GitHub.  Examples include server names, database or data storage credentials (i.e., usernames, passwords, tokens, acess keys, etc), IP address, name of networks, etc.
 
-Considering both the large potential benefits and risks of using GitHub and Git, how can researchers at Fred Hutch use these tools effectively while protecting the privacy of patients and the reputation of the Center:  Following are key recommended practices.  
 
-1.	De-Identify Protected Health Information or Individually Identified Health Information using Safe Harbor.
+Given the potential risk associated with even a private repository, however, you should carefully consider alternatives to maintaining any level of sensitive data in public or private GitHub repositories. The preferred method for ensuring privacy and security is keeping all potentially sensitive data out of GitHub repositories. Options for helping accomplish this while realizing the benefits of Git include restructuring workflows to preprocess and sanitize sensitive data in secure backend systems prior to it being posted to Git and storing secrets such as access keys and database credentials in the Vault secrets management system, accessing them when needed from Git using a secure API. For more guidance about how to structure your code or content you are putting in GitHub to ensure security, email `scicomp`.  
 
-2.	Recognize sensitive information outside of PHI, IIHI or PII
-
-Understand the types of sensitive information related to security which should never be put on GitHub.  Examples include server names, credentials, IP address, name of networks, etc.
-	
-3.	Classify Information according to FH Information Handling Classification Standard and Secure Information by Level
-4.	 (https://centernet.fredhutch.org/cn/u/center-it/iso/iso-policy---standards-program.html) Secure Information by Level
-
-5.	Recommended Protective Measures
-
-The minimum recommendations to protect to level 2 and level 3 data are listed below:
-
-•	Data maintained in Git is maintaining such data in a private GitHub repository.
-•	Multi-factor authentication for all accounts that access the private repository should be enabled
-•	Enable policies for strong passwords
-•	Frequent rotation of GitHub SSH keys
-•	Protection of local clones of the repository
-•	Immediate removal of privileges for members who leave the team
-
-6.	Prefer Potential Alternatives Currently Available
-
-Given the potential risk associated with even a private repository identified above, however, you should carefully consider alternatives to maintaining any level of sensitive data in public or private GitHub repositories. As FH moves toward the Azure environment, Visual Studio Team Services  (Azure DevOps) with GitHub integration can work to achieve versioning services, workflow and collaboration while preserving access management and greater data security.
-
-The preferred method for ensuring privacy and security is keeping all potentially sensitive data off external or internal Git repositories. Options for helping accomplish this while realizing the benefits of Git include restructuring workflows to preprocess and sanitize sensitive data in secure backend systems prior to it being posted to Git and storing secrets such as access keys and database credentials in the Vault secrets management system, accessing them when needed from Git using a secure API. 
-
-## vailable Resources and links
+## Available Resources and links
  There a wide variety of resources on the web for learning to use the various forms of GitHub.  
  -Get a [GitHub username here.](https://github.com/join)
-- Join the Fred Hutch GitHub organization by sending your username to `helpdesk` and request to be added.  
+- Join the Fred Hutch GitHub organization by sending your GitHub username to `helpdesk` and request to be added.  
 - Getting started with [GitHub Desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/)
 - How to [contribute to projects with GitHub](https://help.github.com/desktop/guides/contributing-to-projects/)
-- A good tutorial slide deck on how to use GitHub with command line can be found [here](https://s3-us-west-2.amazonaws.com/fredhutch-docs/Introducing-Git-and-GitHub.pdf).
-  - Signing up for a GitHub account - Slide 12
-  - How to be part of Fred Hutch GitHub Organization - Slide 13
-  - Creating a new GitHub Repo - Slide 14
-  - Cloning repository (repo) to local machine - Slide 19
-  - Keep your local repo up to date, in the scenario of collaboration with others or moving to a different machine. - Slide 21
-  - Make change to files locally and commit the changes - Slide 23 ~ 27
-  - Push the local committed changes to the remote GitHub repo - Slide 28
-  - Collaborations internally and externally - Slide 31 ~ 43
+
