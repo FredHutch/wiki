@@ -13,7 +13,7 @@ This section will more specifically provide information related to this process 
 For funding agencies like the NIH, the increased use of genomic data
 sets from human specimens outside of the context of the definition of
 human subjects research has resulted in some changes when submitting
-proposals for funding. NIH provides the Infopath Questionnaire, [found here.](https://humansubjects.nih.gov/questionnaire) which
+proposals for funding. NIH provides the Infopath Questionnaire, [found here.](https://humansubjects.nih.gov/) which
 can help determine if the study would need to be categorized as Human
 Subjects Research, or if it is exempt in some way. For Fred Hutch studies
 that propose to generate or use data generated from human specimens for
