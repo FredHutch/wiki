@@ -8,7 +8,7 @@ important issue to consider is whether the proposed research qualifies
 as human subjects research as defined by the Department of Health and
 Human Services Office for Human Research Protections ([OHRP](https://www.hhs.gov/ohrp/)) and/or the National Institutes of Health.
 Take a look at the [OHRP decision charts](https://www.hhs.gov/ohrp/regulations-and-policy/decision-charts/index.html)
-and/or the [NIH questionnaire to find out what aspects of human subjects research may apply.](https://humansubjects.nih.gov/questionnaire)
+and/or the [NIH questionnaire to find out what aspects of human subjects research may apply.](https://humansubjects.nih.gov/)
 
 ## IRB Approval in Human Subjects Research
 
