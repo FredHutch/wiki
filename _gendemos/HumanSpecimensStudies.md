@@ -4,12 +4,51 @@ last_modified_at: 2018-09-27
 main_author:
 primary_reviewers: vortexing
 ---
-## Making genomic data and patient identifiers
-Please provide a Fred Hutch based investigator guidance for the necessary steps involved in starting a new study that would involve prospectively banking human specimens from which they intend to generate genomic data sets that would be subject to the GDS policy but whose research staff WOULD have access to patient identifiers. Step through anything related to unique situations for funding applications (NIH focused?), Just in Time Provisional Institutional Certification, New IRB application, Data storage and sharing, GDS Certificate, public repository deposition, post-study data archiving.
+Investigators with questions about whether the NIH GDS Policy applies to their current or proposed research should consult the relevant NIH Program Official or Project Officer or the IC’s Genomic Program Administrator (GPA).https://osp.od.nih.gov/scientific-sharing/policy-oversight/
 
-## Making genomic data without knowing patient identifiers
-Please provide a Fred Hutch based investigator guidance for the necessary steps involved in starting a new study using human de-identified specimens from which they intend to generate genomic data sets that would be subject to the GDS policy. Step through anything related to unique situations for funding applications (NIH focused?), Just in Time Provisional Institutional Certification, New IRB application, Data storage and sharing, GDS Certificate, public repository deposition, post-study data archiving.
+## Prospective Study with Identified Data
+A Fred Hutch based investigator is starting a new study that would involve prospectively banking human specimens from which they intend to generate genomic data sets that would be subject to the GDS policy, but whose research staff would have access to patient identifiers.  This is a single site study.
+
+•	Ensure a GDS acceptable Data Sharing Plan (DSP) is created.  The DSP will be submitted to NIH during the initial application submittal using existing FH resources.
+•	Select which NIH trusted repository will receive data, if the submitted data will be aggregate or individual level.
+•	Complete the FH GDS Institutional Certificate Information Sheet and the Institutional Certificate. Certificate should be signed by investigator before submitting to the IRO.  
+•	If this data will be fully identifiable, it will likely be subject to Human Subjects Protection requirements.
+•	A proposal is submitted to the IRO along with the FH GDS Institutional Certificate Information Sheet, an Intuitional Certificate, a GDS compliant consent, a FH Genomic Data Supplement form and the DSP.  If you reference the DSP within the proposal, make sure all references are accurate to what is in the DSP. 
+•	The use of Hutch Grants for completing an application for the NIH remains the same. 
+•	If approved: Any unique random ID per person and all other coding keys to remain at the institution when data is submitted. 
+•	Data remaining at FH stored according to FH Information Classification Handling Standard and other FH Information Security standards.
 
 
-## Using de-identified Human Genomic Datasets
-Please provide a Fred Hutch based investigator guidance for the necessary steps involved in starting a new study using human de-identified genomic datasets. Step through anything related to unique situations for funding applications (NIH focused?), Just in Time Provisional Institutional Certification, New IRB application, Data storage and sharing, GDS Certificate, public repository deposition, post-study data archiving.
+## Specimen/Data Already Collected at Fred Hutch and Data is De-Identified
+A Fred Hutch investigator is starting a new study using human specimens already banked and collected from which they intend to generate de-identified genomic data sets that would be subject to the GDS policy. This is a single site study
+
+1.	Ensure a GDS acceptable Data Sharing Plan (DSP) is created.  The DSP will be submitted to NIH during the initial application submittal using existing FH resources.
+2.	Select which NIH trusted repository will receive data and if the submitted data will be aggregate or individual level.
+3.	Complete the FH GDS Institutional Certificate Information Sheet and the Institutional Certificate. Certificate should be signed by investigator before submitting to the IRO. 
+4.	Determine if the specimens or samples were collected before or after January 25, 2015. 
+•	Samples collected before January 25, 2015 will have a different Institutional Certificate than those collected after January 15, 2015.
+•	For those samples generated after January 25, 2015, inquire as to their foundational (collection) consent. This consent should be included in the documents submitted to the IRO/IRB.  No consent is needed for data collected before January 25, 2015.
+5.	If the data is de-identified such that there is no key (code) or the key is not accessible to the research team, the data may or may not require Human Subjects Protection status.  Complete the FH human subjects determination form.
+6.	A proposal is submitted to the IRO for review along with the FH GDS Institutional Certificate Information Sheet, an Intuitional Certificate, a GDS compliant consent, a FH Genomic Data Supplement form and the DSP.  If you reference the DSP within the proposal, make sure all references are accurate to what is in the DSP. 
+7.	The use of Hutch Grants for completing an application for the NIH remains the same. 
+8.	If approved: Any unique random ID per person and all other coding keys to remain at the institution when data is submitted.
+9.	Data remaining at FH stored according to FH Information Classification Handling Standard and other FH Information Security standards.
+
+
+## Specimen/Data Already Collected by Someone Outside of FH and Data is De-Identified
+A Fred Hutch investigator is starting a new study using human de-identified genomic datasets that were generated by someone else either inside or outside of FH, i. e., the research does not generate the data, but uses data already generated. This is a single site study.
+
+1.	Is the data sourced from dbGaP?
+a.	Applicants who wish to use controlled-access human genomic data from an NIH-designated/trusted data repository (e.g., dbGaP) as a secondary user to achieve the specific aim(s) of the research proposed in the grant application should briefly address their plans for requesting access to the data and state their intention to abide by the NIH Genomic Data User Code of Conduct in the Research Plan of the application.  
+b.	Researchers should be aware that access to controlled data is dependent on an approval process that involves the relevant NIH Data Access Committee(s). Researchers may wish to secure access to the data prior to submitting their application for NIH support. 
+2.	If data not sourced from dbGaP, was the data generated at FH or outside of FH? 
+a.	 If outside of FH, is there a data use agreement (DUA) in place? What are the security requirements if any of the DUA? Are there data use limitations on the data?    Confirm consent has appropriate language for any specimen or cell information collected after January 25, 2015. 
+b.	If the data is sourced within FH, see User Scenario 2.
+3.	Ensure a GDS acceptable Data Sharing Plan (DSP) is created.  The DSP will be submitted to NIH during the initial application submittal using existing FH resources.
+4.	If the data is de-identified such that there is no key (code) or the key is not accessible to the research team, the data may or may not require Human Subjects Protection status.  Complete the FH human subjects determination form.
+5.	A proposal is submitted to the IRO for review along with the FH GDS Institutional Certificate Information Sheet, an Intuitional Certificate, a GDS compliant consent, a FH Genomic Data Supplement form and the DSP.  If you reference the DSP within the proposal, make sure all references are accurate to what is in the DSP. 
+6.	 NOTE:  dbGaP is part of the FH IRO pre-approved list of data sources; such sources are presumptively considered to be research not involving human subjects. Confirm whether FH IRO requires a consent, as data with only proper consents have already been submitted to dbGaP.
+7.	If approved: Any unique random ID per person and all other coding keys to remain at the institution when data is submitted.
+8.	Data remaining at FH stored according to FH Information Classification Handling Standard and other FH Information Security standards.
+
+
