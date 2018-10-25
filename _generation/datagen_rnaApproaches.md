@@ -1,17 +1,18 @@
 ---
 title: RNA Analysis Approaches
-last_modified_at: 2018-07-19
+last_modified_at: 2018-10-25
+primary_reviewers:
 ---
 
-This page contains an outline of the platforms and approaches used to produce various types of large scale data sets from RNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource and example cost estimates and read depth, etc will vary study to study. To answer any study-specific questions, please contact the staff at the [Genomics Core](https://sharedresources.fredhutch.org/core-facilities/genomics).  Be prepared to describe study details including sample types, numbers, goal datasets, and proposed platforms of interest.
+This page contains an outline of the platforms and approaches used to produce various types of large scale data sets from RNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource and example cost estimates and read depth, etc will vary study to study. To answer any study-specific questions, please contact the staff at the [Genomics Shared Resource](https://sharedresources.fredhutch.org/core-facilities/genomics).  Be prepared to describe study details including sample types, numbers, goal datasets, and proposed platforms of interest.
 
 ## Quantitative Approaches: Gene Expression
 Often, researchers want to answer what seems to be a very simple question--what is different between the treatment groups?  In an RNA context, this approach is called differential gene expression (DGE). DGE quantitatively measures differences in the levels of gene expression between two or more treatments or groups.
 
 ### RNA Sequencing
-RNA sequencing is a common approach to assess DGE.  Simply stated, this involves comparing the counts for sequencing reads that come from each transcript. In practice, however, this involves a complex combination of RNA extraction, amplification, sequencing to get the raw sequence data, followed by a series of bioinformatic analysis steps to map those sequence data to regions of the transcript, then comparing the counts in each transcript region between treatment groups .
+RNA sequencing is a common approach to assess DGE.  Simply stated, this involves comparing the counts for sequencing reads that come from each transcript. In practice, however, this involves a complex combination of RNA extraction, amplification, sequencing to get the raw sequence data, followed by a series of bioinformatic analysis steps to map those sequence data to regions of the transcript, then comparing the counts in each transcript region between treatment groups.
 
-An important point to remember: the data output of RNA sequencing is a set of .fastq files, which are files that contain the sequence and read quality information for sequencing reads from each sample.  In order to get fully processed DGE results, there is a significant amount of bioinformatic support needed, as well as statistical support to assess gene expression differences among groups.
+An important point to remember: the data output of RNA sequencing is a set of `fastq` files, which are files that contain the sequence and read quality information for sequencing reads from each sample.  In order to get fully processed DGE results, there is a significant amount of bioinformatic support needed, as well as statistical support to assess gene expression differences among groups.
 
 ### Nanostring Gene Expression Panels
 DGE is not exclusive to sequencing techniques.  Nanostring nCounter systems utilize nucleic acid probes, attached to fluorescent barcodes. The probes hybridize to single RNA molecules in each sample, then the fluorescent barcodes are counted to quantify expression of each target.
@@ -23,12 +24,10 @@ The analysis of the resulting count data is processed via Nanostring's proprieta
 
 
 ### Available Resources
-  - Illumina has various options for RNA sequencing workflows.
-    - Link:  [Illumina Differential Gene Expression Approaches ](https://www.illumina.com/techniques/popular-applications/gene-expression-transcriptome-analysis.html)
+  - [Illumina Differential Gene Expression Approaches](https://www.illumina.com/techniques/popular-applications/gene-expression-transcriptome-analysis.html)
 
 
-  - Nanostring has a selection of curated gene expression panels, as well as custom panels.
-    - Link:  [Nanostring Gene Expression Panels](https://www.nanostring.com/products/gene-expression-panels)
+  - Nanostring has a selection of curated gene expression panels, as well as custom panels. [Nanostring Gene Expression Panels](https://www.nanostring.com/products/gene-expression-panels)
 
 
 

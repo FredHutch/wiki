@@ -1,6 +1,6 @@
 ---
 title: Data Generation Overview
-last_modified_at: 2018-08-25
+last_modified_at: 2018-10-25
 ---
 
 "The data may not contain the answer. The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data." - John Tukey  
@@ -29,9 +29,9 @@ The policies and processes that relate to the human subject components of any la
 For a each study, the particular covariates associated with large scale data sets typically come from clinical or laboratory data. When these data are originating from human samples, certain protections need to be in place to ensure patient privacy.  There are resources at the Fred Hutch which can help researchers effectively manage these data so that they can be associated with downstream molecular data sets more consistently and securely.  
 
 
-* [Clinical Covariates]({{ site.baseurl }}/generation/clsp_clinicalCov/)
+* [Clinical Data]({{ site.baseurl }}/generation/clsp_clinicalCov/)
 * [Specimen Banking]({{ site.baseurl }}/generation/clsp_specimenBanking/)
-* [Experimental Covariates]({{ site.baseurl }}/generation/clsp_labCov/)
+* [Experimental Data]({{ site.baseurl }}/generation/clsp_labCov/)
 
 ## [Large-Scale Data Generation]({{ site.baseurl }}/generation/datagen_overview/)
 The decisions required when generating large scale data sets themselves are informed by an understanding of the specimen cohort, any limitations imposed by the consent of the patients from which those specimens were obtained, and the specific hypothesis the researcher is intending to address.  This section includes important considerations for nucleic acid isolation and provides guidance for using the genomic platforms available at the Fred Hutch Genomics Shared Resource.  Data types generated using other large scale molecular technologies such as proteomics or metabolomics are not discussed.  

@@ -1,7 +1,8 @@
 ---
 title: Proposal Preparation and the Funding Process
-last_modified_at: 2018-09-06
+last_modified_at: 2018-10-25
 main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
+primary_reviewers: sgglick, JasonMajor1
 ---
 >An excellent starting place for more information on starting the funding application process in general is the [Fred Hutch Office of Sponsored Research site](https://centernet.fredhutch.org/cn/u/osr.html) and specifically the section on [sponsored projects (meaning externally-funded research).](https://centernet.fredhutch.org/cn/u/osr/sponsored-projects.html)  
 

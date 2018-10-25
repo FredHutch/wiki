@@ -61,11 +61,11 @@ generation:
     children:
       - title: "Overview"
         url: /generation/clsp_overview/
-      - title: "Clinical Covariates"
+      - title: "Clinical Data"
         url: /generation/clsp_clinicalCov/
       - title: "Specimen Banking"
         url: /generation/clsp_specimenBanking/
-      - title: "Experimental Covariates"
+      - title: "Experimental Data"
         url: /generation/clsp_labCov/
 
 

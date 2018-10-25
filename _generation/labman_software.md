@@ -1,11 +1,12 @@
 ---
 title: Software for Research and Laboratory Management
-last_modified_at: 2018-07-16
+last_modified_at: 2018-10-25
+primary_reviewers:
 ---
 There are a number of software tools available that lend themselves well to the management of research labs and here we focus on those that have a free tier, are open source, or are supported by the Fred Hutch itself.  
 
 ## Reagent and Laboratory Organization
-[Quartzy](http://www.quartzy.com) is a free, web-based lab management software. Users can organize lab member order requests, track order receipts, and organize lab inventory.  Quatrzy's ordering system integrates with the Hutch Online Marketplace to streamline ordering and subsequent tracking of recieving in the lab, as well as lab storage and lot tracking. This software facilitates four main lab functions:
+[Quartzy](http://www.quartzy.com) is a free, web-based lab management software. Users can organize lab member order requests, track order receipts, and organize lab inventory.  Quartzy's ordering system integrates with the Hutch Online Marketplace to streamline ordering and subsequent tracking of receiving in the lab, as well as lab storage and lot tracking. This software facilitates four main lab functions:
 
 1. Submit supply requests -- Lab members can browse Quartzy's catalog of life science products and request supplies from their lab manager
 2. Process supply requests -- Lab managers/Supply managers can receive and incoming supply requests for approval.

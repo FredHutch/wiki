@@ -1,9 +1,10 @@
 ---
 title: Genomics Platforms and Data Types
-last_modified_at: 2018-07-19
+last_modified_at: 2018-10-25
+primary_reviewers: 
 ---
 
-This guide highlights some of the genomics platforms available through the Genomics Core at Fred Hutch.  This guide is intended to give general context to each platform.
+This guide highlights some of the genomics platforms available through the Genomics Shared Resource at Fred Hutch.  This guide is intended to give general context to each platform.  Access to many of the submission processes involved in using the Genomics Shared Resource is via [Hutchbase.](https://hutchbase.fhcrc.org/base2/)
 
 > Note:  As technologies and reagents change, the relative costs of performing these experiments do as well.  It is important to discuss your particular experiment and needs with the Genomics and Bioinformatics Shared Resource during the planning stages of your project.  You can contact them by emailing `genomics`.  
 
@@ -15,20 +16,20 @@ The Illumina sequencers are high read number, short read sequencers that provide
 
 
 
-Sequencer | Mode | Read Lengths | Approx. Reads per Lane | Lanes per Run 
---- | --- | --- | --- | --- 
+Sequencer | Mode | Read Lengths | Approx. Reads per Lane | Lanes per Run
+--- | --- | --- | --- | ---
 NovaSeq 6000 | Depends on Chip Type | 50-150, depending on Chip Type | Variable | Variable
-HiSeq 2500 | High Output | 50, 100, 125 | 250M | 8\* 
-HiSeq 2500 | Rapid Run | 50, 100, 150, 200, 250 | 150M | 2 
-MiSeq | Version 2 Reagents | up to 250 | 15M | 1 
-MiSeq | Version 3 Reagents | up to 300 | 25M | 1 
+HiSeq 2500 | High Output | 50, 100, 125 | 250M | 8\*
+HiSeq 2500 | Rapid Run | 50, 100, 150, 200, 250 | 150M | 2
+MiSeq | Version 2 Reagents | up to 250 | 15M | 1
+MiSeq | Version 3 Reagents | up to 300 | 25M | 1
 
 \* High Output mode requires all 8 lanes to be run simultaneously, no partial runs.
 
 
 When deciding how much sequencing is needed for a set of libraries to provide sufficient read depth (number of reads per genomic location in the genome covered in the library), issues such as the intended data type, sample type and quality, library preparation type, number of total samples, and the applicability of multiplexing approaches need to be considered.  Consulting with the Genomics Core can help provide more clarity for individual projects.  
 
-[More from Illumina about Illumina Sequencing cna be found here.](https://www.illumina.com/techniques/sequencing.html)
+[More from Illumina about Illumina Sequencing can be found here.](https://www.illumina.com/techniques/sequencing.html)
 
 ### Pacific Biosciences (PacBio) Long Range Sequencer
 The PacBio SMRT sequencer works differently than the Illumina sequencers in that the read length is not specified by the platform, but is limited by the library itself, with an associated reduction in confidence of the sequence as reads get longer and longer.  However, instead of being limited to sequencing only fragments of DNA, PacBio sequencing can provide long stretches of sequencing data that occur in the same fragment.  This allow for analyses such as full length isoform discovery, de novo small genome sequencing, assessing structural variants/translocations, and allele phasing.  On average the PacBio sequencer aims to provide up to 15kb of read length.  
@@ -43,23 +44,20 @@ The PacBio SMRT sequencer works differently than the Illumina sequencers in that
     - For large insert library prep up to 20kb
 - Multiple multiplexing schemas (in-line or ligated) - discuss details with Genomics Shared Resource to plan the approach (email `genomics`).  
 
-[PacBio SMRT Sequencing](http://www.pacb.com/smrt-science/smrt-sequencing/)
+More about [PacBio SMRT Sequencing.](http://www.pacb.com/smrt-science/smrt-sequencing/)
 
 
 ## Array Based Platforms
  Microarrays are a sometimes less costly option that can in some cases be substituted for a wide variety of sequencing types; for example, there are SNP, gene expression, and whole exome arrays. While microarrays are not useful for discovery of novel targets, for well-established targets, assay chemistries and data analysis pipelines are well-vetted.  A discussion with the Genomics Core can be useful in helping you decide the best technologies for your work.
 
 ### Single Nucleotide Polymorphism (SNP) Arrays or Methylation Arrays
-The Genomics lab is equipped to run all Illumina genotyping and methylation beadchips.  Beadchip kits are sold in a variety of sample size kits and it is important to plan total sample sizes as well as randomizing batches to minimize batch-specific bias. Beadchip kits need to be purchased by the investigator and should be drop-shipped to the Genomics lab.  The Genomics lab then charges a fee for processing which covers all non-Illumina supplies, reagents, and labor.  Investigators should plan to provide genomic DNA for genotyping arrays, which has been quantified by a dsDNA specific method such as picogreen.  For methylation arrays, investigators may submit either genomic DNA or bisulfite converted DNA.  Again, the starting DNA should be quantified by picogreen.  
+The Genomics lab is equipped to run all Illumina genotyping and methylation beadchips ([Illumina Microarrays](https://www.illumina.com/techniques/microarrays.html)).  Beadchip kits are sold in a variety of sample size kits and it is important to plan total sample sizes as well as randomizing batches to minimize batch-specific bias. Beadchip kits need to be purchased by the investigator and should be drop-shipped to the Genomics lab.  The Genomics lab then charges a fee for processing which covers all non-Illumina supplies, reagents, and labor.  Investigators should plan to provide genomic DNA for genotyping arrays, which has been quantified by a dsDNA specific method such as picogreen.  For methylation arrays, investigators may submit either genomic DNA or bisulfite converted DNA.  Again, the starting DNA should be quantified by picogreen.  
 
-Genotyping BeadChip kits vary in price ($50/sample - $600/sample), depending on content.  The Genomics Shared Resource can process samples to run for a service fee, regardless of the beadchip kit wiht an additional fee for DNA samples that require bisulfite conversion for methylation arrays.
+Genotyping BeadChip kits vary in price ($50/sample - $600/sample), depending on content.  The Genomics Shared Resource can process samples to run for a service fee, regardless of the beadchip kit with an additional fee for DNA samples that require bisulfite conversion for methylation arrays.
 
-[Illumina Microarrays](https://www.illumina.com/techniques/microarrays.html)
 
 ### Nanostring Hybridization Arrays for Gene Expression
-Reagents for Nanostring arrays can be purchased from Nanostring and total RNA ready to be run can be brought to the Genomics Shared Resource for processing.  
-
-[Nanostring](https://www.nanostring.com)
+Reagents for [Nanostring](https://www.nanostring.com) arrays can be purchased from Nanostring and total RNA ready to be run can be brought to the Genomics Shared Resource for processing.  
 
 
 ## Library Preparation Reagents and Methods
@@ -74,8 +72,8 @@ The four main steps in preparing RNA or DNA for NGS analysis are:
 4. quantitating the final library product for sequencing
 
 ### 10x Genomics Single Cell Library Preparation System
-To obtain single cell gene expression data from RNA-seq, the Genomics lab uses the 10x Genomics Single Cell Expression platform.  Starting with a cell suspension, this process partitions cells into droplets for cDNA library preparation.  After library prep, the droplets are pooled, then sequenced on an Illumina sequencer. Unique molecular identifiers used in the library prep allow the sequencing results to be computationally traced back to individual cells.
-[10X Genomics](https://www.10xgenomics.com)
+To obtain single cell gene expression data from RNA-seq, the Genomics lab uses the [10X Genomics](https://www.10xgenomics.com) Single Cell Expression platform.  Starting with a cell suspension, this process partitions cells into droplets for cDNA library preparation.  After library prep, the droplets are pooled, then sequenced on an Illumina sequencer. Unique molecular identifiers used in the library prep allow the sequencing results to be computationally traced back to individual cells.
+
 
 ### Overview of the Sequencing Process
 1. The adapter-ligated DNA library is loaded onto a flowcell.
@@ -87,6 +85,7 @@ To obtain single cell gene expression data from RNA-seq, the Genomics lab uses t
 ### Available Resources
  - [The Hutch Genomics Shared Resource:](https://sharedresources.fredhutch.org/core-facilities/genomics)
 The genomics core is VERY helpful if you need guidance about reagent and platform choice for your samples.  Email `genomics` to discuss your particular project.  
+- Submission of some types of samples for services to the Hutch Genomics Shared Resource is via [Hutchbase.](https://hutchbase.fhcrc.org/base2/)
 - Genohub has a compendium of library prep kits, organized by NGS application type [here](https://genohub.com/ngs-library-preparation-kit-guide/).
 - Illumina has a few interactive methods guides to help you find the most appropriate [library prep reagents](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html) and [sequencing methods](https://www.illumina.com/science/sequencing-method-explorer.html) to use in your experiments.
 - A helpful reference in considering library prep methods is [Ordoukhanian's 2014 paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351865/).

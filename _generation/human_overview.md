@@ -1,6 +1,6 @@
 ---
 title: Overview of IRB and Human Subjects
-last_modified_at: 2018-09-06
+last_modified_at: 2018-10-25
 ---
 
 This section contains a variety of types of information about relevant
