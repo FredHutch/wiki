@@ -1,6 +1,6 @@
 ---
 title: Overview of Clinical and Experimental Data
-last_modified_at: 2018-1-=25
+last_modified_at: 2018-1-25
 ---
 For a each study, the particular covariates associated with large scale data sets typically come from clinical or laboratory data. When these data are originating from human samples, certain protections need to be in place to ensure patient privacy.  There are resources at the Fred Hutch which can help researchers effectively manage these data so that they can be associated with downstream molecular data sets more consistently and securely.  
 
