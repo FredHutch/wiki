@@ -1,10 +1,8 @@
 ---
 title: Data Storage in Object Storage Systems
-last_modified_at: 2018-09-06
+last_modified_at: 2018-10-18
+primary_reviewers: dirkpetersen, dtenenba
 ---
-
->NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
-
 Object Storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an Object Storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud Computing depends very much on Object Storage systems such as Amazon's AWS S3 or Google Cloud Storage.
 
 
@@ -27,7 +25,7 @@ Given these benefits it is expected that Object Storage systems will become more
 ## Accessing Economy File
 You can access _Economy Local_ or _Economy Cloud_ resources with [command line tools](/compdemos/EconomyCommand-API/) such as `swc`, `swift`, `aws s3` or `rclone` or libraries such as _swiftclient_ or _boto3_ for _Python_ or _aws.s3_ for R.  As of March 2016, Center IT officially supports the use of [Mountain Duck and Cyberduck desktop clients](/compdemos/Mountain-CyberDuck/) on Windows or Mac to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing. It is also possible to use [Synology to backup data to _Economy Local_.](/compdemos/synology/)
 
-## Economy Local (Swift)
+### Economy Local (Swift)
 
 _Economy Local_ is an object storage system based on Openstack Swift.  _Economy Local_ is recommended for research groups who keep large amounts of data (>100TB) on the Fred Hutch campus and frequently use the `Gizmo` cluster with local storage. We also recommend it for data that is explicitly forbidden to be stored in public cloud storage resources.
 
@@ -39,7 +37,24 @@ Economy File local is well suited to store petabytes of data at low cost and a h
  Currently each PI and each division have an account which includes 5TB of 'free' storage. Access is governed by Hutch Net ID (Active Directory) authentication and group membership in a security group called lastname_f_grp (e.g. groudine_m_grp). This is the same security group that governs access to Fast File storage.
 
 
-## Economy Cloud (S3)
-> Note:  More information about using AWS S3 here at the Fred Hutch can be found on the [Collaborative Data Storage](/computing/store_collaboration/) page.  
+### Economy Cloud (S3)
 
-_Economy Cloud_ is a public cloud based object storage service that uses Amazon S3 to offer managed and secure (encrypted) AWS S3 buckets to Hutch investigators.  While it is not accessible by non-Hutch investigators by default, you can contact `scicomp` to request access for external research groups. _Economy Cloud_ is the default choice for Object Storage for every Hutch investigator who does not have any specific requirements.
+_Economy Cloud_ is a public cloud based object storage service that uses Amazon Web Services Simple Storage Service (S3) to offer managed and secure (encrypted) AWS S3 buckets to Fred Hutch investigators.  While it is not accessible by non-Hutch investigators by default, you can contact `scicomp` to request access for external research groups. _Economy Cloud_ is the default choice for Object Storage for every Hutch investigator who does not have any specific requirements.
+
+You can use the _Economy Cloud_ S3 buckets created for each PI to collaborate with external research groups. In addition to the _Economy Cloud_ S3 buckets SciComp maintains S3 transfer buckets for external institutions and sequencing centers. These buckets may not be encrypted to increase interoperability. Please ask your PI to contact SciComp to enable the bucket of your PI for external collaboration or to enable a transfer bucket into which your sequencing center or other large scale data provider can drop large files.
+
+#### How it Works
+
+S3 (the Simple Storage Service) is an object store very much like the Economy file service, though provided by Amazon Web Services.  Storage resources in S3 are organized much like the other Fred Hutch Object and Block systems, with a "PI bucket" for each investigator at the Hutch which is analogous to the investigator directories available in the traditional file system. A specialized client (the AWS command line interface) is used to upload the data from local storage to S3 storage.  Once there, a temporary URL is created that has the necessary credentials embedded within and is then shared with those needing access.  A secure (HTTPS) connection is then used to download the data (via browser or other client like `wget` or `curl`). This URL is temporary and set with a date after which the generated URL is no longer able to access the data, though the data stored here is not removed as with the Aspera.  That temporary URL can be regenerated as necessary.
+
+#### Backup and Security
+Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
+
+#### Credentials and Permissions
+Once you have [obtained S3 credentials](/computing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  
+
+#### User Demos
+We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-Cyberduck/), [via the AWS CLI](/compdemos/aws-cli/), [via R](/compdemos/aws-R/), or [via Python](/compdemos/aws-python/).
+
+
+>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
