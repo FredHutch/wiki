@@ -30,14 +30,14 @@ Install the software on your own computer [install Jupyter](http://jupyter.org/i
 
 ### Grab a node and launch Jupyterlab 
 
-On Rhino just execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the cpus and number of days you need the node
+On Rhino just execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node
 
 - Pro: easy single command, exclusive compute power for you
 - Con: have to wait until a node is ready 
 
 ### Run Jupyterlab on Rhino
 
-Just load a Python distribution maintained by SciComp and run Jupyter lab, use the fhfreeport command as suggested in the example to get a free tcp port on Rhino that nobody else uses:
+Just load a Python distribution maintained by SciComp and run Jupyter lab. Use the `fhfreeport` command as suggested in the example to get a free TCP port on Rhino that nobody else uses:
 
 ```
     petersen@rhino1:~$ ml Python/3.6.5-foss-2016b-fh3
@@ -74,4 +74,4 @@ Also only the first method allows you to install your own python packages as roo
 
 ## Zeppelin Notebooks
 
-Zeppelin notebooks are similar to Jypyter Notebooks but they are more commonly used in Java / BigData Ecosystems. More information about Zeppelin Notebooks [can be found at the Zeppline site.](https://zeppelin.apache.org/)
+Zeppelin notebooks are similar to Jupyter Notebooks but they are more commonly used in Java / BigData Ecosystems. More information about Zeppelin Notebooks [can be found at the Zeppelin site.](https://zeppelin.apache.org/)
