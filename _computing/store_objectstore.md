@@ -54,7 +54,7 @@ Data on this service is not backed up in the traditional sense, but rather versi
 Once you have [obtained S3 credentials](/computing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  
 
 #### User Demos
-We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-Cyberduck/), [via the AWS CLI](/compdemos/aws-cli/), [via R](/compdemos/aws-R/), or [via Python](/compdemos/aws-python/).
+We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-CyberDuck/), [via the AWS CLI](/compdemos/aws-cli/), [via R](/compdemos/aws-R/), or [via Python](/compdemos/aws-python/).
 
 
 >NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
