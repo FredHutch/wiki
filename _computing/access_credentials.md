@@ -5,8 +5,6 @@ main_authors:
 primary_reviewers:
 ---
 
->Note:  This section is still under construction.  If you have any input for what you'd like to see addressed here, please email your suggestions to `sciwiki`.
-
 This section describes how to get access and credentials to computing systems on campus and in the cloud.
 
 ## HutchNet ID
@@ -16,10 +14,6 @@ A HutchNet ID is the standard login name and password you receive when you start
 If one of your collaborators requires access to the Fred Hutch network you can submit a [non-employee action form](https://centernet.fredhutch.org/cn/f/hr/lcex/non-employee-action-form.html). Non-employees is a generic administrative term for affiliates, students, contractors, etc.
 
 Please see the Service Desk site on CenterNet for more information about [HutchNet ID](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) including password rotation, etc.
-
-#### Login to Rhino
-
-A working HutchNet ID is all you need to login to `rhino` (`ssh rhino`). Some users will see an error message that their home directory was not found. This can happen if you are in a newly created department or in one that is typically not working with SciComp resources. Please contact `SciComp` to have your home directory created.
 
 ## GitHub.com
 
@@ -39,7 +33,12 @@ You can obtain [Amazon Web Services](https://aws.amazon.com/) (AWS) credentials 
 
 There are two ways to get AWS credentials. Which one to use depends on how you will use AWS, either via the command line on `rhino`/`gizmo` or via graphical programs on your local computer such as via Cyberduck or Mountainduck.
 
+
 ### Command Line (Rhino/Gizmo) Instructions
+
+A working HutchNet ID is all you need to login to `rhino` (`ssh rhino`). Some users will see an error message that their home directory was not found. This can happen if you are in a newly created department or in one that is typically not working with SciComp resources. Please contact `SciComp` to have your home directory created.
+
+
 First, `ssh` to one of the `rhino machines` (or use NoMachine):
 
 ```
