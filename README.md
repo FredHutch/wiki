@@ -1,15 +1,15 @@
 # Contributing
-This curated Wiki is just that, curated and a wiki, and as such relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the content of this Wiki spans a wide range of research realms, we need and welcome contributions from a similarly wide range of researchers whether as novice reviewers for a topic outside of their particular domain of expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large), and this section describes the various modes and types of contributions each researcher on the Fred Hutch campus can make to this effort.  
+This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers whether as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large).
 
-The strength of the Wiki lies in it's collaborative and unified approach. To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can be a part of and contribute to.  The instructions for how to get started via GitHub are below as well as additional information about the ways to communicate with and participate in the Wiki Contributor team in other ways as well.
+The strength of the Wiki lies in its collaborative and unified approach. We use a GitHub repository to which any Fred Hutch based researcher can contribute to.  
 
 ## Contributing Directly Via GitHub
 
-We manage the content of this site via a set of markdown files that contain long article-style text with an emphasis on the use of outline structures to allow related content to show up near each other but with the ability to use the automatically rendered Table of Contents to allow users to jump around the documents.  
+We manage the content of this site via a set of markdown files that contain long article-style text with an emphasis on the use of outline structures to allow related content to show up near each other but with the ability to use the automatically rendered Table of Contents to jump around the documents.  
 
-To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are), the process for each user is:
+To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are) from GitHub, follow these steps:
 
-  1. Create a branch off the master branch for your edits (do not fork the repo or create branches of branches).  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names if at all possible, as in order for your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your content.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
+  1. Create a branch off the master branch for your edits (do not fork the repo or create branches from other branches).  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names if at all possible. For your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
   2. Commit your edits to existing markdowns as you go, and update from the master branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the master and committing frequently.  
   3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
   4. When you are done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
@@ -20,6 +20,8 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
 
 >Afterwards:  Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site.
 
+## Contributing via an external text editor
+You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.
 
 ## Wiki Content Style Guide
 ### Github-Flavored Markdown
@@ -29,13 +31,13 @@ The content of this site is generated using GitHub "flavored" markdown.  A cheat
 Our goal is the generate article-style content (with the exception of the demo's pages), with the following general sections:
 
 #### Introduction
-An introductory paragraph explaining the summary of the content of the page must be included and be interpretable for a novice OR expert.  This paragraph is a good place to define commonly used words that may be domain-specific or be used with a domain-specific definition.  Also include a description or set of examples that might highlight why the reader might want to keep reading for a novice and an expert.  Good examples of this would have direct relationships to one's research project that would allow the reader to understand a bit about how the content might impact the research one does.  
+An introductory paragraph explaining the summary of the page must be included and be interpretable for a novice OR expert.  This paragraph is a good place to define commonly used words that may be domain-specific or be used with a domain-specific definition.  Also include a description or set of examples that might highlight why the reader might want to keep reading for a novice and an expert.  Good introductions can use your own research project to give the reader some context.
 
 #### Graduated Content
-The main content of the pages is up to you to structure.  Keep in mind that the purpose of these articles is mainly to provide enough background for a variety of readers to know what sorts of questions related to their particular research to pose when looking for in-person help in the course of their research.  Endeavor to use headings to separate text in such a way that an advanced user could use the TOC links to go directly to the content they want but also allow novices to browse and slowly increase the complexity of the material throughout the page.  This gradual increase in complexity of content is intended to range from basic to somewhat generalizable across researchers, so that a reader can have some basic understanding of the topic before heading directly to the particular web-based (Fred Hutch sponsored or otherwise), in-person training/office hours, or on-campus expert to discuss or learn about their project in more detail.
+The main content of the pages is up to you to structure.  Keep in mind that the wiki's articles are meant to provide enough background for a variety of readers to know what sorts of questions related to their particular research to pose when looking for in-person help.  Create headings that an advanced user could use the TOC links to go directly to the content they want while novices can also browse and slowly increase the complexity of the material throughout the page.  This gradual increase in content complexity from basic to advanced will give a reader some basic understanding of the topic before heading directly to the particular web-based (Fred Hutch sponsored or otherwise), in-person training/office hours, or on-campus expert to discuss or learn about their project in more detail.
 
 #### Available Resources
-Given that we are not intending to write comprehensive explanations of how things are done, the Available Resources sections in our Wiki are really the intended endpoint for our readers. This section should focus on linking to comprehensive and established external educational resources of interest to the topic, online training tools from established entities, additional more detailed Fred Hutch documentation provided by Fred Hutch based experts/providers, in-person training opportunities at the Fred Hutch or locally, and if possible and approved by the expert, specific highlights of on-campus experts in a given field who are willing and able to provide consulting or advice on the topic.  Please make sure all links to any other site are correct and tested!!!!
+Since we are not intending to write comprehensive explanations, the Available Resources sections in our Wiki are really the intended endpoint for our readers. This section should focus on linking to comprehensive and established external educational resources of interest to the topic, online training tools from established entities, additional more detailed Fred Hutch documentation provided by Fred Hutch based experts/providers, in-person training opportunities at the Fred Hutch or locally, and if possible and approved by the expert, specific highlights of on-campus experts in a given field who are willing and able to provide consulting or advice on the topic.  Please make sure all links to any other site are correct and tested!!!!
 
 If a content section is relatively short and cohesive, there should be one Available Resources section at the bottom of the page.  However, as content sections grow and perhaps themes evolve, consider having a specific Available Resources section after the end of a unified topic section for which the resources mentioned are thematically related.  
 
@@ -54,7 +56,7 @@ If it is a link to an external site use:
 
 
 ### In-text Images
-If you'd like to add images to your text, use Atom or VSCode both have packages/plugins that can allow for copy/paste accessibility for easy adding and organizing of images.  You can read some instructions on how to get set up with VSCode in one of the Computing Demo's.  
+If you'd like to add images to your entry, some text editors (eg. Atom or VSCode via their respective plugins) allow for copy-and-pasting of images.  You can read some instructions on how to get set up with VSCode in one of the Computing Demo's.  
 
 One edit is that in order for Jekyll to correctly render the images in a page, the following text is the example format that that call to the image needs to be in for a markdown in the **_compdemos** folder:
 ```
@@ -68,7 +70,7 @@ Both Atom and VSCode will make a directory called `assets` in the directory wher
 
 #### Youtube
 
-When linking to videos such as screencasts you typically want to show an image screenshot and clicking on that screenshot starts the video. Images of videos are stored at https://img.youtube.com/vi and they use the same video id you find in Youtube URLs, so The Gift of Time is ```https://youtu.be/rN7cmb1K2yA```. To embed, insert this into markdown:
+When linking to videos like screencasts you typically want to show an image screenshot and clicking on that screenshot starts the video. Images of videos are stored at https://img.youtube.com/vi and they use the same video id you find in Youtube URLs, so The Gift of Time is ```https://youtu.be/rN7cmb1K2yA```. To embed, insert this into markdown:
 
     [![The Gift of Time](https://img.youtube.com/vi/rN7cmb1K2yA/0.jpg)](https://youtu.be/rN7cmb1K2yA "Click to see The Gift of Time")
 
