@@ -83,8 +83,10 @@ generation:
         url: /generation/datagen_proteomics/
 
 
-  - title: "Laboratory Management Resources"
+  - title: "Other Laboratory Resources"
     children:
+      - title: "Overview"
+        url: /generation/labman_overview/
       - title: "Assay Material Prep and QC"
         url: /generation/datagen_assayPrep/
       - title: "DNA-Based Approaches"
