@@ -2,8 +2,7 @@
 title: Topic Title
 last_modified_at: 2018-06-06
 ---
-<font size="3"><a href="{{site.github.repository_url}}/blob/master/{{page.relative_path}}"><i class="fas fa-pen-square"></i><span> Edit this Page using GitHub</span></a>  <a href="{{site.github.repository_url}}/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a></font>
----
+
 Introduction to what is on this page, why you might want to read it, definitions of any words a novice might not already know, and some basic background information you'd need to understand the detailed content.  
 
 ## Subtopic 1 Title
