@@ -34,16 +34,18 @@ For a each study, the particular covariates associated with large scale data set
 * [Experimental Data]({{ site.baseurl }}/generation/clsp_labCov/)
 
 ## [Large-Scale Data Generation]({{ site.baseurl }}/generation/datagen_overview/)
-The decisions required when generating large scale data sets themselves are informed by an understanding of the specimen cohort, any limitations imposed by the consent of the patients from which those specimens were obtained, and the specific hypothesis the researcher is intending to address.  This section includes important considerations for nucleic acid isolation and provides guidance for using the genomic platforms available at the Fred Hutch Genomics Shared Resource.  Data types generated using other large scale molecular technologies such as proteomics or metabolomics are not discussed.  
+The decisions required when generating large scale data sets themselves are informed by an understanding of the specimen cohort, any limitations imposed by the consent of the patients from which those specimens were obtained, and the specific hypothesis the researcher is intending to address.  This section contains guidance about generating or handling large scale data from a variety of sources, highlights the particularites of each, and include information for researchers interacting with various Fred Hutch Shared Resources.  
 
+* [Genomics Data]({{ site.baseurl }}/generation/datagen_platformsData/)
+* [Flow Cytometry Data]({{ site.baseurl }}/generation/datagen_flowcytometry/)
+* [Imaging Data]({{ site.baseurl }}/generation/datagen_imaging/)
+* [Proteomics Data]({{ site.baseurl }}/generation/datagen_proteomics/)
+
+## [Other Laboratory Resources]({{ site.baseurl }}/generation/labman_overview/)
+Some of the challenges associated with executing large scale data projects can be mitigated by implementing good laboratory management and data systems before beginning the project.  These sections relate to the particular systems available to Fred Hutch researchers that help them manage data generated in laboratories and also specific types of guidance about good laboratory practices with large scale data generation in mind. 
 
 * [Assay Material Prep and QC]({{ site.baseurl }}/generation/datagen_assayPrep/)
 * [DNA-Based Approaches]({{ site.baseurl }}/generation/datagen_dnaApproaches/)
 * [RNA-Based Approaches]({{ site.baseurl }}/generation/datagen_dnaApproaches/)
-* [Genomics Platforms Available]({{ site.baseurl }}/generation/datagen_platformsData/)
-
-## [Laboratory and Data Management Resources]({{ site.baseurl }}/generation/labman_overview/)
-Some of the challenges associated with executing large scale data projects can be mitigated by implementing good laboratory management and data systems before beginning the project.  These sections relate to the particular systems available to Fred Hutch researchers that help them manage data generated in laboratories.  
-
 * [Support Software]({{ site.baseurl }}/generation/labman_software/)
-* [Shared Equipment and Wisdom]({{ site.baseurl }}/generation/labman_sharedequip/)
+
