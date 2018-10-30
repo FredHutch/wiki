@@ -10,7 +10,7 @@ R is a programming language and also a software development environment. It is w
 ## What is RStudio?
 RStudio is a graphical frontend to R that also improves upon a basic R installation, providing syntax-highlighting and code-completion, static or dynamic reports (via RMarkdown documents), and easing the creation of R packages, among other functionalities. It is considered an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) which functions much like a wrapper around R itself, to create a graphic user interface, and easy access to various tools and functions that enhance the user's experience of using R.  
 
-For more information about RStudio, see the [Notebooks and UIs](/_bioinformatics/compute_uis.md) page.
+For more information about RStudio, see the [Notebooks and UIs](/_bioinformatics/compute_uis/) page.
 
 
 
