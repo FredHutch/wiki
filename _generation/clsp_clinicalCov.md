@@ -28,7 +28,8 @@ If your team has questions about Caisis, the STTR REDCap template, or data abstr
 ## Data Requests
 To request data which has been abstracted into Caisis and/or data from the Hutch Data Repository, investigators or research coordinators need to fill in the data request form available [here](https://cdsweb07.fhcrc.org/redcap/surveys/?s=WM3CAN33YY). The data request form and instructions can also be found [here](https://centernet.fredhutch.org/cn/f/hdc/lcex/clinical-app-request.html). Requests for data can be made for the purposes of research, preparatory for research, operations, quality assurance/quality improvement and clinical care. For research projects, IRB documentation will be requested to verify whether the requestor should be granted access to the requested data.  Requests for identified data in support of preparatory to research activities will be reviewed for potential documentation requirements, such as a confidentiality pledge.
 
-The [Fred Hutch Ontology Browser](https://ontology.fredhutch.org) can be a useful tool in developing data requests as it will help researchers understand how, when and in what format each data element is collected. HELPFUL HINT: Before submitting a request, use the Ontology Browser to create an excel document containing fields of interest; the document can be uploaded within the data request form.
+The [Fred Hutch Ontology Browser](https://ontology.fredhutch.org) can be a useful tool in developing data requests as it will help researchers understand how, when and in what format each data element is collected. 
+>**Tip:** Before submitting a request, use the Ontology Browser to create an Excel file/csv containing your fields of interest that are already in existence then that file can be uploaded within the data request form.
 
 ### Detailed Instructions
 
