@@ -1,7 +1,8 @@
 ---
 title: Data Sharing and Public Repositories
-last_modified_at: 2018-09-06
+last_modified_at: 2018-10-25
 main_authors: Susan Glick, Jason Major, Karen Hansen
+primary_reviewers: sgglick, JasonMajor1
 ---
 
 Whether required for funding and publication or desired for its

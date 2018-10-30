@@ -61,11 +61,11 @@ generation:
     children:
       - title: "Overview"
         url: /generation/clsp_overview/
-      - title: "Clinical Covariates"
+      - title: "Clinical Data"
         url: /generation/clsp_clinicalCov/
       - title: "Specimen Banking"
         url: /generation/clsp_specimenBanking/
-      - title: "Experimental Covariates"
+      - title: "Experimental Data"
         url: /generation/clsp_labCov/
 
 
@@ -176,7 +176,7 @@ computing:
         url: /computing/store_collaboration/
 
 
-  - title: "Scientific Computing"
+  - title: "Computation"
     children:
       - title: "Overview"
         url: /computing/cluster_overview/
@@ -201,3 +201,5 @@ computing:
         url: http://fredhutch.github.io/easybuild-life-sciences/
       - title: "Updates and Announcements"
         url: /scicompannounce/
+      - title: "Demos/HOWTOs (Resource Library)"
+        url: /compdemos/

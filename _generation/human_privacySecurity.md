@@ -1,7 +1,8 @@
 ---
 title: Data Privacy and Security
-last_modified_at: 2018-09-06
+last_modified_at: 2018-10-25
 main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
+primary_reviewers: JasonMajor1, sgglick
 ---
 
 Every effort must be made to protect the privacy and confidentiality of

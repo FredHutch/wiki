@@ -1,0 +1,22 @@
+# Currently the master branch is protected. To merge into it requires an approving review.
+# In order to keep things open but converge chaos, different content may require an approving review
+# from someone in a codeowner group.
+
+# Current codeowner groups are:@FredHutch/scicomp, @FredHutch/wiki-writer-editors, @FredHutch/fh-wiki-admin
+# This CODEOWNERS doc specifies the required groups to review each domain in the wiki
+
+
+/_data/ @FredHutch/fh-wiki-admin
+/images/ @FredHutch/fh-wiki-admin
+/_includes/ @FredHutch/fh-wiki-admin
+/* @FredHutch/fh-wiki-admin
+
+/_generation/ @FredHutch/wiki-writer-editors
+/_gendemos/ @FredHutch/wiki-writer-editors
+/_bioinformatics/ @FredHutch/wiki-writer-editors
+/_infdemos/ @FredHutch/wiki-writer-editors
+
+
+/_scicompannounce/ @FredHutch/scicomp
+/_compdemos/ @FredHutch/scicomp
+/_computing/ @FredHutch/scicomp

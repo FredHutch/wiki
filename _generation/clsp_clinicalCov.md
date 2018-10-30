@@ -9,7 +9,20 @@ The ability to identify suitable biospecimens associated with a cohort--availabl
 ## Clinical Data Abstraction in Caisis
 [Caisis](http://www.caisis.org/) is an open source data management platform in use by [STTR](http://www.sttrcancer.org/) to facilitate data abstraction and programmatic resources to support translational research. Abstraction of data into Caisis is covered by the HIDRA IRB and does not require program-specific IRBs until the data is being requested out for research purposes. Caisis is centered around individual patients and helps create a story about their clinical experiences and health status at various times in the course of their treatment at UW Medicine or SCCA. Data entered into Caisis builds upon the discrete data elements available through the Hutch Data Repository. Approximately 30 fields from that data repository are fed directly into Caisis, along with a linkage to SEER data which pulls in death dates when available. Abstracted data elements are recorded in discrete fields, per data dictionaries which are set up by consensus by multiple members of each program. Wherever possible, data elements are standardized across disease programs, enabling data sharing across programs and larger research questions to be answered in the future. All data in Caisis is audited (real-time auditing is performed on at least 10% of patients entered for each program). To view fields and disease-specific data dictionaries, see the [Fred Hutch Ontology Browser](https://ontology.fredhutch.org).
 
-Currently, there are 10 programs with data abstracted into Caisis (Brain, Colorectal, Head & Neck, Lung, Liver, Lymphoma, Myeloma, Pancreas, Prostate and Sarcoma), many of which have ongoing abstraction. Two additional programs (Breast and Thyroid) will begin abstraction before the end of 2018. STTR contracts with abstractors through a company called Vasta Global at a cost of $22,000 per abstractor per year. Each group selects and prioritizes the patients for which they would like data abstracted, supplying the abstractors with an updated list on a regular basis. Please note, the contract with Vasta Global only allows them to access the UW/SCCA medical records, not those from outside institutions. The data abstracted into Caisis is available to any interested Consortium investigator, with valid IRB approval or for activities preparatory to research. Data requested from Caisis can be requested in many different formats depending on intended downstreatm use; the submission form allows you to select your preferred format.
+
+Currently, there are 10 programs with data abstracted into Caisis:
+- Brain,
+- Colorectal,
+- Head & Neck,
+- Lung,
+- Liver,
+- Lymphoma,
+- Myeloma,
+- Pancreas,
+- Prostate and Sarcoma
+
+Many of these have ongoing abstraction. Two additional programs (Breast and Thyroid) will begin abstraction before the end of 2018. STTR contracts with abstractors through a company called Vasta Global at a cost of $22,000 per abstractor per year. Each group selects and prioritizes the patients for which they would like data abstracted, supplying the abstractors with an updated list on a regular basis. Please note, the contract with Vasta Global only allows them to access the UW/SCCA medical records, not those from outside institutions. The data abstracted into Caisis is available to any interested Consortium investigator, with valid IRB approval or for activities preparatory to research.
+
 
 ## STTR REDCap Template
 In partnership with HDC, STTR has created a REDCap template which is available to any Fred Hutch investigator. The template provides an opportunity for groups who are interested in abstracting their own patient/participant data (either for a specific study group, or from an outside medical institution). The template includes the fields which are common across programmatic data dictionaries and allows each group to tailor the data collection to their own needs and timeline.
@@ -23,7 +36,7 @@ A group would like to begin data abstraction and wants the benefits of standardi
 
 If a group starts abstraction using REDCap, but would like to contribute the data back to the institutional database in Caisis at a later date: When the group has finished their data entry into REDCap for their specific project, STTR will provide auditing services to determine the accuracy of the entered data and, if it passes our threshold, we can push the data into Caisis.  
 
-If your team has questions about Caisis, the STTR REDCap template, or data abstraction, please reach out to us at [STTRCancer](mailto:sttrcancer@fredhutch.org).
+If your team has questions about Caisis, the STTR REDCap template, or data abstraction, please reach out to us by emailing `STTRCancer`.
 
 ## Data Requests
 To request data which has been abstracted into Caisis and/or data from the Hutch Data Repository, investigators or research coordinators need to fill in the data request form available [here](https://cdsweb07.fhcrc.org/redcap/surveys/?s=WM3CAN33YY). The data request form and instructions can also be found [here](https://centernet.fredhutch.org/cn/f/hdc/lcex/clinical-app-request.html). Requests for data can be made for the purposes of research, preparatory for research, operations, quality assurance/quality improvement and clinical care. For research projects, IRB documentation will be requested to verify whether the requestor should be granted access to the requested data.  Requests for identified data in support of preparatory to research activities will be reviewed for potential documentation requirements, such as a confidentiality pledge.

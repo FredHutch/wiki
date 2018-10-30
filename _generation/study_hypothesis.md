@@ -1,6 +1,7 @@
 ---
 title: Hypotheses in the Era of Large Scale Molecular Data
-last_modified_at: 2018-08-31
+last_modified_at: 2018-10-25
+primary_reviewers:
 ---
 
 
@@ -30,7 +31,7 @@ The resources below will help you understand the broad strokes before consulting
 ## Study Design and Data Types
 You could design a house without an architect, but the time and money you would spend while trying to do so are effectively wasted because there are people for whom this procedural and rote knowledge is their job.  The same is true for 'omics - there is an incredible quantity of statistics, bioinformatics and sample preparation that goes into this process. To give a study the best chance of succeeding (and being possible with the $ resources available in a suitable amount of time), identify a set of collaborators familiar with the experimental design and statistics required for a study of this kind.  
 
-There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however can be very different, and the details specific to each are best addressed prior to beginning a process involved in generating materials or data sets. 
+There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however can be very different, and the details specific to each are best addressed prior to beginning a process involved in generating materials or data sets.
 
 Finding a collaborator to help identify if any biological feature supports or rejects your hypothesis using large scale molecular data is important because of the issues of multiple testing, determining biological significance and power issues unique to large data sets where the number of measurements (p) is much larger than the sample size (n).  The statistics required when n>>p are very different than those when p>>n and finding someone who is well versed in the specific issues that arise in this context is important.  
 
@@ -45,4 +46,3 @@ The reproducibility of a bioinformatic or statistical analysis has been highligh
 
 ## Confounding and Unintended Covariates
 Issues we intend to expand upon in this section include the types of confounding covariates that can occur when using large scale molecular data, such as batch effects of assay material isolation or genomics data creation.  Randomization of samples based on intended covariates (group A vs group B relating to the specific hypothesis the study is designed to address) as well as unintended covariates (such as sex, specimen type, date of specimen acquisition, laboratory performing the preservation or isolation, or other variables that are not associated the primary hypothesis), is critical to plan for in a study especially considering the costs to generate these data as well as the use of limited human specimens.   
-

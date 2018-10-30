@@ -1,6 +1,6 @@
 ---
 title: Overview of Study Design
-last_modified_at: 2018-08-31
+last_modified_at: 2018-10-25
 ---
 In this section we will provide some guidance for researchers looking to develop a hypothesis that will have reasonable statistical power, identify the appropriate set of samples, and execute a large scale data production from those samples.  
 
@@ -9,4 +9,3 @@ You could design a house without an architect, but a large part of the time and 
 
 ## [Hypothesis Development and Big Molecular Data]({{ site.baseurl }}/generation/study_hypothesis/)
 Clearly defining the experimental hypothesis will ease the process of evaluating the available tools and techniques.  Finding a collaborator to help identify if any biological feature supports or rejects your hypothesis can be critical when using large scale molecular data.  Multiple testing, difficulty determining biological significance, and power issues are common for large data sets where the number of measurements (p) is much larger than the sample size (n). There are different groups available at the Fred Hutch who collaborate with researchers using large scale datasets and can provide valuable insight into study design, data types and hypothesis generation as well as assistance with downstream analytics.  
-
