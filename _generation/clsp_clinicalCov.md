@@ -1,11 +1,10 @@
---
+---
 title: Clinical Data Management
-last_modified_at: 2018-09-19
+last_modified_at: 2018-10-30
 main_authors: Rachel Galbraith
 primary_reviewers: Rachierizz
 ---
-
-We will describe what data management systems are available to Fred Hutch researchers, to access and interpret clinical data for a select cohort.  The ability to identify suitable biospecimens associated with a cohort--available via collaboration with other researchers or via a specimen repository--is critical to enable the generation of large-scale data sets associated with patient phenotypes.
+The ability to identify suitable biospecimens associated with a cohort--available via collaboration with other researchers or via a specimen repository--is critical to enable the generation of large-scale data sets associated with patient phenotypes.  On this page we describe what data management systems are available to Fred Hutch researchers, to access and interpret clinical data for a select cohort. 
 
 ## Clinical Data Abstraction in Caisis
 [Caisis](http://www.caisis.org/) is an open source data management platform in use by [STTR](http://www.sttrcancer.org/) to facilitate data abstraction and programmatic resources to support translational research. Abstraction of data into Caisis is covered by the HIDRA IRB and does not require program-specific IRBs until the data is being requested out for research purposes. Caisis is centered around individual patients and helps create a story about their clinical experiences and health status at various times in the course of their treatment at UW Medicine or SCCA. Data entered into Caisis builds upon the discrete data elements available through the Hutch Data Repository. Approximately 30 fields from that data repository are fed directly into Caisis, along with a linkage to SEER data which pulls in death dates when available. Abstracted data elements are recorded in discrete fields, per data dictionaries which are set up by consensus by multiple members of each program. Wherever possible, data elements are standardized across disease programs, enabling data sharing across programs and larger research questions to be answered in the future. All data in Caisis is audited (real-time auditing is performed on at least 10% of patients entered for each program). To view fields and disease-specific data dictionaries, see the [Fred Hutch Ontology Browser](https://ontology.fredhutch.org).
