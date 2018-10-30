@@ -1,7 +1,5 @@
 # Contributing
-This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers whether as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large).
-
-The strength of the Wiki lies in its collaborative and unified approach. We use a GitHub repository to which any Fred Hutch based researcher can contribute to.  
+This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff whether as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large).
 
 ## Contributing Directly Via GitHub
 
@@ -21,14 +19,14 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
 >Afterwards:  Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site.
 
 ## Contributing via an external text editor
-You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.
+You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.  Also there is a tutorial on how to use [VSCode](https://sciwiki.fredhutch.org/compdemos/vscode_markdown_howto/) which is what you will want to use if you anticipate putting in lots of screen shots or other images.  
 
 ## Wiki Content Style Guide
 ### Github-Flavored Markdown
 The content of this site is generated using GitHub "flavored" markdown.  A cheat sheet for the code required to use things like headings and table is [here.](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Our page TOC's are generated from these headings, so use ## H2 as your first level, and headings H2, H3 and H4 show up automatically in our TOC's).
 
 ### Content Structure
-Our goal is the generate article-style content (with the exception of the demo's pages), with the following general sections:
+Our goal is the generate article-style content (with the exception of the demo's/resource library pages), with the following general sections:
 
 #### Introduction
 An introductory paragraph explaining the summary of the page must be included and be interpretable for a novice OR expert.  This paragraph is a good place to define commonly used words that may be domain-specific or be used with a domain-specific definition.  Also include a description or set of examples that might highlight why the reader might want to keep reading for a novice and an expert.  Good introductions can use your own research project to give the reader some context.
@@ -42,7 +40,7 @@ Since we are not intending to write comprehensive explanations, the Available Re
 If a content section is relatively short and cohesive, there should be one Available Resources section at the bottom of the page.  However, as content sections grow and perhaps themes evolve, consider having a specific Available Resources section after the end of a unified topic section for which the resources mentioned are thematically related.  
 
 
-### Inserting Links and Placeholders
+### Inserting Links
 
 If you would like to insert a link to another page in our site, please use:  
 ```
@@ -106,6 +104,8 @@ For new contributor entries: https://github.com/FredHutch/wiki/blob/master/draft
 ####  Folders with Existing Content
 Data Generation Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_generation
 
+Data Generation Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/master/_gendemos
+
 Bioinformatics Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_bioinformatics
 
 Bioinformatics Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/master/_infdemos
@@ -118,25 +118,6 @@ Contributors List (note all markdowns in this folder will be rendered): https://
 
 
 
-### Please Do Not Edit these folders and files:
-####  Pages that run Demo and Contributors Collection pages:
-Computing:  https://github.com/FredHutch/wiki/blob/master/computingdemos.md
-
-Bioinformatics:  https://github.com/FredHutch/wiki/blob/master/informaticsdemos.md
-
-Contributors list: https://github.com/FredHutch/wiki/blob/master/contributorslist.md
-
-#### Folders containing website configuration files
-Main website configuration file: https://github.com/FredHutch/wiki/blob/master/_config.yml
-
-Navigation yml:
-https://github.com/FredHutch/wiki/tree/master/_data
-
-Custom styling that overrides the remote theme:
-https://github.com/FredHutch/wiki/tree/master/assets/css
-
-Header and footer configs:
-https://github.com/FredHutch/wiki/tree/master/_includes
 
 ## Building the site locally
 
@@ -177,3 +158,25 @@ not have access to them).
 You can also look at the most recent
 [CircleCI build](https://circleci.com/gh/FredHutch/wiki) to see
 the list of broken links.
+
+
+## For Admins:
+
+### Pages that run Demo and Contributors Collection pages:
+Computing:  https://github.com/FredHutch/wiki/blob/master/computingdemos.md
+
+Bioinformatics:  https://github.com/FredHutch/wiki/blob/master/informaticsdemos.md
+
+Contributors list: https://github.com/FredHutch/wiki/blob/master/contributorslist.md
+
+### Folders containing website configuration files
+Main website configuration file: https://github.com/FredHutch/wiki/blob/master/_config.yml
+
+Navigation yml:
+https://github.com/FredHutch/wiki/tree/master/_data
+
+Custom styling that overrides the remote theme:
+https://github.com/FredHutch/wiki/tree/master/assets/css
+
+Header and footer configs:
+https://github.com/FredHutch/wiki/tree/master/_includes
