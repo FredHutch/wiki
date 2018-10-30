@@ -1,8 +1,8 @@
 ---
 title: Computing Credentials
-last_modified_at: 2018-09-27
+last_modified_at: 2018-10-30
 main_authors:
-primary_reviewers:
+primary_reviewers: dtenenbaum
 ---
 
 This section describes how to get access and credentials to computing systems on campus and in the cloud.
@@ -17,9 +17,9 @@ Please see the Service Desk site on CenterNet for more information about [HutchN
 
 ## GitHub.com
 
-The Fred Hutch GitHub organization at https://github.com/FredHutch offers free access to public and private git repostories to all Fred Hutch staff and collaborators. If you are a Fred Hutch employee working with source code and don't have a github.com account yet, please [create one](https://github.com/join) and email `SciComp`: "Please add my GitHub user id `xyz` to organization github.com/FredHutch". Once you are a member of the organization you can create repostories, teams and invite external collaborators to share and edit code.
+The Fred Hutch GitHub organization at https://github.com/FredHutch offers free access to public and private git repostories to all Fred Hutch staff and collaborators. If you are a Fred Hutch employee working with source code and don't have a github.com account yet, please [create one](https://github.com/join) and email `scicomp`: "Please add my GitHub user id `xyz` to organization github.com/FredHutch". Once you are a member of the organization you can create repostories, teams and invite external collaborators to share and edit code.
 
->Note: github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch. It has security features that are otherwise not available via other systems.
+>**Note**: github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch. It has security features that are otherwise not available via other systems.
 
 A GitHub account is different from other accounts. If you leave the Hutch you keep your GitHub account, however you will just be removed from the Fred Hutch organization on GitHub and your former colleagues can still add you as an external collaborator to their GitHub repositories.
 
@@ -36,7 +36,7 @@ There are two ways to get AWS credentials. Which one to use depends on how you w
 
 ### Command Line (Rhino/Gizmo) Instructions
 
-A working HutchNet ID is all you need to login to `rhino` (`ssh rhino`). Some users will see an error message that their home directory was not found. This can happen if you are in a newly created department or in one that is typically not working with SciComp resources. Please contact `SciComp` to have your home directory created.
+A working HutchNet ID is all you need to login to `rhino` (`ssh rhino`). Some users will see an error message that their home directory was not found. This can happen if you are in a newly created department or in one that is typically not working with SciComp resources. Please email `scicomp` to have your home directory created.
 
 
 First, `ssh` to one of the `rhino machines` (or use NoMachine):
