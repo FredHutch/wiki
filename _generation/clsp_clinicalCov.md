@@ -19,7 +19,8 @@ Currently, there are 10 programs with data abstracted into Caisis:
 - Lymphoma,
 - Myeloma,
 - Pancreas,
-- Prostate and Sarcoma
+- Prostate and 
+- Sarcoma
 
 Many of these have ongoing abstraction. Two additional programs (Breast and Thyroid) will begin abstraction before the end of 2018. STTR contracts with abstractors through a company called Vasta Global at a cost of $22,000 per abstractor per year. Each group selects and prioritizes the patients for which they would like data abstracted, supplying the abstractors with an updated list on a regular basis. Please note, the contract with Vasta Global only allows them to access the UW/SCCA medical records, not those from outside institutions. The data abstracted into Caisis is available to any interested Consortium investigator, with valid IRB approval or for activities preparatory to research.
 
