@@ -1,13 +1,27 @@
-# Contributing
+# Contributing to this wiki
 This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff whether as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large).
 
-## Contributing Directly Via GitHub
+# Details
+[Contributing Directly via GitHub](#contributing-directly-via-github)
+
+[Contributing via an external editor](#contributing-via-an-external-editor)
+
+[Wiki content style guide](#wiki-content-style-guide)
+
+[Repository structure](#repo-structure)
+
+[Building a copy of this wiki locally](#building-the-site-locally)
+
+[For Admins](#for-admins)
+
+
+## Contributing directly via GitHub
 
 We manage the content of this site via a set of markdown files that contain long article-style text with an emphasis on the use of outline structures to allow related content to show up near each other but with the ability to use the automatically rendered Table of Contents to jump around the documents.  
 
 To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are) from GitHub, follow these steps:
 
-  1. Create a branch off the master branch for your edits (do not fork the repo or create branches from other branches).  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names if at all possible. For your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
+  1. Create a branch off the master branch for your edits (do not fork the repo or create branches from other branches).  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names whenever possible. For your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
   2. Commit your edits to existing markdowns as you go, and update from the master branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the master and committing frequently.  
   3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
   4. When you are done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
@@ -19,17 +33,17 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
 >Afterwards:  Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site.
 
 ## Contributing via an external text editor
-You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.  Also there is a tutorial on how to use [VSCode](https://sciwiki.fredhutch.org/compdemos/vscode_markdown_howto/) which is what you will want to use if you anticipate putting in lots of screen shots or other images.  
+You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.  Also there is a tutorial on how to use [VSCode](https://sciwiki.fredhutch.org/compdemos/vscode_markdown_howto/) which is what you will want to use if you plan to contribute many screenshots or other images.  
 
 ## Wiki Content Style Guide
 ### Github-Flavored Markdown
-The content of this site is generated using GitHub "flavored" markdown.  A cheat sheet for the code required to use things like headings and table is [here.](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Our page TOC's are generated from these headings, so use ## H2 as your first level, and headings H2, H3 and H4 show up automatically in our TOC's).
+The content of this site is generated using GitHub "flavored" markdown.  A cheat sheet for the code required to create things like headings and table is [here.](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Our page TOC's are generated from these headings, so use ## H2 as your first level, and headings H2, H3 and H4 show up automatically in our TOC's).
 
 ### Content Structure
 Our goal is the generate article-style content (with the exception of the demo's/resource library pages), with the following general sections:
 
 #### Introduction
-An introductory paragraph explaining the summary of the page must be included and be interpretable for a novice OR expert.  This paragraph is a good place to define commonly used words that may be domain-specific or be used with a domain-specific definition.  Also include a description or set of examples that might highlight why the reader might want to keep reading for a novice and an expert.  Good introductions can use your own research project to give the reader some context.
+An introductory paragraph summarizing the page must be included and should be comprehensible for novices and experts alike.  This paragraph is a good place to define domain-specific words that appear in your article.  Also include a description or set of examples that might highlight why the reader might want to keep reading, whether they are novice or expert.  Good introductions can use your own research project to give the reader some context.
 
 #### Graduated Content
 The main content of the pages is up to you to structure.  Keep in mind that the wiki's articles are meant to provide enough background for a variety of readers to know what sorts of questions related to their particular research to pose when looking for in-person help.  Create headings that an advanced user could use the TOC links to go directly to the content they want while novices can also browse and slowly increase the complexity of the material throughout the page.  This gradual increase in content complexity from basic to advanced will give a reader some basic understanding of the topic before heading directly to the particular web-based (Fred Hutch sponsored or otherwise), in-person training/office hours, or on-campus expert to discuss or learn about their project in more detail.
@@ -80,8 +94,7 @@ So the above link modified would be:
 
     [![The Gift of Time](https://img.youtube.com/vi/rN7cmb1K2yA/0.jpg)](https://youtu.be/rN7cmb1K2yA?rel=0&iv_load_policy=3 "Click to see the amazing kitten")
 
-A good free screen cast tool (for Windows) is https://www.apowersoft.com/free-online-screen-recorder
-
+If you need to make screencasts, free software exist for [Windows](https://www.apowersoft.com/free-online-screen-recorder), [Linux](https://launchpad.net/kazam), and [OSX](https://www.webascender.com/blog/free-screencast-software-built-right-mac-os-x/).
 
 ### Referencing a Fred Hutch username
 Please if you need to reference a Fred Hutch username, do not write the entire email address out, just put the username in backticks like this:
@@ -121,10 +134,7 @@ Contributors List (note all markdowns in this folder will be rendered): https://
 
 ## Building the site locally
 
-You may want to build the site locally
-(on your own computer) to make sure
-that it looks like you expect it to
-before pushing your changes.
+You may want to build a copy of this wiki locally (on your own computer) to make sure that it looks the way you want before pushing your changes.
 
 ### Steps
 
