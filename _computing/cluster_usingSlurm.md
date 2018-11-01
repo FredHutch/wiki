@@ -13,19 +13,19 @@ and the resources available in the cluster.  There are two main clusters in use 
 
 ### Cluster
 
-A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case)
+A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).  At the Hutch we have two clusters, _beagle_ and _gizmo_.  From most hosts the default cluster will be _gizmo_- selection of the target cluster is done via an argument to Slurm commands (see [Multi-Cluster Operation](#Multi-Cluster Operation) below)
 
 ### Partition
 
-A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required.
+A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required.  While the different clusters may have different partitions, there are two partitions- a default partition with smaller nodes named _campus_ and a partition with more capable nodes (more memory and CPUs) named _largenode_.
 
 ### Node
 
-A node is the basic computing unit that shares processors, memory, and some (limited) local disk.
+A node is the basic computing unit that shares processors, memory, and some (limited) local disk.  As a rule, you don't want to worry about choosing a node for your jobs.
 
 ### Job
 
-A job is a collection of tasks, typically implemented as a shell script.
+A job is a collection of tasks, typically implemented as a shell script.  Jobs have an ID (just a number) and a name.  The ID is automatically assigned, but you can assign a name to your job.
 
 ### Account
 
@@ -35,7 +35,16 @@ When we refer to an "account" in the context of Slurm, we are referring to the P
 
 ### squeue
 
-The `squeue` command allows you to see the jobs running and waiting in the job queue.
+The `squeue` command allows you to see the jobs running and waiting in the job queue.  `squeue` takes many options to help you select the jobs displayed by the command
+
+| option/argument     | function                                              |
+|---------------------|--------------------------------------------------------
+| -M _cluster_        | Only show jobs running on the indicated cluster       |
+| -u _username_       | Limit jobs displayed to those owned by a user         |
+| -A _account_        | Limit jobs displayed to those owned by an account     |
+| -p _partition_      | Only show jobs in the indicated partition             |
+
+There are many ways to alter which jobs are shown and how the output is formatted- refer to the [`squeue` manpage](https://slurm.schedmd.com/squeue.html) for more details on using this command.
 
 ### scancel
 
@@ -61,7 +70,5 @@ by the task your are running.
 
 The `grabnode` command will start an interactive login session on a cluster node.
 
-## SciComp Wrappers and Tools
 
-<!-- grab commands, hitparade -->
-
+## Multi-Cluster Operation
