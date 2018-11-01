@@ -27,7 +27,7 @@ possible without compromising the confidentiality of participants.
 
 Data/Information should be handled according to the FH Information
 Classification Standard, which requires security and handling standards
-commensurate with the risk of information mishandling. A copy of the Standard is located [HERE.](https://centernet.fredhutch.org/cn/u/hdc/_jcr_content/leftParsys/download_0/file.res/Fred-Hutch-Information-Classification-and-Handling-Standard-FINAL.pdf) These standards provide guidelines for managing
+commensurate with the risk of information mishandling. A copy of the Standard is located [here.](https://centernet.fredhutch.org/cn/u/hdc/_jcr_content/leftParsys/download_0/file.res/Fred-Hutch-Information-Classification-and-Handling-Standard-FINAL.pdf) These standards provide guidelines for managing
 data at FH and for sharing information within FH and between FH and an
 outside party. Genomic data, outside of public reference data, is
 considered confidential (Level II) or strictly confidential information
@@ -42,14 +42,32 @@ in the data management and sharing plan. In the event that you apply for
 or receive commercial funding for any part of research, you should
 advise BD&S of the situation without delay.
 
+### Data Classification Overview
+#### Public - Level I
+This level includes published research results, Fred Hutch publications and communications press announcements, public record documents, job postings, open source configuration list/code/recipes, reference genomes, released data sets.
+
+#### Confidential - Level II
+This level includes pre–publication research information and analyses, medical expense information, invoices, legal instruments or agreements, transaction documents and reports, Fast file and Secure File server, building plans and information about the physical plant, de-identified research participant information,  and donor information.
+
+#### Strictly Confidential - Level III
+This level includes Protected Health Information (PHI), Individually Identifiable Health Information (IIHI), Personally Identifiable Information (PII), passwords and encryption keys, proprietary information including that belonging to entities other than Fred Hutch.
+
+
+|Level | Subject to FH Admin. Control | Access Requires Authentication  | Logging/Audit  | Encryption at Rest (Encryption effective mid-2019) | Encryption in Transit  | Email | Paper-Based |
+|---|---|---|---|---|---|---|---|
+| Public - Level I | No | No | No | | No, On Premises                              No, Off-Premises (Cloud)   | No Restrictions                                                   | No Restriction                                       |
+| Confidential - Level II |  Yes | Yes | Yes, if automated or manual system allows. | No, On Premises                              No, Off-Premises (Cloud)   | No, On Premises                              Yes, Off-Premises (Cloud)  | FH Supported Systems                                              | Confidential Labeling                                |
+| Strictly Confidential - Level III |  Yes, Both on and off Premises | Yes                                     | Yes. Audited Semi-Annual                   | Yes, On Premises                              Yes, Off-Premises (Cloud) | Yes, On Premises                              Yes, Off-Premises (Cloud) | Encrypted and FH Approved Systems | Tamper-proof Envelope/Registered Mail/Signed Delivery |
+
+
 ## Patient Consent -- Protection against Patient Harms
 
 All research involving 1) human subject participants, 2) patient
 information, or 3) tissue samples derived from patients/human
 participants must include appropriate safeguards to protect the privacy
-of research participants. You must ensure the necessary patient consent
-1) adheres to Human Subjects Protection by receiving IRB approval and 2)
-is signed by the patient prior to data sharing. Requirements to adhere
+of research participants. You must ensure the necessary patient consent 
+1.  adheres to Human Subjects Protection by receiving IRB approval and
+2.  is signed by the patient prior to data sharing. Requirements to adhere
 to relevant regulatory, ethical, or institutional policy should be met,
 data security measures established and all IRO and patient permissions
 should be in place prior to disclosing any data. Requirements may
@@ -84,7 +102,7 @@ confidential or protected data.
 
 -   The Privacy Rule permits sharing of a Limited Data Set, which includes some identifiers. A LDS may be disclosed for research activities if the disclosing entity and the LDS recipient enter into a data use agreement. Limited Data Sets may be used or disclosed only for purposes of research, public health, or health care operation.
 
--   A sample Fred Hutch MTA can be found [here (sign-in required if off campus).](http://www.compass.fhcrc.org/caretweb/requests/caret%20dua%20final%20201405.pdf)  Contact Fred Hutch BD&S for more information on Fred Hutch DUAs.
+-   A sample Fred Hutch MTA can be found [here.](http://www.compass.fhcrc.org/caretweb/requests/caret%20dua%20final%20201405.pdf)  Contact Fred Hutch BD&S for more information on Fred Hutch DUAs.
 
 ### Material Transfer Agreement (MTA)
 
@@ -155,24 +173,10 @@ The Fred Hutch Data Classification standard addresses appropriate levels
 of security. Fred Hutch does not currently provide a secure/encrypted
 exchange portal available enterprise-wide. Typically, reciprocation
 should take place in an encrypted environment. Below are various options
-for Fred Hutch members.
-[Here,](https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html)
-CIT lists various options for sharing data. Using regular Fred Hutch
-email is highly discouraged as, generally, it is not encrypted. The
-standard solution for data exchange that is a little more secure than
-email is [Aspera.](https://aspera.fhcrc.org/) You can use
-Aspera to send large amounts data through an email-like interface. The
-recipient receives an email with a complex link URL and can then
-download the data. It's a little more secure than email because you can
-only download the data once. If the recipient cannot get the data, it
-likely means that security was breached and someone else got hold of
-that email that was sent. So you can't prevent the breach, but at least
-know if one happens.
+for Fred Hutch members. Using regular Fred Hutch
+email is highly discouraged as, generally, it is not encrypted. Learn more about [collaborative data storage options here.](/computing/store_collaboration/)
 
-Fred Hutch data should not be stored or shared via applications utilized
-for personal use. Properly licensed corporate tools or subscription
-applications such as DropBox, Box can be considered with guidance from
-the Information Security Office.
+Fred Hutch data should not be stored or shared via applications utilized for personal use. Properly licensed corporate tools or subscription applications such as DropBox, Box can be considered with guidance from the Information Security Office.
 
 Generally, Investigators can share their data by transferring it to a
 data archive facility for distribution more widely to the scientific
