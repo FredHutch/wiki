@@ -53,11 +53,11 @@ This level includes pre–publication research information and analyses, medical
 This level includes Protected Health Information (PHI), Individually Identifiable Health Information (IIHI), Personally Identifiable Information (PII), passwords and encryption keys, proprietary information including that belonging to entities other than Fred Hutch.
 
 
-|Level | Subject to FH Admin. Control | Access Requires Authentication  | Logging/Audit  | Encryption at Rest | Encryption in Transit  | Email | Paper-Based |
+|Level | Subject to FH Admin. Control | Access Requires Authentication  | Logging/Audit  | Encryption at Rest (Encryption effective mid-2019) | Encryption in Transit  | Email | Paper-Based |
 |---|---|---|---|---|---|---|---|
 | Public - Level I | No | No | No | | No, On Premises                              No, Off-Premises (Cloud)   | No Restrictions                                                   | No Restriction                                       |
 | Confidential - Level II |  Yes | Yes | Yes, if automated or manual system allows. | No, On Premises                              No, Off-Premises (Cloud)   | No, On Premises                              Yes, Off-Premises (Cloud)  | FH Supported Systems                                              | Confidential Labeling                                |
-| Strictly Confidential - Level III |  Yes, Both on and off Premises | Yes                                     | Yes. Audited Semi-Annual                   | Yes, On Premises                              Yes, Off-Premises (Cloud) | Yes, On Premises                              Yes, Off-Premises (Cloud) | Encrypted and FH Approved Systems (Encryption effective mid-2019) | Tamper-proof Envelope/Registered Mail/Signed Delivery |
+| Strictly Confidential - Level III |  Yes, Both on and off Premises | Yes                                     | Yes. Audited Semi-Annual                   | Yes, On Premises                              Yes, Off-Premises (Cloud) | Yes, On Premises                              Yes, Off-Premises (Cloud) | Encrypted and FH Approved Systems | Tamper-proof Envelope/Registered Mail/Signed Delivery |
 
 
 ## Patient Consent -- Protection against Patient Harms
