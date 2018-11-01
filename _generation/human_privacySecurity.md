@@ -1,7 +1,8 @@
 ---
 title: Data Privacy and Security
-last_modified_at: 2018-09-06
+last_modified_at: 2018-10-25
 main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
+primary_reviewers: JasonMajor1, sgglick
 ---
 
 Every effort must be made to protect the privacy and confidentiality of
@@ -26,8 +27,7 @@ possible without compromising the confidentiality of participants.
 
 Data/Information should be handled according to the FH Information
 Classification Standard, which requires security and handling standards
-commensurate with the risk of information mishandling. An easy to read
-chart is located HERE. These standards provide guidelines for managing
+commensurate with the risk of information mishandling. A copy of the Standard is located [HERE.](https://centernet.fredhutch.org/cn/u/hdc/_jcr_content/leftParsys/download_0/file.res/Fred-Hutch-Information-Classification-and-Handling-Standard-FINAL.pdf) These standards provide guidelines for managing
 data at FH and for sharing information within FH and between FH and an
 outside party. Genomic data, outside of public reference data, is
 considered confidential (Level II) or strictly confidential information

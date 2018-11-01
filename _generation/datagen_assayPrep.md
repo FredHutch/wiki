@@ -1,6 +1,7 @@
 ---
 title: Assay Material Prep and QC
-last_modified_at: 2018-07-19
+last_modified_at: 2018-10-25
+primary_reviewers: vortexing
 ---
 
 Multiple processes can be involved in the isolation, quality assessment and preparation of biological materials upstream of large scale data collection. For many types of datasets, the particulars of the method of nucleic acid extraction and quality assessment process can have a large impact on the quality, relevance, and interpretability of the resulting data. Thus, it is critical to ensure that a correct set of conditions are chosen before any specimens are prepared for analysis.
@@ -19,13 +20,13 @@ RNA extraction kits will typically isolate total RNA (small RNAs, mRNAs, rRNAs a
 
 DNA extraction from samples of varying quantities and preservation methods can be limited by the fragment length of the isolated DNA and its appropriateness to the downstream sample prep steps. Choosing a method that incorporates the specimen type is important to avoid situations where sufficient yield of DNA is obtained, but the resulting fragments are so small that they are incompatible with the analysis type. For example, fragmented DNA may not provide usable data for a capture based sample preparation, such as an exome sequencing library preparation, that starts with a probe based hybridization because the selected fragments bound to the probes may not be long enough to then sequence sufficiently far to produce usable data.
 
-### Available Resources:
+### Available Resources
 
 Some summaries of extraction kits can be found at the following links:
 
   * DNA extraction - [Labome overview of DNA extraction kits and applications](https://www.labome.com/method/DNA-Extraction-and-Purification.html)
 
-  * RNA extraction - [Labome overview of RNA extraction kits and application*s](https://www.labome.com/method/RNA-Extraction.html)
+  * RNA extraction - [Labome overview of RNA extraction kits and application's](https://www.labome.com/method/RNA-Extraction.html)
 
 ## Quantification Methods
 
@@ -35,7 +36,7 @@ There are two main approaches to quantifying nucleic acids in solution after iso
 
 Spectrophotometic analysis (e.g. via [NanoDrop systems](https://www.thermofisher.com/us/en/home/industrial/spectroscopy-elemental-isotope-analysis/molecular-spectroscopy/ultraviolet-visible-visible-spectrophotometry-uv-vis-vis/uv-vis-vis-instruments/nanodrop-microvolume-spectrophotometers/nanodrop-products-guide.html) is a common quantification method that allows measurement of quantity and purity of nucleic acid samples, via their absorbance of light. Total amount of nucleic acid is determined by the absorbance at 260nm. Amounts of common contaminants can also be measured with this method - remaining protein is measured via absorbance at 280nm; remaining organic solvents and salts are measured via absorbance at 230nm. Purity of the sample is assessed by calculating ratios of absorbances: 260/280 and 260/230. Nucleic acid samples are generally considered pure enough for sequencing if 260/280 > 1.8 and 260/230 > 1.7.
 
-**Of Important Note:** Both RNA and DNA absorb light at 260nm. Spectrophotometric analysis will tell you the **total** amount of nucleic acid (all moieties) in your sample. Also, this analysis does not give information about the quality of the nucleic acid in the sample. To assess amounts of specific nucleic acid, use a fluorescent dye-tagging quantification (fluorimetric) method; in addition, assessment of nucleic acid quality requires electrophoresis via TapeStation (see below).
+>Note: Both RNA and DNA absorb light at 260nm. Spectrophotometric analysis will tell you the **total** amount of nucleic acid (all moieties) in your sample. Also, this analysis does not give information about the quality of the nucleic acid in the sample. To assess amounts of specific nucleic acid, use a fluorescent dye-tagging quantification (fluorimetric) method; in addition, assessment of nucleic acid quality requires electrophoresis via TapeStation (see below).
 
 ### Fluorimetric analysis
 
@@ -51,11 +52,11 @@ For RNA samples, you can use the results of electrophoresis to calculate an RNA 
 
 ### Additional Resources
 
-* Consider emailing the reagents listserv in order to find laboratories near you that have a Qubit reader.
+* Consider emailing the `reagents` listserv in order to find laboratories near you that have a Qubit reader.
 
 * The Fred Hutch Genomics lab members are very helpful and can provide guidance for what works best for different types of genomics assays. [The Hutch Genomics Core site is here along with the relevant contact info for the group.](https://sharedresources.fredhutch.org/core-facilities/genomics)
 
-* The Fred Hutch Genomics lab also provides access to TapeStation analysis for nucleic acids (to determine RIN for RNA or fragment sizes for DNA). Samples can be submitted for fee-for-service via Hutchbase. Check in with the Genomics lab members for specific instructions on sample concentration and volume requirements as well as assay choice (there are several different assays that can be run on the TapeStation).
+* The Fred Hutch Genomics lab also provides access to TapeStation analysis for nucleic acids (to determine RIN for RNA or fragment sizes for DNA). Samples can be submitted for fee-for-service via [Hutchbase.](https://hutchbase.fhcrc.org/base2/) Check in with the Genomics lab members for specific instructions on sample concentration and volume requirements as well as assay choice (there are several different assays that can be run on the TapeStation).
 
 * For more information on [RIN definition and background for why it is important to consider when using RNA as an assay material, this article provides additional information.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1413964/)
 

@@ -61,11 +61,11 @@ generation:
     children:
       - title: "Overview"
         url: /generation/clsp_overview/
-      - title: "Clinical Covariates"
+      - title: "Clinical Data"
         url: /generation/clsp_clinicalCov/
       - title: "Specimen Banking"
         url: /generation/clsp_specimenBanking/
-      - title: "Experimental Covariates"
+      - title: "Experimental Data"
         url: /generation/clsp_labCov/
 
 
@@ -73,22 +73,29 @@ generation:
     children:
       - title: "Overview"
         url: /generation/datagen_overview/
+      - title: "Genomics Data"
+        url: /generation/datagen_platformsData/
+      - title: "Flow Cytometry Data"
+        url: /generation/datagen_flowcytometry/
+      - title: "Imaging Data"
+        url: /generation/datagen_imaging/
+      - title: "Proteomics Data"
+        url: /generation/datagen_proteomics/
+
+
+  - title: "Other Laboratory Resources"
+    children:
+      - title: "Overview"
+        url: /generation/labman_overview/
       - title: "Assay Material Prep and QC"
         url: /generation/datagen_assayPrep/
       - title: "DNA-Based Approaches"
         url: /generation/datagen_dnaApproaches/
       - title: "RNA-Based Approaches"
         url: /generation/datagen_rnaApproaches/
-      - title: "Genomics Platforms Available"
-        url: /generation/datagen_platformsData/
-
-
-  - title: "Laboratory Management Resources"
-    children:
       - title: "Support Software"
         url: /generation/labman_software/
-      - title: "Shared Equipment and Wisdom"
-        url: /generation/labman_sharedequip/
+
 
 
 
@@ -176,7 +183,7 @@ computing:
         url: /computing/store_collaboration/
 
 
-  - title: "Scientific Computing"
+  - title: "Computation"
     children:
       - title: "Overview"
         url: /computing/cluster_overview/
@@ -201,3 +208,5 @@ computing:
         url: http://fredhutch.github.io/easybuild-life-sciences/
       - title: "Updates and Announcements"
         url: /scicompannounce/
+      - title: "Demos/HOWTOs (Resource Library)"
+        url: /compdemos/

@@ -1,7 +1,8 @@
 ---
 title: Proposal Preparation and the Funding Process
-last_modified_at: 2018-09-06
+last_modified_at: 2018-10-25
 main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
+primary_reviewers: sgglick, JasonMajor1
 ---
 >An excellent starting place for more information on starting the funding application process in general is the [Fred Hutch Office of Sponsored Research site](https://centernet.fredhutch.org/cn/u/osr.html) and specifically the section on [sponsored projects (meaning externally-funded research).](https://centernet.fredhutch.org/cn/u/osr/sponsored-projects.html)  
 
@@ -13,7 +14,7 @@ This section will more specifically provide information related to this process 
 For funding agencies like the NIH, the increased use of genomic data
 sets from human specimens outside of the context of the definition of
 human subjects research has resulted in some changes when submitting
-proposals for funding. NIH provides the Infopath Questionnaire, [found here.](https://humansubjects.nih.gov/questionnaire) which
+proposals for funding. NIH provides the Infopath Questionnaire, [found here.](https://humansubjects.nih.gov/) which
 can help determine if the study would need to be categorized as Human
 Subjects Research, or if it is exempt in some way. For Fred Hutch studies
 that propose to generate or use data generated from human specimens for

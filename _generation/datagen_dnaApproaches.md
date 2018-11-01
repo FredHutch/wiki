@@ -1,9 +1,10 @@
 ---
 title: DNA Analysis Approaches
-last_modified_at: 2018-07-19
+last_modified_at: 2018-10-25
+primary_reviewers: vortexing
 ---
 
-This page contains an outline of the platforms and approaches used to produce data sets from DNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource, and example cost estimates and read depth, etc will vary study to study. To answer study-specific questions, please contact the staff at the [Genomics Core](https://sharedresources.fredhutch.org/core-facilities/genomics](https://sharedresources.fredhutch.org/core-facilities/genomics).  Be prepared to discuss the sample types, sample numbers, goal datasets, and proposed platforms of interest.  
+This page contains an outline of the platforms and approaches used to produce data sets from DNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource, and example cost estimates and read depth, etc will vary study to study. To answer study-specific questions, please contact the staff at the [Genomics Core](https://sharedresources.fredhutch.org/core-facilities/genomics).  Be prepared to discuss the sample types, sample numbers, goal datasets, and proposed platforms of interest.  
 
 ## DNA Sequencing for Variant Analysis
 
@@ -51,7 +52,6 @@ To perform exome or other capture based sequencing, multiple details should be t
 
     * While exomes are less expensive to generate than whole genomes, due to the moderate coverage of the genome of interest, sequencing costs are higher than for more targeted panels.  
 
-    * An example data set previously generated on average 100x coverage in the Fred Hutch Genomics Core, with a low input kit, and all capture and library preparation steps done by Genomics staff (full service), was approximately $750 per sample.  However, given the above variables, the exact cost for a given study will vary.   
 
 ### Amplicon Based Sequencing - Targeted DNA sequencing
 
@@ -87,7 +87,7 @@ This [tech note from Illumina](https://support.illumina.com/content/dam/illumina
 
   * Targeted panels provide lower cost data, but at the expense of genomic ranges which depending on the study goals, can be no great loss and provide the opportunity to get data from a much higher sample number.
 
-  * The costs for these vary greatly based on the size of the covered region in the panel because this increases the sequencing costs of the libraries.  An example cost seen in the Genomics Core for full service library preparation and sequencing of a TruSight Myeloid sequencing panel (~141kb, relatively small) for 96 samples was approximately $200/sample.  
+  * The costs for these vary greatly based on the size of the covered region in the panel because this increases the sequencing costs of the libraries.
 
 ### SMRT sequencing (PacBio)
 
@@ -95,10 +95,10 @@ Both exome and targeted approaches rely on short length sequencing reads that ar
 
 ### Human Whole Genome Sequencing (WGS) Guidance
 More to come about approaches to obtain and evaluate the logistics involved in using whole genome sequencing data in a research study.  
-<!-- Patty please write here what issues are the most important to think about before endeavoring into a WGS project.  Such as:  Do I really need this data?  How do I decide between WGS NGS providers?  What should I prepare ahead of time so I know I can import, store and re-access that data after it's been made and provided back to us?-->
+
 #### Does My Research Questions Require WGS?
 * For *Inherited variants* WGS may be the right choice for you if your scientific question requires a comprehensive assessment of  inherited genome-wide constitutive copy number variants (CNVs), chromosomal structural variants (SVs), or you need to assess simple variation such as single nucleotide variants (SNVs) or small insertion/deletions (indels) that is not typically captured using standard SNP array approaches. However, it is important to have a sufficiently large participant sample size given the every that each individual will have <!-- xx--> unique variants that differ from the human reference genome. Additional, there is substantial cost associated with generating, analyzing, and storing WGS data.  Contact the Reid Lab or the Peters Lab <!-- INSERT EXTERNAL LINK--> for Hutch teams with experience with WGS. <!-- INSERT REFERENCES HERE -->
-* For *Somatic Variants* there are several advantages to measuring somatic genetic variation using WGS, especially for cancer research. SNVs, indels, somatic CNVs (SCNAs), aneuploidy, whole genome doubling (WGD) and chromosomal structural variations are ubiquitious in cancer and there are different pros and cons of different WGS approaches for each variant type. <!--Consider a table here discussion the pros and cons of generating WGS data for each variant type-->
+* For *Somatic Variants* there are several advantages to measuring somatic genetic variation using WGS, especially for cancer research. SNVs, indels, somatic CNVs (SCNAs), aneuploidy, whole genome doubling (WGD) and chromosomal structural variations are ubiquitous in cancer and there are different pros and cons of different WGS approaches for each variant type. <!--Consider a table here discussion the pros and cons of generating WGS data for each variant type-->
 
 #### Selecting A WGS Vendor
 There are many vendors available to generate WGS data. <!--INSERT EXTERNAL LINK --> Things to consider when comparing WGS vendors include the obvious such as cost, input DNA requirements, deliverables, technology, quality control steps, data security and data delivery methods, methods of communication between vendor and customer, customer service after sequence data is delivered, and turn-around time. In addition, the largest resource requirements will be at the level of analytical pipeline implementation and variant analysis. Many vendors offer tiered levels of service that go beyond providing sequencing to include informatic and computational support. Consider whether you simply need sequencing fee for service or whether your project would require a more collaborative model.
@@ -112,33 +112,19 @@ There are many vendors available to generate WGS data. <!--INSERT EXTERNAL LINK 
 
 ### Available Resources
 
-* Genohub has a useful guide to exome sequencing approaches. The comparison chart of exome library preparations is of particular note:
+* Genohub has a useful guide to exome sequencing approaches. The comparison chart of exome library preparations is of particular note.  [Genohub's Guide to Exome Sequencing](https://genohub.com/exome-sequencing-library-preparation/)
 
-    * Link: [Genohub's Guide to Exome Sequencing](https://genohub.com/exome-sequencing-library-preparation/)
+* Illumina has several exome sequencing options. [Illumina Whole Exome Sequencing](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/exome-sequencing.html)
 
-* Illumina has several exome sequencing options, which are outlined in the link below.
+* Agilent also has several exome sequencing options, including a more clinically focused option. [Agilent Exome Sequencing ](https://www.genomics.agilent.com/en/SureSelect-DNA-Target-Enrichment-Baits-NEW/SureSelect-Human-All-Exon-V6/?cid=AG-PT-124&tabId=AG-PR-1308)
 
-    * Link: [Illumina Whole Exome Sequencing](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/exome-sequencing.html)
+* Roche NimbleGen has several exome and other bait sets. [Roche NimbleGen Exome Sequencing](http://sequencing.roche.com/en/products-solutions/by-category/target-enrichment/hybridization.html)
 
-* Agilent also has several exome sequencing options, including a more clinically focused option.
+* Illumina has a variety of ready-made targeted DNA sequencing panels. Users can also design custom panels.[Illumina Targeted Sequencing Panels](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html)
 
-    * Link : [Agilent Exome Sequencing ](https://www.genomics.agilent.com/en/SureSelect-DNA-Target-Enrichment-Baits-NEW/SureSelect-Human-All-Exon-V6/?cid=AG-PT-124&tabId=AG-PR-1308)
+* Illumina has a sequencing depth calculator tool to estimate what type of depth to expect in certain combinations of setups.  More information on the available sequencing platforms in the Genomics Shared Resource can be found on [this page.](/generation/datagen_platformsData/) [Illumina Sequencing Calculator](https://support.illumina.com/downloads/sequencing_coverage_calculator.html)
 
-* Roche NimbleGen has several exome and other bait sets.
-
-    * Link : [Roche NimbleGen Exome Sequencing](http://sequencing.roche.com/en/products-solutions/by-category/target-enrichment/hybridization.html)
-
-* Illumina has a variety of ready-made targeted DNA sequencing panels. Users can also design custom panels.
-
-    * Link: [Illumina Targeted Sequencing Panels](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html)
-
-* Illumina has a sequencing depth calculator tool to estimate what type of depth to expect in certain combinations of setups.  Note, the Genomics Core has access to MiSeqs and HiSeq2500 in Rapid Run (2 lanes at a time), or High Output (8 lanes at a time) Modes
-
-    * Link: [Illumina Sequencing Calculator](https://support.illumina.com/downloads/sequencing_coverage_calculator.html)
-
-* PacBio Single Molecule Real-time (SMRT) technology enables long-read (>20kb) sequencing.
-
-    * Link: [PacBio SMRT](http://www.pacb.com/smrt-science/smrt-sequencing/)
+* PacBio Single Molecule Real-time (SMRT) technology enables long-read (>20kb) sequencing. [PacBio SMRT Sequencing](http://www.pacb.com/smrt-science/smrt-sequencing/)
 
 ## DNA Microarrays
 
@@ -146,21 +132,16 @@ For quantitative studies of known targets, microarrays can be a very useful alte
 
 ### SNP Genotyping Arrays
 
-More to come
+More to come.
+
+[Illumina Methylation Microarrays](https://www.illumina.com/techniques/microarrays/methylation-arrays.html)
 
 ### Methylation Arrays
 
-More to come
+More to come.
 
-### Available Resources
+[Illumina Genotyping Microarrays](https://www.illumina.com/techniques/popular-applications/genotyping.html)
 
-* Illumina SNP Microarrays.
-
-    *  Link: [Illumina Genotyping Microarrays](https://www.illumina.com/techniques/popular-applications/genotyping.html)
-
-* Illumina Methylation Microarrays.
-
-    * Link: [Illumina Methylation Microarrays](https://www.illumina.com/techniques/microarrays/methylation-arrays.html)
 
 ## DNA Sequencing for other analysis types
 
@@ -178,14 +159,8 @@ RRBS uses a combination of CpG island-specific restriction enzymes with bisulfit
 
 ### Available Resources
 
-* Epigenie has a useful guide to getting started with ChIP-seq.
+* Epigenie has a useful guide to getting started with ChIP-seq. [Epigenie's Guide to ChIP-seq](http://epigenie.com/guide-getting-started-with-chip-seq/)
 
-    * Link: [Epigenie's Guide to ChIP-seq](http://epigenie.com/guide-getting-started-with-chip-seq/)
+* The genomics core uses the Kapa Hyper Prep kit for ChiP-seq. [Kapa Hyper Prep for ChIP-seq](http://sequencing.roche.com/en/products-solutions/by-application/research/chip-sequencing.html)
 
-* The genomics core uses the Kapa Hyper Prep kit for ChiP-seq.
-
-    * Link: [Kapa Hyper Prep for ChIP-seq](http://sequencing.roche.com/en/products-solutions/by-application/research/chip-sequencing.html)
-
-* The Babraham Institute has a brief guide to the biology and bioinformatics of RRBS.
-
-    * Link: [Babraham Institute's Brief Guide to RRBS](http://www.bioinformatics.babraham.ac.uk/projects/bismark/RRBS_Guide.pdf)
+* The Babraham Institute has a brief guide to the biology and bioinformatics of RRBS. [Babraham Institute's Guide to RRBS](http://www.bioinformatics.babraham.ac.uk/projects/bismark/RRBS_Guide.pdf)

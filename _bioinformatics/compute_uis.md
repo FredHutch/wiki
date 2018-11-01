@@ -6,7 +6,7 @@ author_list: Dirk Petersen
 While programming in R, Python or other languages is an important skill to learn, another layer of how to actually implement and manage processes you have developed in the code you've written can be useful.  To manage the interface between code and environments, versioning and more integrated features (e.g. git or multi-langage processes), various Notebook or User Interfaces exist.  This document is an overview of common user interfaces used to manage or interact with code.  
 
 ## RStudio IDE
-The RStudio IDE is a free and open source, popular interface to R, which supports a number of added features including a GUI that can be customized to view aspects of your work of most importance (such as plots, files, environment variables, scripts, workspaces, etc).  RStudio is free and can be [downloaded here](https://www.rstudio.com/), and requires an installation of R itself, which can be [downloaded here, or obtained via Center IT's Self Service tools.](https://cran.r-project.org/)  Alternatively, a Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org). <!-- Note, this is currently using http, not https, so not secure in its transfer of user passwords!  But, scicomp documenation (https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/Rstudio%20Server,%20rstudio.fhcrc.org.aspx) states this is only accessible from within the Hutch, so is maybe ok?? -->
+The RStudio IDE is a free and open source, popular interface to R, which supports a number of added features including a GUI that can be customized to view aspects of your work of most importance (such as plots, files, environment variables, scripts, workspaces, etc).  RStudio is free and can be [downloaded here](https://www.rstudio.com/), and requires an installation of R itself, which can be [downloaded here](https://cran.r-project.org/), or obtained via Center IT's Self Service tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Alternatively, a Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org), and for more information about using it, please contact `scicomp`. <!-- Note, this is currently using http, not https, so not secure in its transfer of user passwords!  But, scicomp documenation (https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/Rstudio%20Server,%20rstudio.fhcrc.org.aspx) states this is only accessible from within the Hutch, so is maybe ok?? -->
 
 RStudio has a few particularly useful features, that include:
 - Support for R Markdowns/Notebooks
@@ -15,7 +15,9 @@ RStudio has a few particularly useful features, that include:
 - Direct deployment of Shiny apps via Shinyapps.io
 - R package management and direct installation capabilities
 
-RStudio is typically run locally on desktop computers, but as compute resources for the tasks involved increase, it is possible to run RStudio off the Rhino's.  Documentation about how this works is still to come.  
+RStudio is typically run locally on desktop computers, but as compute resources for the tasks involved increase, it is possible to run RStudio off the `Rhino`'s.  Documentation about how this works is still to come.  
+
+For more information about R packages and useful R-related topics, please see our [R, RStudio page.](/bioinformatics/prog_R/)
 
 ## Jupyter Notebooks
 
@@ -30,14 +32,14 @@ Install the software on your own computer [install Jupyter](http://jupyter.org/i
 
 ### Grab a node and launch Jupyterlab 
 
-On Rhino just execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the cpus and number of days you need the node
+On Rhino just execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node
 
 - Pro: easy single command, exclusive compute power for you
 - Con: have to wait until a node is ready 
 
 ### Run Jupyterlab on Rhino
 
-Just load a Python distribution maintained by SciComp and run Jupyter lab, use the fhfreeport command as suggested in the example to get a free tcp port on Rhino that nobody else uses:
+Just load a Python distribution maintained by SciComp and run Jupyter lab. Use the `fhfreeport` command as suggested in the example to get a free TCP port on Rhino that nobody else uses:
 
 ```
     petersen@rhino1:~$ ml Python/3.6.5-foss-2016b-fh3
@@ -74,4 +76,4 @@ Also only the first method allows you to install your own python packages as roo
 
 ## Zeppelin Notebooks
 
-Zeppelin notebooks are similar to Jypyter Notebooks but they are more commonly used in Java / BigData Ecosystems. More information about Zeppelin Notebooks [can be found at the Zeppline site.](https://zeppelin.apache.org/)
+Zeppelin notebooks are similar to Jupyter Notebooks but they are more commonly used in Java / BigData Ecosystems. More information about Zeppelin Notebooks [can be found at the Zeppelin site.](https://zeppelin.apache.org/)

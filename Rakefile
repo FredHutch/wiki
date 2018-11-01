@@ -10,7 +10,8 @@ task :test do
                     /aspera.fhcrc.org/, /mydb.fredhutch.org/,
                     /translationalgenomics.fredhutch.org/,
                     /lists.fhcrc.org/, /slack.com/,
-                    /ontology.fredhutch.org/, /biocontainers.pro/],
+                    /ontology.fredhutch.org/, /biocontainers.pro/,
+                    /hutchbase.fhcrc.org/],
       :typhoeus => {:connecttimeout => 30, :timeout => 60}}
   HTMLProofer.check_directory("./_site", options).run
 end
