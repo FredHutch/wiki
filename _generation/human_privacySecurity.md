@@ -65,9 +65,9 @@ This level includes Protected Health Information (PHI), Individually Identifiabl
 All research involving 1) human subject participants, 2) patient
 information, or 3) tissue samples derived from patients/human
 participants must include appropriate safeguards to protect the privacy
-of research participants. You must ensure the necessary patient consent
-1) adheres to Human Subjects Protection by receiving IRB approval and 2)
-is signed by the patient prior to data sharing. Requirements to adhere
+of research participants. You must ensure the necessary patient consent 
+1.  adheres to Human Subjects Protection by receiving IRB approval and
+2.  is signed by the patient prior to data sharing. Requirements to adhere
 to relevant regulatory, ethical, or institutional policy should be met,
 data security measures established and all IRO and patient permissions
 should be in place prior to disclosing any data. Requirements may
