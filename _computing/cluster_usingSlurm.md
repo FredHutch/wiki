@@ -13,7 +13,7 @@ and the resources available in the cluster.  There are two main clusters in use 
 
 ### Cluster
 
-A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).  At the Hutch we have two clusters, _beagle_ and _gizmo_.  From most hosts the default cluster will be _gizmo_- selection of the target cluster is done via an argument to Slurm commands (see [Multi-Cluster Operation](./cluster_usingSlurm.md#Multi-Cluster Operation) below)
+A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).  At the Hutch we have two clusters, _beagle_ and _gizmo_.  From most hosts the default cluster will be _gizmo_- selection of the target cluster is done via an argument to Slurm commands (see [Multi-Cluster Operation](#multicluster-operation) below)
 
 ### Partition
 
@@ -71,4 +71,4 @@ by the task your are running.
 The `grabnode` command will start an interactive login session on a cluster node.
 
 
-## Multi-Cluster Operation
+## MultiCluster Operation
