@@ -68,7 +68,7 @@ compute environments such as Rhino / Gizmo / Slurm. Instead,
 developers at LBL have developed a utility called Singularity
 which can be used to run Docker images within an environment
 like Rhino / Gizmo / Slurm at Fred Hutch. More details
-[here](https://singularity.lbl.gov/docs-docker).
+[here](https://www.sylabs.io/docs/).
 
 Some cloud computing platforms are built explicitly on top of Docker.
 For example, AWS Batch works by running code within Docker containers
