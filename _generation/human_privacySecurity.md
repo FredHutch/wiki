@@ -43,11 +43,21 @@ or receive commercial funding for any part of research, you should
 advise BD&S of the situation without delay.
 
 ### Data Classification Overview
-|Level | Description| Subject to FH Admin. Control | Access Requires Authentication  | Logging/Audit  | Encryption at Rest | Encryption in Transit  | Email | Paper-Based |
+#### Public - Level I
+This level includes published research results, Fred Hutch publications and communications press announcements, public record documents, job postings, open source configuration list/code/recipes, reference genomes, released data sets.
+
+#### Confidential - Level II
+This level includes pre–publication research information and analyses, medical expense information, invoices, legal instruments or agreements, transaction documents and reports, Fast file and Secure File server, building plans and information about the physical plant, de-identified research participant information,  and donor information.
+
+#### Strictly Confidential - Level III
+This level includes Protected Health Information (PHI), Individually Identifiable Health Information (IIHI), Personally Identifiable Information (PII), passwords and encryption keys, proprietary information including that belonging to entities other than Fred Hutch.
+
+
+|Level | Subject to FH Admin. Control | Access Requires Authentication  | Logging/Audit  | Encryption at Rest | Encryption in Transit  | Email | Paper-Based |
 |---|---|---|---|---|---|---|---|---|
-| Public - Level I | Published research results, FH publications and communications press announcements, Public record documents, Job postings, Open source configuration list/code/recipes, Reference genomes, Released data sets | No | No | No | | No, On Premises                              No, Off-Premises (Cloud)   | No Restrictions                                                   | No Restriction                                       |
-| Confidential - Level II | Pre–publication research information and analyses, Medical expense information, InvoicesLegal instruments or agreement, Transaction documents and reports, Fast file and Secure File server, Building plans and information about the physical plant, De-identified research participant information, Donor information | Yes | Yes | Yes, if automated or manual system allows. | No, On Premises                              No, Off-Premises (Cloud)   | No, On Premises                              Yes, Off-Premises (Cloud)  | FH Supported Systems                                              | Confidential Labeling                                |
-| Strictly Confidential - Level III | Protected Health Information (PHI), Individually Identifiable Health Information (IIHI), Personally Identifiable Information (PII), Passwords and encryption keys, Proprietary information including that belonging to entities other than Fred Hutch | Yes, Both on and off Premises | Yes                                     | Yes. Audited Semi-Annual                   | Yes, On Premises                              Yes, Off-Premises (Cloud) | Yes, On Premises                              Yes, Off-Premises (Cloud) | Encrypted and FH Approved Systems (Encryption effective mid-2019) | Tamper-proof Envelope/Registered Mail/Signed Delivery |
+| Public - Level I | No | No | No | | No, On Premises                              No, Off-Premises (Cloud)   | No Restrictions                                                   | No Restriction                                       |
+| Confidential - Level II |  Yes | Yes | Yes, if automated or manual system allows. | No, On Premises                              No, Off-Premises (Cloud)   | No, On Premises                              Yes, Off-Premises (Cloud)  | FH Supported Systems                                              | Confidential Labeling                                |
+| Strictly Confidential - Level III |  Yes, Both on and off Premises | Yes                                     | Yes. Audited Semi-Annual                   | Yes, On Premises                              Yes, Off-Premises (Cloud) | Yes, On Premises                              Yes, Off-Premises (Cloud) | Encrypted and FH Approved Systems (Encryption effective mid-2019) | Tamper-proof Envelope/Registered Mail/Signed Delivery |
 
 
 ## Patient Consent -- Protection against Patient Harms
