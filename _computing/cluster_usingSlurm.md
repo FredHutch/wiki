@@ -44,6 +44,12 @@ The `squeue` command allows you to see the jobs running and waiting in the job q
 | -A _account_        | Limit jobs displayed to those owned by an account     |
 | -p _partition_      | Only show jobs in the indicated partition             |
 
+```
+rhino2[~]: squeue -u edgar
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                       30305866    campus    myjob      edgar  R       0:04      1 gizmof83
+```
+
 There are many ways to alter which jobs are shown and how the output is formatted- refer to the [`squeue` manpage](https://slurm.schedmd.com/squeue.html) for more details on using this command.
 
 ### scancel
