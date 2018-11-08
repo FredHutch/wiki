@@ -17,7 +17,7 @@ koshuf      | 70    | 4           | 32768 MB | none
 koshug      | 10    | 8           | 262144 MB| none
 koshuk      | 10    | 4           | 131072 MB| 1 NVIDIA Tesla v100
 
-Note that the processors are hyperthreaded, which means that each physical CPU could be assigned two threads.  Whether this is an improvement for your tools will affect how you run them.
+Note that the processors are hyperthreaded, which means that each physical CPU could be assigned two threads.  Whether this is an improvement for your tools will affect how you run them. 
 
 
 ## Using Koshu
