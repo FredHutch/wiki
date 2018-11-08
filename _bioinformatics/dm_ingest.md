@@ -1,13 +1,13 @@
 ---
 title: Data Ingestion and Public Datasets Best Practices
-last_modified_at: 2018-06-06
+last_modified_at: 2018-11-08
 ---
-Large-scale research data can come from multiple sources, like FredHutch Shared Resources, external collaborators or public repositories. Regardless, if processing or analysis is required, your data will need to be accessible via a Fred Hutch managed data storage, compute resource, or workstation. Being selective about what degree public datasets need to be copied to a local storage space can lower project costs.  
+Large-scale research data can come from multiple sources, like one of the Fred Hutch Shared Resources, external vendors, external collaborators or public repositories. Regardless, if processing or analysis is required, your data will need to be accessible via a Fred Hutch managed data storage, compute resource, or workstation. Being selective about what degree public datasets need to be copied to a local storage space can lower your project costs.  
 
 Below, we outline some different approaches to ingest and store only the most relevant portions of the data. 
 
 ## Data Ingestion for Externally Generated Data
-For data from non-FredHutch entities that you would like to transfer to FredHutch-managed storage for further analysis, there is a multi-step process that Scientific Computing can assist you with. Largescale biomedical datasets have higher risks of data corruption and transfer interruption. Also, "intermediate" data may also need to be generated during analyses by Fred Hutch investigators. Thus, it is important for you to work with Scientific Computing to ensure that the external data are transferred completely, and you have secure and affordable storage on FredHutch systems
+For data from non-Fred Hutch entities that you would like to transfer to Fred Hutch-managed storage for further analysis, there is a multi-step process that Scientific Computing can assist you with. Largescale biomedical datasets have higher risks of data corruption and transfer interruption. Also, "intermediate" data may also need to be generated during analyses by Fred Hutch investigators. Thus, it is important for you to work with Scientific Computing to ensure that the external data are transferred completely, and you have secure and affordable storage on FredHutch systems
 
 The process is generally:
 - Fred Hutch user downloads data from an external source to the *Scratch* service (using ftp, scp, ascp, etc).
@@ -22,11 +22,11 @@ THEN
 - Transfer the validated data to the PI's *Economy File* service either locally or to the *Economy Cloud* service
 
 ### Available Resources
-  - For consulting about how to handle large amounts of externally or internally generated data email FH username **scicomp**.
-  - For assistance with Fred Hutch users manually coordinating and initiating a transfer of large amounts of data to *Scratch*, email helpdesk to get set up using [Aspera.](https://aspera.fhcrc.org/index.html){:target="_blank"}<!--_-->
+  - For consulting about how to handle large amounts of externally or internally generated data email `scicomp`.
+  - For assistance with Fred Hutch users manually coordinating and initiating a transfer of large amounts of data to *Scratch*, email helpdesk to get set up using [Aspera.](https://aspera.fhcrc.org/index.html){:target="_blank"}
 
 ## Data Locations for Fred Hutch Shared Resource-Generated Data
-For data made by Fred Hutch researchers via the Genomics Shared Resource, the default data deposition is currently managed directly by Genomics, and will result in the data being made available to the researchers via their *Fast File* directory: /fh/fast/lastname_f/SR/ngs for sequencing data.  Other types of datasets are transferred to researchers in either a dnaarray directory or via other forms of transfer specific to the platform type.  This allows for rapid access to recently generated datasets.  However, once data generated via the Genomics Core becomes of primary interest to archive for occasional use, it is a good idea to visit the Data Storage section and consider implementing the active data management scheme described above with the assistance of Scientific Computing.  
+For data made by Fred Hutch researchers via the Genomics Shared Resource, the default data deposition is currently managed directly by Genomics, and will result in the data being made available to the researchers via their *Fast File* directory:   `/fh/fast/lastname_f/SR/ngs` for sequencing data.  Other types of datasets are transferred to researchers in either a dnaarray directory or via other forms of transfer specific to the platform type.  This allows for rapid access to recently generated datasets.  However, once data generated via the Genomics Core becomes of primary interest to archive for occasional use, it is a good idea to visit the Data Storage section and consider implementing the active data management scheme described above with the assistance of Scientific Computing.  
 
 For example, depending on the intended use of the datasets, it may be desirable once data is generated by the Genomics Shared Resource to archive the data to the researcher's *Economy* storage space, with a copy put in *Scratch* or researcher AWS S3 bucket for immediate processing.  The specific organization of archive and working copies of data will depend on the particular project involved.  
 
