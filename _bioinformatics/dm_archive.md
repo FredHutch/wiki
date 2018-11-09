@@ -39,9 +39,6 @@ One issue to consider is that it may be desired to have two copies of irreplacea
 
 ### Available Resources
 - Email `helpdesk` for questions or assistance with managing local filesystem based data, and email `scicomp` for questions or assistance withe managing cloud-based data and services.  
-
-
-### Available Resources
 - [Common Data Elements (NCI)](https://wiki.nci.nih.gov/display/caDSR/CTEP+Common+Data+Elements){:target="_blank"}
 - [The Digital Curation Centre](http://www.dcc.ac.uk/resources/metadata-standards){:target="_blank"} provides examples of disciplinary-specific metadata.
 - [Project Open Data](https://project-open-data.cio.gov/v1.1/schema/){:target="_blank"} has a listed of standard data oriented Metadata Terms
