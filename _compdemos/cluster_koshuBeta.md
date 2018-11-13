@@ -36,7 +36,9 @@ For example, _bowtie2_ has the option `-p` to control the number of threads it w
 
     bowtie2 -p 4 ...
 
-would use four threads.
+would use four threads.  The best-practice for this would be to use the Slurm environment variable `SLURM_CPUS_ON_NODE` which will always contain the number of processors you have been assigned on the node:
+
+    bowtie2 -p ${SLURM_CPUS_ON_NODE} ...
 
 ## Managing GPUs
 
