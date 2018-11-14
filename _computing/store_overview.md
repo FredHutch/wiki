@@ -44,7 +44,7 @@ Object Storage systems are not directly attached to your computer (via drive map
 
 These storage systems have capabilities allowing you to share data with people outside the Hutch- with or without a HutchnetID.  These include Aspera and Amazon Web Services S3.  
 
-## Storage FAQ: Cost, Consumption and security
+## Storage FAQ: Cost, Consumption and Security
 
 This section is a quick overview of frequent questions on data storage.  
 
@@ -53,19 +53,20 @@ This section is a quick overview of frequent questions on data storage.
 Please see an overview of storage features and costs on Centernet:
 https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html
 
-Note: As of Oct 2018 [OneDrive](https://centernet.fredhutch.org/cn/u/center-it/help-desk/onedrive-getting-started.html) is available to all hutch users in addition to the storage options described on Centernet. There are no costs up to a limit of 2TB per user. As of Oct 2018 the center has not yet determined if users will be able to increase usage beyond the 2TB limit nor if there will be a charge.
+Note: As of Oct 2018 [OneDrive](https://centernet.fredhutch.org/cn/u/center-it/help-desk/onedrive-getting-started.html) is available to all Fred Hutch users in addition to the storage options described on Centernet. There are no costs up to a limit of 2TB per user. As of Oct 2018 Fred Hutch has not yet determined if users will be able to increase usage beyond the 2TB limit or if there will be a charge.
 
 ### How can I see how much data I am charged for ?
 
 Please see the storage chargeback portal: 
 https://teams.fhcrc.org/sites/centerit/Support/storage/
 
-Note: The monthly billing information can typically be accessed the first 10 days of every month 
+Note: You can typically access the monthly billing information during the first 10 days of every month 
 
 ### Where can I store protected health information (PHI) data ?
 
 Please check with your supervisor before you store any [PHI data](https://cphs.berkeley.edu/hipaa/hipaa18.html) on Fred Hutch systems as your data set may have compliance requirements that would not allow you to store the data on any of the existing systems. In almost all cases you should be working with de-identified data which can be stored on any of the above storage systems. If you require to store PHI data you should only use systems that support 1. Encryption at rest (e.g. on the hard drive), 2. Encryption in transit (e.g. through the network) and 3. access auditing (a systems log who accessed a file what time). Also, PHI can only be stored on systems that are approved by [ISO](https://centernet.fredhutch.org/cn/u/center-it/iso.html). 
 
+This is an overview of supported features:
 
 |  Feature 	| Secure File	| Fast File | Economy File |  OneDrive 	|
 |:-	|:-:	|:-:	|:-:	|:-:	|
