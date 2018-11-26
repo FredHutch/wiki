@@ -1,21 +1,22 @@
 ---
 title: Notebooks and User Interfaces for R, Python and Other Computing Languages
-last_modified_at: 2018-11-09
+last_modified_at: 2018-11-26
 primary_reviewers: dirkpetersen
 ---
-While programming in R, Python or other languages you may need access to various User Interfaces or "Notebooks".  This document provides an overview of these tools. 
+While programming in R, Python or other languages you may need access to various User Interfaces or "Notebooks".  This document provides an overview of these tools.
 
-For R and Python, you can run the code you have written locally on your computer, or remotely on the [Linux clusters administered by SciComp](https://sciwiki.fredhutch.org/computing/cluster_rhinoGizmo/). For running remotely, you can either run on a cluster node shared with other users, or reserve a node for your exclusive use for a limited time.
+## Compute Resources Needed
+For R and Python, you can run the code you have written locally on your computer, or remotely on the [Linux clusters](/computing/cluster_rhinoGizmo/). For running remotely, you can either run on a cluster node shared with other users, or reserve a node for your exclusive use for a limited time.
 
-## Running on your computer
+### Running on your computer
 - Pro: immediate access, familiar environment
 - Con: limited CPU, memory and disk resources for large tasks (eg. aligning RNASeq reads, variant calling, etc.)
 
-## Running remotely on shared cluster node (Rhino)
+### Running remotely on shared cluster node (`Rhino`)
 - Pro: higher CPU, memory and disk resources
 - Con: need to transfer files to Hutch servers, requires Internet connection, can be temporarily slow if Rhino has many concurrent users
 
-## Running remotely on reserved cluster node (Gizmo)
+### Running remotely on reserved cluster node (`Gizmo`)
 - Pro: higher CPU, memory and disk resources, and you're the exclusive user
 - Con: need to transfer files to Hutch servers, requires Internet connection, if you request a very powerful computer, you may have to wait a while for one to become available
 
@@ -45,7 +46,7 @@ Depending on what OS is on your local computer, the steps are:
 From Rhino, execute the `grabnode` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node.
 
 ### RStudio on rstudio.fredhutch.org
-Lastly, a Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org) from computers connected to the Hutch network. For more information about using it, please contact `scicomp`. 
+Lastly, a Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org) from computers connected to the Hutch network. For more information about using it, please contact `scicomp`.
 
 ## Jupyter Notebooks
 
@@ -55,7 +56,7 @@ Jupyter Notebooks are web interfaces to an interpreter shell such as Python. The
 
 Install the software on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
 
-### Jupyter on Rhino
+### Jupyter on `Rhino`
 
 Just load a Python distribution maintained by SciComp and run Jupyter lab:
 
@@ -68,15 +69,15 @@ Then connect to the URL, copying the link given by the previous command, which l
 ```
        Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
-        http://rhino1:11112/?token=0eee692be6c81c1061dbe7455bcd2adf338e75d7b0e23f7e&token=0eee692be6c81c1061dbe7455bcd2adf338e75d7b0e23f7e
+        http://rhino1:11112/?token=0eee692be6c81c1061db
 ```
-### Jupyter on Gizmo
+### Jupyter on `Gizmo`
 
 From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node.
 
 ### Jupyter on Jupyterhub
 
-SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id. 
+SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.
 
 Also only the first method allows you to install your own python packages as root user. The other 3 methods require you to either request a package from Scientific Computing or to create a virtual Python environment, for example:
 ```
