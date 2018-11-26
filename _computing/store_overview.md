@@ -1,17 +1,10 @@
 ---
 title: Overview of Data Storage at Fred Hutch
-last_modified_at: 2018-09-06
+last_modified_at: 2018-11-26
 main_author: Dirk Petersen
 ---
 
-The Hutch supports a number of options for storing your data. These can be categorized as:
-
- - database storage
- - file storage
- - object storage
- - collaborative storage
-
-The service you use to store your data will depend on the nature of the data and the anticipated use. Provided here is a summary of the different options to provide a basic overview of what resources are available to researchers for data storage. For more detailed information on each of these topics summarized here including setup instructions and limitations, please refer to each of the articles in this section of the sidebar.  
+The Hutch supports a number of options for storing your data, specifically Database storage, File storage, Scratch storage, Object storage and Collaborative storage options.  The storage you use to store your data will depend on the nature of the data and the anticipated use. Provided here is a summary of the different options to provide a basic overview of what resources are available to researchers for data storage. For more detailed information on each of these topics summarized here including setup instructions and limitations, please refer to each of the articles in this section of the sidebar.  
 
 ### Special Note: Storing protected health information (PHI) data
 
@@ -39,18 +32,10 @@ There are several options available at the Fred Hutch for storing data in a data
 
 File storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
-There are multiple resources available to researchers that are file storage including:
-
-- _Home_ for personal settings and some data files
-- _Fast File_ for shared data, the default storage for most research data
-- _Secure File_ for strictly confidential data such as PHI
-
 
 ## [Scratch (Temporary) Storage]({{ site.baseurl }}/computing/store_scratch/)
 
 The scratch file system is a file storage system that works differently than the systems intended for long term data storage. It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
-
-Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).  **Data on this platform is not backed up.**  This storage is _not_ appropriate for storing the primary or only copy of any data.
 
 
 ## [Object Storage: Economy File]({{ site.baseurl }}/computing/store_objectstore/)
