@@ -13,6 +13,12 @@ There are multiple resources available to researchers that are Block storage inc
 
 >Note:  Currently it is recommended to use a combination of *Economy*, *Scratch* and *Fast*.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
+## Storage Allocation and Costs
+
+Please see an overview of file/block allocation amounts, features and costs on [Centernet.](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html) For expenses charged for your group for data storage in these systems, please see the [storage chargeback portal.](https://teams.fhcrc.org/sites/centerit/Support/storage/)
+
+>Note: You can typically access the monthly billing information during the first 10 days of every month
+
 ## *Home*
 
 *Home* storage is your own personal file storage space at the Fred Hutch.  It is a default place for your Linux login files (profiles &c) as well as an appropriate place to store your own private information.
