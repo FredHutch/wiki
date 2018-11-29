@@ -11,11 +11,11 @@ The cluster _Koshu_ is a cloud-based Slurm cluster based in Google's Cloud Platf
 
 At this time there are three partitions: the "campus" partition with smaller nodes, a "largenode" partition with nodes that have greater capacities (processors and memory), and a partition named "gpu" that has GPU capabilities.
 
-Node Class  | Count | Processors  | Memory   | GPU 
-------------| ------| ------------| ---------| -----
-koshuf      | 70    | 4           | 32768 MB | none
-koshug      | 10    | 8           | 262144 MB| none
-koshuk      | 10    | 4           | 131072 MB| 1 NVIDIA Tesla v100
+Partition  | Node Class  | Count | Processors  | Memory   | GPU 
+-----------| ------------| ------| ------------| ---------| -----
+campus     | koshuf      | 70    | 4           | 32768 MB | none
+largenode  | koshug      | 10    | 8           | 262144 MB| none
+gpu        | koshuk      | 10    | 4           | 131072 MB| 1 NVIDIA Tesla v100
 
 Note that the processors are hyperthreaded, which means that each physical CPU could be assigned two threads.  Whether this is an improvement for your tools will affect how you run them. 
 
