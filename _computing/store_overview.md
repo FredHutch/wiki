@@ -24,7 +24,7 @@ Additional resources for identifying [whether your data is de-identified or not]
 
 ## Storage Allocation and Costs
 
-Please see an overview of file/block allocation amounts, features and costs on [Centernet.](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html) For expenses charged for your group for data storage in these systems, please see the [storage chargeback portal.](https://teams.fhcrc.org/sites/centerit/Support/storage/)
+Please see an overview of file/block allocation amounts, features and costs on [Centernet.](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html) For expenses charged for your group for data storage in these systems, please see the [storage chargeback portal.](https://teams.fhcrc.org/sites/centerit/Support/storage/)  This portal also displays the amount of data in TB that is stored in each location for each Investigator.  
 
 >Note: You can typically access the monthly billing information during the first 10 days of every month
 
