@@ -19,6 +19,8 @@ koshuk      | 10    | 4           | 131072 MB| 1 NVIDIA Tesla v100
 
 Note that the processors are hyperthreaded, which means that each physical CPU could be assigned two threads.  Whether this is an improvement for your tools will affect how you run them. 
 
+Koshu has access to most Hutch storage systems in the same paths as on gizmo.  The exception to this is the scratch directories- `/fh/scratch/delete10`, `/fh/scratch/delete30`.  These directories are on different file systems and are not available outside the koshu environment.
+
 
 ## Using Koshu
 
@@ -26,7 +28,7 @@ Much like Beagle, jobs are routed to Koshu by use of the `-M` option when runnin
 
     sbatch -M koshu ...
 
-Note that `salloc` and `srun` do not support this.  To run interactive sesisons you need to log into the host _koshu-ctld_.
+Note that `salloc` and `srun` do not support this.  To run interactive sessions you need to log into the host _koshu-login_.
 
 ## Managing CPUS
 
