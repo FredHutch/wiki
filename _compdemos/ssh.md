@@ -12,7 +12,7 @@ Located in your home directory in the `.ssh` folder is a file called `config` (c
 You must start from a client that is running an X11 server. These include any Linux system including NoMachine, XQuartz on MacOS, and Xming or Cygwin on Windows.
 Config|Command Line|Value|Notes
 ---|---|---|---
-ForwardX11|-X|yes/no|This will instuct your ssh client to set up a tunnel between the X11 server on your client device and a port on the remote machine. This port is specified by the `DISPLAY` environment variable.
+ForwardX11|-X|yes/no|This will instruct your ssh client to set up a tunnel between the X11 server on your client device and a port on the remote machine. This port is specified by the `DISPLAY` environment variable.
 ForwardTrustedX11|-Y|yes/no|Trusted X11 connections bypass X11 security features. The traffic is all still encrypted, but root on the remote machine may be able to access your client device. Some SSH implementations do not support X11 security extensions, so you must specify `-Y` or `ForwardTrustedX11` to bypass them.
 
 Check on the remote system that you have a `DISPLAY` environment variable set using `echo $DISPLAY` and test X11 itself by running a simple X11 program like `xeyes`.
