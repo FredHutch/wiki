@@ -7,7 +7,7 @@ last_modified_at: 2018-11-07
 
 The cluster _Koshu_ is a cloud-based Slurm cluster based in Google's Cloud Platform.
 
-> Koshu is currently under beta as it is currently not sized for large-scale work and may experience more maintenance time than other clusters or be missing some functionalities.  We're using this to "kick the tires," make sure everything functions before bringing it into production.  Check back frequently for updates or, as always, contact `SciComp` with any questions or to note any problems you experience when using Koshu.
+> _Koshu_ is currently under beta as it is currently not sized for large-scale work and may experience more maintenance time than other clusters or be missing some functionalities.  We're using this to "kick the tires," make sure everything functions before bringing it into production.  Check back frequently for updates or, as always, contact `SciComp` with any questions or to note any problems you experience when using _Koshu_.
 
 At this time there are three partitions: the "campus" partition with smaller nodes, a "largenode" partition with nodes that have greater capacities (processors and memory), and a partition named "gpu" that has GPU capabilities.
 
@@ -19,12 +19,12 @@ gpu        | koshuk      | 10    | 4           | 131,072 MB| 1 NVIDIA Tesla v100
 
 Note that the processors are hyperthreaded, which means that each physical CPU could be assigned two threads.  Whether this is an improvement for your tools will affect how you run them. 
 
-Koshu has access to most Hutch storage systems in the same paths as on gizmo.  The exception to this is the scratch directories- `/fh/scratch/delete10`, `/fh/scratch/delete30`.  These directories are on different file systems and are not available outside the koshu environment.
+_Koshu_ has access to most Hutch storage systems in the same paths as on `gizmo`.  The exception to this is the scratch directories: `/fh/scratch/delete10` and `/fh/scratch/delete30`.  These directories are on different file systems and are not available outside the _koshu_ environment.
 
 
-## Using Koshu
+## Using _Koshu_
 
-Much like Beagle, jobs are routed to Koshu by use of the `-M` option when running Slurm commands on campus resources (e.g. rhinos):
+Much like _Beagle_, jobs are routed to Koshu by use of the `-M` option when running Slurm commands on campus resources (e.g. `rhinos`):
 
     sbatch -M koshu ...
 
