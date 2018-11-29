@@ -19,7 +19,7 @@ Please see the Service Desk site on CenterNet for more information about [HutchN
 
 The Fred Hutch GitHub organization at https://github.com/FredHutch offers free access to public and private git repostories to all Fred Hutch staff and collaborators. If you are a Fred Hutch employee working with source code and don't have a github.com account yet, please [create one](https://github.com/join) and email `scicomp`: "Please add my GitHub user id `xyz` to organization github.com/FredHutch". Once you are a member of the organization you can create repostories, teams and invite external collaborators to share and edit code.
 
->**Note**: github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch. It has security features that are otherwise not available via other systems.
+>Note: github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch. It has security features that are otherwise not available via other systems.
 
 A GitHub account is different from other accounts. If you leave the Hutch you keep your GitHub account, however you will just be removed from the Fred Hutch organization on GitHub and your former colleagues can still add you as an external collaborator to their GitHub repositories.
 
@@ -29,7 +29,7 @@ We have an entry in the Bioinformatics Resource library that provides more infor
 
 You can obtain [Amazon Web Services](https://aws.amazon.com/) (AWS) credentials to make use of the Center's AWS account. By default this will give you access to your lab's S3 bucket, but you can request permission to use other services such as _AWS Batch_.  AWS credentials are designated per user, so any Fred Hutch employee should obtain their own credentials.
 
->**NOTE**: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `scicomp` to request support from [Scientific Computing](https://centernet.fredhutch.org/cn/u/center-it/cio/scicomp.html).
+>Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `scicomp` to request support from [Scientific Computing](https://centernet.fredhutch.org/cn/u/center-it/cio/scicomp.html).
 
 There are two ways to get AWS credentials. Which one to use depends on how you will use AWS, either via the command line on `rhino`/`gizmo` or via graphical programs on your local computer such as via Cyberduck or Mountainduck.
 
@@ -57,10 +57,10 @@ This will prompt you for your HutchNet password, which will not echo to the scre
 awscreds --help
 ```
 
-See more about accessing AWS S3 via the command line [here.](/computing/store_collaboration/)
+See more about accessing AWS S3 via the command line [here for Python,](/compdemos/aws-python/) [here for R](/compdemos/aws-R/), and [here for the AWS Command Line Interface.](/compdemos/aws-cli/)
 
 
 ### GUI Instructions
 
 Open a web browser and navigate to [https://toolbox.fhcrc.org/sw2srv/aws/account](https://toolbox.fhcrc.org/sw2srv/aws/account).
-This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck. See the more about how to use Cyberduck to connect to AWS S3 [here.](/computing/store_collaboration/)
+This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck or Mountain Duck. See the more about how to use Cyberduck or Mountain Duck to connect to AWS S3 [here.](/compdemos/Mountain-CyberDuck/)
