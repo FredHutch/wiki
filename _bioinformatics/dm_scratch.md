@@ -5,6 +5,8 @@ last_modified_at: 2018-11-26
 
 *Scratch* storage serves as a temporary location for large data sets that ideally reside in an archive space like *Economy* storage, to be transferred to when compute processes are applied to them.  Data in *Scratch* are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in *Scratch* as well, and then the final data resulting from the compute process can be written to *Fast* storage for the researcher.  This allows large data to be archived in *Economy* storage, accessed by HPC when it is temporarily housed in *Scratch* and only the (typically smaller) resulting data are written to the more accessible, but more costly *Fast* storage.
 
+Read more details about *Scratch* over in the [Computing domain here.](/computing/store_scratch/)
+
 ## Why is *Scratch* Different?
 The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the *Home* or *Fast* storage meant for long term data storage (these features were traded for lower cost and greater volume).  Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).
 
