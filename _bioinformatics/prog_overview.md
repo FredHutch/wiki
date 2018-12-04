@@ -1,10 +1,10 @@
 ---
 title: Overview of Common Programming Languages in Bioinformatics
-last_modified_at: 2018-07-20
+last_modified_at: 2018-12-01
 ---
->NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
+Software used in scientific research are written in a wide range of programming languages, we highlight the most commonly used ones below. 
 
-While there are many types of programming languages various software used in scientific research are written in, there are a handful of specific languages that are commonly used in the process of doing a wide range of research tasks.  We will introduce the most common here.  
+When using the Fred Hutch computing clusters, users should access these programming languages via the environmental modules (eg. `ml R` rather than simply `R` in Rhino). Doing this will ensure reproducibility of your code and that you're using the latest software available. More information about environmental modules are available [here](/computing/cluster_software/).
 
 ## R and RStudio
 R is a programming language and also a software development environment. It is widely used among statisticians and has strong capabilities for statistical modeling and data analysis. While R's core functions are fairly small, there is a robust community of user-contributed R 'packages' (eg. see "Bioconductor" below). You can [download](https://cran.r-project.org/) R for your computer, install it from Center IT's Self Service (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs), or run R on SciComp's computing clusters (see "Current R Builds on Gizmo" and in the [Scientific Computing domain of this site](/computing/comp_index/)).
