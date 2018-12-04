@@ -10,6 +10,7 @@ Located in your home directory in the `.ssh` folder is a file called `config` (c
 
 ## Forward X11
 You must start from a client that is running an X11 server. These include any Linux system including NoMachine, XQuartz on MacOS, and Xming or Cygwin on Windows.
+
 Config|Command Line|Value|Notes
 ---|---|---|---
 ForwardX11|-X|yes/no|This will instruct your ssh client to set up a tunnel between the X11 server on your client device and a port on the remote machine. This port is specified by the `DISPLAY` environment variable.
@@ -19,7 +20,6 @@ Check on the remote system that you have a `DISPLAY` environment variable set us
 
 ## Identity
 Often the local user on your client device is not the same as your username on the remote system. You can always `ssh joeuser@remotehost.com` but you can also specify that in the config file.
-
 
 Config|Command Line|Value|Notes
 ---|---|---|---
@@ -42,6 +42,7 @@ The following steps will get your MacOS device into a state where your SSH key p
 
 * Add your 'key' to the keychain - run `ssh-add -K <path to keyfile>` the default is `~/.ssh/id_rsa`. This will prompt for your passphrase, and then store it in your login keychain.
 * Tell ssh to use it - add the following to your ssh config:
+
 Config|Command Line|Value|Notes
 ---|---|---|---
 UseKeychain|-o UseKeychain|yes/no|So not all config options have easy command line options. This tells your ssh client to use your keychain for the passphrase.
@@ -68,6 +69,7 @@ The best practices involving keys include:
 SSH supports an in-memory agent process that will hold your unlocked private key safely. This alleviates the need to type your passphrase for the duration of time the agent is running. See above for MacOS options. On Linux, you can run `eval $(ssh-agent)` to start an agent, and `ssh-add [path to keyfile if not default]` to add your key to the running agent process.
 
 You can forward key requests from remote machine back to your running agent:
+
 Config|Command Line|Value|Notes
 ---|---|---|---
 ForwardAgent|-o ForwardAgent|yes/no|Forward agent requests back to the agent running on your client device.
