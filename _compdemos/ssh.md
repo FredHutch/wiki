@@ -20,6 +20,7 @@ Check on the remote system that you have a `DISPLAY` environment variable set us
 ## Identity
 Often the local user on your client device is not the same as your username on the remote system. You can always `ssh joeuser@remotehost.com` but you can also specify that in the config file.
 
+
 Config|Command Line|Value|Notes
 ---|---|---|---
 User|<username>@|Your remote system username|Make ssh commands shorter and easier.
