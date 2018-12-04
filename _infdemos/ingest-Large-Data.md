@@ -23,10 +23,55 @@ wget --recursive ftp://user@ftp.broadinstitute.org/bundle/
 While `wget` supports sending a password in the command line (either by using `user:pass@` or via the `--password` option) this will make your credentials visible to anyone on the system.
 
 ### Helpful `wget` Options
+
+#### Skipping Existing Files
+
 If you need to repeat the ftp if not all files come down, use no-clobber when resending the command and this will skip any files that already exist.
 
 ```
 --no-clobber
+```
+
+#### Managing Credentials
+
+As mentioned above, there are different options for providing credentials (username and password) to the remote site.  The different options expose, to varying degrees, those credentials to others on the system.  Thus it is up to you to determine which of these methods should be used for storage of the credential.
+
+> IMPORTANT: Passwords are classified as level III data by the ISO.  Thus, none of these mechanisms can be used to store your HutchNet ID.
+
+The first option is to send the credential on the command line, either in the URI or as an option to `wget`.  Providing the credential in the URI means adding the password after the username:
+
+    wget ftp://basil:VeryStrongPassword@site.example.org
+
+You can also put the username and password in options for the `wget` command:
+
+    wget --user=basil --password=VeryStrongPassword ftp://site.example.org
+
+This will expose the username and password to any other users on the system. For anonymous or commonly known credentials this may not be a concern but should not be used for any other credentials.
+
+The next methods allow you to hide the credentials in a file- these files are unencrypted which makes storage of very sensitive credentials inadvisable (or in the case of your HutchNet ID, disallowed). It is _essential_ that this file's permissions allow read and write by you alone.
+
+You can store these credentials in a file in your home directory.  On startup, `wget` will read the file `$HOME/.wgetrc`- this file can be used to store credentials:
+
+```
+user=basil
+password=VeryStrongPassword
+```
+
+Another way to store credentials is to create a file with the URIs you wish to download.  These URIs would contain the credentials using the `user:pass` syntax.  For example, if we create the file `$HOME/data_download.txt` with the line:
+
+```
+ftp://basil:VeryStrongPassword@site.example.org
+```
+
+You then provide this file to `wget` with the following command:
+
+    cat $HOME/data_download | wget -i -
+
+As indicated above, setting this file to be readable by _only_ you is essential:
+
+```
+chmod u=rw,go-rwx $HOME/.wgetrc
+chmod u=rw,go-rwx $HOME/data_download.txt
 ```
 
 ## Sync to AWS S3 *Economy Cloud* Storage
