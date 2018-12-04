@@ -17,8 +17,10 @@ First, make a directory in Scratch for the data you want to ingest.  Then use `w
 cd /fh/scratch/delete10/lastname_f/
 mkdir ingestedDataDir
 cd ingestedDataDir
-wget --recursive ftp://user:pass@ftp.broadinstitute.org/bundle/
+wget --recursive ftp://user@ftp.broadinstitute.org/bundle/
 ```
+
+While `wget` supports sending a password in the command line (either by using `user:pass@` or via the `--password` option) this will make your credentials visible to anyone on the system.
 
 ### Helpful `wget` Options
 If you need to repeat the ftp if not all files come down, use no-clobber when resending the command and this will skip any files that already exist.
@@ -26,7 +28,6 @@ If you need to repeat the ftp if not all files come down, use no-clobber when re
 ```
 --no-clobber
 ```
-
 
 ## Sync to AWS S3 *Economy Cloud* Storage
 Once you've confirmed that the intended data has been fully transferred to *Scratch* then transfer these data to the intended final location in *Economy*, in this case AWS S3 (*Economy Cloud*).  
