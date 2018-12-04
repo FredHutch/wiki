@@ -1,6 +1,6 @@
 ---
-title: Overview of IRB and Human Subjects
-last_modified_at: 2018-10-25
+title: Overview of Data Privacy and Security
+last_modified_at: 2018-12-01
 ---
 
 This section contains a variety of types of information about relevant
@@ -29,7 +29,12 @@ Every effort must be made to protect the identity of participants when human sub
 instances, sharing data should be possible without compromising the
 confidentiality of participants, but if there are circumstances where data needs to
 be restricted due to the inability to protect confidentiality, this should be
-fully addressed in the data management and sharing plan.  This section addresses various aspects of data privacy and security tailored to large scale data involving human subjects.  
+fully addressed in the data management and sharing plan.  This section addresses various aspects of data privacy and security including data that originates from human subjects or specimens.  
+
+## [Compliance and Legal Agreements]({{ site.baseurl }}/generation/security_legal/)
+When sharing data, there are additional issues that might arise regarding appropriate use of those data.  This section provides information about how to obtain the relevant legal agreements involved when compliance with data use restrictions is required for a project. 
+
+
 
 ## [De-Identification of Specimens and Data]({{ site.baseurl }}/generation/human_deidentification/)
 

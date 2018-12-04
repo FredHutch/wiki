@@ -51,6 +51,8 @@ generation:
         url: /generation/human_consentIRB/
       - title: "Data Privacy and Security"
         url: /generation/human_privacySecurity/
+      - title: "Compliance and Legal"
+        url: /generation/security_legal/
       - title: "De-identification"
         url: /generation/human_deidentification/
       - title: "Data Sharing and Public Repositories"
