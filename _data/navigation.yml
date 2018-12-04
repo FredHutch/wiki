@@ -43,7 +43,7 @@ generation:
         url: /generation/study_hypothesis/
 
 
-  - title: "Privacy and Security"
+  - title: "Consent, Privacy and Security"
     children:
       - title: "Overview"
         url: /generation/human_overview/
