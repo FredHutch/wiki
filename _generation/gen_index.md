@@ -17,11 +17,12 @@ This section provides guidance for researchers looking to develop a hypothesis t
 * [Hypothesis Development and Big Molecular Data]({{ site.baseurl }}/generation/study_hypothesis/)
 
 
-## [IRB and Human Subjects]({{ site.baseurl }}/generation/human_overview/)
+## [Consent, Privacy and Security]({{ site.baseurl }}/generation/human_overview/)
 The policies and processes that relate to the human subject components of any large scale data generating or analyzing study are continually evolving as new issues arise and become more clear.  Keeping up with the particular issues that do or do not apply to a given research project can sometimes be a challenge, and these pages contain relevant guidance and links to the necessary information researchers need before, during and after a research project involving human specimens or data.  
 
 * [Consenting and Big Molecular Data]({{ site.baseurl }}/generation/human_consentIRB/)
-* [Privacy and Security]({{ site.baseurl }}/generation/human_privacySecurity/)
+* [Data Privacy and Security]({{ site.baseurl }}/generation/human_privacySecurity/)
+* [Compliance and Legal Agreements]({{ site.baseurl }}/generation/security_legal/)
 * [De-identification]({{ site.baseurl }}/generation/human_deidentification/)
 * [Data Sharing and Public Repositories]({{ site.baseurl }}/generation/human_shareDeposits/)
 
