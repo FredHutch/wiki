@@ -11,8 +11,8 @@ task :test do
                     /translationalgenomics.fredhutch.org/,
                     /lists.fhcrc.org/, /slack.com/,
                     /ontology.fredhutch.org/, /biocontainers.pro/,
-                    /hutchbase.fhcrc.org/],
-      :typhoeus => {:connecttimeout => 30, :timeout => 60}}
+                    /hutchbase.fhcrc.org/, /batch-dashboard.fhcrc.org/],
+      :typhoeus => {:connecttimeout => 60, :timeout => 120}}
   HTMLProofer.check_directory("./_site", options).run
 end
 

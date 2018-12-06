@@ -114,6 +114,8 @@ bioinformatics:
         url: /bioinformatics/dm_storage/
       - title: "Data Ingestion and Public Datasets"
         url: /bioinformatics/dm_ingest/
+      - title: "Using Scratch Storage"
+        url: /bioinformatics/dm_scratch/
       - title: "Data Archiving"
         url: /bioinformatics/dm_archive/
 

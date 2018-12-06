@@ -1,6 +1,6 @@
 ---
-title: Human Data GDS Proposal Development: Regulatory User Scenarios
-main_author:
+title: "Human Data GDS Proposal Development: Regulatory User Scenarios"
+main_author: 
 last_modified_at: 2018-09-27
 primary_reviewers: vortexing, sgglick
 ---

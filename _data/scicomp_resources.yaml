@@ -41,6 +41,7 @@
           manufacturer: SuperMicro
           vendor: Silicon Mechanics
           model: Rackform iServ R4920
+          os: Ubuntu 14.04 LTS
           local_storage:
             -
               type: hard drive
@@ -59,6 +60,7 @@
           manufacturer: SuperMicro
           vendor: SiliconMechanics
           model: 6028U 2U Ultra NVMe Server
+          os: Ubuntu 14.04 LTS
           local_storage:
             -
               type: hard drive
@@ -77,6 +79,7 @@
           manufacturer: SuperMicro
           vendor: Silicon Mechanics
           model: 6028U 2U Ultra NVMe Server
+          os: Ubuntu 14.04 LTS
           local_storage:
             -
               type: hard disk
@@ -95,6 +98,7 @@
           manufacturer: SuperMicro
           vendor: Silicon Mechanics
           model: Super Server
+          os: Ubuntu 14.04 LTS
           local_storage:
             -
               type: hard disk
@@ -120,29 +124,31 @@
         -
           f:
             -
-              cores: 8
+              cores: 4
               sockets: n/a
-              memory_gb: 16
+              memory_gb: 15
               processor_model: c5
               processor_manufacturer: Intel
               manufacturer: EC2
               vendor: Amazon
               model: c5.2xlarge
+              os: Ubuntu 14.04 LTS
               node_count: 777
           g:
             -
-              cores: 36
+              cores: 18
               sockets: n/a
-              memory_gb: 72
+              memory_gb: 60
               processor_model: c5
               processor_manufacturer: Intel
               manufacturer: EC2
               vendor: Amazon
               model: c5.9xlarge
+              os: Ubuntu 14.04 LTS
               node_count: 103
           h:
             -
-              cores: 32
+              cores: 16
               sockets: n/a
               memory_gb: 244
               processor_model: r4
@@ -150,4 +156,5 @@
               manufacturer: EC2
               vendor: amazon
               model: r4.8xlarge
+              os: Ubuntu 14.04 LTS
               node_count: 34

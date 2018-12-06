@@ -203,7 +203,7 @@ More to come.
 "Scratch space" refers to extra disk space that your job may
 need in order to run. By default, not much disk space is
 available (but you have infinite space for input and output
-files in [S3](#using-s3-in-jobs)).
+files in S3.
 
 The provisioning of scratch space in AWS Batch turns out to
 be a very complicated topic. There is no officially supported
@@ -318,7 +318,7 @@ Now edit `job.json`, being sure to fill in the following fields:
   of one (or more) job definitions. This will show you each version
   of the specified definition(s). You can also view job
   definitions in the [dashboard](https://batch-dashboard.fhcrc.org).
-* If you are using [fetch-and-run](#using-fetch-and-run), do NOT edit
+* If you are using [fetch-and-run](https://aws.amazon.com/blogs/compute/creating-a-simple-fetch-and-run-aws-batch-job/), do NOT edit
   the `command` field. If you are not using `fetch-and-run` you may
   want to edit this field to override the default command.
 * Set the `environment` field to pass environment variables to your jobs.
