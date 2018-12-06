@@ -17,7 +17,6 @@ tools, which are also listed below.
 Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
 --- | --- | --- | ---
 Gizmo | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
-  |   |   |  
 Beagle | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Center IT | _home_, _fast_, _economy_, AWS-S3, and Beagle-specific _scratch_
 Rhino | CLI, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
 NoMachine | NX Client, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
