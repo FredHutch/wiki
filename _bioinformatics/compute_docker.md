@@ -64,14 +64,14 @@ download Docker and read instructions on how to run it
 [here](https://github.com/docker/labs/tree/master/beginner/).
 
 Because Docker requires root access, it cannot be run on shared
-compute environments such as Rhino / Gizmo / Slurm. Instead,
+compute environments such as `Rhino` / `Gizmo`. Instead,
 developers at LBL have developed a utility called Singularity
 which can be used to run Docker images within an environment
-like Rhino / Gizmo / Slurm at Fred Hutch. More details
-[here](https://www.sylabs.io/docs/).
+like `Rhino` / `Gizmo` at Fred Hutch. More details
+[here](https://www.sylabs.io/docs/) as well as more information about using Docker at the Hutch in this page in the [Computing Resource Library](/compdemos/Docker/)
 
 Some cloud computing platforms are built explicitly on top of Docker.
-For example, AWS Batch works by running code within Docker containers
+For example, [AWS Batch](/computing/cluster_cloudCompute/) works by running code within Docker containers
 on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch,
 Docker images can be used to save and version the code that is
 executed with that system.
