@@ -88,7 +88,7 @@ loading Python/3.6.4-foss-2016b-fh2...
 
 `srun` is used to run a task on the cluster.  This is an interactive session,
 where you can directly view output as it's produced or provide input (if needed
-by the task your are running.
+by the task you are running).
 
 These two take many of the same options:
 
@@ -99,9 +99,9 @@ These two take many of the same options:
  - `-c` request a number of processors per task (default 1)
  - `-j` name a job
 
-A useful option that is only applicable to `sbatch` is `-o`, which writes output to a different file (default is _slurm-<jobid>.out_ in the current directory)
+A useful option that is only applicable to `sbatch` is `-o`, which writes output to a different file.  The default will write the file _slurm-<jobid>.out_ in the directory in which you submitted the job.
 
-### Examples:
+#### sbatch/srun Examples:
 
 Submit a batch job that will run in one day, six hours in the largenode partition in Beagle.  This will run one instance of the job with one processor.  Name the job "quoth-the-raven".
 
@@ -114,10 +114,6 @@ Submit a job using 6 cores and redirect output to a file named "my-output":
 ```
 sbatch -c 6 -j my-output
 ```
-
-### grabnode
-
-The `grabnode` command will start an interactive login session on a cluster node.
 
 
 ## MultiCluster Operation
