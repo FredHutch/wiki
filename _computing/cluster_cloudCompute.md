@@ -2,6 +2,7 @@
 title: Cloud Computing at Fred Hutch
 last_modified_at: 2018-11-01
 main_author: Sam Minot
+primary_reviewers: dtenenba
 ---
 
 The Hutch is just getting started with cloud computing.  Options like the
@@ -119,10 +120,7 @@ about compute environments, queues, job definitions, and jobs.
 Please report any [issues](https://github.com/FredHutch/batch-dashboard/issues/new)
 you discover with this dashboard.
 
-
-## Request access
-
-### Get AWS Credentials
+## Get AWS Credentials
 
 You will need AWS credentials in order to
 use AWS Batch. You can get the credentials
@@ -141,41 +139,9 @@ SciComp will contact you when your access has been granted.
 Note that you will not be able to create
 compute environments or job queues. If you need a custom compute environment, please contact SciComp.
 
-## Create a Docker image
+## Create and Deploy a Docker Image
+See our detailed information in the Computing Resource Library [here](/compdemos/Docker/) about creating and deploying Docker images, as well as running your own Docker Host.  
 
-### Do you need to create your own image?
-
-It depends on what you want to do. If you are using software that is
-readily available, there is probably already a Docker image containing
-that software. Look around on [Docker Hub](https://hub.docker.com/) to see
-if there's already a Docker image available.
-
-The SciComp group is also developing Docker images that contain much
-of the software you are used to finding in `/app` on the `rhino`
-machines and `gizmo`/`beagle` clusters (here's the [R image](https://hub.docker.com/r/fredhutch/ls2_r/)).
-
-If you've found an existing Docker image that meets your needs, you don't
-need to read the rest of this section.
-
-### Docker Installation Instructions
-It's recommended (but not required) that you install
-[Docker](https://www.docker.com/) on your workstation (laptop or desktop)
-and develop your image on your own machine until it's ready to be deployed.
-
-* [Windows](https://www.docker.com/docker-windows)
-* [Mac](https://www.docker.com/docker-mac)
-* [Ubuntu Linux](https://www.docker.com/docker-ubuntu)
-
-## Deploy Docker Image
-More to come.
-### [Create GitHub Account](/bioinformatics/compute_github/)
-See our docs at the above link.
-### Create a Docker Hub Account
-More to come.
-### Push your Dockerfile to a GitHub repository
-More to come.
-### Create an Automated Build in Docker Hub
-More to come.
 ## Create a Job Definition
 
 [Job Definitions](https://docs.aws.amazon.com/batch/latest/userguide/job_definitions.html) specify how jobs are to be run. Some of the attributes specified in a job definition include:
