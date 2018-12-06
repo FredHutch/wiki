@@ -44,13 +44,13 @@ advise BD&S of the situation without delay.
 
 ### Data Classification Overview
 #### Public - Level I
-This level includes published research results, Fred Hutch publications and communications press announcements, public record documents, job postings, open source configuration list/code/recipes, reference genomes, released data sets.
+This level includes published research results, Fred Hutch publications and communications press announcements, public record documents, job postings, open source configuration list/code/recipes, reference genomes, released data sets, public cryptographic keys.
 
 #### Confidential - Level II
-This level includes pre–publication research information and analyses, medical expense information, invoices, legal instruments or agreements, transaction documents and reports, Fast file and Secure File server, building plans and information about the physical plant, de-identified research participant information,  and donor information.
+This level includes pre–publication research information and analyses, medical expense information, invoices, legal instruments or agreements, transaction documents and reports, Fast file and Secure File server, building plans and information about the physical plant, de-identified research participant information, donor information, metadata, Human Resources data/Employee ID numbers, server names/IP addresses, corporate policies, DNS and LDAP information.
 
 #### Strictly Confidential - Level III
-This level includes Protected Health Information (PHI), Individually Identifiable Health Information (IIHI), Personally Identifiable Information (PII), passwords and encryption keys, proprietary information including that belonging to entities other than Fred Hutch.
+This level includes Protected Health Information (PHI), Individually Identifiable Health Information (IIHI), Personally Identifiable Information (PII), passwords and encryption keys, proprietary information including that belonging to entities other than Fred Hutch, hardware and software authtorization or authentication keys, electronic communication and documents regarding personal or financial matters or other sensitive subjects.
 
 
 |Level | Subject to FH Admin. Control | Access Requires Authentication  | Logging/Audit  | Encryption at Rest (Encryption effective mid-2019) | Encryption in Transit  | Email | Paper-Based |
@@ -84,11 +84,13 @@ Common mechanisms for sharing genomic data:
 
 -   Submitted as supplemental material to be hosted on a journal publisher's website
 
--   Deposited in an open repository or archive
+-   Deposited in an open repository or archive.  (Example: Github)  Not allowed for identified data/information as per Fred Hutch   Information Classification Standard.
 
 -   Deposited in an open repository and publish a "data paper" describing the data
 
--   Emailed to individual requesters (Discouraged)
+-   Using FH Office 365 One-Drive
+
+-   Using FH Outlook email and Office 365 Encryption Security.  (Using non-FH email is discouraged.)
 
 -   Shared using [Fred Hutch resources described at the IT Collaboration Tools site](https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html)
 
@@ -96,18 +98,32 @@ The Fred Hutch Data Classification standard addresses appropriate levels
 of security. Fred Hutch does not currently provide a secure/encrypted
 exchange portal available enterprise-wide. Typically, reciprocation
 should take place in an encrypted environment. Below are various options
-for Fred Hutch members. Using regular Fred Hutch
-email is highly discouraged as, generally, it is not encrypted. Learn more about [collaborative data storage options here.](/computing/store_collaboration/)
+for Fred Hutch members. 
+
+The implementation of Office 365 provides the ability to secure email, storage and sharing.
+
+* Secure email:  Outlook email can be secured within the FH environment and between FH and external entities.  To trigger email encryption, type “secure” (without quotes) in the subject line of any email. Full instructions for securing email is [here.](https://centernet.fredhutch.org/content/dam/centernet/u/center-it/Ignite2/Fred%20Hutch%20Email%20Encryption%20Instructions%202018-11-20.pdf.) For users of mobile devices, Outlook mobile app (iOS and Android) ca display encrypted email within the app without opening browser.
+
+* Microsoft OneDrive: OneDrive offers each user 2T of storage and may be used for sensitive data.  This storage is encrypted at rest and in transit.  OneDrive provides sharing within FH and between FH and external entities.  However, when sharing between FH and external entities, best practices must be put into place to ensure security.  Examples of best practices are here:
+  * Do not sync your Fred Hutch OneDrive with any non-Hutch device
+  * Do leave copies of sensitive data on a non-Hutch device from which you have accessed OneDrive
+  * Sharing Links: Choose the “Specific people” option whenever possible. Beware - if you choose the “People in Fred Hutchinson Cancer R research Center” option, anyone at the Center with a link to your shared file can access it.  Do not select “Everyone” when sharing.
+  * Once a file is shared with someone and they download it to their device, they can share it with others.  File protection may also remain an appropriate practice.
+  * Links which share documents do NOT expire.  Remember to remove ability to share when no longer needed.
+  * Link to further best practices is [here.](https://centernet.fredhutch.org/cn/u/center-it/iso/o365-information-security-guidelines.html)
+
+Learn more about [collaborative data storage options here.](/computing/store_collaboration/)
 
 Fred Hutch data should not be stored or shared via applications utilized for personal use. Properly licensed corporate tools or subscription applications such as DropBox, Box can be considered with guidance from the Information Security Office.
 
-Generally, Investigators can share their data by transferring it to a
-data archive facility for distribution more widely to the scientific
-community, to maintain documentation and meet reporting requirements.
+Generally, Investigators can more widely share their data to the scientific community by transferring it to a
+data archive facility to maintain documentation and meet reporting requirements.
 Data archives are particularly attractive for investigators concerned
 about managing a large volume of requests for data, vetting frivolous or
 inappropriate requests, or providing technical assistance for users
-seeking to help with analyses.
+seeking to help with analyses. Fred
+Hutch does not have a centralized data archive and does not have a preferred
+recommendation for one.
 
 Datasets that cannot be distributed to the general public, due to
 confidentiality concerns or third-party licensing or use agreements that
