@@ -199,6 +199,8 @@ computing:
         url: /computing/cluster_software/
       - title: "Using the Cluster"
         url: /computing/cluster_rhinoGizmo/
+      - title: "Job Management with Slurm"
+        url: /computing/cluster_usingSlurm/
       - title: "Cloud Computing"
         url: /computing/cluster_cloudCompute/
 
