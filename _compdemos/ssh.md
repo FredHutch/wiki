@@ -13,11 +13,13 @@ Many programs you will want to run on a remote compute servers are command line 
 If the remote program has a Graphical User Interface (GUI) then you use a Windows-like system called X (or X11 or XOrg or officially The X Window System). The X Window System is backward from the way you may think it works - what you run on your laptop or desktop is actually the X server, and the remote program you want to display on your device is the client. All SSH clients support tunnelling the X traffic, so usually you will use SSH to start the remote GUI program, which is then displayed on your device.
 
 This is a list of clients and servers by OS:
+
 | OS | SSH client and command | X server | Notes
 | --- | --- | --- | --- |
 | MacOS | OpenSSH `ssh` | [XQuartz](https://www.xquartz.org/) | OpenSSH is already installed on MacOS
 | Linux | OpenSSH `ssh` | Xorg | Both likely already installed on most systems
 | Windows | puTTY `puTTY` | Windows Subsystem for Linux | Must be installed - ask admin
+
 
 ## SSH Connections
 SSH uses the TCP network protocol to make connections between systems. TCP is a persistent, stateful connection that is resilient to network interruptions. When you use SSH to run a program on a remote system (even a shell) the connection you make is tied to an SSH process on the remote machine, and all programs are children of that SSH process. If that process stops, all children stop as well. If the network connection does drop between your client and the server, your SSH process stops, and all your running programs stop.
