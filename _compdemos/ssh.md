@@ -135,7 +135,7 @@ Host *.fhcrc.org
 	ForwardX11 yes
 	ForwardX11Trusted yes
 	ForwardAgent yes
-    User bmcgough
+   	User bmcgough
 ```
 This config contains all of the features mentioned above and will apply them to all `fhcrc.org` hosts. It will use `snail` (the SSH gateway host) for all hosts except `snail` itself, as this would create a loop. Obviously you would replace your identity file path and username if needed.
 
