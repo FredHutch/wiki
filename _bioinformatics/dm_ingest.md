@@ -1,6 +1,6 @@
 ---
 title: Data Ingestion and Public Datasets Best Practices
-last_modified_at: 2018-11-08
+last_modified_at: 2018-12-11
 ---
 Large-scale research data can come from multiple sources, like one of the Fred Hutch Shared Resources, external vendors, external collaborators or public repositories. Regardless, if processing or analysis is required, your data will need to be accessible via a Fred Hutch managed data storage, compute resource, or workstation. Being selective about what degree public datasets need to be copied to a local storage space can lower your project costs.  
 
@@ -21,8 +21,10 @@ THEN
 
 - Transfer the validated data to the PI's [*Economy* storage.](/computing/store_objectstore/)
 
+
 ### Available Resources
   - For consulting about how to handle large amounts of externally or internally generated data email `scicomp`.
+  - An example of how this process can be performed [has been written in the Resource Library.](/bioinformaticsdemos/ingest-Large-Data/)
 
 ## Data Locations for Fred Hutch Shared Resource-Generated Data
 For data made by Fred Hutch researchers via the Genomics Shared Resource, the default data deposition is currently managed directly by Genomics, and will result in the data being made available to the researchers via their *Fast* storage ( e.g., at path `/fh/fast/lastname_f/SR/ngs` for sequencing data).  Other types of datasets are transferred to researchers in either a `dnaarray` directory or via other forms of transfer specific to the platform type or data source.  This allows for rapid access to recently generated datasets.  However, once data generated via the Genomics Core becomes of primary interest to archive for occasional use, it is a good idea to visit the Data Storage section and consider implementing the active data management scheme described above with the assistance of Scientific Computing.  
