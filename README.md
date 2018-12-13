@@ -138,9 +138,11 @@ You may want to build a copy of this wiki locally (on your own computer) to make
 
 ### Steps
 
+1. clone the repo somwhere
 1. Install Ruby (version 1.9.2 or later).
 **Note**: most modern Mac computers already have Ruby installed. If you still need Ruby,
 it can be found [here](https://www.ruby-lang.org/en/downloads/).
+1. On Mac, install xcode commandline tools `xcode-select --install`
 
 1. You may need to install `bundler`. Type
    `which bundler` to see if it is already
@@ -148,8 +150,8 @@ it can be found [here](https://www.ruby-lang.org/en/downloads/).
    install `bundler` with `gem install bundler`.
    If that fails, try `sudo gem install bundler`.
 
-1. To build and view the site locally, type
-   `bundle install`  then enter `bundle exec jekyll serve`. Once the
+1. To build and view the site locally, from the cloned repo directory run
+   `bundle install` then run `bundle exec jekyll serve`. Once the
    site is built you can view it at
    [http://localhost:4000](http://localhost:4000).
 
