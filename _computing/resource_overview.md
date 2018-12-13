@@ -26,3 +26,11 @@ Name|Type|Authentication|Authorization|Location
 {%- for resource in site.data.scicomp_resources %}
 {{ resource.name }}|{{ resource.type }}|{{ resource.access[0].type }}|{{ resource.access[0].auth }}|{{ resource.location }}
 {%- endfor %}
+
+|Cluster|Location|Partition|Node Name|Node Count|CPU|Cores|Memory|Local Disk|Network
+|---|---|---|---|---|---|---|---|---|---|
+{%- for resource in site.data.cluster_nodes %}
+{%- for node in resource.nodes %}
+{{ resource.cluster_name }}|{{ resource.location }}|{{ node.partition }}|{{ node.node_name }}|{{ node.count }}|{{ node.processor_manufacturer node.processor_model }}|{{ node.cores }}|{{ node.memory_gb }}|{{ node.local_storage }}|{{ node.network}}
+{%- endfor %}
+{%- endfor %}
