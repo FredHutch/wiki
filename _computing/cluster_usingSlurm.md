@@ -46,9 +46,11 @@ The `squeue` command allows you to see the jobs running and waiting in the job q
 
 ```
 rhino2[~]: squeue -u edgar
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                       30305866    campus    myjob      edgar  R       0:04      1 gizmof83
+      JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+   31071290    campus     wrap    edgar  R   19:03:13      1 gizmof404
 ```
+
+The field `NODELIST(REASON)` will show either the name of the node(s) allocated for running jobs or the reason a job isn't running.
 
 There are many ways to alter which jobs are shown and how the output is formatted- refer to the [`squeue` manpage](https://slurm.schedmd.com/squeue.html) for more details on using this command.
 
@@ -115,5 +117,14 @@ Submit a job using 6 cores and redirect output to a file named "my-output":
 sbatch -c 6 -j my-output
 ```
 
-
 ## MultiCluster Operation
+
+Most Slurm commands can operate against remote clusters (i.e. _beagle_ from _gizmo_).  Typically the only change required is to add the argument `-M <cluster name>`.
+
+```
+sbatch -M beagle -c 6 -j my-output
+scancel -M beagle 12345
+```
+
+_hitparade_ also supports `-M` and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands _srun_ and _salloc_ will not work.  If use of those commands is necessary, please contact SciComp.
+
