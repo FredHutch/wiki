@@ -26,23 +26,22 @@ There are currently two approaches available for deploying Shiny apps, either ma
     - User can specify if their app is only facing campus within the firewall or being exposed to the entire internet. Authorization feature can also be included upon request.
     - This service is completely free to campus users regardless of usage hours or number of apps.
 
-## Deploying Shiny Apps via SciComp
 
-### GitHub Setup
 To deploy a Shiny app via the Fred Hutch system, you must first have access to the Fred Hutch institution GitHub.  You can find more information about [getting set up with GitHub at Fred Hutch here.](/bioinformatics/compute_github/)  As an overview, you must first create a GitHub username, and then have `scicomp` connect it to the Fred Hutch institution.  
 
-### Set up your Repository
+## Set up your GitHub Repository
 There are two ways to set up your repository, and either is suitable.  Note:  Documentation for using GitHub at the Fred Hutch is being generated [here](/bioinformatics/compute_github/), and it is a good place to start to find the necessary help you may need to use GitHub to set up your Shiny app.  
 
-#### Basic Set Up
 To do a basic set up via the web, go to GitHub and create a new repository in the Fred Hutch institution for your app.  Then clone your new repository to your local computer. In the local folder created, create a folder called `app` and put your shiny app files (either app.R, or ui.r/server.R) and any other associated data files needed for the app in the `app` directory.  (Once you are finished and have tested your app locally, either via R or RStudio, push your edits to GitHub. )
 
-#### Cloning the Template Set Up
+### Cloning the Template Set Up
+
 The template for your app can be found in this GitHub Repo (accessible after login):
 [FredHutch/Shiny-app-template](https://github.com/FredHutch/shiny-app-template)  
 Clone this repository, remove the unnecessary files listed and add your Shiny app files to the `app` directory, before pushing your changes to a new repo on GitHub.  
 
-###### Using Command Line Git
+
+### Using Command Line Git
 
 ![]({{ site.baseurl }}/compdemos/assets/com-com.png)
 
@@ -57,6 +56,7 @@ Clone this repository, remove the unnecessary files listed and add your Shiny ap
     git add .
     git commit -m 'initial commit'
 ```
+
 After the steps above from a terminal, you have achieved these steps:
 - Cloned a template
 - Created your own repo
@@ -64,7 +64,9 @@ After the steps above from a terminal, you have achieved these steps:
 
 Now it's time to inject your wonderful shiny app to this template. The goal is to put all your app code base to template's subfolder 'app'.  
 
-###### Using the GitHub Desktop Application
+
+### Using the GitHub Desktop Application
+
 
 To keep track of file changes within a local repo, first add this folder to GitHub Desktop Application:
 
@@ -76,7 +78,27 @@ You can create a remote repo by clicking on the 'Publish repository' and select 
 
 ![]({{ site.baseurl }}/compdemos/assets/electro-create-remote-repo.png)
 
-### Insert Your App into the Template
+## Test Your Application Locally
+Open the app in an R console.
+
+![]({{ site.baseurl }}/compdemos/assets/r.png)
+
+- Change directory to subfolder 'app' under your app root:
+```
+    cd <your_app_folder>
+    cd app
+    R
+```
+- Via R console,
+```
+    source('start.r')
+```
+
+- Then go to a browser to check the url: http://localhost:7777
+
+
+
+## Insert Your App into the Template
 Use your favorite code editor to add your own shiny app content to this template.  Here are a few reminders for the shiny apps with a single R script:
 
 - Please split your app.R or ui.R/server.R in the `app` directory in the local cloned repository
@@ -102,31 +124,13 @@ After you added your own content to this repo, you are ready to commit the chang
 
 ![]({{ site.baseurl }}/compdemos/assets/electron-push.png)
 
-## Viewing Your App
+### Viewing Your App
 You should be able to find your app within the repo you created.
 
 ![]({{ site.baseurl }}/compdemos/assets/github-repo_s.png)
 
 <!--Please also add topics 'r' and 'shiny'
 ![](/{{ site.baseurl }}/compdemos/assets/GitHub-add-labels-3.png)-->
-
-## Test Your Application Locally
-Open the app in an R console.
-
-![]({{ site.baseurl }}/compdemos/assets/r.png)
-
-- Change directory to subfolder 'app' under your app root:
-```
-    cd <your_app_folder>
-    cd app
-    R
-```
-- Via R console,
-```
-    source('start.r')
-```
-
-- Then go to a browser to check the url: http://localhost:7777
 
 
 
