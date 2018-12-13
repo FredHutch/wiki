@@ -1,4 +1,4 @@
-- name: gizmo
+- cluster_name: gizmo
   type: HPC
   location: FHCRC
   access:
@@ -13,67 +13,66 @@
       version: 1
   nodes:
     -
-      f:
-        -
-          cores: 4
-          sockets: 1
-          memory_gb: 32
-          processor_model: E3-1270v3
-          processor_manufacturer: Intel
-          manufacturer: SuperMicro
-          vendor: Silicon Mechanics
-          model: Rackform iServ R4920
-          os: Ubuntu 14.04 LTS
-          local_storage: "800GB @ /loc  (ca 100 MB/s throughput)"
-          network: 1G (up to 100MB/s throughput)
-          node_count: 456
-          partition: campus
-      g:
-        -
-          cores: 6
-          sockets: 2
-          memory_gb: 256
-          processor_model: E5-1234v666
-          processor_manufacturer: Intel
-          manufacturer: SuperMicro
-          vendor: SiliconMechanics
-          model: 6028U 2U Ultra NVMe Server
-          os: Ubuntu 14.04 LTS
-          local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOPS)\n200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
-          network: 10G (upto 1GB/s throughput)
-          node_count: 18
-          partition: largenode
-      h:
-        -
-          cores: 14
-          sockets: 2
-          memory_gb: 768
-          processor_model: E5-1234v666
-          processor_manufacturer: Intel
-          manufacturer: SuperMicro
-          vendor: Silicon Mechanics
-          model: 6028U 2U Ultra NVMe Server
-          os: Ubuntu 14.04 LTS
-          local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOps)\n200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
-          network: 10G (upto 1GB/s throughput)
-          node_count: 3
-          partition: largenode
-      rhino:
-        -
-          cores: 14
-          sockets: 2
-          memory_gb: 384
-          processor_model: E5-1234v666
-          processor_manufacturer: Intel
-          manufacturer: SuperMicro
-          vendor: Silicon Mechanics
-          model: Super Server
-          os: Ubuntu 14.04 LTS
-          local_storage: "5TB @ /loc (300MB/s throughput/ 1000 IOps)"
-          network: 10G (up to 1GB/s throughput)
-          node_count: 3
-          partition: none (login use)
-- name: beagle
+      node_name: f
+      cores: 4
+      sockets: 1
+      memory_gb: 32
+      processor_model: E3-1270v3
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: Rackform iServ R4920
+      os: Ubuntu 14.04 LTS
+      local_storage: "800GB @ /loc  (ca 100 MB/s throughput)"
+      network: 1G (up to 100MB/s throughput)
+      node_count: 456
+      partition: campus
+    -  
+      node_name: g
+      cores: 6
+      sockets: 2
+      memory_gb: 256
+      processor_model: E5-1234v666
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: SiliconMechanics
+      model: 6028U 2U Ultra NVMe Server
+      os: Ubuntu 14.04 LTS
+      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOPS)\n200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
+      network: 10G (upto 1GB/s throughput)
+      node_count: 18
+      partition: largenode
+    -  
+      node_name: h
+      cores: 14
+      sockets: 2
+      memory_gb: 768
+      processor_model: E5-1234v666
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: 6028U 2U Ultra NVMe Server
+      os: Ubuntu 14.04 LTS
+      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOps)\n200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
+      network: 10G (upto 1GB/s throughput)
+      node_count: 3
+      partition: largenode
+    -  
+      node_name: rhino
+      cores: 14
+      sockets: 2
+      memory_gb: 384
+      processor_model: E5-1234v666
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: Super Server
+      os: Ubuntu 14.04 LTS
+      local_storage: "5TB @ /loc (300MB/s throughput/ 1000 IOps)"
+      network: 10G (up to 1GB/s throughput)
+      node_count: 3
+      partition: none (interactive use)
+- cluster_name: beagle
   type: HPC
   location: AWS
   access:
@@ -82,54 +81,53 @@
       url:  ssh://rhino
       auth: hutchnetID
       auth_type: LDAP
-      scheduler:
-        -
-          name: slurm
-          version: 1
-      nodes:
-        -
-          f:
-            -
-              cores: 4
-              sockets: n/a
-              memory_gb: 15
-              processor_model: c5
-              processor_manufacturer: Intel
-              manufacturer: EC2
-              vendor: Amazon
-              model: c5.2xlarge
-              os: Ubuntu 14.04 LTS
-              local_storage: EBS
-              network: EC2
-              node_count: 777
-              partition: campus
-          g:
-            -
-              cores: 18
-              sockets: n/a
-              memory_gb: 60
-              processor_model: c5
-              processor_manufacturer: Intel
-              manufacturer: EC2
-              vendor: Amazon
-              model: c5.9xlarge
-              os: Ubuntu 14.04 LTS
-              local_storage: EBS
-              network: EC2
-              node_count: 103
-              partition: largenode
-          h:
-            -
-              cores: 16
-              sockets: n/a
-              memory_gb: 244
-              processor_model: r4
-              processor_manufacturer: Intel
-              manufacturer: EC2
-              vendor: amazon
-              model: r4.8xlarge
-              os: Ubuntu 14.04 LTS
-              local_storage: EBS
-              network: EC2
-              node_count: 34
-              partition: largenode
+  scheduler:
+    -
+      name: slurm
+      version: 1
+  nodes:
+    - 
+      node_name: f
+      cores: 4
+      sockets: n/a
+      memory_gb: 15
+      processor_model: c5
+      processor_manufacturer: Intel
+      manufacturer: EC2
+      vendor: Amazon
+      model: c5.2xlarge
+      os: Ubuntu 14.04 LTS
+      local_storage: EBS
+      network: EC2
+      node_count: 777
+      partition: campus
+    - 
+      node_name: g
+      cores: 18
+      sockets: n/a
+      memory_gb: 60
+      processor_model: c5
+      processor_manufacturer: Intel
+      manufacturer: EC2
+      vendor: Amazon
+      model: c5.9xlarge
+      os: Ubuntu 14.04 LTS
+      local_storage: EBS
+      network: EC2
+      node_count: 103
+      partition: largenode
+    - 
+      node_name: h
+      cores: 16
+      sockets: n/a
+      memory_gb: 244
+      processor_model: r4
+      processor_manufacturer: Intel
+      manufacturer: EC2
+      vendor: amazon
+      model: r4.8xlarge
+      os: Ubuntu 14.04 LTS
+      local_storage: EBS
+      network: EC2
+      node_count: 34
+      partition: largenode
