@@ -24,14 +24,10 @@
           vendor: Silicon Mechanics
           model: Rackform iServ R4920
           os: Ubuntu 14.04 LTS
-          local_storage:
-            -
-              type: hard drive
-              disks: 1
-              size_gb: 800
-              filesystem: ext4
-              mount: /loc
+          local_storage: "800GB @ /loc  (ca 100 MB/s throughput)"
+          network: 1G (up to 100MB/s throughput)
           node_count: 456
+          partition: campus
       g:
         -
           cores: 6
@@ -43,14 +39,10 @@
           vendor: SiliconMechanics
           model: 6028U 2U Ultra NVMe Server
           os: Ubuntu 14.04 LTS
-          local_storage:
-            -
-              type: hard drive
-              disks: 6
-              size_gb: 5300
-              filesystem: zfs
-              mount: /loc
+          local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOPS)\n200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
+          network: 10G (upto 1GB/s throughput)
           node_count: 18
+          partition: largenode
       h:
         -
           cores: 14
@@ -62,14 +54,10 @@
           vendor: Silicon Mechanics
           model: 6028U 2U Ultra NVMe Server
           os: Ubuntu 14.04 LTS
-          local_storage:
-            -
-              type: hard disk
-              disks: 6
-              size_gb: 5300
-              filesystem: zfs
-              mount: /loc
+          local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOps)\n200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
+          network: 10G (upto 1GB/s throughput)
           node_count: 3
+          partition: largenode
       rhino:
         -
           cores: 14
@@ -81,14 +69,10 @@
           vendor: Silicon Mechanics
           model: Super Server
           os: Ubuntu 14.04 LTS
-          local_storage:
-            -
-              type: hard disk
-              disks: 6
-              size_gb: 5300
-              filesystem: zfs
-              mount: /loc
+          local_storage: "5TB @ /loc (300MB/s throughput/ 1000 IOps)"
+          network: 10G (up to 1GB/s throughput)
           node_count: 3
+          partition: none (login use)
 - name: beagle
   type: HPC
   location: AWS
@@ -115,7 +99,10 @@
               vendor: Amazon
               model: c5.2xlarge
               os: Ubuntu 14.04 LTS
+              local_storage: EBS
+              network: EC2
               node_count: 777
+              partition: campus
           g:
             -
               cores: 18
@@ -127,7 +114,10 @@
               vendor: Amazon
               model: c5.9xlarge
               os: Ubuntu 14.04 LTS
+              local_storage: EBS
+              network: EC2
               node_count: 103
+              partition: largenode
           h:
             -
               cores: 16
@@ -139,4 +129,7 @@
               vendor: amazon
               model: r4.8xlarge
               os: Ubuntu 14.04 LTS
+              local_storage: EBS
+              network: EC2
               node_count: 34
+              partition: largenode
