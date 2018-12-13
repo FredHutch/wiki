@@ -33,7 +33,7 @@ Please see Center IT pages for more information on [Mobile Device Services](http
 
 ## Access Methods (Terminals, X11, ssh)
 
-There are multiple ways you can get access Scientific Computing resources which are all running on a supported version of Ubuntu Linux. The most simple form of access is using a secure shell terminal software such as `ssh` or `putty`. You may also need graphical output (GUI), for example to use tools like R Studio or advanced text editors. For this you will need X11 tools which can either be installed as add-ons to your ssh program or a dedicated tool such as NoMachine.
+There are multiple ways you can get access Scientific Computing resources which are all running on a supported version of Ubuntu Linux. The most simple form of access is using a secure shell terminal software such as `ssh` or `putty`. You may also need graphical output (GUI), for example to use tools like R Studio or advanced text editors. For this you will need X11 tools which can either be installed as add-ons to your ssh program or a dedicated tool such as NoMachine.  See this page for more information about [ssh configurations.](/compdemos/ssh/)
 
 ### Putty (Windows)
 
@@ -98,4 +98,4 @@ By default you login to `snail.fhcrc.org` first and then to `rhino`. However, if
 ```
 If you are outside the Fred Hutch network type `ssh rhino.fhcrc.org` to use the snail gateway and if you are inside type `ssh rhino` to bypass the gateway.
 
-Please see [this page](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts) to learn more about ProxyCommand.
+Please see [this page](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts) to learn more about ProxyCommand.  See this page for more information about [ssh configurations.](/compdemos/ssh/)

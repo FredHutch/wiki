@@ -38,15 +38,16 @@ There are several options available at the Fred Hutch for storing data in a data
 
 File storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
+## [Economy Storage: Object Storage]({{ site.baseurl }}/computing/store_objectstore/)
 
-## [Scratch (Temporary) Storage]({{ site.baseurl }}/computing/store_scratch/)
+Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud computing depends very much on object storage systems such as Amazon's AWS S3. There are a number of features and benefits of object storage systems, such as better sharing of data and much better handling of meta data (e.g. annotations). At Fred Hutch we use object storage predominantly for very large files (e.g. BAM files) and for archiving purposes.
+
+
+## [Temporary Storage: Scratch]({{ site.baseurl }}/computing/store_scratch/)
 
 The scratch file system is a file storage system that works differently than the systems intended for long term data storage. It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
 
 
-## [Economy Storage: Object Storage]({{ site.baseurl }}/computing/store_objectstore/)
-
-Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud computing depends very much on object storage systems such as Amazon's AWS S3. There are a number of features and benefits of object storage systems, such as better sharing of data and much better handling of meta data (e.g. annotations). At Fred Hutch we use object storage predominantly for very large files (e.g. BAM files) and for archiving purposes.
 
 ## [Collaborative Storage Options]({{ site.baseurl }}/computing/store_collaboration/)
 

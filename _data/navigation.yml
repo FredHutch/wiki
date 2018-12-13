@@ -43,14 +43,16 @@ generation:
         url: /generation/study_hypothesis/
 
 
-  - title: "IRB and Human Subjects"
+  - title: "Consent, Privacy and Security"
     children:
       - title: "Overview"
         url: /generation/human_overview/
       - title: "Consenting and Big Molecular Data"
         url: /generation/human_consentIRB/
-      - title: "Privacy and Security"
+      - title: "Data Privacy and Security"
         url: /generation/human_privacySecurity/
+      - title: "Compliance and Legal"
+        url: /generation/security_legal/
       - title: "De-identification"
         url: /generation/human_deidentification/
       - title: "Data Sharing and Public Repositories"
@@ -197,6 +199,8 @@ computing:
         url: /computing/cluster_software/
       - title: "Using the Cluster"
         url: /computing/cluster_rhinoGizmo/
+      - title: "Job Management with Slurm"
+        url: /computing/cluster_usingSlurm/
       - title: "Cloud Computing"
         url: /computing/cluster_cloudCompute/
 

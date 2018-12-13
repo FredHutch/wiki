@@ -7,23 +7,8 @@ toc: true
 toc_label: "On This Page"
 ---
 
-## Communication and Events
-### Wiki Contributors
-To get involved there are many ways to find us:
-- The Wiki team has weekly, "office hours" style Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions when time permits!  The current schedule can be found on the [FHBig Google calendar,](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) just look for "Wiki Working Meeting" in the event name, or please email `sciwiki` for more information.  
-
-- Join the **FHBig** Slack workspace via [this link, and use your fredhutch.org email to join.](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg)  In this Slack workspace we have a #wikicontributors channel where you can chime in with edits, get updates about next meetings, goals and our next steps.  
-
-- Follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content if you have had your GitHub username linked to the Fred Hutch GitHub organization account. If you have not done this yet, please see more about using GitHub at the Fred Hutch [here](/bioinformatics/compute_github/) and specific instructions for joining the Fred Hutch organization [here.](/bioinformatics/compute_github/#available-resources-and-links)
-
-
-### Translational Genomics Pop Up Events
-Starting in Fall of 2018 we will begin hosting Pop Up workshops!!!  You can find up to date events by going to [the FHBig Google Calendar](https://calendar.google.com/calendar?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) and looking for those events labeled "Pop Up:...".  If you'd like to get on the roster, please email Amy Paguirigan (`apaguiri`) or go chat about it on [Slack.](https://fhbig.slack.com)  
-
-
-
 ## FH Biomedical Data Science Wiki Writer-Editor Program
->Note:  Applications are currently being accepted until Oct 19th for the Nov-Jan term.  Join us for this inaugural session and have the opportunity to influence how this project evolves!  Please contact Amy Paguirigan for additional information.  
+>Note:  Applications are currently being accepted on a rolling basis.  Join us for this inaugural session and have the opportunity to influence how this project evolves!  Please contact Amy Paguirigan for additional information.  
 
 The Biomedical Data Science Wiki aims to support ongoing biomedical research now and in the future. The ongoing contribution and curation of the content in the Wiki by the Fred Hutch researcher community itself is intended to serve two purposes:
 - create an evolving source of documentation that grows and changes along with the particular interests and research tools available to Fred Hutch researchers over time, and
@@ -52,5 +37,12 @@ To apply, these brief application materials need to be combined into a single pd
 - A sample of your writing - preference is for text intended for as general a scientific audience as possible, such as a recent abstract or other review article, and for text that as closely reflects your writing style as possible (without heavy editing by others)
 - Your current CV (FYI:  a link to it or other full online profile can suffice, e.g., a complete LinkedIn profile or a personal website)
 
-### Selection process
-When applications are received, applicants will be provided a short article (likely from existing Wiki content) to edit and return prior to selection.  We aim to select up to 3 researchers per session and ideally each cohort will be comprised of researchers with primary affiliations in different Fred Hutch Divisions.  
+
+## Communication and Events
+### Wiki Contributors
+To get involved there are many ways to find us:
+- The Wiki team has weekly, "office hours" style Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions when time permits!  The current schedule can be found on the [FHBig Google calendar,](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) just look for "Wiki Working Meeting" in the event name, or please email `sciwiki` for more information.  
+
+- Join the **FHBig** Slack workspace via [this link, and use your fredhutch.org email to join.](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg)  In this Slack workspace we have a #wikicontributors channel where you can chime in with edits, get updates about next meetings, goals and our next steps.  
+
+- Follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content if you have had your GitHub username linked to the Fred Hutch GitHub organization account. If you have not done this yet, please see more about using GitHub at the Fred Hutch [here](/bioinformatics/compute_github/) and specific instructions for joining the Fred Hutch organization [here.](/bioinformatics/compute_github/#available-resources-and-links)

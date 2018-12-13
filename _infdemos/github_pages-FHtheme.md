@@ -6,4 +6,10 @@ The Biomedical Data Science Wiki site, as well as the [Fred Hutch Bioinformatics
 
 The repository can be found [here, at the Fred Hutch FH-minimal-mistakes repo.](https://github.com/FredHutch/FH-minimal-mistakes)  It is a customized version of the theme [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) and uses this theme as a remote theme (meaning when the developer updates their site, yours will update too, forcing the majority of the maintenance to the developer rather than you!).  
 
+Of note, if you want to retain the Fred Hutch colors, you MUST leave this line in the config.yml unchanged:
+```
+minimal_mistakes_skin: "contrast"
+```
+If you change the Minimal Mistakes skin to something other than "contrast" you will lose the Fred Hutch colors.  
+
 Please contact Amy Paguirigan (`apaguiri`, sciwiki) or Chao-Jen Wong (`cwon2`, FHBig) for advice or commiseration in using this theme/repo, or go to the FHBig Slack Workspace (see the link at the bottom of this page), and ask your questions in the #githubteam channel.  Given that this was simply community service effort, our documentation on how to use the theme repo is minimal at this point but we will endeavor to keep updating it as we continue to use the theme as well.  
