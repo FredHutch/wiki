@@ -27,10 +27,26 @@ Name|Type|Authentication|Authorization|Location
 {{ resource.name }}|{{ resource.type }}|{{ resource.access[0].type }}|{{ resource.access[0].auth }}|{{ resource.location }}
 {%- endfor %}
 
-|Cluster|Location|Partition|Node Name|Node Count|CPU|Cores|Memory|Local Disk|Network
-|---|---|---|---|---|---|---|---|---|---|
+## Cluster Node Table
+This table is auto-generated based on the yaml in _data/cluster_nodes.yaml:
+
 {%- for resource in site.data.cluster_nodes %}
+
+### {{ resource.cluster_name | upcase }}
+Location: {{ resource.location }}
+
+|Partition|Node Name|Node Count|CPU|Cores|Memory|
+|---|:---:|:---:|---:|:---:|:---:|
 {%- for node in resource.nodes %}
-{{ resource.cluster_name }}|{{ resource.location }}|{{ node.partition }}|{{ node.node_name }}|{{ node.count }}|{{ node.processor_manufacturer node.processor_model }}|{{ node.cores }}|{{ node.memory_gb }}|{{ node.local_storage }}|{{ node.network}}
+{{ node.partition }}|{{ node.node_name }}|{{ node.node_count }}|{{ node.processor_manufacturer }} {{ node.processor_model }}|{{ node.cores }}|{{ node.memory_gb }}GB
 {%- endfor %}
+
+#### Additional resources
+
+|Node Name|Network|Local Storage|
+|---|---|---|
+{%- for node in resource.nodes %}
+{{ node.node_name }}|{{ node.network }}|{{ node.local_storage }}
+{%- endfor %}
+
 {%- endfor %}

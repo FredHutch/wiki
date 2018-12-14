@@ -38,7 +38,7 @@
       vendor: SiliconMechanics
       model: 6028U 2U Ultra NVMe Server
       os: Ubuntu 14.04 LTS
-      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOPS)\n200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
+      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOPS) and 200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
       network: 10G (upto 1GB/s throughput)
       node_count: 18
       partition: largenode
@@ -53,7 +53,7 @@
       vendor: Silicon Mechanics
       model: 6028U 2U Ultra NVMe Server
       os: Ubuntu 14.04 LTS
-      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOps)\n200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
+      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOps) and 200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
       network: 10G (upto 1GB/s throughput)
       node_count: 3
       partition: largenode
