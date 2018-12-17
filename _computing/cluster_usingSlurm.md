@@ -44,31 +44,87 @@ The `squeue` command allows you to see the jobs running and waiting in the job q
 | -A _account_        | Limit jobs displayed to those owned by an account     |
 | -p _partition_      | Only show jobs in the indicated partition             |
 
+```
+rhino2[~]: squeue -u edgar
+      JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+   31071290    campus     wrap    edgar  R   19:03:13      1 gizmof404
+```
+
+The field `NODELIST(REASON)` will show either the name of the node(s) allocated for running jobs or the reason a job isn't running.
+
 There are many ways to alter which jobs are shown and how the output is formatted- refer to the [`squeue` manpage](https://slurm.schedmd.com/squeue.html) for more details on using this command.
 
 ### scancel
 
-`scancel` allows you to signal jobs- most commonly this command is used to stop execution of a running job or remove a pending job from the job queue.  A job IDis the common argument though `scancel` will take many other arguments that allow bulk management of jobs.
+`scancel` allows you to signal jobs- most commonly this command is used to stop execution of a running job or remove a pending job from the job queue.  A job IDis the common argument though `scancel` will take many other arguments that allow bulk management of jobs- it shares many of the same arguments as `squeue`.  For example, the command:
+
+```
+rhino2[~]: scancel -u edgar
+```
+
+will cancel all jobs (pending or running) owned by the user _edgar_.
 
 ### hitparade
 
-The `hitparade` command will show a summary of all jobs running and queued on the cluster broken down by user and account.
+The `hitparade` command will show a summary of all jobs running and queued on the cluster broken down by user and account.  Note that this isn't a Slurm command, rather something built in-house.
+
+`hitparade` takes the `-M` argument to select a cluster:
+
+```
+rhino2[~]: hitparade -M beagle
+loading Python/3.6.4-foss-2016b-fh2...
+
+  === Queue: campus ======= (R / PD) ======
+    poe_e (edgar) 300 / 72
+
+  === Queue: largenode ======= (R / PD) ===
+    schulz_cm (snoopy) 273 / 0
+
+```
 
 ## Commands for Submitting Jobs
 
-### sbatch
+### sbatch and srun
 
-`sbatch` is used to submit a job script to the cluster.  These run jobs without your intervention or input (i.e. non-interactively).
-
-### srun
+`sbatch` is used to submit a job script to the cluster.  These run jobs without your intervention or input (i.e. non-interactively). Common arguments are:
 
 `srun` is used to run a task on the cluster.  This is an interactive session,
 where you can directly view output as it's produced or provide input (if needed
-by the task your are running.
+by the task you are running).
 
-### grabnode
+These two take many of the same options:
 
-The `grabnode` command will start an interactive login session on a cluster node.
+ - `-M` select the cluster on which the job will run
+ - `-p` change the partition
+ - `-t` request a certain amount of time for the job.
+ - `-n` request a number of tasks (default 1)
+ - `-c` request a number of processors per task (default 1)
+ - `-j` name a job
 
+A useful option that is only applicable to `sbatch` is `-o`, which writes output to a different file.  The default will write the file _slurm-<jobid>.out_ in the directory in which you submitted the job.
+
+#### sbatch/srun Examples:
+
+Submit a batch job that will run in one day, six hours in the largenode partition in Beagle.  This will run one instance of the job with one processor.  Name the job "quoth-the-raven".
+
+```
+sbatch -M beagle -p largenode -t 1-6 -j quoth-the-raven myscript.sh
+```
+
+Submit a job using 6 cores and redirect output to a file named "my-output":
+
+```
+sbatch -c 6 -j my-output
+```
 
 ## MultiCluster Operation
+
+Most Slurm commands can operate against remote clusters (i.e. _beagle_ from _gizmo_).  Typically the only change required is to add the argument `-M <cluster name>`.
+
+```
+sbatch -M beagle -c 6 -j my-output
+scancel -M beagle 12345
+```
+
+_hitparade_ also supports `-M` and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands _srun_ and _salloc_ will not work.  If use of those commands is necessary, please contact SciComp.
+
