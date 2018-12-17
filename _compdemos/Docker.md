@@ -1,14 +1,14 @@
 ---
 title: using Docker at Fred Hutch
-last_modified_at: 2018-11-29
+last_modified_at: 2018-12-17
 main_author: Dirk Petersen
 primary_reviewers: dtenenba, dirkpetersen
 ---
-## getting the docker engine ready for testing
 
+## Installing Docker
 You can either install docker on your own machine or you install on the SciComp test server farm 
 
-### Installing Docker on your desktop or Laptop
+### On Your Local Computer
 
 It's recommended (but not required) that you install
 [Docker](https://www.docker.com/) on your workstation (laptop or desktop)
@@ -19,7 +19,7 @@ and develop your image on your own machine until it's ready to be deployed.
 * [Ubuntu Linux](https://www.docker.com/docker-ubuntu)
 
 
-### Run your own Docker host on the SciComp test farm 
+### On the SciComp Test Environment
 
 You can quickly deploy your own docker machine on the Proxmox virtual test environment. 
 This environment uses multiple large memory machines (16 cores, 384GB memory each) which come 
@@ -27,14 +27,14 @@ from the previous generation Rhino class machines.
 
 Login to Rhino via ssh and follow these quick step to run your own docker host:
 
-pick a new host name (in this case we pick 'sausage') and 
+- Pick a new host name (in this case we pick 'sausage') and 
 make sure it does not already exist, ping should respond "unknown host"
-
+```
     petersen@rhino:~$ ping sausage
     ping: unknown host sausage
-
-​now bootstrap a new machine 'sausage' using the "prox new" command and your Hutch net password.
-
+```
+- now bootstrap a new machine 'sausage' using the "prox new" command and your Hutch net password.
+```
     petersen@rhino3:~$ prox new --docker --no-bootstrap sausage
     Password for 'petersen':
 
@@ -48,16 +48,16 @@ make sure it does not already exist, ping should respond "unknown host"
     waiting for machine sausage to come up .. hit ctrl+c to stop ping
     PING sausage.fhcrc.org (140.107.117.249) 56(84) bytes of data.
     64 bytes from sausage.fhcrc.org (140.107.117.249): icmp_seq=1 ttl=63 time=3.17 ms
-
+```
 The prox command checks that the machine is up, now you can login as root with the prox ssh command
 or by using your Hutch net password​:​
 
-    petersen@rhino:~$ prox ssh root@sausage
+ ```   petersen@rhino:~$ prox ssh root@sausage
     Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.19-1-pve x86_64)
-
+```
 and verify that docker works as expected by running the hello world container:
 
-    root@sausage:~# docker run hello-world
+ ```   root@sausage:~# docker run hello-world
     Unable to find image 'hello-world:latest' locally
     latest: Pulling from library/hello-world
     c04b14da8d14: Pull complete 
@@ -66,13 +66,13 @@ and verify that docker works as expected by running the hello world container:
 
     Hello from Docker!
     This message shows that your installation appears to be working correctly.​
-    
+```    
 Now let's assume you would like to install multiple machines to build a small 
 cluster. Each machine requires some ad hoc configuration and we want a little 
 more disk and memory. warning: Each machine requires an IP address and there 
 are a limited number of IP addresses in the subnet of the proxmox cluster. 
 Try not to deploy not more than 10 machines at a time.
-
+```
     petersen@rhino3:~$ prox new --docker --mem 1G --disk 8 --no-bootstrap  sausage1 sausage2 sausage3
     Password for 'petersen':
 
@@ -92,9 +92,9 @@ Try not to deploy not more than 10 machines at a time.
     Starting host 121 ..
         ...UPID:proxa3:00003BE2:0111BDC2:57EEB1A9:vzstart:121:petersen@FHCRC.ORG:
     Machine 121 : running, cpu: -1% ​
-
+```
 and after you are done with your work you can stop and then destroy these machines: 
-
+```
     petersen@rhino3:~$ prox stop sausage1 sausage2 sausage3
     Password for 'petersen':
 
@@ -108,7 +108,7 @@ and after you are done with your work you can stop and then destroy these machin
     UPID:proxa2:000061C7:01122C18:57EEB2C4:vzdestroy:116:petersen@FHCRC.ORG:
     UPID:proxa3:000061CB:01122C2A:57EEB2C4:vzdestroy:118:petersen@FHCRC.ORG:
     UPID:proxa4:000061CF:01122C3B:57EEB2C4:vzdestroy:121:petersen@FHCRC.ORG:​​
-
+```
 Important: If you stop a machine with the 'prox stop' command the host name will 
 not be purged from DHCP/DNS. If you want to re-use that hostname you need to wait 
 for a couple of days. However, if you login to a machine and shut it down with  
@@ -116,10 +116,10 @@ the 'shutdown -h now' command the hostname will be released immediately and you
 can re-use right away after destroying the machine. This trick does currently 
 only work with the default machine which is based on Ubuntu 16.04. It does not 
 work (as of December 2018) if you use Ubuntu 18.04, such as:
-
+``
     petersen@rhino3:~$ prox new --docker --ubuntu 18.04 --no-bootstrap sausage
-
-## using pre-made Docker images with application stacks
+``
+## Using pre-made Docker images with application stacks
 
 You may not need to create your own Docker image, but that depends on what you  
 want to do. If you are using software that is readily available, there is probably 
@@ -142,20 +142,20 @@ need to read the rest of this section.
 You really need a GitHub account to properly build docker containers. Please see our [Shiny](/compdemos/shiny/) app example on how to create your own docker image  
 
 
-## Deploy your Docker image to production
+### Deploy your Docker image to production
 
 Your own machine or the SciComp test farm are likely poor choices for running production level
 applications in containers. For production deployments you will need a GitHub account. (see above)
 
-### Using docker hub 
+#### Using docker hub 
 
-[Dockerhub(https://hub.docker.com/ is a good choice for fully public open source projects 
+[Dockerhub](https://hub.docker.com/) is a good choice for fully public open source projects 
 
-#### Push your Dockerfile to a GitHub repository
+##### Push your Dockerfile to a GitHub repository
 More to come.
-#### Create an Automated Build in Docker Hub
+##### Create an Automated Build in Docker Hub
 More to come.
-#### Create a Job Definition
+### Create a Job Definition
 
 ### Using the Fred Hutch Container environment
 
@@ -168,7 +168,7 @@ based web applications:
 |SciComp-ext |Publicly accessible SciComp managed applications |
 |HDC_Local   |HDC application environment (currently hosting HICORIQ)
 
-Please contact SciComp to discuss which environment is best for your needs.
+Please email `SciComp` to request assistance and discuss which environment is best for your needs.
 
 
 
