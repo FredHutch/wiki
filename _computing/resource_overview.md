@@ -1,13 +1,12 @@
 ---
 title: Scientific Computing Supported Resources
-last_modified_at: 2018-09-14
+last_modified_at: 2018-12-17
 ---
 
->NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
-
+## Proposal Preparation
 A description of computational and storage resources from Scientific Computing for grant writers can be found [here.](/computing/grants_publications/)
 
-## Self Service Resources
+<!-- ## Self Service Resources
 Jupyterhub, RStudio, db4sci, Galaxy, etc.
 
 ## Available Resources
@@ -16,10 +15,11 @@ VMs, shiny, rancher, data transfer
 ## Community Resources (not specifically supported by IT)
 Are there things people use that we don't really support?
 
+-->
 
 
-## Auto-generated Table
-This table is auto-generated based on the yaml in _data/scicomp_resources.yaml:
+## Resource Table
+This table is auto-generated based on the yaml in _data/scicomp_resources.yaml, and is a work in progress.  
 
 Name|Type|Authentication|Authorization|Location
 ---|---|---|---|---
