@@ -1,6 +1,6 @@
 ---
 title: Managing Code and Computing
-last_modified_at: 2018-08-31
+last_modified_at: 2018-12-17
 ---
 This section contains a variety of emerging topics that are becoming more critical for researchers to implement in their work.  
 
@@ -16,4 +16,4 @@ While version control software has evolved over time, a new evolution that is ha
 While programming in R, Python or other languages is an important skill to learn, another layer of how to actually implement and manage processes you have developed in the code you’ve written can be useful. To manage the interface between code and environments, versioning and more integrated features (e.g. git or multi-language processes), various Notebook or User Interfaces exist. This document is an overview of common user interfaces commonly used to manage or interact with code.
 
 ## [Docker]({{ site.baseurl }}/bioinformatics/compute_docker/)
-Docker is an important tool for reproducible analysis in research, as it can be valuable in ensuring the computing environment an analysis is performed in can be completely reproduced.  At its core, Docker is a tool that lets you run code inside a totally fixed and reproducible computational environment. If you have used virtual machines, then you can think of a Docker container as being a lightweight, portable, intuitive system for building and running virtual machines. The major difference between a Docker container and virtual machine is that Docker doesn’t come with operating system, which makes it more lightweight and portable. However, Docker containers do require the Docker engine to run them, which is a client-side application.
+Docker is an important tool for reproducible analysis in research, as it can be valuable in ensuring the computing environment an analysis is performed in can be completely reproduced.  At its core, Docker is a tool that lets you run code inside a totally fixed and reproducible computational environment. If you have used virtual machines, then you can think of a Docker container as being a lightweight, portable, intuitive system for building and running virtual machines. The major difference between a Docker container and virtual machine is that Docker doesn’t come with operating system, which makes it more lightweight and portable. However, Docker containers do require the Docker engine to run them, which is a client-side application. More about using Docker at Fred Hutch is on this [Introduction to Docker](/bioinformatics/compute_docker/) page, and we have provided a detailed set of instructions in the [Computing Resource Library](/compdemos/Docker/).
