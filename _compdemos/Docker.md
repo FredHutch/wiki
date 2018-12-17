@@ -5,13 +5,13 @@ main_author: Dirk Petersen
 primary_reviewers: dtenenba, dirkpetersen
 ---
 
-## Installing Docker
+## Accessing Docker
 You can either install docker on your own machine or you install on the SciComp test server farm 
 
 ### On Your Local Computer
 
 It's recommended (but not required) that you install
-[Docker](https://www.docker.com/) on your workstation (laptop or desktop)
+[Docker](https://www.docker.com/) on your workstation
 and develop your image on your own machine until it's ready to be deployed.
 
 * [Windows](https://www.docker.com/docker-windows)
@@ -25,15 +25,12 @@ You can quickly deploy your own docker machine on the Proxmox virtual test envir
 This environment uses multiple large memory machines (16 cores, 384GB memory each) which come 
 from the previous generation Rhino class machines.
 
-Login to Rhino via ssh and follow these quick step to run your own docker host:
-
-- Pick a new host name (in this case we pick 'sausage') and 
-make sure it does not already exist, ping should respond "unknown host"
+Login to Rhino via ssh and follow these quick step to run your own docker host.  Pick a new host name (in this case we pick `sausage`) and  make sure it does not already exist, ping should respond "unknown host"
 ```
     petersen@rhino:~$ ping sausage
     ping: unknown host sausage
 ```
-- now bootstrap a new machine 'sausage' using the "prox new" command and your Hutch net password.
+Now bootstrap a new machine `sausage` using the "prox new" command and your HutchNet password.
 ```
     petersen@rhino3:~$ prox new --docker --no-bootstrap sausage
     Password for 'petersen':
@@ -50,12 +47,12 @@ make sure it does not already exist, ping should respond "unknown host"
     64 bytes from sausage.fhcrc.org (140.107.117.249): icmp_seq=1 ttl=63 time=3.17 ms
 ```
 The prox command checks that the machine is up, now you can login as root with the prox ssh command
-or by using your Hutch net password​:​
+or by using your Hutch net password.
 
  ```   petersen@rhino:~$ prox ssh root@sausage
     Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.19-1-pve x86_64)
 ```
-and verify that docker works as expected by running the hello world container:
+Verify that docker works as expected by running the hello world container.
 
  ```   root@sausage:~# docker run hello-world
     Unable to find image 'hello-world:latest' locally
@@ -65,7 +62,7 @@ and verify that docker works as expected by running the hello world container:
     Status: Downloaded newer image for hello-world:latest
 
     Hello from Docker!
-    This message shows that your installation appears to be working correctly.​
+    This message shows that your installation appears to be working correctly.
 ```    
 Now let's assume you would like to install multiple machines to build a small 
 cluster. Each machine requires some ad hoc configuration and we want a little 
@@ -91,9 +88,10 @@ Try not to deploy not more than 10 machines at a time.
     Machine 118 : running, cpu: 0% 
     Starting host 121 ..
         ...UPID:proxa3:00003BE2:0111BDC2:57EEB1A9:vzstart:121:petersen@FHCRC.ORG:
-    Machine 121 : running, cpu: -1% ​
+    Machine 121 : running, cpu: -1% 
 ```
-and after you are done with your work you can stop and then destroy these machines: 
+
+After you are done with your work you can stop and then destroy these machines.
 ```
     petersen@rhino3:~$ prox stop sausage1 sausage2 sausage3
     Password for 'petersen':
@@ -109,7 +107,7 @@ and after you are done with your work you can stop and then destroy these machin
     UPID:proxa3:000061CB:01122C2A:57EEB2C4:vzdestroy:118:petersen@FHCRC.ORG:
     UPID:proxa4:000061CF:01122C3B:57EEB2C4:vzdestroy:121:petersen@FHCRC.ORG:​​
 ```
-Important: If you stop a machine with the 'prox stop' command the host name will 
+>**Important:** If you stop a machine with the 'prox stop' command the host name will 
 not be purged from DHCP/DNS. If you want to re-use that hostname you need to wait 
 for a couple of days. However, if you login to a machine and shut it down with  
 the 'shutdown -h now' command the hostname will be released immediately and you  
