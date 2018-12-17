@@ -1,6 +1,6 @@
 ---
-title: Introduction to Docker for Bioinformaticians 
-last_modified_at: 2018-08-31
+title: Introduction to Docker
+last_modified_at: 2018-12-17
 ---
 
 At its core, Docker is a tool that lets you run code inside a
