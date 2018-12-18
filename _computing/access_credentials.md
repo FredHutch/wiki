@@ -26,7 +26,7 @@ A GitHub account is different from other accounts. If you leave the Hutch you ke
 We have an entry in the Bioinformatics Resource library that provides more information about [git and GitHub](/bioinformatics/compute_github/) in general and specifically here at the Fred Hutch.  
 
 ### Guidance for Managing Credentials and Passwords
-One issue to note when using GitHub to do version control in your code is that it can be very straightforward to inadvertently push content to GitHub that includes things such as API tokens, usernames and passwords, or even your AWS credentials themselves.  Please take care to structure your code in such a way that these "secrets" or anything you perceive to be private information (see our [Security page]() for more information about what this might be) are loaded from an external file or environment variables that themselves are not sent to GitHub!!
+One issue to note when using GitHub to do version control in your code is that it can be very straightforward to inadvertently push content to GitHub that includes things such as API tokens, usernames and passwords, or even your AWS credentials themselves.  Please take care to structure your code in such a way that these "secrets" or anything you perceive to be private information (see our [Security page](/generation/human_privacySecurity/) for more information about what this might be) are loaded from an external file or environment variables that themselves are not sent to GitHub!!
 
 ## Amazon Web Services (AWS)
 

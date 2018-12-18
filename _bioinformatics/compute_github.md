@@ -1,7 +1,7 @@
 ---
 title: Git and GitHub for Computational Research
-last_modified_at: 2018-10-19
-primary_reviewers: k8hertweck
+last_modified_at: 2018-12-18
+primary_reviewers: k8hertweck, vortexing
 ---
 Version control software allows anyone using a computer to track changes made to computer files over time, which allows both referencing and reverting back to earlier work. Such software is becoming increasingly common among scientists, academics, and other researchers to manage computational work. While originally developed to support code development, version control software is useful for not just computer code, but also data, documentation, or any other files associated with a project. Moreover, version control software streamlines collaborative editing of documents, allowing changes to be easily identified and attribution of changes to be assigned to individual contributors.   
 
@@ -62,7 +62,7 @@ Considering both the large potential benefits and risks of using GitHub and Git,
 Given the potential risk associated with even a private repository, however, you should carefully consider alternatives to maintaining any level of sensitive data in public or private GitHub repositories. The preferred method for ensuring privacy and security is keeping all potentially sensitive data out of GitHub repositories. Options for helping accomplish this while realizing the benefits of Git include restructuring workflows to preprocess and sanitize sensitive data in secure backend systems prior to it being posted to Git and storing secrets such as access keys and database credentials in the Vault secrets management system, accessing them when needed from Git using a secure API. For more guidance about how to structure your code or content you are putting in GitHub to ensure security, email `scicomp`.  
 
 ### Managing Credentials in Your Code
-
+One issue to note when using GitHub to do version control in your code is that it can be very straightforward to inadvertently push content to GitHub that includes things such as API tokens, usernames and passwords, or even your AWS credentials themselves.  Please take care to structure your code in such a way that these "secrets" or anything you perceive to be private information (see our [Security page](/generation/human_privacySecurity/) for more information about what this might be) are loaded from an external file or environment variables that themselves are not sent to GitHub!!  More information about how to avoid this can be found in our [Computing Credentials page.](/computing/access_credentials/)
 
 
 ## Available Resources and links
