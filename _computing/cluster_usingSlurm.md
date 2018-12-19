@@ -1,19 +1,22 @@
 ---
 title: Using Slurm on Hutch Systems
-last_modified_at: 2018-09-27
+last_modified_at: 2018-12-18
+primary_reviewers: atombaby
 ---
->NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.
 
 ## Slurm
 
 Slurm is the workload manager for Scicomp clusters.  It manages both your jobs
-and the resources available in the cluster.  There are two main clusters in use today- the on-campus _gizmo_ cluster and the cloud-based _beagle_ cluster.  Commands work the same in either environment.
+and the resources available in the cluster.  There are two main clusters in use today- the on-campus `Gizmo` cluster and the cloud-based `Beagle` cluster.  Commands work the same in either environment.
+
+## Examples of Use
+A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  
 
 ## Basic Slurm Terminology
 
 ### Cluster
 
-A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).  At the Hutch we have two clusters, _beagle_ and _gizmo_.  From most hosts the default cluster will be _gizmo_- selection of the target cluster is done via an argument to Slurm commands (see [Multi-Cluster Operation](#multicluster-operation) below)
+A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).  At the Hutch we have two clusters, `Beagle` and `Gizmo`.  From most hosts the default cluster will be _gizmo_- selection of the target cluster is done via an argument to Slurm commands (see [Multi-Cluster Operation](#multicluster-operation) below)
 
 ### Partition
 
