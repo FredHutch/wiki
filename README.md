@@ -1,3 +1,5 @@
+> Note on the AllFredHutch team.  We want everyone included, but GitHub can be chatty.  Go [here](https://help.github.com/articles/watching-and-unwatching-team-discussions/) to see how to set your personal settings to NOT automatically watch every team you are part of.  
+
 # Contributing to this wiki
 This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff whether as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large).
 
