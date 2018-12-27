@@ -58,9 +58,13 @@ if you want to switch back to the non-GPU version of Tensorflow just uninstall t
 ```
 
 
-### GPU Tensorflow in a virtual envionment 
+### GPU Tensorflow in a virtual environment 
+
+### GPU Tensorflow from a singularity container  
 
 ## GPU Tensorflow from R 
+
+
 
 ## Troubleshooting 
 
