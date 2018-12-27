@@ -19,7 +19,7 @@ load a current version of Python 3.6 on Rhino using the ml shortcut for module l
     ~$ pip3 install --user --upgrade /app/src/tensorflow/14.04/python3.6/cuda10/tensorflow-1.12.0-cp36-cp36m-linux_x86_64.whl
 ``` 
 
-then create a small python test script and run it for example on koshu:
+then create a small python test script:
 
 ```
     echo "#! /usr/bin/env python3" > ~/tf-test.py
