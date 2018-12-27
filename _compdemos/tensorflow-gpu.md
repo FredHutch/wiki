@@ -5,7 +5,7 @@ main_author: Dirk Petersen
 primary_reviewers: fizwit, dirkpetersen
 ---
 
-In order to run tensorflow on GPUs you need to use a special version of Tensorflow are currently installed on the [Koshu cluster](/compdemos/cluster_koshuBeta/) (Google cloud). In early 2019 GPUs will also be available on the GizmoJ class nodes. For now please follow the instructions for getting a GPU based machines on Koshu
+In order to run tensorflow on GPUs you need to use a special version of Tensorflow. GPUs are currently installed on the [Koshu cluster](/compdemos/cluster_koshuBeta/) (Google cloud). In early 2019 GPUs will also be available on the new GizmoJ class nodes. For now please follow the instructions for getting a GPU based machines on Koshu: 
 
 
 ## GPU Tensorflow in a Python Environment 
