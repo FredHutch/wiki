@@ -62,7 +62,30 @@ if you want to switch back to the non-GPU version of Tensorflow just uninstall t
 
 ### GPU Tensorflow from a singularity container  
 
-## GPU Tensorflow from R 
+### Tensorflow from R
+Scientific Computing maintains custom builds of R and Python.
+Python modules with fh suffixes have Tensorflow since version 3.6.1.
+Only Python3 releases have the Tensorflow package. To use Tensorflow from
+R, use the FredHutch Modules for R and Python.
+Example Setup
+
+```
+ml R
+ml Python/3.6.7-foss-2016b-fh2
+
+# Start R
+R
+# R commands
+pyroot = Sys.getenv("EBROOTPYTHON")
+pypath <- paste(pyroot, sep = "/", "bin/python")
+Sys.setenv(TENSORFLOW_PYTHON=pypath)
+library(tensorflow)
+tf_version()
+sess = tf$Session()
+hello <- tf$constant('Hello, TensorFlow!')
+sess$run(hello)
+# Sample output: b'Hello, TensorFlow!'
+```
 
 
 
