@@ -8,7 +8,7 @@ primary_reviewers: fizwit, dirkpetersen
 In order to run tensorflow on GPUs you need to use a special version of Tensorflow. GPUs are currently installed on the [Koshu cluster](/compdemos/cluster_koshuBeta/) (Google cloud). In early 2019 GPUs will also be available on the new GizmoJ class nodes. For now please follow the instructions for getting a GPU based machines on Koshu: 
 
 
-## GPU Tensorflow in a Python Environment 
+## GPU Tensorflow in a Python Environment
 
 ### GPU Tensorflow with the standard Python
 
@@ -24,8 +24,10 @@ then create a small python test script:
 ```
     echo "#! /usr/bin/env python3" > ~/tf-test.py
     echo "import tensorflow" >> ~/tf-test.py
+    echo "from tensorflow.python.client import device_lib" >> ~/tf-test.py
     echo "print(tensorflow.__version__)" >> ~/tf-test.py
     echo "print(tensorflow.__path__)" >> ~/tf-test.py
+    echo "print(device_lib.list_local_devices())" >> ~/tf-test.py
     chmod +x ~/tf-test.py
 ```
 
@@ -37,6 +39,8 @@ and run it on Koshu (for example)
     ~$ tail -f out.txt
     1.12.0
     ['/home/petersen/.local/lib/python3.6/site-packages/tensorflow', '...']
+    ...
+    physical_device_desc: "device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0"
 ```
 
 if you want to switch back to the non-GPU version of Tensorflow just uninstall the GPU version you installed under .local 
@@ -57,12 +61,37 @@ if you want to switch back to the non-GPU version of Tensorflow just uninstall t
         Successfully uninstalled tensorflow-1.12.0
 ```
 
+### GPU Tensorflow in a virtual environment
 
-### GPU Tensorflow in a virtual environment 
+Python virtual environments are useful for advanced users who would like to work with multiple versions of python packages. It is important to understand that the virtual env is tied to the Python environment you have previously loaded using the `ml` command. Let's load a recent Python and create a virtual environment called `mypy`
+
+```
+    ~$ ml Python/3.6.7-foss-2016b-fh2
+    ~$ python3 -m venv mypy
+    ~$ source ./mypy/bin/activate
+    (mypy) petersen@rhino3:~$ which pip3
+    /home/petersen/mypy/bin/pip3
+```
+
+Now that you have our own environment you can install packages with pip3. Leave out the --user option in this case because you want to install the package under the virtual environment and not under ~/.local 
+
+```
+    (mypy) petersen@rhino3:~$ pip3 install --upgrade /app/src/tensorflow/14.04/python3.6/cuda10/tensorflow-1.12.0-cp36-cp36m-linux_x86_64.whl
+``` 
+
+Now you can just continue with the example from `GPU Tensorflow with the standard Python`. After you are done with your virtual environment you can just run the `deactivate` script. No need to uninstall the tensorflow package:
+
+```
+    (mypy) petersen@rhino3:~$ deactivate 
+    ~$ 
+```
+
 
 ### GPU Tensorflow from a singularity container  
 
-### Tensorflow from R
+
+## Tensorflow from R
+
 Scientific Computing maintains custom builds of R and Python.
 Python modules with fh suffixes have Tensorflow since version 3.6.1.
 Only Python3 releases have the Tensorflow package. To use Tensorflow from
@@ -70,24 +99,22 @@ R, use the FredHutch Modules for R and Python.
 Example Setup
 
 ```
-ml R
-ml Python/3.6.7-foss-2016b-fh2
+    ml R
+    ml Python/3.6.7-foss-2016b-fh2
 
-# Start R
-R
-# R commands
-pyroot = Sys.getenv("EBROOTPYTHON")
-pypath <- paste(pyroot, sep = "/", "bin/python")
-Sys.setenv(TENSORFLOW_PYTHON=pypath)
-library(tensorflow)
-tf_version()
-sess = tf$Session()
-hello <- tf$constant('Hello, TensorFlow!')
-sess$run(hello)
-# Sample output: b'Hello, TensorFlow!'
+    # Start R
+    R
+    # R commands
+    pyroot = Sys.getenv("EBROOTPYTHON")
+    pypath <- paste(pyroot, sep = "/", "bin/python")
+    Sys.setenv(TENSORFLOW_PYTHON=pypath)
+    library(tensorflow)
+    tf_version()
+    sess = tf$Session()
+    hello <- tf$constant('Hello, TensorFlow!')
+    sess$run(hello)
+    # Sample output: b'Hello, TensorFlow!'
 ```
-
-
 
 ## Troubleshooting 
 
