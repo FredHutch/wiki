@@ -89,6 +89,22 @@ Now you can just continue with the example from `GPU Tensorflow with the standar
 
 ### GPU Tensorflow from a singularity container  
 
+To run in a Singularity container, you need to start with a Docker image containing a modern Python and the _tensorflow-gpu_ package installed.  The [Tensorflow Docker images](https://hub.docker.com/r/tensorflow/tensorflow/) are all set up and ready.
+
+After that load Singularity:
+
+    ml Singularity
+
+> Note that there is a _singularity_ module (note the case) that is
+> out-of-date.  Loading _Singularity_ (with caps) will give you the most modern
+> release which is typically what you want.
+
+After that, the only change is to enable NVIDIA support by adding the `--nv`
+flag to `singularity exec`:
+
+    singularity exec -nv docker://tensorflow/tensorflow:latest-gpu python ...
+
+Sample code is available in the [slurm-examples repository](https://github.com/FredHutch/slurm-examples/tree/master/tensorflow-gpu).
 
 ## Tensorflow from R
 
