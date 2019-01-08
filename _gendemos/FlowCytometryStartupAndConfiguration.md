@@ -140,7 +140,7 @@ primary_reviewers: vortexing
 3. Replace the tube containing detergent with a tube containing DI water and let run for 5 minutes.
 4. Press the GREEN button on the front of the cytometer to turn off the machine.
 5. On the computer close all software and running programs, but DO NOT log out from iLab.
-6. Click the windows home icon and select shutdown. A window will appear asking if you want to force the shutdown while iLab is running. Select force shutdown. This will turn the computer and monitors off and select shutdown. A window will appear asking if you want to force the shutdown while iLab is running. Select force shutdown. This will turn the computer and monitors off.
+6. Click the windows home icon and select shutdown. A window will appear asking if you want to force the shutdown while iLab is running. Select force shutdown. This will turn the computer and monitors off.
 
 
 ## Symphony and Fortessa X-50 Instrument Setup and Operation
@@ -182,4 +182,4 @@ primary_reviewers: vortexing
 3. Replace the tube containing detergent with a tube containing DI water and let run for 5 minutes.
 4. Press the GREEN button on the side of the cytometer to turn off the machine.
 5. On the computer close all software and running programs, but DO NOT log out from iLab.
-6. Click the windows home icon and select shutdown. A window will appear asking if you want to force the shutdown while iLab is running. Select force shutdown. This will turn automatically off the computer and monitors. Select shutdown. A window will appear asking if you want to force the shutdown while iLab is running. Select force shutdown. This will turn automatically off the computer and monitors.
+6. Click the windows home icon and select shutdown. A window will appear asking if you want to force the shutdown while iLab is running. Select force shutdown. This will turn off the computer and monitors. 
