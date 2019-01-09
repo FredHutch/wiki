@@ -20,6 +20,8 @@ For current instrument configurations available in the Fred Hutch Flow Cytometry
 - [LSR 2]({{ site.baseurl }}/generation/assets/flowCytometryStartupDocs/LSR2-2.pdf)
 - [Symphony]({{ site.baseurl }}/generation/assets/flowCytometryStartupDocs/Symphony1.pdf)
 - [X-50]({{ site.baseurl }}/generation/assets/flowCytometryStartupDocs/X-50.pdf)
+- AutoMACS
+- CyTOF
 
 ## Startup Instructions
 For current startup and shut down instructions for the Aria, Canto and LSR, see our [Resource Library entry.](/gendemos/FlowCytometryStartupAndConfiguration/)
