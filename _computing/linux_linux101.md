@@ -1,9 +1,7 @@
 ---
 title: Linux 101
-last_modified_at: 2018-09-14
+last_modified_at: 2019-01-10
 ---
->NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  This page is intended to serve as an introduction to using Linux at the Hutch.  The following sections are the outline for the content to be created here.
-
 
 ## What is Linux?
 
