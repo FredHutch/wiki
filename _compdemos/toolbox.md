@@ -1,20 +1,20 @@
 ---
-title: using Toolbox to get Hutch master data 
-last_modified_at: 2018-12-31
+title: Using Toolbox to Get Hutch Master Data 
+last_modified_at: 2019-01-10
 main_author: Dirk Petersen
 primary_reviewers: mrg, dirkpetersen
 ---
 
-## What is [toolbox.fhcrc.org](https://toolbox.fhcrc.org/) ?
+## What is [toolbox.fhcrc.org](https://toolbox.fhcrc.org/)?
 
-Did you ever want to know to which PI or division a user rolls up to or check if someone is Hutch staff or affiliated or get all users in the same department? Then Toolbox may be for you. Toolbox is a system that provides Hutch [master data](https://en.wikipedia.org/wiki/Master_data) to developers (currently focusing on user centric master data).
-Toolbox can only be accessed from inside the Hutch network or VPN and you may have already used it to get access to credentials for Cloud Computing / Economy File. However Toolbox offers much more. If you develop applications or need any kind of automation that requires information about the almost 5000 Hutch employees and non-employees (e.g affiliates) this is the tool for you. Toolbox is polling the central HR database daily so your scripts will always use current information.
+Did you ever want to know to which PI or division a user rolls up to, check if someone is Hutch staff or affiliated or get all users in the same department? Then Toolbox may be for you. Toolbox is a system that provides Hutch [master data](https://en.wikipedia.org/wiki/Master_data) to developers (currently focusing on user centric master data).
+Toolbox can only be accessed from inside the Hutch network or VPN and you may have already used it to get access to credentials for cloud computing or `Economy` storage access. If you develop applications or need any kind of automation that requires information about the almost 5,000 Hutch employees and non-employees (e.g affiliates) this is the tool for you. Toolbox is polling the central HR database daily so your scripts will always use current information.
 
-### getting data from Toolbox
+## Data Format
 
-Toolbox offers its data as simple json ( https://toolbox.fhcrc.org/json/ ) or csv files ( https://toolbox.fhcrc.org/csv/ ) and you can easily parse them using your favorite coding tool such as Python, R or the Linux shell. You can browse the json files using Chrome or Firefox. (The Microsoft browsers IE and Edge want to download json files instead).
+Toolbox offers its data as simple [json](https://toolbox.fhcrc.org/json/) or [csv files](https://toolbox.fhcrc.org/csv/) and you can easily parse them using your favorite coding tool such as Python, R or the Linux shell. You can browse the json files using Chrome or Firefox. (The Microsoft browsers IE and Edge want to download json files instead).
 
-### what datasets are available ?
+## What Datasets are Available?
 
 The exact file collection available is in flux but here is an extract:
 
@@ -30,11 +30,15 @@ The exact file collection available is in flux but here is an extract:
 * **pi_groupmember.json/csv** - get the security groups a specific user is member of. The list of security groups is limited to the ones that govern access to Fast File and Economy local and cloud (S3) storage.
 
 
-## Writing code that uses Toolbox (examples)
+## Writing code that uses Toolbox
 
- There are 2 types of JSON files. Files that have the number "2" in their names are simple mappings or key / value pairs. For example user2sup.json allows you to get the the username of the direct supervisor of a user. Other files are larger tables. For example  users.json contains all users (faculty, staff and affiliates) with details such as department, job titles and division. (Note: Human Biology has the ID 'CB' which is an artifact of the past and Shared Resources has its own division ID although it technically rolls up under Research Administration). These json databases are presented as lists of dictionaries in Python. The field or column naming convention are mostly based on [LDAP RFC 2798](https://tools.ietf.org/html/rfc2798), e.g. givenName, displayName, sn (for surname)
+There are 2 types of JSON files. Files that have the number "2" in their names are simple mappings or key / value pairs. For example `user2sup.json` allows you to get the the username of the direct supervisor of a user. Other files are larger tables. For example `users.json` contains all users (faculty, staff and affiliates) with details such as department, job titles and division. These json databases are presented as lists of dictionaries in Python. The field or column naming convention are mostly based on [LDAP RFC 2798](https://tools.ietf.org/html/rfc2798), e.g. givenName, displayName, sn (for surname).
 
-### Python Examples
+> Note: Human Biology has the ID 'CB' which is an artifact of the past and Shared Resources has its own division ID although it technically rolls up under Research Administration. 
+
+
+
+### Python
 
 To parse JSON files from a web server we need to import the `requests` and `json` packages. To process csv files we use the `pandas` package which is the standard toolset for python based data scientists.
 Files with "2" in their name are converted to simple Python dictionaries, e.g. `{'key1': 'valueA', 'key2': 'valueB'}`. The other JSON files are converted to a list of dictionaries were each dictionary represents a row. `[{'key1':'A','key2':'B'},{'key1':'C','key2':'D'}]`. In the csv files this would be a row in the table.
@@ -48,7 +52,7 @@ To start with a simple example let's say we want to find the supervisor of Fred 
     gary
 ```
 
-then we would like to know to which PI user markg (Mark Groudine) rolls up to
+Then we would like to know to which PI user markg (Mark Groudine) rolls up to:
 
 ``` python
     >>> URL = 'https://toolbox.fhcrc.org/json/user2pi.json'
@@ -57,7 +61,7 @@ then we would like to know to which PI user markg (Mark Groudine) rolls up to
     groudine_m
 ```
 
-and the answer is of course groudine_m. When we query other staff who reports indirectly or directly up to Mark Groudine the result would also be 'groudine_m'. If we query the username of non-scientific staff there is no PI to roll up to and user2pi will return an empty string.
+The answer is of course `groudine_m`. When we query other staff who reports indirectly or directly up to Mark Groudine the result would also be `groudine_m`. If we query the username of non-scientific staff there is no PI to roll up to and user2pi will return an empty string.
 
  
 ``` python
@@ -79,7 +83,7 @@ Now let's look for a slightly more complicated query. We are looking for staff i
     Clinical Research Data Systems Software Dev Engineer
 ```
 
-If you prefer csv over json you can do the same thing using the `csv` package, you just need to write 2 lines more code
+If you prefer csv over json you can do the same thing using the `csv` package, you just need to write 2 lines more code.
 
 ``` python
     >>> import requests, csv
@@ -108,7 +112,7 @@ Most data scientists will use the power of pandas to query csv files. If you thi
     1882  Clinical Research Data Systems       Software Dev Engineer
 ```
 
-#### filtering json files using the `sci` package
+#### Filtering json files using the `sci` package
 
 Querying json files can be a bit unwieldy for more complex queries. The `sci` python package offers a few wrapper and shortcut functions for scientists and programmers. The sci package is already installed on Rhino if you load the latest Python through the `ml` command. Otherwise you can just install the sci package in your home directory. The `sci` package only supports Python3:
 
@@ -135,19 +139,19 @@ Querying json files can be a bit unwieldy for more complex queries. The `sci` py
 
 ```
 
-#### don't forget velocity checks
+#### Velocity Checks
 
-If you are adding and deleting users based on active users in Toolbox you will sooner or later run into the situation that something fails and toolbox  returns a user list that is empty. Now your script may think that all users have left the center and will try to delete all existing users in the system you manage. To prevent this we are building a velocity check. A velocity check is a routine that checks if a certain action makes sense. For example it will be extremely unlikely that 100 users or more will leave the Hutch at any given day so we will just cancel all actions that involve more than 100 users.
+If you are adding and deleting users based on active users in Toolbox you will sooner or later run into the situation that something fails and Toolbox  returns a user list that is empty. Now your script may think that all users have left the center and will try to delete all existing users in the system you manage. To prevent this we are building a velocity check. A velocity check is a routine that checks if a certain action makes sense. For example it will be extremely unlikely that 100 users or more will leave the Hutch at any given day so we will just cancel all actions that involve more than 100 users.
 
 ```
    CODE EXAMPLE TBD
 ```
 
-### R examples
+### R
 
 R also offers a few nice options: use library `jsonlite` to process JSON files. For importing a csv file into a tibble (a dataframe like object with a few convenience features that was inspired by the pandas dataframe) use `readr` to import and then `dplyr` to filter it with a sql like syntax. 
 
-First we would like to know to which PI user markg (Mark Groudine) rolls up to
+First we would like to know to which PI user `markg` (Mark Groudine) rolls up to:
 
 ``` R
     > library(jsonlite)
@@ -158,9 +162,9 @@ First we would like to know to which PI user markg (Mark Groudine) rolls up to
     [1] "groudine_m"
 ```
 
-and no surprise: he rolls up to PI id groudine_m
+No surprise: he rolls up to PI id `groudine_m`
 
-Then we try processing a csv file and show the filtering capabilities of `dplyr`. We would like to find the first name of all employees who are among the first 50 employees of the Hutch since it was founded. Hutch employee IDs start with 10000
+Then we try processing a csv file and show the filtering capabilities of `dplyr`. We would like to find the first name of all employees who are among the first 50 employees of the Hutch since it was founded. Hutch employee IDs start with 10000.
 
 ``` R
     > library(readr, dplyr)
@@ -179,7 +183,7 @@ Then we try processing a csv file and show the filtering capabilities of `dplyr`
 
 ### Linux Shell (bash and jq)
 
-Through the linux Shell (e.g. on Rhino) you have access to many tools such as such as `curl` and `jq`, the command-line JSON processor, that can help processing information quickly.
+Through the Linux Shell (e.g. on Rhino) you have access to many tools such as such as `curl` and `jq`, the command-line JSON processor, that can help processing information quickly.
 
 Consider the unlikely scenario that you need to collaborate with every PI and would like to create a folder for each PI just as you see it in Fast File (/fh/fast):
 
@@ -193,18 +197,19 @@ Consider the unlikely scenario that you need to collaborate with every PI and wo
     done
 ```
 
-or check to which PI user markg (Mark Groudine) rolls up to
+Check to which PI user markg (Mark Groudine) rolls up to:
 
 ```
     curl -s https://toolbox.fhcrc.org/json/user2pi.json | jq -r .markg
 ```
 
-or you would like to retrieve the email addresses of all center employees:
+If you would like to retrieve the email addresses of all center employees:
 
 ```
     curl -s https://toolbox.fhcrc.org/json/employees.json | jq -r '.[] | .mail'
 ```
-or how many unique job titles are there? 
+
+How many unique job titles are there? 
 
 ```
     curl -s https://toolbox.fhcrc.org/json/employees.json | jq -r '.[] | .title' | sort | uniq | wc -l
@@ -212,13 +217,13 @@ or how many unique job titles are there?
 
 ## Information for System Administrators 
 
-As of early 2019 Toolbox lives on VM fox.fhcrc.org. Most scripts are symlinks under /root/bin that point to a git clone of the FredHutch/IT repository 
+As of early 2019 Toolbox lives on VM fox.fhcrc.org. Most scripts are symlinks under /root/bin that point to a git clone of the FredHutch/IT repository.
 
 ```
     root@fox:~# readlink ~/bin/sc_dump_groups_json.py /root/github/IT/general/newusernotify/sc_dump_groups_json.py
 ```
 
-several cron jobs are triggered, groups are updated hourly
+Several cron jobs are triggered, groups are updated hourly:
 
 ```
     root@fox:~# cat /etc/cron.d/sc_dump_groups_json 
@@ -227,7 +232,7 @@ several cron jobs are triggered, groups are updated hourly
     12 * * * * root /root/bin/sc_dump_groups_json.py --gid
 ```
 
-## Other data - what's missing ?
+## Final Thoughts
 
-If you have a proposal for improvements either in the text or in the code examples please send a pull request. If you have examples in other Programming languages that are used at Fred Hutch (Java, C#, Powershell) please also send a pull request. If you would like see other Fred Hutch master data via Toolbox or if you believe that any of the data is incorrect please contact Dirk Petersen.
+If you have a proposal for improvements either in the text or in the code examples please send a pull request. If you have examples in other Programming languages that are used at Fred Hutch (Java, C#, Powershell) please also send a pull request. If you would like see other Fred Hutch master data via Toolbox or if you believe that any of the data is incorrect please email Dirk Petersen.  
 
