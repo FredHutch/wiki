@@ -1,6 +1,6 @@
 ---
 title: using Toolbox to get Hutch master data 
-last_modified_at: 2018-12-31
+last_modified_at: 2019-01-13
 main_author: Dirk Petersen
 primary_reviewers: mrg, dirkpetersen
 ---
@@ -110,11 +110,8 @@ Most data scientists will use the power of pandas to query csv files. If you thi
 
 #### filtering json files using the `sci` package
 
-Querying json files can be a bit unwieldy for more complex queries. The `sci` python package offers a few wrapper and shortcut functions for scientists and programmers. The sci package is already installed on Rhino if you load the latest Python through the `ml` command. Otherwise you can just install the sci package in your home directory. The `sci` package only supports Python3 and the next examples require a sci package >= 0.1.0)
+Querying json files can be a bit unwieldy for more complex queries. The `sci` python package offers a few wrapper and shortcut functions for scientists and programmers. The sci package is already installed on Rhino if you load the latest Python through the `ml` command. Otherwise you can just install the sci package in your home directory using the command `pip3 install --user --upgrade sci`. The `sci` package only supports Python3 and the next examples require a sci package >= 0.1.0)
 
-```
-    pip3 install --user --upgrade sci
-```
 
 ``` python
     import requests, json, sci
@@ -134,13 +131,13 @@ Querying json files can be a bit unwieldy for more complex queries. The `sci` py
     user = sci.json.jgetonerow(users,'title','President & Director'):
 ```
 
-In another example we would like to send an email notification to users who regularly write code at Fred Hutch to inform them of new features and we also want to CC their supervisors to increase awareness. Coders may have a range a job titles we need to consider but there is no chance this will be comprehensive list. The output list of email addresses is separated by semicolon so you can paste it directly into to, cc or bcc fields of Outlook. (Please note: This example requires sci package >= 0.1.3)
+In another example we would like to send an email notification to users outside the Admin division who regularly write code to inform them of new features. We also want to CC their supervisors to increase awareness. Coders may have a range a job titles we need to consider but there is no chance this will be comprehensive list. The output list of email addresses is separated by semicolon so you can paste it directly into the to, cc or bcc fields of Outlook. (Please note: This example requires sci package >= 0.1.3 which has the sci.fh.getToolbox function)
 
 ```python
     #! /usr/bin/env python3
     import sci
     titles = [
-            'Software Dev Engineer',
+            'Data Engineer',
             'Software Dev Eng',
             'Bioinformatics Analyst',
             'Programmer',
@@ -151,7 +148,7 @@ In another example we would like to send an email notification to users who regu
     supervisors = []
     for u in users:
         for t in titles:
-            if t in u['title']:
+            if t in u['title'] and u['division'] != 'AD':
                 if u['mail'] not in coders:
                     coders.append(u['mail'])
                     email = sci.json.jsearchone(users,'mgrID',u['mgrID'],'mail')
