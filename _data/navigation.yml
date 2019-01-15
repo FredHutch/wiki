@@ -142,8 +142,6 @@ bioinformatics:
         url: /bioinformatics/compute_resoverview/
       - title: "GitHub, Versioning and Sharing"
         url: /bioinformatics/compute_github/
-      - title: "Notebooks and UIs"
-        url: /bioinformatics/compute_uis/
       - title: "Docker"
         url: /bioinformatics/compute_docker/
 
