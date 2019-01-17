@@ -45,4 +45,34 @@ the threaded solution).  However, if there are many steps the resources on a
 single system will be a bottleneck, which makes a distributed solution more
 appealing.
 
+## An Atlas of Computational Workloads
 
+### Pleasantly Parallel
+
+"Pleasantly parallel" work (AKA "embarassingly parallel") is typically made up of many _completely_ independent steps.  By independent we mean that:
+
+  - any one step does not depend on the output or completion of any other step
+  - steps do not need to exchange information with other steps
+
+Examples: simulations
+
+### Sequential
+
+This is one opposite of pleasantly parallel.  In sequential workloads each step
+is dependent on another step- step "B" cannot proceed until step "A" is
+complete. This kind of workload is nearly impossible to speed up with
+additional processors.
+
+### Communication Intensive
+
+Another opposite of the pleasantly parallel workload is workload where steps
+communicate information between other steps.  Weather and climate forecasts are
+notorious for this kind of workload- each step represents a block of atmosphere
+which is affected by its neighbors, thus step needs to look at the state of
+another step and vice-versa.
+
+These problems require very low-latency, high-speed communication between steps
+and are typically better served when run on a single system (or one of the
+exotic supercomputers).  That said, modern networks are fairly good and can
+provide usable service for this communication if the number of steps greatly
+exceeds the number of cores available on a single system.
