@@ -109,16 +109,14 @@ SciComp singularity is configured to allow access to mounted file systems at /ap
 ```
 
 ## Troubleshooting
-Intermittent Error with Singularity  : 
+
+You might see this intermittent Error with Singularity:
+``` 
  ERROR  : Could not open image /fh/fast/.......: Too many levels of symbolic links
-Reported here: 
+```
+
+the gory details are reported here: 
 https://github.com/sylabs/singularity/issues/2556
 Workaround: You have not notified SciComp that you want to use this folder with Singularity. Please do so ASAP
 ​
-
 Please email `SciComp` to request assistance and discuss which environment is best for your needs.
-
-
-
-
-

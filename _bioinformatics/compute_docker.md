@@ -63,15 +63,12 @@ The best page to get started at the Hutch is the [Computing Resource Library](/c
 
 Because Docker requires root access, it cannot be run on shared
 compute environments such as `Rhino` / `Gizmo`. Instead,
-developers at LBL have developed a utility called Singularity
-which can be used to run Docker images within an environment
-like `Rhino` / `Gizmo` at Fred Hutch. More details
-[here](https://www.sylabs.io/docs/) 
+developers at LBL have developed a utility called Singularity which can be used to run Docker images within an environment
+like `Rhino` / `Gizmo` at Fred Hutch. More details at
+[sylabs.io](https://www.sylabs.io/docs/) and [here is some documentation](/compdemos/Singularity/) how you can use Singularity on Gizmo.
+**A cautiaus note:** Singularity also has its own image format, however we do not recommend to use it and instead import Docker containers as they can be used more universally, e.g. in cloud computing.
 
-Some cloud computing platforms are built explicitly on top of Docker. For 
-example, [AWS Batch](/computing/cluster_cloudCompute/) works by running code 
-within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out 
-at Fred Hutch, Docker images can be used to save and version the code that is
+Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/computing/cluster_cloudCompute/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
 executed with that system.
 
 ## Other Docker Resources
