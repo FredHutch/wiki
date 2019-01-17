@@ -1,24 +1,24 @@
 ---
-title: When to use Singularity containers instead of Docker
+title: Using Singularity Containers
 last_modified_at: 2019-01-17
 main_author: Dirk Petersen
 primary_reviewers: bmcgough, dirkpetersen
 ---
 
-## understanding Singularity
+## Understanding Singularity
 
-Docker containers only run as root so we cannot use them in shared multi-user environments such as Rhino/Gizmo with shared storage such as /home, /fh/fast or /fh/scratch. Singularity containers can run under any user account once created. This is possible :
+Docker containers only run as root so we cannot use them in shared multi-user environments such as `Rhino`/`Gizmo` with shared storage such as `/home`, `/fh/fast` or `/fh/scratch`. Singularity containers can run under any user account once created. This is possible:
 
 ```
     petersen@gizmof13:~$ ml Singularity
     petersen@rhinof13:~$ singularity exec ~/ubuntu-python.simg python3 /fh/fast/_HDC/team/SciComp/script.py
 ```
 
-we are loading the singularity lmod environment on Gizmo and are then running python3 with a script residing in fast file. The python3 binary is not executed on Gizmo but singularity is using python3 from inside the ubuntu-python.img container which is stored in my home directory. This process allows us to package entire pipelines in containers and integrate them seamlessly in HPC workflows as /tmp, /home and /fh are always read from the Gizmo environment outside the container. ​
+We are loading the singularity lmod environment on `Gizmo` and are then running python3 with a script residing in `Fast`. The python3 binary is not executed on `Gizmo` but Singularity is using python3 from inside the ubuntu-python.img container which is stored in my home directory. This process allows us to package entire pipelines in containers and integrate them seamlessly in HPC workflows as `/tmp`, `/home` and `/fh` are always read from the `Gizmo` environment outside the container.
 
-## preparing Singularity and a workaround (DO NOT USE IT ON RHINO)
+## Preparing Singularity and a workaround (DO NOT USE IT ON RHINO)
 
-Before you use Singularity please let SciComp know the users in your group and the PI folder you will be working with, otherwise you will get this error which also affects others. 
+Before you use Singularity please let `SciComp` know the users in your group and the PI folder you will be working with, otherwise you will get this error which also affects others. 
 
 ```
     $ singularity run  container.simg
@@ -26,15 +26,15 @@ Before you use Singularity please let SciComp know the users in your group and t
     ABORT : Retval = 255
 ```
 
-You should only use Singularity on a Gizmo node and **never on Rhino** . SciComp will only allow users to run Singularity who are able to follow this guidance consistently.
+You should only use Singularity on a `Gizmo` node and **never on `Rhino`**. `SciComp` will only allow users to run Singularity who are able to follow this guidance consistently.
 
-## Using Docker containers with Singularity
+## Using Docker Containers with Singularity
 
-Docker containers are the predominant storage format for containerized workflows and it is important to know that Singularity can easily import Dcoker containers. Creating a new container from a docker image on docker hub is as easy as this (make sure you run `ml Singularity` before)
+Docker containers are the predominant storage format for containerized workflows and it is important to know that Singularity can easily import Dcoker containers. Creating a new container from a docker image on [DockerHub](https://hub.docker.com/) is as easy as this (make sure you run `ml Singularity` before):
 
 ```
-    petersen@gizmof13:~$​ ml Singularity​
-    petersen@gizmof13:~$​ ​singularity pull docker://ubuntu:latest
+    petersen@gizmof13:~$ ml Singularity
+    petersen@gizmof13:~$ singularity pull docker://ubuntu:latest
 
     WARNING: pull for Docker Hub is not guaranteed to produce the
     WARNING: same image on repeated pull. Use Singularity Registry
@@ -70,23 +70,23 @@ Now you can just use any tool inside the singularity container using the exec co
 
 ```
 
-You will get an error message which means that empty folders inside the container for mount points /app and /fh are not created yet. You can address this by creating these folders in the docker container you pull from docker hub. There are also some warnings like `WARNING: Failed to open directory` You can ignore those warnings 
+You will get an error message which means that empty folders inside the container for mount points /app and /fh are not created yet. You can address this by creating these folders in the docker container you pull from DockerHub. There are also some warnings like `WARNING: Failed to open directory` You can ignore those warnings.
 
-## tuning your environment
+## Tuning your Environment
 
-Singularity uses settings from the hom​e directory of the invoking user on the host system, for example .bashrc. The recommended settings for ~/.bashrc: check for a singularity symlink at the root or a SINGULARITY_NAME env var. In some cases you want bash to behave differently if you are inside a container. You can put this into ~/.bashrc
+Singularity uses settings from the home directory of the invoking user on the host system, for example .bashrc. The recommended settings for ~/.bashrc: check for a Singularity symlink at the root or a SINGULARITY_NAME env var. In some cases you want bash to behave differently if you are inside a container. You can put this into ~/.bashrc.
 
 ```
     if [ -L '/singularity' ]; then
     PS1='\u@$SINGULARITY_CONTAINER> '
     export PROMPT_COMMAND=''
-    fi​
+    fi
 ```
 
-## Creating custom Singularity containers for Docker images
+## Creating custom Singularity Containers for Docker Images
 
-Sometimes you would like a larger singularity container than your docker container and / or customize your singularity container after the fact. (This should be the exceptions as we want to use docker containers in most cases. 
-If you have root access (SciComp staff) you can use the esudo wrapper (yes, use esudo wrapper instead of sudo!) to open the image as root in write mode to create the 2 empty folders to mount file systems
+Sometimes you would like a larger Singularity container than your docker container and/or customize your singularity container after the fact. (This should be the exceptions as we want to use docker containers in most cases. 
+If you have root access (`SciComp` staff) you can use the esudo wrapper (yes, use esudo wrapper instead of sudo!) to open the image as root in write mode to create the 2 empty folders to mount file systems.
 
 ```
     petersen@gizmof13:~$​ singularity create --size 2048 ubuntu-1404.img
@@ -100,7 +100,7 @@ If you have root access (SciComp staff) you can use the esudo wrapper (yes, use 
     Singularity ubuntu-1404.img:~> mkdir /app /fh
 ```
 
-SciComp singularity is configured to allow access to mounted file systems at /app /fh and /mnt, this is set in singularity.conf, for example these 3 lines were added to /app/singularity/2.x.x/etc/singularity/singularity.conf :
+`SciComp` Singularity is configured to allow access to mounted file systems at `/app`, `/fh` and `/mnt`, this is set in `singularity.conf`, for example these 3 lines were added to `/app/singularity/2.x.x/etc/singularity/singularity.conf`:
 
 ```
     bind path = /app
