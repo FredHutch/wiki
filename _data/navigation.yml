@@ -162,6 +162,8 @@ computing:
         url: /computing/comp_index/
       - title: "Resource Library"
         url: /compdemos/
+      - title: "Announcements"
+        url: /scicompannounce/
   - title: "Access and Credentials"
     children:
       - title: "Overview"
@@ -210,9 +212,7 @@ computing:
         url: /computing/software_overview/
       - title: "In-Person Training and Office Hours"
         url: /computing/training_overview/
-      - title: "Current Software"
+      - title: "Current Cluster Software"
         url: http://fredhutch.github.io/easybuild-life-sciences/
-      - title: "Updates and Announcements"
-        url: /scicompannounce/
       - title: "Demos/HOWTOs (Resource Library)"
         url: /compdemos/
