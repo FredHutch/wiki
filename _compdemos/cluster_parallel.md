@@ -54,7 +54,7 @@ appealing.
   - any one step does not depend on the output or completion of any other step
   - steps do not need to exchange information with other steps
 
-Examples: simulations
+Examples: simulations, GWAS, chromosome by chromosome analyses
 
 ### Sequential
 
