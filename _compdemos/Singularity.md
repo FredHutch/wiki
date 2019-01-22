@@ -5,9 +5,11 @@ main_author: Dirk Petersen
 primary_reviewers: bmcgough, dirkpetersen
 ---
 
+Docker can only run containers as root so we cannot use them in shared multi-user environments such as `Rhino`/`Gizmo` with shared storage such as `/home`, `/fh/fast` or `/fh/scratch`. Singularity can import Docker containers and run them. 
+
 ## Understanding Singularity
 
-Docker containers only run as root so we cannot use them in shared multi-user environments such as `Rhino`/`Gizmo` with shared storage such as `/home`, `/fh/fast` or `/fh/scratch`. Singularity containers can run under any user account once created. This is possible:
+Singularity containers can run under any user account once created. This is possible:
 
 ```
     petersen@gizmof13:~$ ml Singularity
@@ -30,7 +32,7 @@ You should only use Singularity on a `Gizmo` node and **never on `Rhino`**. `Sci
 
 ## Using Docker Containers with Singularity
 
-Docker containers are the predominant storage format for containerized workflows and it is important to know that Singularity can easily import Dcoker containers. Creating a new container from a docker image on [DockerHub](https://hub.docker.com/) is as easy as this (make sure you run `ml Singularity` before):
+Docker containers are the predominant storage format for containerized workflows and it is important to know that Singularity can easily import Docker containers. To create a new container from a Docker image on [DockerHub](https://hub.docker.com/) you just need to run the `singularity pull` command (make sure you run `ml Singularity` before):
 
 ```
     petersen@gizmof13:~$ ml Singularity
@@ -67,7 +69,6 @@ Now you can just use any tool inside the singularity container using the exec co
     WARNING: Non existent bind point (directory) in container: '/app'
     WARNING: Non existent bind point (directory) in container: '/fh'
     petersen@ubuntu-latest.simg> 
-
 ```
 
 You will get an error message which means that empty folders inside the container for mount points /app and /fh are not created yet. You can address this by creating these folders in the docker container you pull from DockerHub. There are also some warnings like `WARNING: Failed to open directory` You can ignore those warnings.
@@ -78,8 +79,10 @@ Singularity uses settings from the home directory of the invoking user on the ho
 
 ```
     if [ -L '/singularity' ]; then
-    PS1='\u@$SINGULARITY_CONTAINER> '
-    export PROMPT_COMMAND=''
+        PS1='\u@$SINGULARITY_CONTAINER> '
+        export PROMPT_COMMAND=''
+    else
+        PS1=''
     fi
 ```
 
@@ -100,7 +103,7 @@ If you have root access (`SciComp` staff) you can use the esudo wrapper (yes, us
     Singularity ubuntu-1404.img:~> mkdir /app /fh
 ```
 
-`SciComp` Singularity is configured to allow access to mounted file systems at `/app`, `/fh` and `/mnt`, this is set in `singularity.conf`, for example these 3 lines were added to `/app/singularity/2.x.x/etc/singularity/singularity.conf`:
+SciComp's Singularity install is configured to allow access to mounted file systems at `/app`, `/fh` and `/mnt`, this is set in `singularity.conf`, for example these 3 lines were added to `/app/easybuild/software/Singularity/2.x.x-GCC-5.4.0-2.26/etc/singularity/singularity.conf`:
 
 ```
     bind path = /app
@@ -117,6 +120,7 @@ You might see this intermittent Error with Singularity:
 
 the gory details are reported here: 
 https://github.com/sylabs/singularity/issues/2556
+
 Workaround: You have not notified SciComp that you want to use this folder with Singularity. Please do so ASAP
 ​
 Please email `SciComp` to request assistance and discuss which environment is best for your needs.
