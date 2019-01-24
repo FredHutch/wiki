@@ -49,7 +49,8 @@ appealing.
 
 ### Pleasantly Parallel
 
-"Pleasantly parallel" work (AKA "embarassingly parallel") is typically made up of many _completely_ independent steps.  By independent we mean that:
+"Pleasantly parallel" work (AKA "embarassingly parallel") is typically made up
+of many _completely_ independent steps.  By independent we mean that:
 
   - any one step does not depend on the output or completion of any other step
   - steps do not need to exchange information with other steps
@@ -63,7 +64,7 @@ is dependent on another step- step "B" cannot proceed until step "A" is
 complete. This kind of workload is nearly impossible to speed up with
 additional processors.
 
-### Communication Intensive
+### Highly Connected
 
 Another opposite of the pleasantly parallel workload is workload where steps
 communicate information between other steps.  Weather and climate forecasts are
@@ -76,3 +77,23 @@ and are typically better served when run on a single system (or one of the
 exotic supercomputers).  That said, modern networks are fairly good and can
 provide usable service for this communication if the number of steps greatly
 exceeds the number of cores available on a single system.
+
+## Parallel Operations in Slurm
+
+Slurm has two concepts important when looking at implementing a parallel
+workload: _jobs_ and _steps_.  The step is the atomic unit of a job- a job can
+be made up of multiple steps.  In general, the steps are independent and don't
+directly communicate with each other. Steps can execute across many CPUs and
+hosts and many steps can run simultaneously within the job. For example,
+suppose I need to do three things to a data set:
+
+ - divide it into pieces
+ - run a calculation on each of those pieces
+ - summarize those calculations
+
+In Slurm, I can create a job made up of three steps.  The first step is
+sequential- it will use one CPU on one host.  The second step can be run on
+multiple CPUs as these calculations are independent.  The last step is, again,
+a sequential task that can only use a single CPU.  The job would need to
+request as many CPUs as could be used (or is practical) by the second step- the
+first and last step would only use a single CPU.
