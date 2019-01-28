@@ -1,18 +1,19 @@
 ---
-title: On-Premise HPC at Fred Hutch
-last_modified_at: 2018-08-02
+title: On-Premise High Performance Computing at Fred Hutch
+last_modified_at: 2019-01-28
 ---
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various services provided are outlined here along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.  
 
-## Interactive Computing: Command Line Interface (CLI), Moderate to High Capability
-
-These systems are provided by the Fred Hutch to serve needs that rise above
-those that can be met using the above listed platforms.  Often reasons to move
+The systems listed here provided by the Fred Hutch, serve needs that rise above
+those that can be met using your desktop computer or web-based services. Often reasons to move
 to these high performance computing (HPC) resources include the need for version controlled, specialized
 package/module/tool configurations, higher compute resource needs, or rapid
 access to large data sets in data storage locations not accessible with the
-required security for the data type by the above systems. In the table below,
+required security for the data type by desktop or web-based services. In the table below,
 `gizmo` is actually the compute resource that can be accessed via multiple
 tools, which are also listed below.
+
+## Overview of On-Premise Resources
 
 Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
 --- | --- | --- | ---
@@ -69,9 +70,10 @@ This command can be run from any NoMachine or rhino host.
 
 _Batch_ computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop should be disconnected for any reason the job will be terminated.
 
-The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on the gizmo and beagle clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.
+The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on the gizmo and beagle clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm on our systems see our [Using Slurm page](/computing/cluster_usingSlurm/), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources availab.e  
 
-### External Resources
+## External Resources
+For more information and education on how to use HPC resources from external sources see the following sites:
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)
