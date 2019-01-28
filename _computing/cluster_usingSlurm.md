@@ -61,7 +61,8 @@ There are many ways to alter which jobs are shown and how the output is formatte
 rhino[~]: scancel -u edgar
 ```
 
-
+### `salloc`
+Obtain a Slurm job allocation (a set of nodes), execute a command, and then release the allocation when the command is finished.
 
 ### `hitparade` (Fred Hutch homebrew)
 
@@ -125,5 +126,5 @@ sbatch -M beagle -c 6 myscript.sh my-output
 scancel -M beagle 12345
 ```
 
-_hitparade_ also supports `-M` and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands _srun_ and _salloc_ will not work.  If use of those commands is necessary, please contact SciComp.
+`hitparade` also supports `-M` and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands `srun` and `salloc` will not work.  If use of those commands is necessary, please contact SciComp.
 
