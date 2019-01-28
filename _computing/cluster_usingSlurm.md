@@ -1,16 +1,12 @@
 ---
-title: Using Slurm on Hutch Systems
-last_modified_at: 2018-12-18
+title: Using Slurm on Fred Hutch Systems
+last_modified_at: 2019-01-28
 primary_reviewers: atombaby
 ---
-
-## Slurm
-
-Slurm is the workload manager for Scicomp clusters.  It manages both your jobs
-and the resources available in the cluster.  There are two main clusters in use today- the on-campus `Gizmo` cluster and the cloud-based `Beagle` cluster.  Commands work the same in either environment.
+This page is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the clusters available.  There are two main clusters in use today that rely on Slurm - the on-campus `Gizmo` cluster and the cloud-based `Beagle` cluster (see our [introductory page on these resources](/computing/cluster_rhinoGizmo/).  Commands work the same in either environment. 
 
 ## Examples of Use
-A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  
+A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  This is an evolving example repo that new users can refer to to begin to get into parallel computing and more adept use of Slurm.  If you are a Fred Hutch user and would like to contribute to the documentation or the examples there, to share with the community how you structure your interactions with Slurm, submit a pull request there.  
 
 ## Basic Slurm Terminology
 
@@ -36,7 +32,7 @@ When we refer to an "account" in the context of Slurm, we are referring to the P
 
 ## Commands for Managing Jobs
 
-### squeue
+### `squeue`
 
 The `squeue` command allows you to see the jobs running and waiting in the job queue.  `squeue` takes many options to help you select the jobs displayed by the command
 
@@ -48,7 +44,7 @@ The `squeue` command allows you to see the jobs running and waiting in the job q
 | -p _partition_      | Only show jobs in the indicated partition             |
 
 ```
-rhino2[~]: squeue -u edgar
+rhino[~]: squeue -u edgar
       JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
    31071290    campus     wrap    edgar  R   19:03:13      1 gizmof404
 ```
@@ -57,24 +53,24 @@ The field `NODELIST(REASON)` will show either the name of the node(s) allocated 
 
 There are many ways to alter which jobs are shown and how the output is formatted- refer to the [`squeue` manpage](https://slurm.schedmd.com/squeue.html) for more details on using this command.
 
-### scancel
+### `scancel`
 
-`scancel` allows you to signal jobs- most commonly this command is used to stop execution of a running job or remove a pending job from the job queue.  A job IDis the common argument though `scancel` will take many other arguments that allow bulk management of jobs- it shares many of the same arguments as `squeue`.  For example, the command:
-
-```
-rhino2[~]: scancel -u edgar
-```
-
-will cancel all jobs (pending or running) owned by the user _edgar_.
-
-### hitparade
-
-The `hitparade` command will show a summary of all jobs running and queued on the cluster broken down by user and account.  Note that this isn't a Slurm command, rather something built in-house.
-
-`hitparade` takes the `-M` argument to select a cluster:
+`scancel` allows you to signal jobs- most commonly this command is used to stop execution of a running job or remove a pending job from the job queue.  A job ID is the common argument though `scancel` will take many other arguments that allow bulk management of jobs- it shares many of the same arguments as `squeue`.  For example, the following command will cancel all jobs (pending or running) owned by the user `edgar`.
 
 ```
-rhino2[~]: hitparade -M beagle
+rhino[~]: scancel -u edgar
+```
+
+
+
+### `hitparade` (Fred Hutch homebrew)
+
+The `hitparade` command will show a summary of all jobs running and queued on the cluster broken down by user and account.  Note that this isn't a Slurm command, rather something built in-house at Fred Hutch. 
+
+`hitparade` takes the `-M` argument to select a cluster about which to generate the output. 
+
+```
+rhino[~]: hitparade -M beagle
 loading Python/3.6.4-foss-2016b-fh2...
 
   === Queue: campus ======= (R / PD) ======
@@ -87,7 +83,7 @@ loading Python/3.6.4-foss-2016b-fh2...
 
 ## Commands for Submitting Jobs
 
-### sbatch and srun
+### `sbatch` and `srun`
 
 `sbatch` is used to submit a job script to the cluster.  These run jobs without your intervention or input (i.e. non-interactively). Common arguments are:
 
@@ -106,18 +102,18 @@ These two take many of the same options:
 
 A useful option that is only applicable to `sbatch` is `-o`, which writes output to a different file.  The default will write the file _slurm-<jobid>.out_ in the directory in which you submitted the job.
 
-#### sbatch/srun Examples:
+#### Examples
 
-Submit a batch job that will run in one day, six hours in the largenode partition in Beagle.  This will run one instance of the job with one processor.  Name the job "quoth-the-raven".
-
-```
-sbatch -M beagle -p largenode -t 1-6 -j quoth-the-raven myscript.sh
-```
-
-Submit a job using 6 cores and redirect output to a file named "my-output":
+Submit a batch job (`sbatch`), that will run in one day, six hours (with the flag `-t 1-6`) in the largenode partition (with the flag `-p largenode`) in Beagle (with the flag `-M beagle`).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job "quoth-the-raven" (with the `-J` flag) and list the script to use in the job `myscript.sh`.
 
 ```
-sbatch -c 6 -j my-output
+sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
+```
+
+Submit a job using 6 cores (with the fla `-c 6`) and redirect output to a file named "my-output":
+
+```
+sbatch -c 6 myscript.sh my-output
 ```
 
 ## MultiCluster Operation
@@ -125,7 +121,7 @@ sbatch -c 6 -j my-output
 Most Slurm commands can operate against remote clusters (i.e. _beagle_ from _gizmo_).  Typically the only change required is to add the argument `-M <cluster name>`.
 
 ```
-sbatch -M beagle -c 6 -j my-output
+sbatch -M beagle -c 6 myscript.sh my-output
 scancel -M beagle 12345
 ```
 
