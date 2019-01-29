@@ -1,6 +1,6 @@
 ---
 title: R and RStudio
-last_modified_at: 2018-10-26
+last_modified_at: 2019-01-29
 primary_reviewers: ptvan
 ---
 ## RStudio
@@ -43,13 +43,13 @@ There are a number of available resources built on R that are free and open sour
 ### Bioconductor
 [Bioconductor](https://bioconductor.org/) is a public repository of R bioinformatics packages. Bioconductor packages are curated for intercompatibility and grouped into [workflows](http://bioconductor.org/packages/3.7/workflows/) (eg. CyTOF, ChIP-seq, eQTL, etc...). New Bioinformatic tools often result in a submission of the corresponding packages to Bioconductor.
 
-[R/Bioconductor events page](http://www.bioconductor.org/help/events/)
+[R/Bioconductor events page.](http://www.bioconductor.org/help/events/)
 
 ### CRAN
 [CRAN](https://cran.r-project.org), (Comprehensive R Archive Network) is a public repository of numerous R packages along with R itself. Numerous staistical packages are available, though packages are not vetted as heavily as Bioconductor. 
 
 ### GitHub
-[GitHub](https://github.com/trending/r) hosts many opensource R packages. As they are not necessarily vetted or peer-review, these packages can be more experimental than those on CRAN or Bioconductor. Instructions for installing R packages from GitHub are [here](http://kbroman.org/pkg_primer/pages/github.html)
+[GitHub](https://github.com/trending/r) hosts many opensource R packages. As they are not necessarily vetted or peer-reviewed, these packages can be more experimental than those on CRAN or Bioconductor. Instructions for installing R packages from GitHub are [here.](http://kbroman.org/pkg_primer/pages/github.html)
 
 ### The Tidyverse
 The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordinate together and are commonly used for manipulating and  visualizing data in data science applications.  There are a number of useful packages for research based users that are part of the Tidyverse, and it's worth the time to learn about them and see how one might employ them to clean, analyze and convey data and results.  DataCamp has an online [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) that can be useful when first evaluating whether these packages might be useful.  
