@@ -62,6 +62,7 @@ rhino[~]: scancel -u edgar
 ```
 
 ### `salloc`
+
 Obtain a Slurm job allocation (a set of nodes), execute a command, and then release the allocation when the command is finished.
 
 ### `hitparade` (Fred Hutch homebrew)
@@ -111,7 +112,7 @@ Submit a batch job (`sbatch`), that will run in one day, six hours (with the fla
 sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
 ```
 
-Submit a job using 6 cores (with the fla `-c 6`) and redirect output to a file named "my-output":
+Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file named "my-output":
 
 ```
 sbatch -c 6 myscript.sh my-output
