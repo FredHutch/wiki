@@ -142,8 +142,6 @@ bioinformatics:
         url: /bioinformatics/compute_resoverview/
       - title: "GitHub, Versioning and Sharing"
         url: /bioinformatics/compute_github/
-      - title: "Notebooks and UIs"
-        url: /bioinformatics/compute_uis/
       - title: "Docker"
         url: /bioinformatics/compute_docker/
 
@@ -162,6 +160,8 @@ computing:
         url: /computing/comp_index/
       - title: "Resource Library"
         url: /compdemos/
+      - title: "Announcements"
+        url: /scicompannounce/
   - title: "Access and Credentials"
     children:
       - title: "Overview"
@@ -210,9 +210,7 @@ computing:
         url: /computing/software_overview/
       - title: "In-Person Training and Office Hours"
         url: /computing/training_overview/
-      - title: "Current Software"
+      - title: "Current Cluster Software"
         url: http://fredhutch.github.io/easybuild-life-sciences/
-      - title: "Updates and Announcements"
-        url: /scicompannounce/
       - title: "Demos/HOWTOs (Resource Library)"
         url: /compdemos/

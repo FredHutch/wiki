@@ -4,7 +4,7 @@
 This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff whether as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large).
 
 # Details
-[Contributing Directly via GitHub](#contributing-directly-via-github)
+[Content Contribution and Review Process](#content-contribution-and-review-process)
 
 [Contributing via an external editor](#contributing-via-an-external-editor)
 
@@ -12,27 +12,37 @@ This curated Wiki relies upon the Fred Hutch research community itself to improv
 
 [Repository structure](#repo-structure)
 
-[Building a copy of this wiki locally](#building-the-site-locally)
+[Building a copy of this Wiki locally](#building-the-site-locally)
 
 [For Admins](#for-admins)
 
 
-## Contributing directly via GitHub
+## Content Contribution and Review Process
 
-We manage the content of this site via a set of markdown files that contain long article-style text with an emphasis on the use of outline structures to allow related content to show up near each other but with the ability to use the automatically rendered Table of Contents to jump around the documents.  
+We manage the content of this site via a set of markdown files that contain long article-style text and a handful of cookbook/demo style documents (Resource Libraries). Articles use an outline structure to allow graduated content, starting from basic information and progressing to more detailed content for expert users/readers. Using headers (H2 through H4) in the text allows the automatically rendered Table of Contents to facilitate readers' ability to jump around the documents to get to needed content.  Resource Library entries can use headers as well to population the Table of Contents, but these documents are intended to be fairly detailed examples or content that is linked to by Articles, but address a specific use case or example scenario that may be only intended for advanced users/readers.  Both Articles and Resource Library entries are full-text searchable using the search feature (the magnifying glass in the header).  This search ability is the primary strength behind this Wiki, as members of the community providing content are not web designers, but no existing documentation source yet allows community members to search full text.   
+
+### Adding/Editing Content
 
 To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are) from GitHub, follow these steps:
 
-  1. Create a branch off the master branch for your edits (do not fork the repo or create branches from other branches).  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names whenever possible. For your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
-  2. Commit your edits to existing markdowns as you go, and update from the master branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the master and committing frequently.  
-  3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
-  4. When you are done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
+1. Create a branch off the master branch for your edits. Do not fork the repo or others cannot submit additional edits to your content.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names whenever possible. For your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
+2. Commit your edits to existing markdowns as you go, and update from the master branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the master and committing frequently.  
+3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
+4. When you are done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
+
     >Note: If you are editing existing content and the page has a listing for the Primary Reviewers like this:  `primary_reviewers: somegithubusername` then when you submit the pull request please request a review from those usernames.  
-  5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  If there is a `primary_reviewer` listed for content then one of the reviews must be from one of those members.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
-  6. Once reviews have been obtained, the pull request can be merged into the master and then any edits go live to the site [here.](https://sciwiki.fredhutch.org/)
+
+5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  If there is a `primary_reviewers` listed for content then one of the reviews must be from one of those members.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
+6. Once reviews have been obtained, the pull request can be merged into the master and then any edits go live to the site [here.](https://sciwiki.fredhutch.org/)
+
+### The Review Process
+This Wiki is intended to be curated by content owners, local experts, and service providers at the Fred Hutch in order to ensure accuracy and relevancy to our community.  Thus, contributions and reviews can only be made by users who have GitHub usernames affiliated with the Fred Hutch institution.  We use the `primary_reviewers` tag in our markdowns to indicate when there is a resident expert who should be contacted via pull request review requests when content in that markdown is edited or added to.  This process of contribution and review from multiple different users allows us to make sure that the content evolves in such a way that it it both more interpretable to the intended audience (Fred Hutch affiliated staff), but also accurate, appropriate and continuously reviewed.  
+
+Currently only one approving review of the content is required for a pull request to be merged.  Ideally before this point, a novice reviewer would weigh in with edits to the text, and an expert reviewer would provide the approving review.  To bring your content/edits to the attention of the community for editing and review, please submit a pull request from your branch to the master.  
 
 
->Afterwards:  Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site.
+### Getting Credit
+Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.  
 
 ## Contributing via an external text editor
 You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.  Also there is a tutorial on how to use [VSCode](https://sciwiki.fredhutch.org/compdemos/vscode_markdown_howto/) which is what you will want to use if you plan to contribute many screenshots or other images.  
@@ -51,16 +61,14 @@ An introductory paragraph summarizing the page must be included and should be co
 The main content of the pages is up to you to structure.  Keep in mind that the wiki's articles are meant to provide enough background for a variety of readers to know what sorts of questions related to their particular research to pose when looking for in-person help.  Create headings that an advanced user could use the TOC links to go directly to the content they want while novices can also browse and slowly increase the complexity of the material throughout the page.  This gradual increase in content complexity from basic to advanced will give a reader some basic understanding of the topic before heading directly to the particular web-based (Fred Hutch sponsored or otherwise), in-person training/office hours, or on-campus expert to discuss or learn about their project in more detail.
 
 #### Available Resources
-Since we are not intending to write comprehensive explanations, the Available Resources sections in our Wiki are really the intended endpoint for our readers. This section should focus on linking to comprehensive and established external educational resources of interest to the topic, online training tools from established entities, additional more detailed Fred Hutch documentation provided by Fred Hutch based experts/providers, in-person training opportunities at the Fred Hutch or locally, and if possible and approved by the expert, specific highlights of on-campus experts in a given field who are willing and able to provide consulting or advice on the topic.  Please make sure all links to any other site are correct and tested!!!!
-
-If a content section is relatively short and cohesive, there should be one Available Resources section at the bottom of the page.  However, as content sections grow and perhaps themes evolve, consider having a specific Available Resources section after the end of a unified topic section for which the resources mentioned are thematically related.  
+Since we are not intending to write comprehensive explanations of every topic we touch on, the Available Resources sections or in-text links in our Wiki are really the intended endpoint for our readers. This section should focus on linking to comprehensive and established external educational resources of interest to the topic, online training tools from established entities, additional more detailed Fred Hutch documentation provided by Fred Hutch based experts/providers, in-person training opportunities at the Fred Hutch or locally, and if possible and approved by the expert, specific highlights of on-campus experts in a given field who are willing and able to provide consulting or advice on the topic.  Please make sure all links to any other site are correct and tested!!!!
 
 
 ### Inserting Links
 
 If you would like to insert a link to another page in our site, please use:  
 ```
-[text you want to have highlighted](/page_name/)
+[text you want to have highlighted](/domain/page_name/)
 ```
 
 If it is a link to an external site use:  
@@ -100,17 +108,17 @@ If you need to make screencasts, free software exist for [Windows](https://www.a
 
 ### Referencing a Fred Hutch username
 Please if you need to reference a Fred Hutch username, do not write the entire email address out, just put the username in backticks like this:
+
 ```
 `username`
 ```
-
 
 
 ## Repo structure
 
 ### Folders and Files that may be Edited:
 ####  Draft Folders with Templates for New Content
->NOTE:  All draft content should be stored in the `draft` folder until it is ready for publication, and then an admin will move it to where it needs to go if it is new content, OR the writer can move demo's themselves when they are ready to go live.  
+>NOTE:  Any draft content should be stored in the `draft` folder until it is ready for publication, and then an admin will move it to where it needs to go if it is new content, OR the writer can move demo's themselves when they are ready to go live.  
 
 For new content: https://github.com/FredHutch/wiki/blob/master/draft/contentTemplate.md
 
@@ -140,7 +148,7 @@ You may want to build a copy of this wiki locally (on your own computer) to make
 
 ### Steps
 
-1. clone the repo somwhere
+1. clone the repo somewhere
 1. Install Ruby (version 1.9.2 or later).
 **Note**: most modern Mac computers already have Ruby installed. If you still need Ruby,
 it can be found [here](https://www.ruby-lang.org/en/downloads/).
@@ -174,14 +182,18 @@ You can also look at the most recent
 the list of broken links.
 
 
-## For Admins:
+## For Admins (everyone else, please do not edit these as your edits will be ignored/removed)
 
 ### Pages that run Demo and Contributors Collection pages:
-Computing:  https://github.com/FredHutch/wiki/blob/master/computingdemos.md
+Generation resource library collection page:  https://github.com/FredHutch/wiki/blob/master/generationdemos.md
 
-Bioinformatics:  https://github.com/FredHutch/wiki/blob/master/informaticsdemos.md
+Bioinformatics resource library collection page:  https://github.com/FredHutch/wiki/blob/master/informaticsdemos.md
 
-Contributors list: https://github.com/FredHutch/wiki/blob/master/contributorslist.md
+Computing resource library collection page:  https://github.com/FredHutch/wiki/blob/master/computingdemos.md
+
+SciComp Announcement resource library collection page:  https://github.com/FredHutch/wiki/blob/master/scicompannounce.md
+
+Contributors list collection page: https://github.com/FredHutch/wiki/blob/master/contributorslist.md
 
 ### Folders containing website configuration files
 Main website configuration file: https://github.com/FredHutch/wiki/blob/master/_config.yml

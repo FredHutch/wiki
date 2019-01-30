@@ -60,6 +60,14 @@ This will prompt you for your HutchNet password, which will not echo to the scre
 awscreds --help
 ```
 
+One important option is the `--force` flag, which tells `awscreds` that it can overwrite
+your existing credentials. This may be needed
+if your credentials are changed, and can be invoked as follows:
+
+```
+awscreds --force
+```
+
 See more about accessing AWS S3 via the command line [here for Python,](/compdemos/aws-python/) [here for R](/compdemos/aws-R/), and [here for the AWS Command Line Interface.](/compdemos/aws-cli/)
 
 
