@@ -1,6 +1,6 @@
 ---
 title: On-Premise HPC at Fred Hutch
-last_modified_at: 2018-08-02
+last_modified_at: 2019-01-30
 ---
 
 ## Interactive Computing: Command Line Interface (CLI), Moderate to High Capability
@@ -71,7 +71,10 @@ _Batch_ computing allows you to queue up jobs and have them executed by the batc
 
 The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on the gizmo and beagle clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.
 
-### External Resources
+## Parallel Computing
+There are many approaches to parallel computing (doing many jobs simultaneously rather than in series).  We have begun a Resource LIbrary entry on [Parallel Computing with Slurm,](/compdemos/cluster_parallel/) as well as created the [FredHutch/slurm-examples repository](https://github.com/FredHutch/slurm-examples) containing community curated examples with additional documentation that can help you get started.  
+
+## External Slurm and HPC Reference and Learning Resources
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)
