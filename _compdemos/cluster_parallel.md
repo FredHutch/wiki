@@ -1,6 +1,6 @@
 ---
 title: Parallel Computing on Slurm Clusters
-last_modified_at: 2019-01-10
+last_modified_at: 2019-01-30
 ---
 
 _Parallel computing_ is an approach to computing where many tasks are done
@@ -31,7 +31,7 @@ approach is often described as "distributed"
 
 > Note: It is also possible to combine those techniques- using multiple cores on multiple computers.  This can add a little complexity, but many tools will handle this neatly.
 
-### Choosing an Approach
+## Choosing an Approach
 
 The primary drivers for choosing between the two approaches is how much communication
 between individual steps is necessary and how many steps there are.
