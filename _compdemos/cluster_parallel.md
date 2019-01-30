@@ -94,3 +94,7 @@ multiple CPUs as these calculations are independent.  The last step is, again,
 a sequential task that can only use a single CPU.  The job would need to
 request as many CPUs as could be used (or is practical) by the second step- the
 first and last step would only use a single CPU.
+
+
+## Examples
+We have begun consolidating examples of parallel computing approaches in the [FredHutch/slurm-examples repository.](https://github.com/FredHutch/slurm-examples)  Please refer to that repository for more community curated exmaple approaches and associated documentation to see if someone has approached a problem similar to yours so you don't have to start from scratch.    
