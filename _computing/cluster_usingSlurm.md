@@ -100,7 +100,7 @@ These two take many of the same options:
  - `-t` request a certain amount of time for the job.
  - `-n` request a number of tasks (default 1)
  - `-c` request a number of processors per task (default 1)
- - `-j` name a job
+ - `-J` name a job
 
 A useful option that is only applicable to `sbatch` is `-o`, which writes output to a different file.  The default will write the file _slurm-<jobid>.out_ in the directory in which you submitted the job.
 
