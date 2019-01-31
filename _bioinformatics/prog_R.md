@@ -3,11 +3,11 @@ title: R and RStudio
 last_modified_at: 2019-01-29
 primary_reviewers: ptvan
 ---
-R is a common statistical and computing language used in a variety of biomedical data analysis, visualization and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or [CRAN](https://cran.r-project.org/), or via the FH Center IT's Self Service Tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.  
+R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or [CRAN](https://cran.r-project.org/), or via the FH Center IT's Self Service Tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.  
 
 
 ## RStudio
-The RStudio IDE is a free and open source, popular interface to R, which supports a number of added features including a GUI that can be customized to view aspects of your work of most importance (such as plots, files, environment variables, scripts, workspaces, etc). RStudio can be [downloaded here](https://www.rstudio.com/), and requires an installation of R itself first.  Keep in mind that updates to R/RStudio subsequently will require a two step process, one to update R itself, and the other to update the interface to R, RStudio.  
+The RStudio IDE is a free and open source, popular interface to R, which supports a number of added features including a GUI that can be customized to view aspects of your work of most importance (such as plots, files, environment variables, scripts, workspaces, etc). RStudio can be [downloaded here](https://www.rstudio.com/) and requires an installation of R itself first.  Keep in mind that updates to R/RStudio subsequently will require a two step process, one to update R itself, and the other to update the interface to R, RStudio.  
 
 RStudio has a few particularly useful features:
 - Support for R Markdowns/Notebooks
@@ -27,7 +27,7 @@ There are a number of available resources built on R that are free and open sour
 [CRAN](https://cran.r-project.org), (Comprehensive R Archive Network) is a public repository of numerous R packages along with R itself. Numerous packages are available, though packages are not vetted as heavily as Bioconductor and generally are required to successfully be built, but may not always perform reliably, or be fully documented.  
 
 ### GitHub
-[GitHub](https://github.com/trending/r) hosts many opensource R packages. As they are **not** vetted or peer-reviewed, these packages can be more experimental than those on CRAN or Bioconductor and thus you will want to proceed with caution. Some basic instructions on how to install packages into your local R/RStudio are included in this [vignette.](https://cran.r-project.org/web/packages/githubinstall/vignettes/githubinstall.html)
+[GitHub](https://github.com/trending/r) hosts many open source R packages. As they are **not** vetted or peer-reviewed, these packages can be more experimental than those on CRAN or Bioconductor and thus you will want to proceed with caution. Some basic instructions on how to install packages into your local R/RStudio are included in this [vignette.](https://cran.r-project.org/web/packages/githubinstall/vignettes/githubinstall.html)
 
 
 ## Local (Desktop) Use
