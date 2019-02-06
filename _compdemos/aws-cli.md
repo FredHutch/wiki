@@ -36,6 +36,18 @@ This example copies `hello.txt` from the `a/b/c` folder in your bucket to the cu
 aws s3 cp s3://fh-pi-doe-j/a/b/c/hello.txt .
 ```
 
+## Creating S3 prefixes
+
+You can also copy files directly into an S3 prefix (denoted by a "PRE" before the name on S3). The prefix does not have to already exist - this copying step can generate one. To copy a file into a prefix, use the local file path in your `cp` command as before, but make sure that the *destination* path for S3 is followed by a `/` character (the `/` is essential).
+
+For example:
+
+```
+aws s3 cp s3://fh-pi-doe-j/hello.txt s3://fh-pi-doe-j/test_prefix/
+```
+
+will copy `hello.txt` into the PRE named test_prefix. Without the trailing `/`, the file `hello.txt` will be copied into the S3 bucket under the filename `test_prefix`, rather than into the desired prefix itself. If the prefix `test_prefix` does not already exist, this step will create it and place `hello.txt` within it.
+
 
 ## Listing bucket contents
 
