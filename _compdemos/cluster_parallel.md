@@ -10,12 +10,15 @@ degreees of ordering and orchestration.  Parallel computing can be quite
 complicated to set up but can improve job throughput when done correctly. 
 
 Parallel computing starts with breaking a larger task into smaller steps- the
-"size" and relationship of those steps is highly dependent on the task
-at hand but determines much about how the job can be "parallelized". Because of the variety of approaches to large tasks, often there can be multiple strategies to consider using to identify the most effective approach to use for the particular task at hand. 
+"size" and relationship of those steps is highly dependent on the task at hand
+but determines much about how the job can be "parallelized". Because of the
+variety of approaches to large tasks, often there can be multiple strategies to
+consider using to identify the most effective approach to use for the
+particular task at hand. 
 
-When steps are highly dependent on each other (e.g. the output of one step is used
-for input into the next) that job is said to be "serial" and it won't benefit
-greatly from parallel processing.  At the other end, "embarassingly" or
+When steps are highly dependent on each other (e.g. the output of one step is
+used for input into the next) that job is said to be "serial" and it won't
+benefit greatly from parallel processing.  At the other end, "embarassingly" or
 "pleasantly" parallel work has individual steps that do not depend on each
 other and can occur in at the same time, often in great numbers. 
 
@@ -29,20 +32,22 @@ multiple different computers.  This approach has the advantage of being
 able to scale up the amount of computation being done concurrently.  This
 approach is often described as "distributed"
 
-> Note: It is also possible to combine those techniques- using multiple cores on multiple computers.  This can add a little complexity, but many tools will handle this neatly.
+> Note: It is also possible to combine those techniques- using multiple cores
+> on multiple computers.  This can add a little complexity, but many tools will
+> handle this neatly.
 
 ## Choosing an Approach
 
-The primary drivers for choosing between the two approaches is how much communication
-between individual steps is necessary and how many steps there are.
-Communication between steps is computationally expensive, and if that communication needs to
-cross a network (as in a distributed solution) there can be a degredation in
-performance compared to keeping all of the steps on the same system (as in
-the threaded solution).  However, if there are many steps the resources on a
-single system will be a bottleneck, which makes a distributed solution more
-appealing.
+The primary drivers for choosing between the two approaches is how much
+communication between individual steps is necessary and how many steps there
+are.  Communication between steps is computationally expensive, and if that
+communication needs to cross a network (as in a distributed solution) there can
+be a degredation in performance compared to keeping all of the steps on the
+same system (as in the threaded solution).  However, if there are many steps
+the resources on a single system will be a bottleneck, which makes a
+distributed solution more appealing.
 
-## An Atlas of Computational Workloads
+## An Atlas of Parallel Workloads
 
 ### Pleasantly Parallel
 
@@ -75,6 +80,34 @@ exotic supercomputers).  That said, modern networks are fairly good and can
 provide usable service for this communication if the number of steps greatly
 exceeds the number of cores available on a single system.
 
+## Techniques for Parallel Computation
+
+### Threading
+
+"Threading" is an approach where tasks or computations are divided amongst the
+compute resources available on a computer- this allows a single process to use
+multiple compute cores.  More information on threads is available
+[here](https://en.wikipedia.org/wiki/Thread_(computing)).
+
+Threading is very useful for highly-connected tasks that communicate with each
+other or share memory- as all of the threads are on the same system there is
+little delay in communications between thread (commonly referred to as "low
+latency communication".  Threading typically involves fairly low-level
+programming skills though both Python and R have tools and libraries that make
+threading some tasks easier.
+
+### Message Passing
+
+A common way of running parallel computations in HPC environments is using
+message passing to communicate between processes.  The most common
+implementation of message passing is the Message Passing Interface (MPI).  MPI
+allows processes to share memory and communicate with each other across
+multiple computers using a network.  Thus, these computations will scale up
+much more than threaded applications
+
+Writing MPI code can be very difficult- however, there are many libraries
+available for Python and R which make creating MPI programs much easier.
+
 ## Parallel Operations in Slurm
 
 Slurm has two concepts important when looking at implementing a parallel
@@ -95,6 +128,11 @@ a sequential task that can only use a single CPU.  The job would need to
 request as many CPUs as could be used (or is practical) by the second step- the
 first and last step would only use a single CPU.
 
-
 ## Examples
-We have begun consolidating examples of parallel computing approaches in the [FredHutch/slurm-examples repository.](https://github.com/FredHutch/slurm-examples)  Please refer to that repository for more community curated exmaple approaches and associated documentation to see if someone has approached a problem similar to yours so you don't have to start from scratch.    
+
+We have begun consolidating examples of parallel computing approaches in the
+[FredHutch/slurm-examples
+repository.](https://github.com/FredHutch/slurm-examples)  Please refer to that
+repository for more community curated exmaple approaches and associated
+documentation to see if someone has approached a problem similar to yours so
+you don't have to start from scratch. 
