@@ -1,6 +1,6 @@
 ---
 title: Data Storage in File (Block) Storage Systems
-last_modified_at: 2018-11-26
+last_modified_at: 2019-02-07
 primary_reviewer: dirkpetersen
 ---
 
@@ -27,7 +27,7 @@ The data here is organized by investigator- each folder at the top level is name
 
 On SciComp supported Linux systems you will see this storage in the path `/fh/fast`.  Windows systems can access this via the UNC path `\\center.fhcrc.org\fh\fast` and OSX hosts using the path `smb://center.fhcrc.org/fh/fast`.  
 
-This storage platform is appropriate for most scientific data- particularly large data sets.  There is no charge for the first 5TB of storage on this system: there is a $30 per-month charge for every terabyte above this.
+This storage platform is appropriate for most scientific data- particularly large data sets.  
 
 ## *Secure*
 
@@ -35,4 +35,4 @@ This storage platform is appropriate for most scientific data- particularly larg
 
 Secure file is available via the path `/fh/fast/secure/research/lastname_f` on SciComp Linux systems, `\\center.fhcrc.org\fh\secure\research\lastname_f` on Windows hosts, and `smb://center/fh/secure/research/lastname_f` on OSX.
 
-This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data.  The first terabyte of data is provided by CIT with a charge of $50 per-terabyte for any amount above that.
+This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data. 
