@@ -1,6 +1,6 @@
 ---
 title: Specimen Processing and Banking
-last_modified_at: 2018-10-25
+last_modified_at: 2019-02-07
 main_authors: Kylie McCloskey
 primary_reviewers:
 ---
@@ -27,4 +27,4 @@ Fred Hutch researchers have access to retrospectively banked specimens through N
   - Shared Resources link to how to contact, what services are offered and forms required for Specimen Processing/Research Cell Bank services are  [here.](https://sharedresources.fredhutch.org/core-facilities/specimen-processingresearch-cell-bank)
 
 ## Impact of Specimen Processing and Handling on Downstream Data
-For more information about the common types of specimen preservation, processing and handling approaches that are particularly impactful on what types of data are feasible and desirable to generate, please refer to Assay material prep and QC link. (https://sciwiki.fredhutch.org/generation/datagen_assayPrep/)
+For more information about the common types of specimen preservation, processing and handling approaches that are particularly impactful on what types of data are feasible and desirable to generate, please refer to our page on [Assay Material Prep and QC.](https://sciwiki.fredhutch.org/generation/datagen_assayPrep/)
