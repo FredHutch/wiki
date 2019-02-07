@@ -1,6 +1,6 @@
 ---
 title: Using R to Access AWS S3
-last_modified_at: 2018-10-18
+last_modified_at: 20190-02-07
 main_author: Dan Tenenbaum
 primary_reviewers: dtenenba
 ---
@@ -112,3 +112,21 @@ for (match in matches) {
   s3load(object=match, bucket=b)
 }
 ```
+
+### Write data frame to S3 as a file
+When you have a data frame in R that you'd like to save as an object in S3, you'll do the following:
+
+```r
+# using write.table
+s3write_using(df, 
+              FUN = write.table, quote = F, row.names = F, sep = "\t", 
+              object = "foo/bar/baz/df.txt",
+              bucket = b)
+ 
+# write write.csv
+s3write_using(df, 
+              FUN = write.csv, quote = F, row.names = F, 
+              object = "foo/bar/baz/df.csv",
+              bucket = b)
+```
+
