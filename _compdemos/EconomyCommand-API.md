@@ -111,11 +111,9 @@ now let's download a subfolder of that folder /test to our scratch file system f
 please check our HPC and data migration tutorials in the scicomp wiki at http://scicomp.fhcrc.org and the swc page on github for additional details:
 
 
-- How to migrate large data to Economy File
-- How to use Economy File and Scratch with Sequencing Data
+- [How to migrate large data to Economy File](/compdemos/Economy-local-large/)
 - [swift commander on github](https://github.com/FredHutch/swift-commander)​
 - [Check out this video how to the swc command](https://asciinema.org/a/17172)​
-- HPC: using Economy File and Scratch on Gizmo
 
 
 ## R swift client
