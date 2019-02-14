@@ -1,6 +1,6 @@
 ---
 title: Overview of Computing at Fred Hutch
-last_modified_at: 2018-09-18
+last_modified_at: 2019-02-14
 ---
 Center IT supports a wide array of resources made available to researchers.  Much of the basic computing information needed on an ongoing basis can be found via Centernet and the Center IT pages.  However, much of the scientific computing resource documentation beyond this material is provided in this section of the Wiki, and links to existing resources and documentation are provided when available.  
 
@@ -20,13 +20,13 @@ The Hutch, through Center IT and Scientific Computing, support a number of optio
 - [Collaborative Storage Systems]({{ site.baseurl }}/computing/store_collaboration/)
 
 
-## [Scientific Computing]({{ site.baseurl }}/computing/cluster_overview/)
+## [Large Scale Compute]({{ site.baseurl }}/computing/cluster_overview/)
 This section contains articles that describe a range of high performance computing resource options available to Fred Hutch researchers.
-- [Resources Available]({{ site.baseurl }}/computing/resource_overview/)
-- [Linux]({{ site.baseurl }}/computing/linux_linux101/)
-- [Cluster Software]({{ site.baseurl }}/computing/cluster_software/)
-- [Using the Cluster]({{ site.baseurl }}/computing/cluster_rhinoGizmo/)
-- [Job Management with Slurm]({{ site.baseurl }}/computing/cluster_usingSlurm/)
+
+- [Linux Operating System]({{ site.baseurl }}/computing/linux_linux101/)
+- [Technologies]({{ site.baseurl }}/computing/resource_overview/)
+- [Scientific Software]({{ site.baseurl }}/computing/cluster_software/)
+- [Job Management]({{ site.baseurl }}/computing/cluster_usingSlurm/)
 - [Cloud Computing]({{ site.baseurl }}/computing/cluster_cloudCompute/)
 
 
