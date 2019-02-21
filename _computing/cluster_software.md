@@ -1,61 +1,9 @@
 ---
 title: Scientific Software
-last_modified_at: 2019-01-31
+last_modified_at: 2019-02-21
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various services provided are outlined here along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.  
-
-The Fre Hutch managed systems listed serve needs that rise above
-those that can be met using your desktop computer or web-based services. Often reasons to move
-to these high performance computing (HPC) resources include:
-- reproducible compute jobs
-- version controlled and/or specialized software
-- increase compute capability
-- rapid access to large data sets in central data storage locations
-
-## Overview of On-Premise Resources
-
-Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
---- | --- | --- | ---
-Gizmo | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
-Beagle | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Center IT | _home_, _fast_, _economy_, AWS-S3, and Beagle-specific _scratch_
-Rhino | CLI, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
-NoMachine | NX Client, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
-Python/Jupyter Notebooks | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
-R/R Studio | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
-
-## NoMachine
-
-The NoMachine (NX) servers provide a Linux desktop environment. These systems
-are useful if you use tools that require an X Windows display and you don't
-wish to install an X11 server on your personal computer.  Another benefit of
-using these systems is that the desktop environment and any processes are
-preserved if you should disconnect- particularly handy for laptop users.
-
-There are three NX servers: lynx, manx, and sphinx.  lynx runs the Unity desktop environment, the other two run Maté.
-
-NoMachine requires you install the client (NX client) on your computer.  Clients are available for OSX and Windows.  Contact the helpdesk if you need assistance with installation.
-
-## Gizmo and Beagle Cluster
-
-While we generally don't recommend interactive computing on the HPC clusters-
-interactive use can limit the amount of work you can do and introduce
-"fragility" into your computing- there are many scenarios where interactively
-using cluster nodes is a valid approach.  For example, if you have a single
-task that is too much for a rhino, opening a session on a cluster node is the
-way to go.
-
-If you need an interactive session with dedicated resources, you can start a
-job on the cluster using the command `grabnode`.  The `grabnode` command will
-start an interactive login session on a cluster node.  This command will prompt
-you for how many cores, how much memory, and how much time is required
-
-This command can be run from any NoMachine or rhino host.
-
-> NOTE: at this time we aren't running interactive jobs on Beagle nodes.  If
-> you have a need for this, please contact scicomp.
-
-## Scientific Software
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/computing/resource_overview/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.  
 
 The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
@@ -64,7 +12,8 @@ Reasons to use scientific software maintained by SciComp include:
 - packages are reproducible in or outside Fred Hutch
 - rapid access to many software packages and package versions
 
-The full list of available software can be found [here](http://fredhutch.github.io/easybuild-life-sciences/).
+## EasyBuild Life Sciences
+The full list of available software can be found [on the Easy Build site](http://fredhutch.github.io/easybuild-life-sciences/).  
 
 ## Environment Modules
 
@@ -128,7 +77,7 @@ module load Python
 ```
 The above line will load a different version of the software package over time as the "pointer" to a specific version is changed.
 
-**Note:** This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
+> **Note:** This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
 
 ## Installing Custom Software Packages
 If you do not find the software you need, a support package or library, or the specific version you need, you have two options:
@@ -159,7 +108,8 @@ If you want to install or build a standalone software package, you are also welc
 - If you loaded a toolchain module when installing or building new software, you will must load that toolchain module before running that software, or you will get library errors.
 
 ## Frequently Asked Questions
-<!--We should have a single "how to get help from SciComp page" and link here.-->
+> Note:  For announcements from Scientific Computing, please see the [Announcements page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the Events page in CenterNet for current Office Hours.  
+
 1. *Something weird is going on with my shell and/or job!?!*
   - "Reset" your shell by logging out and back in. This will clear your environment. Users using screen or tmux will need to exit their session to clear their environment.
 1. *Why am I getting errors when running software from a module?*
