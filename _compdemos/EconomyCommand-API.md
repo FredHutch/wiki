@@ -6,21 +6,21 @@ primary_reviewers: dirkpetersen
 ---
 Access to data stored in Fred Hutch resources that are [object stores](/computing/store_objectstore/) can be achieved via command line tools or the API.
 
-## A​ccessing `Economy File` directly via Object API
+## Accessing `Economy File` directly via Object API
 
 This is an overview available tools starting with the ones you will most likely use and that are best supported.
 
 ## swc (swift commander - simple access)
 Using the swc command is the simplest way of accessing the swift object store. The tool includes easy to use sub commands such as swc upload and swc download as well as simplified versions of standard unix tools such as ls, cd, rm, etc. By using swc you can ignore most of the peculiarities of the swift object storage system and (almost) work with it like a traditional file system. It is the best option for HPC scripting and automation.
 
-First, let's invoke the swc command and see what it has to offer:​
+First, let's invoke the swc command and see what it has to offer:
 ```
     gizmod16:~> swc
     *** Swift credentials not set. ***
     Please execute 'sw2account <accountname>' to get credentials.
     Use 'sw2account --save <accountname>' to set them as default.
 ```
-Swift requires certain environment variables to be set for each PI.  You can easily set them by using the 'sw2account' command which asks for your HutchNet password:​​​​
+Swift requires certain environment variables to be set for each PI.  You can easily set them by using the 'sw2account' command which asks for your HutchNet password:
 ```
     rhino04:~> sw2account groudine_m
 ```
@@ -71,7 +71,7 @@ now let's try running 'swc' again, still without any command options, you are pr
     swc openwith emacs /folder/some_file.txt
 ```
 
-OK, we see that there are some options, the swc command has nearly 30 sub commands. Let's upload a folder called 'testing' that is stored somewhere on fast file. The target folder on economy file is called /test:​​​​​​​​​​​
+OK, we see that there are some options, the swc command has nearly 30 sub commands. Let's upload a folder called 'testing' that is stored somewhere on fast file. The target folder on economy file is called /test:
 
 ```    petersen@rhino04:~/sc$ swc upload ./testing /test
     *** uploading ./test ***
@@ -87,7 +87,7 @@ OK, we see that there are some options, the swc command has nearly 30 sub comman
     .
     /test
 ```
-let's make sure that the data is really there by comparing the size of the local folder with the swift folder:​
+let's make sure that the data is really there by comparing the size of the local folder with the swift folder:
 ```
     petersen@rhino02:~/sc$ swc compare ./testing /test
         checking swift folder test ...
@@ -112,18 +112,18 @@ please check our HPC and data migration tutorials in the scicomp wiki at http://
 
 
 - [How to migrate large data to Economy File](/compdemos/Economy-local-large/)
-- [swift commander on github](https://github.com/FredHutch/swift-commander)​
-- [Check out this video how to the swc command](https://asciinema.org/a/17172)​
+- [swift commander on github](https://github.com/FredHutch/swift-commander)
+- [Check out this video how to the swc command](https://asciinema.org/a/17172)
 
 
 ## R swift client
 
 The R swift package allows to upload and download files to swift directly from R. This greatly improves usability from interactive R sessions
-​​​​if you do *not* work on a SciComp supported Linux computer you need to install the R swift package first:
+if you do *not* work on a SciComp supported Linux computer you need to install the R swift package first:
 ```
     > install.packages('devtools',repos='http://cran.fhcrc.org')
     > devtools::install_github("mtmorgan/swift")
-    interacting with the object stop is pretty easy. If your credentials are set (see above) you can start right away. In this case we (1) list the content of the SciComp swift container, (2) download a file and (3) upload a results file.​​​
+    interacting with the object stop is pretty easy. If your credentials are set (see above) you can start right away. In this case we (1) list the content of the SciComp swift container, (2) download a file and (3) upload a results file.
     > library('swift')
     >
     > swlist('SciComp')
@@ -198,7 +198,7 @@ you can upload an entire folder structure using the swift upload command. swift 
 
 "download" and "delete work as you might expect:
 
-​"download" and untar a compressed file directly into Gizmo's scratch file system (--output -  sends the downloaded file directly to STDOUT )
+"download" and untar a compressed file directly into Gizmo's scratch file system (--output -  sends the downloaded file directly to STDOUT )
 
     $ swift download newcontainer samplefile.tar.gz --output - | tar xzv -C $SCRATCH/$SLURM_JOB_ID
     Limitations and Notes
@@ -213,7 +213,7 @@ However, swift will delete a container with files still in it, so be careful wha
 Amazon S3 (boto)
 Swift has an Amazon S3 compatiblity layer that supports most of the S3 API. boto is a very popular python library that allows you to interact with S3 compatible object stores. It is currently installed on most scientific computing systems such as the rhinos and gizmo nodes. The current version this boto3. You can also install it on your own system:
 
-​​​​​On SciComp systems boto3 is already in the latest Python, just load the module
+On SciComp systems boto3 is already in the latest Python, just load the module
     $ ml Python
 
 or you install boto within virtualenv, please check the scicomp wiki for "Manage Python environments using virtualenv"
@@ -226,8 +226,8 @@ The client method below is a little  older and exposes more low level access to 
 
 To use this method, put your credentials into a text file (.e.g.  ~/.aws/s3.fhcrc.org) separated by colon:
 echo "accountname:secretkey" > ~/.aws/s3.fhcrc.org
-​
-then you run your first example: using Boto to list your existing storage containers (buckets):​​​​
+
+then you run your first example: using Boto to list your existing storage containers (buckets):
 
     #! /usr/bin/env python3
 
@@ -243,7 +243,7 @@ then you run your first example: using Boto to list your existing storage contai
 
     l = s3client.list_buckets()
     print(l)
-    ​
+    
     boto3 is the current and recommeded version of boto, however you will still find many examples for boto, the legacy version of the library
     import boto.s3.connection
 
@@ -262,8 +262,8 @@ then you run your first example: using Boto to list your existing storage contai
     buckets = connection.get_all_buckets()
     print buckets
     there is more detailed documentation about boto:
-    http://boto.s3.amazonaws.com/s3_tut.html​
-​
+    http://boto.s3.amazonaws.com/s3_tut.html
+
 
 ## Python (swiftclient)
 
@@ -305,9 +305,9 @@ instead of using the swift command from the unix shell one can also access swift
 
 
 
-​## access from the command line or Rest API
+## access from the command line or Rest API
 
-Economy File supports several access methods:​​
+Economy File supports several access methods:
 Direct Access / Linux / Rhino
 Please see How to Access the Swiftstack Object store to learn about direct Access via API or command line tools. If you want to use data from Economy File on the Gizmo cluster or from the Rhinos this is your preferred access method.  
 
