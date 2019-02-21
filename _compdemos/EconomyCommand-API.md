@@ -232,83 +232,85 @@ To use this method, put your credentials into a text file (.e.g.  ~/.aws/s3.fhcr
 
 then you run your first example: using Boto to list your existing storage containers (buckets):
 
-    #! /usr/bin/env python3
+```
+#! /usr/bin/env python3
 
-    import boto3, os
+import boto3, os
 
-    with open(os.path.expanduser('~/.aws/s3.fhcrc.org'), 'r') as f:
-        access_key_id, secret_access_key = f.readline().strip().split(':')
+with open(os.path.expanduser('~/.aws/s3.fhcrc.org'), 'r') as f:
+    access_key_id, secret_access_key = f.readline().strip().split(':')
 
-    s3client = boto3.client('s3',
-            endpoint_url='https://s3.fhcrc.org',
-            aws_access_key_id = access_key_id,
-            aws_secret_access_key = secret_access_key)
+s3client = boto3.client('s3',
+        endpoint_url='https://s3.fhcrc.org',
+        aws_access_key_id = access_key_id,
+        aws_secret_access_key = secret_access_key)
 
-    l = s3client.list_buckets()
-    print(l)
-    
-    boto3 is the current and recommeded version of boto, however you will still find many examples for boto, the legacy version of the library
-    import boto.s3.connection
+l = s3client.list_buckets()
+print(l)
 
-    connection = boto.s3.connection.S3Connection(
-        aws_access_key_id='EC2_ACCESS_KEY or USERNAME',
-        aws_secret_access_key='S3 API KEY',
-        port=443,
-        host='s3.fhcrc.org',
-        is_secure=True,
-        validate_certs=False,
-        calling_format=boto.s3.connection.OrdinaryCallingFormat()
-    )
+boto3 is the current and recommeded version of boto, however you will still find many examples for boto, the legacy version of the library
+import boto.s3.connection
 
-    b=connection.create_bucket('mybucket')
+connection = boto.s3.connection.S3Connection(
+    aws_access_key_id='EC2_ACCESS_KEY or USERNAME',
+    aws_secret_access_key='S3 API KEY',
+    port=443,
+    host='s3.fhcrc.org',
+    is_secure=True,
+    validate_certs=False,
+    calling_format=boto.s3.connection.OrdinaryCallingFormat()
+)
 
-    buckets = connection.get_all_buckets()
-    print buckets
-    there is more detailed documentation about boto:
-    http://boto.s3.amazonaws.com/s3_tut.html
+b=connection.create_bucket('mybucket')
 
+buckets = connection.get_all_buckets()
+print buckets
+```
+
+There is more detailed documentation about boto available [here](http://boto.s3.amazonaws.com/s3_tut.html)
 
 ## Python (swiftclient)
 
-instead of using the swift command from the unix shell one can also access swift directly from python using the swiftclient python module which is also used by the swift command line client. This is a quick example that writes 100 objects / files to a swift container called prj1. create this container by using the command "swift post prj1"
+Instead of using the swift command from the unix shell one can also access swift directly from python using the swiftclient python module which is also used by the swift command line client. This is a quick example that writes 100 objects / files to a swift container called prj1. create this container by using the command `swift post prj1`
 
-    #! /usr/bin/env python
-    # -*- encoding: utf-8 -*-
-    import os, sys, random
-    from swiftclient import client as swiftclient
+```
+#! /usr/bin/env python
+# -*- encoding: utf-8 -*-
+import os, sys, random
+from swiftclient import client as swiftclient
 
-    arg=0
-    if len(sys.argv) > 1:
-        arg=sys.argv[1]
+arg=0
+if len(sys.argv) > 1:
+    arg=sys.argv[1]
 
-    object_base_name = "%s-array" % arg
-    content_base = "asdasdfasdfafaf"
-    container_name = "prj1"
+object_base_name = "%s-array" % arg
+content_base = "asdasdfasdfafaf"
+container_name = "prj1"
 
-    AUTH = os.environ.get('ST_AUTH')
-    USER = os.environ.get('ST_USER')
-    PASSWORD = os.environ.get('ST_KEY')
+AUTH = os.environ.get('ST_AUTH')
+USER = os.environ.get('ST_USER')
+PASSWORD = os.environ.get('ST_KEY')
 
-    post_url, post_token = swiftclient.Connection(
-        '%s' % (AUTH),
-        USER,
-        PASSWORD, auth_version=1).get_auth()
+post_url, post_token = swiftclient.Connection(
+    '%s' % (AUTH),
+    USER,
+    PASSWORD, auth_version=1).get_auth()
 
-    #headers = get_headers
-    #headers['x-auth-token'] = post_token
-    headers = {'x-auth-token': post_token}
-    sync_to = post_url + '/' + container_name
+#headers = get_headers
+#headers['x-auth-token'] = post_token
+headers = {'x-auth-token': post_token}
+sync_to = post_url + '/' + container_name
 
-    for i in range(100):
-        x = random.random()
-        object_name = "%s-%s" % (object_base_name,i)
-        content = "%s-%s" % (content_base,x)
-        swiftclient.put_object(sync_to, name=object_name, headers=headers,
-                        contents=content)
+for i in range(100):
+    x = random.random()
+    object_name = "%s-%s" % (object_base_name,i)
+    content = "%s-%s" % (content_base,x)
+    swiftclient.put_object(sync_to, name=object_name, headers=headers,
+                    contents=content)
+```
 
 
-
-## access from the command line or Rest API
+## Access From the Command Line or REST API
 
 Economy File supports several access methods:
 Direct Access / Linux / Rhino
@@ -329,4 +331,4 @@ If you have permissions to see the credentials you will get 3 entries:
 
 For tools that use S3 protocol you need 'account' and 'key'. Use the entry in account for "access key id" and the entry in 'key' for "secret key id". Connect these tools to https://s3.fhcrc.org
 
-For tools that use the Swift protocol you need 'account' and 'password'. In addition you need an authentical url which is also called authentication endpoint. Use https://tin.fhcrc.org/auth/v1.0 for this.
+For tools that use the Swift protocol you need the account, a password, and an authentication endpoint (a URL used for authenticating your credentials). Use https://tin.fhcrc.org/auth/v1.0 for this.
