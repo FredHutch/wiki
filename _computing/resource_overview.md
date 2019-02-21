@@ -41,7 +41,7 @@ you for how many cores, how much memory, and how much time is required
 This command can be run from any NoMachine or rhino host.
 
 > NOTE: at this time we aren't running interactive jobs on Beagle nodes.  If
-> you have a need for this, please contact scicomp.
+> you have a need for this, please email `scicomp`.
 
 ## Available Resources
 VMs, shiny, rancher, data transfer
