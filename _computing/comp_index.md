@@ -1,8 +1,12 @@
 ---
 title: Overview of Computing at Fred Hutch
-last_modified_at: 2019-02-14
+last_modified_at: 2019-02-19
 ---
 Center IT supports a wide array of resources made available to researchers.  Much of the basic computing information needed on an ongoing basis can be found via Centernet and the Center IT pages.  However, much of the scientific computing resource documentation beyond this material is provided in this section of the Wiki, and links to existing resources and documentation are provided when available.  
+
+We maintain a space for both announcements from Scientific Computing as well as a Resource Library at the following links:
+- [Updates and Announcements]({{ site.baseurl }}/scicompannounce/)
+- [Resource Library, Demo's and HOWTOs]({{ site.baseurl }}/compdemos/)
 
 ## [Access and Credentials]({{ site.baseurl }}/computing/access_overview/)
 This section includes a variety of information about accessing computing resources at the Fred Hutch, including managing credentials for services when required.  
@@ -30,9 +34,3 @@ This section contains articles that describe a range of high performance computi
 - [Cloud Computing]({{ site.baseurl }}/computing/cluster_cloudCompute/)
 
 
-## [Software, Resources and Updates]({{ site.baseurl }}/computing/training_overview/)
-This section contains a variety of frequently updated sections where you can find current information about office hours, current software builds, recent notifications, and the Resource Library which contains a growing list of short demo's and articles about a variety of topics not addressed elsewhere in the site.  
-- [In-Person Training and Office Hours]({{ site.baseurl }}/computing/training_overview/)
-- [Current Software (link out)](http://fredhutch.github.io/easybuild-life-sciences/)
-- [Updates and Announcements]({{ site.baseurl }}/scicompannounce/)
-- [Resource Library, Demo's and HOWTOs]({{ site.baseurl }}/compdemos/)
