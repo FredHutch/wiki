@@ -165,7 +165,7 @@ The swift client operates similar to ftp or scp and can be used in batch mode.  
 - capabilities: lists features/capabilities of the swift cluster
 - tempurl: creates a temporary url with expiration date that can be published within the Fred Hutch network
 
-You can supply your credentials on the command line, but this is discouraged as it can expose your password to any other user on the system.  
+You can supply your credentials on the command line, but this is discouraged as it can expose your password to any other user on the system.
 The easiest way to get credentials to Swift Economy File storage on SciComp system is using the command sw2account with the id of the PI as an argument (sw2account lastname_f) . It is recommend that you use the sw2account command to save the credentials of the PI account you mostly work with.
 
 ```
@@ -196,7 +196,7 @@ The "post" subcommand creates a new container into which we can "upload" a file.
 ```
 you can upload an entire folder structure using the swift upload command. swift will recreate the entire folder structure you send on the command line. If you run "swift upload -S 2g newcontainer /fh/fast/lastname_f/myfolder" it will create the entire folder structure /fh/fast... under newcontainer. if you just want myfolder to show up under mycontainer you need to cd to  /fh/fast/lastname_f  and then run  "swift upload newcontainer myfolder"
 
-"download" and "delete work as you might expect:
+"download" and "delete" work as you might expect:
 
 "download" and untar a compressed file directly into Gizmo's scratch file system (--output -  sends the downloaded file directly to STDOUT )
 
@@ -210,22 +210,25 @@ Swift commands that fail don't set a return code, which could complicate scripti
 You can't delete a directory in a container. When you delete the last file from the directory, swift deletes the directory automatically.
 However, swift will delete a container with files still in it, so be careful what you delete.
 
-Amazon S3 (boto)
+## Amazon S3 (boto)
+
 Swift has an Amazon S3 compatiblity layer that supports most of the S3 API. boto is a very popular python library that allows you to interact with S3 compatible object stores. It is currently installed on most scientific computing systems such as the rhinos and gizmo nodes. The current version this boto3. You can also install it on your own system:
 
 On SciComp systems boto3 is already in the latest Python, just load the module
+
     $ ml Python
 
 or you install boto within virtualenv, please check the scicomp wiki for "Manage Python environments using virtualenv"
 
 Please see this detailed and current example for boto3 in the scicomp wiki:
 
-"Boto3 access to Economy File"
+### Boto3 access to Economy File
 
 The client method below is a little  older and exposes more low level access to s3. It should not be required for most access.
 
 To use this method, put your credentials into a text file (.e.g.  ~/.aws/s3.fhcrc.org) separated by colon:
-echo "accountname:secretkey" > ~/.aws/s3.fhcrc.org
+
+    echo "accountname:secretkey" > ~/.aws/s3.fhcrc.org
 
 then you run your first example: using Boto to list your existing storage containers (buckets):
 
@@ -309,7 +312,7 @@ instead of using the swift command from the unix shell one can also access swift
 
 Economy File supports several access methods:
 Direct Access / Linux / Rhino
-Please see How to Access the Swiftstack Object store to learn about direct Access via API or command line tools. If you want to use data from Economy File on the Gizmo cluster or from the Rhinos this is your preferred access method.  
+Please see How to Access the Swiftstack Object store to learn about direct Access via API or command line tools. If you want to use data from Economy File on the Gizmo cluster or from the Rhinos this is your preferred access method.
 
 
 ## other access methods
