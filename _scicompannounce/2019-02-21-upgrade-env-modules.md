@@ -7,6 +7,7 @@ Hello to all Data Scientists and HPC Users!
 We hope you are already aware of our upcoming Operating System (OS) upgrade - we are updating all Linux systems from Ubuntu 14.04 to Ubuntu 18.04.
 
 [First Announcement](https://sciwiki.fredhutch.org/scicompannounce/2019-01-22-hpc-systems-upgrade-2019/)
+
 [Second Announcement](https://fredhutch.github.io/easybuild-life-sciences/announcements/2019-01-24_Upgrade/)
 
 There will be changes to our Environment Modules. Please refresh your understanding of Environment Modules.
@@ -39,6 +40,9 @@ Please send email to scicomp@fredhutch.org or stop by one of our Office Hours if
 Links:
 
 [OS Upgrade Announcement One](https://fredhutch.github.io/easybuild-life-sciences/announcements/2019-01-24_Upgrade/)
+
 [OS Upgrade Announcement Two](https://sciwiki.fredhutch.org/scicompannounce/2019-01-22-hpc-systems-upgrade-2019/)
+
 [Environment Modules Information](https://sciwiki.fredhutch.org/computing/cluster_software/)
+
 [18.04 (new) Environment Module list](http://fredhutch.github.io/easybuild-life-sciences/bio-modules-18.04/)
