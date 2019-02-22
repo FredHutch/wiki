@@ -16,7 +16,7 @@ There will be changes to our Environment Modules. Please refresh your understand
 
 The list of available Environment Modules on the new OS is different, and this may affect your scripts.
 
-[18.04 Environment Modules](https://fredhutch.github.io/easybuild-life-sciences/bio-modules-18.04/)
+[18.04 Environment Modules](https://fredhutch.github.io/easybuild-life-sciences/all-modules-18.04/)
 
 This is the best way to avoid problems:
 
@@ -45,4 +45,4 @@ Links:
 
 [Environment Modules Information](https://sciwiki.fredhutch.org/computing/cluster_software/)
 
-[18.04 (new) Environment Module list](http://fredhutch.github.io/easybuild-life-sciences/bio-modules-18.04/)
+[18.04 (new) Environment Module list](http://fredhutch.github.io/easybuild-life-sciences/all-modules-18.04/)
