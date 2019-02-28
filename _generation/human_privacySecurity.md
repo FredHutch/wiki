@@ -2,7 +2,7 @@
 title: Data Privacy and Security
 last_modified_at: 2018-12-11
 main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
-primary_reviewers: JasonMajor1, sgglick
+primary_reviewers: JasonMajor1, sgglick, jli-fh
 ---
 
 Every effort must be made to protect the privacy and confidentiality of
@@ -26,7 +26,7 @@ possible without compromising the confidentiality of participants.
 ## Fred Hutch Information Classification Standard
 
 Data should be handled according to the [Fred Hutch Information
-Classification Standard](https://centernet.fredhutch.org/cn/u/hdc/_jcr_content/leftParsys/download_0/file.res/Fred-Hutch-Information-Classification-and-Handling-Standard-FINAL.pdf), which describes security and handling standards
+Classification Standard](https://teams.fhcrc.org/sites/centerit/governance/PSP/FinalDocs/Fred-Hutch-Information-Classification-and-Handling-Standard%20-%20102018.pdf), which describes security and handling standards
 commensurate with the risk of information mishandling. These standards provide guidelines for managing
 data at Fred Hutch and for sharing information within Fred Hutch and between Fred Hutch and an
 outside party. Genomic data, outside of public reference data, is
