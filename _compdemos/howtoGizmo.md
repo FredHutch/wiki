@@ -181,37 +181,3 @@ You will likely need to "clean up" after jobs that are killed- partial output fi
 gizmo: sbatch -n 1 -p restart -t 1-0 bin/job.sh  # <--- this job will not restart
 gizmo: sbatch -n 1 -p restart -t 1-0 --restart bin/job.sh  # <--- this will automatically re-enter the queue 
 ```
-
-### Boneyard
-The "boneyard" partition is intended for those wanted to take advantage of legacy nodes which are no longer officially supported:
-
-nodes may fail at any time 
-scicomp will not prepare / compaile software running on boneyard nodes 
-only "D" class nodes are available
-Overall throughput will be less than in the default queue
-#### Example:
-```
-gizmo: 
-         sbatch -n 1 -p boneyard ​-t 12:00:00 bin/job.sh  # Will use a whole node even
-gizmo: 
-         sbatch -n 6 -p boneyard -t 12:00:00 bin/job.sh  # though not all cores are consumed
-gizmo: 
-         sbatch -n 12 -N 2 -p boneyard bin/job.sh # <--- this will fail
-gizmo: 
-         sbatch -n 50 -p boneyard bin/job.sh # <--- as will this
-```
-
-### Boneyard_Restart
-The "boneyard_restart" partition is for jobs that can be preempted by other workload, meaning that a job running in this partition can be killed by jobs that are queued in the other partitions.  These jobs are not requeued by default- they are removed from the system, unless you use the --restart flag. In that case they would move to the end of the waiting line and be restarted when there is enough resources
-
-The advantage to using this partition is that you can use more nodes than in the default partition.  The jobs that have the highest degree of success running in this partition are jobs that use a single core and run quickly- in the scope of hours.
-
-You will likely need to "clean up" after jobs that are killed- partial output files, temporary files in network locations, etc.  Checkpointing is one strategy for effective use of the restart queue- there are many different methods available to checkpoint an application- contact us to determine a) if checkpointing is an appropriate strategy and b) what the most effective checkpointing technology would be.
-
-#### Example:
-```
-gizmo: sbatch -n 1 -p boneyard_restart -t 1-0 bin/job.sh  # <--- this job will not restart
-gizmo: sbatch -n 1 -p boneyard_restart -t 1-0 --restart bin/job.sh  # <--- this will automatically re-enter the queue 
-```
-
-
