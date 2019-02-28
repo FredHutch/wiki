@@ -44,7 +44,7 @@ R/R Studio | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientif
 ### Meet `Rhino`
 `Gizmo` is actually not a stand alone system; instead, access to the resource is based on the `Rhino` platform supported by Center IT.  `Rhino`, or more specifically the Rhinos, are three locally managed HPC servers all accessed via the name `rhino`. Together, they function as a data and compute hub for a variety of data storage resources and high performance computing (HPC). The specific guidance for the use of each of the approaches to HPC access are slightly different, but will all require the user to learn how to access and interact with `rhino`.  
 
-Any user interacting with the following systems will be dependent on being proficient with the care and keeping of the Rhinos, and more information about on premise computing resources can be found in the Computing section of this site [here](/computing/cluster_rhinoGizmo/).
+Any user interacting with the following systems will be dependent on being proficient with the care and keeping of the Rhinos, and more information about on premise computing resources can be found in the Computing section of this site [here](/computing/resource_overview/).
 
 More information on the topic of ssh configurations for access to `rhino` can be found [here.](/compdemos/ssh/)
 
