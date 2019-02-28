@@ -3,45 +3,33 @@ title: Supported Resources and Technologies
 last_modified_at: 2019-02-21
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on here along with the basic information required for researchers to identify which resource might be best suited to their particular computing needs.  
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on here along with the basic information required for researchers to identify which resource might be best suited to their particular computing needs.
 
-The Fred Hutch managed systems listed serve needs that rise above
-those that can be met using your desktop computer or web-based services. Often reasons to move
+The Fred Hutch managed systems listed serve needs that rise above those that can be met using your desktop computer or web-based services. Often reasons to move
 to these high performance computing (HPC) resources include:
-- reproducible compute jobs
-- version controlled and/or specialized software
-- increased compute capability
-- rapid access to large data sets in central data storage locations
+
+  - reproducible compute jobs
+  - version controlled and/or specialized software
+  - increased compute capability
+  - rapid access to large data sets in central data storage locations
 
 ## Overview of On-Premise Resources
 
 Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
 --- | --- | --- | ---
+Rhino | CLI, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
 Gizmo | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
 Beagle | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Center IT | _home_, _fast_, _economy_, AWS-S3, and Beagle-specific _scratch_
-Rhino | CLI, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
+Koshu | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Center IT | _home_, _fast_, _economy_, Google Cloud Storage, and koshu-specific _scratch_
 NoMachine | NX Client, FH credentials on campus/VPN off campus | Scientific Computing | Direct to all local storage types
 Python/Jupyter Notebooks | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
 R/R Studio | Via Rhino (CLI, FH credentials on campus/VPN off campus) | Scientific Computing | Direct to all local storage types
 
-### Gizmo and Beagle Cluster
+### The Compute Clusters
 
-While we generally don't recommend interactive computing on the HPC clusters-
-interactive use can limit the amount of work you can do and introduce
-"fragility" into your computing- there are many scenarios where interactively
-using cluster nodes is a valid approach.  For example, if you have a single
-task that is too much for a rhino, opening a session on a cluster node is the
-way to go.
+Scientific computing support three different clusters: the on-campus _gizmo_ cluster and two clusters based in different cloud providers, _beagle_ (in Amazon's Web Services) and _koshu_ (in Google's Compute Platform).
 
-If you need an interactive session with dedicated resources, you can start a
-job on the cluster using the command `grabnode`.  The `grabnode` command will
-start an interactive login session on a cluster node.  This command will prompt
-you for how many cores, how much memory, and how much time is required
-
-This command can be run from any NoMachine or rhino host.
-
-> NOTE: at this time we aren't running interactive jobs on Beagle nodes.  If
-> you have a need for this, please email `scicomp`.
+Compute clusters are managed by a _workload manager_, in this case Slurm.  Clusters are primarily intended for _batch computing_, where jobs are submitted to the workload manager which then takes over management of the job.
 
 ## Available Resources
 VMs, shiny, rancher, data transfer
