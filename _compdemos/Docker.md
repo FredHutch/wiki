@@ -56,6 +56,14 @@ The prox command checks that the machine is up, now you can login as root with t
     Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.19-1-pve x86_64)
 ```
 
+First, change the network configuration and restart Docker. You only need to do this once, but if you don't
+do it you will have network problems:
+
+```
+echo '{ "bip": "10.99.99.1/24" }'  > /etc/docker/daemon.json
+service docker restart
+```
+
 Verify that docker works as expected by running the hello world container.
 
  ```   
