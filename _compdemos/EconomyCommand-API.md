@@ -325,13 +325,14 @@ for i in range(100):
 ## Access From the Command Line or REST API
 
 Economy File supports several access methods:
-Direct Access / Linux / Rhino
+
+## Direct Access / Linux / Rhino
+
 Please see How to Access the Swiftstack Object store to learn about direct Access via API or command line tools. If you want to use data from Economy File on the Gizmo cluster or from the Rhinos this is your preferred access method.
 
+## Other Access Methods
 
-## other access methods
-
-There are many other tools out there that support object storage systems. Swiftstack supports the swift API but also the more common S3 API. To get your credentials for these access methods please use this link https://toolbox.fhcrc.org/sw2srv/swift/account and enter the name of the PI or department account account (e.g. lastname_f).  You may be prompted for your hutchnet ID password.
+There are many other tools out there that support object storage systems. Swiftstack supports the Swift API and the more common S3 API. To get your credentials for these access methods please use this link https://toolbox.fhcrc.org/sw2srv/swift/account and enter the name of the PI or department account account (e.g. lastname_f).  You may be prompted for your hutchnet ID password.
 
 If you have permissions to see the credentials you will get 3 entries:
 
@@ -341,6 +342,6 @@ If you have permissions to see the credentials you will get 3 entries:
      "password": "Huew4jv&jfwvjsdg"
     }
 
-For tools that use S3 protocol you need 'account' and 'key'. Use the entry in account for "access key id" and the entry in 'key' for "secret key id". Connect these tools to https://s3.fhcrc.org
+For tools that use S3 protocol you need _account_ and _key_. Use the entry in account for "access key id" and the entry in 'key' for "secret key id". Connect these tools to https://s3.fhcrc.org
 
 For tools that use the Swift protocol you need the account, a password, and an authentication endpoint (a URL used for authenticating your credentials). Use https://tin.fhcrc.org/auth/v1.0 for this.
