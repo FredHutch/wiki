@@ -1,10 +1,10 @@
 ---
 title: Overview of Data Storage at Fred Hutch
-last_modified_at: 2018-11-26
+last_modified_at: 2019-02-06
 main_author: Dirk Petersen
 ---
 
-The Hutch supports a number of options for storing your data, specifically Database storage, File storage, Scratch storage, Object storage and Collaborative storage options.  The storage you use to store your data will depend on the nature of the data and the anticipated use. Provided here is a summary of the different options to provide a basic overview of what resources are available to researchers for data storage. For more detailed information on each of these topics summarized here including setup instructions and limitations, please refer to each of the articles in this section of the sidebar.  
+The Hutch supports a number of options for storing your data, specifically Database storage, File storage, Scratch storage, Object storage and Collaborative storage options.  The storage you use to store your data will depend on the nature of the data and the anticipated use. Here we provide a basic overview of what resources are available to researchers for data storage. For more detailed information on each of these topics summarized here including setup instructions and limitations, please refer to each of the articles in this section of the sidebar.  
 
 ## Storing protected health information (PHI) data
 
@@ -24,7 +24,7 @@ Additional resources for identifying [whether your data is de-identified or not]
 
 ## Storage Allocation and Costs
 
-Please see an overview of file/block allocation amounts, features and costs on [Centernet.](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html) For expenses charged for your group for data storage in these systems, please see the [storage chargeback portal.](https://teams.fhcrc.org/sites/centerit/Support/storage/)  This portal also displays the amount of data in TB that is stored in each location for each Investigator.  
+Please see an overview of file allocation amounts, features and costs on [Centernet.](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html) For expenses charged for your group for data storage in these systems, please see the [storage chargeback portal.](https://teams.fhcrc.org/sites/centerit/Support/storage/)  This portal also displays the amount of data in TB that is stored in each location for each Investigator.  
 
 >Note: You can typically access the monthly billing information during the first 10 days of every month
 
@@ -34,7 +34,7 @@ Please see an overview of file/block allocation amounts, features and costs on [
 There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [DB4Sci](https://mydb.fredhutch.org/) (aka MyDB, supported by SciComp, and provides access to four database engine types including Postgres, MariaDB (MySQL), MongoDB, and Neo4j).  
 
 
-## [File Storage: Block Storage in Home, Fast, Secure]({{ site.baseurl }}/computing/store_posix/)
+## [File Storage: Storage in Home, Fast, Secure]({{ site.baseurl }}/computing/store_posix/)
 
 File storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
@@ -46,7 +46,6 @@ Object storage systems scale better in capacity and performance and are much che
 ## [Temporary Storage: Scratch]({{ site.baseurl }}/computing/store_scratch/)
 
 The scratch file system is a file storage system that works differently than the systems intended for long term data storage. It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
-
 
 
 ## [Collaborative Storage Options]({{ site.baseurl }}/computing/store_collaboration/)
