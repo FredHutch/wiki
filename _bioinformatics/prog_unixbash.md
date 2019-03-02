@@ -25,6 +25,6 @@ The [Julia](https://docs.julialang.org) language aims to combine the accessible 
 Go, or [GoLang](https://golang.org/doc/) also has some [support for data science](https://blog.chewxy.com/2017/11/02/go-for-data-science/).
 
 ## Perl 
-[Perl](https://www.perl.org) is a computational language often found in bioinformatic analyses. The language was originally developed in 1987. [perl.org](https://www.perl.org/learn.html) has numerous tutorials. 
+[Perl](https://www.perl.org) is a computational language often found in bioinformatic analyses. The language was originally developed in 1987. [perl.org](https://www.perl.org/learn.html) has numerous tutorials and modules for learning the language. 
 
 >NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
