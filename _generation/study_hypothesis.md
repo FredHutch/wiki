@@ -12,7 +12,7 @@ Develop a hypothesis that will have reasonable statistical power and feasible se
 More to come about how to identify what types of hypotheses have the possibility to be addressed with what sample sizes.  
 
 ### Significance in the 'omics setting:  Multiple Testing
-More to come.  Statistically, this is defined as the testing of more than one hypothesis at a time.  Pragmatically, this changes 'omics significance levels based on the breadth of your assay and the number of different cohort arrangements on which statistical tests are run.
+More to come.  Statistically, this is defined as the testing of more than one hypothesis at a time.  Pragmatically, this changes 'omics significance levels based on the breadth of your assay and the number of different cohort arrangements on which statistical tests are run. More information can be found on the page [Multiple Testing](multiple_testing.md)
 
 The resources below will help you understand the broad strokes before consulting with a statistician about your project's specific details.
 
