@@ -1,12 +1,12 @@
 # Multiple testing
-On this page, we aim to provide some insight on why researchers need to correct for multiple testing. We do this via a hypothetical example. This page provides information on the Family Wise Error Rate (FWER) and the False Discovery Rate (FDR). We provide information on a few commonly used approaches for correcting for multiple testing as well. This is not an exhaustive list, as there is still ongoing research on how to adjust for multiple testing.
+This page provides information on the Family Wise Error Rate (FWER) and the False Discovery Rate (FDR). We provide information on a few commonly used approaches for correcting for multiple testing as well. This is not an exhaustive list, as there is still ongoing research on how to adjust for multiple testing.
 
 ## Hypothetical Study
-For the sake of having an example on hand, lets draw up a hypothetical study. Imagine we have observed gene expression for 1000 independent transcripts in 500 study participants. We are interested in testing if there is any association between those 1000 transcripts and reading this wiki page. For each of the 500 people, we have an indicator (1 or 0) for whether they have read the wiki page you are reading right now. For each gene we are testing the following hypothesis:
+For the sake of having an example on hand, let's draw up a hypothetical study. Imagine we have observed gene expression for 1000 independent transcripts in 500 study participants. We are interested in testing if there is any association between any of those 1000 transcripts and reading this wiki page. For each of the 500 people, we have an indicator (1 or 0) for whether they have read the wiki page you are reading right now. For each gene we are testing the following hypothesis:
 
-> H<sub>0j</sub>: The mean gene expression at transcript j is not associated with having read this wiki.
+> H<sub>0j</sub>: The gene expression at transcript j is not associated with having read this wiki.
 >
-> H<sub>1j</sub>: The mean gene expression at transcript j is associated with having read this wiki.
+> H<sub>1j</sub>: The gene expression at transcript j is associated with having read this wiki.
 
 H<sub>0j</sub> is the NULL hypothesis for transcript j and H<sub>1j</sub> is the alternative. For each test we have a p-value which we use as evidence against H<sub>0j</sub>. 
 
@@ -23,7 +23,7 @@ This mean we observe a p-value that would lead us to reject the NULL hypothesis 
 
 ## Now run the study
 
-Now let us run this hypothetical study and see what happens. We provide code below to run, if you would like to follow along in R. We generate the gene expression data (Y) and the phenotype data (X) of whether they have read this wiki page. We're going to use as our significance threshold 0.05. Thus if the p-value is less than 0.05, we are going to reject the NULL hypothesis that there is no association between gene expression at that gene and reading this wiki page. 
+Now let us run this hypothetical study and see what happens. We provide code below to run, if you would like to follow along in R. We generate the gene expression data (Y) and the exposure information (X) of whether they have read this wiki page. We're going to use as our significance threshold 0.05. Thus if the p-value is less than 0.05, we are going to reject the NULL hypothesis that there is no association between gene expression at that gene and reading this wiki page. 
 
 ``` r
 set.seed(20190101)
@@ -70,7 +70,7 @@ Remember, the FWER is the probability that we perform at least one type I error 
 
 Let us say that we originally decided to say the test is significant if the p-value is less than 0.05. In that situation:
 
->P(V&ge;1)=P(Any of the tests where H<sub>0j</sub> is true come back significant)&le;(V+U)0.05&ge;0.05
+>P(V&ge;1)&ge;0.05
 
 Therefore, our FWER is not controlled at the rate of 0.05. We actually have more than a 5% chance of making a Type I error, which is not we want. If all 1000 tests are truly null, the probability of making at least one error is equal to 1-(1-0.05)^1000 or approximately 1. 
 
@@ -78,7 +78,7 @@ Below we give two different approaches to control for the FWER. This is by no me
 
 ### Bonferroni
 
-The most widely used approach. A test is declared significance if the corresponding p-value is less than @alpha; divided by the number of tests. In our example, we would use 0.05/1000 as opposed to 0.05. Here would have:
+The most widely used approach. A test is declared significance if the corresponding p-value is less than &alpha; divided by the number of tests. In our example, we would use 0.05/1000 as opposed to 0.05. Here would have:
 
 >P(V&ge;1)=P(Any of the tests where H<sub>0j</sub> is true come back significant)&le;(V+U)0.05/1000&le;(V+U)0.05/(V+U)=0.05
 
@@ -90,11 +90,11 @@ The Holm correction is a stepwise procedure, where the significance threshold ch
 
 1. Look smallest p-value. If less than &alpha;/#tests reject the respective H<sub>0j</sub>.
 2. Look at next smallest p-value. If this p-value is less than &alpha;/(#tests-1) reject H<sub>0j</sub>.
-3. Continue iteratively until no longer reject p-value.
+3. Continue looking at successively larger p-values in the same manner until you can no longer reject.
 
 
 ### Implementation
-Let us implement these in our example and see how they do. First the Bonferroni correction. The function p.adjust gives back a corrected p-value that we can then attest if less than 0.05 or not. 
+Let us implement these in our example and see how they do. First the Bonferroni correction. The function p.adjust gives back a corrected p-value. 
 
 
 ``` r
