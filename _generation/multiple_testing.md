@@ -80,7 +80,7 @@ Below we give two different approaches to control for the FWER. This is by no me
 
 The most widely used approach. A test is declared significance if the corresponding p-value is less than &alpha; divided by the number of tests. In our example, we would use 0.05/1000 as opposed to 0.05. Here would have:
 
->P(V&ge;1)=P(Any of the tests where H<sub>0j</sub> is true come back significant)&le;(V+U)0.05/1000&le;(V+U)0.05/(V+U)=0.05
+>P(V&ge;1)=P(Any of the H<sub>0j</sub> are improperly rejected)&le;(V+U)0.05/1000&le;(1000)0.05/(1000)=0.05
 
 Therefore we have that the P(V&ge;1)&le; 0.05, the desired result.
 
