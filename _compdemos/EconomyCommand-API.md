@@ -123,41 +123,88 @@ please check our HPC and data migration tutorials in the scicomp wiki at http://
 - [swift commander on github](https://github.com/FredHutch/swift-commander)
 - [Check out this video how to the swc command](https://asciinema.org/a/17172)
 
+## AWS S3 cli 
 
-## R swift client
+We can use AWS tools such as awscli and boto3 to access Economy local through the S3 compatibility layer. 
 
-The R swift package allows to upload and download files to swift directly from R. This greatly improves usability from interactive R sessions
-if you do *not* work on a SciComp supported Linux computer you need to install the R swift package first:
+for this we need to first setup the profile s3.fhcrc.org in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on Rhino:
 
 ```
-> install.packages('devtools',repos='http://cran.fhcrc.org')
-> devtools::install_github("mtmorgan/swift")
-interacting with the object stop is pretty easy. If your credentials are set (see above) you can start right away. In this case we (1) list the content of the SciComp swift container, (2) download a file and (3) upload a results file.
-> library('swift')
->
-> swlist('SciComp')
-        size              last_modified                                 name
-1    20.8 Mb 2014-12-08T07:01:27.141470                annotationhub.sqlite3
-2     725 Kb 2014-12-08T06:54:18.677440                       tmp/squeue.txt
-3     7.9 Kb 2014-12-08T06:54:18.974290                         tmp/test.csv
+> s3cfg
+Please go to https://toolbox.fhcrc.org/sw2srv/swift/account
+to get your PI/department S3 compatible credentials for Economy local (swift)
+Edit section [s3.fhcrc.org] in ~/.aws/credentials and enter
+aws_access_key_id = [account]
+aws_secret_access_key = [key]
 
-> myfile <- swdownload('SciComp','tmp/squeue.txt')
-> myobject <- read.table(myfile)
->
-> ....processing
->
-> newfile <- paste0(myfile,'.csv')
-> write.csv(myobject, newfile, row.names=FALSE)
-> swupload('SciComp',newfile)
->
-##### and even easier: use swread to load a file directly from swift into memory ######
-> myobj <- swread('SciComp','tmp/squeue.txt')
-> mydf <- swread('SciComp','tmp/test.csv')
+Please run command: source ~/.aws/s3env.sh
 
-# a csv file always loads into a dataframe
-Limitations and Notes:
-only supports files with sizes less than 5GB
 ```
+So after running `s3cfg` you need to first put the credentials you can get from toolbox into ~/.aws/credentials. When you are done you can simply source some environment variables from script ~/.aws/s3env.sh :
+
+```
+    > source ~/.aws/s3env.sh
+```
+
+Now you should be able to use the aws cli to list all your buckets in Economy local 
+
+```
+    > aws s3 ls
+
+    2009-02-03 08:45:09 nyc-taxi-data
+    2009-02-03 08:45:09 public
+    2009-02-03 08:45:09 s3ql
+    2009-02-03 08:45:09 sc_software
+```
+
+If you would like to use both Economy Local (Swift) and Economy Cloud (AWS S3) it may be best not to set Economy Local as your default profile:
+
+```
+    > unset AWS_DEFAULT_PROFILE
+    > unset AWS_PROFILE
+```
+
+and instead use the --profile option for Economy Local:
+
+```
+    > aws s3 ls --profile s3.fhcrc.org
+```
+
+
+## R package aws.s3
+
+There are no mature native Swift options for R so we will be using the aws.s3 Package from [CloudyR](https://github.com/CloudyR/aws.s3) as Economy Local storage can also be accessed by S3 tools. The aws.s3 package allows uploads and downloads directly from R. This greatly improves usability from interactive R sessions.
+
+Before you start, make sure that you have finished the setup in the previous section and sourced ~/.aws/s3env.sh
+
+```
+    > source ~/.aws/s3env.sh
+```
+
+now let's just write a little rscript 
+
+```
+> cat ./s3-test.R 
+
+#! /usr/bin/env Rscript
+library(aws.s3)
+bucketlist()
+
+```
+
+and list all the buckets inside R:
+
+```
+> ./s3-test.R
+
+32            test 2009-02-03T16:45:09.000Z
+33          tester 2009-02-03T16:45:09.000Z
+34             tmp 2009-02-03T16:45:09.000Z
+
+```
+
+For more details please check the docs for [CloudyR examples](https://github.com/CloudyR/aws.s3#objects) 
+
 
 ## Swift standard client (python)
 
@@ -228,58 +275,19 @@ Swift has an Amazon S3 compatiblity layer that supports most of the S3 API. boto
 
 On SciComp systems boto3 is already in the latest Python, just load the module
 
+```
     $ ml Python
-
-or you install boto within virtualenv, please check the scicomp wiki for "Manage Python environments using virtualenv"
-
-Please see this detailed and current example for boto3 in the scicomp wiki:
-
-### Boto3 access to Economy File
-
-The client method below is a little  older and exposes more low level access to s3. It should not be required for most access.
-
-To use this method, put your credentials into a text file (.e.g.  ~/.aws/s3.fhcrc.org) separated by colon:
-
-    echo "accountname:secretkey" > ~/.aws/s3.fhcrc.org
-
-then you run your first example: using Boto to list your existing storage containers (buckets):
-
-```
-#! /usr/bin/env python3
-
-import boto3, os
-
-with open(os.path.expanduser('~/.aws/s3.fhcrc.org'), 'r') as f:
-    access_key_id, secret_access_key = f.readline().strip().split(':')
-
-s3client = boto3.client('s3',
-        endpoint_url='https://s3.fhcrc.org',
-        aws_access_key_id = access_key_id,
-        aws_secret_access_key = secret_access_key)
-
-l = s3client.list_buckets()
-print(l)
-
-boto3 is the current and recommeded version of boto, however you will still find many examples for boto, the legacy version of the library
-import boto.s3.connection
-
-connection = boto.s3.connection.S3Connection(
-    aws_access_key_id='EC2_ACCESS_KEY or USERNAME',
-    aws_secret_access_key='S3 API KEY',
-    port=443,
-    host='s3.fhcrc.org',
-    is_secure=True,
-    validate_certs=False,
-    calling_format=boto.s3.connection.OrdinaryCallingFormat()
-)
-
-b=connection.create_bucket('mybucket')
-
-buckets = connection.get_all_buckets()
-print buckets
 ```
 
-There is more detailed documentation about boto available [here](http://boto.s3.amazonaws.com/s3_tut.html)
+Before you start, make sure that you have finished the setup in the previous section and sourced ~/.aws/s3env.sh
+
+```
+    > source ~/.aws/s3env.sh
+```
+for further details please see our other docs about S3 
+
+https://sciwiki.fredhutch.org/compdemos/aws-python
+
 
 ## Python (swiftclient)
 
