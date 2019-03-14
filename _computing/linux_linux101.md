@@ -52,7 +52,7 @@ An alternative is using a NoMachine client to start a graphical session.  That
 process is described
 [here](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx).  Within these NoMachine sessions you can start a terminal on the NoMachine server from whence you can start an SSH session.
 
-With those tools, you are now ready to connect to one of the session servers described in [Using the Cluster](/computing/cluster_rhinoGizmo/).  Most commonly you will connect to the host `rhino`.
+With those tools, you are now ready to connect to one of the session servers described in our [Technologies page](/computing/resource_overview/).  Most commonly you will connect to the host `rhino`.
 
 ### Setting up your Account
 
@@ -77,4 +77,4 @@ Home    | /home/<your username>
 
 ### Next Steps
 
-What you do next will depend on the direction your work will take you.  At a minimum, become familiar with our under-development [Using Computing](/computing/cluster_rhinoGizmo/) page.  The Scientific Computing [Resource Overview](/computing/resource_overview/) will have more details about the technologies available for your use.
+What you do next will depend on the direction your work will take you.  The Scientific Computing [Resource Overview](/computing/resource_overview/) will have more details about the technologies available for your use.

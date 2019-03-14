@@ -3,7 +3,7 @@ title: Scientific Software
 last_modified_at: 2019-02-21
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/computing/resource_overview/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.  
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/computing/resource_overview/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
 
 The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
@@ -13,7 +13,7 @@ Reasons to use scientific software maintained by SciComp include:
 - rapid access to many software packages and package versions
 
 ## EasyBuild Life Sciences
-The full list of available software can be found [on the Easy Build site](http://fredhutch.github.io/easybuild-life-sciences/).  
+The full list of available software can be found [on the Easy Build site](http://fredhutch.github.io/easybuild-life-sciences/).
 
 ## Environment Modules
 
