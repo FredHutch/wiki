@@ -1,34 +1,47 @@
-# Multiple testing
-This page provides information on the Family Wise Error Rate (FWER) and the False Discovery Rate (FDR). We provide information on a few commonly used approaches for correcting for multiple testing as well. This is not an exhaustive list, as there is still ongoing research on how to adjust for multiple testing.
+---
+title: Multiple Testing
+last_modified_at: 2019-03-19
+primary_reviewers: rbarfield, vortexing
+---
+Statistically, multiple testing is defined as the testing of more than one hypothesis at a time.  Pragmatically, this changes 'omics significance levels based on the breadth of your assay and the number of different cohort arrangements on which statistical tests are run. The resources below will help you understand the broad strokes before consulting with a statistician about your project's specific details.
 
-## Hypothetical Study
+## Reading material
+We aim to curate some useful reading material about multiple testing relevant to Fred Hutch studies.  Please email additional suggestions to Fred Hutch username `sciwiki`.  
+- [How does multiple testing correction work?](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2907892/) (Noble 2010)
+
+
+
+## Hands on Example (R)
+This example provides information on the Family Wise Error Rate (FWER) and the False Discovery Rate (FDR), using code run in [R](/bioinformatics/prog_R/). We provide information on a few commonly used approaches for correcting for multiple testing as well. This is not an exhaustive list, as there is still ongoing research on how to adjust for multiple testing.
+
+### Hypothetical Study Design
 For the sake of having an example on hand, let's draw up a hypothetical study. Imagine we have observed gene expression for 1000 independent transcripts in 500 study participants. We are interested in testing if there is any association between any of those 1000 transcripts and reading this wiki page. For each of the 500 people, we have an indicator (1 or 0) for whether they have read the wiki page you are reading right now. For each gene we are testing the following hypothesis:
 
 > H<sub>0j</sub>: The gene expression at transcript j is not associated with having read this wiki.
 >
 > H<sub>1j</sub>: The gene expression at transcript j is associated with having read this wiki.
 
-H<sub>0j</sub> is the NULL hypothesis for transcript j and H<sub>1j</sub> is the alternative. For each test we have a p-value which we use as evidence against H<sub>0j</sub>. 
+H<sub>0j</sub> is the NULL hypothesis for transcript j and H<sub>1j</sub> is the alternative. For each test we have a p-value which we use as evidence against H<sub>0j</sub>.
 
 
-## Some definitions
-Before continuing, it is useful to define some statistical terms. 
+### Some definitions
+Before continuing, it is useful to define some statistical terms.
 >Type I error: Probability that we incorrectly  reject H<sub>0j</sub>
 
-This mean we observe a p-value that would lead us to reject the NULL hypothesis and give us evidence to __suggest__ the alternative. Often, we want to control the Type I error at some pre-specified level &alpha;. For example, 0.05 is often used. With this threshold, if the p-value is less than 0.05, we reject the NULL hypothesis. The value of 0.05 is arbitrary and a significance cutoff should be decided prior to running any analyses and should be based on prevalent thought within the field. 
+This mean we observe a p-value that would lead us to reject the NULL hypothesis and give us evidence to __suggest__ the alternative. Often, we want to control the Type I error at some pre-specified level &alpha;. For example, 0.05 is often used. With this threshold, if the p-value is less than 0.05, we reject the NULL hypothesis. The value of 0.05 is arbitrary and a significance cutoff should be decided prior to running any analyses and should be based on prevalent thought within the field.
 
 >FWER: Family Wise Error Rate: The Probability of making at least one Type I error
 >
->FDR: False Discovery Rate: Rate of tests that come back as significant that are actually false. 
+>FDR: False Discovery Rate: Rate of tests that come back as significant that are actually false.
 
-## Now run the study
+### Analyze the Study Data
 
-Now let us run this hypothetical study and see what happens. We provide code below to run, if you would like to follow along in R. We generate the gene expression data (Y) and the exposure information (X) of whether they have read this wiki page. We're going to use as our significance threshold 0.05. Thus if the p-value is less than 0.05, we are going to reject the NULL hypothesis that there is no association between gene expression at that gene and reading this wiki page. 
+Now let us run this hypothetical study and see what happens. We provide code below to run, if you would like to follow along in R. We generate the gene expression data (Y) and the exposure information (X) of whether they have read this wiki page. We're going to use as our significance threshold 0.05. Thus if the p-value is less than 0.05, we are going to reject the NULL hypothesis that there is no association between gene expression at that gene and reading this wiki page.
 
 ``` r
 set.seed(20190101)
 
-N<-500 #the sample size 
+N<-500 #the sample size
 M<-1000 #number of "genes" we are testing
 X<-rbinom(N,1,0.2) # Variable of interest
 Y<-replicate(M,rnorm(N)) # The observed gene expression
@@ -39,17 +52,17 @@ for(i in 1:M){
 }
 ```
 
-If we look at the p-values (which are the fourth column of the R matrix TestIt above), we can count how many NULL hypothesis we would reject. 
+If we look at the p-values (which are the fourth column of the R matrix TestIt above), we can count how many NULL hypothesis we would reject.
 ``` r
 sum(TestIt[,4]<0.05)
 ```
 
     ## [1] 58
 
-We can see that we improperly reject 58 tests solely by chance. This is not ideal. The reason for this is that when we are under the NULL and we are using a well-behaving test, the p-values follow something called a continuous uniform distribution from 0 to 1. Under this distribution, the probability that one p-value is less than 0.05 is 0.05, which is fine if we are only performing one test. However, when we are performing 1000 tests, the probability that *at least one of those p-values is less than 0.05* is approximately 1. IE our FWER under this case is going to be 1. 
+We can see that we improperly reject 58 tests solely by chance. This is not ideal. The reason for this is that when we are under the NULL and we are using a well-behaving test, the p-values follow something called a continuous uniform distribution from 0 to 1. Under this distribution, the probability that one p-value is less than 0.05 is 0.05, which is fine if we are only performing one test. However, when we are performing 1000 tests, the probability that *at least one of those p-values is less than 0.05* is approximately 1. IE our FWER under this case is going to be 1.
 
-## Correcting for Multiple testing
-We now get into the details of how to correct for multiple testing. There are two ways one can go about doing this, control the FWER or the FDR. Which one is used, should be decided prior to the analysis. 
+### Correcting for Multiple testing
+We now get into the details of how to correct for multiple testing. There are two ways one can go about doing this, control the FWER or the FDR. Which one is used, should be decided prior to the analysis.
 
 Consider the following table for our example (borrowed from Wikipedia).
 
@@ -72,9 +85,9 @@ Let us say that we originally decided to say the test is significant if the p-va
 
 >P(V&ge;1)&ge;0.05
 
-Therefore, our FWER is not controlled at the rate of 0.05. We actually have more than a 5% chance of making a Type I error, which is not we want. If all 1000 tests are truly null, the probability of making at least one error is equal to 1-(1-0.05)^1000 or approximately 1. 
+Therefore, our FWER is not controlled at the rate of 0.05. We actually have more than a 5% chance of making a Type I error, which is not we want. If all 1000 tests are truly null, the probability of making at least one error is equal to 1-(1-0.05)^1000 or approximately 1.
 
-Below we give two different approaches to control for the FWER. This is by no means exhaustive and there are other approaches out there. All two are implemented in the R function p.adjust. 
+Below we give two different approaches to control for the FWER. This is by no means exhaustive and there are other approaches out there. All two are implemented in the R function p.adjust.
 
 ### Bonferroni
 
@@ -86,7 +99,7 @@ Therefore we have that the P(V&ge;1)&le; 0.05, the desired result.
 
 ### Holm procedure
 
-The Holm correction is a stepwise procedure, where the significance threshold changes as you reject tests. 
+The Holm correction is a stepwise procedure, where the significance threshold changes as you reject tests.
 
 1. Look smallest p-value. If less than &alpha;/#tests reject the respective H<sub>0j</sub>.
 2. Look at next smallest p-value. If this p-value is less than &alpha;/(#tests-1) reject H<sub>0j</sub>.
@@ -94,7 +107,7 @@ The Holm correction is a stepwise procedure, where the significance threshold ch
 
 
 ### Implementation
-Let us implement these in our example and see how they do. First the Bonferroni correction. The function p.adjust gives back a corrected p-value. 
+Let us implement these in our example and see how they do. First the Bonferroni correction. The function p.adjust gives back a corrected p-value.
 
 
 ``` r
@@ -125,7 +138,7 @@ If we are controlling at the level &alpha;, we order the p-values and find the k
 
 ### q-value
 
-A popular approach in bioinformatics, the q-value is a Bayesian approach to the FDR developed by John Storey. It is implemented in the Bioconductor R package q-value. 
+A popular approach in bioinformatics, the q-value is a Bayesian approach to the FDR developed by John Storey. It is implemented in the Bioconductor R package q-value.
 
 ### Implementation of these FDR methods
 
@@ -177,7 +190,7 @@ set.seed(44511)
 EachStudy<-matrix(nrow=Numstudies,ncol=4)
 for(k in 1:Numstudies){
   X<-rbinom(N,1,0.2) # Variable of interest
-  Y<-replicate(M,rnorm(N)) 
+  Y<-replicate(M,rnorm(N))
   AA<-fastReg.func(X,Y)
   EachStudy[k,1]<-sum(AA[,2]<0.05)
   B1<-p.adjust(AA[,2],"bonferroni")
@@ -188,13 +201,13 @@ for(k in 1:Numstudies){
   EachStudy[k,4]<-sum(BH1<0.05)
 }
 ```
-In the above, we are saving from each study of 1000 genes four things. 
-1) How many uncorrected p-values are less than 0.05 (first column of the matrix EachStudy). 
+In the above, we are saving from each study of 1000 genes four things.
+1) How many uncorrected p-values are less than 0.05 (first column of the matrix EachStudy).
 2) How many Bonferroni corrected p-values are less than 0.05 (second column of EachStudy). This is equivalent to how many uncorrected p-values are less than 0.05/1000.
 3) How many Holm adjusted p-values are less than 0.05 (third column of EachStudy).
-4) How many Benjamini Hochberg corrected p-values are less than 0.05 (fourth column of EachStudy). This is controlling the FDR. 
+4) How many Benjamini Hochberg corrected p-values are less than 0.05 (fourth column of EachStudy). This is controlling the FDR.
 
-We can now look at what the FWER is if we didn't perform any correction at all by taking the mean of how many of these 5000 studies resulted in at least one p-value less than 0.05. 
+We can now look at what the FWER is if we didn't perform any correction at all by taking the mean of how many of these 5000 studies resulted in at least one p-value less than 0.05.
 
 ```r
 mean(EachStudy[,1]>0)
@@ -202,7 +215,7 @@ mean(EachStudy[,1]>0)
 
     ## [1] 1
 
-It is 1 as we expected. Next we can look at how the Bonferroni and Holm corrected approach do by mean of how many of these 5000 studies resulted in at least one p-value less than 0.05. 
+It is 1 as we expected. Next we can look at how the Bonferroni and Holm corrected approach do by mean of how many of these 5000 studies resulted in at least one p-value less than 0.05.
 
 ``` r
 mean(EachStudy[,2]>0)
@@ -216,7 +229,7 @@ mean(EachStudy[,3]>0)
 
     ## [1] 0.0488
 
-We see that it is less than 0.05 (but still close) which is the desired result. Finally, we look at the FDR and we see a similar result (though now we are controlling the FDR). 
+We see that it is less than 0.05 (but still close) which is the desired result. Finally, we look at the FDR and we see a similar result (though now we are controlling the FDR).
 ``` r
 mean(EachStudy[,4]>0)
 ```
