@@ -1,19 +1,25 @@
 ---
-title: Using the command line/API for Accessing Economy Local Storage
-last_modified_at: 2018-09-27
+title: Using the command line/API for Accessing `Economy Local` Storage
+last_modified_at: 2019-03-19
 main_author: Dirk Peterson
 primary_reviewers: dirkpetersen
 ---
-Access to data stored in Fred Hutch resources that are [object stores](/computing/store_objectstore/) can be achieved via command line tools or the API.
+Access to data stored in Fred Hutch resources that are [object stores](/computing/store_objectstore/) can be achieved via command line tools or the API.  This is an overview of available tools that are related to accessing `Economy Local` storage, starting with the ones you will most likely use and that are best supported.  
 
-## Accessing `Economy` File Storage directly via Object API
+## General Limitations and Notes
 
-This is an overview available tools starting with the ones you will most likely use and that are best supported.
+ - Files larger than 5GB require segmentation.  The value indicated with the "-S" argument is the size that files will be split into on the object store.  A segment size may be any value up to 5GB.  A reasonable default value is -S 2G which sets the maximum segment size to 2 GB, which means a file of 10GB size will be split into 5 segments.
+ - using multiple segments will increase upload speeds (and download speeds in the future), setting the segment size to 1GB on a 10GB file can increase the theoretical upload performance 10 fold
+ - Swift commands that fail don't set a return code, which could complicate scripting.
+ - You can't delete a directory in a container. When you delete the last file from the directory, swift deletes the directory automatically.  However, swift will delete a container with files still in it, so be careful what you delete.
 
-## `swc` (swift commander - simple access)
-Using the `swc` command is the simplest way of accessing the Swift object store. The tool includes easy to use sub commands such as swc upload and swc download as well as simplified versions of standard unix tools such as ls, cd, rm, etc. By using swc you can ignore most of the peculiarities of the Swift object storage system and (almost) work with it like a traditional file system. It is the best option for HPC scripting and automation.
 
-First, let's invoke the swc command and see what it has to offer:
+
+
+## Swift Commander
+Using the `swc` command is the simplest way of accessing the Swift object store. The tool includes easy to use sub commands such as `swc upload` and `swc download` as well as simplified versions of standard unix tools such as ls, cd, rm, etc. By using `swc` you can ignore most of the peculiarities of the Swift object storage system and (almost) work with it like a traditional file system. It is the best option for HPC scripting and automation.
+
+First, let's invoke the `swc` command and see what it has to offer:
 
 ```
 gizmod16:~> swc
@@ -22,11 +28,9 @@ Please execute 'sw2account <accountname>' to get credentials.
 Use 'sw2account --save <accountname>' to set them as default.
 ```
 
-Swift requires certain environment variables to be set for each PI.  You can easily set them by using the 'sw2account' command which asks for your HutchNet password:
+Swift requires certain environment variables to be set for each user based on the PI's group.  You can easily set them by using `sw2account lastname_f` and providing your HutchNet ID and password.
 
-    rhino04:~> sw2account groudine_m
-
-Now let's try running 'swc' again, still without any command options, you are prompted for your hutchnet password:
+Now let's try running `swc` again, still without any command options, you are prompted for your HutchNet password:
 ```
 petersen@rhino:~$ swc
 
@@ -73,7 +77,7 @@ swc more /folder/some_file.txt
 swc openwith emacs /folder/some_file.txt
 ```
 
-OK, we see that there are some options, the swc command has nearly 30 sub commands. Let's upload a folder called 'testing' that is stored somewhere on fast file. The target folder on economy file is called /test:
+OK, we see that there are some options, the `swc` command has nearly 30 sub commands. Let's upload a folder called 'testing' that is stored somewhere locally in `Fast`. The target folder in Swift is called /test:
 
 ```   
 petersen@rhino04:~/sc$ swc upload ./testing /test
@@ -116,15 +120,15 @@ fld1/fld2/file21 [auth 0.123s, headers 0.158s, total 0.169s, 0.000 MB/s]
 /fh/scratch/delete30/lastname_f/tmp/
 ```
 
-Please check out the swc page on GitHub for additional details:
+Please check out the `swc` page on GitHub for additional details:
 
 - [How to migrate large data to Economy File](/compdemos/Economy-local-large/)
 - [swift commander on github](https://github.com/FredHutch/swift-commander)
 - [Check out this video how to the swc command](https://asciinema.org/a/17172)
 
-## AWS S3 CLI
+## Amazon Web Services S3 Compatibility Layer
 
-We can use AWS tools such as awscli and boto3 to access `Economy Local` (Swift) through the S3 compatibility layer. For this we need to first setup the profile s3.fhcrc.org in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on `Rhino`.
+We can use AWS tools such as `awscli`, the Python module `boto3` or the R package `aws.s3` to access Swift through the AWS S3 compatibility layer.  We have generated detailed docs for using [`awscli`](/compdemos/aws-cli/), [`boto3`](/compdemos/aws-python/) and [`aws.s3`](/compdemos/aws-R/) in our Resource Library section.  Prior to using these tools, hwoever, we need to first setup the profile `s3.fhcrc.org` in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on `rhino`.  
 
 ```
 > s3cfg
@@ -143,7 +147,7 @@ After running `s3cfg` you need to first put the credentials you can get from too
     > source ~/.aws/s3env.sh
 ```
 
-Now you should be able to use the aws cli to list all your buckets in `Economy local`.
+Now you should be able to use the `awscli` commands as [documented here](/compdemos/awscli/) to list all your directories in `Economy Local`.
 
 ```
     > aws s3 ls
@@ -168,44 +172,10 @@ and instead use the --profile option for `Economy Local`:
 ```
 
 
-## R package aws.s3
-
-There are no mature native Swift options for R so we will be using the aws.s3 Package from [CloudyR](https://github.com/CloudyR/aws.s3) as `Economy Local` storage can also be accessed by S3 tools. The aws.s3 package allows uploads and downloads directly from R. This greatly improves usability from interactive R sessions.
-
-Before you start, make sure that you have finished the setup in the previous section and sourced ~/.aws/s3env.sh
-
-```
-    > source ~/.aws/s3env.sh
-```
-
-now let's just write a little rscript 
-
-```
-> cat ./s3-test.R 
-
-#! /usr/bin/env Rscript
-library(aws.s3)
-bucketlist()
-
-```
-
-and list all the buckets inside R:
-
-```
-> ./s3-test.R
-
-32            test 2009-02-03T16:45:09.000Z
-33          tester 2009-02-03T16:45:09.000Z
-34             tmp 2009-02-03T16:45:09.000Z
-
-```
-
-For more details please check the docs for [CloudyR examples](https://github.com/CloudyR/aws.s3#objects) 
-
 
 ## Swift standard client (python)
 
-The Swift client allows you to read and write files in your containers directly without mounting the container in the file system.  This is particularly handy for scripting and automation. The swift client is used by swc 'under the hood' and offers more options than swc but it is also slighly more difficult to use.  Do not use this tool if swc meets your needs.
+The Swift client allows you to read and write files in your containers directly without mounting the container in the file system.  This is particularly handy for scripting and automation. The swift client is used by `swc` 'under the hood' and offers more options than `swc` but it is also slightly more difficult to use.  Do not use this tool if `swc` meets your needs.
 
 The swift client operates similar to ftp or scp and can be used in batch mode.  These operations are:
 
@@ -219,9 +189,11 @@ The swift client operates similar to ftp or scp and can be used in batch mode.  
 - tempurl: creates a temporary url with expiration date that can be published within the Fred Hutch network
 
 You can supply your credentials on the command line, but this is discouraged as it can expose your password to any other user on the system.
-The easiest way to get credentials to Swift storage on SciComp system is using the command sw2account with the id of the PI as an argument (sw2account lastname_f) . It is recommend that you use the sw2account command to save the credentials of the PI account you mostly work with.
+The easiest way to get credentials to Swift storage on a SciComp system is using `sw2account` with the id of the PI as an argument (`sw2account lastname_f`) . It is recommend that you use `sw2account` to save the credentials of the PI account you mostly work with.
 
+```
     $ sw2account --save groudine_m
+```
 
 With those environment variables set, the connection can be tested with the "stat" subcommand:
 
@@ -251,39 +223,14 @@ samplefile.tgz
 $ swift list newcontainer
 samplefile.tgz
 ```
-You can upload an entire folder structure using the swift upload command. Swift will recreate the entire folder structure you send on the command line. If you run "swift upload -S 2g newcontainer /fh/fast/lastname_f/myfolder" it will create the entire folder structure /fh/fast... under newcontainer. if you just want myfolder to show up under mycontainer you need to cd to  /fh/fast/lastname_f  and then run  "swift upload newcontainer myfolder"
+You can upload an entire folder structure using the Swift upload command. Swift will recreate the entire folder structure you send on the command line. If you run `swift upload -S 2g newcontainer /fh/fast/lastname_f/myfolder` it will create the entire folder structure /fh/fast... under newcontainer. if you just want myfolder to show up under mycontainer you need to cd to  /fh/fast/lastname_f  and then run  `swift upload newcontainer myfolder`.
 
-"download" and "delete" work as you might expect:
+`download` and `delete` work as you might expect:
 
 "download" and untar a compressed file directly into Gizmo's scratch file system (--output -  sends the downloaded file directly to STDOUT )
-
+```
     $ swift download newcontainer samplefile.tar.gz --output - | tar xzv -C $SCRATCH/$SLURM_JOB_ID
-
-## Limitations and Notes
-
- - Files larger than 5GB require segmentation.  The value indicated with the "-S" argument is the size that files will be split into on the object store.  A segment size may be any value up to 5GB.  A reasonable default value is -S 2G which sets the maximum segment size to 2 GB, which means a file of 10GB size will be split into 5 segments.
- - using multiple segments will increase upload speeds (and downlaod speeds in the future), setting the segment size to 1GB on a 10GB file can increase the theoretical upload performance 10 fold
- - Swift commands that fail don't set a return code, which could complicate scripting.
- - You can't delete a directory in a container. When you delete the last file from the directory, swift deletes the directory automatically.  However, swift will delete a container with files still in it, so be careful what you delete.
-
-## Amazon S3 (boto)
-
-Swift has an Amazon S3 compatiblity layer that supports most of the S3 API. boto is a very popular python library that allows you to interact with S3 compatible object stores. It is currently installed on most scientific computing systems such as the rhinos and gizmo nodes. The current version this boto3. You can also install it on your own system:
-
-On SciComp systems boto3 is already in the latest Python, just load the module
-
-```
-    $ ml Python
-```
-
-Before you start, make sure that you have finished the setup in the previous section and sourced ~/.aws/s3env.sh
-
-```
-    > source ~/.aws/s3env.sh
-```
-for further details please see our other docs about S3 
-
-https://sciwiki.fredhutch.org/compdemos/aws-python
+````
 
 
 ## Python (swiftclient)
@@ -326,14 +273,6 @@ for i in range(100):
                     contents=content)
 ```
 
-
-## Access From the Command Line or REST API
-
-Economy File supports several access methods:
-
-## Direct Access / Linux / Rhino
-
-Please see How to Access the Swiftstack Object store to learn about direct Access via API or command line tools. If you want to use data from Economy File on the Gizmo cluster or from the Rhinos this is your preferred access method.
 
 ## Other Access Methods
 
