@@ -70,15 +70,15 @@ The following should be considered when developing a data sharing plan:
 -   [Dataverse](http://best-practices.dataverse.org/data-management/index.html) has basic best practices guidance for data management plans.
 
 -   [DMPTool](https://dmptool.org/) from University of California
-<!--
--   Data Management Guide - Duke Libraries (Link to come)
 
--   NIH Examples of Data Sharing Plans (Link to come)
+-   [Data Management Guide](https://guides.library.duke.edu/c.php?g=633433&p=4429249- Duke Libraries)
 
--   NIAID Sample Data Sharing Plan (Link to come)
+-   [Stanford University Library](https://library.stanford.edu/research/data-management-services/data-management-plans) includes some sample DMPs from NIH and other resources.
+
+-   [NIAID Sample Data Sharing Plan](https://www.niaid.nih.gov/research/sample-data-sharing-plan)
+
 
 -   [FAIRSharing policies](https://fairsharing.org/policies/):  A catalogue of data preservation, management and sharing policies form international funding agencies, regulators and journals. 
--->
 
 ## Data Sharing Responsibilities
 
