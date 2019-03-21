@@ -76,6 +76,8 @@ The following should be considered when developing a data sharing plan:
 -   NIH Examples of Data Sharing Plans (Link to come)
 
 -   NIAID Sample Data Sharing Plan (Link to come)
+
+-   [FAIRSharing policies](https://fairsharing.org/policies/):  A catalogue of data preservation, management and sharing policies form international funding agencies, regulators and journals. 
 -->
 
 ## Data Sharing Responsibilities
