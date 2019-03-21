@@ -71,7 +71,7 @@ The following should be considered when developing a data sharing plan:
 
 -   [DMPTool](https://dmptool.org/) from University of California
 
--   [Data Management Guide](https://guides.library.duke.edu/c.php?g=633433&p=4429249)
+-   [Duke University Data Management Guide](https://guides.library.duke.edu/c.php?g=633433&p=4429249)
 
 -   [Stanford University Library](https://library.stanford.edu/research/data-management-services/data-management-plans) includes some sample DMPs from NIH and other resources.
 
