@@ -1,6 +1,7 @@
 ---
 title: Scientific Software
-last_modified_at: 2019-02-21
+last_modified_at: 2019-03-21
+primary_reviewers: bmcgough
 ---
 
 The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/computing/resource_overview/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
@@ -12,31 +13,34 @@ Reasons to use scientific software maintained by SciComp include:
 - packages are reproducible in or outside Fred Hutch
 - rapid access to many software packages and package versions
 
-## EasyBuild Life Sciences
-The full list of available software can be found [on the Easy Build site](http://fredhutch.github.io/easybuild-life-sciences/).
 
 ## Environment Modules
 
-On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available.
+On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.
 
-### A Note About Environment Module Use
-As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `Python`). This is fast, but circumvents the reproducible aspect of Environment Modules. The version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. For scripts, we recommend always using a specific Environment Module reference.
+### EasyBuild Life Sciences
+The full list of available software can be found [on the Easy Build site](http://fredhutch.github.io/easybuild-life-sciences/).
 
 ### How to Use Environment Modules
+As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
+
+The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.  
+
+
 #### Interactively
-When you log in to a SciComp server your terminal session has Lmod pre-loaded. Commonly used shell commands around Environment Modules include:
+When you log in to any SciComp managed server, your terminal session has **Lmod** pre-loaded. Commonly used shell commands around Environment Modules include:
 
 Command | Action
 --- | ---
 `module avail` | Output a list of available Environment Modules
 `module avail <pattern>` | Output a filtered list of modules based on pattern (ex: `module avail SAMtools`)
-`module load <packagename>/<version>` | Load a specific version of a module into your environment (ex: `module load Python/3.6.5-foss-2016b-fh1`)
+`module load <packagename>/<version>` | Load a specific version of a module into your environment (ex: `module load Python/3.6.5-foss-2016b-fh1`) - you can cut and paste from the output of `module avail`
 `module load <packagename>` | Load a generic Environment Module (ex: `module load Perl`)
 `module list` | Output a list of Environment Modules loaded in your current shell
-`module unload <packagename>` | Unload an Environment Module
+`module unload <packagename>` | Unload an Environment Module from your current shell
 `module purge` | Unload all currently loaded Environment Modules
 
-There is also a short version of the `module` command: `ml`.  You can substitute `ml` for `module` in any of the commands above (`ml` = `module list` `ml <pkg>` = `module load <pkg>`).
+There is also a short version of the `module` command: `ml`.  The `ml` command can substitute for `module` in any `module` command, behaves like `module list` when called with no arguments, and behaves like `module load` when executed with an argument (ex: `ml R/3.5.1-foss-20167b-fh1` runs `module load R/3.5.1-foss-2016b-fh1`). The `ml` and `module` commands can be used in scripts, but see the section on Scripting with Environment Modules below. 
 
 Example:
 ```
@@ -57,7 +61,7 @@ $ which python
 ```
 
 #### Scripting with Environment Modules
-To use Environment Modules in a bash script, there are two Best Practices.
+To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work. 
 
 1. Interactive shell session have the required `module` commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the `module` command. Add the follow lines to the top of your script:
 ```
@@ -65,7 +69,16 @@ To use Environment Modules in a bash script, there are two Best Practices.
 source /app/Lmod/lmod/lmod/init/bash
 module use /app/easybuild/modules/all
 ```
-This activates the `module` command a points it to our list of installed modules.
+This snippet can be used as a template for bash shell scripts.
+
+The `source` like activates the `module` and `ml` commands for you current shell, and the `module use` line loads our list of modules.
+
+The next line you might use, for example, would be:
+```
+module load R/3.5.1-foss-2016b-fh1
+```
+This would load that specific Environment Module for use in your script.
+
 
 1. Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
 ```
