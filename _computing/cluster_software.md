@@ -17,26 +17,26 @@ The full list of available software can be found [on the Easy Build site](http:/
 
 ## Environment Modules
 
-On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available.
+On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is Lmod, and the commands you use to interact with Environment Modules are `module` or `ml`.
 
 ### A Note About Environment Module Use
-As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `Python`). This is fast, but circumvents the reproducible aspect of Environment Modules. The version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. For scripts, we recommend always using a specific Environment Module reference.
+As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity features of Environment Modules. The version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When specifying the version, you will always load exactly the same version of the software package. For scripts, we recommend always using a specific Environment Module reference.
 
 ### How to Use Environment Modules
 #### Interactively
-When you log in to a SciComp server your terminal session has Lmod pre-loaded. Commonly used shell commands around Environment Modules include:
+When you log in to any SciComp managed server, your terminal session has Lmod pre-loaded. Commonly used shell commands around Environment Modules include:
 
 Command | Action
 --- | ---
 `module avail` | Output a list of available Environment Modules
 `module avail <pattern>` | Output a filtered list of modules based on pattern (ex: `module avail SAMtools`)
-`module load <packagename>/<version>` | Load a specific version of a module into your environment (ex: `module load Python/3.6.5-foss-2016b-fh1`)
+`module load <packagename>/<version>` | Load a specific version of a module into your environment (ex: `module load Python/3.6.5-foss-2016b-fh1`) - you can cut and paste from the output of `module avail`
 `module load <packagename>` | Load a generic Environment Module (ex: `module load Perl`)
 `module list` | Output a list of Environment Modules loaded in your current shell
-`module unload <packagename>` | Unload an Environment Module
+`module unload <packagename>` | Unload an Environment Module from your current shell
 `module purge` | Unload all currently loaded Environment Modules
 
-There is also a short version of the `module` command: `ml`.  You can substitute `ml` for `module` in any of the commands above (`ml` = `module list` `ml <pkg>` = `module load <pkg>`).
+There is also a short version of the `module` command: `ml`.  The `ml` command can substitute for `module` in any `module` command, behaves like `module list` when called with no arguments, and behaves like `module load` when executed with an argument (ex: `ml R/3.5.1-foss-20167b-fh1` runs `module load R/3.5.1-foss-2016b-fh1`). The `ml` and `module` commands can be used in scripts, but see the section on Scripting with Environment Modules below. 
 
 Example:
 ```
@@ -65,7 +65,15 @@ To use Environment Modules in a bash script, there are two Best Practices.
 source /app/Lmod/lmod/lmod/init/bash
 module use /app/easybuild/modules/all
 ```
-This activates the `module` command a points it to our list of installed modules.
+This snippet can be used as a template for bash shell scripts.
+
+The `source` like activates the `module` and `ml` commands for you current shell, and the `module use` line loads our list of modules.
+
+The next line you might use, for example, would be:
+```
+module load R/3.5.1-foss-2016b-fh1
+```
+This would load that Environment Module for use in your script.
 
 1. Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
 ```
