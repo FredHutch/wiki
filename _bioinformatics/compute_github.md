@@ -1,7 +1,7 @@
 ---
 title: Git and GitHub for Computational Research
-last_modified_at: 2019-03-07
-primary_reviewers: k8hertweck, vortexing
+last_modified_at: 2019-03-21
+primary_reviewers: k8hertweck, vortexing, dirkpetersen
 ---
 Version control software allows anyone using a computer to track changes made to computer files over time, which allows both referencing and reverting back to earlier work. Such software is becoming increasingly common among scientists, academics, and other researchers to manage computational work. While originally developed to support code development, version control software is useful for not just computer code, but also data, documentation, or any other files associated with a project. Moreover, version control software streamlines collaborative editing of documents, allowing changes to be easily identified and attribution of changes to be assigned to individual contributors.   
 
@@ -26,7 +26,7 @@ Anyone may create an individual GitHub account and username for free. These indi
 Repositories are publicly available by default. While this supports open science practices, there are also cases in which code or data in a repository needs to be kept private, such as when data or code are proprietary or need to be kept secure for other legal or ethical reasons. Although GitHub provides unlimited free public repositories to all users, and recently has added the option for private repositories for small teams. Repositories created by a user, however, should be primarily for private (non-Fred Hutch related) work. However, the Fred Hutch provides access to both public and private repositories for Fred Hutch related work via the Fred Hutch GitHub organization.  
 
 ### Fred Hutch GitHub Organization
-GitHub Organizations are accounts shared by individuals that assist in coordinating large collaborative projects. Scientific Computing maintains a [Fred Hutch GitHub Organization](https://github.com/fredhutch) through which affiliated employees can create public *or* private repositories and share access with collaborators external to the Hutch. For more information on our GitHub Organization, please see this wiki's section on GitHub in [Computing Credentials]({{ site.baseurl }}/computing/access_credentials).
+GitHub Organizations are accounts shared by individuals that assist in coordinating large collaborative projects. Scientific Computing maintains a [Fred Hutch GitHub Organization](https://github.com/fredhutch) through which affiliated employees can create public *or* private repositories and share access with collaborators external to the Hutch. For individual users working on Fred Hutch related work, creating repositories as part of the insitution is preferred as monitoring services exist for the institution's repositories that do not exist for your own.  These services can identify and help address potential issues such as accidental credential submission or other security related mistakes which can have an impact on you or the Fred Hutch.  For more information on our GitHub Organization, please see this wiki's section on GitHub in [Computing Credentials]({{ site.baseurl }}/computing/access_credentials).
 
 ## Using GitHub
 There are many different ways of sharing projects collaboratively in a GitHub repository. [This GitHub Guide for using GitHub is useful for understanding the basics.](https://guides.github.com/introduction/flow/)
