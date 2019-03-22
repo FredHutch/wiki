@@ -1,6 +1,6 @@
 ---
 title: Data Sharing and Public Repositories
-last_modified_at: 2019-03-21
+last_modified_at: 2019-03-22
 main_authors: Susan Glick, Jason Major, Karen Hansen
 primary_reviewers: sgglick, JasonMajor1
 ---
@@ -152,8 +152,9 @@ etc.
 
 As of 1 July 2018, manuscripts submitted to journals within the
 International Committee of Medical Journal Editors
-([[ICJME]{.underline}](http://www.icmje.org/)) reporting clinical trial
+(*[ICJME](http://www.icmje.org/)*) reporting clinical trial
 data must contain a data sharing statement, indicating:
+
 
 -   whether the authors intend to share individual de-identified participant data
 
