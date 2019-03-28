@@ -1,13 +1,11 @@
 ---
 title: Data Sharing and Public Repositories
-last_modified_at: 2018-10-25
+last_modified_at: 2019-03-22
 main_authors: Susan Glick, Jason Major, Karen Hansen
 primary_reviewers: sgglick, JasonMajor1
 ---
 
-Whether required for funding and publication or desired for its
-beneficial impact on research progress, understanding the why and how of
-data sharing is essential for modern biomedical research programs.
+Whether required for funding and publication or desired for its beneficial impact on research progress, understanding the why and how of data sharing is essential for modern biomedical research programs.
 
 ## Benefits of Data Sharing
 
@@ -65,29 +63,25 @@ The following should be considered when developing a data sharing plan:
 
 13. Adherence: How will you check for adherence of this plan?
 
-### **Available Resources**
+### Reading Material
 
 -   [Dataverse](http://best-practices.dataverse.org/data-management/index.html) has basic best practices guidance for data management plans.
 
 -   [DMPTool](https://dmptool.org/) from University of California
-<!--
--   Data Management Guide - Duke Libraries (Link to come)
 
--   NIH Examples of Data Sharing Plans (Link to come)
+-   [Duke University Data Management Guide](https://guides.library.duke.edu/c.php?g=633433&p=4429249)
 
--   NIAID Sample Data Sharing Plan (Link to come)
--->
+-   [Stanford University Library](https://library.stanford.edu/research/data-management-services/data-management-plans) includes some sample DMPs from NIH and other resources.
+
+-   [NIAID Sample Data Sharing Plan](https://www.niaid.nih.gov/research/sample-data-sharing-plan)
+
+-   [FAIRSharing policies](https://fairsharing.org/policies/):  A catalogue of data preservation, management and sharing policies form international funding agencies, regulators and journals. 
 
 ## Data Sharing Responsibilities
 
-The context of a data sharing project can mandate certain safety
-requirements and restrictions. Some of these considerations may include
-whether the data is shared pre- or post- publication, or whether the
-data is shared locally within the Fred Hutch Cancer Consortium or to a
-larger national or international audience.
+The context of a data sharing project can mandate certain safety requirements and restrictions. Some of these considerations may include whether the data is shared pre- or post- publication, or whether the data is shared locally within the Fred Hutch Cancer Consortium or to a larger national or international audience.
 
-While the underlying goal of sharing is to further research and its
-benefits, the underlying tenets of data sharing processes are to ensure:
+While the underlying goal of sharing is to further research and its benefits, the underlying tenets of data sharing processes are to ensure:
 
 -   Identification of who shall have access to the data
 
@@ -158,8 +152,9 @@ etc.
 
 As of 1 July 2018, manuscripts submitted to journals within the
 International Committee of Medical Journal Editors
-([[ICJME]{.underline}](http://www.icmje.org/)) reporting clinical trial
+(*[ICJME](http://www.icmje.org/)*) reporting clinical trial
 data must contain a data sharing statement, indicating:
+
 
 -   whether the authors intend to share individual de-identified participant data
 
@@ -297,3 +292,8 @@ withdraw de-identified data:
 -   Public Access: Non-individual genomic data can be publicly accessed through the dbGAP website.
 
 -   Controlled Access (Individual-level data): Individual-level data submitted to the dbGaP is required to be de-identified. No names or identifiable information is attached to the data. The genetic fingerprint however is embedded in individual's genotype data, which is not de-identifiable. That is why, to protect individuals privacy, all individual level data is only distributed through the NIH Authorized Access System.
+
+Additional information regarding the process of depositing data into NIH Public Repositories can be found from [NCBI](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/GetPdf.cgi?document_name=HowToSubmit.pdf) and from the [NCI](https://datascience.cancer.gov/data-sharing/submitting-data#expectations).  
+
+
+

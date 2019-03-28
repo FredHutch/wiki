@@ -41,7 +41,8 @@ generation:
         url: /generation/study_proposal/
       - title: "Hypothesis Development and Big Molecular Data"
         url: /generation/study_hypothesis/
-
+      - title: "Multiple Testing"
+        url: /generation/multiple_testing/
 
   - title: "Consent, Privacy and Security"
     children:
