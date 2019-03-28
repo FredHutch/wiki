@@ -295,5 +295,9 @@ withdraw de-identified data:
 
 Additional information regarding the process of depositing data into NIH Public Repositories can be found from [NCBI](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/GetPdf.cgi?document_name=HowToSubmit.pdf) and from the [NCI](https://datascience.cancer.gov/data-sharing/submitting-data#expectations).  
 
+## Some Public Repositories 
 
+We here provide some details on a few (by no mean exhaustive) public repositories. If you know of another repository that would like to see added to this page please contact Gary Gilliland and tell him psicomp sent you. Some of these repositories do require IRB approval to download the data. Please correspond with the proper admin to sort this out. 
+
+- GTEx: The Genotype-Tissue Expression ([GTEx](https://gtexportal.org/home/)) project is aiming to understand the difference and regulation of gene expression by tissue across 53 different tissues.
 
