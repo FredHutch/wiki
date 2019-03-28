@@ -306,5 +306,5 @@ We here provide some details on a few (by no mean exhaustive) public repositorie
 - [GEO](https://www.ncbi.nlm.nih.gov/geo/): Gene expression Omnbinus  is a public genomics data repository. 
 - [gnomAD](https://gnomad.broadinstitute.org): The genotype aggression database  is working to aggregate and harmonize sequencing data across multiple studies. 
 - TOPMed
-- dbsnp
-- UK Biobank 
+- [dbsnp](https://www.ncbi.nlm.nih.gov/snp): Has information about single nuclotide polymorphisms, as well as tracking their publication history. 
+- [UK Biobank](https://www.ukbiobank.ac.uk): Are you from the UK? There is a .75% chance you are in this study! Prospective cohort study with a wealth of genetic and health data on 500,000 participants. 
