@@ -45,8 +45,6 @@ A working HutchNet ID is all you need to login to `rhino` (`ssh rhino`). Some us
 First, `ssh` to one of the `rhino` machines (or use NoMachine):
 
 ```
-ssh rhino
-## Or if you are on a Mac, you may need to use the following:
 ssh hutchid@rhino
 ```
 
