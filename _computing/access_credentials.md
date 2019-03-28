@@ -1,6 +1,6 @@
 ---
 title: Computing Credentials
-last_modified_at: 2018-12-18
+last_modified_at: 2019-03-28
 main_authors:
 primary_reviewers: dtenenbaum
 ---
@@ -46,7 +46,11 @@ First, `ssh` to one of the `rhino` machines (or use NoMachine):
 
 ```
 ssh rhino
+## Or if you are on a Mac, you may need to use the following:
+ssh hutchid@rhino
 ```
+
+
 
 Then run the `awscreds` command.
 
@@ -67,6 +71,15 @@ if your credentials are changed, and can be invoked as follows:
 ```
 awscreds --force
 ```
+
+To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from our shared reference data bucket to your local system, and then copy that file to your PI bucket.  
+
+```
+module load awscli
+aws s3 cp s3://fh-ctr-public-reference-data/wiki_example_data/iris.csv .
+aws s3 cp iris.csv s3://fh-pi-lastname-f/wiki_example_data/iris.csv
+```
+If you notice any errors with this, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials.  
 
 See more about accessing AWS S3 via the command line [here for Python,](/compdemos/aws-python/) [here for R](/compdemos/aws-R/), and [here for the AWS Command Line Interface.](/compdemos/aws-cli/)
 
