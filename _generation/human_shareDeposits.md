@@ -299,12 +299,12 @@ Additional information regarding the process of depositing data into NIH Public 
 
 We here provide some details on a few (by no mean exhaustive) public repositories. If you know of another repository that would like to see added to this page please contact Gary Gilliland and tell him psicomp sent you. Some of these repositories do require IRB approval to download the data. Please correspond with the proper admin to sort this out. 
 
-- GTEx: The Genotype-Tissue Expression ([GTEx](https://gtexportal.org/home/)) project is aiming to understand the difference and regulation of gene expression by tissue across 53 different tissues.
-- TCGA: The Cancer Genome Atlas  ([TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga)) is a joint effort by the NCI and the NHGRI to moleculary characterize approximately 20000 primary cancer in comparison to matched normal over 33 cancer types. 
+- [GTEx](https://gtexportal.org/home/): The Genotype-Tissue Expression  project is aiming to understand the difference and regulation of gene expression by tissue across 53 different tissues.
+- [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga): The Cancer Genome Atlas is a joint effort by the NCI and the NHGRI to moleculary characterize approximately 20000 primary cancer in comparison to matched normal over 33 cancer types. 
 - HapMap: HapMap is dead. 
-- 1000 genomes: The (1000 genomes project)[http://www.internationalgenome.org/home] Sequence 1000 genomes to find genetic variants with at least 1% variation in the human population.
-- GEO: Gene expression Omnbinus [GEO](https://www.ncbi.nlm.nih.gov/geo/) is a public genomics data repository. 
-- gnomAD: The genotype aggression database [gnomAD](https://gnomad.broadinstitute.org) is working to aggregate and harmonize sequencing data across multiple studies. 
+- [1000 genomes](http://www.internationalgenome.org/home): The 1000 genomes project sequenced 1000 genomes to find genetic variants with at least 1% variation in the human population.
+- [GEO](https://www.ncbi.nlm.nih.gov/geo/): Gene expression Omnbinus  is a public genomics data repository. 
+- [gnomAD](https://gnomad.broadinstitute.org): The genotype aggression database  is working to aggregate and harmonize sequencing data across multiple studies. 
 - TOPMed
 - dbsnp
 - UK Biobank 
