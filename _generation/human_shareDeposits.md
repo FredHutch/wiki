@@ -301,7 +301,6 @@ We here provide some details on a few (by no mean exhaustive) public repositorie
 
 - [GTEx](https://gtexportal.org/home/): The Genotype-Tissue Expression  project is aiming to understand the difference and regulation of gene expression by tissue across 53 different tissues.
 - [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga): The Cancer Genome Atlas is a joint effort by the NCI and the NHGRI to moleculary characterize approximately 20000 primary cancer in comparison to matched normal over 33 cancer types. 
-- HapMap: HapMap is dead. 
 - [1000 genomes](http://www.internationalgenome.org/home): The 1000 genomes project sequenced 1000 genomes to find genetic variants with at least 1% variation in the human population.
 - [GEO](https://www.ncbi.nlm.nih.gov/geo/): Gene expression Omnbinus  is a public genomics data repository. 
 - [gnomAD](https://gnomad.broadinstitute.org): The genotype aggression database  is working to aggregate and harmonize sequencing data across multiple studies. 
