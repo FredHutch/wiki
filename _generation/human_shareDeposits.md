@@ -304,3 +304,7 @@ We here provide some details on a few (by no mean exhaustive) public repositorie
 - HapMap: HapMap is dead. 
 - 1000 genomes: The (1000 genomes project)[http://www.internationalgenome.org/home] Sequence 1000 genomes to find genetic variants with at least 1% variation in the human population.
 - GEO: Gene expression Omnbinus [GEO](https://www.ncbi.nlm.nih.gov/geo/) is a public genomics data repository. 
+- gnomAD: The genotype aggression database [gnomAD](https://gnomad.broadinstitute.org) is working to aggregate and harmonize sequencing data across multiple studies. 
+- TOPMed
+- dbsnp
+- UK Biobank 
