@@ -5,7 +5,7 @@ last_modified_at: 2018-09-16
 
 # Description of computational resources for grant writers
 
-This is a description of Scientific Computing resources. For Shared Resources descriptions please see [SR info for grant writers](https://sharedresources.fredhutch.org/grant-writers#cf-922)
+This is a description of Scientific Computing resources. For Shared Resources descriptions please see [SR info for grant writers](https://sharedresources.fredhutch.org/grant-writers#cf-922).
 
 ## Long Description
 
@@ -40,4 +40,4 @@ Both systems are equipped with a recycle bin that protects against accidental de
 
 ## Information for citing in publications
 
-Fred Hutch is using compute equipment that has been partially funded by an NIH [S10 instrumentation grant](https://orip.nih.gov/construction-and-instruments/s10-instrumentation-programs). If you use Fred Hutch computational resources in your publication, please cite: **"Fred Hutch Scientific Computing, NIH grant S10-OD-020069"**
+Fred Hutch is using compute equipment that has been partially funded by an NIH [S10 instrumentation grant](https://orip.nih.gov/construction-and-instruments/s10-instrumentation-programs). If you use Fred Hutch computational resources in your publication, please cite: **"Fred Hutch Scientific Computing, NIH grant S10-OD-020069"**.
