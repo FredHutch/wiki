@@ -70,14 +70,27 @@ if your credentials are changed, and can be invoked as follows:
 awscreds --force
 ```
 
+### Testing Your Credentials
+
 To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from our shared reference data bucket to your local system, and then copy that file to your PI bucket.  
 
 ```
 module load awscli
 aws s3 cp s3://fh-ctr-public-reference-data/wiki_example_data/iris.csv .
-aws s3 cp iris.csv s3://fh-pi-lastname-f/wiki_example_data/iris.csv
 ```
-If you notice any errors with this, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials.  
+
+In the commands below, replace `lastname-firstinitial` with the name associated to your PI bucket:
+
+```
+aws s3 cp iris.csv s3://fh-pi-lastname-firstinitial/iris.csv
+```
+If you notice any errors with this, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials. 
+
+Once you have confirmed your credentials, remember to remove the test file:
+
+```
+aws s3 rm s3://fh-pi-lastname-firstinitial/iris.csv
+```
 
 See more about accessing AWS S3 via the command line [here for Python,](/compdemos/aws-python/) [here for R](/compdemos/aws-R/), and [here for the AWS Command Line Interface.](/compdemos/aws-cli/)
 
