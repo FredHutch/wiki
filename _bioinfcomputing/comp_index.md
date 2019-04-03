@@ -7,8 +7,8 @@ Center IT supports a wide array of resources made available to researchers.  Muc
 
 ## [Access and Credentials](/bioinfcomputing/access_overview/)
 This section includes a variety of information about accessing computing resources at the Fred Hutch, including managing credentials for services when required.  
-- [Credentials](/bioinfcomputing/access_credentials/)
 - [Methods](/bioinfcomputing/access_methods/)
+- [Credentials](/bioinfcomputing/access_credentials/)
 
 
 ## [Data Storage](/bioinfcomputing/store_overview/)
