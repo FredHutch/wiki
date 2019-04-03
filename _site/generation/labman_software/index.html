@@ -1,0 +1,662 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software for Research and Laboratory Management - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="There are a number of software tools available that lend themselves well to the management of research labs and here we focus on those that have a free tier, are open source, or are supported by the Fred Hutch itself.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Software for Research and Laboratory Management">
+<meta property="og:url" content="http://localhost:4000/generation/labman_software/">
+
+
+  <meta property="og:description" content="There are a number of software tools available that lend themselves well to the management of research labs and here we focus on those that have a free tier, are open source, or are supported by the Fred Hutch itself.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2018-10-25T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/generation/labman_software/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/gen_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generationdemos/" class="">Resource Library</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Study Design and Funding</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_proposal/" class="">Proposals and Funding</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_hypothesis/" class="">Hypothesis Development and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/multiple_testing/" class="">Multiple Testing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Consent, Privacy and Security</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_consentIRB/" class="">Consenting and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_privacySecurity/" class="">Data Privacy and Security</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/security_legal/" class="">Compliance and Legal</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_deidentification/" class="">De-identification</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_shareDeposits/" class="">Data Sharing and Public Repositories</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Clinical and Experimental Data</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_clinicalCov/" class="">Clinical Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_specimenBanking/" class="">Specimen Banking</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_labCov/" class="">Experimental Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_platformsData/" class="">Genomics Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_flowcytometry/" class="">Flow Cytometry Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_imaging/" class="">Imaging Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_proteomics/" class="">Proteomics Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Laboratory Resources</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_assayPrep/" class="">Assay Material Prep and QC</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_dnaApproaches/" class="">DNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_rnaApproaches/" class="">RNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_software/" class="active">Support Software</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software for Research and Laboratory Management">
+    <meta itemprop="description" content="There are a number of software tools available that lend themselves well to the management of research labs and here we focus on those that have a free tier, are open source, or are supported by the Fred Hutch itself.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="October 25, 2018">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software for Research and Laboratory Management
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_generation/labman_software.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneration%2Flabman_software%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#reagent-and-laboratory-organization">Reagent and Laboratory Organization</a></li>
+  <li><a href="#project-management">Project Management</a></li>
+  <li><a href="#team-communication-and-collaboration">Team Communication and Collaboration</a></li>
+  <li><a href="#available-resources">Available Resources</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>There are a number of software tools available that lend themselves well to the management of research labs and here we focus on those that have a free tier, are open source, or are supported by the Fred Hutch itself.</p>
+
+<h2 id="reagent-and-laboratory-organization">Reagent and Laboratory Organization</h2>
+<p><a href="http://www.quartzy.com">Quartzy</a> is a free, web-based lab management software. Users can organize lab member order requests, track order receipts, and organize lab inventory.  Quartzy’s ordering system integrates with the Hutch Online Marketplace to streamline ordering and subsequent tracking of receiving in the lab, as well as lab storage and lot tracking. This software facilitates four main lab functions:</p>
+
+<ol>
+  <li>Submit supply requests – Lab members can browse Quartzy’s catalog of life science products and request supplies from their lab manager</li>
+  <li>Process supply requests – Lab managers/Supply managers can receive and incoming supply requests for approval.</li>
+  <li>Receive and Organize lab supplies – Users can mark supplies as received, automatically update inventory data, and alert lab members when supplies are back in stock and where to find them.</li>
+  <li>Search/Browse Lab inventory – Users with appropriate permissions can search the entire contents of the lab for reagents, or browse individual locations within the lab database.</li>
+</ol>
+
+<h2 id="project-management">Project Management</h2>
+<p><a href="http://www.asana.com">Asana</a> is a web-based project management software.  It allows groups to create tasks and assign those tasks to group members. Groups can get task reminders, define timelines, comment on the status of tasks, and easily edit the scope of tasks as projects develop.  Tasks may be independent, or dependent on the status of other tasks–for example, when laying out a project where Task A must be finished before Task B can be performed, you can define Task B to be dependent on the completion of Task A. This functionality allows easy design of task workflows within projects. Asana can be accessed on mobile devices, laptops, desktops, and tablets, which allows easy group communication, regardless of platform.</p>
+
+<p><a href="http://www.trello.com">Trello</a> is another web-based project management software. Its functionality is very similar to Asana–groups can create and assign tasks, manage priorities and status, comment and attach files, and can be accessed on multiple device types.</p>
+
+<h2 id="team-communication-and-collaboration">Team Communication and Collaboration</h2>
+<p><a href="http://www.slack.com">Slack</a> is a collaborative team messaging software. Communication in Slack happens in channels–which can be organized by project, topic, team, or whatever makes sense for a group. Conversations in Slack are searchable, which can facilitate group communication and easy onboarding of new group members. Slack also offers integration of other software tools (Google Drive, GitHub, Asana, Trello, etc.), which can be very useful for communicating project information. Several groups at Fred Hutch use Slack to communicate with members–including the Fred Hutch Bioinformatics Interest Group (FHBIG).  Individual groups or labs can create a private Slack workspace just for their group, or individuals can join other Slack workspaces as well as guests or members, depending on how the workspaces are set up by their administrators.</p>
+
+<h2 id="available-resources">Available Resources</h2>
+<ul>
+  <li>At <a href="https://fhbig.slack.com/">FHBIG’s Slack Channel</a>, you can see an example of how groups are using Slack to facilitate communication between bioinformatics-oriented researchers here at Fred Hutch.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-10-25">October 25, 2018</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_generation/labman_software.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneration%2Flabman_software%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/generation/labman_overview/" class="pagination--pager" title="Overview of Laboratory Management Resources
+">Previous</a>
+    
+    
+      <a href="/generation/multiple_testing/" class="pagination--pager" title="Multiple Testing
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

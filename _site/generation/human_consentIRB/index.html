@@ -1,0 +1,837 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Consenting and Large Scale Data - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="Before beginning a study and during the proposal preparation process, animportant issue to consider is whether the proposed research qualifiesas human subjects research as defined by the Department of Health andHuman Services Office for Human Research Protections (OHRP) and/or the National Institutes of Health.Take a look at the OHRP decision chartsand/or the NIH questionnaire to find out what aspects of human subjects research may apply.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Consenting and Large Scale Data">
+<meta property="og:url" content="http://localhost:4000/generation/human_consentIRB/">
+
+
+  <meta property="og:description" content="Before beginning a study and during the proposal preparation process, animportant issue to consider is whether the proposed research qualifiesas human subjects research as defined by the Department of Health andHuman Services Office for Human Research Protections (OHRP) and/or the National Institutes of Health.Take a look at the OHRP decision chartsand/or the NIH questionnaire to find out what aspects of human subjects research may apply.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2018-10-25T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/generation/human_consentIRB/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/gen_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generationdemos/" class="">Resource Library</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Study Design and Funding</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_proposal/" class="">Proposals and Funding</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_hypothesis/" class="">Hypothesis Development and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/multiple_testing/" class="">Multiple Testing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Consent, Privacy and Security</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_consentIRB/" class="active">Consenting and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_privacySecurity/" class="">Data Privacy and Security</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/security_legal/" class="">Compliance and Legal</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_deidentification/" class="">De-identification</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_shareDeposits/" class="">Data Sharing and Public Repositories</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Clinical and Experimental Data</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_clinicalCov/" class="">Clinical Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_specimenBanking/" class="">Specimen Banking</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_labCov/" class="">Experimental Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_platformsData/" class="">Genomics Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_flowcytometry/" class="">Flow Cytometry Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_imaging/" class="">Imaging Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_proteomics/" class="">Proteomics Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Laboratory Resources</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_assayPrep/" class="">Assay Material Prep and QC</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_dnaApproaches/" class="">DNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_rnaApproaches/" class="">RNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_software/" class="">Support Software</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Consenting and Large Scale Data">
+    <meta itemprop="description" content="Before beginning a study and during the proposal preparation process, animportant issue to consider is whether the proposed research qualifiesas human subjects research as defined by the Department of Health andHuman Services Office for Human Research Protections (OHRP) and/or the National Institutes of Health.Take a look at the OHRP decision chartsand/or the NIH questionnaire to find out what aspects of human subjects research may apply.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="October 25, 2018">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Consenting and Large Scale Data
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_generation/human_consentIRB.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneration%2Fhuman_consentIRB%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#irb-approval-in-human-subjects-research">IRB Approval in Human Subjects Research</a>
+    <ul>
+      <li><a href="#available-resources">Available Resources</a></li>
+    </ul>
+  </li>
+  <li><a href="#retrospectively-banked-specimens-and-irb-review">Retrospectively Banked Specimens and IRB Review</a></li>
+  <li><a href="#nih-genomic-data-sharing-and-informed-consent">NIH Genomic Data Sharing and Informed Consent</a>
+    <ul>
+      <li><a href="#available-resources-1">Available Resources</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>Before beginning a study and during the proposal preparation process, an
+important issue to consider is whether the proposed research qualifies
+as human subjects research as defined by the Department of Health and
+Human Services Office for Human Research Protections (<a href="https://www.hhs.gov/ohrp/">OHRP</a>) and/or the National Institutes of Health.
+Take a look at the <a href="https://www.hhs.gov/ohrp/regulations-and-policy/decision-charts/index.html">OHRP decision charts</a>
+and/or the <a href="https://humansubjects.nih.gov/">NIH questionnaire to find out what aspects of human subjects research may apply.</a></p>
+
+<h2 id="irb-approval-in-human-subjects-research">IRB Approval in Human Subjects Research</h2>
+
+<p>Institutional Review Boards (IRBs) exist to protect the rights and
+welfare of human research subjects. IRB oversight supports compliance
+with the current standards of human subjects research and with current
+regulations. When conducting its review for genomic research, the IRB
+will look at whether the research involves human subjects.</p>
+
+<p>When starting a research project that may involve the generation of
+large-scale genetic or other large-scale molecular datasets, a first
+step is to ensure that the consent forms involved in the study or studies during which the intended specimens were collected include
+language specific to the possibility of generating these types of data
+and how those data can be used and shared.</p>
+
+<p>In some cases, the use of
+human specimens to generate large-scale molecular datasets is not
+considered human subjects research, and thus not subject to the specific
+requirements of human subjects research, even though the dataset
+uses human data. This distinction allows studies which use human specimens/data and deemed not human subjects research to avoid the relatively high level of documentation and reporting requirements of human subjects research.</p>
+
+<p>For NIH grant applications submitted after January 25,
+2018, a new required form allows for more clarity if a study does not
+qualify as human subjects, but does use human specimens and/or data.
+More about this form, the PHS Human Subject and Clinical Trial
+Information form can be found
+<a href="https://grants.nih.gov/policy/clinical-trials/new-human-subject-clinical-trial-info-form.htm">here.</a>
+This form requires the investigator to have reviewed the NIH
+questionnaire; if the study does involve human specimens and/or data, but is not deemed human subjects research,
+additional documentation or justification is required. An example of the Research Involving Private Information or Biological Specimens flowchart is <a href="https://grants.nih.gov/grants/policy/hs/PrivateInfoOrBioSpecimensDecisionChart.pdf">here.</a></p>
+
+<h3 id="available-resources">Available Resources</h3>
+
+<ul>
+  <li>
+    <p>If you are affiliated with the the Fred Hutchinson Cancer Research Center or Seattle Cancer Care Alliance, a good place to start is the <a href="https://centernet.fredhutch.org/cn/u/irb.html">Fred Hutch IRB.</a></p>
+  </li>
+  <li>
+    <p>Similarly, if you work for the University of Washington, the <a href="https://www.washington.edu/research/hsd/">UW IRB</a> curates that information.</p>
+  </li>
+  <li>
+    <p>If you currently have an NIH grant, are considering applying for one, or are in the process of writing one, consider taking a look at <a href="https://humansubjects.nih.gov/">the NIH’s human subjects research site.</a></p>
+  </li>
+  <li>
+    <p>For more information about using human specimens, cell lines or data in the context of a non-human subjects study, <a href="https://humansubjects.nih.gov/sites/hs/public_files/privateinfoorbiospecimensdecisionchart.pdf">here is a pdf of a decision tree provided by the NIH.</a></p>
+  </li>
+</ul>
+
+<h2 id="retrospectively-banked-specimens-and-irb-review">Retrospectively Banked Specimens and IRB Review</h2>
+
+<p>It is important to be aware that the timeframe in which the specimens
+were banked may affect the IRB review of the foundational collection
+consents. On January 25, 2015, NIH policy for viewing and sharing
+genomic data changed. Consent documents associated with human specimens
+banked before this date will have different (and fewer) IRB review
+criteria than consent documents associated with human specimens banked
+after this date. For data made from human specimens banked after this
+date, the patient consent documents will be required to address broad
+sharing in order for broad data sharing to occur. Sharing may be
+possible for specimens banked earlier for which the consent documents
+may be ambiguous with respect to genomic datasets. It is important to
+consult with the relevant IRB if a consent with sharing requirements can
+limit the types of data which can be generated and if such a consent can
+restrict secondary usage or sharing of generated data.</p>
+
+<h2 id="nih-genomic-data-sharing-and-informed-consent">NIH Genomic Data Sharing and Informed Consent</h2>
+
+<p>If you are working under an NIH grant and sharing data that may fall
+under the NIH Genomic Data Sharing (GDS) policy, you should be aware of
+whether the data you are receiving was collected under appropriate
+consent. The GDS Policy expects subjects who are asked to enroll in a
+study in which genomic data are obtained to also be asked for their
+informed consent to the future research use and broad sharing of their
+data. Only if potential subjects provide such consent would broad
+sharing of the data be permissible. If a subject does not consent, he or
+she may still be enrolled in the study, but their data may not be
+shared, or may be shared in a limited manner consistent with the
+specifics of the consent form. The IRB of the entity sharing the data
+will make a determination about what can be shared and any limitations.</p>
+
+<p>In order to meet the NIH expectations under the GDS Policy, for research
+projects for which the IRB has granted a waiver of some or all of the
+required elements of informed consent under 45 CFR 46.116(d), or consent
+is not required because the activity is not subject to 45 CFR 46,
+investigators will still need to seek or document consent for future use
+and broad sharing of genomic and phenotypic data. At minimum, the
+information described below should be provided to prospective
+participants.</p>
+
+<p>In order to meet the expectations for future research use and broad
+sharing under the GDS Policy, the consent should capture and convey in
+language understandable to prospective participants information along
+the following lines:</p>
+
+<ul>
+  <li>
+    <p>Genomic and phenotypic data and any other data relevant for the
+ study (such as exposure or disease status) will be generated and
+ may be used for future research on any topic and shared broadly in
+ a manner consistent with the consent and all applicable federal
+ and state laws and regulations.</p>
+  </li>
+  <li>
+    <p>Prior to submitting the data to an NIH-designated data repository,
+ data will be stripped of identifiers such as name, address,
+ account and other identification numbers and will be de-identified
+ by standards consistent with the Common Rule. Safeguards to
+ protect the data according to Federal standards for information
+ protection will be implemented.</p>
+  </li>
+  <li>
+    <p>Access to de-identified participant data will be controlled, unless
+ participants explicitly consent to allow unrestricted access to
+ and use of their data for any purpose. Because it may be possible
+ to re-identify de-identified genomic data, even if access to data
+ is controlled and data security standards are met, confidentiality
+ cannot be guaranteed, and re-identified data could potentially be
+ used to discriminate against or stigmatize participants, their
+ families, or groups. In addition, there may be unknown risks.</p>
+  </li>
+  <li>
+    <p>No direct benefits to participants are expected from any secondary
+ research that may be conducted.</p>
+  </li>
+  <li>
+    <p>Participants may withdraw consent for research use of genomic or
+ phenotypic data at any time without penalty or loss of benefits to
+ which the participant is otherwise entitled. In this event, data
+ will be withdrawn from any repository, if possible, but data
+ already distributed for research use will not be retrieved.</p>
+  </li>
+  <li>
+    <p>The name and contact information of an individual who is affiliated
+ with the institution and familiar with the research and will be
+ available to address participant questions.</p>
+  </li>
+  <li>
+    <p>Studies that include whole genome sequencing (WGS), whole exome sequencing (WES), epigenetic profiles, microbiotic profiles, and related forms of in-depth extra-genomic data generate immense
+ amounts of personal information about participants. It is
+ important to draw a distinction between targeted genetic research
+ and broader sequencing protocols, so that participants understand
+ the scope of data generation.</p>
+  </li>
+</ul>
+
+<h3 id="available-resources-1">Available Resources</h3>
+
+<ul>
+  <li>
+    <p>See also <a href="https://osp.od.nih.gov/wp-content/uploads/NIH_PTC_in_Developing_DUL_Statements.pdf">National Institutes of Health Points to Consider in Developing Effective Data Use Limitation Statements,</a> prepared by the Office of Science Policy July 13, 2015).</p>
+  </li>
+  <li>
+    <p>The national Human Genome Research Institute has a page for
+ <a href="https://www.genome.gov/27026588/informed-consent-for-genomics-research/">Informed Consent for Genomic Research.</a></p>
+  </li>
+  <li>
+    <p>The NIH Genomic Data Sharing Policy is
+ <a href="https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/">here</a>.</p>
+  </li>
+  <li>
+    <p>Large-scale genomic data include genome-wide association studies
+ (GWAS), single nucleotide polymorphisms (SNP) arrays, and genome
+ sequence, transcriptomic, metagenomic, epigenomic, and gene
+ expression data. Examples of research that are subject to the GDS
+ Policy include, but are not limited to, projects that involve
+ generating the whole genome sequence data for more than one gene
+ from more than 1,000 individuals, or analyzing 300,000 or more
+ genetic variants in more than 1,000 individuals, or sequencing
+ more than a 100 isolates of infectious organisms such as bacteria.
+ The <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-14-124.html">Supplemental Information to the NIH Genomic Data Sharing
+ Policy</a>
+ includes detailed description of research under scope of the
+ policy and data submission expectations.</p>
+  </li>
+  <li>
+    <p>The Fred Hutch IRB policy information can be found <a href="https://centernet.fredhutch.org/cn/u/irb.html">here, sign-in required if off campus</a>,
+ including the Genomic Data Sharing Supplement <a href="https://centernet.fredhutch.org/cn/f/irb/genomic-data-sharing-supplement.html">here.</a></p>
+  </li>
+  <li>
+    <p>NIH Information on Institutional Certifications is
+ <a href="https://osp.od.nih.gov/scientific-sharing/institutional-certifications/">here.</a>
+ NOTE: Fred Hutch cannot issue a provisional or final
+ “Institutional Certificate” unless Fred Hutch is uploading the
+ final genomic data.</p>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-10-25">October 25, 2018</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_generation/human_consentIRB.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneration%2Fhuman_consentIRB%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/generation/gen_index/" class="pagination--pager" title="Data Generation Overview
+">Previous</a>
+    
+    
+      <a href="/generation/human_deidentification/" class="pagination--pager" title="De-identification of Specimens and Data
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

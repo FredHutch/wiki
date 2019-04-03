@@ -41,6 +41,9 @@ collections:
   drafts:
     output: true
     permalink: /:collection/:path/
+  bioinfcomputing:
+    output: true
+    permalink: /:collection/:path/
 
 
 
@@ -324,3 +327,15 @@ defaults:
       toc: true
       toc_label: "On This Page"
       share: true
+
+  # _bioinfcomputing
+  - scope:
+      path: ""
+      type: bioinfcomputing
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "bioinfcomputing"

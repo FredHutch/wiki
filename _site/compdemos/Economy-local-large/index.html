@@ -1,0 +1,672 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to migrate large data to Economy Local - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="Learn how archive data with little effort using the Gimzo cluster as a Helper">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="How to migrate large data to Economy Local">
+<meta property="og:url" content="http://localhost:4000/compdemos/Economy-local-large/">
+
+
+  <meta property="og:description" content="Learn how archive data with little effort using the Gimzo cluster as a Helper">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2019-02-06T00:00:00-08:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/compdemos/Economy-local-large/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/comp_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library/HOWTOs</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_methods/" class="">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_databases/" class="">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Compute</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/linux_linux101/" class="">Linux Operating System</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/resource_overview/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_software/" class="">Scientific Software</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_usingSlurm/" class="">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_cloudCompute/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to migrate large data to Economy Local">
+    <meta itemprop="description" content="Learn how archive data with little effort using the Gimzo cluster as a Helper">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="February 06, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">How to migrate large data to Economy Local
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_compdemos/Economy-local-large.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcompdemos%2FEconomy-local-large%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#disclaimer">Disclaimer</a></li>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#how-do-i-find-out-if-i-have-many-small-files-">How do I find out if I have many small files ?</a></li>
+  <li><a href="#how-can-i-find-my-big-files">How can I find my big files?</a></li>
+  <li><a href="#preparation">Preparation</a></li>
+  <li><a href="#a-migrating-medium-to-large-size-files">A) Migrating medium to large size files</a></li>
+  <li><a href="#b-migrating-many-small-size-files">B) Migrating many small size files</a></li>
+  <li><a href="#checking-results">Checking results</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>Learn how archive data with little effort using the Gimzo cluster as a Helper</p>
+
+<h2 id="disclaimer">Disclaimer</h2>
+
+<p>Disclaimer for users who decide to delete data or put it on USB drives, etc:
+Before you decide to delete data in order to reduce storage costs please be aware that there may be data retention requirements imposed by the research funding sponsor, other contractual obligations, NIH data sharing and retention requirements (if applicable),  and Center policies. Please contact the Office of the General Counsel if you are in doubt about the retention requirements for your data.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>When we migrate large amounts of data we have different use cases. First (A) we assume that we have a folder <code class="highlighter-rouge">mydata</code> that contains medium to large size data. (Many files that are &gt; 1MB up to multiple  GB, scientific datasets, bam files, etc) After that we look for the best way (B) to store smaller files (e.g. source code and small text files, home directories of previous staff).  For further instructions please see How to use Economy File Storage
+ . PLEASE NOTE: copying thousands of small files to economy file will be slow and frustrating to manage. Please use method B) if you have many small files.</p>
+
+<p>Still excited to do this yourself ? SciComp offers to move the data for you. All you have to do is send the Fast file source folder and the Economy File target folder and the PI account to use to SciComp @ and the data will be moved for you.</p>
+
+<h2 id="how-do-i-find-out-if-i-have-many-small-files-">How do I find out if I have many small files ?</h2>
+<p>Please see File Data Management Tips and Tricks</p>
+
+<h2 id="how-can-i-find-my-big-files">How can I find my big files?</h2>
+<p>Please check the Scientific Storage Reporter Howto</p>
+
+<h2 id="preparation">Preparation</h2>
+
+<p>create and switch to a folder where you keep the logs for your archiving activity. We recommend to use a folder Archivelogs in your home directory or in the fast file folder of the PI, eg. /fh/fast/lastname_f/archive/Archivelogs:
+use sw2account to switch to the economy file account of your PI.
+use ‘swc ls’ to make sure that the destination does not already exist. data at the destination will be overwritten without asking.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &gt; mkdir ~/Archivelogs
+    &gt; cd ~/Archivelogs
+    &gt; sw2account lastname_f
+    &gt; swc ls /archive/my/target
+</code></pre></div></div>
+
+<p>make sure that ‘Archivelogs’ is your current directory during the following archiving activities</p>
+
+<h2 id="a-migrating-medium-to-large-size-files">A) Migrating medium to large size files</h2>
+
+<p>if you have not done yet make sure you use the right Economy file account with sw2account
+submit a swc upload command to gizmo. Please check if the target folder has a trailing slash or not as this influences where you data is copied to. Also make sure that you request enough wall clock time on gizmo (in the example below 7 days)
+check the progress of your copy job using the tail command on the –output file
+use the swc compare command to make sure that source and target folder have the same size. If the size differs you may run another swc upload job
+ask your colleaques if the data made it over correctly before you delete the source or ask IT to delete it for you.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ sbatch -J "copy" --mail-type=ALL -t 7-0 --output=myfolder-archive.txt --wrap="swc upload /myfolder /archive"
+    $ tail -f myfolder-archive.txt
+    $ swc compare myfolder /archive
+
+    To make things even easier there is a wrapper script : fhUpload,  which will use one gizmof node per subfolder to move data:​​​​
+  
+    $ fhUpload /fh/fast/....../human/hg19/2013 /human/hg19/2013
+    submitted batch job 27981126
+    Upload job submitted to Gizmo. If you would like to monitor progress please use one of these commands:
+    swc size "/human/hg19/2013"
+    tail -f Upload_.....slurm.log.txt
+</code></pre></div></div>
+
+<p>To make things a little easier if you have a folder that has multiple subfolders with large files in them you can use the fhUploadSubfolders2Economy command, which will use one gizmof node per subfolder to move data:​​​​</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ fhUploadSubfolders2Economy human/hg19/2013 /human/hg19/2013
+
+    Will now submit a cluster job for each of these commands to Gizmo:
+
+    swc upload human/hg19/2013/TCGA.HNSC /human/hg19/2013/TCGA.HNSC
+    swc upload human/hg19/2013/TCGA.THCA /human/hg19/2013/TCGA.THCA
+    swc upload human/hg19/2013/TCGA.READ /human/hg19/2013/TCGA.READ
+    Do you want to continue? [y/N] n
+</code></pre></div></div>
+
+<p>if you do not want to use a separate cluster node for each sub directory you can also use the simpler fhUpload which submits an upload command for a single directory to a single Gizmo node and works very simple:
+$ fhUpload /myfolder /archive/folder</p>
+
+<h2 id="b-migrating-many-small-size-files">B) Migrating many small size files</h2>
+
+<p>After you have gone through the ‘Preparation’ steps above you just need to use the fhArchive command to archive many small files to Economy.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ fhArchive
+
+    usage: fhArchive /directory/to/archive /swift/folder /scratch/folder
+        -&gt;  compress and archive a directory to economy file
+</code></pre></div></div>
+
+<p>You do need to pass a scratch folder as final argument to be able to compare the size of the source with the archive. As the archive is compressed it will have a different size. fhArchive uncompresses the archived data to scratch and then compares the sizes of the original data with the scratch folder.
+For example if you would like to archive a sub folder ProjectA in fast file for PI Jane Doe it would look like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    petersen@rhino1:/home…en/Archivelogs$ fhArchive /fh/fast/doe_j/ProjectA /archive/ProjectA /fh/scratch/delete30/doe_j/archive_verify
+    Submitted batch job 45975375
+    Archive job submitted to Gizmo. If you would like to monitor progress please use one of these commands:
+    swc size "/archive/ProjectA"
+    tail -f Archive__fh_fast_doe_j_ProjectA.slurm.log.txt
+</code></pre></div></div>
+
+<p>If the sizes of source and destination are not identical, use this command to search for errors:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    grep -B5 -A5 -i error Archive__fh_fast_doe_j_ProjectA.slurm.log.txt
+</code></pre></div></div>
+
+<p>It is strongly recommended to not archive more than 1 TB per fhArchive command because each fhArchive command uses only a single compute node with &lt;= 100 MB/s throughput and 4 cores. It will be faster if you execute fhArchive multiple times, one for each sub directory e.g ProjectA/subproject1, ProjectA/subproject2, etc )</p>
+
+<h2 id="checking-results">Checking results</h2>
+
+<p>when the job finishes you should get an email from slurm with a subject line similar to this one:
+subject: SLURM Job_id=45975375 Name=Arc__fh_fast_doe_j_ProjectA Ended, Run time 00:29:56, COMPLETED, ExitCode 0
+then check the output file with the tail command, you want to see something like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &gt; tail -f Archive__fh_fast_doe_j_ProjectA.slurm.log.txt
+
+        checking posix folder /fh/fast/doe_j/ProjectA ...
+        81,024,500,435 bytes (75.460 GB) in /fh/fast/doe_j/ProjectA
+        checking 2nd posix folder /fh/scratch/delete30/doe_j/archive_verify ...
+        81,024,500,435 bytes (75.460 GB) in /fh/scratch/delete30/doe_j/archive_verify
+    OK! The size of /fh/fast/doe_j/ProjectA and /fh/scratch/delete30/doe_j/archive_verify is identical!
+    The data was uploaded and then uncompressed to scratch.
+    The sizes of the source directory and the scratch directory should be identical.
+
+    now you can delete everything under archive_verify. Note that fhArchive does not delete the orginal source data (e.g. under /fh/fast). You need to delete this data after you have confirmed that your data was archived successfully.
+    &gt; rm -rf /fh/scratch/delete30/doe_j/archive_verify
+    Getting your data back is easy. Note that you do not need to restore the entire archive, you can also just restore a subdirectory. This is possible because "swc archive" creates one tar.gz archive per directory level.
+    swc unarch /archive/ProjectA/subproject1 /fh/scratch/delete30/doe_j/ProjectA/subproject1
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-06">February 06, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_compdemos/Economy-local-large.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcompdemos%2FEconomy-local-large%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/compdemos/Docker/" class="pagination--pager" title="using Docker at Fred Hutch
+">Previous</a>
+    
+    
+      <a href="/compdemos/EconomyCommand-API/" class="pagination--pager" title="Using the command line/API for Accessing Economy Local Storage
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

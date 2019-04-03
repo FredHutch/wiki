@@ -1,0 +1,900 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Using the command line/API for Accessing Economy Local Storage - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="Access to data stored in Fred Hutch resources that are object stores can be achieved via command line tools or the API.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Using the command line/API for Accessing Economy Local Storage">
+<meta property="og:url" content="http://localhost:4000/compdemos/EconomyCommand-API/">
+
+
+  <meta property="og:description" content="Access to data stored in Fred Hutch resources that are object stores can be achieved via command line tools or the API.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2018-09-27T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/compdemos/EconomyCommand-API/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/comp_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library/HOWTOs</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_methods/" class="">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_databases/" class="">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Compute</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/linux_linux101/" class="">Linux Operating System</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/resource_overview/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_software/" class="">Scientific Software</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_usingSlurm/" class="">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_cloudCompute/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Using the command line/API for Accessing Economy Local Storage">
+    <meta itemprop="description" content="Access to data stored in Fred Hutch resources that are object stores can be achieved via command line tools or the API.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="September 27, 2018">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Using the command line/API for Accessing Economy Local Storage
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_compdemos/EconomyCommand-API.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcompdemos%2FEconomyCommand-API%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#accessing-economy-file-directly-via-object-api">Accessing Economy File directly via Object API</a></li>
+  <li><a href="#swc-swift-commander---simple-access">swc (swift commander - simple access)</a></li>
+  <li><a href="#r-swift-client">R swift client</a></li>
+  <li><a href="#swift-standard-client-python">Swift standard client (python)</a></li>
+  <li><a href="#limitations-and-notes">Limitations and Notes</a></li>
+  <li><a href="#amazon-s3-boto">Amazon S3 (boto)</a>
+    <ul>
+      <li><a href="#boto3-access-to-economy-file">Boto3 access to Economy File</a></li>
+    </ul>
+  </li>
+  <li><a href="#python-swiftclient">Python (swiftclient)</a></li>
+  <li><a href="#access-from-the-command-line-or-rest-api">Access From the Command Line or REST API</a></li>
+  <li><a href="#direct-access--linux--rhino">Direct Access / Linux / Rhino</a></li>
+  <li><a href="#other-access-methods">Other Access Methods</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>Access to data stored in Fred Hutch resources that are <a href="/computing/store_objectstore/">object stores</a> can be achieved via command line tools or the API.</p>
+
+<h2 id="accessing-economy-file-directly-via-object-api">Accessing <code class="highlighter-rouge">Economy File</code> directly via Object API</h2>
+
+<p>This is an overview available tools starting with the ones you will most likely use and that are best supported.</p>
+
+<h2 id="swc-swift-commander---simple-access">swc (swift commander - simple access)</h2>
+<p>Using the swc command is the simplest way of accessing the swift object store. The tool includes easy to use sub commands such as swc upload and swc download as well as simplified versions of standard unix tools such as ls, cd, rm, etc. By using swc you can ignore most of the peculiarities of the swift object storage system and (almost) work with it like a traditional file system. It is the best option for HPC scripting and automation.</p>
+
+<p>First, let’s invoke the swc command and see what it has to offer:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gizmod16:~&gt; swc
+*** Swift credentials not set. ***
+Please execute 'sw2account &lt;accountname&gt;' to get credentials.
+Use 'sw2account --save &lt;accountname&gt;' to set them as default.
+</code></pre></div></div>
+
+<p>Swift requires certain environment variables to be set for each PI.  You can easily set them by using the ‘sw2account’ command which asks for your HutchNet password:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rhino04:~&gt; sw2account groudine_m
+</code></pre></div></div>
+
+<p>now let’s try running ‘swc’ again, still without any command options, you are prompted for your hutchnet password:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>petersen@rhino:~$ swc
+
+Swift Commander (swc) allows you to easily work with a swift object store.
+swc supports sub commands that attempt to mimic standard unix file system tools.
+These sub commands are currently implemented: (Arguments in square brackets are
+optional).
+
+swc upload &lt;src&gt; &lt;targ&gt;   -  copy file / dirs from a file system to swift
+swc download &lt;src&gt; &lt;targ&gt; -  copy files and dirs from swift to a file system
+swc cd &lt;folder&gt;           -  change current folder to &lt;folder&gt; in swift
+swc ls [folder]           -  list contents of a folder - or the current one
+swc mkdir &lt;folder&gt;        -  create a folder (works only at the root)
+swc rm &lt;path&gt;             -  delete all file paths that start with &lt;path&gt;
+swc pwd                   -  display the current swift folder name
+swc cat|more|less &lt;file&gt;  -  download a file to TMPDIR and view with cat, more or less
+swc vi|emacs|nano &lt;file&gt;  -  download a file to TMPDIR and edit it with vi|emacs or nano
+swc chgrp &lt;group&gt; &lt;fld.&gt;  -  grant/remove rw access to current swift account or container
+swc rw &lt;group&gt; &lt;folder&gt;   -  add rw access to current swift account or container
+swc ro &lt;group&gt; &lt;folder&gt;   -  add ro access to current swift account or container
+swc list &lt;folder&gt; [filt]  -  list folder content (incl. subfolders) and filter
+swc search &lt;str&gt; &lt;folder&gt; -  search for a string in text files under /folder
+swc openwith &lt;cmd&gt; &lt;file&gt; -  download a file to TMPDIR and open it with &lt;cmd&gt;
+swc header &lt;file&gt;         -  display the header of a file in swift
+swc meta &lt;file&gt;           -  display custom meta data of a file in swift
+swc mtime &lt;file&gt;          -  show the original mtime of a file before uploaded
+swc size &lt;folder&gt;         -  show the size of a swift or a local folder
+swc compare &lt;l.fld&gt; &lt;fld&gt; -  compare size of a local folder with a swift folder
+swc hash &lt;locfile&gt; &lt;file&gt; -  compare the md5sum of a local file with a swift file
+swc arch &lt;src&gt; &lt;targ&gt;     -  create one tar archive for each folder level
+swc unarch &lt;src&gt; &lt;targ&gt;   -  restore folders that have been archived
+swc auth                  -  show current storage url and auth token
+swc env                   -  show authentication env vars (ST_ and OS_)
+swc clean                 -  remove current authtoken credential cache
+
+Examples:
+swc upload /local/folder /swift/folder
+swc upload --symlinks /local/folder /swift/folder (save symlinks)
+swc compare /local/folder /swift/folder
+swc download /swift/folder /scratch/folder
+swc download /swift/folder $TMPDIR
+swc rm /archive/some_prefix
+swc more /folder/some_file.txt
+swc openwith emacs /folder/some_file.txt
+</code></pre></div></div>
+
+<p>OK, we see that there are some options, the swc command has nearly 30 sub commands. Let’s upload a folder called ‘testing’ that is stored somewhere on fast file. The target folder on economy file is called /test:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>petersen@rhino04:~/sc$ swc upload ./testing /test
+*** uploading ./test ***
+*** to Swift__ADM_SciComp:/test/ ***
+executing:swift upload --changed --segment-size=2147483648 --use-slo --segment-container=".segments_test" --header="X-Object-Meta-Uploaded-by:petersen" --object-name="" "test" "./test"
+*** please wait... ***
+/fld11/file12
+/fld11/file11
+/fld11/fld2/fld3/fld4/file43
+/fld11/fld2/fld3/fld4/file42
+.
+.
+.
+/test
+</code></pre></div></div>
+
+<p>let’s make sure that the data is really there by comparing the size of the local folder with the swift folder:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>petersen@rhino02:~/sc$ swc compare ./testing /test
+    checking swift folder test ...
+    3,180,498,696 bytes (2.962 GB) in test (swift)
+    checking posix folder ./testing/ ...
+    3,180,498,696 bytes (2.962 GB) in ./testing
+OK! The size of ./testing and /test is identical!
+</code></pre></div></div>
+
+<p>now let’s download a subfolder of that folder /test to our scratch file system for further processing:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>petersen@rhino04:~/sc$ swc download /test/fld1 /fh/scratch/delete30/lastname_f/tmp
+...downloading /test/fld1, please wait...
+executing:swift download --prefix="fld1" test
+fld1/file11 [auth 0.123s, headers 0.162s, total 0.170s, 0.000 MB/s]
+fld1/file12 [auth 0.118s, headers 0.164s, total 0.171s, 0.000 MB/s]
+fld1/fld2/file21 [auth 0.123s, headers 0.158s, total 0.169s, 0.000 MB/s]
+.
+.
+/fh/scratch/delete30/lastname_f/tmp/
+</code></pre></div></div>
+
+<p>please check our HPC and data migration tutorials in the scicomp wiki at http://scicomp.fhcrc.org and the swc page on github for additional details:</p>
+
+<ul>
+  <li><a href="/compdemos/Economy-local-large/">How to migrate large data to Economy File</a></li>
+  <li><a href="https://github.com/FredHutch/swift-commander">swift commander on github</a></li>
+  <li><a href="https://asciinema.org/a/17172">Check out this video how to the swc command</a></li>
+</ul>
+
+<h2 id="r-swift-client">R swift client</h2>
+
+<p>The R swift package allows to upload and download files to swift directly from R. This greatly improves usability from interactive R sessions
+if you do <em>not</em> work on a SciComp supported Linux computer you need to install the R swift package first:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; install.packages('devtools',repos='http://cran.fhcrc.org')
+&gt; devtools::install_github("mtmorgan/swift")
+interacting with the object stop is pretty easy. If your credentials are set (see above) you can start right away. In this case we (1) list the content of the SciComp swift container, (2) download a file and (3) upload a results file.
+&gt; library('swift')
+&gt;
+&gt; swlist('SciComp')
+        size              last_modified                                 name
+1    20.8 Mb 2014-12-08T07:01:27.141470                annotationhub.sqlite3
+2     725 Kb 2014-12-08T06:54:18.677440                       tmp/squeue.txt
+3     7.9 Kb 2014-12-08T06:54:18.974290                         tmp/test.csv
+
+&gt; myfile &lt;- swdownload('SciComp','tmp/squeue.txt')
+&gt; myobject &lt;- read.table(myfile)
+&gt;
+&gt; ....processing
+&gt;
+&gt; newfile &lt;- paste0(myfile,'.csv')
+&gt; write.csv(myobject, newfile, row.names=FALSE)
+&gt; swupload('SciComp',newfile)
+&gt;
+##### and even easier: use swread to load a file directly from swift into memory ######
+&gt; myobj &lt;- swread('SciComp','tmp/squeue.txt')
+&gt; mydf &lt;- swread('SciComp','tmp/test.csv')
+
+# a csv file always loads into a dataframe
+Limitations and Notes:
+only supports files with sizes less than 5GB
+</code></pre></div></div>
+
+<h2 id="swift-standard-client-python">Swift standard client (python)</h2>
+
+<p>The swift client allows you to read and write files in your containers directly without mounting the container in the file system.  This is particularly handy for scripting and automation. The swift client is used by swc ‘under the hood’ and offers more options than swc but it is also slighly more difficult to use.  Do not use this tool if swc meets your needs.</p>
+
+<p>The swift client operates similar to ftp or scp and can be used in batch mode.  These operations are:</p>
+
+<ul>
+  <li>delete: delete a container or objects within a container</li>
+  <li>download: download objects from containers</li>
+  <li>list: lists the containers for the account or the objects for a container</li>
+  <li>post: updates meta information for the account, container, or object</li>
+  <li>stat: displays information for the account, container, or object</li>
+  <li>upload: uploads files or directories to the given container</li>
+  <li>capabilities: lists features/capabilities of the swift cluster</li>
+  <li>tempurl: creates a temporary url with expiration date that can be published within the Fred Hutch network</li>
+</ul>
+
+<p>You can supply your credentials on the command line, but this is discouraged as it can expose your password to any other user on the system.
+The easiest way to get credentials to Swift Economy File storage on SciComp system is using the command sw2account with the id of the PI as an argument (sw2account lastname_f) . It is recommend that you use the sw2account command to save the credentials of the PI account you mostly work with.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sw2account --save groudine_m
+</code></pre></div></div>
+
+<p>With those environment variables set, the connection can be tested with the “stat” subcommand:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift stat
+Account: AUTH_username
+Containers: 0
+Objects: 0
+    Bytes: 0
+Accept-Ranges: bytes
+X-Timestamp: 1386202905.14525
+X-Trans-Id: tx93f905a47d044277b276c-0052a0ca26
+Content-Type: text/plain; charset=utf-8
+</code></pre></div></div>
+
+<p>The “post” subcommand creates a new container into which we can “upload” a file.  The “list” subcommand rather obviously displays the contents of the indicated object:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls -l samplefile.tgz
+-rw-rw-r-- 1 user group 8134841 Nov 12 09:12 samplefile.tgz
+$ swift post newcontainer
+$ swift list
+newcontainer
+$ swift list newcontainer
+$ swift upload -S 2G newcontainer samplefile.tgz
+samplefile.tgz
+$ swift list newcontainer
+samplefile.tgz
+</code></pre></div></div>
+<p>you can upload an entire folder structure using the swift upload command. swift will recreate the entire folder structure you send on the command line. If you run “swift upload -S 2g newcontainer /fh/fast/lastname_f/myfolder” it will create the entire folder structure /fh/fast… under newcontainer. if you just want myfolder to show up under mycontainer you need to cd to  /fh/fast/lastname_f  and then run  “swift upload newcontainer myfolder”</p>
+
+<p>“download” and “delete” work as you might expect:</p>
+
+<p>“download” and untar a compressed file directly into Gizmo’s scratch file system (–output -  sends the downloaded file directly to STDOUT )</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift download newcontainer samplefile.tar.gz --output - | tar xzv -C $SCRATCH/$SLURM_JOB_ID
+</code></pre></div></div>
+
+<h2 id="limitations-and-notes">Limitations and Notes</h2>
+
+<ul>
+  <li>Files larger than 5GB require segmentation.  The value indicated with the “-S” argument is the size that files will be split into on the object store.  A segment size may be any value up to 5GB.  A reasonable default value is -S 2G which sets the maximum segment size to 2 GB, which means a file of 10GB size will be split into 5 segments.</li>
+  <li>using multiple segments will increase upload speeds (and downlaod speeds in the future), setting the segment size to 1GB on a 10GB file can increase the theoretical upload performance 10 fold</li>
+  <li>Swift commands that fail don’t set a return code, which could complicate scripting.</li>
+  <li>You can’t delete a directory in a container. When you delete the last file from the directory, swift deletes the directory automatically.  However, swift will delete a container with files still in it, so be careful what you delete.</li>
+</ul>
+
+<h2 id="amazon-s3-boto">Amazon S3 (boto)</h2>
+
+<p>Swift has an Amazon S3 compatiblity layer that supports most of the S3 API. boto is a very popular python library that allows you to interact with S3 compatible object stores. It is currently installed on most scientific computing systems such as the rhinos and gizmo nodes. The current version this boto3. You can also install it on your own system:</p>
+
+<p>On SciComp systems boto3 is already in the latest Python, just load the module</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ml Python
+</code></pre></div></div>
+
+<p>or you install boto within virtualenv, please check the scicomp wiki for “Manage Python environments using virtualenv”</p>
+
+<p>Please see this detailed and current example for boto3 in the scicomp wiki:</p>
+
+<h3 id="boto3-access-to-economy-file">Boto3 access to Economy File</h3>
+
+<p>The client method below is a little  older and exposes more low level access to s3. It should not be required for most access.</p>
+
+<p>To use this method, put your credentials into a text file (.e.g.  ~/.aws/s3.fhcrc.org) separated by colon:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "accountname:secretkey" &gt; ~/.aws/s3.fhcrc.org
+</code></pre></div></div>
+
+<p>then you run your first example: using Boto to list your existing storage containers (buckets):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#! /usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">boto3</span><span class="p">,</span> <span class="n">os</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">'~/.aws/s3.fhcrc.org'</span><span class="p">),</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">access_key_id</span><span class="p">,</span> <span class="n">secret_access_key</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">':'</span><span class="p">)</span>
+
+<span class="n">s3client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'s3'</span><span class="p">,</span>
+        <span class="n">endpoint_url</span><span class="o">=</span><span class="s">'https://s3.fhcrc.org'</span><span class="p">,</span>
+        <span class="n">aws_access_key_id</span> <span class="o">=</span> <span class="n">access_key_id</span><span class="p">,</span>
+        <span class="n">aws_secret_access_key</span> <span class="o">=</span> <span class="n">secret_access_key</span><span class="p">)</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="n">s3client</span><span class="o">.</span><span class="n">list_buckets</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+
+<span class="n">boto3</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">current</span> <span class="ow">and</span> <span class="n">recommeded</span> <span class="n">version</span> <span class="n">of</span> <span class="n">boto</span><span class="p">,</span> <span class="n">however</span> <span class="n">you</span> <span class="n">will</span> <span class="n">still</span> <span class="n">find</span> <span class="n">many</span> <span class="n">examples</span> <span class="k">for</span> <span class="n">boto</span><span class="p">,</span> <span class="n">the</span> <span class="n">legacy</span> <span class="n">version</span> <span class="n">of</span> <span class="n">the</span> <span class="n">library</span>
+<span class="kn">import</span> <span class="nn">boto.s3.connection</span>
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">boto</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">S3Connection</span><span class="p">(</span>
+    <span class="n">aws_access_key_id</span><span class="o">=</span><span class="s">'EC2_ACCESS_KEY or USERNAME'</span><span class="p">,</span>
+    <span class="n">aws_secret_access_key</span><span class="o">=</span><span class="s">'S3 API KEY'</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">443</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s">'s3.fhcrc.org'</span><span class="p">,</span>
+    <span class="n">is_secure</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">validate_certs</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">calling_format</span><span class="o">=</span><span class="n">boto</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">OrdinaryCallingFormat</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">b</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">create_bucket</span><span class="p">(</span><span class="s">'mybucket'</span><span class="p">)</span>
+
+<span class="n">buckets</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">get_all_buckets</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">buckets</span>
+</code></pre></div></div>
+
+<p>There is more detailed documentation about boto available <a href="http://boto.s3.amazonaws.com/s3_tut.html">here</a></p>
+
+<h2 id="python-swiftclient">Python (swiftclient)</h2>
+
+<p>Instead of using the swift command from the unix shell one can also access swift directly from python using the swiftclient python module which is also used by the swift command line client. This is a quick example that writes 100 objects / files to a swift container called prj1. create this container by using the command <code class="highlighter-rouge">swift post prj1</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#! /usr/bin/env python</span>
+<span class="c"># -*- encoding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="p">,</span> <span class="n">sys</span><span class="p">,</span> <span class="n">random</span>
+<span class="kn">from</span> <span class="nn">swiftclient</span> <span class="kn">import</span> <span class="n">client</span> <span class="k">as</span> <span class="n">swiftclient</span>
+
+<span class="n">arg</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">arg</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">object_base_name</span> <span class="o">=</span> <span class="s">"</span><span class="si">%</span><span class="s">s-array"</span> <span class="o">%</span> <span class="n">arg</span>
+<span class="n">content_base</span> <span class="o">=</span> <span class="s">"asdasdfasdfafaf"</span>
+<span class="n">container_name</span> <span class="o">=</span> <span class="s">"prj1"</span>
+
+<span class="n">AUTH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'ST_AUTH'</span><span class="p">)</span>
+<span class="n">USER</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'ST_USER'</span><span class="p">)</span>
+<span class="n">PASSWORD</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'ST_KEY'</span><span class="p">)</span>
+
+<span class="n">post_url</span><span class="p">,</span> <span class="n">post_token</span> <span class="o">=</span> <span class="n">swiftclient</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span>
+    <span class="s">'</span><span class="si">%</span><span class="s">s'</span> <span class="o">%</span> <span class="p">(</span><span class="n">AUTH</span><span class="p">),</span>
+    <span class="n">USER</span><span class="p">,</span>
+    <span class="n">PASSWORD</span><span class="p">,</span> <span class="n">auth_version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">get_auth</span><span class="p">()</span>
+
+<span class="c">#headers = get_headers</span>
+<span class="c">#headers['x-auth-token'] = post_token</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-auth-token'</span><span class="p">:</span> <span class="n">post_token</span><span class="p">}</span>
+<span class="n">sync_to</span> <span class="o">=</span> <span class="n">post_url</span> <span class="o">+</span> <span class="s">'/'</span> <span class="o">+</span> <span class="n">container_name</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="n">object_name</span> <span class="o">=</span> <span class="s">"</span><span class="si">%</span><span class="s">s-</span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="p">(</span><span class="n">object_base_name</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="s">"</span><span class="si">%</span><span class="s">s-</span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="p">(</span><span class="n">content_base</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">swiftclient</span><span class="o">.</span><span class="n">put_object</span><span class="p">(</span><span class="n">sync_to</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">object_name</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+                    <span class="n">contents</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="access-from-the-command-line-or-rest-api">Access From the Command Line or REST API</h2>
+
+<p>Economy File supports several access methods:</p>
+
+<h2 id="direct-access--linux--rhino">Direct Access / Linux / Rhino</h2>
+
+<p>Please see How to Access the Swiftstack Object store to learn about direct Access via API or command line tools. If you want to use data from Economy File on the Gizmo cluster or from the Rhinos this is your preferred access method.</p>
+
+<h2 id="other-access-methods">Other Access Methods</h2>
+
+<p>There are many other tools out there that support object storage systems. Swiftstack supports the Swift API and the more common S3 API. To get your credentials for these access methods please use this link https://toolbox.fhcrc.org/sw2srv/swift/account and enter the name of the PI or department account account (e.g. lastname_f).  You may be prompted for your hutchnet ID password.</p>
+
+<p>If you have permissions to see the credentials you will get 3 entries:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+ "account": "Swift_lastname_f",
+ "key": "abf47sfj48sfrjsrg8usrgj",
+ "password": "Huew4jv&amp;jfwvjsdg"
+}
+</code></pre></div></div>
+
+<p>For tools that use S3 protocol you need <em>account</em> and <em>key</em>. Use the entry in account for “access key id” and the entry in ‘key’ for “secret key id”. Connect these tools to https://s3.fhcrc.org</p>
+
+<p>For tools that use the Swift protocol you need the account, a password, and an authentication endpoint (a URL used for authenticating your credentials). Use https://tin.fhcrc.org/auth/v1.0 for this.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-09-27">September 27, 2018</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_compdemos/EconomyCommand-API.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcompdemos%2FEconomyCommand-API%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/compdemos/Economy-local-large/" class="pagination--pager" title="How to migrate large data to Economy Local
+">Previous</a>
+    
+    
+      <a href="/compdemos/Mountain-CyberDuck/" class="pagination--pager" title="Using Mountain Duck or Cyberduck for Accessing Economy Storage
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

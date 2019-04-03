@@ -1,0 +1,801 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Scientific Software - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our Technologies page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Scientific Software">
+<meta property="og:url" content="http://localhost:4000/computing/cluster_software/">
+
+
+  <meta property="og:description" content="The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our Technologies page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2019-03-21T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/computing/cluster_software/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/comp_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library/HOWTOs</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_methods/" class="">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_databases/" class="">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Compute</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/linux_linux101/" class="">Linux Operating System</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/resource_overview/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_software/" class="active">Scientific Software</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_usingSlurm/" class="">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_cloudCompute/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Scientific Software">
+    <meta itemprop="description" content="The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our Technologies page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="March 21, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Scientific Software
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_computing/cluster_software.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcomputing%2Fcluster_software%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#environment-modules">Environment Modules</a>
+    <ul>
+      <li><a href="#easybuild-life-sciences">EasyBuild Life Sciences</a></li>
+      <li><a href="#how-to-use-environment-modules">How to Use Environment Modules</a>
+        <ul>
+          <li><a href="#interactively">Interactively</a></li>
+          <li><a href="#scripting-with-environment-modules">Scripting with Environment Modules</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#installing-custom-software-packages">Installing Custom Software Packages</a>
+    <ul>
+      <li><a href="#packagesmodules-for-python-and-r">Packages/Modules for Python and R</a></li>
+      <li><a href="#other-software-installs-and-builds">Other software installs and builds</a></li>
+    </ul>
+  </li>
+  <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+  <li><a href="#batch-computing">Batch Computing</a></li>
+  <li><a href="#parallel-computing">Parallel Computing</a></li>
+  <li><a href="#external-slurm-and-hpc-reference-and-learning-resources">External Slurm and HPC Reference and Learning Resources</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our <a href="/computing/resource_overview/">Technologies</a> page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.</p>
+
+<p>The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.</p>
+
+<p>Reasons to use scientific software maintained by SciComp include:</p>
+<ul>
+  <li>packages are often faster due to compiler optimizations</li>
+  <li>packages are reproducible in or outside Fred Hutch</li>
+  <li>rapid access to many software packages and package versions</li>
+</ul>
+
+<h2 id="environment-modules">Environment Modules</h2>
+
+<p>On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is <strong>Lmod</strong>, and the commands you use to interact with Environment Modules are <code class="highlighter-rouge">module</code> or <code class="highlighter-rouge">ml</code>.</p>
+
+<h3 id="easybuild-life-sciences">EasyBuild Life Sciences</h3>
+<p>The full list of available software can be found <a href="http://fredhutch.github.io/easybuild-life-sciences/">on the Easy Build site</a>.</p>
+
+<h3 id="how-to-use-environment-modules">How to Use Environment Modules</h3>
+<p>As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: <code class="highlighter-rouge">module load Python</code>). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules.</p>
+
+<p>The default version of <code class="highlighter-rouge">Python</code> loaded using the generic reference will change as the <code class="highlighter-rouge">Python</code> package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: <code class="highlighter-rouge">module load R/3.5.1-foss-2016b-fh1</code>). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.</p>
+
+<h4 id="interactively">Interactively</h4>
+<p>When you log in to any SciComp managed server, your terminal session has <strong>Lmod</strong> pre-loaded. Commonly used shell commands around Environment Modules include:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">module avail</code></td>
+      <td>Output a list of available Environment Modules</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">module avail &lt;pattern&gt;</code></td>
+      <td>Output a filtered list of modules based on pattern (ex: <code class="highlighter-rouge">module avail SAMtools</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">module load &lt;packagename&gt;/&lt;version&gt;</code></td>
+      <td>Load a specific version of a module into your environment (ex: <code class="highlighter-rouge">module load Python/3.6.5-foss-2016b-fh1</code>) - you can cut and paste from the output of <code class="highlighter-rouge">module avail</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">module load &lt;packagename&gt;</code></td>
+      <td>Load a generic Environment Module (ex: <code class="highlighter-rouge">module load Perl</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">module list</code></td>
+      <td>Output a list of Environment Modules loaded in your current shell</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">module unload &lt;packagename&gt;</code></td>
+      <td>Unload an Environment Module from your current shell</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">module purge</code></td>
+      <td>Unload all currently loaded Environment Modules</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There is also a short version of the <code class="highlighter-rouge">module</code> command: <code class="highlighter-rouge">ml</code>.  The <code class="highlighter-rouge">ml</code> command can substitute for <code class="highlighter-rouge">module</code> in any <code class="highlighter-rouge">module</code> command, behaves like <code class="highlighter-rouge">module list</code> when called with no arguments, and behaves like <code class="highlighter-rouge">module load</code> when executed with an argument (ex: <code class="highlighter-rouge">ml R/3.5.1-foss-20167b-fh1</code> runs <code class="highlighter-rouge">module load R/3.5.1-foss-2016b-fh1</code>). The <code class="highlighter-rouge">ml</code> and <code class="highlighter-rouge">module</code> commands can be used in scripts, but see the section on Scripting with Environment Modules below.</p>
+
+<p>Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ which python
+/usr/bin/python
+$ module avail Python/2.7.15
+
+-------------------------- /app/easybuild/modules/all --------------------------
+   Python/2.7.15-foss-2016b-fh1    Python/2.7.15-foss-2016b
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching
+any of the "keys".
+
+$ module load Python/2.7.15-foss-2016b-fh1
+$ which python
+/app/easybuild/software/Python/2.7.15-foss-2016b-fh1/bin/python
+</code></pre></div></div>
+
+<h4 id="scripting-with-environment-modules">Scripting with Environment Modules</h4>
+<p>To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work.</p>
+
+<ol>
+  <li>Interactive shell session have the required <code class="highlighter-rouge">module</code> commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the <code class="highlighter-rouge">module</code> command. Add the follow lines to the top of your script:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">source</span> /app/Lmod/lmod/lmod/init/bash
+module use /app/easybuild/modules/all
+</code></pre></div>    </div>
+    <p>This snippet can be used as a template for bash shell scripts.</p>
+  </li>
+</ol>
+
+<p>The <code class="highlighter-rouge">source</code> like activates the <code class="highlighter-rouge">module</code> and <code class="highlighter-rouge">ml</code> commands for you current shell, and the <code class="highlighter-rouge">module use</code> line loads our list of modules.</p>
+
+<p>The next line you might use, for example, would be:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module load R/3.5.1-foss-2016b-fh1
+</code></pre></div></div>
+<p>This would load that specific Environment Module for use in your script.</p>
+
+<ol>
+  <li>Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module load Python/3.5.1-foss-2016b-fh1
+</code></pre></div>    </div>
+    <p>Rather than:</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module load Python
+</code></pre></div>    </div>
+    <p>The above line will load a different version of the software package over time as the “pointer” to a specific version is changed.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Note:</strong> This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.</p>
+</blockquote>
+
+<h2 id="installing-custom-software-packages">Installing Custom Software Packages</h2>
+<p>If you do not find the software you need, a support package or library, or the specific version you need, you have two options:</p>
+
+<ol>
+  <li>
+    <p>Request the software be built: file an issue in our <a href="https://github.com/FredHutch/easybuild-life-sciences">software repo</a> and we will work with you to build a module for any software or version. This Environment Module will then be available to all.</p>
+  </li>
+  <li>
+    <p>If you cannot wait for the software to be built, you may be able to install it yourself. This is primarily supported for language (Python/R) packages.</p>
+  </li>
+</ol>
+
+<h3 id="packagesmodules-for-python-and-r">Packages/Modules for Python and R</h3>
+<p>Normal install methods will work after loading an Environment Module:</p>
+
+<ul>
+  <li>R: <code class="highlighter-rouge">install.packages("&lt;pkgname&gt;")</code></li>
+  <li>Python: you can use <code class="highlighter-rouge">pip</code> or <code class="highlighter-rouge">setup.py</code> (specify <code class="highlighter-rouge">--user</code> with pip)</li>
+</ul>
+
+<p>Any package you install this way will be installed into your home directory.</p>
+
+<p>Remember that the environment module you have loaded will be used to install the package/module. For example, if you load <code class="highlighter-rouge">Python/3.6.9</code> and use <code class="highlighter-rouge">pip install --user &lt;newpkg&gt;</code> then you will need to load <code class="highlighter-rouge">Python/3.6.9</code> every time you wish to use <code class="highlighter-rouge">newpkg</code>. Using a different version of the language module may or may not work.</p>
+
+<h3 id="other-software-installs-and-builds">Other software installs and builds</h3>
+<p>If you want to install or build a standalone software package, you are also welcome to install into your home directory, with the following caveats:</p>
+
+<ul>
+  <li>We cannot install OS package dependencies (if your software has many dependencies, please file an issue <a href="https://github.com/FredHutch/easybuild-life-sciences">here</a> and we will be happy to work with you to offer a package build with all dependencies.</li>
+  <li>Ubuntu compilers are not optimized. We recommend loading a ‘toolchain’ module:
+    <ul>
+      <li>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module load foss-2016b
+</code></pre></div>        </div>
+        <p>This will get you GCC 5.4.0, binutils 2.26, OpenMPI 1.10.3, OpenBLAS 0.2.18, FFTW 3.3.4, ScaLAPACK 2.0.2 (most of our software on Ubuntu 14.04 is built against this toolchain).</p>
+      </li>
+    </ul>
+  </li>
+  <li>If you loaded a toolchain module when installing or building new software, you will must load that toolchain module before running that software, or you will get library errors.</li>
+</ul>
+
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<blockquote>
+  <p>Note:  For announcements from Scientific Computing, please see the <a href="/scicompannounce/">Announcements page</a>, and for assistance email <code class="highlighter-rouge">scicomp</code>.  Also, see the Events page in CenterNet for current Office Hours.</p>
+</blockquote>
+
+<ol>
+  <li><em>Something weird is going on with my shell and/or job!?!</em>
+    <ul>
+      <li>“Reset” your shell by logging out and back in. This will clear your environment. Users using screen or tmux will need to exit their session to clear their environment.</li>
+    </ul>
+  </li>
+  <li><em>Why am I getting errors when running software from a module?</em>
+    <ul>
+      <li>Unload all modules with <code class="highlighter-rouge">module purge</code> and re-load only the module(s) you need</li>
+      <li>Reset your shell - <em>see above</em></li>
+      <li>Remove and reinstall software in your home directory not installed with the module you are using (<code class="highlighter-rouge">~/R</code>,<code class="highlighter-rouge">~/.local</code>) - this is key with toolchain modules and package/libraries that use compiled code</li>
+    </ul>
+  </li>
+  <li><em>Only bash?</em>
+    <ul>
+      <li>Our recommendation is to use bash as your shell. If you wish to use a different shell, please contact SciComp.</li>
+    </ul>
+  </li>
+  <li><em>Is there a faster way?</em>
+    <ul>
+      <li>The command <code class="highlighter-rouge">ml</code> is a shortcut for <code class="highlighter-rouge">module</code> and implies <code class="highlighter-rouge">module load</code> but will work with other <code class="highlighter-rouge">module</code> subcommands (ex: <code class="highlighter-rouge">ml R/3.5.0-foss-2016b-fh1</code> or <code class="highlighter-rouge">ml avail Python/3.5</code>)</li>
+    </ul>
+  </li>
+  <li><em>What is this “foss-2016b” stuff?</em>
+    <ul>
+      <li>The EasyBuild project supports many different toolchains. The toolchain defines a compiler and library set, and also has a number of common support libraries (things like libTIFF) associated with it.</li>
+    </ul>
+  </li>
+  <li><em>Should I load default modules?</em>
+    <ul>
+      <li>It is faster and easier to type <code class="highlighter-rouge">ml R</code> than specifying the full package and version. However, the default version loaded by a generic <code class="highlighter-rouge">module load &lt;pkg&gt;</code> command will change over time.  If maintaining a specific version of a package is important to you, always specify the version.</li>
+    </ul>
+  </li>
+  <li><em>Is there a list of included language libraries/modules/packages?</em>
+    <ul>
+      <li>Yes! For R, Python, and some additional packages, look <a href="https://fredhutch.github.io/easybuild-life-sciences">here</a>.</li>
+    </ul>
+  </li>
+  <li><em>What about Bioconductor for R?</em>
+    <ul>
+      <li>Starting with R/3.4.3-foss-2016b-fh2 we include Bioconductor and many Bioc packages with the standard R module.</li>
+    </ul>
+  </li>
+  <li><em>What are Best Practices with Environment Modules?</em>
+    <ul>
+      <li>Specify the full Module name when loading, especially in scripts (see above for scripting information).</li>
+      <li>Avoid mixing Modules from different toolchains at the same time (unloading one and loading another mid-script works well if you need to).</li>
+      <li>If you can’t find a package you want, send an email us or file an <a href="https://github.com/FredHutch/easybuild-life-sciences">issue</a> requesting a new or updated package.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="batch-computing">Batch Computing</h2>
+
+<p><em>Batch</em> computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop should be disconnected for any reason the job will be terminated.</p>
+
+<p>The batch system used at the Hutch is <a href="http://schedmd.com">Slurm</a>.  Slurm provides a set of commands for submitting and managing jobs on the gizmo and beagle clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm on our systems see our <a href="/computing/cluster_usingSlurm/">Using Slurm page</a>, which also links to a variety of detailed how-to’s and examples to get you started using the on-premise HPC resources available</p>
+
+<h2 id="parallel-computing">Parallel Computing</h2>
+<p>There are many approaches to parallel computing (doing many jobs simultaneously rather than in series).  We have begun a Resource Library entry on <a href="/compdemos/cluster_parallel/">Parallel Computing with Slurm,</a> as well as created the <a href="https://github.com/FredHutch/slurm-examples">FredHutch/slurm-examples repository</a> containing community curated examples with additional documentation that can help you get started.</p>
+
+<h2 id="external-slurm-and-hpc-reference-and-learning-resources">External Slurm and HPC Reference and Learning Resources</h2>
+<p>For more information and education on how to use HPC resources from external sources see the following sites:</p>
+
+<ul>
+  <li>Princeton’s Introduction to <a href="https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/">HPC systems and Bash.</a></li>
+  <li>Harvard’s <a href="https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic">Wiki site Slurm page.</a></li>
+  <li>The Carpentries <a href="https://hpc-carpentry.github.io/hpc-intro/">lesson on HPC and job scheduling.</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-03-21">March 21, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_computing/cluster_software.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcomputing%2Fcluster_software%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/computing/cluster_overview/" class="pagination--pager" title="Large Scale Compute Overview
+">Previous</a>
+    
+    
+      <a href="/computing/cluster_usingSlurm/" class="pagination--pager" title="Using Slurm on Fred Hutch Systems
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>
