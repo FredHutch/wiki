@@ -32,7 +32,7 @@
       cores: 6
       sockets: 2
       memory_gb: 256
-      processor_model: E5-1234v666
+      processor_model: E5-2667v3
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: SiliconMechanics
@@ -47,7 +47,7 @@
       cores: 14
       sockets: 2
       memory_gb: 768
-      processor_model: E5-1234v666
+      processor_model: E5-2697v3
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
@@ -62,7 +62,7 @@
       cores: 14
       sockets: 2
       memory_gb: 384
-      processor_model: E5-1234v666
+      processor_model: E5-2697v3
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
@@ -124,10 +124,70 @@
       processor_model: r4
       processor_manufacturer: Intel
       manufacturer: EC2
-      vendor: amazon
+      vendor: Amazon
       model: r4.8xlarge
       os: Ubuntu 14.04 LTS
       local_storage: EBS
       network: EC2
       node_count: 34
       partition: largenode
+
+- cluster_name: koshu
+  type: HPC
+  location: GCP
+  access:
+    -
+      type: terminal
+      url:  ssh://rhino
+      auth: hutchnetID
+      auth_type: LDAP
+  scheduler:
+    -
+      name: slurm
+      version: 1
+  nodes:
+    - 
+      node_name: f
+      cores: 4
+      sockets: n/a
+      memory_gb: 32
+      processor_model: ??
+      processor_manufacturer: Intel
+      manufacturer: GCP
+      vendor: Google
+      model: ???
+      os: Ubuntu 14.04 LTS
+      local_storage: ???
+      network: ???
+      node_count: 70
+      partition: campus
+    - 
+      node_name: g
+      cores: 8
+      sockets: n/a
+      memory_gb: 256
+      processor_model: ??
+      processor_manufacturer: Intel
+      manufacturer: GCP
+      vendor: Google
+      model: ???
+      os: Ubuntu 14.04 LTS
+      local_storage: ???
+      network: ???
+      node_count: 10
+      partition: largenode
+    - 
+      node_name: h
+      cores: 4
+      sockets: n/a
+      memory_gb: 128
+      processor_model: ??
+      processor_manufacturer: Intel
+      manufacturer: GCP
+      vendor: Google
+      model: ???
+      os: Ubuntu 14.04 LTS
+      local_storage: ???
+      network: ???
+      node_count: 10
+      partition: gpu
