@@ -55,7 +55,7 @@ Network global scratch space is a scratch directory that is created on storage t
 
 Sometimes you need to work with temporary data that is not part of a specific pipeline, for example if you are doing manual QA on data for a few days or even weeks. The persistent scratch file system is accessible via environment variables $DELETE10, $DELETE30 and $DELETE90 and the files in these folders will be removed after 10, 30 or 90 days of inactivity. The $DELETE30 folder is currently available on Gizmo and $DELETE10 folders are currently avialble on Beagle and Koshu. These folders can also be reached from other operating systems: In Windows you can select (x:\scratch\delete30 ) and on Mac you select smb://center.fhcrc.org/fh/scratch/delete30.
 
-#### How long will my data stay in persistent scratch?
+## How long will my data stay in persistent scratch?
 
 In $DELETE30 the data will stay on the file system for 30 days after you have stopped accessing it. 3 days before the data is deleted you (the owner of the files created) will receive an email with a final warning:
 
