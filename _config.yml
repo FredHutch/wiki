@@ -41,6 +41,9 @@ collections:
   drafts:
     output: true
     permalink: /:collection/:path/
+  bioinfcomputing:
+    output: true
+    permalink: /:collection/:path/
 
 
 
@@ -85,7 +88,7 @@ search_full_content      :  true #, false (default)
 search_provider          :  google #(default), algolia
 # Can use google search, here are instructions: https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 google:
-  search_engine_id: 018020560330782233421:waz3ch9w_wg
+  search_engine_id: 008250600098126702450:xciawyvddl8
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -324,3 +327,15 @@ defaults:
       toc: true
       toc_label: "On This Page"
       share: true
+
+  # _bioinfcomputing
+  - scope:
+      path: ""
+      type: bioinfcomputing
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "bioinfcomputing"

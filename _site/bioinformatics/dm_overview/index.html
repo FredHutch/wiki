@@ -1,0 +1,559 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Overview of Data Management for Researchers - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="While the primary focus of research is the processes more clearly involved in the scientific endeavor, often the importance of knowing some degree of best practices for various data oriented issues is understated. The Generation section has an important section on data privacy and security when data relates to humans or human specimens.  The Computing section of this site contains a wide array of detailed information about the resources and processes provided by Center IT and Scientific Computing specifically.  However, here are aim to summarize the essential points of the best practices for the following topics here at the Fred Hutch.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Overview of Data Management for Researchers">
+<meta property="og:url" content="http://localhost:4000/bioinformatics/dm_overview/">
+
+
+  <meta property="og:description" content="While the primary focus of research is the processes more clearly involved in the scientific endeavor, often the importance of knowing some degree of best practices for various data oriented issues is understated. The Generation section has an important section on data privacy and security when data relates to humans or human specimens.  The Computing section of this site contains a wide array of detailed information about the resources and processes provided by Center IT and Scientific Computing specifically.  However, here are aim to summarize the essential points of the best practices for the following topics here at the Fred Hutch.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2018-08-31T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/bioinformatics/dm_overview/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Bioinformatics</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/inf_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformaticsdemos/" class="">Resource Library</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Best Practices for Research Data Management</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_overview/" class="active">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_storage/" class="">Data Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_ingest/" class="">Data Ingestion and Public Datasets</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_scratch/" class="">Using Scratch Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_archive/" class="">Data Archiving</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_R/" class="">R, RStudio</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_python/" class="">Python</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_unixbash/" class="">Other Languages</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Managing Code and Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_resoverview/" class="">Fred Hutch Compute Resources</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_github/" class="">GitHub, Versioning and Sharing</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_docker/" class="">Docker</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Training and References</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/howto_training/" class="">Training Opportunties</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Overview of Data Management for Researchers">
+    <meta itemprop="description" content="While the primary focus of research is the processes more clearly involved in the scientific endeavor, often the importance of knowing some degree of best practices for various data oriented issues is understated. The Generation section has an important section on data privacy and security when data relates to humans or human specimens.  The Computing section of this site contains a wide array of detailed information about the resources and processes provided by Center IT and Scientific Computing specifically.  However, here are aim to summarize the essential points of the best practices for the following topics here at the Fred Hutch.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="August 31, 2018">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Overview of Data Management for Researchers
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinformatics/dm_overview.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinformatics%2Fdm_overview%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#data-storage-best-practices">Data Storage Best Practices</a></li>
+  <li><a href="#data-ingestion-and-public-datasets-best-practices">Data Ingestion and Public Datasets Best Practices</a></li>
+  <li><a href="#using-scratch">Using Scratch</a></li>
+  <li><a href="#data-archiving-best-practices">Data Archiving Best Practices</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>While the primary focus of research is the processes more clearly involved in the scientific endeavor, often the importance of knowing some degree of best practices for various data oriented issues is understated. The Generation section has an important section on <a href="/generation/human_privacySecurity/">data privacy and security</a> when data relates to humans or human specimens.  The Computing section of this site contains a wide array of detailed information about the resources and processes provided by Center IT and Scientific Computing specifically.  However, here are aim to summarize the essential points of the best practices for the following topics here at the Fred Hutch.</p>
+
+<h2 id="data-storage-best-practices"><a href="/bioinformatics/dm_storage/">Data Storage Best Practices</a></h2>
+<p>Depending on the type of data used by a research group, different combinations of data storage options may be appropriate.  Assessing the strengths, mode of access, and interactivity with computing resources of each of these types of data storage options alongside an assessment of the types of data a research group use and the type of interactions with those data is becoming more important for researchers. This assessment also is becoming more important to repeat over time as data storage and connectivity infrastructure changes and as the particular data types and interactions of research groups evolve.</p>
+
+<h2 id="data-ingestion-and-public-datasets-best-practices"><a href="/bioinformatics/dm_ingest/">Data Ingestion and Public Datasets Best Practices</a></h2>
+<p>Large scale datasets for a study can come from multiple sources, such as those generated by an outside sequencing center or the Fred Hutch Genomics Shared Resource or other large databases. Additionally, a study might rely on publicly available datasets in a repository with some degree of managed access. Regardless of the source, if bioinformatic or analytic processing of the data is required, data will need to be accessible via a Fred Hutch managed data storage, compute resource, or workstation. Below, we will outline some of the different approaches that exist to ingest and store only the most relevant portions of the data. Additionally being selective about what aspects and to what degree public datasets need to be copied to a local storage space can ensure that data storage and cost issues do not arise unnecessarily. Being knowledgeable about the various repositories and modes of access that exist for data of interest will ensure that research progress is neither hindered by data access challenges nor by incurred costs from unnecessary data storage.</p>
+
+<h2 id="using-scratch"><a href="/bioinformatics/dm_scratch/">Using Scratch</a></h2>
+<p>Scratch storage space is temporary storage that can be leveraged during workflows to store intermediate files or working copies of raw data while an analysis is being performed.  The benefits and limitations of using Scratch storage are discussed here as well as some guidance for how to structure your workflows to best employ Scratch.</p>
+
+<h2 id="data-archiving-best-practices"><a href="/bioinformatics/dm_archive/">Data Archiving Best Practices</a></h2>
+<p>Typically the need to actively archive data is fairly rare, but as research datasets and digital research assets become larger and larger such as for imaging or genomics data, a strategy for managing data archiving becomes important. Also, as data management plans and public repository deposition of data increasingly require researchers to steward larger and larger data sets in a more active manner. Thus prioritizing active data management during the research process can be important in order to avoid massive loss of time and resources due to the need to slog through old data to comply with current funding or publication requirements.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-08-31">August 31, 2018</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinformatics/dm_overview.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinformatics%2Fdm_overview%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/bioinformatics/dm_ingest/" class="pagination--pager" title="Data Ingestion and Public Datasets
+">Previous</a>
+    
+    
+      <a href="/bioinformatics/dm_scratch/" class="pagination--pager" title="Using Scratch Storage
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

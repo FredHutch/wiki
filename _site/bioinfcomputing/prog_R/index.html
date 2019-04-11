@@ -1,0 +1,702 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>R and RStudio - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or CRAN, or via the FH Center IT’s Self Service Tools (on Macs or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="R and RStudio">
+<meta property="og:url" content="http://localhost:4000/bioinfcomputing/prog_R/">
+
+
+  <meta property="og:description" content="R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or CRAN, or via the FH Center IT’s Self Service Tools (on Macs or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2019-04-01T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/bioinfcomputing/prog_R/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Bioinformatics and Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/comp_index/" class="">Overview</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/access_methods/" class="">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_databases/" class="">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_R/" class="active">R, RStudio</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_python/" class="">Python</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_linux101/" class="">Linux, Unix and Bash</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_managecode/" class="">Managing and Sharing Code</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_development/" class="">Software Development Practices</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_platforms/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_environments/" class="">Computing Environments and Containers</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_jobs/" class="">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_cloud/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Reference and Announcements</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/reference_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="R and RStudio">
+    <meta itemprop="description" content="R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or CRAN, or via the FH Center IT’s Self Service Tools (on Macs or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="April 01, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">R and RStudio
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinfcomputing/prog_R.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinfcomputing%2Fprog_R%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#rstudio">RStudio</a></li>
+  <li><a href="#r-packages-and-extensions">R Packages and Extensions</a>
+    <ul>
+      <li><a href="#bioconductor">Bioconductor</a></li>
+      <li><a href="#cran">CRAN</a></li>
+      <li><a href="#github">GitHub</a></li>
+    </ul>
+  </li>
+  <li><a href="#local-desktop-use">Local (Desktop) Use</a></li>
+  <li><a href="#remote-rhino-and-gizmo-use">Remote (Rhino and Gizmo) Use</a>
+    <ul>
+      <li><a href="#current-r-builds-on-rhinogizmo">Current R Builds on Rhino/Gizmo</a></li>
+      <li><a href="#rhino">Rhino</a></li>
+      <li><a href="#gizmo">Gizmo</a></li>
+    </ul>
+  </li>
+  <li><a href="#rstudiofredhutchorg">rstudio.fredhutch.org</a></li>
+  <li><a href="#the-tidyverse">The Tidyverse</a></li>
+  <li><a href="#shiny">Shiny</a></li>
+  <li><a href="#local-resources">Local resources</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or <a href="https://cran.r-project.org/">CRAN</a>, or via the FH Center IT’s Self Service Tools (on <a href="https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html">Macs</a> or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.</p>
+
+<h2 id="rstudio">RStudio</h2>
+<p>The RStudio IDE is a free and open source, popular interface to R, which supports a number of added features including a GUI that can be customized to view aspects of your work of most importance (such as plots, files, environment variables, scripts, workspaces, etc). RStudio can be <a href="https://www.rstudio.com/">downloaded here</a> and requires an installation of R itself first.  Keep in mind that updates to R/RStudio subsequently will require a two step process, one to update R itself, and the other to update the interface to R, RStudio.</p>
+
+<p>RStudio has a few particularly useful features:</p>
+<ul>
+  <li>Support for R Markdowns/Notebooks</li>
+  <li>Integration with git or SVN</li>
+  <li>Concurrent views of code, plots, files, and environment variables with customized panels.</li>
+  <li>Direct deployment of Shiny apps via Shinyapps.io</li>
+  <li>R package management and direct installation capabilities</li>
+</ul>
+
+<h2 id="r-packages-and-extensions">R Packages and Extensions</h2>
+<p>There are a number of available resources built on R that are free and open source that can greatly expand the utility of R and RStudio for research purposes.  There are currently three main sources of R packages that are of interest to a majority of the research community.</p>
+
+<h3 id="bioconductor">Bioconductor</h3>
+<p><a href="https://bioconductor.org/">Bioconductor</a> is a public repository of R bioinformatics packages. Bioconductor packages are curated for intercompatibility and grouped into <a href="http://bioconductor.org/packages/3.7/workflows/">workflows</a> (eg. CyTOF, ChIP-seq, eQTL, etc…). New Bioinformatic tools often result in a submission of the corresponding packages to Bioconductor.  These are reliable, well vetted packages that undergo a rigorous process for submission.</p>
+
+<h3 id="cran">CRAN</h3>
+<p><a href="https://cran.r-project.org">CRAN</a>, (Comprehensive R Archive Network) is a public repository of numerous R packages along with R itself. Numerous packages are available, though packages are not vetted as heavily as Bioconductor and generally are required to successfully be built, but may not always perform reliably, or be fully documented.</p>
+
+<h3 id="github">GitHub</h3>
+<p><a href="https://github.com/trending/r">GitHub</a> hosts many open source R packages. As they are <strong>not</strong> vetted or peer-reviewed, these packages can be more experimental than those on CRAN or Bioconductor and thus you will want to proceed with caution. Some basic instructions on how to install packages into your local R/RStudio are included in this <a href="https://cran.r-project.org/web/packages/githubinstall/vignettes/githubinstall.html">vignette.</a></p>
+
+<h2 id="local-desktop-use">Local (Desktop) Use</h2>
+<p>When using R/RStudio locally, you have the option to install a number of different packages from multiple sources.  Depending on the source of the package, you may approach downloading and installing them slightly differently but you manage the various packages installed, the versions of them as well as the version of R you are using them with.</p>
+
+<h2 id="remote-rhino-and-gizmo-use">Remote (<code class="highlighter-rouge">Rhino</code> and <code class="highlighter-rouge">Gizmo</code>) Use</h2>
+<p>If computing resources beyond what is available via your desktop are required, you may consider running R scripts or RStudio from the <code class="highlighter-rouge">rhinos</code> or <code class="highlighter-rouge">gizmo</code>.  When using R/RStudio on shared computing resources, different options for builds and modules are available that you can take advantage of.  <code class="highlighter-rouge">SciComp</code> makes pre-built modules available for researcher use in order to facilitate more reproducible and reliable use of software on the local cluster.</p>
+
+<h3 id="current-r-builds-on-rhinogizmo">Current R Builds on <code class="highlighter-rouge">Rhino</code>/<code class="highlighter-rouge">Gizmo</code></h3>
+<p>SciComp maintains a current list of the various builds of R available on <code class="highlighter-rouge">Gizmo</code> for use by researchers on the <a href="https://fredhutch.github.io/easybuild-life-sciences/">EasyBuild site.</a>  Each build has different packages installed and versions of R itself, thus identifying if an existing R build matches your needs is a first step to using R on <code class="highlighter-rouge">Gizmo</code>.  If you do not see a build that meets your needs, then contact <code class="highlighter-rouge">scicomp</code> with the specific needs of your project.</p>
+
+<h3 id="rhino"><code class="highlighter-rouge">Rhino</code></h3>
+<p>Depending on what OS is on your local computer, the steps are:</p>
+<ul>
+  <li>If your local computer runs Windows, you should connect to the <code class="highlighter-rouge">Rhino</code>’s with <a href="/computing/access_methods/#nomachine-nx-access-multi-os">NoMachine</a>, then launch RStudio from within NoMachine.</li>
+  <li>If your local computer is a Mac, you should <a href="/computing/access_methods/#xquartz-x11-mac-osx">install XQuartz and connect to Rhino</a>, then launch RStudio from the terminal</li>
+  <li>If your local computer runs Linux, you simply need to connect to Rhino <a href="/computing/access_methods/#xquartz-x11-mac-osx">with X11 forwarding</a> using the <code class="highlighter-rouge">-X</code> flag as detailed above for Mac computers.</li>
+</ul>
+
+<h3 id="gizmo"><code class="highlighter-rouge">Gizmo</code></h3>
+<p>From Rhino, execute the <code class="highlighter-rouge">grabnode</code> command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node.</p>
+
+<h2 id="rstudiofredhutchorg">rstudio.fredhutch.org</h2>
+<p>Lastly, a Hutch supported RStudio server can be accessed at <a href="http://rstudio.fhcrc.org">rstudio.fhcrc.org</a> from computers connected to the Hutch network. For more information about using it, please contact <code class="highlighter-rouge">scicomp</code>.</p>
+
+<h2 id="the-tidyverse">The Tidyverse</h2>
+<p>The <a href="https://www.tidyverse.org/">Tidyverse</a> is a group of R packages that coordinate together and are commonly used for manipulating and  visualizing data in data science applications.  There are a number of useful packages for research based users that are part of the Tidyverse, and it’s worth the time to learn about them and see how one might employ them to clean, analyze and convey data and results.  DataCamp has an online <a href="https://www.datacamp.com/courses/introduction-to-the-tidyverse">Introduction to the Tidyverse</a> that can be useful when first evaluating whether these packages might be useful.</p>
+
+<h2 id="shiny">Shiny</h2>
+<p><a href="https://shiny.rstudio.com/">Shiny</a> is an R package bundled with RStudio that enables the creation of interactive applications powered by R code. These apps can be viewed on any computer running RStudio, or they can be hosted on a server. Scicomp provides instructions for hosting Shiny apps <a href="https://sciwiki.fredhutch.org/compdemos/shiny/">here</a></p>
+
+<h2 id="local-resources">Local resources</h2>
+<ul>
+  <li><a href="http://www.meetup.com/Seattle-useR/">Seattle useR group</a></li>
+  <li><a href="https://cascadiarconf.com/">Cascadia RConf</a>, a local yearly conference</li>
+</ul>
+
+<blockquote>
+  <p>NOTE: This article is a work in progress. If you have suggestions or would like to contribute email <code class="highlighter-rouge">sciwiki</code>.</p>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-04-01">April 01, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinfcomputing/prog_R.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinfcomputing%2Fprog_R%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/bioinfcomputing/compute_platforms/" class="pagination--pager" title="Supported Technologies and Platforms
+">Previous</a>
+    
+    
+      <a href="/bioinfcomputing/prog_development/" class="pagination--pager" title="Software Development Practices
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

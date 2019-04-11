@@ -1,0 +1,665 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Computing Resource Access Methods - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="  Note:  This page is still a work in progress.  If you have specific input on topics related to access methods, please email them to sciwiki.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Computing Resource Access Methods">
+<meta property="og:url" content="http://localhost:4000/computing/access_methods/">
+
+
+  <meta property="og:description" content="  Note:  This page is still a work in progress.  If you have specific input on topics related to access methods, please email them to sciwiki.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2018-09-27T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/computing/access_methods/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/comp_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library/HOWTOs</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_methods/" class="active">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_databases/" class="">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Compute</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/linux_linux101/" class="">Linux Operating System</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/resource_overview/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_software/" class="">Scientific Software</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_usingSlurm/" class="">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_cloudCompute/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Computing Resource Access Methods">
+    <meta itemprop="description" content="  Note:  This page is still a work in progress.  If you have specific input on topics related to access methods, please email them to sciwiki.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="September 27, 2018">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Computing Resource Access Methods
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_computing/access_methods.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcomputing%2Faccess_methods%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#client-devices">Client Devices</a>
+    <ul>
+      <li><a href="#laptops-and-desktops">Laptops and Desktops</a></li>
+      <li><a href="#mobile-devices">Mobile Devices</a></li>
+    </ul>
+  </li>
+  <li><a href="#access-methods-terminals-x11-ssh">Access Methods (Terminals, X11, ssh)</a>
+    <ul>
+      <li><a href="#putty-windows">Putty (Windows)</a></li>
+      <li><a href="#iterm2-mac-osx">iTerm2 (Mac OSX)</a></li>
+      <li><a href="#xquartz-x11-mac-osx">xquartz X11 (Mac OSX)</a></li>
+      <li><a href="#terminator-linux">Terminator (Linux)</a></li>
+      <li><a href="#nomachine-nx-access-multi-os">NoMachine NX access (Multi-OS)</a></li>
+    </ul>
+  </li>
+  <li><a href="#how-can-i-get-access-from-remote-locations">How can I get access from remote locations?</a>
+    <ul>
+      <li><a href="#vpn">VPN</a></li>
+      <li><a href="#ssh-to-snailfhcrcorg">ssh to snail.fhcrc.org</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <blockquote>
+  <p>Note:  This page is still a work in progress.  If you have specific input on topics related to access methods, please email them to <code class="highlighter-rouge">sciwiki</code>.</p>
+</blockquote>
+
+<h2 id="client-devices">Client Devices</h2>
+
+<p>Client devices are supported by Center IT (ADM, CRD, VIDD) as well as Division IT groups (BSD, HB, PHS).</p>
+
+<h3 id="laptops-and-desktops">Laptops and Desktops</h3>
+
+<p>Center IT supports 3 different operating systems:</p>
+
+<ul>
+  <li>Laptops:
+    <ul>
+      <li>Windows</li>
+      <li>MacOS</li>
+    </ul>
+  </li>
+  <li>Desktops:
+    <ul>
+      <li>Windows</li>
+      <li>MacOS</li>
+      <li>Ubuntu Linux LTS</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Please see Center IT’s page in CenterNet about <a href="https://centernet.fredhutch.org/cn/u/center-it/help-desk/laptops-and-desktops.html">Laptops and Desktops</a> for more information about support.</p>
+
+<blockquote>
+  <p>Note: If you request a Linux Desktop, Center IT will recommend that you use NoMachine from a Windows or Mac system instead as this is the most appropriate choice for most users but not all. If it is required for your work, it can be supported.</p>
+</blockquote>
+
+<h3 id="mobile-devices">Mobile Devices</h3>
+
+<p>Please see Center IT pages for more information on <a href="https://centernet.fredhutch.org/cn/u/center-it/services/mobile_device_service.html">Mobile Device Services</a> or contact <a href="https://centernet.fredhutch.org/cn/u/center-it/help-desk.html">Help Desk</a> with questions or problems.</p>
+
+<h2 id="access-methods-terminals-x11-ssh">Access Methods (Terminals, X11, ssh)</h2>
+
+<p>There are multiple ways you can get access Scientific Computing resources which are all running on a supported version of Ubuntu Linux. The most simple form of access is using a secure shell terminal software such as <code class="highlighter-rouge">ssh</code> or <code class="highlighter-rouge">putty</code>. You may also need graphical output (GUI), for example to use tools like R Studio or advanced text editors. For this you will need X11 tools which can either be installed as add-ons to your ssh program or a dedicated tool such as NoMachine.  See this page for more information about <a href="/compdemos/ssh/">ssh configurations.</a></p>
+
+<h3 id="putty-windows">Putty (Windows)</h3>
+
+<p>Putty is the most widely used secure shell software for Windows. You can install putty through “Software Center” and then simply connect to host name <code class="highlighter-rouge">rhino</code></p>
+
+<h3 id="iterm2-mac-osx">iTerm2 (Mac OSX)</h3>
+
+<p>The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources.  We also recommend using <a href="https://www.iterm2.com/">iTerm2</a> for your local terminal program on your Mac- it has a richer feature set that comes in handy as your computing needs grow.</p>
+
+<h3 id="xquartz-x11-mac-osx">xquartz X11 (Mac OSX)</h3>
+
+<p>The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go <a href="http://xquartz.macosforge.org">here</a>, and download and install the latest version of XQuartz.</p>
+
+<p>After installing XQuartz just start the app. The XQuartz icon will appear in the toolbar showing that it is running. XQuartz is now running an X11 client and that is the only interaction that you need to do with XQuartz. After XQuartz is running, open the Mac terminal. The latest version of XQuartz sets the DISPLAY environment with the default Mac terminal window. We do not recommend using the terminal that comes with XQuartz.</p>
+
+<p>When connecting to a rhino with ssh always use the -X flag to forward your Xsession to your Mac.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -X jfdey@rhino2
+</code></pre></div></div>
+
+<p>After connecting to a Rhino verify that your X11 client is working by typing <code class="highlighter-rouge">xeyes</code>.</p>
+
+<h3 id="terminator-linux">Terminator (Linux)</h3>
+
+<p>Terminator is a convenient terminal emulator that can have multiple terminals in a single window. You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend <a href="https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx">NoMachine NX</a> to connect to a Linux machine with Terminator.</p>
+
+<p>After starting Terminator you can right click on the terminal window and either split it horizontally or vertically. This 1 min video shows you how it works:</p>
+
+<p><a href="https://youtu.be/OmkkbvH_JZU" title="See how Terminator works"><img src="https://img.youtube.com/vi/OmkkbvH_JZU/0.jpg" alt="Terminator" /></a></p>
+
+<h3 id="nomachine-nx-access-multi-os">NoMachine NX access (Multi-OS)</h3>
+<p>NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers <code class="highlighter-rouge">lynx</code>, <code class="highlighter-rouge">sphinx</code> or <code class="highlighter-rouge">manx</code> which you use to access the <code class="highlighter-rouge">rhino</code> systems. To connect through the local Fred Hutch network or through a VPN connection please download and install the NoMachine Enterprise Client from <a href="https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client">NoMachine’s Site.</a>  Windows users can also install an older version from “Software Center”.</p>
+
+<p>Configuration is very quick and the process is described in this video:</p>
+
+<p><a href="https://youtu.be/I3znzb9M_Ms" title="See how to connect with NoMachine"><img src="https://img.youtube.com/vi/I3znzb9M_Ms/0.jpg" alt="NoMachine" /></a></p>
+
+<p>One of the nicest features of NoMachine is that you can disconnect from the server’s desktop environment and later resume the connection and continue right where you left off with all terminal windows in the same place. NoMachine from Windows or Mac is often a better choice than installing a Linux desktop.</p>
+
+<h2 id="how-can-i-get-access-from-remote-locations">How can I get access from remote locations?</h2>
+
+<p>The Fred Hutch network is protected by a firewall and there are currently 2 options to get access to resources inside the network, using VPN or <code class="highlighter-rouge">snail.fhcrc.org</code>.</p>
+
+<h3 id="vpn">VPN</h3>
+
+<p>The Fred Hutch desktop VPN service is the default choice for all remote connections. Please see the <a href="https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html">VPN page on CenterNet</a> for more details.</p>
+
+<h3 id="ssh-to-snailfhcrcorg">ssh to <code class="highlighter-rouge">snail.fhcrc.org</code></h3>
+
+<p>Snail is a SSH gateway (also called bastion host or jump host) you can use to get remote access if you do not require the features that VPN provides. Using SSH can be easier for some users, for example if you have a network printer at home you cannot use it while connected to VPN.
+By default you login to <code class="highlighter-rouge">snail.fhcrc.org</code> first and then to <code class="highlighter-rouge">rhino</code>. However, if you add these 2 lines your ~/.ssh/config file you only have to type <code class="highlighter-rouge">ssh</code> once</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Host rhino*.fhcrc.org
+    ProxyCommand ssh yourusername@snail.fhcrc.org exec nc %h %p 2&gt; /dev/nul
+</code></pre></div></div>
+<p>If you are outside the Fred Hutch network type <code class="highlighter-rouge">ssh rhino.fhcrc.org</code> to use the snail gateway and if you are inside type <code class="highlighter-rouge">ssh rhino</code> to bypass the gateway.</p>
+
+<p>Please see <a href="https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts">this page</a> to learn more about ProxyCommand.  See this page for more information about <a href="/compdemos/ssh/">ssh configurations.</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-09-27">September 27, 2018</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_computing/access_methods.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcomputing%2Faccess_methods%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/computing/access_credentials/" class="pagination--pager" title="Computing Credentials
+">Previous</a>
+    
+    
+      <a href="/computing/access_overview/" class="pagination--pager" title="Computing Access Overview
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

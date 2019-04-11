@@ -1,0 +1,1122 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Intro to plyranges (Bioconductor) - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="plyranges provides dplyr-style operations to genomic range data infrastructure in Bioconductor. Spending 15 - 20 minutes going over this demo, you may find how plyranges enables us to create more clean, readable and reproducible codes for genomic data analysis.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Intro to plyranges (Bioconductor)">
+<meta property="og:url" content="http://localhost:4000/infdemos/plyranges-workshop/">
+
+
+  <meta property="og:description" content="plyranges provides dplyr-style operations to genomic range data infrastructure in Bioconductor. Spending 15 - 20 minutes going over this demo, you may find how plyranges enables us to create more clean, readable and reproducible codes for genomic data analysis.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/infdemos/plyranges-workshop/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Bioinformatics</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/inf_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformaticsdemos/" class="">Resource Library</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Best Practices for Research Data Management</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_storage/" class="">Data Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_ingest/" class="">Data Ingestion and Public Datasets</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_scratch/" class="">Using Scratch Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_archive/" class="">Data Archiving</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_R/" class="">R, RStudio</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_python/" class="">Python</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_unixbash/" class="">Other Languages</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Managing Code and Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_resoverview/" class="">Fred Hutch Compute Resources</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_github/" class="">GitHub, Versioning and Sharing</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_docker/" class="">Docker</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Training and References</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/howto_training/" class="">Training Opportunties</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Intro to plyranges (Bioconductor)">
+    <meta itemprop="description" content="plyranges provides dplyr-style operations to genomic range data infrastructure in Bioconductor. Spending 15 - 20 minutes going over this demo, you may find how plyranges enables us to create more clean, readable and reproducible codes for genomic data analysis.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Intro to plyranges (Bioconductor)
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_infdemos/plyranges-workshop.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Finfdemos%2Fplyranges-workshop%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#setup">Setup</a></li>
+  <li><a href="#invoke-r-or-rstudio-on-rhino">Invoke R or Rstudio on rhino</a></li>
+  <li><a href="#start-with-granges">Start with GRanges</a>
+    <ul>
+      <li><a href="#construct-a-granges-object">Construct a GRanges object</a></li>
+    </ul>
+  </li>
+  <li><a href="#core-verbs">Core verbs</a>
+    <ul>
+      <li><a href="#mutate">mutate()</a></li>
+      <li><a href="#filter">filter()</a></li>
+      <li><a href="#summarise">summarise()</a></li>
+      <li><a href="#group_by">group_by()</a></li>
+      <li><a href="#ungroup">ungroup()</a></li>
+      <li><a href="#select">select()</a></li>
+    </ul>
+  </li>
+  <li><a href="#arithmatic">Arithmatic</a></li>
+  <li><a href="#arithmatic-1">Arithmatic</a></li>
+  <li><a href="#genomic-aggregation">Genomic aggregation</a>
+    <ul>
+      <li><a href="#reduce_range">reduce_range()</a></li>
+      <li><a href="#disjoin_ranges">disjoin_ranges()</a></li>
+    </ul>
+  </li>
+  <li><a href="#overlap">Overlap</a>
+    <ul>
+      <li><a href="#filter_by_overalsp">filter_by_overalsp()</a></li>
+      <li><a href="#more-overlap-actions">More overlap actions</a></li>
+    </ul>
+  </li>
+  <li><a href="#r-session-info">R session info</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><code class="highlighter-rouge">plyranges</code> provides <code class="highlighter-rouge">dplyr</code>-style operations to genomic range data infrastructure in Bioconductor. Spending 15 - 20 minutes going over this demo, you may find how <code class="highlighter-rouge">plyranges</code> enables us to create more clean, readable and reproducible codes for genomic data analysis.</p>
+
+<p>This demo is extracted from a chapter in Bioconductor 2018 Workshop Compilation - <a href="https://bioconductor.github.io/BiocWorkshops/fluent-genomic-data-analysis-with-plyranges.html">Fluent Genomic Data Analysis with Plyranges</a>.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>It requires R &gt;= 3.5.0 to install <code class="highlighter-rouge">BiocManager</code> and <code class="highlighter-rouge">plyanges</code>. <code class="highlighter-rouge">BiocManager</code> is a new package for Bioconductor package management.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">install.packages</span><span class="p">(</span><span class="s2">"BiocManager"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">BiocManager</span><span class="p">)</span><span class="w">
+</span><span class="n">install</span><span class="p">(</span><span class="s2">"plyranges"</span><span class="err">"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="invoke-r-or-rstudio-on-rhino">Invoke R or Rstudio on rhino</h2>
+
+<p>If you intend to work on rhino, <code class="highlighter-rouge">ml</code> R and Rstudio.</p>
+
+<ul>
+  <li>
+    <p>Connect to rhino:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; ssh -X HutchID@rhino
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Load R and Rstudio modules (R &gt;= 3.5.0):</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; ml R/3.5.0-foss-2016b-fh1
+&gt; ml rstudio/1.1.383
+&gt; rstudio &amp;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>In Rstudio, load the library</p>
+  </li>
+</ul>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">plyranges</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="start-with-granges">Start with GRanges</h2>
+
+<p><code class="highlighter-rouge">GRanges</code> is the basic, core genomic range data structure of Bioconductor. It has two core components:</p>
+
+<ul>
+  <li>seqname, ranges, strands columns (left side of the dotted line)</li>
+  <li>metadata columns: annotation, covariates (right side of the dotted line)</li>
+</ul>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+    </span><span class="c1">## GRanges object with 6 ranges and 1 metadata column:</span><span class="w">
+    </span><span class="c1">##       seqnames    ranges strand |     gene_id</span><span class="w">
+    </span><span class="c1">##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt;</span><span class="w">
+    </span><span class="c1">##   [1]       VI 3322-3846      - |     YFL064C</span><span class="w">
+    </span><span class="c1">##   [2]       VI 3030-3338      - |     YFL065C</span><span class="w">
+    </span><span class="c1">##   [3]       VI 1437-2615      - |     YFL066C</span><span class="w">
+    </span><span class="c1">##   [4]       VI 5066-5521      + |     YFL063W</span><span class="w">
+    </span><span class="c1">##   [5]       VI 6426-7565      + |     YFL062W</span><span class="w">
+    </span><span class="c1">##   [6]       VI  836-1363      + |     YFL067W</span><span class="w">
+    </span><span class="c1">##   -------</span><span class="w">
+    </span><span class="c1">##   seqinfo: 1 sequence from an unspecified genome; no seqlengths</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="construct-a-granges-object">Construct a GRanges object</h3>
+
+<p>The conventional way to create a <code class="highlighter-rouge">GRanges</code> object is using Constructor <code class="highlighter-rouge">GRanges()</code>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cd">#' Genomic range columns</span><span class="w">
+</span><span class="n">gr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">GRanges</span><span class="p">(</span><span class="n">seqnames</span><span class="o">=</span><span class="s2">"VI"</span><span class="p">,</span><span class="w">
+              </span><span class="n">IRanges</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3322</span><span class="p">,</span><span class="w"> </span><span class="m">3030</span><span class="p">,</span><span class="w"> </span><span class="m">1437</span><span class="p">,</span><span class="w">  </span><span class="m">5066</span><span class="p">,</span><span class="w"> </span><span class="m">6426</span><span class="p">,</span><span class="w"> </span><span class="m">836</span><span class="p">),</span><span class="w">
+                      </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3846</span><span class="p">,</span><span class="w"> </span><span class="m">3338</span><span class="p">,</span><span class="w"> </span><span class="m">2615</span><span class="p">,</span><span class="w"> </span><span class="m">5521</span><span class="p">,</span><span class="w"> </span><span class="m">7565</span><span class="p">,</span><span class="w"> </span><span class="m">1363</span><span class="p">)),</span><span class="w">
+              </span><span class="n">strand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"-"</span><span class="p">,</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w"> </span><span class="s2">"+"</span><span class="p">,</span><span class="w"> </span><span class="s2">"+"</span><span class="p">,</span><span class="w"> </span><span class="s2">"+"</span><span class="p">))</span><span class="w">
+</span><span class="cd">#' define the metadata columns</span><span class="w">
+</span><span class="n">mcols</span><span class="p">(</span><span class="n">gr</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w">
+  </span><span class="n">DataFrame</span><span class="p">(</span><span class="n">gene_id</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"YFL064C"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YFL065C"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YFL066C"</span><span class="p">,</span><span class="w">
+                      </span><span class="s2">"YFL063W"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YFL062W"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YFL067W"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Or we can use <code class="highlighter-rouge">plyranges::as_granges()</code> to create a <code class="highlighter-rouge">GRanges</code> object:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">plyranges</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">genes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">seqnames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"VI"</span><span class="p">,</span><span class="w">
+                    </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3322</span><span class="p">,</span><span class="w"> </span><span class="m">3030</span><span class="p">,</span><span class="w"> </span><span class="m">1437</span><span class="p">,</span><span class="w">  </span><span class="m">5066</span><span class="p">,</span><span class="w"> </span><span class="m">6426</span><span class="p">,</span><span class="w"> </span><span class="m">836</span><span class="p">),</span><span class="w">
+                    </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3846</span><span class="p">,</span><span class="w"> </span><span class="m">3338</span><span class="p">,</span><span class="w"> </span><span class="m">2615</span><span class="p">,</span><span class="w"> </span><span class="m">5521</span><span class="p">,</span><span class="w"> </span><span class="m">7565</span><span class="p">,</span><span class="w"> </span><span class="m">1363</span><span class="p">),</span><span class="w">
+                    </span><span class="n">strand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"-"</span><span class="p">,</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w"> </span><span class="s2">"+"</span><span class="p">,</span><span class="w"> </span><span class="s2">"+"</span><span class="p">,</span><span class="w"> </span><span class="s2">"+"</span><span class="p">),</span><span class="w">
+                    </span><span class="n">gene_id</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"YFL064C"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YFL065C"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YFL066C"</span><span class="p">,</span><span class="w">
+                              </span><span class="s2">"YFL063W"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YFL062W"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YFL067W"</span><span class="p">),</span><span class="w">
+                    </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+</span><span class="n">gr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as_granges</span><span class="p">(</span><span class="n">genes</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="core-verbs">Core verbs</h2>
+
+<p>The code chunks perform actions on <code class="highlighter-rouge">GRagnes</code> objects using some verbs defined by <code class="highlighter-rouge">plyranges</code> grammer.</p>
+
+<h3 id="mutate"><code class="highlighter-rouge">mutate()</code></h3>
+
+<p>Use <code class="highlighter-rouge">plyranges::mutate()</code> to add metadata columns:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">2018-07-28</span><span class="p">)</span><span class="w">
+</span><span class="n">gr2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gr</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">gene_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ORF"</span><span class="p">,</span><span class="w">
+         </span><span class="n">gc_content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runif</span><span class="p">(</span><span class="n">n</span><span class="p">()))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">filter</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">400</span><span class="p">)</span><span class="w">
+</span><span class="n">gr2</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 5 ranges and 3 metadata columns:
+##       seqnames    ranges strand |     gene_id   gene_type
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt; &lt;character&gt;
+##   [1]       VI 3322-3846      - |     YFL064C         ORF
+##   [2]       VI 1437-2615      - |     YFL066C         ORF
+##   [3]       VI 5066-5521      + |     YFL063W         ORF
+##   [4]       VI 6426-7565      + |     YFL062W         ORF
+##   [5]       VI  836-1363      + |     YFL067W         ORF
+##              gc_content
+##               &lt;numeric&gt;
+##   [1]  0.49319754820317
+##   [2] 0.216616344172508
+##   [3] 0.747259315103292
+##   [4] 0.907683959929273
+##   [5] 0.221016310621053
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<h3 id="filter"><code class="highlighter-rouge">filter()</code></h3>
+
+<p><code class="highlighter-rouge">plyranges::filter()</code> returns ranges if the expression evaluates to TRUE.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gr2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">filter</span><span class="p">(</span><span class="n">strand</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"+"</span><span class="p">,</span><span class="w"> </span><span class="n">gc_content</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 2 ranges and 3 metadata columns:
+##       seqnames    ranges strand |     gene_id   gene_type
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt; &lt;character&gt;
+##   [1]       VI 5066-5521      + |     YFL063W         ORF
+##   [2]       VI 6426-7565      + |     YFL062W         ORF
+##              gc_content
+##               &lt;numeric&gt;
+##   [1] 0.747259315103292
+##   [2] 0.907683959929273
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<h3 id="summarise"><code class="highlighter-rouge">summarise()</code></h3>
+
+<p><code class="highlighter-rouge">plyranges::summarise()</code> performs tasks and return <code class="highlighter-rouge">DataFrame</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gr2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">summarise</span><span class="p">(</span><span class="n">avg_gc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">gc_content</span><span class="p">),</span><span class="w">
+            </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">())</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## DataFrame with 1 row and 2 columns
+##              avg_gc         n
+##           &lt;numeric&gt; &lt;integer&gt;
+## 1 0.517154695605859         5
+</code></pre></div></div>
+
+<h3 id="group_by"><code class="highlighter-rouge">group_by()</code></h3>
+
+<p><code class="highlighter-rouge">group_by()</code> acts on each group on ragnes defined by the value:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gr2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">group_by</span><span class="p">(</span><span class="n">strand</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">summarise</span><span class="p">(</span><span class="n">avg_gc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">gc_content</span><span class="p">),</span><span class="w">
+            </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">())</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## DataFrame with 2 rows and 3 columns
+##   strand            avg_gc         n
+##    &lt;Rle&gt;         &lt;numeric&gt; &lt;integer&gt;
+## 1      + 0.625319861884539         3
+## 2      - 0.354906946187839         2
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">group_by()</code> causes verbs to behave differently.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">by_strand</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gr2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">group_by</span><span class="p">(</span><span class="n">strand</span><span class="p">)</span><span class="w">
+</span><span class="n">by_strand</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 5 ranges and 3 metadata columns:
+## Groups: strand [2]
+##       seqnames    ranges strand |     gene_id   gene_type
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt; &lt;character&gt;
+##   [1]       VI 3322-3846      - |     YFL064C         ORF
+##   [2]       VI 1437-2615      - |     YFL066C         ORF
+##   [3]       VI 5066-5521      + |     YFL063W         ORF
+##   [4]       VI 6426-7565      + |     YFL062W         ORF
+##   [5]       VI  836-1363      + |     YFL067W         ORF
+##              gc_content
+##               &lt;numeric&gt;
+##   [1]  0.49319754820317
+##   [2] 0.216616344172508
+##   [3] 0.747259315103292
+##   [4] 0.907683959929273
+##   [5] 0.221016310621053
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<p>Now the verb works within each group, instead of in a <code class="highlighter-rouge">GRanges</code> object.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">by_strand</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">filter</span><span class="p">(</span><span class="n">n</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 3 ranges and 3 metadata columns:
+## Groups: strand [1]
+##       seqnames    ranges strand |     gene_id   gene_type
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt; &lt;character&gt;
+##   [1]       VI 5066-5521      + |     YFL063W         ORF
+##   [2]       VI 6426-7565      + |     YFL062W         ORF
+##   [3]       VI  836-1363      + |     YFL067W         ORF
+##              gc_content
+##               &lt;numeric&gt;
+##   [1] 0.747259315103292
+##   [2] 0.907683959929273
+##   [3] 0.221016310621053
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<p>Find mean gc content within each group:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">by_strand</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">avg_gc_strand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">gc_content</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 5 ranges and 4 metadata columns:
+## Groups: strand [2]
+##       seqnames    ranges strand |     gene_id   gene_type
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt; &lt;character&gt;
+##   [1]       VI 3322-3846      - |     YFL064C         ORF
+##   [2]       VI 1437-2615      - |     YFL066C         ORF
+##   [3]       VI 5066-5521      + |     YFL063W         ORF
+##   [4]       VI 6426-7565      + |     YFL062W         ORF
+##   [5]       VI  836-1363      + |     YFL067W         ORF
+##              gc_content     avg_gc_strand
+##               &lt;numeric&gt;         &lt;numeric&gt;
+##   [1]  0.49319754820317 0.354906946187839
+##   [2] 0.216616344172508 0.354906946187839
+##   [3] 0.747259315103292 0.625319861884539
+##   [4] 0.907683959929273 0.625319861884539
+##   [5] 0.221016310621053 0.625319861884539
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<h3 id="ungroup"><code class="highlighter-rouge">ungroup()</code></h3>
+
+<p><code class="highlighter-rouge">ungroup()</code></p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">by_strand</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">ungroup</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 5 ranges and 3 metadata columns:
+##       seqnames    ranges strand |     gene_id   gene_type
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt; &lt;character&gt;
+##   [1]       VI 3322-3846      - |     YFL064C         ORF
+##   [2]       VI 1437-2615      - |     YFL066C         ORF
+##   [3]       VI 5066-5521      + |     YFL063W         ORF
+##   [4]       VI 6426-7565      + |     YFL062W         ORF
+##   [5]       VI  836-1363      + |     YFL067W         ORF
+##              gc_content
+##               &lt;numeric&gt;
+##   [1]  0.49319754820317
+##   [2] 0.216616344172508
+##   [3] 0.747259315103292
+##   [4] 0.907683959929273
+##   [5] 0.221016310621053
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<h3 id="select"><code class="highlighter-rouge">select()</code></h3>
+
+<p><code class="highlighter-rouge">select()</code> selects the metadata columns.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gr2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">select</span><span class="p">(</span><span class="n">gene_id</span><span class="p">,</span><span class="w"> </span><span class="n">gene_type</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 5 ranges and 2 metadata columns:
+##       seqnames    ranges strand |     gene_id   gene_type
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt; &lt;character&gt;
+##   [1]       VI 3322-3846      - |     YFL064C         ORF
+##   [2]       VI 1437-2615      - |     YFL066C         ORF
+##   [3]       VI 5066-5521      + |     YFL063W         ORF
+##   [4]       VI 6426-7565      + |     YFL062W         ORF
+##   [5]       VI  836-1363      + |     YFL067W         ORF
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<h2 id="arithmatic">Arithmatic</h2>
+
+<p>Operation on the ranges - extend the width (to <code class="highlighter-rouge">end</code>?)</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gr</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 6 ranges and 1 metadata column:
+##       seqnames    ranges strand |     gene_id
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt;
+##   [1]       VI 3322-3847      - |     YFL064C
+##   [2]       VI 3030-3339      - |     YFL065C
+##   [3]       VI 1437-2616      - |     YFL066C
+##   [4]       VI 5066-5522      + |     YFL063W
+##   [5]       VI 6426-7566      + |     YFL062W
+##   [6]       VI  836-1364      + |     YFL067W
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<h2 id="arithmatic-1">Arithmatic</h2>
+
+<p><code class="highlighter-rouge">plyranges</code> has Arithmatic actions to modify genomic regions. An example to extend the width of the range from the “end” of the range:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gr</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">anchor_end</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 6 ranges and 1 metadata column:
+##       seqnames    ranges strand |     gene_id
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;character&gt;
+##   [1]       VI 3321-3846      - |     YFL064C
+##   [2]       VI 3029-3338      - |     YFL065C
+##   [3]       VI 1436-2615      - |     YFL066C
+##   [4]       VI 5065-5521      + |     YFL063W
+##   [5]       VI 6425-7565      + |     YFL062W
+##   [6]       VI  835-1363      + |     YFL067W
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<p>Anchor points include the start <code class="highlighter-rouge">anchor_start()</code>, end <code class="highlighter-rouge">anchor_end()</code>, midpoint <code class="highlighter-rouge">anchor_center()</code>, 3’ end <code class="highlighter-rouge">anchor_3p()</code> and 5’ end <code class="highlighter-rouge">anchor_5p()</code>:</p>
+
+<h2 id="genomic-aggregation">Genomic aggregation</h2>
+
+<h3 id="reduce_range"><code class="highlighter-rouge">reduce_range()</code></h3>
+
+<p><code class="highlighter-rouge">reduce_range()</code> aggregates nearby neighbors:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gr</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">reduce_ranges</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 5 ranges and 0 metadata columns:
+##       seqnames    ranges strand
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt;
+##   [1]       VI  836-1363      *
+##   [2]       VI 1437-2615      *
+##   [3]       VI 3030-3846      *
+##   [4]       VI 5066-5521      *
+##   [5]       VI 6426-7565      *
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<p>Find out which genes are overlapping each other by aggregating over the gene_id column and storing the result in a List column:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gr</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">reduce_ranges</span><span class="p">(</span><span class="n">gene_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="n">gene_id</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 5 ranges and 1 metadata column:
+##       seqnames    ranges strand |         gene_id
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;CharacterList&gt;
+##   [1]       VI  836-1363      * |         YFL067W
+##   [2]       VI 1437-2615      * |         YFL066C
+##   [3]       VI 3030-3846      * | YFL065C,YFL064C
+##   [4]       VI 5066-5521      * |         YFL063W
+##   [5]       VI 6426-7565      * |         YFL062W
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<h3 id="disjoin_ranges"><code class="highlighter-rouge">disjoin_ranges()</code></h3>
+
+<p><code class="highlighter-rouge">disjoin_ranges()</code> takes the union of end points over all ranges, and results in an expanded range:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gr</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">disjoin_ranges</span><span class="p">(</span><span class="n">gene_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="n">gene_id</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 7 ranges and 1 metadata column:
+##       seqnames    ranges strand |         gene_id
+##          &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; | &lt;CharacterList&gt;
+##   [1]       VI  836-1363      * |         YFL067W
+##   [2]       VI 1437-2615      * |         YFL066C
+##   [3]       VI 3030-3321      * |         YFL065C
+##   [4]       VI 3322-3338      * | YFL064C,YFL065C
+##   [5]       VI 3339-3846      * |         YFL064C
+##   [6]       VI 5066-5521      * |         YFL063W
+##   [7]       VI 6426-7565      * |         YFL062W
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<h2 id="overlap">Overlap</h2>
+
+<p>To demonstrate how overlap action works, we first construct some <code class="highlighter-rouge">GRanges</code> objects:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">66+105+111+99+49+56</span><span class="p">)</span><span class="w">
+</span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10000</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+</span><span class="n">size</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">rep1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">chr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"VI"</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w">
+                  </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w">
+                  </span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w">
+                  </span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
+</span><span class="n">rep2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">chrom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"VI"</span><span class="p">,</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w">
+                  </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w">
+                  </span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w">
+                  </span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">
+</span><span class="n">rep3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">chromosome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"VI"</span><span class="p">,</span><span class="w">
+                  </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w">
+                  </span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w">
+                  </span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Next convert <code class="highlighter-rouge">data.frame</code> to <code class="highlighter-rouge">GRanges</code>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rep1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as_granges</span><span class="p">(</span><span class="n">rep1</span><span class="p">,</span><span class="w"> </span><span class="n">seqnames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chr</span><span class="p">,</span><span class="w">
+                   </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w">
+</span><span class="n">rep2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as_granges</span><span class="p">(</span><span class="n">rep2</span><span class="p">,</span><span class="w"> </span><span class="n">seqnames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chrom</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">)</span><span class="w">
+</span><span class="n">rep3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as_granges</span><span class="p">(</span><span class="n">rep3</span><span class="p">,</span><span class="w"> </span><span class="n">seqnames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chromosome</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Finally, constuct the final GRanges using <code class="highlighter-rouge">arrange()</code> and <code class="highlighter-rouge">bind_ranges()</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cd">#' construct the final GRanges</span><span class="w">
+</span><span class="n">intensities</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bind_ranges</span><span class="p">(</span><span class="n">rep1</span><span class="p">,</span><span class="w"> </span><span class="n">rep2</span><span class="p">,</span><span class="w"> </span><span class="n">rep3</span><span class="p">,</span><span class="w">
+                           </span><span class="n">.id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"replicate"</span><span class="p">)</span><span class="w">
+</span><span class="n">arrange</span><span class="p">(</span><span class="n">intensities</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## GRanges object with 300 ranges and 3 metadata columns:
+##         seqnames    ranges strand |                  X                  Y
+##            &lt;Rle&gt; &lt;IRanges&gt;  &lt;Rle&gt; |          &lt;numeric&gt;          &lt;numeric&gt;
+##     [1]       VI    99-100      * |   2.18077108319727   1.15893283880961
+##     [2]       VI    99-100      * |  -1.14331853023759  -1.84545382593297
+##     [3]       VI    99-100      * |   4.42535734042167   3.53884540635964
+##     [4]       VI   110-111      * |   1.41581829875993 -0.262026041514519
+##     [5]       VI   110-111      * | 0.0203313104969627  -1.18095384044377
+##     ...      ...       ...    ... .                ...                ...
+##   [296]       VI 9671-9673      * |  0.756423808063998  -0.24544579405238
+##   [297]       VI 9671-9673      * |  0.715559817063897    4.6963376859667
+##   [298]       VI 9838-9839      * |   1.83836043312615  0.267996156074214
+##   [299]       VI 9838-9839      * |  -4.62774336616852  -3.45271032367217
+##   [300]       VI 9838-9839      * | -0.285141455604857   4.16118336728783
+##           replicate
+##         &lt;character&gt;
+##     [1]           1
+##     [2]           2
+##     [3]           3
+##     [4]           1
+##     [5]           2
+##     ...         ...
+##   [296]           2
+##   [297]           3
+##   [298]           1
+##   [299]           2
+##   [300]           3
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths
+</code></pre></div></div>
+
+<h3 id="filter_by_overalsp"><code class="highlighter-rouge">filter_by_overalsp()</code></h3>
+
+<p><code class="highlighter-rouge">filter_by_overlaps(query, subject)</code> - related to <code class="highlighter-rouge">GenomicRanges::findOverlaps()</code> and <code class="highlighter-rouge">subsetOverlaps()</code></p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">olap</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">filter_by_overlaps</span><span class="p">(</span><span class="n">intensities</span><span class="p">,</span><span class="w"> </span><span class="n">gr</span><span class="p">)</span><span class="w">
+</span><span class="nf">length</span><span class="p">(</span><span class="n">olap</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## [1] 108
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">intensities</code> has 300 ranges and 108 are overlapping with <code class="highlighter-rouge">gr</code>.</p>
+
+<h3 id="more-overlap-actions">More overlap actions</h3>
+
+<p><code class="highlighter-rouge">join_overlap_*(query, subject)</code>: how query and subject overlap: <code class="highlighter-rouge">join_overlap_inner(query, subject)</code>, <code class="highlighter-rouge">join_overlap_left()</code> and <code class="highlighter-rouge">join_overlap_intersect()</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">olap</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">join_overlap_inner</span><span class="p">(</span><span class="n">intensities</span><span class="p">,</span><span class="w"> </span><span class="n">gr</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The returned Hit object obtains the ranges that the query and subject overlapp within.</p>
+
+<h2 id="r-session-info">R session info</h2>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sessionInfo</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## R version 3.5.0 (2018-04-23)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Ubuntu 14.04.5 LTS
+##
+## Matrix products: default
+## BLAS/LAPACK: /app/easybuild/software/OpenBLAS/0.2.18-GCC-5.4.0-2.26-LAPACK-3.6.1/lib/libopenblas_prescottp-r0.2.18.so
+##
+## locale:
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+##
+## attached base packages:
+## [1] stats4    parallel  stats     graphics  grDevices utils     datasets
+## [8] methods   base     
+##
+## other attached packages:
+## [1] plyranges_1.0.3      GenomicRanges_1.32.2 GenomeInfoDb_1.16.0
+## [4] IRanges_2.14.6       S4Vectors_0.18.1     BiocGenerics_0.26.0
+## [7] BiocInstaller_1.30.0
+##
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_0.12.16                pillar_1.2.2               
+##  [3] compiler_3.5.0              XVector_0.20.0             
+##  [5] bindr_0.1.1                 bitops_1.0-6               
+##  [7] tools_3.5.0                 zlibbioc_1.26.0            
+##  [9] digest_0.6.15               tibble_1.4.2               
+## [11] evaluate_0.10.1             lattice_0.20-35            
+## [13] pkgconfig_2.0.1             rlang_0.2.0                
+## [15] Matrix_1.2-14               DelayedArray_0.6.0         
+## [17] yaml_2.1.19                 bindrcpp_0.2.2             
+## [19] GenomeInfoDbData_1.1.0      rtracklayer_1.40.2         
+## [21] stringr_1.3.0               dplyr_0.7.4                
+## [23] knitr_1.20                  Biostrings_2.48.0          
+## [25] tidyselect_0.2.4            rprojroot_1.3-2            
+## [27] grid_3.5.0                  glue_1.2.0                 
+## [29] Biobase_2.40.0              R6_2.2.2                   
+## [31] XML_3.98-1.11               BiocParallel_1.14.2        
+## [33] rmarkdown_1.9               purrr_0.2.4                
+## [35] tidyr_0.8.0                 magrittr_1.5               
+## [37] backports_1.1.2             Rsamtools_1.32.2           
+## [39] htmltools_0.3.6             matrixStats_0.53.1         
+## [41] GenomicAlignments_1.16.0    assertthat_0.2.0           
+## [43] SummarizedExperiment_1.10.0 stringi_1.2.2              
+## [45] RCurl_1.95-4.10
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-04-02T18:09:25-07:00">April 02, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_infdemos/plyranges-workshop.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Finfdemos%2Fplyranges-workshop%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/infdemos/how_to_beagle/" class="pagination--pager" title="How to Beagle
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

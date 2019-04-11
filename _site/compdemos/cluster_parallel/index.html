@@ -1,0 +1,656 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Parallel Computing on Slurm Clusters - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="Parallel computing is an approach to computing where many tasks are donesimultaneously- either on a single device or on multiple independent devices.These tasks can be dependent or independent of each other requiring varyingdegreees of ordering and orchestration.  Parallel computing can be quitecomplicated to set up but can improve job throughput when done correctly.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Parallel Computing on Slurm Clusters">
+<meta property="og:url" content="http://localhost:4000/compdemos/cluster_parallel/">
+
+
+  <meta property="og:description" content="Parallel computing is an approach to computing where many tasks are donesimultaneously- either on a single device or on multiple independent devices.These tasks can be dependent or independent of each other requiring varyingdegreees of ordering and orchestration.  Parallel computing can be quitecomplicated to set up but can improve job throughput when done correctly.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2019-01-30T00:00:00-08:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/compdemos/cluster_parallel/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/comp_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library/HOWTOs</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_methods/" class="">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_databases/" class="">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Compute</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/linux_linux101/" class="">Linux Operating System</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/resource_overview/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_software/" class="">Scientific Software</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_usingSlurm/" class="">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_cloudCompute/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Parallel Computing on Slurm Clusters">
+    <meta itemprop="description" content="Parallel computing is an approach to computing where many tasks are donesimultaneously- either on a single device or on multiple independent devices.These tasks can be dependent or independent of each other requiring varyingdegreees of ordering and orchestration.  Parallel computing can be quitecomplicated to set up but can improve job throughput when done correctly.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="January 30, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Parallel Computing on Slurm Clusters
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_compdemos/cluster_parallel.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcompdemos%2Fcluster_parallel%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#choosing-an-approach">Choosing an Approach</a></li>
+  <li><a href="#an-atlas-of-computational-workloads">An Atlas of Computational Workloads</a>
+    <ul>
+      <li><a href="#pleasantly-parallel">Pleasantly Parallel</a></li>
+      <li><a href="#sequential">Sequential</a></li>
+      <li><a href="#highly-connected">Highly Connected</a></li>
+    </ul>
+  </li>
+  <li><a href="#parallel-operations-in-slurm">Parallel Operations in Slurm</a></li>
+  <li><a href="#examples">Examples</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><em>Parallel computing</em> is an approach to computing where many tasks are done
+simultaneously- either on a single device or on multiple independent devices.
+These tasks can be dependent or independent of each other requiring varying
+degreees of ordering and orchestration.  Parallel computing can be quite
+complicated to set up but can improve job throughput when done correctly.</p>
+
+<p>Parallel computing starts with breaking a larger task into smaller steps- the
+“size” and relationship of those steps is highly dependent on the task
+at hand but determines much about how the job can be “parallelized”. Because of the variety of approaches to large tasks, often there can be multiple strategies to consider using to identify the most effective approach to use for the particular task at hand.</p>
+
+<p>When steps are highly dependent on each other (e.g. the output of one step is used
+for input into the next) that job is said to be “serial” and it won’t benefit
+greatly from parallel processing.  At the other end, “embarassingly” or
+“pleasantly” parallel work has individual steps that do not depend on each
+other and can occur in at the same time, often in great numbers.</p>
+
+<p>Once you’ve determined how your work can be parallelized, there are two ways
+to distribute those steps.  The first uses the capabilities of multi-core
+CPUs- modern CPUs have multiple cores, each of which are capable of processing
+independent steps.  This technique is typically referred to as “threading.”</p>
+
+<p>Another approach to using multiple processors is to spread the work over
+multiple different computers.  This approach has the advantage of being
+able to scale up the amount of computation being done concurrently.  This
+approach is often described as “distributed”</p>
+
+<blockquote>
+  <p>Note: It is also possible to combine those techniques- using multiple cores on multiple computers.  This can add a little complexity, but many tools will handle this neatly.</p>
+</blockquote>
+
+<h2 id="choosing-an-approach">Choosing an Approach</h2>
+
+<p>The primary drivers for choosing between the two approaches is how much communication
+between individual steps is necessary and how many steps there are.
+Communication between steps is computationally expensive, and if that communication needs to
+cross a network (as in a distributed solution) there can be a degredation in
+performance compared to keeping all of the steps on the same system (as in
+the threaded solution).  However, if there are many steps the resources on a
+single system will be a bottleneck, which makes a distributed solution more
+appealing.</p>
+
+<h2 id="an-atlas-of-computational-workloads">An Atlas of Computational Workloads</h2>
+
+<h3 id="pleasantly-parallel">Pleasantly Parallel</h3>
+
+<p>“Pleasantly parallel” work (AKA “embarassingly parallel”) is typically made up
+of many <em>completely</em> independent steps.  By independent we mean that:</p>
+
+<ul>
+  <li>any one step does not depend on the output or completion of any other step</li>
+  <li>steps do not need to exchange information with other steps</li>
+</ul>
+
+<p>Examples: simulations, GWAS, chromosome by chromosome analyses</p>
+
+<h3 id="sequential">Sequential</h3>
+
+<p>This is one opposite of pleasantly parallel.  In sequential workloads each step
+is dependent on another step- step “B” cannot proceed until step “A” is
+complete. This kind of workload is nearly impossible to speed up with
+additional processors.</p>
+
+<h3 id="highly-connected">Highly Connected</h3>
+
+<p>Another opposite of the pleasantly parallel workload is workload where steps
+communicate information between other steps.  Weather and climate forecasts are
+notorious for this kind of workload- each step represents a block of atmosphere
+which is affected by its neighbors, thus step needs to look at the state of
+another step and vice-versa.</p>
+
+<p>These problems require very low-latency, high-speed communication between steps
+and are typically better served when run on a single system (or one of the
+exotic supercomputers).  That said, modern networks are fairly good and can
+provide usable service for this communication if the number of steps greatly
+exceeds the number of cores available on a single system.</p>
+
+<h2 id="parallel-operations-in-slurm">Parallel Operations in Slurm</h2>
+
+<p>Slurm has two concepts important when looking at implementing a parallel
+workload: <em>jobs</em> and <em>steps</em>.  The step is the atomic unit of a job- a job can
+be made up of multiple steps.  In general, the steps are independent and don’t
+directly communicate with each other. Steps can execute across many CPUs and
+hosts and many steps can run simultaneously within the job. For example,
+suppose I need to do three things to a data set:</p>
+
+<ul>
+  <li>divide it into pieces</li>
+  <li>run a calculation on each of those pieces</li>
+  <li>summarize those calculations</li>
+</ul>
+
+<p>In Slurm, I can create a job made up of three steps.  The first step is
+sequential- it will use one CPU on one host.  The second step can be run on
+multiple CPUs as these calculations are independent.  The last step is, again,
+a sequential task that can only use a single CPU.  The job would need to
+request as many CPUs as could be used (or is practical) by the second step- the
+first and last step would only use a single CPU.</p>
+
+<h2 id="examples">Examples</h2>
+<p>We have begun consolidating examples of parallel computing approaches in the <a href="https://github.com/FredHutch/slurm-examples">FredHutch/slurm-examples repository.</a>  Please refer to that repository for more community curated exmaple approaches and associated documentation to see if someone has approached a problem similar to yours so you don’t have to start from scratch.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-01-30">January 30, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_compdemos/cluster_parallel.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcompdemos%2Fcluster_parallel%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/compdemos/cluster_koshuBeta/" class="pagination--pager" title="Instructions for Using Koshu (beta)
+">Previous</a>
+    
+    
+      <a href="/compdemos/matlab/" class="pagination--pager" title="Matlab
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

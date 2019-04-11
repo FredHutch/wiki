@@ -1,0 +1,700 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>RNA Analysis Approaches - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="This page contains an outline of the platforms and approaches used to produce various types of large scale data sets from RNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource and example cost estimates and read depth, etc will vary study to study. To answer any study-specific questions, please contact the staff at the Genomics Shared Resource.  Be prepared to describe study details including sample types, numbers, goal datasets, and proposed platforms of interest.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="RNA Analysis Approaches">
+<meta property="og:url" content="http://localhost:4000/generation/datagen_rnaApproaches/">
+
+
+  <meta property="og:description" content="This page contains an outline of the platforms and approaches used to produce various types of large scale data sets from RNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource and example cost estimates and read depth, etc will vary study to study. To answer any study-specific questions, please contact the staff at the Genomics Shared Resource.  Be prepared to describe study details including sample types, numbers, goal datasets, and proposed platforms of interest.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2018-10-25T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/generation/datagen_rnaApproaches/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/gen_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generationdemos/" class="">Resource Library</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Study Design and Funding</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_proposal/" class="">Proposals and Funding</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_hypothesis/" class="">Hypothesis Development and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/multiple_testing/" class="">Multiple Testing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Consent, Privacy and Security</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_consentIRB/" class="">Consenting and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_privacySecurity/" class="">Data Privacy and Security</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/security_legal/" class="">Compliance and Legal</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_deidentification/" class="">De-identification</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_shareDeposits/" class="">Data Sharing and Public Repositories</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Clinical and Experimental Data</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_clinicalCov/" class="">Clinical Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_specimenBanking/" class="">Specimen Banking</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_labCov/" class="">Experimental Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_platformsData/" class="">Genomics Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_flowcytometry/" class="">Flow Cytometry Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_imaging/" class="">Imaging Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_proteomics/" class="">Proteomics Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Laboratory Resources</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_assayPrep/" class="">Assay Material Prep and QC</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_dnaApproaches/" class="">DNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_rnaApproaches/" class="active">RNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_software/" class="">Support Software</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="RNA Analysis Approaches">
+    <meta itemprop="description" content="This page contains an outline of the platforms and approaches used to produce various types of large scale data sets from RNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource and example cost estimates and read depth, etc will vary study to study. To answer any study-specific questions, please contact the staff at the Genomics Shared Resource.  Be prepared to describe study details including sample types, numbers, goal datasets, and proposed platforms of interest.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="October 25, 2018">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">RNA Analysis Approaches
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_generation/datagen_rnaApproaches.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneration%2Fdatagen_rnaApproaches%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#quantitative-approaches-gene-expression">Quantitative Approaches: Gene Expression</a>
+    <ul>
+      <li><a href="#rna-sequencing">RNA Sequencing</a></li>
+      <li><a href="#nanostring-gene-expression-panels">Nanostring Gene Expression Panels</a></li>
+      <li><a href="#available-resources">Available Resources</a></li>
+    </ul>
+  </li>
+  <li><a href="#qualitative-approaches-transcript-and-splicing-discovery">Qualitative Approaches: Transcript and Splicing Discovery</a></li>
+  <li><a href="#other-rna-based-research-approaches">Other RNA Based Research Approaches</a>
+    <ul>
+      <li><a href="#example--small-rnas-eg-mirna">Example:  Small RNAs (e.g., miRNA)</a></li>
+      <li><a href="#available-resources-1">Available Resources</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>This page contains an outline of the platforms and approaches used to produce various types of large scale data sets from RNA that are available through the Fred Hutch Genomics Core. Please remember that this is a general resource and example cost estimates and read depth, etc will vary study to study. To answer any study-specific questions, please contact the staff at the <a href="https://sharedresources.fredhutch.org/core-facilities/genomics">Genomics Shared Resource</a>.  Be prepared to describe study details including sample types, numbers, goal datasets, and proposed platforms of interest.</p>
+
+<h2 id="quantitative-approaches-gene-expression">Quantitative Approaches: Gene Expression</h2>
+<p>Often, researchers want to answer what seems to be a very simple question–what is different between the treatment groups?  In an RNA context, this approach is called differential gene expression (DGE). DGE quantitatively measures differences in the levels of gene expression between two or more treatments or groups.</p>
+
+<h3 id="rna-sequencing">RNA Sequencing</h3>
+<p>RNA sequencing is a common approach to assess DGE.  Simply stated, this involves comparing the counts for sequencing reads that come from each transcript. In practice, however, this involves a complex combination of RNA extraction, amplification, sequencing to get the raw sequence data, followed by a series of bioinformatic analysis steps to map those sequence data to regions of the transcript, then comparing the counts in each transcript region between treatment groups.</p>
+
+<p>An important point to remember: the data output of RNA sequencing is a set of <code class="highlighter-rouge">fastq</code> files, which are files that contain the sequence and read quality information for sequencing reads from each sample.  In order to get fully processed DGE results, there is a significant amount of bioinformatic support needed, as well as statistical support to assess gene expression differences among groups.</p>
+
+<h3 id="nanostring-gene-expression-panels">Nanostring Gene Expression Panels</h3>
+<p>DGE is not exclusive to sequencing techniques.  Nanostring nCounter systems utilize nucleic acid probes, attached to fluorescent barcodes. The probes hybridize to single RNA molecules in each sample, then the fluorescent barcodes are counted to quantify expression of each target.</p>
+
+<p>From Nanostring’s website:
+<em>“Each color-coded barcode represents a single target molecule. Barcodes hybridize directly to your target molecules and can be individually counted without the need for amplification—providing sensitive digital data.”</em></p>
+
+<p>The analysis of the resulting count data is processed via Nanostring’s proprietary software.  Thus, Nanostring data requires little to no bioinformatic support, but still requires statistical analysis to assess gene expression differences among groups.</p>
+
+<h3 id="available-resources">Available Resources</h3>
+<ul>
+  <li>
+    <p><a href="https://www.illumina.com/techniques/popular-applications/gene-expression-transcriptome-analysis.html">Illumina Differential Gene Expression Approaches</a></p>
+  </li>
+  <li>
+    <p>Nanostring has a selection of curated gene expression panels, as well as custom panels. <a href="https://www.nanostring.com/products/gene-expression-panels">Nanostring Gene Expression Panels</a></p>
+  </li>
+</ul>
+
+<h2 id="qualitative-approaches-transcript-and-splicing-discovery">Qualitative Approaches: Transcript and Splicing Discovery</h2>
+<p>The goal of a qualitative approach is to identify (or annotate) genes and gene structures.  Here, the most important parameter is that the sequence reads evenly cover each transcript, including both ends.  One only needs to sequence at a depth that ensures all target areas are represented in the sequencing output.</p>
+
+<p>Qualitative approaches allow the discovery of novel transcripts and alternatives splicing events.  But, to be clear:the design of such experiments will most likely be different from those aimed at quantification of transcripts. For novel transcripts and splicing, longer reads are often favored, at lower read depth.  This increases the probability  that reads will contain the alternative splicing sites.</p>
+
+<p>The raw files produced from this type of sequencing are similar to those made in quantitative analysis. However, bioinformatic analyses for transcript and splicing discovery will differ from quantitative analyses.</p>
+
+<h2 id="other-rna-based-research-approaches">Other RNA Based Research Approaches</h2>
+
+<h3 id="example--small-rnas-eg-mirna">Example:  Small RNAs (e.g., miRNA)</h3>
+
+<p>The workflows necessary for small RNA sequencing often differ from other RNA sequencing protocols in a few ways:</p>
+<ol>
+  <li>RNA is isolated using methods that either retain or enrich small RNA molecule content. Often, total RNA isolation protocols (e.g.  phenol-chloroform isolation) or small RNA-specific column extractions.</li>
+  <li>Small RNAs are size-fractionated from total RNA, using either gel electrophoresis or size exclusion columns.  This step is sometimes performed as part of the library preparation.</li>
+  <li>Sequencing adapters are ligated onto the small RNAs, to allow library prep and sequencing.  There are varying methods for this ligation (e.g. RNA polyadenylation or T4 RNA ligase2 adapter ligation), depending on the library prep method.</li>
+  <li>The adapter-ligated small RNAs are amplified, during the process of library prep. Sometimes the size fractionation step follows this amplification.</li>
+  <li>NGS Sequencing is done, and specialized read alignment and bioinformatic approaches will be required.</li>
+</ol>
+
+<h3 id="available-resources-1">Available Resources</h3>
+<ul>
+  <li>Genohub (a general resource for NGS information) has a short guide to special considerations for small RNA sequencing. <a href="https://genohub.com/services/sequencing/illumina-miRNA-sequencing-services/">Genohub’s Guide to Small RNA sequencing</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-10-25">October 25, 2018</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_generation/datagen_rnaApproaches.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneration%2Fdatagen_rnaApproaches%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/generation/datagen_proteomics/" class="pagination--pager" title="Proteomic Data and Methods
+">Previous</a>
+    
+    
+      <a href="/generation/gen_index/" class="pagination--pager" title="Data Generation Overview
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

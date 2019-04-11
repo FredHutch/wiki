@@ -1,0 +1,817 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Data Privacy and Security - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="Every effort must be made to protect the privacy and confidentiality ofparticipants regardless of the type of data being used as part of a research project. A key protective measure is to de-identify datasets.Typically, this involves removing 18 key direct identifiers as describedunder HIPAA, and indirect identifiers, such as age, gender, location,etc from any part of the data.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Data Privacy and Security">
+<meta property="og:url" content="http://localhost:4000/generation/human_privacySecurity/">
+
+
+  <meta property="og:description" content="Every effort must be made to protect the privacy and confidentiality ofparticipants regardless of the type of data being used as part of a research project. A key protective measure is to de-identify datasets.Typically, this involves removing 18 key direct identifiers as describedunder HIPAA, and indirect identifiers, such as age, gender, location,etc from any part of the data.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2018-12-11T00:00:00-08:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/generation/human_privacySecurity/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/gen_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generationdemos/" class="">Resource Library</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Study Design and Funding</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_proposal/" class="">Proposals and Funding</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_hypothesis/" class="">Hypothesis Development and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/multiple_testing/" class="">Multiple Testing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Consent, Privacy and Security</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_consentIRB/" class="">Consenting and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_privacySecurity/" class="active">Data Privacy and Security</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/security_legal/" class="">Compliance and Legal</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_deidentification/" class="">De-identification</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_shareDeposits/" class="">Data Sharing and Public Repositories</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Clinical and Experimental Data</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_clinicalCov/" class="">Clinical Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_specimenBanking/" class="">Specimen Banking</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_labCov/" class="">Experimental Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_platformsData/" class="">Genomics Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_flowcytometry/" class="">Flow Cytometry Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_imaging/" class="">Imaging Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_proteomics/" class="">Proteomics Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Laboratory Resources</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_assayPrep/" class="">Assay Material Prep and QC</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_dnaApproaches/" class="">DNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_rnaApproaches/" class="">RNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_software/" class="">Support Software</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Data Privacy and Security">
+    <meta itemprop="description" content="Every effort must be made to protect the privacy and confidentiality ofparticipants regardless of the type of data being used as part of a research project. A key protective measure is to de-identify datasets.Typically, this involves removing 18 key direct identifiers as describedunder HIPAA, and indirect identifiers, such as age, gender, location,etc from any part of the data.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="December 11, 2018">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Data Privacy and Security
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_generation/human_privacySecurity.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneration%2Fhuman_privacySecurity%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#fred-hutch-information-classification-standard">Fred Hutch Information Classification Standard</a></li>
+  <li><a href="#data-classification-overview">Data Classification Overview</a>
+    <ul>
+      <li><a href="#public---level-i">Public - Level I</a></li>
+      <li><a href="#confidential---level-ii">Confidential - Level II</a></li>
+      <li><a href="#strictly-confidential---level-iii">Strictly Confidential - Level III</a></li>
+    </ul>
+  </li>
+  <li><a href="#patient-consent">Patient Consent</a></li>
+  <li><a href="#security">Security</a>
+    <ul>
+      <li><a href="#office-365-email-and-onedrive">Office 365 Email and OneDrive</a></li>
+      <li><a href="#final-notes">Final Notes</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>Every effort must be made to protect the privacy and confidentiality of
+participants regardless of the type of data being used as part of a research project. A key protective measure is to de-identify datasets.<br />
+Typically, this involves removing 18 key direct identifiers as described
+under HIPAA, and indirect identifiers, such as age, gender, location,
+etc from any part of the data.</p>
+
+<p>The aim of de-identification is to maintain confidentiality through
+elimination of identifiers in a way that eliminates or greatly
+diminishes the risk of re-identification of an individual patient (also
+see our page on <a href="/generation/human_deidentification/">de-identification of data or specimens</a>). Maintaining strong
+data security processes is an additional key measure. Sharing data
+should be done securely, after the information is de-identified and
+within a data management and sharing plan. This plan should delineate
+data security, restrictions on data which cannot be sufficiently
+de-identified, data use agreements, naming conventions and other clearly
+specified requirements. In most instances, sharing data should be
+possible without compromising the confidentiality of participants.</p>
+
+<h2 id="fred-hutch-information-classification-standard">Fred Hutch Information Classification Standard</h2>
+
+<p>Data should be handled according to the <a href="https://teams.fhcrc.org/sites/centerit/governance/PSP/FinalDocs/Fred-Hutch-Information-Classification-and-Handling-Standard%20-%20102018.pdf">Fred Hutch Information
+Classification Standard</a>, which describes security and handling standards
+commensurate with the risk of information mishandling. These standards provide guidelines for managing
+data at Fred Hutch and for sharing information within Fred Hutch and between Fred Hutch and an
+outside party. Genomic data, outside of public reference data, is
+considered confidential (Level II) or strictly confidential information
+(Level III).</p>
+
+<p>If you are sharing data that includes a third party’s proprietary data
+or has third-party commercial restrictions, please contact <a href="https://centernet.fredhutch.org/cn/u/business-dev.html">Fred Hutch
+Business Development &amp; Strategy (BD&amp;S)</a>. When research is funded by a
+commercial sponsor, restrictions on data sharing may apply because of
+agreements with the sponsor. Any such restrictions should be highlighted
+in the data management and sharing plan. In the event that you apply for
+or receive commercial funding for any part of research, you should
+advise BD&amp;S of the situation without delay.</p>
+
+<h2 id="data-classification-overview">Data Classification Overview</h2>
+<h3 id="public---level-i">Public - Level I</h3>
+<p>This level includes published research results, Fred Hutch publications and communications press announcements, public record documents, job postings, open source configuration list/code/recipes, reference genomes, released data sets, public cryptographic keys.</p>
+
+<h3 id="confidential---level-ii">Confidential - Level II</h3>
+<p>This level includes pre–publication research information and analyses, medical expense information, invoices, legal instruments or agreements, transaction documents and reports, Fast file and Secure File server, building plans and information about the physical plant, de-identified research participant information, donor information, metadata, Human Resources data/Employee ID numbers, server names/IP addresses, corporate policies, DNS and LDAP information.</p>
+
+<h3 id="strictly-confidential---level-iii">Strictly Confidential - Level III</h3>
+<p>This level includes Protected Health Information (PHI), Individually Identifiable Health Information (IIHI), Personally Identifiable Information (PII), passwords and encryption keys, proprietary information including that belonging to entities other than Fred Hutch, hardware and software authtorization or authentication keys, electronic communication and documents regarding personal or financial matters or other sensitive subjects.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Subject to FH Admin. Control</th>
+      <th>Access Requires Authentication</th>
+      <th>Logging/Audit</th>
+      <th>Encryption at Rest (Encryption effective mid-2019)</th>
+      <th>Encryption in Transit</th>
+      <th>Email</th>
+      <th>Paper-Based</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Public - Level I</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td> </td>
+      <td>No, On Premises                              No, Off-Premises (Cloud)</td>
+      <td>No Restrictions</td>
+      <td>No Restriction</td>
+    </tr>
+    <tr>
+      <td>Confidential - Level II</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes, if automated or manual system allows.</td>
+      <td>No, On Premises                              No, Off-Premises (Cloud)</td>
+      <td>No, On Premises                              Yes, Off-Premises (Cloud)</td>
+      <td>FH Supported Systems</td>
+      <td>Confidential Labeling</td>
+    </tr>
+    <tr>
+      <td>Strictly Confidential - Level III</td>
+      <td>Yes, Both on and off Premises</td>
+      <td>Yes</td>
+      <td>Yes. Audited Semi-Annual</td>
+      <td>Yes, On Premises                              Yes, Off-Premises (Cloud)</td>
+      <td>Yes, On Premises                              Yes, Off-Premises (Cloud)</td>
+      <td>Encrypted and FH Approved Systems</td>
+      <td>Tamper-proof Envelope/Registered Mail/Signed Delivery</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="patient-consent">Patient Consent</h2>
+
+<p>All research involving 1) human subject participants, 2) patient
+information, or 3) tissue samples derived from patients/human
+participants must include appropriate safeguards to protect the privacy
+of research participants. You must ensure the necessary patient consent:</p>
+
+<ol>
+  <li>adheres to Human Subjects Protection by receiving IRB approval, and</li>
+  <li>is signed by the patient prior to data sharing.</li>
+</ol>
+
+<p>Requirements to adhere to relevant regulatory, ethical, or institutional policy should be met,
+data security measures established and all IRO and patient permissions
+should be in place prior to disclosing any data. Requirements may
+dictate sharing through a data use agreement.</p>
+
+<h2 id="security">Security</h2>
+
+<p>Common mechanisms for sharing datasets:</p>
+
+<ul>
+  <li>
+    <p>Hosted by portals or other data sharing platforms as prescribed by specific federal agencies or journals</p>
+  </li>
+  <li>
+    <p>Posted online via a project or personal website</p>
+  </li>
+  <li>
+    <p>Submitted as supplemental material to be hosted on a journal publisher’s website</p>
+  </li>
+  <li>
+    <p>Deposited in an open repository or archive (such as GitHub or other open hosting site)</p>
+  </li>
+  <li>
+    <p>Deposited in an open repository and publish a “data paper” describing the data</p>
+  </li>
+  <li>
+    <p>Using FH Outlook email and Office 365 Encryption Security</p>
+  </li>
+  <li>
+    <p>Shared using Fred Hutch resources (such as Sharepoint, Aspera, Microsoft OneDrive or BaseCamp), described in the <a href="https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html">Center IT Collaboration Tools site</a> and in this site’s <a href="/computing/storage_collaboration/">Collaborative Data Storage page</a></p>
+  </li>
+  <li>
+    <p>Using properly licensed corporate tools or subscription applications such as DropBox or Box can be considered with guidance from the Information Security Office</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Note:  Fred Hutch data should not be stored or shared via applications utilized for personal use.</p>
+</blockquote>
+
+<h3 id="office-365-email-and-onedrive">Office 365 Email and OneDrive</h3>
+<p>The implementation of Office 365 provides the ability to secure email, storage and sharing.  Outlook email can be secured within the Fred Hutch environment and between Fred Hutch and external entities.  To trigger email encryption, type “secure” (without quotes) in the subject line of any email and <a href="https://centernet.fredhutch.org/content/dam/centernet/u/center-it/Ignite2/Fred%20Hutch%20Email%20Encryption%20Instructions%202018-11-20.pdf.">additional instructions for securing email are provided here.</a> For users of mobile devices, Outlook mobile app (iOS and Android) ca display encrypted email within the app without opening browser.</p>
+
+<p>More information about using OneDrive to share data can be found on our <a href="/computing/store_collaboration/">Collaborative Data Storage page.</a></p>
+
+<h3 id="final-notes">Final Notes</h3>
+<p>Generally, Investigators can more widely share their data to the scientific community by transferring it to a
+data archive facility to maintain documentation and meet reporting requirements.
+Data archives are particularly attractive for investigators concerned
+about managing a large volume of requests for data, vetting frivolous or
+inappropriate requests, or providing technical assistance for users
+seeking to help with analyses. Fred
+Hutch does not have a centralized data archive and does not have a preferred
+recommendation for one.</p>
+
+<p>Datasets that cannot be distributed to the general public, due to
+confidentiality concerns or third-party licensing or use agreements that
+prohibit redistribution, can be accessed through a data enclave. Fred
+Hutch does not have a data enclave and does not have a preferred
+recommendation for one. A data enclave provides a controlled secure
+environment in which eligible researchers can perform analyses using
+restricted data resources.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-12-11">December 11, 2018</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_generation/human_privacySecurity.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgeneration%2Fhuman_privacySecurity%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/generation/human_overview/" class="pagination--pager" title="Overview of Data Privacy and Security
+">Previous</a>
+    
+    
+      <a href="/generation/human_shareDeposits/" class="pagination--pager" title="Data Sharing and Public Repositories
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>
