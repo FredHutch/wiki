@@ -98,8 +98,8 @@ There are times when you may want to go beyond the minimum requirements to build
 ### Manage Dependencies (Environments and Containers)
 
 
-### Use Standard Styles (PEP8, linter tools)
-
+### Use Standard Styles (PEP8-- pycodestyle, linter tools)
+-pylint
 
 ### Unit Testing
 
