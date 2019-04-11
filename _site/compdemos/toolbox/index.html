@@ -1,0 +1,800 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>using Toolbox to get Hutch master data - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="What is toolbox.fhcrc.org ?">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="using Toolbox to get Hutch master data">
+<meta property="og:url" content="http://localhost:4000/compdemos/toolbox/">
+
+
+  <meta property="og:description" content="What is toolbox.fhcrc.org ?">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2019-01-13T00:00:00-08:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/compdemos/toolbox/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/comp_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library/HOWTOs</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_methods/" class="">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_databases/" class="">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Compute</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/linux_linux101/" class="">Linux Operating System</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/resource_overview/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_software/" class="">Scientific Software</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_usingSlurm/" class="">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_cloudCompute/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="using Toolbox to get Hutch master data">
+    <meta itemprop="description" content="What is toolbox.fhcrc.org ?">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="January 13, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">using Toolbox to get Hutch master data
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_compdemos/toolbox.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcompdemos%2Ftoolbox%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#what-is-toolboxfhcrcorg-">What is toolbox.fhcrc.org ?</a>
+    <ul>
+      <li><a href="#getting-data-from-toolbox">getting data from Toolbox</a></li>
+      <li><a href="#what-datasets-are-available-">what datasets are available ?</a></li>
+    </ul>
+  </li>
+  <li><a href="#writing-code-that-uses-toolbox-examples">Writing code that uses Toolbox (examples)</a>
+    <ul>
+      <li><a href="#python-examples">Python Examples</a>
+        <ul>
+          <li><a href="#filtering-json-files-using-the-sci-package">filtering json files using the sci package</a></li>
+          <li><a href="#dont-forget-velocity-checks">don’t forget velocity checks</a></li>
+        </ul>
+      </li>
+      <li><a href="#r-examples">R examples</a></li>
+      <li><a href="#linux-shell-bash-and-jq">Linux Shell (bash and jq)</a></li>
+    </ul>
+  </li>
+  <li><a href="#information-for-system-administrators">Information for System Administrators</a></li>
+  <li><a href="#other-data---whats-missing-">Other data - what’s missing ?</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h2 id="what-is-toolboxfhcrcorg-">What is <a href="https://toolbox.fhcrc.org/">toolbox.fhcrc.org</a> ?</h2>
+
+<p>Did you ever want to know to which PI or division a user rolls up to or check if someone is Hutch staff or affiliated or get all users in the same department? Then Toolbox may be for you. Toolbox is a system that provides Hutch <a href="https://en.wikipedia.org/wiki/Master_data">master data</a> to developers (currently focusing on user centric master data).
+Toolbox can only be accessed from inside the Hutch network or VPN and you may have already used it to get access to credentials for Cloud Computing / Economy File. However Toolbox offers much more. If you develop applications or need any kind of automation that requires information about the almost 5000 Hutch employees and non-employees (e.g affiliates) this is the tool for you. Toolbox is polling the central HR database daily so your scripts will always use current information.</p>
+
+<h3 id="getting-data-from-toolbox">getting data from Toolbox</h3>
+
+<p>Toolbox offers its data as simple json ( https://toolbox.fhcrc.org/json/ ) or csv files ( https://toolbox.fhcrc.org/csv/ ) and you can easily parse them using your favorite coding tool such as Python, R or the Linux shell. You can browse the json files using Chrome or Firefox. (The Microsoft browsers IE and Edge want to download json files instead).</p>
+
+<h3 id="what-datasets-are-available-">what datasets are available ?</h3>
+
+<p>The exact file collection available is in flux but here is an extract:</p>
+
+<ul>
+  <li><strong>faculty.json/csv</strong> - a list of all member track Hutch faculty</li>
+  <li><strong>pi.json/csv</strong> - a combined list of all member track Hutch faculty and Hutch staff who have been contact PI on a NIH grant in the last 5 years. Members of this list are getting certain allocations of data storage and high performance computing covered by center funds. IDs for Faculty / PI ID’s are built from the PI’s last name and the first initial of the preferred first name (or nick name), e.g. doe_j for Jane Doe</li>
+  <li><strong>users.json/csv</strong> - all active hutch employees and non-employees (affiliates). If a person has a “preferred name” (aka nick name) set in the HR system, the givenName column will always be set to this entry.</li>
+  <li><strong>employees.json/csv</strong> - all Hutch employees (Faculty and Staff)</li>
+  <li><strong>sc_users.json/csv</strong> - all users in departments that have had at least one scientific computing user in the past. Users in this list automatically get a posix home directory (formerly known as ‘Fred account’) and other scientific computing accounts (such as access to the Gizmo, Beagle and Koshu compute clusters)</li>
+  <li><strong>pi2user.json/csv</strong> - get the user name (hutchnet id) of a PI when passing in the PI id (lastname_f aka doe_j)</li>
+  <li><strong>user2pi.json/csv</strong> - get the PI id by passing in the user id of a person in the reporting line of the PI</li>
+  <li><strong>user2sup.json.csv</strong> - get the immediate supervisor by passing in the user id</li>
+  <li><strong>pi_groups.json/csv</strong> - get users who are member of a security group that governs access to a PIs data in center storage systems (e.g. Fast &amp; Economy File)</li>
+  <li><strong>pi_groupmember.json/csv</strong> - get the security groups a specific user is member of. The list of security groups is limited to the ones that govern access to Fast File and Economy local and cloud (S3) storage.</li>
+</ul>
+
+<h2 id="writing-code-that-uses-toolbox-examples">Writing code that uses Toolbox (examples)</h2>
+
+<p>There are 2 types of JSON files. Files that have the number “2” in their names are simple mappings or key / value pairs. For example user2sup.json allows you to get the the username of the direct supervisor of a user. Other files are larger tables. For example  users.json contains all users (faculty, staff and affiliates) with details such as department, job titles and division. (Note: Human Biology has the ID ‘CB’ which is an artifact of the past and Shared Resources has its own division ID although it technically rolls up under Research Administration). These json databases are presented as lists of dictionaries in Python. The field or column naming convention are mostly based on <a href="https://tools.ietf.org/html/rfc2798">LDAP RFC 2798</a>, e.g. givenName, displayName, sn (for surname)</p>
+
+<h3 id="python-examples">Python Examples</h3>
+
+<p>To parse JSON files from a web server we need to import the <code class="highlighter-rouge">requests</code> and <code class="highlighter-rouge">json</code> packages. To process csv files we use the <code class="highlighter-rouge">pandas</code> package which is the standard toolset for python based data scientists.
+Files with “2” in their name are converted to simple Python dictionaries, e.g. <code class="highlighter-rouge">{'key1': 'valueA', 'key2': 'valueB'}</code>. The other JSON files are converted to a list of dictionaries were each dictionary represents a row. <code class="highlighter-rouge">[{'key1':'A','key2':'B'},{'key1':'C','key2':'D'}]</code>. In the csv files this would be a row in the table.
+To start with a simple example let’s say we want to find the supervisor of Fred Appelbaum, the Center’s deputy Director. We pull the file user2sup.json into a json object and then a Python dictionary. The correct answer should be Gary Gilliland’s user id and voila:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">requests</span><span class="p">,</span> <span class="n">json</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">URL</span> <span class="o">=</span> <span class="s">'https://toolbox.fhcrc.org/json/user2sup.json'</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s">'fappelba'</span><span class="p">])</span>
+    <span class="n">gary</span>
+</code></pre></div></div>
+
+<p>then we would like to know to which PI user markg (Mark Groudine) rolls up to</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">URL</span> <span class="o">=</span> <span class="s">'https://toolbox.fhcrc.org/json/user2pi.json'</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s">'markg'</span><span class="p">])</span>
+    <span class="n">groudine_m</span>
+</code></pre></div></div>
+
+<p>and the answer is of course groudine_m. When we query other staff who reports indirectly or directly up to Mark Groudine the result would also be ‘groudine_m’. If we query the username of non-scientific staff there is no PI to roll up to and user2pi will return an empty string.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">URL</span> <span class="o">=</span> <span class="s">'https://toolbox.fhcrc.org/json/user2pi.json'</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s">'petersen'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Now let’s look for a slightly more complicated query. We are looking for staff in the clinical research division who have the word ‘Engineer’ in their job title and in the search result we would like to display 2 columns: department and title.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">URL</span> <span class="o">=</span> <span class="s">'https://toolbox.fhcrc.org/json/users.json'</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">users</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+    <span class="o">&gt;&gt;&gt;</span>     <span class="k">if</span> <span class="n">user</span><span class="p">[</span><span class="s">'division'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'CR'</span> <span class="ow">and</span> <span class="s">'Engineer'</span> <span class="ow">in</span> <span class="n">user</span><span class="p">[</span><span class="s">'title'</span><span class="p">]:</span>
+    <span class="o">&gt;&gt;&gt;</span>         <span class="k">print</span><span class="p">(</span><span class="n">user</span><span class="p">[</span><span class="s">'department'</span><span class="p">],</span> <span class="n">user</span><span class="p">[</span><span class="s">'title'</span><span class="p">])</span> 
+    <span class="n">Clinical</span> <span class="n">Research</span> <span class="n">Data</span> <span class="n">Systems</span> <span class="n">Application</span> <span class="n">Suppt</span> <span class="n">Engineer</span>
+    <span class="o">...</span>
+    <span class="n">Clinical</span> <span class="n">Research</span> <span class="n">Data</span> <span class="n">Systems</span> <span class="n">Software</span> <span class="n">Dev</span> <span class="n">Engineer</span>
+</code></pre></div></div>
+
+<p>If you prefer csv over json you can do the same thing using the <code class="highlighter-rouge">csv</code> package, you just need to write 2 lines more code</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">requests</span><span class="p">,</span> <span class="n">csv</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">URL</span> <span class="o">=</span> <span class="s">'https://toolbox.fhcrc.org/csv/users.csv'</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">iter_lines</span><span class="p">(</span><span class="n">decode_unicode</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+    <span class="o">&gt;&gt;&gt;</span>     <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s">'division'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'CR'</span> <span class="ow">and</span> <span class="s">'Engineer'</span> <span class="ow">in</span> <span class="n">row</span><span class="p">[</span><span class="s">'title'</span><span class="p">]:</span>
+    <span class="o">&gt;&gt;&gt;</span>         <span class="k">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s">'department'</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s">'title'</span><span class="p">])</span> 
+    <span class="n">Clinical</span> <span class="n">Research</span> <span class="n">Data</span> <span class="n">Systems</span> <span class="n">Application</span> <span class="n">Suppt</span> <span class="n">Engineer</span>
+    <span class="o">...</span>
+    <span class="n">Clinical</span> <span class="n">Research</span> <span class="n">Data</span> <span class="n">Systems</span> <span class="n">Software</span> <span class="n">Dev</span> <span class="n">Engineer</span>
+</code></pre></div></div>
+
+<p>Most data scientists will use the power of pandas to query csv files. If you think that iterating over a list is not too elegant this may be the right option for you.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">URL</span> <span class="o">=</span> <span class="s">'https://toolbox.fhcrc.org/csv/users.csv'</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">crdeng</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s">'division'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'CR'</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'title'</span><span class="p">]</span><span class="o">.</span><span class="nb">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s">'Engineer'</span><span class="p">)),</span> <span class="p">[</span><span class="s">'department'</span><span class="p">,</span> <span class="s">'title'</span><span class="p">]]</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">crdeng</span><span class="p">)</span>
+                            <span class="n">department</span>                       <span class="n">title</span>
+    <span class="mi">237</span>   <span class="n">Clinical</span> <span class="n">Research</span> <span class="n">Data</span> <span class="n">Systems</span>  <span class="n">Application</span> <span class="n">Suppt</span> <span class="n">Engineer</span>
+    <span class="o">...</span>
+    <span class="mi">1882</span>  <span class="n">Clinical</span> <span class="n">Research</span> <span class="n">Data</span> <span class="n">Systems</span>       <span class="n">Software</span> <span class="n">Dev</span> <span class="n">Engineer</span>
+</code></pre></div></div>
+
+<h4 id="filtering-json-files-using-the-sci-package">filtering json files using the <code class="highlighter-rouge">sci</code> package</h4>
+
+<p>Querying json files can be a bit unwieldy for more complex queries. The <code class="highlighter-rouge">sci</code> python package offers a few wrapper and shortcut functions for scientists and programmers. The sci package is already installed on Rhino if you load the latest Python through the <code class="highlighter-rouge">ml</code> command. Otherwise you can just install the sci package in your home directory using the command <code class="highlighter-rouge">pip3 install --user --upgrade sci</code>. The <code class="highlighter-rouge">sci</code> package only supports Python3 and the next examples require a sci package &gt;= 0.1.0)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="nn">requests</span><span class="p">,</span> <span class="n">json</span><span class="p">,</span> <span class="n">sci</span>
+    <span class="n">URL</span> <span class="o">=</span> <span class="s">'https://toolbox.fhcrc.org/json/users.json'</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="c"># get a list of all employeeIDs</span>
+    <span class="n">uids</span> <span class="o">=</span> <span class="n">sci</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">jget</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="s">'employeeID'</span><span class="p">))</span>
+
+    <span class="c"># get a list of employeeIDs of all Administrative Assistants</span>
+    <span class="n">uids</span> <span class="o">=</span> <span class="n">sci</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">jsearch</span><span class="p">(</span><span class="n">users</span><span class="p">,</span><span class="s">'title'</span><span class="p">,</span><span class="s">'Administrative Assistant'</span><span class="p">,</span><span class="s">'employeeID'</span><span class="p">)</span>
+
+    <span class="c"># get the job title of the 10th user in the list </span>
+    <span class="n">mytitle</span> <span class="o">=</span> <span class="n">sci</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">jsearchone</span><span class="p">(</span><span class="n">users</span><span class="p">,</span><span class="s">"employeeID"</span><span class="p">,</span><span class="n">uids</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span><span class="s">"title"</span><span class="p">)</span>
+
+    <span class="c"># Search and return an entire row of the first match</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">sci</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">jgetonerow</span><span class="p">(</span><span class="n">users</span><span class="p">,</span><span class="s">'title'</span><span class="p">,</span><span class="s">'President &amp; Director'</span><span class="p">):</span>
+</code></pre></div></div>
+
+<p>In another example we would like to send an email notification to users outside the Admin division who regularly write code to inform them of new features. We also want to CC their supervisors to increase awareness. Coders may have a range a job titles we need to consider but there is no chance this will be comprehensive list. The output list of email addresses is separated by semicolon so you can paste it directly into the to, cc or bcc fields of Outlook. (Please note: This example requires sci package &gt;= 0.1.3 which has the sci.fh.getToolbox function)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c">#! /usr/bin/env python3</span>
+    <span class="kn">import</span> <span class="nn">sci</span>
+    <span class="n">titles</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s">'Data Engineer'</span><span class="p">,</span>
+            <span class="s">'Software Dev Eng'</span><span class="p">,</span>
+            <span class="s">'Bioinformatics Analyst'</span><span class="p">,</span>
+            <span class="s">'Programmer'</span><span class="p">,</span>
+            <span class="s">'Developer'</span>
+            <span class="p">]</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="n">sci</span><span class="o">.</span><span class="n">fh</span><span class="o">.</span><span class="n">getToolbox</span><span class="p">(</span><span class="s">'users.json'</span><span class="p">)</span>
+    <span class="n">coders</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">supervisors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">titles</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">u</span><span class="p">[</span><span class="s">'title'</span><span class="p">]</span> <span class="ow">and</span> <span class="n">u</span><span class="p">[</span><span class="s">'division'</span><span class="p">]</span> <span class="o">!=</span> <span class="s">'AD'</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">u</span><span class="p">[</span><span class="s">'mail'</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">coders</span><span class="p">:</span>
+                    <span class="n">coders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="s">'mail'</span><span class="p">])</span>
+                    <span class="n">email</span> <span class="o">=</span> <span class="n">sci</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">jsearchone</span><span class="p">(</span><span class="n">users</span><span class="p">,</span><span class="s">'mgrID'</span><span class="p">,</span><span class="n">u</span><span class="p">[</span><span class="s">'mgrID'</span><span class="p">],</span><span class="s">'mail'</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">email</span> <span class="ow">and</span> <span class="n">email</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">supervisors</span><span class="p">:</span>
+                        <span class="n">supervisors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">email</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">### Coders ####'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'; '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">coders</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">### Supervisors ####'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'; '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">supervisors</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h4 id="dont-forget-velocity-checks">don’t forget velocity checks</h4>
+
+<p>If you are adding and deleting users based on active users in Toolbox you will sooner or later run into the situation that something fails and toolbox  returns a user list that is empty. Now your script may think that all users have left the center and will try to delete all existing users in the system you manage. To prevent this we are building a velocity check. A velocity check is a routine that checks if a certain action makes sense. For example it will be extremely unlikely that 100 users or more will leave the Hutch at any given day so we will just cancel all actions that involve more than 100 users.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   CODE EXAMPLE TBD
+</code></pre></div></div>
+
+<h3 id="r-examples">R examples</h3>
+
+<p>R also offers a few nice options: use library <code class="highlighter-rouge">jsonlite</code> to process JSON files. For importing a csv file into a tibble (a dataframe like object with a few convenience features that was inspired by the pandas dataframe) use <code class="highlighter-rouge">readr</code> to import and then <code class="highlighter-rouge">dplyr</code> to filter it with a sql like syntax.</p>
+
+<p>First we would like to know to which PI user markg (Mark Groudine) rolls up to</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span><span class="w">
+    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'https://toolbox.fhcrc.org/json/user2pi.json'</span><span class="w">
+    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">user2pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fromJSON</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span><span class="w">
+    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">print</span><span class="p">(</span><span class="n">user2pi</span><span class="p">[</span><span class="s1">'markg'</span><span class="p">])</span><span class="w">
+    </span><span class="o">$</span><span class="n">markg</span><span class="w">
+    </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"groudine_m"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>and no surprise: he rolls up to PI id groudine_m</p>
+
+<p>Then we try processing a csv file and show the filtering capabilities of <code class="highlighter-rouge">dplyr</code>. We would like to find the first name of all employees who are among the first 50 employees of the Hutch since it was founded. Hutch employee IDs start with 10000</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">,</span><span class="w"> </span><span class="n">dplyr</span><span class="p">)</span><span class="w">
+    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'https://toolbox.fhcrc.org/csv/employees.csv'</span><span class="w">
+    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">tib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span><span class="w">
+    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">newtib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tib</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">employeeID</span><span class="p">,</span><span class="w"> </span><span class="n">givenName</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">filter</span><span class="p">(</span><span class="n">employeeID</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">10050</span><span class="p">)</span><span class="w">
+    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">print</span><span class="p">(</span><span class="n">newtib</span><span class="p">)</span><span class="w">
+    </span><span class="c1"># A tibble: 4 x 2</span><span class="w">
+    </span><span class="n">employeeID</span><span class="w"> </span><span class="n">givenName</span><span class="w">
+        </span><span class="o">&lt;</span><span class="n">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    
+    </span><span class="m">1</span><span class="w">      </span><span class="m">10002</span><span class="w"> </span><span class="n">Brenda</span><span class="w">   
+    </span><span class="m">2</span><span class="w">      </span><span class="m">10018</span><span class="w"> </span><span class="n">Stan</span><span class="w">     
+    </span><span class="m">3</span><span class="w">      </span><span class="m">10035</span><span class="w"> </span><span class="n">Patricia</span><span class="w"> 
+    </span><span class="m">4</span><span class="w">      </span><span class="m">10041</span><span class="w"> </span><span class="n">Molly</span><span class="w">   
+</span></code></pre></div></div>
+
+<h3 id="linux-shell-bash-and-jq">Linux Shell (bash and jq)</h3>
+
+<p>Through the linux Shell (e.g. on Rhino) you have access to many tools such as such as <code class="highlighter-rouge">curl</code> and <code class="highlighter-rouge">jq</code>, the command-line JSON processor, that can help processing information quickly.</p>
+
+<p>Consider the unlikely scenario that you need to collaborate with every PI and would like to create a folder for each PI just as you see it in Fast File (/fh/fast):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nv">URL</span><span class="o">=</span>https://toolbox.fhcrc.org/json/pi.json
+    <span class="nv">rootdir</span><span class="o">=</span>/fh/fast/doe_j/collab
+    <span class="k">for </span>PI <span class="k">in</span> <span class="k">$(</span>curl <span class="nt">-s</span> <span class="k">${</span><span class="nv">URL</span><span class="k">}</span> | jq <span class="nt">-r</span> <span class="s1">'.[] | .pi_dept'</span><span class="k">)</span><span class="p">;</span> <span class="k">do
+        if</span> <span class="o">!</span> <span class="o">[[</span> <span class="nt">-d</span> <span class="k">${</span><span class="nv">rootdir</span><span class="k">}</span>/<span class="k">${</span><span class="nv">PI</span><span class="k">}</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+            </span>mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">rootdir</span><span class="k">}</span>/<span class="k">${</span><span class="nv">PI</span><span class="k">}</span>
+        <span class="k">fi
+    done</span>
+</code></pre></div></div>
+
+<p>or check to which PI user markg (Mark Groudine) rolls up to</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    curl -s https://toolbox.fhcrc.org/json/user2pi.json | jq -r .markg
+</code></pre></div></div>
+
+<p>or you would like to retrieve the email addresses of all center employees:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    curl -s https://toolbox.fhcrc.org/json/employees.json | jq -r '.[] | .mail'
+</code></pre></div></div>
+<p>or how many unique job titles are there?</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    curl -s https://toolbox.fhcrc.org/json/employees.json | jq -r '.[] | .title' | sort | uniq | wc -l
+</code></pre></div></div>
+
+<h2 id="information-for-system-administrators">Information for System Administrators</h2>
+
+<p>As of early 2019 Toolbox lives on VM fox.fhcrc.org. Most scripts are symlinks under /root/bin that point to a git clone of the FredHutch/IT repository</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    root@fox:~# readlink ~/bin/sc_dump_groups_json.py /root/github/IT/general/newusernotify/sc_dump_groups_json.py
+</code></pre></div></div>
+
+<p>several cron jobs are triggered, groups are updated hourly</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    root@fox:~# cat /etc/cron.d/sc_dump_groups_json 
+    10 * * * * root /root/bin/sc_dump_groups_json.py --users &gt; /var/www/toolbox/json/pi_groupmember.json 
+    11 * * * * root /root/bin/sc_dump_groups_json.py  &gt; /var/www/toolbox/json/pi_groups.json
+    12 * * * * root /root/bin/sc_dump_groups_json.py --gid
+</code></pre></div></div>
+
+<h2 id="other-data---whats-missing-">Other data - what’s missing ?</h2>
+
+<p>If you have a proposal for improvements either in the text or in the code examples please send a pull request. If you have examples in other Programming languages that are used at Fred Hutch (Java, C#, Powershell) please also send a pull request. If you would like see other Fred Hutch master data via Toolbox or if you believe that any of the data is incorrect please contact Dirk Petersen.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-01-13">January 13, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_compdemos/toolbox.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcompdemos%2Ftoolbox%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/compdemos/tensorflow-gpu/" class="pagination--pager" title="Running Tensorflow (and Keras) on GPUs
+">Previous</a>
+    
+    
+      <a href="/compdemos/vscode_markdown_howto/" class="pagination--pager" title="Using Markdown with Visual Studio Code
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

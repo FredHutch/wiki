@@ -1,0 +1,881 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Flow Cytometry Startup Instructions - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="Changing the Sheath Tank Fluid and Waste  Check the fluid levels. This can be done by checking their weight or opening the lids. The weight of the sheath tank (looks like a box) when full (20L) is approximately 20 kg. Tanks should never run empty. There is a level indicator in the diva program on the cytometer window.  WASTE: Disconnect waste tank and unscrew the large lid to pour out the waste into the lab sink.  SHEATH FLUID: Disconnect and unscrew the level sense probe to remove it.  Add 1x PBS (sheath fluid) to the tank and fill to the top weld line.  Replace and secure the lid by pressing the down the latch or screwing tight the fastener at the top.  Reattach the tank to the fluidics cart  Bleed the three fluid filters on the front of the fluidics cart by unscrewing the bleed port.  These are gravity fed and pressure from the tanks should force air out of the bleed ports.  Replace the plugs once the air is removed.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Flow Cytometry Startup Instructions">
+<meta property="og:url" content="http://localhost:4000/gendemos/FlowCytometryStartupAndConfiguration/">
+
+
+  <meta property="og:description" content="Changing the Sheath Tank Fluid and Waste  Check the fluid levels. This can be done by checking their weight or opening the lids. The weight of the sheath tank (looks like a box) when full (20L) is approximately 20 kg. Tanks should never run empty. There is a level indicator in the diva program on the cytometer window.  WASTE: Disconnect waste tank and unscrew the large lid to pour out the waste into the lab sink.  SHEATH FLUID: Disconnect and unscrew the level sense probe to remove it.  Add 1x PBS (sheath fluid) to the tank and fill to the top weld line.  Replace and secure the lid by pressing the down the latch or screwing tight the fastener at the top.  Reattach the tank to the fluidics cart  Bleed the three fluid filters on the front of the fluidics cart by unscrewing the bleed port.  These are gravity fed and pressure from the tanks should force air out of the bleed ports.  Replace the plugs once the air is removed.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2019-01-08T00:00:00-08:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/gendemos/FlowCytometryStartupAndConfiguration/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/gen_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generationdemos/" class="">Resource Library</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Study Design and Funding</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_proposal/" class="">Proposals and Funding</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/study_hypothesis/" class="">Hypothesis Development and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/multiple_testing/" class="">Multiple Testing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Consent, Privacy and Security</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_consentIRB/" class="">Consenting and Big Molecular Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_privacySecurity/" class="">Data Privacy and Security</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/security_legal/" class="">Compliance and Legal</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_deidentification/" class="">De-identification</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/human_shareDeposits/" class="">Data Sharing and Public Repositories</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Clinical and Experimental Data</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_clinicalCov/" class="">Clinical Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_specimenBanking/" class="">Specimen Banking</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/clsp_labCov/" class="">Experimental Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Data Generation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_platformsData/" class="">Genomics Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_flowcytometry/" class="">Flow Cytometry Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_imaging/" class="">Imaging Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_proteomics/" class="">Proteomics Data</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Laboratory Resources</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_assayPrep/" class="">Assay Material Prep and QC</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_dnaApproaches/" class="">DNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/datagen_rnaApproaches/" class="">RNA-Based Approaches</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/generation/labman_software/" class="">Support Software</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Flow Cytometry Startup Instructions">
+    <meta itemprop="description" content="Changing the Sheath Tank Fluid and Waste  Check the fluid levels. This can be done by checking their weight or opening the lids. The weight of the sheath tank (looks like a box) when full (20L) is approximately 20 kg. Tanks should never run empty. There is a level indicator in the diva program on the cytometer window.  WASTE: Disconnect waste tank and unscrew the large lid to pour out the waste into the lab sink.  SHEATH FLUID: Disconnect and unscrew the level sense probe to remove it.  Add 1x PBS (sheath fluid) to the tank and fill to the top weld line.  Replace and secure the lid by pressing the down the latch or screwing tight the fastener at the top.  Reattach the tank to the fluidics cart  Bleed the three fluid filters on the front of the fluidics cart by unscrewing the bleed port.  These are gravity fed and pressure from the tanks should force air out of the bleed ports.  Replace the plugs once the air is removed.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="January 08, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Flow Cytometry Startup Instructions
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_gendemos/FlowCytometryStartupAndConfiguration.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgendemos%2FFlowCytometryStartupAndConfiguration%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#changing-the-sheath-tank-fluid-and-waste">Changing the Sheath Tank Fluid and Waste</a></li>
+  <li><a href="#overview-of-the-diva-software">Overview of the DIVA software</a></li>
+  <li><a href="#qc-bead-setup">QC Bead Setup</a>
+    <ul>
+      <li><a href="#cytometer-setup-and-tracking-cst-beads">Cytometer Setup and Tracking (CST) Beads</a></li>
+      <li><a href="#ultra-rainbow-ur-beads-38">Ultra-Rainbow (UR) Beads 3.8</a></li>
+    </ul>
+  </li>
+  <li><a href="#connecting-to-your-fred-hutch-user-account-to-transfer-data">Connecting to your Fred Hutch User Account to Transfer Data</a></li>
+  <li><a href="#canto-ii-instrument-setup-and-operation">Canto II Instrument Setup and Operation</a>
+    <ul>
+      <li><a href="#starting-up-the-cytometer">Starting up the Cytometer</a></li>
+      <li><a href="#fluidics">Fluidics</a>
+        <ul>
+          <li><a href="#startup-after-turning-on-the-lasers">Startup after turning on the lasers</a></li>
+          <li><a href="#shutdown-specifics">Shutdown Specifics</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#lsr-ii-instrument-setup-and-operation">LSR II Instrument Setup and Operation</a>
+    <ul>
+      <li><a href="#starting-up-the-cytometer-1">Starting up the Cytometer</a></li>
+      <li><a href="#fluidics-1">Fluidics</a>
+        <ul>
+          <li><a href="#startup-after-turning-on-the-lasers-1">Startup after turning on the lasers</a></li>
+          <li><a href="#shutdown">Shutdown</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#symphony-and-fortessa-x-50-instrument-setup-and-operation">Symphony and Fortessa X-50 Instrument Setup and Operation</a>
+    <ul>
+      <li><a href="#starting-up-the-cytometer-2">Starting up the Cytometer</a></li>
+      <li><a href="#fluidics-2">Fluidics</a>
+        <ul>
+          <li><a href="#startup-after-turning-on-the-lasers-2">Startup after turning on the lasers</a></li>
+          <li><a href="#shutdown-1">Shutdown</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h2 id="changing-the-sheath-tank-fluid-and-waste">Changing the Sheath Tank Fluid and Waste</h2>
+<ol>
+  <li>Check the fluid levels. This can be done by checking their weight or opening the lids. The weight of the sheath tank (looks like a box) when full (20L) is approximately 20 kg. Tanks should never run empty. There is a level indicator in the diva program on the cytometer window.</li>
+  <li>WASTE: Disconnect waste tank and unscrew the large lid to pour out the waste into the lab sink.</li>
+  <li>SHEATH FLUID: Disconnect and unscrew the level sense probe to remove it.</li>
+  <li>Add 1x PBS (sheath fluid) to the tank and fill to the top weld line.</li>
+  <li>Replace and secure the lid by pressing the down the latch or screwing tight the fastener at the top.</li>
+  <li>Reattach the tank to the fluidics cart</li>
+  <li>Bleed the three fluid filters on the front of the fluidics cart by unscrewing the bleed port.  These are gravity fed and pressure from the tanks should force air out of the bleed ports.  Replace the plugs once the air is removed.</li>
+</ol>
+
+<h2 id="overview-of-the-diva-software">Overview of the DIVA software</h2>
+<ul>
+  <li>
+    <p>Cytometer settings file (also known as instrument settings in older files): This file contains parameter voltage settings, threshold set point, and laser delay settings that are used to acquire data. Only the FS voltage, SSC voltage and the threshold are adjustable.  All other settings are predetermined in the control file.</p>
+  </li>
+  <li>
+    <p>Cytometer settings file (Global vs tube): The global cytometer settings file is located directly under the experiment name. After collection this file is automatically copied to each tube run and is saved with each tube.</p>
+  </li>
+  <li>
+    <p>Parameter usage: determining the detectors needed for each experiment and delete all parameters not being used in the experiment. This is located in the inspector window period.</p>
+  </li>
+  <li>
+    <p>Creating a new experiment: Under the Experiments drop down select new experiment. This will bring up previously saved templates. Select your template or under the general tab find New Experiment with blank sample tube. <em>Experiments must be labeled with your hutch net ID first and then the days date (mmddyr).</em></p>
+  </li>
+  <li>
+    <p>Creating a new experimental template file: Templates must be labeled using your hutch net ID and then the name of your experiment.</p>
+  </li>
+  <li>
+    <p>Export FCS v. 3.0 files: While other formats can be exported always export using this format.</p>
+  </li>
+</ul>
+
+<h2 id="qc-bead-setup">QC Bead Setup</h2>
+
+<h3 id="cytometer-setup-and-tracking-cst-beads">Cytometer Setup and Tracking (CST) Beads</h3>
+<ol>
+  <li>Under Cytometer select CST. This will open up a window for running a cytometer setup and tracking performance check.</li>
+  <li>Remove the HTS coupler.</li>
+  <li>Load a facs tube with the bead LOT number that corresponds to the bead lot set for this machine. If the LOT number is listed as 0000 check with the flow lab staff for the current bead lot number for that machine.</li>
+  <li>Click Run to start the setup and tracking script.</li>
+  <li>Hopefully, the CST performance check has passed. Then you click finish and exit out of the CST setup window. If the CST performance does not pass. Proceed to the Ultra Rainbow section below and check the CVs. If they are all \&lt;10 then it is fine to run your samples.</li>
+  <li>A prompt will then appear asking what settings you would like to use. You will select <code class="highlighter-rouge">Use CST Settings</code> as you have just run a performance check that passed on the CST beads.</li>
+  <li>Remove the CST beads from the cytometer.</li>
+</ol>
+
+<h3 id="ultra-rainbow-ur-beads-38">Ultra-Rainbow (UR) Beads 3.8</h3>
+<ol>
+  <li>Click the green arrow to the left of the date you have created after opening up the DIVA software.</li>
+  <li>Load the UR 3.8 beads onto the cytometer and select <code class="highlighter-rouge">Run</code> and <code class="highlighter-rouge">low</code> for the speed. Keep the fine adjusted speed at 250.</li>
+  <li>In the DIVA software click acquire. Ensure that the beads are falling within the set gates, then click Record.</li>
+  <li>After the 10,000 events are recorded, unload the tube and record the values corresponding values for FSC, FITC etcetera in the cytometers binder.</li>
+  <li>Once the UR values are recorded click File and select logout. This will bring you to the DIVA start screen. On the drop down Select FHCRC and enter. No password is needed.</li>
+  <li>Create a new daily folder and label it with the current days date: mm/dd/yr.</li>
+</ol>
+
+<h2 id="connecting-to-your-fred-hutch-user-account-to-transfer-data">Connecting to your Fred Hutch User Account to Transfer Data</h2>
+
+<ol>
+  <li>Click on windows explorer, which is the file icon near the windows home icon (lower left corner)</li>
+  <li>Right click on <code class="highlighter-rouge">Network</code> and select <code class="highlighter-rouge">map network drive…</code></li>
+  <li>A new window will appear. Select any letter drive and then select <code class="highlighter-rouge">\\homelink\homes</code>. Then check the box next to connect using different user.</li>
+  <li>
+    <p>Enter the following to connect to your Fred Hutch account: <code class="highlighter-rouge">fhcrc.org\_your username_</code>, then <code class="highlighter-rouge">_Your password_</code></p>
+  </li>
+  <li>Right click on your experiment. Select export and fcs files. They should be <code class="highlighter-rouge">FCS v. 3.0</code> and the files should be in <code class="highlighter-rouge">linear</code> mode. Export to the file you want in your account that you just connected.</li>
+  <li>Once transfer is complete, disconnect your account by again right clicking on <code class="highlighter-rouge">Network,</code> but now select <code class="highlighter-rouge">disconnect network drive…</code></li>
+  <li>Close your experiment and sign out of iLab.</li>
+</ol>
+
+<h2 id="canto-ii-instrument-setup-and-operation">Canto II Instrument Setup and Operation</h2>
+<h3 id="starting-up-the-cytometer">Starting up the Cytometer</h3>
+
+<ol>
+  <li>Start the cytometer by pressing the GREEN button on the side of the machine.</li>
+  <li>Turn on the computer and log on to the admin user for windows using the password (see Flow Core Staff for these).</li>
+  <li>Sign into iLab using your Hutch Net ID.</li>
+  <li>Open the DIVA software. Run the fluidics start up and Bead QC in the administrator profile. No password is needed.</li>
+</ol>
+
+<h3 id="fluidics">Fluidics</h3>
+
+<ol>
+  <li>Be sure that the HTS coupler is connected to the probe before running setup. If not, slightly loosen the coupler and insert the probe until it is flush. Then screw tight the coupler to fasten it to the probe.</li>
+  <li>On the desktop left click on the Facs DIVA software. On the drop down Select Administrator and enter. No password is needed.</li>
+  <li>A prompt will then appear asking what settings you would like to use. You will select <code class="highlighter-rouge">Use CST Settings</code> as you have just run a performance check that passed on the CST beads.</li>
+  <li>Open the file for the current year for UR and select the experiment for current month. Expand out the specimen and add a new tube label this tube with the current days date: mm/dd/yr</li>
+</ol>
+
+<h4 id="startup-after-turning-on-the-lasers">Startup after turning on the lasers</h4>
+
+<ol>
+  <li>From the drop down, menu at the top select Cytometer, then select Cleaning Modes and Prime Tank after Fill. A window will appear with three boxes that can be check marked. Check all three boxes, then select Run.  Perform this action twice.
+```
+<a href="https://en.wiktionary.org/wiki/%E2%9C%93">✓</a> FACSFlow</li>
+</ol>
+
+<p><a href="https://en.wiktionary.org/wiki/%E2%9C%93">✓</a> Shutdown Solution</p>
+
+<p><a href="https://en.wiktionary.org/wiki/%E2%9C%93">✓</a> Cleaning Solution
+```</p>
+
+<ol>
+  <li>From the drop down, menu at the top select Cytometer, then select Bubble Filter Purge and Degas Flow Cell. Perform this action twice.</li>
+  <li>From the drop down, menu at the top select Cytometer, then select Fluidics Startup. A window will appear notifying you that this action will take 10 minutes to complete. Click Run to proceed.</li>
+  <li>See Section on QC bead setup and continue with the alignment procedures using CST and Ultra rainbow beads before running.</li>
+</ol>
+
+<h4 id="shutdown-specifics">Shutdown Specifics</h4>
+<ol>
+  <li>Be sure that the HTS coupler is connected to the probe before running setup. If not, slightly loosen the coupler and insert the probe until it is flush. Then screw tight the coupler to fasten it to the probe.</li>
+  <li>From the drop down, menu at the top select Cytometer, then select Fluidics Shutdown. A window will appear notifying you that this action will take 5 minutes to complete. Click Run to proceed.</li>
+  <li>Once completed. Click Ok Press the GREEN button on the side of the cytometer to turn off the machine.</li>
+  <li>On the computer close all software and running programs, but DO NOT log out from iLab.</li>
+  <li>Click the windows home icon and select shutdown. A window will appear asking if you want to force the shutdown while iLab is running. Select force shutdown. This will turn the computer and monitors off.</li>
+</ol>
+
+<h2 id="lsr-ii-instrument-setup-and-operation">LSR II Instrument Setup and Operation</h2>
+
+<h3 id="starting-up-the-cytometer-1">Starting up the Cytometer</h3>
+
+<ol>
+  <li>Start the cytometer by pressing the GREEN button. Once the tank is pressurized bleed air from the filter attached to the sheath fluid line.</li>
+  <li>Turn on the computer and log on to the admin user for windows using the password: BDIS#1</li>
+  <li>Sign into iLab using your hutch net ID.</li>
+  <li>After powering on the cytometer by pressing the GREEN button, the red laser must be turned on. This is done by clicking on the <code class="highlighter-rouge">Fiber Laser</code> software application icon on the desktop. Clicking this will open up the application seen in Figure 1.</li>
+  <li>Press the <code class="highlighter-rouge">On</code> button in the application window to turn on the laser.</li>
+  <li>Set the power level to 200 by typing it in the <code class="highlighter-rouge">Power set</code> section. Then click <code class="highlighter-rouge">Activate.</code></li>
+  <li>The current mA (milliamps) should increase, which indicates that the laser is powered on.  Fiber laser application for turning on the red laser. Power must be set to <strong>200mW.</strong></li>
+  <li>If the current, power, and SHG temp. values are blank without green numbering, then you are not connected to the correct com port.</li>
+  <li>You must click the com port icon in the upper left-hand corner of the window and select <strong>com serial port 1</strong>.</li>
+</ol>
+
+<h3 id="fluidics-1">Fluidics</h3>
+
+<h4 id="startup-after-turning-on-the-lasers-1">Startup after turning on the lasers</h4>
+
+<ol>
+  <li>Prime the fluidics by pressing the PRIME button twice.</li>
+  <li>Place a facs tube with 40% Contrad onto the cytometer and run on high at a flow rate of 500 for 5 minutes. Do this by turning the black dial all the way clockwise.</li>
+  <li>Bleed the filters so that the lines are free of air bubbles.</li>
+  <li>Prime the fluidics by pressing the PRIME button twice.</li>
+  <li>Replace the tube containing contrad with a tube containing blue detergent (Coulter Clenz) and let run for 5 minutes.</li>
+  <li>Prime the fluidics by pressing the PRIME button twice.</li>
+  <li>Replace the tube containing detergent with a tube containing ethanol (EtOH) and let run for 5 minutes.</li>
+  <li>Replace the tube containing ethanol with a tube containing DI water and let run for 5 minutes.</li>
+  <li>Remove the tube and press prime while the stage is off to the side. Wait until the STANDBY button turns on (amber color).</li>
+  <li>See section III. for turning on appropriate lasers for running alignment and samples. See Section V. for QC bead setup and continue with the alignment procedures using CST and Ultra rainbow beads.</li>
+</ol>
+
+<h4 id="shutdown">Shutdown</h4>
+
+<ol>
+  <li>Place a facs tube with 10% bleach (NaOCl) onto the cytometer and run on high at a flow rate of 500 for 5 minutes.</li>
+  <li>Replace the tube containing bleach with a tube containing blue detergent (Coulter Clenz) and let run for 5 minutes.</li>
+  <li>Replace the tube containing detergent with a tube containing DI water and let run for 5 minutes.</li>
+  <li>Press the GREEN button on the front of the cytometer to turn off the machine.</li>
+  <li>On the computer close all software and running programs, but DO NOT log out from iLab.</li>
+  <li>Click the windows home icon and select shutdown. A window will appear asking if you want to force the shutdown while iLab is running. Select force shutdown. This will turn the computer and monitors off.</li>
+</ol>
+
+<h2 id="symphony-and-fortessa-x-50-instrument-setup-and-operation">Symphony and Fortessa X-50 Instrument Setup and Operation</h2>
+
+<h3 id="starting-up-the-cytometer-2">Starting up the Cytometer</h3>
+
+<ol>
+  <li>Start the cytometer by pressing the GREEN button. Once the tank is pressurized bleed air from the filter attached to the sheath fluid line.</li>
+  <li>Turn on the computer and log on to the admin user for windows using the password: BDIS#1</li>
+  <li>Sign into iLab using your hutch net ID.</li>
+  <li>After powering on the cytometer by pressing the GREEN button, the red laser must be turned on. This is done by clicking on the <code class="highlighter-rouge">Fiber Laser</code> software application icon on the desktop. Clicking this will open up the application seen in Figure 1.</li>
+  <li>Press the <code class="highlighter-rouge">On</code> button in the application window to turn on the laser.</li>
+  <li>Set the power level to 200 by typing it in the <code class="highlighter-rouge">Power set</code> section. Then click <code class="highlighter-rouge">Activate.</code></li>
+  <li>The current mA (milliamps) should increase, which indicates that the laser is powered on. Fiber laser application for turning on the red laser. Power must be set to <strong>200mW.</strong></li>
+  <li>If the current, power, and SHG temp. values are blank without green numbering, then you are not connected to the correct com port.</li>
+  <li>You must click the com port icon in the upper left-hand corner of the window and select the appropriate com port ( <strong>Symphony 1: 11, Symphony 2: 9 and Fortessa X-50: 6</strong> ).  Fiber laser application with COM port number 11 selected.</li>
+  <li>Double click the BD Coherent icon on the desktop and the coherent software will open as seen in Figure 3.</li>
+  <li>The 355nm laser does not automatically start when opening the program and must be started manually.  Enter <strong>65</strong> as the mW power then click laser STOP and laser START. This should start the laser and all four should then be operational.</li>
+</ol>
+
+<h3 id="fluidics-2">Fluidics</h3>
+
+<h4 id="startup-after-turning-on-the-lasers-2">Startup after turning on the lasers</h4>
+
+<ol>
+  <li>Prime the fluidics by pressing the PRIME button twice.</li>
+  <li>Place a facs tube with 40% Contrad onto the cytometer and run on high at a flow rate of 500 for 5 minutes.</li>
+  <li>Bleed the filters so that the lines are free of air bubbles.</li>
+  <li>Prime the fluidics by pressing the PRIME button twice.</li>
+  <li>Replace the tube containing contrad with a tube containing blue detergent (Coulter Clenz) and let run for 5 minutes.</li>
+  <li>Prime the fluidics by pressing the PRIME button twice.</li>
+  <li>Replace the tube containing detergent with a tube containing ethanol (EtOH) and let run for 5 minutes.</li>
+  <li>Replace the tube containing ethanol with a tube containing DI water and let run for 5 minutes.</li>
+  <li>Remove the tube and press prime while the stage is off to the side. Wait until the STANDBY button turns on (amber color).</li>
+  <li>See section III. for turning on appropriate lasers for running alignment and samples. See Section V. for QC bead setup and continue with the alignment procedures using CST and Ultra rainbow beads.</li>
+</ol>
+
+<h4 id="shutdown-1">Shutdown</h4>
+
+<ol>
+  <li>Place a facs tube with 10% bleach (NaOCl) onto the cytometer and run on high at a flow rate of 500 for 5 minutes.</li>
+  <li>Replace the tube containing bleach with a tube containing blue detergent (Coulter Clenz) and let run for 5 minutes.</li>
+  <li>Replace the tube containing detergent with a tube containing DI water and let run for 5 minutes.</li>
+  <li>Press the GREEN button on the side of the cytometer to turn off the machine.</li>
+  <li>On the computer close all software and running programs, but DO NOT log out from iLab.</li>
+  <li>Click the windows home icon and select shutdown. A window will appear asking if you want to force the shutdown while iLab is running. Select force shutdown. This will turn off the computer and monitors.</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-01-08">January 08, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_gendemos/FlowCytometryStartupAndConfiguration.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgendemos%2FFlowCytometryStartupAndConfiguration%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/gendemos/HumanSpecimensStudies/" class="pagination--pager" title="Human Data GDS Proposal Development: Regulatory User Scenarios
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,653 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Using Scratch Storage - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="Scratch storage serves as a temporary location for large data sets that ideally reside in an archive space like Economy storage, to be transferred to when compute processes are applied to them.  Data in Scratch are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in Scratch as well, and then the final data resulting from the compute process can be written to Fast storage for the researcher.  This allows large data to be archived in Economy storage, accessed by HPC when it is temporarily housed in Scratch and only the (typically smaller) resulting data are written to the more accessible, but more costly Fast storage.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Using Scratch Storage">
+<meta property="og:url" content="http://localhost:4000/bioinformatics/dm_scratch/">
+
+
+  <meta property="og:description" content="Scratch storage serves as a temporary location for large data sets that ideally reside in an archive space like Economy storage, to be transferred to when compute processes are applied to them.  Data in Scratch are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in Scratch as well, and then the final data resulting from the compute process can be written to Fast storage for the researcher.  This allows large data to be archived in Economy storage, accessed by HPC when it is temporarily housed in Scratch and only the (typically smaller) resulting data are written to the more accessible, but more costly Fast storage.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2019-03-19T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/bioinformatics/dm_scratch/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Bioinformatics</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/inf_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformaticsdemos/" class="">Resource Library</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Best Practices for Research Data Management</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_storage/" class="">Data Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_ingest/" class="">Data Ingestion and Public Datasets</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_scratch/" class="active">Using Scratch Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/dm_archive/" class="">Data Archiving</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_R/" class="">R, RStudio</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_python/" class="">Python</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/prog_unixbash/" class="">Other Languages</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Managing Code and Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_resoverview/" class="">Fred Hutch Compute Resources</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_github/" class="">GitHub, Versioning and Sharing</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/compute_docker/" class="">Docker</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Training and References</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinformatics/howto_training/" class="">Training Opportunties</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Using Scratch Storage">
+    <meta itemprop="description" content="Scratch storage serves as a temporary location for large data sets that ideally reside in an archive space like Economy storage, to be transferred to when compute processes are applied to them.  Data in Scratch are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in Scratch as well, and then the final data resulting from the compute process can be written to Fast storage for the researcher.  This allows large data to be archived in Economy storage, accessed by HPC when it is temporarily housed in Scratch and only the (typically smaller) resulting data are written to the more accessible, but more costly Fast storage.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="March 19, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Using <em>Scratch</em> Storage
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinformatics/dm_scratch.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinformatics%2Fdm_scratch%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#why-is-scratch-different">Why is Scratch Different?</a></li>
+  <li><a href="#why-use-scratch-storage-for-temporary-data">Why use Scratch Storage for temporary data?</a></li>
+  <li><a href="#using-scratch-temporary-storage-with-aws-s3-buckets-and-rhino">Using Scratch Temporary Storage with AWS S3 buckets and rhino</a>
+    <ul>
+      <li><a href="#connect-to-rhino">Connect to rhino</a></li>
+      <li><a href="#find-scratch-space">Find Scratch space</a></li>
+      <li><a href="#copy-files-from-s3-to-scratch">Copy files from S3 to Scratch</a></li>
+      <li><a href="#perform-your-process">Perform your process</a></li>
+      <li><a href="#copy-results-back-to-s3">Copy Results Back to S3</a></li>
+      <li><a href="#be-polite-clean-up-after-yourself">Be Polite: Clean up after yourself</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><em>Scratch</em> storage serves as a temporary location for large data sets that ideally reside in an archive space like <em>Economy</em> storage, to be transferred to when compute processes are applied to them.  Data in <em>Scratch</em> are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in <em>Scratch</em> as well, and then the final data resulting from the compute process can be written to <em>Fast</em> storage for the researcher.  This allows large data to be archived in <em>Economy</em> storage, accessed by HPC when it is temporarily housed in <em>Scratch</em> and only the (typically smaller) resulting data are written to the more accessible, but more costly <em>Fast</em> storage.</p>
+
+<p>Read more details about <em>Scratch</em> over in the <a href="/computing/store_scratch/">Computing domain here.</a></p>
+
+<h2 id="why-is-scratch-different">Why is <em>Scratch</em> Different?</h2>
+<p>The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the <em>Home</em> or <em>Fast</em> storage meant for long term data storage (these features were traded for lower cost and greater volume).  Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).</p>
+
+<p><strong>Data on this platform is not backed up.</strong>  This storage is <em>not</em> appropriate for storing the primary or only copy of any data.  Most importantly, there is no charge to the investigator for data stored here.</p>
+
+<h2 id="why-use-scratch-storage-for-temporary-data">Why use <em>Scratch</em> Storage for temporary data?</h2>
+
+<p>In bioinformatics workflows we are often using pipelines with many execution steps. Each of these steps can create a large amount of temporary data, for example extracting information from genomics data (BAM files). This data often needs to be kept for a short period of time to allow for quality assurance.</p>
+
+<p>Informaticians often do not delete this data after this step because they are already off to the next task. Even worse, if temporary data is created in a standard file system such as <em>Fast</em> storage it will be picked up by the backup system and copied to the cloud the next night. If data is frequently created and deleted the backup data can grow to <strong>5 or even 10 times the size</strong> of the primary data which is an enormous waste. To prevent this waste every informatician or Data Scientist working with large datasets should use <em>Scratch</em> storage as part of their routine.</p>
+
+<p>For this purpose we have a scratch file systems attached to the <code class="highlighter-rouge">Gizmo</code>, <code class="highlighter-rouge">Beagle</code> and <code class="highlighter-rouge">Koshu</code> clusters. There is a different scratch file system mounted on each cluster.  Using a scratch resource has several advantages:</p>
+
+<ul>
+  <li>The scratch file system is free of charge</li>
+  <li>It is the most performant storage system connected to <code class="highlighter-rouge">Rhino</code>/<code class="highlighter-rouge">Gizmo</code></li>
+  <li>You do not have to clean up your temporary data because the system does it for you</li>
+  <li>It reduces Fred Hutch storage expenses because the data is not backed up to the cloud.</li>
+</ul>
+
+<blockquote>
+  <p>Note: Even if you delete data from <em>Fast</em> storage one day after creation it will be kept in the backup system for a long time.</p>
+</blockquote>
+
+<h2 id="using-scratch-temporary-storage-with-aws-s3-buckets-and-rhino">Using <code class="highlighter-rouge">Scratch</code> Temporary Storage with AWS S3 buckets and <code class="highlighter-rouge">rhino</code></h2>
+
+<p>Using <code class="highlighter-rouge">scratch</code> storage for intermediate files during a process can be a useful way to keep storage costs low, while also using our local HPC resources (<code class="highlighter-rouge">rhino</code> and <code class="highlighter-rouge">gizmo</code>).  This adjusted way to work can be useful in reducing the tendency to store large and/or temporary data sets in <code class="highlighter-rouge">Fast</code> storage.  Due to the backup frequencies and speed configuration of <code class="highlighter-rouge">fast</code>, any files saved here even temporarily, will be retained in the backup for quite some time.</p>
+
+<p>Using <code class="highlighter-rouge">Economy Cloud</code> storage (AWS S3) can be a more affordable way to store large data sets, and when combined with <code class="highlighter-rouge">scratch</code> can allow all of your current processes to work without a substantial shift in your approach.</p>
+
+<h3 id="connect-to-rhino">Connect to <code class="highlighter-rouge">rhino</code></h3>
+<p>See our pages on <a href="/computing/access_methods/">Access Methods</a> and an overview of the <a href="/computing/resource_overview/">Technologies Supported</a> to learn more about what <code class="highlighter-rouge">rhino</code> is and how to use it.</p>
+
+<h3 id="find-scratch-space">Find <code class="highlighter-rouge">Scratch</code> space</h3>
+<p>Head over to some Scratch space for your PI.   Learn more about <a href="/computing/store_scratch/"><code class="highlighter-rouge">Scratch</code> storage here.</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /fh/scratch/delete10/lastname_f/
+mkdir workingdir
+cd workingdir
+</code></pre></div></div>
+
+<h3 id="copy-files-from-s3-to-scratch">Copy files from S3 to <code class="highlighter-rouge">Scratch</code></h3>
+
+<p>Sync the prefix(es) of the file(s) in S3 containing the data you want, down to <code class="highlighter-rouge">Scratch</code>.</p>
+<blockquote>
+  <p>See the AWS CLI help for using <a href="https://docs.aws.amazon.com/cli/latest/reference/s3/">S3 commands</a>.</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws s3 sync s3://yourbucket/yourDirectory/ .
+</code></pre></div></div>
+
+<h3 id="perform-your-process">Perform your process</h3>
+<p>Process the data however you typically do.  In this example we are concatenating fastq’s from paired sequencing and then converting those into uBAMS for downstream analysis with GATK tools.</p>
+
+<p>Here you can see we use the <code class="highlighter-rouge">sbatch</code> command to send the task to <code class="highlighter-rouge">gizmo</code>.  See <a href="/computing/cluster_usingSlurm/">more about HPC Job Management and commands here.</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbatch --wrap="zcat *_R1_*.fastq.gz &gt; forwardReads_R1.fastq"
+sbatch --wrap="zcat *_R2_*.fastq.gz &gt; reverseReads_R2.fastq"
+</code></pre></div></div>
+
+<p>Or, you can write a quick shell script to do a process.  Then you’re ready to convert from FASTQ to uBAM via a teeny shell script (miniScript.sh).  You can find more about how to use Slurm and see some curated examples of approaching job management in our <a href="https://github.com/FredHutch/slurm-examples">slurm-examples GitHub repository.</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">set</span> <span class="nt">-e</span>
+
+module load picard/2.18.1-Java-1.8.0_121
+
+java <span class="nt">-Xmx8G</span> <span class="nt">-jar</span> picard.jar FastqToSam <span class="se">\</span>
+    <span class="nv">FASTQ</span><span class="o">=</span>forwardReads_R1.fastq <span class="se">\ </span><span class="c">#first read file of pair</span>
+    <span class="nv">FASTQ2</span><span class="o">=</span>reverseReads_R2.fastq <span class="se">\ </span><span class="c">#second read file of pair</span>
+    <span class="nv">OUTPUT</span><span class="o">=</span>forprocessing.bam <span class="se">\</span>
+    <span class="nv">READ_GROUP_NAME</span><span class="o">=</span>H0164.2 <span class="se">\ </span><span class="c">#required; changed from default of A</span>
+    <span class="nv">SAMPLE_NAME</span><span class="o">=</span>NA12878 <span class="se">\ </span><span class="c">#required</span>
+    <span class="nv">LIBRARY_NAME</span><span class="o">=</span>Solexa-272222 <span class="se">\ </span><span class="c">#required</span>
+    <span class="nv">PLATFORM</span><span class="o">=</span>illumina <span class="se">\ </span><span class="c">#recommended</span>
+</code></pre></div></div>
+
+<p>Execute the process.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x /fh/path/miniScript.sh
+sbatch /fh/path/miniScript.sh
+</code></pre></div></div>
+
+<h3 id="copy-results-back-to-s3">Copy Results Back to S3</h3>
+<p>After you have performed your intended process and removed any intermediate files that are not the end result you are after and do not need to save, you can then sync the directory back up to S3.  By using <code class="highlighter-rouge">sync</code>, all of your output files and logs will go to S3 in a mirrored structure to that in <code class="highlighter-rouge">scratch</code>.  Another option is to directly sync only the files you want to save by name.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws s3 sync workingdir/ s3://yourbucket/yourDirectory/
+</code></pre></div></div>
+
+<h3 id="be-polite-clean-up-after-yourself">Be Polite: Clean up after yourself</h3>
+
+<p><code class="highlighter-rouge">Scratch</code>, by definition isn’t backed up, and has a finite total size for all the users at the Hutch (the sum of all data stored in individual PI’s <code class="highlighter-rouge">scratch</code> space is fixed).  Thus, it is best when you finish work and have some output files you want to save, to sync them with S3 and then delete all of what is in <code class="highlighter-rouge">scratch</code>.  Yes, you don’t HAVE to do this as eventually your files will be deleted, but it is good practice to minimize your impact on others, AND make sure that you get in the habit of taking what you need right away.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf workingdir
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-03-19">March 19, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinformatics/dm_scratch.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinformatics%2Fdm_scratch%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/bioinformatics/dm_overview/" class="pagination--pager" title="Overview of Data Management for Researchers
+">Previous</a>
+    
+    
+      <a href="/bioinformatics/dm_storage/" class="pagination--pager" title="Data Storage Guidance
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

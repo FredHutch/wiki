@@ -25,6 +25,7 @@
       os: Ubuntu 14.04 LTS
       local_storage: "800GB @ /loc  (ca 100 MB/s throughput)"
       network: 1G (up to 100MB/s throughput)
+      gpu: none
       node_count: 456
       partition: campus
     -  
@@ -32,7 +33,7 @@
       cores: 6
       sockets: 2
       memory_gb: 256
-      processor_model: E5-1234v666
+      processor_model: E5-2667v3
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: SiliconMechanics
@@ -40,6 +41,7 @@
       os: Ubuntu 14.04 LTS
       local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOPS) and 200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
       network: 10G (upto 1GB/s throughput)
+      gpu: none
       node_count: 18
       partition: largenode
     -  
@@ -47,7 +49,7 @@
       cores: 14
       sockets: 2
       memory_gb: 768
-      processor_model: E5-1234v666
+      processor_model: E5-2697v3
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
@@ -55,6 +57,7 @@
       os: Ubuntu 14.04 LTS
       local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOps) and 200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
       network: 10G (upto 1GB/s throughput)
+      gpu: none
       node_count: 3
       partition: largenode
     -  
@@ -62,7 +65,7 @@
       cores: 14
       sockets: 2
       memory_gb: 384
-      processor_model: E5-1234v666
+      processor_model: E5-2697v3
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
@@ -70,6 +73,7 @@
       os: Ubuntu 14.04 LTS
       local_storage: "5TB @ /loc (300MB/s throughput/ 1000 IOps)"
       network: 10G (up to 1GB/s throughput)
+      gpu: none
       node_count: 3
       partition: none (interactive use)
 - cluster_name: beagle
@@ -99,6 +103,7 @@
       os: Ubuntu 14.04 LTS
       local_storage: EBS
       network: EC2
+      gpu: none
       node_count: 777
       partition: campus
     - 
@@ -114,6 +119,7 @@
       os: Ubuntu 14.04 LTS
       local_storage: EBS
       network: EC2
+      gpu: none
       node_count: 103
       partition: largenode
     - 
@@ -124,10 +130,74 @@
       processor_model: r4
       processor_manufacturer: Intel
       manufacturer: EC2
-      vendor: amazon
+      vendor: Amazon
       model: r4.8xlarge
       os: Ubuntu 14.04 LTS
       local_storage: EBS
       network: EC2
+      gpu: none
       node_count: 34
       partition: largenode
+
+- cluster_name: koshu
+  type: HPC
+  location: GCP
+  access:
+    -
+      type: terminal
+      url:  ssh://rhino
+      auth: hutchnetID
+      auth_type: LDAP
+  scheduler:
+    -
+      name: slurm
+      version: 1
+  nodes:
+    - 
+      node_name: f
+      cores: 4
+      sockets: n/a
+      memory_gb: 32
+      processor_model: ??
+      processor_manufacturer: Intel
+      manufacturer: GCP
+      vendor: Google
+      model: ???
+      os: Ubuntu 14.04 LTS
+      local_storage: Google Persistent Disk
+      network: GCP
+      gpu: none
+      node_count: 70
+      partition: campus
+    - 
+      node_name: g
+      cores: 8
+      sockets: n/a
+      memory_gb: 256
+      processor_model: ??
+      processor_manufacturer: Intel
+      manufacturer: GCP
+      vendor: Google
+      model: ???
+      os: Ubuntu 14.04 LTS
+      local_storage: Google Persistent Disk
+      network: GCP
+      gpu: none
+      node_count: 10
+      partition: largenode
+    - 
+      node_name: h
+      cores: 4
+      sockets: n/a
+      memory_gb: 128
+      processor_model: ??
+      processor_manufacturer: Intel
+      manufacturer: GCP
+      vendor: Google
+      model: ???
+      os: Ubuntu 14.04 LTS
+      local_storage: Google Persistent Disk
+      network: GCP
+      gpu: 1 X Nvidia V100
+      node_count: 10
+      partition: gpu

@@ -1,0 +1,716 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Using Slurm on Fred Hutch Systems - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="This page is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the clusters available.  There are two main clusters in use today that rely on Slurm - the on-campus Gizmo cluster and the cloud-based Beagle cluster (see our Technology page for more information about those resources.  Commands work the same in either environment.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Using Slurm on Fred Hutch Systems">
+<meta property="og:url" content="http://localhost:4000/computing/cluster_usingSlurm/">
+
+
+  <meta property="og:description" content="This page is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the clusters available.  There are two main clusters in use today that rely on Slurm - the on-campus Gizmo cluster and the cloud-based Beagle cluster (see our Technology page for more information about those resources.  Commands work the same in either environment.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2019-01-28T00:00:00-08:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/computing/cluster_usingSlurm/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/comp_index/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library/HOWTOs</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/access_methods/" class="">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_databases/" class="">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Compute</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/linux_linux101/" class="">Linux Operating System</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/resource_overview/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_software/" class="">Scientific Software</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_usingSlurm/" class="active">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/computing/cluster_cloudCompute/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Using Slurm on Fred Hutch Systems">
+    <meta itemprop="description" content="This page is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the clusters available.  There are two main clusters in use today that rely on Slurm - the on-campus Gizmo cluster and the cloud-based Beagle cluster (see our Technology page for more information about those resources.  Commands work the same in either environment.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="January 28, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Using Slurm on Fred Hutch Systems
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_computing/cluster_usingSlurm.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcomputing%2Fcluster_usingSlurm%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#examples-of-use">Examples of Use</a></li>
+  <li><a href="#basic-slurm-terminology">Basic Slurm Terminology</a>
+    <ul>
+      <li><a href="#cluster">Cluster</a></li>
+      <li><a href="#partition">Partition</a></li>
+      <li><a href="#node">Node</a></li>
+      <li><a href="#job">Job</a></li>
+      <li><a href="#account">Account</a></li>
+    </ul>
+  </li>
+  <li><a href="#commands-for-managing-jobs">Commands for Managing Jobs</a>
+    <ul>
+      <li><a href="#squeue">squeue</a></li>
+      <li><a href="#scancel">scancel</a></li>
+      <li><a href="#salloc">salloc</a></li>
+      <li><a href="#hitparade-fred-hutch-homebrew">hitparade (Fred Hutch homebrew)</a></li>
+    </ul>
+  </li>
+  <li><a href="#commands-for-submitting-jobs">Commands for Submitting Jobs</a>
+    <ul>
+      <li><a href="#sbatch-and-srun">sbatch and srun</a>
+        <ul>
+          <li><a href="#examples">Examples</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#multicluster-operation">MultiCluster Operation</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>This page is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the clusters available.  There are two main clusters in use today that rely on Slurm - the on-campus <code class="highlighter-rouge">Gizmo</code> cluster and the cloud-based <code class="highlighter-rouge">Beagle</code> cluster (see our <a href="/computing/resources_overview/">Technology page</a> for more information about those resources.  Commands work the same in either environment.</p>
+
+<h2 id="examples-of-use">Examples of Use</h2>
+<p>A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the <a href="https://github.com/FredHutch/slurm-examples">Slurm Examples repo</a> for more specific guidance on using Slurm in variety of settings.  This is an evolving example repo that new users can refer to to begin to get into parallel computing and more adept use of Slurm.  If you are a Fred Hutch user and would like to contribute to the documentation or the examples there, to share with the community how you structure your interactions with Slurm, submit a pull request there.</p>
+
+<h2 id="basic-slurm-terminology">Basic Slurm Terminology</h2>
+
+<h3 id="cluster">Cluster</h3>
+
+<p>A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).  At the Hutch we have two clusters, <code class="highlighter-rouge">Beagle</code> and <code class="highlighter-rouge">Gizmo</code>.  From most hosts the default cluster will be <em>gizmo</em>- selection of the target cluster is done via an argument to Slurm commands (see <a href="#multicluster-operation">Multi-Cluster Operation</a> below)</p>
+
+<h3 id="partition">Partition</h3>
+
+<p>A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required.  While the different clusters may have different partitions, there are two partitions- a default partition with smaller nodes named <em>campus</em> and a partition with more capable nodes (more memory and CPUs) named <em>largenode</em>.</p>
+
+<h3 id="node">Node</h3>
+
+<p>A node is the basic computing unit that shares processors, memory, and some (limited) local disk.  As a rule, you don’t want to worry about choosing a node for your jobs.</p>
+
+<h3 id="job">Job</h3>
+
+<p>A job is a collection of tasks, typically implemented as a shell script.  Jobs have an ID (just a number) and a name.  The ID is automatically assigned, but you can assign a name to your job.</p>
+
+<h3 id="account">Account</h3>
+
+<p>When we refer to an “account” in the context of Slurm, we are referring to the PI account used to enforce limits and priority and <em>not</em> your HutchNet ID.  Your HutchNet ID is associated with an account.</p>
+
+<h2 id="commands-for-managing-jobs">Commands for Managing Jobs</h2>
+
+<h3 id="squeue"><code class="highlighter-rouge">squeue</code></h3>
+
+<p>The <code class="highlighter-rouge">squeue</code> command allows you to see the jobs running and waiting in the job queue.  <code class="highlighter-rouge">squeue</code> takes many options to help you select the jobs displayed by the command</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>option/argument</th>
+      <th>function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-M <em>cluster</em></td>
+      <td>Only show jobs running on the indicated cluster</td>
+    </tr>
+    <tr>
+      <td>-u <em>username</em></td>
+      <td>Limit jobs displayed to those owned by a user</td>
+    </tr>
+    <tr>
+      <td>-A <em>account</em></td>
+      <td>Limit jobs displayed to those owned by an account</td>
+    </tr>
+    <tr>
+      <td>-p <em>partition</em></td>
+      <td>Only show jobs in the indicated partition</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rhino[~]: squeue -u edgar
+      JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+   31071290    campus     wrap    edgar  R   19:03:13      1 gizmof404
+</code></pre></div></div>
+
+<p>The field <code class="highlighter-rouge">NODELIST(REASON)</code> will show either the name of the node(s) allocated for running jobs or the reason a job isn’t running.</p>
+
+<p>There are many ways to alter which jobs are shown and how the output is formatted- refer to the <a href="https://slurm.schedmd.com/squeue.html"><code class="highlighter-rouge">squeue</code> manpage</a> for more details on using this command.</p>
+
+<h3 id="scancel"><code class="highlighter-rouge">scancel</code></h3>
+
+<p><code class="highlighter-rouge">scancel</code> allows you to signal jobs- most commonly this command is used to stop execution of a running job or remove a pending job from the job queue.  A job ID is the common argument though <code class="highlighter-rouge">scancel</code> will take many other arguments that allow bulk management of jobs- it shares many of the same arguments as <code class="highlighter-rouge">squeue</code>.  For example, the following command will cancel all jobs (pending or running) owned by the user <code class="highlighter-rouge">edgar</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rhino[~]: scancel -u edgar
+</code></pre></div></div>
+
+<h3 id="salloc"><code class="highlighter-rouge">salloc</code></h3>
+
+<p>Obtain a Slurm job allocation (a set of nodes), execute a command, and then release the allocation when the command is finished.</p>
+
+<h3 id="hitparade-fred-hutch-homebrew"><code class="highlighter-rouge">hitparade</code> (Fred Hutch homebrew)</h3>
+
+<p>The <code class="highlighter-rouge">hitparade</code> command will show a summary of all jobs running and queued on the cluster broken down by user and account.  Note that this isn’t a Slurm command, rather something built in-house at Fred Hutch.</p>
+
+<p><code class="highlighter-rouge">hitparade</code> takes the <code class="highlighter-rouge">-M</code> argument to select a cluster about which to generate the output.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rhino[~]: hitparade -M beagle
+loading Python/3.6.4-foss-2016b-fh2...
+
+  === Queue: campus ======= (R / PD) ======
+    poe_e (edgar) 300 / 72
+
+  === Queue: largenode ======= (R / PD) ===
+    schulz_cm (snoopy) 273 / 0
+
+</code></pre></div></div>
+
+<h2 id="commands-for-submitting-jobs">Commands for Submitting Jobs</h2>
+
+<h3 id="sbatch-and-srun"><code class="highlighter-rouge">sbatch</code> and <code class="highlighter-rouge">srun</code></h3>
+
+<p><code class="highlighter-rouge">sbatch</code> is used to submit a job script to the cluster.  These run jobs without your intervention or input (i.e. non-interactively). Common arguments are:</p>
+
+<p><code class="highlighter-rouge">srun</code> is used to run a task on the cluster.  This is an interactive session,
+where you can directly view output as it’s produced or provide input (if needed
+by the task you are running).</p>
+
+<p>These two take many of the same options:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">-M</code> select the cluster on which the job will run</li>
+  <li><code class="highlighter-rouge">-p</code> change the partition</li>
+  <li><code class="highlighter-rouge">-t</code> request a certain amount of time for the job.</li>
+  <li><code class="highlighter-rouge">-n</code> request a number of tasks (default 1)</li>
+  <li><code class="highlighter-rouge">-c</code> request a number of processors per task (default 1)</li>
+  <li><code class="highlighter-rouge">-J</code> name a job</li>
+</ul>
+
+<p>A useful option that is only applicable to <code class="highlighter-rouge">sbatch</code> is <code class="highlighter-rouge">-o</code>, which writes output to a different file.  The default will write the file _slurm-<jobid>.out_ in the directory in which you submitted the job.</jobid></p>
+
+<h4 id="examples">Examples</h4>
+
+<p>Submit a batch job (<code class="highlighter-rouge">sbatch</code>), that will run in one day, six hours (with the flag <code class="highlighter-rouge">-t 1-6</code>) in the largenode partition (with the flag <code class="highlighter-rouge">-p largenode</code>) in Beagle (with the flag <code class="highlighter-rouge">-M beagle</code>).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job “quoth-the-raven” (with the <code class="highlighter-rouge">-J</code> flag) and list the script to use in the job <code class="highlighter-rouge">myscript.sh</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
+</code></pre></div></div>
+
+<p>Submit a job using 6 cores (with the flag <code class="highlighter-rouge">-c 6</code>) and redirect output to a file named “my-output”:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbatch -c 6 myscript.sh my-output
+</code></pre></div></div>
+
+<h2 id="multicluster-operation">MultiCluster Operation</h2>
+
+<p>Most Slurm commands can operate against remote clusters (i.e. <em>beagle</em> from <em>gizmo</em>).  Typically the only change required is to add the argument <code class="highlighter-rouge">-M &lt;cluster name&gt;</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbatch -M beagle -c 6 myscript.sh my-output
+scancel -M beagle 12345
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">hitparade</code> also supports <code class="highlighter-rouge">-M</code> and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands <code class="highlighter-rouge">srun</code> and <code class="highlighter-rouge">salloc</code> will not work.  If use of those commands is necessary, please contact SciComp.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-01-28">January 28, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_computing/cluster_usingSlurm.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcomputing%2Fcluster_usingSlurm%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/computing/cluster_software/" class="pagination--pager" title="Scientific Software
+">Previous</a>
+    
+    
+      <a href="/computing/comp_index/" class="pagination--pager" title="Overview of Computing at Fred Hutch
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

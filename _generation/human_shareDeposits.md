@@ -1,13 +1,11 @@
 ---
 title: Data Sharing and Public Repositories
-last_modified_at: 2018-10-25
+last_modified_at: 2019-04-01
 main_authors: Susan Glick, Jason Major, Karen Hansen
 primary_reviewers: sgglick, JasonMajor1
 ---
 
-Whether required for funding and publication or desired for its
-beneficial impact on research progress, understanding the why and how of
-data sharing is essential for modern biomedical research programs.
+Whether required for funding and publication or desired for its beneficial impact on research progress, understanding the why and how of data sharing is essential for modern biomedical research programs.
 
 ## Benefits of Data Sharing
 
@@ -65,29 +63,25 @@ The following should be considered when developing a data sharing plan:
 
 13. Adherence: How will you check for adherence of this plan?
 
-### **Available Resources**
+### Reading Material
 
 -   [Dataverse](http://best-practices.dataverse.org/data-management/index.html) has basic best practices guidance for data management plans.
 
 -   [DMPTool](https://dmptool.org/) from University of California
-<!--
--   Data Management Guide - Duke Libraries (Link to come)
 
--   NIH Examples of Data Sharing Plans (Link to come)
+-   [Duke University Data Management Guide](https://guides.library.duke.edu/c.php?g=633433&p=4429249)
 
--   NIAID Sample Data Sharing Plan (Link to come)
--->
+-   [Stanford University Library](https://library.stanford.edu/research/data-management-services/data-management-plans) includes some sample DMPs from NIH and other resources.
+
+-   [NIAID Sample Data Sharing Plan](https://www.niaid.nih.gov/research/sample-data-sharing-plan)
+
+-   [FAIRSharing policies](https://fairsharing.org/policies/):  A catalogue of data preservation, management and sharing policies form international funding agencies, regulators and journals. 
 
 ## Data Sharing Responsibilities
 
-The context of a data sharing project can mandate certain safety
-requirements and restrictions. Some of these considerations may include
-whether the data is shared pre- or post- publication, or whether the
-data is shared locally within the Fred Hutch Cancer Consortium or to a
-larger national or international audience.
+The context of a data sharing project can mandate certain safety requirements and restrictions. Some of these considerations may include whether the data is shared pre- or post- publication, or whether the data is shared locally within the Fred Hutch Cancer Consortium or to a larger national or international audience.
 
-While the underlying goal of sharing is to further research and its
-benefits, the underlying tenets of data sharing processes are to ensure:
+While the underlying goal of sharing is to further research and its benefits, the underlying tenets of data sharing processes are to ensure:
 
 -   Identification of who shall have access to the data
 
@@ -158,8 +152,9 @@ etc.
 
 As of 1 July 2018, manuscripts submitted to journals within the
 International Committee of Medical Journal Editors
-([[ICJME]{.underline}](http://www.icmje.org/)) reporting clinical trial
+(*[ICJME](http://www.icmje.org/)*) reporting clinical trial
 data must contain a data sharing statement, indicating:
+
 
 -   whether the authors intend to share individual de-identified participant data
 
@@ -297,3 +292,20 @@ withdraw de-identified data:
 -   Public Access: Non-individual genomic data can be publicly accessed through the dbGAP website.
 
 -   Controlled Access (Individual-level data): Individual-level data submitted to the dbGaP is required to be de-identified. No names or identifiable information is attached to the data. The genetic fingerprint however is embedded in individual's genotype data, which is not de-identifiable. That is why, to protect individuals privacy, all individual level data is only distributed through the NIH Authorized Access System.
+
+Additional information regarding the process of depositing data into NIH Public Repositories can be found from [NCBI](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/GetPdf.cgi?document_name=HowToSubmit.pdf) and from the [NCI](https://datascience.cancer.gov/data-sharing/submitting-data#expectations).  
+
+## Some Public Repositories 
+
+We here provide some details on a few (by no mean exhaustive) public repositories. If you know of another repository that would like to see added to this page please contact us. Some of these repositories do require IRB approval to download the data. Please correspond with the proper administration authority. 
+
+- [GTEx](https://gtexportal.org/home/): The Genotype-Tissue Expression  project is aiming to understand the difference and regulation of gene expression by tissue across 53 different tissues.
+- [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga): The Cancer Genome Atlas is a joint effort by the NCI and the NHGRI to moleculary characterize approximately 20000 primary cancer in comparison to matched normal over 33 cancer types. 
+- [1000 genomes](http://www.internationalgenome.org/home): The 1000 genomes project sequenced 1000 genomes to find genetic variants with at least 1% variation in the human population. A useful source
+- [GEO](https://www.ncbi.nlm.nih.gov/geo/): Gene expression Omnbinus  is a public genomics data repository. 
+- [gnomAD](https://gnomad.broadinstitute.org): The genotype aggression database  is working to aggregate and harmonize sequencing data across multiple studies. 
+- [TOPMed](https://www.nhlbiwgs.org): TOPMed is brought to you by NIH and NHLBI. Trans-Omics for Precision Medicine (TOPmed) aims to "understand of the fundamental biological processes that underlie heart, lung, blood, and sleep (HLBS) disorders." 
+- [dbsnp](https://www.ncbi.nlm.nih.gov/snp): Provides information about single nuclotide polymorphisms (SNPs), as well as tracking these SNPs publication history. 
+- [UK Biobank](https://www.ukbiobank.ac.uk): Prospective cohort study with a wealth of genetic and health data on 500,000 participants. 
+- [cBioPortal](http://www.cbioportal.org/):  This is an excellent resource for viewing/accessing TCGA cancer genomics data.  
+- [Sage's Synapse.org](https://www.synapse.org/) is not only useful for sharing (privately or publicly) your own research data, but also where [several open datasets are hosted](https://www.synapse.org/#!StandaloneWiki:OpenResearchProjects), and also interact with the various [DREAM Challenges they host](http://dreamchallenges.org/).

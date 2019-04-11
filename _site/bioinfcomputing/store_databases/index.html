@@ -1,0 +1,683 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Data Storage in Databases - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="Database Management Systems (DBMS) are useful if you need to manage large data tables of structured data and / or multiple tables that can be linked to each other (relational databases). Databases are most successfully used by researches for data set for which the data structure (e.g. column names or tables) on a very frequent basis.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Data Storage in Databases">
+<meta property="og:url" content="http://localhost:4000/bioinfcomputing/store_databases/">
+
+
+  <meta property="og:description" content="Database Management Systems (DBMS) are useful if you need to manage large data tables of structured data and / or multiple tables that can be linked to each other (relational databases). Databases are most successfully used by researches for data set for which the data structure (e.g. column names or tables) on a very frequent basis.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2018-04-01T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/bioinfcomputing/store_databases/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Bioinformatics and Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/comp_index/" class="">Overview</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/access_methods/" class="">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_databases/" class="active">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_R/" class="">R, RStudio</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_python/" class="">Python</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_linux101/" class="">Linux, Unix and Bash</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_managecode/" class="">Managing and Sharing Code</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_development/" class="">Software Development Practices</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_platforms/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_environments/" class="">Computing Environments and Containers</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_jobs/" class="">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_cloud/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Reference and Announcements</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/reference_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Data Storage in Databases">
+    <meta itemprop="description" content="Database Management Systems (DBMS) are useful if you need to manage large data tables of structured data and / or multiple tables that can be linked to each other (relational databases). Databases are most successfully used by researches for data set for which the data structure (e.g. column names or tables) on a very frequent basis.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="April 01, 2018">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Data Storage in Databases
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinfcomputing/store_databases.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinfcomputing%2Fstore_databases%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#redcap">REDCap</a></li>
+  <li><a href="#ms-sql-server">MS SQL Server</a></li>
+  <li><a href="#db4sci--previously-mydb">DB4Sci  (previously MYDB)</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>Database Management Systems (DBMS) are useful if you need to manage large data tables of structured data and / or multiple tables that can be linked to each other (relational databases). Databases are most successfully used by researches for data set for which the data structure (e.g. column names or tables) on a very frequent basis.</p>
+
+<p>Important issues to consider before choosing a data storage location for a data set are:</p>
+<ul>
+  <li>How does the data need to be accessed by staff members and what is their experience level with databases?</li>
+  <li>What is the structure of the data set?  E.g., could it be contained in an Excel file, or a set of related Excel worksheets in a file, or are the data more complex in their structure?</li>
+  <li>Are logging, user-specific permissions, or data capture features desired or required?</li>
+  <li>How will backups and maintenance be addressed by the research staff?</li>
+</ul>
+
+<p>Depending on the particular needs of the project, there are different data set storage options available supported by the Fred Hutch.</p>
+
+<h2 id="redcap">REDCap</h2>
+<p>REDCap, or Research Electronic Data Capture, is an open source, mature, secure web application for building and managing CRFs, data forms, and participant-completed surveys. REDCap is HIPAA-compliant and supports advanced features such as logging, validation, branching logic, e-signatures, randomization, calculated fields, and programming hooks. REDCap’s mobile app allows allows for offline data capture using iPad and Android tablets. Collected data can be easily exported from REDCap to Excel and common statistical packages (SPSS, SAS, Stata, and R) and has an API.</p>
+
+<p>The beauty of REDCap is that it’s easy to get started but it also has advanced features and programming hooks to serve researchers needs when creating simple surveys all the way to conducting large complex research studies and projects.  For other types of research data, the ability to customize the data dictionary to meet the needs of a particular use make it an excellent option to consider when multiple users need to have a common data source with easy access and no database management knowledge is required.</p>
+
+<p>REDCap has been used by thousands of non-profit institutions throughout the world on hundreds of thousands of projects. The REDCap group at Vanderbilt University manages the development of the REDCap code base; new features are being added every month that make REDCap better and better. At Fred Hutch, the instance of REDCap is supported by Collaborative Data Services (CDS), which is an active member of the REDCap consortium, regularly maintains our REDCap installation so that it remains up-to-date.</p>
+
+<p>CDS provides backup services, database maintenance, support for developing REDCap projects, and is very accessible for staff without previous database experience.</p>
+
+<p>For more information about REDCap at the Fred Hutch, training materials and documentation provided by CDS, <a href="http://research.fhcrc.org/cds/en/redcap.html">visit their site here.</a></p>
+
+<p>Look for in-person trainings available on a regular basis around campus, <a href="http://research.fhcrc.org/cds/en/redcap-training.html">here.</a> You will also find recorded training videos and presentation materials at this <a href="http://research.fhcrc.org/cds/en/redcap-training.html">url.</a>.</p>
+
+<p>The login page for the Fred Hutch instance is <a href="http://redcap.fredhutch.org/">here.</a></p>
+
+<h2 id="ms-sql-server">MS SQL Server</h2>
+<p>For groups for whom a REDCap system is not suitable, Microsoft SQL technology is available in conjunction with Database Administrator Services such as:</p>
+
+<ul>
+  <li>Requirements analysis, review and documentation for internally developed and third party application databases</li>
+  <li>Provision of database environments for testing and development</li>
+  <li>Management of database users and permissions</li>
+  <li>Support for SQL reporting (SSRS), analysis (SSAS) and integrated services (SSIS) platforms</li>
+</ul>
+
+<p>For further info about how to get started with a SQL server, please see <a href="https://centernet.fredhutch.org/cn/u/center-it/services/database_hosting.html">the Database Hosting page on Centernet.</a></p>
+
+<h2 id="db4sci--previously-mydb">DB4Sci  (previously MYDB)</h2>
+<p><em>DB4Sci</em> is a service supported by Scientific Computing (SciComp) that allows you to provision a dedicated server (aka, instance).  DB4Sci is a self-service website for creating containerized databases. The service is available to anyone at the center without cost. Users are given full admin rights to the database but are not given shell access to the database system. DB4Sci service performs daily database backups which are stored in the Amazon cloud.
+To access <a href="https://mydb.fredhutch.org/">DB4Sci</a> click the link and use your Hutch credentials to log in.</p>
+
+<ul>
+  <li><em>MariaDB</em> Is the latest open source version of MySQL. MariaDB is traditional
+relational database that supports SQL. MariaDB has an option
+for data encryption and data encryption in transit (TLS).  If your project
+requires encryption at rest you should use MariaDB. For more information
+visit the <a href="https://mariadb.org">MariaDB official site</a></li>
+  <li><em>Postgres</em> Postgres is a very popular open source relational database.
+Postgres is very performant and capable of storing large databases. For more information
+visit the <a href="https://www.postgresql.org">Postgres official site.</a></li>
+  <li><em>MongoDB</em> Mongo is a specialized database for storing JSON documents. Mongo
+is a NoSQL database. For more information
+visit the <a href="https://mongodb.com/">MongoDB official site</a></li>
+  <li><em>Neo4j</em> is a NoSQL database for representing graph data. For more information
+visit the <a href="https://neo4j.com">Neo4j official site</a></li>
+</ul>
+
+<p>More detailed information about <em>DB4Sci</em> can be found on the application website. DB4Sci is and open source project that is under development.
+Future features are: Self serve restore
+and Point in Time recovery. Project web site <a href="http://db4sci.org">DB4Sci.org</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-04-01">April 01, 2018</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinfcomputing/store_databases.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinfcomputing%2Fstore_databases%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/bioinfcomputing/store_collaboration/" class="pagination--pager" title="Data Storage for Collaboration
+">Previous</a>
+    
+    
+      <a href="/bioinfcomputing/store_objectstore/" class="pagination--pager" title="Data Storage in Object Storage Systems (Economy)
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>

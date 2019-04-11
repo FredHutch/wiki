@@ -1,0 +1,708 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Managing and Sharing Code - Fred Hutch Biomedical Data Science Wiki</title>
+<meta name="description" content="Version control software allows anyone using a computer to track changes made to computer files over time, which allows both referencing and reverting back to earlier work. Such software is becoming increasingly common among scientists, academics, and other researchers to manage computational work. While originally developed to support code development, version control software is useful for not just computer code, but also data, documentation, or any other files associated with a project. Moreover, version control software streamlines collaborative editing of documents, allowing changes to be easily identified and attribution of changes to be assigned to individual contributors.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Fred Hutch Biomedical Data Science Wiki">
+<meta property="og:title" content="Managing and Sharing Code">
+<meta property="og:url" content="http://localhost:4000/bioinfcomputing/prog_managecode/">
+
+
+  <meta property="og:description" content="Version control software allows anyone using a computer to track changes made to computer files over time, which allows both referencing and reverting back to earlier work. Such software is becoming increasingly common among scientists, academics, and other researchers to manage computational work. While originally developed to support code development, version control software is useful for not just computer code, but also data, documentation, or any other files associated with a project. Moreover, version control software streamlines collaborative editing of documents, allowing changes to be easily identified and attribution of changes to be assigned to individual contributors.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-04-02T18:09:25-07:00">
+
+
+
+  <meta property="article:modified_time" content="2019-04-01T00:00:00-07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/bioinfcomputing/prog_managecode/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="index.html" type="application/atom+xml" rel="alternate" title="Fred Hutch Biomedical Data Science Wiki Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+              <a href="http://localhost:4000"><img src="/images/Biomedical-Data-Science-Wiki-logo.png" alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+        <!--<a class="site-title" href="/">Fred Hutch Biomedical Data Science Wiki</a>-->
+
+        <ul class="visible-links">
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/generation/gen_index/" >Data Generation</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/bioinformatics/inf_index/" >Bioinformatics</a>
+          </li>
+          
+          
+          <li class="masthead__menu-item">
+            <a href="/computing/comp_index/" >Computing</a>
+          </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
+              transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Bioinformatics and Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/comp_index/" class="">Overview</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Access and Credentials</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/access_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/access_credentials/" class="">Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/access_methods/" class="">Methods</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Data Storage</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_databases/" class="">Database Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_posix/" class="">File Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_objectstore/" class="">Object Storage Systems</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_scratch/" class="">Temporary (Scratch) Storage</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/store_collaboration/" class="">Collaborative Storage Systems</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_R/" class="">R, RStudio</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_python/" class="">Python</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_linux101/" class="">Linux, Unix and Bash</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_managecode/" class="active">Managing and Sharing Code</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/prog_development/" class="">Software Development Practices</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Large Scale Computing</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_platforms/" class="">Technologies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_environments/" class="">Computing Environments and Containers</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_jobs/" class="">Job Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/compute_cloud/" class="">Cloud Computing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Reference and Announcements</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/bioinfcomputing/reference_overview/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/compdemos/" class="">Resource Library</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/scicompannounce/" class="">Announcements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Managing and Sharing Code">
+    <meta itemprop="description" content="Version control software allows anyone using a computer to track changes made to computer files over time, which allows both referencing and reverting back to earlier work. Such software is becoming increasingly common among scientists, academics, and other researchers to manage computational work. While originally developed to support code development, version control software is useful for not just computer code, but also data, documentation, or any other files associated with a project. Moreover, version control software streamlines collaborative editing of documents, allowing changes to be easily identified and attribution of changes to be assigned to individual contributors.">
+    <meta itemprop="datePublished" content="April 02, 2019">
+    <meta itemprop="dateModified" content="April 01, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Managing and Sharing Code
+</h1>
+          
+          <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinfcomputing/prog_managecode.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinfcomputing%2Fprog_managecode%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+        </header>
+      
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#what-is-git-and-github">What is Git and GitHub?</a></li>
+  <li><a href="#using-github-at-fred-hutch">Using GitHub at Fred Hutch</a>
+    <ul>
+      <li><a href="#public-and-private-repositories">Public and Private Repositories</a></li>
+      <li><a href="#fred-hutch-github-organization">Fred Hutch GitHub Organization</a></li>
+    </ul>
+  </li>
+  <li><a href="#using-github">Using GitHub</a>
+    <ul>
+      <li><a href="#github-desktop-client">GitHub Desktop Client</a></li>
+      <li><a href="#command-line-git">Command Line Git</a></li>
+      <li><a href="#github-on-the-web">GitHub on the Web</a></li>
+      <li><a href="#git-kraken-another-desktop-client">Git Kraken (Another Desktop Client)</a></li>
+      <li><a href="#git-integration-with-rstudio">Git Integration with RStudio</a></li>
+      <li><a href="#github-api">GitHub API</a></li>
+    </ul>
+  </li>
+  <li><a href="#github-and-information-security">GitHub and Information Security</a>
+    <ul>
+      <li><a href="#managing-credentials-in-your-code">Managing Credentials in Your Code</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>Version control software allows anyone using a computer to track changes made to computer files over time, which allows both referencing and reverting back to earlier work. Such software is becoming increasingly common among scientists, academics, and other researchers to manage computational work. While originally developed to support code development, version control software is useful for not just computer code, but also data, documentation, or any other files associated with a project. Moreover, version control software streamlines collaborative editing of documents, allowing changes to be easily identified and attribution of changes to be assigned to individual contributors.</p>
+
+<h2 id="what-is-git-and-github">What is Git and GitHub?</h2>
+<p>Git is the name of a free, open source version control software commonly used among academics and software developers. GitHub is a web-based hosting service for projects managed with Git version control software, and includes a wide variety of additional tools which allows users to collaborate, publish files, release new versions of software, and even create webpages (in fact, this wiki is published through GitHub!). Some relevant terminology associated with Git and GitHub include:</p>
+<ul>
+  <li><strong>repository:</strong> a project folder including all files and their history as tracked with Git. A repository can represent a variety of projects, including a piece of software, quarterly report, or research manuscript.
+    <ul>
+      <li><strong>local:</strong> exists on your own computer</li>
+      <li><strong>remote:</strong> exists somewhere besides your own computer and must be accessed over a network, such as on GitHub, the cloud, or a shared computer cluster</li>
+    </ul>
+  </li>
+  <li><strong>commit:</strong> a change to a file (or set of files) that represents a revision to previous versions</li>
+  <li><strong>branch:</strong> a parallel version of the “master” repository that allows you to test changes without affecting the original (or live) version; changes in a branch can be merged back to the “master” when a particular task has been completed</li>
+  <li><strong>fork:</strong> a copy of someone else’s repository in which you can make changes (and submit a request for the original repository owner to accept these changes)</li>
+</ul>
+
+<p>Additional terms are defined in <a href="https://help.github.com/articles/github-glossary/">GitHub’s Glossary</a>.</p>
+
+<h2 id="using-github-at-fred-hutch">Using GitHub at Fred Hutch</h2>
+<p>Anyone may create an individual GitHub account and username for free. These individual accounts allow creation of repositories that are by default published publicly for anyone to view and use. This supports the goal of GitHub to facilitate open, reproducible science and collaboration. Collaborative options include forking repositories belonging to other people and allowing other people to collaborate on your own projects. Depending on the content and nature of your repositories, however, you may require additional flexibility in sharing and collaboration. Some of these options are described below.</p>
+
+<ul>
+  <li>Get a <a href="https://github.com/join">GitHub username here.</a></li>
+  <li>Join the Fred Hutch GitHub organization by sending your GitHub username to <code class="highlighter-rouge">helpdesk</code> and request to be added.</li>
+</ul>
+
+<h3 id="public-and-private-repositories">Public and Private Repositories</h3>
+<p>Repositories are publicly available by default. While this supports open science practices, there are also cases in which code or data in a repository needs to be kept private, such as when data or code are proprietary or need to be kept secure for other legal or ethical reasons. Although GitHub provides unlimited free public repositories to all users, and recently has added the option for private repositories for small teams. Repositories created by a user, however, should be primarily for private (non-Fred Hutch related) work. However, the Fred Hutch provides access to both public and private repositories for Fred Hutch related work via the Fred Hutch GitHub organization.</p>
+
+<h3 id="fred-hutch-github-organization">Fred Hutch GitHub Organization</h3>
+<p>GitHub Organizations are accounts shared by individuals that assist in coordinating large collaborative projects. Scientific Computing maintains a <a href="https://github.com/fredhutch">Fred Hutch GitHub Organization</a> through which affiliated employees can create public <em>or</em> private repositories and share access with collaborators external to the Hutch. For individual users working on Fred Hutch related work, creating repositories as part of the insitution is preferred as monitoring services exist for the institution’s repositories that do not exist for your own.  These services can identify and help address potential issues such as accidental credential submission or other security related mistakes which can have an impact on you or the Fred Hutch.  For more information on our GitHub Organization, please see this wiki’s section on GitHub in <a href="/computing/access_credentials">Computing Credentials</a>.</p>
+
+<h2 id="using-github">Using GitHub</h2>
+<p>There are many different ways of sharing projects collaboratively in a GitHub repository. <a href="https://guides.github.com/introduction/flow/">This GitHub Guide for using GitHub is useful for understanding the basics.</a>
+<img src="/compdemos/assets/comp_github-5c26f4cd.png" alt="" /></p>
+
+<p>There are many different ways to interact with Git and GitHub. Choosing which approach to use depends on whether you’re collaborating, if you are an experienced programmer, and how complex your work in Git will be; the advantages of each of these methods are described below. fredhutch.io’s recommended methods for beginners are described on their <a href="http://www.fredhutch.io/software/">software page</a>. In general, a good place to start is the GitHub Desktop client.</p>
+
+<h3 id="github-desktop-client">GitHub Desktop Client</h3>
+<p>Developers at Git have developed a desktop application with a graphical user interface that will allow you to accomplish most of the common tasks associated with Git version control and collaboration with GitHub. This is a great place for new Git users to learn about version control; you can download the desktop client for your system for free <a href="https://desktop.github.com/">here.</a> You can find some help getting started with <a href="https://help.github.com/desktop/guides/getting-started-with-github-desktop/">GitHub Desktop here.</a></p>
+
+<p>This desktop client will allow you to perform the basic Git workflow of making changes that are documented with Git version control. Additionally, the desktop client will allow you to clone repositories from web-based GitHub so that you can work on the project on your own computer.  After you have modified the file or files in your project, you can document and commit those changes back to the remote repository.
+<img src="/compdemos/assets/comp_github-96005f6a.png" alt="" /></p>
+
+<h3 id="command-line-git">Command Line Git</h3>
+<p>Git was originally written, and continues to be developed, as a command-line tool accessible through Terminal (Mac) and Command Prompt or PowerShell (Windows). This version of Git is the only way you can run all available Git commands, and is appropriate if you are already familiar with the command line and consistently perform work using it. Additionally, you will likely need to use the command line version if you are connecting to remote computational resources like a cluster or cloud. You can learn more about command line Git <a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics">here</a> and download the command line software <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a>.</p>
+
+<h3 id="github-on-the-web">GitHub on the Web</h3>
+<p><a href="https://github.com">GitHub</a> provides a web-based graphical interface for interacting with projects that are published through GitHub. While GitHub’s interface limits your ability to perform more advanced version control operations, there are additional tools available for collaborating, publishing wikis, and managing projects (see section below on “Additional options available in GitHub”).</p>
+
+<h3 id="git-kraken-another-desktop-client">Git Kraken (Another Desktop Client)</h3>
+<p><a href="https://www.gitkraken.com/">Git Kraken</a> is a desktop client (Mac, PC, and Linux) available for free use to academics. It allows greater control and granularity than GitHub Desktop, especially when dealing with collaborative projects involving lots of branching and forking.  It is good for advanced beginners and beyond.</p>
+
+<h3 id="git-integration-with-rstudio">Git Integration with RStudio</h3>
+<p>If you are working with R statistical programming, the <a href="https://www.rstudio.com">RStudio</a> interface possesses robust <a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">integration with version control</a>.</p>
+
+<h3 id="github-api">GitHub API</h3>
+<p>An API (Application Programming Interface) is a tool that allows you to communicate, or pass information between, two pieces of software. GitHub has an API that you can read more about <a href="https://developer.github.com/v3/">here</a>, which is useful for developing software that needs to reference information embedded in GitHub repositories.</p>
+
+<h2 id="github-and-information-security">GitHub and Information Security</h2>
+<p>With open, agile, collaborative research rapidly becoming the preferred model for scientific inquiry, many researchers at Fred Hutch and elsewhere are adopting Git and GitHub as an essential part of their analytic and publishing workflow. Combining code, data, documentation, and visualizations together in a GitHub repository along with an interactive notebook application provides an enhanced platform for reproducible research and dynamic, computational narratives. However, the same flexibility, ease-of-use, and openness that are major benefits in research collaboration can introduce serious risks when Git is used by design or unintentionally to maintain sensitive data such as protected health information (PHI) or data storage credentials. Git does not provide the same granular access controls, audit logging capabilities, and data encryption available with a database or filesystem certified for HIPAA compliance. A user with read access to a Git repository can readily clone the entire repository, including all current and previous versions of datasets and freely distribute the data through another repository or other communication channels with no record of such activity. While a GitHub repository containing sensitive data can be made “private,” simple misconfiguration or oversight can expose it to the public.</p>
+
+<p>Considering both the large potential benefits and risks of using GitHub and Git, it is important for researchers at Fred Hutch to use these tools effectively while protecting the privacy of patients and Fred Hutch data resources. It is important to understand the types of sensitive information related to security which should never be put on GitHub.  Examples include individually identifiable health or financial information, server names, database or data storage credentials (i.e., usernames, passwords, tokens, access keys, etc), IP address, name of networks, etc.</p>
+
+<p>Given the potential risk associated with even a private repository, however, you should carefully consider alternatives to maintaining any level of sensitive data in public or private GitHub repositories. The preferred method for ensuring privacy and security is keeping all potentially sensitive data out of GitHub repositories. Options for helping accomplish this while realizing the benefits of Git include restructuring workflows to preprocess and sanitize sensitive data in secure backend systems prior to it being posted to Git and storing secrets such as access keys and database credentials in the Vault secrets management system, accessing them when needed from Git using a secure API. For more guidance about how to structure your code or content you are putting in GitHub to ensure security, email <code class="highlighter-rouge">scicomp</code>.</p>
+
+<h3 id="managing-credentials-in-your-code">Managing Credentials in Your Code</h3>
+<p>One issue to note when using GitHub to do version control in your code is that it can be very straightforward to inadvertently push content to GitHub that includes things such as API tokens, usernames and passwords, or even your AWS credentials themselves.  Please take care to structure your code in such a way that these “secrets” or anything you perceive to be private information are loaded from an external file or environment variables that themselves are <strong>not</strong> sent to GitHub.  See our <a href="/generation/human_privacySecurity/">Security page</a> for more information on what is considered a secret or private information and see our <a href="/computing/access_credentials/">Computing Credentials page</a> for more specific guidance about how to structure your code to avoid a problem.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-04-01">April 01, 2019</time></p>
+        
+      </footer>
+
+      <!-- <section class="page__share"> -->
+<font size="2">
+  <a href="http://github.com/FredHutch/wiki/blob/master/_bioinfcomputing/prog_managecode.md"><i class="fas fa-pen-square"></i>
+  <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
+  <a href="http://github.com/FredHutch/wiki/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
+  <a href="https://fhbig.slack.com/#question-and-answer"><i class="fas fa-question-circle"></i>
+  <span> Have Questions? Ask them here.</span></a>
+</font>
+<hr>
+
+<!--  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbioinfcomputing%2Fprog_managecode%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+<!-- </section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/bioinfcomputing/prog_linux101/" class="pagination--pager" title="Linux, Unix and Bash
+">Previous</a>
+    
+    
+      <a href="/bioinfcomputing/prog_overview/" class="pagination--pager" title="Overview of Common Programming Languages in Bioinformatics
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>    
+    </div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+          <li><a href="/contributors/"><i class="fas fa-user-edit"></i> See our Contributors</a></li>
+
+          <li><a href="https://github.com/FredHutch/wiki"><i class="fab fa-fw fa-github"></i> See our GitHub Repo</a></li>
+
+          <li><a href="https://fhbig.slack.com/"><i class="fab fa-fw fa-slack"> </i> Join the Conversation on Slack</a></li>
+
+          <li><a href="https://fredhutch.github.io/FHBig/"><img src="/images/FHBig.png" alt="fhbig" width="40" align="left|middle" hspace="0"> Find Upcoming Events</a></li>
+
+          <li><a href="https://www.fredhutch.io/"><img src="/images/fhio.png" alt="fredhutchio" width="20" align="left|middle" hspace="0"> Find Training</a></li>
+
+
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Fred Hutch Biomedical Data Science Wiki. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+<script>
+  (function () {
+    var cx = '018020560330782233421:waz3ch9w_wg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+</script>
+
+
+
+
+
+  </body>
+</html>
