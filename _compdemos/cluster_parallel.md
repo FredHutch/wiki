@@ -82,6 +82,19 @@ exceeds the number of cores available on a single system.
 
 ## Techniques for Parallel Computation
 
+### Task Marshalling and Coordination
+
+For pleasantly parallel work its primarily necessary to track the independent
+steps within the job.  If you divide your work into 1000 steps, you need some
+way to track and ensure each step was completed prior to proceeding.  These
+techniques sometimes require integration with the workload manager depending on
+the level of tracking required.
+
+R has libraries such as _Rslurm_ which can provide back ends to the parallel
+library, enabling you to write simple loops with _Rslurm_ managing the jobs
+which are sent to cluster nodes.  _make_ has also been used to track tasks,
+though this requires that you write a little more code for job submission
+
 ### Threading
 
 "Threading" is an approach where tasks or computations are divided amongst the
