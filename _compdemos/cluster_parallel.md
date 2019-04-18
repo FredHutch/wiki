@@ -126,11 +126,32 @@ parallel) work though this approach is overkill in most cases.
 
 Slurm allows a single job to request multiple CPUs both on a single host and
 across multiple hosts.  The fundamental unit is the _task_ which can use one or
-many CPUs but cannot span multiple nodes.  Thus if your task uses threading,
-you will want a single node, but multiple CPUs on that node.  If your task uses
-message passing you can use specify multiple tasks each using one or more CPUs.
+many CPUs but cannot span multiple nodes.
 
-OpenMPI is well integrated and supported by Slurm.
+The simplest method of running parallel computations in Slurm is _srun_.  With _srun_, you can run multiple copies of an indicated program on multiple hosts by specifing the number of tasks to run:
+
+    srun --ntasks=6 myprogram
+
+
+will run six independent copies of _myprogram_ on six different CPUs (though the assigned CPUs may be on one or more nodes.
+
+If your task uses threading, you will want a single node, but multiple CPUs on
+that node.  In these cases, you'll need a single task that uses multiple CPUs
+per task.
+
+    srun --ntasks=1 --cpus-per-task=6 myprogram
+
+
+will run a single copy of _myprogram_, but will allocate 6 CPUs to _myprogram_.
+Note that _myprogram_ is "responsible" for figuring out how many CPUs are
+available and running within that allocation.
+
+If your task uses message passing you can use specify multiple tasks each using one or more CPUs (one CPU per task is most typical):
+
+    srun --ntasks=6 --cpus-per-task=1 mpirun myprogram
+
+
+In this case _myprogram_ needs to be compiled using the MPI compilers or use MPI aware libraries.  Since OpenMPI and Slurm support each other well, it's not necessary to tell the _mpirun_ about the nodes and CPUs assigned.  Note that 1 is the default for `cpus-per-task` and can be safely omitted.
 
 ## Examples
 
