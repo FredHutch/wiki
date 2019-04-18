@@ -124,23 +124,13 @@ parallel) work though this approach is overkill in most cases.
 
 ## Parallel Operations in Slurm
 
-Slurm has two concepts important when looking at implementing a parallel
-workload: _jobs_ and _steps_.  The step is the atomic unit of a job- a job can
-be made up of multiple steps.  In general, the steps are independent and don't
-directly communicate with each other. Steps can execute across many CPUs and
-hosts and many steps can run simultaneously within the job. For example,
-suppose I need to do three things to a data set:
+Slurm allows a single job to request multiple CPUs both on a single host and
+across multiple hosts.  The fundamental unit is the _task_ which can use one or
+many CPUs but cannot span multiple nodes.  Thus if your task uses threading,
+you will want a single node, but multiple CPUs on that node.  If your task uses
+message passing you can use specify multiple tasks each using one or more CPUs.
 
- - divide it into pieces
- - run a calculation on each of those pieces
- - summarize those calculations
-
-In Slurm, I can create a job made up of three steps.  The first step is
-sequential- it will use one CPU on one host.  The second step can be run on
-multiple CPUs as these calculations are independent.  The last step is, again,
-a sequential task that can only use a single CPU.  The job would need to
-request as many CPUs as could be used (or is practical) by the second step- the
-first and last step would only use a single CPU.
+OpenMPI is well integrated and supported by Slurm.
 
 ## Examples
 
