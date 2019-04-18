@@ -111,15 +111,16 @@ threading some tasks easier.
 
 ### Message Passing
 
-A common way of running parallel computations in HPC environments is using
-message passing to communicate between processes.  The most common
-implementation of message passing is the Message Passing Interface (MPI).  MPI
-allows processes to share memory and communicate with each other across
-multiple computers using a network.  Thus, these computations will scale up
-much more than threaded applications
+Message passing allows processes to share memory and communicate with each
+other across multiple computers using a network.  The most common standard for
+message passing is the [Message Passing Interface
+(MPI)](https://www.mpi-forum.org/) which defines the high-level interfaces used
+to communicate between different hosts. OpenMPI is the most common
+implementation of MPI and the one used here.
 
-Writing MPI code can be very difficult- however, there are many libraries
-available for Python and R which make creating MPI programs much easier.
+MPI is well-suited to scaling up highly-connected algorithms to run across
+computers.  MPI can also be used for marshalling independent (i.e. plesantly
+parallel) work though this approach is overkill in most cases.
 
 ## Parallel Operations in Slurm
 
