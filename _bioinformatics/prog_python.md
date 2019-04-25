@@ -28,9 +28,13 @@ SciComp maintains a current list of the various builds of Python available on `g
 Just load a Python distribution maintained by SciComp and run Jupyter lab:
 
 ```
-    petersen@rhino1:~$ ml Python/3.6.5-foss-2016b-fh3
-    petersen@rhino1:~$ jupyter lab --no-browser
+    petersen@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
+    petersen@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+
+    ... or simply use the 'jupyterlab' wrapper script:
+    petersen@rhino1:~$ jupyterlab
 ```
+
 
 Then connect to the URL, copying the link given by the previous command, which looks as follows:
 ```
@@ -46,11 +50,13 @@ From Rhino execute the `grabjupyter` command and a node will be allocated on Giz
 
 ## Jupyter on Jupyterhub
 
-SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.
+SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.  (Jupyterhub does not have the latest Python packages)
 
-Also only the first method allows you to install your own python packages as root user. The other 3 methods require you to either request a package from Scientific Computing or to create a virtual Python environment, for example:
+Also only the first method allows you to install your own python packages as administrator of your machine. 
+The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the --user option (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
+
 ```
-    petersen@rhino1:~$ ml Python/3.6.5-foss-2016b-fh3
+    petersen@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
     petersen@rhino1:~$ python3 -m venv ~/mypython
     petersen@rhino1:~$ source ~/mypython/bin/activate
     (mypython) petersen@rhino1:~$ jupyter lab

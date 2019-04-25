@@ -1,11 +1,11 @@
 ---
 title: Intro to plyranges (Bioconductor)
 main_author: Chao-Jen Wong
-last_modified_at: 2018-08-16
+primary_reviewers: TapscottLab
 ---
 
 
-`plyranges` provides `dplyr`-style operations to genomic range data infastructure in Bioconductor. Spending 15 - 20 minutes going over this demo, you may find how `plyranges` enables us to create more clean, readable and reproducible codes for genomic data analysis.
+`plyranges` provides `dplyr`-style operations to genomic range data infrastructure in Bioconductor. Spending 15 - 20 minutes going over this demo, you may find how `plyranges` enables us to create more clean, readable and reproducible codes for genomic data analysis.
 
 This demo is extracted from a chapter in Bioconductor 2018 Workshop Compilation - [Fluent Genomic Data Analysis with Plyranges](https://bioconductor.github.io/BiocWorkshops/fluent-genomic-data-analysis-with-plyranges.html).
 

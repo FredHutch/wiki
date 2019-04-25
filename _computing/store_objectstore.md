@@ -1,6 +1,6 @@
 ---
 title: Data Storage in Object Storage Systems (*Economy*)
-last_modified_at: 2018-11-26
+last_modified_at: 2019-02-06
 primary_reviewers: dirkpetersen, dtenenba
 ---
 Object storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an object storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud Computing depends very much on object storage systems such as Amazon's AWS S3 or Google Cloud Storage.
@@ -40,7 +40,7 @@ You can access *Economy Local* or *Economy Cloud* resources with [command line t
 
 >In the near future *Economy Local* will be retrofitted to become a hybrid storage solution. You will be able to access your data conveniently through a file access mount point such as `/fh/economy/` in addition to the faster object storage access.
 
-*Economy Local* is well suited to store petabytes of data at low cost and a high level of data protection. Economy File does not require tape backup as data is replicated to multiple sites. If you accidentally delete data it will be held in a "Trash can" for multiple months during which you have read-only access to the deleted data. Economy File is approved for PHI / PII data.  It is a suitable location to store genomic data  including those governed by the NIH Genomic Data Sharing policies or originating from public repositories while in use locally.
+*Economy Local* is well suited to store petabytes of data at low cost and a high level of data protection. Economy File does not require tape backup as data is replicated to multiple sites. If you accidentally delete data it will be held in a "Trash can" for multiple months during which you have read-only access to the deleted data. Economy File is approved for PHI / PII data.  It is a suitable location to store genomic data  including those governed by the NIH Genomic Data Sharing policies or originating from public repositories while in use locally. Please the [demo section for examples of Economy Local](/compdemos/EconomyCommand-API/)
 
 
 ### *Economy Cloud* (S3)
@@ -60,7 +60,7 @@ Data on this service is not backed up in the traditional sense, but rather versi
 Once you have [obtained S3 credentials](/computing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  
 
 #### User Demos
-We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-CyberDuck/), [via the AWS CLI](/compdemos/aws-cli/), [via R](/compdemos/aws-R/), or [via Python](/compdemos/aws-python/).
+We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-CyberDuck/), [via the AWS CLI](/compdemos/aws-cli/), [via R](/compdemos/aws-R/), or [via Python](/compdemos/aws-python/) and various methods for [Economy Local](/compdemos/EconomyCommand-API/)
 
 
 >NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  

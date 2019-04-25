@@ -7,7 +7,7 @@ Software used in scientific research are written in a wide range of programming 
 While programming in R, Python or other languages you may need access to various User Interfaces or "Notebooks".  This document provides an overview of these tools.
 
 ## Compute Resources Needed
-For R and Python, you can run the code you have written locally on your computer, or remotely on the [Linux clusters](/computing/cluster_rhinoGizmo/). For running remotely, you can either run on a cluster node shared with other users, or reserve a node for your exclusive use for a limited time.
+For R and Python, you can run the code you have written locally on your computer, or remotely on the [Linux clusters](/computing/resource_overview/). For running remotely, you can either run on a cluster node shared with other users, or reserve a node for your exclusive use for a limited time.
 
 ### Running on your computer
 - Pro: immediate access, familiar environment

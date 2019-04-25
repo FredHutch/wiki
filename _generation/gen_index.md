@@ -15,6 +15,7 @@ This section provides guidance for researchers looking to develop a hypothesis t
 
 * [Proposals and Funding]({{ site.baseurl }}/generation/study_proposal/)
 * [Hypothesis Development and Big Molecular Data]({{ site.baseurl }}/generation/study_hypothesis/)
+* [Multiple Testing](/generation/multiple_testing/)
 
 
 ## [Consent, Privacy and Security]({{ site.baseurl }}/generation/human_overview/)
@@ -43,10 +44,9 @@ The decisions required when generating large scale data sets themselves are info
 * [Proteomics Data]({{ site.baseurl }}/generation/datagen_proteomics/)
 
 ## [Other Laboratory Resources]({{ site.baseurl }}/generation/labman_overview/)
-Some of the challenges associated with executing large scale data projects can be mitigated by implementing good laboratory management and data systems before beginning the project.  These sections relate to the particular systems available to Fred Hutch researchers that help them manage data generated in laboratories and also specific types of guidance about good laboratory practices with large scale data generation in mind. 
+Some of the challenges associated with executing large scale data projects can be mitigated by implementing good laboratory management and data systems before beginning the project.  These sections relate to the particular systems available to Fred Hutch researchers that help them manage data generated in laboratories and also specific types of guidance about good laboratory practices with large scale data generation in mind.
 
 * [Assay Material Prep and QC]({{ site.baseurl }}/generation/datagen_assayPrep/)
 * [DNA-Based Approaches]({{ site.baseurl }}/generation/datagen_dnaApproaches/)
 * [RNA-Based Approaches]({{ site.baseurl }}/generation/datagen_dnaApproaches/)
 * [Support Software]({{ site.baseurl }}/generation/labman_software/)
-

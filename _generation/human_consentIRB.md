@@ -146,7 +146,7 @@ the following lines:
  [Informed Consent for Genomic Research.](https://www.genome.gov/27026588/informed-consent-for-genomics-research/)
 
 -   The NIH Genomic Data Sharing Policy is
- [here,](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/).  
+ [here](https://osp.od.nih.gov/scientific-sharing/genomic-data-sharing/).  
 
 -   Large-scale genomic data include genome-wide association studies
  (GWAS), single nucleotide polymorphisms (SNP) arrays, and genome

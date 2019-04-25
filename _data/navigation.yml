@@ -41,7 +41,8 @@ generation:
         url: /generation/study_proposal/
       - title: "Hypothesis Development and Big Molecular Data"
         url: /generation/study_hypothesis/
-
+      - title: "Multiple Testing"
+        url: /generation/multiple_testing/
 
   - title: "Consent, Privacy and Security"
     children:
@@ -201,3 +202,72 @@ computing:
         url: /computing/cluster_usingSlurm/
       - title: "Cloud Computing"
         url: /computing/cluster_cloudCompute/
+
+
+bioinfcomputing:
+  - title: "Bioinformatics and Computing"
+    children:
+      - title: "Overview"
+        url: /bioinfcomputing/comp_index/
+
+  - title: "Access and Credentials"
+    children:
+      - title: "Overview"
+        url: /bioinfcomputing/access_overview/
+      - title: "Credentials"
+        url: /bioinfcomputing/access_credentials/
+      - title: "Methods"
+        url: /bioinfcomputing/access_methods/
+
+  - title: "Data Storage"
+    children:
+      - title: "Overview"
+        url: /bioinfcomputing/store_overview/
+      - title: "Database Systems"
+        url: /bioinfcomputing/store_databases/
+      - title: "File Storage Systems"
+        url: /bioinfcomputing/store_posix/
+      - title: "Object Storage Systems"
+        url: /bioinfcomputing/store_objectstore/
+      - title: "Temporary (Scratch) Storage"
+        url: /bioinfcomputing/store_scratch/
+      - title: "Collaborative Storage Systems"
+        url: /bioinfcomputing/store_collaboration/
+
+  - title: "Programming"
+    children:
+      - title: "Overview"
+        url: /bioinfcomputing/prog_overview/
+      - title: "R, RStudio"
+        url: /bioinfcomputing/prog_R/
+      - title: "Python"
+        url: /bioinfcomputing/prog_python/
+      - title: "Linux, Unix and Bash"
+        url: /bioinfcomputing/prog_linux101/
+      - title: "Managing and Sharing Code"
+        url: /bioinfcomputing/prog_managecode/
+      - title: "Software Development Practices"
+        url: /bioinfcomputing/prog_development/
+
+
+  - title: "Large Scale Computing"
+    children:
+      - title: "Overview"
+        url: /bioinfcomputing/compute_overview/
+      - title: "Technologies"
+        url: /bioinfcomputing/compute_platforms/
+      - title: "Computing Environments and Containers"
+        url: /bioinfcomputing/compute_environments/
+      - title: "Job Management"
+        url: /bioinfcomputing/compute_jobs/
+      - title: "Cloud Computing"
+        url: /bioinfcomputing/compute_cloud/
+
+  - title: "Reference and Announcements"
+    children:
+      - title: "Overview"
+        url: /bioinfcomputing/reference_overview/
+      - title: "Resource Library"
+        url: /compdemos/
+      - title: "Announcements"
+        url: /scicompannounce/

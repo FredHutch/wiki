@@ -1,6 +1,6 @@
 ---
 title: Computing Credentials
-last_modified_at: 2018-12-18
+last_modified_at: 2019-03-28
 main_authors:
 primary_reviewers: dtenenbaum
 ---
@@ -45,8 +45,10 @@ A working HutchNet ID is all you need to login to `rhino` (`ssh rhino`). Some us
 First, `ssh` to one of the `rhino` machines (or use NoMachine):
 
 ```
-ssh rhino
+ssh hutchid@rhino
 ```
+
+
 
 Then run the `awscreds` command.
 
@@ -68,10 +70,32 @@ if your credentials are changed, and can be invoked as follows:
 awscreds --force
 ```
 
-See more about accessing AWS S3 via the command line [here for Python,](/compdemos/aws-python/) [here for R](/compdemos/aws-R/), and [here for the AWS Command Line Interface.](/compdemos/aws-cli/)
+### Testing Your Credentials
+
+To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from our shared reference data bucket to your local system, and then copy that file to your PI bucket.  
+
+```
+module load awscli
+aws s3 cp s3://fh-ctr-public-reference-data/wiki_example_data/iris.csv .
+```
+
+In the commands below, replace `lastname-f` (where `f` is the PI's first name initial) with the name associated to your PI bucket:
+
+```
+aws s3 cp iris.csv s3://fh-pi-lastname-f/iris.csv
+```
+If you notice any errors with this, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials. 
+
+Once you have confirmed your credentials, remember to remove the test file:
+
+```
+aws s3 rm s3://fh-pi-lastname-f/iris.csv
+```
+
+See more about accessing AWS S3 via the command line [here for Python](/compdemos/aws-python/), [here for R](/compdemos/aws-R/), and [here for the AWS Command Line Interface](/compdemos/aws-cli/).
 
 
 ### GUI Instructions
 
-Open a web browser and navigate to [https://toolbox.fhcrc.org/sw2srv/aws/account](https://toolbox.fhcrc.org/sw2srv/aws/account).
+Open a web browser and navigate to [the Toolbox](https://toolbox.fhcrc.org/sw2srv/aws/account).
 This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck or Mountain Duck. See the more about how to use Cyberduck or Mountain Duck to connect to AWS S3 [here.](/compdemos/Mountain-CyberDuck/)
