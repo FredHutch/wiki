@@ -84,8 +84,7 @@ GNU Screen and tmux are both terminal multiplexers. They run one or more shell p
 
 1. Use SSH to connect to a remote system: `ssh rhino`
 1. On Fred Hutch systems, load the tmux environment module: `module load tmux` or just `ml tmux`
-1. Attach to your running tmux session: `tmux attach` or just `tmux a`
-1. If you do not have a running session, start one: `tmux`
+1. Start a tmux session by entering `tmux`, or attach to your running tmux session using `tmux attach` or just `tmux a`
 1. When in a session, typing `exit` or `ctrl-d` will exit the tmux session
 1. Closing the lid of your laptop and/or exiting your local ssh client will leave the tmux session running
 1. Explicitly disconnect with `ctrl-b d` (ctrl-b puts tmux into command mode, and the disconnect command is d)
@@ -94,8 +93,8 @@ A note about tmux iterm2 integration. If you are using iterm2 on a Mac, add `-CC
 
 A note about the X Window System and terminal multiplexers. As stated above, on your laptop you are running an X server, and the remote program is a client. Terminal multiplexing allow your laptop to disconnect because the multiplexing server is running on the remote system and your device is the client. When you close your laptop, the X server stops. Clients exit at that point as a client cannot do anything without a server. See [NoMachine](#nomachine-nx-(multi-os)) for a workaround for X programs.
 
-## The SSH config file
-Located in your home directory in the `.ssh` folder is a file called `config` (create it if it doesn't exist). Your SSH client will read configuration options from this file when you use it. Any of the command line options can be specified in this config file to avoid overly complex SSH commands. This is what this page is all about.
+## Making Things Easier: The SSH config file
+Located in your home directory in the `.ssh` folder is a file called `config` (create it if it doesn't exist). Your SSH client will read configuration options from this file when you use it. Any of the command line options can be specified in this config file to avoid overly complex SSH commands and make frequent use of remote servers more straightforward.  
 
 ### Forward X11
 You must start from a client that is running an X11 server. These include any Linux system including NoMachine, XQuartz on MacOS, and Xming or Cygwin on Windows.
@@ -108,7 +107,7 @@ ForwardTrustedX11|-Y|yes/no|Trusted X11 connections bypass X11 security features
 Check on the remote system that you have a `DISPLAY` environment variable set using `echo $DISPLAY` and test X11 itself by running a simple X11 program like `xeyes`.
 
 ### Identity
-Often the local user on your client device is not the same as your username on the remote system. You can always `ssh joeuser@remotehost.com` but you can also specify that in the config file.
+Often the local user on your client device is not the same as your username on the remote system. You can always `ssh joeuser@remotehost.com` but you can also specify the alternate username in the config file.
 
 Config|Command Line|Value|Notes
 ---|---|---|---
@@ -125,7 +124,7 @@ You will be prompted to enter and then confirm a passphrase. This is the best pr
 This command will create two files in `~/.ssh` - `id_rsa` and `id_rsa.pub`. The first is your private key, and the second is the public key.
 
 #### MacOS Keychain
-No one wants to type a long passphrase every time they use SSH. Creating an SSH key with no passphrase is unsafe. MacOS keychain to the rescue.
+No one wants to type a long passphrase every time they use SSH. Creating an SSH key with no passphrase is unsafe. MacOS keychain to the rescue!
 
 The following steps will get your MacOS device into a state where your SSH key passphrase is unlocked for you when you log into the Mac, and is automatically supplied to SSH. You will need to be logged in to your Mac, have a terminal open, and have an SSH key to start.
 
