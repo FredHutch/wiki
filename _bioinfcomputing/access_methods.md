@@ -4,28 +4,26 @@ last_modified_at: 2019-04-11
 primary_reviewers: bmcgough
 ---
 
-## Desktop Computing
+## Desktop Computing and Mobile Devices
 
 Client devices are supported by Center IT (ADM, CRD, VIDD) as well as Division IT groups (BSD, HB, PHS).  Please see Center IT's page in CenterNet about [Laptops and Desktops](https://centernet.fredhutch.org/cn/u/center-it/help-desk/laptops-and-desktops.html) for more information about support for desktop computing.
 
 >Note: If you request a Linux Desktop, Center IT will recommend that you use NoMachine from a Windows or Mac system instead as this is the most appropriate choice for most users but not all. If it is required for your work, it can be supported.  
 
-### Mobile Devices
-
 Please see Center IT pages for more information on [Mobile Device Services](https://centernet.fredhutch.org/cn/u/center-it/services/mobile_device_service.html) or contact [Help Desk](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) with questions or problems.  
 
 
-## SSH Clients
+## SSH Clients for Remote Computing Resources
 
-We use 2 common protocols to access remote compute resources. The first is the Hypertext Transfer Protocol (HTTP). This is the way your browser communicates with remote web servers. The second common protocol is Secure SHell (SSH). This is the method used to run a program on a remote server. Typically the program run is a `shell` that gives you an interactive command line on the remote host.
+We use two common protocols to access remote compute resources. The first is the Hypertext Transfer Protocol (HTTP). This is the way your browser communicates with remote web servers. The second common protocol is Secure SHell (SSH). This is the method used to run a program on a remote server. Typically the program run is a `shell` that gives you an interactive command line on the remote host.
 
-Many programs you will want to run on a remote compute servers are command line programs. These are easily executed from your `shell` remote process. You use this method when opening a terminal (`shell`) on a compute server (like `rhino`) and typing the name of the program or script.
+Many programs you will want to run on a remote compute server are command line programs. These are easily executed from your `shell` remote process. You use this method when opening a terminal (`shell`) on a compute server (like `rhino`) and typing the name of the program or script.
 
-You may also need graphical output (GUI), for example to use tools like R Studio or advanced text editors. If the remote program has a Graphical User Interface (GUI) then you use a Windows-like system called X (or X11 or XOrg or officially The X Window System). The X Window System is backward from the way you may think it works - what you run on your laptop or desktop is actually the X server, and the remote program you want to display on your device is the client. All SSH clients support tunneling the X traffic, so usually you will use SSH to start the remote GUI program, which is then displayed on your device.
+You may also need graphical output (GUI) to use tools like R Studio or advanced text editors. If the remote program has a Graphical User Interface (GUI) then you use a Windows-like system called X (or X11 or XOrg or officially The X Window System). The X Window System is backward from the way you may think it works - what you run on your laptop or desktop is actually the X server, and the remote program you want to display on your device is the client. All SSH clients support tunneling the X traffic, so usually you will use SSH to start the remote GUI program, which is then displayed on your device.
 
 This is a list of clients and servers by OS:
 
-| OS | SSH client and command | X server | Availability
+| OS | SSH client and `command` | X server | Availability
 | --- | --- | --- | --- |
 | MacOS | OpenSSH `ssh` | [XQuartz](https://www.xquartz.org/) | OpenSSH is already installed on MacOS
 | Linux | OpenSSH `ssh` | Xorg | Both likely already installed on most systems
@@ -34,23 +32,23 @@ This is a list of clients and servers by OS:
 
 ### Windows
 
-Putty is the most widely used secure shell software for Windows. You can install putty through "Software Center" and then simply connect to host name `rhino`.
+puTTy is the most widely used secure shell software for Windows. You can install puTTy through "Software Center" and then simply connect to host name `rhino`.
 
 ### Mac OS
 
-The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources.  We also recommend using [iTerm2](https://www.iterm2.com/) for your local terminal program on your Mac- it has a richer feature set that comes in handy as your computing needs grow.
+The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources.  We also recommend using [iTerm2](https://www.iterm2.com/) for your local terminal program on your Mac.  It has a richer feature set that comes in handy as your computing needs grow.
 
 The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](http://xquartz.macosforge.org), and download and install the latest version of XQuartz.
 
 After installing XQuartz just start the app. The XQuartz icon will appear in the toolbar showing that it is running. XQuartz is now running an X11 client and that is the only interaction that you need to do with XQuartz. After XQuartz is running, open the Mac terminal. The latest version of XQuartz sets the DISPLAY environment with the default Mac terminal window. We do not recommend using the terminal that comes with XQuartz.
 
-When connecting to a rhino with ssh always use the -X flag to forward your Xsession to your Mac.
+When connecting to a `rhino` with `ssh` always use the -X flag to forward your Xsession to your Mac.
 
 ```
-ssh -X jfdey@rhino2
+ssh -X HutchID@rhino2
 ```
 
-After connecting to a Rhino verify that your X11 client is working by typing `xeyes`.
+After connecting to a `rhino` verify that your X11 client is working by typing `xeyes`.
 
 
 ### Linux
