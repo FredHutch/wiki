@@ -82,7 +82,7 @@ Configuration is very quick and the process is described in this video:
 One of the nicest features of NoMachine is that you can disconnect from the server's desktop environment and later resume the connection and continue right where you left off with all terminal windows in the same place. NoMachine from Windows or Mac is often a better choice than installing a Linux desktop.
 
 ### Screen and tmux
-GNU Screen and tmux are both terminal multiplexers. They run one or more shell processes on a remote system and enable you to disconnect and reconnect while leaving the process(es) running. They are both full-featured utilities that take a long time to learn. Using the command below, you can get working with tmux quickly.
+GNU Screen and tmux are both terminal multiplexers. They run one or more shell processes on a remote system and enable you to disconnect and reconnect while leaving the process(es) running. They are both full-featured utilities that take a longer time to learn, but provide a useful set of features that aren't available with simpler tools. Using the command below, you can get working with tmux quickly.
 
 1. Use SSH to connect to a remote system: `ssh rhino`
 1. On Fred Hutch systems, load the tmux environment module: `module load tmux` or just `ml tmux`
