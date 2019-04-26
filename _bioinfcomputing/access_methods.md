@@ -17,7 +17,7 @@ Please see Center IT pages for more information on [Mobile Device Services](http
 
 We use two common protocols to access remote compute resources. The first is the Hypertext Transfer Protocol (HTTP). This is the way your browser communicates with remote web servers. The second common protocol is Secure SHell (SSH). This is the method used to run a program on a remote server. Typically the program run is a `shell` that gives you an interactive command line on the remote host.
 
-Many programs you will want to run on a remote compute server are command line programs. These are easily executed from your `shell` remote process. You use this method when opening a terminal (`shell`) on a compute server (like `rhino`) and typing the name of the program or script.
+Many programs you will want to run on a remote compute server are command line programs. These are easily executed from your `shell` remote process. You use this method when opening a terminal (`shell`) on your computer to connect to a remote compute server (like `rhino`) and typing the name of the program or script.
 
 You may also need graphical output (GUI) to use tools like R Studio or advanced text editors. If the remote program has a Graphical User Interface (GUI) then you use a Windows-like system called X (or X11 or XOrg or officially The X Window System). The X Window System is backward from the way you may think it works - what you run on your laptop or desktop is actually the X server, and the remote program you want to display on your device is the client. All SSH clients support tunneling the X traffic, so usually you will use SSH to start the remote GUI program, which is then displayed on your device.
 
