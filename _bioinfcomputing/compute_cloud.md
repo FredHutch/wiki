@@ -1,19 +1,13 @@
 ---
 title: Cloud Computing at Fred Hutch
-last_modified_at: 2018-11-01
+last_modified_at: 2019-04-26
 main_author: Sam Minot
 primary_reviewers: dtenenba
 ---
 
-The Hutch is just getting started with cloud computing.  Options like the
-`beagle` and `koshu` clusters, while built _in_ the cloud, are very much a simple
-extension of existing infrastructure into cloud providers but does not fully or
-particularly efficiently utilize the real capabilities and advantages provided
-by cloud services.
+The Hutch is just getting started with cloud computing.  Options like the `beagle` and `koshu` clusters, while built _in_ the cloud, are very much a simple extension of existing infrastructure into cloud providers but does not fully or particularly efficiently utilize the real capabilities and advantages provided by cloud services.
 
-If you are at all interested or curious about cloud solutions and would like to
-talk over options, Scientific Computing hosts a cloud-specific office hours
-every week.  Dates and details for SciComp office hours can be found in
+If you are at all interested or curious about cloud solutions and would like to talk over options, Scientific Computing hosts a cloud-specific office hours every week.  Dates and details for SciComp office hours can be found in
 [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html).
 
 ## AWS Batch Overview
@@ -21,10 +15,10 @@ The Amazon Web Service (AWS) is a "cloud" computing provider which sells access 
 
 
 Among the different products offered by AWS, the three most relevant to bioinformatics are:
-- [Amazon Elastic Compute Cloud](https://aws.amazon.com/ec2/), or *EC2*: a service that provides access to cloud-based computers of various sizes that allow temporary use by researchers to run computing jobs that require larger processors (CPU's) or more memory than is typically available on a land-based computer.  The computing resources available for a task depend on the choices made about the CPU's or memory allocation in the specific EC2 instance (a virtual computing environment).  
-- [Amazon Simple Storage Service](https://aws.amazon.com/s3/), or *S3*:
+- [Amazon Elastic Compute Cloud](https://aws.amazon.com/ec2/), or **EC2**: a service that provides access to cloud-based computers of various sizes that allow temporary use by researchers to run computing jobs that require larger processors (CPU's) or more memory than is typically available on a land-based computer.  The computing resources available for a task depend on the choices made about the CPU's or memory allocation in the specific EC2 instance (a virtual computing environment).  
+- [Amazon Simple Storage Service](https://aws.amazon.com/s3/), or **S3**:
 a service that provides cloud-based data storage in the form of "buckets", or a pool of data that can be accessed anywhere, anytime via the web by users with credentials allowing the access to that specific bucket. The size and particular security and credentials associated with individual S3 buckets are particularly well suited to scaling and flexibility with respect to access.
-- [*AWS Batch*](https://aws.amazon.com/batch/): a service which wraps around AWS EC2 resources such that researchers can more easily do computing processes with EC2 instances on data stored in S3.  
+- [AWS Batch](https://aws.amazon.com/batch/): a service which wraps around AWS EC2 resources such that researchers can more easily do computing processes with EC2 instances on data stored in S3.  
 
 
 ### Essential terms
@@ -113,12 +107,9 @@ SciComp provides access to AWS Batch in two ways:
 * Via programmatic interfaces such as Python's [boto3](https://boto3.readthedocs.io/en/latest/reference/services/batch.html#client). The
   earlier version of this library (`boto`) is deprecated and should not be used.
 
-Access to the AWS Management Console (the web/GUI interface), is not available
-to end users at the Center. However, there is a customized, read-only
-[dashboard](https://batch-dashboard.fhcrc.org/) available which displays information
-about compute environments, queues, job definitions, and jobs.
-Please report any [issues](https://github.com/FredHutch/batch-dashboard/issues/new)
-you discover with this dashboard.
+Access to the AWS Management Console (the web/GUI interface), is not available to end users at the Center. However, there is a customized, read-only [dashboard](https://batch-dashboard.fhcrc.org/) available which displays information about compute environments, queues, job definitions, and jobs.
+
+Please report any problems you discover with this dashboard by describing the problem in an Issue in [this GitHub repository](https://github.com/FredHutch/batch-dashboard/issues/new).
 
 ## Get AWS Credentials
 
@@ -158,7 +149,7 @@ See our detailed information in the Computing Resource Library [here](/compdemos
   is important if your job requires permission to access your PI's
   [S3](https://aws.amazon.com/s3/) bucket.
 
-† = these items can be overridden in individual job submissions.
+† These items can be overridden in individual job submissions.
 
 
 
@@ -177,10 +168,7 @@ way to get scratch space (though Amazon hopes to provide one
 in the future), and there are a number of unsupported ways,
 each with its own pros and cons.
 
-If you need scratch space, contact SciComp and we can discuss
-which approach will best meet your needs.
-
-But first, determine if you **really** need scratch space.
+If you need scratch space, email `scicomp` and we can discuss which approach will best meet your needs.  **But first**, determine if you **really** need scratch space.
 Many simple jobs, where a single command is run on an input file
 to produce an output file, can be *streamed*, meaning S3 can
 serve as both the standard input and output of the command.
@@ -193,22 +181,14 @@ aws s3 cp s3://mybucket/myinputfile - | mycmd | aws s3 cp --sse AES256 - s3://my
 In the first `aws` command, the `-` means "copy the file
 to standard output", and in the second, it means
 "copy standard input to S3". `mycmd` knows how to operate
-upon its standard input.
-
-By using streams in this way, we don't require any extra disk
+upon its standard input. By using streams in this way, we don't require any extra disk
 space. Not all commands can work with streaming, specifically
 those which open files in random-access mode, allowing seeking
 to random parts of the file.
 
 If a program does not open files in random-access mode, but
-does not explicitly accept input from `STDIN`, or writes more
-than one output file, it can still work with streaming
-input/output via the use of
-[named pipes](https://github.com/FredHutch/s3uploader).
-
-More and more bioinformatics programs can read and write
-directly from/to S3 buckets, so this should reduce the need
-for scratch space.
+does not explicitly accept input from `STDIN`, or writes more than one output file, it can still work with streaming input/output via the use of
+[named pipes](https://github.com/FredHutch/s3uploader).More and more bioinformatics programs can read and write directly from/to S3 buckets, so this should reduce the need for scratch space.
 
 
 
@@ -355,8 +335,6 @@ that as you will need it to track the progress of your job.
 
 ### Submitting your job via `boto3`
 
-#### Notes on using Python
-
 * We strongly encourage the use of Python 3. It has been the current
   version of the language since 2008. Python 2 will eventually no longer
   be supported.
@@ -381,7 +359,7 @@ You can now install more Python packages using `pipenv install`.
 See the [pipenv documentation](https://docs.pipenv.org/) for more
 information.
 
-### Submitting your job
+#### Submitting your job
 
 Paste the following code into a file called `submit_job.py`:
 
@@ -408,7 +386,7 @@ print("Job ID is {}.".format(response['jobId']))
 
 ```
 
-Run it with
+Run it with:
 
 ```
 python3 submit_job.py

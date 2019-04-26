@@ -1,7 +1,7 @@
 ---
 title: Scientific Computing Resource Overview for Grants and Publications
 last_modified_at: 2019-04-25
-primary_reviewers: 
+primary_reviewers: dirkpetersen
 ---
 
 # Description of computational resources for grant writers

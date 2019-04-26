@@ -1,6 +1,6 @@
 ---
 title: Computing Environments and Containers
-last_modified_at: 2019-04-25
+last_modified_at: 2019-04-26
 primary_reviewers: bmcgough
 ---
 
@@ -63,7 +63,8 @@ $ which python
 #### Scripting with Environment Modules
 To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work. 
 
-1. Interactive shell session have the required `module` commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the `module` command. Add the follow lines to the top of your script:
+##### Best Practice 1
+Interactive shell session have the required `module` commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the `module` command. Add the follow lines to the top of your script:
 ```
 #!/bin/bash
 source /app/Lmod/lmod/lmod/init/bash
@@ -80,7 +81,8 @@ module load R/3.5.1-foss-2016b-fh1
 This would load that specific Environment Module for use in your script.
 
 
-1. Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
+##### Best Practice 2
+Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
 ```
 module load Python/3.5.1-foss-2016b-fh1
 ```

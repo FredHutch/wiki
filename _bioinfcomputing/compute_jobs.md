@@ -1,13 +1,10 @@
 ---
 title: Computing Job Management
-last_modified_at: 2019-04-01
+last_modified_at: 2019-04-26
 primary_reviewers: atombaby
 ---
 
-
-## Batch Computing
-
-_Batch_ computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop should be disconnected for any reason the job will be terminated.
+Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system and performing tasks one by one.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop should be disconnected for any reason the job will be terminated.
 
 The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on the gizmo and beagle clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm see the section below on [Using Slurm on Fred Hutch Systems](#using-slurm-on-fred-hutch-systems), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources available
 
@@ -136,7 +133,7 @@ sbatch -c 6 myscript.sh my-output
 
 ### MultiCluster Operation
 
-Most Slurm commands can operate against remote clusters (i.e. _beagle_ from _gizmo_).  Typically the only change required is to add the argument `-M <cluster name>`.
+Most Slurm commands can operate against remote clusters (i.e. `beagle` from `gizmo`).  Typically the only change required is to add the argument `-M <cluster name>`.
 
 ```
 sbatch -M beagle -c 6 myscript.sh my-output

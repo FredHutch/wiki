@@ -1,7 +1,7 @@
 ---
 title: Supported Technologies and Platforms
-last_modified_at: 2019-04-01
-primary_reviewers: 
+last_modified_at: 2019-04-26
+primary_reviewers: mbcgough, dirkpetersen, atombaby
 ---
 
 The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on here along with the basic information required for researchers to identify which resource might be best suited to their particular computing needs.  
@@ -60,19 +60,14 @@ NX has the particular advantage of maintaining your session even when you discon
 There are three systems you can use for NX sessions: _lynx_, _manx_, and _sphinx_.  These are not computational systems but rather these hosts are used solely as launch-points for sessions on `gizmo` or `rhino`. Running computational tools on this system will get you a warning from SciComp.
 
 
-## Available Resources
-VMs, shiny, rancher, data transfer
+## Other Available Resources
+More to come here regarding VMs, shiny, rancher, data transfer.  
 
-## Community Resources (not specifically supported by IT)
-Are there things people use that we don't really support?
+## Resource and Node Description information
+Below we describe the current basic configurations available for node types, numbers, and memory for a variety of `scicomp` supported computing resources.  These tables are useful when deciding on what type of resources you need to request when using `rhino` and `gizmo` for interactive and non-interactive jobs.  These tables are auto-generated and are a work in progress so that we can provide the most up to date information on the Wiki for your use.  Please file an Issue in our [GitHub repository](https://github.com/FredHutch/wiki/issues) if you notice something amiss or need clarification.  
 
-<!-- ## Self Service Resources
-Jupyterhub, RStudio, db4sci, Galaxy, etc.
-
-## Gory Details on Node Classes
-
-### Resource Table
-This table is auto-generated based on the yaml in _data/scicomp_resources.yaml, and is a work in progress.  
+### Resource Information
+<!--This table is auto-generated based on the yaml in _data/scicomp_resources.yaml, and is a work in progress.  -->
 
 Name|Type|Authentication|Authorization|Location
 ---|---|---|---|---
@@ -80,8 +75,8 @@ Name|Type|Authentication|Authorization|Location
 {{ resource.name }}|{{ resource.type }}|{{ resource.access[0].type }}|{{ resource.access[0].auth }}|{{ resource.location }}
 {%- endfor %}
 
-### Cluster Node Table
-This table is auto-generated based on the yaml in _data/cluster_nodes.yaml:
+### Cluster Node Information
+<!--This table is auto-generated based on the yaml in _data/cluster_nodes.yaml--> 
 
 {%- for resource in site.data.cluster_nodes %}
 

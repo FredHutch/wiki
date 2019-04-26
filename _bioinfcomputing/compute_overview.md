@@ -1,7 +1,7 @@
 ---
 title: Large Scale Computing Overview
-last_modified_at: 2019-04-01
-primary_reviewers: 
+last_modified_at: 2019-04-26
+primary_reviewers: bmcgough
 ---
 
 Researchers are more and more likely to need to analyze raw data sets using some sort of analysis process before they can be interpreted in the context of the scientific question. Raw data, whether from an array or sequencing for example, are not typically directly interpretable results, thus require some degree of processing. The nature of the processing depends on the data type, the platform with which the data were generated, and the biological question being asked of the data set. How this process is performed depends on the specific project, but support and resources for this process are available at the Fred Hutch for a variety of needs.
@@ -36,7 +36,7 @@ Compute Resource | Access Interface | Resource Admin | Connection to FH Data Sto
 
 
 ### Interactive Computing: Command Line Interface (CLI), Moderate to High Capability
-These systems are provided by the Fred Hutch to serve needs that rise above those that can be met using the above listed platforms.  Often reasons to move to these HPC resources include the need for version controlled, specialized package/module/tool configurations, more compute resources, or rapid access to large data sets in data storage locations not accessible with the required security for the data type by the above systems. In the table below, `gizmo` is actually the compute resource that can be accessed via multiple tools, which are also listed below.  
+These systems are provided by the Fred Hutch to serve needs that rise above those that can be met using the above listed platforms.  Often reasons to move to these HPC resources include the need for version controlled, specialized package/module/tool configurations, more compute resources, or rapid access to large data sets in data storage locations not accessible with the required security for the data type by the above systems.
 
 
 ## [Computing Environments and Containers](/bioinfcomputing/compute_environments/)
@@ -45,12 +45,12 @@ A wide range of pre-built scientific software is available for use in large scal
 ## [Job Management](/bioinfcomputing/compute_jobs/)
 When doing large scale computing tasks, one often shifts to the use of jobs to perform specific tasks.  This page provides some background on managing and interacting with your tasks.  
 
-_Batch computing_ allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop disconnected, the job would be terminated.
+Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop disconnected, the job would be terminated.
 
 The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on the `gizmo` and `beagle` clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  
 
 ## [Cloud Computing](/bioinfcomputing/compute_cloud/)
 Beyond on premise resources, cloud computing access is available for Fred Hutch researchers and this page provides some basics on how to get started if you are in need of cloud computing specifically.  
 
-## [Proposal Preparation](/bioinfcomputing/compute_grants/)
+## [Information for Grant Writers](/bioinfcomputing/compute_grants/)
 Scientific Computing has provided a description of computational and storage resources for grant writers.
