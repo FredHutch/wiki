@@ -70,7 +70,7 @@ There are several ways around this:
 
 * NoMachine - you can use the NoMachine service
 * GNU Screen or tmux - these utilities run a separate process on the remote host that is not tied to your SSH connection
-* Cluster jobs - you can run your programs using our [slurm cluster](/bioinfcomputing/compute_jobs/), which queues and executes programs independently of your SSH connection
+* Cluster jobs - you can run your programs using our [slurm cluster](/bioinfcomputing/compute_jobs/), which queues and executes programs independently of your SSH connection. This is best for non-interactive tasks, such as executing scripts that run from start to finish.
 
 ### NoMachine NX (Multi-OS)
 NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `lynx`, `sphinx` or `manx` which you use to access the `rhino` systems. To connect through the local Fred Hutch network or through a VPN connection please download and install the NoMachine Enterprise Client from [NoMachine's Site.](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)  Windows users can also install an older version from "Software Center".
