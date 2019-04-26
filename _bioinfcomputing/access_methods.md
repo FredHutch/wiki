@@ -27,7 +27,7 @@ This is a list of clients and servers by OS:
 | --- | --- | --- | --- |
 | MacOS | OpenSSH `ssh` | [XQuartz](https://www.xquartz.org/) | OpenSSH is already installed on MacOS
 | Linux | OpenSSH `ssh` | Xorg | Both likely already installed on most systems
-| Windows | puTTY `puTTY` | Windows Subsystem for Linux | Must be installed by admin (email `helpdesk`)
+| Windows | puTTY `puTTY` | Windows Subsystem for Linux | Can be installed through "Software Center"
 
 
 ### Windows
