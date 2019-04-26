@@ -1,6 +1,7 @@
 ---
 title: Supported Technologies and Platforms
-last_modified_at: 2019-04-01
+last_modified_at: 2019-04-26
+primary_reviewers: mbcgough, dirkpetersen, atombaby
 ---
 
 The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on here along with the basic information required for researchers to identify which resource might be best suited to their particular computing needs.  
@@ -40,25 +41,33 @@ you for how many cores, how much memory, and how much time is required
 
 This command can be run from any NoMachine or rhino host.
 
-> NOTE: at this time we aren't running interactive jobs on Beagle nodes.  If
+> Note: At this time we aren't running interactive jobs on Beagle nodes.  If
 > you have a need for this, please email `scicomp`.
 
-## Available Resources
-VMs, shiny, rancher, data transfer
+### Rhino
+`Gizmo` is actually not a stand alone system; instead, access to the resource is based on the `Rhino` platform supported by Center IT.  `Rhino`, or more specifically the Rhinos, are three locally managed HPC servers all accessed via the name `rhino`. Together, they function as a data and compute hub for a variety of data storage resources and high performance computing (HPC). The specific guidance for the use of each of the approaches to HPC access are slightly different, but will all require the user to learn how to access and interact with `rhino`.  
 
-## Community Resources (not specifically supported by IT)
-Are there things people use that we don't really support?
+> Note: Any user interacting with the following systems will be dependent on being proficient with the care and keeping of the Rhinos.
 
-## Proposal Preparation
-A description of computational and storage resources from Scientific Computing for grant writers can be found [here.](/computing/grants_publications/)
+More information on the topic of ssh configurations for access to `rhino` can be found [here.](/compdemos/ssh/)
 
-<!-- ## Self Service Resources
-Jupyterhub, RStudio, db4sci, Galaxy, etc.
+### The NoMachine Cluster
 
-## Gory Details on Node Classes
+[NoMachine](https://www.nomachine.com/) is a software suite that allows you to run a Linux desktop session remotely.  The session runs on the NoMachine server but is displayed on your desktop or laptop using the NoMachine client.  NoMachine (also abbreviated _NX_) is installed on CIT supported PC desktops and laptops.
 
-### Resource Table
-This table is auto-generated based on the yaml in _data/scicomp_resources.yaml, and is a work in progress.  
+NX has the particular advantage of maintaining your session even when you disconnect or lose connectivity.  All that is required is to restart the client and your session will be as you'd last left it.
+
+There are three systems you can use for NX sessions: _lynx_, _manx_, and _sphinx_.  These are not computational systems but rather these hosts are used solely as launch-points for sessions on `gizmo` or `rhino`. Running computational tools on this system will get you a warning from SciComp.
+
+
+## Other Available Resources
+More to come here regarding VMs, shiny, rancher, data transfer.  
+
+## Resource and Node Description information
+Below we describe the current basic configurations available for node types, numbers, and memory for a variety of `scicomp` supported computing resources.  These tables are useful when deciding on what type of resources you need to request when using `rhino` and `gizmo` for interactive and non-interactive jobs.  These tables are auto-generated and are a work in progress so that we can provide the most up to date information on the Wiki for your use.  Please file an Issue in our [GitHub repository](https://github.com/FredHutch/wiki/issues) if you notice something amiss or need clarification.  
+
+### Resource Information
+<!--This table is auto-generated based on the yaml in _data/scicomp_resources.yaml, and is a work in progress.  -->
 
 Name|Type|Authentication|Authorization|Location
 ---|---|---|---|---
@@ -66,8 +75,8 @@ Name|Type|Authentication|Authorization|Location
 {{ resource.name }}|{{ resource.type }}|{{ resource.access[0].type }}|{{ resource.access[0].auth }}|{{ resource.location }}
 {%- endfor %}
 
-### Cluster Node Table
-This table is auto-generated based on the yaml in _data/cluster_nodes.yaml:
+### Cluster Node Information
+<!--This table is auto-generated based on the yaml in _data/cluster_nodes.yaml--> 
 
 {%- for resource in site.data.cluster_nodes %}
 

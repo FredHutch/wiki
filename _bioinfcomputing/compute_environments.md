@@ -1,5 +1,230 @@
 ---
 title: Computing Environments and Containers
-last_modified_at: 2019-04-01
+last_modified_at: 2019-04-26
 primary_reviewers: bmcgough
 ---
+
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/bioinfcomputing/compute_platforms/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
+
+The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
+
+Reasons to use scientific software maintained by SciComp include:
+- packages are often faster due to compiler optimizations
+- packages are reproducible in or outside Fred Hutch
+- rapid access to many software packages and package versions
+
+
+## Environment Modules
+
+On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.
+
+### EasyBuild Life Sciences
+The full list of available software can be found [on the Easy Build site](http://fredhutch.github.io/easybuild-life-sciences/).
+
+### How to Use Environment Modules
+As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
+
+The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.  
+
+
+#### Interactively
+When you log in to any SciComp managed server, your terminal session has **Lmod** pre-loaded. Commonly used shell commands around Environment Modules include:
+
+Command | Action
+--- | ---
+`module avail` | Output a list of available Environment Modules
+`module avail <pattern>` | Output a filtered list of modules based on pattern (ex: `module avail SAMtools`)
+`module load <packagename>/<version>` | Load a specific version of a module into your environment (ex: `module load Python/3.6.5-foss-2016b-fh1`) - you can cut and paste from the output of `module avail`
+`module load <packagename>` | Load a generic Environment Module (ex: `module load Perl`)
+`module list` | Output a list of Environment Modules loaded in your current shell
+`module unload <packagename>` | Unload an Environment Module from your current shell
+`module purge` | Unload all currently loaded Environment Modules
+
+There is also a short version of the `module` command: `ml`.  The `ml` command can substitute for `module` in any `module` command, behaves like `module list` when called with no arguments, and behaves like `module load` when executed with an argument (ex: `ml R/3.5.1-foss-20167b-fh1` runs `module load R/3.5.1-foss-2016b-fh1`). The `ml` and `module` commands can be used in scripts, but see the section on Scripting with Environment Modules below. 
+
+Example:
+```
+$ which python
+/usr/bin/python
+$ module avail Python/2.7.15
+
+-------------------------- /app/easybuild/modules/all --------------------------
+   Python/2.7.15-foss-2016b-fh1    Python/2.7.15-foss-2016b
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching
+any of the "keys".
+
+$ module load Python/2.7.15-foss-2016b-fh1
+$ which python
+/app/easybuild/software/Python/2.7.15-foss-2016b-fh1/bin/python
+```
+
+#### Scripting with Environment Modules
+To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work. 
+
+##### Best Practice 1
+Interactive shell session have the required `module` commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the `module` command. Add the follow lines to the top of your script:
+```
+#!/bin/bash
+source /app/Lmod/lmod/lmod/init/bash
+module use /app/easybuild/modules/all
+```
+This snippet can be used as a template for bash shell scripts.
+
+The `source` like activates the `module` and `ml` commands for you current shell, and the `module use` line loads our list of modules.
+
+The next line you might use, for example, would be:
+```
+module load R/3.5.1-foss-2016b-fh1
+```
+This would load that specific Environment Module for use in your script.
+
+
+##### Best Practice 2
+Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
+```
+module load Python/3.5.1-foss-2016b-fh1
+```
+Rather than:
+```
+module load Python
+```
+The above line will load a different version of the software package over time as the "pointer" to a specific version is changed.
+
+> **Note:** This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
+
+
+## Docker Containers
+
+At its core, Docker is a tool that lets you run code inside a
+totally fixed and reproducible computational environment. If
+you have used virtual machines, then you can think of a Docker container
+as being a lightweight, portable, intuitive system for building
+and running virtual machines. The major difference between a Docker container and virtual machine is that Docker doesn't come with operating system, which makes it more lightweight and portable.  However, Docker containers do require the Docker engine to run them, which is a client-side application.
+
+The folks at Docker are probably the best ones to answer the
+question, ["What is Docker?"](https://www.docker.com/what-docker).
+
+The reason that scientists use Docker is that it allows them
+to run computational tools using the exact same computational
+environment as another scientist, so that the same input data
+will (by definition) yield the exact same set of results. This
+is a level of reproducibility that is essentially impossible
+to achieve with any other tool apart from full virtual machines.
+It also neatly solves the problem of having to install dependencies
+in order to run a new tool in the right way.
+
+#### Common Terms
+
+There are a few basic terms that will make it easier to learn
+about Docker:
+
+##### Image
+
+A Docker image is basically a file that is built from a [Dockerfile](https://docs.docker.com/engine/reference/builder/). The image functions like a recipe for the process you want to have the Docker container execute. It specifies all the details, such as tools, processes and parameters needed for the process to occur in the Docker container that could be created from it.  
+
+##### Container
+
+A Docker container is a Docker image that is being executed or actively applied. Once you launch an image and start doing things (writing files,
+running commands, etc.) it becomes a container. The useful reason
+behind the distinction between images and containers is that once
+you are done using a container, you usually delete it. However,
+the image that you launched the container from remains untouched,
+and can be used to launch more containers in the future should the same exact process be needed again for different data sets.  
+
+##### Mount Point
+
+By default, Docker containers do not have access to the file system
+for the computer that they are being run on. In order to pass
+files back and forth between the running Docker container and the host
+filesystem, you must make a "mount point." The mount point is a folder
+that is shared between the Docker container and the host filesystem,
+allowing you to read and write data.
+
+##### Pull / Push
+
+Docker images can be stored either locally (on your laptop or desktop)
+or on a remote Docker server (such as [Docker Hub](https://hub.docker.com/)). Moving the Docker image to and from a remote server is called "pushing" and
+"pulling." The nice thing about this feature is that you can pull
+down an image that was used by another scientist and run all of
+the same commands that they did using the exact same computational
+environment.
+
+### Using Docker at Fred Hutch
+
+The best page to get started at the Hutch is the [Computing Resource Library](/compdemos/Docker/) about Docker.
+
+Because Docker requires root access, it cannot be run on shared
+compute environments such as `Rhino` / `Gizmo`. Instead,
+developers at LBL have developed a utility called Singularity which can be used to run Docker images within an environment
+like `Rhino` / `Gizmo` at Fred Hutch. Additional information on using Singularity can be found at the
+[sylabs.io](https://www.sylabs.io/docs/) site and more [details about using Singularity at Fred Hutch](/compdemos/Singularity/) on `Gizmo`.
+
+**Words of Wisdom:** Singularity also has its own image format, however we do not recommend to use it and instead import Docker containers as they can be used more universally, e.g. in cloud computing.
+
+Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/bioinfcomputing/compute_cloud/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
+executed with that system.
+
+### Other Docker Resources
+
+  * The most commonly used server to share Docker images is called [Docker Hub](https://hub.docker.com/).
+  * Another commonly used server to share Docker images is called [Quay](https://quay.io/).
+  * [BioContainers](https://biocontainers.pro/) is a free and open source project to collect a set of images that contain useful bioinformatics tools.
+
+
+## Installing Custom Software Packages
+If you do not find the software you need, a support package or library, or the specific version you need, you have two options:
+
+1. Request the software be built: file an issue in our [software repo](https://github.com/FredHutch/easybuild-life-sciences) and we will work with you to build a module for any software or version. This Environment Module will then be available to all.
+
+2. If you cannot wait for the software to be built, you may be able to install it yourself. This is primarily supported for language (Python/R) packages.
+
+### Packages/Modules for Python and R
+Normal install methods will work after loading an Environment Module:
+
+- R: `install.packages("<pkgname>")`
+- Python: you can use `pip` or `setup.py` (specify `--user` with pip)
+
+Any package you install this way will be installed into your home directory.
+
+Remember that the environment module you have loaded will be used to install the package/module. For example, if you load `Python/3.6.9` and use `pip install --user <newpkg>` then you will need to load `Python/3.6.9` every time you wish to use `newpkg`. Using a different version of the language module may or may not work.
+
+### Other software installs and builds
+If you want to install or build a standalone software package, you are also welcome to install into your home directory, with the following caveats:
+
+- We cannot install OS package dependencies (if your software has many dependencies, please file an issue [here](https://github.com/FredHutch/easybuild-life-sciences) and we will be happy to work with you to offer a package build with all dependencies.
+- Ubuntu compilers are not optimized. We recommend loading a 'toolchain' module:
+  
+  ```
+  module load foss-2016b
+  ```
+  This will get you GCC 5.4.0, binutils 2.26, OpenMPI 1.10.3, OpenBLAS 0.2.18, FFTW 3.3.4, ScaLAPACK 2.0.2 (most of our software on Ubuntu 14.04 is built against this toolchain).
+- If you loaded a toolchain module when installing or building new software, you will must load that toolchain module before running that software, or you will get library errors.
+
+## Frequently Asked Questions
+> Note:  For announcements from Scientific Computing, please see the [Announcements page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the Events page in CenterNet for current Office Hours.  
+
+1. *Something weird is going on with my shell and/or job!?!*
+  - "Reset" your shell by logging out and back in. This will clear your environment. Users using screen or tmux will need to exit their session to clear their environment.
+1. *Why am I getting errors when running software from a module?*
+  - Unload all modules with `module purge` and re-load only the module(s) you need
+  - Reset your shell - *see above*
+  - Remove and reinstall software in your home directory not installed with the module you are using (`~/R`,`~/.local`) - this is key with toolchain modules and package/libraries that use compiled code
+1. *Only bash?*
+  - Our recommendation is to use bash as your shell. If you wish to use a different shell, please contact SciComp.
+1. *Is there a faster way?*
+  - The command `ml` is a shortcut for `module` and implies `module load` but will work with other `module` subcommands (ex: `ml R/3.5.0-foss-2016b-fh1` or `ml avail Python/3.5`)
+1. *What is this "foss-2016b" stuff?*
+  - The EasyBuild project supports many different toolchains. The toolchain defines a compiler and library set, and also has a number of common support libraries (things like libTIFF) associated with it.
+1. *Should I load default modules?*
+  - It is faster and easier to type `ml R` than specifying the full package and version. However, the default version loaded by a generic `module load <pkg>` command will change over time.  If maintaining a specific version of a package is important to you, always specify the version.
+1. *Is there a list of included language libraries/modules/packages?*
+  - Yes! For R, Python, and some additional packages, look [here](https://fredhutch.github.io/easybuild-life-sciences).
+1. *What about Bioconductor for R?*
+  - Starting with R/3.4.3-foss-2016b-fh2 we include Bioconductor and many Bioc packages with the standard R module.
+1. *What are Best Practices with Environment Modules?*
+  - Specify the full Module name when loading, especially in scripts (see above for scripting information).
+  - Avoid mixing Modules from different toolchains at the same time (unloading one and loading another mid-script works well if you need to).
+  - If you can't find a package you want, send an email us or file an [issue](https://github.com/FredHutch/easybuild-life-sciences) requesting a new or updated package.
+

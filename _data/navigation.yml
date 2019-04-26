@@ -262,6 +262,8 @@ bioinfcomputing:
         url: /bioinfcomputing/compute_jobs/
       - title: "Cloud Computing"
         url: /bioinfcomputing/compute_cloud/
+      - title: "Information for Grant Writers"
+        url: /bioinfcomputing/compute_grants/
 
   - title: "Reference and Announcements"
     children:
