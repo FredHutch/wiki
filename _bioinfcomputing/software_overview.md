@@ -1,6 +1,6 @@
 ---
 title: Overview of Software Development at Fred Hutch
-last_modified_at: 2019-04-01
+last_modified_at: 2019-04-28
 primary_reviewers: k8hertweck
 ---
 
@@ -56,55 +56,6 @@ For more information on using Github, see the [Managing and Sharing Code](/bioin
 ### Submitting Your Code
 When you have completed a coding project that you would like to submit to the examples wiki, there are a few steps in Github to navigate the review process. You will want to push your code in a clean branch to the repository, and then submit a pull request on `github.com` for your branch that will kick off a review and merge process.
 
-## Fred Hutch Software Development Standards
+## [Fred Hutch Software Development Standards](/bioinfcomputing/software_standards/)
 
-This section documents coding standards at Fred Hutch, along with several helpful tool suggestions and examples. In an effort to create high-quality, transparent, and reproducible software-aided research, it is important that best software practices be fused into the process.
-
-### Using Templates
-- README.md (Summary Documentation, Title, Author, Technical and Domain Reviewer(s))
-- LICENSE.md (What's an okay default? MIT license?)
-- Raw data stored unmodified (note: do not store data on github)
-- src code
-- See https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424
-- bash script in addition to git repo?
-
-### Coding Practices
-- meaningful variable names
-- fully document code
-- automate tasks
-- use libraries when available
-
-### Writing Help Documentation
-
-
-### Additional Resources
- - Software Carpentry
- - PLOS Computational Biology's [Good Enough Practices in Scientific Computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
-
-
-## Tools and Ideas to Further Improve Software
-
-There are times when you may want to go beyond the minimum requirements to build a more robust piece of software. This may be the case if you are working with many collaborators, plan to publish/release your code, or anticipate a need to update your code and/or data over time.
-
-
-### Manage Dependencies (Environments and Containers)
-
-
-### Use Standard Styles (PEP8-- pycodestyle, linter tools)
-- pylint
-
-### Unit Testing
-
-
-### Version Control and Issue Tracking
- - Link to managecode
- - Reiterate importance of review
-
-### Continuous Integration
-
-
-#### Git Badges
-https://travis-ci.org/
-
-https://medium.freecodecamp.org/how-to-use-badges-to-stop-feeling-like-a-noob-d4e6600d37d2
-
+This linked section documents coding standards at Fred Hutch, along with several helpful tool suggestions and examples. In an effort to create high-quality, transparent, and reproducible software-aided research, it is important that best software practices be fused into the process.
