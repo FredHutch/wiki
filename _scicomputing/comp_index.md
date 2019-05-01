@@ -1,6 +1,6 @@
 ---
-title: Overview of Bioinformatics and Computing at Fred Hutch
-last_modified_at: 2019-04-01
+title: Overview of Scientific Computing at Fred Hutch
+last_modified_at: 2019-05-01
 ---
 Center IT supports a wide array of resources made available to researchers.  Much of the basic computing information needed on an ongoing basis can be found via Centernet and the Center IT pages.  However, much of the scientific computing resource documentation beyond this material is provided in this section of the Wiki, and links to existing resources and documentation are provided when available.  
 
@@ -21,14 +21,15 @@ The Hutch, through Center IT and Scientific Computing, support a number of optio
 - [Collaborative Storage Systems](/scicomputing/store_collaboration/)
 
 
-## [Programming](/bioinformatics/prog_overview/)
+## [Software Development](/scicomputing/software_overview/)
 While there are many types of programming languages various software used in scientific research are written in, there are a handful of specific languages that are commonly used in the process of doing a wide range of research tasks. We will introduce the most common here.
 
-- [R, RStudio](/scicomputing/prog_R/)
-- [Python](/scicomputing/prog_python/)
-- [Linux, Unix and Bash](/scicomputing/prog_linux101/)
-- [Managing and Sharing Code](/scicomputing/prog_managecode/)
-- [Software Develoment Practices](/scicomputing/prog_development/)
+- [Getting Started](/scicomputing/software_languages/)
+- [R, RStudio](/scicomputing/software_R/)
+- [Python](/scicomputing/software_python/)
+- [Linux, Unix and Bash](/scicomputing/software_linux101/)
+- [Managing and Sharing Code](/scicomputing/software_managecode/)
+- [Software Development Standards](/scicomputing/software_standards/)
 
 
 ## [Large Scale Compute](/scicomputing/compute_overview/)
@@ -38,8 +39,9 @@ This section contains articles that describe a range of high performance computi
 - [Computing Environments and Containers](/scicomputing/compute_environments/)
 - [Job Management](/scicomputing/compute_jobs/)
 - [Cloud Computing](/scicomputing/compute_cloud/)
+- [Information for Grant Writers](/scicomputing/compute_grants/)
 
 ## [Reference Material](/scicomputing/reference_overview/)
 We maintain a space for both announcements from Scientific Computing as well as a Resource Library at the following links:
-- [Updates and Announcements](/scicompannounce/)
-- [Resource Library, Demo's and HOWTOs](/compdemos/)
+- [Resource Library](/compdemos/)
+- [Announcements](/scicompannounce/)

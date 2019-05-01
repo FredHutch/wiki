@@ -95,7 +95,7 @@ generation:
 
 
 scicomputing:
-  - title: "Bioinformatics and Computing"
+  - title: "Scientific Computing"
     children:
       - title: "Overview"
         url: /scicomputing/comp_index/
@@ -130,16 +130,16 @@ scicomputing:
         url: /scicomputing/software_overview/
       - title: "Getting Started"
         url: /scicomputing/software_languages/
-     - title: "R, RStudio"
-       url: /scicomputing/software_R/
-     - title: "Python"
-       url: /scicomputing/software_python/
-     - title: "Linux, Unix and Bash"
-       url: /scicomputing/software_linux101/
-     - title: "Managing and Sharing Code"
-       url: /scicomputing/software_managecode/
-     - title: "Software Development Standards"
-       url: /scicomputing/software_standards/
+      - title: "R, RStudio"
+        url: /scicomputing/software_R/
+      - title: "Python"
+        url: /scicomputing/software_python/
+      - title: "Linux, Unix and Bash"
+        url: /scicomputing/software_linux101/
+      - title: "Managing and Sharing Code"
+        url: /scicomputing/software_managecode/
+      - title: "Software Development Standards"
+        url: /scicomputing/software_standards/
 
   - title: "Large Scale Computing"
     children:
