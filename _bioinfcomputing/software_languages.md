@@ -6,7 +6,8 @@ primary_reviewers: k8hertweck
 
 ## Training Resources 
 
-Fred Hutch offers training resources for each of the common languages and tools listed below. For course descriptions and session notifications, go to Hutch Learning [here](http://www.fredhutch.io/). New class offerings will also be posted in the Coop Newsletter. Email `thecoop` to join the mailing list.
+
+Fred Hutch offers training resources for many of the common languages and tools listed below. Course descriptions can be found at fredhutch.io, and course registration is tracked in Hutch Learning (only accessible to Fred Hutch employees through CenterNet; search for "fredhutch.io" to see all relevant courses). New class offerings will also be posted in the Coop Newsletter. Email `thecoop` to join the mailing list.
 
 
 ## [R, RStudio](/bioinfcomputing/software_R/)
