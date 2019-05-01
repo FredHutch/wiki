@@ -56,7 +56,6 @@ generation:
       - title: "Data Sharing and Public Repositories"
         url: /generation/human_shareDeposits/
 
-
   - title: "Clinical and Experimental Data"
     children:
       - title: "Overview"
@@ -67,7 +66,6 @@ generation:
         url: /generation/clsp_specimenBanking/
       - title: "Experimental Data"
         url: /generation/clsp_labCov/
-
 
   - title: "Large Scale Data Generation"
     children:
@@ -81,7 +79,6 @@ generation:
         url: /generation/datagen_imaging/
       - title: "Proteomics Data"
         url: /generation/datagen_proteomics/
-
 
   - title: "Other Laboratory Resources"
     children:
@@ -143,7 +140,6 @@ scicomputing:
        url: /scicomputing/software_managecode/
      - title: "Software Development Standards"
        url: /scicomputing/software_standards/
-
 
   - title: "Large Scale Computing"
     children:
