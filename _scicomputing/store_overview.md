@@ -44,26 +44,26 @@ Additional details of file allocation amounts, features and costs are available 
 
 >Note: You can typically access the monthly billing information during the first 10 days of every month
 
-## [Database Storage Systems: REDCap, SQL and DB4Sci](/bioinfcomputing/store_databases/)
+## [Database Storage Systems: REDCap, SQL and DB4Sci](/scicomputing/store_databases/)
 
 There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [DB4Sci](https://mydb.fredhutch.org/) (aka MyDB, supported by SciComp, and provides access to four database engine types including Postgres, MariaDB (MySQL), MongoDB, and Neo4j).  
 
 
-## [File Storage: Storage in Home, Fast, Secure](/bioinfcomputing/store_posix/)
+## [File Storage: Storage in Home, Fast, Secure](/scicomputing/store_posix/)
 
 File storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
-## [Economy Storage: Object Storage](/bioinfcomputing/store_objectstore/)
+## [Economy Storage: Object Storage](/scicomputing/store_objectstore/)
 
 Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud computing depends very much on object storage systems such as Amazon's AWS S3. There are a number of features and benefits of object storage systems, such as better sharing of data and much better handling of meta data (e.g. annotations). At Fred Hutch we use object storage predominantly for very large files (e.g. BAM files) and for archiving purposes.
 
 
-## [Temporary Storage: Scratch](/bioinfcomputing/store_scratch/)
+## [Temporary Storage: Scratch](/scicomputing/store_scratch/)
 
 The scratch file system is a file storage system that works differently than the systems intended for long term data storage. It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
 
 
-## [Collaborative Storage Options](/bioinfcomputing/store_collaboration/)
+## [Collaborative Storage Options](/scicomputing/store_collaboration/)
 
 These storage systems have capabilities allowing you to share data with people outside the Hutch, with or without a HutchNet ID.  These include Aspera and OneDrive.  
 

@@ -20,13 +20,7 @@ collections:
   gendemos:
     output: true
     permalink: /:collection/:path/
-  bioinformatics:
-    output: true
-    permalink: /:collection/:path/
-  infdemos:
-    output: true
-    permalink: /:collection/:path/
-  computing:
+  scicomputing:
     output: true
     permalink: /:collection/:path/
   contributors:
@@ -41,9 +35,7 @@ collections:
   drafts:
     output: true
     permalink: /:collection/:path/
-  bioinfcomputing:
-    output: true
-    permalink: /:collection/:path/
+
 
 
 
@@ -252,30 +244,6 @@ defaults:
       sidebar:
         nav: "generation"
 
-  # _bioinformatics
-  - scope:
-      path: ""
-      type: bioinformatics
-    values:
-      layout: single
-      toc: true
-      toc_label: "On This Page"
-      share: true
-      sidebar:
-        nav: "bioinformatics"
-
-# _infdemos
-  - scope:
-      path: ""
-      type: infdemos
-    values:
-      layout: single
-      toc: true
-      toc_label: "On This Page"
-      share: true
-      sidebar:
-        nav: "bioinformatics"
-
 # _compdemos
   - scope:
       path: ""
@@ -286,19 +254,19 @@ defaults:
       toc_label: "On This Page"
       share: true
       sidebar:
-        nav: "computing"
+        nav: "scicomputing"
 
-  # _computing
+  # _scicomputing
   - scope:
       path: ""
-      type: computing
+      type: scicomputing
     values:
       layout: single
       toc: true
       toc_label: "On This Page"
       share: true
       sidebar:
-        nav: "computing"
+        nav: "scicomputing"
 
 # _contributors
   - scope:
@@ -316,7 +284,7 @@ defaults:
       layout: single
       share: false
       sidebar:
-        nav: "computing"
+        nav: "scicomputing"
 
   # _drafts
   - scope:
@@ -327,15 +295,3 @@ defaults:
       toc: true
       toc_label: "On This Page"
       share: true
-
-  # _bioinfcomputing
-  - scope:
-      path: ""
-      type: bioinfcomputing
-    values:
-      layout: single
-      toc: true
-      toc_label: "On This Page"
-      share: true
-      sidebar:
-        nav: "bioinfcomputing"

@@ -2,10 +2,8 @@
 main:
   - title: "Data Generation"
     url: /generation/gen_index/
-  - title: "Bioinformatics"
-    url: /bioinformatics/inf_index/
-  - title: "Computing"
-    url: /computing/comp_index/
+  - title: "Scientific Computing"
+    url: /scicomputing/comp_index/
 
 frontpage:
   - title: "Who We Are"
@@ -24,8 +22,6 @@ frontpage:
       - title: "Style Guide"
         url: /styleguide/
 
-
-
 generation:
   - title: "Data Generation"
     children:
@@ -33,6 +29,7 @@ generation:
         url: /generation/gen_index/
       - title: "Resource Library"
         url: /generationdemos/
+
   - title: "Study Design and Funding"
     children:
       - title: "Overview"
@@ -59,7 +56,6 @@ generation:
       - title: "Data Sharing and Public Repositories"
         url: /generation/human_shareDeposits/
 
-
   - title: "Clinical and Experimental Data"
     children:
       - title: "Overview"
@@ -70,7 +66,6 @@ generation:
         url: /generation/clsp_specimenBanking/
       - title: "Experimental Data"
         url: /generation/clsp_labCov/
-
 
   - title: "Large Scale Data Generation"
     children:
@@ -84,7 +79,6 @@ generation:
         url: /generation/datagen_imaging/
       - title: "Proteomics Data"
         url: /generation/datagen_proteomics/
-
 
   - title: "Other Laboratory Resources"
     children:
@@ -100,175 +94,72 @@ generation:
         url: /generation/labman_software/
 
 
-
-
-bioinformatics:
-  - title: "Bioinformatics"
+scicomputing:
+  - title: "Scientific Computing"
     children:
       - title: "Overview"
-        url: /bioinformatics/inf_index/
-      - title: "Resource Library"
-        url: /bioinformaticsdemos/
-  - title: "Best Practices for Research Data Management"
-    children:
-      - title: "Overview"
-        url: /bioinformatics/dm_overview/
-      - title: "Data Storage"
-        url: /bioinformatics/dm_storage/
-      - title: "Data Ingestion and Public Datasets"
-        url: /bioinformatics/dm_ingest/
-      - title: "Using Scratch Storage"
-        url: /bioinformatics/dm_scratch/
-      - title: "Data Archiving"
-        url: /bioinformatics/dm_archive/
-
-
-
-  - title: "Programming"
-    children:
-      - title: "Overview"
-        url: /bioinformatics/prog_overview/
-      - title: "R, RStudio"
-        url: /bioinformatics/prog_R/
-      - title: "Python"
-        url: /bioinformatics/prog_python/
-      - title: "Other Languages"
-        url: /bioinformatics/prog_unixbash/
-
-  - title: "Managing Code and Computing"
-    children:
-      - title: "Overview"
-        url: /bioinformatics/compute_overview/
-      - title: "Fred Hutch Compute Resources"
-        url: /bioinformatics/compute_resoverview/
-      - title: "GitHub, Versioning and Sharing"
-        url: /bioinformatics/compute_github/
-      - title: "Docker"
-        url: /bioinformatics/compute_docker/
-
-  - title: "Training and References"
-    children:
-      - title: "Training Opportunties"
-        url: /bioinformatics/howto_training/
-
-
-
-
-computing:
-  - title: "Computing"
-    children:
-      - title: "Overview"
-        url: /computing/comp_index/
-      - title: "Resource Library/HOWTOs"
-        url: /compdemos/
-      - title: "Announcements"
-        url: /scicompannounce/
-  - title: "Access and Credentials"
-    children:
-      - title: "Overview"
-        url: /computing/access_overview/
-      - title: "Credentials"
-        url: /computing/access_credentials/
-      - title: "Methods"
-        url: /computing/access_methods/
-
-  - title: "Data Storage"
-    children:
-      - title: "Overview"
-        url: /computing/store_overview/
-      - title: "Database Systems"
-        url: /computing/store_databases/
-      - title: "File Storage Systems"
-        url: /computing/store_posix/
-      - title: "Object Storage Systems"
-        url: /computing/store_objectstore/
-      - title: "Temporary (Scratch) Storage"
-        url: /computing/store_scratch/
-      - title: "Collaborative Storage Systems"
-        url: /computing/store_collaboration/
-
-
-  - title: "Large Scale Compute"
-    children:
-      - title: "Overview"
-        url: /computing/cluster_overview/
-      - title: "Linux Operating System"
-        url: /computing/linux_linux101/
-      - title: "Technologies"
-        url: /computing/resource_overview/
-      - title: "Scientific Software"
-        url: /computing/cluster_software/
-      - title: "Job Management"
-        url: /computing/cluster_usingSlurm/
-      - title: "Cloud Computing"
-        url: /computing/cluster_cloudCompute/
-
-
-bioinfcomputing:
-  - title: "Bioinformatics and Computing"
-    children:
-      - title: "Overview"
-        url: /bioinfcomputing/comp_index/
+        url: /scicomputing/comp_index/
 
   - title: "Access and Credentials"
     children:
       - title: "Overview"
-        url: /bioinfcomputing/access_overview/
-      - title: "Credentials"
-        url: /bioinfcomputing/access_credentials/
+        url: /scicomputing/access_overview/
       - title: "Methods"
-        url: /bioinfcomputing/access_methods/
+        url: /scicomputing/access_methods/
+      - title: "Credentials"
+        url: /scicomputing/access_credentials/
 
   - title: "Data Storage"
     children:
       - title: "Overview"
-        url: /bioinfcomputing/store_overview/
+        url: /scicomputing/store_overview/
       - title: "Database Systems"
-        url: /bioinfcomputing/store_databases/
+        url: /scicomputing/store_databases/
       - title: "File Storage Systems"
-        url: /bioinfcomputing/store_posix/
+        url: /scicomputing/store_posix/
       - title: "Object Storage Systems"
-        url: /bioinfcomputing/store_objectstore/
+        url: /scicomputing/store_objectstore/
       - title: "Temporary (Scratch) Storage"
-        url: /bioinfcomputing/store_scratch/
+        url: /scicomputing/store_scratch/
       - title: "Collaborative Storage Systems"
-        url: /bioinfcomputing/store_collaboration/
+        url: /scicomputing/store_collaboration/
 
-  - title: "Programming"
+  - title: "Software Development"
     children:
       - title: "Overview"
-        url: /bioinfcomputing/prog_overview/
+        url: /scicomputing/software_overview/
+      - title: "Getting Started"
+        url: /scicomputing/software_languages/
       - title: "R, RStudio"
-        url: /bioinfcomputing/prog_R/
+        url: /scicomputing/software_R/
       - title: "Python"
-        url: /bioinfcomputing/prog_python/
+        url: /scicomputing/software_python/
       - title: "Linux, Unix and Bash"
-        url: /bioinfcomputing/prog_linux101/
+        url: /scicomputing/software_linux101/
       - title: "Managing and Sharing Code"
-        url: /bioinfcomputing/prog_managecode/
-      - title: "Software Development Practices"
-        url: /bioinfcomputing/prog_development/
-
+        url: /scicomputing/software_managecode/
+      - title: "Software Development Standards"
+        url: /scicomputing/software_standards/
 
   - title: "Large Scale Computing"
     children:
       - title: "Overview"
-        url: /bioinfcomputing/compute_overview/
+        url: /scicomputing/compute_overview/
       - title: "Technologies"
-        url: /bioinfcomputing/compute_platforms/
+        url: /scicomputing/compute_platforms/
       - title: "Computing Environments and Containers"
-        url: /bioinfcomputing/compute_environments/
+        url: /scicomputing/compute_environments/
       - title: "Job Management"
-        url: /bioinfcomputing/compute_jobs/
+        url: /scicomputing/compute_jobs/
       - title: "Cloud Computing"
-        url: /bioinfcomputing/compute_cloud/
+        url: /scicomputing/compute_cloud/
       - title: "Information for Grant Writers"
-        url: /bioinfcomputing/compute_grants/
+        url: /scicomputing/compute_grants/
 
   - title: "Reference and Announcements"
     children:
       - title: "Overview"
-        url: /bioinfcomputing/reference_overview/
+        url: /scicomputing/reference_overview/
       - title: "Resource Library"
         url: /compdemos/
       - title: "Announcements"
