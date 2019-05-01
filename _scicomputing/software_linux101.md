@@ -70,7 +70,7 @@ An alternative is using a NoMachine client to start a graphical session.  That
 process is described
 [here](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx).  Within these NoMachine sessions you can start a terminal on the NoMachine server from whence you can start an SSH session.
 
-With those tools, you are now ready to connect to one of the session servers described in our [Technologies page](/bioinfcomputing/compute_platforms/).  Most commonly you will connect to the host `rhino`.
+With those tools, you are now ready to connect to one of the session servers described in our [Technologies page](/scicomputing/compute_platforms/).  Most commonly you will connect to the host `rhino`.
 
 ### Setting up your Account
 
@@ -83,7 +83,7 @@ course, computation really requires data, so next let's discuss where all the
 interesting data resides on these systems.
 
 This [guide](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html)
-shows the common supported storage options. Additionally, see the [Data Storage](/bioinfcomputing/store_overview/) section in our Wiki for more guidance about storage locations and access.  All, except for the transfer
+shows the common supported storage options. Additionally, see the [Data Storage](/scicomputing/store_overview/) section in our Wiki for more guidance about storage locations and access.  All, except for the transfer
 drive, are available on SciComp supported systems:
 
 Service | Path
@@ -95,4 +95,4 @@ Home    | /home/<your username>
 
 ### Next Steps
 
-What you do next will depend on the direction your work will take you.  The Scientific Computing [Resource Overview](/bioinfcomputing/compute_platforms/) will have more details about the technologies available for your use.
+What you do next will depend on the direction your work will take you.  The Scientific Computing [Resource Overview](/scicomputing/compute_platforms/) will have more details about the technologies available for your use.

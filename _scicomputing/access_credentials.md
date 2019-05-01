@@ -22,7 +22,7 @@ The [Fred Hutch GitHub organization](https://github.com/FredHutch) offers free a
 
 A GitHub account is different from other accounts. If you leave the Hutch you keep your GitHub account, however you will just be removed from the Fred Hutch organization on GitHub and your former colleagues can still add you as an external collaborator to their GitHub repositories.
 
-We have a Code Management primer that provides more information about [git and GitHub](/bioinfcomputing/prog_managecode/) in general and specifically here at the Fred Hutch.  
+We have a Code Management primer that provides more information about [git and GitHub](/scicomputing/prog_managecode/) in general and specifically here at the Fred Hutch.  
 
 ### Guidance for Managing Credentials and Passwords
 One issue to note when using GitHub to do version control in your code is that it can be very straightforward to inadvertently push content to GitHub that includes things such as API tokens, usernames and passwords, or even your AWS credentials themselves.  Please take care to structure your code in such a way that these "secrets" or anything you perceive to be private information (see our [Security page](/generation/human_privacySecurity/) for more information about what this might be) are loaded from an external file or environment variables that themselves are not sent to GitHub!!
@@ -38,7 +38,7 @@ There are two ways to get AWS credentials. Which one to use depends on how you w
 
 ### Command Line (Rhino/Gizmo) Instructions
 
-A working HutchNet ID is all you need to login to `rhino`. We provide basic references for bash/linux computing [here](/bioinfcomputing/prog_linux101/), as well as a resource library page for [advanced ssh configurations](/compdemos/ssh/) at Fred Hutch.  These resources will provide the necessary information for how to connect to `rhino`/`gizmo` resources to be able to run these instructions.  If you have questions about how to access `rhino` to perform these steps please email `scicomp`.  
+A working HutchNet ID is all you need to login to `rhino`. We provide basic references for bash/linux computing [here](/scicomputing/prog_linux101/), as well as a resource library page for [advanced ssh configurations](/compdemos/ssh/) at Fred Hutch.  These resources will provide the necessary information for how to connect to `rhino`/`gizmo` resources to be able to run these instructions.  If you have questions about how to access `rhino` to perform these steps please email `scicomp`.  
 
 First, `ssh` to one of the `rhino` machines (or use NoMachine):
 

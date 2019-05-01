@@ -4,7 +4,7 @@ last_modified_at: 2019-04-26
 primary_reviewers: bmcgough
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/bioinfcomputing/compute_platforms/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
 
 The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
@@ -163,7 +163,7 @@ like `Rhino` / `Gizmo` at Fred Hutch. Additional information on using Singularit
 
 **Words of Wisdom:** Singularity also has its own image format, however we do not recommend to use it and instead import Docker containers as they can be used more universally, e.g. in cloud computing.
 
-Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/bioinfcomputing/compute_cloud/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
+Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/scicomputing/compute_cloud/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
 executed with that system.
 
 ### Other Docker Resources

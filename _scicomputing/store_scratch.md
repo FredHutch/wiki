@@ -140,7 +140,7 @@ Using `Economy Cloud` storage (AWS S3) can be a more affordable way to store lar
 
 
 ### Connect to `rhino`
-See our pages on [Access Methods](/bioinfcomputing/access_methods/) and an overview of the [Technologies Supported](/bioinfcomputing/reference_overview/) to learn more about what `rhino` is and how to use it.
+See our pages on [Access Methods](/scicomputing/access_methods/) and an overview of the [Technologies Supported](/scicomputing/reference_overview/) to learn more about what `rhino` is and how to use it.
 
 ### Find `Scratch` space
 Head over to some Scratch space for your PI.  
@@ -164,7 +164,7 @@ aws s3 sync s3://yourbucket/yourDirectory/ .
 ### Perform your process
 Process the data however you typically do.  In this example we are concatenating fastq's from paired sequencing and then converting those into uBAMS for downstream analysis with GATK tools.  
 
-Here you can see we use the `sbatch` command to send the task to `gizmo`.  See [more about HPC Job Management and commands here.](/bioinfcomputing/compute_jobs/)
+Here you can see we use the `sbatch` command to send the task to `gizmo`.  See [more about HPC Job Management and commands here.](/scicomputing/compute_jobs/)
 ```
 sbatch --wrap="zcat *_R1_*.fastq.gz > forwardReads_R1.fastq"
 sbatch --wrap="zcat *_R2_*.fastq.gz > reverseReads_R2.fastq"
