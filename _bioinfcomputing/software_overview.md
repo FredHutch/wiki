@@ -54,7 +54,7 @@ For more information on using Github, see the [Managing and Sharing Code](/bioin
 
 
 ### Submitting Your Code
-When you have completed a coding project that you would like to submit to the examples wiki, there are a few steps in Github to navigate the review process. You will want to push your code in a clean branch to the repository, and then submit a pull request on `github.com` for your branch that will kick off a review and merge process.
+When you have completed a coding project that you would like to submit to the examples wiki, there are a few steps in Github to navigate the review process. In order to submit to the repo, you will need to join the Fred Hutch GitHub organization by sending your GitHub username to `helpdesk` with a request to be added. For additional resources on using GitHub at Fred Hutch, see our [wiki resource page](/bioinfcomputing/software_managecode/).
 
 ## [Fred Hutch Software Development Standards](/bioinfcomputing/software_standards/)
 
