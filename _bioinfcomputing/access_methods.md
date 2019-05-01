@@ -28,7 +28,7 @@ This is a list of clients and servers by OS:
 | OS | SSH client and `command` | X server | Availability
 | --- | --- | --- | --- |
 | MacOS | OpenSSH `ssh` | [XQuartz](https://www.xquartz.org/) | OpenSSH is already installed on MacOS
-| Linux | OpenSSH `ssh` | Xorg | Both likely already installed on most systems
+| Linux | OpenSSH `ssh` | Xorg | Already installed on supported Ubuntu systems
 | Windows | puTTY `puTTY` | Windows Subsystem for Linux | Can be installed through "Software Center"
 
 
@@ -44,10 +44,10 @@ The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux
 
 After installing XQuartz just start the app. The XQuartz icon will appear in the toolbar showing that it is running. XQuartz is now running an X11 client and that is the only interaction that you need to do with XQuartz. After XQuartz is running, open the Mac terminal. The latest version of XQuartz sets the DISPLAY environment with the default Mac terminal window. We do not recommend using the terminal that comes with XQuartz.
 
-When connecting to a `rhino` with `ssh` always use the -X flag to forward your Xsession to your Mac.
+When connecting to a `rhino` with `ssh` always use the -Y flag to forward your Xsession to your Mac.
 
 ```
-ssh -X HutchID@rhino2
+ssh -Y HutchID@rhino2
 ```
 
 After connecting to a `rhino` verify that your X11 client is working by typing `xeyes`.
@@ -70,7 +70,7 @@ There are several ways around this:
 
 * NoMachine - you can use the NoMachine service
 * GNU Screen or tmux - these utilities run a separate process on the remote host that is not tied to your SSH connection
-* Cluster jobs - you can run your programs using our [slurm cluster](/bioinfcomputing/compute_jobs/), which queues and executes programs independently of your SSH connection. This is best for non-interactive tasks, such as executing scripts that run from start to finish.
+* Cluster jobs - you can run your programs using our [slurm cluster](/bioinfcomputing/compute_jobs/), which queues and executes programs independently of your SSH connection. This is best for non-interactive tasks, such as executing scripts that run from start to finish
 
 ### NoMachine NX (Multi-OS)
 NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `lynx`, `sphinx` or `manx` which you use to access the `rhino` systems. To connect through the local Fred Hutch network or through a VPN connection please download and install the NoMachine Enterprise Client from [NoMachine's Site.](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)  Windows users can also install an older version from "Software Center".
@@ -95,18 +95,8 @@ A note about tmux iterm2 integration. If you are using iterm2 on a Mac, add `-CC
 
 A note about the X Window System and terminal multiplexers. As stated above, on your laptop you are running an X server, and the remote program is a client. Terminal multiplexing allow your laptop to disconnect because the multiplexing server is running on the remote system and your device is the client. When you close your laptop, the X server stops. Clients exit at that point as a client cannot do anything without a server. See [NoMachine](#nomachine-nx-(multi-os)) for a workaround for X programs.
 
-## Making Things Easier: The SSH config file
+## Advanced/Optional Setup for Making Things Easier: The SSH config file
 Located in your home directory in the `.ssh` folder is a file called `config` (create it if it doesn't exist). Your SSH client will read configuration options from this file when you use it. Any of the command line options can be specified in this config file to avoid overly complex SSH commands and make frequent use of remote servers more straightforward.  
-
-### Forward X11
-You must start from a client that is running an X11 server. These include any Linux system including NoMachine, XQuartz on MacOS, and Xming or Cygwin on Windows.
-
-Config|Command Line|Value|Notes
----|---|---|---
-ForwardX11|-X|yes/no|This will instruct your ssh client to set up a tunnel between the X11 server on your client device and a port on the remote machine. This port is specified by the `DISPLAY` environment variable.
-ForwardTrustedX11|-Y|yes/no|Trusted X11 connections bypass X11 security features. The traffic is all still encrypted, but root on the remote machine may be able to access your client device. Some SSH implementations do not support X11 security extensions, so you must specify `-Y` or `ForwardTrustedX11` to bypass them.
-
-Check on the remote system that you have a `DISPLAY` environment variable set using `echo $DISPLAY` and test X11 itself by running a simple X11 program like `xeyes`.
 
 ### Identity
 Often the local user on your client device is not the same as your username on the remote system. You can always `ssh joeuser@remotehost.com` but you can also specify the alternate username in the config file.
@@ -164,7 +154,27 @@ Config|Command Line|Value|Notes
 ---|---|---|---
 ForwardAgent|-o ForwardAgent|yes/no|Forward agent requests back to the agent running on your client device.
 
-### All together now
+#### Remote Access
+
+SSH supports using a proxy or "jump host" and can be configured to do so automatically.
+
+Config|Command Line|Value|Notes
+---|---|---|---
+ProxyJump|-J|hostname|SSH will use the specified host as a middle-point before completing the connection to your desired host.
+
+#### Forward X11
+
+You must start from a client that is running an X11 server. These include any supported Ubuntu Linux system, XQuartz on Macos, and NoMachine.
+
+Config|Command Line|Value|Notes
+---|---|---|---
+ForwardX11|-X|yes/no|This will instruct your ssh client to set up a tunnel between the X11 server on your client device and a port on the remote machine. This port is specified by the `DISPLAY` environment variable.
+ForwardTrustedX11|-Y|yes/no|Trusted X11 connections bypass X11 security features. The traffic is all still encrypted, but root on the remote machine may be able to access your client device. Some SSH implementations do not support X11 security extensions, so you must specify `-Y` or `ForwardTrustedX11` to bypass them.
+
+Check on the remote system that you have a `DISPLAY` environment variable set using `echo $DISPLAY` and test X11 itself by running a simple X11 program like `xeyes`.
+
+### All Together Now
+
 Your SSH config supports multiple 'stanzas' to help you as your config may not be the same for remote hosts. The 'stanza' keyword is `Host`. In the example below, everything from one `Host` line to the next `Host` line is applied the specified host.
 ```
 Host *.fhcrc.org !snail.fhcrc.org
@@ -177,22 +187,15 @@ Host *.fhcrc.org
 	ForwardX11 yes
 	ForwardX11Trusted yes
 	ForwardAgent yes
-   	User bmcgough
+   	User <username>
 ```
-This config contains all of the features mentioned above and will apply them to all `fhcrc.org` hosts. It will use `snail` (the SSH gateway host) for all hosts except `snail` itself, as this would create a loop. Obviously you would replace your identity file path and username if needed.
+This config contains all of the features mentioned above and will apply them to all `fhcrc.org` hosts. It will use `snail` (the SSH gateway host) for all hosts except `snail` itself, as this would create a loop. *You must place your username in the code above*.
 
-One final note - SSH does not do DNS resolution before consulting the config file, so typing `ssh rhino` will not trigger the `*fhcrc.org` Host entries. You can add `rhino` to the Host line to have this trigger the config as well.
-
+One final note - SSH does not do DNS resolution before consulting the config file, so typing `ssh rhino` (or any short hostname without domain) will not trigger the `*fhcrc.org` Host entries. You can add `rhino` to the Host line to have this trigger the config as well.
 
 ## Access via a Remote Location
 
 Fred Hutch supports use of a VPN to remotely connect with our network. The network is protected by a firewall and there are currently 2 options to get access to resources inside the network, using VPN or the SSH gateway `snail.fhcrc.org`. This is allowed as all SSH communication is encrypted, and the gateway system is audited.
-
-SSH supports using a proxy or "jump host" and can be configured to do so automatically.
-
-Config|Command Line|Value|Notes
----|---|---|---
-ProxyJump|-J|hostname|SSH will use the specified host as a middle-point before completing the connection to your desired host.
 
 ### VPN
 
