@@ -38,6 +38,7 @@ This section contains articles that describe a range of high performance computi
 - [Technologies](/scicomputing/compute_platforms/)
 - [Computing Environments and Containers](/scicomputing/compute_environments/)
 - [Job Management](/scicomputing/compute_jobs/)
+- [Parallel Computing](/scicomputing/compute_parallel/)
 - [Cloud Computing](/scicomputing/compute_cloud/)
 - [Information for Grant Writers](/scicomputing/compute_grants/)
 
