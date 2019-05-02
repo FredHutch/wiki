@@ -1,7 +1,7 @@
 ---
 title: Parallel Computing on Slurm Clusters
 last_modified_at: 2019-05-02
-primary_reviewer: 
+primary_reviewer: atombaby
 ---
 
 _Parallel computing_ is an approach to computing where many tasks are done
