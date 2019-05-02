@@ -151,6 +151,8 @@ scicomputing:
         url: /scicomputing/compute_environments/
       - title: "Job Management"
         url: /scicomputing/compute_jobs/
+      - title: "Parallel Computing"
+        url: /scicomputing/compute_parallel/
       - title: "Cloud Computing"
         url: /scicomputing/compute_cloud/
       - title: "Information for Grant Writers"

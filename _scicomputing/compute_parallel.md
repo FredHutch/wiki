@@ -4,24 +4,24 @@ last_modified_at: 2019-05-02
 primary_reviewer: atombaby
 ---
 
-_Parallel computing_ is an approach to computing where many tasks are done
+Parallel computing is an approach to computing where many tasks are done
 simultaneously- either on a single device or on multiple independent devices.
 These tasks can be dependent or independent of each other requiring varying
-degreees of ordering and orchestration.  Parallel computing can be quite
-complicated to set up but can improve job throughput when done correctly. 
+degrees of ordering and orchestration.  Parallel computing can be quite
+complicated to set up but can improve job throughput when done correctly.
 
 Parallel computing starts with breaking a larger task into smaller steps- the
 "size" and relationship of those steps is highly dependent on the task at hand
 but determines much about how the job can be "parallelized". Because of the
 variety of approaches to large tasks, often there can be multiple strategies to
 consider using to identify the most effective approach to use for the
-particular task at hand. 
+particular task at hand.
 
 When steps are highly dependent on each other (e.g. the output of one step is
 used for input into the next) that job is said to be "serial" and it won't
-benefit greatly from parallel processing.  At the other end, "embarassingly" or
+benefit greatly from parallel processing.  At the other end, "embarrassingly" or
 "pleasantly" parallel work has individual steps that do not depend on each
-other and can occur in at the same time, often in great numbers. 
+other and can occur in at the same time, often in great numbers.
 
 Once you've determined how your work can be parallelized, there are two ways
 to distribute those steps.  The first uses the capabilities of multi-core
@@ -31,7 +31,7 @@ independent steps.  This technique is typically referred to as "threading."
 Another approach to using multiple processors is to spread the work over
 multiple different computers.  This approach has the advantage of being
 able to scale up the amount of computation being done concurrently.  This
-approach is often described as "distributed"
+approach is often described as "distributed".
 
 > Note: It is also possible to combine those techniques- using multiple cores
 > on multiple computers.  This can add a little complexity, but many tools will
@@ -43,7 +43,7 @@ The primary drivers for choosing between the two approaches is how much
 communication between individual steps is necessary and how many steps there
 are.  Communication between steps is computationally expensive, and if that
 communication needs to cross a network (as in a distributed solution) there can
-be a degredation in performance compared to keeping all of the steps on the
+be a degradation in performance compared to keeping all of the steps on the
 same system (as in the threaded solution).  However, if there are many steps
 the resources on a single system will be a bottleneck, which makes a
 distributed solution more appealing.
@@ -52,7 +52,7 @@ distributed solution more appealing.
 
 ### Pleasantly Parallel
 
-"Pleasantly parallel" work (AKA "embarassingly parallel") is typically made up
+"Pleasantly parallel" work (AKA "embarrassingly parallel") is typically made up
 of many _completely_ independent steps.  By independent we mean that:
 
   - any one step does not depend on the output or completion of any other step
@@ -83,7 +83,7 @@ exceeds the number of cores available on a single system.
 
 ## Techniques for Parallel Computation
 
-### Task Marshalling and Coordination
+### Task Marshaling and Coordination
 
 For pleasantly parallel work its primarily necessary to track the independent
 steps within the job.  If you divide your work into 1000 steps, you need some
@@ -120,7 +120,7 @@ to communicate between different hosts. OpenMPI is the most common
 implementation of MPI and the one used here.
 
 MPI is well-suited to scaling up highly-connected algorithms to run across
-computers.  MPI can also be used for marshalling independent (i.e. plesantly
+computers.  MPI can also be used for marshaling independent (i.e. pleasantly
 parallel) work though this approach is overkill in most cases.
 
 ## Parallel Operations in Slurm
@@ -129,12 +129,12 @@ Slurm allows a single job to request multiple CPUs both on a single host and
 across multiple hosts.  The fundamental unit is the _task_ which can use one or
 many CPUs but cannot span multiple nodes.
 
-The simplest method of running parallel computations in Slurm is _srun_.  With _srun_, you can run multiple copies of an indicated program on multiple hosts by specifing the number of tasks to run:
+The simplest method of running parallel computations in Slurm is _srun_.  With _srun_, you can run multiple copies of an indicated program on multiple hosts by specifying the number of tasks to run:
 
     srun --ntasks=6 myprogram
 
 
-will run six independent copies of _myprogram_ on six different CPUs (though the assigned CPUs may be on one or more nodes.
+This will run six independent copies of `myprogram` on six different CPUs (though the assigned CPUs may be on one or more nodes.
 
 If your task uses threading, you will want a single node, but multiple CPUs on
 that node.  In these cases, you'll need a single task that uses multiple CPUs
@@ -143,8 +143,8 @@ per task.
     srun --ntasks=1 --cpus-per-task=6 myprogram
 
 
-will run a single copy of _myprogram_, but will allocate 6 CPUs to _myprogram_.
-Note that _myprogram_ is "responsible" for figuring out how many CPUs are
+will run a single copy of `myprogram`, but will allocate 6 CPUs to `myprogram`.
+Note that `myprogram` is "responsible" for figuring out how many CPUs are
 available and running within that allocation.
 
 If your task uses message passing you can use specify multiple tasks each using one or more CPUs (one CPU per task is most typical):
@@ -152,13 +152,13 @@ If your task uses message passing you can use specify multiple tasks each using 
     srun --ntasks=6 --cpus-per-task=1 mpirun myprogram
 
 
-In this case _myprogram_ needs to be compiled using the MPI compilers or use MPI aware libraries.  Since OpenMPI and Slurm support each other well, it's not necessary to tell the _mpirun_ about the nodes and CPUs assigned.  Note that 1 is the default for `cpus-per-task` and can be safely omitted.
+In this case `myprogram` needs to be compiled using the MPI compilers or use MPI aware libraries.  Since OpenMPI and Slurm support each other well, it's not necessary to tell the _mpirun_ about the nodes and CPUs assigned.  Note that 1 is the default for `cpus-per-task` and can be safely omitted.
 
 ## Examples
 
 We have begun consolidating examples of parallel computing approaches in the
 [FredHutch/slurm-examples
-repository.](https://github.com/FredHutch/slurm-examples)  Please refer to that
-repository for more community curated exmaple approaches and associated
+GitHub repository.](https://github.com/FredHutch/slurm-examples)  Please refer to that
+repository for more community curated example approaches and associated
 documentation to see if someone has approached a problem similar to yours so
-you don't have to start from scratch. 
+you don't have to start from scratch.
