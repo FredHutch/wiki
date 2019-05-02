@@ -1,12 +1,12 @@
 ---
 title: Data Storage in Temporary Storage (Scratch)
 last_modified_at: 2019-04-04
-primary_reviewers:
+primary_reviewers: vortexing
 ---
 
-*Scratch* storage serves as a temporary location for large data sets that ideally reside in an archive space like *Economy* storage, to be transferred to when compute processes are applied to them.  Data in *Scratch* are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in *Scratch* as well, and then the final data resulting from the compute process can be written to *Fast* storage for the researcher.  This allows large data to be archived in *Economy* storage, accessed by HPC when it is temporarily housed in *Scratch* and only the (typically smaller) resulting data are written to the more accessible, but more costly *Fast* storage.
+`Scratch` storage serves as a temporary location for large data sets that ideally reside in an archive space like `Economy` storage, to be transferred to when compute processes are applied to them.  Data in `Scratch` are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in `Scratch` as well, and then the final data resulting from the compute process can be written to `Fast` storage for the researcher.  This allows large data to be archived in `Economy` storage, accessed by HPC when it is temporarily housed in `Scratch` and only the (typically smaller) resulting data are written to the more accessible, but more costly `Fast` storage.
 
-## Why is *Scratch* Different?
+## Why is Scratch Different?
 
 The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the _home_ or _fast_ file systems meant for long term data storage (these features were traded for lower cost and greater volume). Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).
 
@@ -17,11 +17,11 @@ Similar to the Fast File system above, the scratch file system is available on t
 There is no charge to the investigator for data stored here.
 
 
-## Why use *Scratch* Storage for temporary data?
+## Why use Scratch Storage for temporary data?
 
 In bioinformatics workflows we are often using pipelines with many execution steps. Each of these steps can create a large amount of temporary data, for example extracting information from genomics data (BAM files). This data often needs to be kept for a short period of time to allow for quality assurance.
 
-Informaticians often do not delete this data after this step because they are already off to the next task. Even worse, if temporary data is created in a standard file system such as *Fast* storage it will be picked up by the backup system and copied to the cloud the next night. If data is frequently created and deleted the backup data can grow to **5 or even 10 times the size** of the primary data which is an enormous waste. To prevent this waste every informatician or Data Scientist working with large datasets should use *Scratch* storage as part of their routine.
+Informaticians often do not delete this data after this step because they are already off to the next task. Even worse, if temporary data is created in a standard file system such as `Fast` storage it will be picked up by the backup system and copied to the cloud the next night. If data is frequently created and deleted the backup data can grow to **5 or even 10 times the size** of the primary data which is an enormous waste. To prevent this waste every informatician or Data Scientist working with large datasets should use `Scratch` storage as part of their routine.
 
 For this purpose we have a scratch file systems attached to the `Gizmo`, `Beagle` and `Koshu` clusters. There is a different scratch file system mounted on each cluster.  Using a scratch resource has several advantages:
 
@@ -30,7 +30,7 @@ For this purpose we have a scratch file systems attached to the `Gizmo`, `Beagle
 - You do not have to clean up your temporary data because the system does it for you
 - It reduces Fred Hutch storage expenses because the data is not backed up to the cloud.
 
-> Note: Even if you delete data from *Fast* storage one day after creation it will be kept in the backup system for a long time.  
+> Note: Even if you delete data from `Fast` storage one day after creation it will be kept in the backup system for a long time.  
 
 ## Types of Scratch Storage Available
 
@@ -88,7 +88,7 @@ In jobs on `Gizmo`, environment variables can be used to write and then read tem
 The files under $SCRATCH_LOC and $SCRATCH are automatically deleted when your Gizmo or Beagle job ends. You can also reach Scratch storage space via Windows (via the X: drive) or Mac, e.g. smb://center.fhcrc.org/fh/scratch.
 
 
-**Note:** lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
+>Note: lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
 
 
 ### Examples
@@ -132,18 +132,18 @@ In R:
 ```
 
 
-## Using `Scratch` Temporary Storage with AWS S3 buckets and `rhino`
+## Using Scratch Temporary Storage with AWS S3 buckets and rhino
 
 Using `scratch` storage for intermediate files during a process can be a useful way to keep storage costs low, while also using our local HPC resources (`rhino` and `gizmo`).  This adjusted way to work can be useful in reducing the tendency to store large and/or temporary data sets in `Fast` storage.  Due to the backup frequencies and speed configuration of `fast`, any files saved here even temporarily, will be retained in the backup for quite some time.  
 
 Using `Economy Cloud` storage (AWS S3) can be a more affordable way to store large data sets, and when combined with `scratch` can allow all of your current processes to work without a substantial shift in your approach.  
 
 
-### Connect to `rhino`
+### Connect to rhino
 See our pages on [Access Methods](/scicomputing/access_methods/) and an overview of the [Technologies Supported](/scicomputing/reference_overview/) to learn more about what `rhino` is and how to use it.
 
-### Find `Scratch` space
-Head over to some Scratch space for your PI.  
+### Find Scratch space
+Head over to some `Scratch` space for your PI.  
 
 ```
 cd /fh/scratch/delete10/lastname_f/
@@ -152,10 +152,10 @@ cd workingdir
 ```
 
 
-### Copy files from S3 to `Scratch`
+### Copy files from S3 to Scratch
 
 Sync the prefix(es) of the file(s) in S3 containing the data you want, down to `Scratch`.
-> See the AWS CLI help for using [S3 commands](https://docs.aws.amazon.com/cli/latest/reference/s3/).
+>Note: See the AWS CLI help for using [S3 commands](https://docs.aws.amazon.com/cli/latest/reference/s3/).
 
 ```
 aws s3 sync s3://yourbucket/yourDirectory/ .

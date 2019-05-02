@@ -39,6 +39,6 @@ The Economy File storage service is backed by two different technologies:
 Both systems are equipped with a recycle bin that protects against accidental deletion of files and currently allow for data restoration within 60 days after deletion.
 
 
-## Information for citing in publications
+# Information for citing in publications
 
 Fred Hutch is using compute equipment that has been partially funded by an NIH [S10 instrumentation grant](https://orip.nih.gov/construction-and-instruments/s10-instrumentation-programs). If you use Fred Hutch computational resources in your publication, please cite: **"Fred Hutch Scientific Computing, NIH grant S10-OD-020069"**.

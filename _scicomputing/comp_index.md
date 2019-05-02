@@ -1,6 +1,7 @@
 ---
 title: Overview of Scientific Computing at Fred Hutch
 last_modified_at: 2019-05-01
+primary_reviewers: vortexing
 ---
 Center IT supports a wide array of resources made available to researchers.  Much of the basic computing information needed on an ongoing basis can be found via Centernet and the Center IT pages.  However, much of the scientific computing resource documentation beyond this material is provided in this section of the Wiki, and links to existing resources and documentation are provided when available.  
 

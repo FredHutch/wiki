@@ -1,7 +1,7 @@
 ---
 title: Linux, Unix and Bash
 last_modified_at: 2019-04-11
-primary_reviewers:
+primary_reviewers: vortexing
 ---
 
 ## What is Linux?
