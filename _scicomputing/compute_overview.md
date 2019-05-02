@@ -47,7 +47,11 @@ When doing large scale computing tasks, one often shifts to the use of jobs to p
 
 Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop disconnected, the job would be terminated.
 
-The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on the `gizmo` and `beagle` clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  
+The batch system used at the Hutch is [Slurm](http://schedmd.com). Slurm provides a set of commands for submitting and managing jobs on the `gizmo` and `beagle` clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  
+
+## [Parallel Computing](/scicomputing/compute_parallel/)
+There are many approaches to parallel computing (doing many jobs simultaneously rather than in series). We have a wiki resource available for parallel computing with Slurm, as well as the [FredHutch/slurm-examples repository](https://github.com/FredHutch/slurm-examples) containing community curated examples with additional documentation that can help you get started.   
+
 
 ## [Cloud Computing](/scicomputing/compute_cloud/)
 Beyond on premise resources, cloud computing access is available for Fred Hutch researchers and this page provides some basics on how to get started if you are in need of cloud computing specifically.  
