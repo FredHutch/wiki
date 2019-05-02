@@ -92,7 +92,7 @@ module load Python
 ```
 The above line will load a different version of the software package over time as the "pointer" to a specific version is changed.
 
-> **Note:** This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
+> Note: This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
 
 
 ## Docker Containers
@@ -115,16 +115,16 @@ to achieve with any other tool apart from full virtual machines.
 It also neatly solves the problem of having to install dependencies
 in order to run a new tool in the right way.
 
-#### Common Terms
+### Common Terms
 
 There are a few basic terms that will make it easier to learn
 about Docker:
 
-##### Image
+#### Image
 
 A Docker image is basically a file that is built from a [Dockerfile](https://docs.docker.com/engine/reference/builder/). The image functions like a recipe for the process you want to have the Docker container execute. It specifies all the details, such as tools, processes and parameters needed for the process to occur in the Docker container that could be created from it.  
 
-##### Container
+#### Container
 
 A Docker container is a Docker image that is being executed or actively applied. Once you launch an image and start doing things (writing files,
 running commands, etc.) it becomes a container. The useful reason
@@ -133,7 +133,7 @@ you are done using a container, you usually delete it. However,
 the image that you launched the container from remains untouched,
 and can be used to launch more containers in the future should the same exact process be needed again for different data sets.  
 
-##### Mount Point
+#### Mount Point
 
 By default, Docker containers do not have access to the file system
 for the computer that they are being run on. In order to pass
@@ -142,7 +142,7 @@ filesystem, you must make a "mount point." The mount point is a folder
 that is shared between the Docker container and the host filesystem,
 allowing you to read and write data.
 
-##### Pull / Push
+#### Pull / Push
 
 Docker images can be stored either locally (on your laptop or desktop)
 or on a remote Docker server (such as [Docker Hub](https://hub.docker.com/)). Moving the Docker image to and from a remote server is called "pushing" and

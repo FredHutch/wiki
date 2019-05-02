@@ -30,7 +30,7 @@ For R and Python, you can run the code you have written locally on your computer
 - Pro: higher CPU, memory and disk resources, and you're the exclusive user
 - Con: need to transfer files to Hutch servers, requires Internet connection, if you request a very powerful computer, you may have to wait a while for one to become available
 
-When using the Fred Hutch computing clusters, users should access these programming languages via the environmental modules (eg. `ml R` rather than simply `R` in Rhino). Doing this will ensure reproducibility of your code and that you're using the latest software available. More information about environmental modules are available [here](/scicomputing/compute_environments/).
+When using the Fred Hutch computing clusters, users should access these programming languages via the environmental modules (eg. `ml R` rather than simply `R` in Rhino). Doing this will ensure reproducibility of your code and that you're using the latest software available. More information about environment modules are available [here](/scicomputing/compute_environments/).
 
 
 ## [Wiki Examples Repository](https://github.com/FredHutch/wiki-code-examples)

@@ -1,7 +1,7 @@
 ---
 title: Overview of How-To and Training
 last_modified_at: 20190-04-01
-primary_reviewers:
+primary_reviewers: vortexing
 ---
 There are a variety of resources for training on various aspects of Bioinformatics and data skills available at the Fred Hutch, in the Seattle area as well as online resources.
 

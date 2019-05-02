@@ -51,7 +51,7 @@ Depending on what OS is on your local computer, the steps are:
 From Rhino, execute the `grabnode` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node.
 
 
-## rstudio.fredhutch.org
+### rstudio.fredhutch.org
 Lastly, a Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org) from computers connected to the Hutch network. For more information about using it, please contact `scicomp`.
 
 
@@ -68,4 +68,4 @@ The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordi
 - [Seattle useR group](http://www.meetup.com/Seattle-useR/)
 - [Cascadia RConf](https://cascadiarconf.com/), a local yearly conference
 
->NOTE: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
+>Note: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
