@@ -99,13 +99,12 @@ to _Batch_.
 
 
 
-## How do I use AWS Batch?
+## Using AWS Batch
 
 SciComp provides access to AWS Batch in two ways:
 
 * Via the [AWS Command Line Interface (CLI)](https://docs.aws.amazon.com/cli/latest/reference/batch/index.html).
-* Via programmatic interfaces such as Python's [boto3](https://boto3.readthedocs.io/en/latest/reference/services/batch.html#client). The
-  earlier version of this library (`boto`) is deprecated and should not be used.
+* Via programmatic interfaces such as Python's [boto3](https://boto3.readthedocs.io/en/latest/reference/services/batch.html#client). 
 
 Access to the AWS Management Console (the web/GUI interface), is not available to end users at the Center. However, there is a customized, read-only [dashboard](https://batch-dashboard.fhcrc.org/) available which displays information about compute environments, queues, job definitions, and jobs.
 
@@ -113,22 +112,9 @@ Please report any problems you discover with this dashboard by describing the pr
 
 ## Get AWS Credentials
 
-You will need AWS credentials in order to
-use AWS Batch. You can get the credentials
-[here](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/Getting%20AWS%20Credentials.aspx).
-
-Initially, these credentials only allow you
-to access your PI's S3 bucket. To use the
-credentials with AWS Batch, you must request
-access to Batch.
-
-Request access by emailing `scicomp` with the subject
-line **Request Access to AWS Batch**.  In your email, **include** the name of your PI.
+You will need to obtain [AWS credentials](/scicomputing/access_credentials/#amazon-web-services-aws) first in order to use AWS Batch. Initially, these credentials only allow you to access your PI's S3 bucket. To use the credentials with AWS Batch, you must request access by emailing `scicomp` with the subject line **Request Access to AWS Batch**. In your email, **include** the name of your PI and a staff member will follow up with you. Note that you will not be able to create compute environments or job queues, thus if you need a custom compute environment, please email `scicomp`.
 
 SciComp will contact you when your access has been granted.
-
-Note that you will not be able to create
-compute environments or job queues. If you need a custom compute environment, please contact SciComp.
 
 ## Create and Deploy a Docker Image
 See our detailed information in the Computing Resource Library [here](/compdemos/Docker/) about creating and deploying Docker images, as well as running your own Docker Host.  
@@ -151,10 +137,6 @@ See our detailed information in the Computing Resource Library [here](/compdemos
 
 † These items can be overridden in individual job submissions.
 
-
-
-## Using secrets in jobs
-More to come.
 ## Using scratch space
 
 "Scratch space" refers to extra disk space that your job may
@@ -190,9 +172,6 @@ If a program does not open files in random-access mode, but
 does not explicitly accept input from `STDIN`, or writes more than one output file, it can still work with streaming input/output via the use of
 [named pipes](https://github.com/FredHutch/s3uploader).More and more bioinformatics programs can read and write directly from/to S3 buckets, so this should reduce the need for scratch space.
 
-
-
-
 ## Submit your job
 
 There are currently two ways to submit jobs:
@@ -202,7 +181,6 @@ There are currently two ways to submit jobs:
 1. Using Python's `boto3` library. Recommended for launching
    larger numbers of jobs.
 
-
 AWS Batch also supports [array jobs](https://docs.aws.amazon.com/batch/latest/userguide/array_jobs.html), which are collections of related jobs.
 Each job in an array job has the exact same command line and
 parameters, but has a different value for the
@@ -211,33 +189,6 @@ So you could, for example, have a script which uses
 that environment variable as an index into a list of files,
 to determine which file to download and process. Array jobs
 can be submitted by using either of the methods listed above.
-
-We are looking into additional tools to orchestrate workflows and pipelines.
-
-### Which queue to use?
-
-No matter how you submit your job, you need to choose
-a queue to submit to. At the present time, there are two:
-
-* **mixed** - This queue uses a compute environment
-  (also called **mixed**) which uses many
-  [instance types](https://aws.amazon.com/ec2/instance-types/)
-  from the `C` and `M` families. Each of the instance types
-  used is one that the Center has high
-  [limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html)
-  for in our account.
-* **optimal** - This queue uses a compute environment
-  (also called **optimal**) which uses the instance type
-  `optimal`, meaning Batch will choose from among the
-  `C`, `M`, and `R` instance types. While the Center's
-  account has high limits for most `C` and `M` types, its
-  limits for the `R` types are lower. Batch has no awareness
-  of per-account instance limits, so it may try to place
-  jobs on `R` instances which could result in longer
-  time-to-result.
-
-
-
 
 ### Submitting your job via the AWS CLI
 
@@ -359,8 +310,6 @@ You can now install more Python packages using `pipenv install`.
 See the [pipenv documentation](https://docs.pipenv.org/) for more
 information.
 
-#### Submitting your job
-
 Paste the following code into a file called `submit_job.py`:
 
 ```python
@@ -396,20 +345,41 @@ If you had dozens of jobs to submit, you could do it with a `for`
 loop in python (but consider using
 [array jobs](https://docs.aws.amazon.com/batch/latest/userguide/array_jobs.html)).
 
+### Choose a Job Queue
 
-## Monitor job progress
+No matter how you submit your job, you need to choose
+a queue to submit to. At the present time, there are two:
+
+* **mixed** - This queue uses a compute environment
+  (also called **mixed**) which uses many
+  [instance types](https://aws.amazon.com/ec2/instance-types/)
+  from the `C` and `M` families. Each of the instance types
+  used is one that the Center has high
+  [limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html)
+  for in our account.
+* **optimal** - This queue uses a compute environment
+  (also called **optimal**) which uses the instance type
+  `optimal`, meaning Batch will choose from among the
+  `C`, `M`, and `R` instance types. While the Center's
+  account has high limits for most `C` and `M` types, its
+  limits for the `R` types are lower. Batch has no awareness
+  of per-account instance limits, so it may try to place
+  jobs on `R` instances which could result in longer
+  time-to-result.
+
+### Monitor job progress
 
 Once your job has been submitted and you have a job ID, you can use it to
 retrieve the job status.
 
-### In the web dashboard
+#### In the web dashboard
 
 Go to the [jobs table](https://batch-dashboard.fhcrc.org/#jobs_header) in
 the dashboard. Paste your job ID or job name into the **Search** box.
 This will show the current status of your job. Click the job ID
 to see more details.
 
-### From the command line
+#### From the command line
 
 The following command will give comprehensive information about your job,
 given a job ID:
@@ -430,21 +400,20 @@ aws batch describe-jobs --jobs  2c0c87f2-ee7e-4845-9fcb-d747d5559370 \
 This will give you the status (one of `SUBMITTED, PENDING, RUNNABLE,
   STARTING, RUNNING, FAILED, SUCCEEDED`).
 
-## View Job Logs
+### View Job Logs
 
 Note that you can only view job logs once a job has reached the `RUNNING`
 state, or has completed (with the `SUCCEEDED` or `FAILED` state).
 
-### In the web dashboard
+#### In the web dashboard
 
 Go to the [job table](https://batch-dashboard.fhcrc.org/#jobs_header) in the
 web dashboard. Paste your job's ID into the **Search** box. Click on
 the job ID. Under **Attempts**, click on the **View logs** link.
 
-### On the command line
+#### On the command line
 
-#### On Rhino or Gizmo
-
+##### Remotely
 On the `rhino` machines or the `gizmo` cluster, there's a quick command
 to get the job output. Be sure and use your actual job ID instead of
 the example one below:
@@ -456,7 +425,7 @@ get_batch_job_log 2c0c87f2-ee7e-4845-9fcb-d747d5559370
 You can also pass a log stream ID (see below) instead of a job ID.
 
 
-#### On other systems
+##### Locally
 
 If you are on another system without the `get_batch_job_log` script
 (such as your laptop), you can still monitor job logs, but you need to
@@ -499,7 +468,7 @@ aws logs get-log-events --log-group-name /aws/batch/job \
 | jq -r '.events[]| .message'
 ```
 
-**NOTE**: `aws logs get-log-events` will only retrieve 1MB worth of
+> Note: `aws logs get-log-events` will only retrieve 1MB worth of
 log entries at a time (up to 10,000 entries). If your job has created
 more than 1MB of output, read the
 [documentation](https://docs.aws.amazon.com/cli/latest/reference/logs/get-log-events.html)
@@ -508,3 +477,9 @@ batches of log output. (The [get_batch_job_log](#on-rhino-or-gizmo) script on rh
 handles multiple batches of job output, using the
 [equivalent command](https://boto3.readthedocs.io/en/latest/reference/services/logs.html#CloudWatchLogs.Client.get_log_events)
 in `boto3`.
+
+## [Nextflow at Fred Hutch](/compdemos/nextflow/)
+
+Another option for using cloud resources, especially when performing a series of tasks (a workflow) repeated, while not necessarily having to understand or coordinate the individual components of the AWS infrastructure is to use the workflow manager [Nextflow](https://www.nextflow.io/).  Nextflow can be configured to use AWS as the backend execution resource, and thus it is very helpful to understand the basics of AWS Batch in order to get your data to a place where it can be analyzed easily via Nextflow.
+
+Ultimately, Nextflow will reduce the amount of backend retooling required when transitioning from on-premise computing to cloud computing. This is an emerging service that is not currently fully supported. However, resource documentation is available [here](/compdemos/nextflow/) and will be updated with forthcoming releases.

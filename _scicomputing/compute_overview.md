@@ -54,7 +54,12 @@ There are many approaches to parallel computing (doing many jobs simultaneously 
 
 
 ## [Cloud Computing](/scicomputing/compute_cloud/)
-Beyond on premise resources, cloud computing access is available for Fred Hutch researchers and this page provides some basics on how to get started if you are in need of cloud computing specifically.  
+Beyond on premise resources, cloud computing access is available for Fred Hutch researchers and this page provides some basics on how to get started if you are in need of cloud computing specifically.  Options like the `beagle` and `koshu` [clusters](/scicomputing/resource_overview/), while built _in_ the cloud, are very much a simple extension of existing infrastructure into cloud providers but does not fully or particularly efficiently utilize the real capabilities and advantages provided by cloud services.   Additionally, Fred Hutch users have access to the [Amazon Web Services Batch](https://aws.amazon.com/batch/) service directly, which can be a powerful tool, but may have a steeper learning curve or be more finicky than users may have the bandwidth for.  
+
+If you are at all interested or curious about cloud solutions and would like to
+talk over options, Scientific Computing hosts a cloud-specific office hours
+every week.  Dates and details for SciComp office hours can be found in
+[CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html) or on the Coop Communities [calendar.](https://calendar.google.com/calendar/embed?src=gd30dlifri4fu7h104cuqdj0dg%40group.calendar.google.com&ctz=America%2FLos_Angeles) 
 
 ## [Information for Grant Writers](/scicomputing/compute_grants/)
 Scientific Computing has provided a description of computational and storage resources for grant writers.
