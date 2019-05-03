@@ -36,10 +36,10 @@ Fred Hutch researchers are building and maintaining a set of Nextflow workflows 
 
 ### Setup
 
-  1. Get set up with [AWS Credentials](/scicomputing/access_credentials/#amazon-web-services-aws) and request access to [Batch](#get-aws-credentials-and-access)
+  1. Get set up with [AWS Credentials](/scicomputing/access_credentials/#amazon-web-services-aws) and request access to [Batch](/scicomputing/access_credentials/#get-aws-credentials-and-access)
   2. Make a file named `nextflow.config` in your home directory
 
-`nextflow.config` must contain a handful of elements in order to run correctly on AWS at Fred Hutch. You don't have to understand all of these things completely. Remember to [select the right job queue for your analysis.](#choose-a-job-queue).  Also, you will be provided with the appropriate Job Role ARN when you get set up with your AWS credentials.
+`nextflow.config` must contain a handful of elements in order to run correctly on AWS at Fred Hutch. You don't have to understand all of these things completely. Remember to [select the right job queue for your analysis.](/scicomputing/access_credentials/#choose-a-job-queue).  Also, you will be provided with the appropriate Job Role ARN when you get set up with your AWS credentials.
 
 ```
 // Run the analysis on AWS Batch
