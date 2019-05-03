@@ -8,7 +8,8 @@ primary_reviewers: sminot
 
 There is extensive documentation on how to write workflows and run Nextflow on [their documentation pages](https://www.nextflow.io/docs/latest/index.html), but in this page we will focus on the minimum requirements for running Nextflow at Fred Hutch using AWS for the execution.
 
->Note:  The current version of Nextflow **does not** include support for the full range of parameters needed to run on AWS at Fred Hutch as of March 2019. However, that support has been added to the codebase and will be included in a forthcoming release of Nextflow.  Docs will be updated as more becomes clear.
+>Note:  The latest release of Nextflow **does not** include support for the full range of parameters needed to run on AWS at Fred Hutch as of April 2019. However, that support has been added to the codebase and will soon be available at Fred Hutch via the `module load` system under the name `nextflow/devel`.  Docs will be updated as this module becomes available.
+
 ### How it works
 
 A [workflow in Nextflow](https://www.nextflow.io/docs/latest/getstarted.html#your-first-script) is a text file written in a particular format containing all of the details of the analysis that are generally true for _all_ of the times that you need to run that analysis. Any of the details specific to a single experiment or batch of samples can be specified as _parameters_, which are specified for each individual batch of data whenever you invoke the workflow.
@@ -36,20 +37,21 @@ Fred Hutch researchers are building and maintaining a set of Nextflow workflows 
 ### Setup
 
   1. Get set up with [AWS Credentials](/scicomputing/access_credentials/#amazon-web-services-aws) and request access to [Batch](#get-aws-credentials-and-access)
-  2. [Install Nextflow](https://www.nextflow.io/docs/latest/getstarted.html#installation)
-  3. Make a file named `nextflow.config` in your home directory
+  2. Make a file named `nextflow.config` in your home directory
 
 `nextflow.config` must contain a handful of elements in order to run correctly on AWS at Fred Hutch. You don't have to understand all of these things completely. Remember to [select the right job queue for your analysis.](#choose-a-job-queue).  Also, you will be provided with the appropriate Job Role ARN when you get set up with your AWS credentials.
 
 ```
 // Run the analysis on AWS Batch
 process.executor = 'awsbatch'
-// Run the analysis on the specified queue
+// Run the analysis on the specified queue in AWS Batch
 process.queue = 'mixed'
 // Run in the correct AWS region
 aws.region = 'us-west-2'
 // Location of the AWS executable in the host machine image
 executor.awscli = '/home/ec2-user/miniconda/bin/aws'
+
+// THE OPTIONS BELOW ARE UNDER ACTIVE DEVELOPMENT AND WILL BE UPDATED SHORTLY
 // Mount the host folder /docker_scratch to /tmp within the running job
 docker.temp = '/docker_scratch'
 // Use /tmp for scratch space to provide a larger working directory
@@ -79,6 +81,10 @@ Example script:
 #!/bin/bash
 set -e
 BASE_BUCKET="s3://fh-pi-lastname-f/lab/user_name/project_name"
+
+# CURRENTLY UNDER DEVELOPMENT
+ml nextflow/devel
+
 nextflow \
     run \
     path-to-workflow.nf \
