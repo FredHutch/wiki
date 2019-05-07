@@ -51,13 +51,16 @@ aws.region = 'us-west-2'
 // Location of the AWS executable in the host machine image
 executor.awscli = '/home/ec2-user/miniconda/bin/aws'
 
-// THE OPTIONS BELOW ARE UNDER ACTIVE DEVELOPMENT AND WILL BE UPDATED SHORTLY
 // Mount the host folder /docker_scratch to /tmp within the running job
-docker.temp = '/docker_scratch'
 // Use /tmp for scratch space to provide a larger working directory
-process.scratch = '/tmp'
 // Replace with the Job Role ARN for your account
-aws.jobRoleArn = 'YOUR JOB ROLE ARN HERE'
+aws {
+    region = 'us-west-2'
+    batch {
+        jobRole = '<YOUR JOB ROLE ARN HERE>'
+        volumes = ['/docker_scratch:/tmp:rw']
+    }
+}
 ```
 
 
