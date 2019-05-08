@@ -1,17 +1,57 @@
 ---
-title: How to migrate large data to Economy Local
-last_modified_at: 2019-02-06
-main_author: Dirk Petersen
-primary_reviewers: dirkpetersen
+title: How to migrate large data to `Economy Local`
+last_modified_at: 2019-05-08
+primary_reviewers: dirkpetersen, vortexing
 ---
-Learn how archive data with little effort using the Gimzo cluster as a Helper
 
-## Disclaimer
+This document aims to provide some guidance for researchers interested in creating data archives in `Economy Local`.  Data archive in this document is intended to mean a long term dataset storage location where larger (>1TB) datasets can be stored, perhaps as read only for your group.  
+
+
+## Data Sources
+Depending on where the data is being acquired from, different methods work best for archiving datasets in `Economy Local`.  
+
+### `Fast`
+
+
+### Web Based Resources
+
+
+### Physical Drives
+
+
+## Archive Types
+
+Two common approaches for data archive types are those that are:
+- intended to be used as long term, occasional access, backup type archives where subsets of the entire data collection may be accessed independently.
+    - Example:  raw genomic data sets that need to be protected should any corruption or loss of the working copies occur.  
+- intended to be used as long term, solely backup in which the entire data collection, should it be accessed, would be accessed in it's entirity.  
+    - Example:  a large number of files associated with a project with legal or funding related requirements for retention.  
+
+
+## Assisted Archiving
+
+When requesting assistance with archiving your data, you may consider emailing `helpdesk` with the following information:
+- What the data source is
+- Where you'd like it to be archived
+- What type of archive you'd like to create
+- What permissions would you like to have on that archive
+
+
+
+
+
+
+
+## Using `fh` Archive Tools
+
+Learn how archive data with little effort using the Gimzo cluster as a Helper.
+
+### Disclaimer
 
 Disclaimer for users who decide to delete data or put it on USB drives, etc:
 Before you decide to delete data in order to reduce storage costs please be aware that there may be data retention requirements imposed by the research funding sponsor, other contractual obligations, NIH data sharing and retention requirements (if applicable),  and Center policies. Please contact the Office of the General Counsel if you are in doubt about the retention requirements for your data.
 
-## Overview
+### Overview
 
 When we migrate large amounts of data we have different use cases. First (A) we assume that we have a folder `mydata` that contains medium to large size data. (Many files that are > 1MB up to multiple  GB, scientific datasets, bam files, etc) After that we look for the best way (B) to store smaller files (e.g. source code and small text files, home directories of previous staff).  For further instructions please see How to use Economy File Storage
  . PLEASE NOTE: copying thousands of small files to economy file will be slow and frustrating to manage. Please use method B) if you have many small files.
