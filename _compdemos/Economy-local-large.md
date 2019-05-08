@@ -8,7 +8,7 @@ This document aims to provide some guidance for researchers interested in creati
 
 
 ## Data Sources
-Depending on where the data is being acquired from, different methods work best for archiving datasets in `Economy Local`.  
+Depending on where the data is being migrated from, different methods work best for archiving datasets in `Economy Local`.  
 
 ### `Fast`
 
@@ -17,27 +17,43 @@ Depending on where the data is being acquired from, different methods work best 
 
 
 ### Physical Drives
+In some cases the choice is made to receive large datasets on physical drives, such as a hard drive mailed to you from a data provider.  In this case, the physical drive might not be the best archive for a variety of reasons, but also is not an ideal working copy location either.  Prior to generating any working copies from 
+
+#### Physical Drive through Cyberduck to `Economy Local`
 
 
-## Archive Types
 
+## Archiving Basics
+
+### Archive Types
 Two common approaches for data archive types are those that are:
 - intended to be used as long term, occasional access, backup type archives where subsets of the entire data collection may be accessed independently.
     - Example:  raw genomic data sets that need to be protected should any corruption or loss of the working copies occur.  
 - intended to be used as long term, solely backup in which the entire data collection, should it be accessed, would be accessed in it's entirity.  
     - Example:  a large number of files associated with a project with legal or funding related requirements for retention.  
 
+### Archiving Steps
+In order to create an archive the following considerations should be determined for any given dataset collection:
+- What is the total size of the dataset and how many individual files are inside it?
+- [Where does it make sense to store these data at Fred Hutch](/scicomputing/store_overview/)? 
+- What type of archive do they need to be in?
+- What permissions, for whom does the archive need to have once it's stored?
 
-## Assisted Archiving
+Migration:
+- connect to the data source
+- migrate the data
+- check to ensure complete, uncorrupted data migration
+
+
+Decide if you need assistance or if this is a task you can complete yourself.  
+
+### Assisted Archiving
 
 When requesting assistance with archiving your data, you may consider emailing `helpdesk` with the following information:
 - What the data source is
 - Where you'd like it to be archived
 - What type of archive you'd like to create
 - What permissions would you like to have on that archive
-
-
-
 
 
 
