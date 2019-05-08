@@ -15,12 +15,15 @@ Depending on where the data is being migrated from, different methods work best 
 
 ### Web Based Resources
 
+#### AWS S3 Transfer Bucket
+How to set up an AWS S3 transfer bucket to receive data from sources such as sequencing centers, etc. 
 
 ### Physical Drives
 In some cases the choice is made to receive large datasets on physical drives, such as a hard drive mailed to you from a data provider.  In this case, the physical drive might not be the best archive for a variety of reasons, but also is not an ideal working copy location either.  Prior to generating any working copies from 
 
 #### Physical Drive through Cyberduck to `Economy Local`
 
+#### Other methods
 
 
 ## Archiving Basics
