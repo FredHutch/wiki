@@ -12,14 +12,13 @@ Depending on where the data is being migrated from, different methods work best 
 
 ### `Fast`
 
-
 ### Web Based Resources
 
 #### AWS S3 Transfer Bucket
-How to set up an AWS S3 transfer bucket to receive data from sources such as sequencing centers, etc. 
+How to set up an AWS S3 transfer bucket to receive data from sources such as sequencing centers, etc.
 
 ### Physical Drives
-In some cases the choice is made to receive large datasets on physical drives, such as a hard drive mailed to you from a data provider.  In this case, the physical drive might not be the best archive for a variety of reasons, but also is not an ideal working copy location either.  Prior to generating any working copies from 
+In some cases the choice is made to receive large datasets on physical drives, such as a hard drive mailed to you from a data provider.  In this case, the physical drive might not be the best archive for a variety of reasons, but also is not an ideal working copy location either.  
 
 #### Physical Drive through Cyberduck to `Economy Local`
 
@@ -32,13 +31,13 @@ In some cases the choice is made to receive large datasets on physical drives, s
 Two common approaches for data archive types are those that are:
 - intended to be used as long term, occasional access, backup type archives where subsets of the entire data collection may be accessed independently.
     - Example:  raw genomic data sets that need to be protected should any corruption or loss of the working copies occur.  
-- intended to be used as long term, solely backup in which the entire data collection, should it be accessed, would be accessed in it's entirity.  
+- intended to be used as long term, solely backup in which the entire data collection, should it be accessed, would be accessed in it's entirety.  
     - Example:  a large number of files associated with a project with legal or funding related requirements for retention.  
 
 ### Archiving Steps
 In order to create an archive the following considerations should be determined for any given dataset collection:
 - What is the total size of the dataset and how many individual files are inside it?
-- [Where does it make sense to store these data at Fred Hutch](/scicomputing/store_overview/)? 
+- [Where does it make sense to store these data at Fred Hutch](/scicomputing/store_overview/)?
 - What type of archive do they need to be in?
 - What permissions, for whom does the archive need to have once it's stored?
 
@@ -112,7 +111,7 @@ ask your colleaques if the data made it over correctly before you delete the sou
     $ swc compare myfolder /archive
 
     To make things even easier there is a wrapper script : fhUpload,  which will use one gizmof node per subfolder to move data:​​​​
-  
+
     $ fhUpload /fh/fast/....../human/hg19/2013 /human/hg19/2013
     submitted batch job 27981126
     Upload job submitted to Gizmo. If you would like to monitor progress please use one of these commands:
