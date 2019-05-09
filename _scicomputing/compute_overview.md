@@ -62,4 +62,4 @@ every week.  Dates and details for SciComp office hours can be found in
 [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html) or on the Coop Communities [calendar.](https://calendar.google.com/calendar/embed?src=gd30dlifri4fu7h104cuqdj0dg%40group.calendar.google.com&ctz=America%2FLos_Angeles) 
 
 ## [Information for Grant Writers](/scicomputing/compute_grants/)
-Scientific Computing has provided a description of computational and storage resources for grant writers.
+Scientific Computing has a description of computational and storage resources for grant writers.  Contact SciComp for the most current and accurate version of this information.
