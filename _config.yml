@@ -20,13 +20,7 @@ collections:
   gendemos:
     output: true
     permalink: /:collection/:path/
-  bioinformatics:
-    output: true
-    permalink: /:collection/:path/
-  infdemos:
-    output: true
-    permalink: /:collection/:path/
-  computing:
+  scicomputing:
     output: true
     permalink: /:collection/:path/
   contributors:
@@ -41,6 +35,7 @@ collections:
   drafts:
     output: true
     permalink: /:collection/:path/
+
 
 
 
@@ -82,9 +77,10 @@ atom_feed:
 search                   :  true #, false (default)
 search_full_content      :  true #, false (default)
 #Note: Only the first 50 words of a post or page’s body content is added to the Lunr search index. Setting search_full_content to true in your _config.yml will override this and could impact page load performance.
-search_provider          :  lunr #(default), algolia
+search_provider          :  google #(default), algolia
 # Can use google search, here are instructions: https://mmistakes.github.io/minimal-mistakes/docs/configuration/
-
+google:
+  search_engine_id: 008250600098126702450:xciawyvddl8
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -248,30 +244,6 @@ defaults:
       sidebar:
         nav: "generation"
 
-  # _bioinformatics
-  - scope:
-      path: ""
-      type: bioinformatics
-    values:
-      layout: single
-      toc: true
-      toc_label: "On This Page"
-      share: true
-      sidebar:
-        nav: "bioinformatics"
-
-# _infdemos
-  - scope:
-      path: ""
-      type: infdemos
-    values:
-      layout: single
-      toc: true
-      toc_label: "On This Page"
-      share: true
-      sidebar:
-        nav: "bioinformatics"
-
 # _compdemos
   - scope:
       path: ""
@@ -282,19 +254,19 @@ defaults:
       toc_label: "On This Page"
       share: true
       sidebar:
-        nav: "computing"
+        nav: "scicomputing"
 
-  # _computing
+  # _scicomputing
   - scope:
       path: ""
-      type: computing
+      type: scicomputing
     values:
       layout: single
       toc: true
       toc_label: "On This Page"
       share: true
       sidebar:
-        nav: "computing"
+        nav: "scicomputing"
 
 # _contributors
   - scope:
@@ -312,7 +284,7 @@ defaults:
       layout: single
       share: false
       sidebar:
-        nav: "computing"
+        nav: "scicomputing"
 
   # _drafts
   - scope:

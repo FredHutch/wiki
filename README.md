@@ -159,6 +159,9 @@ it can be found [here](https://www.ruby-lang.org/en/downloads/).
    installed. If nothing is returned, then
    install `bundler` with `gem install bundler`.
    If that fails, try `sudo gem install bundler`.
+   
+1. You may need to install gems used by the site.
+   Type `gem install -g Gemfile` to install all of the gems the site uses.
 
 1. To build and view the site locally, from the cloned repo directory run
    `bundle install` then run `bundle exec jekyll serve`. Once the
