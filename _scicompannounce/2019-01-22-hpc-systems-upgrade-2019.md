@@ -2,7 +2,12 @@
 title: High Performance Computing Systems Upgrade 2019 Announcement 
 ---
 
-The operating system used on all High Performance Computing (Gizmo, Rhino, etc) will reach end-of-life later this spring. As a result, Scientific Computing will need to upgrade the operating system on all High Performance Computing servers used at Fred Hutch this spring. *(Note: the current operating system has been in use for over three years.)*
+> UPDATE: This work has been delayed.  Dates indicated below are no longer
+> accurate and will be corrected in a later announcement
+
+The operating system used on all High Performance Computing (Gizmo, Rhino, etc) will reach end-of-life later this spring. As a result, Scientific Computing will need to upgrade the operating system on all High Performance Computing servers used at Fred Hutch this spring. 
+
+> Note: the current operating system has been in use for over three years.
 
 For this upgrade we plan to use a phased approach that will not require taking the entire computing environment offline at once. Instead it will allow for continual use of the computing environment while it is upgraded.  
 
