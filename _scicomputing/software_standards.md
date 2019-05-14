@@ -54,8 +54,8 @@ In addition to building your project within the file structure of the template, 
 
 ### Additional Resources
 For more information on these coding practices, we recommend the following guides:
- - [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)
- - [Good Enough Practices in Scientific Computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
+ - [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745): This article from PLOS Biology is written for researchers in science who are primarily self-taught and interested in adopting effective practices for designing and maintaining code in research settings. 
+ - [Good Enough Practices in Scientific Computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510): This article from PLOS Computational Biology is a follow-up to the article above, and highlights the most essential practices for researchers to consider adopting if they are writing code for research purposes.
 
 
 ## Tools and Ideas to Further Improve Software
