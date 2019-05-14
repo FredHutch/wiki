@@ -1,14 +1,14 @@
 ---
 title: How to `Gizmo`
-last_modified_at: 2019-02-27
+last_modified_at: 2019-05-14
 primary_reviewers: atombaby, bmcgough
 ---
 
-Gizmo is a capability cluster maintained by Center IT's Scientific Computing group for use in Hutch research.  Presented here is some basic information about the cluster and how to use it.
+`Gizmo` is a capability cluster maintained by Center IT's Scientific Computing group for use in Hutch research.  Presented here is some basic information about the cluster and how to use it.
 
-gizmo is the compute cluster that you should use for most "production" computational tasks. Use of the cluster is a topic for another course, but you can try it by using one of the grabnode commands on either the NX servers or one of the rhino nodes.
+`Gizmo` is the compute cluster that you should use for most "production" computational tasks. Information about our cluster is provided [elsewhere in the Wiki](/scicomputing/compute_overview/), but you can try it by using one of the `grabnode` commands on either the NX servers or one of the `rhino` nodes.
 
-Access to gizmo nodes requires the use of Slurm commands- Slurm is the software suite that queues and dispatches jobs to the cluster.
+Access to `gizmo` nodes requires the use of Slurm commands - [Slurm](/scicomputing/compute_jobs/) is the software suite that queues and dispatches jobs to the cluster.
 
 ## Batch Computing with `Gizmo`
 
@@ -20,7 +20,7 @@ Batch jobs are written as shell scripts.
 
 ### Public Resources
 
-There are 3 types of nodes in the current configuration- F, G and H class nodes.  The class of node is reflected in the node's host name: gizmof100 is an F class, gizmog10 is a G class.  Without specifying other contstraints, you will be assigned cores from any available node (though F nodes are assigned preferentially if there are nodes of both class available).
+There are 3 types of [nodes in the current configuration](/scicomputing/compute_platforms/#gizmo)- F, G and H class nodes.  The class of node is reflected in the node's host name: gizmof100 is an F class, gizmog10 is a G class.  Without specifying other contstraints, you will be assigned cores from any available node (though F nodes are assigned preferentially if there are nodes of both class available).
 
 ### Private Resources
 
@@ -46,7 +46,7 @@ jdoe@rhino:~$ sbatch myscript.py
 Submitted batch job 11111
 ```
 
-now you want to see if the job is running for user jdoe and using the squeue command we see it is pending / waiting  (ST=PD) 
+Now you want to see if the job is running for user jdoe and using the squeue command we see it is pending / waiting  (ST=PD) 
 
 ```
 jdoe@rhino:~$ squeue -u jdoe
