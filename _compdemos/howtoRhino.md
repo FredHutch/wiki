@@ -1,12 +1,12 @@
 ---
 title: How to `Rhino`
-last_modified_at: 2019-02-27
+last_modified_at: 2019-05-14
 primary_reviewers: atombaby, bmcgough
 ---
 
-Probably the more familiar method of computing once resources beyond those available on your desktop/laptop are needed is interactive computing.  Here, one would start a shell and enter commands to be run. In these sorts of jobs, output is directed to a terminal and input taken from a keyboard.  `Rhino` nodes provide this capability- simply log in via SSH and begin your computing.
+Probably the more familiar method of computing once resources beyond those available on your desktop/laptop are needed is interactive computing.  Here, one would start a shell and enter commands to be run. In these sorts of jobs, output is directed to a terminal and input taken from a keyboard.  [`Rhino` nodes](/scicomputing/compute_platforms/#rhino) provide this capability- simply log in [via SSH](/scicomputing/access_methods/) and begin your computing.
 
-Slurm also provides interactive computing via the `srun` command which allocates and connects you to a compute node.
+[Slurm](/scicomputing/compute_jobs/) also provides interactive computing via the `srun` command which allocates and connects you to a compute node.
 
 ### Credentials
 
@@ -41,7 +41,7 @@ Storage comes in four basic flavors:
 - secure
 - scratch
 
-Each of those "flavors" is mounted on all of the gizmo compute systems- compute nodes and rhino nodes alike.  You can read more about Storage on our [Storage pages.](/computing/store_overview/)
+Each of those "flavors" is mounted on all of the gizmo compute systems- compute nodes and rhino nodes alike.  You can read more about Data Storage on our [Storage pages.](/computing/store_overview/)
 
 ```
 mrg@rhino$ ls -l /fh
@@ -82,7 +82,7 @@ You can run an app directly on the rhino node to which you are connected. This i
   - MATLAB - run `module load matlab/R2016b` followed by `matlab` to start. There are several versions of MATLAB installed, run `module list matlab` to see them all.
   - Mozilla/Firefox - it can be handy to run a browser on the remote system sometimes. Start one by simply running the `firefox` command.
 
-### Running an app on a gizmo node
+### Running an app on a `gizmo` node
 
 If you want to run a computationally-intensive X/GUI app, you should grab your own node to do so. This will not impact other users of the rhino systems. This method can also be used to run non-GUI apps interactively.
 
