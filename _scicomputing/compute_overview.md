@@ -50,7 +50,7 @@ Batch computing allows you to queue up jobs and have them executed by the batch 
 The batch system used at the Hutch is [Slurm](http://schedmd.com). Slurm provides a set of commands for submitting and managing jobs on the `gizmo` and `beagle` clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  
 
 ## [Parallel Computing](/scicomputing/compute_parallel/)
-There are many approaches to parallel computing (doing many jobs simultaneously rather than in series). We have a wiki resource available for parallel computing with Slurm, as well as the [FredHutch/slurm-examples repository](https://github.com/FredHutch/slurm-examples) containing community curated examples with additional documentation that can help you get started.   
+There are many approaches to parallel computing (doing many jobs simultaneously rather than in series). We have a [wiki resource available describing parallel computing](/scicomputing/compute_parallel/) as well as the [FredHutch/slurm-examples repository](https://github.com/FredHutch/slurm-examples) containing community curated examples with additional documentation that can help you get started.   
 
 
 ## [Cloud Computing](/scicomputing/compute_cloud/)
