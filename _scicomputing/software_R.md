@@ -43,9 +43,9 @@ SciComp maintains a current list of the various builds of R available on `Gizmo`
 
 ### `Rhino`
 Depending on what OS is on your local computer, the steps are:
-- If your local computer runs Windows, you should connect to the `Rhino`'s with [NoMachine](/computing/access_methods/#nomachine-nx-access-multi-os), then launch RStudio from within NoMachine.
-- If your local computer is a Mac, you should [install XQuartz and connect to Rhino](/computing/access_methods/#xquartz-x11-mac-osx), then launch RStudio from the terminal
-- If your local computer runs Linux, you simply need to connect to Rhino [with X11 forwarding](/computing/access_methods/#xquartz-x11-mac-osx) using the `-X` flag as detailed above for Mac computers.
+- If your local computer runs Windows, you should connect to the `Rhino`'s with [NoMachine](/scicomputing/access_methods/#nomachine-nx-access-multi-os), then launch RStudio from within NoMachine.
+- If your local computer is a Mac, you should [install XQuartz and connect to Rhino](/scicomputing/access_methods/), then launch RStudio from the terminal
+- If your local computer runs Linux, you simply need to connect to Rhino [with X11 forwarding](/scicomputing/access_methods/) using the `-X` flag as detailed above for Mac computers.
 
 ### `Gizmo`
 From Rhino, execute the `grabnode` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node.

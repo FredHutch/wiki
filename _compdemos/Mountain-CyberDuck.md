@@ -4,7 +4,7 @@ last_modified_at: 2018-09-27
 main_author: Dirk Petersen
 primary_reviewers: dirkpetersen
 ---
-Access to data stored in Fred Hutch resources that are [object stores](/computing/store_objectstore/) can be achieved using clients.  As of March 2016 Center IT officially supports Mountain Duck and Cyberduck clients for this purpose. You can use these Windows or Mac clients to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing.
+Access to data stored in Fred Hutch resources that are [object stores](/scicomputing/store_objectstore/) can be achieved using clients.  As of March 2016 Center IT officially supports Mountain Duck and Cyberduck clients for this purpose. You can use these Windows or Mac clients to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing.
 
 Mountain Duck can map Economy File as a simple drive in Windows Explorer or in Mac Finder. Mountain Duck is the default choice for most users and you should try it first before you move to other options. The performance of Mountain Duck is limited.
 

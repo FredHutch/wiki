@@ -141,7 +141,7 @@ need to read the rest of this section.
 
 ## Create your own Docker image and put your software inside
 
-### [Create GitHub Account](/bioinformatics/compute_github/)
+### [Create GitHub Account](/scicomputing/software_managecode/)
 
 You really need a GitHub account to properly build docker containers. Please see our [Shiny](/compdemos/shiny/) app example on how to create your own docker image  
 

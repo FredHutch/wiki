@@ -27,10 +27,10 @@ There are currently two approaches available for deploying Shiny apps, either ma
     - This service is completely free to campus users regardless of usage hours or number of apps.
 
 
-To deploy a Shiny app via the Fred Hutch system, you must first have access to the Fred Hutch institution GitHub.  You can find more information about [getting set up with GitHub at Fred Hutch here.](/bioinformatics/compute_github/)  As an overview, you must first create a GitHub username, and then have `scicomp` connect it to the Fred Hutch institution.  
+To deploy a Shiny app via the Fred Hutch system, you must first have access to the Fred Hutch institution GitHub.  You can find more information about [getting set up with GitHub at Fred Hutch here.](/scicomputing/software_managecode/)  As an overview, you must first create a GitHub username, and then have `scicomp` connect it to the Fred Hutch institution.  
 
 ## Set up your GitHub Repository
-There are two ways to set up your repository, and either is suitable.  Note:  Documentation for using GitHub at the Fred Hutch is being generated [here](/bioinformatics/compute_github/), and it is a good place to start to find the necessary help you may need to use GitHub to set up your Shiny app.  
+There are two ways to set up your repository, and either is suitable.  Note:  Documentation for using GitHub at the Fred Hutch is being generated [here](/scicomputing/software_managecode/), and it is a good place to start to find the necessary help you may need to use GitHub to set up your Shiny app.  
 
 To do a basic set up via the web, go to GitHub and create a new repository in the Fred Hutch institution for your app.  Then clone your new repository to your local computer. In the local folder created, create a folder called `app` and put your shiny app files (either app.R, or ui.r/server.R) and any other associated data files needed for the app in the `app` directory.  (Once you are finished and have tested your app locally, either via R or RStudio, push your edits to GitHub. )
 

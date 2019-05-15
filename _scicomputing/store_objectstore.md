@@ -11,7 +11,7 @@ As the amount of research data grows, which can occur rapidly when new large sca
 >Note:  Currently it is recommended to use a combination of `Economy`, *Scratch* and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
 
-`Economy` is less expensive than [`Fast`](/computing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, `Economy` would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  `Economy` serves as an archive for these data, and typically compute processes do not directly access these files.
+`Economy` is less expensive than [`Fast`](/scicomputing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, `Economy` would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  `Economy` serves as an archive for these data, and typically compute processes do not directly access these files.
 
 ## Features & Benefits of Object Storage Systems
 
@@ -57,7 +57,7 @@ S3 (the Simple Storage Service) is an object store very much like the Economy fi
 Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
 
 #### Credentials and Permissions
-Once you have [obtained S3 credentials](/computing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  
+Once you have [obtained S3 credentials](/scicomputing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  
 
 #### User Demos
 We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-CyberDuck/), [via the AWS CLI](/compdemos/aws-cli/), [via R](/compdemos/aws-R/), or [via Python](/compdemos/aws-python/) and various methods for [Economy Local](/compdemos/EconomyCommand-API/)

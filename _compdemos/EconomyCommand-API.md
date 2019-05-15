@@ -4,7 +4,7 @@ last_modified_at: 2019-03-19
 main_author: Dirk Peterson
 primary_reviewers: dirkpetersen
 ---
-Access to data stored in Fred Hutch resources that are [object stores](/computing/store_objectstore/) can be achieved via command line tools or the API.  This is an overview of available tools that are related to accessing `Economy Local` storage, starting with the ones you will most likely use and that are best supported.  
+Access to data stored in Fred Hutch resources that are [object stores](/scicomputing/store_objectstore/) can be achieved via command line tools or the API.  This is an overview of available tools that are related to accessing `Economy Local` storage, starting with the ones you will most likely use and that are best supported.  
 
 ## General Limitations and Notes
 

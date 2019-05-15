@@ -12,7 +12,7 @@ We aim to curate some useful reading material about multiple testing relevant to
 
 
 ## Hands on Example (R)
-This example provides information on the Family Wise Error Rate (FWER) and the False Discovery Rate (FDR), using code run in [R](/bioinformatics/prog_R/). We provide information on a few commonly used approaches for correcting for multiple testing as well. This is not an exhaustive list, as there is still ongoing research on how to adjust for multiple testing.
+This example provides information on the Family Wise Error Rate (FWER) and the False Discovery Rate (FDR), using code run in [R](/scicomputing/software_R/). We provide information on a few commonly used approaches for correcting for multiple testing as well. This is not an exhaustive list, as there is still ongoing research on how to adjust for multiple testing.
 
 ### Hypothetical Study Design
 For the sake of having an example on hand, let's draw up a hypothetical study. Imagine we have observed gene expression for 1000 independent transcripts in 500 study participants. We are interested in testing if there is any association between any of those 1000 transcripts and reading this wiki page. For each of the 500 people, we have an indicator (1 or 0) for whether they have read the wiki page you are reading right now. For each gene we are testing the following hypothesis:

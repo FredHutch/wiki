@@ -10,11 +10,11 @@ Probably the more familiar method of computing once resources beyond those avail
 
 ### Credentials
 
-To use Fred Hutch IT supported computing resources, you will need to acquire and manage various credentials. You can read more about how to get started on our [Credentials](/computing/access_credentials/) page.
+To use Fred Hutch IT supported computing resources, you will need to acquire and manage various credentials. You can read more about how to get started on our [Credentials](/scicomputing/access_credentials/) page.
 
 ### Access Methods
 
-There are multiple ways you can get access Scientific Computing resources which are all running on a supported version of Ubuntu Linux. The most simple form of access is using a secure shell terminal software such as ssh or putty. You may also need graphical output (GUI), for example to use tools like R Studio or advanced text editors. See our page on access [Methods](/computing/access_methods/) to learn more about how to set up your connection to the `rhino` nodes.  To access SciComp resources from outside FHCRC, you have to use WebVPN (Cisco AnyConnect) to come through the FHCRC firewall.
+There are multiple ways you can get access Scientific Computing resources which are all running on a supported version of Ubuntu Linux. The most simple form of access is using a secure shell terminal software such as ssh or putty. You may also need graphical output (GUI), for example to use tools like R Studio or advanced text editors. See our page on access [Methods](/scicomputing/access_methods/) to learn more about how to set up your connection to the `rhino` nodes.  To access SciComp resources from outside FHCRC, you have to use WebVPN (Cisco AnyConnect) to come through the FHCRC firewall.
 
 ## `rhino` Compute Nodes
 
@@ -41,7 +41,7 @@ Storage comes in four basic flavors:
 - secure
 - scratch
 
-Each of those "flavors" is mounted on all of the gizmo compute systems- compute nodes and rhino nodes alike.  You can read more about Data Storage on our [Storage pages.](/computing/store_overview/)
+Each of those "flavors" is mounted on all of the gizmo compute systems- compute nodes and rhino nodes alike.  You can read more about Data Storage on our [Storage pages.](/scicomputing/store_overview/)
 
 ```
 mrg@rhino$ ls -l /fh
