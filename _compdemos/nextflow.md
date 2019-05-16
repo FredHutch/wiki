@@ -10,14 +10,19 @@ There is extensive documentation on how to write workflows and run Nextflow on [
 
 >Note:  The latest release of Nextflow **does not** include support for the full range of parameters needed to run on AWS at Fred Hutch as of May 2019. However, that support has been added to the codebase and is available if you follow these special installation instructions:
 
-On shared systems (rhino/gizmo), load Java:
+### Rhino / Gizmo
+
+On shared systems (rhino/gizmo), load a specific module of Nextflow:
 
 ```
-ml Java/1.8.0_181
+ml nextflow/19.04.1
 ```
 
-On any system (rhino/gizmo or your own desktop/laptop), install the bleeding-edge version of
-Nextflow as follows:
+Loading that module will place a working copy of `nextflow` in your PATH.
+
+### Personal Desktop / Laptop
+
+If, instead, you are on your own desktop/laptop, install the bleeding-edge version of Nextflow as follows:
 
 ```
 curl https://s3-us-west-2.amazonaws.com/fredhutch-scicomp-tools/install-nextflow.sh | bash
@@ -106,8 +111,8 @@ Example script:
 set -e
 BASE_BUCKET="s3://fh-pi-lastname-f/lab/user_name/project_name"
 
-# CURRENTLY UNDER DEVELOPMENT
-ml nextflow/devel
+# Load the module
+ml nextflow/19.04.1
 
 nextflow \
     run \
