@@ -9,16 +9,17 @@ handleSearchQuery = function (query) {
     url += "%26size=100";
     $.getJSON(url, function (data, b, c) {
         // TODO be less ugly
-        var searchResults = $('<div id="searchresults"  style="margin-top: 100px; margin-bottom: 100px; margin-left: 80px; margin-right: 150px;" />').appendTo('body');
+        var issue = "<br><span>Didn't find what you were looking for? File an <a href='https://github.com/FredHutch/wiki/issues/new/choose'>issue</a>.</span>";
+        var searchResults = $('<div id="searchresults"  style="margin-top: 10px; margin-bottom: 10px; margin-left: 80px; margin-right: 80px;" />').appendTo('body');
         if (data['hits']['found'] == 0) {
-            $("#searchresults").html("No results for '" + query + "'.");
+            $("#searchresults").html("No results for '" + query + "'." + issue);
         } else {
             // TODO if we got more than 100 results we should indicate that we are only showing the 1st 100
             // is pagination worth it?
             var hitsFound = data['hits']['found'];
             var hitsPerPage = data['hits']['hit'].length;
             var html = "";
-            html += "<span>Found " + hitsFound + " matches for '" + query + "'.</span><br/>&nbsp;<br/>\n";
+            html += "<span>Found " + hitsFound + " matches for '" + query + "'.</span><br/>\n";
 
             for (var i = 0; i < hitsPerPage; i++) {
                 var hit = data['hits']['hit'][i];
@@ -30,6 +31,7 @@ handleSearchQuery = function (query) {
                 html += '<span>' + hit['highlights']['content'] + '</span><br/>\n';
 
             }
+            html += issue;
             $("#searchresults").html(html);
         }
     }).fail(function () {
@@ -41,7 +43,7 @@ $(function () {
     $(".search__toggle").click(function () {
         $("#searchbox").remove();
         $("#searchresults").remove();
-        var searchDiv = $('<input type="search" id="searchbox" aria-placeholder="Enter your search term..." class="search-input" tabindex="-1" placeholder="Enter your search term..."/>').appendTo('body');
+        var searchDiv = $('<input type="search" id="searchbox" aria-placeholder="Type search term(s) and press Enter..." class="search-input" tabindex="-1" placeholder="Type search term(s) and press Enter..." style="margin-top: 20px; margin-bottom: 20px; margin-left: 80px; margin-right: 20x;"/>').appendTo('body');
         $("#searchbox").focus();
     });
 
