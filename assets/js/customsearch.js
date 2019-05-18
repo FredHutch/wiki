@@ -2,10 +2,10 @@
 handleSearchQuery = function (query) {
     // TODO come up with a more permanent solution than jsonp.afeld.me?
     // deploy it ourselves: https://github.com/afeld/jsonp#setup
-    var url = "https://wiki-json-proxy.fhcrc.org/?callback=?&url=https://search-sciwiki-0-miwsjq2efeohp7oftsafh2ywa4.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search?q=";
+    var url = "https://jsonp.afeld.me/?callback=?&url=https://search-sciwiki-0-miwsjq2efeohp7oftsafh2ywa4.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search?q=";
     url += encodeURI(query);
     url += "%26return=title";
-    url += "%26highlight.content==%7B%7D"
+    url += "%26highlight.content={}"
     url += "%26size=100";
     $.getJSON(url, function (data, b, c) {
         // TODO be less ugly
