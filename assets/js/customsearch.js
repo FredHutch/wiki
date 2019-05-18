@@ -5,7 +5,7 @@ handleSearchQuery = function (query) {
     var url = "https://wiki-json-proxy.fhcrc.org/?callback=?&url=https://search-sciwiki-0-miwsjq2efeohp7oftsafh2ywa4.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search?q=";
     url += encodeURI(query);
     url += "%26return=title";
-    url += "%26highlight.content={}"
+    url += "%26highlight.content==%7B%7D"
     url += "%26size=100";
     $.getJSON(url, function (data, b, c) {
         // TODO be less ugly
