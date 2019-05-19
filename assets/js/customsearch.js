@@ -15,7 +15,7 @@ handleSearchQuery = function (query) {
              mimeType: "application/json",
              contentType: 'application/json; charset=utf-8'}).done(function(data) {
         // TODO be less ugly
-        var issue = "<br><span>Didn't find what you were looking for? File an <a href='https://github.com/FredHutch/wiki/issues/new/choose'>issue</a>.</span>";
+                 var issue = "<br><span>Didn't find what you were looking for? File an <a href='https://github.com/FredHutch/wiki/issues/new?template=request-for-content.md'>issue</a>.</span>";
         var searchResults = $('<div id="searchresults"  style="margin-top: 10px; margin-bottom: 10px; margin-left: 80px; margin-right: 80px;" />').appendTo('body');
         if (data['hits']['total'] == 0) {
             $("#searchresults").html("No results for '" + query + "'." + issue);
