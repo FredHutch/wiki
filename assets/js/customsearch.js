@@ -1,42 +1,51 @@
 
 handleSearchQuery = function (query) {
-    // TODO come up with a more permanent solution than jsonp.afeld.me?
-    // deploy it ourselves: https://github.com/afeld/jsonp#setup
-    var url = "https://jsonp.afeld.me/?callback=?&url=https://search-sciwiki-0-miwsjq2efeohp7oftsafh2ywa4.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search?q=";
-    url += encodeURI(query);
-    url += "%26return=title";
-    url += "%26highlight.content={}"
-    url += "%26size=100";
-    $.getJSON(url, function (data, b, c) {
+    var url = "https://search-sciwiki-search-0-f7ntx2mpc5g6yohp6dtiwzsdiy.us-west-2.es.amazonaws.com/sciwiki0/_search";
+
+    var data = {
+        _source: ['title'],
+        highlight: { fields: { content: {} } },
+        size: 100,
+        query: { match_phrase: { content: query } }
+    };
+
+    $.ajax({ method: 'POST',
+             url: url,
+             data: JSON.stringify(data),
+             mimeType: "application/json",
+             contentType: 'application/json; charset=utf-8'}).done(function(data) {
         // TODO be less ugly
         var issue = "<br><span>Didn't find what you were looking for? File an <a href='https://github.com/FredHutch/wiki/issues/new/choose'>issue</a>.</span>";
         var searchResults = $('<div id="searchresults"  style="margin-top: 10px; margin-bottom: 10px; margin-left: 80px; margin-right: 80px;" />').appendTo('body');
-        if (data['hits']['found'] == 0) {
+        if (data['hits']['total'] == 0) {
             $("#searchresults").html("No results for '" + query + "'." + issue);
         } else {
             // TODO if we got more than 100 results we should indicate that we are only showing the 1st 100
             // is pagination worth it?
-            var hitsFound = data['hits']['found'];
-            var hitsPerPage = data['hits']['hit'].length;
+            var hitsFound = data['hits']['total'];
+            var hitsPerPage = data['hits']['hits'].length;
             var html = "";
             html += "<span>Found " + hitsFound + " matches for '" + query + "'.</span><br/>\n";
 
             for (var i = 0; i < hitsPerPage; i++) {
-                var hit = data['hits']['hit'][i];
+                var hit = data['hits']['hits'][i];
                 html += "<br/>\n";
-                html += '<a href="' + hit['id'] + '">';
-                html += hit['fields']['title'];
+                html += '<a href="' + hit['_id'] + '">';
+                html += hit['_source']['title'];
                 html += "</a>";
                 html += "<br/>\n";
-                html += '<span>' + hit['highlights']['content'] + '</span><br/>\n';
+                html += '<span>' + hit['highlight']['content'].join("...") + '</span><br/>\n';
 
             }
             html += issue;
             $("#searchresults").html(html);
         }
-    }).fail(function () {
-        console.log("in error function");
+
+    }).fail(function(e) {
+        console.log("in fail");
+        console.log(e);
     });
+
 }
 
 $(function () {
