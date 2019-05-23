@@ -61,6 +61,22 @@
       node_count: 3
       partition: largenode
     -  
+      node_name: j
+      cores: 24
+      sockets: 2
+      memory_gb: 384
+      processor_model: Gold 6146
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: 6029U 2U Ultra NVMe Server
+      os: Ubuntu 14.04 LTS
+      local_storage: "7TB @ /loc (300MB/s throughput / 1000 IOps)"
+      network: 10G (up to 1GB/s throughput)
+      gpu: NVIDIA GeForce GTX 1080Ti
+      node_count: 42
+      partition: largenode
+    -  
       node_name: rhino
       cores: 14
       sockets: 2
