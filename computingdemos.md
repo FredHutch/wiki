@@ -22,7 +22,7 @@ SciComp is reviewing emerging contributions of example starter scripts that focu
 Fredhutch.io is providing and reviewing example code for various data wrangling and analysis purposes.  That emerging resource can be found [here.](https://github.com/FredHutch/wiki-code-examples)
 
 ### `wiki-templates` GitHub Repository
-The Fred Hutch `wiki-templates` repository aims to describe th eminimum file requirements for several project types. Each project folder serves as a template and guide for following best coding practices and is an evolving resource meant to help people get started.  You can find that repository [here.](https://github.com/FredHutch/wiki-templates)
+The Fred Hutch `wiki-templates` repository aims to describe the minimum file requirements for several project types. Each project folder serves as a template and guide for following best coding practices and is an evolving resource meant to help people get started.  You can find that repository [here.](https://github.com/FredHutch/wiki-templates)
 
 
 Below you will find a variety of more hands on descriptions that relate to a specific topic.  These tend to be more detailed examples of the use of resources described in the main articles of the Wiki.  
