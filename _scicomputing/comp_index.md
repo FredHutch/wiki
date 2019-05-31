@@ -6,9 +6,11 @@ primary_reviewers: vortexing
 Center IT supports a wide array of resources made available to researchers.  Much of the basic computing information needed on an ongoing basis can be found via Centernet and the Center IT pages.  However, much of the scientific computing resource documentation beyond this material is provided in this section of the Wiki, and links to existing resources and documentation are provided when available.  
 
 
-## [Help, Access and Credentials](/scicomputing/access_overview/)
+## [Access and Credentials](/scicomputing/access_overview/)
 This section includes a variety of information about accessing computing resources at the Fred Hutch, including managing credentials for services when required.  
-- To get help you can contact SciComp @ via email or you ask a public question on the fhbig slack channel.
+
+To get help you can email `SciComp` or you ask a public question on [The Coop's Slack Workspace](https://fhbig.slack.com/messages) in the `question-and-answer` channel.  
+
 - [Methods](/scicomputing/access_methods/)
 - [Credentials](/scicomputing/access_credentials/)
 
