@@ -91,7 +91,7 @@ Once you have confirmed your credentials, remember to remove the test file:
 aws s3 rm s3://fh-pi-lastname-f/iris.csv
 ```
 
-See more about accessing AWS S3 via the command line [here for Python](/compdemos/aws-python/), [here for R](/compdemos/aws-R/), and [here for the AWS Command Line Interface](/compdemos/aws-cli/).
+See more about accessing AWS S3 via the command line [here](/compdemos/aws/).
 
 
 ### GUI Instructions
