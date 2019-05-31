@@ -52,7 +52,7 @@ $(function () {
     $(".search__toggle").click(function () {
         $("#searchbox").remove();
         $("#searchresults").remove();
-        var searchDiv = $('<input type="search" id="searchbox" aria-placeholder="Type search term(s) and press Enter..." class="search-input" tabindex="-1" placeholder="Type search term(s) and press Enter..." style="margin-top: 20px; margin-bottom: 20px; margin-left: 80px; margin-right: 20x;"/>').appendTo('body');
+        var searchDiv = $('<input type="search" id="searchbox" aria-placeholder="Type search term(s) and press Enter..." class="search-input" tabindex="-1" placeholder="Type search term(s) and press Enter..." style="margin-top: 20px; margin-bottom: 20px; margin-left: 80px; margin-right: 20x; width: 50%;"/>').appendTo('body');
         $("#searchbox").focus();
     });
 
