@@ -15,7 +15,11 @@ Depending on the type of data used by a research group, different combinations o
 
 ## Storing protected health information (PHI) data
 
-Please check with your supervisor before you store any [PHI data](https://cphs.berkeley.edu/hipaa/hipaa18.html) on Fred Hutch systems as your data set may have compliance requirements that would not allow you to store the data on any of the existing systems. In almost all cases you should be working with de-identified data which can be stored on any of the above storage systems. If you require to store PHI data you should only use systems that support 1. Encryption at rest (e.g. on the hard drive), 2. Encryption in transit (e.g. through the network) and 3. access auditing (a systems log who accessed a file what time). Also, PHI can only be stored on systems that are approved by [ISO](https://centernet.fredhutch.org/cn/u/center-it/iso.html).
+Please check with your supervisor before you store any [PHI data](https://cphs.berkeley.edu/hipaa/hipaa18.html) on Fred Hutch systems as your data set may have compliance requirements that would not allow you to store the data on any of the existing systems. In almost all cases you should be working with de-identified data which can be stored on any of the above storage systems. If you must store PHI data, you may only use systems that are approved by [ISO](https://centernet.fredhutch.org/cn/u/center-it/iso.html) and support:
+
+1. Encryption at rest (e.g. on the hard drive)
+2. Encryption in transit (e.g. through the network)
+3. Access auditing (a systems log who accessed a file what time).
 
 This is an overview of supported features:
 
