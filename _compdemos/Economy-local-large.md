@@ -1,17 +1,75 @@
 ---
-title: How to migrate large data to Economy Local
-last_modified_at: 2019-02-06
-main_author: Dirk Petersen
-primary_reviewers: dirkpetersen
+title: How to migrate large data to `Economy Local`
+last_modified_at: 2019-05-08
+primary_reviewers: dirkpetersen, vortexing
 ---
-Learn how archive data with little effort using the Gimzo cluster as a Helper
 
-## Disclaimer
+This document aims to provide some guidance for researchers interested in creating data archives in `Economy Local`.  Data archive in this document is intended to mean a long term dataset storage location where larger (>1TB) datasets can be stored, perhaps as read only for your group.  
+
+
+## Data Sources
+Depending on where the data is being migrated from, different methods work best for archiving datasets in `Economy Local`.  
+
+### `Fast`
+
+### Web Based Resources
+
+#### AWS S3 Transfer Bucket
+How to set up an AWS S3 transfer bucket to receive data from sources such as sequencing centers, etc.
+
+### Physical Drives
+In some cases the choice is made to receive large datasets on physical drives, such as a hard drive mailed to you from a data provider.  In this case, the physical drive might not be the best archive for a variety of reasons, but also is not an ideal working copy location either.  
+
+#### Physical Drive through Cyberduck to `Economy Local`
+
+#### Other methods
+
+
+## Archiving Basics
+
+### Archive Types
+Two common approaches for data archive types are those that are:
+- intended to be used as long term, occasional access, backup type archives where subsets of the entire data collection may be accessed independently.
+    - Example:  raw genomic data sets that need to be protected should any corruption or loss of the working copies occur.  
+- intended to be used as long term, solely backup in which the entire data collection, should it be accessed, would be accessed in it's entirety.  
+    - Example:  a large number of files associated with a project with legal or funding related requirements for retention.  
+
+### Archiving Steps
+In order to create an archive the following considerations should be determined for any given dataset collection:
+- What is the total size of the dataset and how many individual files are inside it?
+- [Where does it make sense to store these data at Fred Hutch](/scicomputing/store_overview/)?
+- What type of archive do they need to be in?
+- What permissions, for whom does the archive need to have once it's stored?
+
+Migration:
+- connect to the data source
+- migrate the data
+- check to ensure complete, uncorrupted data migration
+
+
+Decide if you need assistance or if this is a task you can complete yourself.  
+
+### Assisted Archiving
+
+When requesting assistance with archiving your data, you may consider emailing `helpdesk` with the following information:
+- What the data source is
+- Where you'd like it to be archived
+- What type of archive you'd like to create
+- What permissions would you like to have on that archive
+
+
+
+
+## Using `fh` Archive Tools
+
+Learn how archive data with little effort using the Gimzo cluster as a Helper.
+
+### Disclaimer
 
 Disclaimer for users who decide to delete data or put it on USB drives, etc:
 Before you decide to delete data in order to reduce storage costs please be aware that there may be data retention requirements imposed by the research funding sponsor, other contractual obligations, NIH data sharing and retention requirements (if applicable),  and Center policies. Please contact the Office of the General Counsel if you are in doubt about the retention requirements for your data.
 
-## Overview
+### Overview
 
 When we migrate large amounts of data we have different use cases. First (A) we assume that we have a folder `mydata` that contains medium to large size data. (Many files that are > 1MB up to multiple  GB, scientific datasets, bam files, etc) After that we look for the best way (B) to store smaller files (e.g. source code and small text files, home directories of previous staff).  For further instructions please see How to use Economy File Storage
  . PLEASE NOTE: copying thousands of small files to economy file will be slow and frustrating to manage. Please use method B) if you have many small files.
@@ -53,7 +111,7 @@ ask your colleaques if the data made it over correctly before you delete the sou
     $ swc compare myfolder /archive
 
     To make things even easier there is a wrapper script : fhUpload,  which will use one gizmof node per subfolder to move data:​​​​
-  
+
     $ fhUpload /fh/fast/....../human/hg19/2013 /human/hg19/2013
     submitted batch job 27981126
     Upload job submitted to Gizmo. If you would like to monitor progress please use one of these commands:
