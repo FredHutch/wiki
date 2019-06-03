@@ -119,6 +119,22 @@ directory from which you submitted the job.
 
 The option `-o` will redirect this output (errors as well) to the file indicated as the argument to this option.  For example, `-o myjob.out` redirects to _myjob.out_ in the submission directory.  Adding `%j` in this file name will include the job ID.  `-o myjob-%j.out` would create a file like _myjob-12345.out_.
 
+#### Memory
+
+Memory is requested with the `--mem` option.  This option takes an argument: a
+number indicating the amount of memory required on the node.  The default unit
+is megabytes- to specify the unit, append `K`, `M`, `G`, or `T` for kilobytes,
+megabytes, gigabytes, or terabytes.
+
+A memory request is required for the _largenode_ partition.  Note that adding a
+memory request only ensures that sufficient memory is configured on the node
+and that your job will not exceed the requested memory
+
+#### GPU
+
+GPUs are available on some nodes- these are requested using the option
+`--gres=gpu`.
+
 ##### Examples
 
 Submit a batch job (`sbatch`), that will run in one day, six hours (with the flag `-t 1-6`) in the largenode partition (with the flag `-p largenode`) in Beagle (with the flag `-M beagle`).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job "quoth-the-raven" (with the `-J` flag) and list the script to use in the job `myscript.sh`.
