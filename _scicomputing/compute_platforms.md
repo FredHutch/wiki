@@ -4,7 +4,7 @@ last_modified_at: 2019-04-26
 primary_reviewers: mbcgough, dirkpetersen, atombaby
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on here along with the basic information required for researchers to identify which resource might be best suited to their particular computing needs.  
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on here along with the basic information required for researchers to identify which resource might be best suited to their particular computing needs.
 
 The Fred Hutch managed systems listed serve needs that rise above
 those that can be met using your desktop computer or web-based services. Often reasons to move
@@ -45,12 +45,12 @@ This command can be run from any NoMachine or rhino host.
 > you have a need for this, please email `scicomp`.
 
 ### Rhino
-`Gizmo` is actually not a stand alone system; instead, access to the resource is based on the `Rhino` platform supported by Center IT.  `Rhino`, or more specifically the Rhinos, are three locally managed HPC servers all accessed via the name `rhino`. Together, they function as a data and compute hub for a variety of data storage resources and high performance computing (HPC). The specific guidance for the use of each of the approaches to HPC access are slightly different, but will all require the user to learn how to access and interact with `rhino`.  
+`Gizmo` is actually not a stand alone system; instead, access to the resource is based on the `Rhino` platform supported by Center IT.  `Rhino`, or more specifically the Rhinos, are three locally managed HPC servers all accessed via the name `rhino`. Together, they function as a data and compute hub for a variety of data storage resources and high performance computing (HPC). The specific guidance for the use of each of the approaches to HPC access are slightly different, but will all require the user to learn how to access and interact with `rhino`.
 
 > Note: Any user interacting with the following systems will be dependent on being proficient with the care and keeping of the Rhinos.
 
 More information on the topic of ssh configurations for access to `rhino` can be found [here.](/compdemos/ssh/)
-More information on specific guidance for using `rhino` and `gizmo` are in our Resource Library for [`rhino`](/scicomputing/howtoRhino/) and for [`gizmo`](/compdemos/howtoGizmo/).  
+More information on specific guidance for using `rhino` and `gizmo` are in our Resource Library for [`rhino`](/scicomputing/howtoRhino/) and for [`gizmo`](/compdemos/howtoGizmo/).
 
 ### The NoMachine Cluster
 
@@ -62,10 +62,10 @@ There are three systems you can use for NX sessions: _lynx_, _manx_, and _sphinx
 
 
 ## Other Available Resources
-More to come here regarding VMs, shiny, rancher, data transfer.  
+More to come here regarding VMs, shiny, rancher, data transfer.
 
 ## Resource and Node Description information
-Below we describe the current basic configurations available for node types, numbers, and memory for a variety of `scicomp` supported computing resources.  These tables are useful when deciding on what type of resources you need to request when using `rhino` and `gizmo` for interactive and non-interactive jobs.  These tables are auto-generated and are a work in progress so that we can provide the most up to date information on the Wiki for your use.  Please file an Issue in our [GitHub repository](https://github.com/FredHutch/wiki/issues) if you notice something amiss or need clarification.  
+Below we describe the current basic configurations available for node types, numbers, and memory for a variety of `scicomp` supported computing resources.  These tables are useful when deciding on what type of resources you need to request when using `rhino` and `gizmo` for interactive and non-interactive jobs.  These tables are auto-generated and are a work in progress so that we can provide the most up to date information on the Wiki for your use.  Please file an Issue in our [GitHub repository](https://github.com/FredHutch/wiki/issues) if you notice something amiss or need clarification.
 
 ### Resource Information
 <!--This table is auto-generated based on the yaml in _data/scicomp_resources.yaml, and is a work in progress.  -->
