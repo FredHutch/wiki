@@ -5,8 +5,7 @@ main_author: Dirk Petersen
 primary_reviewers: fizwit, vortexing
 ---
 
-Running tensorflow with GPUs has become easier in 2019. We can either use it on Gizmo as the latest GizmoJ class nodes are equipped with GPUs or on the [Koshu cluster](/compdemos/cluster_koshuBeta/) which is running in Google's cloud.: 
-
+Running tensorflow with GPUs has become easier in 2019. We can either use it on Gizmo as the latest GizmoJ class nodes are equipped with GPUs or on the [Koshu cluster](/compdemos/cluster_koshuBeta/) which is running in Google's cloud.
 
 ## GPU Tensorflow in a Python Environment
 
@@ -31,17 +30,18 @@ then create a small python test script:
     chmod +x ~/tf-test.py
 ```
 
-and run it on Gizmo with --constraint=x11dpu to select GizmoJ nodes  
+and run it on Gizmo with `--gres=gpu` to select GizmoJ nodes
+
 
 ``` 
-    ~$ sbatch -p largenode -c 6 --mem 33000 -o out.txt --constraint x11dpu ~/tf-test.py
+    ~$ sbatch -p largenode -c 6 --mem 33000 -o out.txt --gres=gpu ~/tf-test.py
     ~$ tail -f out.txt
 ```
 
 or you run it on Koshu which has slightly more powerful GPUs
 
 ```
-    ~$ sbatch -M koshu -p gpu --gres=gpu:V100-SXM2-16GB:1 -o out.txt ~/tf-test.py
+    ~$ sbatch -M koshu -p gpu --gres=gpu -o out.txt ~/tf-test.py
     Submitted batch job 27074536 on cluster koshu
     ~$ tail -f out.txt
     1.12.0
@@ -161,8 +161,3 @@ First verify that you have a GPU active (e.g. Tesla V100) as well as CUDA V 10.0
 If you see any issues here you need to contact `SciComp` to have the error corrected 
 
 Also please email `SciComp` to request further assistance 
-
-
-
-
-
