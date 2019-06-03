@@ -87,7 +87,7 @@ Location: {{ resource.location }}
 |Partition|Node Name|Node Count|CPU|Cores|Memory|
 |---|:---:|:---:|---:|:---:|:---:|
 {%- for node in resource.nodes %}
-{{ node.partition }}|{{ node.node_name }}|{{ node.node_count }}|{{ node.processor_manufacturer }} {{ node.processor_model }}|{{ node.cores }}|{{ node.memory_gb }}GB
+{{ node.partition }}|{{ node.node_name }}|{{ node.node_count }}|{{ node.processor_manufacturer }} {{ node.processor_model }}|{{ node.gpu }}|{{ node.cores }}|{{ node.memory_gb }}GB
 {%- endfor %}
 
 ### Additional resources
