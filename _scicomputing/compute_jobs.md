@@ -90,7 +90,7 @@ loading Python/3.6.4-foss-2016b-fh2...
 
 ```
 
-### Commands for Submitting Jobs
+### Submitting Jobs
 
 #### `sbatch` and `srun`
 
@@ -99,6 +99,8 @@ loading Python/3.6.4-foss-2016b-fh2...
 `srun` is used to run a task on the cluster.  This is an interactive session,
 where you can directly view output as it's produced or provide input (if needed
 by the task you are running).
+
+#### Common Options
 
 These two take many of the same options:
 
@@ -109,7 +111,29 @@ These two take many of the same options:
  - `-c` request a number of processors per task (default 1)
  - `-J` name a job
 
-A useful option that is only applicable to `sbatch` is `-o`, which writes output to a different file.  The default will write the file _slurm-<jobid>.out_ in the directory in which you submitted the job.
+#### Job Output
+
+Output (stdout and stderr) from your job script, steps, tasks, and processes is
+captured by Slurm and written to a file named _slurm-<jobid>.out_ in the
+directory from which you submitted the job.
+
+The option `-o` will redirect this output (errors as well) to the file indicated as the argument to this option.  For example, `-o myjob.out` redirects to _myjob.out_ in the submission directory.  Adding `%j` in this file name will include the job ID.  `-o myjob-%j.out` would create a file like _myjob-12345.out_.
+
+#### Memory
+
+Memory is requested with the `--mem` option.  This option takes an argument: a
+number indicating the amount of memory required on the node.  The default unit
+is megabytes- to specify the unit, append `K`, `M`, `G`, or `T` for kilobytes,
+megabytes, gigabytes, or terabytes.
+
+A memory request is required for the _largenode_ partition.  Note that adding a
+memory request only ensures that sufficient memory is configured on the node
+and that your job will not exceed the requested memory
+
+#### GPU
+
+GPUs are available on some nodes- these are requested using the option
+`--gres=gpu`.
 
 ##### Examples
 
