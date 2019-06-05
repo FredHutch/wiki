@@ -73,7 +73,7 @@
       os: Ubuntu 14.04 LTS
       local_storage: "7TB @ /loc (300MB/s throughput / 1000 IOps)"
       network: 10G (up to 1GB/s throughput)
-      gpu: NVIDIA GeForce GTX 1080Ti
+      gpu: NVIDIA
       node_count: 42
       partition: largenode
     -  

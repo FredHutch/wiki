@@ -10,19 +10,11 @@ GPUs are requested via the GRES option:
 
     sbatch --gres=gpu ...
 
-Additional options allow you to specify the GPU model:
-
-    sbatch --gres=gpu:gtx1080ti
-
-Number of GPUs:
+Request multiple GPUs with:
 
     sbatch --gres=gpu:2
 
-Or both:
-
-    sbatch --gres=gpu:gtx1080ti:2
-
-At this time we have just a single model and only one GPU per node- the other examples are provided for the sake of completeness.
+At this time we have one GPU per node.
 
 ## Requesting GPUs on Gizmo
 
