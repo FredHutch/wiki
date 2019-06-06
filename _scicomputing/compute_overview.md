@@ -58,5 +58,11 @@ talk over options, Scientific Computing hosts a cloud-specific office hours
 every week.  Dates and details for SciComp office hours can be found in
 [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html) or on the Coop Communities [calendar.](https://calendar.google.com/calendar/embed?src=gd30dlifri4fu7h104cuqdj0dg%40group.calendar.google.com&ctz=America%2FLos_Angeles) 
 
+## [Computing with GPU](/scicomputing/compute_gpu/)
+
+Graphical Processing Units (GPUs) provide acceleration for some kinds of computations and tools, [tensorflow](https://www.tensorflow.org/) is a notable example of such a tool.
+
+[This page](/scicomputing/compute_gpu/) describes where you can find those resources and how to request those for your jobs.
+
 ## [Information for Grant Writers](/scicomputing/compute_grants/)
 Scientific Computing has provided a description of computational and storage resources for grant writers.
