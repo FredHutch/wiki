@@ -16,9 +16,6 @@ This page describes all the various technologies and specifications for them tha
 
 While most bioinformatic analysis of genomics data, for example, will likely require more compute resources than are typically available in a desktop computer, some smaller analysis jobs or training can be done on a desktop or laptop.  For these smaller compute jobs, scientific computing languages [R](https://www.r-project.org) or [Python](https://www.python.org) may be useful (see [the Software Development page](/scicomputing/software_overview/) for more information about these computing languages). You can obtain assistance in installing a copy of R and RStudio on PCs through the Center IT desktop software resource. The installation of a commonly used Python and R package management system called Conda can be done on either PCs or Macs and more information about Anaconda and Miniconda (two versions of the Python oriented version of Conda package manager) can be found [here.](https://conda.io/docs/glossary.html#anaconda)
 
-![](/assets/comp_index/2018-06-28-12-56-21.png)
-
-
 ### Interactive Computing:  Easy Access, Moderate Capability
 These systems are provided by the Fred Hutch to serve the community with the intention of:
   1. being immediately accessible by everyone, regardless of skill set,
