@@ -155,6 +155,8 @@ scicomputing:
         url: /scicomputing/compute_parallel/
       - title: "Cloud Computing"
         url: /scicomputing/compute_cloud/
+      - title: "Computing with GPU"
+        url: /scicomputing/compute_gpu/
       - title: "Information for Grant Writers"
         url: /scicomputing/compute_grants/
 
