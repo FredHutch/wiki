@@ -106,5 +106,3 @@ Location: {{ resource.location }}
 {%- endif %}
 
 {%- endfor %}
-
-{%- endfor %}
