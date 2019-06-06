@@ -99,10 +99,13 @@ Location: {{ resource.location }}
 {%- endfor %}
 
 ### GPU Resources
+
 |Node Name|Partition|GPU|
 |---|---|---|---|
+{%- for node in resource.nodes %}
 {%- if node.gpu != 'none' %}
 {{ node.node_name }}|{{ node.partition }}|{{ node.gpu }}
 {%- endif %}
+{%- endfor %}
 
 {%- endfor %}
