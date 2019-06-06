@@ -1,7 +1,7 @@
 > Note on the AllFredHutch team.  We want everyone included, but GitHub can be chatty.  Go [here](https://help.github.com/articles/watching-and-unwatching-team-discussions/) to see how to set your personal settings to NOT automatically watch every team you are part of.  
 
 # Contributing to this wiki
-This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff whether as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large).
+This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff whether as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them.  No contribution is too little (or too large).  We have recently opened up the ability to contribute to allow public contributions, with the contributions being reviewed by those Fred Hutch members who opt-in to the Wiki-Reviwer GitHub team.  If you'd like to be added to the Wiki-Reviewer team, please email Fred Hutch username `sciwki` and provide your GitHub username.  
 
 # Details
 [Content Contribution and Review Process](#content-contribution-and-review-process)
@@ -25,10 +25,11 @@ We manage the content of this site via a set of markdown files that contain long
 
 To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are) from GitHub, follow these steps:
 
-1. Create a branch off the master branch for your edits. Do not fork the repo or others cannot submit additional edits to your content.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names whenever possible. For your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
-2. Commit your edits to existing markdowns as you go, and update from the master branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the master and committing frequently.  
-3. Publish/push your branch to GitHub to save your work and let us know you're working on something.
-4. When you are done editing, create a pull request from your branch.  Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
+1. **For those users in the Fred Hutch institution**, please create a branch off the master branch for your edits. Do not fork the repo or others cannot submit additional edits to your content. Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with uninformative names whenever possible. For your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
+  - **For those users outside the Fred Hutch institution**, the easiest way to contribute is actually via one of the "Edit this Page" links on all of our pages.  GitHub will force you to fork the repository, which is fine but does not allow anyone else to edit your edits!  This method does focus your contributions to more targeted improvements and corrections and is a great way to weigh in to the evolution/discussion.  Remember to submit your pull request promptly to highlight your edits for the Wiki-Reviewers team.  
+2. Publish/push your branch to GitHub to save your work and let us know you're working on something.
+3. Commit your edits to existing markdowns as you go and push those edits to GitHub when finished with an editing session. Remember to pull a new copy of the branch prior to editing in case other people have contributed to your branch too!
+4. When you are done editing, create a pull request from your branch to the master.  Suggest reviewers based on the content of the edits if that user is not part of the Wiki-Reviewer team.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
 
     >Note: If you are editing existing content and the page has a listing for the Primary Reviewers like this:  `primary_reviewers: somegithubusername` then when you submit the pull request please request a review from those usernames.  
 
@@ -36,9 +37,9 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
 6. Once reviews have been obtained, the pull request can be merged into the master and then any edits go live to the site [here.](https://sciwiki.fredhutch.org/)
 
 ### The Review Process
-This Wiki is intended to be curated by content owners, local experts, and service providers at the Fred Hutch in order to ensure accuracy and relevancy to our community.  Thus, contributions and reviews can only be made by users who have GitHub usernames affiliated with the Fred Hutch institution.  We use the `primary_reviewers` tag in our markdowns to indicate when there is a resident expert who should be contacted via pull request review requests when content in that markdown is edited or added to.  This process of contribution and review from multiple different users allows us to make sure that the content evolves in such a way that it it both more interpretable to the intended audience (Fred Hutch affiliated staff), but also accurate, appropriate and continuously reviewed.  
+This Wiki is intended to be a consistent, consolidated place for contributions from both inside and outside the Fred Hutch community but curated by Fred Hutch community members via the Wiki-Reviewer team.  We use the `primary_reviewers` tag in our markdowns to indicate when there is a resident expert who should be contacted via pull request review requests when content in that markdown is edited or added to.  This process of contribution and review from multiple different users allows us to make sure that the content evolves in such a way that it it both more interpretable to the intended audience (Fred Hutch affiliated staff and collaborators), but also accurate, appropriate and continuously reviewed.  
 
-Currently only one approving review of the content is required for a pull request to be merged.  Ideally before this point, a novice reviewer would weigh in with edits to the text, and an expert reviewer would provide the approving review.  To bring your content/edits to the attention of the community for editing and review, please submit a pull request from your branch to the master.  
+Currently only one approving review of the content from a member of the Wiki-Reviewer team is required for a pull request to be merged.  Ideally before this point, a novice reviewer would weigh in with edits to the text, and an expert reviewer would provide the approving review.  To bring your content/edits to the attention of the community for editing and review, please submit a pull request from your branch to the master.  
 
 
 ### Getting Credit
@@ -127,18 +128,13 @@ For new contributor entries: https://github.com/FredHutch/wiki/blob/master/draft
 ####  Folders with Existing Content
 Data Generation Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_generation
 
-Data Generation Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/master/_gendemos
+Data Generation Resource Library (note all markdowns in this folder will be rendered once merged into the master): https://github.com/FredHutch/wiki/tree/master/_gendemos
 
-Bioinformatics Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_bioinformatics
+Scientific Computing Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_scicomputing
 
-Bioinformatics Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/master/_infdemos
-
-Computing Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_computing
-
-Computing Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/master/_compdemos
+Scientific Computing Resource Library (note all markdowns in this folder will be rendered once merged into the master): https://github.com/FredHutch/wiki/tree/master/_compdemos
 
 Contributors List (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/master/_contributors
-
 
 
 
@@ -159,7 +155,7 @@ it can be found [here](https://www.ruby-lang.org/en/downloads/).
    installed. If nothing is returned, then
    install `bundler` with `gem install bundler`.
    If that fails, try `sudo gem install bundler`.
-   
+
 1. You may need to install gems used by the site.
    Type `gem install -g Gemfile` to install all of the gems the site uses.
 
@@ -190,9 +186,7 @@ the list of broken links.
 ### Pages that run Demo and Contributors Collection pages:
 Generation resource library collection page:  https://github.com/FredHutch/wiki/blob/master/generationdemos.md
 
-Bioinformatics resource library collection page:  https://github.com/FredHutch/wiki/blob/master/informaticsdemos.md
-
-Computing resource library collection page:  https://github.com/FredHutch/wiki/blob/master/computingdemos.md
+Scientific Computing resource library collection page:  https://github.com/FredHutch/wiki/blob/master/computingdemos.md
 
 SciComp Announcement resource library collection page:  https://github.com/FredHutch/wiki/blob/master/scicompannounce.md
 
