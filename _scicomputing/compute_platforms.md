@@ -90,12 +90,21 @@ Location: {{ resource.location }}
 {{ node.partition }}|{{ node.node_name }}|{{ node.node_count }}|{{ node.processor_manufacturer }} {{ node.processor_model }}|{{ node.gpu }}|{{ node.cores }}|{{ node.memory_gb }}GB
 {%- endfor %}
 
-### Additional resources
+### Additional Resources
 
 |Node Name|Network|Local Storage|
 |---|---|---|
 {%- for node in resource.nodes %}
 {{ node.node_name }}|{{ node.network }}|{{ node.local_storage }}
+{%- endfor %}
+
+### GPU Resources
+|Node Name|Partition|GPU|
+|---|---|---|---|
+{%- if node.gpu != 'none' %}
+{{ node.node_name }}|{{ node.partition }}|{{ node.gpu }}
+{%- endif %}
+
 {%- endfor %}
 
 {%- endfor %}
