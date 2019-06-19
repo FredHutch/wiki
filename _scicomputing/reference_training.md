@@ -12,17 +12,17 @@ There are a variety of resources for training on various aspects of Bioinformati
 
 ### Community Groups
 
-[The Coop](https://centernet.fredhutch.org/cn/u/bdsc.html) (link requires login) is the Fred Hutch Bioinformatics and Data Science Cooperative, and works to share information and resources about computational work across the Hutch. The Coop maintains a listserv, calendars of data science events, and The Coop Communities Slack](https://fhbig.slack.com/). [FHBig](https://fredhutch.github.io/FHBig/) is the Fred Hutch Bioinformatics Interest Group, a community-based group that hosts a [blog](https://fredhutch.github.io/FHBig/year-archive/) and facilitates information sharing among the bioinformatics research community at the Hutch. Hutch employees can learn more through the links above or by emailing `coophelp`.
+[The Coop](https://centernet.fredhutch.org/cn/u/bdsc.html) (link requires login) is the Fred Hutch Bioinformatics and Data Science Cooperative, and works to share information and resources about computational work across the Hutch. The Coop maintains a listserv, calendars of data science events, and [The Coop Communities Slack](https://fhbig.slack.com/). [FHBig](https://fredhutch.github.io/FHBig/) is the Fred Hutch Bioinformatics Interest Group, a community-based group that hosts a [blog](https://fredhutch.github.io/FHBig/year-archive/) and facilitates information sharing among the bioinformatics research community at the Hutch. Hutch employees can learn more through the links above or by emailing `coophelp`.
 
 The Coop and FHBig also support community groups that meet regularly to discuss topics in reproducible computational methods. To learn more about what to expect from these meetings, please visit [our Community Groups GitHub repository](https://github.com/FredHutch/community_groups). Current meeting schedules and locations are available on the [Google calendar](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
-- **Data visualization group:**  
+- **Data visualization group:** Develops visualizations from data released by [TidyTuesday](https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/); see #data-viz on [The Coop Communities Slack](https://fhbig.slack.com/)
 
-- **Python coding group:**
+- **Python coding group:** TBA, see #python-user-comm on [The Coop Communities Slack](https://fhbig.slack.com/)
 
-- **R coding group:**
+- **R coding group:** Discusses R packages and troubleshoots code of participants; see #r-user-comm on [The Coop Communities Slack](https://fhbig.slack.com/)
 
-- **Software design group:**
+- **Software design group:** Discusses issues in software engineering and interface design, invites speakers on specific topics and participants share their coding projects; see #software-engineers on [The Coop Communities Slack](https://fhbig.slack.com/)
 
 ### Office Hours
 
@@ -30,32 +30,17 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 
 - **Bioinformatics (Shared Resources)** offers consultation on a variety of issues related to experimental design and bioinformatic analysis. They are able to answer questions on topics including: experimental design, exploring data visually (e.g., IGV, Loupe Cell Browser), generating figures for manuscripts, and developing customized workflows for unique problems. See the [Shared Resources website](http://sharedresources.fhcrc.org/core-facilities/computational-biology) for more information, and email `bioinformatics` to make sure there is time/space available during their scheduled events.
 
-Data Ethics/Compliance/Security: Am I managing my data securely? What resources are available at the Hutch for data security compliance?
+- **Data Ethics/Compliance/Security:** Staff from the Information Security Office (ISO) and Hutch Data Commonwealth (HDC) Compliance Office are available to answer questions related to secure data management and resources at the Hutch for security compliance.
 
-Information Security Office (ISO)
-Hutch Data Commonwealth (HDC) Compliance
+- **Data Science/Software Engineers:** Hutch Data Commonwealth (HDC) employs teams of Data Scientists and Software Developers, who are available to answer questions related to general data management and application of common data science tools (like machine learning) to research questions.
 
-Data Science/Software Engineers: HDC houses teams of Data Scientists and Software Developers.
+- **Fredhutch.io:** [fredhutch.io](http://www.fredhutch.io/) trains researchers in reproducible computational methods. Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
 
-Questions: How can I improve my data management? How can I apply machine learning to my dataset?
+- **REDcap:** [REDCap](http://research.fhcrc.org/cds/en/redcap.html) is a secure web application for building and managing online surveys and databases and is managed by Collaborative Data Services (CDS) at Fred Hutch. Staff are available to answer questions related to REDCap functionality and troubleshooting.
 
-Fredhutch.io: trains researchers in reproducible computational methods
+- **SciComp General Consulting:** Scientific Computing (SciComp) is the group in Hutch Data Commonwealth (HDC) that manages basic account access for research computing resources, including data storage and shared computational cluster use. Staff are available to answer questions related to access and usage of Hutch resources for computational research.
 
-Questions: Where should I get started with programming? What resources are available at the Hutch for computational training? I just started programming and can't debug my code! Help!
-
-REDcap: REDCap is a secure web application for building and managing online surveys and databases. What can REDCap do? How can I make REDCap do something (or stop doing something)?
-
-REDCap is a secure web application for building and managing online surveys and databases.
-
-SciComp General Consulting: How do I access and use shared computational resources at the Hutch? Why are my scripts not working on the cluster? How can I use this new R/python package on the cluster?
-
-Scientific Computing manages basic account, storage, and cluster use
-
-SciComp New Technologies: How can I start building analytical pipelines in the cloud? How can I making my computation more scalable and reproducible?
-
-Next generation and cloud computing
-
-
+- **SciComp New Technologies:** In addition to general consulting (see above), Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.
 
 ## In Seattle
 
