@@ -1,22 +1,21 @@
 ---
 title: Running Tensorflow (and Keras) on GPUs
-last_modified_at: 2018-12-28
+last_modified_at: 2019-05-25
 main_author: Dirk Petersen
-primary_reviewers: fizwit, dirkpetersen
+primary_reviewers: fizwit, vortexing
 ---
 
-In order to run tensorflow on GPUs you need to use a special version of Tensorflow. GPUs are currently installed on the [Koshu cluster](/compdemos/cluster_koshuBeta/) (Google cloud). In early 2019 GPUs will also be available on the new GizmoJ class nodes. For now please follow the instructions for getting a GPU based machines on Koshu: 
-
+Running tensorflow with GPUs has become easier in 2019. We can either use it on Gizmo as the latest GizmoJ class nodes are equipped with GPUs or on the [Koshu cluster](/compdemos/cluster_koshuBeta/) which is running in Google's cloud.
 
 ## GPU Tensorflow in a Python Environment
 
 ### GPU Tensorflow with the standard Python
 
-load a current version of Python 3.6 on Rhino using the ml shortcut for module load and then use pip3 to install the Tensorflow wheel made for Koshu and Gizmo 
+load a current version of Python 3.6 on Rhino using the ml shortcut for module load and then use pip3 to install Tensorflow in your user home directory. 
 
 ```
     ~$ ml Python/3.6.7-foss-2016b-fh2
-    ~$ pip3 install --user --upgrade /app/src/tensorflow/14.04/python3.6/cuda10/tensorflow-1.12.0-cp36-cp36m-linux_x86_64.whl
+    ~$ pip3 install --user --upgrade tensorflow-gpu
 ``` 
 
 then create a small python test script:
@@ -31,10 +30,18 @@ then create a small python test script:
     chmod +x ~/tf-test.py
 ```
 
-and run it on Koshu (for example)
+and run it on Gizmo with `--gres=gpu` to select GizmoJ nodes
+
+
+``` 
+    ~$ sbatch -p largenode -c 6 --mem 33000 -o out.txt --gres=gpu ~/tf-test.py
+    ~$ tail -f out.txt
+```
+
+or you run it on Koshu which has slightly more powerful GPUs
 
 ```
-    ~$ sbatch -M koshu -p gpu --gres=gpu:V100-SXM2-16GB:1 -o out.txt ~/tf-test.py
+    ~$ sbatch -M koshu -p gpu --gres=gpu -o out.txt ~/tf-test.py
     Submitted batch job 27074536 on cluster koshu
     ~$ tail -f out.txt
     1.12.0
@@ -46,19 +53,19 @@ and run it on Koshu (for example)
 if you want to switch back to the non-GPU version of Tensorflow just uninstall the GPU version you installed under .local 
 
 ```
-    ~$ pip3 uninstall tensorflow
-    Uninstalling tensorflow-1.12.0:
+    ~$ pip3 uninstall tensorflow-gpu
+    Uninstalling tensorflow-gpu-1.13.1:
     Would remove:
         /home/petersen/.local/bin/freeze_graph
         /home/petersen/.local/bin/saved_model_cli
         /home/petersen/.local/bin/tensorboard
+        /home/petersen/.local/bin/tf_upgrade_v2
         /home/petersen/.local/bin/tflite_convert
         /home/petersen/.local/bin/toco
         /home/petersen/.local/bin/toco_from_protos
-        /home/petersen/.local/lib/python3.6/site-packages/tensorflow-1.12.0.dist-info/*
         /home/petersen/.local/lib/python3.6/site-packages/tensorflow/*
-    Proceed (y/n)? y
-        Successfully uninstalled tensorflow-1.12.0
+        /home/petersen/.local/lib/python3.6/site-packages/tensorflow_gpu-1.13.1.dist-info/*
+    Proceed (y/n)?
 ```
 
 ### GPU Tensorflow in a virtual environment
@@ -76,7 +83,7 @@ Python virtual environments are useful for advanced users who would like to work
 Now that you have our own environment you can install packages with pip3. Leave out the --user option in this case because you want to install the package under the virtual environment and not under ~/.local 
 
 ```
-    (mypy) petersen@rhino3:~$ pip3 install --upgrade /app/src/tensorflow/14.04/python3.6/cuda10/tensorflow-1.12.0-cp36-cp36m-linux_x86_64.whl
+    (mypy) petersen@rhino3:~$ pip3 install --upgrade tensorflow-gpu
 ``` 
 
 Now you can just continue with the example from `GPU Tensorflow with the standard Python`. After you are done with your virtual environment you can just run the `deactivate` script. No need to uninstall the tensorflow package:
@@ -98,11 +105,12 @@ After that load Singularity:
 > Note that there is a _singularity_ module (note the case) that is
 > out-of-date.  Loading _Singularity_ (with caps) will give you the most modern
 > release which is typically what you want.
+> 
 
 After that, the only change is to enable NVIDIA support by adding the `--nv`
 flag to `singularity exec`:
 
-    singularity exec -nv docker://tensorflow/tensorflow:latest-gpu python ...
+    singularity exec --nv docker://tensorflow/tensorflow:latest-gpu-py3 python3 ...
 
 Sample code is available in the [slurm-examples repository](https://github.com/FredHutch/slurm-examples/tree/master/tensorflow-gpu).
 
@@ -134,7 +142,7 @@ Example Setup
 
 ## Troubleshooting 
 
-First verify that you have a GPU (Tesla V100 or Geforce) active as well as CUDA V 10.0 or newer
+First verify that you have a GPU active (e.g. Tesla V100) as well as CUDA V 10.0 or newer
 
 ```
     petersen@koshuk0:~$ nvidia-smi 
@@ -153,8 +161,3 @@ First verify that you have a GPU (Tesla V100 or Geforce) active as well as CUDA 
 If you see any issues here you need to contact `SciComp` to have the error corrected 
 
 Also please email `SciComp` to request further assistance 
-
-
-
-
-
