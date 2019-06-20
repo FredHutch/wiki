@@ -1,8 +1,8 @@
 ---
 title: Rslurm and Tximport Example
-date: "5/30/2019"
+date: 2019-05-31
 main_author: Jenny Smith
-primary_reviewers: vortexing, atombaby
+primary_reviewers: vortexing, atombaby, jennylsmith
 ---
 
 This is an example of Rslurm for a bioinformatics application with the `tximport` package for reading in transcript level RNA-seq count data. I used this example with `tximport` since transcript level counts files, at least for kallisto, are text files that are created for each individual sample. So, if you wanted to combine 100's or 1000's of samples quantification results, the RAM usage can become larger than your local compute requirements.
@@ -22,7 +22,8 @@ The takehome message for this example is really on RSlurm. The idea is that one 
 
 If you'd like to know more about using `sbatch` on the command line, see [this page](https://github.com/FredHutch/slurm-examples/tree/master/R_and_sh_example)  and [this page](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/) for more information and some templates. Common slurm commands can also be found in the official SLURM [documentation](https://slurm.schedmd.com/sbatch.html).
 
-## Requirements
+## Using RSlurm
+### Requirements
 - Will need a small amount of scratch space in your working directory to create dummy expression files and save the output of rslurm
 - You will need access to the Rhinos for submitting the SBATCH job (otherwise, you can just skip that step)
 
@@ -30,7 +31,7 @@ If you'd like to know more about using `sbatch` on the command line, see [this p
 More information on `Rslurm` is on its [vignette](https://cran.r-project.org/web/packages/rslurm/vignettes/rslurm.html) and `tximport` also has a nice [vignette](https://bioconductor.org/packages/devel/bioc/vignettes/tximport/inst/doc/tximport.html).
 
 
-# Instructions on how to get set-up
+### Instructions on how to get set-up
 
 1. open a terminal
 2. ssh user@rhino
@@ -46,7 +47,7 @@ If you have Xquarts installed and X11 forwarding enabled, you can open an intera
 
 You will need to update a few of the file paths but otherwise should be plug and play. Also, it is not required to do this on the Rhinos. You can run through this example and just have rslurm `submit=FALSE`.
 
-# Example Code
+### Example Code
 
 Be sure to set your working directory to a place where you have a little space, and read-write access. I usually use scratch.
 
@@ -57,6 +58,8 @@ Be sure to set your working directory to a place where you have a little space, 
 Install tximport if necessary and load it into your R session.
 
 ```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 # BiocManager::install("tximport")
 library(tximport)
 
@@ -98,7 +101,7 @@ Next, we'll create some dummy data for 10 samples and 30 transcripts. I use the 
 
 Also different than standard Kallisto output, is that each sample count file is not in its own directory. Kallisto by default will create multiple output files for a single processed sample and save all results in an output directory using your chosen `--output-dir` parameter.  
 
-## Create Data
+### Create Data
 
 ```
 #Create example data frames.
@@ -117,7 +120,7 @@ for ( i in 1:10){
 ```
 
 
-## Rslurm Set-up
+### Rslurm Set-up
 
 ```
 #install the package if necessary and load it into the R session
@@ -161,7 +164,7 @@ files[1:2]
 
 Rslurm will create a directory containg all the accessory data files, libraries to load, and the batch script for you. I have `submit=TRUE` assuming you are running this on a Rhino/GIZMO node.
 
-## Submit Job to Scheduler
+### Submit Job to Scheduler
 
 ```
 txi.geneLevel.job <- slurm_call(f=tximport, #function to be used
@@ -181,7 +184,7 @@ txi.geneLevel.job <- slurm_call(f=tximport, #function to be used
 print_job_status(txi.geneLevel.job) #keep runnning this for status updates
 ```
 
-## Read in the Results
+### Read in the Results
 
 You can use the rslurm function `get_slurm_out` to read in the results of `tximport`. However, this only works when you have the object txi.geneLevel.job in active memory. If you were to try to run the code below in the future without resubmitting the job, you would get a `object not found ` error since the object `txi.geneLevel.job` doesn't exist in future R sessions.
 
