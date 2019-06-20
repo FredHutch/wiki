@@ -43,7 +43,7 @@ More information on `Rslurm` is on its [vignette](https://cran.r-project.org/web
 > ml rstudio/1.1.383
 ```
 
-If you have Xquarts installed and X11 forwarding enabled, you can open an interactive Rstudio session on the Rhinos and simply open this tempate and run it. If you are running an interactive R session from the command line, you can also just copy and paste.
+If you have Xquartz installed and X11 forwarding enabled, you can open an interactive Rstudio session on the Rhinos and simply open this template and run it. If you are running an interactive R session from the command line, you can also just copy and paste.
 
 You will need to update a few of the file paths but otherwise should be plug and play. Also, it is not required to do this on the Rhinos. You can run through this example and just have rslurm `submit=FALSE`.
 
