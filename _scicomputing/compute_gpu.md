@@ -18,9 +18,9 @@ At this time we have one GPU per node.
 
 ## Nodes with GPUs
 
-{%- for resource in site.data.cluster_nodes %}
 |Location|Partition|Node Name|GPU|
 |---|:---:|:---:|---:|
+{%- for resource in site.data.cluster_nodes %}
 {%- for node in resource.nodes %}
 {%- if node.gpu != 'none' %}
 {{resource.location}}|{{ node.partition }}|{{ node.node_name }}|{{ node.gpu }}
