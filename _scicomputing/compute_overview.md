@@ -16,9 +16,6 @@ This page describes all the various technologies and specifications for them tha
 
 While most bioinformatic analysis of genomics data, for example, will likely require more compute resources than are typically available in a desktop computer, some smaller analysis jobs or training can be done on a desktop or laptop.  For these smaller compute jobs, scientific computing languages [R](https://www.r-project.org) or [Python](https://www.python.org) may be useful (see [the Software Development page](/scicomputing/software_overview/) for more information about these computing languages). You can obtain assistance in installing a copy of R and RStudio on PCs through the Center IT desktop software resource. The installation of a commonly used Python and R package management system called Conda can be done on either PCs or Macs and more information about Anaconda and Miniconda (two versions of the Python oriented version of Conda package manager) can be found [here.](https://conda.io/docs/glossary.html#anaconda)
 
-![](/assets/comp_index/2018-06-28-12-56-21.png)
-
-
 ### Interactive Computing:  Easy Access, Moderate Capability
 These systems are provided by the Fred Hutch to serve the community with the intention of:
   1. being immediately accessible by everyone, regardless of skill set,
@@ -60,6 +57,12 @@ If you are at all interested or curious about cloud solutions and would like to
 talk over options, Scientific Computing hosts a cloud-specific office hours
 every week.  Dates and details for SciComp office hours can be found in
 [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html) or on the Coop Communities [calendar.](https://calendar.google.com/calendar/embed?src=gd30dlifri4fu7h104cuqdj0dg%40group.calendar.google.com&ctz=America%2FLos_Angeles) 
+
+## [Computing with GPU](/scicomputing/compute_gpu/)
+
+Graphical Processing Units (GPUs) provide acceleration for some kinds of computations and tools, [tensorflow](https://www.tensorflow.org/) is a notable example of such a tool.
+
+[This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  [This](https://sciwiki.fredhutch.org/compdemos/tensorflow-gpu/) has a specific example of running tensorflow on SciComp clusters.
 
 ## [Information for Grant Writers](/scicomputing/compute_grants/)
 Scientific Computing has provided a description of computational and storage resources for grant writers.

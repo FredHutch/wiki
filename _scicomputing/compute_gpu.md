@@ -16,12 +16,23 @@ Request multiple GPUs with:
 
 At this time we have one GPU per node.
 
+## Nodes with GPUs
+
+{%- for resource in site.data.cluster_nodes %}
+|Location|Partition|Node Name|GPU|
+|---|:---:|:---:|---:|
+{%- for node in resource.nodes %}
+{%- if node.gpu != 'none' %}
+{{resource.location}}|{{ node.partition }}|{{ node.node_name }}|{{ node.gpu }}
+{%- endif %}
+{%- endfor %}
+{%- endfor %}
+
 ## Requesting GPUs on Gizmo
 
 The GPUs are currently installed only on nodes in the _largenode_ partition, thus it is necessary to request the minimums required for _largenode_ jobs:
 
     sbatch -p largenode --mem=21500 -c 6 --gres=gpu ...
-
 
 ## Requesting GPUs on Koshu
 

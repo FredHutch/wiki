@@ -97,15 +97,3 @@ Location: {{ resource.location }}
 {%- for node in resource.nodes %}
 {{ node.node_name }}|{{ node.network }}|{{ node.local_storage }}
 {%- endfor %}
-
-### GPU Resources
-
-|Node Name|Partition|GPU|
-|---|---|---|---|
-{%- for node in resource.nodes %}
-{%- if node.gpu != 'none' %}
-{{ node.node_name }}|{{ node.partition }}|{{ node.gpu }}
-{%- endif %}
-{%- endfor %}
-
-{%- endfor %}
