@@ -1,7 +1,7 @@
 ---
 title: Matlab
 last_modified_at: 2018-07-05
-main_author: 
+main_author: John Dey
 ---
 
 ## Desktop Usage
@@ -44,4 +44,8 @@ matlab -nodisplay -nosplash -nodesktop -r  "run('myAnalysisJob.m $1 $2'); exit;"
 ```
 
 ### MATLAB Distributed Compute Engine
-The distributed compute engine allows you to run parallelized Matlab programs across multiple cores and/or nodes simultaneously.
+The distributed compute engine allows you to run parallelized Matlab programs across multiple
+ cores and/or nodes simultaneously. Tutorial and setup guide for the parallel tool
+ box is on the wiki-code-examples repo. [link](https://github.com/FredHutch/wiki-code-examples/tree/master/MATLAB)
+
+
