@@ -164,6 +164,8 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/reference_overview/
+      - title: "Training and Finding Help"
+        url: /scicomputing/reference_training/
       - title: "Resource Library"
         url: /compdemos/
       - title: "Announcements"
