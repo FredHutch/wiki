@@ -77,7 +77,7 @@ Name|Type|Authentication|Authorization|Location
 {%- endfor %}
 
 ### Cluster Node Information
-<!--This table is auto-generated based on the yaml in _data/cluster_nodes.yaml-->
+<!--This table is auto-generated based on the yaml in _data/cluster_nodes.yaml--> 
 
 {%- for resource in site.data.cluster_nodes %}
 
@@ -87,7 +87,7 @@ Location: {{ resource.location }}
 |Partition|Node Name|Node Count|CPU|Cores|Memory|
 |---|:---:|:---:|---:|:---:|:---:|
 {%- for node in resource.nodes %}
-{{ node.partition }}|{{ node.node_name }}|{{ node.node_count }}|{{ node.processor_manufacturer }} {{ node.processor_model }}|{{ node.gpu }}|{{ node.cores }}|{{ node.memory_gb }}
+{{ node.partition }}|{{ node.node_name }}|{{ node.node_count }}|{{ node.processor_manufacturer }} {{ node.processor_model }}|{{ node.gpu }}|{{ node.cores }}|{{ node.memory_gb }}GB
 {%- endfor %}
 
 ### Additional Resources
