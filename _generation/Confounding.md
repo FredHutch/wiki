@@ -109,7 +109,7 @@ some differences
 
 ### Simulation Scenario 3
 
-<img src="Dag3.PNG">
+<img src="Dag3.PNG" width="561.494" height="244">>
 
 Now let us consider when we have a variable Z that we do observe. U has
 an effect on X only through this variable Z. The effect of X onto Y
@@ -198,8 +198,8 @@ We encourage you to play around with similar simulations. What would
 happen let's say if you set betaY=0? Would we maybe incorrectly assume
 that X has an effect on Y if we did not adjust for U or Z?
 
-Real Data example
------------------
+## Real Data example
+
 
 We will first consider an example using the mtcars package that is a
 base dataset within R
@@ -295,3 +295,58 @@ it is always important to discuss with people what are the important
 variables or covariates that need to adjust for that may confound an
 analysis. Because otherwise, you may deem something significant when it
 can be explained away by adjusting for a confounder.
+
+## Real Data example 2
+
+
+Now lets consider one more scenario. This is using data from the Sandia
+Report from 1994.
+``` r
+    TheData<-read.csv("data_confounding_example.csv")
+    head(TheData)
+```
+
+    ##   X Year Score      N Category
+    ## 1 1 1976   524 226962        1
+    ## 2 2 1978   515 218637        1
+    ## 3 3 1980   510 214168        1
+    ## 4 4 1982   511 212567        1
+    ## 5 5 1984   511 206443        1
+    ## 6 6 1985   516 206224        1
+
+We have information on the year (“Year”), the score (“Score”), the
+sample size (“N”) and level (“Category”).
+
+We are interested in how Score changes over the years. Let us ignore the
+level category and examine the mean score by year. Looking at the mean
+``` r
+    TheYears<-unique(TheData[,"Year"])
+    NewMeans<-c()
+    for(j in 1:length(TheYears)){
+      TempFile<-subset(TheData,TheData[,"Year"]==TheYears[j])
+      TempMean<-sum(TempFile[,"Score"]*TempFile[,"N"])/sum(TempFile[,"N"])  
+      NewMeans<-c(NewMeans,TempMean)
+    }
+``` 
+And now plot the score over the years
+``` r
+    library(ggplot2)
+    ggplot(data.frame(Year=TheYears,Score=NewMeans),aes(x = Year, y = Score))+geom_line()+geom_point()
+```
+
+<img src="first plot-1.png">
+
+
+We see that it is highly variable. But now let us look at it by year.
+``` r
+    NewFile<-data.frame(TheData)
+    NewFile$Category<-as.character(NewFile$Category)
+    ggplot(data.frame(NewFile), aes(x = Year, y = Score,group=Category))+
+      geom_line(aes(linetype=Category,color=Category))+
+      geom_point(aes(shape=Category,color=Category))
+```
+<img src="second plot-1.png">
+
+We see that there is no strong variability. Everything appears to be pretty constant
+across the years.
+
