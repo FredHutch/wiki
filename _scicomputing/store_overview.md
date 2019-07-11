@@ -28,7 +28,7 @@ This is an overview of supported features:
 |  Encryption at Rest 	|   -	|   -	|   X	|   X	|
 |  Encryption in Transit	|   	X|   -	|   X	|   X	|
 |  Access auditing 	|   X	|   -	|   X	|   X 	|
-|  Approved for PHI by ISO 	|   Yes	|   No	|   Yes	|   pending	|
+|  Approved for PHI by ISO 	|   Yes	|   No	|   Yes	|   Yes	|
 
 
 Additional resources for identifying [whether your data is de-identified or not](https://centernet.fredhutch.org/cn/u/hdc/data.html) and the Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhutch.org/cn/u/irb/hipaa-compliance.html) can be found at the linked CenterNet pages.  
