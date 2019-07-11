@@ -49,7 +49,7 @@ This command can be run from any NoMachine or rhino host.
 
 > Note: Any user interacting with the following systems will be dependent on being proficient with the care and keeping of the Rhinos.
 
-More information on the topic of ssh configurations for access to `rhino` can be found [here.](/compdemos/ssh/)
+More information on the topic of ssh configurations for access to `rhino` can be found [here.](/scicomputing/access_methods/)
 More information on specific guidance for using `rhino` and `gizmo` are in our Resource Library for [`rhino`](/scicomputing/howtoRhino/) and for [`gizmo`](/compdemos/howtoGizmo/).
 
 ### The NoMachine Cluster
