@@ -30,6 +30,22 @@
   chargeback_per_tb: $30/tb/mo
   chargeback_threshold: 5tb
 
+- name: economy
+  phi: yes
+  unix_path: n/a
+  windows_path: n/a
+  osx_path: n/a
+  rest_encrypted: yes
+  transit_encrypted: yes
+  audit_access: yes
+  backup: no*
+  backup_notes: >-
+    internal system is redundant
+  iso_phi_ok: yes
+  quota: none
+  chargeback_per_tb: none
+  chargeback_threshold: none
+
 - name: secure
   phi: yes
   unix_path: /fh/secure
