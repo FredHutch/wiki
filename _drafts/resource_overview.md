@@ -27,7 +27,7 @@ phi|backup|quota
 
 
 ## Auto-generated Table
-This table is auto-generated based on the yaml in _data/scicomp_resources.yaml:
+This table is auto-generated based on the yaml in `_data/scicomp_resources.yaml`:
 
 Name|Type|Authentication|Authorization|Location
 ---|---|---|---|---
