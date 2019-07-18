@@ -29,3 +29,5 @@ Put more detailed content here.
 
 ### Available Resources and links
 Here you can provide contextualized links to humans to contact about this (names only, let's leave emails out of this), or links to good websites, or links to places in Centernet where more detailed information can be found.  Please try to keep the above text sections as text ONLY, and put all links in this links section!!
+
+And what about rabbits in the site?  :rabbit:

@@ -9,7 +9,7 @@ The rest of this wiki provides general guidelines and approaches to working with
 
 There are many opportunities for training (courses and tutorials) and connecting with coding communities. The Fred Hutch Bioinformatics and Data Science Cooperative (The Coop) and fredhutch.io offer events and meeting groups. Additional opportunities are available elsewhere in Seattle (at UW and through Meetup.com) and online.
 
-## [Resource library](/computingdemos/)
+## [Resource library](/compdemos/)
 
 The Resource Library contains both links to GitHub repositories containing templates for coding projects and example code, as well as tutorials and demonstrations for accomplishing tasks with Hutch data science resources.
 
