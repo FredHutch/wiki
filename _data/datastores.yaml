@@ -1,0 +1,63 @@
+- name: home
+  phi: no
+  unix_path: /home
+  windows_path: "H:"
+  osx_path: "smb://home.fhcrc.org"
+  rest_encrypted: no
+  transit_encrypted: no
+  audit_access: no
+  backup: yes
+  backup_notes: >-
+    data in home is backed up to AWS
+  iso_phi_ok: no
+  quota: 100GB
+  chargeback_per_tb: n/a
+  chargeback_threshold: n/a
+
+- name: fast
+  phi: no
+  unix_path: /fh/fast
+  windows_path: "X:"
+  osx_path: "smb://center.fhcrc.org/fh"
+  rest_encrypted: no
+  transit_encrypted: no
+  audit_access: no
+  backup: yes
+  backup_notes: >-
+    data in home is backed up to AWS
+  iso_phi_ok: no
+  quota: none
+  chargeback_per_tb: $30/tb/mo
+  chargeback_threshold: 5tb
+
+- name: economy
+  phi: yes
+  unix_path: n/a
+  windows_path: n/a
+  osx_path: n/a
+  rest_encrypted: yes
+  transit_encrypted: yes
+  audit_access: yes
+  backup: no*
+  backup_notes: >-
+    internal system is redundant
+  iso_phi_ok: yes
+  quota: none
+  chargeback_per_tb: none
+  chargeback_threshold: none
+
+- name: secure
+  phi: yes
+  unix_path: /fh/secure
+  windows_path: n/a
+  osx_path: "smb://center.fhcrc.org/fh/secure"
+  rest_encrypted: yes
+  transit_encrypted: yes
+  audit_access: yes
+  backup: yes
+  backup_notes: >-
+    data in home is backed up to AWS
+  iso_phi_ok: no
+  quota: none
+  chargeback_per_tb: $50/tb/mo
+  chargeback_threshold: 1tb
