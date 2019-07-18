@@ -12,7 +12,7 @@ toc_label: "On This Page"
 
 The Biomedical Data Science Wiki aims to support ongoing biomedical research now and in the future. The ongoing contribution and curation of the content in the Wiki by the Fred Hutch researcher community itself is intended to serve two purposes:
 - create an evolving source of documentation that grows and changes along with the particular interests and research tools available to Fred Hutch researchers over time, and
-- tailors and unifies content that bridges the divide between how research processes are performed *in general* and how those processes are performed at the Fred Hutch *specifically.*
+- unifies content that bridges the divide between how research processes are performed *in general* and how those processes are performed at the Fred Hutch *specifically.*
 
 
 The Wiki Writer-Editor program is intended to engage current Fred Hutch based postdocs, staff scientists and research specialists in order to ensure that the resource achieves those two goals.  We aim to incorporate more information relevant to new and emerging projects or technologies in which Fred Hutch researchers are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research.  The Wiki Writer-Editor program engages current staff from each of the Divisions for 3 month positions to both write and edit content, and a stipend is provided.  
@@ -22,6 +22,7 @@ Responsibilities for a Wiki Writer-Editor include:
 - An initial meeting for training on how to manage contributions and editing via GitHub (web OR desktop client training will be provided, no previous experience needed).  
 - Participation in a weekly in-person meeting of the larger Wiki Contributors group (1hr)
 - ~3 hours per week of writing documentation in your primary area of expertise and/or editing existing documents both in and outside of your primary area of expertise.  This work is done remotely, anytime during the week, and contributions are submitted regularly via GitHub.  Contributions are then reviewed and incorporated along with all other contributions at the weekly Wiki Contributors meeting.
+- Provide reviews of content for formatting, clarity and content (when in your area of expertise) when other contributors submit pull requests.  
 
 ### Requirements
 - Ability to write clearly and concisely for a wide range of scientific audiences and levels of expertise.  
@@ -41,8 +42,7 @@ To apply, these brief application materials need to be combined into a single pd
 ## Communication and Events
 ### Wiki Contributors
 To get involved there are many ways to find us:
-- The Wiki team has weekly, "office hours" style Wiki Working meetings that you can stop by and get some assistance to get set up, or just chime in with your edits, typo-finds and suggestions when time permits!  The current schedule can be found on the [FHBig Google calendar,](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) just look for "Wiki Working Meeting" in the event name, or please email `sciwiki` for more information.  
 
 - Join the **FHBig** Slack workspace via [this link, and use your fredhutch.org email to join.](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg)  In this Slack workspace we have a #wikicontributors channel where you can chime in with edits, get updates about next meetings, goals and our next steps.  
 
-- Follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content if you have had your GitHub username linked to the Fred Hutch GitHub organization account. If you have not done this yet, please see more about using GitHub at the Fred Hutch [here](/bioinformatics/compute_github/) and specific instructions for joining the Fred Hutch organization [here.](/bioinformatics/compute_github/#available-resources-and-links)
+- Follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content if you have had your GitHub username linked to the Fred Hutch GitHub organization account. If you have not done this yet, please see more about using GitHub at the Fred Hutch [here](/scicomputing/software_managecode/).
