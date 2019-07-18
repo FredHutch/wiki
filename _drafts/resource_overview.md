@@ -1,4 +1,4 @@
----
+
 title: Scientific Computing Supported Resources - DRAFT
 last_modified_at: 2018-11-01
 ---
@@ -30,8 +30,8 @@ Name|Type|Authentication|Authorization|Location
 ## nother Auto-generated table
 
 
-{% assign storage_type = site.data.datastores["fast"]}
+{% assign storage_type = site.data.datastores["fast"] %}
 phi|backup|quota
 ---|---|---
-{storage_type.phi}|{storage_type.backup}|{storage_type.quota}
+{{ storage_type.phi }}|{{ storage_type.backup }}|{{ storage_type.quota }}
 
