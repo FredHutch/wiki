@@ -107,7 +107,7 @@ some differences
 
 ### Simulation Scenario 3
 
-<img src="Dag3.PNG" width="561.494" height="244">>
+<img src="Dag3.PNG" width="561.494" height="244">
 
 Now let us consider when we have a variable Z as well. U has
 an effect on X only through this variable Z. The effect of X onto Y
