@@ -4,7 +4,7 @@ Here we will discuss some issues regarding confounding and how to approach it. C
 
 >> -*Applied Regression Analysis and other Multivariable Methods*, Kleinbaum, Kupper, Nizam, Muller. 4th edition.
 
-This is just one definition of confounding and by all acounts other more technical/philosophical definitions exist. In more concise words, confounding exists when the relationship between an exposure and outcome is impacted by a third variable that is associated with both exposure and outcome. Consider the following examples of confounding. 
+This is just one definition of confounding and by all acounts other more technical/philosophical definitions [exist](https://projecteuclid.org/euclid.aos/1364302740). In more concise words, confounding exists when the relationship between an exposure and outcome is impacted by a third variable that is associated with both exposure and outcome. Consider the following examples of confounding. 
 1. There is a strong association between ice cream consuption and drowning. Does eating ice cream increase the risk of drowning?
 2. There is a strong association between how many fire fighters are at a fire and how much fire damage occurs. Do firefighters lead to more fire damage?
 
@@ -353,4 +353,14 @@ We see that it is highly variable. But now let us look at it by category.
 
 We see that there is no strong variability. Everything appears to be pretty constant
 across the years. If we failed to adjust for category, we would assume that the score are highly variable. 
+
+## Additional Terms
+
+Here we will define some additional terms that relate to confounding.
+
+### Simpson's Paradox
+Simpson's paradox occurs when the association between two variables differs when adjusting by the stratum of a third variable. Consider the scenario again where we are interested in the association between X and Y. We have a third variable U that has two levels. Simpson's paradox occurs when the association between X and Y within each of those levels is opposite than the distribution between X and Y if we did not adjust for U. 
+
+
+
 
