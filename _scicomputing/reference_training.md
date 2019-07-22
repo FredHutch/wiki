@@ -17,15 +17,15 @@ There are a variety of resources for training on various aspects of Bioinformati
 
 The Coop and FHBig also support community groups that meet regularly to discuss topics in reproducible computational methods. To learn more about what to expect from these meetings, please visit [our Community Groups GitHub repository](https://github.com/FredHutch/community_groups). Current meeting schedules and locations are available on the [Google calendar](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
-- **Data visualization group:** Develops visualizations from data released by [TidyTuesday](https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/); see #data-viz on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
+- **Data visualization group:** Develops visualizations from data released by [TidyTuesday](https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/). All programming languages (and even non-coders!) are welcome. See #data-viz on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
-- **Python coding group:** Discusses methods of programming in Python and troubleshoots code of participants, see #python-user-comm on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
+- **Python coding group:** Discusses methods of programming in Python and troubleshoots code of participants. Python coders of all levels of expertise are welcome. See #python-user-comm on [The Coop Communities Slack](https://fhbig.slack.com/) for more information. 
 
-- **R coding group:** Discusses R packages and troubleshoots code of participants; see #r-user-comm on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
+- **R coding group:** Discusses R packages and troubleshoots code of participants. R coders of all levels of expertise are welcome. See #r-user-comm on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
-- **Software design group:** Discusses issues in software engineering and interface design, invites speakers on specific topics and participants share their coding projects; see #software-engineers on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
+- **Software design group:** Discusses issues in software engineering and interface design, invites speakers on specific topics and participants share their coding projects. This group is not for a specific programming language, and focuses on issues common across software projects. See #software-engineers on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
-- **Technology Exchange:** Informal learning forum for employees in technology-focused jobs to share technical skills; subscribe to the [TechExchange mailing list](https://lists.fhcrc.org/mailman/listinfo/techexchange) for more information. 
+- **Technology Exchange:** Informal learning forum for employees in technology-focused jobs to share technical skills. This groups is most appropriate for individuals who want to discuss the technical details of tools commonly used in positions focused on administration and infrastructure. Subscribe to the [TechExchange mailing list](https://lists.fhcrc.org/mailman/listinfo/techexchange) for more information. 
 
 ### Office Hours
 
