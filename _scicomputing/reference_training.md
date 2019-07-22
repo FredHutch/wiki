@@ -17,6 +17,8 @@ There are a variety of resources for training on various aspects of Bioinformati
 
 The Coop and FHBig also support community groups that meet regularly to discuss topics in reproducible computational methods. To learn more about what to expect from these meetings, please visit [our Community Groups GitHub repository](https://github.com/FredHutch/community_groups). Current meeting schedules and locations are available on the [Google calendar](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
+- **Coop community meetings:** The Coop hosts community meetings once a quarter to share information from the data science community at the Hutch. Join us to learn about projects and events happening in our community!
+
 - **Data visualization group:** Develops visualizations from data released by [TidyTuesday](https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/). All programming languages (and even non-coders!) are welcome. See #data-viz on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
 - **Python coding group:** Discusses methods of programming in Python and troubleshoots code of participants. Python coders of all levels of expertise are welcome. See #python-user-comm on [The Coop Communities Slack](https://fhbig.slack.com/) for more information. 
