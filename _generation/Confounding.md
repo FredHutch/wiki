@@ -1,4 +1,16 @@
-Here we will discuss some issues regarding confounding and how to approach it. Confounding often involves a discussion on causality, so when thinking about confounding it is important to think about the pathways in which a potential confounder may influence the analysis. 
+Here we will discuss some issues regarding confounding and how to approach it. Confounding often involves a discussion on causality, so when thinking about confounding it is important to think about the pathways in which a potential confounder may influence the analysis. First however, let us give a formal definition of confounding.
+
+>> Confounding exists if meaningful different interpretations of the relationship of interest result when an extraneous variable is ignored or included in the analysis
+
+>> -*Applied Regression Analysis and other Multivariable Methods*, Kleinbaum, Kupper, Nizam, Muller. 4th edition.
+
+This is just one definition of confounding and by all acounts other more technical/philosophical definitions exist. In more concise words, confounding exists when the relationship between an exposure and outcome is impacted by a third variable that is associated with both exposure and outcome. Consider the following examples of confounding. 
+1. There is a strong association between ice cream consuption and drowning. Does eating ice cream increase the risk of drowning?
+2. There is a strong association between how many fire fighters are at a fire and how much fire damage occurs. Do firefighters lead to more fire damage?
+
+In both cases, the answer is no correct. In the first example, the relationship is confounded by the season. In the second example, the association is confounded by the size of the fire. 
+
+Now let us get more technical:
 
 Let us assume that we are interested in the association between a variable X and an outcome Y. We have the following Directed Acyclic Graph  (a DAG) that describes the relationship between X and Y. There is in addition some variable U, that may influence the analysis.
 
