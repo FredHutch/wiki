@@ -4,7 +4,7 @@ last_modified_at: 2019-04-04
 primary_reviewers: vortexing
 ---
 
-`Scratch` storage serves as a temporary location for large data sets that ideally reside in an archive space like `Economy` storage, to be transferred to when compute processes are applied to them.  Data in `Scratch` are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in `Scratch` as well, and then the final data resulting from the compute process can be written to `Fast` storage for the researcher.  This allows large data to be archived in `Economy` storage, accessed by HPC when it is temporarily housed in `Scratch` and only the (typically smaller) resulting data are written to the more accessible, but more costly `Fast` storage.
+`Scratch` storage serves as a temporary location for large data sets that ideally reside in an archive space like [`Economy`](store_objectstore.md) storage, to be transferred to when compute processes are applied to them.  Data in `Scratch` are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in `Scratch` as well, and then the final data resulting from the compute process can be written to [`Fast`](/scicomputing/store_posix/) storage for the researcher.  This allows large data to be archived in [`Economy`](store_objectstore.md) storage, accessed by HPC when it is temporarily housed in `Scratch` and only the (typically smaller) resulting data are written to the more accessible, but more costly [`Fast`](/scicomputing/store_posix/) storage.
 
 ## Why is Scratch Different?
 
