@@ -309,8 +309,11 @@ Now consider the following, if U had an effect on X that was not through Z, woul
 
 
 ### Simulation Scenario 6
+<img src="Dag6.PNG" width="561.494" height="244">
+
 
 As promised, let us provide an example where there is collider bias.
+
 ``` r
     set.seed(10161946)
     betaY<-1
@@ -339,18 +342,22 @@ As promised, let us provide an example where there is collider bias.
 ```
 
 Now let us look at the results
+
 ``` r
     mean(TheEst6[,1])
-
+```
     ## [1] 1.000552
-``` 
+ 
 This is unbiased. What if we adjusted for Z?
+
 ``` r
     mean(TheEst6[,2])
-
-    ## [1] 1.000665
 ``` 
+    ## [1] 1.000665
+
+
 And if we adjust for A?
+
 ``` r
     mean(TheEst6[,3])
 
