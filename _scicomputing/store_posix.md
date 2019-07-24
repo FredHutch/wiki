@@ -12,7 +12,7 @@ There are multiple file storage resources available to researchers including:
 - [`Scratch`](store_scratch.md) for personal and shared temporary data
 - `Secure` for data with higher-level security needs (PHI/encryption/auditing)
 
->Note:  Currently it is recommended to use a combination of [*Economy*](store_scratch.md), [`Scratch`](store_scratch.md) and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+>Note:  Currently it is recommended to use a combination of [*Economy*](store_objectstore.md), [`Scratch`](store_scratch.md) and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
 ## Home
 
