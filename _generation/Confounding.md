@@ -1,4 +1,4 @@
-On this page we give a brief overview of confounding and confounders. We note that confounding can sometimes verge into a philosphical discussion and there is no test for whether a variable is a confounder. We are only providing a brief overview along with an example and some simulations. In addition, confounding also often involves a discussion on causality. Therefore, when thinking about what variables to adjust for in the study it is important to assess prior to the analysis what pathways or variables may influence your results. 
+On this page we give a brief overview of confounding and confounders. We note that confounding can sometimes verge into a philosophical discussion and there is no test for whether a variable is a confounder. We are only providing a brief overview along with an example and some simulations. In addition, confounding also often involves a discussion on causality. Therefore, when thinking about what variables to adjust for in the study it is important to assess prior to the analysis what pathways or variables may influence your results. 
 
 First, let us give a formal definition of confounding.
 
@@ -7,7 +7,7 @@ First, let us give a formal definition of confounding.
 >> -*Applied Regression Analysis and other Multivariable Methods*, Kleinbaum, Kupper, Nizam, Muller. 4th edition.
 
 This is just one definition of confounding and more technical/philosophical definitions [exist](https://projecteuclid.org/euclid.aos/1364302740). In more concise words, confounding exists when the relationship between an exposure and outcome is impacted by a third variable that is associated with both exposure and outcome. Consider the following examples: 
-1. There is a strong association between ice cream consuption and drowning. Does eating ice cream increase the risk of drowning?
+1. There is a strong association between ice cream consumption and drowning. Does eating ice cream increase the risk of drowning?
 2. There is a strong association between how many fire fighters are at a fire and how much fire damage occurs. Do firefighters lead to more fire damage?
 
 In both examples, the correct answer is no. In the first, the relationship is confounded by the time of year. In the second example, the association is confounded by the size of the fire. 
@@ -99,16 +99,16 @@ car. Now again, this is a contrived example, but why is this happening?
 The number of cylinders is a confounder of weight and
 horsepower. The more cylinders a car has, the higher the
 horsepower. In addition, the more cylinders a car has: the larger the weight of the car. Now a mechanic or an engineer
-would tell us that this is a no brainer, but if we are not knowledgeble
+would tell us that this is a no brainer, but if we are not knowledgeable
 in the field, we may miss this and come to an incorrect conclusion. 
 
 **That's why when planning a study,
-it is always important to have a discussion about what the important
+it is always important to discuss what the important
 covariates are and what needs to be adjusted for so as to avoid confounding.** 
 
 ## Additional Terms
 
-Let's go over a few additional terms that relate to confounding . 
+Let's go over a few additional terms that relate to confounding. 
 
 
 ### Simpson's Paradox
@@ -119,7 +119,7 @@ Simpson's paradox occurs when the association between two variables differs when
 Collider bias often occurs when researchers over adjust within their study. One way it can occur when both the exposure and the outcome affect a third variable through independent pathways. Adjusting for this third variable can then bias the results. More info can be found [here](https://catalogofbias.org/biases/collider-bias/). Collider bias is different than confounding but should still be considered in your analysis.
 
 ### The Ten Percent Rule of thumb
-As there is no test for whether or not there is confounding or if a variable is a confounder, a common rule of thumb is the so-called "10% rule". The 10% rule states that if adjusting for a third variable changes the effect estimate by over 10% than there is evidence that the variable is a confounder. In our horsepower example above, adjusting for the number of cylinders changes the estimated effect of horsepower on weight from 0.009401 to 0.0003422 or a change of approximately 96% ((0.009401-0.0003422)/0.009401). By the 10% rule, the number cylinders would be considered a confounders. It's important to note that this is just a rule of thumb, it is only meant to guide researchers. In addition, it is scale specific. Let us say that we had run a logistic regression for some disease status (outcome) and smoking status (exposure) and we adjust for alcohol use. We are interested if alcohol use is a confounder. Do we look at the change in magnitude on the log odds scale or the odds ratio scale?  Caution should be waranted. 
+As there is no test for whether or not there is confounding or if a variable is a confounder, a common rule of thumb is the so-called "10% rule". The 10% rule states that if adjusting for a third variable changes the effect estimate by over 10% than there is evidence that the variable is a confounder. In our horsepower example above, adjusting for the number of cylinders changes the estimated effect of horsepower on weight from 0.009401 to 0.0003422 or a change of approximately 96% ((0.009401-0.0003422)/0.009401). By the 10% rule, the number cylinders would be considered a confounder. It's important to note that this is just a rule of thumb, it is only meant to guide researchers. In addition, it is scale specific. Let us say that we had run a logistic regression for some disease status (outcome) and smoking status (exposure) and we adjust for alcohol use. We are interested if alcohol use is a confounder. Do we look at the change in magnitude on the log odds scale or the odds ratio scale?  Caution should be warranted. 
 
 
 ## Simulations
@@ -213,7 +213,7 @@ not have an effect on Y. If we look at the results if we had adjusted for U, we 
 Which is again unbiased.
 
 ### Simulation Scenario 3
-Let us increase the complexity and add an aditional variable U. 
+Let us increase the complexity and add an additional variable Z. 
 
 <img src="Dag3.PNG" width="561.494" height="244">
 
@@ -248,7 +248,7 @@ and Z is 2. Finally, the effect of U onto Z is 2.
 
     ## [1] 1.587053
 ``` 
-We have a bias estimate of Z as we did not adjust for Z. If however we adjust for Z:
+We have a bias estimate of Z as we did not adjust for Z. If, however we adjust for Z:
 ``` r
     mean(TheEst3[,2])
 ``` 
@@ -294,7 +294,7 @@ We see that it is bias as U has an effect on X that is not through Z. To get an 
 ### Simulation Scenario 5
 
 We encourage you to play around with the simulation parameters. What would
-happen if you set betaY (the effect of X onto Y)=0?. Would we maybe incorrectly assume
+happen if you set betaY (the effect of X onto Y)=0? Would we maybe incorrectly assume
 that X has an effect on Y if we did not adjust for U or Z?
 
 
@@ -355,6 +355,6 @@ And if we adjust for A?
 
     ## [1] 0.7048837
 ```
-We now have a biased estimate of the effect of X on Y. By adjusting for A we have induced collider bias. For a nice write up of this phenomenom, check out this write up in the [Catalogue of Bias](https://catalogofbias.org/biases/collider-bias/).
+We now have a biased estimate of the effect of X on Y. By adjusting for A, we have induced collider bias. For a nice write up of this phenomenon, check out this write up in the [Catalogue of Bias](https://catalogofbias.org/biases/collider-bias/).
 
 
