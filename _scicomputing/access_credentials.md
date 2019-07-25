@@ -38,7 +38,7 @@ There are two ways to get AWS credentials. Which one to use depends on how you w
 
 ### Command Line (Rhino/Gizmo) Instructions
 
-A working HutchNet ID is all you need to login to `rhino`. We provide basic references for bash/linux computing [here](/scicomputing/prog_linux101/), as well as a resource library page for [advanced ssh configurations](/compdemos/ssh/) at Fred Hutch.  These resources will provide the necessary information for how to connect to `rhino`/`gizmo` resources to be able to run these instructions.  If you have questions about how to access `rhino` to perform these steps please email `scicomp`.  
+A working HutchNet ID is all you need to login to `rhino`. We provide basic references for bash/linux computing [here](/scicomputing/prog_linux101/), as well as a resource library page for [advanced ssh configurations](/scicomputing/access_methods/) at Fred Hutch.  These resources will provide the necessary information for how to connect to `rhino`/`gizmo` resources to be able to run these instructions.  If you have questions about how to access `rhino` to perform these steps please email `scicomp`.  
 
 First, `ssh` to one of the `rhino` machines (or use NoMachine):
 
