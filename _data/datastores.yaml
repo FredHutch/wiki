@@ -1,4 +1,4 @@
-- name: home
+home:
   phi: no
   unix_path: /home
   windows_path: "H:"
@@ -14,7 +14,7 @@
   chargeback_per_tb: n/a
   chargeback_threshold: n/a
 
-- name: fast
+fast:
   phi: no
   unix_path: /fh/fast
   windows_path: "X:"
@@ -30,7 +30,7 @@
   chargeback_per_tb: $30/tb/mo
   chargeback_threshold: 5tb
 
-- name: economy
+economy:
   phi: yes
   unix_path: n/a
   windows_path: n/a
@@ -46,7 +46,7 @@
   chargeback_per_tb: none
   chargeback_threshold: none
 
-- name: secure
+secure:
   phi: yes
   unix_path: /fh/secure
   windows_path: n/a
