@@ -355,6 +355,6 @@ And if we adjust for A?
 
     ## [1] 0.7048837
 ```
-We now have a biased estimate of the effect of X on Y. By adjusting for A, we have induced collider bias. For a nice write up of this phenomenon, check out this write up in the [Catalogue of Bias](https://catalogofbias.org/biases/collider-bias/).
+We now have a biased estimate of the effect of X on Y. By adjusting for A, we have induced collider bias. For a nice write up of this phenomenon, check out the [Catalogue of Bias](https://catalogofbias.org/biases/collider-bias/).
 
 
