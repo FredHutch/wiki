@@ -304,8 +304,6 @@ Now let us look at a simulation examining collider bias. As mentioned earlier, t
 <img src="Dag6.PNG" width="561.494" height="244">
 
 
-As promised, let us provide an example where there is collider bias.
-
 ``` r
     set.seed(10161946)
     betaY<-1
