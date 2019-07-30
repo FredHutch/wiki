@@ -112,7 +112,7 @@ Let's go over a few additional terms that relate to confounding.
 
 
 ### Simpson's Paradox
-Simpson's paradox occurs when the association between two variables differs when adjusting by the stratum of a third variable. Consider a scenario where we are interested in the association between X and Y. We have a third variable U that has two levels. Simpson's paradox occurs when the association between X and Y within each of the levels of U is opposite than the distribution between X and Y if we did not adjust for U. 
+Simpson's paradox occurs when the association between two variables differs when adjusting by the stratum of a third variable. Consider a scenario where we are interested in the association between X and Y. We have a third variable U that has two levels. Simpson's paradox occurs when the association between X and Y within each of the levels of U is opposite than the distribution between X and Y if we did not adjust for U. [Wikipedia](https://en.wikipedia.org/wiki/Simpson%27s_paradox) has a nice write up of this phenomenon.
 
 ### Collider Bias
 
