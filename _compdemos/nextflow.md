@@ -1,6 +1,6 @@
 ---
 title: Nextflow - an Emerging Service for Workflow Management
-last_modified_at: 2019-05-02
+last_modified_at: 2019-07-30
 primary_reviewers: sminot
 ---
 
@@ -18,7 +18,9 @@ On shared systems (rhino/gizmo), load a specific module of Nextflow:
 ml nextflow/19.04.1
 ```
 
-Loading that module will place a working copy of `nextflow` in your PATH.
+Loading that module will place a working copy of `nextflow` in your PATH
+which **does** include support for the full range of parameters needed
+to run on AWS at Fred hutch.
 
 ### Personal Desktop / Laptop
 
@@ -127,6 +129,16 @@ nextflow \
 ```
 
 The command above will run the workflow in the file `path-to-workflow.nf`. Inside that script, the variable `${params.first_parameter}` will be replaced with `ValueForFirstParameter`, `${params.second_parameter}` will be replaced with `ValueForSecondParameter`, etc. Running any workflow with arguments prefixed by `--`, will provide that value as a parameter in that pattern. Specifying `-with-report` tells Nextflow to write a summary of the complete workflow execution to a human readable summary in `nextflow_report.html`. Specifying `-work-dir` tells Nextflow to use `s3://fh-pi-lastname-f/lab/user_name/project_name/work/` to store all temporary data (the inputs and outputs of each individual task). The `-resume` flag tells Nextflow to pick up with the results from any previous run on this workflow, in case there was a failure and you want to try to rerun the whole workflow without repeating any of the steps that succeeded and don't *need* to be run again.
+
+
+### Grabnode vs. Rhino
+
+While it is possible to run your nextflow script on one of the rhinos, we **strongly suggest**
+using `grabnode` and running on a dedicated machine. In addition to the good practice of
+keeping the rhinos clear for other users, we have found that the performance is much faster
+on a gizmo node. This is possibly due to the number of requests that the nextflow process
+must make in order to keep track of many concurrent tasks, but in the end the reason is 
+less important than the result.
 
 
 ### Getting Results
