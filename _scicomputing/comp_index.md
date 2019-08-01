@@ -3,13 +3,11 @@ title: Overview of Scientific Computing at Fred Hutch
 last_modified_at: 2019-05-30
 primary_reviewers: vortexing
 ---
-Center IT supports a wide array of resources made available to researchers.  Much of the basic computing information needed on an ongoing basis can be found via Centernet and the Center IT pages.  However, much of the scientific computing resource documentation beyond this material is provided in this section of the Wiki, and links to existing resources and documentation are provided when available.  
+Various groups support computational capacity at the Hutch. Center IT supports general computing tasks, such as email and desktop computer software; further information can be found on the Center IT pages in Centernet. This section of the Wiki represents information relating to research and scientific computing, which generally require additional software, hardware, and skills. If you have questions that aren't answered here, please email `SciComp` or ask a public question on [The Coop's Slack Workspace](https://fhbig.slack.com/messages) in the `question-and-answer` channel. 
 
 
 ## [Access and Credentials](/scicomputing/access_overview/)
-This section includes a variety of information about accessing computing resources at the Fred Hutch, including managing credentials for services when required.  
-
-To get help you can email `SciComp` or you ask a public question on [The Coop's Slack Workspace](https://fhbig.slack.com/messages) in the `question-and-answer` channel.  
+This section includes a variety of information about accessing computing resources at the Fred Hutch, including managing credentials for services when required.   
 
 
 ## [Data Storage](/scicomputing/store_overview/)
@@ -17,12 +15,12 @@ The Hutch, through Center IT and Scientific Computing, support a number of optio
 
 
 ## [Software Development](/scicomputing/software_overview/)
-While there are many types of programming languages various software used in scientific research are written in, there are a handful of specific languages that are commonly used in the process of doing a wide range of research tasks. We will introduce the most common here.
+Researchers at the Hutch use reproducible computational methods to perform research and share their findings with the broader community. These methods include writing computer code and producing software in various coding languages. This section describes some common languages and tools, as well as recommended best practices, for writing code.
 
 
-## [Large Scale Compute](/scicomputing/compute_overview/)
-This section contains articles that describe a range of high performance computing resource options available to Fred Hutch researchers.
+## [Large Scale Computing](/scicomputing/compute_overview/)
+The Hutch supports both local compute clusters as well as cloud computing for researchers. This section describes available technology and how to use these resources.
 
 
-## [Reference Material](/scicomputing/reference_overview/)
-We maintain a space for both announcements from Scientific Computing as well as a Resource Library at the following links:
+## [Reference and Announcements](/scicomputing/reference_overview/)
+This section includes links to training opportunities, office hours, and community groups for computational support, as well as a resource library of code and tutorials and announcements from Scientific Computing.
