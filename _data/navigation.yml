@@ -36,7 +36,7 @@ generation:
         url: /generation/study_overview/
       - title: "Proposals and Funding"
         url: /generation/study_proposal/
-      - title: "Hypothesis Development and Big Molecular Data"
+      - title: "Hypotheses and Molecular Data"
         url: /generation/study_hypothesis/
       - title: "Multiple Testing"
         url: /generation/multiple_testing/
@@ -45,7 +45,7 @@ generation:
     children:
       - title: "Overview"
         url: /generation/human_overview/
-      - title: "Consenting and Big Molecular Data"
+      - title: "Consenting and IRB"
         url: /generation/human_consentIRB/
       - title: "Data Privacy and Security"
         url: /generation/human_privacySecurity/
