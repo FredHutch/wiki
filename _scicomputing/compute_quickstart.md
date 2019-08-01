@@ -1,5 +1,5 @@
 ---
-title: Quick Start Guide
+title: Quick Start Guide to Fred Hutch Research Computing
 last_modified_at: 2019-07-11
 main_author: Kate Hertweck
 primary_reviewers: vortexing
