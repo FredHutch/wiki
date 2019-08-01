@@ -1,3 +1,9 @@
+---
+title: Primer on Confounding
+last_modified_at: 2019-08-01
+primary_reviewers: rbarfield, vortexing
+---
+
 On this page we give a brief overview of confounding and confounders. We note that confounding can sometimes verge into a philosophical discussion and there is no test for whether a variable is a confounder. We are only providing a brief overview along with an example and some simulations. In addition, confounding also often involves a discussion on causality. Therefore, when thinking about what variables to adjust for in the study it is important to assess prior to the analysis what pathways or variables may influence your results. 
 
 First, let us give a formal definition of confounding.
