@@ -8,6 +8,9 @@ Researchers are more and more likely to need to analyze raw data sets using some
 
 The first step in doing this work is often as simple as asking "what computing resource do I need to use for this task?"  This section describes a range of computing resource options available to Fred Hutch researchers, all the way from a single laptop to the Fred Hutch on-premise high performance computing cluster (`gizmo`) to various cloud-based options, as well as how to get started using each platform.
 
+## [Quick Start Guide](/scicomputing/compute_quickstart/)
+
+If you have experience working with cluster computing resources at other institutions, this quick start guide should give you a general idea of our compute resources at the Hutch.
 
 ## [Technologies](/scicomputing/compute_platforms/)
 This page describes all the various technologies and specifications for them that are supported by Fred Hutch for large scale computing.  
