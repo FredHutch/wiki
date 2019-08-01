@@ -47,7 +47,7 @@ The nice thing about Nextflow is that it can be used to run analyses on AWS, wit
 The overall setup for using Nextflow on AWS is:
 
   1. Input data is stored in AWS S3
-  2. Analysis of the input data is run via Nextflow from your laptop or a Rhino
+  2. Analysis of the input data is run via Nextflow from your laptop or a `Rhino`
   3. Output of that analysis is stored on AWS S3, and can be pulled down for inspection and further analysis
 
 #### Call caching
@@ -131,11 +131,11 @@ nextflow \
 The command above will run the workflow in the file `path-to-workflow.nf`. Inside that script, the variable `${params.first_parameter}` will be replaced with `ValueForFirstParameter`, `${params.second_parameter}` will be replaced with `ValueForSecondParameter`, etc. Running any workflow with arguments prefixed by `--`, will provide that value as a parameter in that pattern. Specifying `-with-report` tells Nextflow to write a summary of the complete workflow execution to a human readable summary in `nextflow_report.html`. Specifying `-work-dir` tells Nextflow to use `s3://fh-pi-lastname-f/lab/user_name/project_name/work/` to store all temporary data (the inputs and outputs of each individual task). The `-resume` flag tells Nextflow to pick up with the results from any previous run on this workflow, in case there was a failure and you want to try to rerun the whole workflow without repeating any of the steps that succeeded and don't *need* to be run again.
 
 
-### Grabnode vs. Rhino
+### Grabnode vs. `Rhino`
 
-While it is possible to run your nextflow script on one of the rhinos, we **strongly suggest**
+While it is possible to run your nextflow script on one of the `rhinos`, we **strongly suggest**
 using `grabnode` and running on a dedicated machine. In addition to the good practice of
-keeping the rhinos clear for other users, we have found that the performance is much faster
+keeping the `rhinos` clear for other users, we have found that the performance is much faster
 on a gizmo node. This is possibly due to the number of requests that the nextflow process
 must make in order to keep track of many concurrent tasks, but in the end the reason is 
 less important than the result.
