@@ -1,6 +1,6 @@
 ---
 title: Computing Resource Access Methods
-last_modified_at: 2019-04-11
+last_modified_at: 2019-08-02
 primary_reviewers: bmcgough
 ---
 
@@ -142,7 +142,7 @@ The best practices involving keys include:
 
 * limit copies of your private key (there should be only one)
 * do not enter a blank passphrase
-* add your public key (cut-and-paste is fine) to `~/.ssh/authroized_keys` file
+* add your public key (cut-and-paste is fine) to `~/.ssh/authorized_keys` file
 * you do not need to put both of your keys on every machine you want to use, only your client device
 
 #### Agents
@@ -204,11 +204,20 @@ The Fred Hutch desktop VPN service is the default choice for all remote connecti
 ### ssh to `snail.fhcrc.org`
 
 Snail is a SSH gateway (also called bastion host or jump host) you can use to get remote access if you do not require the features that VPN provides. Using SSH can be easier for some users, for example if you have a network printer at home you cannot use it while connected to VPN.
-By default you login to `snail.fhcrc.org` first and then to `rhino`. However, if you add these 2 lines your ~/.ssh/config file you only have to type `ssh` once
+
+If you are outside the Fred Hutch network, use the following to connect to the Snail gateway first:
+```ssh username@snail.fhcrc.org```
+
+Once you are connected, from there you can then connect to the `rhinos`:
+```ssh username@rhino```
+
+>Note:  When you disconnect from `rhino`, you will also then need to disconnect from `snail` as well. 
+
+To avoid this two step process, for example if you connect this way very often, you can add these 2 lines your ~/.ssh/config file you only have to type `ssh` once.
 ```
     Host rhino*.fhcrc.org
     ProxyCommand ssh yourusername@snail.fhcrc.org exec nc %h %p 2> /dev/nul
 ```
-If you are outside the Fred Hutch network type `ssh rhino.fhcrc.org` to use the snail gateway and if you are inside type `ssh rhino` to bypass the gateway.
+
 
 Please see [this page](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts) to learn more about ProxyCommand.
