@@ -63,7 +63,10 @@ Note that the call caching is coordinated from the working directory that you ru
 ### Example workflows
 Fred Hutch researchers are building and maintaining a set of Nextflow workflows for use by the general community [here](https://github.com/FredHutch/reproducible-workflows/tree/master/nextflow), while also providing an example of how to write your own workflows.
 
-## Setup
+Some Nextflow-based tools used for microbiome analysis at Fred Hutch can be found in
+[the accompanying documentation](https://sciwiki.fredhutch.org/compdemos/microbiome_tools/)
+
+### Setup
 
   1. Get set up with [AWS Credentials](/scicomputing/access_credentials/#amazon-web-services-aws) and request access to [Batch](/scicomputing/access_credentials/#get-aws-credentials-and-access)
   2. Make a file named `nextflow.config` in your home directory
