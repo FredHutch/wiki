@@ -11,7 +11,7 @@ This guide is intended for rapid onboarding of Fred Hutch staff who have previou
 
 - Fred Hutch employees can access compute resources using their HutchNet ID and associated password. 
 - Most resources are automatically accessible via HutchNet ID. 
-- Email `scicomp` to be added to the [Fred Hutch GitHub organization](https://github.com/FredHutch) and for access to [AWS and other cloud computing](https://sciwiki.fredhutch.org/scicomputing/compute_cloud/). 
+- After creating a GitHub account for yourself, email `scicomp` to be added to the [Fred Hutch GitHub organization](https://github.com/FredHutch) and for access to [AWS and other cloud computing](https://sciwiki.fredhutch.org/scicomputing/compute_cloud/). 
 - For more information on credentials, please [go here](https://sciwiki.fredhutch.org/scicomputing/access_credentials/).
 
 ## Cluster usage 
