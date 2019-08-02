@@ -145,6 +145,8 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/compute_overview/
+      - title: "Quick Start Guide"
+        url: /scicomputing/compute_quickstart/
       - title: "Technologies"
         url: /scicomputing/compute_platforms/
       - title: "Computing Environments and Containers"
