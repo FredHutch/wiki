@@ -10,10 +10,10 @@ The first step in doing this work is often as simple as asking "what computing r
 
 ## [Quick Start Guide](/scicomputing/compute_quickstart/)
 
-If you have experience working with cluster computing resources at other institutions, this quick start guide should give you a general idea of our compute resources at the Hutch.
+If you have experience working with cluster computing resources at other institutions, this quick start guide should give you a general idea of our compute resources at the Hutch and how to get started using them.
 
 ## [Technologies](/scicomputing/compute_platforms/)
-This page describes all the various technologies and specifications for them that are supported by Fred Hutch for large scale computing.  
+This page describes all the various technologies and specifications for them that are supported by Fred Hutch for large scale computing.
 
 ### Desktop computing platforms
 
