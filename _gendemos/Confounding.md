@@ -252,9 +252,9 @@ and Z is 2. Finally, the effect of U onto Z is 2.
       TheEst3[i,]<-c(E1,E2)
     }
     mean(TheEst3[,1])
-
+```
     ## [1] 1.587053
-``` 
+
 We have a bias estimate of Z as we did not adjust for Z. If, however we adjust for Z:
 ``` r
     mean(TheEst3[,2])
