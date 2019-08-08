@@ -36,7 +36,7 @@ generation:
         url: /generation/study_overview/
       - title: "Proposals and Funding"
         url: /generation/study_proposal/
-      - title: "Hypothesis Development and Big Molecular Data"
+      - title: "Hypotheses and Molecular Data"
         url: /generation/study_hypothesis/
       - title: "Multiple Testing"
         url: /generation/multiple_testing/
@@ -45,7 +45,7 @@ generation:
     children:
       - title: "Overview"
         url: /generation/human_overview/
-      - title: "Consenting and Big Molecular Data"
+      - title: "Consenting and IRB"
         url: /generation/human_consentIRB/
       - title: "Data Privacy and Security"
         url: /generation/human_privacySecurity/
@@ -104,10 +104,10 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/access_overview/
-      - title: "Methods"
-        url: /scicomputing/access_methods/
       - title: "Credentials"
         url: /scicomputing/access_credentials/
+      - title: "Methods"
+        url: /scicomputing/access_methods/
 
   - title: "Data Storage"
     children:
@@ -128,14 +128,8 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/software_overview/
-      - title: "Getting Started"
-        url: /scicomputing/software_languages/
-      - title: "R, RStudio"
-        url: /scicomputing/software_R/
-      - title: "Python"
-        url: /scicomputing/software_python/
-      - title: "Linux, Unix and Bash"
-        url: /scicomputing/software_linux101/
+      - title: "Common Languages"
+        url: /scicomputing/software_languages/     
       - title: "Managing and Sharing Code"
         url: /scicomputing/software_managecode/
       - title: "Software Development Standards"
@@ -145,6 +139,8 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/compute_overview/
+      - title: "Quick Start Guide"
+        url: /scicomputing/compute_quickstart/
       - title: "Technologies"
         url: /scicomputing/compute_platforms/
       - title: "Computing Environments and Containers"
