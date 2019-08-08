@@ -1,6 +1,6 @@
 ---
 title: Hypotheses in the Era of Large Scale Molecular Data
-last_modified_at: 2019-03-19
+last_modified_at: 2019-08-01
 primary_reviewers: rbarfield, vortexing
 ---
 
@@ -24,7 +24,7 @@ The reproducibility of a bioinformatic or statistical analysis has been highligh
 
 
 ## Confounding and Unintended Covariates
-Issues we intend to expand upon in this section include the types of confounding covariates that can occur when using large scale molecular data, such as batch effects of assay material isolation or genomics data creation.  Randomization of samples based on intended covariates (group A vs group B relating to the specific hypothesis the study is designed to address) as well as unintended covariates (such as sex, specimen type, date of specimen acquisition, laboratory performing the preservation or isolation, or other variables that are not associated the primary hypothesis), is critical to plan for in a study especially considering the costs to generate these data as well as the use of limited human specimens.   
+Issues we intend to expand upon in this section include the types of confounding covariates that can occur when using large scale molecular data, such as batch effects of assay material isolation or genomics data creation.  Randomization of samples based on intended covariates (group A vs group B relating to the specific hypothesis the study is designed to address) as well as unintended covariates (such as sex, specimen type, date of specimen acquisition, laboratory performing the preservation or isolation, or other variables that are not associated the primary hypothesis), is critical to plan for in a study especially considering the costs to generate these data as well as the use of limited human specimens. For a quick primer, check out our page on [confounding](/gendemos/Confounding/).
 
 ## Sample Size:  Power calculations in the 'omics setting
 More to come about how to identify what types of hypotheses have the possibility to be addressed with what sample sizes.  For now, have some reading material:
