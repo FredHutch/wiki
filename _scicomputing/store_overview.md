@@ -85,4 +85,4 @@ These storage systems have capabilities allowing you to share data with people o
 ## Data Transfer
 
 ### [Motuz](http://motuz.fredhutch.org)
-To facilitate the transfer of data between Fred Hutch storage locations, a new tool has been developed and is being piloted at the Hutch called [Motuz](http://motuz.fredhutch.org).  You can find some basic how-to guidance to get started with Motux in our [Resource Library](/compdemos/motuz/)
+To facilitate the transfer of data between Fred Hutch storage locations, a new tool has been developed and is being piloted at the Hutch called [Motuz](http://motuz.fredhutch.org).  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/)
