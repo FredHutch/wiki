@@ -80,8 +80,6 @@ process.executor = 'awsbatch'
 process.queue = 'mixed'
 // Run in the correct AWS region
 aws.region = 'us-west-2'
-// Location of the AWS executable in the host machine image
-executor.awscli = '/home/ec2-user/miniconda/bin/aws'
 
 // Mount the host folder /docker_scratch to /tmp within the running job
 // Use /tmp for scratch space to provide a larger working directory
@@ -89,6 +87,7 @@ executor.awscli = '/home/ec2-user/miniconda/bin/aws'
 aws {
     region = 'us-west-2'
     batch {
+        cliPath = '/home/ec2-user/miniconda/bin/aws'
         jobRole = '<YOUR JOB ROLE ARN HERE>'
         volumes = ['/docker_scratch:/tmp:rw']
     }
@@ -118,7 +117,7 @@ set -e
 BASE_BUCKET="s3://fh-pi-lastname-f/lab/user_name/project_name"
 
 # Load the module
-ml nextflow/19.04.1
+ml nextflow/19.07.0
 
 nextflow \
     run \
