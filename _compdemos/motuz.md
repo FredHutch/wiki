@@ -50,4 +50,57 @@ In the `Basic` section, set `Type` to `Amazon Simple Storage Service (s3)`. Give
 
 In the `Credentials` section, paste your access key ID and secret access key from the credentials you obtained above. You can optionally click `Verify Connection` to make sure the connection works. Then click `Create Cloud Connection`.
 
+## Copying files to S3
+
+You can copy a single file or the contents of a directory. 
+
+The Motuz UI consists of two panes. You can actually copy in either direction, but in this case we will copy from left to right, and therefore use the button that points to the right.
+
+First, select the files you want to copy. In this case I want to copy a directory. I navigate from my home directory by clicking the Path widget in the right-hand pane and navigating to the top level directory (`/`):
+
+![](/assets/motuz/2019-08-29-11-57-11.png)
+
+From there I can navigate to the location
+of the files I want to copy, under `/fh/fast`.
+Note that each user has different permissions and you may not be able to access the files that I can access. Try to copy files in your lab's subdirectory under `/fh/fast`.
+
+Then, in the right-hand pane, choose the cloud connection that you set up earlier:
+
+![](/assets/motuz/2019-08-29-11-59-47.png)
+
+If you want to copy to a sub-folder (prefix) 
+of the S3 bucket, navigate there (this example uses a bucket you may not have access to; you will be seeing different files/fodlers
+in your PI's bucket).
+
+![](/assets/motuz/2019-08-29-12-02-29.png)
+
+In the left-hand pane, single-click the folder you want to copy to S3:
+
+![](/assets/motuz/2019-08-29-12-03-33.png)
+
+Then click the blue arrow that points to the right:
+
+![](/assets/motuz/2019-08-29-12-03-58.png)
+
+You will see a confirmation screen like this that allows you to enter an optional description of the copy job:
+
+![](/assets/motuz/2019-08-29-12-05-23.png)
+
+Click the `Submit Copy Job` button. 
+
+You'll see the copy job's progress shown in the bottom pane:
+
+![](/assets/motuz/2019-08-29-12-06-01.png)
+
+If all goes well, the copy will complete with the status `SUCCESS`. 
+
+At any point during or after the copy, you can click this line in the status bar to see more information about the job status:
+
+![](/assets/motuz/2019-08-29-12-08-16.png)
+
+If you change your mind, you can cancel the copy job by clicking the `Stop Job` button.
+
+## Advanced Usage
+
+Motuz also has an API; consult its [documentation](https://github.com/FredHutch/motuz/#how-to-use-the-api). Note that the API endpoint to use with Fred Hutch's instance of Motuz is `https://motuz.fredhutch.org/api/` .
 
