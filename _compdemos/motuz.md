@@ -100,6 +100,14 @@ At any point during or after the copy, you can click this line in the status bar
 
 If you change your mind, you can cancel the copy job by clicking the `Stop Job` button.
 
+
+## Copying from S3 to a shared directory on campus
+
+This is similar to the previous steps; just find the directory you want to copy in the right hand pane, navigate to the place you want to copy to in the left hand pane, and click the blue arrow that points to the left:
+
+![](/assets/motuz/2019-08-29-12-13-27.png)
+
+
 ## Advanced Usage
 
 Motuz also has an API; consult its [documentation](https://github.com/FredHutch/motuz/#how-to-use-the-api). Note that the API endpoint to use with Fred Hutch's instance of Motuz is `https://motuz.fredhutch.org/api/` .
