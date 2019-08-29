@@ -33,6 +33,9 @@ Unix is the foundation for both Linux and macOS, and is the operating system tha
 
 ## Other Languages
 
+### Matlab
+
+We have shared licences at Fred Hutch for [Matlab](https://www.mathworks.com/products/matlab.html?s_tid=hp_products_matlab) users. Please see this [Matlab entry] in the Resource Library for information on accessing Matlab on Fred Hutch compute resources.
 
 ### Julia
 The [Julia](https://docs.julialang.org) language aims to combine the accessible syntax of R or Python with the speed of C/C++ programs. While not currently as functional as R or Python for bioinformatic tasks, there is a growing collection of resources for [Julia for bioinformatics](http://ucidatascienceinitiative.github.io/IntroToJulia/).
