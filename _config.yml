@@ -1,8 +1,8 @@
 plugins:
   - jekyll-remote-theme
-remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: mmistakes/minimal-mistakes
 
-minimal_mistakes_skin: "contrast"
+minimal_mistakes_skin: contrast
 
 # Site Settings
 locale: en-US
@@ -113,6 +113,24 @@ analytics:
   provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : UA-123256805-1
+
+# New as of 8/2019
+footer:
+  links:
+    - label: "See our GitHub Repo"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/FredHutch/coop"
+    - label: "Join the Conversation on Slack"
+      icon: "fab fa-fw fa-slack"
+      url: "https://fhbig.slack.com/"
+    - label: "See our Contributors"
+      icon: "fas fa-user-edit"
+      url: /contributors/
+    - label: "Find Training"
+      icon: "fas fa-chalkboard-teacher"
+      url: "https://www.fredhutch.io/"
+
+
 
 
 
