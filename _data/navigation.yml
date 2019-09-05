@@ -108,6 +108,8 @@ scicomputing:
         url: /scicomputing/access_credentials/
       - title: "Methods"
         url: /scicomputing/access_methods/
+      - title: "Permissions"
+        url: /scicomputing/access_permissions/
 
   - title: "Data Storage"
     children:
