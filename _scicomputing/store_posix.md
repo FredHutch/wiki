@@ -16,7 +16,7 @@ There are multiple file storage resources available to researchers including:
 
 ## Home
 
-`Home` storage is your own personal file storage space at the Fred Hutch.  It is a default place for your Linux login files (profiles &c) as well as an appropriate place to store your own private information.
+`Home` storage is your own personal file storage space at the Fred Hutch.  It is a default place for your [shell login files](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) as well as an appropriate place to store your own private information.
 
 While you are allowed up to 100GB of storage in this home directory, it is not tailored for heavy use and won't accommodate large data sets- the 100GB limit cannot be extended.  Also, data in this file system cannot be shared with others.
 
