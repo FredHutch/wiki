@@ -15,29 +15,110 @@ This section is intended to be a basic introduction to using the workload manage
 ### Examples of Use
 A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  This is an evolving example repo that new users can refer to to begin to get into parallel computing and more adept use of Slurm.  If you are a Fred Hutch user and would like to contribute to the documentation or the examples there, to share with the community how you structure your interactions with Slurm, submit a pull request there.  
 
-### Basic Slurm Terminology
+## Basic Slurm Terminology
 
-#### Cluster
+### Cluster
 
 A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).  At the Hutch we have two clusters, `Beagle` and `Gizmo`.  From most hosts the default cluster will be _gizmo_- selection of the target cluster is done via an argument to Slurm commands (see [Multi-Cluster Operation](#multicluster-operation) below)
 
-#### Partition
+### Partition
 
 A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required.  While the different clusters may have different partitions, there are two partitions- a default partition with smaller nodes named _campus_ and a partition with more capable nodes (more memory and CPUs) named _largenode_.
 
-#### Node
+### Node
 
 A node is the basic computing unit that shares processors, memory, and some (limited) local disk.  As a rule, you don't want to worry about choosing a node for your jobs.
 
-#### Job
+### Job
 
 A job is a collection of tasks, typically implemented as a shell script.  Jobs have an ID (just a number) and a name.  The ID is automatically assigned, but you can assign a name to your job.
 
-#### Account
+### Account
 
 When we refer to an "account" in the context of Slurm, we are referring to the PI account used to enforce limits and priority and _not_ your HutchNet ID.  Your HutchNet ID is associated with an account.
 
-### Commands for Managing Jobs
+
+
+## Submitting Jobs
+
+### `sbatch` and `srun`
+
+`sbatch` is used to submit a job script to the cluster.  These run jobs without your intervention or input (i.e. non-interactively). Common arguments are:
+
+`srun` is used to run a task on the cluster.  This is an interactive session,
+where you can directly view output as it's produced or provide input (if needed
+by the task you are running).
+
+### Common Options
+
+These two take many of the same options:
+
+ - `-M` select the cluster on which the job will run
+ - `-p` change the partition
+ - `-t` request a certain amount of time for the job.
+ - `-n` request a number of tasks (default 1)
+ - `-c` request a number of processors per task (default 1)
+ - `-J` name a job
+
+### Job Output
+
+Output (stdout and stderr) from your job script, steps, tasks, and processes is
+captured by Slurm and written to a file named _slurm-<jobid>.out_ in the
+directory from which you submitted the job.
+
+The option `-o` will redirect this output (errors as well) to the file indicated as the argument to this option.  For example, `-o myjob.out` redirects to _myjob.out_ in the submission directory.  Adding `%j` in this file name will include the job ID.  `-o myjob-%j.out` would create a file like _myjob-12345.out_.
+
+### Memory
+
+Memory is requested with the `--mem` option.  This option takes an argument: a
+number indicating the amount of memory required on the node.  The default unit
+is megabytes- to specify the unit, append `K`, `M`, `G`, or `T` for kilobytes,
+megabytes, gigabytes, or terabytes.
+
+A memory request is required for the _largenode_ partition.  Note that adding a
+memory request only ensures that sufficient memory is configured on the node
+and that your job will not exceed the requested memory
+
+### GPU
+
+GPUs are available on some nodes- these are requested using the option
+`--gres=gpu`.
+
+#### Examples
+
+Submit a batch job (`sbatch`), that will run in one day, six hours (with the flag `-t 1-6`) in the largenode partition (with the flag `-p largenode`) in Beagle (with the flag `-M beagle`).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job "quoth-the-raven" (with the `-J` flag) and list the script to use in the job `myscript.sh`.
+
+```
+sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
+```
+
+Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file named "my-output":
+
+```
+sbatch -c 6 myscript.sh my-output
+```
+
+### MultiCluster Operation
+
+Most Slurm commands can operate against remote clusters (i.e. `beagle` from `gizmo`).  Typically the only change required is to add the argument `-M <cluster name>`.
+
+```
+sbatch -M beagle -c 6 myscript.sh my-output
+scancel -M beagle 12345
+```
+
+`hitparade` also supports `-M` and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands `srun` and `salloc` will not work.  If use of those commands is necessary, please contact SciComp.
+
+
+## Managing Jobs
+
+### Walltime issues
+More to come....
+
+### Why isn't my job running?
+More to come...
+
+### Useful Commands
 
 #### `squeue`
 
@@ -89,76 +170,6 @@ loading Python/3.6.4-foss-2016b-fh2...
     schulz_cm (snoopy) 273 / 0
 
 ```
-
-### Submitting Jobs
-
-#### `sbatch` and `srun`
-
-`sbatch` is used to submit a job script to the cluster.  These run jobs without your intervention or input (i.e. non-interactively). Common arguments are:
-
-`srun` is used to run a task on the cluster.  This is an interactive session,
-where you can directly view output as it's produced or provide input (if needed
-by the task you are running).
-
-#### Common Options
-
-These two take many of the same options:
-
- - `-M` select the cluster on which the job will run
- - `-p` change the partition
- - `-t` request a certain amount of time for the job.
- - `-n` request a number of tasks (default 1)
- - `-c` request a number of processors per task (default 1)
- - `-J` name a job
-
-#### Job Output
-
-Output (stdout and stderr) from your job script, steps, tasks, and processes is
-captured by Slurm and written to a file named _slurm-<jobid>.out_ in the
-directory from which you submitted the job.
-
-The option `-o` will redirect this output (errors as well) to the file indicated as the argument to this option.  For example, `-o myjob.out` redirects to _myjob.out_ in the submission directory.  Adding `%j` in this file name will include the job ID.  `-o myjob-%j.out` would create a file like _myjob-12345.out_.
-
-#### Memory
-
-Memory is requested with the `--mem` option.  This option takes an argument: a
-number indicating the amount of memory required on the node.  The default unit
-is megabytes- to specify the unit, append `K`, `M`, `G`, or `T` for kilobytes,
-megabytes, gigabytes, or terabytes.
-
-A memory request is required for the _largenode_ partition.  Note that adding a
-memory request only ensures that sufficient memory is configured on the node
-and that your job will not exceed the requested memory
-
-#### GPU
-
-GPUs are available on some nodes- these are requested using the option
-`--gres=gpu`.
-
-##### Examples
-
-Submit a batch job (`sbatch`), that will run in one day, six hours (with the flag `-t 1-6`) in the largenode partition (with the flag `-p largenode`) in Beagle (with the flag `-M beagle`).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job "quoth-the-raven" (with the `-J` flag) and list the script to use in the job `myscript.sh`.
-
-```
-sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
-```
-
-Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file named "my-output":
-
-```
-sbatch -c 6 myscript.sh my-output
-```
-
-### MultiCluster Operation
-
-Most Slurm commands can operate against remote clusters (i.e. `beagle` from `gizmo`).  Typically the only change required is to add the argument `-M <cluster name>`.
-
-```
-sbatch -M beagle -c 6 myscript.sh my-output
-scancel -M beagle 12345
-```
-
-`hitparade` also supports `-M` and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands `srun` and `salloc` will not work.  If use of those commands is necessary, please contact SciComp.
 
 
 ## External Slurm and HPC Reference and Learning Resources
