@@ -112,3 +112,6 @@ This is similar to the previous steps; just find the directory you want to copy 
 
 Motuz also has an API; consult its [documentation](https://github.com/FredHutch/motuz/#how-to-use-the-api). Note that the API endpoint to use with Fred Hutch's instance of Motuz is `https://motuz.fredhutch.org/api/` .
 
+## Problems?
+
+Email `scicomp` or [file an issue in the Motuz repository](https://github.com/FredHutch/motuz/issues/new).
