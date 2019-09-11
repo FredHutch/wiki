@@ -9,11 +9,12 @@ There are a variety of resources for training on various aspects of bioinformati
 
 ### In Person Courses
 
-[fredhutch.io](http://www.fredhutch.io/) offers frequent, on campus courses on a topics such as R, python or GitHub, and information about previous and upcoming courses is on their site.  In order to sign up for courses, go to [MyHutch](https://fredhutch.okta.com/) and click on Hutch Learning to see currently available courses and register for them. fredhutch.io also helps coordinate additional events and specialized classes in collaboration with The Coop (see below).
+[fredhutch.io](http://www.fredhutch.io/) offers frequent, on campus courses on a topics such as R, Python and GitHub; course descriptions can be found [here](http://www.fredhutch.io/resources/). Fred Hutch and SCCA employees can register for these courses by going to [MyHutch](https://fredhutch.okta.com/) and clicking on Hutch Learning. Search for "fredhutch.io" to view and register for all currently available courses. fredhutch.io also helps coordinate additional events and specialized classes in collaboration with The Coop (see below).
+
 
 ### Community Groups
 
-[The Coop](https://centernet.fredhutch.org/cn/u/bdsc.html) (link requires login) is the Fred Hutch Bioinformatics and Data Science Cooperative, and works to share information and resources about computational work across the Hutch. The Coop maintains a listserv, calendars of data science events, and [The Coop Communities Slack](https://fhbig.slack.com/), supported by FHBig. [FHBig](https://fredhutch.github.io/FHBig/) is the Fred Hutch Bioinformatics Interest Group, a community-based group that hosts a [blog](https://fredhutch.github.io/FHBig/year-archive/) and facilitates information sharing among the bioinformatics research community at the Hutch. Hutch employees can learn more through the links above or by emailing `coophelp`.
+[The Coop](https://centernet.fredhutch.org/cn/u/bdsc.html) (link requires login) is the Fred Hutch Bioinformatics and Data Science Cooperative, and works to share information and resources about computational work across the Hutch. The Coop maintains a listserv, calendars of data science events, and [The Coop Communities Slack](https://fhbig.slack.com/), supported by FHBig. [FHBig](https://fredhutch.github.io/FHBig/) is the Fred Hutch Bioinformatics Interest Group, a community-based group that hosts a [blog](https://fredhutch.github.io/FHBig/year-archive/) and facilitates information sharing among the bioinformatics research community at the Hutch. Hutch employees can learn more through the links above or by emailing `coophelp` wiht questions or to be added to our email/newsletter list.
 
 The Coop and FHBig also support community groups that meet regularly to discuss topics ranging from basic data literacy skill building to reproducible computational methods. To learn more about what to expect from these meetings, please visit [our Community Groups GitHub repository](https://github.com/FredHutch/community_groups). Current meeting schedules and locations are available on the [Google calendar](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
@@ -21,13 +22,13 @@ The Coop and FHBig also support community groups that meet regularly to discuss 
 
 - **Data visualization group:** Develops visualizations from data released by [TidyTuesday](https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/). All programming languages (and even non-coders!) are welcome. See the #data-viz channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
-- **Python coding group:** Discusses methods of programming in Python and troubleshoots code of participants. Python coders of all levels of expertise are welcome. See the #python-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information. 
+- **Python coding group:** Discusses methods of programming in Python and troubleshoots code of participants. Python coders of all levels of expertise are welcome. See the #python-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
 - **R coding group:** Discusses R packages, R code and troubleshoots code of participants. R coders of all levels of expertise are welcome. See the #r-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
 - **Software design group:** Discusses issues related to software engineering and interface design and invites speakers on specific topics and participants to share their coding projects. This group is not focused on a specific programming language, but rather on issues common across software projects. See the #software-engineers channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
-- **Technology Exchange:** Informal learning forum for employees in technology-focused jobs to share technical skills. This groups is most appropriate for individuals who want to discuss the technical details of tools commonly used in positions focused on administration and infrastructure. Subscribe to the [TechExchange mailing list](https://lists.fhcrc.org/mailman/listinfo/techexchange) for more information. 
+- **Technology Exchange:** Informal learning forum for employees in technology-focused jobs to share technical skills. This groups is most appropriate for individuals who want to discuss the technical details of tools commonly used in positions focused on administration and infrastructure. Subscribe to the [TechExchange mailing list](https://lists.fhcrc.org/mailman/listinfo/techexchange) for more information.
 
 ### Office Hours
 
