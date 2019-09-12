@@ -6,7 +6,7 @@ primary_reviewers: k8hertweck
 
 ## Getting Started
 
-Fred Hutch offers training resources for many of the common languages and tools listed below. For more information on training opportunities and cooperative learning groups, please see the [training page](/scicomputing/reference_training/).
+Fred Hutch offers training resources for many of the common languages and tools listed below. For more information on training opportunities, cooperative learning groups, and how to get started, please see the [reference page](/scicomputing/reference_overview/).
 
 
 ## [R, RStudio](/scicomputing/software_R/)
