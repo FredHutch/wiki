@@ -21,4 +21,6 @@ Similarly, there are several questions you can ask that help you figure out what
 - What are your career goals? Are the tools you're planning to learn going to be useful only for your current position, or will they be meaningful additions to your resume?
 - What do you personally prefer? Some people simply prefer working in one language over another, because the syntax (rules about the structure of the language) makes more sense to them.
 
+Our page about [Common Programming Languages](/scicomputing/software_languages/) provides information about some of the common tools used at Fred Hutch to help you answer these questions.
+
 It's important to be deliberate in your choice of first language to learn, because it can be a significant time investment, but it's not committing you to only using that language in the future. Just like learning human languages, learning one language generally makes it easier to learn another language later.
