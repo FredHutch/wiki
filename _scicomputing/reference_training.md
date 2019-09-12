@@ -42,7 +42,7 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 
 - **Fredhutch.io:** [fredhutch.io](http://www.fredhutch.io/) trains researchers in reproducible computational methods. Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
 
-- **REDcap:** [REDCap](http://research.fhcrc.org/cds/en/redcap.html) is a secure web application for building and managing online surveys and databases and is managed by Collaborative Data Services (CDS) at Fred Hutch. Staff are available to answer questions related to REDCap functionality and troubleshooting.
+- **REDcap:** [REDCap](http://research.fhcrc.org/cds/en/redcap.html) is a secure web application for building and managing online surveys and databases and is managed by Collaborative Data Services (CDS) at Fred Hutch. Staff are available to answer questions related to REDCap functionality and troubleshooting. You can also discuss REDCap issues with staff and other researchers on the #redcap-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/).
 
 - **SciComp General Consulting:** Scientific Computing (SciComp) is the group in Hutch Data Commonwealth (HDC) that manages basic account access for research computing resources, including data storage and shared computational cluster use. Staff are available to answer questions related to access and usage of Hutch resources for computational research.
 
