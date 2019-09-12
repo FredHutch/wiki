@@ -34,20 +34,15 @@ Unix is the foundation for both Linux and macOS, and is the operating system tha
 
 ### Proprietary (Licensed) Statistics Software
 
-We have shared licenses at Fred Hutch for [**Matlab**](https://www.mathworks.com/products/matlab.html?s_tid=hp_products_matlab) users. Please see the [Matlab entry](compdemos/matlab/) in the Resource Library for information on accessing Matlab on Fred Hutch compute resources.
+We encourage the use of free, open-source software at the Hutch, especially for academic research use. For projects and researchers who prefer not to use open-source software, Fred Hutch supports proprietary software through shared licenses for the following statistical analysis and visualization software: [**SAS**](https://www.sas.com/en_us/software/stat.html), [**SPSS**](https://www.ibm.com/analytics/spss-statistics-software), [**Stata**](https://www.stata.com), and [**Matlab**](https://www.mathworks.com/products/matlab.html?s_tid=hp_products_matlab) users. Please see the [Resource Library](compdemos/matlab/) for information on accessing Matlab on Fred Hutch compute resources.
 
-**SAS**
+There is an active [**Tableau**](https://www.tableau.com) data visualization community at Fred Hutch. For more information on help sessions, meetups, and Q&A, please see the #tableau-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/).
 
-**SPSS**
-
-**Stata**
-
-**Tableau**
-user group and channel
 
 ### Workflow Managers
 
-**Nextflow** (compdemos/nextflow/)
+Workflow managers are software that facilitate the setup, execution, and monitoring of scientific analyses involving multiple steps. These are especially important for complex bioinformatic analyses that require various software dependencies and resource requirements, and can make your analysis both easier to troubleshoot and more reproducible. Workflow managers common for scientific processes include: [Snakemake](https://snakemake.readthedocs.io/en/stable/), [Cromwell](https://cromwell.readthedocs.io/en/stable/tutorials/FiveMinuteIntro/), [Toil](https://toil.readthedocs.io), [CWL](https://www.commonwl.org), and [Nextflow](https://www.nextflow.io/). For more information on running **Nextflow**, please see [this demo](compdemos/nextflow/).
+
 
 ### Other languages
 
