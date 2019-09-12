@@ -1,7 +1,7 @@
 ---
 title: Overview of Reference and Announcements
-last_modified_at: 2019-04-01
-primary_reviewers: vortexing
+last_modified_at: 2019-09-12
+primary_reviewers: vortexing, k8hertweck
 ---
 The rest of this wiki provides general guidelines and approaches to working with data at Fred Hutch. This reference section includes information on where to obtain training, as well as specific step-by-step tutorials for accomplishing tasks with Hutch resources.
 
