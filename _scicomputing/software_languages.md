@@ -1,13 +1,12 @@
 ---
-title: Getting Started with Common Languages and Tools
-last_modified_at: 2019-04-24
+title: Common Languages and Tools for Research Computing
+last_modified_at: 2019-09-11
 primary_reviewers: k8hertweck
 ---
 
-## Training Resources 
+## Getting Started
 
-
-Fred Hutch offers training resources for many of the common languages and tools listed below. Course descriptions can be found at fredhutch.io, and course registration is tracked in Hutch Learning (only accessible to Fred Hutch employees through CenterNet; search for "fredhutch.io" to see all relevant courses). New class offerings will also be posted in the Coop Newsletter. Email `thecoop` to join the mailing list.
+Fred Hutch offers training resources for many of the common languages and tools listed below. For more information on training opportunities, cooperative learning groups, and how to get started, please see the [reference page](/scicomputing/reference_overview/).
 
 
 ## [R, RStudio](/scicomputing/software_R/)
@@ -31,17 +30,24 @@ While version control software has evolved over time, a new evolution that is ha
 Unix is the foundation for both Linux and macOS, and is the operating system that is most commonly used for developing and executing bioinformatic software tools. In order to navigate a Unix-based operating system and execute commands, it is extremely useful to use the command line interface, which is generally referred to as BASH (Bourne-Again SHell).
 
 
-## Other Languages
+## Other Languages and Tools for Data Analysis
 
-### Matlab
+### Proprietary (Licensed) Statistics Software
 
-We have shared licences at Fred Hutch for [Matlab](https://www.mathworks.com/products/matlab.html?s_tid=hp_products_matlab) users. Please see this [Matlab entry] in the Resource Library for information on accessing Matlab on Fred Hutch compute resources.
+We encourage the use of free, open-source software at the Hutch, especially for academic research use. For projects and researchers who prefer not to use open-source software, Fred Hutch supports proprietary software through shared licenses for the following statistical analysis and visualization software: [**SAS**](https://www.sas.com/en_us/software/stat.html), [**SPSS**](https://www.ibm.com/analytics/spss-statistics-software), [**Stata**](https://www.stata.com), and [**Matlab**](https://www.mathworks.com/products/matlab.html?s_tid=hp_products_matlab) users. Please see the [Resource Library](compdemos/matlab/) for information on accessing Matlab on Fred Hutch compute resources. For more information on obtaining access to licensed software, please contact Center IT.
 
-### Julia
-The [Julia](https://docs.julialang.org) language aims to combine the accessible syntax of R or Python with the speed of C/C++ programs. While not currently as functional as R or Python for bioinformatic tasks, there is a growing collection of resources for [Julia for bioinformatics](http://ucidatascienceinitiative.github.io/IntroToJulia/).
+There is an active [**Tableau**](https://www.tableau.com) data visualization community at Fred Hutch. For more information on help sessions, meetups, and Q&A, please see the #tableau-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/).
 
-### Go
-Go, or [GoLang](https://golang.org/doc/) also has some [support for data science](https://blog.chewxy.com/2017/11/02/go-for-data-science/).
 
-### Perl 
-[Perl](https://www.perl.org) is a computational language often found in bioinformatic analyses. The language was originally developed in 1987. [perl.org](https://www.perl.org/learn.html) has numerous tutorials and modules for learning the language. 
+### Workflow Managers
+
+Workflow managers are software that facilitate the setup, execution, and monitoring of scientific analyses involving multiple steps. These are especially important for complex bioinformatic analyses that require various software dependencies and resource requirements, and can make your analysis both easier to troubleshoot and more reproducible. Workflow managers common for scientific processes include: [Snakemake](https://snakemake.readthedocs.io/en/stable/), [Cromwell](https://cromwell.readthedocs.io/en/stable/tutorials/FiveMinuteIntro/), [Toil](https://toil.readthedocs.io), [CWL](https://www.commonwl.org), and [Nextflow](https://www.nextflow.io/). For more information on running **Nextflow**, please see [this demo](compdemos/nextflow/).
+
+
+### Other languages
+
+The [**Julia**](https://docs.julialang.org) language aims to combine the accessible syntax of R or Python with the speed of C/C++ programs. While not currently as functional as R or Python for bioinformatic tasks, there is a growing collection of resources for [Julia for bioinformatics](http://ucidatascienceinitiative.github.io/IntroToJulia/).
+
+**Go**, or [GoLang](https://golang.org/doc/), also has some [support for data science](https://blog.chewxy.com/2017/11/02/go-for-data-science/).
+
+[**Perl**](https://www.perl.org) is a computational language often found in bioinformatic analyses. The language was originally developed in 1987. [perl.org](https://www.perl.org/learn.html) has numerous tutorials and modules for learning the language.
