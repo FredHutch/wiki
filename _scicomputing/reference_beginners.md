@@ -1,5 +1,5 @@
 ---
-title: For Beginners: How to Start Learning to Code
+title: For Beginners - How to Start Learning to Code
 last_modified_at: 2019-09-11
 primary_reviewers: k8hertweck
 ---
