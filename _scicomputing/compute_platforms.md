@@ -73,21 +73,34 @@ Name|Type|Authentication|Authorization|Location
 
 ### Cluster Node Information
 <!--This table is auto-generated based on the yaml in _data/cluster_nodes.yaml--> 
-The particular number and resources of cluster nodes available to Fred Hutch researchers depend on the resource and are described here.  
+The particular number and resources of cluster nodes available to Fred Hutch researchers depend on the resource and are described here. Details include:
+- Partition: All nodes of a given generation are in one or more partitions to facilitate resource use efficiency
+- Node Gen: Nodes are named after the their cluster + generation + sequential ID (ex: gizmoj23)
+
 {%- for resource in site.data.cluster_nodes %}
 
-### {{ resource.cluster_name | upcase }}
+#### {{ resource.cluster_name | upcase }}
 Location: {{ resource.location }}
 
-|Partition|Node Name|Node Count|CPU|Cores|Memory|
+|Partition|Node Gen|Node Count|CPU|Cores|Memory|
 |---|:---:|:---:|---:|:---:|:---:|
 {%- for node in resource.nodes %}
 {{ node.partition }}|{{ node.node_name }}|{{ node.node_count }}|{{ node.processor_manufacturer }} {{ node.processor_model }}|{{ node.cores }}|{{ node.memory_gb }}GB
 {%- endfor %}
 
-### Resource Detail
+{%- endfor %}
 
-|Node Name|Network|Local Storage|
+### Resource Detail
+Specific details about our cluster(s):
+- Network: The underlying network fabric may affect jobs that rely on inter-node messaging
+- Local Storage: The amount and type of storage on each node, used as `TMPDIR` during jobs, but also available for other job use
+
+{%- for resource in site.data.cluster_nodes %}
+
+#### {{ resource.cluster_name | upcase }}
+Location: {{ resource.location }}
+
+|Node Gen|Network|Local Storage|
 |---|---|---|
 {%- for node in resource.nodes %}
 {{ node.node_name }}|{{ node.network }}|{{ node.local_storage }}
