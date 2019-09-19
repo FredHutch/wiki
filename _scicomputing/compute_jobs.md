@@ -132,8 +132,8 @@ and that your job will not exceed the requested memory
 
 #### GPU
 
-GPUs are available on some nodes- these are requested using the option
-`--gres=gpu`.
+GPUs are available on some nodes- [this page](/scicomputing/compute_gpu/)
+describes the Slurm options required to request GPUs with your job.
 
 ##### Examples
 
