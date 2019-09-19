@@ -8,7 +8,7 @@ Object storage systems are not directly attached to your computer via drive mapp
 ### Object Storage PI Allocations
 As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.  Each PI is provided with 5TB of free storage space via `Economy` storage above which a relatively low cost per TB per month is charged.
 
->Note:  Currently it is recommended to use a combination of `Economy`, *Scratch* and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+>Note:  Currently it is recommended to use a combination of `Economy`, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
 
 `Economy` is less expensive than [`Fast`](/scicomputing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, `Economy` would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  `Economy` serves as an archive for these data, and typically compute processes do not directly access these files.
@@ -29,7 +29,7 @@ Given these benefits it is expected that Object Storage systems will become more
 
 Access to `Economy` storage is governed by Hutch Net ID (Active Directory) authentication and group membership in a security group called `lastname_f_grp` (e.g. `groudine_m_grp`). This is the same security group that governs access to `Fast` storage.
 
->Note: In the future Fred Hutch Shared Resources data delivery processes (e.g. through  HutchBase) will be modified to deliver data directly to `Economy` and *Scratch* storage as opposed to `Fast` as it happens today.
+>Note: In the future Fred Hutch Shared Resources data delivery processes (e.g. through  HutchBase) will be modified to deliver data directly to `Economy` and [*Scratch*](/scicomputing/store_scratch/) storage as opposed to [`Fast`](/scicomputing/store_posix/) as it happens today.
 
 ## Accessing Economy Storage
 You can access `Economy Local` or `Economy Cloud` resources with [command line tools](/compdemos/Economy-storage/) such as `swc`, `swift`, `aws s3` or `rclone` or libraries such as _swiftclient_ or _boto3_ for _Python_ or _aws.s3_ for R.  As of March 2016, Center IT officially supports the use of [Mountain Duck and Cyberduck desktop clients](/compdemos/Mountain-CyberDuck/) on Windows or Mac to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing. It is also possible to use [Synology to backup data to _Economy Local_.](/compdemos/synology/)

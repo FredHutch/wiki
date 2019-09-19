@@ -97,4 +97,4 @@ See more about accessing AWS S3 via the command line [here](/compdemos/aws/).
 ### GUI Instructions
 
 Open a web browser and navigate to [the Toolbox](https://toolbox.fhcrc.org/sw2srv/aws/account).
-This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such as Cyberduck or Mountain Duck. See the more about how to use Cyberduck or Mountain Duck to connect to AWS S3 [here.](/compdemos/Mountain-CyberDuck/)
+This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such Cyberduck,  Mountain Duck, or [Motuz](/compdemos/motuz/). See the more about how to use Cyberduck or Mountain Duck to connect to AWS S3 [here.](/compdemos/Mountain-CyberDuck/)

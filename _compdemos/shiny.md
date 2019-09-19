@@ -135,7 +135,7 @@ You should be able to find your app within the repo you created.
 
 
 ## Deployment Service from SciComp
-Hopefully, you can see your app working as expected in the browser. Please keep a good record of all your dependencies. You may have all the necessary R packages installed on your local machine but SciComp deployment platform needs to know those dependencies.  You also want to be ready to answer all the questions below before you contact Scientific Computing team.  If you are ready with your **codebase**  and have the answers for the **below information required by deployment**, then go to https://getshiny.fredhutch.org to submit the application deployment request. This request website is only accessible from Campus computers through wired connection or the `Marconi` wireless network. 
+Hopefully, you can see your app working as expected in the browser. Please keep a good record of all your dependencies. You may have all the necessary R packages installed on your local machine but SciComp deployment platform needs to know those dependencies.  You also want to be ready to answer all the questions below before you contact Scientific Computing team.  If you are ready with your **codebase**  and have the answers for the **below information required by deployment**, then go to [https://getshiny.fredhutch.org](https://getshiny.fredhutch.org) to submit the application deployment request. This request website is only accessible from Campus computers through wired connection or the `Marconi` wireless network. 
 
 1.  Is your application codebase version-controlled by Git and in a GitHub repository (repo) ?  If so, is it under FredHutch account?
 
