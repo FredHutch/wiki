@@ -116,7 +116,20 @@ scancel -M beagle 12345
 More to come....
 
 ### Why isn't my job running?
-More to come...
+
+There are any number of reasons why your job may not be running.  When you run `squeue` you will see the job's state as `PD` with a reason code (in the column headed with `NODELIST(REASON)`)  As suggested by the heading, this column contains the reason that the job isn't running.
+
+The three most common reasons are a) there are no idle resources for your job, b) jobs running under your account are already consuming the maximum amount of resources available for accounts, and c) your job does not have a high enough priority to be run.
+
+If your job won't run because resources aren't available, the reason code will be "Resources".  Jobs in this state have resources reserved for them (a "priority reservation") and should run next.  This reason is only applied to one or two jobs in the queue.  Every other job will have the reason "Priority," which indicates that the job does not have sufficient priority to have resources reserved (reason "c" above).
+
+If the job is held because of a limit (reason "b" above, consuming more than allowed for accounts) you will see a number of different limits, usually including some form of "Max_something_PerAccount" or "Max_something_PerUser":
+
+```
+39435170 largenode        R   username PD       0:00      1 (MaxCpuPerAccount)
+```
+
+Indicates that the job is running under an account that is already using the maximum number of CPUs available to accounts.
 
 ### Useful Commands
 
