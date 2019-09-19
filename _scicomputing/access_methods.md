@@ -98,8 +98,8 @@ A note about the X Window System and terminal multiplexers. As stated above, on 
 ## Advanced/Optional Setup for Making Things Easier: The SSH config file
 Located in your home directory in the `.ssh` folder is a file called `config` (create it if it doesn't exist). Your SSH client will read configuration options from this file when you use it. Any of the command line options can be specified in this config file to avoid overly complex SSH commands and make frequent use of remote servers more straightforward.  
 
-### Identity
-Often the local user on your client device is not the same as your username on the remote system. You can always `ssh joeuser@remotehost.com` but you can also specify the alternate username in the config file.
+### Usernames
+Sometimes the local user on your client device is not the same as your username on the remote system, or you have a different identity/user on a remote system. You can always `ssh joeuser@remotehost.com` but you can also specify the alternate username in the config file.
 
 Config|Command Line|Value|Notes
 ---|---|---|---
@@ -107,16 +107,24 @@ User|<username>@|Your remote system username|Make ssh commands shorter and easie
 Identity|-i|<path to identity file>|SSH supports multiple identities and multiple keys. Use this option to specify a different SSH key from the default `~/.ssh/id_rsa`.
 
 ### Keys
-If you use your password to ssh, you can certainly continue to do so. However, with a key you will have to type your password less frequently, or sometimes never. Many remote systems do not allow password authentication and require keys.
+If you use your password to ssh, you can certainly continue to do so. However, with a key you will have to type your password less frequently, or sometimes never. Many remote systems do not allow password authentication and require the use of keys.
 
-Create an SSH key - on MacOS or Linux, run `ssh-keygen` and follow the prompts (change the file location if you are creating a new key but want to keep the old one). On Windows you will need `puttygen` if using puTTY or copy the Linux way if using Cygwin.
+#### Key Generations and passphrases
 
-You will be prompted to enter and then confirm a passphrase. This is the best protection of your ssh key, and should be a longer complex passphrase. See below to automate the use of it, and try to resist creating passphrase-less keys.
+Create an SSH key - on MacOS or Linux, run `ssh-keygen` and follow the prompts (change the file location if you are creating a new key but want to keep the old one). On Windows you will need `puttygen` if using puTTY or follow the Linux instructions if using Cygwin.
 
-This command will create two files in `~/.ssh` - `id_rsa` and `id_rsa.pub`. The first is your private key, and the second is the public key.
+You will be prompted to enter and then confirm a passphrase. This is the best protection of your ssh key, and should be a longer complex passphrase. Passphrase-less ssh keys are a security violation. See below for ways to automate local unlocking of your key to avoid having to use a complex passphrase frequently.
 
-#### MacOS Keychain
-No one wants to type a long passphrase every time they use SSH. Creating an SSH key with no passphrase is unsafe. MacOS keychain to the rescue!
+For extra points, read all about [public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) (it is very cool!).
+
+#### Key distribution
+
+You can copy your public key in any way you like. You can even cut-and-paste the key contents if that is easy. On Mac and Linux there is an auxiliary ssh command called `ssh-copy-key` which will copy your default public key to a specified remote system (asking for your password to make the ssh connect to transfer the key). On Windows it is easiest to cut-and-paste the key into a remote session opened using a password.
+
+#### Passphrase management
+No one wants to type a long passphrase every time they use SSH. Creating an SSH key with no passphrase is unsafe. There must be a better way... .
+
+##### MacOS Keychain
 
 The following steps will get your MacOS device into a state where your SSH key passphrase is unlocked for you when you log into the Mac, and is automatically supplied to SSH. You will need to be logged in to your Mac, have a terminal open, and have an SSH key to start.
 
@@ -127,6 +135,10 @@ Config|Command Line|Value|Notes
 ---|---|---|---
 UseKeychain|-o UseKeychain|yes/no|So not all config options have easy command line options. This tells your ssh client to use your keychain for the passphrase.
 AddKeysToAgent|-o AddKeysToAgent|yes/no|Starts and ssh-agent process that will hold your unlocked key safely in memory for subsequent ssh session. Shutdown or reboot and this disappears.
+
+##### Windows/puTTY
+
+On Windows, puTTY can include a key management agent called `pageant.exe` - you can download puTTY easily without it and can download it separately from [the puTTY site](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 #### Good key management
 Your SSH key is actually in two parts - the public key, and the private key. Public/Private key pairs are fascinating if you are in to encryption. Be sure to search and read all about them.
@@ -142,11 +154,11 @@ The best practices involving keys include:
 
 * limit copies of your private key (there should be only one)
 * do not enter a blank passphrase
-* add your public key (cut-and-paste is fine) to `~/.ssh/authroized_keys` file
+* add your public key (cut-and-paste is fine) to `~/.ssh/authroized_keys` file (see `ssh-copy-key` above)
 * you do not need to put both of your keys on every machine you want to use, only your client device
 
 #### Agents
-SSH supports an in-memory agent process that will hold your unlocked private key safely. This alleviates the need to type your passphrase for the duration of time the agent is running. See above for MacOS options. On Linux, you can run `eval $(ssh-agent)` to start an agent, and `ssh-add [path to keyfile if not default]` to add your key to the running agent process.
+SSH supports an in-memory agent process that will hold your unlocked private key safely. This alleviates the need to type your passphrase for the duration of time the agent is running. See above for MacOS options. On Linux, you can run `eval $(ssh-agent)` to start an agent, and `ssh-add [path to keyfile if not default]` to add your key to the running agent process. On Windows, you can run puTTY's `pageant.exe`.
 
 You can forward key requests from remote machine back to your running agent:
 
@@ -207,7 +219,7 @@ Snail is a SSH gateway (also called bastion host or jump host) you can use to ge
 By default you login to `snail.fhcrc.org` first and then to `rhino`. However, if you add these 2 lines your ~/.ssh/config file you only have to type `ssh` once
 ```
     Host rhino*.fhcrc.org
-    ProxyCommand ssh yourusername@snail.fhcrc.org exec nc %h %p 2> /dev/nul
+    ProxyCommand ssh yourusername@snail.fhcrc.org exec nc %h %p 2> /dev/null
 ```
 If you are outside the Fred Hutch network type `ssh rhino.fhcrc.org` to use the snail gateway and if you are inside type `ssh rhino` to bypass the gateway.
 
