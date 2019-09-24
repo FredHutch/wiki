@@ -131,6 +131,16 @@ If the job is held because of a limit (reason "b" above, consuming more than all
 
 Indicates that the job is running under an account that is already using the maximum number of CPUs available to accounts.
 
+|Reason                 | Possible Cause(s)                                    |
+|---------------------- | -----------------------------------------------------|
+| Priority              | The job is waiting for higher-priority jobs to run |
+| Resources             | The job will run as soon as enough resources become available |
+| MaxCpuPerAccount      | Account has reached the limit on the number of CPUs available to it |
+| QOSMinCpuNotSatisfied | The job isn't requesting enough CPUs for the requested partition. See [Limits](#limits) |
+| QOSMinMemory          | The job isn't requesting enough memory for the requested partition. See [Limits](#limits) |
+
+There are other reason codes- these are uncommon in our environment.  Email Scientific Computing for more information.
+
 ### Useful Commands
 
 #### `squeue`
