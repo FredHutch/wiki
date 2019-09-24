@@ -92,6 +92,19 @@
       gpu: none
       node_count: 3
       partition: none (interactive use)
+  partitions:
+    -
+      partition_name: campus
+      max_per_acct: 100-300 cpus
+      default_per_job: 3 days
+      max_per_job: 4 cpus, 30000MB memory (effective)
+      min_per_job: none
+    -
+      partition_name: largenode
+      max_per_acct: 180 cpus
+      default_per_job: 1 day
+      max_per_job: 24 cpus, 768000MB memory (effective)
+      min_per_job: 6 cpus, 22000MB memory
 - cluster_name: beagle
   type: HPC
   location: AWS
@@ -105,6 +118,19 @@
     -
       name: slurm
       version: 1
+  partitions:
+    -
+      partition_name: campus
+      max_per_acct: 300 cpus
+      default_per_job: 1 day
+      max_per_job: 4 cpus, 15000MB memory (effective)
+      min_per_job: none
+    -
+      partition_name: largenode
+      max_per_acct: 300 cpus
+      default_per_job: 1 day
+      max_per_job: 24 cpus, 240000MB memory (effective)
+      min_per_job: none
   nodes:
     - 
       node_name: f
