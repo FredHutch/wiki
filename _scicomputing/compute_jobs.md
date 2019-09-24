@@ -37,7 +37,20 @@ A job is a collection of tasks, typically implemented as a shell script.  Jobs h
 
 When we refer to an "account" in the context of Slurm, we are referring to the PI account used to enforce limits and priority and _not_ your HutchNet ID.  Your HutchNet ID is associated with an account.
 
+### Limits
 
+A variety of limits are used to ensure equitable access to computing resources,  The primary limit is a maximum on the number of CPUs in use by any account or user.  The largenode partition has minimum limits- to use nodes in the largenode partition you'll need to request a minimum amount of memory and number of CPUs.
+
+### Priority
+
+Priority (the "priority score") is used to order pending jobs in the queue with
+jobs having a higher score run before those with a lower score.  The priority
+calculation is based primarily on the historical usage of cluster resources by
+an account- accounts with high utilization (i.e. lots of jobs and lots of CPUs)
+have lower priority scores than those accounts with lower usage.
+
+Time queued does factor in to the priority score but is a relatively minor
+component of the priority score
 
 ## Submitting Jobs
 
