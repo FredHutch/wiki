@@ -58,7 +58,7 @@ footer:
   links:
     - label: "See our GitHub Repo"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/FredHutch/coop"
+      url: "https://github.com/FredHutch/wiki"
     - label: "Join the Conversation on Slack"
       icon: "fab fa-fw fa-slack"
       url: "https://fhbig.slack.com/"
