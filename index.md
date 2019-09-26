@@ -14,13 +14,16 @@ feature_row:
   - title: "Scientific Computing"
     excerpt: "This domain houses researcher-oriented documentation for high performance computing and data management tools supported by Fred Hutch Center IT as provided by the Scientific Computing group (SciComp).  Topics include get started guides for the various computing and software tools supported by IT, guidance for data infrastructure best practices, and advanced computing worked examples and guides on a variety of topics. "
     url: /scicomputing/comp_index/
-  - title: "How to Contribute"
-    excerpt: "This project relies upon the Fred Hutch research community itself to improve, review, expand and evolve over time. The content spans a wide range of research realms and thus we welcome contributions from a similarly wide range of researchers and staff.  To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can contribute to.  Find more information on how to contribute here."      
-    url: https://github.com/FredHutch/wiki/blob/master/README.md   
-feature_row2:
-  - title: "Wiki Writer-Editor Program"
+  - title: "Wiki Editor Program"
     excerpt: "The Writer-Editor program is intended to engage current Fred Hutch based postdocs, staff scientists, and research specialists as writer-editor contributors in an ongoing manner in order to ensure that the resource continues to evolve and grow. To learn more about the program, contact Amy Paguirigan at `apaguiri`, or see more information here."
     url: /outreach/
+feature_row2:
+  - title: "Overview of Contributing"
+    excerpt: "This project relies upon the Fred Hutch research community itself to improve, review, expand and evolve over time. The content spans a wide range of research realms and thus we welcome contributions from a similarly wide range of researchers and staff.  To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can contribute to.  Find more information on how to contribute here."      
+    url: https://github.com/FredHutch/wiki/blob/master/README.md
+  - title: "Add your Content!"
+    excerpt: "For providers of content from Fred Hutch staff, learn how to create pages and add your content here."
+    url: /contentproviders/
   - title: "Our Contributors"
     excerpt: "The content of this Wiki is generated through the work of researcher and staff content providers, novice and expert reviews, and valuable editing input. Find out more about who has made this site what it is and what types of contributions have been made to date here."
     url: /contributors/
