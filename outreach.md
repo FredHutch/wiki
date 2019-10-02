@@ -43,6 +43,6 @@ To apply, these brief application materials need to be combined into a single pd
 ### Wiki Contributors
 To get involved there are many ways to find us:
 
-- Join the **FHBig** Slack workspace via [this link, and use your fredhutch.org email to join.](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg)  In this Slack workspace we have a #wikicontributors channel where you can chime in with edits, get updates about next meetings, goals and our next steps.  
+- Join the **FHBig** Slack workspace via [this link, and use your fredhutch.org email to join.](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg)  In this Slack workspace we have a #wiki-contributors channel where you can chime in with edits, get updates about next meetings, goals and our next steps.  
 
 - Follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content if you have had your GitHub username linked to the Fred Hutch GitHub organization account. If you have not done this yet, please see more about using GitHub at the Fred Hutch [here](/scicomputing/software_managecode/).
