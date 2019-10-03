@@ -39,7 +39,7 @@ When we refer to an "account" in the context of Slurm, we are referring to the P
 
 ### Limits
 
-A variety of limits are used to ensure equitable access to computing resources,  The primary limit is a maximum on the number of CPUs in use by any account or user.  The largenode partition has minimum limits- to use nodes in the largenode partition you'll need to request a minimum amount of memory and number of CPUs.
+A variety of limits are used to ensure equitable access to computing resources,  The primary limit is a maximum on the number of CPUs in use by any account or user.  The largenode partition has minimum limits- to use nodes in the largenode partition you'll need to request a minimum amount of memory (33GB/21780MB) and number of CPUs (6).
 
 ### Priority
 
@@ -111,6 +111,15 @@ Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file 
 sbatch -c 6 myscript.sh my-output
 ```
 
+The largenode partition has minimum limits on memory and the number of CPUs. To submit a job to the largenode partition you must request at least 6 cores (using the flag `-c ` ) and at least 33GB of memory (using the flag `--mem`). 
+
+Submit a job to the largenode partition (with the flag `-p largenode`) using the minimum required resources; 6 cores (with the flag `-c 6`) and 33GB/21780MB of memory (using the flag `--mem 21780` ):
+
+```
+sbatch -p largenode -c 6 --mem 21780 myscript.sh
+```
+
+
 ### MultiCluster Operation
 
 Most Slurm commands can operate against remote clusters (i.e. `beagle` from `gizmo`).  Typically the only change required is to add the argument `-M <cluster name>`.
@@ -136,7 +145,7 @@ is, requesting significantly more time than you think necessary- is usually the
 better way to go to avoid your job getting terminated should it run over that
 requested time.
 
-If you should need to increase the amount of time for a running job (or jobs), email Scientific Computing.  If a job has not started, you can update this yourself:
+If you should need to increase the amount of time (i.e. increase wall time) for a running job (or jobs), email Scientific Computing.  If a job has not started, you can update this yourself:
 
     scontrol update jobid=<job ID> timelimit=+2-0
 
@@ -204,7 +213,7 @@ rhino[~]: scancel -u edgar
 
 Obtain a Slurm job allocation (a set of nodes), execute a command, and then release the allocation when the command is finished.
 
-#### `hitparade` (Fred Hutch homebrew)
+#### `hitparade`
 
 The `hitparade` command will show a summary of all jobs running and queued on the cluster broken down by user and account.  Note that this isn't a Slurm command, rather something built in-house at Fred Hutch. 
 
