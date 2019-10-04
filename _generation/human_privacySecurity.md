@@ -102,7 +102,7 @@ Common mechanisms for sharing datasets:
 ### Office 365 Email and OneDrive
 The implementation of Office 365 provides the ability to secure email, storage and sharing.  Outlook email can be secured within the Fred Hutch environment and between Fred Hutch and external entities.  To trigger email encryption, type “secure” (without quotes) in the subject line of any email and [additional instructions for securing email are provided here.](https://centernet.fredhutch.org/content/dam/centernet/u/center-it/Ignite2/Fred%20Hutch%20Email%20Encryption%20Instructions%202018-11-20.pdf.) For users of mobile devices, Outlook mobile app (iOS and Android) ca display encrypted email within the app without opening browser.  
 
-More information about using OneDrive to share data can be found on our [Collaborative Data Storage page.](/scicomputing/store_collaboration/)
+More information about using OneDrive to share data can be found on our [Collaborative Data Storage page.](https://sciwiki.fredhutch.org/scicomputing/store_overview/)
 
 
 ### Final Notes
