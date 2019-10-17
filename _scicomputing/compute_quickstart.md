@@ -31,19 +31,19 @@ As a general rule, computational resources are not available outside the Hutch c
 
 ## Core Computational Resources
 
+### Bioinformatic Applications
+
+Scientific Computing maintains hundreds of bioinformatic and development tools for use on the above resources.  These are managed using [environment modules- AKA `lmod`](https://sciwiki.fredhutch.org/scicomputing/compute_environments/#environment-modules)
+
 ### Interactive Shell
 
 The ["rhino" hosts](https://sciwiki.fredhutch.org/compdemos/howtoRhino/#rhino-compute-nodes) are identically configured, shared linux servers that provide shell and bioinformatic application access.
 
-### High-Performance Compute
+### Batch Computing
 
 The on-premise compute cluster is _gizmo_- the clusters _koshu_ and _beagle_ are based in off-site cloud providers.  You can read about these and additional resources [here](https://sciwiki.fredhutch.org/scicomputing/compute_platforms/).
 
-The compute clusters use [Slurm](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/) for workload management. This is the interface for submitting and managing batch jobs to HDC managed cluster.
-
-### Bioinformatic Applications
-
-Scientific Computing maintains hundreds of bioinformatic and development tools for use on the above resources.  These are managed using [environment modules- AKA `lmod`](https://sciwiki.fredhutch.org/scicomputing/compute_environments/#environment-modules)
+The compute clusters use [Slurm](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/) for workload management. This is the interface for submitting and managing batch jobs to these clusters.
 
 ## Additional Help and Support
 
@@ -58,6 +58,21 @@ Scientific Computing maintains hundreds of bioinformatic and development tools f
      The CIT Service Desk is the point of contact for most compute support,
      including email, your workstation, networking questions, and your HutchNet
      ID.  Support is offered via email, phone, and walk-up.
+
+ - Local IT Support
+
+     Hutch divisions have their own IT support that provides support
+     for many IT resources, including your workstation, some account
+     and permissions, as well as assistance navigating the Hutch's IT
+     world:
+
+      - PHS (link to come)
+
+      - HB/BS (link to come)
+
+      - VIDD/SCHARP (link to come)
+
+      - CRD (link to come)
 
  - [The Coop](https://research.fhcrc.org/coop/en.html)
  
