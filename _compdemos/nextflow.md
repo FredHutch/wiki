@@ -1,6 +1,6 @@
 ---
 title: Nextflow - an Emerging Service for Workflow Management
-last_modified_at: 2019-07-30
+last_modified_at: 2019-10-18
 primary_reviewers: sminot
 ---
 
@@ -16,7 +16,7 @@ There is extensive documentation on how to write workflows and run Nextflow on [
 On shared systems (`rhino`/`gizmo`), load a specific module of Nextflow:
 
 ```
-ml nextflow/19.04.1
+ml nextflow
 ```
 
 Loading that module will place a working copy of `nextflow` in your PATH
@@ -77,7 +77,7 @@ Some Nextflow-based tools used for microbiome analysis at Fred Hutch can be foun
 // Run the analysis on AWS Batch
 process.executor = 'awsbatch'
 // Run the analysis on the specified queue in AWS Batch
-process.queue = 'mixed'
+process.queue = 'optimal'
 // Run in the correct AWS region
 aws.region = 'us-west-2'
 
@@ -117,9 +117,10 @@ set -e
 BASE_BUCKET="s3://fh-pi-lastname-f/lab/user_name/project_name"
 
 # Load the module
-ml nextflow/19.07.0
+ml nextflow
 
 nextflow \
+    -c ~/nextflow.config \
     run \
     path-to-workflow.nf \
     --first_parameter ValueForFirstParameter \
