@@ -20,3 +20,17 @@ The Resource Library contains both links to GitHub repositories containing templ
 ## [Announcements](/scicompannounce)
 
 Scientific Computing sends email updates to their list of users about changes to software and hardware. Important announcements are also archived here.
+
+
+
+## Templates and Examples GitHub Repositories
+There are a handful of useful resources emerging alongside this Wiki page that are sources of assistance that might be relevant to your work.  
+
+### `slurm-examples` GitHub Repository
+SciComp is reviewing emerging contributions of example starter scripts that focus on connecting your work to computing resources supported by SciComp.  You can find that repository [here.](https://github.com/FredHutch/slurm-examples)
+
+### `wiki-code-examples` GitHub Repository
+Fredhutch.io is providing and reviewing example code for various data wrangling and analysis purposes.  That emerging resource can be found [here.](https://github.com/FredHutch/wiki-code-examples)
+
+### `wiki-templates` GitHub Repository
+The Fred Hutch `wiki-templates` repository aims to describe the minimum file requirements for several project types. Each project folder serves as a template and guide for following best coding practices and is an evolving resource meant to help people get started.  You can find that repository [here.](https://github.com/FredHutch/wiki-templates)
