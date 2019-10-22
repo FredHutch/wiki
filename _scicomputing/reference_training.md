@@ -22,6 +22,8 @@ The Coop and FHBig also support community groups that meet regularly to discuss 
 
 - **Data visualization group:** Develops visualizations from data released by [TidyTuesday](https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/). All programming languages (and even non-coders!) are welcome. See the #data-viz channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
+- **Nextflow group:** Discusses issues related to the use of Nextflow (and other workflow managers like Cromwell) at Fred Hutch. The group welcomes Nextflow users of all levels of expertise as well as those just learning about the tool. See the #nextflow channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
+
 - **Python coding group:** Discusses methods of programming in Python and troubleshoots code of participants. Python coders of all levels of expertise are welcome. See the #python-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
 - **R coding group:** Discusses R packages, R code and troubleshoots code of participants. R coders of all levels of expertise are welcome. See the #r-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
