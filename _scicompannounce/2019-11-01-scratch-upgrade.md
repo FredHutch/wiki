@@ -14,6 +14,10 @@ after the work is complete- you will see _ReqNodeNotAvail_ as the "reason"
 for the job pending.  See below if you want to allow your job to run during
 this maintenance period.
 
+> NOTE: the cloud-based clusters _beagle_ and _koshu_ are not going to be
+> affected by this maintenance as these are served by a different scratch file
+> system.
+
 As part of this work we are decomissioning per-job network scratch.
 
 Please email Scientific Computing with any questions or assistance.
