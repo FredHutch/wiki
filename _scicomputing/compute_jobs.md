@@ -1,6 +1,6 @@
 ---
 title: Computing Job Management
-last_modified_at: 2019-04-26
+last_modified_at: 2019-10-24
 primary_reviewers: atombaby
 ---
 
@@ -117,14 +117,14 @@ Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file 
 sbatch -c 6 myscript.sh my-output
 ```
 
-#### Use beagle cluster
+#### Use `beagle` cluster
 Submit a batch job (`sbatch`), that will run in one day, six hours (with the flag `-t 1-6`) in the largenode partition (with the flag `-p largenode`) in Beagle (with the flag `-M beagle`).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job "quoth-the-raven" (with the `-J` flag) and list the script to use in the job `myscript.sh`.
 
 ```
 sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
 ```
 
-#### Use largenode partition
+#### Use `largenode` partition
 The largenode partition has minimum limits on memory and the number of CPUs. To submit a job to the largenode partition you must request at least 6 cores (using the flag `-c ` ) and at least 33GB of memory (using the flag `--mem`). 
 
 Submit a job to the largenode partition (with the flag `-p largenode`) using the minimum required resources; 6 cores (with the flag `-c 6`) and 33GB/21780MB of memory (using the flag `--mem 21780` ):
@@ -149,7 +149,9 @@ requested time.
 
 If you should need to increase the amount of time (i.e. increase wall time) for a running job (or jobs), email Scientific Computing.  If a job has not started, you can update this yourself:
 
-    scontrol update jobid=<job ID> timelimit=+2-0
+```
+scontrol update jobid=<job ID> timelimit=+2-0
+```
 
 This command increases the job's timelimit by two days.
 
@@ -157,9 +159,12 @@ This command increases the job's timelimit by two days.
 
 There are any number of reasons why your job may not be running.  When you run `squeue` you will see the job's state as `PD` with a reason code (in the column headed with `NODELIST(REASON)`)  As suggested by the heading, this column contains the reason that the job isn't running.
 
-The three most common reasons are a) there are no idle resources for your job, b) jobs running under your account are already consuming the maximum amount of resources available for accounts, and c) your job does not have a high enough priority to be run.
+The three most common reasons are:
+a) there are no idle resources for your job, 
+b) jobs running under your account are already consuming the maximum amount of resources available for accounts, and 
+c) your job does not have a high enough priority to be run.
 
-If your job won't run because resources aren't available, the reason code will be "Resources".  Jobs in this state have resources reserved for them (a "priority reservation") and should run next.  This reason is only applied to one or two jobs in the queue.  Every other job will have the reason "Priority," which indicates that the job does not have sufficient priority to have resources reserved (reason "c" above).
+If your job won't run because resources aren't available, the reason code will be "Resources".  Jobs in this state have resources reserved for them (a "priority reservation") and should run next when those resources become available.  This reason is only applied to one or two jobs in the queue.  Every other job will have the reason "Priority," which indicates that the job does not have sufficient priority to have resources reserved (reason "c" above).
 
 If the job is held because of a limit (reason "b" above, consuming more than allowed for accounts) you will see a number of different limits, usually including some form of "Max_something_PerAccount" or "Max_something_PerUser":
 
@@ -210,6 +215,11 @@ There are many ways to alter which jobs are shown and how the output is formatte
 ```
 rhino[~]: scancel -u edgar
 ```
+The following command will cancel a single job, with jobID 12345.
+```
+rhino[~]: scancel 12345
+```
+
 
 #### `salloc`
 
