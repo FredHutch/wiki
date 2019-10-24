@@ -97,29 +97,6 @@ and that your job will not exceed the requested memory
 GPUs are available on some nodes- [this page](/scicomputing/compute_gpu/)
 describes the Slurm options required to request GPUs with your job.
 
-#### Examples
-
-Submit a batch job (`sbatch`), that will run in one day, six hours (with the flag `-t 1-6`) in the largenode partition (with the flag `-p largenode`) in Beagle (with the flag `-M beagle`).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job "quoth-the-raven" (with the `-J` flag) and list the script to use in the job `myscript.sh`.
-
-```
-sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
-```
-
-Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file named "my-output":
-
-```
-sbatch -c 6 myscript.sh my-output
-```
-
-The largenode partition has minimum limits on memory and the number of CPUs. To submit a job to the largenode partition you must request at least 6 cores (using the flag `-c ` ) and at least 33GB of memory (using the flag `--mem`). 
-
-Submit a job to the largenode partition (with the flag `-p largenode`) using the minimum required resources; 6 cores (with the flag `-c 6`) and 33GB/21780MB of memory (using the flag `--mem 21780` ):
-
-```
-sbatch -p largenode -c 6 --mem 21780 myscript.sh
-```
-
-
 ### MultiCluster Operation
 
 Most Slurm commands can operate against remote clusters (i.e. `beagle` from `gizmo`).  Typically the only change required is to add the argument `-M <cluster name>`.
@@ -130,6 +107,31 @@ scancel -M beagle 12345
 ```
 
 `hitparade` also supports `-M` and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands `srun` and `salloc` will not work.  If use of those commands is necessary, please contact SciComp.
+
+### Examples
+
+#### Use multiple cores
+Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file named "my-output":
+
+```
+sbatch -c 6 myscript.sh my-output
+```
+
+#### Use beagle cluster
+Submit a batch job (`sbatch`), that will run in one day, six hours (with the flag `-t 1-6`) in the largenode partition (with the flag `-p largenode`) in Beagle (with the flag `-M beagle`).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job "quoth-the-raven" (with the `-J` flag) and list the script to use in the job `myscript.sh`.
+
+```
+sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
+```
+
+#### Use largenode partition
+The largenode partition has minimum limits on memory and the number of CPUs. To submit a job to the largenode partition you must request at least 6 cores (using the flag `-c ` ) and at least 33GB of memory (using the flag `--mem`). 
+
+Submit a job to the largenode partition (with the flag `-p largenode`) using the minimum required resources; 6 cores (with the flag `-c 6`) and 33GB/21780MB of memory (using the flag `--mem 21780` ):
+
+```
+sbatch -p largenode -c 6 --mem 21780 myscript.sh
+```
 
 
 ## Managing Jobs
