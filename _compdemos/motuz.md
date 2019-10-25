@@ -69,7 +69,7 @@ Then, in the right-hand pane, choose the cloud connection that you set up earlie
 ![](/assets/motuz/2019-08-29-11-59-47.png)
 
 If you want to copy to a sub-folder (prefix) 
-of the S3 bucket, navigate there (this example uses a bucket you may not have access to; you will be seeing different files/fodlers
+of the S3 bucket, navigate there (this example uses a bucket you may not have access to; you will be seeing different files/folders
 in your PI's bucket).
 
 ![](/assets/motuz/2019-08-29-12-02-29.png)
