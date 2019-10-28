@@ -1,6 +1,6 @@
 ---
 title: Nextflow - an Emerging Service for Workflow Management
-last_modified_at: 2019-10-18
+last_modified_at: 2019-10-28
 primary_reviewers: sminot
 ---
 
@@ -8,27 +8,25 @@ primary_reviewers: sminot
 
 There is extensive documentation on how to write workflows and run Nextflow on [their documentation pages](https://www.nextflow.io/docs/latest/index.html), but in this page we will focus on the minimum requirements for running Nextflow at Fred Hutch using AWS for the execution.
 
->Note:  The latest release of Nextflow **does not** include support for the full range of parameters needed to run on AWS at Fred Hutch as of May 2019. However, that support has been added to the codebase and is available if you follow these special installation instructions:
-
 ## Getting up and running
 ### `Rhino` / `Gizmo`
 
-On shared systems (`rhino`/`gizmo`), load a specific module of Nextflow:
+On shared systems (`rhino`/`gizmo`), load the Nextflow module:
 
 ```
 ml nextflow
 ```
 
 Loading that module will place a working copy of `nextflow` in your PATH
-which **does** include support for the full range of parameters needed
+which includes support for the full range of parameters needed
 to run on AWS at Fred Hutch.
 
 ### Personal Desktop / Laptop
 
-If, instead, you are on your own desktop/laptop, install the bleeding-edge version of Nextflow as follows:
+If, instead, you are on your own desktop/laptop, install Nextflow as follows:
 
 ```
-curl https://s3-us-west-2.amazonaws.com/fredhutch-scicomp-tools/install-nextflow.sh | bash
+curl -s https://get.nextflow.io | bash
 ```
 
 This installation will leave the `nextflow` script in the current directory 
