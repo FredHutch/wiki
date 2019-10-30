@@ -2,6 +2,8 @@
 title: Scratch File System Migration
 ---
 
+> This work has been postponed for the 8th of November
+
 On the weekend of 1 November we'll be upgrading the scratch file system to new
 hardware and to a new version of the underlying software providing the file
 services (BeegFS).  This will impact access to data in the scratch filesystem,
