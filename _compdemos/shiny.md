@@ -20,7 +20,7 @@ There are currently two approaches available for deploying Shiny apps, either ma
 2. Using the application deployment pipeline developed by Fred Hutch Scientific Computing
     - SciComp’s pipeline has the capability to host applications written in other languages as long as the application itself can be containerized.
     - Integrates with data sources within Hutch campus. For example, the application can be connected to a campus based database system (Postgres, mysql, etc…) without exposing it to the entire internet.
-    - There is a template repository (https://github.com/FredHutch/shiny-app-template) to help users to assemble your own shiny app.
+    - There is a template repository ([https://github.com/FredHutch/shiny-app-template](https://github.com/FredHutch/shiny-app-template)) to help users to assemble their own shiny app.
     - Once the application is deployed, updates/re-deploying is done by committing changes to GitHub, as the pipeline is based on a continuous integration/continuous delivery (CI/CD) feature.
     - Users can pick their own custom site URL in the fredhutch.org domain (example: 'myshinyapp.fredhutch.org').
     - User can specify if their app is only facing campus within the firewall or being exposed to the entire internet. Authorization feature can also be included upon request.
