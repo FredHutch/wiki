@@ -164,7 +164,7 @@ a) there are no idle resources for your job,
 b) jobs running under your account are already consuming the maximum amount of resources available for accounts, and 
 c) your job does not have a high enough priority to be run.
 
-If your job won't run because resources aren't available, the reason code will be "Resources".  Jobs in this state have resources reserved for them (a "priority reservation") and should run next when those resources become available.  This reason is only applied to one or two jobs in the queue.  Every other job will have the reason "Priority," which indicates that the job does not have sufficient priority to have resources reserved (reason "c" above).
+If your job won't run because resources aren't available, the reason code will be "Resources". Jobs in this state have resources reserved for them (a "priority reservation") and should run next when those resources become available. Every other job will have the reason "Priority," which indicates that the job does not have sufficient priority to have resources reserved (reason "c" above).
 
 If the job is held because of a limit (reason "b" above, consuming more than allowed for accounts) you will see a number of different limits, usually including some form of "Max_something_PerAccount" or "Max_something_PerUser":
 
