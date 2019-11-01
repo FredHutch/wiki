@@ -10,4 +10,4 @@ Training/Education Specialist
 
 
 ## Contribution Domain and Type
-Data Science
+Scientific Computing & Writing/Editing
