@@ -70,7 +70,7 @@ RStudio, so you may not need to ask for a lot of
 computing power for your RStudio machine.
 * Once you are on the node you grabbed, choose
   a version of `R` by using the [module load](/scicomputing/compute_environments/#how-to-use-environment-modules) command (`ml` for short). (Example: `ml R/3.6.1-foss-2016b`).
-* Run the `launch_rstudio_server` command. This will spit out a URL that you can paste into your browser.
+* Run the `launch_rstudio_server` command. This will spit out a URL that you can paste into your browser. (This URL only works inside the Hutch network, so you need to be on campus or using VPN.)
 * In your browser, log into RStudio using your HutchNet ID and password.
 * When you are finished using RStudio Server, you can 
 terminate it by typing this command on the node you "grabbed" (the same machine where you launched RStudio Server): `launch_rstudio_server --kill` 
