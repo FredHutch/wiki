@@ -133,9 +133,9 @@ Contributors List (note all markdowns in this folder will be rendered): https://
 ###  Draft Folders with Templates for New Content
 >NOTE:  Any content that will need to be an entirely new page should be stored in the `draft` folder until it is ready for publication, and then an admin will move it to where it needs to go when it is considered finished.  
 
-For new content: https://github.com/FredHutch/wiki/blob/master/draft/contentTemplate.md
+For new content: https://github.com/FredHutch/wiki/blob/master/_drafts/contentTemplate.md
 
-For new contributor entries: https://github.com/FredHutch/wiki/blob/master/draft/contributorTemplate.md
+For new contributor entries: https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md
 
 
 ## Building the site locally
