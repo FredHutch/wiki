@@ -34,7 +34,7 @@ The `gizmo` nodes are available for all Fred Hutch users and as it is a communit
 The campus partition is the default- jobs submitted to this will have shared, non-exclusive, access to assigned nodes.
 
 ### Largenode Partition
-The largenode partition must be specifically requested by adding "--partition=largenode" to your job submission. 
+The largenode partition must be specifically requested by adding `--partition=largenode` to your job submission. 
 
 running jobs     |     5 per account     |          |     
 
@@ -79,7 +79,7 @@ jdoe@rhino:~$ scancel -u jdoe
 
 Tasks are the basic unit of work- a "task" requires cores and memory all on the same node.  A job may have multiple tasks- in this case, a job may be assinged multiple nodes.
 
-Use the "-n" or "--ntasks" option to specify the number of tasks in the job. This example shows a job that requests 6 tasks (which may be assigned up to 6 different nodes).
+Use the "-n" or `--ntasks` option to specify the number of tasks in the job. This example shows a job that requests 6 tasks (which may be assigned up to 6 different nodes).
 
 ```
 sbatch -n 6 bin/job.sh
@@ -91,7 +91,7 @@ Note that your job must handle communication between and startup of multiple tas
 
 Indicates the number of CPUs required for each task.  Defaults to one, so one task (above) would get one CPU.  When this is specified, Slurm will assign each of the tasks CPUs from the same host- so indicating 1 task with 3 CPUs per task will result in three CPUs on the same node allocated to the task.
 
-Use -c/--cpus-per-task to change this.
+Use `-c`/`--cpus-per-task` to change this.
 
 ### Examples:
 
@@ -105,7 +105,7 @@ sbatch -n 6 -c 2 bin/job.sh # <- requests 6 tasks of two cores each (12 total). 
 
 Wall time indicates the length of time you expect your job to run.  If no wall time is specified, a default value (three days) will be used.  After a grace period of 72 hours (during which time you can ask SciComp to increase your wall time) your job will be killed 
 
-To add this information to your job use the argument -t/--time.  Different time formats are supported:
+To add this information to your job use the argument `-t`/`--time`.  Different time formats are supported:
 
 - minutes 
 - minutes:seconds
@@ -123,7 +123,7 @@ sbatch -n 1 -c 4 -t 8:00:00 # 4 cores for 8 hours
 
 All systems have local scratch.  Each node you are assigned will have a temporary directory created in this scratch space- the path to this is available via the "TMPDIR" environment variable in the job.
 
-If you require large volumes of local scratch, use "--tmp" to specify (in megabytes) the volume of disk you think you'll require to make sure you are assigned a node with sufficient space:
+If you require large volumes of local scratch, use `--tmp` to specify (in megabytes) the volume of disk you think you'll require to make sure you are assigned a node with sufficient space:
 
 ```
 sbatch --tmp=300000 # requires node configured with at least 300GB disk
@@ -133,7 +133,7 @@ Note that this only ensures that the node is configured with that amount of disk
 
 ## RAM
 
-If you require a significant amount of RAM (over 1-2GB per core requested), you'll want to specify this to ensure there's enough available.  Similar to requesting local scratch, specify the megabytes required using the argument "--mem"
+If you require a significant amount of RAM (over 1-2GB per core requested), you'll want to specify this to ensure there's enough available.  Similar to requesting local scratch, specify the megabytes required using the argument `--mem`
 
 ```
 sbatch --mem=8096  # Requests 8GB available RAM
@@ -162,7 +162,7 @@ gizmo: cat out.txt
 Hello World
 ```
 
-In this case, one task is requested for one day. As we don't specify the number of CPUs required per task, we are given one CPU for the task.  The other arguments handle where output is saved and how the command is run (the --wrap argument takes the value and "wraps" it in a bash wrapper for execution on the node.
+In this case, one task is requested for one day. As we don't specify the number of CPUs required per task, we are given one CPU for the task.  The other arguments handle where output is saved and how the command is run (the `--wrap` argument takes the value and "wraps" it in a bash wrapper for execution on the node.
 
 ## Specialized Partitions
 
@@ -170,7 +170,7 @@ The term "partition" refers to a logical grouping of resources within the cluste
 
 ### Restart
 
-The "restart" partition is for jobs that can be preempted by other workload, meaning that a job running in this partition can be killed by jobs that are queued in the other partitions.  These jobs are not requeued by default- they are removed from the system, unless you use the --restart flag. In that case they would move to the end of the waiting line and be restarted when there are enough resources.
+The "restart" partition is for jobs that can be preempted by other workload, meaning that a job running in this partition can be killed by jobs that are queued in the other partitions.  These jobs are not requeued by default- they are removed from the system, unless you use the `--restart` flag. In that case they would move to the end of the waiting line and be restarted when there are enough resources.
 
 The advantage to using this partition is that you can use more nodes than in the default partition.  The jobs that have the highest degree of success running in this partition are jobs that use a single core and run quickly- in the scope of hours.
 
