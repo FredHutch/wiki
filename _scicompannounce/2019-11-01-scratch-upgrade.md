@@ -2,9 +2,9 @@
 title: Scratch File System Migration
 ---
 
-> This work has been postponed for the 8th of November
+> This work was previously scheduled for November 1st.
 
-On the weekend of 1 November we'll be upgrading the scratch file system to new
+On the weekend of 8 November we'll be upgrading the scratch file system to new
 hardware and to a new version of the underlying software providing the file
 services (BeegFS).  This will impact access to data in the scratch filesystem,
 specifically paths under `/fh/scratch/delete10`, `/fh/scratch/delete30`, and
@@ -39,7 +39,7 @@ dependent on the number of changes to the file system.
 
 ## Running Your job During the Maintenance
 
-We have placed a reservation from November 1st at 6:00 through the 3rd to
+We have placed a reservation from November 8th at 6:00 through the 11th to
 prevent jobs from running on the cluster.  If your job is being held because of the maintenance, you will see something like:
 
 ```
