@@ -2,7 +2,7 @@
 name: Content Refresh Request
 about: Ask primary reviewers if any existing content needs to be updated
 title: ''
-labels: ''
+labels: 'refresh content'
 assignees: ''
 
 ---
