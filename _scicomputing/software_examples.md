@@ -12,6 +12,8 @@ https://github.com/FredHutch/wiki-code-templates
 
 https://github.com/FredHutch/scharpTemplates
 
+https://github.com/FredHutch/shiny-app-template
+
 ### Templates from other organizations
 
 Cookiecutter https://cookiecutter.readthedocs.io/en/latest/readme.html
@@ -29,3 +31,7 @@ https://github.com/FredHutch/batch_pipeline
 https://github.com/FredHutch/scicomp_flask_examples
 
 https://github.com/FredHutch/community_groups/blob/master/python_coding.md#examples
+
+https://github.com/FredHutch/scrnaseq-workflows
+
+https://github.com/FredHutch/reproducible-workflows
