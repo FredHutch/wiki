@@ -1,6 +1,9 @@
 ---
 name: Technical problem
 about: Notify us of technical and website problems
+title: ''
+labels: ''
+assignees: ''
 
 ---
 
