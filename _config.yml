@@ -93,7 +93,6 @@ plugins:
   - jekyll-gist
   - jemoji
   - jekyll-include-cache
-  - jekyll-last-modified-at
 
 
 # mimic GitHub Pages with --safe
