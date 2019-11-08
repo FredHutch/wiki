@@ -9,14 +9,16 @@ handleSearchQuery = function (query) {
         query: { match_phrase: { content: query } }
     };
 
-    $.ajax({ method: 'POST',
-             url: url,
-             data: JSON.stringify(data),
-             mimeType: "application/json",
-             contentType: 'application/json; charset=utf-8'}).done(function(data) {
+    $.ajax({
+        method: 'POST',
+        url: url,
+        data: JSON.stringify(data),
+        mimeType: "application/json",
+        contentType: 'application/json; charset=utf-8'
+    }).done(function (data) {
         // TODO be less ugly
-                 var issue = "<br><span>Didn't find what you were looking for? File an <a href='https://github.com/FredHutch/wiki/issues/new?template=request-for-content.md'>issue</a>.</span>";
-        var searchResults = $('<div id="searchresults"  style="margin-top: 10px; margin-bottom: 10px; margin-left: 80px; margin-right: 80px;" />').appendTo('body');
+        var issue = "<br><span>Didn't find what you were looking for? File an <a href='https://github.com/FredHutch/wiki/issues/new?template=request-for-content.md'>issue</a>.</span>";
+        var searchResults = $('<div id="searchresults"  style="margin-top: 10px; margin-bottom: 10px; margin-left: 80px; margin-right: 80px;" />').appendTo('#searchresults');
         if (data['hits']['total'] == 0) {
             $("#searchresults").html("No results for '" + query + "'." + issue);
         } else {
@@ -41,7 +43,7 @@ handleSearchQuery = function (query) {
             $("#searchresults").html(html);
         }
 
-    }).fail(function(e) {
+    }).fail(function (e) {
         console.log("in fail");
         console.log(e);
     });
@@ -49,16 +51,18 @@ handleSearchQuery = function (query) {
 }
 
 $(function () {
-    $(".search__toggle").click(function () {
-        $("#searchbox").remove();
-        $("#searchresults").remove();
-        var searchDiv = $('<input type="search" id="searchbox" aria-placeholder="Type search term(s) and press Enter..." class="search-input" tabindex="-1" placeholder="Type search term(s) and press Enter..." style="margin-top: 20px; margin-bottom: 20px; margin-left: 80px; margin-right: 20x; width: 50%;"/>').appendTo('body');
-        $("#searchbox").focus();
-    });
+    // $(".search__toggle").click(function () {
+    //     $("#searchbox").remove();
+    //     $("#searchresults").remove();
+    //     var searchDiv = $('<input type="search" id="searchbox" aria-placeholder="Type search term(s) and press Enter..." class="search-input" tabindex="-1" placeholder="Type search term(s) and press Enter..." style="margin-top: 20px; margin-bottom: 20px; margin-left: 80px; margin-right: 20x; width: 50%;"/>').appendTo('body');
+    //     $("#searchbox").focus();
+    // });
 
     $('body').on('keydown', '#searchbox', function (event) {
         if (event.keyCode == 13) {
-            handleSearchQuery($("#searchbox").val());
+            var searchResultsUrl = window.location.href.replace("/search/", "/searchresults/?query=" + encodeURIComponent($("#searchbox").val()));
+            window.location.href = searchResultsUrl;
+            //handleSearchQuery($("#searchbox").val());
         }
     });
 
