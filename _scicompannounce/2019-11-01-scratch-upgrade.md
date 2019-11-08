@@ -61,9 +61,16 @@ Would set the job's time limit to one day.
 
 ### Use the Reservation.  
 
-If you know you don't use the scratch file system you can configure your job to use the maintenance reservation.  During job submission add `--reservation=scratch_move`.  If your job has already been submitted, update the job with scontrol:
+If you know you don't use the scratch file system you can configure your job to
+use the maintenance reservation.  During job submission add
+`--reservation=scratch_move`.  If your job has already been submitted, update
+the job with scontrol:
 
     scontrol update jobid=<jobid> reservationname=scratch_move
+
+>  NOTE: this reservation wasn't set up correctly so it is necessary to
+>  manually add you to the access list for this reservation.  Email scicomp to
+>  get your account added if you need to use this reservation.
 
 Contact Scientific Computing with any questions or for assistance.
 
