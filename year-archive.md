@@ -1,8 +1,8 @@
 ---
 title: "Posts by Year"
 permalink: /year-archive/
-layout: posts
 classes: wide
+layout: posts
 collection: scicompannounce # collection name
 entries_layout: list # list or grid (default),
 show_excerpts:  true #(default), false

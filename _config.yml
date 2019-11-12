@@ -96,6 +96,7 @@ plugins:
   - jekyll-gist
   - jemoji
   - jekyll-include-cache
+  - jekyll-archives
 
 
 # mimic GitHub Pages with --safe
