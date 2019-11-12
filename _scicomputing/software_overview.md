@@ -5,13 +5,19 @@ primary_reviewers: k8hertweck
 Frequently in scientific research, we must write code in order to perform our desired analysis. Whether we are writing a short script for our own manuscript, or making an app we intend to share with other researchers, incorporating standard programming practices will enhance the readability and reproducibility of our work. Below, we provide an overview of what coding languages are commonly used at the Hutch, different resources for running code, and recommendations for developing research software.  
 
 ## Common Languages
-One of the most commonly asked questions when researchers realize they need to use some form of code in their work is, "Which language should I learn?"  This simple question rarely has a simple answer, and thus we aim to provide both resources for training opportunities as well as basic documentation about what other people commonly use.  Your results may vary and we highly recommend you get started by taking some basic introductory courses on common languages either in person or on the web in order for you to better evaluate your next steps.  
+One of the most commonly asked questions when researchers realize they need to use some form of code in their work is, "Which language should I learn?"  This simple question rarely has a simple answer. There are several questions you can ask that help you figure out what programming language to learn first:
+- What are other people in your immediate work group using? If you'll need to use or adapt code from other people, it makes sense to start with the tool they're using.
+- What tools are most commonly used in your field? You may find assistance answering this question by reviewing recently published literature, or through talking with colleagues (on Twitter, at conferences, etc).
+- What are your career goals? Are the tools you're planning to learn going to be useful only for your current position, or will they be meaningful additions to your resume?
+- What do you personally prefer? Some people simply prefer working in one language over another, because the syntax (rules about the structure of the language) makes more sense to them.
 
 ### Getting Started with Common Languages
 
-If you are new to coding, or are interested in learning about coding languages for research software, the Fred Hutch offers training resources for many of the common languages and tools listed below. For more information on training opportunities, cooperative learning groups, and how to get started, please see the [reference page](/scicomputing/reference_overview/).
+It's important to be deliberate in your choice of first language to learn, because it can be a significant time investment, but it's not committing you to only using that language in the future. Just like learning human languages, learning one language generally makes it easier to learn another language later.  If you are new to coding, or are interested in learning about coding languages for research software, the Fred Hutch offers training resources for many of the common languages and tools listed below. For more information on training opportunities, cooperative learning groups, and how to get started, please see the [reference page](/scicomputing/reference_overview/).
 
 The remainder of the Software Development content will presume a basic skill level in at least one common language, as well as a basic understanding of [GitHub](/scicomputing/software_managecode/) for version control.
+
+For a clear side-by-side comparison of R and Python specifically, [this article](https://medium.com/@data_driven/python-vs-r-for-data-science-and-the-winner-is-3ebb1a968197) provides some general considerations from a data science perspective.
 
 ### [R and RStudio](/scicomputing/software_R/)
 

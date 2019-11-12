@@ -149,10 +149,8 @@ scicomputing:
 
   - title: "Large Scale Computing"
     children:
-      - title: "Overview"
+      - title: "Overview and Quick Start Guide"
         url: /scicomputing/compute_overview/
-      - title: "Quick Start Guide"
-        url: /scicomputing/compute_quickstart/
       - title: "Technologies"
         url: /scicomputing/compute_platforms/
       - title: "Computing Environments and Containers"
@@ -174,8 +172,6 @@ scicomputing:
         url: /scicomputing/reference_overview/
       - title: "Training and Finding Help"
         url: /scicomputing/reference_training/
-      - title: "For Beginniners"
-        url: /scicomputing/reference_beginners/
       - title: "Resource Library"
         url: /compdemos/
       - title: "Announcements"
