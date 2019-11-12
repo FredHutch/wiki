@@ -2,17 +2,6 @@
 title: Scratch File System Migration
 ---
 
-<font size="2">
-  
-            {%- for resource in site.data.last_modified_dates %}
-          {% if resource.url == page.relative_path %}
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> {{resource.dlm}}</p>
-          {% endif %}
-          {%- endfor %}
-  
-</font>
-
-
 > This work was previously scheduled for November 1st.
 
 On the weekend of 8 November we'll be upgrading the scratch file system to new
