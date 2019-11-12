@@ -172,7 +172,7 @@ defaults:
       type: scicompannounce
     values:
       layout: single
-      share: false
+      share: true
       sidebar:
         nav: "scicomputing"
 

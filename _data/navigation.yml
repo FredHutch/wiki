@@ -4,6 +4,8 @@ main:
     url: /generation/gen_index/
   - title: "Scientific Computing"
     url: /scicomputing/comp_index/
+  - title: "About"
+    url: /about/
 
 frontpage:
   - title: "Who We Are"
