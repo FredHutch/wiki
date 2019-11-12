@@ -187,6 +187,16 @@ defaults:
       toc_label: "On This Page"
       share: true
 
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: false
+
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"
