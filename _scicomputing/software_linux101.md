@@ -1,7 +1,6 @@
 ---
 title: Linux, Unix and Bash
-last_modified_at: 2019-04-11
-primary_reviewers: vortexing
+primary_reviewers: atombaby
 ---
 
 ## What is Linux?
@@ -82,17 +81,4 @@ Once you have access to these systems you're ready to start computing.  Of
 course, computation really requires data, so next let's discuss where all the
 interesting data resides on these systems.
 
-This [guide](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html)
-shows the common supported storage options. Additionally, see the [Data Storage](/scicomputing/store_overview/) section in our Wiki for more guidance about storage locations and access.  All, except for the transfer
-drive, are available on SciComp supported systems:
-
-Service | Path
----     | ---
-Fast    | /fh/fast
-Secure  | /fh/secure
-Scratch | /fh/scratch
-Home    | /home/<your username>
-
-### Next Steps
-
-What you do next will depend on the direction your work will take you.  The Scientific Computing [Resource Overview](/scicomputing/compute_platforms/) will have more details about the technologies available for your use.
+See the [Data Storage](/scicomputing/store_overview/) section in our Wiki for more guidance about storage locations and access. 

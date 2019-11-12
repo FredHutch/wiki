@@ -1,7 +1,6 @@
 ---
 title: R and RStudio
-last_modified_at: 2019-04-01
-primary_reviewers: ptvan
+primary_reviewers: ptvan, vortexing
 ---
 R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or [CRAN](https://cran.r-project.org/), or via the FH Center IT's Self Service Tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.  
 
@@ -67,5 +66,3 @@ The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordi
 ## Local resources
 - [Seattle useR group](http://www.meetup.com/Seattle-useR/)
 - [Cascadia RConf](https://cascadiarconf.com/), a local yearly conference
-
->Note: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  

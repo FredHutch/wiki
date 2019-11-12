@@ -1,6 +1,5 @@
 ---
 title: Fred Hutch Software Development Standards
-last_modified_at: 2019-04-28
 primary_reviewers: k8hertweck
 ---
 

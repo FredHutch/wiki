@@ -128,12 +128,20 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/software_overview/
-      - title: "Common Languages"
-        url: /scicomputing/software_languages/
+      - title: "R and RStudio"
+        url: /scicomputing/software_R/
+      - title: "Python"
+        url: /scicomputing/software_python/
+      - title: "Linux, Unix and Shell"
+        url: /scicomputing/software_linux101/
+      - title: "Where to run my code?"
+        url: /scicomputing/software_running/
       - title: "Managing and Sharing Code"
         url: /scicomputing/software_managecode/
       - title: "Software Development Standards"
         url: /scicomputing/software_standards/
+      - title: "Code Examples and Templates"
+        url: /scicomputing/software_examples/
 
   - title: "Large Scale Computing"
     children:

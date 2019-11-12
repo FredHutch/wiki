@@ -68,6 +68,9 @@ footer:
     - label: "Find Training"
       icon: "fas fa-chalkboard-teacher"
       url: "https://www.fredhutch.io/"
+    - label: "About this Project"
+      icon: "fas fa-landmark"
+      url: /about/
 
 
 
