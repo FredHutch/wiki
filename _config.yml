@@ -195,7 +195,9 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      share: false
+      share: true
+      sidebar:
+        nav: "scicomputing"
 
 webrick:
   headers:
