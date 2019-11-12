@@ -1,5 +1,5 @@
 ---
-title: About this Wiki
+title: About this Project
 layout: splash
 permalink: /
 header:
