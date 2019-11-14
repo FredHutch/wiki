@@ -1,11 +1,10 @@
 ---
 title: Quick Start Guide to Fred Hutch Research Computing
-last_modified_at: 2019-08-01
 main_author: Kate Hertweck
 primary_reviewers: vortexing, k8hertweck
 ---
 
-This guide is intended for rapid onboarding of Fred Hutch staff who have previous experience working with computing resources at other academic institutions.  Overview information and links to relevant portions of the Wiki for getting started and basic usage of Fred Hutch resources is the primary focus. We highlight, as well, specific steps new staff or existing staff who have not previously needed to use these resoruces might need to take in order to get set up to use these resources.
+This guide is intended for rapid onboarding of Fred Hutch staff who have previous experience working with computing resources at other academic institutions.  Overview information and links to relevant portions of the Wiki for getting started and basic usage of Fred Hutch resources is the primary focus. We highlight, as well, specific steps new staff or existing staff who have not previously needed to use these resources might need to take in order to get set up to use these resources.
 
 ## Accounts
 
@@ -75,6 +74,6 @@ The compute clusters use [Slurm](https://sciwiki.fredhutch.org/scicomputing/comp
       - CRD (link to come)
 
  - [The Coop](https://research.fhcrc.org/coop/en.html)
- 
+
      Supports data-intensive research and analysis.  The Coop uses community
      and community tool (like Slack) to connect researchers across the Hutch.
