@@ -53,7 +53,7 @@ There are two ways to set up your repository and either is suitable.
 
 ### From a New GitHub Repo
 
-To do a basic set up via the web, go to [GitHub](www.github.com) and create a new repository in the Fred Hutch institution for your app.  Clone your new repository to your local computer. 
+To do a basic set up via the web, go to [GitHub](https://github.com) and create a new repository in the Fred Hutch institution for your app.  Clone your new repository to your local computer. 
 
 In the local folder created, create a folder called `app` and put your Shiny app files (either app.R, or ui.r/server.R) and any other associated data files needed for the app in the `app` directory.  
 
