@@ -3,8 +3,6 @@ title: Linux, Unix and Bash
 primary_reviewers: atombaby
 ---
 
-## What is Linux?
-
 Linux is an operating system that has been developed over the past 27 years as a Unix-like operating system.  From hobbyist/student beginnings it has grown to be a versitile, mature, and fairly robust technology.
 
 However, calling what we use "Linux" today glosses over what are many of the most important tools that make Linux useful: the GNU project. GNU, a recursive acronym for 
@@ -45,40 +43,5 @@ Most Unix-based systems (eg. [Ubuntu](https://www.ubuntu.com)) come with the Bou
 - Slightly more advanced Bash scripting are found [here](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html).
 - [Common Bash pitfalls](http://mywiki.wooledge.org/BashPitfalls) goes into more subtle, advanced usage
 - Overview of [Windows PowerShell](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/powershell) and an example [comparing Command Prompt and PowerShell](https://www.windowscentral.com/how-rename-multiple-files-bulk-windows-10#rename_filename_powershell).
+- [explainshell.com](https://explainshell.com/) is a useful, interactive site, that lets you type in shell commands and then it will explain what each of the different portions of the command is actually doing.  
 
-
-## Linux at the Fred Hutch
-
-With these skills in hand, we will now discuss how to navigate the various
-Linux-based computational resources available to you in the Hutch computing
-environment.
-
-### Using the Network
-These systems all live remotely: either in a server room on campus or possibly
-in a cloud provider's datacenter.  Thus, we need to use the network to connect
-to them.  Most of our systems require that you are connected to the Campus
-network, either via wired network connection at a workstation, the Marconi wifi
-network, or via VPN from off-campus networks.
-
-The next requirement is that you have a tool called "SSH" (for *S*ecure
-*SH*ell).  Mac OSX has one built-in and can be found by going to `Applications`, then select `Utilities`, and you will see the application `Terminal`. Windows users will need to find an add-on.
-[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) is a
-freely available SSH/terminal client that has been the go-to for Windows users for years.
-
-An alternative is using a NoMachine client to start a graphical session.  That
-process is described
-[here](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx).  Within these NoMachine sessions you can start a terminal on the NoMachine server from whence you can start an SSH session.
-
-With those tools, you are now ready to connect to one of the session servers described in our [Technologies page](/scicomputing/compute_platforms/).  Most commonly you will connect to the host `rhino`.
-
-### Setting up your Account
-
-For the most part, your HutchNetID and password are all that are required to access the computational environment here.  If you do have trouble accessing hosts, contact Scientific Computing (`scicomp`).
-
-### Finding Data
-
-Once you have access to these systems you're ready to start computing.  Of
-course, computation really requires data, so next let's discuss where all the
-interesting data resides on these systems.
-
-See the [Data Storage](/scicomputing/store_overview/) section in our Wiki for more guidance about storage locations and access. 
