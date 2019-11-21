@@ -27,7 +27,7 @@ cluster. This document describes how to use Matlab on the `Gizmo` cluster.
 > or the rhino nodes- use these only for development, design, and testing.  Use
 > grabnode to allocate a cluster node for heavy computational processes.
 
-From your Linux session manager, start a terminal.
+From a terminal in a noMachine session:
 
   - `ssh rhino`
   - Type `grabnode` Answer the questions about how many CPUs and Memory you require. When your `grabnode` is successful you will have a Linux command prompt on a gizmo cluster node.
