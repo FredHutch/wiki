@@ -76,6 +76,17 @@ terminate it by typing this command on the node you "grabbed" (the same machine 
 * Alternatively, you can just wait for your `grabnode` allocation (the number of days you specified when grabbing the node) to expire, and RStudio Server will become unavailable after that.
 * If you need RStudio Server again, just repeat these steps.
 
+*Note*: If you are working with RMarkdown documents in RStudio Server,
+you may find that plot labels and other graphics look kind of weird.
+This is because X11 (the X Window System) is not available
+inside RStudio Server. The solution is to make the the `Cairo`
+package is installed, and put the following line at the beginning of your first 
+code chunk. This should cause plots and other graphics to render
+correctly without need for X11.
+
+```r
+knitr::opts_chunk$set(dev="CairoPNG")
+```
 
 
 
