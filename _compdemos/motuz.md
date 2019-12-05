@@ -33,6 +33,8 @@ shared file systems on campus and Amazon S3.
 
 ## Add a new Cloud Connection to Motuz
 
+### Amazon S3 Bucket Connection
+
 Before we can use Motuz to move data, we need to add a Cloud Connection
 which will tell Motuz about our S3 account and bucket.
 
@@ -50,7 +52,22 @@ In the `Basic` section, set `Type` to `Amazon Simple Storage Service (s3)`. Give
 
 In the `Credentials` section, paste your access key ID and secret access key from the credentials you obtained above. You can optionally click `Verify Connection` to make sure the connection works. Then click `Create Cloud Connection`.
 
-## Copying files to S3
+### Swift
+To create a connection to a Swift location, you will need your Fred Hutch ID, your password and the `lastname_f` for the PI whose Swift storage location that you have access to and the following information:
+
+  **Basic**
+  - Connection Name:  Anything you'd like to show up in the lists
+  - Bucket Name: Unnecessary
+  - Auth URL: "htps://tin.fhcrc.org/auth/v2.0"
+  - Tenant: Of the format: "AUTH_Swift_lastname_f" with lastname_f being the last name and first initial of the PI
+  
+  **Credentials**
+  - User:  Your Fred Hutch ID
+  - Password/Key: Your Fred Hutch password
+
+
+
+## Copying Files to Cloud Locations
 
 You can copy a single file or the contents of a directory. 
 
