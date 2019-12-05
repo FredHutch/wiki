@@ -5,18 +5,20 @@ primary_reviewers: k8hertweck
 There are a variety of creators around FRed Hutch and beyond who have provided code examples or templates beyond what is described in our [Resource Library](/compdemos/).  These include resources like template GitHub repositories (learn more about using those [here](/scicomputing/software_managecode/)) you can clone and use directly, to examples of code that users have used to perform tasks on Fred Hutch infrastructure that you can copy and tailor to your own use.  If you know of other resources the community might benefit from that are not linked to here, please file an [issue in our GitHub repo](https://github.com/FredHutch/wiki/issues) with the link and some context about it (what is it? why should people be interested in it?).  Or if you would like to contribute either a [Resource Library](/compdemos/) entry or link your own template/example repo, you can also file an [issue in our GitHub repo](https://github.com/FredHutch/wiki/issues) or [add it yourself](https://github.com/FredHutch/wiki)!!  
 
 ## Fred Hutch Templates
-The following repositories were created by researchers at Fred Hutch to assist in best practices for creating reproducible programming projects. 
+The following repositories were created by researchers at Fred Hutch to assist in best practices for creating reproducible programming projects.
 
-For a data analysis project using Jupyter notebooks, we recommend: https://github.com/FredHutch/python-analysis-template
+Data analysis project using Jupyter notebooks: [Python data analysis template](https://github.com/FredHutch/python-analysis-template).
 
-For developing a Python package, we recommend: https://github.com/FredHutch/python-tool-template
+Developing a Python package: [Python tool development template](https://github.com/FredHutch/python-tool-template).
+
+Creating a web application using Python: [Flask Python template](https://github.com/FredHutch/flask-python-template).
 
 https://github.com/FredHutch/scharpTemplates
 
 https://github.com/FredHutch/shiny-app-template
 
 ## Templates from other organizations
-Similar but from other organizations. 
+Similar but from other organizations.
 
 Cookiecutter https://cookiecutter.readthedocs.io/en/latest/readme.html
 
@@ -24,7 +26,6 @@ Shablona https://github.com/uwescience/shablona
 
 ## Fred Hutch Code Examples
 These repositories contain a variety of Fred Hutch curated example code, chunks, examples and general documentation you might peruse and learn from.  
-
 
 https://github.com/FredHutch/wiki-code-examples
 
