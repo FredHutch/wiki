@@ -26,7 +26,7 @@ possible without compromising the confidentiality of participants.
 ## Fred Hutch Information Classification Standard
 
 Data should be handled according to the [Fred Hutch Information
-Classification Standard](https://teams.fhcrc.org/sites/centerit/governance/PSP/FinalDocs/Fred-Hutch-Information-Classification-and-Handling-Standard%20-%20102018.pdf), which describes security and handling standards
+Classification Standard](https://teams.fhcrc.org/sites/centerit/governance/PSP/FinalDocs/Fred-Hutch-Information-Classification-and-Handling-Standard%20-%20Final%20v2.pdf), which describes security and handling standards
 commensurate with the risk of information mishandling. These standards provide guidelines for managing
 data at Fred Hutch and for sharing information within Fred Hutch and between Fred Hutch and an
 outside party. Genomic data, outside of public reference data, is
