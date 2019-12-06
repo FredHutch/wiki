@@ -131,15 +131,18 @@ grep('project',available_fields('files'),value=TRUE)
 grep('type',available_fields('files'),value=TRUE)
 ```
 
-But based on the above, I will need the prject ID (eg TCGA, TARGET), the sample IDs (UUIDs) from the "associated_entities" feild, all the default fields, and
-analysis types, and workflow types in a dataframe to parse out the project RNA-seq data I will download.
+I will need the project ID (eg TCGA, TARGET), the sample IDs (UUIDs) from the "associated_entities" field. I will also need to parse all the default fields, analysis_types, and workflow_types.
+
+ The `files()` function call produces a list, which contains the specified filters and the fields you will want to download. It is of class `GDCQuery`.
+
+ *HOW DO YOU KNOW WHAT TO FILTER???? HOW DID YOU KNOW THE PROJECT ID AND WORKFLOW TPYE?*
 
 ```
-#Note: Here I need the sample UUID because it will map file ID to TARGET Barcode later, and is not included in the default fields.
-#so I used some selected fields, such as project ID, associated_entities (Sample UUIDs),and workflow type, in addition to  the default.
+desired_fields <-c("cases.project.project_id",default_fields('files'),grep_fields('files', "associated_entities"),  "analysis.analysis_type", "analysis.workflow_type", "analysis.workflow_version")
+length(desired_fields) #54 fields
 
-qfiles <- files(fields=c("cases.project.project_id",default_fields('files'), grep_fields('files', "associated_entities"),
-                         "analysis.analysis_type", "analysis.workflow_type", "analysis.workflow_version")) %>%
+
+qfiles <- files(fields=desired_fields) %>%
   filter(~ type == 'gene_expression' &
            analysis.workflow_type == 'HTSeq - Counts' &
           (cases.project.project_id == "TARGET-AML" |
@@ -150,25 +153,39 @@ qfiles <- files(fields=c("cases.project.project_id",default_fields('files'), gre
              cases.project.project_id == "TARGET-RT"))
 
 
-qfiles %>% count() #473
-# head(qfiles)
+qfiles %>% count()
+str(qfiles)
 ```
 
 #Create ID Map for Manifest, Clinical, and Expression Files
 
-```}
-res.expn <-  qfiles %>%
-  results_all()
+Now, you can query the GDC for the information in the fields in the  `qfiles` object.
+The output of the  `results_all()` function call will be long nested list. Again, you will need to do many print statements to really get a handle on the information you've now downloaded. Be aware you are *not* downloading any data files at this point. The query is for the file identifiers, associated sample identifiers, etc.
 
-length(res.expn)
-names(res.expn)
+The items in the list output from `results_all()` can be a vector, which we will print out, and some nested lists.
+
+```
+res.expn <- results_all(x=qfiles)
+
 # str(res.expn)
-# lapply(res.expn,head)
 ```
 
-The "cases" feilds - if used in `results()` contains much of the clinical data elements that are extracted through `gdc_clinical()` function used below.
+Printing out a few of the list items can help clarify what type of information you've just downloaded in the `res.expn` object.
 
-```}
+You have a vector of file names, a vector of file_ids, and then a nested list of "associated_entities". For example, you can see that the file_id for one is "1f51fa92-c89b-4974-988e-666846e14400". Then the associated_entities named "1f51fa92-c89b-4974-988e-666846e14400" is a dataframe with 1 row and 4 columns. The associated_entities for this particular file_id, "1f51fa92-c89b-4974-988e-666846e14400", contains the "entity_submitter_id" feild, which is the legacy case unique identifier and likely the one you will be most familiar with. It also contains the "case_id" field which is the hash
+
+*CHECK THAT ITS ACTUALLY*  
+
+```
+head(res.expn$file_name)
+head(res.expn$file_id)
+res.expn$associated_entities$`1f51fa92-c89b-4974-988e-666846e14400`
+```
+
+
+The "cases" fields - if used in `results()` contains much of the clinical data elements that are extracted through `gdc_clinical()` function used below.
+
+```
 #there are 2 Sample IDs associated with a single file.
 #Filter these out, since they are suspect.
 idx <- sapply(res.expn$associated_entities , nrow) %>% grep(2, .)
@@ -194,21 +211,21 @@ dim(ID.map) #474
 # write.csv(ID.map, "GCD_TARGET_Data_Manifest_AML_NBL_WT_RT.csv", row.names = FALSE)
 ```
 
-```}
+```
 table(ID.map$project.project_id)
 ```
 
 
 #Create a Download Manifest file
 
-```}
+```
 qfiles <- qfiles %>%
   filter(~ file_id %in% names(res.expn$associated_entities[-idx]) )
 
 qfiles %>% count() #469
 ```
 
-```}
+```
 manifest_df = qfiles %>% manifest()
 head(manifest_df)
 dim(manifest_df) #469
