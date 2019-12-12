@@ -153,3 +153,7 @@ publishDir "${params.output_folder}"
 
 In the script above, then the output will be copied to the folder specified with the input flag
 `--output_folder`.
+
+## FAQ
+
+There are many "gotchas" and common issues with getting started with nextflow, or nuances of using nextflow here at Fred Hutch. Here is a non-comprehensive list of known solutions / best practices to help avoid getting caught up by these common issues:
