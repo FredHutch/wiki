@@ -157,3 +157,11 @@ In the script above, then the output will be copied to the folder specified with
 ## FAQ
 
 There are many "gotchas" and common issues with getting started with nextflow, or nuances of using nextflow here at Fred Hutch. Here is a non-comprehensive list of known solutions / best practices to help avoid getting caught up by these common issues:
+
+### AWS Batch
+**Why isn't my job running / why did my job fail on AWS Batch?**
+* `queue`:
+
+### Input to / output from processes
+**Why can't my process find the input files it needs**
+* incomplete input download: 
