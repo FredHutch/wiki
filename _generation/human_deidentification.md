@@ -20,7 +20,7 @@ datasets are generated. In the setting of genomics, this would include
 considerations for the condition where genomic datasets generated from a human
 specimen may be deposited in a publicly available setting for the purposes of
 data sharing for further research. The most common method is the Safe Harbor
-method, removal of 18 identifiers as listed in [HIPAA regulation (45 CFR 164.514(b)(2).](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html)
+method, removal of 18 identifiers as listed in [HIPAA regulation (45 CFR 164.514(b)(2).](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html) A Fred Hutch guide on HIPAA and Research is on the [HDC Compliance and Security Centernet Page.](https://centernet.fredhutch.org/cn/u/hdc/compliance---governance/_jcr_content/leftParsys/download_307265254/file.res/2019_10%2520PHI%2520and%2520Research%252018%2520HIPAA%2520Identifiers%2520and%2520More.pdf)
 
 Ethnicity, gender, age, marital status, geographical location, and preferred
 language are types of descriptors (indirect identifiers) which when combined can
@@ -35,7 +35,7 @@ challenging to protect participants' privacy, even if research samples are
 de-identified. To ensure confidentiality, not only direct identifiers should be
 removed. Indirect identifiers, such as date of birth, location, marital status,
 preferred language and ethnicity should also be reviewed and removed when
-possible.
+possible. 
 
 Some types of individual-level genomic data can be used to identify an
 individual even without the 18 identifiers. Thus, de-identification of genomics
