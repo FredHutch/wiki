@@ -51,9 +51,42 @@ From Rhino, execute the `grabnode` command and a node will be allocated on Gizmo
 
 
 ### rstudio.fredhutch.org
-Lastly, a Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org) from computers connected to the Hutch network. For more information about using it, please contact `scicomp`.
+Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org) from computers connected to the Hutch network. For more information about using it, please contact `scicomp`.
 
+### Run RStudio Server on an HPC machine
 
+There is a wrapper script that allows you to run RStudio Server (the web-browser-based version of RStudio)
+on the HPC machines (cluster machines whose names start with `gizmo`).
+
+You can run this with any version of `R` that is available on our shared computing systems.
+
+Here are the steps to run this wrapper. 
+
+* Grab a node using the [grabnode](/scicomputing/compute_platforms/#gizmo-and-beagle-cluster) command. Specify how many CPUs and how much memory you want, and
+how many days you want to have control of the node.
+Remember that you can launch `slurm` jobs within
+RStudio, so you may not need to ask for a lot of
+computing power for your RStudio machine.
+* Once you are on the node you grabbed, choose
+  a version of `R` by using the [module load](/scicomputing/compute_environments/#how-to-use-environment-modules) command (`ml` for short). (Example: `ml R/3.6.1-foss-2016b`).
+* Run the `launch_rstudio_server` command. This will spit out a URL that you can paste into your browser. (This URL only works inside the Hutch network, so you need to be on campus or using VPN.)
+* In your browser, log into RStudio using your HutchNet ID and password.
+* When you are finished using RStudio Server, you can 
+terminate it by typing this command on the node you "grabbed" (the same machine where you launched RStudio Server): `launch_rstudio_server --kill` 
+* Alternatively, you can just wait for your `grabnode` allocation (the number of days you specified when grabbing the node) to expire, and RStudio Server will become unavailable after that.
+* If you need RStudio Server again, just repeat these steps.
+
+*Note*: If you are working with RMarkdown documents in RStudio Server,
+you may find that plot labels and other graphics look kind of weird.
+This is because X11 (the X Window System) is not available
+inside RStudio Server. The solution is to make the the `Cairo`
+package is installed, and put the following line at the beginning of your first 
+code chunk. This should cause plots and other graphics to render
+correctly without need for X11.
+
+```r
+knitr::opts_chunk$set(dev="CairoPNG")
+```
 
 
 
