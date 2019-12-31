@@ -32,7 +32,7 @@ Responsibilities for a Wiki Writer-Editor include:
 - An interest in learning more about realms of biomedical research and resources here at Fred Hutch that you may not already be familiar with!
 
 ### Application Materials
-To apply, these brief application materials need to be combined into a single pdf file and emailed to the program managers at the Fred Hutch username `sciwiki`.
+To apply email the following application materials combined as a single pdf file to `sciwiki`:
 - Name, Primary Division affiliation, Current Mentor/Lab(s), Current Position
 - A brief (½ page max) summary of your current research focus and general domain of expertise (what you ALREADY know) along with your current data-oriented learning goals (what you WISH you knew).
 - A sample of your writing - preference is for text intended for as general a scientific audience as possible, such as a recent abstract or other review article, and for text that as closely reflects your writing style as possible (without heavy editing by others)

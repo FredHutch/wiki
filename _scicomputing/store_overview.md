@@ -4,7 +4,7 @@ last_modified_at: 2019-08-22
 primary_reviewers: dirkpetersen
 ---
 
-The Hutch supports a number of options for storing your data, specifically Database storage, File storage, Scratch storage, Object storage and Collaborative storage options.  The storage you use to store your data will depend on the nature of the data and the anticipated use. Here we provide a basic overview of what resources are available to researchers for data storage. For more detailed information on each of these topics summarized here including setup instructions and limitations, please refer to each of the articles in this section of the sidebar.  
+The Hutch supports a number of options for storing your data such as _database_, _file_, _scratch_, _object_ and _collaborative storage_ options. The storage you use to store your data will depend on the nature of the data and your anticipated use. Below is an overview of what data storage resources are available. For more detailed information, including setup instructions and limitations, please see the links and articles in the sidebar.  
 
 ## Data Storage Guidance
 
