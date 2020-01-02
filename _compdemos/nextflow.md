@@ -181,7 +181,12 @@ machine for execution. There are a few potential reasons for this:
 **How do I pick which 'queue' to use in AWS Batch?**
 
 A 'queue' is a concept in AWS Batch which specifies what line a job will go into to wait to 
-be scheduled and executed. There are currently a handful of queues that you can use on AWS
+be scheduled and executed. 
+
+You can specify the queue with `process.queue = 'optimal'` in your `nextflow.config`, or with
+`-process.queue optimal` at runtime (in the `nextflow run ...` command).
+
+There are currently a handful of queues that you can use on AWS
 Batch:
 
   - optimal
