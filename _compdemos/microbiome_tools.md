@@ -1,6 +1,6 @@
 ---
 title: Bioinformatics Tools for Microbiome Analysis
-last_modified_at: 2019-10-02
+last_modified_at: 2020-01-02
 primary_reviewers: sminot
 ---
 
@@ -27,6 +27,25 @@ for more details on running Nextflow at Fred Hutch, as well as
 For any questions on the tools presented here, either in trying to get them running
 on your data, or if you would like access to additional functionality (or would like
 to offer your own utilities), please contact Sam Minot (sminot@fredhutch.org).
+
+## Bacterial Genome Annotation
+
+In order to work with individual microbes, it is almost essential to have a map
+of the genes present in their genome. The computational tool for microbial genome
+annotation which is most compatible with submission to public repositories is the
+PGAP tool developed by NCBI ([link](https://github.com/ncbi/pgap)). 
+
+We have implemented a simple workflow which enables any researcher to run the PGAP
+genome annotation pipeline on their own collection of bacterial genomes.
+
+In order to run this tool, you must assemble some basic metadata describing the
+genome, as well as the genome sequence itself in FASTA format. Please see the
+Microbial Genome Assembly workflow below if you would like to assemble a genome
+from raw sequequence reads.
+
+All of the details on running the PGAP workflow can be found in the repository
+for that workflow: [https://github.com/FredHutch/PGAP-nf](https://github.com/FredHutch/PGAP-nf)
+
 
 ## Ribosomal 16S Amplicon Analysis
 
