@@ -159,8 +159,39 @@ In the script above, then the output will be copied to the folder specified with
 There are many "gotchas" and common issues with getting started with nextflow, or nuances of using nextflow here at Fred Hutch. Here is a non-comprehensive list of known solutions / best practices to help avoid getting caught up by these common issues:
 
 ### AWS Batch
-**Why isn't my job running / why did my job fail on AWS Batch?**
-* `queue`:
+
+**My workflow has started, but have my jobs started running?**
+
+When you start your workflow, it will submit jobs to AWS Batch for execution. Sometimes it can
+be hard to tell if those jobs have even started running, or if they have already been stalled.
+The best way to check is to go to the convenient [Batch Dashboard](https://batch-dashboard.fhcrc.org/)
+which is accessible from inside the Fred Hutch VPN. You can scroll down to the **Jobs** section
+and search for one of your job names in the table. That will tell you if the jobs are stuck in
+RUNNABLE, or if they are already RUNNING.
+
+**Why are my jobs stuck in "RUNNABLE"?**
+
+When a job is "RUNNABLE" in AWS Batch, this means that it is waiting to be scheduled onto a
+machine for execution. There are a few potential reasons for this:
+
+  - The queue is busy with other jobs (check the top of the Batch Dashboard for total numbers of jobs): try using another queue (see below)
+  - Your job is configured with a combination of CPUs and memory which does not fit onto any known machine. This is likely only a problem encountered by workflow *developers*, and you can check [this link](https://aws.amazon.com/ec2/instance-types/) for a list of common instance configurations
+  - If you do not believe that either of these are the case, please contact SciComp
+
+**How do I pick which 'queue' to use in AWS Batch?**
+
+A 'queue' is a concept in AWS Batch which specifies what line a job will go into to wait to 
+be scheduled and executed. There are currently a handful of queues that you can use on AWS
+Batch:
+
+  - optimal
+  - mixed
+  - spot-test
+
+These are essentially the same, except that 'spot-test' uses so-called SPOT instances, which
+come at a lower cost, but run the risk of being pre-empted by more highly paying customers.
+It is generally reasonable to just pick one and use it for everything, switching to another
+queue if your usual queue is full.
 
 ### Input to / output from processes
 **Why can't my process find the input files it needs**
