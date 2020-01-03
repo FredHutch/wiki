@@ -79,6 +79,11 @@ process.queue = 'optimal'
 // Run in the correct AWS region
 aws.region = 'us-west-2'
 
+// Set a place to write temporary files which can be deleted after
+// the workflow is completed. It can be useful to treat this as
+// 'scratch' space which can be automatically deleted after 30 days
+workDir = "s3://fh-pi-lastname-f/scratch-delete-30/nextflow/work/"
+
 // Mount the host folder /docker_scratch to /tmp within the running job
 // Use /tmp for scratch space to provide a larger working directory
 // Replace with the Job Role ARN for your account
@@ -197,6 +202,24 @@ These are essentially the same, except that 'spot-test' uses so-called SPOT inst
 come at a lower cost, but run the risk of being pre-empted by more highly paying customers.
 It is generally reasonable to just pick one and use it for everything, switching to another
 queue if your usual queue is full.
+
+
+### Working directory
+
+**What is the working directory? What should I use?**
+
+When a single task is run with Nextflow, all of the commands needed to run the task, as well
+as the data output by that task, are written to a working directory. It is important to remember
+while you are developing a Nextflow workflow that the working directory is different from the
+output directory which you 'publish' to. In fact, when you add the `publishDir` option to a
+process, it indicates that `nextflow` will ultimately copy files from the working directory
+to the output directory upon successful completion of the workflow.
+
+A good practice is to treat the working directory like scratch space which can be safely 
+deleted once the workflow has been completed successfully. A good practice would be to set
+a common location in an S3 bucket, and to set the working directory in your configuration
+file so that it is used across all workflows. See the documentation above for an example.
+
 
 ### Input to / output from processes
 **Why can't my process find the input files it needs**
