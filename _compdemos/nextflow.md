@@ -294,3 +294,57 @@ setting `NXF_VER` at runtime, e.g.:
 NXF_VER=19.10.0 nextflow run -c ~/nextflow.config repo/workflow --help
 ```
 
+
+### Advanced workflow patterns
+
+**How do I keep track of matching data in two parallel channels?**
+
+One of the first tricky parts of writing Nextflow workflows is the realization that channels
+do not preserve the order of the data which passes through them. An example is the case where
+you have two channels which need to execute something independently for multiple samples and 
+then join together the results (e.g. running FASTQC in one channel and aligning to a reference 
+in another). 
+
+There is an easy fix for this, which is to include a unique sample ID with the file object as
+a `tuple`, and then merge the channels on that key. Here's an example:
+
+```
+// Set up two input channels with the input files to process
+Channel.fromPath("{params.input_folder}/*")
+       .map { fp -> file(fp) }
+       .into { input_ch_1; input_ch_2 }
+
+// One process runs FASTQ, I will omit everything but the input and output blocks
+process fastqc {
+    input:
+    file input_file from input_ch_1
+
+    // Make the output a tuple with the name of the input file as a variable
+    output:
+    tuple val(input_file.name), file("${input_file}.fastqc") into output_ch_1
+}
+
+// Another process runs BWA
+process bwa {
+    input:
+    file input_file from input_ch_2
+
+    // Make the output a tuple with the name of the input file as a variable
+    output:
+    tuple val(input_file.name), file("${input_file}.bam") into output_ch_2
+}
+
+// Now we can set up a process which takes in the pairs of FASTQC output and
+// BAM files which were generated from the same input file
+process combine {
+    input:
+    tuple val(fn), file(fastqc), file(bam) from output_ch_1.join(output_ch_2)
+}
+```
+
+In the example above, `output_ch_1.join(output_ch_2)` will yield tuples with
+the input file name, the FASTQC output file, and the BAM file for every set
+of outputs which share the unique common input file name. This ensures that
+everything is nicely synchronized between processes without having to wait
+around for `fastqc` and `bwa` to process all of the samples before starting
+to `combine` the ones that are already finished.
