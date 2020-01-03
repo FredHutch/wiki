@@ -233,6 +233,10 @@ step. But don't worry! You can just re-run the exact same workflow with the `-re
 and the whole workflow will re-run (fetching from the cached output for every step in the
 workflow) copying over all of the final results to the output directory. 
 
+
 ### Input to / output from processes
-**Why can't my process find the input files it needs**
-* incomplete input download: 
+**Why can't my process find the input files it needs?**
+
+  - incomplete input download: Sometimes a task will fail to completely download an input file. Try running it again and see if it works. This will only be a consistent error if your process has thousands of inputs
+  - input defined as variable: Sometimes you write a workflow expecting to be passing a file as an input, but if you don't use the `path()` or (older) `file()` on the file path then the file path will get passed in as a string. You can tell this is happening if `${input_file}` does not exist as a file, but you can still `echo ${input_file}` and it prints the file name
+
