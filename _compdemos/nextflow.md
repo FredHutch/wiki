@@ -221,6 +221,18 @@ a common location in an S3 bucket, and to set the working directory in your conf
 file so that it is used across all workflows. See the documentation above for an example.
 
 
+### Publishing output data
+
+**My workflow ran successfully, why don't I see anything in the output folder?**
+
+tl;dr: Just run it again (and make sure to use the `-resume` flag).
+
+The final step of a nextflow workflow is to copy the working copies of each final output file
+to the specified output directory. For some reason this will sometimes just fail on the copy
+step. But don't worry! You can just re-run the exact same workflow with the `-resume` flag,
+and the whole workflow will re-run (fetching from the cached output for every step in the
+workflow) copying over all of the final results to the output directory. 
+
 ### Input to / output from processes
 **Why can't my process find the input files it needs**
 * incomplete input download: 
