@@ -240,3 +240,42 @@ workflow) copying over all of the final results to the output directory.
   - incomplete input download: Sometimes a task will fail to completely download an input file. Try running it again and see if it works. This will only be a consistent error if your process has thousands of inputs
   - input defined as variable: Sometimes you write a workflow expecting to be passing a file as an input, but if you don't use the `path()` or (older) `file()` on the file path then the file path will get passed in as a string. You can tell this is happening if `${input_file}` does not exist as a file, but you can still `echo ${input_file}` and it prints the file name
 
+
+### Resource allocation
+
+For a bioinformatics workflow to run on AWS Batch, you generally have to define how much CPU
+and RAM each job needs. One convenient way to do this is by adding all of the resource definitions
+to the `nextflow.config` file associated with the workflow (in the workflow's repository) with 
+either the `withLabel` or `withName` selectors. 
+
+The reason you would take this approach is that it makes it easier for the user to just copy
+the `nextflow.config` file and modify anything that they need (pointing to that new config
+file with the `-c` flag at execution time), without having to modify `main.nf` directly. 
+
+With the label-based approach, every process in `main.nf` has a label (e.g. `label 'io_limited'`)
+at the top of the `process` block. Then, in the `nextflow.config` file you have a section like:
+
+```
+process {
+    withLabel: 'io_limited' {
+        cpus = 2
+        memory = 8.GB
+    }
+}
+```
+The nice thing about this is that you can have many different processes which all have the
+same set of resources.
+
+If you only have a handful of processes in your workflow, it may be easier to use `withName`,
+where you don't need the `label` in the workflow, and instead add something to your config like:
+
+```
+process {
+    withName: 'trimmomatic' {
+        cpus = 2
+        memory = 8.GB
+    }
+}
+```
+
+Which will directly set the resources for the `trimmomatic` process.
