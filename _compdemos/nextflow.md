@@ -243,6 +243,8 @@ workflow) copying over all of the final results to the output directory.
 
 ### Resource allocation
 
+**How do I make sure that my processes have enough CPU and memory?**
+
 For a bioinformatics workflow to run on AWS Batch, you generally have to define how much CPU
 and RAM each job needs. One convenient way to do this is by adding all of the resource definitions
 to the `nextflow.config` file associated with the workflow (in the workflow's repository) with 
@@ -279,3 +281,16 @@ process {
 ```
 
 Which will directly set the resources for the `trimmomatic` process.
+
+### Random Errors
+
+**Why am I getting an odd error around this `tuple` thing?**
+
+The `tuple` was added to replace `set` in version 19.10.0. If you are getting an error, it's
+possible that you're running an older version of Nextflow. Try using a newer version by
+setting `NXF_VER` at runtime, e.g.:
+
+```
+NXF_VER=19.10.0 nextflow run -c ~/nextflow.config repo/workflow --help
+```
+
