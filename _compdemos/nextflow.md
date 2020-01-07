@@ -211,6 +211,23 @@ There are currently a handful of queues that you can use on AWS Batch:
 These are essentially the same, except that 'spot-test' uses so-called SPOT instances, which come at a lower cost, but run the risk of being pre-empted by more highly paying customers. 
 It is generally reasonable to just pick one and use it for everything, switching to another queue if your usual queue is full.
 
+### Montoring running jobs
+
+**Is there a better way to monitor a running workflow?**
+
+While you *can* just watch the output on the command line to see how your workflow is progressing, another great option is to use a service called Nextflow Tower.
+If you set up Nextflow Tower *before* starting a workflow, then you will be able to log in to [tower.nf](tower.nf) and see how your workflow is progressing. 
+Nextflow Tower is a service set up and maintained by the developers of Nextflow.
+Keep in mind that this service is not hosted by Fred Hutch, and so you have to trust a third-party system to keep your data safe. 
+**It is not advised to user Nextflow Tower with sensitive or private information.**
+That said, only the metadata describing a given task is sent to Tower, not the actual data being analyzed.
+
+To get set up, go to [tower.nf](tower.nf) and follow their instructions. 
+This setup will consist of verifying your email address, and then copying some configuration information into your Nextflow configuration file. 
+
+**Gottcha**: Make sure that you are using Nextflow version 19.10.0 or later.
+
+
 ### Working directory
 
 **What is the working directory? What should I use?**
