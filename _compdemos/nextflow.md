@@ -141,11 +141,18 @@ nextflow \
     -resume
 ```
 
+### Workflow script
 The command above will run the workflow in the file `path-to-workflow.nf`. 
+You can also [run a workflow directly from github](https://www.nextflow.io/docs/latest/sharing.html#running-a-pipeline) without a local copy like `nextflow run http://github.com/foo/bar
+`
+### Params
 Inside that script, the variable `${params.first_parameter}` will be replaced with `ValueForFirstParameter`, `${params.second_parameter}` will be replaced with `ValueForSecondParameter`, etc. 
 Running any workflow with arguments prefixed by `--`, will provide that value as a parameter in that pattern. 
+### Report
 Specifying `-with-report` tells Nextflow to write a summary of the complete workflow execution to a human readable summary in `nextflow_report.html`. 
+### Working directory
 Specifying `-work-dir` tells Nextflow to use `s3://fh-pi-lastname-f/lab/user_name/project_name/work/` to store all temporary data (the inputs and outputs of each individual task). 
+### Resume
 The `-resume` flag tells Nextflow to pick up with the results from any previous run on this workflow, in case there was a failure and you want to try to rerun the whole workflow without repeating any of the steps that succeeded and don't *need* to be run again.
 
 ## Grabnode vs. `Rhino`
@@ -177,7 +184,7 @@ Here is a non-comprehensive list of known solutions / best practices to help avo
 When you start your workflow, it will submit jobs to AWS Batch for execution. 
 Sometimes it can be hard to tell if those jobs have even started running, or if they have already been stalled. 
 The best way to check is to go to the convenient [Batch Dashboard](https://batch-dashboard.fhcrc.org/) which is accessible from inside the Fred Hutch VPN. 
-You can scroll down to the **Jobs** section and search for one of your job names in the table. That will tell you if the jobs are stuck in RUNNABLE, or if they are already RUNNING.
+You can scroll down to the **Jobs** section and search for one of your job names (which should match the nextflow process names) in the table. That will tell you if the jobs are stuck in RUNNABLE, or if they are already RUNNING.
 
 **Why are my jobs stuck in "RUNNABLE"?**
 
@@ -231,7 +238,12 @@ But don't worry! You can just re-run the exact same workflow with the `-resume` 
 **Why can't my process find the input files it needs?**
 
   - incomplete input download: Sometimes a task will fail to completely download an input file. 
-  Try running it again and see if it works. This will only be a consistent error if your process has thousands of inputs
+  Try running it again and see if it works.
+    - This will only be a consistent error if your process has thousands of inputs.
+    - This can also happen if you have an individual file which exceeds the memory limit of your process.
+      - The fix in that case is to add more memory to the process.
+      - On AWS, this can also result from the temp space filling up, which can be fixed by using [`afterScript "rm *"`](https://www.nextflow.io/docs/latest/process.html?highlight=afterscript#afterscript) directive in these processes
+      As noted above, you should only use that `afterScript` approach for workflows which are run on AWS, since it will break things if you’re just running locally.
   - input defined as variable: Sometimes you write a workflow expecting to be passing a file as an input, but if you don't use the `path()` or (older) `file()` on the file path then the file path will get passed in as a string. 
   You can tell this is happening if `${input_file}` does not exist as a file, but you can still `echo ${input_file}` and it prints the file name
 
@@ -269,6 +281,19 @@ process {
 ```
 
 Which will directly set the resources for the `trimmomatic` process.
+
+### Container issues
+
+When specifying a Docker image to use for a process, there are a number of things that you have to do for it to successfully run in that container:
+
+- Before investigating issues with running a process using Docker, be sure to carefully read [the Nextflow docs about how to set up running with Docker](https://www.nextflow.io/docs/latest/docker.html#how-it-works)
+- Make your container public / make sure you have the permissions to access it: some registries, such as [quay.io](https://quay.io/), default to making repositories private and if you try to run a workflow using an image from such a repository, it will give a cryptic message like: `terminated for an unknown reason -- Likely it has been terminated by the external system`
+- Entrypoints: You may get the same error as above "when Batch is unable to execute the process script. A common cause of this problem is that the Docker container image you have specified uses a non standard [entrypoint](https://docs.docker.com/engine/reference/builder/#entrypoint) which does not allow the execution of the Bash launcher script required by Nextflow to run the job." - [Nextflow docs](https://www.nextflow.io/docs/latest/awscloud.html?highlight=entrypoint#troubleshooting)
+
+### Bash scripts in processes
+
+It can be tricky to keep track of which variables in your `script` directive are Nextflow variables and which belong to the bash code (or scripting language you are using) in your `process.script`. 
+One way to deal with this in the case of bash is to [use the `shell` directive](https://www.nextflow.io/docs/latest/process.html#shell) instead.
 
 ### Random Errors
 
