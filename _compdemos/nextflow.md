@@ -208,17 +208,15 @@ queue if your usual queue is full.
 
 **What is the working directory? What should I use?**
 
-When a single task is run with Nextflow, all of the commands needed to run the task, as well
-as the data output by that task, are written to a working directory. It is important to remember
-while you are developing a Nextflow workflow that the working directory is different from the
-output directory which you 'publish' to. In fact, when you add the `publishDir` option to a
-process, it indicates that `nextflow` will ultimately copy files from the working directory
-to the output directory upon successful completion of the workflow.
+When a single task is run with Nextflow, all of the commands needed to run the task, as well as the data output by that task, are written to a working directory. 
+It is important to remember while you are developing a Nextflow workflow that the working directory is different from the output directory which you 'publish' to.
+In fact, when you add the `publishDir` option to a process, it indicates that `nextflow` will ultimately copy files from the working directory to the output directory upon successful completion of the workflow.
 
-A good practice is to treat the working directory like scratch space which can be safely 
-deleted once the workflow has been completed successfully. A good practice would be to set
-a common location in an S3 bucket, and to set the working directory in your configuration
-file so that it is used across all workflows. See the documentation above for an example.
+
+A good practice when running on AWS is to treat the working directory like scratch space which can be safely deleted once the workflow has been completed successfully.
+However, it is important to note that when running nextflow locally (with `executor 'local'`), links will be created from files in the working directory to the `publishDir`.
+This means that if you remove the working directory, you will remove the only copy of your output and it will be gone from `publishDir` as well.
+A good practice when running on AWS would be to set a common location in an S3 bucket, and to set the working directory in your configuration file so that it is used across all workflows. See the documentation above for an example.
 
 
 ### Publishing output data
