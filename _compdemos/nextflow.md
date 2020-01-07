@@ -55,7 +55,10 @@ This ensures that each workflow is run with complete reproducibility, while also
 The operational steps are as follows:
 
   1. When you run a workflow, Nextflow checks to see what all of the processes are that have been run previously, including the Docker container that was used, all parameters, and the input file (MD5 checksum)
-  2. For each process that is run, Nextflow checks to see if that command has been run previously with the exact same set of inputs and parameters. If no such command has been run previously, it goes ahead and runs the command. If the exact same command _has_ been run previously, it will use the outputs from that previous run. If as little as a single byte of the input file has changed, it will err on the side of caution and rerun the command.
+  2. For each process that is run, Nextflow checks to see if that command has been run previously with the exact same set of inputs and parameters. 
+  If no such command has been run previously, it goes ahead and runs the command. 
+  If the exact same command _has_ been run previously, it will use the outputs from that previous run. 
+  If as little as a single byte of the input file has changed, it will err on the side of caution and rerun the command.
 
 Note that the call caching is coordinated from the working directory that you run Nextflow from. 
 If you want to run a workflow using cached calls from a previous run, make sure that you are running Nextflow from the same directory as the previous run.
@@ -182,7 +185,8 @@ When a job is "RUNNABLE" in AWS Batch, this means that it is waiting to be sched
 There are a few potential reasons for this:
 
   - The queue is busy with other jobs (check the top of the Batch Dashboard for total numbers of jobs): try using another queue (see below)
-  - Your job is configured with a combination of CPUs and memory which does not fit onto any known machine. This is likely only a problem encountered by workflow *developers*, and you can check [this link](https://aws.amazon.com/ec2/instance-types/) for a list of common instance configurations
+  - Your job is configured with a combination of CPUs and memory which does not fit onto any known machine. 
+  This is likely only a problem encountered by workflow *developers*, and you can check [this link](https://aws.amazon.com/ec2/instance-types/) for a list of common instance configurations
   - If you do not believe that either of these are the case, please contact SciComp
 
 **How do I pick which 'queue' to use in AWS Batch?**
@@ -226,8 +230,10 @@ But don't worry! You can just re-run the exact same workflow with the `-resume` 
 ### Input to / output from processes
 **Why can't my process find the input files it needs?**
 
-  - incomplete input download: Sometimes a task will fail to completely download an input file. Try running it again and see if it works. This will only be a consistent error if your process has thousands of inputs
-  - input defined as variable: Sometimes you write a workflow expecting to be passing a file as an input, but if you don't use the `path()` or (older) `file()` on the file path then the file path will get passed in as a string. You can tell this is happening if `${input_file}` does not exist as a file, but you can still `echo ${input_file}` and it prints the file name
+  - incomplete input download: Sometimes a task will fail to completely download an input file. 
+  Try running it again and see if it works. This will only be a consistent error if your process has thousands of inputs
+  - input defined as variable: Sometimes you write a workflow expecting to be passing a file as an input, but if you don't use the `path()` or (older) `file()` on the file path then the file path will get passed in as a string. 
+  You can tell this is happening if `${input_file}` does not exist as a file, but you can still `echo ${input_file}` and it prints the file name
 
 ### Resource allocation
 
