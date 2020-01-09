@@ -1,5 +1,5 @@
 # Contributing to SciWiki
-This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the Wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff.  Whether this contribution is as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them, no contribution is too little (or too large).
+This [curated Wiki](https://sciwiki.fredhutch.org/about/) relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the Wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff.  Whether this contribution is as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them, no contribution is too little (or too large). 
 
 # Outline of this document:
 [Content Contribution and Review Process](#content-contribution-and-review-process)
