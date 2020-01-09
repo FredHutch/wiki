@@ -26,7 +26,7 @@ for more details on running Nextflow at Fred Hutch, as well as
 
 For any questions on the tools presented here, either in trying to get them running
 on your data, or if you would like access to additional functionality (or would like
-to offer your own utilities), please contact Sam Minot (sminot@fredhutch.org).
+to offer your own utilities), please contact Sam Minot (`sminot` at fredhutch.org).
 
 ## Bacterial Genome Annotation
 
@@ -52,7 +52,7 @@ on those annotation files [here](https://github.com/ncbi/pgap/wiki/Input-Files).
 Please see the Microbial Genome Assembly workflow below if you would like to assemble 
 a genome from raw sequence reads.
 
-All of the details on running the PGAP workflow can be found in the repository
+All of the details on running the PGAP workflow can be found in the GitHub repository
 for that workflow: [https://github.com/FredHutch/PGAP-nf](https://github.com/FredHutch/PGAP-nf)
 
 
@@ -71,7 +71,7 @@ This workflow uses `dada2` to identify exact sequence varients and ultimately
 performs taxonomic identification using a phylogenetic approach which is very much
 on the cutting edge of the 16S field (using `pplacer` for phylogenetic assignment).
 
-GitHub repository: [jgolob/maliampi/](https://github.com/jgolob/maliampi/)
+See his GitHub repository for more about this at [jgolob/maliampi/](https://github.com/jgolob/maliampi/).
 
 ### Example Run:
 
@@ -110,7 +110,7 @@ have implemented the UniCycler assembler in an easy-to-use workflow. This assemb
 provides the advantage of accommodating both short- and long-reads, performing
 hybrid assembly when both are provided. 
 
-GitHub Repository: [FredHutch/unicycler-nf/](https://github.com/FredHutch/unicycler-nf/)
+This workflow can be found in this GitHub Repository: [FredHutch/unicycler-nf/](https://github.com/FredHutch/unicycler-nf/)
 
 ```
 Usage:
@@ -143,8 +143,8 @@ we wanted to provide an easy point of entry with a workflow that imports a set o
 bacterial genomes into the anvi'o database format, and then launches a graphical viewer
 which allows the user to explore their pan-genome collection. 
 
-The guidance and instructions for running this tool can be found on the
-[FredHutch/nf-anvio-pangenome GitHub repository](https://github.com/FredHutch/nf-anvio-pangenome)
+The guidance and instructions for running this tool can be found on the GitHub repository
+[FredHutch/nf-anvio-pangenome](https://github.com/FredHutch/nf-anvio-pangenome).
 
 
 ## Microbial RNAseq
@@ -160,7 +160,7 @@ in their genomes. Using just those organisms, the pipeline will then measure the
 depth of sequencing across all genes for all organisms across all samples, and provide
 those results to the user in the form of a set of CSV files.
 
-GitHub repository: [FredHutch/microbial-rnaseq](https://github.com/FredHutch/microbial-rnaseq)
+This workflow can be found in this GitHub Repository: [FredHutch/microbial-rnaseq](https://github.com/FredHutch/microbial-rnaseq)
 
 ### Example Run:
 
@@ -194,7 +194,7 @@ tasks to cloud computing services (like AWS).
 This utility takes a set of input files (FASTQ format) and aligns them all against a set
 of viral genomes (specified by NCBI `accession` in a provided CSV file).
 
-GitHub repository: [FredHutch/nf-viral-metagenomics](https://github.com/FredHutch/nf-viral-metagenomics)
+This workflow can be found in this GitHub Repository: [FredHutch/nf-viral-metagenomics](https://github.com/FredHutch/nf-viral-metagenomics)
 
 ### Example Run:
 
