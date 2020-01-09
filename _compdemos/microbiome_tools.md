@@ -35,6 +35,13 @@ of the genes present in their genome. The computational tool for microbial genom
 annotation which is most compatible with submission to public repositories is the
 PGAP tool developed by NCBI ([link](https://github.com/ncbi/pgap)). 
 
+There are many different ways to annotate a single bacterial genome with all of the
+genes it is predicted to contain. PGAP is one such tool which has been produced by
+NCBI, and therefore retains some element of authority. Compared to other tools like
+Prokka, PGAP takes a very long time to run (a couple of hours per genome), but this
+can be mitigated for large batches of samples by processing them all concurrently
+using Nextflow.
+
 We have implemented a simple workflow which enables any researcher to run the PGAP
 genome annotation pipeline on their own collection of bacterial genomes.
 
@@ -124,21 +131,6 @@ Sample Sheet:
   The sample_sheet is a CSV with a header indicating which samples correspond to which files.
   The file must contain the column `name`, and `long_reads`, `short_R1`, `short_R2` as appropriate.
 ```
-
-## Microbial Genome Annotation
-
-There are many different ways to annotate a single bacterial genome with all of the
-genes it is predicted to contain. PGAP is one such tool which has been produced by
-NCBI, and therefore retains some element of authority. Compared to other tools like
-Prokka, PGAP takes a very long time to run (a couple of hours per genome), but this
-can be mitigated for large batches of samples by processing them all concurrently
-using Nextflow.
-
-You can find details on how to run the PGAP Nextflow workflow at [this link](https://github.com/FredHutch/PGAP-nf).
-
-The biggest gottcha for this workflow is that you need to assemble some details describing
-each genome in order to run the workflow. You can find details on those annotation
-files [here](https://github.com/ncbi/pgap/wiki/Input-Files).
 
 
 ## Microbial Pan-Genome Analysis
