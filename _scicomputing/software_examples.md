@@ -23,20 +23,13 @@ Other groups have developed templates for more general use:
 
 ## Fred Hutch Code Examples
 
-These repositories contain a variety of Fred Hutch curated example code, chunks, examples and general documentation you might peruse and learn from.  
+These repositories were created by Fred Hutch researchers and staff, and contain a variety of curated example code with documentation.
 
-https://github.com/FredHutch/wiki-code-examples
-
-https://github.com/FredHutch/slurm-examples
-
-https://github.com/FredHutch/batch_pipeline
-
-https://github.com/FredHutch/scicomp_flask_examples
-
-https://github.com/FredHutch/community_groups/blob/master/python_coding.md#examples
-
-https://github.com/FredHutch/scrnaseq-workflows
-
-https://github.com/FredHutch/reproducible-workflows
-
-[Nextflow examples](https://github.com/FredHutch?utf8=✓&q=nf&type=&language=)
+- [Data Science Example Code](https://github.com/FredHutch/data-science-examples): Example code for a variety of common data science analysis tasks, longer than what appears in the [Resource Library](/compdemos/), but not so long as to warrant their own repositories.
+- [Slurm examples](https://github.com/FredHutch/slurm-examples): Examples of using Slurm (the [job management system](https://sciwiki.fredhutch.org/scicomputing/compute_overview/#job-management) used on our cluster) for life sciences research tasks.
+- [Batch pipeline](https://github.com/FredHutch/batch_pipeline): Example workflows for a multi-step array job on AWS Batch (cloud computing)
+- [Python examples](https://github.com/FredHutch/community_groups/blob/master/python_coding.md#examples): discussed and aggregated by the Python User Group at Fred Hutch.
+- [Nextflow examples](https://github.com/FredHutch?utf8=✓&q=nf&type=&language=): this link shows all repositories containing Nextflow (`nf`) examples in the Fred Hutch GitHub organization. Each repository represents a different kind of analysis (e.g.,)
+- Older repositories involving workflows that are useful for reference:
+  - [Single Cell RNAseq workflows](https://github.com/FredHutch/scrnaseq-workflows): basic outline of different approaches to workflows used in scRNAseq. Includes some perspective on why some approaches may be more effective.
+  - [Reproducible Workflows](https://github.com/FredHutch/reproducible-workflows): examples of various workflows (Cromwell, WDL, AWS), with guidance for use of each.
