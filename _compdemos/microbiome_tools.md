@@ -39,9 +39,11 @@ We have implemented a simple workflow which enables any researcher to run the PG
 genome annotation pipeline on their own collection of bacterial genomes.
 
 In order to run this tool, you must assemble some basic metadata describing the
-genome, as well as the genome sequence itself in FASTA format. Please see the
-Microbial Genome Assembly workflow below if you would like to assemble a genome
-from raw sequequence reads.
+genome, as well as the genome sequence itself in FASTA format. You can find details 
+on those annotation files [here](https://github.com/ncbi/pgap/wiki/Input-Files).
+
+Please see the Microbial Genome Assembly workflow below if you would like to assemble 
+a genome from raw sequence reads.
 
 All of the details on running the PGAP workflow can be found in the repository
 for that workflow: [https://github.com/FredHutch/PGAP-nf](https://github.com/FredHutch/PGAP-nf)
