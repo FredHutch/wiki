@@ -1,4 +1,4 @@
-Would like to contribute? Please see our [CONTRIBUTING GUIDLINES](https://github.com/FredHutch/wiki/tree/master/CONTRIBUTING.md).
+Would like to contribute? Please see our [CONTRIBUTING GUIDLINES](/CONTRIBUTING.md).
 
 Want to learn more about the background and history of the wiki? 
 Please see our [ABOUT PAGE](https://sciwiki.fredhutch.org/about/) on the Fred Hutch Biomedical Data Science Wiki.
