@@ -1,3 +1,8 @@
+Would like to contribute? Please see our [CONTRIBUTING GUIDLINES](https://github.com/FredHutch/wiki/tree/master/CONTRIBUTING.md).
+
+Want to learn more about the background and history of the wiki? 
+Please see our [ABOUT PAGE](https://sciwiki.fredhutch.org/about/) on the Fred Hutch Biomedical Data Science Wiki.
+
 ## Wiki Content Style Guide
 ### Github-Flavored Markdown
 The content of this site is generated using GitHub "flavored" markdown.  A cheat sheet for the code required to create things like headings and table is [here.](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Our page TOC's are generated from these headings, so use ## H2 as your first level, and headings H2, H3 and H4 show up automatically in our TOC's).
