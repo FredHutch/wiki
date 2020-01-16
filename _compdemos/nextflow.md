@@ -83,8 +83,6 @@ Also, you will be provided with the appropriate Job Role ARN when you get set up
 process.executor = 'awsbatch'
 // Run the analysis on the specified queue in AWS Batch
 process.queue = 'optimal'
-// Run in the correct AWS region
-aws.region = 'us-west-2'
 
 // Set a place to write temporary files which can be deleted after
 // the workflow is completed. It can be useful to treat this as
@@ -95,6 +93,7 @@ workDir = "s3://fh-pi-lastname-f/scratch-delete-30/nextflow/work/"
 // Use /tmp for scratch space to provide a larger working directory
 // Replace with the Job Role ARN for your account
 aws {
+    // Run in the correct AWS region
     region = 'us-west-2'
     batch {
         cliPath = '/home/ec2-user/miniconda/bin/aws'
