@@ -15,7 +15,7 @@ The [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) aims to suppo
 1. create an evolving source of documentation that grows and changes along with the particular interests and research tools available to Fred Hutch researchers over time, and
 2. unify content that bridges the divide between how research processes are performed *in general* and how those processes are performed at the Fred Hutch *specifically*.
 
-To fulfill these two purposes we have the Wiki Writer/Editor program which is intended to engage current Fred Hutch based postdocs, staff scientists and research specialists to create and edit content and help the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) achieves those goals. We aim to incorporate information about new and emerging technologies or projects in which Fred Hutch researchers are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research. The Wiki Writer-Editor program engages current staff from all of the Divisions for a three month timeframe to both write and edit content with a stipend provided for said work. 
+To fulfill these two purposes we have the Wiki Writer/Editor program which is intended to engage current Fred Hutch based postdocs, staff scientists and research specialists over a three month timeframe to create and edit content to help the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) achieve those goals. We aim to incorporate information about new and emerging technologies or projects in which Fred Hutch researchers are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research. The Wiki Writer-Editor program engages current staff from all of the Divisions for a three month timeframe to both write and edit content with a stipend provided for said work. 
 
 ### Do you have a desire to:
 
@@ -36,7 +36,7 @@ To fulfill these two purposes we have the Wiki Writer/Editor program which is in
 ### Possible areas of interest and content development for the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) include:
 
 - Editing existing content on the [SciWiki](https://sciwiki.fredhutch.org/) for accuracy, readability, and brevity
-- Nextflow
+- Nextflow({{site.baseurl}}/compdemos/nextflow/)
 - AWS
 - ???
 
