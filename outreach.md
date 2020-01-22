@@ -36,8 +36,9 @@ To fulfill these two purposes we have the Wiki Writer/Editor program which is in
 ### Possible areas of interest and content development for the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) include:
 
 - Editing existing content on the [SciWiki](https://sciwiki.fredhutch.org/) for accuracy, readability, and brevity
-- Nextflow({{site.baseurl}}/compdemos/nextflow/)
-- AWS
+- Tackling some [issues](https://github.com/FredHutch/wiki/issues) on the [SciWiki](https://sciwiki.fredhutch.org/)
+- Adding to Nextflow({{site.baseurl}}/compdemos/nextflow/) content
+- Adding more AWS information
 - ???
 
 ### Requirements:
