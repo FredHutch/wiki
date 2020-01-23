@@ -299,6 +299,29 @@ process {
 
 Which will directly set the resources for the `trimmomatic` process.
 
+### Iterative Resource Allocation
+Jobs within a batch may have different resource requirements. Thus, the user may wish to specify resources (e.g., Memory) based on the typical file size within a batch but worry that a few exceptionally large files may fail due to insufficient memory. 
+
+This scenario can be accommodated with a flexible error handling, using a conditional Nextflow [errorStrategy](https://www.nextflow.io/docs/latest/process.html), where either 'retry' or 'finish' is implemented based on the number of times a given task is attempted up to some maximum number of retries .  That is, it is possible to 'retry' failed jobs with more memory requested on each subsequent attempt. **Make sure to limit the number retries ('maxRetries'), so the job will eventually fail before trying to run on the largest available EC2 instance.**
+
+For example, consider a portion of a Nextflow configuration file shown below. When process1 is initially run, Nextflow requests 2 CPUs and only 4 GB of memory, an allocation the user-determined was sufficient for most of the files in a batch. When an exceptionally large input file causes a job failure due to insufficient allocated memory, the config tells Nextflow to try again. In this case, when the task.attempt is less than or equal to 3 (the specified maximum number of retries), the errorStrategy will 'retry' the task with stepwise larger memory allocations. After one job failure, 8GB (4*2 attempts) will be requested for the second attempt. If that attempt fails, the third attempt with 12GB will be made. Crucially, after three failed attempts, the errorStrategy will be switched from 'retry' to 'finish' (initiating an orderly pipeline shutdown when an error condition is raised, waiting for the completion of other submitted jobs). 
+
+```
+process {
+    withName: 'process1' {
+        cpus = 2
+        maxRetries = 3
+        errorStrategy = {task.attempt <= 3 ? 'retry' : 'finish'}
+        memory = {4.GB * task.attempt}
+    }
+    withName: 'process2' {
+        cpus = 1
+        memory = 2.GB
+        errorStrategy = 'finish'
+    }
+}
+```
+
 ### Container issues
 
 When specifying a Docker image to use for a process, there are a number of things that you have to do for it to successfully run in that container:
