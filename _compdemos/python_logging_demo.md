@@ -73,7 +73,7 @@ logger.info('Hello world!')
 Running this code, you should see something like this:  
 `2020-01-23 14:46:29,928 - new_logger - INFO - Hello world! - line 11`  
 
-Now lets examine the different components of a `Logger` to better understand what's going on.
+Now let's examine the different components of a `Logger` to better understand what's going on.
 
 #### Anatomy of a Logger
 
@@ -85,12 +85,24 @@ parent-child loggers, which can be useful in more complex situations but will no
 hereditary log propagation please see the [Python Logging Cookbook](https://docs.python.org/3/howto/logging-cookbook.html) 
 and / or the [Python Logging Docs](https://docs.python.org/3.8/library/logging.html).    
 
-- **Log levels**
-
-
 ##### Handlers
 
 ##### Formatters
+
+##### Filters
+
+- **Log levels**  
+Both `Logger` and `Handler` instances have an attribute called `.level`, which determines the severity of messages the 
+`Logger` will emit.  Each log level is represented by a decimal number internally, although they can be referenced in a 
+variety of ways.  The following table shows the various built-in log levels (although one can create their own log levels
+as well).  
+| Level | Int Representation | Str Representation |  
+| --- | --- | --- |  
+| DEBUG | 10 | 'DEBUG' |  
+| INFO | 20 | 'INFO' |  
+| WARNING | 30 | 'WARNING' |    
+| ERROR | 40 | 'ERROR' |  
+| CRITICAL | 50 | 'CRITICAL' |  
 
 
 ### Where
