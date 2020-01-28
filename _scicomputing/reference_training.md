@@ -78,4 +78,4 @@ The following sites include content that one or more community member has found 
 - [The Open Source Data Science Masters](http://datasciencemasters.org)
 - [ROSALIND interactive bioinformatics problem set](http://rosalind.info/)
 - [Udacity](https://www.udacity.com) has courses on [Data Science](https://www.udacity.com/courses/school-of-data-science)
-- [Udemy](https://www.udemy.com) has a section onn [Data Science](https://www.udemy.com/courses/development/data-science/)
+- [Udemy](https://www.udemy.com) has a section on [Data Science](https://www.udemy.com/courses/development/data-science/)
