@@ -64,11 +64,13 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 
 ## Resources on the Web
 
+The following sites include content that one or more community member has found useful. Most of them include at least some free content, while others require a paid subscription.
+
 - [Biostar Handbook: A Beginner's Guide to Bioinformatics](https://www.biostarhandbook.com)
 - [CalTech](http://work.caltech.edu/telecourse) Learning from Data
 - [The Carpentries](https://carpentries.org), with lessons from [Data Carpentry](https://datacarpentry.org) and [Software Carpentry](https://software-carpentry.org/lessons/)
 - [Cognitive Class](https://cognitiveclass.ai): Data science and cognitive computing courses
-- [Coursera](https://www.datacamp.com), including courses on [Data Science](https://www.coursera.org/browse/data-science) and [Bioinforamtics](https://www.coursera.org/browse/life-sciences/bioinformatics)
+- [Coursera](https://www.coursera.org), including courses on [Data Science](https://www.coursera.org/browse/data-science) and [Bioinformatics](https://www.coursera.org/browse/life-sciences/bioinformatics)
 - [CodeAcademy](http://www.codecademy.com)
 - [DataCamp](https://www.datacamp.com)
 - [DataQuest](https://www.dataquest.io/home)
@@ -76,3 +78,4 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 - [The Open Source Data Science Masters](http://datasciencemasters.org)
 - [ROSALIND interactive bioinformatics problem set](http://rosalind.info/)
 - [Udacity](https://www.udacity.com) has courses on [Data Science](https://www.udacity.com/courses/school-of-data-science)
+- [Udemy](https://www.udemy.com) has a section on [Data Science](https://www.udemy.com/courses/development/data-science/)
