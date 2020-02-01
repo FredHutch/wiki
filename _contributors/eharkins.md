@@ -10,4 +10,4 @@ Bioinformatics Analyst, Matsen Group
 
 
 ## Contribution Domain and Type
-Scientific Computing - editing and editing
+Scientific Computing - editing and writing
