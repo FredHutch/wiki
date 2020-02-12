@@ -11,6 +11,9 @@ There are some publicly accessible resources available to assist in getting star
   * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
   * [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
 
+## Available Python Modules
+SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python Modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).  If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.  
+
 
 ## Jupyter Notebooks
 
@@ -20,11 +23,7 @@ Jupyter Notebooks are web interfaces to an interpreter shell such as Python. The
 
 Install the software on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
 
-### Jupyter on `Rhino` and `Gizmo`
-#### Current Python Builds on `Rhino`/`Gizmo`
-SciComp maintains a current list of the various builds of Python available on `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  If you do not see a build that meets your needs [here,](https://fredhutch.github.io/easybuild-life-sciences/Python.html) then contact `scicomp` with the specific needs of your project.  
-
-#### `Rhino`
+### Jupyter on `Rhino`
 Just load a Python distribution maintained by SciComp and run Jupyter lab:
 
 ```
@@ -42,13 +41,13 @@ Then connect to the URL, copying the link given by the previous command, which l
     to login with a token:
         http://rhino1:11112/?token=0eee692be6c81c1061db
 ```
-#### `Gizmo`
+### Jupyter on `Gizmo`
 
 From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node.
 
 
 
-## Jupyter on Jupyterhub
+### Jupyter on Jupyterhub
 
 SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.  (Jupyterhub does not have the latest Python packages)
 
