@@ -101,6 +101,10 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/comp_index/
+      - title: "Resource Library"
+        url: /compdemos/
+      - title: "Announcements"
+        url: /scicompannounce/
 
   - title: "Access and Credentials"
     children:
@@ -157,6 +161,8 @@ scicomputing:
         url: /scicomputing/compute_platforms/
       - title: "Computing Environments and Containers"
         url: /scicomputing/compute_environments/
+      - title: "Scientific Software, R and Python Modules"
+        url: /scicomputing/compute_scientificSoftware/
       - title: "Job Management"
         url: /scicomputing/compute_jobs/
       - title: "Parallel Computing"
@@ -165,18 +171,16 @@ scicomputing:
         url: /scicomputing/compute_cloud/
       - title: "Computing with GPU"
         url: /scicomputing/compute_gpu/
-      - title: "Information for Grant Writers"
-        url: /scicomputing/compute_grants/
+
 
   - title: "Reference and Announcements"
     children:
       - title: "Overview"
         url: /scicomputing/reference_overview/
+      - title: "Information for Grant Writers"
+        url: /scicomputing/compute_grants/
       - title: "Training and Finding Help"
         url: /scicomputing/reference_training/
       - title: "For Beginniners"
         url: /scicomputing/reference_beginners/
-      - title: "Resource Library"
-        url: /compdemos/
-      - title: "Announcements"
-        url: /scicompannounce/
+

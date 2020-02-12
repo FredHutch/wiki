@@ -35,6 +35,12 @@ collections:
   drafts:
     output: true
     permalink: /:collection/:path/
+  pythonModules:
+    output: true
+    permalink: /:collection/:path/
+  rModules:
+    output: true
+    permalink: /:collection/:path/
 
 
 atom_feed:
