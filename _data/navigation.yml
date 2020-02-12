@@ -173,7 +173,7 @@ scicomputing:
         url: /scicomputing/compute_gpu/
 
 
-  - title: "Reference and Announcements"
+  - title: "Reference and Training"
     children:
       - title: "Overview"
         url: /scicomputing/reference_overview/
