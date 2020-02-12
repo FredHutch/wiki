@@ -16,10 +16,8 @@ Reasons to use scientific software maintained by SciComp include:
 
 ## Environment Modules
 
-On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.
+On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.  For more information on what modules we have available for use on `rhino`, `gizmo` and `beagle`, see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.  
 
-### EasyBuild Life Sciences
-The full list of available software can be found [on the Easy Build site](http://fredhutch.github.io/easybuild-life-sciences/).
 
 ### How to Use Environment Modules
 As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
