@@ -71,3 +71,4 @@ function to show the library version and `update.packages()` function to update
 out of date packages.
 
 ## R Modules Available
+More to come - autopopulation is happening!  For now, see this duplicate page [here.](https://fredhutch.github.io/easybuild-life-sciences/r/)
