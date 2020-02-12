@@ -17,4 +17,4 @@ toc_label: "On This Page"
 The Fred Hutch python modules have the suffix `-fh1`. The `-fh1` module is specific to the Hutch, and contains libraries that have been requested by Hutch users.
 
 ## Available Python Modules
-More to come - autopopulation is happening!  For now, see this duplicate page [here.](https://fredhutch.github.io/easybuild-life-sciences/python/)
+
