@@ -204,6 +204,24 @@ defaults:
       share: true
       sidebar:
         nav: "scicomputing"
+# _rModules
+  - scope:
+      path: ""
+      type: rModules
+    values:
+      layout: single
+      share: true
+      sidebar:
+        nav: "scicomputing"
+# _pythonModules
+  - scope:
+      path: ""
+      type: pythonModules
+    values:
+      layout: single
+      share: true
+      sidebar:
+        nav: "scicomputing"
 
 webrick:
   headers:
