@@ -30,6 +30,8 @@
   url: searchresults.md
 - dlm: February 12, 2020
   url: pythonModules.md
+- dlm: February 12, 2020
+  url: scientificSoftware-header.md
 - dlm: October 4, 2019
   url: _generation/clsp_clinicalCov.md
 - dlm: April 25, 2019
@@ -145,8 +147,6 @@
 - dlm: November 12, 2019
   url: _scicomputing/software_standards.md
 - dlm: February 12, 2020
-  url: _scicomputing/compute_scientificSoftware-header.md
-- dlm: February 12, 2020
   url: _scicomputing/software_R.md
 - dlm: May 2, 2019
   url: _scicomputing/compute_grants.md
@@ -214,6 +214,8 @@
   url: _contributors/khertwec.md
 - dlm: August 9, 2018
   url: _contributors/apaguiri.md
+- dlm: February 12, 2020
+  url: _pythonModules/2020-02-12-placeholder.md
 - dlm: January 9, 2020
   url: _compdemos/microbiome_tools.md
 - dlm: January 18, 2019
@@ -270,6 +272,8 @@
   url: _drafts/contributorTemplate.md
 - dlm: November 8, 2019
   url: _drafts/contentTemplate.md
+- dlm: February 12, 2020
+  url: _rModules/2020-02-12-placeholder.md
 - dlm: November 12, 2019
   url: _posts/2019-02-21-upgrade-env-modules.md
 - dlm: November 12, 2019
