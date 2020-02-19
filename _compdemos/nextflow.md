@@ -92,6 +92,12 @@ workDir = "s3://fh-pi-lastname-f/scratch-delete-30/nextflow/work/"
 // Mount the host folder /docker_scratch to /tmp within the running job
 // Use /tmp for scratch space to provide a larger working directory
 // Replace with the Job Role ARN for your account
+
+// The use of aws.client.maxConnections = 4 is intended to prevent
+// any errors resulting from too many requests to S3. Some users have
+// noticed that while this may slow the rate of job submission, it
+// can help prevent errors when running workflows with many thousands
+// of tasks.
 aws {
     // Run in the correct AWS region
     region = 'us-west-2'
@@ -99,6 +105,9 @@ aws {
         cliPath = '/home/ec2-user/miniconda/bin/aws'
         jobRole = '<YOUR JOB ROLE ARN HERE>'
         volumes = ['/docker_scratch:/tmp:rw']
+    }
+    client {
+        maxConnections = 4
     }
 }
 ```
