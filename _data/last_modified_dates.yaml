@@ -98,7 +98,7 @@
   url: _scicomputing/compute_gpu.md
 - dlm: November 12, 2019
   url: _scicomputing/software_overview.md
-- dlm: August 2, 2019
+- dlm: February 20, 2020
   url: _scicomputing/compute_overview.md
 - dlm: November 14, 2019
   url: _scicomputing/reference_beginners.md
@@ -108,7 +108,7 @@
   url: _scicomputing/store_overview.md
 - dlm: November 12, 2019
   url: _scicomputing/software_running.md
-- dlm: September 19, 2019
+- dlm: February 20, 2020
   url: _scicomputing/access_methods.md
 - dlm: November 14, 2019
   url: _scicomputing/software_linux101.md
@@ -122,7 +122,7 @@
   url: _scicomputing/comp_index.md
 - dlm: January 28, 2020
   url: _scicomputing/reference_training.md
-- dlm: October 31, 2019
+- dlm: February 20, 2020
   url: _scicomputing/compute_jobs.md
 - dlm: February 12, 2020
   url: _scicomputing/compute_scientificSoftware.md
@@ -238,7 +238,7 @@
   url: _compdemos/Cromwell.md
 - dlm: September 27, 2018
   url: _compdemos/synology.md
-- dlm: November 3, 2019
+- dlm: February 20, 2020
   url: _compdemos/howtoGizmo.md
 - dlm: June 20, 2019
   url: _compdemos/rslurm_example.md
