@@ -24,7 +24,6 @@ As you will learn below, Environment Modules can be referred to in two ways - ge
 
 The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.  
 
-
 #### Interactively
 When you log in to any SciComp managed server, your terminal session has **Lmod** pre-loaded. Commonly used shell commands around Environment Modules include:
 
@@ -91,6 +90,16 @@ module load Python
 The above line will load a different version of the software package over time as the "pointer" to a specific version is changed.
 
 > Note: This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
+
+#### With Workflow Managers
+If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
+- sending the jobs to the compute resources, 
+- deciding what tasks can be done in parallel, 
+- staging data for use and keeping track of inputs and outputs,
+- environment management (via docker containers or environment modules)
+- monitoring jobs and providing you with metadata about them and the workflow itself.   
+
+Two workflow managers in use on the Fred Hutch camps are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.  
 
 
 ## Docker Containers
