@@ -247,6 +247,7 @@ loading Python/3.6.4-foss-2016b-fh2...
 ## External Slurm and HPC Reference and Learning Resources
 For more information and education on how to use HPC resources from external sources see the following sites:
 
+- SchedMD's [Documentation for Version 18.08](https://slurm.schedmd.com/archive/slurm-18.08.3/)
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)
