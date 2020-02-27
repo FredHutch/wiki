@@ -15,22 +15,12 @@ This FAQ-style page includes answers to questions like "How do I get started lea
 
 ## [Resource library](/compdemos/)
 
-The Resource Library contains both links to GitHub repositories containing templates for coding projects and example code, as well as tutorials and demonstrations for accomplishing tasks with Hutch data science resources.
+The Resource Library contains tutorials and demonstrations for accomplishing common computing tasks using Hutch data science resources. Also see [Code Example and Templates](/scicomputing/software_examples/), which focuses on larger-scale code projects.
 
-## [Announcements](/scicompannounce)
+## [Information for Grant Writers](/scicomputing/compute_grants/)
+
+This section includes boilerplate language about resources for research computing that is appropriate for inclusion in grant proposals.
+
+## [Announcements](/scicompannounce/)
 
 Scientific Computing sends email updates to their list of users about changes to software and hardware. Important announcements are also archived here.
-
-
-
-## Templates and Examples GitHub Repositories
-There are a handful of useful resources emerging alongside this Wiki page that are sources of assistance that might be relevant to your work.  
-
-### `slurm-examples` GitHub Repository
-SciComp is reviewing emerging contributions of example starter scripts that focus on connecting your work to computing resources supported by SciComp.  You can find that repository [here.](https://github.com/FredHutch/slurm-examples)
-
-### `wiki-code-examples` GitHub Repository
-Fredhutch.io is providing and reviewing example code for various data wrangling and analysis purposes.  That emerging resource can be found [here.](https://github.com/FredHutch/wiki-code-examples)
-
-### `wiki-templates` GitHub Repository
-The Fred Hutch `wiki-templates` repository aims to describe the minimum file requirements for several project types. Each project folder serves as a template and guide for following best coding practices and is an evolving resource meant to help people get started.  You can find that repository [here.](https://github.com/FredHutch/wiki-templates)
