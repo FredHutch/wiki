@@ -1,0 +1,35 @@
+#Research-related Software Listing
+
+##Project/Workflow
+|Name|Access|Cost|Pros|Cons|Notes|
+|:-|:-|:-|:-|:-|:-|
+|Trello|Cloud. Free/Premium|Free tier<br/>Gold - $45/yr<br/>Business - $9.99/user/mo (w/annual)|Straight-forward task management.|Doesn't allow for editing of comments on cards<br/>Best for smaller-sized projects|
+|Asana|Cloud. Free/Premium|Free tier (up to 15 users)<br/>Premium - $9.99/user/mo (w/annual)<br/>Business - $19.99/user/mo (w/annual)|Simple workflow management.<br/>Automations for workflows|"Feature overload can make it a headache for smaller teams or projects; can cause decision fatigue"<br/>Tasks can only be assigned to one person<br/>No time tracking|
+|Monday|Cloud. Paid (Free trial)|$39/mo - 5 users<br/>$399/mo - 50 users|Simpler, "More Excel-like" interface|Limited time tracking Limited integrations Complex interface|
+|Orchestly|Cloud. Paid (Free trial)|$7/user/mo|"Blueprints" allow flow-diagram creation of repeatable processes  Forms for data capture|
+
+##Pipeline
+|Name|Access|Cost|Pros|Cons|Notes|
+|:-|:-|:-|:-|:-|:-|
+|Nextflow|Free (Open Source)|$0|Powerful, Highly flexible|Nextflow-specific definition language -- more akin to actual programming language (moderate difficulty)|
+|Cromwell|Free (Open Source)|$0|Powerful, Workflows are portable|Minor learning curve on Workflow Definition Language|
+|Globus|Cloud. Provided by Center|$0|Highly approachable, visual interface, sharable workflows|Limited in scope<br/>Installation of new tools takes time
+
+##Storage
+|Name|Access|Cost|Pros|Cons|Notes|
+|:-|:-|:-|:-|:-|:-|
+|OneDrive/Teams/Sharepoint|Cloud. Center-provided|$0|Center-supported<br/>PHI allowed without modification<br/>Collaboration with consortium is simple<br/>Integrated with the rest of O365|		
+|Amazon S3|Cloud|Complicated [see here](https://aws.amazon.com/s3/pricing/)|Each object is individually accessible over API<br/>Not being attached to any individual institution makes intense collaboration with externals easier|Complex|Requires specific security setup to allow safe storage of PHI"	S3 has a fundamentally different approach to storage. Instead of storing "files", S3 stores "objects". Objects are immutable (once created, they cannot be changed or destroyed), and include some inherent metadata. That being said, it's not a complete departure from the typical "file" systems like OneDrive or DropBox|
+|DropBox|Cloud. Freemium|Free basic tier - 2GB<br/>$9.99/mo - 2TB<br/>$16.57/mo - 3TB|Easily approached|	Not PHI compliant.<br/>Center discourages its use.|
+
+##Data Management
+|Name|Access|Cost|Pros|Cons|Notes|
+|:-|:-|:-|:-|:-|:-|
+|LabKey Server|Paid. Cloud or Hosted|Complex|Allows enforcement of data management standards.<br/>Includes pipelines for processing, as well as security.<br/>APIs allow for custom extension of the application|	Complexity is very high, as well as the cost.|
+|OneDrive|Free. Center-provided|$0|Free|No inherent enforcement of standards is possible<br/>Metadata will have to be handled manually.|
+
+##Analysis
+|Name|Access|Cost|Pros|Cons|Notes|
+|:-|:-|:-|:-|:-|:-|
+|R|||||
+|Python|||||
