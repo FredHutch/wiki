@@ -82,7 +82,7 @@ Also, you will be provided with the appropriate Job Role ARN when you get set up
 // Run the analysis on AWS Batch
 process.executor = 'awsbatch'
 // Run the analysis on the specified queue in AWS Batch
-process.queue = 'optimal'
+process.queue = 'cpu-spot-30'
 
 // Set a place to write temporary files which can be deleted after
 // the workflow is completed. It can be useful to treat this as
@@ -209,16 +209,11 @@ There are a few potential reasons for this:
 
 A 'queue' is a concept in AWS Batch which specifies what line a job will go into to wait to be scheduled and executed. 
 
-You can specify the queue with `process.queue = 'optimal'` in your `nextflow.config`, or with `-process.queue optimal` at runtime (in the `nextflow run ...` command).
+You can specify the queue with `process.queue = 'cpu-spot-30'` in your `nextflow.config`, or with `-process.queue cpu-spot-30` at runtime (in the `nextflow run ...` command).
 
-There are currently a handful of queues that you can use on AWS Batch:
+Please refer to [Choosing a Job Queue](https://sciwiki.fredhutch.org/scicomputing/compute_cloud/#choose-a-job-queue) for more guidance about the available queues and the differences between them.
 
-  - optimal
-  - mixed
-  - spot-test
-
-These are essentially the same, except that 'spot-test' uses so-called SPOT instances, which come at a lower cost, but run the risk of being pre-empted by more highly paying customers. 
-It is generally reasonable to just pick one and use it for everything, switching to another queue if your usual queue is full.
+It is generally reasonable to just pick one queue and use it for everything, switching to another queue if your usual queue is full.
 
 ### Montoring running jobs
 
