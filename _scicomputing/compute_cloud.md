@@ -1,7 +1,7 @@
 ---
 title: Cloud Computing at Fred Hutch
-last_modified_at: 2019-04-26
-main_author: Sam Minot
+last_modified_at: 2020-03-03
+main_author: Sam Minot & Dan Tenenbaum
 primary_reviewers: dtenenba
 ---
 
@@ -361,9 +361,9 @@ a queue to submit to. There are several queues to choose from:
 
 #### Understanding this table:
 
-* **SPOT** refers to a [pricing scheme](https://aws.amazon.com/ec2/spot/) in the AWS cloud. SPOT instances (virtual machines) are cheaper than normal (known as "on-demand") instances. When a spot instance is started, a **Bid Percentage** is chosen. If the spot price rises above the chosen percentage of the on-demand price, the spot instance is terminated. This is infrequent, and if your AWS Batch job is set up to automatically retry failed jobs, you will likely not even notice.
+* **SPOT** refers to a [pricing scheme](https://aws.amazon.com/ec2/spot/) in the AWS cloud. SPOT instances (virtual machines) are cheaper than normal (known as "on-demand") instances. When a spot instance is started, a **Bid Percentage** is chosen. If the spot price rises above the chosen percentage of the on-demand price, the spot instance is terminated. This is infrequent, and if your AWS Batch job is set up to automatically retry failed jobs, you will likely not even notice. Practically speaking, a bid of 50 percent should generally be available around the clock, while a bid of 20 percent may only become available on nights and weekends. However, that availability pattern may vary by instance type, and with regional demand.
 * **Maximum CPUs** Each queue is tied to a compute environment which
-  has a maximum number of CPUs defined. No more than this number of CPUs can be in use at any given time. 
+  has a maximum number of CPUs defined. No more than this number of CPUs can be in use at any given time. As an example, the total number of CPUs needed for a set of 10 jobs which each request 16 CPUs is the same as the total number of CPUs needed for a set of 160 jobs each requesting 1 CPU.
 * **Instance Types** *optimal* means that AWS Batch will choose between the C, M, and R [instance type families](https://aws.amazon.com/ec2/instance-types/). *p3.16xlarge* should only be
 used when your AWS Batch job needs access to [GPUs](https://en.wikipedia.org/wiki/Graphics_processing_unit).
 
