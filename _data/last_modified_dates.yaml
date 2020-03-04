@@ -102,7 +102,7 @@
   url: _scicomputing/reference_overview.md
 - dlm: July 24, 2019
   url: _scicomputing/store_objectstore.md
-- dlm: January 28, 2020
+- dlm: March 3, 2020
   url: _scicomputing/reference_training.md
 - dlm: November 12, 2019
   url: _scicomputing/software_running.md
@@ -250,6 +250,8 @@
   url: _contributors/genomics.md
 - dlm: September 10, 2018
   url: _contributors/kmcclosk.md
+- dlm: March 3, 2020
+  url: _contributors/lwolfe.md
 - dlm: June 15, 2018
   url: _contributors/jfdey.md
 - dlm: October 21, 2019
