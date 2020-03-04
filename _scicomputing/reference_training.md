@@ -48,13 +48,13 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 
 - **Data Science/Software Engineers:** Hutch Data Commonwealth (HDC) employs teams of Data Scientists and Software Developers, who are available to answer questions related to general data management and application of common data science tools (like machine learning) to research questions.
 
-- **Fredhutch.io:** [fredhutch.io](http://www.fredhutch.io/) trains researchers in reproducible computational methods. Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
+- **The Coop:** Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
 
 - **REDcap:** [REDCap](http://research.fhcrc.org/cds/en/redcap.html) is a secure web application for building and managing online surveys and databases and is managed by Collaborative Data Services (CDS) at Fred Hutch. Staff are available to answer questions related to REDCap functionality and troubleshooting. You can also discuss REDCap issues with staff and other researchers on the #redcap-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/).
 
 - **SciComp General Consulting:** Scientific Computing (SciComp) is the group in Hutch Data Commonwealth (HDC) that manages basic account access for research computing resources, including data storage and shared computational cluster use. Staff are available to answer questions related to access and usage of Hutch resources for computational research.
 
-- **SciComp New Technologies:** In addition to general consulting (see above), Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.
+- **SciComp Next Gen/HPC Office Hours:** In addition to general consulting (see above), Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.
 
 ## Resources In Seattle
 
