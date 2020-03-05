@@ -31,12 +31,11 @@ The Coop and FHBig also support community groups that meet regularly to discuss 
 
 - **R User Group:** The R User Group meets weekly to discuss programming, data analysis, and troubleshooting in R. Bring your lunch, code, questions, and thoughts! R coders of all levels of expertise are welcome. Notes about this group are located [here](https://github.com/FredHutch/community_groups/blob/master/R_coding.md), and check out the #r-user-comm channel on the [Coop Communities Slack](https://fhbig.slack.com/) for announcements. Note: If you do not have a laptop available to you we still want you to come!! You can email code privately ahead of each event to Amy Paguirigan (apaguiri at fredhutch.org). 
 
-- **Shiny User Group:** The Shiny User Group meets once monthly to discuss this method of using R to create interactive web applications for visualizing data analysis. Notes about this group are located [here](https://github.com/FredHutch/community_groups/blob/master/shiny.md), and check out the #r-user-comm channel on the [Coop Communities Slack](https://fhbig.slack.com/) for announcements and more information.
-
 - **Technology Exchange:** Informal learning forum for employees in technology-focused jobs to share technical skills. This group is most appropriate for individuals who want to discuss the technical details of tools commonly used in positions focused on administration and infrastructure. However, anyone is welcome to attend this forum, and many topics will be relevant to researchers in positions that require technical skills. Subscribe to the [TechExchange mailing list](https://lists.fhcrc.org/mailman/listinfo/techexchange) for more information.
 
 - **Retired Community Groups:** All of our groups were created because of the needs voiced by our community. Sometimes those needs change, and we're happy to respond by refocusing our efforts. The following groups have been retired, but are noted here for reference purposes:
   - ~~Software design group:~~ Discusses issues related to software engineering and interface design and invites speakers on specific topics and participants to share their coding projects. This group is not focused on a specific programming language, but rather on issues common across software projects. Notes from this group can be found [here](https://github.com/FredHutch/community_groups/blob/master/software_dev.md). *Discussions about this topic are now included periodically in the Python User Group*
+  - ~~Shiny User Group:~~ The Shiny User Group meets once monthly to discuss this method of using R to create interactive web applications for visualizing data analysis. Notes about this group are located [here](https://github.com/FredHutch/community_groups/blob/master/shiny.md). *Discussions about this topic are now included periodically in the R User Group*
 
 ### Office Hours
 
@@ -45,8 +44,6 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 - **Bioinformatics (Shared Resources)** offers consultation on a variety of issues related to experimental design and bioinformatic analysis. They are able to answer questions on topics including: experimental design, exploring data visually (e.g., IGV, Loupe Cell Browser), generating figures for manuscripts, and developing customized workflows for unique problems. These office hours are not currently being held on a regular basis; see the [Shared Resources website](http://sharedresources.fhcrc.org/core-facilities/computational-biology) for more information, and email `bioinformatics` to make sure there is time/space available during their scheduled events.
 
 - **Data Ethics/Compliance/Security:** Staff from the Hutch Data Commonwealth (HDC) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
-
-- **Data Science/Software Engineers:** Hutch Data Commonwealth (HDC) employs teams of Data Scientists and Software Developers, who are available to answer questions related to general data management and application of common data science tools (like machine learning) to research questions.
 
 - **The Coop:** Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
 
