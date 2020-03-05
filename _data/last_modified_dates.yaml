@@ -44,7 +44,7 @@
   url: _gendemos/FlowCytometryStartupAndConfiguration.md
 - dlm: June 27, 2019
   url: _gendemos/DataManagementGuidance.md
-- dlm: May 2, 2019
+- dlm: March 3, 2020
   url: _scicomputing/compute_cloud.md
 - dlm: August 1, 2019
   url: _scicomputing/comp_index.md
@@ -142,7 +142,7 @@
   url: _scicompannounce/2018-05-26-pythonupdate.md
 - dlm: February 21, 2019
   url: _scicompannounce/2019-02-21-upgrade-env-modules.md
-- dlm: February 19, 2020
+- dlm: March 1, 2020
   url: _compdemos/nextflow.md
 - dlm: May 1, 2019
   url: _compdemos/how_to_beagle.md
