@@ -41,8 +41,6 @@ The Coop and FHBig also support community groups that meet regularly to discuss 
 
 Several groups on campus host weekly or monthly office hours to provide assistance on data related tasks. Please visit Centernet or the [Google calendar](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) for current scheduling, locations, and contact information.
 
-- **Bioinformatics (Shared Resources)** offers consultation on a variety of issues related to experimental design and bioinformatic analysis. They are able to answer questions on topics including: experimental design, exploring data visually (e.g., IGV, Loupe Cell Browser), generating figures for manuscripts, and developing customized workflows for unique problems. These office hours are not currently being held on a regular basis; see the [Shared Resources website](http://sharedresources.fhcrc.org/core-facilities/computational-biology) for more information, and email `bioinformatics` to make sure there is time/space available during their scheduled events.
-
 - **Data Ethics/Compliance/Security:** Staff from the Hutch Data Commonwealth (HDC) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
 
 - **The Coop:** Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
