@@ -5,7 +5,7 @@ primary_reviewers:
 --
 ## Logging in Python
 
-Great related reading: 
+Recommended related reading: 
 - [Python Logging Cookbook](https://docs.python.org/3/howto/logging-cookbook.html)
 - [Python Logging Docs](https://docs.python.org/3.8/library/logging.html)
 
