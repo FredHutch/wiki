@@ -16,8 +16,10 @@ Python libraries. The `logging` module enables developers to produce structured 
 log messages to a variety of places of output including console, files, TCP/UDP socket, syslog, and SMTP emails.
 
 ### Who
-Application developers, particularly those creating services which might be hosted remotely or called by other users. 
-Very helpful if using any AWS services.
+Application developers, particularly those creating services which might be hosted remotely or called by other users. Long-running
+analysis/batch developers who want regular in-processing status updates saved for later review - in some cases if an analysis
+crashes and the appropriate information has been logged to that point, it may be possible to restart the analysis from the
+crash point.   
  
 ### Why
 But I can just `print` stuff I need to see... why would I bother using a logger?  
@@ -193,7 +195,17 @@ Once you're using structured logging you can start to use CloudWatch Insights to
 pertaining to any of the attributes you're logging. 
 
 Log messages a presented in a pretty nice format on CloudWatch:  
-![cloudwatchlogs](./assets/cwlogex.png)
+![cloudwatchlogs](./assets/cwlogex.png)  
+
+While it's not necessary to use in order to produce log messages to CloudWatch, there is a project out there called
+[WatchTower](https://github.com/kislyuk/watchtower) which can really help consolidate your logs into particular user-story
+focused log streams that can track logs from across mutiple services if they all use `WatchTower` to point to the same log
+group / stream. I've found `WatchTower` helpful for consolidating Lambda logs as by default a new stream is created for 
+every new lambda instance, which can get really confusing.  I have had some issues (which may have more to do with how I'm
+creating the `WatchTower` handlers and my application structure) with some of the functions hitting AWS service limits on 
+API calls like Create/DescribeLogGroups and Create/DescribeLogStreams, which can have have an affect on responsiveness and 
+at worst can crash the application if the exceptions aren't handled properly. This is particularly the case when the service
+is under a high load.
 
 
 Give me a shout at zromer@fredhutch.org if you have any questions, comments, or corrections you think should be made.
