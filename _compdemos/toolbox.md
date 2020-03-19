@@ -1,20 +1,18 @@
 ---
-title: using Toolbox to get Hutch master data 
+title: Using Toolbox to Get Hutch Master Data 
 last_modified_at: 2019-01-13
 main_author: Dirk Petersen
 primary_reviewers: mrg, dirkpetersen
 ---
 
-## What is [toolbox.fhcrc.org](https://toolbox.fhcrc.org/) ?
+Did you ever want to know to which PI or division a user rolls up to or check if someone is Hutch staff or affiliated or get all users in the same department? Then [toolbox.fhcrc.org](https://toolbox.fhcrc.org/) may be for you. Toolbox is a system that provides Hutch [master data](https://en.wikipedia.org/wiki/Master_data) to developers (currently focusing on user centric master data).
+[Toolbox](https://toolbox.fhcrc.org/) can only be accessed from inside the Hutch network or VPN and you may have already used it to get access to credentials for Cloud Computing / Economy File. However Toolbox offers much more. If you develop applications or need any kind of automation that requires information about the almost 5000 Hutch employees and non-employees (e.g affiliates) this is the tool for you. Toolbox is polling the central HR database daily so your scripts will always use current information.
 
-Did you ever want to know to which PI or division a user rolls up to or check if someone is Hutch staff or affiliated or get all users in the same department? Then Toolbox may be for you. Toolbox is a system that provides Hutch [master data](https://en.wikipedia.org/wiki/Master_data) to developers (currently focusing on user centric master data).
-Toolbox can only be accessed from inside the Hutch network or VPN and you may have already used it to get access to credentials for Cloud Computing / Economy File. However Toolbox offers much more. If you develop applications or need any kind of automation that requires information about the almost 5000 Hutch employees and non-employees (e.g affiliates) this is the tool for you. Toolbox is polling the central HR database daily so your scripts will always use current information.
+## Getting data from Toolbox
 
-### getting data from Toolbox
+Toolbox offers its data as [simple json](https://toolbox.fhcrc.org/json/ ) or [csv files](https://toolbox.fhcrc.org/csv/) and you can easily parse them using your favorite coding tool such as Python, R or the Linux shell. You can browse the json files using Chrome or Firefox. (The Microsoft browsers IE and Edge want to download json files instead).
 
-Toolbox offers its data as simple json ( https://toolbox.fhcrc.org/json/ ) or csv files ( https://toolbox.fhcrc.org/csv/ ) and you can easily parse them using your favorite coding tool such as Python, R or the Linux shell. You can browse the json files using Chrome or Firefox. (The Microsoft browsers IE and Edge want to download json files instead).
-
-### what datasets are available ?
+### What datasets are available?
 
 The exact file collection available is in flux but here is an extract:
 
@@ -108,7 +106,7 @@ Most data scientists will use the power of pandas to query csv files. If you thi
     1882  Clinical Research Data Systems       Software Dev Engineer
 ```
 
-#### filtering json files using the `sci` package
+#### Filtering json files using the `sci` package
 
 Querying json files can be a bit unwieldy for more complex queries. The `sci` python package offers a few wrapper and shortcut functions for scientists and programmers. The sci package is already installed on Rhino if you load the latest Python through the `ml` command. Otherwise you can just install the sci package in your home directory using the command `pip3 install --user --upgrade sci`. The `sci` package only supports Python3 and the next examples require a sci package >= 0.1.0)
 
@@ -161,7 +159,7 @@ In another example we would like to send an email notification to users outside 
     print('; '.join(supervisors))
 ```
 
-#### don't forget velocity checks
+#### Don't forget velocity checks
 
 If you are adding and deleting users based on active users in Toolbox you will sooner or later run into the situation that something fails and toolbox  returns a user list that is empty. Now your script may think that all users have left the center and will try to delete all existing users in the system you manage. To prevent this we are building a velocity check. A velocity check is a routine that checks if a certain action makes sense. For example it will be extremely unlikely that 100 users or more will leave the Hutch at any given day so we will just cancel all actions that involve more than 100 users.
 
