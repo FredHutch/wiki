@@ -3,8 +3,6 @@ title: Instructions for Using Koshu (beta)
 last_modified_at: 2018-11-07
 ---
 
-## About Koshu
-
 The cluster _Koshu_ is a cloud-based Slurm cluster based in Google's Cloud Platform.
 
 > _Koshu_ is currently under beta as it is currently not sized for large-scale work and may experience more maintenance time than other clusters or be missing some functionalities.  We're using this to "kick the tires," make sure everything functions before bringing it into production.  Check back frequently for updates or, as always, contact `SciComp` with any questions or to note any problems you experience when using _Koshu_.
