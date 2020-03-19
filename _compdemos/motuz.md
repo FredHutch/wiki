@@ -1,22 +1,15 @@
 ---
-title: Using Motuz to Move Data
+title: Using Motuz to Move Large Data
 last_modified_at: 2019-08-22
 main_author: Dan Tenenbaum
 primary_reviewers: dtenenba
 ---
 
-# Overview
-
 This demo provides specific examples of how to use the new tool, Motuz, to transfer data between Fred Hutch data storage locations.  
 
 ## Accessing Motuz
 
-Motuz is available at 
-
-[https://motuz.fredhutch.org](https://motuz.fredhutch.org)
-
-This link is only accessible from the campus network. If you are off campus you will need
-to use VPN.
+Motuz is available at [https://motuz.fredhutch.org](https://motuz.fredhutch.org).  This link is only accessible from the campus network. If you are off campus you will need to use VPN.
 
 Log in with your HutchNet ID and password.
 
