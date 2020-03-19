@@ -5,6 +5,7 @@ primary_reviewers: vortexing
 ---
 Various groups support computational capacity at the Hutch. Center IT supports general computing tasks, such as email and desktop computer software; further information can be found on the Center IT pages in Centernet. This section of the Wiki represents information relating to research and scientific computing, which generally require additional software, hardware, and skills. If you have questions that aren't answered here, please email `SciComp` or ask a public question on [The Coop's Slack Workspace](https://fhbig.slack.com/messages) in the `question-and-answer` channel. 
 
+We have a collection of detailed, how-to style documents in our [Resource Library](/compdemos/) and our Scientific Computing-related public announcement archives can be found in our [Announcements](/scicompannounce/) section.  
 
 ## [Access and Credentials](/scicomputing/access_overview/)
 This section includes a variety of information about accessing computing resources at the Fred Hutch, including managing credentials for services when required.   
@@ -22,5 +23,5 @@ Researchers at the Hutch use reproducible computational methods to perform resea
 The Hutch supports both local compute clusters as well as cloud computing for researchers. This section describes available technology and how to use these resources.
 
 
-## [Reference and Announcements](/scicomputing/reference_overview/)
-This section includes links to training opportunities, office hours, and community groups for computational support, as well as a resource library of code and tutorials and announcements from Scientific Computing.
+## [Reference and Training](/scicomputing/reference_overview/)
+This section includes links to training opportunities, office hours, and community groups for computational support.
