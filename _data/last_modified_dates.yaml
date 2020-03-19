@@ -34,7 +34,7 @@
   url: search.md
 - dlm: October 10, 2019
   url: _compdemos/ingest-Large-Data.md
-- dlm: December 2, 2019
+- dlm: March 19, 2020
   url: _compdemos/motuz.md
 - dlm: May 31, 2019
   url: _compdemos/Mountain-CyberDuck.md
@@ -56,13 +56,13 @@
   url: _compdemos/Economy-storage.md
 - dlm: January 18, 2019
   url: _compdemos/Singularity.md
-- dlm: November 29, 2018
+- dlm: March 19, 2020
   url: _compdemos/cluster_koshuBeta.md
 - dlm: December 10, 2018
   url: _compdemos/snapshots.md
 - dlm: June 3, 2019
   url: _compdemos/tensorflow-gpu.md
-- dlm: November 21, 2019
+- dlm: March 19, 2020
   url: _compdemos/matlab.md
 - dlm: November 19, 2019
   url: _compdemos/shiny.md
@@ -76,11 +76,11 @@
   url: _compdemos/microbiome_tools.md
 - dlm: February 19, 2020
   url: _compdemos/Cromwell.md
-- dlm: September 27, 2018
+- dlm: March 19, 2020
   url: _compdemos/synology.md
 - dlm: December 6, 2019
   url: _compdemos/Docker.md
-- dlm: January 13, 2019
+- dlm: March 19, 2020
   url: _compdemos/toolbox.md
 - dlm: June 15, 2018
   url: _contributors/sgglick.md
