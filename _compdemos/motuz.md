@@ -17,9 +17,13 @@ At this time, Motuz allows copying of files/objects between the following file s
 
 * Shared file systems on campus (your home directory, `/fh/fast`, `/fh/scratch`)
 * [Amazon S3](https://aws.amazon.com/s3/)
-* [Azure Blob Storage](https://aws.amazon.com/s3/)
+* [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/)
 * [Google Cloud Bucket](https://cloud.google.com/storage/docs/json_api/v1/buckets)
 * [Swift](/compdemos/Economy-storage/) (Economy Local Storage)
+* [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+* [WebDAV](https://en.wikipedia.org/wiki/WebDAV)
+* [Dropbox](https://www.dropbox.com/) (Beta)
+* [Microsoft OneDrive](https://onedrive.live.com/about/auth/) (Beta)
 
 This demo will focus on moving files between 
 shared file systems on campus and Amazon S3.
