@@ -12,42 +12,34 @@ Recommended related reading:
 
 ### What
 Logging in Python is performed through the simple and elegant `logging` module which comes in the standard
-Python libraries. The `logging` module enables developers to produce structured log messages and direct those 
-log messages to a variety of places of output including console, files, TCP/UDP socket, syslog, and SMTP emails.
+Python library for both Python 2 and 3. The `logging` module enables developers to produce structured log messages and 
+direct those log messages to a variety of outputs including console, files, TCP/UDP socket, syslog, and SMTP emails.
 
 ### Who
-Application developers, particularly those creating services which might be hosted remotely or called by other users. Long-running
-analysis/batch developers who want regular in-processing status updates saved for later review - in some cases if an analysis
+- Application developers, particularly those creating services which might be hosted remotely or called by other users. 
+- Long-running analysis/batch developers who want regular in-processing status updates / checkpoints saved for later review; in some cases if an analysis
 crashes and the appropriate information has been logged to that point, it may be possible to restart the analysis from the
-crash point.   
+crash point.  
+- Anyone developing code which might be hosted on a machine separate from their own and who wants to be able to have logs 
+available for any kind of debugging / performance analysis purposes.
  
 ### Why
 But I can just `print` stuff I need to see... why would I bother using a logger?  
-Well, if you are writing applications which
-you expect others to use, might run for long periods of time, or are dependent on external services which could cause errors
+If you are writing applications which you expect others might use, might run for long periods of time, or are dependent on external services which could cause errors
 in your application if they are not working properly, chances are you may not be able to watch all your `print` statements
 fly across the terminal for hours on end.  Or perhaps another user encounters an error while using your service, and replicating 
 the error is simply impossible because you don't know what all the inputs were, whether an external service was down, or possibly
 even what the error was. In these cases you'll want to have logs detailing the use of the application leading up to the crash, hopefully
-capturing what went wrong and giving you insight into how to fix the problem without necessarily having to replicate it. Python loggers 
+capturing what went wrong and enough parameters of the event to give you insight into how to fix the problem without necessarily having to replicate it. Python loggers 
 can be set up to automatically add contextual information such as line number the log message occurred on, timestamps, function / module,
-stack traces, and more, all of which can become vitally important when doing post mortems on a failure.  
+stack traces, and more, all of which can be vitally important when doing post mortems on a failure.  
 
-A particularly helpful aspect of logging statements is the different contextual levels they have, meaning you can filter
-out log messages of different types without redeploying the code.  For instance, I could use an environment variable or
-configuration file where the desired log level is set.  When the program runs this could be used to set the `logging` 
-module level, meaning all logging calls below that won't get reported.  As an example you might want a bunch of `.debug()`
-calls around a particularly tricky piece of logic when running in one environment, but perhaps want to ignore `.debug()`
-and only see`.error()` and above messages in another environment.  You could have a LOG_LEVEL environment variable which 
-is then used in the code to set your logger levels to their desired state, without having to touch the code. 
-
-In more advanced use cases one can use retrospective log analysis on structured logs to profile an application and see things 
+In more advanced use cases one can use retrospective log analysis on structured logs to profile an application and view metrics 
 like how often components of your application are used, identify bottlenecks, and track down areas of the code where bugs
 seem to occur more often.  When running in AWS Lambda, EC2, ECS, or Batch, the `logging` module automatically routes messages 
 to CloudWatch, which can be essential for troubleshooting your code when executing in the cloud. 
 
 ### How  
-Now we're getting to the meat (or tempeh if you prefer) and potatoes.  
 
 The quickest and simplest way to start logging is like this:
 ```python
@@ -56,8 +48,9 @@ logging.basicConfig()
 logging.warning('Blargh')
 ```
 This will setup the logging module to log messages of level WARNING and above (ERROR, EXCEPTION) to the console.  You can
-provide a format string (more on `Formatter` classes and adding contextual informaation later) to your `.basicConfig()` call.
-By itself this way of initialization your log facilities has fairly limited capabilities, but can be further customized 
+provide a format string (more on `Formatter` classes and adding contextual informaation later) to your `.basicConfig()` call to 
+format the structure your log messages for this logger will appear.
+By itself this way of initializing your log facilities has fairly limited capabilities, but can be further customized 
 using some of the objects and methods listed below.
 
 Setting up a basic logger is very simple.
@@ -76,11 +69,12 @@ If you run the code above you should see `Hello world!` has been output to the t
 Knowing this toy example doesn't really provide any obvious additional functionality to `print`, let's explore what's 
 happening here.  
 In the first section a `Logger` instance is created. Next, a `StreamHandler` is created, which by default will send log 
-messages to `sys.stderr`.  Finally, `Hello world!` is outputted to the console by invoking the `info` method on the `Logger`
+messages to the console.  Finally, `Hello world!` is outputted to the console by invoking the `info` method on the `Logger`
 instance.   
 
 We can quickly make this basic logger much more interesting by using a `Formatter`, which will add contextual information
-to every log message which the `Handler` it is associated with emits.
+to every log message which the `Handler` it is associated with emits.  The contextual information is added to the string
+using special key words within the `%()s` notation; more on this later.
 
 ```python
 import logging
@@ -99,7 +93,32 @@ logger.info('Hello world!')
 Running this code, you should see something like this:  
 `2020-01-23 14:46:29,928 - new_logger - INFO - Hello world! - line 11`  
 
-Now let's examine the different components of a `Logger` to better understand what's going on.
+A particularly helpful aspect of logging statements is the different contextual levels they have, allowing you to filter
+out log messages of different severity without redeploying the code.  For instance, I could use an environment variable or
+configuration file where the desired log level is set.  When the program runs this could be used to set the `logging` 
+module level, meaning all logging calls below that won't get reported.  As an example you might want a bunch of `.debug()`
+calls around a particularly tricky piece of logic when running in your test environment, but perhaps want to ignore `.debug()`
+and only see`.error()` and above messages in another environment.  You could have a LOG_LEVEL environment variable which 
+is then used in the code to set your logger levels to their desired state, without having to touch the code. Example below:  
+
+```python
+import logging
+import os
+
+LOG_LEVEL = os.getenv('LOG_LEVEL')
+
+logger = logging.getLogger('new_logger')
+logger.setLevel(LOG_LEVEL)
+
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s - line %(lineno)s')
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+
+logger.addHandler(stream_handler)
+logger.info('Hello world!')
+```
+
+Now let's examine the different components of a `Logger` to better understand what's going on under the hood.
 
 #### Anatomy of a Logger
 
@@ -129,9 +148,9 @@ quite often are `%(lineno)d` (line number), `%(asctime)s` (timestamp), `%(filena
 There are also some handy formatting attributes for reporting what thread or process a message is coming from if you're 
 working in a concurrent environment.
 
-By creating a Formatter object, it simply must be added to a Handler class instance using the `.setFormatter()` function,
+When creating a Formatter object, it simply must be added to a Handler class instance using the `.setFormatter()` function,
 as seen in the earlier example.  By attaching different `Formatter` objects to different handlers, you can provide different levels
-of details to different outputs.  For instance, maybe I don't want the module, function, and file name cluttering up
+of detail to different outputs.  For instance, maybe I don't want the module, function, and file name cluttering up
 my console, so I'd attach a formatter to it which doesn't have those attributes.  But I want my file handler to have as
 much information as possible so I can better reconstruct events when doing retrospectives (example below).
 
@@ -159,10 +178,13 @@ we have a logger hierarchy like:
 - - module_logger  
 - - debug_logger
 ```
-where the parent-child relationships of our loggers can be described as `base_logger.module_logger` and `base_logger.debug_logger`.  
-A `Filter` object can be attached to a `Logger` instance in order to prevent messages from parts of the logger hierarchy. 
-`Filter` objects can also be attached to specific handlers as well, in order for more nuanced control of which loggers 
-are emitted to a particular output location. 
+where the parent-child relationships of our loggers can be described as `base_logger.module_logger` and `base_logger.debug_logger`. 
+A `Filter` object can be attached to a `Logger` instance in order to prevent it from propagating messages from specific parts of the 
+logger hierarchy. `Filter` objects can also be attached to specific handlers as well, in order for more nuanced control of which loggers 
+are emitted to a particular output location.  
+For instance, if we were to want to have messages from our `module_logger` propagate to the `base_logger`, but did not want any messages 
+from `debug_logger` propagating up to the `base_logger` and its handlers, a `Filter` object could be attached to the `base_logger`
+specifying that it should ignore any messages recorded by `debug_logger`   
 
 - ##### Log levels  
 Both `Logger` and `Handler` instances have an attribute called `.level`, which determines the severity of messages the 
@@ -170,7 +192,7 @@ Both `Logger` and `Handler` instances have an attribute called `.level`, which d
 variety of ways.  The following table shows the various built-in log levels (although one can create their own log levels
 as well).  
 
-| Level | Int Representation | Str Representation |  
+| Level | Int Representation | String Representation |  
 | ---- | :----: | :----: |  
 | DEBUG | 10 | 'DEBUG' |  
 | INFO | 20 | 'INFO' |  
@@ -178,7 +200,7 @@ as well).
 | ERROR | 40 | 'ERROR' |  
 | CRITICAL | 50 | 'CRITICAL' |  
 
-These 
+It is also possible to create your own log levels, a process which is described in the Logging Cookbook.
 
 ### Where  
 I like to log early and log often, especially during the development phase of a project.  In particular, I find often 
@@ -191,7 +213,9 @@ create a function to create or retrieve a pre-configured `Logger` instance early
 environment variables to set the log level of the service to reduce log message volume once the service is more stable.  
 
 ### Bonus AWS stuff
-Once you're using structured logging you can start to use CloudWatch Insights to query across log groups for messages 
+As mentioned before python logging instances will emit their log records to the AWS CloudWatch log group / stream for 
+most of their services (I've seen it wth EC2, ECS, Batch, and Lambda so far). By leveraging structured logging through 
+ python's custom log formatting, you can start to use CloudWatch Insights to query across log groups for messages 
 pertaining to any of the attributes you're logging. 
 
 Log messages a presented in a pretty nice format on CloudWatch:  
@@ -199,13 +223,13 @@ Log messages a presented in a pretty nice format on CloudWatch:
 
 While it's not necessary to use in order to produce log messages to CloudWatch, there is a project out there called
 [WatchTower](https://github.com/kislyuk/watchtower) which can really help consolidate your logs into particular user-story
-focused log streams that can track logs from across mutiple services if they all use `WatchTower` to point to the same log
+focused log streams that can track logs from across multiple services if they all use `WatchTower` to point to the same log
 group / stream. I've found `WatchTower` helpful for consolidating Lambda logs as by default a new stream is created for 
-every new lambda instance, which can get really confusing.  I have had some issues (which may have more to do with how I'm
-creating the `WatchTower` handlers and my application structure) with some of the functions hitting AWS service limits on 
-API calls like Create/DescribeLogGroups and Create/DescribeLogStreams, which can have have an affect on responsiveness and 
-at worst can crash the application if the exceptions aren't handled properly. This is particularly the case when the service
-is under a high load.
+every new lambda instance, which can get really confusing, particularly if you have concurrent executions.  I have had 
+some issues (which may have more to do with how I'm creating the `WatchTower` handlers and my application structure) 
+with some of the functions hitting AWS service limits on API calls like Create/DescribeLogGroups and Create/DescribeLogStreams, 
+which can have have an affect on responsiveness and at worst can crash the Lambda call if the exceptions aren't handled properly. 
+This is particularly the case when the service is under a high load. If someone has another solution for this I'd love to hear about it!
 
 
 Give me a shout at zromer@fredhutch.org if you have any questions, comments, or corrections you think should be made.
