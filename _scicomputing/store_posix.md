@@ -22,13 +22,44 @@ While you are allowed up to 100GB of storage in this home directory, it is not t
 
 ## Fast
 
-`Fast` storage is a large high-performance system that holds the bulk of the scientific data at the FredHutch.  Each PI is provided with 5TB of free storage space via `Fast` storage above which a cost per TB per month is charged.  This storage can be accessed by mapping the drive to their workstation (using `//center/fh/fast/lastname_f` on a Mac or `\\center\fh\fast\lastname_f` or `X:\fast\lastname_f` on a PC). This storage access point can provide members of research groups access to groups of datasets that can have different types of permissions.  Within a PI's `Fast` directory, directories can exist for data shared to any Fred Hutch user (`/pub`), to any member of the PI's immediate research group (`/grp`), or private to each individual user in a PI's immediate research group (`/user`).  Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (`/SR`).  This can be customized for a given researcher in conjunction with Scientific Computing (see Available Resources).
+`Fast` storage is a petabyte sized high-performance posix file system that holds the bulk of the scientific data at the Fred Hutch. A quick overview: 
 
-The data here is organized by investigator- each folder at the top level is named using the investigators last name and first initial: investigator "Sneezy Smith" would have a directory on fast called `smith_s`.
+- Each PI and each division is provided with 5TB of free storage space via `Fast` storage above which a cost per TB per month is charged.  
 
-On SciComp supported Linux systems you will see this storage in the path `/fh/fast`.  Windows systems can access this via the UNC path `\\center.fhcrc.org\fh\fast` or `X:\fast` and OSX hosts using the path `smb://center.fhcrc.org/fh/fast`.  
+- You can access `Fast` from your workstation using `smb://center.fhcrc.org/fh/fast/lastname_f` on a Mac or `\\center.fhcrc.org\fh\fast\lastname_f` or `X:\fast\lastname_f` on a PC).
 
-This storage platform is appropriate for most scientific data- particularly large data sets.  There is no charge for the first 5TB of storage on this system: there is a $30 per-month charge for every terabyte above this.
+- On Fred Hutch HPC systems (Rhino, Gizmo, Beagle and Koshu) you can access fast via `/fh/fast/lastname_f`
+
+This storage platform is appropriate for most scientific data- particularly large data sets. There is no charge for the first 5TB of storage on this system: there is a $30 per-month charge for every terabyte above this.
+
+The data in `Fast` is organized by investigator or Division - each folder at the top level is named using the investigators last name and first initial: investigator "Sneezy Smith" would have a directory on fast called `smith_s`. There are also folders for each division. Special folders \_IRC (Integrated research centers), \_CTR (center wide resources and groups not under a specific division.)
+Each folder that lives directly under `/fh/fast` has 5 terabyte free of charge and there is a $30 per-month charge for every terabyte above this.
+
+Each folder that lives directly under `/fh/fast/lastname_f` can have a different set of permissions governed by a specific Security group (collection of users authorized for a certain resource - managed by SciComp). 
+We recommend some default folders such as for data shared to any Fred Hutch user (`/pub`), to any member of the PI's immediate research group (`/grp`), group wide software / applications (`/app`) or work spaces to each individual user in a PI's immediate research group (`/user`). Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (`/SR`). Access to these default folders would be governed by a security named lastname_f_grp. This can be customized for a given researcher in conjunction with Scientific Computing (see Available Resources). 
+
+To summarize: the folder structure on fast file looks like this: /fh/fast/(level-of-charge)/(level-of-access-control)/actual/data and access to non default folders is granted by specific security groups created for each folder (see example below: lastname_f_project1_grp)
+
+```
+/pub​ -> publicly readable folder where data can be shared with a hutch 
+        wide community
+
+/SR  -> folder with potentially many subfolders (e.g. /SR/genomics/, /SR/compbio)
+        that shared resources can write data to, e.g Instrument data would 
+        be dropped directly in here.
+
+/app -> binary packages compiled specifically for this group, owned by 
+        root or a programmer in the group
+
+/grp -> lab or group folder, access restricted to lastname_f_grp.
+        Default location for all shared lab data.
+
+/project1 -> project specific folder protected by security group 
+         lastname_f_project1_grp (folder not created by default)
+
+/user -> user specific workspaces (/user/username) for staff and service 
+         accounts (non user accounts used for applications). If a user requires to have a home directory larger than 100GB, the current home directory would be migrated to this location.
+```
 
 ## Secure
 

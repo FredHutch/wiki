@@ -35,6 +35,12 @@ collections:
   drafts:
     output: true
     permalink: /:collection/:path/
+  pythonModules:
+    output: true
+    permalink: /:collection/:path/
+  rModules:
+    output: true
+    permalink: /:collection/:path/
 
 
 atom_feed:
@@ -195,6 +201,24 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
+      share: true
+      sidebar:
+        nav: "scicomputing"
+# _rModules
+  - scope:
+      path: ""
+      type: rModules
+    values:
+      layout: single
+      share: true
+      sidebar:
+        nav: "scicomputing"
+# _pythonModules
+  - scope:
+      path: ""
+      type: pythonModules
+    values:
+      layout: single
       share: true
       sidebar:
         nav: "scicomputing"

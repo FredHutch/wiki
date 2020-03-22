@@ -4,8 +4,6 @@ main_author: John Dey
 primary_reviewers: fizwit
 ---
 
-## Desktop Usage
-
 The majority of Matlab users at the Hutch have Matlab installed on their
 desktop system. Most users have dedicated licenses for their desktop installs
 Matlab. Dedicated licenses offer the flexibility to use Matlab with a laptop on
@@ -29,7 +27,7 @@ From a terminal in a noMachine session:
   - `module load matlab/2019a`
   - Type `matlab` and press enter.  The Matlab window should open in your Linux session. Success!
 
-### Running Matlab Batch Jobs on a Cluster
+## Running Matlab Batch Jobs on a Cluster
 
 Matlab programs can be run on the `gizmo` cluster using `sbatch`.  You can read more about using `sbatch` in general on our [Job Management page.](/scicomputing/compute_jobs/) This allows
 you to use additional resources that are not available on a desktop install.

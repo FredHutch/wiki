@@ -8,7 +8,7 @@ primary_reviewers: bmcgough
 
 Client devices are supported by Center IT (ADM, CRD, VIDD) as well as Division IT groups (BSD, HB, PHS).  Please see Center IT's page in CenterNet about [Laptops and Desktops](https://centernet.fredhutch.org/cn/u/center-it/help-desk/laptops-and-desktops.html) for more information about support for desktop computing.
 
->Note: If you request a Linux Desktop, Center IT will recommend that you use NoMachine from a Windows or Mac system instead as this is the most appropriate choice for most users but not all. If it is required for your work, it can be supported.  
+>Note: If you request a Linux Desktop, Center IT will recommend that you use NoMachine from a Windows or Mac system instead as this is the most appropriate choice for most users but not all. If it is required for your work, it can be supported.
 
 Please see Center IT pages for more information on [Mobile Device Services](https://centernet.fredhutch.org/cn/u/center-it/services/mobile_device_service.html) or contact [Help Desk](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) with questions or problems.  
 

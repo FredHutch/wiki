@@ -31,12 +31,11 @@ The Coop and FHBig also support community groups that meet regularly to discuss 
 
 - **R User Group:** The R User Group meets weekly to discuss programming, data analysis, and troubleshooting in R. Bring your lunch, code, questions, and thoughts! R coders of all levels of expertise are welcome. Notes about this group are located [here](https://github.com/FredHutch/community_groups/blob/master/R_coding.md), and check out the #r-user-comm channel on the [Coop Communities Slack](https://fhbig.slack.com/) for announcements. Note: If you do not have a laptop available to you we still want you to come!! You can email code privately ahead of each event to Amy Paguirigan (apaguiri at fredhutch.org). 
 
-- **Shiny User Group:** The Shiny User Group meets once monthly to discuss this method of using R to create interactive web applications for visualizing data analysis. Notes about this group are located [here](https://github.com/FredHutch/community_groups/blob/master/shiny.md), and check out the #r-user-comm channel on the [Coop Communities Slack](https://fhbig.slack.com/) for announcements and more information.
-
 - **Technology Exchange:** Informal learning forum for employees in technology-focused jobs to share technical skills. This group is most appropriate for individuals who want to discuss the technical details of tools commonly used in positions focused on administration and infrastructure. However, anyone is welcome to attend this forum, and many topics will be relevant to researchers in positions that require technical skills. Subscribe to the [TechExchange mailing list](https://lists.fhcrc.org/mailman/listinfo/techexchange) for more information.
 
 - **Retired Community Groups:** All of our groups were created because of the needs voiced by our community. Sometimes those needs change, and we're happy to respond by refocusing our efforts. The following groups have been retired, but are noted here for reference purposes:
   - ~~Software design group:~~ Discusses issues related to software engineering and interface design and invites speakers on specific topics and participants to share their coding projects. This group is not focused on a specific programming language, but rather on issues common across software projects. Notes from this group can be found [here](https://github.com/FredHutch/community_groups/blob/master/software_dev.md). *Discussions about this topic are now included periodically in the Python User Group*
+  - ~~Shiny User Group:~~ The Shiny User Group meets once monthly to discuss this method of using R to create interactive web applications for visualizing data analysis. Notes about this group are located [here](https://github.com/FredHutch/community_groups/blob/master/shiny.md). *Discussions about this topic are now included periodically in the R User Group*
 
 ### Office Hours
 
@@ -46,15 +45,13 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 
 - **Data Ethics/Compliance/Security:** Staff from the Hutch Data Commonwealth (HDC) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
 
-- **Data Science/Software Engineers:** Hutch Data Commonwealth (HDC) employs teams of Data Scientists and Software Developers, who are available to answer questions related to general data management and application of common data science tools (like machine learning) to research questions.
-
-- **Fredhutch.io:** [fredhutch.io](http://www.fredhutch.io/) trains researchers in reproducible computational methods. Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
+- **The Coop:** Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
 
 - **REDcap:** [REDCap](http://research.fhcrc.org/cds/en/redcap.html) is a secure web application for building and managing online surveys and databases and is managed by Collaborative Data Services (CDS) at Fred Hutch. Staff are available to answer questions related to REDCap functionality and troubleshooting. You can also discuss REDCap issues with staff and other researchers on the #redcap-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/).
 
 - **SciComp General Consulting:** Scientific Computing (SciComp) is the group in Hutch Data Commonwealth (HDC) that manages basic account access for research computing resources, including data storage and shared computational cluster use. Staff are available to answer questions related to access and usage of Hutch resources for computational research.
 
-- **SciComp New Technologies:** In addition to general consulting (see above), Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.
+- **SciComp Next Gen/HPC Office Hours:** In addition to general consulting (see above), Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.
 
 ## Resources In Seattle
 
@@ -64,11 +61,13 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 
 ## Resources on the Web
 
+The following sites include content that one or more community member has found useful. Most of them include at least some free content, while others require a paid subscription.
+
 - [Biostar Handbook: A Beginner's Guide to Bioinformatics](https://www.biostarhandbook.com)
 - [CalTech](http://work.caltech.edu/telecourse) Learning from Data
 - [The Carpentries](https://carpentries.org), with lessons from [Data Carpentry](https://datacarpentry.org) and [Software Carpentry](https://software-carpentry.org/lessons/)
 - [Cognitive Class](https://cognitiveclass.ai): Data science and cognitive computing courses
-- [Coursera](https://www.datacamp.com), including courses on [Data Science](https://www.coursera.org/browse/data-science) and [Bioinforamtics](https://www.coursera.org/browse/life-sciences/bioinformatics)
+- [Coursera](https://www.coursera.org), including courses on [Data Science](https://www.coursera.org/browse/data-science) and [Bioinformatics](https://www.coursera.org/browse/life-sciences/bioinformatics)
 - [CodeAcademy](http://www.codecademy.com)
 - [DataCamp](https://www.datacamp.com)
 - [DataQuest](https://www.dataquest.io/home)
@@ -76,3 +75,4 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 - [The Open Source Data Science Masters](http://datasciencemasters.org)
 - [ROSALIND interactive bioinformatics problem set](http://rosalind.info/)
 - [Udacity](https://www.udacity.com) has courses on [Data Science](https://www.udacity.com/courses/school-of-data-science)
+- [Udemy](https://www.udemy.com) has a section on [Data Science](https://www.udemy.com/courses/development/data-science/)

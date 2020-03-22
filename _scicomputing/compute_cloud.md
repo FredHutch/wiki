@@ -1,7 +1,7 @@
 ---
 title: Cloud Computing at Fred Hutch
-last_modified_at: 2019-04-26
-main_author: Sam Minot
+last_modified_at: 2020-03-03
+main_author: Sam Minot & Dan Tenenbaum
 primary_reviewers: dtenenba
 ---
 
@@ -348,24 +348,27 @@ loop in python (but consider using
 ### Choose a Job Queue
 
 No matter how you submit your job, you need to choose
-a queue to submit to. At the present time, there are two:
+a queue to submit to. There are several queues to choose from:
 
-* **mixed** - This queue uses a compute environment
-  (also called **mixed**) which uses many
-  [instance types](https://aws.amazon.com/ec2/instance-types/)
-  from the `C` and `M` families. Each of the instance types
-  used is one that the Center has high
-  [limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html)
-  for in our account.
-* **optimal** - This queue uses a compute environment
-  (also called **optimal**) which uses the instance type
-  `optimal`, meaning Batch will choose from among the
-  `C`, `M`, and `R` instance types. While the Center's
-  account has high limits for most `C` and `M` types, its
-  limits for the `R` types are lower. Batch has no awareness
-  of per-account instance limits, so it may try to place
-  jobs on `R` instances which could result in longer
-  time-to-result.
+
+| **Queue Name**  | **Compute Environment Name**  | **Compute Type**  | **Instance Types**  | **Maximum CPUs**  | **Bid Percentage**  |
+|---|---|---|---|---|---|
+| **cpu-spot-50**  | cpu-spot-50  | SPOT | optimal  | 500  | 50  |
+| **cpu-spot-40**  | cpu-spot-40  | SPOT | optimal  | 700  | 40  |
+| **cpu-spot-30**  | cpu-spot-30  | SPOT | optimal  | 1000 | 30  |
+| **cpu-spot-20**  | cpu-spot-20  | SPOT | optimal  | 1500 | 20  |
+| **gpu-spot-50**  | gpu-spot-50  | SPOT | p3.16xlarge  | 500  | 50  |
+
+#### Understanding this table:
+
+* **SPOT** refers to a [pricing scheme](https://aws.amazon.com/ec2/spot/) in the AWS cloud. SPOT instances (virtual machines) are cheaper than normal (known as "on-demand") instances. When a spot instance is started, a **Bid Percentage** is chosen. If the spot price rises above the chosen percentage of the on-demand price, the spot instance is terminated. This is infrequent, and if your AWS Batch job is set up to automatically retry failed jobs, you will likely not even notice. Practically speaking, a bid of 50 percent should generally be available around the clock, while a bid of 20 percent may only become available on nights and weekends. However, that availability pattern may vary by instance type, and with regional demand.
+* **Maximum CPUs** Each queue is tied to a compute environment which
+  has a maximum number of CPUs defined. No more than this number of CPUs can be in use at any given time. As an example, the total number of CPUs needed for a set of 10 jobs which each request 16 CPUs is the same as the total number of CPUs needed for a set of 160 jobs each requesting 1 CPU.
+* **Instance Types** *optimal* means that AWS Batch will choose between the C, M, and R [instance type families](https://aws.amazon.com/ec2/instance-types/). *p3.16xlarge* should only be
+used when your AWS Batch job needs access to [GPUs](https://en.wikipedia.org/wiki/Graphics_processing_unit).
+
+Note that choosing a queue involves a tradeoff between capacity (maximum CPUs) and availability (lower bid percentages may result in spot instances being terminated and jobs retried).
+
 
 ### Monitor job progress
 

@@ -15,6 +15,17 @@ This section is intended to be a basic introduction to using the workload manage
 ### Examples of Use
 A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  This is an evolving example repo that new users can refer to to begin to get into parallel computing and more adept use of Slurm.  If you are a Fred Hutch user and would like to contribute to the documentation or the examples there, to share with the community how you structure your interactions with Slurm, submit a pull request there.  
 
+### Using SLURM with Workflow Managers
+If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
+- sending the jobs to the compute resources, 
+- deciding what tasks can be done in parallel, 
+- staging data for use and keeping track of inputs and outputs,
+- environment management (via docker containers or environment modules)
+- monitoring jobs and providing you with metadata about them and the workflow itself.   
+
+Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.  
+
+
 ## Basic Slurm Terminology
 
 ### Cluster
@@ -247,6 +258,7 @@ loading Python/3.6.4-foss-2016b-fh2...
 ## External Slurm and HPC Reference and Learning Resources
 For more information and education on how to use HPC resources from external sources see the following sites:
 
+- SchedMD's [Documentation for Version 18.08](https://slurm.schedmd.com/archive/slurm-18.08.3/)
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)

@@ -8,7 +8,7 @@ primary_reviewers: atombaby, bmcgough
 
 `Gizmo` is the compute cluster that you should use for most "production" computational tasks. Information about our cluster is provided [elsewhere in the Wiki](/scicomputing/compute_overview/), but you can try it by using one of the `grabnode` commands on either the NX servers or one of the `rhino` nodes.
 
-Access to `gizmo` nodes requires the use of Slurm commands - [Slurm](/scicomputing/compute_jobs/) is the software suite that queues and dispatches jobs to the cluster.
+Access to `gizmo` nodes requires the use of Slurm commands - [Slurm](https://slurm.schedmd.com/archive/slurm-18.08.3/) is the software suite that queues and dispatches jobs to the cluster.
 
 ## Batch Computing with `Gizmo`
 
