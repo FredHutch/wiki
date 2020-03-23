@@ -79,7 +79,7 @@ terminate it by typing this command on the node you "grabbed" (the same machine 
 *Note*: In Rstudio Server, when trying to generate `tiff`, `jpeg`, `png` files (with `R` functions of the same names), you will need to change the default bitmap type (default is `X11`). Do this with the following command:
 
 ```
-options(bitmapType = ‘cairo’)
+options(bitmapType = 'cairo')
 ```
 
 
