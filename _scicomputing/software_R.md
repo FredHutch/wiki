@@ -76,7 +76,15 @@ terminate it by typing this command on the node you "grabbed" (the same machine 
 * Alternatively, you can just wait for your `grabnode` allocation (the number of days you specified when grabbing the node) to expire, and RStudio Server will become unavailable after that.
 * If you need RStudio Server again, just repeat these steps.
 
-*Note*: If you are working with RMarkdown documents in RStudio Server,
+*Note*: In Rstudio Server, when trying to generate `tiff`, `jpeg`, `png` files (with `R` functions of the same names), you will need to change the default bitmap type (default is `X11`). Do this with the following command:
+
+```
+options(bitmapType = ‘cairo’)
+```
+
+
+
+*Related Note*: If you are working with RMarkdown documents in RStudio Server,
 you may find that plot labels and other graphics look kind of weird.
 This is because X11 (the X Window System) is not available
 inside RStudio Server. The solution is to make the the `Cairo`
