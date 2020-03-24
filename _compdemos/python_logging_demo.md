@@ -47,13 +47,13 @@ import logging
 logging.basicConfig()
 logging.warning('Blargh')
 ```
-This will setup the logging module to log messages of level WARNING and above (ERROR, EXCEPTION) to the console.  You can
+The `logging` module's `.basicConfig()` method will setup the logging module to log messages of level WARNING and above (i.e. ERROR, EXCEPTION) to the console.  You can
 provide a format string (more on `Formatter` classes and adding contextual informaation later) to your `.basicConfig()` call to 
 format the structure your log messages for this logger will appear.
 By itself this way of initializing your log facilities has fairly limited capabilities, but can be further customized 
 using some of the objects and methods listed below.
 
-Setting up a basic logger is very simple.
+Setting up a basic logger without calling `.basicConfig()` is very simple.
 ```python
 import logging
 
@@ -132,10 +132,10 @@ and / or the [Python Logging Docs](https://docs.python.org/3.8/library/logging.h
 
 - ##### Handlers
 A handler is a critical component of a Logger instance, and provides protocols for directing log messages to a wide variety
-of different possible output sources. Some of the more common handlers include a `StreamHandlers` and `FileHandlers`. It is 
-common to want to see the output of your code in the terminal when you run it, but you might also want output logged to a file
-somewhere in case your project is run on a cron or run by other remote users. There are a lot of different types of handlers,
-including email, socket handlers, rotating file handlers, HTTP handlers, and more but I'm not going into them here.
+of different possible output sources. Some of the more common handlers include `StreamHandlers` for writing to various output 
+streams such as STDOUT and STDERR, and `FileHandlers` for writing records directly to a file. It is common to want to see the output of your 
+code in the terminal when you run it, but you might also want output logged to a file somewhere in case your project is run on a cron or run 
+by other remote users. There are a lot of different types of handlers, including email, socket handlers, rotating file handlers, HTTP handlers, and more but I'm not going into them here.
 
 Different log handler classes can be found listed [here](https://docs.python.org/3.8/library/logging.handlers.html#module-logging.handlers)
 
@@ -150,8 +150,8 @@ working in a concurrent environment.
 
 When creating a Formatter object, it simply must be added to a Handler class instance using the `.setFormatter()` function,
 as seen in the earlier example.  By attaching different `Formatter` objects to different handlers, you can provide different levels
-of detail to different outputs.  For instance, maybe I don't want the module, function, and file name cluttering up
-my console, so I'd attach a formatter to it which doesn't have those attributes.  But I want my file handler to have as
+of detail to different outputs.  For instance maybe I don't want the module, function, and file name cluttering up
+my console, so I could attach a formatter to it which doesn't have those attributes.  But I want my file handler to have as
 much information as possible so I can better reconstruct events when doing retrospectives (example below).
 
 ```python
