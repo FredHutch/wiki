@@ -34,8 +34,8 @@ available in these new nodes.  We've already compiled quite a few, but if
 you're missing one, email SciComp.
 
 The base operating system installation is much leaner than on the older gizmo
-nodes.  Thus, many tools you may have been using without loading a module may
-require that you load a module on this new platform.
+nodes.  Thus, many tools you may have been using without loading an environment
+module may require that you (load a module)[https://sciwiki.fredhutch.org/scicomputing/compute_environments/#environment-modules] on this new platform.
 
 # Use
 
