@@ -9,15 +9,17 @@ between these new systems, and how you can help bring these nodes into service.
 
 # The Hardware
 
-These new systems will be the "K" class of nodes.  Currently we have four in
-service- F, G, H, and J.  These new systems have 36
+These new systems will be the "K" class of nodes.  Currently we have four
+classes in service- F, G, H, and J.  These new systems have 36
 cores[1](#cores-hyperthreading) each running at a peak of 3.10GHz.  These have
 been configured with about 768GB of RAM and 6TB of node-local storage.
 
 > Each node is equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  At this time
 > it is not currently enabled for use- this feature will come soon.
 
-Along with these new nodes there are three new Rhino-class hosts to provide interactive and login sessions. These have the same 36 physical cores, but hyperthreading is enabled which increases the number of cores presented to 72.
+Along with these new nodes there are three new Rhino-class hosts to provide
+interactive and login sessions. These have the same 36 physical cores, but
+hyperthreading is enabled which increases the number of cores presented to 72.
 
 # The Software
 
