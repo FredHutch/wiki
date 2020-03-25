@@ -10,9 +10,9 @@ between these new systems, and how you can help bring these nodes into service.
 # The Hardware
 
 These new systems will be the "K" class of nodes.  Currently we have four in
-service- F, G, H, and J.  These new systems have 36 cores[1](#notes-1) each
-running at a peak of 3.10GHz.  These have been configured with about 768GB of
-RAM and 6TB of node-local storage.
+service- F, G, H, and J.  These new systems have 36
+cores[1](#cores-hyperthreading) each running at a peak of 3.10GHz.  These have
+been configured with about 768GB of RAM and 6TB of node-local storage.
 
 > Each node is equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  At this time
 > it is not currently enabled for use- this feature will come soon.
@@ -31,11 +31,9 @@ Our goal is to make the versions of the tools you're using on the current hosts
 available in these new nodes.  We've already compiled quite a few, but if
 you're missing one, email SciComp.
 
-Many tools you may have been using without loading a module may require that
-you load a module on this new platform.  The prior incarnation of the _app_
-tools was very dependent on node configuration (specifically locally-installed
-OS packages), which introduces some fragility and reduces the desired
-portability of the tools we build.
+The base operating system installation is much leaner than on the older gizmo
+nodes.  Thus, many tools you may have been using without loading a module may
+require that you load a module on this new platform.
 
 # Use
 
@@ -65,9 +63,22 @@ At this point we don't have a `grabnode` equivalent.  For interactive shell usag
 
 Add other `srun` options (like CPU and time limit) as necessary.
 
+## NoMachine
+
+We are consolidating NoMachine functions onto this new generation.  Simple create a new connection to the host "rhino03".
+
+## Usage Guidelines
+
+As with the existing rhinos, these new systems are intended for interactive
+development and testing and should not be used for computationally intensive
+work.  We are in the process of evaluating a few different options for managing
+load- the current "loadwatcher" is effective but can be rather cruel at times.
+During this evaulation period please do your best to keep your processes from
+overwhelming the system.
+
 # Notes
 
-### <a name="notes-1"></a> Cores and Hyperthreading
+### <a name="cores-hyperthreading"></a> Cores and Hyperthreading
 
 Hyperthreading creates multiple virtual cores from a single physical core.  All
 of these hosts are capable of hyperthreading, but given the intense
@@ -78,4 +89,10 @@ The interactive nature of the workload on the rhinos, however, makes
 hyperthreading a much more beneficial feature.  Thus, on the rhinos you will
 see 72 cores even though these have the same number of _physical_ cores as the
 K class nodes
+
+### <a name="x11-support"></a>X11 Support
+
+Starting X clients will require that you load the X11 module:
+
+    ml X11
 
