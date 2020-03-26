@@ -103,3 +103,29 @@ Starting X clients will require that you load the X11 module:
 ### <a name="node-specifications"></a> Node Specifications
 
 <#! insert node spec table here >
+
+# Notes for Admins
+
+> Gory details for those with the stomach and need to know.
+
+## Access to "campus-new" Partition
+
+Allowing access to `campus-new` requires adding a user to a group and the
+user's account to a QOS.  The latter was done for all accounts active as of 25
+March 2020 so will only be necessary as new accounts are provisioned.
+
+### User Group
+
+This access is controlled by the group `gizmo-beta`.  Use `fhgroup` to add
+individuals to this group
+
+### QOS
+
+These limits are governed by a QOS named `campus-new`.  New accounts will need to have this QOS in their list:
+
+    sacctmgr update account where account=foo_b set qos+=campus-new
+
+The QOS is set up as a partition QOS for the _campus-new_ partition
+(`PartitionQOS=campus-new`).  There are two TRES limits specified in
+`MaxTRESPerUser`: `cpu` and `node` limiting cores to 72 and a total number of
+nodes in use to 4.
