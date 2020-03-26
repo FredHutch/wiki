@@ -9,13 +9,15 @@ between these new systems, and how you can help bring these nodes into service.
 
 # The Hardware
 
-These new systems will be the "K" class of nodes.  Currently we have four
-classes in service- F, G, H, and J.  These new systems have 36
-cores[1](#cores-hyperthreading) each running at a peak of 3.10GHz.  These have
-been configured with about 768GB of RAM and 6TB of node-local storage.
+Currently we have four "classes" of node in service: F, G, H, and J. Each class represents compute nodes with different capabilities, processors, and memory.
+These new systems will be the "K" class of nodes.  These new systems have two
+Intel 6254 processors each with 18 cores (for 36 cores per node total) and
+running with processor speeds between 3.10 and 4.0 GHz.  These have been
+configured with 768GB of RAM and 6TB of node-local storage. The full  list of
+specifications [can be found below][#node-specifications]
 
-> Each node is equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  At this time
-> it is not currently enabled for use- this feature will come soon.
+> Each node is also equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  At this
+> time it is not currently enabled for use- this feature will come soon.
 
 Along with these new nodes there are three new Rhino-class hosts to provide
 interactive and login sessions. These have the same 36 physical cores, but
@@ -98,3 +100,6 @@ Starting X clients will require that you load the X11 module:
 
     ml X11
 
+### <a name="node-specifications"></a> Node Specifications
+
+<#! insert node spec table here >
