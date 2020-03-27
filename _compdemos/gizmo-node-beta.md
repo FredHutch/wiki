@@ -43,17 +43,22 @@ module may require that you [load a module](https://sciwiki.fredhutch.org/scicom
 
 ## Reporting Problems
 
-Please report problems using SciComp's ticketing system- emailing SciComp and
-indicating that your problem is with the gizmo beta nodes. Please describe the
+Please report problems using SciComp's ticketing system- email SciComp and
+indicate that your problem is with the gizmo beta nodes. Please describe the
 problem, including any command output, hostnames, and if or how this differs
-from what you do on the current gizmo nodes.
+from your use of the current gizmo nodes.
 
 # Use
 
-First, it must be noted that this is still not a production-ready system.  The
-limits and configuration are not set and are thus subject to change.  While
-we'll try to keep the "dust" to a miniumum, we will need to rebuild and reboot
-systems regularly.
+First, it must be noted that this is still not a production-ready system.  The limits and configuration are not set and are thus subject to change.  While we'll try to keep the "dust" to a miniumum, we will need to rebuild and reboot systems regularly.
+## Usage Guidelines
+
+As with the existing rhinos, these new systems are intended for interactive
+development and testing and should not be used for computationally intensive
+work.  We are in the process of evaluating a few different options for managing
+load- the current "loadwatcher" is effective but can be rather cruel at times.
+During this evaulation period please do your best to keep your processes from
+overwhelming the system.
 
 ## Access
 
@@ -61,6 +66,8 @@ For interactive sessions, use the host "rhino03" (note the zero in the
 hostname).  This should work the same as the existing rhinos- ssh, putty, etc.
 All of your existing data will be available in the same paths.  The Slurm
 commands here work just the same as they do on existing systems.
+
+## Job Submission
 
 For the new K class nodes we need to submit jobs to a different partition- one
 called "campus-new".  This partition doesn't appear in many command outputs by
@@ -82,29 +89,19 @@ does today, but will get you a node on the new hosts.
 > NoMachine is still in the process of getting installed.  When finished, this
 > message will be removed.
 
-We are consolidating NoMachine functions onto this new generation.  Simple
-create a new connection to the host "rhino03".
-
-## Usage Guidelines
-
-As with the existing rhinos, these new systems are intended for interactive
-development and testing and should not be used for computationally intensive
-work.  We are in the process of evaluating a few different options for managing
-load- the current "loadwatcher" is effective but can be rather cruel at times.
-During this evaulation period please do your best to keep your processes from
-overwhelming the system.
+We are consolidating NoMachine functions onto this new generation.  Simply
+create a new connection to the host "rhino03" as you would any of the existing
+NoMachine hosts.
 
 # Notes
 
-## <a name="local-gcc"></a>GCC and Compiling Your Own
+## <a name="local-gcc"></a>GCC and Compiling Your Own Code
 
-As indicated, these new hosts have a very minimal number of tools and packages
-installed.  While a basic compiler is installed on these hosts, it is strongly
-recommended that you use the tools provided in environment modules.  These are
-grouped under the module named "foss" or "fosscuda" (the latter for those
-needing GPU support):
+As indicated, these new hosts have a very minimal number of tools and packages installed.  While a basic compiler is installed on these hosts, it is strongly recommended that you use the tools provided in environment modules.  These are grouped under the module named "foss" or "fosscuda" (the latter for those needing GPU support):
 
     ml foss/2019b
+
+> NOTE: Many R and Python modules compile binaries as part of their installation process.  To prevent future problems load this toolchain _before_ you use `pip install` or `install.packages()`
 
 ## <a name="x11-support"></a>X11 Support
 
