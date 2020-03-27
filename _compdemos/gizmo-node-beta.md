@@ -4,17 +4,19 @@ main_author: Michael Gutteridge
 primary_reviewers: atombaby
 ---
 
-This page describes the new gizmo cluster nodes, some of the differences
-between these new systems, and how you can help bring these nodes into service.
+# Overview
 
-# The Hardware
+This page describes the new gizmo cluster nodes, some of the differences
+between these new systems, and using these systems during this beta period.
+
+## The Hardware
 
 Currently we have four "classes" of node in service: F, G, H, and J. Each class represents compute nodes with different capabilities, processors, and memory.
 These new systems will be the "K" class of nodes.  These new systems have two
 Intel 6254 processors each with 18 cores (for 36 cores per node total) and
 running with processor speeds between 3.10 and 4.0 GHz.  These have been
 configured with 768GB of RAM and 6TB of node-local storage. The full  list of
-specifications [can be found below][#node-specifications]
+specifications [can be found below.][#node-specifications]
 
 > Each node is also equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  At this
 > time it is not currently enabled for use- this feature will come soon.
@@ -23,7 +25,7 @@ Along with these new nodes there are three new Rhino-class hosts to provide
 interactive and login sessions. These have the same 36 physical cores, but
 hyperthreading is enabled which increases the number of cores presented to 72.
 
-# The Software
+## The Software
 
 The software stack is significantly different from what is currently on gizmo:
 
@@ -37,7 +39,14 @@ you're missing one, email SciComp.
 
 The base operating system installation is much leaner than on the older gizmo
 nodes.  Thus, many tools you may have been using without loading an environment
-module may require that you (load a module)[https://sciwiki.fredhutch.org/scicomputing/compute_environments/#environment-modules] on this new platform.
+module may require that you [load a module](https://sciwiki.fredhutch.org/scicomputing/compute_environments/#environment-modules) on this new platform.
+
+## Reporting Problems
+
+Please report problems using SciComp's ticketing system- emailing SciComp and
+indicating that your problem is with the gizmo beta nodes. Please describe the
+problem, including any command output, hostnames, and if or how this differs
+from what you do on the current gizmo nodes.
 
 # Use
 
@@ -53,7 +62,9 @@ hostname).  This should work the same as the existing rhinos- ssh, putty, etc.
 All of your existing data will be available in the same paths.  The Slurm
 commands here work just the same as they do on existing systems.
 
-For the new K class nodes we need to submit jobs to a different partition- one called "campus-new".  This partition doesn't appear in many command outputs by default (it's hidden to prevent confusion):
+For the new K class nodes we need to submit jobs to a different partition- one
+called "campus-new".  This partition doesn't appear in many command outputs by
+default (it's hidden to prevent confusion):
 
     sbatch -p campus-new ...
 
@@ -69,9 +80,10 @@ does today, but will get you a node on the new hosts.
 ## NoMachine
 
 > NoMachine is still in the process of getting installed.  When finished, this
-> message will be removed
+> message will be removed.
 
-We are consolidating NoMachine functions onto this new generation.  Simple create a new connection to the host "rhino03".
+We are consolidating NoMachine functions onto this new generation.  Simple
+create a new connection to the host "rhino03".
 
 ## Usage Guidelines
 
@@ -84,7 +96,7 @@ overwhelming the system.
 
 # Notes
 
-### <a name="local-gcc"></a>GCC and Compiling Your Own
+## <a name="local-gcc"></a>GCC and Compiling Your Own
 
 As indicated, these new hosts have a very minimal number of tools and packages
 installed.  While a basic compiler is installed on these hosts, it is strongly
@@ -94,13 +106,13 @@ needing GPU support):
 
     ml foss/2019b
 
-### <a name="x11-support"></a>X11 Support
+## <a name="x11-support"></a>X11 Support
 
 Starting X clients will require that you load the X11 module:
 
     ml X11
 
-### <a name="cores-hyperthreading"></a> Cores and Hyperthreading
+## <a name="cores-hyperthreading"></a> Cores and Hyperthreading
 
 Hyperthreading creates multiple virtual cores from a single physical core.  All
 of these hosts are capable of hyperthreading, but given the intense
@@ -126,12 +138,12 @@ Allowing access to `campus-new` requires adding a user to a group and the
 user's account to a QOS.  The latter was done for all accounts active as of 25
 March 2020 so will only be necessary as new accounts are provisioned.
 
-### User Group
+## User Group
 
 This access is controlled by the group `gizmo-beta`.  Use `fhgroup` to add
-individuals to this group
+individuals to this group.
 
-### QOS
+## QOS
 
 These limits are governed by a QOS named `campus-new`.  New accounts will need to have this QOS in their list:
 
