@@ -10,7 +10,7 @@ This page describes the new gizmo cluster nodes, some of the differences between
 
 ## The Hardware
 
-Currently we have four "classes" of node in service: F, G, H, and J. Each class represents compute nodes with different capabilities, processors, and memory.  These new systems will be the "K" class of nodes.  These new systems have two Intel 6254 processors each with 18 cores (for 36 cores per node total) and running with processor speeds between 3.10 and 4.0 GHz.  These have been configured with 768GB of RAM and 6TB of node-local storage. The full  list of specifications [can be found below.][#node-specifications]
+Currently we have four "classes" of node in service: F, G, H, and J. Each class represents compute nodes with different capabilities, processors, and memory.  These new systems will be the "K" class of nodes.  These new systems have two Intel 6254 processors each with 18 cores (for 36 cores per node total) and running with processor speeds between 3.10 and 4.0 GHz.  These have been configured with 768GB of RAM and 6TB of node-local storage. The full  list of specifications [can be found below.](#node-specifications)
 
 > Each node is also equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  At this time it is not currently enabled for use- this feature will come soon.
 
@@ -21,7 +21,7 @@ Along with these new nodes there are three new Rhino-class hosts to provide inte
 The software stack is significantly different from what is currently on gizmo:
 
  - The base OS has been upgraded to Ubuntu 18.04 (Bionic) from the venerable 14.04 (Trusty) currently installed
- - The applications in _app_ have been rebuilt for this new platform
+ - The applications and [environment modules](https://sciwiki.fredhutch.org/scicomputing/compute_environments/#environment-modules) in _app_ have been rebuilt for this new platform
 
 Our goal is to make the versions of the tools you're using on the current hosts available in these new nodes.  We've already compiled quite a few, but if you're missing one, email SciComp.
 
@@ -29,51 +29,40 @@ The base operating system installation is much leaner than on the older gizmo no
 
 ## Reporting Problems
 
-Please report problems using SciComp's ticketing system- email SciComp and indicate that your problem is with the gizmo beta nodes. Please describe the problem, including any command output, hostnames, and if or how this differs from your use of the current gizmo nodes.
+Please report problems using SciComp's ticketing system: email SciComp and indicate that your problem is with the gizmo beta nodes. Please describe the problem, including any command output, hostnames, and if or how this differs from your use of the current gizmo nodes.
 
 # Use
 
 First, it must be noted that this is still not a production-ready system.  The limits and configuration are not set and are thus subject to change.  While we'll try to keep the "dust" to a miniumum, we will need to rebuild and reboot systems regularly.
+
+As part of this work we are creating a mailing list for those of you participating in this beta period.  We'll be sending updates on changes and notices of upcoming outages via this list.
+
 ## Usage Guidelines
 
-As with the existing rhinos, these new systems are intended for interactive
-development and testing and should not be used for computationally intensive
-work.  We are in the process of evaluating a few different options for managing
-load- the current "loadwatcher" is effective but can be rather cruel at times.
-During this evaulation period please do your best to keep your processes from
-overwhelming the system.
+As with the existing _rhinos_, the new _rhino_ nodes are intended for interactive development and testing and should not be used for computationally intensive work which should be directed to the cluster nodes via Slurm.
+
+> There is currently no load management on the new _rhino_ nodes, so please take care with your processes.  We are in the process of evaluating a few different options for managing load- the current "loadwatcher" is effective but can be rather cruel at times.  During this evaulation period please do your best to keep your processes from overwhelming the system.
 
 ## Access
 
-For interactive sessions, use the host "rhino03" (note the zero in the
-hostname).  This should work the same as the existing rhinos- ssh, putty, etc.
-All of your existing data will be available in the same paths.  The Slurm
-commands here work just the same as they do on existing systems.
+For interactive sessions, use the host _rhino03_ (note the zero in the hostname).  This should work the same as the existing _rhinos_- ssh, putty, etc.  All of your existing data will be available in the same paths.  The Slurm commands here work just the same as they do on existing systems.
 
 ## Job Submission
 
-For the new K class nodes we need to submit jobs to a different partition- one
-called "campus-new".  This partition doesn't appear in many command outputs by
-default (it's hidden to prevent confusion):
+For the new K class nodes we need to submit jobs to a different partition- one called "campus-new".  This partition doesn't appear in many command outputs by default (it's hidden to prevent confusion):
 
     sbatch -p campus-new ...
 
-Even though these share the profile of the nodes in the "largenode" partition,
-there are no minimums to have jobs run.  The limits are, currently, much lower
-as we're trying to maximize availability during this trial period- 72 cores and
-4 nodes maximum.
+Even though these share the profile of the nodes in the "largenode" partition, there are no minimums to have jobs run.  The limits are, currently, much lower as we're trying to maximize availability during this trial period- 72 cores and 4 nodes maximum.
 
-The `grabnode` command on these new rhino class systems has been updated to use
-the campus-new partition.  It will prompt you for job attributes just as it
-does today, but will get you a node on the new hosts.
+The `grabnode` command on these new _rhino_ class systems has been updated to use the campus-new partition.  It will prompt you for job attributes just as it does today, but will get you a node on the new hosts.
 
 ## NoMachine
 
-> NoMachine is still in the process of getting installed.  When finished, this
-> message will be removed.
+> NoMachine is still in the process of getting installed.  When finished, this message will be removed.
 
 We are consolidating NoMachine functions onto this new generation.  Simply
-create a new connection to the host "rhino03" as you would any of the existing
+create a new connection to the host _rhino03_ as you would any of the existing
 NoMachine hosts.
 
 # Notes
@@ -96,7 +85,7 @@ Starting X clients will require that you load the X11 module:
 
 Hyperthreading creates multiple virtual cores from a single physical core.  All of these hosts are capable of hyperthreading, but given the intense computational demands of most work done in our environment, it provides no benefit.
 
-The interactive nature of the workload on the rhinos, however, makes hyperthreading a much more beneficial feature.  Thus, on the rhinos you will see 72 cores even though these have the same number of _physical_ cores as the K class nodes
+The interactive nature of the workload on the _rhinos_, however, makes hyperthreading a much more beneficial feature.  Thus, on the _rhino_ nodes you will see 72 cores even though these have the same number of _physical_ cores as the K class nodes
 
 ### <a name="node-specifications"></a> Node Specifications
 
