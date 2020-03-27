@@ -82,6 +82,22 @@ overwhelming the system.
 
 # Notes
 
+### <a name="local-gcc"></a>GCC and Compiling Your Own
+
+As indicated, these new hosts have a very minimal number of tools and packages
+installed.  While a basic compiler is installed on these hosts, it is strongly
+recommended that you use the tools provided in environment modules.  These are
+grouped under the module named "foss" or "fosscuda" (the latter for those
+needing GPU support):
+
+    ml foss/2019b
+
+### <a name="x11-support"></a>X11 Support
+
+Starting X clients will require that you load the X11 module:
+
+    ml X11
+
 ### <a name="cores-hyperthreading"></a> Cores and Hyperthreading
 
 Hyperthreading creates multiple virtual cores from a single physical core.  All
@@ -93,12 +109,6 @@ The interactive nature of the workload on the rhinos, however, makes
 hyperthreading a much more beneficial feature.  Thus, on the rhinos you will
 see 72 cores even though these have the same number of _physical_ cores as the
 K class nodes
-
-### <a name="x11-support"></a>X11 Support
-
-Starting X clients will require that you load the X11 module:
-
-    ml X11
 
 ### <a name="node-specifications"></a> Node Specifications
 
