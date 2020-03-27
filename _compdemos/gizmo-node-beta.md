@@ -6,47 +6,30 @@ primary_reviewers: atombaby
 
 # Overview
 
-This page describes the new gizmo cluster nodes, some of the differences
-between these new systems, and using these systems during this beta period.
+This page describes the new gizmo cluster nodes, some of the differences between these new systems, and using these systems during this beta period.
 
 ## The Hardware
 
-Currently we have four "classes" of node in service: F, G, H, and J. Each class represents compute nodes with different capabilities, processors, and memory.
-These new systems will be the "K" class of nodes.  These new systems have two
-Intel 6254 processors each with 18 cores (for 36 cores per node total) and
-running with processor speeds between 3.10 and 4.0 GHz.  These have been
-configured with 768GB of RAM and 6TB of node-local storage. The full  list of
-specifications [can be found below.][#node-specifications]
+Currently we have four "classes" of node in service: F, G, H, and J. Each class represents compute nodes with different capabilities, processors, and memory.  These new systems will be the "K" class of nodes.  These new systems have two Intel 6254 processors each with 18 cores (for 36 cores per node total) and running with processor speeds between 3.10 and 4.0 GHz.  These have been configured with 768GB of RAM and 6TB of node-local storage. The full  list of specifications [can be found below.][#node-specifications]
 
-> Each node is also equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  At this
-> time it is not currently enabled for use- this feature will come soon.
+> Each node is also equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  At this time it is not currently enabled for use- this feature will come soon.
 
-Along with these new nodes there are three new Rhino-class hosts to provide
-interactive and login sessions. These have the same 36 physical cores, but
-hyperthreading is enabled which increases the number of cores presented to 72.
+Along with these new nodes there are three new Rhino-class hosts to provide interactive and login sessions. These have the same 36 physical cores, but hyperthreading is enabled which increases the number of cores presented to 72.
 
 ## The Software
 
 The software stack is significantly different from what is currently on gizmo:
 
- - The base OS has been upgraded to Ubuntu 18.04 (Bionic) from the
-   venerable 14.04 (Trusty) currently installed
+ - The base OS has been upgraded to Ubuntu 18.04 (Bionic) from the venerable 14.04 (Trusty) currently installed
  - The applications in _app_ have been rebuilt for this new platform
 
-Our goal is to make the versions of the tools you're using on the current hosts
-available in these new nodes.  We've already compiled quite a few, but if
-you're missing one, email SciComp.
+Our goal is to make the versions of the tools you're using on the current hosts available in these new nodes.  We've already compiled quite a few, but if you're missing one, email SciComp.
 
-The base operating system installation is much leaner than on the older gizmo
-nodes.  Thus, many tools you may have been using without loading an environment
-module may require that you [load a module](https://sciwiki.fredhutch.org/scicomputing/compute_environments/#environment-modules) on this new platform.
+The base operating system installation is much leaner than on the older gizmo nodes.  Thus, many tools you may have been using without loading an environment module may require that you [load a module](https://sciwiki.fredhutch.org/scicomputing/compute_environments/#environment-modules) on this new platform.
 
 ## Reporting Problems
 
-Please report problems using SciComp's ticketing system- email SciComp and
-indicate that your problem is with the gizmo beta nodes. Please describe the
-problem, including any command output, hostnames, and if or how this differs
-from your use of the current gizmo nodes.
+Please report problems using SciComp's ticketing system- email SciComp and indicate that your problem is with the gizmo beta nodes. Please describe the problem, including any command output, hostnames, and if or how this differs from your use of the current gizmo nodes.
 
 # Use
 
@@ -111,15 +94,9 @@ Starting X clients will require that you load the X11 module:
 
 ## <a name="cores-hyperthreading"></a> Cores and Hyperthreading
 
-Hyperthreading creates multiple virtual cores from a single physical core.  All
-of these hosts are capable of hyperthreading, but given the intense
-computational demands of most work done in our environment, it provides no
-benefit.
+Hyperthreading creates multiple virtual cores from a single physical core.  All of these hosts are capable of hyperthreading, but given the intense computational demands of most work done in our environment, it provides no benefit.
 
-The interactive nature of the workload on the rhinos, however, makes
-hyperthreading a much more beneficial feature.  Thus, on the rhinos you will
-see 72 cores even though these have the same number of _physical_ cores as the
-K class nodes
+The interactive nature of the workload on the rhinos, however, makes hyperthreading a much more beneficial feature.  Thus, on the rhinos you will see 72 cores even though these have the same number of _physical_ cores as the K class nodes
 
 ### <a name="node-specifications"></a> Node Specifications
 
@@ -131,14 +108,11 @@ K class nodes
 
 ## Access to "campus-new" Partition
 
-Allowing access to `campus-new` requires adding a user to a group and the
-user's account to a QOS.  The latter was done for all accounts active as of 25
-March 2020 so will only be necessary as new accounts are provisioned.
+Allowing access to `campus-new` requires adding a user to a group and the user's account to a QOS.  The latter was done for all accounts active as of 25 March 2020 so will only be necessary as new accounts are provisioned.
 
 ## User Group
 
-This access is controlled by the group `gizmo-beta`.  Use `fhgroup` to add
-individuals to this group.
+This access is controlled by the group `gizmo-beta`.  Use `fhgroup` to add individuals to this group.
 
 ## QOS
 
@@ -146,7 +120,4 @@ These limits are governed by a QOS named `campus-new`.  New accounts will need t
 
     sacctmgr update account where account=foo_b set qos+=campus-new
 
-The QOS is set up as a partition QOS for the _campus-new_ partition
-(`PartitionQOS=campus-new`).  There are two TRES limits specified in
-`MaxTRESPerUser`: `cpu` and `node` limiting cores to 72 and a total number of
-nodes in use to 4.
+The QOS is set up as a partition QOS for the _campus-new_ partition (`PartitionQOS=campus-new`).  There are two TRES limits specified in `MaxTRESPerUser`: `cpu` and `node` limiting cores to 72 and a total number of nodes in use to 4.
