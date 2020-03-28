@@ -3,9 +3,6 @@ title: Gizmo Node Beta
 main_author: Michael Gutteridge
 primary_reviewers: atombaby
 ---
-
-# Overview
-
 This page describes the new gizmo cluster nodes, some of the differences between these new systems, and using these systems during this beta period.
 
 ## The Hardware
