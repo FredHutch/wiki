@@ -92,6 +92,20 @@ The interactive nature of the workload on the _rhinos_, however, makes hyperthre
 
 > Gory details for those with the stomach and need to know.
 
+## Communication
+
+We're using a mailman list "gizmo-beta-testers" for communicating updates and information.  The management interface is [here](https://lists.fhcrc.org/mailman/admin/gizmo-beta-testers).
+
+When adding new users, include the following text:
+
+> Hi
+>
+> This is the mailing list for those participating in the gizmo beta node trial period.  The wiki page "https://sciwiki.fredhutch.org/compdemos/gizmo-node-beta/" contains much of the recent information on changes and how to use this resource.
+>
+> Please use 'scicomp@fredhutch.org' to report problems and get assistance.
+
+The administrator password is in LastPass.  This list should be syncronized with the groups below- if someone is participating, they must be a member of the list.
+
 ## Access to "campus-new" Partition
 
 Allowing access to `campus-new` requires adding a user to a group and the user's account to a QOS.  The latter was done for all accounts active as of 25 March 2020 so will only be necessary as new accounts are provisioned.
