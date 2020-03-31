@@ -50,7 +50,7 @@ For the new K class nodes we need to submit jobs to a different partition- one c
 
     sbatch -p campus-new ...
 
-Even though these share the profile of the nodes in the "largenode" partition, there are no minimums to have jobs run.  The limits are, currently, much lower as we're trying to maximize availability during this trial period- 72 cores and 4 nodes maximum.
+Even though these share the profile of the nodes in the "largenode" partition, there are no minimums to have jobs run.  The limits are, currently, much lower as we're trying to maximize availability during this trial period- the limit is 72 cores or 4 nodes.
 
 The `grabnode` command on these new _rhino_ class systems has been updated to use the campus-new partition.  It will prompt you for job attributes just as it does today, but will get you a node on the new hosts.
 
@@ -120,4 +120,4 @@ These limits are governed by a QOS named `campus-new`.  New accounts will need t
 
     sacctmgr update account where account=foo_b set qos+=campus-new
 
-The QOS is set up as a partition QOS for the _campus-new_ partition (`PartitionQOS=campus-new`).  There are two TRES limits specified in `MaxTRESPerUser`: `cpu` and `node` limiting cores to 72 and a total number of nodes in use to 4.
+The QOS is set up as a partition QOS for the _campus-new_ partition (`PartitionQOS=campus-new`).  There are two TRES limits specified in `MaxTRESPerUser`: `cpu` and `node` limiting total cores in use to 72 and a total number of nodes in use to 4.
