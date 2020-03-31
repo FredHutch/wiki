@@ -64,6 +64,11 @@ NoMachine hosts.
 
 # Notes
 
+## < name="environment-modules"></a>Environment Modules Changes
+
+ - loading modules in a script requires new path for init: `/app/lmod/lmod/init/<shell>`
+ - Many modules have the same version of the tool, but have been compiled with different toolchain- for example, on these new nodes you'd load "R/3.6.2-foss-2019b" instead of "R/3.6.2-foss-2016b"
+
 ## <a name="local-gcc"></a>GCC and Compiling Your Own Code
 
 As indicated, these new hosts have a very minimal number of tools and packages installed.  While a basic compiler is installed on these hosts, it is strongly recommended that you use the tools provided in environment modules.  These are grouped under the module named "foss" or "fosscuda" (the latter for those needing GPU support):
