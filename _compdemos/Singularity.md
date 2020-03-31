@@ -13,7 +13,7 @@ Singularity containers can run under any user account once created. This is poss
 
 ```
     petersen@gizmok13:~$ ml Singularity
-    petersen@rhinok13:~$ singularity exec ~/ubuntu-python.sif python3 /fh/fast/_HDC/team/SciComp/script.py
+    petersen@rhinok13:~$ singularity exec ~/ubuntu-python.sif python3 /fh/fast/.../script.py
 ```
 
 We are loading the Singularity module on `Gizmo` and run python3 with a script residing in `Fast File`. The python3 binary is not executed on `Gizmo` but Singularity is using python3 from inside the ubuntu-python.sif container which is stored in my home directory. This process allows us to package entire pipelines in containers and integrate them seamlessly in HPC workflows as `/tmp`, `/home` and `/fh` are always read from the `Gizmo` environment outside the container.
@@ -24,11 +24,12 @@ As singularity may affect the stability of a compute system to which many users 
 
 ## Using Docker Containers with Singularity
 
-Docker containers are the predominant storage format for containerized workflows and it is important to know that Singularity can easily import Docker containers. To create a new container from a Docker image on [DockerHub](https://hub.docker.com/) you just need to run the `singularity pull` command (make sure you run `ml Singularity` before):
+Docker containers are the predominant storage format for containerized workflows and it is important to know that Singularity can easily import Docker containers. To create a new container from a Docker image on [DockerHub](https://hub.docker.com/) you just need to run the `singularity build` command (make sure you run `ml Singularity` before):
 
 ```
     petersen@gizmok13:~$ ml Singularity
-    petersen@gizmok13:~$ singularity pull docker://ubuntu:latest
+
+    petersen@gizmok13:~$ singularity build docker://ubuntu:latest
     INFO:    Converting OCI blobs to SIF format
     INFO:    Starting build...
     Getting image source signatures
@@ -47,7 +48,7 @@ Docker containers are the predominant storage format for containerized workflows
     INFO:    Build complete: ubuntu_latest.sif
 ```
 
-Now you can just use any tool inside the singularity container using the exec command shown above or you shell into the container by invoking bash to see what's in there: 
+Now you can just use any tool inside the singularity container using the exec command shown above or you shell into the container by invoking bash to see what's in there:
 
 ```
     petersen@gizmok13:~$ singularity exec ubuntu_latest.sif bash
@@ -89,5 +90,4 @@ the gory details are reported here:
 https://github.com/sylabs/singularity/issues/2556
 
 
-​
 Please email `SciComp` to request assistance and discuss which environment is best for your needs.
