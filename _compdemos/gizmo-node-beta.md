@@ -116,6 +116,12 @@ The interactive nature of the workload on the _rhinos_, however, makes hyperthre
 
 > Gory details for those with the stomach and need to know.
 
+## Adding New Users
+
+ - [ ] verify user's group has access to "campus-new" QOS
+ - [ ] add to Unix group "gizmo-beta"
+ - [ ] add to "gizmo-beta-testers" mailman list
+
 ## Communication
 
 We're using a mailman list "gizmo-beta-testers" for communicating updates and information.  The management interface is [here](https://lists.fhcrc.org/mailman/admin/gizmo-beta-testers).
