@@ -40,6 +40,8 @@ generation:
         url: /generation/study_hypothesis/
       - title: "Multiple Testing"
         url: /generation/multiple_testing/
+      - title: "Research Software Suggestions"
+        url: /generation/study_data_management/
 
   - title: "Consent, Privacy and Security"
     children:
@@ -177,10 +179,13 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/reference_overview/
-      - title: "Information for Grant Writers"
-        url: /scicomputing/compute_grants/
       - title: "Training and Finding Help"
         url: /scicomputing/reference_training/
       - title: "For Beginniners"
         url: /scicomputing/reference_beginners/
-
+      - title: "Resource Library"
+        url: /compdemos/
+      - title: "Information for Grant Writers"
+        url: /scicomputing/compute_grants/
+      - title: "Announcements"
+        url: /scicompannounce/
