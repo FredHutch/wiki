@@ -1,6 +1,6 @@
 ---
 title: Bioinformatics Tools for Microbiome Analysis
-last_modified_at: 2020-01-08
+last_modified_at: 2020-03-25
 primary_reviewers: sminot
 ---
 
@@ -130,6 +130,43 @@ Options:
 Sample Sheet:
   The sample_sheet is a CSV with a header indicating which samples correspond to which files.
   The file must contain the column `name`, and `long_reads`, `short_R1`, `short_R2` as appropriate.
+```
+
+## Microbial Genome Circularization
+
+The tools used for microbial genome assembly have been changing rapidly with the advent
+of long-read sequencing. One of the tools which has emerged in this area is Circlator,
+a tool to take an existing linear genome assembly and turn it into a circular assembly
+using information from long-read sequencing. You can refer to
+[the publication](http://www.genomebiology.com/2015/16/1/294) and
+[the documentation](https://sanger-pathogens.github.io/circlator/) for more details.
+
+Because this tool has a number of dependencies, it may be helpful to use this tool with
+Nextflow, which executes each step in a Docker container with all of the required
+dependencies. The workflow for this tool can be found
+[in this repository](https://github.com/FredHutch/circulator-nf), which also has all
+of the necessary details for running the workflow.
+
+The only data required to run the tool is (1) a genome assembly in FASTA format, and (2)
+a set of long reads in either FASTQ or BAM format.
+
+```#!/bin/bash
+Usage:
+
+nextflow run FredHutch/circulator-nf <ARGUMENTS>
+
+Required Arguments:
+  --manifest            File containing the location of all input genomes and reads to process
+  --output_folder       Folder to place analysis outputs
+
+Manifest:
+
+    The manifest is a comma-separated table (CSV) with three columns, name, fasta, and reads. For example,
+
+    name,fasta,reads
+    genomeA,assemblies/genomeA.fasta.gz,pacbio_reads/genomeA.fastq.gz
+    genomeB,assemblies/genomeB.fasta.gz,pacbio_reads/genomeB.fastq.gz
+
 ```
 
 
