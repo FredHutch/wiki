@@ -9,7 +9,7 @@ This page describes the new gizmo cluster nodes, some of the differences between
 
 Currently we have four "classes" of node in service: F, G, H, and J. Each class represents compute nodes with different capabilities, processors, and memory.  These new systems will be the "K" class of nodes.  These new systems have two Intel 6254 processors each with 18 cores (for 36 cores per node total) and running with processor speeds between 3.10 and 4.0 GHz.  These have been configured with 768GB of RAM and 6TB of node-local storage. The full  list of specifications [can be found below.](#node-specifications)
 
-> Each node is also equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  At this time it is not currently enabled for use- this feature will come soon.
+Each node is also equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  These can be requested as part of your job submission request.
 
 Along with these new nodes there are three new Rhino-class hosts to provide interactive and login sessions. These have the same 36 physical cores, but hyperthreading is enabled which increases the number of cores presented to 72.
 
@@ -46,6 +46,8 @@ For interactive sessions, use the host _rhino03_ (note the zero in the hostname)
 
 ## Job Submission
 
+> IMPORTANT: Submit jobs from the host _rhino03_.  While other systems have access to this partition, the environment is sufficiently different such that we need to use the new rhino hosts for job submission.
+
 For the new K class nodes we need to submit jobs to a different partition- one called "campus-new".  This partition doesn't appear in many command outputs by default (it's hidden to prevent confusion):
 
     sbatch -p campus-new ...
@@ -54,20 +56,37 @@ Even though these share the profile of the nodes in the "largenode" partition, t
 
 The `grabnode` command on these new _rhino_ class systems has been updated to use the campus-new partition.  It will prompt you for job attributes just as it does today, but will get you a node on the new hosts.
 
+### Special Note for GPU Users
+
+The GPUS can be requested in your job using the option _gres_:
+
+    sbatch -p campus-new --gres=gpu
+
 ## NoMachine
 
-> NoMachine is still in the process of getting installed.  When finished, this message will be removed.
-
-We are consolidating NoMachine functions onto this new generation.  Simply
-create a new connection to the host _rhino03_ as you would any of the existing
-NoMachine hosts.
+We are consolidating NoMachine functions onto this new generation of nodes instead of having separate hosts (i.e. _sphinx_ and other).  Simply create a new connection to the host _rhino03_ as you would any of the existing NoMachine hosts.
 
 # Notes
 
-## < name="environment-modules"></a>Environment Modules Changes
+## <a name="environment-module-scripts"></a>Environment Modules Changes for Scripts
 
- - loading modules in a script requires new path for init: `/app/lmod/lmod/init/<shell>`
- - Many modules have the same version of the tool, but have been compiled with different toolchain- for example, on these new nodes you'd load "R/3.6.2-foss-2019b" instead of "R/3.6.2-foss-2016b"
+Loading modules in a script requires initializing Environment Modules.  This is accomplished by sourcing the shell-specific initialization script in your script:
+
+```
+#!/bin/bash
+
+. /app/lmod/lmod/init/bash
+
+ml ...
+```
+
+## <a name="environment-module-names"></a>Environment Module Names
+
+While Environment Modules on these new hosts have the same version of the tool
+as on the existing nodes, these have been compiled with different toolchain
+which requires a different module name.
+
+For example, on these new nodes you'd load "R/3.6.2-foss-2019b" instead of "R/3.6.2-foss-2016b"
 
 ## <a name="local-gcc"></a>GCC and Compiling Your Own Code
 
@@ -96,6 +115,12 @@ The interactive nature of the workload on the _rhinos_, however, makes hyperthre
 # Notes for Admins
 
 > Gory details for those with the stomach and need to know.
+
+## Adding New Users
+
+ - [ ] verify user's group has access to "campus-new" QOS
+ - [ ] add to Unix group "gizmo-beta"
+ - [ ] add to "gizmo-beta-testers" mailman list
 
 ## Communication
 
