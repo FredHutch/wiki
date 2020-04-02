@@ -10,7 +10,7 @@ The [`rslurm`](https://cran.r-project.org/web/packages/rslurm/index.html) librar
 ## Purpose
 
 - Learn basic use of `rslurm`
-- Create a script for calculating &pi;
+- Create a script for calculating &pi; using the [Monte Carlo method](https://academo.org/demos/estimating-pi-monte-carlo/)
 
 ## Audience
 
