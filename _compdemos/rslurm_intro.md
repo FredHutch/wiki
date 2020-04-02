@@ -10,7 +10,7 @@ The [`rslurm`](https://cran.r-project.org/web/packages/rslurm/index.html) librar
 ## Purpose
 
 - Learn basic use of `rslurm`
-- Create a script for calculating $\pi
+- Create a script for calculating &pi;
 
 ## Audience
 
@@ -93,4 +93,30 @@ This creates a job object (`sjob1`).  The arguments for this function are:
  - nodes - this is misleading- this is more correctly called "tasks" for Slurm The rows in the parameters will be distributed over these tasks
  - cpus_per_node - how many cores will be requested for each task
  
-The job object is then what we will interact with for getting job state and results. `get_job_status` will show the jobs an their Slurm state.  `get_slurm_out` will return the output of the job in a data frame or list
+The job object is then what we will interact with for getting job state and results. `get_job_status` will show the jobs and their Slurm state.  `get_slurm_out` will return the output of the job in a data frame or list.
+
+The function `get_slurm_out` will block until the jobs have completed.  The output can then be put into a data frame or list.  A list is default, so a data frame is selected by passing "table" in the `outtype` parameter:
+
+```
+res <- get_slurm_out(sjob1, outtype="table")
+```
+
+The resulting data frame can then be used by downstream calculations:
+
+```
+res <- get_slurm_out(sjob1, "table")
+my_pi <- 4/(sum(res$iterations)/sum(res$draws.in))
+cat("\n... done\n")
+cat(
+  paste0(
+    "pi estimated to ", my_pi, " over ", sum(res$iterations), " iterations\n"
+  )
+)
+```
+
+This next step is technically optional but desirable as a practical matter.  The `slurm_apply` creates a bunch of temporary files- unless you want these for debugging remove them with `cleanup_files`:
+
+```
+cleanup_files(sjob1)
+```
+
