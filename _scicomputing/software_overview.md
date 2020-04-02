@@ -40,7 +40,7 @@ You have the option to run code on a local (desktop) computer, or on a shared co
 
 In an effort to create high-quality, transparent, and reproducible software-aided research, it is important that best practices be fused into the process of code development. This section documents coding standards for research software, templates for different types of coding projects, and examples coding projects.
 
-## [Code Examples and Templates](/scicomputing/software_examples)
+## [Code Examples and Templates](/scicomputing/software_examples/)
 
 
 ## Other Languages and Tools for Data Analysis
@@ -57,7 +57,7 @@ There is an active [**Tableau**](https://www.tableau.com) data visualization com
 
 Workflow managers are software that facilitate the setup, execution, and monitoring of scientific analyses involving multiple steps. These are especially important for complex bioinformatic analyses that require various software dependencies and resource requirements, and can make your analysis both easier to troubleshoot and more reproducible. Workflow managers common for scientific processes include: [Snakemake](https://snakemake.readthedocs.io/en/stable/), [Cromwell](https://cromwell.readthedocs.io/en/stable/tutorials/FiveMinuteIntro/), [Toil](https://toil.readthedocs.io), [CWL](https://www.commonwl.org), and [Nextflow](https://www.nextflow.io/). For more information on running **Nextflow**, please see [this demo](compdemos/nextflow/).  
 
-Nextflow and Cromwell are currently under development at the Fred Hutch for wider, supported use by researchers here.  [Nextflow](compdemos/nextflow/) is currently available and there is a growing community group working collaboratively you can join on their [Slack channel](https://fhbig.slack.com/archives/CJFP1NYSZ). Cromwell is currently (as of 11/2019) still being evaluated for use by the community, stay tuned for more.  
+Nextflow and Cromwell are currently under development at the Fred Hutch for wider, supported use by researchers here.  [Nextflow](/compdemos/nextflow/) is currently available and there is a growing community group working collaboratively you can join on their [Slack channel](https://fhbig.slack.com/archives/CJFP1NYSZ), and the same is available for [Cromwell](/compdemos/Cromwell/) including a [Slack channel](https://fhbig.slack.com/archives/CTFU13URJ).
 
 
 ### Other languages
