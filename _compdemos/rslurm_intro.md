@@ -42,7 +42,7 @@ The two primary functions for running jobs are `slurm_apply` and `slurm_call`, e
 
 ## Workflow
 
-The first step in using `rslurm` for parallelizing a computation is to create the function.  The function will get its arguments from the `slurm_apply` function.  For example, in our example of calculating $\pi we need a function that generates a random set of coordinates and determines which of those coordinates are inside a circle.
+The first step in using `rslurm` for parallelizing a computation is to create the function.  The function will get its arguments from the `slurm_apply` function.  For example, in our example of calculating &pi; we need a function that generates a random set of coordinates and determines which of those coordinates are inside a circle.
 
 ```
 sim.pi <- function(iterations = 1000) {
