@@ -42,11 +42,7 @@ The two primary functions for running jobs are `slurm_apply` and `slurm_call`, e
 
 ## Workflow
 
-The first step in using `rslurm` for parallelizing a computation is to create
-the function.  The function will get its arguments from the `slurm_apply`
-function.  For example, in our example of calculating $\pi we need a function
-that generates a random set of coordinates and determines which of those
-coordinates are inside a circle.
+The first step in using `rslurm` for parallelizing a computation is to create the function.  The function will get its arguments from the `slurm_apply` function.  For example, in our example of calculating $\pi we need a function that generates a random set of coordinates and determines which of those coordinates are inside a circle.
 
 ```
 sim.pi <- function(iterations = 1000) {
@@ -64,8 +60,7 @@ sim.pi <- function(iterations = 1000) {
 }
 ```
 
-This function returns a data frame containing the number of iterations and how
-many times the coordinates were inside this unit circle.
+This function returns a data frame containing the number of iterations and how many times the coordinates were inside this unit circle.
 
 The next step is to create the data frame containing the parameters.  This example has a simple data frame with just a list of numbers (iterations):
 
