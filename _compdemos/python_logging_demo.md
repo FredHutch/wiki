@@ -159,15 +159,15 @@ much information as possible so I can better reconstruct events when doing retro
 import logging
 logger = logging.getLogger('new_logger')
 logger.setLevel(logging.DEBUG)
-file_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s - line %(lineno)s - module %(module)s - function %(funcName)s - file %(fileName)s')
-file_handler = logging.FileHandler(filename='verbose_logger.log')
+file_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s - line %(lineno)s - module %(module)s - function %(funcName)s - file %(fileName)s')  # File record formatter provides lots of information, better for automated log analysis and post-mortems
+file_handler = logging.FileHandler(filename='verbose_logger.log', mode='a')  # define where the log will be written.  mode parameter will determine whether to append to log if it exists ('a') or write over file ('w'). 
 file_handler.setFormatter(file_formatter)
 
-slim_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s - line %(lineno)s')
-slim_console_handler = logging.StreamHandler()
-slim_console_handler.setFormatter(slim_formatter)
-logger.addHandler(slim_console_handler)
-logger.addHandler(file_handler)
+stream_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s - line %(lineno)s')
+stream_console_handler = logging.StreamHandler()
+stream_console_handler.setFormatter(stream_formatter) # Stream formatter carries less information to clutter up terminal less
+logger.addHandler(stream_console_handler) # Now log messages recorded by logger will be printed to console
+logger.addHandler(file_handler)  # Now log messages recorded by logger will be recorded to file specified in logging.FileHandler() call
 ```
 
 ### Filters 
@@ -212,6 +212,47 @@ be invaluable for debugging stateless applications in AWS, as they pick up log m
 can log state at various points in the application to better understand what might have gone wrong.  In most of my projects I
 create a function to create or retrieve a pre-configured `Logger` instance early on, and use it constantly. I then use 
 environment variables to set the log level of the service to reduce log message volume once the service is more stable.  
+
+A simple log function that I often keep in the src/__init__.py folder of my projects often looks like this:
+```python
+import logging
+def get_logger(log_name:str = None, stream_logging_level: str = logging.INFO, file_handler: bool = False, 
+               log_file_path: str = ''):
+    """ Create a logging instance that will log to console (or Cloudwatch if running on AWS), with an optional file handler.
+        Logging levels can also be set using the top-level constants provided in the logging module, or an integer value
+        corresponding to the desired logging level as described in the documentation.  When file logging is enabled logs
+        will be printed in the /logs subdirectory using the file name 'registrar_log_{YYYYMMDD}.txt', where YYYYMMDD
+        represents a day of log captures.
+    """
+    if not log_name:
+        log_name = 'base_logger'
+    
+    logger = logging.getLogger(log_name)
+
+    logger.setLevel(logging.DEBUG)
+    ch = logging.StreamHandler()
+    ch.setLevel(stream_logging_level)
+
+    formatter = logging.Formatter(
+        '[%(levelname)s] | %(asctime)s | %(message)s | Function: %(module)s.%(funcName)s | lineNumber: %(lineno)s |')
+    ch.setFormatter(formatter)
+    logger.addHandler(ch)  # Now any messages recorded with logger.info() will be send to the console
+
+    # Add file handler if requested by caller - could be set by an environment variable as well.
+    if file_handler:
+        if not log_file_path:
+            raise Exception(f"Log handler file path {log_file_path} is in a directory that doesn't exist")
+
+        fh = logging.FileHandler(filename=log_file_path)
+        fh.setLevel(logging.INFO)
+        fh.setFormatter(formatter)
+        logger.addHandler(fh)  # Now any messages recorded with logger.info() or higher will be sent to the console via
+                               # the earlier-attached stream handler, as well as to a file by the newly attached FileHandler.
+    
+    return logger
+
+    return logger
+```
 
 ## Logging and AWS
 As mentioned before python logging instances will emit their log records to the AWS CloudWatch log group / stream for 
