@@ -1,8 +1,8 @@
---  
+---
 title: Logging in Python
 main_author: Zach Romer (zyd14)
 primary_reviewers:
---
+---
 Logging in Python is performed through the simple and elegant `logging` module which comes in the standard
 Python library for both Python 2 and 3. The `logging` module enables developers to produce structured log messages and 
 direct those log messages to a variety of outputs including console, files, TCP/UDP socket, syslog, and SMTP emails.
