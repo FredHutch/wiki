@@ -200,6 +200,8 @@
   url: _compdemos/nextflow.md
 - dlm: June 3, 2019
   url: _compdemos/tensorflow-gpu.md
+- dlm: April 6, 2020
+  url: _compdemos/python_logging.md
 - dlm: March 19, 2020
   url: _compdemos/cluster_koshuBeta.md
 - dlm: May 15, 2019
@@ -230,8 +232,6 @@
   url: _compdemos/Cromwell.md
 - dlm: October 10, 2019
   url: _compdemos/ingest-Large-Data.md
-- dlm: April 2, 2020
-  url: _compdemos/python_logging_demo.md
 - dlm: April 1, 2020
   url: _compdemos/gizmo-node-beta.md
 - dlm: March 19, 2020
