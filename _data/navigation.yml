@@ -29,6 +29,8 @@ generation:
     children:
       - title: "Overview"
         url: /generation/gen_index/
+      - title: "Resource Library"
+        url: /gendemos/
 
   - title: "Study Design and Funding"
     children:
@@ -94,8 +96,7 @@ generation:
         url: /generation/datagen_rnaApproaches/
       - title: "Support Software"
         url: /generation/labman_software/
-      - title: "Resource Library"
-        url: /generationdemos/
+
 
 
 scicomputing:
@@ -181,11 +182,8 @@ scicomputing:
         url: /scicomputing/reference_overview/
       - title: "Training and Finding Help"
         url: /scicomputing/reference_training/
-      - title: "For Beginniners"
+      - title: "For Beginners"
         url: /scicomputing/reference_beginners/
-      - title: "Resource Library"
-        url: /compdemos/
       - title: "Information for Grant Writers"
         url: /scicomputing/compute_grants/
-      - title: "Announcements"
-        url: /scicompannounce/
+

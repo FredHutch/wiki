@@ -77,6 +77,8 @@ Loading modules in a script requires initializing Environment Modules.  This is 
 
 . /app/lmod/lmod/init/bash
 
+module use /app/modules/all
+
 ml ...
 ```
 

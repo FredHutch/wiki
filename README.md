@@ -24,7 +24,7 @@ Articles use an outline structure to allow graduated content, starting from basi
 
 > Note: This site is created by researchers and staff who are not web designers nor technical writers by training!  Thus, we have opted for a relatively flat organizational structure to keep it simpler for content curators and to reduce the risk of information becoming stale and irrelevant as much as possible.  
 
-The shorter, more focused, Resource Library entries can use headers as well to population the Table of Contents.  These documents are intended to be fairly detailed examples or content that is linked to by Articles, but address a specific use case or example scenario that may be only intended for advanced users/readers.  Once a number of related Resource library entries are created, Editors may consider consolidating the information and moving it into the main site as a full Article to highlight the content to new readers.  
+The more focused, how-to style, Resource Library entries in both the Data Generation and Scientific computing domains can use headers as well to populate a Table of Contents for each of these pages.  These documents are intended to be fairly detailed examples or content that is linked to by Articles, but address a specific use case or example scenario that may be only intended for advanced users/readers.  Once a number of related Resource library entries are created, Editors may consider consolidating the information and moving it into the main site as a full Article to highlight the content to new readers.  
 
 Both Articles and Resource Library entries are full-text searchable using the search feature (the magnifying glass in the header).  This search ability is the primary strength behind this Wiki and will be the primary way people will find content, as, again, no web designers or technical writers are involved in this grassroots project.  
 
@@ -45,12 +45,12 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
 1. Create a branch off the master branch for your edits. Do not fork the repo or others cannot submit additional edits to your content.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with names that don't attempt to describe the types of changes made whenever possible. For your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
 2. Commit your edits to existing markdowns as you go, and update from the master branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the master and committing frequently.  
 3. Publish/push your branch to GitHub to share your edits with the group.
-4. When you are done editing, create a pull request from your branch. This pull request step highlights your branch for consideration by potential contributors and editors! Suggest reviewers based on the content of the edits.  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
+4. When you are done editing, create a pull request from your branch. This pull request step highlights your branch for consideration by potential contributors and editors! Suggest reviewers based on the content of the edits if you'd like by tagging their GitHub usernames (using @...).  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
 
     >Note: If you are editing existing content and the page has a listing for the Primary Reviewers like this:  `primary_reviewers: somegithubusername` then when you submit the pull request please request a review from those usernames.  
 
 5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  If there is a `primary_reviewers` listed for content then one of the reviews must be from one of those members.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
-6. Once reviews have been obtained, the pull request can be merged into the master and then any edits go live to the site [here.](https://sciwiki.fredhutch.org/)
+6. Once approving reviews have been obtained, the pull request can be merged into the master and then any edits go live to the site [here.](https://sciwiki.fredhutch.org/)
 
 ### The Review Process
 This Wiki is intended to be curated by content owners, local experts, and service providers at the Fred Hutch in order to ensure accuracy and relevancy to our community.  Thus, contributions and reviews can only be made by users who have GitHub usernames affiliated with the Fred Hutch institution.  We use the `primary_reviewers` tag in our markdowns to indicate when there is a resident expert who should be contacted via pull request review requests when content in that markdown is edited or added to.  This process of contribution and review from multiple different users allows us to make sure that the content evolves in such a way that it it both more interpretable to the intended audience (Fred Hutch affiliated staff), but also accurate, appropriate and continuously reviewed.  Currently only one approving review of the content is required for a pull request to be merged. 
@@ -84,9 +84,9 @@ If you'd like to add images to your entry, some text editors (eg. Atom or VSCode
 
 One edit is that in order for Jekyll to correctly render the images in a page, the following text is the example format that that call to the image needs to be in for a markdown in the **_compdemos** folder:
 ```
-![]({{ site.baseurl }}/compdemos/assets/2018-06-13-16-47-59.png)
+![](/compdemos/assets/2018-06-13-16-47-59.png)
 ```
-If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is.  
+If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is and please leave out the underscore at the beginning of the folder name.  
 
 Both Atom and VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
 
