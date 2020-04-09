@@ -1,6 +1,6 @@
 ---
 title: Guidance for Making "Tidy" Data
-last_modified_at: 2018-10-30
+last_modified_at: 2019-11-06
 main_author:
 primary_reviewers: ptvan
 ---
@@ -19,14 +19,6 @@ All collaborations, even when your collaborator is your future self, benefit fro
 
 **Include a "data dictionary"**:  Describe what units are for each measurement and which values are acceptable. 
 
-## Data-Type Specific Suggestions
-### Flow-cytometry data
-More to come.
-### Sequencing data
-More to come.
-### Imaging data 
-More to come. 
-
-## Available Resources
+## External Learning
 There are a variety of online resources where you can learn more about what Tidy data is.  
 - [Coursera Getting and Cleaning Data Course](https://www.coursera.org/learn/data-cleaning)

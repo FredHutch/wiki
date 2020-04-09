@@ -1,6 +1,6 @@
 ---
 title: Bioinformatics Tools for Microbiome Analysis
-last_modified_at: 2019-10-02
+last_modified_at: 2020-03-25
 primary_reviewers: sminot
 ---
 
@@ -26,7 +26,35 @@ for more details on running Nextflow at Fred Hutch, as well as
 
 For any questions on the tools presented here, either in trying to get them running
 on your data, or if you would like access to additional functionality (or would like
-to offer your own utilities), please contact Sam Minot (sminot@fredhutch.org).
+to offer your own utilities), please contact Sam Minot (`sminot` at fredhutch.org).
+
+## Bacterial Genome Annotation
+
+In order to work with individual microbes, it is almost essential to have a map
+of the genes present in their genome. The computational tool for microbial genome
+annotation which is most compatible with submission to public repositories is the
+PGAP tool developed by NCBI ([link](https://github.com/ncbi/pgap)). 
+
+There are many different ways to annotate a single bacterial genome with all of the
+genes it is predicted to contain. PGAP is one such tool which has been produced by
+NCBI, and therefore retains some element of authority. Compared to other tools like
+Prokka, PGAP takes a very long time to run (a couple of hours per genome), but this
+can be mitigated for large batches of samples by processing them all concurrently
+using Nextflow.
+
+We have implemented a simple workflow which enables any researcher to run the PGAP
+genome annotation pipeline on their own collection of bacterial genomes.
+
+In order to run this tool, you must assemble some basic metadata describing the
+genome, as well as the genome sequence itself in FASTA format. You can find details 
+on those annotation files [here](https://github.com/ncbi/pgap/wiki/Input-Files).
+
+Please see the Microbial Genome Assembly workflow below if you would like to assemble 
+a genome from raw sequence reads.
+
+All of the details on running the PGAP workflow can be found in the GitHub repository
+for that workflow: [https://github.com/FredHutch/PGAP-nf](https://github.com/FredHutch/PGAP-nf)
+
 
 ## Ribosomal 16S Amplicon Analysis
 
@@ -43,7 +71,7 @@ This workflow uses `dada2` to identify exact sequence varients and ultimately
 performs taxonomic identification using a phylogenetic approach which is very much
 on the cutting edge of the 16S field (using `pplacer` for phylogenetic assignment).
 
-GitHub repository: [jgolob/maliampi/](https://github.com/jgolob/maliampi/)
+See his GitHub repository for more about this at [jgolob/maliampi/](https://github.com/jgolob/maliampi/).
 
 ### Example Run:
 
@@ -82,7 +110,7 @@ have implemented the UniCycler assembler in an easy-to-use workflow. This assemb
 provides the advantage of accommodating both short- and long-reads, performing
 hybrid assembly when both are provided. 
 
-GitHub Repository: [FredHutch/unicycler-nf/](https://github.com/FredHutch/unicycler-nf/)
+This workflow can be found in this GitHub Repository: [FredHutch/unicycler-nf/](https://github.com/FredHutch/unicycler-nf/)
 
 ```
 Usage:
@@ -104,6 +132,44 @@ Sample Sheet:
   The file must contain the column `name`, and `long_reads`, `short_R1`, `short_R2` as appropriate.
 ```
 
+## Microbial Genome Circularization
+
+The tools used for microbial genome assembly have been changing rapidly with the advent
+of long-read sequencing. One of the tools which has emerged in this area is Circlator,
+a tool to take an existing linear genome assembly and turn it into a circular assembly
+using information from long-read sequencing. You can refer to
+[the publication](http://www.genomebiology.com/2015/16/1/294) and
+[the documentation](https://sanger-pathogens.github.io/circlator/) for more details.
+
+Because this tool has a number of dependencies, it may be helpful to use this tool with
+Nextflow, which executes each step in a Docker container with all of the required
+dependencies. The workflow for this tool can be found
+[in this repository](https://github.com/FredHutch/circulator-nf), which also has all
+of the necessary details for running the workflow.
+
+The only data required to run the tool is (1) a genome assembly in FASTA format, and (2)
+a set of long reads in either FASTQ or BAM format.
+
+```#!/bin/bash
+Usage:
+
+nextflow run FredHutch/circulator-nf <ARGUMENTS>
+
+Required Arguments:
+  --manifest            File containing the location of all input genomes and reads to process
+  --output_folder       Folder to place analysis outputs
+
+Manifest:
+
+    The manifest is a comma-separated table (CSV) with three columns, name, fasta, and reads. For example,
+
+    name,fasta,reads
+    genomeA,assemblies/genomeA.fasta.gz,pacbio_reads/genomeA.fastq.gz
+    genomeB,assemblies/genomeB.fasta.gz,pacbio_reads/genomeB.fastq.gz
+
+```
+
+
 ## Microbial Pan-Genome Analysis
 
 Microbial researchers often need to compare multiple genomes in order to identify
@@ -114,8 +180,8 @@ we wanted to provide an easy point of entry with a workflow that imports a set o
 bacterial genomes into the anvi'o database format, and then launches a graphical viewer
 which allows the user to explore their pan-genome collection. 
 
-The guidance and instructions for running this tool can be found on the
-[FredHutch/nf-anvio-pangenome GitHub repository](https://github.com/FredHutch/nf-anvio-pangenome)
+The guidance and instructions for running this tool can be found on the GitHub repository
+[FredHutch/nf-anvio-pangenome](https://github.com/FredHutch/nf-anvio-pangenome).
 
 
 ## Microbial RNAseq
@@ -131,7 +197,7 @@ in their genomes. Using just those organisms, the pipeline will then measure the
 depth of sequencing across all genes for all organisms across all samples, and provide
 those results to the user in the form of a set of CSV files.
 
-GitHub repository: [FredHutch/microbial-rnaseq](https://github.com/FredHutch/microbial-rnaseq)
+This workflow can be found in this GitHub Repository: [FredHutch/microbial-rnaseq](https://github.com/FredHutch/microbial-rnaseq)
 
 ### Example Run:
 
@@ -165,7 +231,7 @@ tasks to cloud computing services (like AWS).
 This utility takes a set of input files (FASTQ format) and aligns them all against a set
 of viral genomes (specified by NCBI `accession` in a provided CSV file).
 
-GitHub repository: [FredHutch/nf-viral-metagenomics](https://github.com/FredHutch/nf-viral-metagenomics)
+This workflow can be found in this GitHub Repository: [FredHutch/nf-viral-metagenomics](https://github.com/FredHutch/nf-viral-metagenomics)
 
 ### Example Run:
 

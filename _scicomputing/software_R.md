@@ -1,7 +1,6 @@
 ---
 title: R and RStudio
-last_modified_at: 2019-04-01
-primary_reviewers: ptvan
+primary_reviewers: ptvan, vortexing
 ---
 R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or [CRAN](https://cran.r-project.org/), or via the FH Center IT's Self Service Tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.  
 
@@ -37,8 +36,8 @@ When using R/RStudio locally, you have the option to install a number of differe
 ## Remote (`Rhino` and `Gizmo`) Use
 If computing resources beyond what is available via your desktop are required, you may consider running R scripts or RStudio from the `rhinos` or `gizmo`.  When using R/RStudio on shared computing resources, different options for builds and modules are available that you can take advantage of.  `SciComp` makes pre-built modules available for researcher use in order to facilitate more reproducible and reliable use of software on the local cluster.  
 
-### Current R Builds on `Rhino`/`Gizmo`
-SciComp maintains a current list of the various builds of R available on `Gizmo` for use by researchers on the [EasyBuild site.](https://fredhutch.github.io/easybuild-life-sciences/)  Each build has different packages installed and versions of R itself, thus identifying if an existing R build matches your needs is a first step to using R on `Gizmo`.  If you do not see a build that meets your needs, then contact `scicomp` with the specific needs of your project.  
+### Current R Modules on `Rhino`/`Gizmo`
+SciComp maintains a range of various builds of R on `Rhino` and `Gizmo` for use by researchers. Each build has different packages installed and versions of R itself, thus identifying if an existing R build matches your needs is a first step to using R on `Rhino` or `Gizmo`.  Specific information about which R Modules are available, including more information about packages installed in them can be found on our dedicated [R Module page](/rModules/). If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.  
 
 
 ### `Rhino`
@@ -52,9 +51,50 @@ From Rhino, execute the `grabnode` command and a node will be allocated on Gizmo
 
 
 ### rstudio.fredhutch.org
-Lastly, a Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org) from computers connected to the Hutch network. For more information about using it, please contact `scicomp`.
+Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org) from computers connected to the Hutch network. For more information about using it, please contact `scicomp`.
+
+### Run RStudio Server on an HPC machine
+
+There is a wrapper script that allows you to run RStudio Server (the web-browser-based version of RStudio)
+on the HPC machines (cluster machines whose names start with `gizmo`).
+
+You can run this with any version of `R` that is available on our shared computing systems.
+
+Here are the steps to run this wrapper.
+
+* Grab a node using the [grabnode](/scicomputing/compute_platforms/#gizmo-and-beagle-cluster) command. Specify how many CPUs and how much memory you want, and
+how many days you want to have control of the node.
+Remember that you can launch `slurm` jobs within
+RStudio, so you may not need to ask for a lot of
+computing power for your RStudio machine.
+* Once you are on the node you grabbed, choose
+  a version of `R` by using the [module load](/scicomputing/compute_environments/#how-to-use-environment-modules) command (`ml` for short). (Example: `ml R/3.6.1-foss-2016b`).
+* Run the `launch_rstudio_server` command. This will spit out a URL that you can paste into your browser. (This URL only works inside the Hutch network, so you need to be on campus or using VPN.)
+* In your browser, log into RStudio using your HutchNet ID and password.
+* When you are finished using RStudio Server, you can
+terminate it by typing this command on the node you "grabbed" (the same machine where you launched RStudio Server): `launch_rstudio_server --kill`
+* Alternatively, you can just wait for your `grabnode` allocation (the number of days you specified when grabbing the node) to expire, and RStudio Server will become unavailable after that.
+* If you need RStudio Server again, just repeat these steps.
+
+*Note*: In Rstudio Server, when trying to generate `tiff`, `jpeg`, `png` files (with `R` functions of the same names), you will need to change the default bitmap type (default is `X11`). Do this with the following command:
+
+```
+options(bitmapType = 'cairo')
+```
 
 
+
+*Related Note*: If you are working with RMarkdown documents in RStudio Server,
+you may find that plot labels and other graphics look kind of weird.
+This is because X11 (the X Window System) is not available
+inside RStudio Server. The solution is to make the the `Cairo`
+package is installed, and put the following line at the beginning of your first
+code chunk. This should cause plots and other graphics to render
+correctly without need for X11.
+
+```r
+knitr::opts_chunk$set(dev="CairoPNG")
+```
 
 
 
@@ -67,5 +107,3 @@ The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordi
 ## Local resources
 - [Seattle useR group](http://www.meetup.com/Seattle-useR/)
 - [Cascadia RConf](https://cascadiarconf.com/), a local yearly conference
-
->Note: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  

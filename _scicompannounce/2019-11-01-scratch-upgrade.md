@@ -2,6 +2,17 @@
 title: Scratch File System Migration
 ---
 
+<font size="2">
+  
+            {%- for resource in site.data.last_modified_dates %}
+          {% if resource.url == page.relative_path %}
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> {{resource.dlm}}</p>
+          {% endif %}
+          {%- endfor %}
+  
+</font>
+
+
 > This work was previously scheduled for November 1st.
 
 On the weekend of 8 November we'll be upgrading the scratch file system to new
@@ -61,9 +72,16 @@ Would set the job's time limit to one day.
 
 ### Use the Reservation.  
 
-If you know you don't use the scratch file system you can configure your job to use the maintenance reservation.  During job submission add `--reservation=scratch_move`.  If your job has already been submitted, update the job with scontrol:
+If you know you don't use the scratch file system you can configure your job to
+use the maintenance reservation.  During job submission add
+`--reservation=scratch_move`.  If your job has already been submitted, update
+the job with scontrol:
 
     scontrol update jobid=<jobid> reservationname=scratch_move
+
+>  NOTE: this reservation wasn't set up correctly so it is necessary to
+>  manually add you to the access list for this reservation.  Email scicomp to
+>  get your account added if you need to use this reservation.
 
 Contact Scientific Computing with any questions or for assistance.
 

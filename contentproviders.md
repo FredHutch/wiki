@@ -2,7 +2,6 @@
 title: Wiki Content Providers
 permalink: /contentproviders/
 layout: single
-classes: wide
 toc: true
 toc_label: "On This Page"
 ---

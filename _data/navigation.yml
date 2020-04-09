@@ -4,6 +4,8 @@ main:
     url: /generation/gen_index/
   - title: "Scientific Computing"
     url: /scicomputing/comp_index/
+  - title: "About"
+    url: /about/
 
 frontpage:
   - title: "Who We Are"
@@ -28,7 +30,7 @@ generation:
       - title: "Overview"
         url: /generation/gen_index/
       - title: "Resource Library"
-        url: /generationdemos/
+        url: /gendemos/
 
   - title: "Study Design and Funding"
     children:
@@ -40,6 +42,8 @@ generation:
         url: /generation/study_hypothesis/
       - title: "Multiple Testing"
         url: /generation/multiple_testing/
+      - title: "Research Software Suggestions"
+        url: /generation/study_data_management/
 
   - title: "Consent, Privacy and Security"
     children:
@@ -94,11 +98,16 @@ generation:
         url: /generation/labman_software/
 
 
+
 scicomputing:
   - title: "Scientific Computing"
     children:
       - title: "Overview"
         url: /scicomputing/comp_index/
+      - title: "Resource Library"
+        url: /compdemos/
+      - title: "Announcements"
+        url: /scicompannounce/
 
   - title: "Access and Credentials"
     children:
@@ -130,12 +139,20 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/software_overview/
-      - title: "Common Languages"
-        url: /scicomputing/software_languages/
+      - title: "R and RStudio"
+        url: /scicomputing/software_R/
+      - title: "Python"
+        url: /scicomputing/software_python/
+      - title: "Linux, Unix and Shell"
+        url: /scicomputing/software_linux101/
+      - title: "Where to run my code?"
+        url: /scicomputing/software_running/
       - title: "Managing and Sharing Code"
         url: /scicomputing/software_managecode/
       - title: "Software Development Standards"
         url: /scicomputing/software_standards/
+      - title: "Code Examples and Templates"
+        url: /scicomputing/software_examples/
 
   - title: "Large Scale Computing"
     children:
@@ -147,6 +164,8 @@ scicomputing:
         url: /scicomputing/compute_platforms/
       - title: "Computing Environments and Containers"
         url: /scicomputing/compute_environments/
+      - title: "Scientific Software, R and Python Modules"
+        url: /scicomputing/compute_scientificSoftware/
       - title: "Job Management"
         url: /scicomputing/compute_jobs/
       - title: "Parallel Computing"
@@ -155,18 +174,16 @@ scicomputing:
         url: /scicomputing/compute_cloud/
       - title: "Computing with GPU"
         url: /scicomputing/compute_gpu/
-      - title: "Information for Grant Writers"
-        url: /scicomputing/compute_grants/
 
-  - title: "Reference and Announcements"
+
+  - title: "Reference and Training"
     children:
       - title: "Overview"
         url: /scicomputing/reference_overview/
       - title: "Training and Finding Help"
         url: /scicomputing/reference_training/
-      - title: "For Beginniners"
+      - title: "For Beginners"
         url: /scicomputing/reference_beginners/
-      - title: "Resource Library"
-        url: /compdemos/
-      - title: "Announcements"
-        url: /scicompannounce/
+      - title: "Information for Grant Writers"
+        url: /scicomputing/compute_grants/
+

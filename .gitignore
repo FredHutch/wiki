@@ -3,3 +3,5 @@
 .vscode/
 _site/
 .idea/*
+
+Gemfile.lock

@@ -1,6 +1,5 @@
 ---
 title: For Beginners - How to Start Learning to Code
-last_modified_at: 2019-09-11
 primary_reviewers: k8hertweck
 ---
 
@@ -21,6 +20,6 @@ Similarly, there are several questions you can ask that help you figure out what
 - What are your career goals? Are the tools you're planning to learn going to be useful only for your current position, or will they be meaningful additions to your resume?
 - What do you personally prefer? Some people simply prefer working in one language over another, because the syntax (rules about the structure of the language) makes more sense to them.
 
-Our page about [Common Programming Languages](/scicomputing/software_languages/) provides information about some of the common tools used at Fred Hutch to help you answer these questions. For a clear side-by-side comparison of R and Python, [this article](https://medium.com/@data_driven/python-vs-r-for-data-science-and-the-winner-is-3ebb1a968197) provides some general considerations from a data science perspective.
+ For a clear side-by-side comparison of R and Python, [this article](https://medium.com/@data_driven/python-vs-r-for-data-science-and-the-winner-is-3ebb1a968197) provides some general considerations from a data science perspective.
 
 It's important to be deliberate in your choice of first language to learn, because it can be a significant time investment, but it's not committing you to only using that language in the future. Just like learning human languages, learning one language generally makes it easier to learn another language later.

@@ -4,7 +4,7 @@ last_modified_at: 2019-08-22
 primary_reviewers: dirkpetersen
 ---
 
-The Hutch supports a number of options for storing your data, specifically Database storage, File storage, Scratch storage, Object storage and Collaborative storage options.  The storage you use to store your data will depend on the nature of the data and the anticipated use. Here we provide a basic overview of what resources are available to researchers for data storage. For more detailed information on each of these topics summarized here including setup instructions and limitations, please refer to each of the articles in this section of the sidebar.  
+The Hutch supports a number of options for storing your data such as _database_, _file_, _scratch_, _object_ and _collaborative storage_ options. The storage you use to store your data will depend on the nature of the data and your anticipated use. Below is an overview of what data storage resources are available. For more detailed information, including setup instructions and limitations, please see the links and articles in the sidebar.  
 
 ## Data Storage Guidance
 
@@ -31,14 +31,14 @@ This is an overview of supported features:
 |  Approved for PHI by ISO 	|   Yes	|   No	|   Yes	|   Yes	|
 
 
-Additional resources for identifying [whether your data is de-identified or not](https://centernet.fredhutch.org/cn/u/hdc/data.html) and the Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhutch.org/cn/u/irb/hipaa-compliance.html) can be found at the linked CenterNet pages.  
+The Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhutch.org/cn/u/irb/hipaa-compliance.html) can be found at the linked CenterNet pages.  
 
 ### Storage Allocation and Costs
 
 Storage Resource | Costs (per TB/month)\*  | Backup Location/Duration | Best Use
 --- | --- | --- | --- | ---
 `Home` | Free to 100GB limit |  7 days of Snapshots, Daily backups, Off Site copy | Data specific to a user, not shared to others, relatively small data sets
-`Fast` | $$$ beyond 5TB per PI |  7 days of Snapshots, Daily backups, Off Site copy | Large data sets that need high performance access to computing resources, Unix file permissioning, but neither PHI nor temporary data (such as intermediate files)
+`Fast` | $$$ beyond 5TB per PI |  Daily backups, Off Site copy | Large data sets that need high performance access to computing resources, Unix file permissioning, but neither PHI nor temporary data (such as intermediate files)
 `Secure` | $$$$ beyond 1TB per PI |  7 days of Snapshots, Daily backups, Off Site copy | PHI containing datasets or those that require auditing, relatively small datasets
 `Economy Local` and `Cloud` | $ beyond 5TB per PI |  Multi-datacenter replication, 60 day undelete with request to `helpdesk` | Best for archiving large data sets, or primary storage of large files.  Good for PHI or other data that requires encryption and auditing. *Requires Desktop Client to access, see [Object Storage page.](/scicomputing/store_objectstore/)*
 `Scratch` | Free | Not applicable | Temporary files, such as those intermediate to a final result that only need to persist during a job.  *Appropriate use  can significantly reduce data storage costs, see our [Scratch Storage](/scicomputing/store_scratch/) page.*

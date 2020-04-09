@@ -34,7 +34,7 @@ For this purpose we have a scratch file systems attached to the `Gizmo`, `Beagle
 
 ## Types of Scratch Storage Available
 
-On Gizmo there are three forms of scratch space available: "node local job scratch", "network job scratch" and "network persistent scratch".  The "network job scratch"  and  "node local"  scratch directories and their contents exist only for the duration of the job- when the job exits, the directory and its contents are removed.  
+On Gizmo there are two forms of scratch space available: "node local job scratch" and "network persistent scratch".  The "node local" scratch directories and their contents exist only for the duration of the job- when the job exits, the directory and its contents are removed.  
 For more persistent scratch space, ​please see the persistent Scratch section.
 
 
@@ -46,10 +46,6 @@ sbatch -n 2 -t 1-0 --tmp=4096 # requests 4GB of disk space
 ```
 Note that this only ensures that the disk is available when the job starts.  Other processes may fill up this scratch space, causing problems with your job.
 The location of this local scratch space is stored in the environment variable "TMPDIR" and "SCRATCH_LOCAL- use this environment variable if you need local storage on the node- **do not use "/tmp"** for storage of files or for scratch space. Node local job scratch spaces are only available on gizmo nodes, not on rhino.
-
-### Network Job Scratch
-
-Network global scratch space is a scratch directory that is created on storage that is available to all nodes in your job's allocation.  The directory is based on the job ID.  You should access the job scratch directory by using the environment variable "$SCRATCH" in your shell scripts, for example use $SCRATCH/myfile.csv to write to a file. Node local job scratch spaces are only available on gizmo nodes, not on rhino.
 
 ### Persistent scratch
 
@@ -82,11 +78,9 @@ As an alternative to the environment variable $DELETE30 you can also reach scrat
 
 ## How can I use Scratch?
 
-In jobs on `Gizmo`, environment variables can be used to write and then read temporary files, e.g. $SCRATCH/myfile.csv, $SCRATCH_LOC/myfile.csv or $DELETE30/lastname_f/myfile.csv ($DELETE10 and $DELETE90 are in preparation).  Similarly, jobs on Beagle can currently use $SCRATCH/myfile.csv and $DELETE10/lastname_f/myfile.csv.
+In jobs on `Gizmo`, environment variables can be used to write and then read temporary files, e.g. $SCRATCH_LOC/myfile.csv or $DELETE30/lastname_f/myfile.csv ($DELETE10 and $DELETE90 are in preparation).  Similarly, jobs on Beagle can currently use $TMPDIR/myfile.csv and $DELETE10/lastname_f/myfile.csv.
 
-
-The files under $SCRATCH_LOC and $SCRATCH are automatically deleted when your Gizmo or Beagle job ends. You can also reach Scratch storage space via Windows (via the X: drive) or Mac, e.g. smb://center.fhcrc.org/fh/scratch.
-
+The files under $SCRATCH_LOC are automatically deleted when your Gizmo or Beagle job ends. You can also reach Scratch storage space via Windows (via the X: drive) or Mac, e.g. smb://center.fhcrc.org/fh/scratch.
 
 >Note: lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
 
@@ -97,7 +91,6 @@ In your Bash Shell:
 ```
    #! /bin/bash
     echo -e $TMPDIR
-    echo -e "Network Job Scratch:​ $SCRATCH"
     echo -e "Node Local Job Scratch: $SCRATCH_LOCAL"
     echo -e "Node Local Job Scratch: $TMPDIR"
     echo -e "Persistent Scratch: $DELETE30"
@@ -111,7 +104,6 @@ In Python:
     #! /usr/bin/env python3
     import os
 
-    print("Network Job Scratch: %s" % (os.environ['SCRATCH']))
     print("Node Local Job Scratch: %s" % (os.environ['SCRATCH_LOCAL']))
     print("Node Local Job Scratch: %s" % (os.environ['TMPDIR']))
     print("Persistent Scratch: %s" % (os.environ['DELETE30']))

@@ -1,6 +1,5 @@
 ---
 title: Fred Hutch Software Development Standards
-last_modified_at: 2019-04-28
 primary_reviewers: k8hertweck
 ---
 
@@ -28,12 +27,9 @@ While sharing results is encouraged, it is not anticipated that the underlying c
 
 This project template is built to accommodate any Python project focused on tool or package development, which can ultimately be shared or imported by other users. The template file structure has the flexibility to support a notebook interface, an automated script, package creation, or some hybrid thereof. Some projects will require building out additional subfolders and modules, but the basic skeleton should be consistent across all projects at Fred Hutch. This will aid in reproducibility, and make it easier for other researches to review and adapt code to their own purposes. All template components are documented in the local [README](https://github.com/FredHutch/wiki-templates/ToolDev-Python-Template/README.md) file.
 
-### [Template Examples](https://github.com/FredHutch/wiki-code-examples/)
+### [Example Coding Projects](https://github.com/FredHutch/wiki-code-examples)
 
-A growing repository of examples developed from these templates is available [here](https://github.com/FredHutch/wiki-code-examples/). Contributions to the examples repository are welcome and encouraged. We hope to develop a robust resource for researchers to see applications of existing packages, as well as share their own results and homegrown code across an open science framework for the Hutch. 
-
-To keep the examples repo lightweight for easy cloning, we request that data not be stored directly in any project repo that is submitted. Please take a look at existing examples to figure out some options for accessing data in your project code.
-
+A growing repository of examples developed from these templates is available [here](https://github.com/FredHutch/wiki-code-examples/). Contributions to the examples repository are welcome and encouraged. We hope to develop a robust resource for researchers to see applications of existing packages, as well as share their own results and homegrown code across an open science framework for the Hutch.
 
 ## Coding Practices
 
@@ -42,14 +38,14 @@ In addition to building your project within the file structure of the template, 
 1. Source code and results should be organized and clearly labeled.
 1. All projects should contain a license and a README file, with a project overview and details about each component in the README.
 1. Code should be fully documented. Additional documentation, instructions and examples can be included in a separate folder.
-1. Reuse existing code (or packages) when available. 
+1. Reuse existing code (or packages) when available.
 1. Code should be automated to reduce transcription errors.
 1. Use inline comments and meaningful variable names to help make your code readable to reviewers, researchers, and your future self.
 1. For Python packages and modules, include Help documentation.
 
 ## Additional Resources
 For more information on these coding practices, we recommend the following guides:
- - [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745): This article from PLOS Biology is written for researchers in science who are primarily self-taught and interested in adopting effective practices for designing and maintaining code in research settings. 
+ - [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745): This article from PLOS Biology is written for researchers in science who are primarily self-taught and interested in adopting effective practices for designing and maintaining code in research settings.
  - [Good Enough Practices in Scientific Computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510): This article from PLOS Computational Biology is a follow-up to the article above, and highlights the most essential practices for researchers to consider adopting if they are writing code for research purposes.
 
 
@@ -64,7 +60,7 @@ When working with others or sharing your code, you'll want to make sure it will 
 
 ## Use Standard Styles
 
-Using a standard coding style along with meaningful variable names will significantly enhance the readability of your code. 
+Using a standard coding style along with meaningful variable names will significantly enhance the readability of your code.
 
 For Python coding, we recommend the PEP8 style guide as a common standard, with reference documentation available [here](https://www.python.org/dev/peps/pep-0008/). Fortunately, there are automated tools available to check your code against the PEP8 style guide and give you feedback when there are issues. Two options are [Pylint](https://www.pylint.org/) and [pycodestyle](https://pypi.org/project/pycodestyle/).
 
@@ -80,8 +76,8 @@ Information about the Python unit test package can be found online in the [Pytho
 With any project that will require ongoing updates or major releases, it is important to take some general development practices under consideration. Things like how often you commit code updates, and running automated testing in each commit can greatly affect how much effort is required for each update. The idea behind [Continuous Integration](https://www.thoughtworks.com/continuous-integration) is that in terms of software development, several small steps will be easier than a few large ones. If automated testing of incremental changes is run frequently, then larger issues are likely resolved before they come up in major milestone updates. While your release schedule may differ from a typical software developer, conscientious decisions behind the size of updates and built-in testing will still have a beneficial impact on your process.
 
 ### Git Badges
-When using GitHub and applying automated testing or continuous integration, [Travis](https://travis-ci.org/) is a tool that will allow you to both monitor and share the the testing standards you have met. It indicates to other users/researchers that your project is reliable and tested, and it assists in your practice of Continuous Integration by testing each commit to GitHub. 
+When using GitHub and applying automated testing or continuous integration, [Travis](https://travis-ci.org/) is a tool that will allow you to both monitor and share the the testing standards you have met. It indicates to other users/researchers that your project is reliable and tested, and it assists in your practice of Continuous Integration by testing each commit to GitHub.
 
-The communication of your build/testing success is efficient; Travis creates badge stickers that appear on your GitHub repository page. While there are several options, some useful ones to start with are `buildpassing` (which tests your code and environment for a successful build) and `codecov` (which checks the percentage of your code covered by unit tests). You can even set up a linter (such as [Pylint](https://www.pylint.org/)) to check your code for standardized style on each build. (This can take some getting used to, but the ultimate benefits are worth it). 
+The communication of your build/testing success is efficient; Travis creates badge stickers that appear on your GitHub repository page. While there are several options, some useful ones to start with are `buildpassing` (which tests your code and environment for a successful build) and `codecov` (which checks the percentage of your code covered by unit tests). You can even set up a linter (such as [Pylint](https://www.pylint.org/)) to check your code for standardized style on each build. (This can take some getting used to, but the ultimate benefits are worth it).
 
-Travis badges do not replace peer review, but they are an excellent tool for a project with multiple contributers or ongoing updates. 
+Travis badges do not replace peer review, but they are an excellent tool for a project with multiple contributers or ongoing updates.

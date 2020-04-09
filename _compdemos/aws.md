@@ -1,13 +1,12 @@
 ---
 title: Accessing AWS S3 from the CLI, Python, or R
-last_modified_at: 2019-05-31
 main_author: Dan Tenenbaum
 primary_reviewers: dtenenba
 ---
 
 This demo provides specific examples of how to access AWS S3 object storage via the AWS CLI, Python, and R.
 
-For information on setting up and testing your AWS credentials, see [this section](../scicomputing/access_credentials/#amazon-web-services-aws) of the Scientific Computing wiki. For any additional questions, please email `scicomp`.
+For information on setting up and testing your AWS credentials, see [this section](/scicomputing/access_credentials/#amazon-web-services-aws) of the Scientific Computing Wiki. For any additional questions, please email `scicomp`.
 
 # AWS Command Line Interface (CLI)
 

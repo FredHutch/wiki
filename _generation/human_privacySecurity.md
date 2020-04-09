@@ -14,7 +14,7 @@ etc from any part of the data.
 The aim of de-identification is to maintain confidentiality through
 elimination of identifiers in a way that eliminates or greatly
 diminishes the risk of re-identification of an individual patient (also
-see our page on [de-identification of data or specimens]({{ site.baseurl }}/generation/human_deidentification/)). Maintaining strong
+see our page on [de-identification of data or specimens](/generation/human_deidentification/)). Maintaining strong
 data security processes is an additional key measure. Sharing data
 should be done securely, after the information is de-identified and
 within a data management and sharing plan. This plan should delineate
@@ -26,7 +26,7 @@ possible without compromising the confidentiality of participants.
 ## Fred Hutch Information Classification Standard
 
 Data should be handled according to the [Fred Hutch Information
-Classification Standard](https://teams.fhcrc.org/sites/centerit/governance/PSP/FinalDocs/Fred-Hutch-Information-Classification-and-Handling-Standard%20-%20102018.pdf), which describes security and handling standards
+Classification Standard](https://teams.fhcrc.org/sites/centerit/governance/PSP/FinalDocs/Fred-Hutch-Information-Classification-and-Handling-Standard%20-%20Final%20v2.pdf), which describes security and handling standards
 commensurate with the risk of information mishandling. These standards provide guidelines for managing
 data at Fred Hutch and for sharing information within Fred Hutch and between Fred Hutch and an
 outside party. Genomic data, outside of public reference data, is
@@ -92,7 +92,7 @@ Common mechanisms for sharing datasets:
 
 -   Using FH Outlook email and Office 365 Encryption Security
 
--   Shared using Fred Hutch resources (such as Sharepoint, Aspera, Microsoft OneDrive or BaseCamp), described in the [Center IT Collaboration Tools site](https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html) and in this site's [Collaborative Data Storage page](/scicomputing/storage_collaboration/)
+-   Shared using Fred Hutch resources (such as Sharepoint, Aspera, Microsoft OneDrive or BaseCamp), described in the [Center IT Collaboration Tools site](https://centernet.fredhutch.org/cn/u/center-it/collaboration-tools.html) and in this site's [Collaborative Data Storage page](/scicomputing/store_collaboration/)
 
 - Using properly licensed corporate tools or subscription applications such as DropBox or Box can be considered with guidance from the Information Security Office
 
@@ -102,7 +102,7 @@ Common mechanisms for sharing datasets:
 ### Office 365 Email and OneDrive
 The implementation of Office 365 provides the ability to secure email, storage and sharing.  Outlook email can be secured within the Fred Hutch environment and between Fred Hutch and external entities.  To trigger email encryption, type “secure” (without quotes) in the subject line of any email and [additional instructions for securing email are provided here.](https://centernet.fredhutch.org/content/dam/centernet/u/center-it/Ignite2/Fred%20Hutch%20Email%20Encryption%20Instructions%202018-11-20.pdf.) For users of mobile devices, Outlook mobile app (iOS and Android) ca display encrypted email within the app without opening browser.  
 
-More information about using OneDrive to share data can be found on our [Collaborative Data Storage page.](/scicomputing/store_collaboration/)
+More information about using OneDrive to share data can be found on our [Collaborative Data Storage page.](/scicomputing/store_collaboration/#onedrive)
 
 
 ### Final Notes

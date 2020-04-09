@@ -1,6 +1,5 @@
 ---
 title: Managing and Sharing Code
-last_modified_at: 2019-04-01
 primary_reviewers: k8hertweck, vortexing, dirkpetersen
 ---
 Version control software allows anyone using a computer to track changes made to computer files over time, which allows both referencing and reverting back to earlier work. Such software is becoming increasingly common among scientists, academics, and other researchers to manage computational work. While originally developed to support code development, version control software is useful for not just computer code, but also data, documentation, or any other files associated with a project. Moreover, version control software streamlines collaborative editing of documents, allowing changes to be easily identified and attribution of changes to be assigned to individual contributors.   

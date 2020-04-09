@@ -35,6 +35,12 @@ collections:
   drafts:
     output: true
     permalink: /:collection/:path/
+  pythonModules:
+    output: true
+    permalink: /:collection/:path/
+  rModules:
+    output: true
+    permalink: /:collection/:path/
 
 
 atom_feed:
@@ -68,6 +74,9 @@ footer:
     - label: "Find Training"
       icon: "fas fa-chalkboard-teacher"
       url: "https://www.fredhutch.io/"
+    - label: "About this Project"
+      icon: "fas fa-landmark"
+      url: /about/
 
 
 
@@ -93,6 +102,8 @@ plugins:
   - jekyll-gist
   - jemoji
   - jekyll-include-cache
+  - jekyll-archives
+
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -168,7 +179,7 @@ defaults:
       type: scicompannounce
     values:
       layout: single
-      share: false
+      share: true
       sidebar:
         nav: "scicomputing"
 
@@ -181,6 +192,36 @@ defaults:
       toc: true
       toc_label: "On This Page"
       share: true
+
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      sidebar:
+        nav: "scicomputing"
+# _rModules
+  - scope:
+      path: ""
+      type: rModules
+    values:
+      layout: single
+      share: true
+      sidebar:
+        nav: "scicomputing"
+# _pythonModules
+  - scope:
+      path: ""
+      type: pythonModules
+    values:
+      layout: single
+      share: true
+      sidebar:
+        nav: "scicomputing"
 
 webrick:
   headers:

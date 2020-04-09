@@ -78,7 +78,7 @@ Verify that docker works as expected by running the hello world container.
     This message shows that your installation appears to be working correctly.
 ```    
 
-Now let's assume you would like to install multiple machines to build a small cluster. Each machine requires some ad hoc configuration and we want a little more disk and memory. warning: Each machine requires its own IP address and there are a limited number of IP addresses in the subnet of the development cluster. Try not to deploy not more than 10 machines at a time.
+Now let's assume you would like to install multiple machines to build a small cluster. Each machine requires some ad hoc configuration and we want a little more disk and memory. warning: Each machine requires its own IP address and there are a limited number of IP addresses in the subnet of the development cluster. Try not to deploy more than 10 machines at a time.
 
 ```
     petersen@rhino3:~$ prox new --docker --mem 1G --disk 8 --no-bootstrap  sausage1 sausage2 sausage3

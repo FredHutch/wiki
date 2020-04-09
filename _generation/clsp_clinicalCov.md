@@ -56,7 +56,7 @@ The [Fred Hutch Ontology Browser](https://ontology.fredhutch.org) can be a usefu
 5.	PHI: Select whether you need identified data or de-identified data
 6.	Identify how you intend to use the data, whether for research (or activities preparatory to research), clinical care, etc.
 7.	Include the IRB number related to this work. If requested, include the IRB number related to this work. You can search CORE FYI to find the appropriate IRB number.
-8.	For the question relating to the confidentiality pledge, this can be found from the link on the page, [which is here](https://centernet.fredhutch.org/cn/f/hdc/lcex/confidentiality-mou.html). The confidentiality pledge can also be attained through a link within the electronic survey.
+8.	Confidentiality pledges are no longer required as per a change in Washington State law.
 9. The form does not require specific data fields to be selected. You may write in specific data fields, or broadly describe what you want. To request specific fields found within Caisis, you may refer to the existing fields listed in the Fred Hutch Ontology Browser under CAISIS [here](https://translationalgenomics.shinyapps.io/FHOntologyBrowser/). The submission form does NOT link to the Ontology Browser.
 10. For the question related to the HDC PHI Data Training Verification, you can get more information [here.](https://centernet.fredhutch.org/cn/f/hdc/lcex/hdc-training.html)
 11. If you wish to submit a list of MRN's to identify specific individuals for whom you want data, the request form allows you to upload the list, Excel format perferred.  Password protect all files with identifiable data, including lists of MRNs; the submission form will ask you to provide the password.
