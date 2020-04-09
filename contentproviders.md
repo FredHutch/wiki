@@ -14,17 +14,4 @@ This curated Wiki relies upon the Fred Hutch research community itself to improv
 - [What is the content review process?](https://github.com/FredHutch/wiki#the-review-process)
 - [It may be helpful to check out the Wiki Content Style Guide](https://github.com/FredHutch/wiki#wiki-content-style-guide)
 
-These bulleted points cover the process of how to add content to the Biomedical Data Science Wiki but there are multiple tools/approaches to actually do that so let's take some time to cover some of the main ways one can add/edit content on the wiki.
-
-### Editing view the Web
-
-
-### Editing via VSCode
-
-
-
-### Additional Interfaces
-Contributing via an external text editor https://github.com/FredHutch/wiki#contributing-via-an-external-text-editor
-
-#### GitHub Desktop
-#### GitKraken
+These bulleted points cover the process of how to add content to the Biomedical Data Science Wiki but there are multiple tools/approaches to make edits and add content. 
