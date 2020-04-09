@@ -1,6 +1,8 @@
 # Contributing to SciWiki
 This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the Wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff.  Whether this contribution is as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them, no contribution is too little (or too large).
 
+To contribute to the Wiki you only need to have your GitHub username added to the Fred Hutch Github Institution (and the AllFredHutchTeam).  Email `scicomp` and provide your GitHub username and request to be added.  If you are interested in being part of the Wiki Reviewers Team (see below for their role), please email `apaguiri` and Amy will add you to the GitHub team for that.  
+
 # Outline of this document:
 [Content Contribution and Review Process](#content-contribution-and-review-process)
 
@@ -54,6 +56,8 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
 
 ### The Review Process
 This Wiki is intended to be curated by content owners, local experts, and service providers at the Fred Hutch in order to ensure accuracy and relevancy to our community.  Thus, contributions and reviews can only be made by users who have GitHub usernames affiliated with the Fred Hutch institution.  We use the `primary_reviewers` tag in our markdowns to indicate when there is a resident expert who should be contacted via pull request review requests when content in that markdown is edited or added to.  This process of contribution and review from multiple different users allows us to make sure that the content evolves in such a way that it it both more interpretable to the intended audience (Fred Hutch affiliated staff), but also accurate, appropriate and continuously reviewed.  Currently only one approving review of the content is required for a pull request to be merged. 
+
+When a pull request is made, it automatically requests a pull request review from any member of the [Wiki Reviewer Team](https://github.com/orgs/FredHutch/teams/wiki-reviewers).  Membership in this team is open to any Fred Hutch user who is interested.  Email `apaguiri` and Amy will add you to the team!
 
 
 ### Getting Credit
