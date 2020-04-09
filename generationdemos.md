@@ -2,7 +2,7 @@
 title: "Data Generation Resource Library"
 layout: collection
 classes: wide
-permalink: /generationdemos/
+permalink: /gendemos/
 collection: gendemos # collection name
 entries_layout: grid # list (default),
 show_excerpts:  true #(default), false
