@@ -20,7 +20,9 @@ The [Fred Hutch GitHub organization](https://github.com/FredHutch) offers free a
 
 >Note: www.github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch. It has security features that are otherwise not available via other systems.
 
-A GitHub account is different from other accounts. If you leave the Hutch you keep your GitHub account, however you will just be removed from the Fred Hutch organization on GitHub and your former colleagues can still add you as an external collaborator to their GitHub repositories.
+Once you are a member of the organization you can create repositories and invite external collaborators to share and edit code. If you plan to work collaboratively with a group of people, we recommend you learn about roles available to GitHub users, and consider creating a team to control permissions and access (members of the Fred Hutch GitHub organization are allowed to create teams). Please see [this GitHub help article](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/organizing-members-into-teams) for more information.
+
+A GitHub account is different from other accounts in that your account is independent from your employment at the Hutch. If you end your employment with the Hutch, you will be removed from the Fred Hutch organization on GitHub. If you have continuing collaborations, your colleagues still working at the Hutch can add you as an external collaborator to their GitHub repositories.
 
 We have a Code Management primer that provides more information about [git and GitHub](/scicomputing/software_managecode/) in general and specifically here at the Fred Hutch.  
 
@@ -83,7 +85,7 @@ In the commands below, replace `lastname-f` (where `f` is the PI's first name in
 ```
 aws s3 cp iris.csv s3://fh-pi-lastname-f/iris.csv
 ```
-If you notice any errors with this, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials. 
+If you notice any errors with this, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials.
 
 Once you have confirmed your credentials, remember to remove the test file:
 
