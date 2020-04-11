@@ -230,7 +230,9 @@ is in contrast to **⌘b**, which will take you directly to the module and locat
 
 ![peek_image](https://github.com/zyd14/pycharm_demo/blob/master/peek.png)
 
-All these hotkeys and tons more can be configured iin the **Preferences > Keymap** menu.
+All these hotkeys and tons more can be configured iin the **Preferences > Keymap** menu. If you're a hotkey ninja (which I am not), 
+you can get set up to keep your hand off the mouse almost completely.  There are `vim` and `emacs` keymap plugins 
+which will allow you to use your `vim`/`emacs` setups in Pycharm as well.
 
 #### Object inspection, completion
 When working with objects that may have lots of methods on them, it can be easy to forget what methods are available.
@@ -239,18 +241,46 @@ or in-line type hints) and typing the '.' operator, a list of all properties and
 Furthermore, onces you've selected a method and are beginning to feed it parameters, you can type **⌘p** from within the method parentheses to list all the parameters the function takes.  If you'd like to know more about how the function itself
 works, you can jump to its definition by highlighting it and typing **⌘b**
 
+#### Setting the python environment  
+By associating your project with a python interpreter (whether it's a global installation, or some conda/venv/pipenv install) your IDE
+will be better able to perform proper syntax highlighting and will also be able to do cool things like run tests and execute
+scripts or selected code blocks.  
+To set a python environment, open the Preferences pane by selecting **Pycharm > Preferences** from the toolbar (or ⌘, for shortcut).
+Then from the **Project** drop-down select **Project Interpreter**.  From here you can create a new conda/pipenv/venv environment for 
+this project (generally good practice) or select an existing interpreter on your computer. To create a new environment,
+or link an existing interpreter to Pycharm select *'Add'* from the menu that appears when you click the gear next to the 
+*Python Interpreter* drop-down menu.  
+![add_interpreter](https://github.com/zyd14/pycharm_demo/blob/master/add_interpreter.png)  
+
+From the next pane you can create a new conda/pipenv/venv or link Pycharm to an existing interpreter / environment by browsing
+directly to its location on your computer, which makes it available to select in the **Project Interpreter** drop-down menu
+on the previous page.  
+
+#### Running code through the IDE
+Once you have a python interpreter associated with your project you should be able to right-click on any .py file selected 
+from the project navigator and select *Run*.  Any output from your project will appear in a terminal window which should appear
+when the file is run. You can customize Run configurations for each executable file, providing things like command-line 
+arguments, environment variables and further environment setup by selecting *Run > Edit Configurations* from the top toolbar,
+
+#### Debugging support
+A file can be run with a debugger attached that will stop the program at any breakpoints you've placed by selecting a file,
+and selecting *Run > Debug...* from the top toolbar, or right-clicking on the file from the project navigator and clicking *Debug 'file.py'*. 
+Breakpoints can be placed on any line of code by clicking in the gutter next to the line number, or using the shortcut *⌘F8*. 
+Once you've entered the debugger and have stopped at a line a powerful array of tools are available to do things like 
+execute a single line, step over lines, inspect / watch variable values, and explore variable attributes or execute arbitrary 
+code in the breakpoint context.
 
 #### Testing
-Pycharm's testing abilities really help make this project shine.  From within the Prefences menu you have can select
-Tools \> Python Integrated Tools.  From here you can choose your favorite test runner (mine happens to be pytest), which
+Pycharm's testing abilities really help make this project shine.  From within the Preferences menu you have can select
+*Tools > Python Integrated Tools*.  From here you can choose your favorite test runner (mine happens to be pytest), which
 will tell PyCharm what tool to use when detecting and running tests in your project.  
 
 ![Test Suite](https://github.com/zyd14/pycharm_demo/blob/master/test_ex.png)
 
 By going to the **Test Configurations** menu under the **Run** menu dropdown you can make custom test
-run configurations for particular modules or scripts, with different test runners or runtime parameters.
+run configurations for particular modules or scripts, with different test runners or runtime parameters and environment setups.
 
-#### Debugging
+#### Test debugging
 While debugging doesn't always have to occur during a unittest, they often go hand in hand.  Say you've got a test that
 is failing and you just don't know why.  Don't you which you could freeze the test right in the middle, inspect the variables
 and see which one contains the erroneous value that is making the test puke?
@@ -267,8 +297,8 @@ give you the ability to drill-down through their attributes as well if you would
 ![File ran with debugger](https://github.com/zyd14/pycharm_demo/blob/master/debugger.png)
 
 #### Refactoring
-Remember when you though 'xfddssd' would be a funny name for a variable? And then that racoon persisted throughout the project,
-leaving its trail everywhere and leaving you and your teammates to try to figure out what a racoon object is in the context
+Remember when you thought `raccoon` would be a funny name for a variable? And then that raccoon persisted throughout the project,
+leaving its trail everywhere and leaving you and your teammates to try to figure out what a raccoon object is in the context
 of bioinformatics?  Pycharm makes refactoring of variable / object names extremely easy.  Simply highlight the variable 
 or object you want to rename, click >**Refactor**, then click \> **Rename**.  Pycharm will then search for any reference
 to that variable and present you with a list of all the places throughout the entire project that the highlighted variable occurs.  If you'd like to rename 
@@ -310,9 +340,14 @@ right-clicking and selecing 'Git > Show history...'
 
 This allows you to see the various concurrent branches of development for the file, as well as a diff viewer showing the 
 commit diff at each commit.  This can be super handy when trying to find where a problem was introduced, or if you need to 
-roll back to a specific commit before your last merge.
+roll back to a specific commit before your last merge.  
+####Installing plugins  
+From the top toolbar, select **Pycharm > Preferences > Plugins**. There are a myriad of plugins to help smooth out your development experience,
+such as database connectors, AWS log and CLI plugins, Docker management tools, various language support plugins, hotkey 
+keymap setups, color schemes and more.  
 
-#### Jupyter Notebook
+
+### Jupyter Notebook
 Pycharm is capable of running Jupyter Notebooks.  This is far from my area of expertise, but the community edition 
 of Pycharm does appear to support it.  A very basic jupyter notebook file is included in this project repo to show that it
 can be done.  The kernel running the Jupyter Notebook can be configured similarly to how a test runner is configured.
@@ -337,12 +372,9 @@ There are also various tools to enable easier development in cloud applications.
 #### Other languages
 Pycharm attempts to provide basic code highlighting and completion (like closing tags in HTML) in various languages,
 including HTML, SQL, and Docker.  The professional version provides better syntax highlighting for things like Django and 
-Jinja2 templates (and I think some light-weight javascript highlighting?), but
-I didn't really find them worth it when I did my 30-day free trial of the professional version.  There are many
-active community projects for supporting tons of various languages.
-
-
-
+Jinja2 templates (and I think some light-weight javascript highlighting?), but I didn't really find them worth it when I 
+did my 30-day free trial of the professional version.  There are many active community plugin projects for supporting tons of 
+various languages.
 
 ### Jupyter Notebooks
 This original content can still be found in it's [original repo](https://github.com/Chilliwack/jupyter_demo) written by a member of the Fred Hutch, this is an adaptation of that content. 
