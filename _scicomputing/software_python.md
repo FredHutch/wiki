@@ -294,7 +294,7 @@ You can also add variables to a watch list from this window, so that if the test
 keep track of the value of an interesting variable.  Collections and objects in the **Variables** window will
 give you the ability to drill-down through their attributes as well if you would like to further interrogate them.
 
-![File ran with debugger](https://github.com/zyd14/pycharm_demo/blob/master/debug_pic.png)  
+![File ran with debugger](https://github.com/zyd14/pycharm_demo/blob/master/debugger.png)  
 
 This picture shows the debugger stopping the program prior to executing the line 13 `assert rand > 2` and the debugger context
 which appears at the bottom of the screen, containing the current call stack, a list of all variables found in the context 
