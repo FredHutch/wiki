@@ -19,7 +19,7 @@ SciComp maintains a current list of the various builds of Python available on `r
 
 ### Via Jupyter Notebooks
 
-Jupyter Notebooks are web interfaces to an interpreter shell such as Python. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called 'Jupyter Lab'.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
+Jupyter Notebooks are web interfaces to an interpreter shell such as Python. They allow the user to write code in small, executable chunks that can be interspersed with blocks of markdown. They are particularly well suited to exploring data and generating narrative-style presentations of analyses. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called 'Jupyter Lab'.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
 
 #### Jupyter Notebook on your computer
 
