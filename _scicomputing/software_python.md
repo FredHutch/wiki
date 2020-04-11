@@ -294,7 +294,12 @@ You can also add variables to a watch list from this window, so that if the test
 keep track of the value of an interesting variable.  Collections and objects in the **Variables** window will
 give you the ability to drill-down through their attributes as well if you would like to further interrogate them.
 
-![File ran with debugger](https://github.com/zyd14/pycharm_demo/blob/master/debugger.png)
+![File ran with debugger](https://github.com/zyd14/pycharm_demo/blob/master/debug_pic.png)  
+
+This picture shows the debugger stopping the program prior to executing the line 13 `assert rand > 2` and the debugger context
+which appears at the bottom of the screen, containing the current call stack, a list of all variables found in the context 
+of the breakpoint which allows you to easily explore the attributes and values of nested objects, and a similar watch context
+for following a particular variables value across different scopes.
 
 #### Refactoring
 Remember when you thought `raccoon` would be a funny name for a variable? And then that raccoon persisted throughout the project,
