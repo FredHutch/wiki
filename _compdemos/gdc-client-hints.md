@@ -51,3 +51,7 @@ One strategy for large files would be to turn off checksums at download time and
 For downloading large numbers of files or for very large (100+GB) files it's likely wise to split a manifest amongst different processes.  That way if a single session fails it will require less time to recover
 
 Keep in mind that if you split a large downloaded manifest that the header must be retained in each chunk of the larger manifest.
+
+## Chunk Sizes
+
+The option `--http-chunk-size` allows customization of the size of the chunks used for download of the segments.  The default (1048576 bytes) appears to work well on our systems- increasing or decreasing didn't have a great effect until the size was reduced to 65536 bytes where there was a significant increase in transfer time.
