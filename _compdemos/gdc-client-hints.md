@@ -34,6 +34,16 @@ While `gdc-client` places its heaviest load on IO and networking, with checksums
 
 IO- both network and disk- are notoriously tricky to manage.  In our environment where we have shared nodes our recommendation is to get exclusive access to a node to ensure that your jobs are not impacted by others and conversely, that others aren't impacted by your downloads.  If you are downloading smaller data sets this might not be as necessary.
 
+## Divide and Conquer
+
+For downloading large numbers of files or for very large (100+GB) files it's likely wise to split a manifest amongst different processes.  That way if a single session fails it will require less time to recover
+
+Keep in mind that if you split a large downloaded manifest that the header must be retained in each chunk of the larger manifest.
+
+## Chunk Sizes
+
+The option `--http-chunk-size` allows customization of the size of the chunks used for download of the segments.  The default (1048576 bytes) appears to work well on our systems- increasing or decreasing didn't have a great effect until the size was reduced to 65536 bytes where there was a significant increase in transfer time.
+
 ## Sum, or not to Sum
 
 > During testing it appears that this setting isn't working.  I've contacted NCI support on this.
@@ -46,12 +56,3 @@ The option `--no-file-md5sum` turns off validation of the file after download.
 
 One strategy for large files would be to turn off checksums at download time and perform these checks out-of-band with other data processing.  This may result in having to both re-download and re-analyse a file should later checks determine a file was corrupted during download.
 
-## Divide and Conquer
-
-For downloading large numbers of files or for very large (100+GB) files it's likely wise to split a manifest amongst different processes.  That way if a single session fails it will require less time to recover
-
-Keep in mind that if you split a large downloaded manifest that the header must be retained in each chunk of the larger manifest.
-
-## Chunk Sizes
-
-The option `--http-chunk-size` allows customization of the size of the chunks used for download of the segments.  The default (1048576 bytes) appears to work well on our systems- increasing or decreasing didn't have a great effect until the size was reduced to 65536 bytes where there was a significant increase in transfer time.
