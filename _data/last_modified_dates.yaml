@@ -12,7 +12,7 @@
   url: search.md
 - dlm: February 12, 2020
   url: rModules.md
-- dlm: April 6, 2020
+- dlm: April 9, 2020
   url: README.md
 - dlm: November 12, 2019
   url: year-archive.md
@@ -22,11 +22,11 @@
   url: LICENSE.md
 - dlm: May 1, 2019
   url: scicompannounce.md
-- dlm: November 12, 2019
+- dlm: April 9, 2020
   url: contentproviders.md
 - dlm: October 22, 2019
   url: computingdemos.md
-- dlm: September 27, 2018
+- dlm: April 9, 2020
   url: generationdemos.md
 - dlm: June 6, 2019
   url: drafts.md
@@ -54,7 +54,7 @@
   url: _scicomputing/software_R.md
 - dlm: November 12, 2019
   url: _scicomputing/software_standards.md
-- dlm: November 12, 2019
+- dlm: April 9, 2020
   url: _scicomputing/software_managecode.md
 - dlm: April 2, 2020
   url: _scicomputing/software_overview.md
@@ -66,7 +66,7 @@
   url: _scicomputing/store_databases.md
 - dlm: May 2, 2019
   url: _scicomputing/compute_grants.md
-- dlm: October 22, 2019
+- dlm: April 9, 2020
   url: _scicomputing/access_credentials.md
 - dlm: February 20, 2020
   url: _scicomputing/compute_overview.md
@@ -100,7 +100,7 @@
   url: _scicomputing/software_python.md
 - dlm: March 3, 2020
   url: _scicomputing/compute_cloud.md
-- dlm: October 22, 2019
+- dlm: April 9, 2020
   url: _scicomputing/reference_overview.md
 - dlm: November 8, 2018
   url: _gendemos/HumanSpecimensStudies.md

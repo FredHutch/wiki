@@ -19,7 +19,7 @@ Additional terms are defined in [GitHub's Glossary](https://help.github.com/arti
 Anyone may create an individual GitHub account and username for free. These individual accounts allow creation of repositories that are by default published publicly for anyone to view and use. This supports the goal of GitHub to facilitate open, reproducible science and collaboration. Collaborative options include forking repositories belonging to other people and allowing other people to collaborate on your own projects. Depending on the content and nature of your repositories, however, you may require additional flexibility in sharing and collaboration. Some of these options are described below.
 
 - Get a [GitHub username here.](https://github.com/join)
-- Join the Fred Hutch GitHub organization by sending your GitHub username to `helpdesk` and request to be added.  
+- Join the Fred Hutch GitHub organization by emailing `SciComp`: "Please add my GitHub user id `xyz` to organization github.com/FredHutch".
 
 ### Public and Private Repositories
 Repositories are publicly available by default. While this supports open science practices, there are also cases in which code or data in a repository needs to be kept private, such as when data or code are proprietary or need to be kept secure for other legal or ethical reasons. Although GitHub provides unlimited free public repositories to all users, and recently has added the option for private repositories for small teams. Repositories created by a user, however, should be primarily for private (non-Fred Hutch related) work. However, the Fred Hutch provides access to both public and private repositories for Fred Hutch related work via the Fred Hutch GitHub organization.  
