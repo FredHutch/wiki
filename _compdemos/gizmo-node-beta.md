@@ -54,7 +54,9 @@ For the new K class nodes we need to submit jobs to a different partition- one c
 
 Even though these share the profile of the nodes in the "largenode" partition, there are no minimums to have jobs run.  The limits are, currently, much lower as we're trying to maximize availability during this trial period- the limit is 72 cores or 4 nodes.
 
-The `grabnode` command on these new _rhino_ class systems has been updated to use the campus-new partition.  It will prompt you for job attributes just as it does today, but will get you a node on the new hosts.
+Your login environment should be configured to set this partition (`campus-new`) as the default partition- this is done via the environment variables `SLURM_PARTITION` and `SBATCH_PARTITION`.  You can verify this with the command `srun hostname` which should return something like `gizmok` in its output.
+
+The `grabnode` command on these new _rhino_ class systems has also been updated to use the campus-new partition.  It will prompt you for job attributes just as it does today, but will get you a node on the new hosts.
 
 ### Special Note for GPU Users
 
