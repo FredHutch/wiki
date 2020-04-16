@@ -17,16 +17,16 @@ More to come!  Contact Amy Paguirigan (`apaguiri`) for more information about us
 ## Design Recommendations for WDL workflows at Fred Hutch
 In order to improve sharability and also leverage the R package, as well as future UI based submission tools being developed, we recommend you structure your WDL based workflows with the following input files:
 
-1.  Workflow Description file:  [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/localbatchFileScatter/parseBatchFile.wdl)
+1.  Workflow Description file:  [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/testWorkflows/localBatchFileScatter/parseBatchFile.wdl)
   - in WDL, a list of tools to be run in a sequence, likely several, otherwise using a workflow manager is not the right approach.  
   - This file describes the process that is desired to occur every time the workflow is run.
-2.  Parameters file: [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/localbatchFileScatter/parse.inputs.json)
+2.  Parameters file: [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/testWorkflows/localBatchFileScatter/parse.inputs.json)
   - in json, a workflow-specific list of inputs and parameters that are intended to be set for every group of workflow executions.
   - Examples of what this input may include would be which genome to map to, reference data files to use, what environment modules to use, etc.
-3.  Batch file:  [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/localbatchFileScatter/sample.batchfile.tsv)
+3.  Batch file:  [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/testWorkflows/localBatchFileScatter/sample.batchfile.tsv)
   - in csv or tsv, a batch-specific list of the raw input data sets intended to be processed using the same set of inputs/parameters for the same workflow, WITH HEADERS!!
   - This file is a list of data locations and any other sample/job-specific information the workflow needs.  Ideally this would be relatively minimal so that the consistency of the analysis between input data sets are as similar as possible to leverage the strengths of a reproducible workflow.  
-4.  Workflow options (OPTIONAL): [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/workflow-options.json)
+4.  Workflow options (OPTIONAL): [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/workflow-options/continueWhile-callcachingOn.json)
 
 Example:
 
@@ -56,7 +56,7 @@ If you are ok with sharing your workflow for use by others in our community or y
 ## Other Fred Hutch based resources
 
 ### Reference Data in S3
-While additional development is going on to make Cromwell work better in AWS (currently it works well in Google and SLURM among other backends), we are anticipating that it will be more widely available for use with AWS based computing.  To support that there is a growing public data set AWS S3 bucket at `fh-ctr-public-reference-data`.  Contact Amy Paguirigan or Sam Minot if you'd like something to be added here and we can help you do that.  
+While additional development is going on to make Cromwell work better in AWS (currently it works well in Google and SLURM among other backends), we are anticipating that it will be more widely available for use with AWS based computing.  To support that there is a growing public data set AWS S3 bucket at `fh-ctr-public-reference-data`.  Contact Amy Paguirigan or Sam Minot or `SciComp` if you'd like something to be added here and we can help you do that.  
 
 ### Docker Hub 
 If you are using Cromwell with AWS (currently still in beta), there are some Docker containers suitable for using with a workflow manager in the [Fred Hutch DockerHub](https://hub.docker.com/u/fredhutch). 
