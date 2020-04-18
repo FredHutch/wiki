@@ -1,5 +1,5 @@
 ---
-title: Gizmo Node Beta
+title: Gizmo K Node Beta
 main_author: Michael Gutteridge
 primary_reviewers: atombaby
 ---
@@ -9,7 +9,7 @@ This page describes the new gizmo cluster nodes, some of the differences between
 
 Currently we have four "classes" of node in service: F, G, H, and J. Each class represents compute nodes with different capabilities, processors, and memory.  These new systems will be the "K" class of nodes.  These new systems have two Intel 6254 processors each with 18 cores (for 36 cores per node total) and running with processor speeds between 3.10 and 4.0 GHz.  These have been configured with 768GB of RAM and 6TB of node-local storage. The full  list of specifications [can be found below.](#node-specifications)
 
-Each node is also equipped with an NVIDIA GeForce RTX 2080 Ti GPU.  These can be requested as part of your job submission request.
+Each node is also equipped with a NVIDIA GPU 12GB Memory and 544 Tensor cores.  These can be requested as part of your job submission request.
 
 Along with these new nodes there are three new Rhino-class hosts to provide interactive and login sessions. These have the same 36 physical cores, but hyperthreading is enabled which increases the number of cores presented to 72.
 
@@ -114,7 +114,12 @@ The interactive nature of the workload on the _rhinos_, however, makes hyperthre
 
 ### <a name="node-specifications"></a> Node Specifications
 
-<#! insert node spec table here >
+* 2 x Intel Xeon Gold 6254 Processor 18-Core 3.1 - 4 GHz with 2 x AVX 512 units each
+* 1 x Dual-Port 10GbE Intel X540
+* 768 GB Memory (12 x 64GB PC4-23400 2933MHz DDR4 ECC RDIMM)
+* 7.68TB Micron 9300 PRO U.2 NVMe Solid State Drive
+* NVIDIA GPU 12GB Memory and 544 Tensor cores 
+  (with Compute Capability 7.5)
 
 # Notes for Admins
 
@@ -136,9 +141,9 @@ When adding new users, include the following text:
 >
 > This is the mailing list for those participating in the gizmo beta node trial period.  The wiki page "https://sciwiki.fredhutch.org/compdemos/gizmo-node-beta/" contains much of the recent information on changes and how to use this resource.
 >
-> Please use 'scicomp@fredhutch.org' to report problems and get assistance.
+> Please use 'scicomp at fredhutch.org' to report problems and get assistance.
 
-The administrator password is in LastPass.  This list should be syncronized with the groups below- if someone is participating, they must be a member of the list.
+The administrator password is in LastPass.  This list should be synchronized with the groups below- if someone is participating, they must be a member of the list.
 
 ## Access to "campus-new" Partition
 
