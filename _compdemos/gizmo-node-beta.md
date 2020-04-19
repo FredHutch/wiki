@@ -9,7 +9,7 @@ This page describes the new gizmo cluster nodes, some of the differences between
 
 Currently we have four "classes" of node in service: F, G, H, and J. Each class represents compute nodes with different capabilities, processors, and memory.  These new systems will be the "K" class of nodes.  These new systems have two Intel 6254 processors each with 18 cores (for 36 cores per node total) and running with processor speeds between 3.10 and 4.0 GHz.  These have been configured with 768GB of RAM and 6TB of node-local storage. The full  list of specifications [can be found below.](#node-specifications)
 
-Each node is also equipped with a NVIDIA GPU 12GB Memory and 544 Tensor cores.  These can be requested as part of your job submission request.
+Each node is also equipped with an NVIDIA GPU 12GB Memory and 544 Tensor cores.  These can be requested as part of your job submission request.
 
 Along with these new nodes there are three new Rhino-class hosts to provide interactive and login sessions. These have the same 36 physical cores, but hyperthreading is enabled which increases the number of cores presented to 72.
 
