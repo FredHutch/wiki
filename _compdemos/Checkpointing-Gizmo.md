@@ -16,26 +16,32 @@ The current checkpointing implementation is geared towards increasing throughput
 
 ## How to use Checkpointing
 
-You can activate checkpointing by using the `checkpointer` command in the shell script that starts your job. When checkpointer is launched it waits in the background until there are only 10 min scheduled time left for your compute job. Then it will kill your compute process and flush it to disk and at the same time it will submit another job with the same parameters as the first one (e.g. number of cpus, partition, wall clock time). When that next job starts it will load all information from disk and continue the computation on a different compute node.
+You can activate checkpointing by using the `checkpointer` command in the shell script that starts your job. After checkpointer is launched, it waits in the background until there are only 10 min scheduled time left for your compute job. Then it will kill your compute process and flush it to disk and at the same time it will submit another job with the same parameters as the first one (e.g. number of cpus, partition, wall clock time). When that next job starts it will load all information from disk and continue the computation on a different compute node.
 
-Add the `checkpointer` command to your script:
+Add the `checkpointer` command to your script and ensure it is executed *before* the actual compute script or bianry is launched.
 ```
 cat runscript.sh
 
 checkpointer 
-R CMD BATCH /fh/fast/..../script.R
+Rscript /fh/fast/..../script.R
 ```
 
-After this you launch the script with sbatch. If you request 1h then one more hour will be requested after the job has been restore.
+After this you launch the script with sbatch. If you request 30 min (e.g. `sbatch -t 0-0:30`) your job will be flushed to disk after 20 min and checkpointer will submit another Gizmo job with a 30 min time limit and restore your process inside that job.
 
 
 ```
-sbatch -t 0-1 runscript.sh
+sbatch -t 0-0:30 runscript.sh
 ```
 
-## Limitations
+## Current limitations
 
-currently we support only simple jobs that run on a single node. The submission script should not contain complex structures or multiple steps.
+* checkpointer supports only simple jobs that run on a single node. 
+* The submission script should not contain complex structures or multiple steps. 
+* each job can only be checkpointed and restores once  
+
+## Future 
+
+We would like to test this process with a variety of tools. The first goal is to be able to checkpoint and restore a job multiple times and not just once.
 
 
 Please email `SciComp` to request assistance and discuss which environment is best for your needs.
