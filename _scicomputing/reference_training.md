@@ -14,7 +14,7 @@ There are a variety of resources for training on various aspects of bioinformati
 
 ### Community Groups
 
-[The Coop](http://thecoop.fredhutch.org/) is the Fred Hutch Bioinformatics and Data Science Cooperative, and works to share information and resources about computational work across the Hutch. The Coop maintains a listserv, calendars of data science events, and [The Coop Communities Slack](https://fhbig.slack.com/), supported by FHBig. [FHBig](https://fredhutch.github.io/FHBig/) is the Fred Hutch Bioinformatics Interest Group, a community-based group that hosts a [blog](https://fredhutch.github.io/FHBig/year-archive/) and facilitates information sharing among the bioinformatics research community at the Hutch. Hutch employees can learn more through the links above or by emailing `coophelp` wiht questions or to be added to our email/newsletter list.
+[The Coop](http://thecoop.fredhutch.org/) is the Fred Hutch Bioinformatics and Data Science Cooperative, and works to share information and resources about computational work across the Hutch. The Coop maintains a listserv, calendars of data science events, and [The Coop Communities Slack](https://fhbig.slack.com/), supported by FHBig. [FHBig](https://fredhutch.github.io/FHBig/) is the Fred Hutch Bioinformatics Interest Group, a community-based group that hosts a [blog](https://fredhutch.github.io/FHBig/year-archive/) and facilitates information sharing among the bioinformatics research community at the Hutch. Hutch employees can learn more through the links above or by emailing `coophelp` with questions or to be added to our email/newsletter list.
 
 The Coop and FHBig also support community groups that meet regularly to discuss topics ranging from basic data literacy skill building to reproducible computational methods. To learn more about what to expect from these meetings, please visit [our Community Groups GitHub repository](https://github.com/FredHutch/community_groups). Current meeting schedules and locations are available on the [Google calendar](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ), and please contact the Coop (coophelp at fredhutch.org) or the relevant channel in [The Coop Communities Slack](https://fhbig.slack.com/) with any questions.
 
@@ -57,20 +57,70 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 - [Meetup](https://www.meetup.com) hosts various coding groups that meet regularly to share skills and provide networking opportunities. [RLadies Seattle](https://www.meetup.com/rladies-seattle/) and [Seattle UseR](https://www.meetup.com/Seattle-useR/) both include leaders from Fred Hutch.
 
 
-## Resources on the Web
+## Resources On the Web
 
-The following sites include content that one or more community member has found useful. Most of them include at least some free content, while others require a paid subscription.
+### Classroom Style Courses
+
+- [MCB517A: Tools for Computational Biology](https://github.com/fredhutchio/tfcb_2019): A graduate-level course taught for UW by Fred Hutch CompBio faculty. This links to a GitHub repository that includes all lectures and homework.
+  - [How to install necessary software for this course](https://github.com/fredhutchio/tfcb_2019/tree/master/software)
+  - [Ask questions about this course](https://github.com/fredhutchio/tfcb_2019/issues)
+  - *Course materials all available for free*
+
+- [edX](https://www.edx.org): Offers courses on [Data Analysis and Statistics](https://www.edx.org/course/subject/data-analysis-statistics) and [Bioinformatics](https://www.edx.org/learn/bioinformatics)
+  - [Rafael Irizarry](http://rafalab.github.io/) of Dana Farber has online programs available through edX:
+    - [Introduction to Data Science](https://www.edx.org/professional-certificate/harvardx-data-science)
+    - [Data Analysis for Life Sciences](https://www.edx.org/professional-certificate/harvardx-data-analysis-for-life-sciences)
+    - [Data Anaysis for Genomics](https://www.edx.org/professional-certificate/harvardx-data-analysis-for-genomics)
+  - *Generally speaking, edX courses are all free to audit for a limited period of time. Unlimited access and the ability to earn a course Certificate will require payment*
+  
+- [Coursera](https://www.coursera.org): Offers courses on [Data Science](https://www.coursera.org/browse/data-science) and [Bioinformatics](https://www.coursera.org/browse/life-sciences/bioinformatics)
+  - [R Programming](https://www.coursera.org/specializations/data-science-foundations-r): A beginner-level program has five mini-courses. It takes about 4 months to complete.
+  - [Statistics with R](https://www.coursera.org/specializations/statistics): A beginner-level program with five mini-courses. It takes about 7 months to complete.
+  - [Genomic Data Science](https://www.coursera.org/specializations/genomic-data-science): An intermediate-level program for those who are already aquainted with R. It has eight mini-courses. It takes about 6 months to complete.
+  - [Python Programming](https://www.coursera.org/specializations/data-science-python): An intermediate-level program that takes about 4 months to complete.
+  - *Coursera offers a 7-day free trial, and is a paid subscription service after*
+
+- [Udacity](https://www.udacity.com): Offers courses on [Data Science](https://www.udacity.com/courses/school-of-data-science)
+  - *Udacity is a paid subscription service*
+  - [Currently offering one month free for their Nanodegree programs.](https://blog.udacity.com/2020/03/one-month-free-on-nanodegrees.html)
+
+- [Udemy](https://www.udemy.com): Offers courses on [Data Science](https://www.udemy.com/courses/development/data-science/)
+  - *Udemy offers courses at various price points.*
+  - Keep an eye out for sales which happen regularly and can drastically reduce the cost.
+
+- [CognitiveClass.ai](https://cognitiveclass.ai/) offers a wide range of courses focused on data science, AI, and cloud computing.
+  - *All courses are free*
+
+- [The Open Source Data Science Masters](http://datasciencemasters.org): An open-source curriculum for learning data science. This is a mixed media course made up of videos, books, and slides.
+  - *Some content is free, some is paid*
+  
+- [CalTech](http://work.caltech.edu/telecourse) Learning from Data
+  - *A free YouTube series*
+
+### Interactive Coding Platforms
+
+- [DataQuest](https://www.dataquest.io/): A subscription service that offers programs and courses focused on data anlysis and engineering in Python and R.
+    -*Teired payment system with basic and premium plans*
+- [CodeAcademy](https://www.codecademy.com/): A subscription service that offers coding programs and courses in many different languages.
+  -*Teired payment system with limited content available for free*
+  
+- [DataCamp](https://www.datacamp.com/): A subscription service that offers coding programs and courses in many different languages.
+  - We previously used DataCamp subscriptions in fredhutch.io courses, but changes in their licenses made this strategy cost prohibitive
+  - Anyone considering DataCamp services should be aware of [this incident involving their CEO](https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup) before choosing to pay for their service.
+  -*Teired payment system with limited content available for free*
+
+### Free ebooks
 
 - [Biostar Handbook: A Beginner's Guide to Bioinformatics](https://www.biostarhandbook.com)
-- [CalTech](http://work.caltech.edu/telecourse) Learning from Data
+
+- [R Cookbook Second Edition](https://rc2e.com/)
+
+- [Advanced R](https://adv-r.hadley.nz/)
+
+- [R for Data Science](https://r4ds.had.co.nz/)
+
+### Misc
+
 - [The Carpentries](https://carpentries.org), with lessons from [Data Carpentry](https://datacarpentry.org) and [Software Carpentry](https://software-carpentry.org/lessons/)
-- [Cognitive Class](https://cognitiveclass.ai): Data science and cognitive computing courses
-- [Coursera](https://www.coursera.org), including courses on [Data Science](https://www.coursera.org/browse/data-science) and [Bioinformatics](https://www.coursera.org/browse/life-sciences/bioinformatics)
-- [CodeAcademy](http://www.codecademy.com)
-- [DataCamp](https://www.datacamp.com)
-- [DataQuest](https://www.dataquest.io/home)
-- [edX](https://www.edx.org), including courses in [Data Analysis and Statistics](https://www.edx.org/course/subject/data-analysis-statistics) and [Bioinformatics](https://www.edx.org/learn/bioinformatics)
-- [The Open Source Data Science Masters](http://datasciencemasters.org)
+
 - [ROSALIND interactive bioinformatics problem set](http://rosalind.info/)
-- [Udacity](https://www.udacity.com) has courses on [Data Science](https://www.udacity.com/courses/school-of-data-science)
-- [Udemy](https://www.udemy.com) has a section on [Data Science](https://www.udemy.com/courses/development/data-science/)
