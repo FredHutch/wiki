@@ -59,36 +59,37 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 
 ## Resources On the Web
 
-### Classroom Style Courses
+### Classroom-Style Courses
+These resources are organized in a lecture type format as slides, screencasts, and video. Most are work-at-your-own-pace, but some may be linked to a course calander. 
 
 - [MCB517A: Tools for Computational Biology](https://github.com/fredhutchio/tfcb_2019): A graduate-level course taught for UW by Fred Hutch CompBio faculty. This links to a GitHub repository that includes all lectures and homework.
   - [How to install necessary software for this course](https://github.com/fredhutchio/tfcb_2019/tree/master/software)
   - [Ask questions about this course](https://github.com/fredhutchio/tfcb_2019/issues)
   - *Course materials all available for free*
 
-- [edX](https://www.edx.org): Offers courses on [Data Analysis and Statistics](https://www.edx.org/course/subject/data-analysis-statistics) and [Bioinformatics](https://www.edx.org/learn/bioinformatics)
+- [edX](https://www.edx.org): Offers a collection of courses for [Data Analysis and Statistics](https://www.edx.org/course/subject/data-analysis-statistics) and [Bioinformatics](https://www.edx.org/learn/bioinformatics)
   - [Rafael Irizarry](http://rafalab.github.io/) of Dana Farber has online programs available through edX:
     - [Introduction to Data Science](https://www.edx.org/professional-certificate/harvardx-data-science)
     - [Data Analysis for Life Sciences](https://www.edx.org/professional-certificate/harvardx-data-analysis-for-life-sciences)
     - [Data Anaysis for Genomics](https://www.edx.org/professional-certificate/harvardx-data-analysis-for-genomics)
   - *Generally speaking, edX courses are all free to audit for a limited period of time. Unlimited access and the ability to earn a course Certificate will require payment*
   
-- [Coursera](https://www.coursera.org): Offers courses on [Data Science](https://www.coursera.org/browse/data-science) and [Bioinformatics](https://www.coursera.org/browse/life-sciences/bioinformatics)
+- [Coursera](https://www.coursera.org): Offers a collection of courses for [Data Science](https://www.coursera.org/browse/data-science) and [Bioinformatics](https://www.coursera.org/browse/life-sciences/bioinformatics)
   - [R Programming](https://www.coursera.org/specializations/data-science-foundations-r): A beginner-level program has five mini-courses. It takes about 4 months to complete.
   - [Statistics with R](https://www.coursera.org/specializations/statistics): A beginner-level program with five mini-courses. It takes about 7 months to complete.
   - [Genomic Data Science](https://www.coursera.org/specializations/genomic-data-science): An intermediate-level program for those who are already aquainted with R. It has eight mini-courses. It takes about 6 months to complete.
   - [Python Programming](https://www.coursera.org/specializations/data-science-python): An intermediate-level program that takes about 4 months to complete.
   - *Coursera offers a 7-day free trial, and is a paid subscription service after*
 
-- [Udacity](https://www.udacity.com): Offers courses on [Data Science](https://www.udacity.com/courses/school-of-data-science)
+- [Udacity](https://www.udacity.com): Offers a collection of courses for [Data Science](https://www.udacity.com/courses/school-of-data-science)
   - *Udacity is a paid subscription service*
   - [Currently offering one month free for their Nanodegree programs.](https://blog.udacity.com/2020/03/one-month-free-on-nanodegrees.html)
 
-- [Udemy](https://www.udemy.com): Offers courses on [Data Science](https://www.udemy.com/courses/development/data-science/)
+- [Udemy](https://www.udemy.com): Offers a collection of courses for [Data Science](https://www.udemy.com/courses/development/data-science/)
   - *Udemy offers courses at various price points.*
   - Keep an eye out for sales which happen regularly and can drastically reduce the cost.
 
-- [CognitiveClass.ai](https://cognitiveclass.ai/) offers a wide range of courses focused on data science, AI, and cloud computing.
+- [CognitiveClass.ai](https://cognitiveclass.ai/) Offers a collection of courses for data science, AI, and cloud computing.
   - *All courses are free*
 
 - [The Open Source Data Science Masters](http://datasciencemasters.org): An open-source curriculum for learning data science. This is a mixed media course made up of videos, books, and slides.
@@ -98,16 +99,18 @@ Several groups on campus host weekly or monthly office hours to provide assistan
   - *A free YouTube series*
 
 ### Interactive Coding Platforms
+These resources offer classes that are work-at-your-own-pace with a major focus on hands-on problem-sets and projects.
 
 - [DataQuest](https://www.dataquest.io/): A subscription service that offers programs and courses focused on data anlysis and engineering in Python and R.
-    -*Teired payment system with basic and premium plans*
+    - *Tiered payment system with basic and premium plans*
+    
 - [CodeAcademy](https://www.codecademy.com/): A subscription service that offers coding programs and courses in many different languages.
-  -*Teired payment system with limited content available for free*
+  - *Tiered payment system with limited content available for free*
   
 - [DataCamp](https://www.datacamp.com/): A subscription service that offers coding programs and courses in many different languages.
   - We previously used DataCamp subscriptions in fredhutch.io courses, but changes in their licenses made this strategy cost prohibitive
   - Anyone considering DataCamp services should be aware of [this incident involving their CEO](https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup) before choosing to pay for their service.
-  -*Teired payment system with limited content available for free*
+  - *Tiered payment system with limited content available for free*
 
 ### Free ebooks
 
@@ -118,6 +121,8 @@ Several groups on campus host weekly or monthly office hours to provide assistan
 - [Advanced R](https://adv-r.hadley.nz/)
 
 - [R for Data Science](https://r4ds.had.co.nz/)
+
+- [O'Reilly books](https://www.spl.org/books-and-media/books-and-ebooks/safari-books-online) available through Seattle Public Library
 
 ### Misc
 
