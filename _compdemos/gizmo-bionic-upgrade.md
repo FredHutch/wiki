@@ -18,11 +18,13 @@ It is important that you take some time to evaulate any necessary changes to you
 
 ### General Availability (4 May - 1 June)
 
-During this time these new systems are available for use by anyone with a HutchNet ID.  This is the best opportunity for you to evaluate any necessary changes to your work and tools as the old Ubuntu 14.04 systems will still be available as the default for most commands and work.  Note that during this phase you will need to take special steps to access these new nodes, including additional options to Slurm commands.
+During this time these new systems are available for use by anyone with a HutchNet ID.  This is the best opportunity for you to evaluate any necessary changes to your work and tools as the old Ubuntu 14.04 systems will still be available as the default for most commands and work.
 
-As demand dictates, we will begin upgrading a limited number of existing nodes to the new OS.
+During this phase you will need to take special steps to access these new nodes, including additional options to Slurm commands.
 
 > On 4 May we will also be discontinuing support for Lmod on the current platform- any new software (including new versions of existing software) will be built for the new environment. Existing packages _will_ continue to function and we will attempt to fix any problems that arise with these packages during this time
+
+As demand dictates, we will begin upgrading a limited number of existing nodes to the new OS though we will endeavor to keep sufficient capacity to accommodate existing work.
 
 ### New Default (1 June - 5 July)
 
@@ -35,6 +37,81 @@ This phase will also see the migration of the NoMachine service (currently hoste
 ### End of Support (5 July)
 
 On this date all hosts will have been migrated to the new environment.
+
+# Instructions for Use- General Availability
+
+> These instructions are appropriate for the first phase of the transition- the "General Availability" phase described above.
+
+## Interactive Computing- Shell Based
+
+Use the alias `rhino-new` to access the new rhino hosts with `ssh`.  This will log you into one of the new rhino nodes which will have a name like `rhino01`, `rhino02`, or `rhino03` (note the zero before the number).
+
+## Interactive Computing- NoMachine
+
+The existing NoMachine hosts will be available for use as per usual during this time.  We do have NoMachine installed on the host `rhino01`- you can use this to see how the NoMachine service will work when this has been migrated to the rhinos.
+
+## Interactive Computing- grabnode
+
+`grabnode` will start a session on one of the new Gizmo nodes when launched from `rhino-new`.  On any other system (the existing rhinos, lynx, etc.) `grabnode` will start a session on a node in the current environment.
+
+## Batch Computing
+
+As with `grabnode` you will need to launch your Slurm jobs from `rhino-new` to use the new environment.  These nodes are in the partition `campus-new`, but from one of these new nodes it will not be necessary to add any additional options.
+
+These new nodes have 36 cores and 768GB of RAM- though these have a profile similar to the largenodes, there is no minimum on memory or CPU required. Thus it is *critical* that if your jobs use a significant amount of memory that you request a number of cores proportional to the anticipated amount of memory you will need.  A good rule of thumb is to request one core for each 4 GB of memory required- if you think you will need about 32GB of memory, request 8 cores for your job.
+
+# Instructions for Use- New Default
+
+When these new hosts become the default you'll no longer need to do anything different to use hosts in the new environment.  At this point the old environment is considered "deprecated" and while transitional work can continue, every effort should be made to migrate to the new nodes.
+
+Contact Scientific Computing for assistance using the old environment.
+
+## Interactive Computing- Shell Based
+
+The name `rhino` will now route you to a new Rhino node.  The `rhino-new` name will still be around, but will eventually be retired.
+
+## Interactive Computing- NoMachine
+
+All of the NoMachine services will be migrated to the new Rhino nodes.  The current hosts- lynx, manx, and sphinx- will be retired with the new Rhinos taking over those services.  You will need to create connections to one of the names `rhino01`, `rhino02`, and `rhino03`.
+
+## Interactive Computing- grabnode
+
+`grabnode` will continue to function as expected from the new Rhino nodes and will allocate nodes from the new environment.
+
+## Batch Computing
+
+As above, no changes to job submission will be required when submitting from one of the new Rhino nodes.  The partition `campus-new` will be configured to reject new jobs (allowing existing jobs to finish) so jobs using that partition name will not be queued.
+
+# Environment Modules (Lmod)
+
+One of the more significant changes in the new environment is to the modules available in Lmod.  While the commands are the same, in the new environment there are different toolchains requiring changes to the names of the modules you use.  For example, if you use R version 3.6.2:
+
+| old                      | new                         |
+|-------                   |------                       |
+| `R/3.6.2-foss-2016b-fh1` | `ml R/3.6.2-foss-2019b-fh1` |
+
+Most common versions and tools are available.  Use the `ml spider` command to locate the modules you use.
+
+## Scripting with Modules
+
+Another change is to the path used for initializing Lmod into your environment- if you have lines that run the Lmod initialization scripts in `/app` you will need to update (or possibly remove) those lines from your script.  Where you have code like:
+
+```
+source /app/Lmod/lmod/lmod/init/bash
+module use /app/easybuild/modules/all
+```
+
+Replace this with:
+
+```
+source /app/lmod/lmod/init/profile
+module use /app/easybuild/modules/all
+```
+
+We have made changes that may allow you to eliminate those lines from your scripts entirely- the specifics of how your job is launched ultimately will determine if those lines are necessary.  Contact Scientific Computing if you need assistance assessing this.
+
+
+
 
 ------
 
