@@ -23,8 +23,6 @@ If you are new to coding, or are interested in learning about coding languages f
 
 The remainder of the Software Development content will presume a basic skill level in at least one common language, as well as a basic understanding of [GitHub](/scicomputing/software_managecode/) for version control.
 
-
-
 ### [R and RStudio](/scicomputing/software_R/)
 
 R is a programming language and also a software development environment. It is widely used among statisticians and has strong capabilities for statistical modeling and data analysis. While R's core functions are fairly small, there is a robust community of user-contributed R 'packages' (eg. see "Bioconductor" on the target reference page). You can [download](https://cran.r-project.org/) R for your computer, install it from Center IT's Self Service (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs), or run R on SciComp's computing clusters using [environment modules](/scicomputing/compute_environments/).
@@ -70,7 +68,6 @@ There is an active [**Tableau**](https://www.tableau.com) data visualization com
 Workflow managers are software that facilitate the setup, execution, and monitoring of scientific analyses involving multiple steps. These are especially important for complex bioinformatic analyses that require various software dependencies and resource requirements, and can make your analysis both easier to troubleshoot and more reproducible. Workflow managers common for scientific processes include: [Snakemake](https://snakemake.readthedocs.io/en/stable/), [Cromwell](https://cromwell.readthedocs.io/en/stable/tutorials/FiveMinuteIntro/), [Toil](https://toil.readthedocs.io), [CWL](https://www.commonwl.org), and [Nextflow](https://www.nextflow.io/). For more information on running **Nextflow**, please see [this demo](compdemos/nextflow/).  
 
 Nextflow and Cromwell are currently under development at the Fred Hutch for wider, supported use by researchers here.  [Nextflow](/compdemos/nextflow/) is currently available and there is a growing community group working collaboratively you can join on their [Slack channel](https://fhbig.slack.com/archives/CJFP1NYSZ), and the same is available for [Cromwell](/compdemos/Cromwell/) including a [Slack channel](https://fhbig.slack.com/archives/CTFU13URJ).
-
 
 ### Other languages
 
