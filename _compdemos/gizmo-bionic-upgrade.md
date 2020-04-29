@@ -24,7 +24,7 @@ During this phase you will need to take special steps to access these new nodes,
 
 As demand dictates, we will begin upgrading a limited number of existing nodes to the new OS though we will endeavor to keep sufficient capacity to accommodate existing work.
 
-During this time we will no longer be building modules and software for Lmod on the current platform- any new software (including new versions of existing software) will be built for the new environment. Existing packages will be available and we will attempt to fix any problems that arise with these packages during this time
+During this time we will no longer be building modules and software for Lmod on the current platform.  New modules and software requestes will be built for the new environment. Existing packages will continue to be available in the old environment and we will attempt to fix any problems that arise with these packages during this time
 
 ## New Default (1 June - 5 July)
 
@@ -60,9 +60,9 @@ The existing NoMachine hosts will be available for use as per usual during this 
 
 ## Batch Computing
 
-As with `grabnode` you will need to launch your Slurm jobs from `rhino-new` to use the new environment.  These nodes are in the partition `campus-new`, but from one of these new nodes it will not be necessary to add any additional options.
+As with `grabnode` you will need to launch your Slurm jobs from `rhino-new` to use the new environment.  These nodes are in the partition `campus-new`, but from one of these new nodes it will not be necessary to add any additional options for job submission.
 
-These new nodes have 36 cores and 768GB of RAM- though these have a profile similar to the largenodes, there is no minimum on memory or CPU required. Thus it is *critical* that if your jobs use a significant amount of memory that you request a number of cores proportional to the anticipated amount of memory you will need.  A good rule of thumb is to request one core for each 4 GB of memory required- if you think you will need about 32GB of memory, request 8 cores for your job.
+These new nodes have 36 cores and 768GB of RAM- though these have a profile similar to the largenodes, there is no minimum on memory or CPU required. Thus it is *critical* that if your jobs use a significant amount of memory that you request a number of cores proportional to the anticipated amount of memory you will need.  A good rule of thumb is to request one core for each 4 GB of memory required- for example, if you think you will need about 32GB of memory, request 8 cores for your job.
 
 # Instructions for Use- New Default (1 June - 5 July)
 
@@ -84,7 +84,7 @@ All of the NoMachine services will be migrated to the new Rhino nodes.  The curr
 
 ## Batch Computing
 
-As above, no changes to job submission will be required when submitting from one of the new Rhino nodes.  The partition `campus-new` will be configured to reject new jobs (allowing existing jobs to finish) so jobs using that partition name will not be queued.
+As above, no changes to job submission will be required when submitting from one of the new Rhino nodes.  The new default partition for the gizmo cluster will contain only these new hosts.
 
 # Environment Modules (Lmod)
 
