@@ -12,35 +12,39 @@ We are therefore upgrading to a more modern version of Ubuntu (18.04, code name 
 
 Unfortunately this will require some changes on your part.  We are trying to maintain as much compatibility with the existing systems but changes are necessary.  You will see this primarily in your use of Lmod modules (the packages you're loading with `ml` or `module load`.  During this transition (before these new systems become the default) you'll also need to take a couple additional steps to access these new systems.
 
-## Schedule
+# Schedule Overview
 
 It is important that you take some time to evaulate any necessary changes to your work as we do have a timeline for implementing these new hosts and retiring the old platform.  The current schedule is:
 
-### General Availability (4 May - 1 June)
+## General Availability (4 May - 1 June)
 
 During this time these new systems are available for use by anyone with a HutchNet ID.  This is the best opportunity for you to evaluate any necessary changes to your work and tools as the old Ubuntu 14.04 systems will still be available as the default for most commands and work.
 
 During this phase you will need to take special steps to access these new nodes, including additional options to Slurm commands.
 
-> On 4 May we will also be discontinuing support for Lmod on the current platform- any new software (including new versions of existing software) will be built for the new environment. Existing packages _will_ continue to function and we will attempt to fix any problems that arise with these packages during this time
-
 As demand dictates, we will begin upgrading a limited number of existing nodes to the new OS though we will endeavor to keep sufficient capacity to accommodate existing work.
 
-### New Default (1 June - 5 July)
+During this time we will no longer be building modules and software for Lmod on the current platform- any new software (including new versions of existing software) will be built for the new environment. Existing packages will be available and we will attempt to fix any problems that arise with these packages during this time
 
-On the 1st of June these new nodes will become the "default".  When you access hosts via the hostname "rhino" you will get one of the new hosts.  Slurm commands (`sbatch`, `srun`, `grabnode`, et alia) will run your jobs on the new nodes by default.
+## New Default (1 June - 5 July)
+
+On the 1st of June this new environment will become the "default".  When you access hosts via the hostname "rhino" you will get one of the new hosts.  Slurm commands (`sbatch`, `srun`, `grabnode`, et alia) will run your jobs on the new nodes by default.
 
 We will be maintaining some capacity in the old platform during this time, including an old "rhino".  However, during this period we will be actively migrating systems to the new platform so there will be a significant decline in capacity in this old environment.
 
 This phase will also see the migration of the NoMachine service (currently hosted by lynx, manx, and sphinx) to the new rhino nodes.
 
+At this point, any problems that develop with Lmod modules in the old environment will not be fixed.  We will work with you to complete the migration to the new environment and address problems there instead.
+
 ### End of Support (5 July)
 
-On this date all hosts will have been migrated to the new environment.
+On this date access to the old environment will be disabled.  Any remaining hosts will be retired or upgraded.
 
-# Instructions for Use- General Availability
+# Instructions for Use- General Availability (4 May - 1 June)
 
-> These instructions are appropriate for the first phase of the transition- the "General Availability" phase described above.
+These instructions are appropriate for the first phase of the transition- the "General Availability" phase described above. During this time, special steps will be necessary to use the new environment as the current environment will remain the default for everyday activities.
+
+This time should be used to evaluate what changes may be necessary for your tools to function in the new environment.  Scientific Computing staff will be available to help with this process.
 
 ## Interactive Computing- Shell Based
 
@@ -60,9 +64,9 @@ As with `grabnode` you will need to launch your Slurm jobs from `rhino-new` to u
 
 These new nodes have 36 cores and 768GB of RAM- though these have a profile similar to the largenodes, there is no minimum on memory or CPU required. Thus it is *critical* that if your jobs use a significant amount of memory that you request a number of cores proportional to the anticipated amount of memory you will need.  A good rule of thumb is to request one core for each 4 GB of memory required- if you think you will need about 32GB of memory, request 8 cores for your job.
 
-# Instructions for Use- New Default
+# Instructions for Use- New Default (1 June - 5 July)
 
-When these new hosts become the default you'll no longer need to do anything different to use hosts in the new environment.  At this point the old environment is considered "deprecated" and while transitional work can continue, every effort should be made to migrate to the new nodes.
+When these new hosts become the default you'll no longer need to do anything different to use hosts in the new environment.  At this point the old environment is considered "deprecated" and while work in the old environment can continue, every effort should be made to migrate to the new nodes.
 
 Contact Scientific Computing for assistance using the old environment.
 
@@ -83,6 +87,8 @@ All of the NoMachine services will be migrated to the new Rhino nodes.  The curr
 As above, no changes to job submission will be required when submitting from one of the new Rhino nodes.  The partition `campus-new` will be configured to reject new jobs (allowing existing jobs to finish) so jobs using that partition name will not be queued.
 
 # Environment Modules (Lmod)
+
+> Please note that we will discontinue building new packages in the old computing environment starting 4 May and will end fixes in the old environment starting 1 June to allow us to better focus on migrating work to the new envrionment.
 
 One of the more significant changes in the new environment is to the modules available in Lmod.  While the commands are the same, in the new environment there are different toolchains requiring changes to the names of the modules you use.  For example, if you use R version 3.6.2:
 
