@@ -90,17 +90,19 @@ As above, no changes to job submission will be required when submitting from one
 
 > Please note that we will discontinue building new packages in the old computing environment starting 4 May and will end fixes in the old environment starting 1 June to allow us to better focus on migrating work to the new envrionment.
 
-One of the more significant changes in the new environment is to the modules available in Lmod.  While the commands are the same, in the new environment there are different toolchains requiring changes to the names of the modules you use.  For example, if you use R version 3.6.2:
+One of the more significant changes in the new environment is to the modules available in Lmod.  While the commands are the same, in the new environment there are different toolchains requiring changes to the names of the modules you use.  Some examples:
 
-| old                      | new                         |
-|-------                   |------                       |
-| `R/3.6.2-foss-2016b-fh1` | `ml R/3.6.2-foss-2019b-fh1` |
+| old                          | new                          |
+|-------                       |------                        |
+| `R/3.6.2-foss-2016b-fh1`     | `ml R/3.6.2-foss-2019b-fh1`  |
+| `Python/3.6.6-foss-2016b`    | `Python/3.6.6-foss-2018b`    |
+| `Bowtie2/2.3.4.3-foss-2016b` | `Bowtie2/2.3.4.2-foss-2018b` |
 
-Most common versions and tools are available.  Use the `ml spider` command to locate the modules you use.
+Most common versions and tools are available.  Use the command `ml spider` to locate the modules you use.
 
 ## Scripting with Modules
 
-Another change is to the path used for initializing Lmod into your environment- if you have lines that run the Lmod initialization scripts in `/app` you will need to update (or possibly remove) those lines from your script.  Where you have code like:
+Another change will be to the path used for initializing Lmod into your environment- if you have lines that run the Lmod initialization scripts in `/app` you will need to update (or possibly remove) those lines from your script.  Where you have code like:
 
 ```
 source /app/Lmod/lmod/lmod/init/bash
