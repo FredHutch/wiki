@@ -11,25 +11,27 @@ Whether required for funding and publication or desired for its beneficial impac
 
 Some of the benefits of data sharing include:
 
--   reinforcing open scientific inquiry
+-   Reinforcing open scientific inquiry
 
--   encouraging diversity of analysis and opinion
+-   Encouraging diversity of analysis and opinion
 
--   promoting new research, testing of new or alternative hypotheses and methods of analysis
+-   Promoting new research
 
--   supporting studies on data collection methods and measurement
+-   Expanding testing capabilities of both new and alternative hypotheses and methods of analysis
 
--   facilitating education of new researchers
+-   Supporting studies on data collection methods and measurement
 
--   enabling the exploration of topics not envisioned by the initial investigators
+-   Facilitating education of new researchers
 
--   permitting the creation of new data sets by combining data from multiple sources
+-   Enabling the exploration of topics not envisioned by the initial investigators
 
--   gaining for individual investigators additional insights from other investigators' studies of the data
+-   Permitting the creation of new data sets by combining data from multiple sources
 
--   increasing the visibility and credibility of one\'s own research based on the data
+-   Gaining for individual investigators additional insights from other investigators' studies of the data
 
--   opening opportunities for developing new collaborations and for access to complementary data sets
+-   Increasing the visibility and credibility of one\'s own research based on the data
+
+-   Opening opportunities for developing new collaborations and for access to complementary data sets
 
 ## Data Sharing and Management Plans
 
