@@ -106,11 +106,6 @@ These resources offer classes that are work-at-your-own-pace with a major focus 
     
 - [CodeAcademy](https://www.codecademy.com/): A subscription service that offers coding programs and courses in many different languages.
   - *Tiered payment system with limited content available for free*
-  
-- [DataCamp](https://www.datacamp.com/): A subscription service that offers coding programs and courses in many different languages.
-  - We previously used DataCamp subscriptions in fredhutch.io courses, but changes in their licenses made this strategy cost prohibitive
-  - Anyone considering DataCamp services should be aware of [this incident involving their CEO](https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup) before choosing to pay for their service.
-  - *Tiered payment system with limited content available for free*
 
 ### Free ebooks
 
