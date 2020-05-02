@@ -237,8 +237,8 @@ which will allow you to use your `vim`/`emacs` setups in Pycharm as well.
 #### Object inspection, completion
 When working with objects that may have lots of methods on them, it can be easy to forget what methods are available.
 By simply typing a variable which has been prior been assigned a type (through just assigning it a value, Py3 method signature type hints,
-or in-line type hints) and typing the '.' operator, a list of all properties and methods of that variable will appear in a dropdown.
-Furthermore, onces you've selected a method and are beginning to feed it parameters, you can type **⌘p** from within the method parentheses to list all the parameters the function takes.  If you'd like to know more about how the function itself
+or in-line type hints) and typing the '.' operator, a list of all properties and methods of that variable will appear in a drop-down.
+Furthermore, once you've selected a method and are beginning to feed it parameters, you can type **⌘p** from within the method parentheses to list all the parameters the function takes.  If you'd like to know more about how the function itself
 works, you can jump to its definition by highlighting it and typing **⌘b**
 
 #### Setting the python environment  
@@ -356,7 +356,7 @@ keymap setups, color schemes and more.
 Pycharm is capable of running Jupyter Notebooks.  This is far from my area of expertise, but the community edition 
 of Pycharm does appear to support it.  A very basic jupyter notebook file is included in this project repo to show that it
 can be done.  The kernel running the Jupyter Notebook can be configured similarly to how a test runner is configured.
-Go to the **Run** window drop down, click > **Edit Configurations..** and select an item from the drop down below **Jupter Notebooks**
+Go to the **Run** window drop-down, click > **Edit Configurations..** and select an item from the drop-down below **Jupter Notebooks**
 on the left side of the window that appears.
 
 #### README writing
@@ -367,9 +367,9 @@ option to view the rendered markdown side-by-side with your markdown file as you
 There are lots of various plugins for PyCharm that can be accessed through the **Preferences** tab, for various things like
 vim keyboard mappings, SQL highlighting and completion, bash completion, ticketing-service integrations, etc.
 
-I've played with the youtrack extension before, and it was pretty neat once I got it up and running.  It allowed me to create
-branches directly from an issue pulled from youtrack, and then commits I made to that branch would show
-up in the youtrack ticket.  I could also close the ticket after merging the feature back in.  They have a number of other 
+I've played with the [youtrack](https://www.jetbrains.com/youtrack/) extension before, and it was pretty neat once I got it up and running.  It allowed me to create
+branches from within Pycharm linked to an issue listed on youtrack, and then commits I made to that branch would show
+up as links in the youtrack ticket.  I could also close the ticket after merging the feature back in.  They have a number of other 
 issue tracker integrations, including JIRA, Trello, and GitLab.
 
 There are also various tools to enable easier development in cloud applications.  
