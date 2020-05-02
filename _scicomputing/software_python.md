@@ -228,7 +228,7 @@ code while you're developing.
 - **⇧⌘I**  will open up a small peek window with a view of the definition of an object or class you have highlighted. This
 is in contrast to **⌘b**, which will take you directly to the module and location of the declaration of the highlighted object. 
 
-![peek_image](https://github.com/zyd14/pycharm_demo/blob/master/peek.png)
+![peek_image](https://user-images.githubusercontent.com/1015576/80849493-38c14180-8bcc-11ea-8a31-a2e1925379d6.png)
 
 All these hotkeys and tons more can be configured iin the **Preferences > Keymap** menu. If you're a hotkey ninja (which I am not), 
 you can get set up to keep your hand off the mouse almost completely.  There are `vim` and `emacs` keymap plugins 
@@ -250,7 +250,7 @@ Then from the **Project** drop-down select **Project Interpreter**.  From here y
 this project (generally good practice) or select an existing interpreter on your computer. To create a new environment,
 or link an existing interpreter to Pycharm select *'Add'* from the menu that appears when you click the gear next to the 
 *Python Interpreter* drop-down menu.  
-![add_interpreter](https://github.com/zyd14/pycharm_demo/blob/master/add_interpreter.png)  
+![add_interpreter](https://user-images.githubusercontent.com/1015576/80850065-e5042780-8bce-11ea-9d73-74133623a4fe.png)  
 
 From the next pane you can create a new conda/pipenv/venv or link Pycharm to an existing interpreter / environment by browsing
 directly to its location on your computer, which makes it available to select in the **Project Interpreter** drop-down menu
@@ -272,10 +272,10 @@ code in the breakpoint context.
 
 #### Testing
 Pycharm's testing abilities really help make this project shine.  From within the Preferences menu you have can select
-*Tools > Python Integrated Tools*.  From here you can choose your favorite test runner (mine happens to be pytest), which
+*Tools > Python Integrated Tools*.  From here you can choose your favorite test runner (mine happens to be [pytest](https://docs.pytest.org/en/latest/))), which
 will tell PyCharm what tool to use when detecting and running tests in your project.  
 
-![Test Suite](https://github.com/zyd14/pycharm_demo/blob/master/test_ex.png)
+![Test Suite](https://user-images.githubusercontent.com/1015576/80849423-ebdd6b00-8bcb-11ea-8c83-a25c22ec64f5.png)
 
 By going to the **Test Configurations** menu under the **Run** menu dropdown you can make custom test
 run configurations for particular modules or scripts, with different test runners or runtime parameters and environment setups.
@@ -294,7 +294,7 @@ You can also add variables to a watch list from this window, so that if the test
 keep track of the value of an interesting variable.  Collections and objects in the **Variables** window will
 give you the ability to drill-down through their attributes as well if you would like to further interrogate them.
 
-![File ran with debugger](https://github.com/zyd14/pycharm_demo/blob/master/debugger.png)  
+![File ran with debugger](https://user-images.githubusercontent.com/1015576/80849400-d23c2380-8bcb-11ea-953c-31fb9bc79540.png)  
 
 This picture shows the debugger stopping the program prior to executing the line 13 `assert rand > 2` and the debugger context
 which appears at the bottom of the screen, containing the current call stack, a list of all variables found in the context 
@@ -314,12 +314,12 @@ clear about their purpose, without having to hunt through scores of modules to d
 Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where it's being used or how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages...** a small pop-up window will show where that varible is referenced throughout the entire project. This is particularly helpful for when you're cleaning up cruft and want to know if you can delete something.  'No Usages Found'? Deleted.
 
 Right-clicking an object opens a menu which contains the 'Find Usages...' button:  
-![find usages example](https://github.com/zyd14/pycharm_demo/blob/master/find_usages.png)
+![find usages example](https://user-images.githubusercontent.com/1015576/80849559-7cb44680-8bcc-11ea-917c-ce156111707e.png)
 
 After clicking the 'Find Usages' button, a pane will open listing all the usages of that object found throughout the
 project, presented in a tree-like fashion.  Double-clicking on any of these usages will take you directly to that location
 in the code. 
-![found_usages_example](https://github.com/zyd14/pycharm_demo/blob/master/found_usages.png)
+![found_usages_example](https://user-images.githubusercontent.com/1015576/80849570-89d13580-8bcc-11ea-8456-7a3a6d73985d.png)
 
 #### Customized lint-hinting
 PyCharm comes with a huge number of different of type and style hints to conform to PEP-8 and avoid some logic errors, particularly if you use the Python 3 type declarations in your code. Missing parentheses, brackets, bad indentation, unused
@@ -336,12 +336,12 @@ Files which have been modified since the last commit will be highlighted in blue
 files you've touched.
 
 Diff window comparing two conflicting files and showing the file resulting from how you merge the conflict.  
-![Merge Conflict differ](https://github.com/zyd14/pycharm_demo/blob/master/merge_veiwer.png)
+![Merge Conflict differ](https://user-images.githubusercontent.com/1015576/80849577-93f33400-8bcc-11ea-90d5-ea76321ba3e2.png)
 
 You also have the ability to look through the git revision history of any module or folder by selecting the folder / module,
-right-clicking and selecing 'Git > Show history...'
+right-clicking and selecting 'Git > Show history...'
 
-![Show History](https://github.com/zyd14/pycharm_demo/blob/master/show_history.png)
+![Show History](https://user-images.githubusercontent.com/1015576/80849581-9bb2d880-8bcc-11ea-8b83-aa60d250b00c.png)
 
 This allows you to see the various concurrent branches of development for the file, as well as a diff viewer showing the 
 commit diff at each commit.  This can be super handy when trying to find where a problem was introduced, or if you need to 
@@ -356,7 +356,7 @@ keymap setups, color schemes and more.
 Pycharm is capable of running Jupyter Notebooks.  This is far from my area of expertise, but the community edition 
 of Pycharm does appear to support it.  A very basic jupyter notebook file is included in this project repo to show that it
 can be done.  The kernel running the Jupyter Notebook can be configured similarly to how a test runner is configured.
-Go to the **Run** window dropdown, click > **Edit Configurations..** and select an item from the drop down below **Jupter Notebooks**
+Go to the **Run** window drop down, click > **Edit Configurations..** and select an item from the drop down below **Jupter Notebooks**
 on the left side of the window that appears.
 
 #### README writing
