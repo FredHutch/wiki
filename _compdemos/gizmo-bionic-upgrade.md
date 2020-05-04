@@ -10,7 +10,7 @@ The current operating system used on the Gizmo cluster and Rhino login nodes is 
 
 We are therefore upgrading to a more modern version of Ubuntu (18.04, code name "Bionic Beaver", or just "Bionic").  As part of this work we are also installing newer hardware (what will become the "K" class of nodes for Gizmo and new systems for the Rhinos).  This work will also see the NoMachine hosts lynx, manx, and sphinx retired, integrating NoMachine services onto the new Rhino nodes.
 
-Unfortunately this will require some changes on your part.  We are trying to maintain as much compatibility with the existing systems but changes are necessary.  You will see this primarily in your use of Lmod modules (the packages you're loading with `ml` or `module load`.  During this transition (before these new systems become the default) you'll also need to take a couple additional steps to access these new systems.
+Unfortunately this will require some changes on your part.  We are trying to maintain as much compatibility with the existing systems but changes are necessary.  You will see this primarily in your use of Lmod modules (the packages you're loading with `ml` or `module load`).  During this transition (before these new systems become the default) you'll also need to take a couple additional steps to access these new systems.
 
 For brevity and clarity, the new environment (module, module versions, and OS version) is termed the "Bionic" environment and the existing, out-of-date environment termed "Trusty".
 
@@ -18,7 +18,7 @@ For brevity and clarity, the new environment (module, module versions, and OS ve
 
 It is important that you take some time to evaulate any necessary changes to your work as we do have a timeline for implementing these new hosts and retiring the old platform.  The current schedule is:
 
-## General Availability (4 May - 1 June)
+## General Availability (6 May - 1 June)
 
 During this time the Bionic environment is available for use by anyone with a HutchNet ID.  This is the best opportunity for you to evaluate any necessary changes to your work and tools as the old Trusty environment will still be available as the default for most commands and work.
 
@@ -42,7 +42,7 @@ At this point, any problems that develop with Lmod modules in the Trusty environ
 
 On this date access to the Trusty environment will be disabled.  Any remaining hosts will be retired or upgraded.
 
-# Instructions for Use- General Availability (4 May - 1 June)
+# Instructions for Use- General Availability (6 May - 1 June)
 
 These instructions are appropriate for the first phase of the transition- the "General Availability" phase described above. During this time, special steps will be necessary to use the Bionic environment.  The current Trusty environment will remain the default for everyday activities.
 
