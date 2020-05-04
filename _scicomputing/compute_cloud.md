@@ -128,9 +128,8 @@ See our detailed information in the Computing Resource Library [here](/compdemos
 * The command the container should run when it is started †
 * What (if any) environment variables should be passed to the container when it starts †
 * Any data volumes that should be used with the container (the compute
-  environments provided by SciComp include 1TB of scratch space available
-  at `/scratch`). (**Note**: the process of providing scratch space
-  is going to change soon, check back for updated information).
+  environments provided by SciComp auto-scaling scratch space available
+  at `/tmp` inside the container). 
 * What (if any) IAM role your job should use for AWS permissions. This
   is important if your job requires permission to access your PI's
   [S3](https://aws.amazon.com/s3/) bucket.
@@ -140,37 +139,17 @@ See our detailed information in the Computing Resource Library [here](/compdemos
 ## Using scratch space
 
 "Scratch space" refers to extra disk space that your job may
-need in order to run. By default, not much disk space is
-available (but you have infinite space for input and output
-files in S3.
+need in order to run. 
 
-The provisioning of scratch space in AWS Batch turns out to
-be a very complicated topic. There is no officially supported
-way to get scratch space (though Amazon hopes to provide one
-in the future), and there are a number of unsupported ways,
-each with its own pros and cons.
+Ensure that you write all output files to the `/tmp` directory inside your container.
 
-If you need scratch space, email `scicomp` and we can discuss which approach will best meet your needs.  **But first**, determine if you **really** need scratch space.
-Many simple jobs, where a single command is run on an input file
-to produce an output file, can be *streamed*, meaning S3 can
-serve as both the standard input and output of the command.
-Here's an example that streams a file from S3 to the
-command `mycmd`, which in turn streams it back to S3:
+This is an auto-scaling volume that will expand before it can fill up. If you write files to any other directories you may run out of space.
 
-```
-aws s3 cp s3://mybucket/myinputfile - | mycmd | aws s3 cp --sse AES256 - s3://mybucket/outputfile
-```
-In the first `aws` command, the `-` means "copy the file
-to standard output", and in the second, it means
-"copy standard input to S3". `mycmd` knows how to operate
-upon its standard input. By using streams in this way, we don't require any extra disk
-space. Not all commands can work with streaming, specifically
-those which open files in random-access mode, allowing seeking
-to random parts of the file.
 
-If a program does not open files in random-access mode, but
-does not explicitly accept input from `STDIN`, or writes more than one output file, it can still work with streaming input/output via the use of
-[named pipes](https://github.com/FredHutch/s3uploader).More and more bioinformatics programs can read and write directly from/to S3 buckets, so this should reduce the need for scratch space.
+You will also need to make sure that you mount `/docker_scratch` on the host to `/tmp` inside the container. If you are using Nextflow, the correct configuration is shown [here](/compdemos/nextflow/#setup).
+
+
+
 
 ## Submit your job
 

@@ -11,10 +11,6 @@ Other relevant sections from other parts of the wiki include the [Resource libra
 
 There are many opportunities for training (courses and tutorials) and connecting with coding communities. The Fred Hutch Bioinformatics and Data Science Cooperative (The Coop) and fredhutch.io offer events and meeting groups. Additional opportunities are available elsewhere in Seattle (at UW and through Meetup.com) and online.
 
-## [For Beginners: How to Start Learning to Code](/scicomputing/reference_beginners/)
-
-This FAQ-style page includes answers to questions like "How do I get started learning to code?" and "What language should I learn first?"
-
 ## [Information for Grant Writers](/scicomputing/compute_grants/)
 
 This section includes boilerplate language about resources for research computing that is appropriate for inclusion in grant proposals.
