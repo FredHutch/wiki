@@ -97,8 +97,9 @@ One of the more significant changes in the Bionic environment is to the availabl
 | old                          | new                          |
 |-------                       |------                        |
 | `R/3.6.2-foss-2016b-fh1`     | `ml R/3.6.2-foss-2019b-fh1`  |
-| `Python/3.6.6-foss-2016b`    | `Python/3.6.6-foss-2018b`    |
+| `Python/3.7.4-foss-2016b`    | `Python/3.7.4-foss-2019b-fh1` |
 | `Bowtie2/2.3.4.3-foss-2016b` | `Bowtie2/2.3.4.2-foss-2018b` |
+| `` | `Bowtie2/2.4.1-GCCcore-8.3.0` |
 
 Most common tools are available.  Use the command `ml spider` to locate the modules you use and contact Scientfic Computing if you need a particular version.
 
