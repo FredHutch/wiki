@@ -54,7 +54,7 @@ Use the alias `rhino-new` to access the Bionic Rhino hosts with `ssh`.  This wil
 
 ## Interactive Computing- NoMachine
 
-The existing NoMachine hosts will be available for use as per usual during this time.  We do have NoMachine installed on the Bionic host `rhino01`- you can use this to see how the NoMachine service will work when this has been migrated to the Bionic environment.
+The existing NoMachine hosts will be available for use as per usual during this time.  We do have NoMachine installed on the Bionic host `rhino01`- you can use this to see how the NoMachine service will work when this has been migrated to the Bionic environment.  More information is available on [this page](gizmo-nx-users)
 
 ## Interactive Computing- grabnode
 
@@ -78,7 +78,7 @@ The name `rhino` will now route you to a Bionic Rhino node.  The `rhino-new` nam
 
 ## Interactive Computing- NoMachine
 
-All of the NoMachine services will be migrated to the new Bionic Rhino nodes.  The current hosts- lynx, manx, and sphinx- will be retired with the Bionic Rhinos taking over those services.  You will need to create connections to one of the names `rhino01`, `rhino02`, and `rhino03`.
+All of the NoMachine services will be migrated to the new Bionic Rhino nodes.  The current hosts- lynx, manx, and sphinx- will be retired with the Bionic Rhinos taking over those services.  You will need to create connections to one of the names `rhino01`, `rhino02`, and `rhino03`.  More information is available on [this page](gizmo-nx-users)
 
 ## Interactive Computing- grabnode
 
