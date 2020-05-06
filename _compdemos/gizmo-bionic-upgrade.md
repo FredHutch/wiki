@@ -10,7 +10,9 @@ The current operating system used on the Gizmo cluster and Rhino login nodes is 
 
 We are therefore upgrading to a more modern version of Ubuntu (18.04, code name "Bionic Beaver", or just "Bionic").  As part of this work we are also installing newer hardware (what will become the "K" class of nodes for Gizmo and new systems for the Rhinos).  This work will also see the NoMachine hosts lynx, manx, and sphinx retired, integrating NoMachine services onto the new Rhino nodes.
 
-Unfortunately this will require some changes on your part.  We are trying to maintain as much compatibility with the existing systems but changes are necessary.  You will see this primarily in your use of Lmod modules (the packages you're loading with `ml` or `module load`).  During this transition (before these new systems become the default) you'll also need to take a couple additional steps to access these new systems.
+Unfortunately this will require some changes on your part.  We are trying to maintain as much compatibility with the existing systems but changes are necessary.  You will see this primarily in the software available by default on these nodes and how you load software with `ml`.
+
+During this transition (before these new systems become the default) you'll also need to take a couple additional steps to access and use these new systems.
 
 For brevity and clarity, the new environment (module, module versions, and OS version) is termed the "Bionic" environment and the existing, out-of-date environment termed "Trusty".
 
@@ -88,11 +90,23 @@ All of the NoMachine services will be migrated to the new Bionic Rhino nodes.  T
 
 No changes to job submission will be required when submitting from one of the Bionic Rhino nodes.  The new default partition for the gizmo cluster will contain only these new hosts.
 
-# Environment Modules (Lmod)
+# Software and Environment Modules (Lmod)
 
 > Please note that we will discontinue building new packages in the Trusty computing environment starting 4 May and will end fixes in the Trusty environment starting 1 June to allow us to better focus on migrating to the Bionic envrionment.
 
-One of the more significant changes in the Bionic environment is to the available available in Lmod.  In the new environment there are different toolchains requiring changes to the names of the modules you use.  Some examples:
+## Bundled Software
+
+We have significantly reduced the number of packages installed as part of the operating system- many utilities available on Trusty nodes without loading a module may now require that you load a module.  For example the `gcc` compiler, `mysql`, and `X11` tools are installed with operating system on Trusty nodes but now require that you load a module first.  An incomplete list:
+
+| if you use this on Trusty | ...use this on Bionic |
+|-----------                |--------------
+| `mysql`                   | `ml mariadb` |
+| `gcc`                     | `ml foss/2019b` |
+| X11 display (e.g. DISPLAY)| `ml X11` |
+
+## Environment Modules
+
+In the new environment there are different toolchains requiring changes to the names of the modules you use.  Some examples:
 
 | old                          | new                          |
 |-------                       |------                        |
