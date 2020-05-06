@@ -143,8 +143,6 @@ These new hosts have a very minimal number of tools and packages installed.  Whi
 
     ml foss/2019b
 
-> NOTE: Many R and Python modules compile binaries as part of their installation process.  To prevent future problems load this toolchain _before_ you use `pip install` or `install.packages()`
-
 ## <a name="compiled-apps"></a>Compiled Applications
 
 If you have compiled your own modules- including R libraries installed via CRAN or Python libraries using `pip`- you may need to rebuild or re-install these (see the above notes about the compiler).
