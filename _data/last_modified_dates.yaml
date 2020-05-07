@@ -184,6 +184,8 @@
   url: _compdemos/Singularity.md
 - dlm: November 12, 2019
   url: _compdemos/aws.md
+- dlm: May 7, 2020
+  url: _compdemos/rslurm_intro.md
 - dlm: March 19, 2020
   url: _compdemos/matlab.md
 - dlm: May 31, 2019
