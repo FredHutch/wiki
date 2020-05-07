@@ -27,7 +27,7 @@ You will need access to the Rhinos for submitting the job
 
 ### Instructions on how to get set-up
 
-Log into a rhino or in an NoMachine terminal session.  Use the module commands to load R- most later versions of R in our environment have the `rslurm` module ainstalled but it is also available for installation via CRAN
+Log into a rhino or in an [NoMachine terminal session](https://sciwiki.fredhutch.org/scicomputing/access_methods/#nomachine-nx-multi-os).  Use the module commands to load R- most later versions of R in our environment have the `rslurm` module ainstalled but it is also available for installation via CRAN
 
 ```
 > module purge
@@ -47,7 +47,8 @@ The first step in using `rslurm` for parallelizing a computation is to create th
 ```
 sim.pi <- function(iterations = 1000) {
   # Generate two vectors for random points in unit 
-  # circle x.pos <- runif(iterations, min=-1, max=1)
+  # circle
+  x.pos <- runif(iterations, min=-1, max=1)
   y.pos <- runif(iterations, min=-1, max=1)
 
   # Test if draws are inside the unit circle
@@ -85,7 +86,7 @@ This creates a job object (`sjob1`).  The arguments for this function are:
  - sim.pi - the function to be run in each Slurm job
  - params - a data frame containing the parameters for each call of the function
  - jobname - the name the jobs will have in Slurm
- - nodes - this is misleading- this is more correctly called "tasks" for Slurm The rows in the parameters will be distributed over these tasks
+ - nodes - this is misleading- this is more correctly called "tasks" for Slurm. The rows in the parameters will be distributed over these tasks
  - cpus_per_node - how many cores will be requested for each task
  
 The job object is then what we will interact with for getting job state and results. `get_job_status` will show the jobs and their Slurm state.  `get_slurm_out` will return the output of the job in a data frame or list.
