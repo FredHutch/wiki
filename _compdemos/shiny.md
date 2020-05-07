@@ -57,7 +57,7 @@ To do a basic set up via the web, go to [GitHub](https://github.com) and create 
 
 In the local folder created, create a folder called `app` and put your Shiny app files (either app.R, or ui.r/server.R) and any other associated data files needed for the app in the `app` directory.  
 
-Once you are finished and have tested your app locally, either via R or RStudio, push your edits to GitHub then request a deployment via these instructions [below.](/compdemos/shiny/#deployment-service-from-scicomp)
+Once you are finished and have tested your app locally, either via R or RStudio, push your edits to GitHub then request a deployment via these instructions [below.](/compdemos/shiny/#request-deployment-service-from-scicomp)
 
 ### From a Cloned Template
 
