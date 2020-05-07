@@ -4,17 +4,16 @@ main_author: Michael Gutteridge
 primary_reviewers: atombaby
 ---
 
-# Overview
 
 With the new roll out of the Bionic nodes for the Gizmo computing environment we have made some changes to NoMachine and what this service is providing.
 
-# Hosts
+## Hosts
 
 The most notable change is that the NoMachine service is now provided by the Rhino login nodes.  The newer, more powerful hardware combined with new load management software will allow us to combine these services so we don't have to make extra steps to get to the cluster.
 
 The hosts providing this service are `rhino01`, `rhino02`, and `rhino03`.  The `rhino` and `rhino-new` aliases shouldn't be used for NoMachine connections.
 
-# Connecting
+## Connecting
 
 We have opened up the configuration to allow different uses of NoMachine- this is discussed further below.  The basic connection- starting a virtual desktop session- is described here.
 
@@ -34,7 +33,7 @@ Once verified, click "Accept" where you'll be prompted to enter a username and p
 
 This creates the connection.  You'll be prompted now to create a session- there is "Create a new virtual desktop" and "Create a new custom session".  The former (virtual desktop) will create a NoMachine session as you'd have in the connections to the old Trusty NoMachine systems.
 
-## Custom Sessions
+### Custom Sessions
 
 One of the changes is that you can now run X11 based software without launching a full desktop session.  This is still something of an experimental feature, but thus far seems to work well.
 
@@ -44,7 +43,7 @@ With these options you'll get a window on your desktop with a prompt on the NoMa
 
 Contact Scientific Computing if more help is required
 
-# Browser Based Access
+## Browser Based Access
 
 There is now support for sessions in a browser window.  This is a rather more experimental feature.  For these style connections point a browser to a URL:
 
