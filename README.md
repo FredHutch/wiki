@@ -86,11 +86,11 @@ If it is a link to an external site use:
 ### In-text Images
 If you'd like to add images to your entry, some text editors (eg. Atom or VSCode via their respective plugins) allow for copy-and-pasting of images.  You can read some instructions on how to get set up with VSCode in one of the Computing Demo's.  
 
-One edit is that in order for Jekyll to correctly render the images in a page, the following text is the example format that that call to the image needs to be in for a markdown in the **_compdemos** folder:
+One edit is that in order for Jekyll to correctly render the images in a page, they should be placed in the `assets` subdirectory of the directory containing the page being edited. The following text is the example format that the call to the image needs to be in for a markdown in the **_compdemos** folder:
 ```
 ![](/compdemos/assets/2018-06-13-16-47-59.png)
 ```
-If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is and please leave out the underscore at the beginning of the folder name.  
+If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is; please leave out the underscore at the beginning of the folder name.  
 
 Both Atom and VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
 
