@@ -146,11 +146,11 @@ tail -f out.txt
 
 ## other considerations 
 
-checkpointing can greatly improve job throughput because you can reduce your wall clock time which allows the cluster to start your jobs much sooner. How does wall clock time relate to checkpoint time ? Currently the wall clock time needs to be a little longer than checkpoint time. If you set the checkpoint time to 6 hours you might set the wall clock time to about 7 hours. In a later version of `checkpointer` wall clock time and checkpoint time might converge for simplicity or we will just use wall clock time. One big question is how often one should set a checkpoint and how many checkpoints should we have in a single compute job. There are some dependencies:
+checkpointing can greatly improve job throughput because you can reduce your wall clock time which allows the cluster to start your jobs much sooner. How does wall clock time relate to checkpoint time ? Currently the wall clock time needs to be longer or equal than checkpoint time. If do not set the checkpoint `checkpointer` with just use the wall clock time as checkpoint time and checkpoint jobs 10 min before the wall clock time ends. One big question is how often one should set a checkpoint and how many checkpoints should we have in a single compute job. There are some dependencies:
 
-* Memory ! Large memory jobs with several GB of memory utilization take longer to checkpoint as all information in memory needs to be written to disk. If we assume modest 100 MB/s throughput a job with 20GB will take a little over 3 minutes to flush to disk.
-* Disk space ! Each job that is checkpointed will copy data to a network scratch location (currently under delete10) This data includes content of memory as well as all output files under $TMPDIR
-* Slurm --requeue ! If a job is requeued it goes back in the queue and might have to wait even though it has a high priority given its low wall clock time. After a job is requeued Slurm waits at least 60 sec until the job can be launched again.
+* Memory: Large memory jobs with several GB of memory utilization take longer to checkpoint as all information in memory needs to be written to disk. If we assume a modest 100 MB/s throughput a job with 20GB will take a little over 3 minutes to flush to network storage.
+* Disk space: Each job that is checkpointed will copy data to a network scratch location (currently under delete10) This data includes content of memory as well as all output files under $TMPDIR
+* Slurm --requeue: If a job is requeued it goes back in the queue and might have to wait even though it has a high priority given its low wall clock time. After a job is requeued Slurm waits at least 60 sec until the job can be launched again.
 
 
 ## Current limitations
@@ -158,7 +158,7 @@ checkpointing can greatly improve job throughput because you can reduce your wal
 * checkpointer supports only simple jobs that run on a single node. 
 * The submission script should not contain complex structures or multiple steps.
 * Error recovery is only partially automated. If checkpointer is unable to restore a previous checkpoint it will make 3 more attempts. However if a job fails during execution and is then requeued `checkpointer` is not yet able to automatically select the right checkpoint to fall back on. This problem will be addressed shortly.
-* To ensure debugging, checkpointer will take the first checkpoint no longer than 60 sec after job start to ensure that you always get immediate feedback if checkpointing works or not. 
+* To ensure debugging, checkpointer will execute the first checkpoint no longer than 60 sec after job start to ensure that you always get immediate feedback if checkpointing works or not.
 
 
 ## Future 
