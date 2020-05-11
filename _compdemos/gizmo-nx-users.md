@@ -47,8 +47,8 @@ Contact Scientific Computing if more help is required
 
 There is now support for sessions in a browser window.  This is a rather more experimental feature.  For these style connections point a browser to a URL:
 
- - https://rhino01:4443/nxwebplayer
- - https://rhino02:4443/nxwebplayer
- - https://rhino03:4443/nxwebplayer
+ - https://rhino01.fhcrc.org:4443/nxwebplayer
+ - https://rhino02.fhcrc.org:4443/nxwebplayer
+ - https://rhino03.fhcrc.org:4443/nxwebplayer
 
 You will be prompted to enter your username and password.  There are options for both virtual desktop and custom session that function much as the full client does.
