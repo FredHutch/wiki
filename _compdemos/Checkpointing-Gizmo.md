@@ -16,7 +16,7 @@ The current checkpointing implementation is geared towards increasing throughput
 
 ## How to use Checkpointing
 
-You can activate checkpointing by using the `checkpointer` command in the shell script that starts your job. After you launched `checkpointer` with your job, it waits in the background until the job run time is larger than the checkpoint time. The checkpoint time is set in an environment variable `SLURM_CHECKPOINT`. Then it will kill your compute process and flush it to disk and trigger a requeue of your slurm job. When the requeued job starts it will load all information from disk and continue the computation (likely on a different compute node).
+You can activate checkpointing by using the `checkpointer` command in the shell script that starts your job. After you launched `checkpointer` with your job, it waits in the background until the job run time is larger than the checkpoint time. The checkpoint time is set in an environment variable `SLURM_CHECKPOINT`. Then it will kill your compute process and flush it to disk and trigger a requeue of your slurm job. When the requeued job starts, it will load all information from disk and continue the computation (likely on a different compute node).
 
 Add the `checkpointer` command to your script and ensure it is executed *before* the actual compute script or binary is launched, for example:
 
@@ -34,7 +34,7 @@ Rscript /fh/fast/..../script.R
 
 Setting the environment variable `SLURM_CHECKPOINT=0-0:45` means that the job will save a checkpoint every 45 min. Adding the directive `--requeue` is required for jobs that can be checkpointed and restarted multiple times. `--open-mode=append` ensures that the sbatch output file (e.g. `slurm-123456.out`) will not be truncated each time the job is restarted.
 
-After this you launch the script with sbatch. Please ensure that the SLURM_CHECKPOINT is smaller than the wall clock time you request as maximum run time. If you request 6 hours (e.g. `sbatch -t 0-6:00`) your job may be restarted 7 times if you set `SLURM_CHECKPOINT` to 45 min.
+After this you launch the script with sbatch. Please ensure that the SLURM_CHECKPOINT is smaller than the wall clock time (maximum run time) you request with the -t option. If you request 6 hours (e.g. `sbatch -t 0-6:00`) and you set `SLURM_CHECKPOINT` to 45 min your job may be restarted 7 times. 
 
 
 ```bash
@@ -44,14 +44,14 @@ tail -f out.txt
 
 ## a simple example 
 
-create a simple Python script called `looper.py` and make it executable with `chmod +x looper.py`. The script will simply count to 100 and write each iteration to a new line in a text file:
+create a simple Python script called `looper.py` and make it executable with `chmod +x looper.py`. The script will simply count to 100 and write each iteration to a new line in a text file in the current folder:
 
 ```python
 #! /usr/bin/env python3
 
 import os, time, socket
 
-outfile='%s/looper.txt' % os.environ['TMPDIR']
+outfile='looper.txt'
 print('writing to %s ...' % outfile)
 for i in range(1, 101):
     pid = os.getpid()
@@ -87,7 +87,7 @@ sbatch -o out.txt -t 0-1:00 runscript.sh
 tail -f out.txt
 ```
 
-we see that `looper.py` is running and then successfully checkpointed to disk and requeued:
+we see that `looper.py` is run and then successfully checkpointed to disk and requeued:
 
 ```
 ### ****************************** #######
@@ -108,7 +108,12 @@ Requeueing ... 47503490
 slurmstepd-gizmok28: error: *** JOB 47503490 ON gizmok28 CANCELLED AT 2020-05-11T00:47:23 DUE TO JOB REQUEUE ***
 
 ```
-Currently `looper.py` writes to a network share. Unfortunatelty checkpointing does not support open file handles to network shares. This does not seem to be a problem because `looper.py` opens and closes the output file in each loop. But what if `looper.py` needed to have a file handle open for longer ? Let's have a look at a slightly modified version:
+
+
+## a more realistic case with local scratch
+
+In the example above `looper.py` writes to the current folder which is on a network share. Unfortunatelty checkpointing does not support open file handles to network shares. This does not seem to be a problem at first because `looper.py` opens and closes the output file in each loop. But what if `looper.py` needed to have a file handle open for longer ? Let's have a look at a slightly modified version:
+
 
 ```python
 #! /usr/bin/env python3
@@ -130,20 +135,30 @@ fh.close()
 
 ```
 
-In this case the file handle is open almost for the entire time the script runs. If we were to checkpoint while the file handle was open, checkpointing would not work properly. As a workaround we can temporarily write the file to a local scratch space. The root of the local scratch space of this compute job is accessible as environment variable $TMPDIR so we write looper.txt to TMPDIR. TMPDIR will be deleted when the compute job ends.
-But if `looper.py` is writing to a local disk and that data goes away when the job ends how can we ensure that we save the result data to a network share? If you set an existing network directory to environment variable RESULT_FOLDER checkpointer will copy local data to this network location after the job is finished. For example, use this command to set the result folder to the current working directory before you submit a job.
+In this case the file handle is open almost for the entire time the script runs. If we were to checkpoint while the file handle was open on a network location, checkpointing would not work properly. As a workaround we can temporarily write the file to a local scratch space. The root of the local scratch space of this compute job is accessible as environment variable $TMPDIR so we write looper.txt to TMPDIR. TMPDIR will be deleted when the compute job ends.
+But if `looper.py` is writing to a local disk and that data goes away when the job ends, how can we ensure that the data is not lost? If you set environment variable RESULT_FOLDER to an existing network directory to which you have write permissions, checkpointer will copy all local data to this network location after the job is finished. For example, use this command to set the result folder to the current working directory before you submit a job:
 
 ```
 export RESULT_FOLDER=$(pwd)
 sbatch -o out.txt -t 0-1:00 runscript.sh
+tail -f out.txt
 ```
+
+## other considerations 
+
+checkpointing can greatly improve job throughput because you can reduce your wall clock time which allows the cluster to start your jobs much sooner. How does wall clock time relate to checkpoint time ? Currently the wall clock time needs to be a little longer than checkpoint time. If you set the checkpoint time to 6 hours you might set the wall clock time to about 7 hours. In a later version of `checkpointer` wall clock time and checkpoint time might converge for simplicity or we will just use wall clock time. One big question is how often one should set a checkpoint and how many checkpoints should we have in a single compute job. There are some dependencies:
+
+* Memory ! Large memory jobs with several GB of memory utilization take longer to checkpoint as all information in memory needs to be written to disk. If we assume modest 100 MB/s throughput a job with 20GB will take a little over 3 minutes to flush to disk.
+* Disk space ! Each job that is checkpointed will copy data to a network scratch location (currently under delete10) This data includes content of memory as well as all output files under $TMPDIR
+* Slurm --requeue ! If a job is requeued it goes back in the queue and might have to wait even though it has a high priority given its low wall clock time. After a job is requeued Slurm waits at least 60 sec until the job can be launched again.
 
 
 ## Current limitations
 
 * checkpointer supports only simple jobs that run on a single node. 
-* The submission script should not contain complex structures or multiple steps. 
-
+* The submission script should not contain complex structures or multiple steps.
+* Error recovery is only partially automated. If checkpointer is unable to restore a previous checkpoint it will make 3 more attempts. However if a job fails during execution and is then requeued `checkpointer` is not yet able to automatically select the right checkpoint to fall back on. This problem will be addressed shortly.
+* To ensure debugging, checkpointer will take the first checkpoint no longer than 60 sec after job start to ensure that you always get immediate feedback if checkpointing works or not. 
 
 
 ## Future 
