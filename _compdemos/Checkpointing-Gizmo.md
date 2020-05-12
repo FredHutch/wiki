@@ -1,6 +1,6 @@
 ---
 title: Checkpointing on Gizmo (beta)
-last_modified_at: 2020-05-10
+last_modified_at: 2020-05-12
 main_author: Dirk Petersen
 primary_reviewers: atombaby, vortexing 
 ---
@@ -135,7 +135,7 @@ fh.close()
 
 ```
 
-In this case the file handle is open almost for the entire time the script runs. If we were to checkpoint while the file handle was open on a network location, checkpointing would not work properly. As a workaround we can temporarily write the file to a local scratch space. The root of the local scratch space of this compute job is accessible as environment variable $TMPDIR so we write looper.txt to TMPDIR. TMPDIR will be deleted when the compute job ends.
+In this case the file handle is open almost for the entire time the script runs. If we were to checkpoint while the file handle was open on a network location, checkpointing may not work in some cases. As a workaround we can temporarily write the file to a local scratch space. The root of the local scratch space of this compute job is accessible as environment variable $TMPDIR so we write looper.txt to TMPDIR. TMPDIR will be deleted when the compute job ends.
 But if `looper.py` is writing to a local disk and that data goes away when the job ends, how can we ensure that the data is not lost? If you set environment variable RESULT_FOLDER to an existing network directory to which you have write permissions, checkpointer will copy all local data to this network location after the job is finished. For example, use this command to set the result folder to the current working directory before you submit a job:
 
 ```
@@ -143,10 +143,11 @@ export RESULT_FOLDER=$(pwd)
 sbatch -o out.txt -t 0-1:00 runscript.sh
 tail -f out.txt
 ```
+Note: another consideration for local scratch space is its **very high performance**. The space under /loc allows for up to 1.5 GB/s throughput 
 
 ## other considerations 
 
-checkpointing can greatly improve job throughput because you can reduce your wall clock time which allows the cluster to start your jobs much sooner. How does wall clock time relate to checkpoint time ? Currently the wall clock time needs to be longer or equal than checkpoint time. If do not set the checkpoint `checkpointer` with just use the wall clock time as checkpoint time and checkpoint jobs 10 min before the wall clock time ends. One big question is how often one should set a checkpoint and how many checkpoints should we have in a single compute job. There are some dependencies:
+checkpointing can greatly improve job throughput because you can reduce your wall clock time which allows the cluster to start your jobs much sooner. How does wall clock time relate to checkpoint time (aka SLURM_CHECKPOINT)? The wall clock time needs to be longer or equal than the checkpoint time. If you do not set the checkpoint time `checkpointer` with just use the wall clock time as checkpoint time and checkpoint jobs 10 min before the wall clock time ends. One big question is how often one should set a checkpoint and how many checkpoints should we have in a single compute job. There are some dependencies:
 
 * Memory: Large memory jobs with several GB of memory utilization take longer to checkpoint as all information in memory needs to be written to disk. If we assume a modest 100 MB/s throughput a job with 20GB will take a little over 3 minutes to flush to network storage.
 * Disk space: Each job that is checkpointed will copy data to a network scratch location (currently under delete10) This data includes content of memory as well as all output files under $TMPDIR
