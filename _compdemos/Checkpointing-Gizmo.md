@@ -158,13 +158,12 @@ checkpointing can greatly improve job throughput because you can reduce your wal
 
 * checkpointer supports only simple jobs that run on a single node. 
 * The submission script should not contain complex structures or multiple steps.
-* Error recovery is only partially automated. If checkpointer is unable to restore a previous checkpoint it will make 3 more attempts. However if a job fails during execution and is then requeued `checkpointer` is not yet able to automatically select the right checkpoint to fall back on. This problem will be addressed shortly.
+* Error recovery is only partially tested. It will make multiple attempts to recover from failures but much more testing needs to be done.
 * To ensure debugging, checkpointer will execute the first checkpoint no longer than 60 sec after job start to ensure that you always get immediate feedback if checkpointing works or not.
 
 
 ## Future 
 
 We have tested this process with R and Python and would like to continue testing with other tools
-
 
 Please email `SciComp` to request assistance and discuss which environment is best for your needs.
