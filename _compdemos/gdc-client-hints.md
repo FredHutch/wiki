@@ -6,8 +6,6 @@ primary_reviewers: atombaby
 
 This page will provide some hints for using GDC on our compute hosts (gizmo, rhino, etc.)
 
-## Overview
-
 `gdc-client` is a tool provided by the NCI for downloading data from the GDC Data Portal.  It provides a command-line interface that can be run interactively or inside shell or batch scripts.
 
 This tool can use multiple download streams to speed downloads.  A number of other tuning and feature options will also affect overall download speeds and data integrity.
