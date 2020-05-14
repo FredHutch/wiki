@@ -18,13 +18,15 @@ As singularity may affect the stability of a compute system to which many users 
 
 Docker containers are the predominant storage format for containerized workflows and it is important to know that Singularity can easily import Docker containers. To create a new container from a Docker image on [DockerHub](https://hub.docker.com/) you just need to run the `singularity build` command.
 
-The basic syntax is as follows to import a docker container and execute it.
+The basic syntax is as follows to import a Docker container and execute it.
 
 Load Singularity.
 ```
 ml Singularity
 ```
 Import the Docker container and build the Singularity container.
+
+**Note**: The build step is only necessary the first time you convert a Docker container to a Singularity container or you want to update your Singularity container to a newer verions of a Docker container. 
 ```
 singularity build pickanameforyourcontainer.sif docker://point-to-dockerhub-repo
 ```
@@ -60,7 +62,7 @@ Normally you would need root access to accomplish this task, but the cool thing 
 
 With that said, to use the remote builder option in Singularity you need a Sylabs account and key. The steps to set up remote builder can be found [here](https://sylabs.io/guides/3.5/user-guide/endpoint.html) and please note you will need to generate a new key every 30 days when using Sylabs' remote builder option.
 
-In this example, we are going to build a Singularity container using the latest R docker image and add additional R modules and directory paths to it using a Singularity definition file and Sylabs remote builder option. Read more about singularity definition files [here.](https://sylabs.io/guides/3.5/user-guide/definition_files.html) 
+In this example, we are going to build a Singularity container using the latest R Docker image and add additional R modules and directory paths to it using a Singularity definition file and Sylabs remote builder option. Read more about Singularity definition files [here.](https://sylabs.io/guides/3.5/user-guide/definition_files.html) 
 
 
 Create your Singularity definition file.
@@ -79,7 +81,7 @@ mkdir -p /fh/fast
 mkdir -p /fh/scratch
 ```
 
-**Note**: The `R --slave -e 'install.packages("devtools", repos="https://cloud.r-project.org/")'` section is installing all of the R devtools modules that are not in the base R docker container by default. The `mkdir -p /fh/` lines are creating new folder paths within the Singularity container that can be bound to a directory outside the container later if needed.
+**Note**: The `R --slave -e 'install.packages("devtools", repos="https://cloud.r-project.org/")'` section is installing all of the R devtools modules that are not in the base R Docker container by default. The `mkdir -p /fh/` lines are creating new folder paths within the Singularity container that can be bound to a directory outside the container later if needed.
 
 Now lets build the Singularity container.
 ```
