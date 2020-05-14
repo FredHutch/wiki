@@ -42,8 +42,6 @@ generation:
         url: /generation/study_hypothesis/
       - title: "Multiple Testing"
         url: /generation/multiple_testing/
-      - title: "Research Software Suggestions"
-        url: /generation/study_data_management/
 
   - title: "Consent, Privacy and Security"
     children:
