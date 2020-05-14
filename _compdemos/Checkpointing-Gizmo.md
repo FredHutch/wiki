@@ -7,9 +7,8 @@ primary_reviewers: atombaby, vortexing
 
 Checkpointing is a technique that provides fault tolerance for computations. It basically consists of saving a snapshot of the application's state on persistent storage, so that applications can restart from that point in case of failure. This is particularly important for long running jobs as they are more likely to fail than short running jobs.
 
-Besides fault tolerance, checkpointing can increase job throughput. Jobs that are scheduled for shorter run times are getting started sooner on average than jobs for which the user requests long run times. The mechanism that implements this prioritization is called [Backfill](https://www.zedat.fu-berlin.de/HPC/EN/Backfill)
+Besides fault tolerance, checkpointing can increase job throughput. Jobs that are scheduled for shorter run times are getting started sooner on average than jobs for which the user requests long run times. The mechanism that implements this prioritization is called [Backfill](https://www.zedat.fu-berlin.de/HPC/EN/Backfill).
 
-## Gizmo Checkpointing 
 
 Checkpointing is available on Gizmo as a beta feature. The feature is currently only available on the new Gizmo Bionic nodes that have Ubuntu 18.04 installed.  The current checkpointing implementation is geared towards increasing throughput and improving fault tolerance.
 
@@ -41,7 +40,9 @@ sbatch -o out.txt -t 0-6:00 runscript.sh
 tail -f out.txt
 ```
 
-## A Simple Example 
+## Examples
+
+### A Simple Example
 
 Create a simple Python script called `looper.py` and make it executable with `chmod +x looper.py`. The script will simply count to 100 and write each iteration to a new line in a text file in the current folder:
 
@@ -65,7 +66,7 @@ for i in range(1, 101):
 
 ```
 
-now add `looper.py` to your submission script and set your checkpoint time to 10 sec.
+Now add `looper.py` to your submission script and set your checkpoint time to 10 sec:
 
 ```bash
 > cat runscript.sh 
@@ -79,14 +80,14 @@ checkpointer
 ./looper.py
 ```
 
-run it and tail the output file 
+Run it and tail the output file:
 
 ```bash
 sbatch -o out.txt -t 0-1:00 runscript.sh
 tail -f out.txt
 ```
 
-we see that `looper.py` is run and then successfully checkpointed to disk and requeued:
+We see that `looper.py` is run and then successfully checkpointed to disk and requeued:
 
 ```
 ### ****************************** #######
@@ -108,7 +109,7 @@ slurmstepd-gizmok28: error: *** JOB 47503490 ON gizmok28 CANCELLED AT 2020-05-11
 
 ```
 
-## A More Realistic Case with Local Scratch
+### A More Realistic Example with Local Scratch
 
 In the example above `looper.py` writes to the current folder which is on a network share. Unfortunatelty checkpointing does not support open file handles to network shares. This does not seem to be a problem at first because `looper.py` opens and closes the output file in each loop. But what if `looper.py` needed to have a file handle open for longer? Let's have a look at a slightly modified version:
 
@@ -142,7 +143,7 @@ export RESULT_FOLDER=$(pwd)
 sbatch -o out.txt -t 0-1:00 runscript.sh
 tail -f out.txt
 ```
-Note: another consideration for local scratch space is its **very high performance**. The space under /loc allows for up to 1.5 GB/s throughput 
+Note: another consideration for local scratch space is its **very high performance**. The space under `/loc` allows for up to 1.5 GB/s throughput 
 
 ## Other Considerations 
 
@@ -153,7 +154,7 @@ Checkpointing can greatly improve job throughput because you can reduce your wal
 * Slurm Requeue: If a job is requeued it goes back in the queue and might have to wait even though it has a high priority given its low wall clock time. After a job is requeued Slurm waits at least 60 sec until the job can be launched again.
 
 
-## Current Limitations
+### Current Limitations
 
 * `checkpointer` supports only simple jobs that run on a single node. 
 * The submission script should not contain complex structures or multiple steps.
