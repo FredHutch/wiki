@@ -166,6 +166,12 @@ The `Peak` function is Some Serious Magic beans.  Sometimes you don't want to se
 
 ![peak](https://user-images.githubusercontent.com/46639063/75184186-d98d0f80-56f8-11ea-8e67-cd76626992f0.png)
 
+**SSH Extension for remote development**  
+
+If you've ever had to access and work on files through a remote connection you've probably found yourself at the mercy of the development tools provided on the remote server you're accessing.  Luckily VSCode has a well-supported extension which can allow you to enjoy the same development experience on a remote server that you would if you were developing locally.  Follow the step-by-step instructions on setting up the [Visual Studio Code Remote - SSH](https://code.visualstudio.com/docs/remote/ssh) to get set up to run VSCode when connected to a remote server.  
+
+The [Visual Studio Code Remote - WSL](https://code.visualstudio.com/docs/remote/wsl) extension is a related extension which allows you to  
+
 **Merge Conflicts example**
 
 Let's look at resolving a merge conflict. A merge conflict often arises when two users commit changes to the same file. For instance, on GitHub, I wrote:
