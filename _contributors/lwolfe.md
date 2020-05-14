@@ -2,11 +2,11 @@
 title: Lauren Wolfe
 ---
 ## Affiliation
-Hutch Data Commonwealth
+The Coop
 
 
 ## Title
-Research Data Specialist
+Training Specialist
 
 
 ## Contribution Domain and Type

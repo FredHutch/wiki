@@ -128,9 +128,8 @@ See our detailed information in the Computing Resource Library [here](/compdemos
 * The command the container should run when it is started †
 * What (if any) environment variables should be passed to the container when it starts †
 * Any data volumes that should be used with the container (the compute
-  environments provided by SciComp include 1TB of scratch space available
-  at `/scratch`). (**Note**: the process of providing scratch space
-  is going to change soon, check back for updated information).
+  environments provided by SciComp auto-scaling scratch space available
+  at `/tmp` inside the container). 
 * What (if any) IAM role your job should use for AWS permissions. This
   is important if your job requires permission to access your PI's
   [S3](https://aws.amazon.com/s3/) bucket.
@@ -140,37 +139,17 @@ See our detailed information in the Computing Resource Library [here](/compdemos
 ## Using scratch space
 
 "Scratch space" refers to extra disk space that your job may
-need in order to run. By default, not much disk space is
-available (but you have infinite space for input and output
-files in S3.
+need in order to run. 
 
-The provisioning of scratch space in AWS Batch turns out to
-be a very complicated topic. There is no officially supported
-way to get scratch space (though Amazon hopes to provide one
-in the future), and there are a number of unsupported ways,
-each with its own pros and cons.
+Ensure that you write all output files to the `/tmp` directory inside your container.
 
-If you need scratch space, email `scicomp` and we can discuss which approach will best meet your needs.  **But first**, determine if you **really** need scratch space.
-Many simple jobs, where a single command is run on an input file
-to produce an output file, can be *streamed*, meaning S3 can
-serve as both the standard input and output of the command.
-Here's an example that streams a file from S3 to the
-command `mycmd`, which in turn streams it back to S3:
+This is an auto-scaling volume that will expand before it can fill up. If you write files to any other directories you may run out of space.
 
-```
-aws s3 cp s3://mybucket/myinputfile - | mycmd | aws s3 cp --sse AES256 - s3://mybucket/outputfile
-```
-In the first `aws` command, the `-` means "copy the file
-to standard output", and in the second, it means
-"copy standard input to S3". `mycmd` knows how to operate
-upon its standard input. By using streams in this way, we don't require any extra disk
-space. Not all commands can work with streaming, specifically
-those which open files in random-access mode, allowing seeking
-to random parts of the file.
 
-If a program does not open files in random-access mode, but
-does not explicitly accept input from `STDIN`, or writes more than one output file, it can still work with streaming input/output via the use of
-[named pipes](https://github.com/FredHutch/s3uploader).More and more bioinformatics programs can read and write directly from/to S3 buckets, so this should reduce the need for scratch space.
+You will also need to make sure that you mount `/docker_scratch` on the host to `/tmp` inside the container. If you are using Nextflow, the correct configuration is shown [here](/compdemos/nextflow/#setup).
+
+
+
 
 ## Submit your job
 
@@ -356,12 +335,11 @@ a queue to submit to. There are several queues to choose from:
 | **cpu-spot-50**  | cpu-spot-50  | SPOT | optimal  | 500  | 50  |
 | **cpu-spot-40**  | cpu-spot-40  | SPOT | optimal  | 700  | 40  |
 | **cpu-spot-30**  | cpu-spot-30  | SPOT | optimal  | 1000 | 30  |
-| **cpu-spot-20**  | cpu-spot-20  | SPOT | optimal  | 1500 | 20  |
 | **gpu-spot-50**  | gpu-spot-50  | SPOT | p3.16xlarge  | 500  | 50  |
 
 #### Understanding this table:
 
-* **SPOT** refers to a [pricing scheme](https://aws.amazon.com/ec2/spot/) in the AWS cloud. SPOT instances (virtual machines) are cheaper than normal (known as "on-demand") instances. When a spot instance is started, a **Bid Percentage** is chosen. If the spot price rises above the chosen percentage of the on-demand price, the spot instance is terminated. This is infrequent, and if your AWS Batch job is set up to automatically retry failed jobs, you will likely not even notice. Practically speaking, a bid of 50 percent should generally be available around the clock, while a bid of 20 percent may only become available on nights and weekends. However, that availability pattern may vary by instance type, and with regional demand.
+* **SPOT** refers to a [pricing scheme](https://aws.amazon.com/ec2/spot/) in the AWS cloud. SPOT instances (virtual machines) are cheaper than normal (known as "on-demand") instances. When a spot instance is started, a **Bid Percentage** is chosen. If the spot price rises above the chosen percentage of the on-demand price, the spot instance is terminated. This is infrequent, and if your AWS Batch job is set up to automatically retry failed jobs, you will likely not even notice. Practically speaking, a bid of 50 percent should generally be available around the clock, while a bid of 30 percent may only become available on nights and weekends. However, that availability pattern may vary by instance type, and with regional demand.
 * **Maximum CPUs** Each queue is tied to a compute environment which
   has a maximum number of CPUs defined. No more than this number of CPUs can be in use at any given time. As an example, the total number of CPUs needed for a set of 10 jobs which each request 16 CPUs is the same as the total number of CPUs needed for a set of 160 jobs each requesting 1 CPU.
 * **Instance Types** *optimal* means that AWS Batch will choose between the C, M, and R [instance type families](https://aws.amazon.com/ec2/instance-types/). *p3.16xlarge* should only be
