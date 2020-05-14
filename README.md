@@ -26,7 +26,7 @@ Articles use an outline structure to allow graduated content, starting from basi
 
 > Note: This site is created by researchers and staff who are not web designers nor technical writers by training!  Thus, we have opted for a relatively flat organizational structure to keep it simpler for content curators and to reduce the risk of information becoming stale and irrelevant as much as possible.  
 
-The more focused, how-to style, Resource Library entries in both the Data Generation and Scientific computing domains can use headers as well to populate a Table of Contents for each of these pages.  These documents are intended to be fairly detailed examples or content that is linked to by Articles, but address a specific use case or example scenario that may be only intended for advanced users/readers.  Once a number of related Resource library entries are created, Editors may consider consolidating the information and moving it into the main site as a full Article to highlight the content to new readers.  
+The more focused, how-to style, Resource Library entries in both the Data Generation and Scientific Computing domains can use headers as well to populate a Table of Contents for each of these pages.  These documents are intended to be fairly detailed examples or content that is linked to by Articles, but address a specific use case or example scenario that may be only intended for advanced users/readers.  Once a number of related Resource library entries are created, Editors may consider consolidating the information and moving it into the main site as a full Article to highlight the content to new readers.  
 
 Both Articles and Resource Library entries are full-text searchable using the search feature (the magnifying glass in the header).  This search ability is the primary strength behind this Wiki and will be the primary way people will find content, as, again, no web designers or technical writers are involved in this grassroots project.  
 
@@ -68,7 +68,7 @@ You can also contribute to the wiki from external editors that can interoperate 
 
 ## Wiki Content Style Guide
 ### Github-Flavored Markdown
-The content of this site is generated using GitHub "flavored" markdown.  A cheat sheet for the code required to create things like headings and table is [here.](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Our page TOC's are generated from these headings, so use ## H2 as your first level, and headings H2, H3 and H4 show up automatically in our TOC's).
+The content of this site is generated using GitHub "flavored" markdown.  A cheat sheet for the code required to create things like headings and table is [here.](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Our page TOC's are generated from these headings, so use ## H2 as your first level, and headings H2, H3 and H4 show up automatically in our TOC's.
 
 ### Inserting Links
 
@@ -86,11 +86,11 @@ If it is a link to an external site use:
 ### In-text Images
 If you'd like to add images to your entry, some text editors (eg. Atom or VSCode via their respective plugins) allow for copy-and-pasting of images.  You can read some instructions on how to get set up with VSCode in one of the Computing Demo's.  
 
-One edit is that in order for Jekyll to correctly render the images in a page, the following text is the example format that that call to the image needs to be in for a markdown in the **_compdemos** folder:
+One edit is that in order for Jekyll to correctly render the images in a page, they should be placed in the `assets` subdirectory of the directory containing the page being edited. The following text is the example format that the call to the image needs to be in for a markdown in the **_compdemos** folder:
 ```
 ![](/compdemos/assets/2018-06-13-16-47-59.png)
 ```
-If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is and please leave out the underscore at the beginning of the folder name.  
+If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is; please leave out the underscore at the beginning of the folder name.  
 
 Both Atom and VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
 
@@ -120,7 +120,7 @@ Please if you need to reference a Fred Hutch username, do not write the entire e
 ```
 
 ## Repo structure
-The general contributor should likely have no reason/need to not edit any of the files in the main directory of the repository, nor in any other subfolders besides the ones described below.  The folders below contain the content portions of the site, while the other folders and files contain all the necessary information to actually BUILD the website itself.  
+The general contributor should likely have no reason/need to edit any of the files in the main directory of the repository, nor files in any other subfolders besides the ones described below.  The folders below contain the content portions of the site, while the other folders and files contain all the necessary information to actually BUILD the website itself.  
 
 ### Content-Housing Folders
 Data Generation Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_generation
