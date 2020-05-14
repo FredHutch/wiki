@@ -1,11 +1,9 @@
 ---
 title: GDC Data Download "How-To" Using R/RStudio
-date: 2019-11-7
 main_author: Jenny Smith
 primary_reviewers: vortexing, jennylsmith
 ---
 
-#Purpose
 
 The purpose of this 'How-To' is to demonstrate the use of the [GDC](https://gdc.cancer.gov/) Repository to access the next generation sequencing data from TCGA and TARGET projects.
 
@@ -15,7 +13,7 @@ This can be a helpful source to download this data locally for a variety of uses
 
 This tutorial will demonstrate how to download the RNA-seq data from the TARGET Pediatric Cancer project as well as the clinical data. Of course, there are various options for downloading data from TCGA/TARGET ranging using the GCD command line tool, or from various other repositories  FTP sites like Broad Firehouse, UCSC XENA browser, and using TARGET data matrix.
 
-#Installation  
+## Installation  
 
 We will use the `GenomicDataCommons` [Bioconductor package](
 https://bioconductor.org/packages/release/bioc/vignettes/GenomicDataCommons/inst/doc/overview.html#quickstart). It should be noted that there is an alternative package, `TCGAbiolinks` for only [TCGA data](http://bioconductor.org/packages/release/bioc/vignettes/TCGAbiolinks/inst/doc/index.html), but will not be covered here.
@@ -82,7 +80,7 @@ head(available_fields('cases')) #clinical data elements "columns"
 qcases %>% count() #number of patient cases/samples
 ```
 
-#Directed Searches in GCD
+## Directed Searches in GCD
 
 You can find the total number of files of a specific type of file, project, and cases . Remember to use `available_feilds(files())` to find your facet arguments (column/field names) to select the appropriate information to summarize. The aggregations() function will create a list of dataframes for each facet you select.
 
@@ -122,7 +120,7 @@ head(res.cases$primary_site)
 ```
 
 
-#Query GDC for Gene Expression Data from the TARGET Project
+### Query GDC for Gene Expression Data from the TARGET Project
 
 As it is, there isn't a central website or very efficient method to determine what are the available field names for each file type, so it does require a bit of printing out and visually searching for the information you are looking for.
 
@@ -157,7 +155,7 @@ qfiles %>% count()
 str(qfiles)
 ```
 
-#Create ID Map for Manifest, Clinical, and Expression Files
+## Create ID Map for Manifest, Clinical, and Expression Files
 
 Now, you can query the GDC for the information in the fields in the  `qfiles` object.
 The output of the  `results_all()` function call will be long nested list. Again, you will need to do many print statements to really get a handle on the information you've now downloaded. Be aware you are *not* downloading any data files at this point. The query is for the file identifiers, associated sample identifiers, etc.
@@ -216,7 +214,7 @@ table(ID.map$project.project_id)
 ```
 
 
-#Create a Download Manifest file
+## Create a Download Manifest file
 
 ```
 qfiles <- qfiles %>%
@@ -236,7 +234,7 @@ dim(manifest_df) #469
 
 
 
-#Download the files
+## Download the files
 
 ```}
 #Add the GDC Client to your R options
@@ -258,7 +256,7 @@ head(fnames)
 ```
 
 
-#Check MD5 Sums
+### Check MD5 Sums
 
 ```}
 #check MD5 sums
@@ -266,7 +264,7 @@ head(fnames)
 
 
 
-#Reorganize and Concatenate the Downloaded Files
+### Reorganize and Concatenate the Downloaded Files
 
 ```}
 source("Cat_Expn_Data.r")
@@ -336,12 +334,12 @@ head(counts[,1:10])
 
 
 
-#Download Clinical Data
+### Download Clinical Data
 
 https://seandavi.github.io/2018/03/extracting-clinical-information-using-the-genomicdatacommons-package/
 
 
-##from GDC Database
+### from GDC Database
 
 ```}
 cases() %>% filter(~ project.project_id == "TARGET-AML") %>% count() #988 patients
@@ -376,7 +374,7 @@ head(full_clin)
 dim(full_clin) # 988  33
 ```
 
-##Precompiled Clinical Data Elements from Study Authors
+## Precompiled Clinical Data Elements from Study Authors
 
 ```}
 qClin <- files() %>%
@@ -426,7 +424,7 @@ system("for dir in $(ls -1d */); do rmdir $dir; done")
 
 
 
-#Session Information
+#### Session Information
 
 ```}
 sessionInfo()
