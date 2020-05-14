@@ -11,8 +11,7 @@ Besides fault tolerance, checkpointing can increase job throughput. Jobs that ar
 
 ## Gizmo Checkpointing 
 
-Checkpointing is available on Gizmo as a beta feature. The feature is currently only available on the new Gizmo K nodes that have Ubuntu 18.04 installed.
-The current checkpointing implementation is geared towards increasing throughput as well as improving fault tolerance.  
+Checkpointing is available on Gizmo as a beta feature. The feature is currently only available on the new Gizmo Bionic nodes that have Ubuntu 18.04 installed.  The current checkpointing implementation is geared towards increasing throughput and improving fault tolerance.
 
 ## How to Use Checkpointing
 
@@ -44,7 +43,7 @@ tail -f out.txt
 
 ## A Simple Example 
 
-create a simple Python script called `looper.py` and make it executable with `chmod +x looper.py`. The script will simply count to 100 and write each iteration to a new line in a text file in the current folder:
+Create a simple Python script called `looper.py` and make it executable with `chmod +x looper.py`. The script will simply count to 100 and write each iteration to a new line in a text file in the current folder:
 
 ```python
 #! /usr/bin/env python3
@@ -111,7 +110,7 @@ slurmstepd-gizmok28: error: *** JOB 47503490 ON gizmok28 CANCELLED AT 2020-05-11
 
 ## A More Realistic Case with Local Scratch
 
-In the example above `looper.py` writes to the current folder which is on a network share. Unfortunatelty checkpointing does not support open file handles to network shares. This does not seem to be a problem at first because `looper.py` opens and closes the output file in each loop. But what if `looper.py` needed to have a file handle open for longer ? Let's have a look at a slightly modified version:
+In the example above `looper.py` writes to the current folder which is on a network share. Unfortunatelty checkpointing does not support open file handles to network shares. This does not seem to be a problem at first because `looper.py` opens and closes the output file in each loop. But what if `looper.py` needed to have a file handle open for longer? Let's have a look at a slightly modified version:
 
 
 ```python
@@ -134,9 +133,9 @@ fh.close()
 
 ```
 
-In this case the file handle is open almost for the entire time the script runs. If we were to checkpoint while the file handle was open on a network location, checkpointing may not work in some cases. As a workaround we can temporarily write the file to a local scratch space. The root of the local scratch space of this compute job is accessible as environment variable $TMPDIR so we write looper.txt to TMPDIR. TMPDIR will be deleted when the compute job ends.
+In this case the file handle is open almost for the entire time the script runs. If we were to checkpoint while the file handle was open on a network location, checkpointing may not work in some cases. As a workaround we can temporarily write the file to a local scratch space. The root of the local scratch space of this compute job is accessible as environment variable `$TMPDIR` so we write `looper.txt` to `TMPDIR`. `TMPDIR` will be deleted when the compute job ends.
 
-But if `looper.py` is writing to a local disk and that data goes away when the job ends, how can we ensure that the data is not lost? If you set environment variable RESULT_FOLDER to an existing network directory to which you have write permissions, checkpointer will copy all local data to this network location after the job is finished. For example, use this command to set the result folder to the current working directory before you submit a job:
+But if `looper.py` is writing to a local disk and that data goes away when the job ends, how can we ensure that the data is not lost? If you set environment variable `RESULT_FOLDER` to an existing network directory to which you have write permissions, `checkpointer` will copy all local data to this network location after the job is finished. For example, use this command to set the result folder to the current working directory before you submit a job:
 
 ```
 export RESULT_FOLDER=$(pwd)
@@ -147,19 +146,19 @@ Note: another consideration for local scratch space is its **very high performan
 
 ## Other Considerations 
 
-checkpointing can greatly improve job throughput because you can reduce your wall clock time which allows the cluster to start your jobs much sooner. How does wall clock time relate to checkpoint time (aka SLURM_CHECKPOINT)? The wall clock time needs to be longer or equal than the checkpoint time. If you do not set the checkpoint time `checkpointer` with just use the wall clock time as checkpoint time and checkpoint jobs 10 min before the wall clock time ends. One big question is how often one should set a checkpoint and how many checkpoints should we have in a single compute job. There are some dependencies:
+Checkpointing can greatly improve job throughput because you can reduce your wall clock time which allows the cluster to start your jobs much sooner. How does wall clock time relate to checkpoint time (aka SLURM_CHECKPOINT)? The wall clock time needs to be longer or equal than the checkpoint time. If you do not set the checkpoint time `checkpointer` with just use the wall clock time as checkpoint time and checkpoint jobs 10 min before the wall clock time ends. One big question is how often one should set a checkpoint and how many checkpoints should we have in a single compute job. There are some dependencies:
 
 * Memory: Large memory jobs with several GB of memory utilization take longer to checkpoint as all information in memory needs to be written to disk. If we assume a modest 100 MB/s throughput a job with 20GB will take a little over 3 minutes to flush to network storage.
-* Disk space: Each job that is checkpointed will copy data to a network scratch location (currently under delete10) This data includes content of memory as well as all output files under $TMPDIR
-* Slurm --requeue: If a job is requeued it goes back in the queue and might have to wait even though it has a high priority given its low wall clock time. After a job is requeued Slurm waits at least 60 sec until the job can be launched again.
+* Disk Space: Each job that is checkpointed will copy data to a network scratch location (currently under delete10) This data includes content of memory as well as all output files under $TMPDIR
+* Slurm Requeue: If a job is requeued it goes back in the queue and might have to wait even though it has a high priority given its low wall clock time. After a job is requeued Slurm waits at least 60 sec until the job can be launched again.
 
 
 ## Current Limitations
 
-* checkpointer supports only simple jobs that run on a single node. 
+* `checkpointer` supports only simple jobs that run on a single node. 
 * The submission script should not contain complex structures or multiple steps.
 * Error recovery is only partially tested. It will make multiple attempts to recover from failures but much more testing needs to be done.
-* To ensure debugging, checkpointer will execute the first checkpoint no longer than 60 sec after job start to ensure that you always get immediate feedback if checkpointing works or not.
+* To ensure debugging, `checkpointer` will execute the first checkpoint no longer than 60 sec after job start to ensure that you always get immediate feedback if checkpointing works or not.
 
 
 ## Future 
