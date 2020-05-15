@@ -103,6 +103,8 @@ We have significantly reduced the number of packages installed as part of the op
 | `gcc`                     | `ml foss/2019b` |
 | X11 display (e.g. DISPLAY)| `ml X11` |
 
+> As always, if you are missing a command or tool, email Scientific Computing to get that installed- depending on the nature of the tool, availability, and its use, it may be installed from the Ubuntu package repositories or as an Environment Module.
+
 ## Environment Modules
 
 In the new environment there are different toolchains requiring changes to the names of the modules you use.  Some examples:
@@ -112,7 +114,7 @@ In the new environment there are different toolchains requiring changes to the n
 | `R/3.6.2-foss-2016b-fh1`     | `ml R/3.6.2-foss-2019b-fh1`  |
 | `Python/3.7.4-foss-2016b`    | `Python/3.7.4-foss-2019b-fh1` |
 | `Bowtie2/2.3.4.3-foss-2016b` | `Bowtie2/2.3.4.2-foss-2018b` |
-| `` | `Bowtie2/2.4.1-GCCcore-8.3.0` |
+| - | `Bowtie2/2.4.1-GCCcore-8.3.0` |
 
 
 Most common tools are available.  Use the command `ml spider` to locate the modules you use and contact Scientfic Computing if you need a particular version.
@@ -134,6 +136,22 @@ module use /app/easybuild/modules/all
 ```
 
 We have made changes that may allow you to eliminate those lines from your scripts entirely- the specifics of how your job is launched ultimately will determine if those lines are necessary.  Contact Scientific Computing if you need assistance assessing this.
+
+## Extended Default Module Matching
+
+With version 8.3 of Lmod we now have new options for loading modules using a partial module name.  For example, if you have loaded R with the command:
+
+    ml R/3.6.2-foss-2019b-fh1
+
+but are not overly concerned with the toolchain information (i.e. the `foss-2019` stuff) you can load the module with the shorter:
+
+    ml R/3.6.2
+
+Similarly, if the "patch" level isn't important to you:
+
+    ml R/3.6
+
+Will get you the latest 3.6 release of R installed in Lmod.
 
 ## Notes
 
