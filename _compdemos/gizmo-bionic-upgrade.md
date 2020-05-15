@@ -132,7 +132,6 @@ Replace this with:
 
 ```
 source /app/lmod/lmod/init/profile
-module use /app/easybuild/modules/all
 ```
 
 We have made changes that may allow you to eliminate those lines from your scripts entirely- the specifics of how your job is launched ultimately will determine if those lines are necessary.  Contact Scientific Computing if you need assistance assessing this.
