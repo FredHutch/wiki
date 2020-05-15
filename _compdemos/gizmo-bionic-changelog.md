@@ -21,3 +21,8 @@ We are applying the latest set of updated pacakges to the Bionic distribution. A
 #### Lmod Update
 
 We are updating Lmod to version 8.3 from the current 7.8.  A full changelog is available [here](https://github.com/TACC/Lmod), but the most significant change for the community is the "extended default" matching of modules.
+
+#### New Software
+
+ - `tree`
+ - _please add new lmod modules_
