@@ -89,11 +89,11 @@ All of the NoMachine services will be migrated to the new Bionic Rhino nodes.  T
 No changes to job submission will be required when submitting from one of the Bionic Rhino nodes.  The new default partition for the `gizmo` cluster will contain only these new hosts.
 
 
-# Software and Environment Modules (Lmod)
+## Software and Environment Modules (Lmod)
 
 > Please note that we will discontinue building new packages in the Trusty computing environment starting 4 May and will end fixes in the Trusty environment starting 1 June to allow us to better focus on migrating to the Bionic envrionment.
 
-## Bundled Software
+### Bundled Software
 
 We have significantly reduced the number of packages installed as part of the operating system- many utilities available on Trusty nodes without loading a module may now require that you load a module.  For example the `gcc` compiler, `mysql`, and `X11` tools are installed with operating system on Trusty nodes but now require that you load a module first.  An incomplete list:
 
@@ -105,7 +105,7 @@ We have significantly reduced the number of packages installed as part of the op
 
 > As always, if you are missing a command or tool, email Scientific Computing to get that installed- depending on the nature of the tool, availability, and its use, it may be installed from the Ubuntu package repositories or as an Environment Module.
 
-## Environment Modules
+### Environment Modules
 
 In the new environment there are different toolchains requiring changes to the names of the modules you use.  Some examples:
 
@@ -137,7 +137,7 @@ module use /app/easybuild/modules/all
 
 We have made changes that may allow you to eliminate those lines from your scripts entirely- the specifics of how your job is launched ultimately will determine if those lines are necessary.  Contact Scientific Computing if you need assistance assessing this.
 
-## Extended Default Module Matching
+### Extended Default Module Matching
 
 With version 8.3 of Lmod we now have new options for loading modules using a partial module name.  For example, if you have loaded R with the command:
 
@@ -154,6 +154,12 @@ Similarly, if the "patch" level isn't important to you:
 Will get you the latest 3.6 release of R installed in Lmod.
 
 ## Notes
+
+### <a name="terminator"></a>Terminator Won't Launch
+
+_Terminator_ won't start.  This is a bug in terminator with no anticipated fix in sight.  The workaround is to start terminator with the `-u` option:
+
+    terminator -u
 
 ### <a name="local-gcc"></a>GCC and Compiling Your Own Code
 
