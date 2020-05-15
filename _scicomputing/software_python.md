@@ -17,56 +17,6 @@ There are many ways to use python beyond a local installation on your computer f
 SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python Modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/_pythonModules/).  If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.  
 
 
-## Running Python using Jupyter Notebooks
-
-Jupyter Notebooks are web interfaces to interpreter shells such as Python and R. They allow the user to write code in small, executable chunks that can be interspersed with blocks of markdown. They are particularly well suited to exploring data and generating narrative-style presentations of analyses. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called 'Jupyter Lab'.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
-
-**Jupyter Notebook on your computer**
-
-Install the software on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
-
-**Jupyter on `Rhino`**  
-For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoRhino.md).  
-
-After you have connected to `rhino`, just load a Python distribution maintained by SciComp and run Jupyter lab:
-
-```
-    petersen@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
-    petersen@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
-
-    ... or simply use the 'jupyterlab' wrapper script:
-    petersen@rhino1:~$ jupyterlab
-```
-
-
-Then connect to the URL, copying the link given by the previous command, which looks as follows:
-```
-       Copy/paste this URL into your browser when you connect for the first time,
-    to login with a token:
-        http://rhino1:11112/?token=0eee692be6c81c1061db
-```
-**Jupyter on `Gizmo`**
-
-From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoGizmo.md)
-
-
-**Jupyter on Jupyterhub**
-
-SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.  (Jupyterhub does not have the latest Python packages)
-
-Please note that only the first method (running Jupyter from your local machine) allows you to install your own python packages as administrator of your machine.
-The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the --user option (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
-
-```
-    petersen@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
-    petersen@rhino1:~$ python3 -m venv ~/mypython
-    petersen@rhino1:~$ source ~/mypython/bin/activate
-    (mypython) petersen@rhino1:~$ jupyter lab
-    (mypython) petersen@rhino1:~$ deactivate
-    petersen@rhino1:~$
-```
-
-
 ## Writing Python Code:  Common IDEs
 
 ### Visual Studio Code 
@@ -104,13 +54,13 @@ Take a look at the icon on the browser panel. You can, with one-click, save all 
 
 VSC offers a live rendering of your markdown. To view it, right-click on your markdown file and select [Open Preview].
 
-**Run Script or Only Part of Script With ⌃⌥N
+- Run Script or Only Part of Script With **⌃⌥N**
 
 You can run a segment of a script by selecting the part you care about and hitting [⌃⌥N]. The results show up in the OUTPUT table.
 
-**Identify Problems and Quick Their Quick Fixes
+- Identify Problems and Their Quick Fixes
 
-Linters help you find problems quickly. These are reported in the Problems tab of the  Here are two examples. 
+[Code linters](https://dbader.org/blog/python-code-linting) help you find possible syntactical and stylistic problems quickly. Issues detected by the built-in VSCode linter are reported in the Problems tab of the  Here are two examples. 
 
 * No-trailing-spaces (see one line above)
 * No-bare URLs (see in the first block)
@@ -371,7 +321,7 @@ such as database connectors, AWS log and CLI plugins, Docker management tools, v
 keymap setups, color schemes and more.  
 
 
-### Jupyter Notebook
+**Jupyter Notebook extension**
 PyCharm is capable of running Jupyter Notebooks.  This is far from my area of expertise, but the community edition 
 of PyCharm does appear to support it.  A very basic jupyter notebook file is included in this project repo to show that it
 can be done.  The kernel running the Jupyter Notebook can be configured similarly to how a test runner is configured.
@@ -472,7 +422,7 @@ So having a debugger in your IDE that you can insert breakpoints, step in, cycle
 
 **Magic Sauce**
 
-Ok, so the "magic beans" here with Jupyterlab is that you have a very light and functional, once all the extensions are updated to play nicely with Jupyterlab 2.0, web-based IDE which outside of hard core engineering can be of use to you especially with the rise of cloud-computing and oh it has a dark theme now Settings > JupyterLab Theme.
+Ok, so the "magic beans" here with Jupyterlab is that you have a very light and functional, once all the extensions are updated to play nicely with Jupyterlab 2.0, web-based IDE which outside of hard core engineering can be of use to you especially with the rise of cloud-computing; oh it has a dark theme now! **Settings > JupyterLab Theme**.
 
 ![](https://github.com/telamonian/theme-darcula/blob/master/darcula_preview.png)
 
@@ -489,6 +439,55 @@ You can set system and all your user-specific settings by going to Settings > Ad
 **the .ipynb file**
 
 This IS the ipython notebook file or your JupyterLab file with code and markdown in it and note you can only access these from the directory you execute `jupyterlab` in so either `pwd` to make sure or have a set location of where you save the files because you'll only be able to open .ipynb files in either the start-up directory or it's sub-folders. 
+
+### Using Jupyter Notebooks at Fred Hutch
+
+Jupyter Notebooks are web interfaces to interpreter shells such as Python and R. They allow the user to write code in small, executable chunks that can be interspersed with blocks of markdown. They are particularly well suited to exploring data and generating narrative-style presentations of analyses. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called 'Jupyter Lab'.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
+
+**Jupyter Notebook on your computer**
+
+Install the software on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
+
+**Jupyter on `Rhino`**  
+For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoRhino.md).  
+
+After you have connected to `rhino`, just load a Python distribution maintained by SciComp and run Jupyter lab:
+
+```
+    petersen@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
+    petersen@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+
+    ... or simply use the 'jupyterlab' wrapper script:
+    petersen@rhino1:~$ jupyterlab
+```
+
+
+Then connect to the URL, copying the link given by the previous command, which looks as follows:
+```
+       Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://rhino1:11112/?token=0eee692be6c81c1061db
+```
+**Jupyter on `Gizmo`**
+
+From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoGizmo.md)
+
+
+**Jupyter on Jupyterhub**
+
+SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.  (Jupyterhub does not have the latest Python packages)
+
+Please note that only the first method (running Jupyter from your local machine) allows you to install your own python packages as administrator of your machine.
+The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the --user option (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
+
+```
+    petersen@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
+    petersen@rhino1:~$ python3 -m venv ~/mypython
+    petersen@rhino1:~$ source ~/mypython/bin/activate
+    (mypython) petersen@rhino1:~$ jupyter lab
+    (mypython) petersen@rhino1:~$ deactivate
+    petersen@rhino1:~$
+```
 
 **Conclusions**
 
