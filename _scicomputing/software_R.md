@@ -34,24 +34,58 @@ When using R/RStudio locally, you have the option to install a number of differe
 
 
 ## Remote (`Rhino` and `Gizmo`) Use
-If computing resources beyond what is available via your desktop are required, you may consider running R scripts or RStudio from the `rhinos` or `gizmo`.  When using R/RStudio on shared computing resources, different options for builds and modules are available that you can take advantage of.  `SciComp` makes pre-built modules available for researcher use in order to facilitate more reproducible and reliable use of software on the local cluster.  
+If computing resources beyond what is available via your desktop are required, you may consider running R scripts from the `rhinos` or `gizmo`.  When using R/RStudio on shared computing resources, different options for builds and modules are available that you can take advantage of.  `SciComp` makes pre-built modules available for researcher use in order to facilitate more reproducible and reliable use of software on the local cluster.  
 
 ### Current R Modules on `Rhino`/`Gizmo`
 SciComp maintains a range of various builds of R on `Rhino` and `Gizmo` for use by researchers. Each build has different packages installed and versions of R itself, thus identifying if an existing R build matches your needs is a first step to using R on `Rhino` or `Gizmo`.  Specific information about which R Modules are available, including more information about packages installed in them can be found on our dedicated [R Module page](/rModules/). If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.  
 
 
 ### `Rhino`
-Depending on what OS is on your local computer, the steps are:
-- If your local computer runs Windows, you should connect to the `Rhino`'s with [NoMachine](/scicomputing/access_methods/#nomachine-nx-access-multi-os), then launch RStudio from within NoMachine.
-- If your local computer is a Mac, you should [install XQuartz and connect to Rhino](/scicomputing/access_methods/), then launch RStudio from the terminal
-- If your local computer runs Linux, you simply need to connect to Rhino [with X11 forwarding](/scicomputing/access_methods/) using the `-X` flag as detailed above for Mac computers.
+
+You can connect to a `rhino` machine 
+either with `ssh` (use `PuTTY` on Windows)
+or NoMachine.
+
+Once on a `rhino` machine, choose a version
+of R. You can see a list of R versions available with the command
+
+```
+module spider R
+```
+
+Choose one and invoke it with `ml`; for example:
+
+```
+ml R/3.6.2-foss-2016b-fh1
+```
+
+Note that you can use tab-completion with the above command. For example, you can type
+
+```
+ml R/
+```
+
+and press the tab key, and you'll see a list of options that begin with `R/`. You can narrow this down further by typing more characters, so typing
+
+```
+ml R/3.6
+```
+
+and then pressing tab will show you 
+all versions of R whose version number starts with `3.6`.
+
+Once you've chosen a version of `R` you can invoke it just by typing:
+
+```
+R
+```
+
 
 ### `Gizmo`
-From Rhino, execute the `grabnode` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node.
 
+To run `R` on a gizmo node, you can follow the same instructions as for `rhino` above.
+If you want to run `RStudio`, see the next section.
 
-### rstudio.fredhutch.org
-Hutch supported RStudio server can be accessed at [rstudio.fhcrc.org](http://rstudio.fhcrc.org) from computers connected to the Hutch network. For more information about using it, please contact `scicomp`.
 
 ### Run RStudio Server on an HPC machine
 
