@@ -13,7 +13,8 @@ For beginners to python, there are a variety of options.  See our page on [Train
 ## Accessing Python
 There are many ways to use python beyond a local installation on your computer from [Python.org](https://www.python.org/downloads/).  These methods depend more on the type of computing you will need to use and in what way you want to interact with your code and it's output.  
 
-**Via the local HPC cluster**
+**Via the local HPC cluster**  
+
 SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python Modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/_pythonModules/).  If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.  
 
 
@@ -321,7 +322,8 @@ such as database connectors, AWS log and CLI plugins, Docker management tools, v
 keymap setups, color schemes and more.  
 
 
-**Jupyter Notebook extension**
+**Jupyter Notebook extension**  
+
 PyCharm is capable of running Jupyter Notebooks.  This is far from my area of expertise, but the community edition 
 of PyCharm does appear to support it.  A very basic jupyter notebook file is included in this project repo to show that it
 can be done.  The kernel running the Jupyter Notebook can be configured similarly to how a test runner is configured.
