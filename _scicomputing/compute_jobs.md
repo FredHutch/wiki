@@ -13,7 +13,7 @@ The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provid
 This section is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the clusters available.  There are two main clusters in use today that rely on Slurm - the on-campus `Gizmo` cluster and the cloud-based `Beagle` cluster (see our [Technology page](/scicomputing/compute_platforms/) for more information about those resources.  Commands work the same in either environment. 
 
 ### Examples of Use
-A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  This is an evolving example repo that new users can refer to to begin to get into parallel computing and more adept use of Slurm.  If you are a Fred Hutch user and would like to contribute to the documentation or the examples there, to share with the community how you structure your interactions with Slurm, submit a pull request there.  
+A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  This is an evolving example repo that new users can refer to to begin to get into parallel computing and more adept use of Slurm.  If you are a Fred Hutch user and would like to contribute to the documentation or the examples there, to share with the community how you structure your interactions with Slurm, submit a pull request there.
 
 ### Using SLURM with Workflow Managers
 If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
@@ -21,9 +21,9 @@ If desired, one way to manage jobs, environments, and data transfers particularl
 - deciding what tasks can be done in parallel, 
 - staging data for use and keeping track of inputs and outputs,
 - environment management (via docker containers or environment modules)
-- monitoring jobs and providing you with metadata about them and the workflow itself.   
+- monitoring jobs and providing you with metadata about them and the workflow itself. 
 
-Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.  
+Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.
 
 
 ## Basic Slurm Terminology
@@ -94,14 +94,13 @@ The option `-o` will redirect this output (errors as well) to the file indicated
 
 ### Memory
 
-Memory is requested with the `--mem` option.  This option takes an argument: a
-number indicating the amount of memory required on the node.  The default unit
-is megabytes- to specify the unit, append `K`, `M`, `G`, or `T` for kilobytes,
-megabytes, gigabytes, or terabytes.
+Currently memory (or RAM) is not scheduled by Slurm.  This means that requesting memory has little effect on the job or its available resources.  Memory is currently only advisory: Slurm will only ensure that the node allocated to the job has more memory installed than the amount requested by the job- it does not look at memory availability or what is consumed by yours or other jobs on the node.
 
-A memory request is required for the _largenode_ partition.  Note that adding a
-memory request only ensures that sufficient memory is configured on the node
-and that your job will not exceed the requested memory
+When your job needs "a lot" of memory use CPUs as a proxy for the memory you expect to be needed.  If you think your job will need more than 4GB of memory, request one CPU for every 4GB required.  For example, if you think your job will need 6GB of RAM, you would request 2 CPUs (adjust upward when the desired memory isn't a multiple of four).
+
+Most F-class nodes have 32GB of memory- thus, between 16 and 32GB of RAM simply request 4 cores.  If your job requires more than the 32GB available on F-class nodes [use the _largenode_ partition.](#largenode-jobs)
+
+If you still want to add a memory request, use the `--mem` option.  This option takes an argument: a number indicating the amount of memory required on the node.  The default unit is megabytes- to specify the unit, append `K`, `M`, `G`, or `T` for kilobytes, megabytes, gigabytes, or terabytes.
 
 ### GPU
 
@@ -135,7 +134,7 @@ Submit a batch job (`sbatch`), that will run in one day, six hours (with the fla
 sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
 ```
 
-#### Use `largenode` partition
+#### <a name="largenode-jobs"></a> Use `largenode` partition
 The largenode partition has minimum limits on memory and the number of CPUs. To submit a job to the largenode partition you must request at least 6 cores (using the flag `-c ` ) and at least 33GB of memory (using the flag `--mem`). 
 
 Submit a job to the largenode partition (with the flag `-p largenode`) using the minimum required resources; 6 cores (with the flag `-c 6`) and 33GB/21780MB of memory (using the flag `--mem 21780` ):
