@@ -34,26 +34,20 @@ When using R/RStudio locally, you have the option to install a number of differe
 
 
 ## Remote (`Rhino` and `Gizmo`) Use
-If computing resources beyond what is available via your desktop are required, you may consider running R scripts from the `rhinos` or `gizmo`.  When using R/RStudio on shared computing resources, different options for builds and modules are available that you can take advantage of.  `SciComp` makes pre-built modules available for researcher use in order to facilitate more reproducible and reliable use of software on the local cluster.  
+If computing resources beyond what is available via your desktop are required, you may consider running R scripts from the `rhinos` or `gizmo`.  `SciComp` makes pre-built R modules available for your use in order to facilitate more reproducible and reliable use of software on the local cluster.  
 
 ### Current R Modules on `Rhino`/`Gizmo`
-SciComp maintains a range of various builds of R on `Rhino` and `Gizmo` for use by researchers. Each build has different packages installed and versions of R itself, thus identifying if an existing R build matches your needs is a first step to using R on `Rhino` or `Gizmo`.  Specific information about which R Modules are available, including more information about packages installed in them can be found on our dedicated [R Module page](/rModules/). If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.  
-
+SciComp maintains a range of various builds of R on `Rhino` and `Gizmo` for use by researchers. Each build has different packages installed and versions of R itself, thus identifying if an existing R build matches your needs is a first step to using R on `Rhino` or `Gizmo`.  Specific information about which R Modules are available- including more information about packages installed in them- can be found on our dedicated [R Module page](/rModules/).  If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.
 
 ### `Rhino`
 
-You can connect to a `rhino` machine 
-either with `ssh` (use `PuTTY` on Windows)
-or NoMachine.
-
-Once on a `rhino` machine, choose a version
-of R. You can see a list of R versions available with the command
+You can connect to a `rhino` machine either with `ssh` (use `PuTTY` on Windows) or NoMachine. Once on a `rhino` machine, choose a version of R. You can see a list of R versions available with the command
 
 ```
 module spider R
 ```
 
-Choose one and invoke it with `ml`; for example:
+Choose one and invoke it with `ml`.  For example:
 
 ```
 ml R/3.6.2-foss-2016b-fh1
@@ -71,8 +65,7 @@ and press the tab key, and you'll see a list of options that begin with `R/`. Yo
 ml R/3.6
 ```
 
-and then pressing tab will show you 
-all versions of R whose version number starts with `3.6`.
+and then pressing tab will show you all versions of R whose version number starts with `3.6`.
 
 Once you've chosen a version of `R` you can invoke it just by typing:
 
@@ -83,8 +76,7 @@ R
 
 ### `Gizmo`
 
-To run `R` on a gizmo node, you can follow the same instructions as for `rhino` above.
-If you want to run `RStudio`, see the next section.
+To run `R` on a gizmo node, you can follow the same instructions as for `rhino` above.  If you want to run `RStudio`, see the next section.
 
 
 ### Run RStudio Server on an HPC machine
@@ -96,13 +88,8 @@ You can run this with any version of `R` that is available on our shared computi
 
 Here are the steps to run this wrapper.
 
-* Grab a node using the [grabnode](/scicomputing/compute_platforms/#gizmo-and-beagle-cluster) command. Specify how many CPUs and how much memory you want, and
-how many days you want to have control of the node.
-Remember that you can launch `slurm` jobs within
-RStudio, so you may not need to ask for a lot of
-computing power for your RStudio machine.
-* Once you are on the node you grabbed, choose
-  a version of `R` by using the [module load](/scicomputing/compute_environments/#how-to-use-environment-modules) command (`ml` for short). (Example: `ml R/3.6.1-foss-2016b`).
+* Grab a node using the [grabnode](/scicomputing/compute_platforms/#gizmo-and-beagle-cluster) command. Specify how many CPUs and how much memory you want, and how many days you want to have control of the node. Remember that you can launch `slurm` jobs within RStudio, so you may not need to ask for a lot of computing power for your RStudio machine.
+* Once you are on the node you grabbed, choose a version of `R` by using the [module load](/scicomputing/compute_environments/#how-to-use-environment-modules) command (`ml` for short). (Example: `ml R/3.6.1-foss-2016b`).
 * Run the `launch_rstudio_server` command. This will spit out a URL that you can paste into your browser. (This URL only works inside the Hutch network, so you need to be on campus or using VPN.)
 * In your browser, log into RStudio using your HutchNet ID and password.
 * When you are finished using RStudio Server, you can
@@ -116,8 +103,6 @@ terminate it by typing this command on the node you "grabbed" (the same machine 
 options(bitmapType = 'cairo')
 ```
 
-
-
 *Related Note*: If you are working with RMarkdown documents in RStudio Server,
 you may find that plot labels and other graphics look kind of weird.
 This is because X11 (the X Window System) is not available
@@ -129,8 +114,6 @@ correctly without need for X11.
 ```r
 knitr::opts_chunk$set(dev="CairoPNG")
 ```
-
-
 
 ## The Tidyverse
 The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordinate together and are commonly used for manipulating and  visualizing data in data science applications.  There are a number of useful packages for research based users that are part of the Tidyverse, and it's worth the time to learn about them and see how one might employ them to clean, analyze and convey data and results.  DataCamp has an online [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) that can be useful when first evaluating whether these packages might be useful.  
