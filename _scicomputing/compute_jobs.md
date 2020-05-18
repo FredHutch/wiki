@@ -169,20 +169,19 @@ This command increases the job's timelimit by two days.
 
 There are any number of reasons why your job may not be running.  When you run `squeue` you will see the job's state as `PD` with a reason code (in the column headed with `NODELIST(REASON)`)  As suggested by the heading, this column contains the reason that the job isn't running.
 
-The three most common reasons are:
-a) there are no idle resources for your job, 
-b) jobs running under your account are already consuming the maximum amount of resources available for accounts, and 
-c) your job does not have a high enough priority to be run.
+The most common reasons are:
+ - there are no idle resources for your job
+ - jobs running under your account are already consuming the maximum amount of resources available- the account is "at its limit"
 
-If your job won't run because resources aren't available, the reason code will be "Resources". Jobs in this state have resources reserved for them (a "priority reservation") and should run next when those resources become available. Every other job will have the reason "Priority," which indicates that the job does not have sufficient priority to have resources reserved (reason "c" above).
+The reason code "Resources" indicates that the job has a node (or nodes) reserved for it (a "priority reservation") and should run next when the nodes become available.
 
-If the job is held because of a limit (reason "b" above, consuming more than allowed for accounts) you will see a number of different limits, usually including some form of "Max_something_PerAccount" or "Max_something_PerUser":
+If the job is held because of a limit (i.e "at its limit") you will see something like "MaxCPUPerAccount" or "MaxCPUPerUser":
 
 ```
 39435170 largenode        R   username PD       0:00      1 (MaxCpuPerAccount)
 ```
 
-Indicates that the job is running under an account that is already using the maximum number of CPUs available to accounts.
+Indicates that the job is running under an account that is already using the maximum number of CPUs available to an account.
 
 | Reason                | Possible Cause(s)                                    |
 |---------------------- | -----------------------------------------------------|
@@ -192,6 +191,7 @@ Indicates that the job is running under an account that is already using the max
 | MaxCpuPerAccount      | Account has reached the limit on the number of CPUs available to it |
 | QOSMinCpuNotSatisfied | The job isn't requesting enough CPUs for the requested partition. See [Limits](#limits) |
 | QOSMinMemory          | The job isn't requesting enough memory for the requested partition. See [Limits](#limits) |
+| MaxMemPerLimit        | The job has requested more memory than available in the partition |
 
 There are other reason codes that are less-common in our environment.  Email Scientific Computing for more information.
 
