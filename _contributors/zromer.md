@@ -1,14 +1,14 @@
- ---
-        title: Zach Romer
-        position: Software Engineer
-        affiliation: Geraghty Lab
-        ---
-        ## Title
-        {{ page.position }}
+---
+title: Zach Romer
+position: Software Engineer
+affiliation: Geraghty Lab
+---
+## Title
+{{ page.position }}
         
-        ## Affiliation
+## Affiliation
         
-        {{ page.affiliation }}
+{{ page.affiliation }}
         
-        ### Links
-        - [Github](https://github.com/zyd14)
+### Links
+[Github](https://github.com/zyd14)
