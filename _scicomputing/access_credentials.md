@@ -8,7 +8,7 @@ This section describes how to get access and credentials to computing systems on
 
 ## HutchNet ID
 
-A HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate. It is also called Network login or Active Directory credentials. You can use it to login to most resources at the Center (Desktop Computer, Employee Self Service, VPN, Webmail) as well to Scientific Computing systems such as `Rhino` (`ssh rhino`), which is the login system to large scale cluster computing resources like `Gizmo`, `Beagle` and `Koshu`.
+A HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate. It is also called Network login or Active Directory credentials. You can use it to login to most resources at the Center (Desktop Computer, Employee Self Service, VPN, Webmail) as well to Scientific Computing systems such as `Rhino` (`ssh rhino`), which is the login system to large scale cluster computing resources like `Gizmo` and `Beagle`.
 
 If one of your collaborators requires access to the Fred Hutch network you can submit a [non-employee action form](https://centernet.fredhutch.org/cn/f/hr/lcex/non-employee-action-form.html). Non-employees is a generic administrative term for affiliates, students, contractors, etc.
 
@@ -40,12 +40,12 @@ There are two ways to get AWS credentials. Which one to use depends on how you w
 
 ### Command Line (Rhino/Gizmo) Instructions
 
-A working HutchNet ID is all you need to login to `rhino`. We provide basic references for bash/linux computing [here](/scicomputing/prog_linux101/), as well as a resource library page for [advanced ssh configurations](/scicomputing/access_methods/) at Fred Hutch.  These resources will provide the necessary information for how to connect to `rhino`/`gizmo` resources to be able to run these instructions.  If you have questions about how to access `rhino` to perform these steps please email `scicomp`.  
+A working HutchNet ID is all you need to login to `rhino`. We provide basic references for bash/linux computing [here](/scicomputing/prog_linux101/), as well as a resource library page for [advanced ssh configurations](/scicomputing/access_methods/) at Fred Hutch.  These resources will provide the necessary information for how to connect to `rhino` and `gizmo` resources to be able to run these instructions.  If you have questions about how to access `rhino` to perform these steps please email `scicomp`.
 
-First, `ssh` to one of the `rhino` machines (or use NoMachine):
+First, connect to one of the `rhino` machines [with ssh](/scicomputing/access_methods/#ssh-connections) or [with NoMachine](/scicomputing/access_methods/#nomachine-nx-multi-os)
 
 ```
-ssh hutchid@rhino
+ssh hutchnetid@rhino
 ```
 
 Some users will see an error message that their home directory was not found. This can happen if you are in a newly created department or in one that is typically not working with SciComp resources. Please email `scicomp` to have your home directory created.
