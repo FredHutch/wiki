@@ -113,7 +113,7 @@ pytest --doctest-modules -v
 
 **Magic Sauce and Git Interface**  
 
-The `Peak` function is Some Serious Magic beans.  Sometimes you don't want to search for where a variable or function is defined. VSCode has a peak function that let's examine externally referenced objects, and even edit them, directly from where an object is referenced. Let's look at what the French hello should be:
+The `Peak` function is Some Serious Magic beans.  Sometimes you don't want to search for where a variable or function is defined. VSCode has a peak function that lets you examine externally referenced objects, and even edit them, directly from where an object is referenced. Let's look at what the French hello should be:
 
 ![peak](https://user-images.githubusercontent.com/46639063/75184186-d98d0f80-56f8-11ea-8e67-cd76626992f0.png)  
 
@@ -330,11 +330,13 @@ can be done.  The kernel running the Jupyter Notebook can be configured similarl
 Go to the **Run** window drop-down, click > **Edit Configurations..** and select an item from the drop-down below **Jupter Notebooks**
 on the left side of the window that appears.
 
-**README writing
+**README writing**
+
 When writing any markdown file (ending with .md), PyCharm automatically picks it up as a markdown file and gives you the
 option to view the rendered markdown side-by-side with your markdown file as you create it.
 
-**Extensions
+**Extensions**
+
 There are lots of various plugins for PyCharm that can be accessed through the **Preferences** tab, for various things like
 vim keyboard mappings, SQL highlighting and completion, bash completion, ticketing-service integrations, etc.
 
@@ -345,7 +347,8 @@ issue tracker integrations, including JIRA, Trello, and GitLab.
 
 There are also various tools to enable easier development in cloud applications.  
 
-**Other languages
+**Other languages**
+
 PyCharm attempts to provide basic code highlighting and completion (like closing tags in HTML) in various languages,
 including HTML, SQL, and Docker.  The professional version provides better syntax highlighting for things like Django and 
 Jinja2 templates (and I think some light-weight javascript highlighting?), but I didn't really find them worth it when I 
@@ -404,9 +407,9 @@ It also auto-saves checkpoints so I don't worry too much about saving but use �
 
 Jupyterlab offers live rendering of your markdown. To set it up, locate the markdown file you want to edit in Jupyter's file browser; right-click on the markdown file and select Open With > Markdown Preview. This will open up the file as a rendered markdown. You can then double-click on the same file again in the explorer and it'll open in Jupyter's Text Editor at which point you can grab and move/split the tabs to your preference for live editing of markdown.
 
-**Run Script or Only Part of Script With ~~⌃⌥N~~**
+**Run Script or Only Part of Script With ⌃⌥N**
 
-~~You can run a segment of a script by selecting the part you care about and hitting [⌃⌥N]. The results show up in the OUTPUT table.~~ Take the segment of code you want to run and drop it into a new cell and Shift+Return. Seems manual but this ability to take parts of code and iterate and interact with them by dropping them into a new cell to run is what some find beatiful about Jupyter. It is like an inline console which speaking of if you want to create a new console just select File > New and you can create a new console, or a new notebook (in either a python, R, Julia or other kernel), a terminal instance, a new text file, or a markdown.
+You can run a segment of a script by selecting the part you care about and hitting [⌃⌥N]. The results show up in the OUTPUT table. Take the segment of code you want to run and drop it into a new cell and Shift+Return. Seems manual but this ability to take parts of code and iterate and interact with them by dropping them into a new cell to run is what some find beatiful about Jupyter. It is like an inline console which speaking of if you want to create a new console just select File > New and you can create a new console, or a new notebook (in either a python, R, Julia or other kernel), a terminal instance, a new text file, or a markdown.
 
 **Identifying Problems and Their Quick Fixes**
 
