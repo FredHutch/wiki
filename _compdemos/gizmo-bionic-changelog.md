@@ -6,6 +6,30 @@ primary_reviewers: atombaby
 
 ## Changes to Bionic Nodes
 
+### 26 May 2020
+
+### Host Key Change for rhino02 and rhino03
+
+Configured ssh to provide the same host-key across all rhino-zero nodes. This will cause an error if you already have the key in place (i.e. have already connected to these hosts).  It will raise an error like "DNS Spoofing Detected".
+
+The command `ssh-keygen -R <hostname>` will remove the key from the local database
+
+### New Local Packages
+
+New packages "agrep" and "python-requests" have been installed.
+
+### Remove MOTD Messages for Unattended Upgrades
+
+Spurious messages from the unattended-upgrades process have been removed from the MOTD
+
+### Bionic Updates
+
+Local bionic mirror updated with latest changes from Canonical
+
+### CRIU Updated
+
+Checkpointing utility "criu" has been updated from 3.13 to 3.48
+
 ### 19 May 2020
 
 #### Fixes to csh/tcsh Logins
