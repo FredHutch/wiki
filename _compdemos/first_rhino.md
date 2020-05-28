@@ -6,7 +6,11 @@ primary_reviewers: k8hertweck
 
 This tutorial is a step-by-step introduction to logging on to `rhino`,
 a remote computing resource available to researchers at Fred Hutch.
-It assumes you have basic familiarity with navigating the command line using Unix commands like `cd`, `ls`, and `pwd`.
+It assumes you have basic familiarity with navigating the command line using Unix commands like `cd`, `ls`, and `pwd`,
+and are connecting via a shell or equivalent emulator:
+on Mac, this would be Terminal;
+on Windows, this would be something like [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or Git bash, a part of [Git for Windows](https://gitforwindows.org).
+
 The basic process below below includes:
 
 - Logging on to `snail` (required if you are out of the Fred Hutch network)
@@ -16,116 +20,195 @@ The basic process below below includes:
 - Exiting out of everything
 
 If you are looking for more in-depth information on using the cluster,
-please see howtoRhino.md or howtoGizmo.md.
+please see [How to `rhino`](/compdemos/howtoRhino/) and [How to `gizmo`](/compdemos/howtoGizmo).
 
-### On Fred Hutch's campus
+## Command prompts
 
-Check to make sure you're connected to the Marconi wireless network (fi you're not connected to Marconi, see [Off campus log-in](#off-campus-log-in) below). Open the program you'll be using to access Unix on your computer (Terminal on Mac or WSL/Git bash on Windows) and type the following (where `username` is your HutchNetID):
+We'll be referencing your command prompt for the duration of this tutorial,
+which refers to the information printed at the start of each line in your shell where you enter commands.
+Command prompts generally take the form of:
+
+    username@computer:~$
+
+The specific symbol at the end may be different for you on your own computer,
+but the shared compute resources we'll be describing in this tutorial all use `$`.
+When you are logged on to Fred Hutch compute resources,
+`username` will always be your HutchNetID.
+
+## Logging on within the Fred Hutch network
+
+This section assumes you are logging on from campus
+(e.g., connected to the Fred Hutch network).
+If you are logging in from off campus,
+please ensure you are connected to the Fred Hutch network using one of the options described in [off campus log-in](#off-campus-log-in).
+
+In your shell,
+type the following (where `username` is your HutchNetID):
 
     ssh username@rhino
 
-Hit enter to execute the command. The first time you execute this on a computer, you'll receive a response similar to:
+Hit enter to execute the command.
+The first time you execute this on a computer,
+you'll receive a response similar to:
 
-> The authenticity of host 'rhino.fhcrc.org' can't be established.
-> Are you sure you want to continue connecting (yes/no)?
+```
+The authenticity of host 'rhino.fhcrc.org' can't be established.
+Are you sure you want to continue connecting (yes/no)?
 
 Type `y` and press enter.
+```
 
-You'll be prompted to enter your username and then password (note that your cursor will not move as you type your password; this is normal!).
+You'll be prompted to enter your username and then password
+(note that your cursor will not move as you type your password; this is normal!).
 
-After you have successfully logged in, you'll see the information about the cluster printed to your screen. You'll be ready to start entering commands when you see a prompt like the following appear:
+After you have successfully logged in,
+you'll see the information about the cluster printed to your screen.
+You'll be ready to start entering commands when you see a prompt like the following appear:
 
-> username@rhino2:~$
+    username@rhino2:~$
 
 
-### Off campus log-in
+## Logging on outside of the Fred Hutch network
 
-For more information about remote login, please see [this entry](https://sciwiki.fredhutch.org/scicomputing/access_methods/#access-via-a-remote-location) in the Fred Hutch Biomedical Data Science Wiki.
-In short, logging in off campus requires an additional step to connect to the campus network,
-either using VPN or `snail` as described below.
-In general, `snail` is preferred since it tends to be more stable for computational work.
+Logging in to `rhino` as described above assumes you are already connected to the Fred Hutch network.
+If you are off campus,
+you will need to first connect to the campus network
+using either VPN or `snail`.
+For more information about remote login, please see [Access via a remote login](https://sciwiki.fredhutch.org/scicomputing/access_methods/#access-via-a-remote-location).
+Here we describe the use of `snail`,
+since it uses the same software as logging on within-network.
 
-Logging in using `snail` requires one additional step prior to logging in to `rhino` (username is your HutchNetID):
+In your shell,
+type the following (username is your HutchNetID):
 
     ssh username@snail.fhcrc.org
 
 You'll see a message printed to the screen that starts with:
 
->  Welcome to the Fred Hutchinson Cancer Research Center
+```
+Welcome to the Fred Hutchinson Cancer Research Center
+```
 
-Then you can enter:
+Your command prompt will now look something like:
+
+    [username@ssh-gw1-prd ~]$
+
+Because you've already logged on to `snail` with your username,
+you can use the following shortcut to log on to `rhino`:
 
     ssh rhino
 
-You'll then be able to interact with the cluster as if you were on campus.
+Follow the process as [described above](#within-the-fred-hutch-network)
+to enter your password and access `rhino`.
 
 
 ## Logging on to `gizmo` via `grabnode`
 
-When you log on to the cluster, all commands you run are limited by the compute resources associated with your default login (and by the cluster being shared by many people!). It's good etiquette, and often a necessity, to request your own node for additional tasks:
+When you log on to the cluster,
+all commands you run are limited by the compute resources associated with your default login
+(and by the cluster being shared by many people!).
+It's good etiquette, and often a necessity,
+to request your own node for additional tasks.
+
+You can accomplish this by executing the following command:
 
     grabnode
 
-When prompted, you should type 1 for number of CPUs, hit `Enter` to select the default for memory, and type 1 for number of days. You'll note your command prompt will switch to say `gizmo` instead of `rhino`; you can interact with your directories the same as you would normally. See [this documentation](https://sciwiki.fredhutch.org/compdemos/howtoRhino/#guidance-for-use) for more information on when to use `grabnode`.
+You'll now be asked a series of questions about what compute resources you would like to request.
+We'll describe requesting the smallest unit of resources here for demonstration purposes.
+When prompted:
+
+- type 1 for number of CPUs
+- hit `Enter` to select the default for memory
+- type 1 for number of days
+
+When requesting resources for your own work,
+choose appropriate selections to suit the needs of the task.
+
+You'll note your command prompt will switch to say `gizmo` instead of `rhino`:
+
+    username@gizmof127:~$
+
+You can interact with your directories the same as you would normally,
+but now your commands will run on a part of the cluster allocated to you specifically.
+See [this documentation](https://sciwiki.fredhutch.org/compdemos/howtoRhino/#guidance-for-use)
+for more information on when to use `grabnode`.
 
 
 ## Loading software
 
-Your compute environment is the collection of machinery, software, and networks on which you perform tasks. Managing environments is challenging, but there are tools available to help you stay on the right track.
+Your compute environment is the collection of machinery, software, and networks on which you perform tasks.
+Managing environments is challenging,
+but there are tools available to help you stay on the right track.
 
-Rhino has hundreds of pieces of software installed, so it uses a module system to make software available for use. To see what software you currently have loaded:
+`rhino` has hundreds of pieces of software installed,
+so it uses a module system to make software available for use.
+To see what software you currently have loaded:
 
     module list
 
-If you're looking for a specific package, you can search using terms related to the name of the software:
+If you're looking for a specific package,
+you can search using terms related to the name of the software.
+We'll use [`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+as an example software:
 
-    module spider cellranger
+    module spider FastQC
 
 If you see the package you want, you can load it with:
 
-    module load cellranger
+    module load FastQC
 
 ...or the abbreviated version, which is the same as above:
 
-    ml cellranger
+    ml FastQC
 
-Be careful with multiple versions of the same software! You can load specific versions too (where XXX is the version number):
+By default,
+the most recent version of the software is loaded.
+You can load specific versions by specifying them in the command:
 
-    ml cellranger/XXX
+    ml FastQC/0.11.2
 
-FIXME: Link to software available on rhino
+For this example,
+you should see in the output that there is also a module available to load as `fastqc`,
+and additional information on using the modules is included as well.
 
-FIXME: loading modules every time you log on
+For more information on using the module system,
+please see the [Computing Environments page](https://sciwiki.fredhutch.org/scicomputing/compute_environments/),
+and you can view lists of available software on the [Scientific Software page](https://fredhutch.github.io/easybuild-life-sciences/).
+
 
 ## Logging out
 
-FIXME
+Once you are done working on the cluster,      
+you should log out.
+The process for logging out depends how you've logged on when starting to work.
+In general, you'll need to type `exit` to end each session you started.
+You can tell what session using the information in the command prompt.
 
-Gizmo command prompt:
+For example, if you are logged on to an interactive job in `gizmo`:
 
-    XXX
+    username@gizmof127:~$
 
-To end your session on `gizmo`:
+Typing `exit` will end the interactive job and return you to `rhino`,
+at which point your command prompt will read:
 
-    exit
+    username@rhino3:~$
 
-This will take you back to your normal `rhino` login prompt:
+Type `exit` again to end your session on `rhino`.
 
-    XXX
 
-To end your session on `rhino`:
+If you logged on using `snail`,
+you'll see something similar to:
 
-    exit
-
-If you logged on while connected to Marconi,
-this will log you out of the remote compute cluster.
-Your login will be that for your local computer:
-
-    XXX
-
-If you logged in via `snail`,
-your command prompt will still reflect remote login:
-
-    XXX
+    [username@ssh-gw1-prd ~]$
 
 You'll need to `exit` once more to leave the Fred Hutch network and see your command prompt return to your local computer.
+
+## Moving beyond the basics
+
+This demo covers the basic process of logging on and using resources for the first time.
+
+For more information on different types of compute nodes, connections with storage,
+and running other applications (like RStudio),
+please see [How to `rhino`](/compdemos/howtoRhino/).
+For information on batch computing and associated limits/recommendations, please see [How to `gizmo`](/compdemos/howtoGizmo).
