@@ -154,7 +154,7 @@ Will get you the latest 3.6 release of R installed in Lmod.
 
 ## Notes
 
-### <a name=locally-libraries></a>Locally Installed Libraries
+### <a name="locally-libraries"></a>Locally Installed Libraries
 
 If you have compiled R and/or Python libraries installed in your home directory you need to take some extra care.
 
