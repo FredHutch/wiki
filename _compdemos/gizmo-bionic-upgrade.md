@@ -154,6 +154,14 @@ Will get you the latest 3.6 release of R installed in Lmod.
 
 ## Notes
 
+### <a name=locally-libraries></a>Locally Installed Libraries
+
+If you have compiled R and/or Python libraries installed in your home directory you need to take some extra care.
+
+Libraries compiled on the Trusty platform very likely won't work when used on Bionic, and vice-versa.  Thus, if you are trying out the Bionic environment and install libraries (e.g. using `install.packages()` or `pip install --user`) you will end up with some libraries that are incompatible with the older Trusty environment.
+
+There are a number of ways to address this problem depending on your goals- the easiest may be backing up the library install directory prior to working in the different environment.  For example, `R` installs local libraries into `$HOME/R`- back this up or move it out of the way before working with the Bionic environment.
+
 ### <a name="terminator"></a>Terminator Won't Launch
 
 _Terminator_ won't start.  This is a bug in terminator with no anticipated fix in sight.  The workaround is to start terminator with the `-u` option:
