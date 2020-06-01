@@ -192,6 +192,8 @@
   url: _compdemos/rslurm_intro.md
 - dlm: April 19, 2020
   url: _compdemos/gizmo-node-beta.md
+- dlm: June 1, 2020
+  url: _compdemos/ucsc-track-s3.md
 - dlm: May 1, 2019
   url: _compdemos/how_to_beagle.md
 - dlm: May 15, 2019
