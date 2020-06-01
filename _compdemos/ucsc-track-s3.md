@@ -6,8 +6,6 @@ primary_reviewers: vortexing, k8hertweck, atombaby
 
 This demo provides specific examples of how to upload tracks (or track hubs) for viewing in the UCSC Genome Browser.
 
-# Uploading tracks to view in the UCSC Genome Browser
-
 The [UCSC Genome Browser](http://genome.ucsc.edu/) provides two different facilities to let you view your own data,
 [Custom Tracks](http://genome.ucsc.edu/cgi-bin/hgCustom) and [Track Hubs](https://genome.ucsc.edu/goldenPath/help/hgTrackHubHelp.html). 
 
@@ -76,6 +74,6 @@ If you had a file in `hub` called `foo.txt`, that file would then be accessible 
 
 ## Questions?
 
-Please contact `scicomp`.
+Please email `scicomp` for more assistance. 
 
 
