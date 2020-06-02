@@ -1,6 +1,6 @@
 ---
 title: Training, Community and Finding Help
-last_modified_at: 2019-09-12
+last_modified_at: 2020-06-02
 primary_reviewers: k8hertweck, vortexing
 ---
 There are a variety of resources for training on various aspects of bioinformatics, analytics and data skills available at the Fred Hutch, in the Seattle area and on the web.
@@ -38,13 +38,13 @@ The Coop and FHBig also support community groups that meet regularly to discuss 
 
 Several groups on campus host weekly or monthly office hours to provide assistance on data related tasks. Please visit Centernet or the [Google calendar](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) for current scheduling, locations, and contact information.
 
-- **Data Ethics/Compliance/Security:** Staff from the Hutch Data Commonwealth (HDC) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
+- **Data Ethics/Compliance/Security:** Staff from the Center Information Technology (CIT) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
 
 - **The Coop/fredhutch.io:** Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
 
 - **REDcap:** [REDCap](http://research.fhcrc.org/cds/en/redcap.html) is a secure web application for building and managing online surveys and databases and is managed by Collaborative Data Services (CDS) at Fred Hutch. Staff are available to answer questions related to REDCap functionality and troubleshooting. You can also discuss REDCap issues with staff and other researchers on the #redcap-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/).
 
-- **SciComp General Consulting:** Scientific Computing (SciComp) is the group in Hutch Data Commonwealth (HDC) that manages basic account access for research computing resources, including data storage and shared computational cluster use. Staff are available to answer questions related to access and usage of Hutch resources for computational research.
+- **SciComp General Consulting:** Scientific Computing (SciComp) is the group in Hutch Data Core (HDC) that manages basic account access for research computing resources, including data storage and shared computational cluster use. Staff are available to answer questions related to access and usage of Hutch resources for computational research.
 
 - **SciComp Next Gen/HPC Office Hours:** In addition to general consulting (see above), Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.
 
