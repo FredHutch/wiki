@@ -6,6 +6,31 @@ primary_reviewers: atombaby
 
 ## Changes to Bionic Nodes
 
+### 2 June 2020
+
+#### New Local Packages
+
+These packages have been added to the OS:
+
+ - emacs
+ - bc/dc
+ - zip
+ - mutt
+
+#### Arbiter
+
+We have installed arbiter2 on the rhino nodes (rhino01-rhino03).  This will replace "loadwatcher" in use on the Trusty rhino nodes.  Arbiter restricts load using cgroups rather than killing user processes when overloaded.
+
+This is currently running in "debug" mode to get some real-world experience.  We're planning to activate this next Tuesday (9 June)
+
+#### Node Health Checks
+
+"Node Health Check" from Lawrence Berkley National Labs has been installed on the new Bionic compute nodes.  This allows us to add checks to verify node function and drain nodes when problems are found.
+
+#### Fixes to Unattended Upgrades
+
+Corrected problems with the processes that manage the automatic package update.  Specifically startup of the daemon and email routing.
+
 ### 26 May 2020
 
 #### Host Key Change for rhino02 and rhino03
