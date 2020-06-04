@@ -2,7 +2,7 @@
 title: Susan Glick
 ---
 ## Affiliation
-Hutch Data Commonwealth
+Center Information Technology
 
 
 ## Title
