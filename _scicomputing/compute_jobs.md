@@ -107,6 +107,17 @@ If you still want to add a memory request, use the `--mem` option.  This option 
 GPUs are available on some nodes- [this page](/scicomputing/compute_gpu/)
 describes the Slurm options required to request GPUs with your job.
 
+### Environment Variables 
+
+When you submit your script using sbatch you will be able to use a number of Slurm environment variables that allow you to customize the behavior of your script dependent on the resources you are getting. For example, you realize that you cannot get an entire node (the K-Nodes have 36 cores) and request fewer resources, say 30 cores. Now you launch a software that uses all cores that are available and this software will now try to attempt to use all 36 cores and will take away resources from another user who is also on this machine. To prevent this you can use the the environment variable `SLURM_JOB_CPUS_PER_NODE` in your script as it will contain the number of CPU cores that have been allocated to your job on the current machine it is running on and many tools allow you to set the maximum number of cores they will use for computing. (e.g. `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`)
+
+other useful environment variables are here https://slurm.schedmd.com/sbatch.html, for example 
+
+| SLURM output variables  | Description                                           |
+|-------------------------| ------------------------------------------------------------|
+| SLURM_JOB_CPUS_PER_NODE | Number of cores allocated for the current job on this node |
+| SLURMD_NODENAME         | The hostname of the node the job runs on |
+
 ### MultiCluster Operation
 
 Most Slurm commands can operate against remote clusters (i.e. `beagle` from `gizmo`).  Typically the only change required is to add the argument `-M <cluster name>`.
