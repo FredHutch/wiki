@@ -6,6 +6,25 @@ primary_reviewers: atombaby
 
 ## Changes to Bionic Nodes
 
+### 9 June 2020
+
+#### New Local Packages
+
+These packages have been added to the OS:
+
+ - eog
+ - keychain
+ - sshfs
+
+
+#### Expanded Node Health Checks
+
+An additional node health check verifying sufficient available memory has been added.  Note that this check has also been added to older "Trusty" nodes as well.
+
+#### Arbiter Fixes
+
+A systemd/arbiter interaction was causing the service to be terminated intermittently.  This fix runs the process in the correct the cgroup slice.
+
 ### 2 June 2020
 
 #### New Local Packages
