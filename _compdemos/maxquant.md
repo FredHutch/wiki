@@ -122,7 +122,14 @@ In the earlier example, that directory was
 /fh/fast/doe_j/proteomics/maxquant-jobs/job20200610/
 ```
 
+
 Substitute your PI's last name and first initial for `doe_j`. The rest of the path after the PI's name is arbitrary and can be whatever you choose. But it must match the paths in the XML file that you edited, and all your files (`.xml`, `.fasta` and data files) must exist here.
+
+So to change to the directory, use `cd`:
+
+```
+cd /fh/fast/doe_j/proteomics/maxquant-jobs/job20200610/
+```
 
 ### Load MaxQuant module
 
