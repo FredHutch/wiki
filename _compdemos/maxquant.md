@@ -1,7 +1,7 @@
 ---
 title: Proteomics using Maxquant on Gizmo
 main_author: Dan Tenenbaum
-primary_reviewers: 
+primary_reviewers: bmcgough, fizwit, atombaby
 ---
 
 This demo gives instructions for running the MaxQuant proteomics
@@ -23,7 +23,7 @@ deprecated and pointing to this tutorial.
 
 [MaxQuant](https://maxquant.org/) is a quantitative proteomics software package designed for analyzing large mass-spectrometric data sets.
 
-Our on-premises compute cluster ([Gizmo](/compdemos/howtoGizmo/)) can do the compute-intensive work of running MaxQuant. You still need to run MaxQuant on your local Windows machine to configure your job, but instead of running it locally, you will run it 
+Our on-premises compute cluster ([Gizmo](/compdemos/howtoGizmo/)) can do the compute-intensive work of running MaxQuant. You still need to run MaxQuant on your local Windows machine to configure your job, but instead of running it locally (or in the cloud), you will run it 
 on the compute cluster.
 
 ### Configure Job
@@ -99,7 +99,7 @@ Remember the number you changed it to; you will need it later.
 
 ### Submit job to cluster
 
-The rest of these steps need to be done on a Linux HPC system. Using `ssh`, `PuTTY`, or `NoMachine`, connect to the system `rhino01.fhcrc.org`.  For more information about these connection methods, read [Computing Resource Access Methods](/scicomputing/access_methods/).
+The rest of these steps need to be done on a Linux HPC system. Using `ssh`, `PuTTY`, or `NoMachine`, connect to the system `rhino01`.  For more information about these connection methods, read [Computing Resource Access Methods](/scicomputing/access_methods/).
 
 <!-- 
 TODO: after Bionic (Ubuntu 18.04)
@@ -111,55 +111,8 @@ round robin pointed to by `rhino`
 will resolve to one of the Bionic systems.
 -->
 
-There are two methods for submitting
-jobs to the cluster and they are fairly similar. We'll discuss each one in turn.
 
-#### Interactive (`grabnode`) method
-
-
-
-This method is perhaps slightly easier so we'll start here. 
-
-##### Start a `tmux` session
-
-Before we begin, we **strongly** recommend starting a `tmux` session. This will ensure your `MaxQuant` job is not interrupted by transient network failures, closing your laptop's lid, etc.
-
-To do this, just enter the `tmux` command at the command prompt on rhino01. You'll see a green bar at the bottom of the screen. 
- 
- If you get disconnected from your `ssh` or `NoMachine` session, you can reconnect to this `tmux` session, and more importantly, your `MaxQuant` job will not end prematurely due to connection loss. See [here](/scicomputing/access_methods/#screen-and-tmux) for more information on `tmux`.
-
-##### Grab a node
-
-We will now use the [grabnode](/scicomputing/compute_platforms/#gizmo-and-beagle-cluster) command to 
-get exclusive control of a number of CPU cores on a machine in the `gizmo` cluster.
-
-`grabnode` will ask a series of questions.
-
-When it asks how many CPUs/cores we want, choose the number we used earlier, the number of data files we have. For memory, we'll just press enter to go with the default. 
-
-For the number of days to run the job, this involves some guesswork. Let's enter 4 days. 
-
-If the job takes less time, you will relinquish your `grabnode` session when you are done, freeing the compute resources up for others. If you need more time, 
-email `scicomp`.
-
-Example interaction with `grabnode`:
-
-```
-How many CPUs/cores would you like to grab on the node? [1-36] 24
-How much memory (GB) would you like to grab? [40]
-Please enter the max number of days you would like to grab this node: [1-7] 4
-Do you need a GPU ? [y/N]
-```
-
-You will now see a command prompt with your username and a `gizmo` hostname, for example:
-
-```
-dtenenba@gizmok30 ~ $
-```
-
-You will need that hostname (`gizmok30` in this example) if you need to request more time for your job.
-
-##### Change to job directory
+### Change to job directory
 
 Let's go to the directory where our xml, fasta, and data files are.
 
@@ -169,11 +122,12 @@ In the earlier example, that directory was
 /fh/fast/doe_j/proteomics/maxquant-jobs/job20200610/
 ```
 
-Substitute your PI's last name and first initial for `doe_j`. The rest of the path after the PI's name is arbitrary and can be whatever you choose. But it must match the paths in the XML file that you edited.
+Substitute your PI's last name and first initial for `doe_j`. The rest of the path after the PI's name is arbitrary and can be whatever you choose. But it must match the paths in the XML file that you edited, and all your files (`.xml`, `.fasta` and data files) must exist here.
 
-##### Load MaxQuant module
+### Load MaxQuant module
 
-To make MaxQuant available, we need to load its module. To see which MaxQuant Modules are available, enter the command `ml avail maxquant`:
+Let's check and see which versions of MaxQuant are available with the command 
+`ml avail maxquant`:
 
 ```
 $ ml avail maxquant
@@ -190,30 +144,7 @@ This shows us that there is one MaxQuant module available and it is called `MaxQ
 
 > **NOTE**: If you need a newer version of maxquant made available on the cluster, please contact `scicomp`.
 
-We can load this module as follows:
-
-```
-ml MaxQuant/1.6.10.43-foss-2018b
-```
-
-##### Run Maxquant command
-
-All that's left is to run the MaxQuant command. All we have to do is point it towards our `mqpar.xml` file:
-
-```
-maxquantcmd mqpar.xml
-```
-
-MaxQuant is now running. It may take hours or days to complete. 
-With this method of job submission, you will not get an email when the job is complete, so keep an eye on this window.
-
-When MaxQuant is finished, your results will be in this same directory. You can then access them either via a Linux system or from a Windows system on the `X:` drive.
-
-#### As a batch job
-
-The second method for submitting 
-a Maxquant job is to construct it 
-as a batch job.
+### Create submit script
 
 Create a script with the following contents using your favorite text editor and make sure it ends up in the same directory as your `mqpar.xml` file and data files. Call the script `submit.sh`:
 
@@ -230,6 +161,10 @@ Create a script with the following contents using your favorite text editor and 
 source /app/lmod/lmod/init/bash
 module use /app/easybuild/modules/all
 
+# Here's the name of the MaxQuant module to load.
+# This may change over time as new versions become available.
+# On rhino01, you can run the command
+# `ml avail maxquant` to see the available versions.
 ml MaxQuant/1.6.10.43-foss-2018b
 
 time mono $EBROOTMAXQUANT/bin/MaxQuantCmd.exe mqpar.xml
@@ -262,20 +197,20 @@ Hold on to that job number, it will be useful for checking on the status of your
 
 At this point, you can safely disconnect from `rhino01`. Your job is running (it will take hours or days to complete) and ending your `ssh` or `NoMachine` session will not stop it from completing. But let's stay connected for a moment to learn a couple other things.
 
-If you run `ls` now, you will also notice that there is a log file whose name contains the job number (jn this case it is `slurm-48886585.out`). One trivial way to monitor job progress is to run
+If you run `ls` now, you will notice that there is a log file whose name contains the job number (jn this case it is `slurm-48886585.out`). One trivial way to monitor job progress is to run
 
 ```
 tail -f slurm-48886585.out
 ```
 
-This will watch that file for changes and show you new lines as they are appended to the end. Type control-c to exit from the `tail` command (it won't exit automatically when your job is done).
+This will watch that file for changes and show you new lines as they are appended to the end. Type `control-c` to exit from the `tail` command (it won't exit automatically when your job is done).
 
 You can also use the `squeue` command to check on the status of your job:
 
 ```
- $ squeue --job 48886707
+ $ squeue --job 48886585
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-          48886707 campus-ne submit.s dtenenba  R       0:07      1 gizmok30
+          48886585 campus-ne submit.s dtenenba  R       0:07      1 gizmok30
 ```
 
 `ST` stands for "status" and a value of `R` for that column means the job is running. 
@@ -289,6 +224,8 @@ Slurm Job_id=48886649 Name=submit.sh Ended, Run time 00:00:01, COMPLETED, ExitCo
 ```
 
 When `maxquant` is finished, your output files will be in this same directory, and you can access them from Windows or Linux.
+
+Check the [Gizmo documentation](/compdemos/howtoGizmo/) on this wiki for further information on running batch jobs on the Gizmo cluster.
 
 If you have any questions, please contact `scicomp`.
 
