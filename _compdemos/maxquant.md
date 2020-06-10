@@ -123,7 +123,7 @@ In the earlier example, that directory was
 ```
 
 
-Substitute your PI's last name and first initial for `doe_j`. The rest of the path after the PI's name is arbitrary and can be whatever you choose. But it must match the paths in the XML file that you edited, and all your files (`.xml`, `.fasta` and data files) must exist here.
+Substitute your PI's last name and first initial for `doe_j`. The rest of the path after the PI's name is arbitrary and can be whatever you choose. But it must match the paths in the XML file that you edited, and all your files (`.xml`, `.fasta` and data files) must exist there.
 
 So to change to the directory, use `cd`:
 
@@ -131,7 +131,7 @@ So to change to the directory, use `cd`:
 cd /fh/fast/doe_j/proteomics/maxquant-jobs/job20200610/
 ```
 
-### Load MaxQuant module
+### List MaxQuant modules
 
 Let's check and see which versions of MaxQuant are available with the command 
 `ml avail maxquant`:
