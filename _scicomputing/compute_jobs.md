@@ -109,14 +109,20 @@ describes the Slurm options required to request GPUs with your job.
 
 ### Environment Variables 
 
-When you submit your script using sbatch you will be able to use a number of Slurm environment variables that allow you to customize the behavior of your script dependent on the resources you are getting. For example, you realize that you cannot get an entire node (the K-Nodes have 36 cores) and request fewer resources, say 30 cores. Now you launch a software that uses all cores that are available and this software will now try to attempt to use all 36 cores and will take away resources from another user who is also on this machine. To prevent this you can use the the environment variable `SLURM_JOB_CPUS_PER_NODE` in your script as it will contain the number of CPU cores that have been allocated to your job on the current machine it is running on and many tools allow you to set the maximum number of cores they will use for computing. (e.g. `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`)
+When you submit your script using sbatch you will be able to use a number of Slurm environment variables inside that script. It allows you to customize the behavior of your script dependent on the resources you are getting. For example, you realize that you cannot get an entire node (the K-Nodes have 36 cores) and request fewer resources, say 30 cores. Now you launch a software that uses all cores that are available and this software will now try to attempt to use all 36 cores and will take away resources from other users who may have jobs on this machine. To prevent this you can use the the environment variable `SLURM_JOB_CPUS_PER_NODE` . It is set to the number of CPU cores that have been allocated to your job on the current machine. Many tools allow you to set the maximum number of cores they will use for computing. (e.g. `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`). 
 
 other useful environment variables are here https://slurm.schedmd.com/sbatch.html, for example 
 
 | SLURM output variables  | Description                                           |
 |-------------------------| ------------------------------------------------------------|
 | SLURM_JOB_CPUS_PER_NODE | Number of cores allocated for the current job on this node |
+| SLURM_JOB_ID            | Job ID, Primary identifier of a job |
+| SLURM_MEM_PER_CPU       | Memory allocated per CPU (unit: MB)
+| SLURM_JOB_NODELIST      | list of node names allocated to the current job |
+| SLURM_SUBMIT_DIR        | directory from which the job was submitted |
 | SLURMD_NODENAME         | The hostname of the node the job runs on |
+
+In addition to these Slurm specific environment vars the sbatch command will forward all environment variables from the host where you submit your job (typically Rhino). To start your jobs with a clean environment you can use `sbatch --export=NONE` 
 
 ### MultiCluster Operation
 
@@ -269,6 +275,8 @@ loading Python/3.6.4-foss-2016b-fh2...
 For more information and education on how to use HPC resources from external sources see the following sites:
 
 - SchedMD's [Documentation for Version 18.08](https://slurm.schedmd.com/archive/slurm-18.08.3/)
+- Slurm [cheat sheet](https://slurm.schedmd.com/pdfs/summary.pdf)
+- University of Utah's [Slurm Docs](https://www.chpc.utah.edu/documentation/software/slurm.php)
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)
