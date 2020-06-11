@@ -3,11 +3,10 @@ title: Proteomics using Maxquant on Gizmo
 main_author: Dan Tenenbaum
 primary_reviewers: bmcgough, fizwit, atombaby
 ---
+[MaxQuant](https://maxquant.org/) is a quantitative proteomics software package designed for analyzing large mass-spectrometric data sets. This demo gives instructions for running the MaxQuant proteomics
+software on Fred Hutch's `Gizmo` compute cluster. 
 
-This demo gives instructions for running the MaxQuant proteomics
-software on Fred Hutch's Gizmo compute cluster.
 
-# Running MaxQuant on the Gizmo cluster
 
 **Note**: The process described here *replaces* the previous cloud- and Windows-based [pipeline](https://github.com/FredHutch/maxquant-pipeline), which is now deprecated. That pipeline will no longer be maintained and will eventually be disabled. 
 
@@ -19,12 +18,9 @@ deprecated and pointing to this tutorial.
  -->
 
 
- ## Overview
 
-[MaxQuant](https://maxquant.org/) is a quantitative proteomics software package designed for analyzing large mass-spectrometric data sets.
-
-Our on-premises compute cluster ([Gizmo](/compdemos/howtoGizmo/)) can do the compute-intensive work of running MaxQuant. You still need to run MaxQuant on your local Windows machine to configure your job, but instead of running it locally (or in the cloud), you will run it 
-on the compute cluster.
+## Running MaxQuant
+Our on-premises compute cluster ([Gizmo](/compdemos/howtoGizmo/)) can do the compute-intensive work of running MaxQuant. You still need to run MaxQuant on your local Windows machine to configure your job, but instead of running it locally (or in the cloud), you will run it  on the compute cluster.
 
 ### Configure Job
 
