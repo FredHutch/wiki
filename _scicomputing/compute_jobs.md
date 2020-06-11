@@ -109,9 +109,7 @@ describes the Slurm options required to request GPUs with your job.
 
 ### Environment Variables 
 
-When you submit your script using sbatch you will be able to use a number of Slurm environment variables inside that script. It allows you to customize the behavior of your script dependent on the resources you are getting. For example, you realize that you cannot get an entire node (the K-Nodes have 36 cores) and request fewer resources, say 30 cores. Now you launch a software that uses all cores that are available and this software will now try to attempt to use all 36 cores and will take away resources from other users who may have jobs on this machine. To prevent this you can use the the environment variable `SLURM_JOB_CPUS_PER_NODE` . It is set to the number of CPU cores that have been allocated to your job on the current machine. Many tools allow you to set the maximum number of cores they will use for computing. (e.g. `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`). 
-
-other useful environment variables are here https://slurm.schedmd.com/sbatch.html, for example 
+When you submit your script using sbatch you will be able to use a number of Slurm environment variables inside that script. It allows you to customize the behavior of your script dependent on the resources you are getting. For example, you realize that you cannot get an entire node (the K-Nodes have 36 cores) and request fewer resources, say 30 cores. Now you launch a software that uses all cores that are available and this software will now try to attempt to use all 36 cores and will take away resources from other users who may have jobs on this machine. To prevent this you can use the the environment variable `SLURM_JOB_CPUS_PER_NODE`. It is set to the number of CPU cores that have been allocated to your job on the current machine. Many tools allow you to set the maximum number of cores they will use for computing (e.g. `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`) other useful environment variables are here https://slurm.schedmd.com/sbatch.html, for example: 
 
 | SLURM output variables  | Description                                           |
 |-------------------------| ------------------------------------------------------------|
@@ -122,18 +120,8 @@ other useful environment variables are here https://slurm.schedmd.com/sbatch.htm
 | SLURM_SUBMIT_DIR        | directory from which the job was submitted |
 | SLURMD_NODENAME         | The hostname of the node the job runs on |
 
-In addition to these Slurm specific environment vars the sbatch command will forward all environment variables from the host where you submit your job (typically Rhino). To start your jobs with a clean environment you can use `sbatch --export=NONE` 
+In addition to these Slurm specific environment vars the sbatch command will forward all environment variables from the host where you submit your job (typically `rhino`). To start your jobs with a clean environment you can use `sbatch --export=NONE`. 
 
-### MultiCluster Operation
-
-Most Slurm commands can operate against remote clusters (i.e. `beagle` from `gizmo`).  Typically the only change required is to add the argument `-M <cluster name>`.
-
-```
-sbatch -M beagle -c 6 myscript.sh my-output
-scancel -M beagle 12345
-```
-
-`hitparade` also supports `-M` and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands `srun` and `salloc` will not work.  If use of those commands is necessary, please contact SciComp.
 
 ### Examples
 
@@ -144,12 +132,6 @@ Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file 
 sbatch -c 6 myscript.sh my-output
 ```
 
-#### Use `beagle` cluster
-Submit a batch job (`sbatch`), that will run in one day, six hours (with the flag `-t 1-6`) in the largenode partition (with the flag `-p largenode`) in Beagle (with the flag `-M beagle`).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job "quoth-the-raven" (with the `-J` flag) and list the script to use in the job `myscript.sh`.
-
-```
-sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
-```
 
 #### <a name="largenode-jobs"></a> Use `largenode` partition
 The largenode partition has minimum limits on memory and the number of CPUs. To submit a job to the largenode partition you must request at least 6 cores (using the flag `-c ` ) and at least 33GB of memory (using the flag `--mem`). 
@@ -174,7 +156,7 @@ is, requesting significantly more time than you think necessary- is usually the
 better way to go to avoid your job getting terminated should it run over that
 requested time.
 
-If you should need to increase the amount of time (i.e. increase wall time) for a running job (or jobs), email Scientific Computing.  If a job has not started, you can update this yourself:
+If you should need to increase the amount of time (i.e. increase wall time) for a running job (or jobs), email Scientific Computing at `scicomp`.  If a job has not started, you can update this yourself:
 
 ```
 scontrol update jobid=<job ID> timelimit=+2-0
@@ -216,7 +198,8 @@ There are other reason codes that are less-common in our environment.  Email Sci
 
 #### `squeue`
 
-The `squeue` command allows you to see the jobs running and waiting in the job queue.  `squeue` takes many options to help you select the jobs displayed by the command
+The `squeue` command allows you to see the jobs running and waiting in the job queue.  `squeue` takes many options to help you select the jobs displayed by the command.
+
 
 | option/argument     | function                                              |
 |---------------------|--------------------------------------------------------
