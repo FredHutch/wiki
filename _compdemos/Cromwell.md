@@ -170,12 +170,20 @@ While additional development is going on to make Cromwell work better in AWS (cu
 If you are using Cromwell with containers, there some Docker containers suitable for using with a workflow manager in the [Fred Hutch DockerHub](https://hub.docker.com/u/fredhutch). Ideally we'll continue to grow that resource as more containers are requested by users.  
 
 
-## Addtional WDL Resources
+## Additional WDL Resources
 
-- [WDL Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=broadinstitute.wdl) for VSCode 
+These plugins help when you are editing your workflow in Atom or VS Code by color coding and finding errors:
+- [WDL Viewer Package](https://atom.io/packages/atom-wdl-viewer) for Atom
+- [WDL Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=broadinstitute.wdl) for VS Code
 
+These relate to the WDL workflow language itself and example workflows to start from:
+- [Open WDL](https://github.com/openwdl/wdl) for more about development of WDL as a standard
+- [bioWDL](https://biowdl.github.io/) for template workflows relating to bioinformatics/sequencing analysis
+- The OpenWDL [WDL 1.0 specification site](https://github.com/openwdl/wdl/blob/master/versions/1.0/SPEC.md)
 - Dave Tang's [Blog post](https://davetang.org/muse/2020/01/09/learning-wdl/) for learning WDL.  
 
-- The OpenWDL [WDL 1.0 specification site](https://github.com/openwdl/wdl/blob/master/versions/1.0/SPEC.md)
-
+These are more Cromwell/Broad oriented instructions and resources:
+- Cromwell [GitHub Repo](https://github.com/broadinstitute/cromwell)
+- Some basic Broad [WDL Tutorials](https://support.terra.bio/hc/en-us/sections/360007347652?name=wdl-tutorials)
+[GATK Workflows](https://github.com/gatk-workflows?language=wdl)
 - The [Terra support forum WDL section](https://support.terra.bio/hc/en-us/sections/360007274612)
