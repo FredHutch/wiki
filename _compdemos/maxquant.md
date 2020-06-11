@@ -174,7 +174,7 @@ module use /app/easybuild/modules/all
 # `ml avail maxquant` to see the available versions.
 ml MaxQuant/1.6.10.43-foss-2018b
 
-time mono $EBROOTMAXQUANT/bin/MaxQuantCmd.exe mqpar.xml
+maxquantcmd mqpar.xml
 
 ```
 
