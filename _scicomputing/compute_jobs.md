@@ -107,16 +107,21 @@ If you still want to add a memory request, use the `--mem` option.  This option 
 GPUs are available on some nodes- [this page](/scicomputing/compute_gpu/)
 describes the Slurm options required to request GPUs with your job.
 
-### MultiCluster Operation
+### Environment Variables 
 
-Most Slurm commands can operate against remote clusters (i.e. `beagle` from `gizmo`).  Typically the only change required is to add the argument `-M <cluster name>`.
+When you submit your script using sbatch you will be able to use a number of Slurm environment variables inside that script. It allows you to customize the behavior of your script dependent on the resources you are getting. For example, you realize that you cannot get an entire node (the K-Nodes have 36 cores) and request fewer resources, say 30 cores. Now you launch a software that uses all cores that are available and this software will now try to attempt to use all 36 cores and will take away resources from other users who may have jobs on this machine. To prevent this you can use the the environment variable `SLURM_JOB_CPUS_PER_NODE`. It is set to the number of CPU cores that have been allocated to your job on the current machine. Many tools allow you to set the maximum number of cores they will use for computing (e.g. `bowtie -p ${SLURM_JOB_CPUS_PER_NODE}`) other useful environment variables are here https://slurm.schedmd.com/sbatch.html, for example: 
 
-```
-sbatch -M beagle -c 6 myscript.sh my-output
-scancel -M beagle 12345
-```
+| SLURM output variables  | Description                                           |
+|-------------------------| ------------------------------------------------------------|
+| SLURM_JOB_CPUS_PER_NODE | Number of cores allocated for the current job on this node |
+| SLURM_JOB_ID            | Job ID, Primary identifier of a job |
+| SLURM_MEM_PER_CPU       | Memory allocated per CPU (unit: MB)
+| SLURM_JOB_NODELIST      | list of node names allocated to the current job |
+| SLURM_SUBMIT_DIR        | directory from which the job was submitted |
+| SLURMD_NODENAME         | The hostname of the node the job runs on |
 
-`hitparade` also supports `-M` and can be used to show the queue on the different clusters.  At this time, multi-cluster operations using the commands `srun` and `salloc` will not work.  If use of those commands is necessary, please contact SciComp.
+In addition to these Slurm specific environment vars the sbatch command will forward all environment variables from the host where you submit your job (typically `rhino`). To start your jobs with a clean environment you can use `sbatch --export=NONE`. 
+
 
 ### Examples
 
@@ -127,12 +132,6 @@ Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file 
 sbatch -c 6 myscript.sh my-output
 ```
 
-#### Use `beagle` cluster
-Submit a batch job (`sbatch`), that will run in one day, six hours (with the flag `-t 1-6`) in the largenode partition (with the flag `-p largenode`) in Beagle (with the flag `-M beagle`).  This will run one instance of the job with one processor (because no flags were provided to tell it to ask for more than the default).  Name the job "quoth-the-raven" (with the `-J` flag) and list the script to use in the job `myscript.sh`.
-
-```
-sbatch -M beagle -p largenode -t 1-6 -J quoth-the-raven myscript.sh
-```
 
 #### <a name="largenode-jobs"></a> Use `largenode` partition
 The largenode partition has minimum limits on memory and the number of CPUs. To submit a job to the largenode partition you must request at least 6 cores (using the flag `-c ` ) and at least 33GB of memory (using the flag `--mem`). 
@@ -157,7 +156,7 @@ is, requesting significantly more time than you think necessary- is usually the
 better way to go to avoid your job getting terminated should it run over that
 requested time.
 
-If you should need to increase the amount of time (i.e. increase wall time) for a running job (or jobs), email Scientific Computing.  If a job has not started, you can update this yourself:
+If you should need to increase the amount of time (i.e. increase wall time) for a running job (or jobs), email Scientific Computing at `scicomp`.  If a job has not started, you can update this yourself:
 
 ```
 scontrol update jobid=<job ID> timelimit=+2-0
@@ -199,7 +198,8 @@ There are other reason codes that are less-common in our environment.  Email Sci
 
 #### `squeue`
 
-The `squeue` command allows you to see the jobs running and waiting in the job queue.  `squeue` takes many options to help you select the jobs displayed by the command
+The `squeue` command allows you to see the jobs running and waiting in the job queue.  `squeue` takes many options to help you select the jobs displayed by the command.
+
 
 | option/argument     | function                                              |
 |---------------------|--------------------------------------------------------
@@ -258,6 +258,8 @@ loading Python/3.6.4-foss-2016b-fh2...
 For more information and education on how to use HPC resources from external sources see the following sites:
 
 - SchedMD's [Documentation for Version 18.08](https://slurm.schedmd.com/archive/slurm-18.08.3/)
+- Slurm [cheat sheet](https://slurm.schedmd.com/pdfs/summary.pdf)
+- University of Utah's [Slurm Docs](https://www.chpc.utah.edu/documentation/software/slurm.php)
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)

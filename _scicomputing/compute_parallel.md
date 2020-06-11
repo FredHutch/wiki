@@ -119,7 +119,13 @@ other or share memory- as all of the threads are on the same system there is
 little delay in communications between thread (commonly referred to as "low
 latency communication".  Threading typically involves fairly low-level
 programming skills though both Python and R have tools and libraries that make
-threading some tasks easier.
+threading some tasks easier. If you run a software that is multi-threaded please 
+ensure that it only uses the number of cpu cores that are assigned to your job on
+the current node. This number is kept in environment variable SLURM_JOB_CPUS_PER_NODE
+and you can use it like this : 
+```
+    bowtie2 -p ${SLURM_JOB_CPUS_PER_NODE} ...
+```
 
 ### Message Passing
 
