@@ -57,6 +57,20 @@ $ which python
 /app/easybuild/software/Python/2.7.15-foss-2016b-fh1/bin/python
 ```
 
+#### Using modules with zsh
+
+If you use zsh, add this to your `.zshrc`:
+
+```
+_MODULE_INIT_PATH='/app/Lmod/lmod/lmod/init/zsh'
+if [ -f $_MODULE_INIT_PATH ]; then
+  source $_MODULE_INIT_PATH
+  module use /app/easybuild/modules/all
+  module use /app/Modules/modulefiles
+fi
+unset $_MODULE_INIT_PATH
+```
+
 #### Scripting with Environment Modules
 To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work. 
 
