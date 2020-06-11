@@ -123,9 +123,9 @@ threading some tasks easier. If you run a software that is multi-threaded please
 ensure that it only uses the number of cpu cores that are assigned to your job on
 the current node. This number is kept in environment variable SLURM_JOB_CPUS_PER_NODE
 and you can use it like this : 
-
+```
     bowtie2 -p ${SLURM_JOB_CPUS_PER_NODE} ...
-
+```
 
 ### Message Passing
 
