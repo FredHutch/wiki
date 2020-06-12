@@ -77,6 +77,22 @@
       node_count: 42
       partition: largenode
     -  
+      node_name: k
+      cores: 36
+      sockets: 2
+      memory_gb: 768
+      processor_model: TBD
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: 6029U 2U Ultra NVMe Server
+      os: Ubuntu 18.04 LTS
+      local_storage: "/loc"
+      network: 10G (up to 1GB/s throughput)
+      gpu: NVIDIA
+      node_count: 42
+      partition: campus-new
+    -  
       node_name: rhino
       cores: 14
       sockets: 2
