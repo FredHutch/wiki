@@ -49,7 +49,7 @@ A wide variety of commercial and open source software are available. Some of the
 - [Protein Pilot](https://sciex.com/products/software/proteinpilot-software)  
 - [SEQUEST Sorcerer](https://www.sagenresearch.com)  
 - [Comet](http://comet-ms.sourceforge.net)
-- [MaxQuant](https://www.maxquant.org/)
+- [MaxQuant](https://www.maxquant.org/) (See also the [documentation](/compdemos/maxquant/) for running MaxQuant on the Gizmo cluster)
 - [Andromeda](https://omictools.com/andromeda-tool)
 - [X!tandem](https://www.thegpm.org/tandem/api/index.html)
 - [Skyline](https://skyline.ms/project/home/software/Skyline/begin.view)
