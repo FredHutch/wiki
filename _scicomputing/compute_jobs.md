@@ -50,18 +50,13 @@ When we refer to an "account" in the context of Slurm, we are referring to the P
 
 ### Limits
 
-A variety of limits are used to ensure equitable access to computing resources,  The primary limit is a maximum on the number of CPUs in use by any account or user.  The largenode partition has minimum limits- to use nodes in the largenode partition you'll need to request a minimum amount of memory (33GB/21780MB) and number of CPUs (6).
+A variety of limits are used to ensure equitable access to computing resources,  The primary limit is a maximum on the number of CPUs in use by any account or user.
 
 ### Priority
 
-Priority (the "priority score") is used to order pending jobs in the queue with
-jobs having a higher score run before those with a lower score.  The priority
-calculation is based primarily on the historical usage of cluster resources by
-an account- accounts with high utilization (i.e. lots of jobs and lots of CPUs)
-have lower priority scores than those accounts with lower usage.
+Priority (the "priority score") is used to order pending jobs in the queue with jobs having a higher score run before those with a lower score.  The priority calculation is based primarily on the historical usage of cluster resources by an account- accounts with high utilization (i.e. lots of jobs and lots of CPUs) have lower priority scores than those accounts with lower usage.  
 
-Time queued does factor in to the priority score but is a relatively minor
-component of the priority score
+Time queued does factor in to the priority score but is a relatively minor component of the priority score
 
 ## Submitting Jobs
 
@@ -98,8 +93,6 @@ Currently memory (or RAM) is not scheduled by Slurm.  This means that requesting
 
 When your job needs "a lot" of memory use CPUs as a proxy for the memory you expect to be needed.  If you think your job will need more than 4GB of memory, request one CPU for every 4GB required.  For example, if you think your job will need 6GB of RAM, you would request 2 CPUs (adjust upward when the desired memory isn't a multiple of four).
 
-Most F-class nodes have 32GB of memory- thus, between 16 and 32GB of RAM simply request 4 cores.  If your job requires more than the 32GB available on F-class nodes [use the _largenode_ partition.](#largenode-jobs)
-
 If you still want to add a memory request, use the `--mem` option.  This option takes an argument: a number indicating the amount of memory required on the node.  The default unit is megabytes- to specify the unit, append `K`, `M`, `G`, or `T` for kilobytes, megabytes, gigabytes, or terabytes.
 
 ### GPU
@@ -122,7 +115,6 @@ When you submit your script using sbatch you will be able to use a number of Slu
 
 In addition to these Slurm specific environment vars the sbatch command will forward all environment variables from the host where you submit your job (typically `rhino`). To start your jobs with a clean environment you can use `sbatch --export=NONE`. 
 
-
 ### Examples
 
 #### Use multiple cores
@@ -132,37 +124,19 @@ Submit a job using 6 cores (with the flag `-c 6`) and redirect output to a file 
 sbatch -c 6 myscript.sh my-output
 ```
 
-
-#### <a name="largenode-jobs"></a> Use `largenode` partition
-The largenode partition has minimum limits on memory and the number of CPUs. To submit a job to the largenode partition you must request at least 6 cores (using the flag `-c ` ) and at least 33GB of memory (using the flag `--mem`). 
-
-Submit a job to the largenode partition (with the flag `-p largenode`) using the minimum required resources; 6 cores (with the flag `-c 6`) and 33GB/21780MB of memory (using the flag `--mem 21780` ):
-
-```
-sbatch -p largenode -c 6 --mem 21780 myscript.sh
-```
-
-
 ## Managing Jobs
 
 ### Wall Time
 
 A job's "wall time" refers to the amount of time a job uses based on the clock-on-the-wall (compare to CPU time, which is time multiplied by the number of CPUs in use).  Wall time is requested using `-t` when submitting a job.  The default and the maximum time for submitted jobs depends on the cluster and partition.
 
-Determining how much time to request for your job is something of an art-form.
-You can review historical time use for similar jobs using `sacct` to make an
-estimate on how much time will be required.  Erring on the side of safety- that
-is, requesting significantly more time than you think necessary- is usually the
-better way to go to avoid your job getting terminated should it run over that
-requested time.
+Determining how much time to request for your job is something of an art-form.  You can review historical time use for similar jobs using `sacct` to make an estimate on how much time will be required.  Erring on the side of safety- that is, requesting significantly more time than you think necessary- is usually the better way to go to avoid your job getting terminated should it run over that requested time.
 
-If you should need to increase the amount of time (i.e. increase wall time) for a running job (or jobs), email Scientific Computing at `scicomp`.  If a job has not started, you can update this yourself:
+If you should need to increase the amount of time (i.e. increase wall time) for a running job (or jobs), email Scientific Computing at `scicomp`.  If a job has not started, you can update this yourself.  For example, to increase a job's time limit by two days:
 
 ```
 scontrol update jobid=<job ID> timelimit=+2-0
 ```
-
-This command increases the job's timelimit by two days.
 
 ### Why isn't my job running?
 
@@ -177,7 +151,7 @@ The reason code "Resources" indicates that the job has a node (or nodes) reserve
 If the job is held because of a limit (i.e "at its limit") you will see something like "MaxCPUPerAccount" or "MaxCPUPerUser":
 
 ```
-39435170 largenode        R   username PD       0:00      1 (MaxCpuPerAccount)
+39435170 campus-new        R   username PD       0:00      1 (MaxCpuPerAccount)
 ```
 
 Indicates that the job is running under an account that is already using the maximum number of CPUs available to an account.
@@ -229,7 +203,6 @@ The following command will cancel a single job, with jobID 12345.
 ```
 rhino[~]: scancel 12345
 ```
-
 
 #### `salloc`
 
