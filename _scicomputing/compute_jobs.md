@@ -34,7 +34,7 @@ A cluster is a collection of compute resources (nodes) under the control of the 
 
 ### Partition
 
-A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required.  While the different clusters may have different partitions, there are two partitions- a default partition with smaller nodes named _campus_ and a partition with more capable nodes (more memory and CPUs) named _largenode_.
+A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required.  Gizmo resources are in the partition _campus-new_.
 
 ### Node
 
