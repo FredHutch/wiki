@@ -118,7 +118,7 @@
   url: _drafts/contentTemplate.md
 - dlm: October 25, 2018
   url: _generation/datagen_platformsData.md
-- dlm: November 26, 2018
+- dlm: June 9, 2020
   url: _generation/datagen_proteomics.md
 - dlm: October 30, 2018
   url: _generation/labman_overview.md
@@ -214,9 +214,9 @@
   url: _compdemos/Docker.md
 - dlm: October 10, 2019
   url: _compdemos/ingest-Large-Data.md
-- dlm: March 20, 2020
+- dlm: June 11, 2020
   url: _compdemos/motuz.md
-- dlm: March 19, 2020
+- dlm: June 9, 2020
   url: _compdemos/cluster_koshuBeta.md
 - dlm: May 14, 2020
   url: _compdemos/Checkpointing-Gizmo.md
@@ -230,17 +230,21 @@
   url: _compdemos/shiny.md
 - dlm: April 6, 2020
   url: _compdemos/python_logging.md
+- dlm: May 14, 2020
+  url: _compdemos/gdc-client-hints.md
 - dlm: February 20, 2020
   url: _compdemos/howtoGizmo.md
 - dlm: November 12, 2019
   url: _compdemos/aws.md
+- dlm: May 14, 2020
+  url: _compdemos/GDC_Data_Download.md
 - dlm: March 19, 2020
   url: _compdemos/matlab.md
 - dlm: May 29, 2020
   url: _compdemos/gizmo-bionic-upgrade.md
 - dlm: June 9, 2020
   url: _compdemos/gizmo-bionic-changelog.md
-- dlm: April 16, 2020
+- dlm: June 11, 2020
   url: _compdemos/Cromwell.md
 - dlm: May 14, 2020
   url: _compdemos/Singularity.md
@@ -260,11 +264,11 @@
   url: _scicomputing/software_managecode.md
 - dlm: April 28, 2020
   url: _scicomputing/reference_overview.md
-- dlm: May 18, 2020
+- dlm: June 11, 2020
   url: _scicomputing/compute_jobs.md
 - dlm: November 15, 2019
   url: _scicomputing/store_scratch.md
-- dlm: February 20, 2020
+- dlm: June 11, 2020
   url: _scicomputing/compute_parallel.md
 - dlm: February 12, 2020
   url: _scicomputing/compute_scientificSoftware.md
