@@ -25,24 +25,24 @@ These systems are provided by the Fred Hutch to serve the community with the int
   2. allowing for interactive development of code and/or approaches to analyses, and
   3. being supported by compute resources larger than a typical desktop computer.
 
-
 These systems are best used for situations such as training of new users in development of R or python code or curation of Galaxy-style workflows that need connectivity to our local filesystem in a way not accessible via the [public instance of Galaxy.](https://usegalaxy.org/) These systems also provide compute resources that are a step above a typical desktop computer, thus are good systems for slightly more compute-intensive jobs that still require interactivity.  Each is a managed resource with actively managed packages/modules/tools depending on the system, and thus work well for fairly standard platforms for interactive computing that does not require highly specialized software components.  Additionally, these systems may not be appropriate for analyses that require a higher level of data security, please contact FH username `scicomp` to inquire.
 
 Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
 --- | --- | --- | ---
 [RStudio Server](http://rstudio.fhcrc.org) | web, FH credentials, no setup required | Center IT | Native to python, default access to /fh/fast
-[Fred Hutch Galaxy Instance](http://galaxy.fredhutch.org/)| web, platform-specific credentials | Matsen Group | Limited to staged data
 [JupyterHub](https://jupyterhub.fhcrc.org/) | web, FH credentials, no setup required | Center IT | Native to python, default access to /fh/fast
 
-
 ### Interactive Computing: Command Line Interface (CLI), Moderate to High Capability
+
 These systems are provided by the Fred Hutch to serve needs that rise above those that can be met using the above listed platforms.  Often reasons to move to these HPC resources include the need for version controlled, specialized package/module/tool configurations, more compute resources, or rapid access to large data sets in data storage locations not accessible with the required security for the data type by the above systems.
 
 
 ## [Computing Environments and Containers](/scicomputing/compute_environments/)
+
 A wide range of pre-built scientific software is available for use in large scale computing work.  This page describes how to find out what is available, how to use it and what to do if something you need is not yet available. 
 
 ## [Job Management](/scicomputing/compute_jobs/)
+
 When doing large scale computing tasks, one often shifts to the use of jobs to perform specific tasks.  This page provides some background on managing and interacting with your tasks.
 
 Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop disconnected, the job would be terminated.
@@ -50,11 +50,12 @@ Batch computing allows you to queue up jobs and have them executed by the batch 
 The batch system used at the Hutch is [Slurm](https://slurm.schedmd.com/archive/slurm-18.08.3/). Slurm provides a set of commands for submitting and managing jobs on the `gizmo` and `beagle` clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.
 
 ## [Parallel Computing](/scicomputing/compute_parallel/)
-There are many approaches to parallel computing (doing many jobs simultaneously rather than in series). We have a [wiki resource available describing parallel computing](/scicomputing/compute_parallel/) as well as the [FredHutch/slurm-examples repository](https://github.com/FredHutch/slurm-examples) containing community curated examples with additional documentation that can help you get started.   
 
+There are many approaches to parallel computing (doing many jobs simultaneously rather than in series). We have a [wiki resource available describing parallel computing](/scicomputing/compute_parallel/) as well as the [FredHutch/slurm-examples repository](https://github.com/FredHutch/slurm-examples) containing community curated examples with additional documentation that can help you get started.
 
 ## [Cloud Computing](/scicomputing/compute_cloud/)
-Beyond on premise resources, cloud computing access is available for Fred Hutch researchers and this page provides some basics on how to get started if you are in need of cloud computing specifically.  Options like the `beagle` and `koshu` [clusters](/scicomputing/resource_overview/), while built _in_ the cloud, are very much a simple extension of existing infrastructure into cloud providers but does not fully or particularly efficiently utilize the real capabilities and advantages provided by cloud services.   Additionally, Fred Hutch users have access to the [Amazon Web Services Batch](https://aws.amazon.com/batch/) service directly, which can be a powerful tool, but may have a steeper learning curve or be more finicky than users may have the bandwidth for.  
+
+Beyond on premise resources, cloud computing access is available for Fred Hutch researchers and this page provides some basics on how to get started if you are in need of cloud computing specifically.  Options like the `beagle` and `koshu` [clusters](/scicomputing/resource_overview/), while built _in_ the cloud, are very much a simple extension of existing infrastructure into cloud providers but does not fully or particularly efficiently utilize the real capabilities and advantages provided by cloud services.   Additionally, Fred Hutch users have access to the [Amazon Web Services Batch](https://aws.amazon.com/batch/) service directly, which can be a powerful tool, but may have a steeper learning curve or be more finicky than users may have the bandwidth for.
 
 If you are at all interested or curious about cloud solutions and would like to
 talk over options, Scientific Computing hosts a cloud-specific office hours
@@ -68,4 +69,5 @@ Graphical Processing Units (GPUs) provide acceleration for some kinds of computa
 [This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  [This](https://sciwiki.fredhutch.org/compdemos/tensorflow-gpu/) has a specific example of running tensorflow on SciComp clusters.
 
 ## [Information for Grant Writers](/scicomputing/compute_grants/)
+
 Scientific Computing has provided a description of computational and storage resources for grant writers.
