@@ -18,7 +18,7 @@ For brevity and clarity, the new environment (module, module versions, and OS ve
 
 It is important that you take some time to evaulate any necessary changes to your work as we do have a timeline for implementing these new hosts and retiring the old platform.  The current schedule is:
 
-### General Availability (6 May - 1 June)
+### General Availability (6 May - 16 June)
 
 During this time the Bionic environment is available for use by anyone with a HutchNet ID.  This is the best opportunity for you to evaluate any necessary changes to your work and tools as the old Trusty environment will still be available as the default for most commands and work.
 
@@ -28,7 +28,7 @@ As demand dictates, we will begin upgrading a limited number of Trusty nodes to 
 
 During this time we will no longer be building modules and software for Lmod in the Trusty environment.  New module and software build requests will be built for the Bionic environment. Existing packages will continue to be available in the Trusty- we will attempt to fix any problems that arise with these packages in the Trusty environment during this time
 
-### New Default (1 June - 5 July)
+### New Default (16 June - 17 July)
 
 On the 1st of June the Bionic environment will become the "default".  When you access hosts via the hostname "rhino" you will get one of the Bionic rhinos nodes.  Slurm commands (`sbatch`, `srun`, `grabnode`, et alia) will run your jobs on the new Bionic nodes by default.
 
@@ -38,11 +38,11 @@ This phase will also see the migration of the NoMachine service (currently hoste
 
 At this point, any problems that develop with Lmod modules in the Trusty environment will not be fixed.  We will work with you to complete the migration to the Bionic environment and address problems there instead.
 
-### End of Support (5 July)
+### End of Support (17 July)
 
 On this date access to the Trusty environment will be disabled.  Any remaining hosts will be retired or upgraded.
 
-## Instructions for Use- General Availability (6 May - 1 June)
+## Instructions for Use- General Availability (6 May - 16 June)
 
 These instructions are appropriate for the first phase of the transition- the "General Availability" phase described above. During this time, special steps will be necessary to use the Bionic environment.  The current Trusty environment will remain the default for everyday activities.
 
@@ -66,7 +66,7 @@ As with `grabnode` you will need to launch your Slurm jobs from `rhino-new` to u
 
 These new nodes have 36 cores and 768GB of RAM. Though these have a profile similar to the current _largenode_ nodes, there is no minimum on memory or CPU required. Thus it is *critical* that if your jobs use a significant amount of memory that you request a number of cores proportional to the anticipated amount of memory you will need.  A good rule of thumb is to request one core for each 4 GB of memory required- for example, if you think you will need about 32GB of memory, request 8 cores for your job.
 
-## Instructions for Use- New Default (1 June - 5 July)
+## Instructions for Use- New Default (16 June - 17 July)
 
 When the Bionic environment become the default you'll no longer need to do anything different to use these systems.  At this point the Trusty environment is considered "deprecated" and while work in the old environment can continue, every effort should be made to migrate to the new nodes.
 
@@ -153,6 +153,14 @@ Similarly, if the "patch" level isn't important to you:
 Will get you the latest 3.6 release of R installed in Lmod.
 
 ## Notes
+
+### <a name="locally-libraries"></a>Locally Installed Libraries
+
+If you have compiled R and/or Python libraries installed in your home directory you need to take some extra care.
+
+Libraries compiled on the Trusty platform very likely won't work when used on Bionic, and vice-versa.  Thus, if you are trying out the Bionic environment and install libraries (e.g. using `install.packages()` or `pip install --user`) you will end up with some libraries that are incompatible with the older Trusty environment.
+
+There are a number of ways to address this problem depending on your goals- the easiest may be backing up the library install directory prior to working in the different environment.  For example, `R` installs local libraries into `$HOME/R`- back this up or move it out of the way before working with the Bionic environment.
 
 ### <a name="terminator"></a>Terminator Won't Launch
 

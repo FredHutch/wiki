@@ -6,6 +6,74 @@ primary_reviewers: atombaby
 
 ## Changes to Bionic Nodes
 
+### 9 June 2020
+
+#### New Local Packages
+
+These packages have been added to the OS:
+
+ - eog
+ - keychain
+ - sshfs
+
+
+#### Expanded Node Health Checks
+
+An additional node health check verifying sufficient available memory has been added.  Note that this check has also been added to older "Trusty" nodes as well.
+
+#### Arbiter Fixes
+
+A systemd/arbiter interaction was causing the service to be terminated intermittently.  This fix runs the process in the correct the cgroup slice.
+
+### 2 June 2020
+
+#### New Local Packages
+
+These packages have been added to the OS:
+
+ - emacs
+ - bc/dc
+ - zip
+ - mutt
+
+#### Arbiter
+
+We have installed arbiter2 on the rhino nodes (rhino01-rhino03).  This will replace "loadwatcher" in use on the Trusty rhino nodes.  Arbiter restricts load using cgroups rather than killing user processes when overloaded.
+
+This is currently running in "debug" mode to get some real-world experience.  We're planning to activate this next Tuesday (9 June)
+
+#### Node Health Checks
+
+"Node Health Check" from Lawrence Berkley National Labs has been installed on the new Bionic compute nodes.  This allows us to add checks to verify node function and drain nodes when problems are found.
+
+#### Fixes to Unattended Upgrades
+
+Corrected problems with the processes that manage the automatic package update.  Specifically startup of the daemon and email routing.
+
+### 26 May 2020
+
+#### Host Key Change for rhino02 and rhino03
+
+Configured ssh to provide the same host-key across all rhino-zero nodes. This will cause an error if you already have the key in place (i.e. have already connected to these hosts).  It will raise an error like "DNS Spoofing Detected".
+
+The command `ssh-keygen -R <hostname>` will remove the key from the local database
+
+#### New Local Packages
+
+New packages "agrep" and "python-requests" have been installed.
+
+#### Remove MOTD Messages for Unattended Upgrades
+
+Spurious messages from the unattended-upgrades process have been removed from the MOTD
+
+#### Bionic Updates
+
+Local bionic mirror updated with latest changes from Canonical
+
+#### CRIU Updated
+
+Checkpointing utility "criu" has been updated from 3.13 to 3.48
+
 ### 19 May 2020
 
 #### Fixes to csh/tcsh Logins

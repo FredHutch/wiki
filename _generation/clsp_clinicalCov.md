@@ -1,6 +1,6 @@
 ---
 title: Clinical Data Management
-last_modified_at: 2018-10-30
+last_modified_at: 2020-05-06
 main_authors: Rachel Galbraith
 primary_reviewers: Rachierizz
 ---
