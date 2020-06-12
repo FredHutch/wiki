@@ -29,36 +29,24 @@ More information on the topic of ssh configurations for access to `rhino` can be
 More information on specific guidance for using `rhino` and `gizmo` are in our Resource Library for [`rhino`](/compdemos/howtoRhino/) and for [`gizmo`](/compdemos/howtoGizmo/).
 
 
-### Gizmo and Beagle Cluster
+### Gizmo Cluster
 
-While we generally don't recommend interactive computing on the HPC clusters-
-interactive use can limit the amount of work you can do and introduce
-"fragility" into your computing- there are many scenarios where interactively
-using cluster nodes is a valid approach.  For example, if you have a single
-task that is too much for a `rhino`, opening a session on a cluster node is the
-way to go.
+While we generally don't recommend interactive computing on the HPC clusters- interactive use can limit the amount of work you can do and introduce "fragility" into your computing- there are many scenarios where interactively using cluster nodes is a valid approach.  For example, if you have a single task that is too much for a `rhino`, opening a session on a cluster node is the way to go.
 
-If you need an interactive session with dedicated resources, you can start a
-job on the cluster using the command `grabnode`.  The `grabnode` command will
-start an interactive login session on a cluster node.  This command will prompt
-you for how many cores, how much memory, and how much time is required
+If you need an interactive session with dedicated resources, you can start a job on the cluster using the command `grabnode`.  The `grabnode` command will start an interactive login session on a cluster node.  This command will prompt you for how many cores, how much memory, and how much time is required
 
-This command can be run from any NoMachine or `rhino` host.
+This command can be run from any `rhino` host.
 
-> Note: At this time we aren't running interactive jobs on Beagle nodes.  If
-> you have a need for this, please email `scicomp`.
-
-
-### The NoMachine Cluster
+### NoMachine Access
 
 [NoMachine](https://www.nomachine.com/) is a software suite that allows you to run a Linux desktop session remotely.  The session runs on the NoMachine server but is displayed on your desktop or laptop using the NoMachine client.  NoMachine (also abbreviated _NX_) is installed on Center IT supported PC desktops and laptops.
 
 NX has the particular advantage of maintaining your session even when you disconnect or lose connectivity.  All that is required is to restart the client and your session will be as you'd last left it.
 
-There are three systems you can use for NX sessions: _lynx_, _manx_, and _sphinx_.  These are not computational systems but rather these hosts are used solely as launch-points for sessions on `gizmo` or `rhino`. Running computational tools on this system will get you a warning from SciComp.
-
+The three rhino hosts are available for NX sessions: _rhino01_, _rhino02_, and _rhino03_.  The name _rhino_ is an alias that returns one of those three names and should not be used for NoMachine sessions
 
 ## Resource and Node Description information
+
 Below we describe the current basic configurations available for node types, numbers, and memory for a variety of `scicomp` supported computing resources.  These tables are useful when deciding on what type of resources you need to request when using `rhino` and `gizmo` for interactive and non-interactive jobs.  These tables are auto-generated and are a work in progress so that we can provide the most up to date information on the Wiki for your use.  Please file an Issue in our [GitHub repository](https://github.com/FredHutch/wiki/issues) if you notice something amiss or need clarification.
 
 ### Resource Information
