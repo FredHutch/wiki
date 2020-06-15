@@ -93,6 +93,8 @@ If you have 24 data files in your job, change the number accordingly:
 
 Remember the number you changed it to; you will need it later.
 
+**NOTE** If you have more than 36 data files, set this number to 36. 
+
 ### Submit job to cluster
 
 The rest of these steps need to be done on a Linux HPC system. Using `ssh`, `PuTTY`, or `NoMachine`, connect to the system `rhino01`.  For more information about these connection methods, read [Computing Resource Access Methods](/scicomputing/access_methods/).
@@ -174,7 +176,7 @@ maxquantcmd mqpar.xml
 
 ```
 
-On the line below where it says `CHANGE THIS`, be sure and change the value `24` to the number of data files that you have (which will end up being the number of CPU cores your job uses).
+On the line below where it says `CHANGE THIS`, be sure and change the value `24` to the number of data files that you have (which will end up being the number of CPU cores your job uses). If you have more than 36 data files, set this number to 36.
 
 Now, on rhino01, after changing to the directory where your XML and data files live, type the following command:
 
