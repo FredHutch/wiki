@@ -76,12 +76,12 @@ Add the following to your definition file.
 BootStrap: docker
 From: r-base
 %post
-R --slave -e 'install.packages("devtools", repos="https://cloud.r-project.org/")'
+R --no-echo -e 'install.packages("devtools", repos="https://cloud.r-project.org/")'
 mkdir -p /fh/fast
 mkdir -p /fh/scratch
 ```
 
-**Note**: The `R --slave -e 'install.packages("devtools", repos="https://cloud.r-project.org/")'` section is installing all of the R devtools modules that are not in the base R Docker container by default. The `mkdir -p /fh/` lines are creating new folder paths within the Singularity container that can be bound to a directory outside the container later if needed.
+**Note**: The `R --no-echo -e 'install.packages("devtools", repos="https://cloud.r-project.org/")'` section is installing all of the R devtools modules that are not in the base R Docker container by default. The `mkdir -p /fh/` lines are creating new folder paths within the Singularity container that can be bound to a directory outside the container later if needed.
 
 Now lets build the Singularity container.
 ```

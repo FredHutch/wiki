@@ -118,7 +118,7 @@
   url: _drafts/contentTemplate.md
 - dlm: October 25, 2018
   url: _generation/datagen_platformsData.md
-- dlm: June 9, 2020
+- dlm: June 11, 2020
   url: _generation/datagen_proteomics.md
 - dlm: October 30, 2018
   url: _generation/labman_overview.md
@@ -182,6 +182,8 @@
   url: _compdemos/rslurm_example.md
 - dlm: June 3, 2019
   url: _compdemos/tensorflow-gpu.md
+- dlm: June 14, 2020
+  url: _compdemos/maxquant.md
 - dlm: October 31, 2019
   url: _compdemos/github_pages-FHtheme.md
 - dlm: May 31, 2019
@@ -246,7 +248,7 @@
   url: _compdemos/gizmo-bionic-changelog.md
 - dlm: June 11, 2020
   url: _compdemos/Cromwell.md
-- dlm: May 14, 2020
+- dlm: June 15, 2020
   url: _compdemos/Singularity.md
 - dlm: November 14, 2019
   url: .github/ISSUE_TEMPLATE/content-refresh-request.md
