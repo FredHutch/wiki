@@ -5,7 +5,7 @@ main_author: Dirk Petersen
 primary_reviewers: fizwit, vortexing
 ---
 
-Running tensorflow with GPUs has become easier in 2019. We can either use it on Gizmo as the latest GizmoJ class nodes are equipped with GPUs or on the [Koshu cluster](/compdemos/cluster_koshuBeta/) which is running in Google's cloud.
+Running tensorflow with GPUs has become easier as of 2019 as the latest Gizmo J and K class nodes are equipped with GPUs.
 
 ## GPU Tensorflow in a Python Environment
 
@@ -30,11 +30,11 @@ then create a small python test script:
     chmod +x ~/tf-test.py
 ```
 
-and run it on Gizmo with `--gres=gpu` to select GizmoJ nodes
+and run it on Gizmo with `--gres=gpu` to select a node with GPU:
 
 
 ``` 
-    ~$ sbatch -p largenode -c 6 --mem 33000 -o out.txt --gres=gpu ~/tf-test.py
+    ~$ sbatch -o out.txt --gres=gpu ~/tf-test.py
     ~$ tail -f out.txt
 ```
 

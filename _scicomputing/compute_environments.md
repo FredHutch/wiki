@@ -61,22 +61,23 @@ $ which python
 To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work. 
 
 ##### Best Practice 1
+
 Interactive shell session have the required `module` commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the `module` command. Add the follow lines to the top of your script:
+
 ```
 #!/bin/bash
-source /app/Lmod/lmod/lmod/init/bash
-module use /app/easybuild/modules/all
+source /app/lmod/lmod/init/profile
 ```
+
 This snippet can be used as a template for bash shell scripts.
 
-The `source` like activates the `module` and `ml` commands for you current shell, and the `module use` line loads our list of modules.
+The `source` like activates the `module` and `ml` commands for you current shell. The `module` and `ml` commands are then available in your script:
 
-The next line you might use, for example, would be:
 ```
 module load R/3.5.1-foss-2016b-fh1
 ```
-This would load that specific Environment Module for use in your script.
 
+This would load that specific Environment Module for use in your script.
 
 ##### Best Practice 2
 Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
@@ -92,23 +93,21 @@ The above line will load a different version of the software package over time a
 > Note: This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
 
 #### With Workflow Managers
+
 If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
-- sending the jobs to the compute resources, 
-- deciding what tasks can be done in parallel, 
-- staging data for use and keeping track of inputs and outputs,
+
+- sending the jobs to the compute resources
+- deciding what tasks can be done in parallel
+- staging data for use and keeping track of inputs and outputs
 - environment management (via docker containers or environment modules)
-- monitoring jobs and providing you with metadata about them and the workflow itself.   
+- monitoring jobs and providing you with metadata about them and the workflow itself
 
 Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.  
 
 
 ## Docker Containers
 
-At its core, Docker is a tool that lets you run code inside a
-totally fixed and reproducible computational environment. If
-you have used virtual machines, then you can think of a Docker container
-as being a lightweight, portable, intuitive system for building
-and running virtual machines. The major difference between a Docker container and virtual machine is that Docker doesn't come with operating system, which makes it more lightweight and portable.  However, Docker containers do require the Docker engine to run them, which is a client-side application.
+At its core, Docker is a tool that lets you run code inside a totally fixed and reproducible computational environment. If you have used virtual machines, then you can think of a Docker container as being a lightweight, portable, intuitive system for building and running virtual machines. The major difference between a Docker container and virtual machine is that Docker doesn't come with operating system, which makes it more lightweight and portable.  However, Docker containers do require the Docker engine to run them, which is a client-side application.
 
 The folks at Docker are probably the best ones to answer the
 question, ["What is Docker?"](https://www.docker.com/what-docker).
@@ -202,11 +201,11 @@ If you want to install or build a standalone software package, you are also welc
 
 - We cannot install OS package dependencies (if your software has many dependencies, please file an issue [here](https://github.com/FredHutch/easybuild-life-sciences) and we will be happy to work with you to offer a package build with all dependencies.
 - Ubuntu compilers are not optimized. We recommend loading a 'toolchain' module:
-  
+
   ```
-  module load foss-2016b
+  module load foss/2019b
   ```
-  This will get you GCC 5.4.0, binutils 2.26, OpenMPI 1.10.3, OpenBLAS 0.2.18, FFTW 3.3.4, ScaLAPACK 2.0.2 (most of our software on Ubuntu 14.04 is built against this toolchain).
+
 - If you loaded a toolchain module when installing or building new software, you will must load that toolchain module before running that software, or you will get library errors.
 
 ## Frequently Asked Questions

@@ -4,7 +4,7 @@ last_modified_at: 2019-06-03
 primary_reviewer: atombaby
 ---
 
-# Requesting GPUs
+## Requesting GPUs
 
 GPUs are requested via the GRES option:
 
@@ -16,7 +16,7 @@ Request multiple GPUs with:
 
 At this time we have one GPU per node.
 
-## Nodes with GPUs
+### Nodes with GPUs
 
 |Location|Partition|Node Name|GPU|
 |---|:---:|:---:|---:|
@@ -28,19 +28,7 @@ At this time we have one GPU per node.
 {%- endfor %}
 {%- endfor %}
 
-## Requesting GPUs on Gizmo
-
-The GPUs are currently installed only on nodes in the _largenode_ partition, thus it is necessary to request the minimums required for _largenode_ jobs:
-
-    sbatch -p largenode --mem=21500 -c 6 --gres=gpu ...
-
-## Requesting GPUs on Koshu
-
-The GPU configured nodes on koshu are in the partition "gpu".  Jobs requiring GPUs need to request this partition and the GPUs:
-
-    sbatch -p gpu --gres=gpu ...
-
-# Using GPUs
+## Using GPUs
 
 When your job is assigned a GPU, Slurm sets the environment variable
 CUDA_VISIBLE_DEVICES.  This environment variable indicates the assigned GPU-

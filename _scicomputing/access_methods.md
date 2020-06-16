@@ -8,7 +8,7 @@ primary_reviewers: bmcgough
 
 Client devices are supported by Center IT (ADM, CRD, VIDD) as well as Division IT groups (BSD, HB, PHS).  Please see Center IT's page in CenterNet about [Laptops and Desktops](https://centernet.fredhutch.org/cn/u/center-it/help-desk/laptops-and-desktops.html) for more information about support for desktop computing.
 
->Note: If you request a Linux Desktop, Center IT will recommend that you use NoMachine from a Windows or Mac system instead as this is the most appropriate choice for most users but not all. If it is required for your work, it can be supported.
+> Note: If you request a Linux Desktop, Center IT will recommend that you use NoMachine from a Windows or Mac system instead as this is the most appropriate choice for most users.
 
 Please see Center IT pages for more information on [Mobile Device Services](https://centernet.fredhutch.org/cn/u/center-it/services/mobile_device_service.html) or contact [Help Desk](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) with questions or problems.  
 
@@ -47,7 +47,7 @@ After installing XQuartz just start the app. The XQuartz icon will appear in the
 When connecting to a `rhino` with `ssh` always use the -Y flag to forward your Xsession to your Mac.
 
 ```
-ssh -Y HutchID@rhino2
+ssh -Y HutchID@rhino
 ```
 
 After connecting to a `rhino` verify that your X11 client is working by typing `xeyes`.
@@ -55,13 +55,11 @@ After connecting to a `rhino` verify that your X11 client is working by typing `
 
 ### Linux
 
-Terminator is a convenient terminal emulator that can have multiple terminals in a single window. You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend [NoMachine NX](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx) to connect to a Linux machine with Terminator.  
+Terminator is a convenient terminal emulator that can have multiple terminals in a single window. You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend [NoMachine NX](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx) to connect to a Linux machine with Terminator.
 
 After starting Terminator you can right click on the terminal window and either split it horizontally or vertically. This 1 min video shows you how it works:
 
 [![Terminator](https://img.youtube.com/vi/OmkkbvH_JZU/0.jpg)](https://youtu.be/OmkkbvH_JZU "See how Terminator works")
-
-
 
 ## SSH Connections
 SSH uses the TCP network protocol to make connections between systems. TCP is a persistent, stateful connection that is resilient to network interruptions. When you use SSH to run a program on a remote system (even a shell) the connection you make is tied to an SSH process on the remote machine, and all programs are children of that SSH process. If that process stops, all children stop as well. If the network connection does drop between your client and the server, your SSH process stops, and all your running programs stop.
@@ -73,7 +71,7 @@ There are several ways around this:
 * Cluster jobs - you can run your programs using our [slurm cluster](/scicomputing/compute_jobs/), which queues and executes programs independently of your SSH connection. This is best for non-interactive tasks, such as executing scripts that run from start to finish
 
 ### NoMachine NX (Multi-OS)
-NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `lynx`, `sphinx` or `manx` which you use to access the `rhino` systems. To connect through the local Fred Hutch network or through a VPN connection please download and install the NoMachine Enterprise Client from [NoMachine's Site.](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)  Windows users can also install an older version from "Software Center".
+NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `rhino01`, `rhino02` or `rhino03`.  To connect through the local Fred Hutch network or through a VPN connection please download and install the NoMachine Enterprise Client from [NoMachine's Site.](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)  Windows users can also install an older version from "Software Center".
 
 Configuration is very quick and the process is described in this video:
 
