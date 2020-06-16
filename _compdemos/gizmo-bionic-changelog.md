@@ -6,6 +6,16 @@ primary_reviewers: atombaby
 
 ## Changes to Bionic Nodes
 
+### 16 June 2020
+
+#### New Local Packages
+
+These packages have been added to the OS:
+
+ - htop
+ - python3-venv
+ - dos2unix
+ 
 ### 9 June 2020
 
 #### New Local Packages
