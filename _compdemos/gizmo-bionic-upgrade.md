@@ -42,30 +42,6 @@ At this point, any problems that develop with Lmod modules in the Trusty environ
 
 On this date access to the Trusty environment will be disabled.  Any remaining hosts will be retired or upgraded.
 
-## Instructions for Use- General Availability (6 May - 16 June)
-
-These instructions are appropriate for the first phase of the transition- the "General Availability" phase described above. During this time, special steps will be necessary to use the Bionic environment.  The current Trusty environment will remain the default for everyday activities.
-
-This time should be used to evaluate what changes may be necessary for your tools to function in the Bionic environment.  Scientific Computing staff will be available to help with this process.
-
-### Interactive Computing- Shell Based
-
-Use the alias `rhino-new` to access the Bionic Rhino hosts with `ssh`.  This will log you into one of the new Rhino nodes which will have a name like `rhino01`, `rhino02`, or `rhino03` (note the zero in the hostname).
-
-### Interactive Computing- NoMachine
-
-The existing NoMachine hosts will be available for use as per usual during this time.  We do have NoMachine installed on the Bionic host `rhino01`- you can use this to see how the NoMachine service will work when this has been migrated to the Bionic environment.  More information is available on [this page](/compdemos/gizmo-nx-users/)
-
-### Interactive Computing- grabnode
-
-`grabnode` will start a session on one of the new Gizmo nodes when launched from `rhino-new`.  On any other system (the existing rhinos, lynx, etc.) `grabnode` will start a session on a node in the current environment.
-
-### Batch Computing
-
-As with `grabnode` you will need to launch your Slurm jobs from `rhino-new` to use the Bionic environment.  From one of these new nodes it will not be necessary to add any additional options for job submission.
-
-These new nodes have 36 cores and 768GB of RAM. Though these have a profile similar to the current _largenode_ nodes, there is no minimum on memory or CPU required. Thus it is *critical* that if your jobs use a significant amount of memory that you request a number of cores proportional to the anticipated amount of memory you will need.  A good rule of thumb is to request one core for each 4 GB of memory required- for example, if you think you will need about 32GB of memory, request 8 cores for your job.
-
 ## Instructions for Use- New Default (16 June - 17 July)
 
 When the Bionic environment become the default you'll no longer need to do anything different to use these systems.  At this point the Trusty environment is considered "deprecated" and while work in the old environment can continue, every effort should be made to migrate to the new nodes.
@@ -88,6 +64,14 @@ All of the NoMachine services will be migrated to the new Bionic Rhino nodes.  T
 
 No changes to job submission will be required when submitting from one of the Bionic Rhino nodes.  The new default partition for the `gizmo` cluster will contain only these new hosts.
 
+### <a name="using-trusty"></a>Using Trusty Hosts
+
+While the old nodes have been left running and will be available through this period, note that we will now begin the process of migrating hosts to the Bionic environment.
+
+ - The Trusty `rhino` hosts are still available, but instead of the alias `rhino`, you need to specify one of `rhino1`, `rhino2`, and `rhino3`.
+ - The `campus` partition is still available but must be requested explicitly.
+ - Using the `campus` from the new Bionic rhino nodes is not supported- launch these jobs from a Trusty `rhino` node.
+ - The Trusty NoMachine servers `lynx`, `manx`, and `sphinx` are now considered deprectated and will be removed on the 29th of June.
 
 ## Software and Environment Modules (Lmod)
 
