@@ -14,7 +14,7 @@ In most cases- as our DNS is very well run- it is sufficient to remove the old k
 
 ### Removing from OSX and Linux Command Line Client
 
-The command line client for OSX and Linux behave in pretty much the same way.  The host key database is kept in a file in your home directory, in the file `~/.ssh/known_hosts`.  Modern versions of SSH encode this information in a way not readily apparent to humans so using the SSH tools to remove and update the key is the best way to accomplish this (versus the old way of just editing the file with a text file).
+The command line client for OSX and Linux behave in pretty much the same way.  The host key database is kept in a file in your home directory, in the file `~/.ssh/known_hosts`.  Modern versions of SSH encode this information in a way not readily usable by humans so using the SSH tools to remove and update the key is the best way to accomplish this (versus the old way of just editing the file with a text file).
 
 ```
 ssh-keygen -R <hostname>
