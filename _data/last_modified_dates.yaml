@@ -192,6 +192,8 @@
   url: _compdemos/R_tips_tricks.md
 - dlm: May 7, 2020
   url: _compdemos/rslurm_intro.md
+- dlm: June 18, 2020
+  url: _compdemos/ssh_host_key_management.md
 - dlm: June 1, 2020
   url: _compdemos/ucsc-track-s3.md
 - dlm: May 1, 2019
