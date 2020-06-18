@@ -93,6 +93,9 @@ A note about tmux iterm2 integration. If you are using iterm2 on a Mac, add `-CC
 
 A note about the X Window System and terminal multiplexers. As stated above, on your laptop you are running an X server, and the remote program is a client. Terminal multiplexing allow your laptop to disconnect because the multiplexing server is running on the remote system and your device is the client. When you close your laptop, the X server stops. Clients exit at that point as a client cannot do anything without a server. See [NoMachine](#nomachine-nx-(multi-os)) for a workaround for X programs.
 
+A note about screen:  `ssh rhino` will assign you to one of the available, specific servers (ie: rhino01, rhino02, rhino03) and _screen_ instances _are not shared across the servers_. If you are interested in using screen to run a persistent session on the rhino cluster, consider:
+ 1. accessing a specific server directly eg: `ssh rhino01` 
+ 1. making note of which server you have logged into by `ssh rhino` and then log directly into it on your next session.
 ## Advanced/Optional Setup for Making Things Easier: The SSH config file
 Located in your home directory in the `.ssh` folder is a file called `config` (create it if it doesn't exist). Your SSH client will read configuration options from this file when you use it. Any of the command line options can be specified in this config file to avoid overly complex SSH commands and make frequent use of remote servers more straightforward.  
 
