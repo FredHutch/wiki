@@ -19,9 +19,6 @@ The basic process below below includes:
 - Loading software
 - Exiting out of everything
 
-If you are looking for more in-depth information on using the cluster,
-please see [How to `rhino`](/compdemos/howtoRhino/) and [How to `gizmo`](/compdemos/howtoGizmo).
-
 ## Command prompts
 
 We'll be referencing your command prompt for the duration of this tutorial,
