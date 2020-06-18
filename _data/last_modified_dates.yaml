@@ -214,6 +214,8 @@
   url: _compdemos/Docker.md
 - dlm: October 10, 2019
   url: _compdemos/ingest-Large-Data.md
+- dlm: June 17, 2020
+  url: _compdemos/gizmo-bionic-issues.md
 - dlm: June 11, 2020
   url: _compdemos/motuz.md
 - dlm: June 9, 2020
@@ -282,7 +284,7 @@
   url: _scicomputing/access_permissions.md
 - dlm: May 18, 2020
   url: _scicomputing/software_R.md
-- dlm: June 12, 2020
+- dlm: June 18, 2020
   url: _scicomputing/access_methods.md
 - dlm: May 2, 2019
   url: _scicomputing/store_collaboration.md
