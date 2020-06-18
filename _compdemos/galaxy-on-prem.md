@@ -21,7 +21,7 @@ Please check the [Galaxy Documentation](https://docs.galaxyproject.org/) for mor
 
 ## How to use Galaxy on Gizmo:
 
-Starting Galaxy is simple. You just run the `galaxy` command on Rhino. Run this command in a new shell that won't be canceled/closed for a while. [We recommend tmux or NoMachine for long running shells.](/scicomputing/access_methods/). When you run the command you may just the the "New Install"
+Starting Galaxy is simple. You just run the `galaxy` command on Rhino. Run this command in a new shell that won't be canceled/closed for a while. [We recommend tmux or NoMachine for long running shells.](/scicomputing/access_methods/). When you run the command the first time, you may just the the "New Install" option, but in the future you can reconnect to a previous install by selecting one of the other options.  
 
 ```bash
 petersen@rhino03:~ galaxy
