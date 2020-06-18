@@ -5,21 +5,18 @@ main_author: Dirk Petersen
 primary_reviewers: atombaby, k8hertweck
 ---
 
-Galaxy is an open, web-based platform for accessible, reproducible, and transparent computational research. Maintaining a central Galaxy instance requires significant effort. 
+[Galaxy](https://usegalaxy.org/) is an open, web-based platform for accessible, reproducible, and transparent computational research. Users can use the public instance of Galaxy, or at the Hutch, we provide acccess to self service installations with the following features:
 
-As this point Fred Hutch does not offer a production ready Galaxy installation. Instead we offer Galaxy self service installations with the following features:
-
-- Galaxy server will run on a Gizmo node.
 - HutchNet ID authentication will be used 
-- Simple database (sqlite instead of Postgres)
-- Each user has Admin access to one or more Galaxy installations
-- Galaxy server run with the launching user's permissions, these will be used for all data library access (e.g. file system)
-- User can self install toolshed software
-- Cannot run cluster jobs, compute capacity is limited to single node (36 cores)
-- User maintains own workflows and exports / migrates them to newer installation
+- The instance will run with the launching user's permissions, these will be used for all data library access (e.g. file system)
+- User maintains their own workflows (and thus can migratee them to newer installation of Galaxy if/when needed)
+- User can self install the software as well as restart existing Galaxy servers, or make new ones if needed
+- A simple database is provided (sqlite instead of Postgres)
+- Each user can have access to multiple Galaxy instances (e.g. in case software updates need to be implemented)
+- Galaxy server will run on a `gizmo` node, thus compute capacity is limited to single node (36 cores)
 
 
-Please check the [Galaxy Documentation](https://docs.galaxyproject.org/) !
+Please check the [Galaxy Documentation](https://docs.galaxyproject.org/) for more general information about using Galaxy.  
 
 
 ## How to use Galaxy on Gizmo:
@@ -55,7 +52,7 @@ Try again after a while. Then you should see the Galaxy login screen. Use your H
 To terminate the Galaxy instance just type Ctrl+c twice inside the terminal Window. It will cancel the cluster job that runs Galaxy. 
 
 
-### Current Issues
+## Current Issues
 
 When using Chrome, you might see this error message:
 
@@ -72,7 +69,3 @@ To remove Cookies from Chrome, go to
 -> in the upper right search for fhcrc.org
 and then click Remove all shown and restart Chrome
 
-
-## Future 
-
-TBD
