@@ -70,6 +70,14 @@ to
 
     --partition=campus-new
 
+The `largenode` partition is being retired in the Bionic environment.  If your job requests the `largenode` partition (and associated memory and core requests) you will need to update the request- the memory request is no longer required and the minimum core request has also been removed.  For example:
+
+    --partition=largenode -c 6 --mem=32000
+
+should be updated to:
+
+    --partition=campus-new -c 6
+
 > IMPORTANT: Submitting jobs to `campus` and `largenode` from Bionic nodes will result in errors.  Please see below if you still need to use Trusty resources.
 
 ### <a name="using-trusty"></a>Using Trusty Hosts
