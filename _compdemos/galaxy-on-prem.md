@@ -37,16 +37,16 @@ New Install: Enter a name for the Galaxy instance: brandnew
 
 A few minutes after the installation has been started you receive an email like this:
 
-![](assets/2020-06-17-01-10-04.png)
+![]({{ site.baseurl }}/compdemos/assets/2020-06-17-01-10-04.png)
 
 Now you wait about 30 min. If you click on the link before Galaxy has finished installing you will see a proxy error: 
 
-![](assets/2020-06-17-01-12-09.png)
+![Proxy Error]({{ site.baseurl }}/compdemos/assets/2020-06-17-01-12-09.png)
 
 
 Try again after a while. Then you should see the Galaxy login screen. Use your HutchnetID and password to login to the Galaxy interface:
 
-![](assets/2020-06-17-01-19-43.png)
+![Login Screen]({{ site.baseurl }}/compdemos/assets/2020-06-17-01-19-43.png)
 
 
 To terminate the Galaxy instance just type Ctrl+c twice inside the terminal Window. It will cancel the cluster job that runs Galaxy. 
@@ -58,7 +58,7 @@ When using Chrome, you might see this error message:
 
 "Wrong session Token found." 
 
-![Error with Chrome](assets/2020-06-17-01-03-11.png)
+![Error with Chrome]({{ site.baseurl }}/compdemos/assets/2020-06-17-01-03-11.png)
 
 To fix the issue please reset all fhcrc.org Cookies from your Chrome browser or use a new incognito window or use a different browser such as Firefox.
 
