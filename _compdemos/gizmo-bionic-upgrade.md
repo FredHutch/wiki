@@ -62,7 +62,15 @@ All of the NoMachine services will be migrated to the new Bionic Rhino nodes.  T
 
 ### Batch Computing
 
-No changes to job submission will be required when submitting from one of the Bionic Rhino nodes.  The new default partition for the `gizmo` cluster will contain only these new hosts.
+The partition `campus-new` contains the new Bionic nodes.  This is the default partition for the cluster as of 17 June.  If your job does specify the `campus` partition in its options, you will need to update the partition when submitting jobs from Bionic hosts.  For example, change:
+
+    --partition=campus
+
+to
+
+    --partition=campus-new
+
+> IMPORTANT: Submitting jobs to `campus` and `largenode` from Bionic nodes will result in errors.  Please see below if you still need to use Trusty resources.
 
 ### <a name="using-trusty"></a>Using Trusty Hosts
 
