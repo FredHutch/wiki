@@ -74,9 +74,11 @@ The `largenode` partition is being retired in the Bionic environment.  If your j
 
     --partition=largenode -c 6 --mem=32000
 
-should be updated to:
+can be updated to:
 
     --partition=campus-new -c 6
+
+If your job has high memory requirements it is necessary to request more than four cores to ensure your job will be assigned a node with a large memory configuration.  Minimally we ask that you ask for at least 1 core for every 4 GB of memory required by your job.
 
 > IMPORTANT: Submitting jobs to `campus` and `largenode` from Bionic nodes will result in errors.  Please see below if you still need to use Trusty resources.
 
