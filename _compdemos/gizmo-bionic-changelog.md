@@ -6,6 +6,26 @@ primary_reviewers: atombaby
 
 ## Changes to Bionic Nodes
 
+### 23 June 2020
+
+#### New Local Packages
+
+These packages have been added to the OS:
+  - wkthmltopdf
+  - libv8
+
+#### Update SSH Daemon Config
+
+Add the parameter "ClientAliveInterval" to have the SSH daemon check for client activity every 20 seconds.  This should prevent idle connection timeouts (i.e. "Broken pipe" disconnections).
+
+#### Kernel Tuning
+
+Increase `vm.max_map_count` to 655360 (roughly 10x of default value) for MaxQuant jobs.
+
+#### Node Exporter
+
+Added node exporter for custom monitoring of hosts and services
+
 ### 16 June 2020
 
 #### New Local Packages
