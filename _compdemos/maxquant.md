@@ -162,9 +162,17 @@ Create a script with the following contents using your favorite text editor and 
 #SBATCH -n 1
 # Number of cores per task, CHANGE THIS:
 #SBATCH -c 24
+# Amount of memory to use. CHANGE THIS to what you need:
+#SBATCH --mem 250G
+# Number of days to let the job run. CHANGE THIS. 
+# In this case, 3 is the number to change:
+#SBATCH -t 3-0
+
 
 source /app/lmod/lmod/init/bash
 module use /app/easybuild/modules/all
+
+ulimit -n 655360
 
 # Here's the name of the MaxQuant module to load.
 # This may change over time as new versions become available.
@@ -176,7 +184,8 @@ maxquantcmd mqpar.xml
 
 ```
 
-On the line below where it says `CHANGE THIS`, be sure and change the value `24` to the number of data files that you have (which will end up being the number of CPU cores your job uses). If you have more than 36 data files, set this number to 36.
+Be sure and change all values where it says `CHANGE THIS`, unless the values set are ok with you.
+For CPU cores, set this to the number of data files you have (unless you have more than 36 data files, in which case, set this to 36).
 
 Now, on rhino01, after changing to the directory where your XML and data files live, type the following command:
 
