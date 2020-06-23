@@ -67,3 +67,8 @@ git merge master       # If there are local changes
 git branch -d master   # Deletes the local branch
 ```
 
+## Notes
+
+### GitHub Pages
+
+If you are building a website with GitHub Pages you can't change the branch name from "master".  Currently this feature will only build from branches named "master" or "gh-pages".
