@@ -2,6 +2,8 @@
 
 > Use this process to change the default branch name both on the local checkout and on the GitHub source.  [See Also](https://www.cnet.com/news/microsofts-github-is-removing-coding-terms-like-master-and-slave/).
 
+> WARNING: Make sure you understand the impacts of changing the default branch.  If you have automation of any kind, CI/CD, and/or Wiki pages (for example GitHub pages) you'll want to approach this process cautiously as often times these processes depend on the branch name "master".
+
 ### Change Branch Name
 
 Make sure your checkout is current:
