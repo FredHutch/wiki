@@ -5,6 +5,8 @@ main_author: Sam Minot & Dan Tenenbaum
 primary_reviewers: dtenenba
 ---
 
+> Note:  Cloud computing is getting a wee overhaul.  Please see our up to the minute updates in [our Resource Library entry](/compdemos/cloudMigration/).
+
 The Hutch is just getting started with cloud computing.  Options like the `beagle` and `koshu` clusters, while built _in_ the cloud, are very much a simple extension of existing infrastructure into cloud providers but does not fully or particularly efficiently utilize the real capabilities and advantages provided by cloud services.
 
 If you are at all interested or curious about cloud solutions and would like to talk over options, Scientific Computing hosts a cloud-specific office hours every week.  Dates and details for SciComp office hours can be found in
