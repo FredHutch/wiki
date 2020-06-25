@@ -9,15 +9,20 @@ a remote computing resource available to researchers at Fred Hutch.
 It assumes you have basic familiarity with navigating the command line using Unix commands like `cd`, `ls`, and `pwd`,
 and are connecting via a shell or equivalent emulator:
 on Mac, this would be Terminal;
-on Windows, this would be something like [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or Git bash, a part of [Git for Windows](https://gitforwindows.org).
+on Windows, this would be something like [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or Git bash,
+a part of [Git for Windows](https://gitforwindows.org).
 
 The basic process below below includes:
 
-- Logging on to `snail` (required if you are out of the Fred Hutch network)
+- Logging on to `snail` (one option for connecting remotely)
 - Logging on to `rhino`
 - Grabbing a node to run an interactive job
 - Loading software
 - Exiting out of everything
+
+> This tutorial uses `snail` as the method for accessing the Fred Hutch campus network.
+This step is unnecessary if you are already connected to the network (such as through VPN).
+For more information about remote login, please see [Access via a remote login](https://sciwiki.fredhutch.org/scicomputing/access_methods/#access-via-a-remote-location).
 
 ## Command prompts
 
@@ -64,16 +69,16 @@ You'll be ready to start entering commands when you see a prompt like the follow
 
     username@rhino2:~$
 
-
 ## Logging on outside of the Fred Hutch network
 
 Logging in to `rhino` as described above assumes you are already connected to the Fred Hutch network.
 If you are off campus,
-you will need to first connect to the campus network
-using either VPN or `snail`.
+you will need to first connect to the campus network.
+Here we describe the use of `snail` for remote login,
+since it doesn't require the use of additional software beyond what it already included in the tutorial.
+VPN may be a preferrable option for you,
+especially if you are already using it to access other Hutch resources.
 For more information about remote login, please see [Access via a remote login](https://sciwiki.fredhutch.org/scicomputing/access_methods/#access-via-a-remote-location).
-Here we describe the use of `snail`,
-since it uses the same software as logging on within-network.
 
 In your shell,
 type the following (username is your HutchNetID):
@@ -97,7 +102,6 @@ you can use the following shortcut to log on to `rhino`:
 
 Follow the process as [described above](#within-the-fred-hutch-network)
 to enter your password and access `rhino`.
-
 
 ## Logging on to `gizmo` via `grabnode`
 
@@ -130,7 +134,6 @@ You can interact with your directories the same as you would normally,
 but now your commands will run on a part of the cluster allocated to you specifically.
 See [this documentation](https://sciwiki.fredhutch.org/compdemos/howtoRhino/#guidance-for-use)
 for more information on when to use `grabnode`.
-
 
 ## Loading software
 
@@ -173,11 +176,16 @@ For more information on using the module system,
 please see the [Computing Environments page](https://sciwiki.fredhutch.org/scicomputing/compute_environments/),
 and you can view lists of available software on the [Scientific Software page](https://fredhutch.github.io/easybuild-life-sciences/).
 
-
 ## Logging out
 
 Once you are done working on the cluster,      
 you should log out.
+
+> If you still have a command running,
+logging out will stop the process.
+See [Moving beyond the basics](#moving-beyond-the-basics)
+for available solutions to this limitation.
+
 The process for logging out depends how you've logged on when starting to work.
 In general, you'll need to type `exit` to end each session you started.
 You can tell what session using the information in the command prompt.
@@ -204,8 +212,11 @@ You'll need to `exit` once more to leave the Fred Hutch network and see your com
 ## Moving beyond the basics
 
 This demo covers the basic process of logging on and using resources for the first time.
-
-For more information on different types of compute nodes, connections with storage,
-and running other applications (like RStudio),
-please see [How to `rhino`](/compdemos/howtoRhino/).
-For information on batch computing and associated limits/recommendations, please see [How to `gizmo`](/compdemos/howtoGizmo).
+Once you are comfortable with the basic process,
+you should look at the complete documentation on [Large Scale Computing](https://sciwiki.fredhutch.org/scicomputing/compute_overview/)
+for information on more advanced tasks, like:
+- executing batch jobs using `slurm`,
+including limits and recommendations for creating scripts
+- using `screen` or `tmux` to keep processes executed on the command line,
+even after you've logged off
+- running applications like RStudio
