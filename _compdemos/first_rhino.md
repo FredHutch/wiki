@@ -123,8 +123,13 @@ When prompted:
 - hit `Enter` to select the default for memory
 - type 1 for number of days
 
-When requesting resources for your own work,
+A few extra pieces of information for new users:
+- When requesting resources for your own work,
 choose appropriate selections to suit the needs of the task.
+If you aren't sure you need more than one CPU,
+you almost certainly do not.
+- There is not currently a way to execute `grabnode` with flags;
+you are required to use the interactive questions.
 
 You'll note your command prompt will switch to say `gizmo` instead of `rhino`:
 
