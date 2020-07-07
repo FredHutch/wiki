@@ -6,6 +6,20 @@ primary_reviewers: atombaby
 
 ## Changes to Bionic Nodes
 
+### 7 July 2020
+
+#### New Local Packages
+
+These packages have been added to the OS:
+  - wkhtmltox (replaces wkthmltopdf)
+  - finger
+  - msodbcsql
+  - "atom" editor (session servers only- rhino)
+
+#### Slurm Node Features
+
+We've added new friendly names for node constraints (i.e. arguments to the Slurm option `--constraint=`).  You can now use the short name to get the desired node class, for example `--constraint=gizmok` to limit your jobs to K class nodes.
+
 ### 23 June 2020
 
 #### New Local Packages
