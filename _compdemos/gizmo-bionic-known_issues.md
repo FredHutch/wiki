@@ -34,7 +34,7 @@ If local libraries and binaries are necessary, rebuild these on a G class node. 
 
 _Gizmo_ contains a number of different processor types- each of these come with different capabilities which can be exploited by the compilation process when binary objects are produced.  This results in a binary object which may not be usable on platforms which have processors lacking that capability.  For example, if node A has a processor with a feature "neato" and a binary is compiled on that node, when that binary is used on a different node (lacking "neato") it will attempt to use that feature and fail.
 
-While R and Python are scripted, many libraries/modules produce binary objects which improve performance.
+While R and Python are interpreted languages, many libraries and modules produce binary objects.
 
 The workaround (assuming Lmod environment tools won't work and local binaries are needed) is to build these objects on a host with the least number of features.  Currently that is the G class nodes though as F class are adopted we may have to re-evaluate this workaround.
 
