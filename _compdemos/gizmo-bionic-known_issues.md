@@ -14,6 +14,8 @@ primary_reviewers: atombaby
 
 #### Behavior and Errors
 
+> The full scope of this problem is not yet known.  The information and workarounds represent our current understanding of the issues.
+
 You may get errors indicating:
 
  - segmentation faults
@@ -22,21 +24,19 @@ You may get errors indicating:
 
 These errors occur with some R libraries, some Python modules, and other binaries when those objects are compiled on K nodes and run on other nodes (e.g. G class).
 
-> The full scope of this problem is not yet known.
-
 #### Work Arounds / Fixes
 
-Use Lmod modules whenever possible- these are built in a "lowest common capability" environment so should run on any node.
+ - Use Lmod modules whenever possible- these are built in a "lowest common capability" environment so should run on any node.  Contact SciComp to get tools and libraries built and incorporated into Lmod
 
-If local libraries and binaries are necessary, rebuild these on a G class node.  First move or remove directories containing binaries in your paths (e.g. `~/R` for R libraries, `~/.local` for Python) and then rebuild using a G class bionic node.
+ - Restrict jobs to run on K class nodes with Slurm option `--constraint=gizmok`.  Note that this will restrict the number of nodes your jobs can use and will reduce overall throughput and increase wait time.
+
+ - If local libraries and binaries are necessary and the constraint is undesirable, rebuild these on a G class node.  First move or remove directories containing binaries in your paths (e.g. `~/R` for R libraries, `~/.local` and `~/.cache/pip` for Python) and then install desired libraries in a session on a G class bionic node.
 
 #### Discussion
 
-_Gizmo_ contains a number of different processor types- each of these come with different capabilities which can be exploited by the compilation process when binary objects are produced.  This results in a binary object which may not be usable on platforms which have processors lacking that capability.  For example, if node A has a processor with a feature "neato" and a binary is compiled on that node, when that binary is used on a different node (lacking "neato") it will attempt to use that feature and fail.
+_Gizmo_ contains a number of different processor types- each of these come with different capabilities which can be exploited by the compilation process when binary objects are produced.  This results in a binary object which may not be usable on platforms which have processors lacking that capability.  At this time we believe the [AVX-512](https://en.wikipedia.org/wiki/AVX-512) extensions are the features that are causing compatibility issues- these extensions are available on K nodes but not on G or F nodes.
 
 While R and Python are interpreted languages, many libraries and modules produce binary objects.
-
-The workaround (assuming Lmod environment tools won't work and local binaries are needed) is to build these objects on a host with the least number of features.  Currently that is the G class nodes though as F class are adopted we may have to re-evaluate this workaround.
 
 ### "Terminator" Does Not Start in NX Session
 
