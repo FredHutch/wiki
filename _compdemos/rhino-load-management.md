@@ -16,7 +16,7 @@ This document describes what you can expect from this new system.
 
 Arbiter runs in the background, configuring [cgroups](https://www.kernel.org/doc/Documentation/cgroup-v1/cgroups.txt) for logged-in users.  These cgroups put limits on how much CPU and memory any one user can use.  Arbiter allows us to put generous limits on user sessions that are then restricted should a user exceed usage limits.  This has the effect of slowing down- rather than killing- processes and allows the user to correct and end processes in a graceful fashion.
 
-This effectively allows you to "burst" briefly without incuring any great penalty.  But should your high usage continue, Arbiter will restrict available resources.
+This effectively allows you to "burst" CPU briefly without incuring any great penalty.  But should your high usage continue, Arbiter will restrict available resources.
 
 ## Notifications
 
@@ -24,7 +24,7 @@ Notifications will be delivered to your email.  These will indicate that Arbiter
 
 > You now have the status penalty2 because your usage has exceeded the thresholds for appropriate usage on the node. Your CPU usage is now limited to 60% of your original limit (4.0 cores) for the next 60 minutes. In addition, your memory limit is 755% of your original limit (86.0 GB) for the same period of time.
 
-Currently the memory limit is buggy- the percentage isn't getting calculated properly.
+Currently the memory limit indicated in this email is incorrect- the percentage isn't getting calculated properly.
 
 ## What Happens
 
@@ -42,3 +42,7 @@ In each of those phases your processes will be kept for the amount of time indic
 | penalty2  | 4 cores (480%)   | 86GB        | 60m    |
 
 Once you have reduced your utilization below the threshold of the penalty phase you are in, your processes will have those more restrictive limits removed.
+
+## Special Note on Memory
+
+The limit on memory is a hard limit, meaning that you will get errors from your applications if your total memory use would exceed the limit indicated in the table above
