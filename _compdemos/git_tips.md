@@ -86,3 +86,9 @@ git branch -d master   # Deletes the local branch
 If you are building a website with GitHub Pages you can't change the branch name from "master" unless you choose the option to build from a branch called 'gh-pages'. The options to build your site from the `master` branch or the `docs/` folder both require the branch to be called "master".  
 
 ## Rebasing with `git`
+
+FIXME
+
+## Comparison of `git` Interfaces
+
+FIXME
