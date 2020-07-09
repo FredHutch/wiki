@@ -1,23 +1,32 @@
-## Changing the Default Branch for GitHub Managed Repositories
+---
+title: Changing the Default Branch for GitHub Managed Repositories
+primary_reviewers: atombaby, vortexing 
+---
 
 > Use this process to change the default branch name both on the local checkout and on the GitHub source.  [See Also](https://www.cnet.com/news/microsofts-github-is-removing-coding-terms-like-master-and-slave/).
 
 > WARNING: Make sure you understand the impacts of changing the default branch.  If you have automation of any kind, CI/CD, and/or Wiki pages (for example GitHub pages) you'll want to approach this process cautiously as often times these processes depend on the branch name "master".
 
-### Change Branch Name
+## Change Branch Name
+### Via `git`
 
 Make sure your checkout is current:
-
+```
     git pull
     git push
-
+```
 Rename the branch:
-
+```
     git branch -m master main
-
+```
 Push branch upstream:
-
+```
     git push -u origin main
+```
+### In GitHub
+When creating a new repository in GitHub, you can immediately create a new branch from your repo, name it `main` or `base` or whatever works for your team.  (You may find you will need to commit some minor change in order to do this.)  Then go to the Repository *Settings* tab, choose the *Branches* option in the list on the left.  You will see an option to select a branch and then set that branch as the Default branch.  Once your new branch is created and set to default, you can safely delete the `master` branch.
+
+If you have an existing repository, a similar process can be performed (create a new branch from master, possibly commit a small change, set branch as default, then delete the master), but you will need to read below and communicate the change to all contributors prior to doing this.  
 
 #### Discussion
 
@@ -49,9 +58,9 @@ There is a command line option for updating GitHub's default branch, but it invo
 ### Delete Old Branch
 
 Since GitHub "sees" the rename of the branch as simply a new branch, it is necessary to remove the old branch from the GitHub repository.  Deleting the branch isn't possible (since the old name "master" doesn't exist anymore).  This is accomplished by pushing an empty reference to the old branch name:
-
+```
     git push -u origin :master
-
+```
 #### Discussion
 
 **Important:** this will delete the branch- and any changes on that branch- when executed.
@@ -73,4 +82,4 @@ git branch -d master   # Deletes the local branch
 
 ### GitHub Pages
 
-If you are building a website with GitHub Pages you can't change the branch name from "master".  Currently this feature will only build from branches named "master" or "gh-pages".
+If you are building a website with GitHub Pages you can't change the branch name from "master" unless you choose the option to build from a branch called 'gh-pages'. The options to build your site from the `master` branch or the `docs/` folder both require the branch to be called "master".  
