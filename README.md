@@ -149,24 +149,42 @@ You may want to build a copy of this wiki locally (on your own computer) to make
 ### Steps
 
 1. clone the repo somewhere
+1. `cd` to the directory where the repo is cloned
+
+At this point there are two different methods you can use to build the site.
+
+#### Method 1: Docker
+
+If you have Docker installed, run:
+
+```
+./docker-build.sh
+```
+
+#### Method 2: Local build without Docker
+
 1. Install Ruby (version 1.9.2 or later).
 **Note**: most modern Mac computers already have Ruby installed. If you still need Ruby,
 it can be found [here](https://www.ruby-lang.org/en/downloads/).
 1. On Mac, install xcode commandline tools `xcode-select --install`
-
 1. You may need to install `bundler`. Type
    `which bundler` to see if it is already
    installed. If nothing is returned, then
    install `bundler` with `gem install bundler`.
    If that fails, try `sudo gem install bundler`.
-   
-1. You may need to install gems used by the site.
-   Type `gem install -g Gemfile` to install all of the gems the site uses.
 
-1. To build and view the site locally, from the cloned repo directory run
-   `bundle install` then run `bundle exec jekyll serve`. Once the
-   site is built you can view it at
-   [http://localhost:4000](http://localhost:4000).
+
+Now run
+
+```
+./build.sh
+```
+
+#### View the built site
+
+With both methods, you should be able to see the 
+built site (once the build is done) by going to
+[http://localhost:7979](http://localhost:7979) in your browser.
 
 
 ## Checking for broken links
@@ -177,13 +195,7 @@ links and the files they are found in.
 
 If you are inside the Fred Hutch network, you can type
 `rake testlocal` and that will include internal URLs
-in the check (these are normally excluded because CircleCI does
-not have access to them).
-
-You can also look at the most recent
-[CircleCI build](https://circleci.com/gh/FredHutch/wiki) to see
-the list of broken links.
-
+in the check.
 
 ## For Admins (everyone else, please do not edit these as your edits will be ignored/removed)
 
