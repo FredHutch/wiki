@@ -10,4 +10,4 @@ HPC Systems Engineer
 
 
 ## Contribution Domain and Type
-Computing - editing and editing
+Computing - writing and editing
