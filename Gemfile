@@ -12,6 +12,7 @@ group :development, :test do
   gem 'jekyll-gist', '~> 1.5.0'
   gem 'jekyll-remote-theme', '~> 0.3.0'
   gem 'jemoji', '~> 0.10.0'
-  gem 'html-proofer', '~> 3.9.0'
+  gem 'html-proofer', '~> 3.14.0'
   gem 'rake', '~> 12.3.0'
+  gem 'faraday', '~> 0.17'
 end
