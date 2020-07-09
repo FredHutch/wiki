@@ -1,14 +1,16 @@
 ---
-title: Changing the Default Branch for GitHub Managed Repositories
-primary_reviewers: atombaby, vortexing 
+title: Tips and tricks for Git and GitHub
+primary_reviewers: atombaby, vortexing, k8hertweck
 ---
 
-> Use this process to change the default branch name both on the local checkout and on the GitHub source.  [See Also](https://www.cnet.com/news/microsofts-github-is-removing-coding-terms-like-master-and-slave/).
+## Changing the Default Branch for GitHub Managed Repositories
+
+Use this process to change the default branch name both on the local checkout and on the GitHub source.  [See Also](https://www.cnet.com/news/microsofts-github-is-removing-coding-terms-like-master-and-slave/).
 
 > WARNING: Make sure you understand the impacts of changing the default branch.  If you have automation of any kind, CI/CD, and/or Wiki pages (for example GitHub pages) you'll want to approach this process cautiously as often times these processes depend on the branch name "master".
 
-## Change Branch Name
-### Via `git`
+### Change Branch Name
+#### Via `git`
 
 Make sure your checkout is current:
 ```
@@ -23,12 +25,6 @@ Push branch upstream:
 ```
     git push -u origin main
 ```
-### In GitHub
-When creating a new repository in GitHub, you can immediately create a new branch from your repo, name it `main` or `base` or whatever works for your team.  (You may find you will need to commit some minor change in order to do this.)  Then go to the Repository *Settings* tab, choose the *Branches* option in the list on the left.  You will see an option to select a branch and then set that branch as the Default branch.  Once your new branch is created and set to default, you can safely delete the `master` branch.
-
-If you have an existing repository, a similar process can be performed (create a new branch from master, possibly commit a small change, set branch as default, then delete the master), but you will need to read below and communicate the change to all contributors prior to doing this.  
-
-#### Discussion
 
 In this example I'm renaming the branch "master" to "main".  Performing a "pull/push" at the start of the process isn't _strictly_ necessary, but is definitely a good habit to have.
 
