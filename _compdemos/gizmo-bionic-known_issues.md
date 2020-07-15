@@ -6,6 +6,8 @@ primary_reviewers: atombaby
 
 ## Known Issues in the Bionic Environment
 
+This is a summary list of the most apparent issus and limitations in the new Bionic environment.  More information on issues we are working on may be found in the [GitHub project](https://github.com/FredHutch/scicomp-todo/projects/5).
+
 ### Binary Incompatibility Between Node Classes
 
 | Last Update  | Update By  |
@@ -71,3 +73,34 @@ Start `terminator` with the `-u` option.  The menu item can be updated by starti
 Unfortunately the Terminator project has been unmaintained until recently. Updates to underlying systems (in this case Dbus) have not been incorporated into terminator, resulting in this error.
 
 This has been [noted](https://github.com/gnome-terminator/terminator/pull/88) by those who have picked up maintenance of the project and a fix is in the works for version 2.  When this becomes available we will update the NX servers with this release.
+
+### SSH Host Key Changed for Rhino
+
+| Last Update  | Update By  |
+|--------------|------------|
+| 2020-06-17   | mrg        |
+
+#### Behavior and Errors
+
+The host key for the name "rhino" has changed as the name now points to a new host.  This results in rather ominous messages suggessting that "spoofing" is going on.  The new key fingerprint is:
+
+     SHA256:Hd8BcmYflVY41wvC6W0ati0Qhc8OrhfE0jbuPVvUuyg.
+
+#### Work Arounds / Fixes
+
+Remediation steps are platform and SSH client specific, but generally can be resolved by reviewing the documentation for your client on how to update "known hosts".  General steps are provided [here](https://sciwiki.fredhutch.org/compdemos/ssh_host_key_management/)
+
+### Hostname "gizmo" Retired
+
+| Last Update  | Update By  |
+|--------------|------------|
+| 2020-06-17   | mrg        |
+
+
+#### Behavior and Errors
+
+The hostname "gizmo" was a round-robin alias for the rhino nodes.  This has been removed from DNS.  Attempts to connect to this host will result in an error like "No such host" or "Temporary failure in name resolution"
+
+#### Work Arounds / Fixes
+
+Use the host name "rhino" to connect to the rhino hosts.
