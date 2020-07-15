@@ -224,15 +224,13 @@
   url: _compdemos/Docker.md
 - dlm: October 10, 2019
   url: _compdemos/ingest-Large-Data.md
-- dlm: June 17, 2020
-  url: _compdemos/gizmo-bionic-issues.md
 - dlm: June 11, 2020
   url: _compdemos/motuz.md
 - dlm: June 9, 2020
   url: _compdemos/cluster_koshuBeta.md
 - dlm: May 14, 2020
   url: _compdemos/Checkpointing-Gizmo.md
-- dlm: July 8, 2020
+- dlm: July 15, 2020
   url: _compdemos/gizmo-bionic-known_issues.md
 - dlm: September 26, 2018
   url: _compdemos/vscode_markdown_howto.md
