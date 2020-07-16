@@ -8,6 +8,8 @@ and assumes you have a basic understanding of how these tools work.
 For a general explanation of Git and GitHub,
 please see [Managing and Sharing Code](/scicomputing/software_managecode/)
 and/or fredhutch.io's course [Introduction to Git and GitHub](http://www.fredhutch.io/resources/#introduction-to-git-and-github).
+For an explanation of how to apply our Fred Hutch theme to other websites hosted by GitHub,
+see [this demo](/compdemos/github_pages_FHtheme/).
 
 ## Changing the Default Branch for GitHub Managed Repositories
 
@@ -91,4 +93,28 @@ FIXME
 
 ## Comparison of `git` Interfaces
 
-FIXME
+[GitHub.com](https://docs.github.com/en/github): online interface, operates in a web browser
+
+[GitHub Desktop](https://docs.github.com/en/desktop)
+
+`git` [command line](https://git-scm.com/docs)
+
+[GitKraken](https://www.gitkraken.com)
+
+Integration with other software/IDEs (integrated development environments):
+- [RStudio](https://rstudio.com/products/rstudio/download/) is an IDE primarily for coding in R.
+Information on its integration with git is available [here](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
+- [Atom](http://atom.io) is an IDE
+useful for working with multiple programming languages,
+and has optional packages to support Git.
+More information on the main package can be found [here](https://atom.io/packages/git-gui).
+- [Visual Studio Code](https://code.visualstudio.com) is an IDE also capable of handling multiple programming languages,
+and is the preferred interface for the Hutch's Scientific Computing group.
+A description of its git interface is available [here](https://code.visualstudio.com/docs/editor/versioncontrol).
+More info on specific use in relation to Python is [here](https://sciwiki.fredhutch.org/scicomputing/software_python/#visual-studio-code).
+- [PyCharm](https://www.jetbrains.com/pycharm/) is an IDE primarily for Python.
+Information on its integration with git is [here](https://www.jetbrains.com/help/pycharm/using-git-integration.html#set-passwords-for-git-remotes);
+more info on specific use in relation to Python is [here](https://sciwiki.fredhutch.org/scicomputing/software_python/#pycharm)
+- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/index.html) is an interface for improving interactions with Jupyter notebooks.
+Information on JupyterLab's extension for git is [here](https://github.com/jupyterlab/jupyterlab-git);
+more info on specific use in relation to Python is [here](https://sciwiki.fredhutch.org/scicomputing/software_python/#jupyter-notebooks).
