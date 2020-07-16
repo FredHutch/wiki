@@ -92,3 +92,19 @@ FIXME
 ## Comparison of `git` Interfaces
 
 FIXME
+
+## To Fork or Not to Fork?
+What a question!  Different GitHub repositories will have different procedures for how to contribute to them.  Ideally these procedures are outlined in the README or in the CONTIBUTING markdowns inside the repository itself, though sometimes they are less well documented.  When a GitHub repository is created, you have the option to allow or disallow forking (the default is currently to allow forking).  You also can limit who can make a branch on the repository and additional branch/user access limitations via options in the Settings tab, for `Managing Access` or `Branches`.  There are many options to control how users can interact with a repo that are far too extensive to discuss here.  
+
+### Fork!  
+When a user forks a repo, it creates a duplicate repository that is administered by the user themselves and shows up in their own user's list of repo's.  This allows the user to make any changes desired on their own version of the repo but then requires a pull request from the forked repo TO the original repo in order to contribute any commits back to the original repo. Reasons you would want to fork a repo include:
+
+- You want to retain a copy of the content for your editing and use even if the original repository were to be deleted, or made private;
+- You want to create a "flavor" of the content for your own use, but continue to have the ability to pull new changes and updates made in the original repository into your version to benefit from future fixes and improvements (note: this means you may need to address any future conflicts those changes might make with your edits);
+- You want to contribute to a repository that does not allow you to make a branch on the original repo;
+
+
+### Not to Fork!
+When a repo is set to prevent forking, it clearly is not an option.  In that case, you may investigate whether that is because it is intended that users contribute directly to the repository by way of branching instead.  Or it could be that both avenues are restricted, in which case you likely won't have options for contributing.  If a repository is set up such that your user has the permissions to create a branch and push commits to it, then you'll be able to contribute your content directly to the original repo!  This often occurs when groups are collaborating on the same content, and commonly assumes that the main branch of the repository where software releases are tagged is limited so that users are prevented from committing to a branch that would break something like a CI build or something.  
+
+This repo is an example of one that has it's permissions set to allow any user from an accepted group (in this case, all of the Fred Hutch team users) to create a branch of the repo itself.  This means that even if the main branch of the repository might be restricted, all accepted users can push to remote branches of the repository, including those that have commits from other users.  For this repo, when collaborative editing is the primary focus, the ideal scenario is to not create a fork.  The reason for this is that if you create edits in a fork.  
