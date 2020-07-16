@@ -87,9 +87,32 @@ git branch -d master   # Deletes the local branch
 
 If you are building a website with GitHub Pages you can't change the branch name from "master" unless you choose the option to build from a branch called 'gh-pages'. The options to build your site from the `master` branch or the `docs/` folder both require the branch to be called "master".  
 
-## Rebasing with `git`
+## Rebasing
 
-FIXME
+Rebasing in Git refers to adding a collection of commits to another branch.
+It is most commonly used prior to merging a pull request,
+when there are changes to the base branch that were made after the comparison branch was created.
+It is often desirable to address any potential conflicts that may have emerged from continued work on parallel branches prior to merging the comparison branch.
+For diagrams and additional use cases for rebasing,
+we recommend [this article](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase).
+
+We find it easiest to perform rebases using GitKraken
+(but see the [section below](#comparison-of-git-interfaces) for more interfaces for working with git).
+In GitKraken,
+please make sure your working branch
+(e.g., the branch you have currently checked out)
+is the branch you would like to update from another branch (this is likely the default or deployment branch for the repository).
+Right click on the branch holding commits you would like to update.
+You'll see an option in the menu for
+"Rebase *branch* onto *this branch*",
+where *branch* is your current working branch
+(to which changes will be added)
+and *this branch* is the branch containing changes you would like to include in your working branch.
+It's worth noting that GitKraken refers to pulling changes from a remote repository to be a "rebase".
+This makes sense because pulling adds commits from a different copy of your repository to your local copy.
+Rebase is different from merging,
+because the latter actually creates a *new* commit in the version history.
+Rebasing does not create a new commit unless there are conflicts that require reconciliation.
 
 ## Comparison of `git` Interfaces
 
