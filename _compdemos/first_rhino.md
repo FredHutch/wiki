@@ -106,7 +106,7 @@ to enter your password and access `rhino`.
 ## Logging on to `gizmo` via `grabnode`
 
 When you log on to the cluster,
-all commands you run are limited by the compute resources associated with your default login
+all commands you run are limited by the compute resources associated with your PI.
 (and by the cluster being shared by many people!).
 It's good etiquette, and often a necessity,
 to request your own node for additional tasks.
@@ -130,6 +130,7 @@ If you aren't sure you need more than one CPU,
 you almost certainly do not.
 - There is not currently a way to execute `grabnode` with flags;
 you are required to use the interactive questions.
+- If you get an error like "Invalid Account" it indicates that your association to a PI account has not been completely set up- contact Scientific Computing.
 
 You'll note your command prompt will switch to say `gizmo` instead of `rhino`:
 
