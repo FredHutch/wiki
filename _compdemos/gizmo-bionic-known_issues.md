@@ -104,3 +104,26 @@ The hostname "gizmo" was a round-robin alias for the rhino nodes.  This has been
 #### Work Arounds / Fixes
 
 Use the host name "rhino" to connect to the rhino hosts.
+
+### R Version 3.6 and Earlier
+
+| Last Update  | Update By  |
+|--------------|------------|
+| 2020-07-21   | mrg        |
+
+#### Behavior and Errors
+
+When you have loaded R versions earlier than 3.6.2 (e.g. R/3.6.0-foss-2018b) you may get errors complaining about undefined symbols or other arcane messages with software installed by the operating system.  For example, `eog`:
+
+```
+rhino02[~]: eog
+eog: symbol lookup error: /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0: undefined symbol: g_log_structured_standard
+```
+
+#### Work Arounds / Fixes
+
+Use the module `R/3.6.2-foss-2019b` or `R/3.6.2-foss-2019b-fh1` for R version 3.6.  For even earlier versions you will need to purge the module before running the conflicting software.
+
+#### Discussion
+
+The problem lies within the toolchain used to compile these earlier versions of R and other modules- specifically the module `GCC/7.3.0-2.30` which contains libraries that conflict with OS libraries used by those OS packages.
