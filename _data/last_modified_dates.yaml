@@ -198,7 +198,7 @@
   url: _compdemos/R_tips_tricks.md
 - dlm: May 7, 2020
   url: _compdemos/rslurm_intro.md
-- dlm: July 2, 2020
+- dlm: July 20, 2020
   url: _compdemos/first_rhino.md
 - dlm: June 18, 2020
   url: _compdemos/ssh_host_key_management.md
@@ -308,11 +308,11 @@
   url: _scicomputing/store_databases.md
 - dlm: July 2, 2020
   url: _scicomputing/compute_overview.md
-- dlm: May 21, 2020
+- dlm: July 20, 2020
   url: _scicomputing/access_credentials.md
 - dlm: June 2, 2020
   url: _scicomputing/reference_training.md
-- dlm: June 12, 2020
+- dlm: July 20, 2020
   url: _scicomputing/compute_platforms.md
 - dlm: November 21, 2019
   url: _scicomputing/store_posix.md
