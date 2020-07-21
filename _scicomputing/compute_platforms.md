@@ -35,7 +35,7 @@ While we generally don't recommend interactive computing on the HPC clusters- in
 
 If you need an interactive session with dedicated resources, you can start a job on the cluster using the command `grabnode`.  The `grabnode` command will start an interactive login session on a cluster node.  This command will prompt you for how many cores, how much memory, and how much time is required
 
-This command can be run from any `rhino` host.
+This command can be run from any `rhino` host.  Access to the Gizmo cluster requires both a HutchNet ID and an association to a PI account on the cluster.  If you get errors like "Invalid account" when using `grabnode` or Slurm commands like `sbatch` then you will need to contact Scientific Computing to have that set up.
 
 ### NoMachine Access
 
