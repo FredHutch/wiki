@@ -31,11 +31,16 @@ One issue to note when using GitHub to do version control in your code is that i
 
 ## Amazon Web Services (AWS)
 
-You can obtain [Amazon Web Services](https://aws.amazon.com/) (AWS) credentials to make use of the Center's AWS account. By default this will give you access to your lab's S3 bucket, but you can request permission (by emailing `scicomp@`) to use other services such as _AWS Batch_.  AWS credentials are designated per user, so any Fred Hutch employee should obtain their own credentials.
+[Amazon Web Services](https://aws.amazon.com/) (AWS) credentials are required to use AWS.
+AWS credentials are designated per user,
+so any Fred Hutch employee should obtain their own credentials.
+Each lab has their own AWS account,
+allowing access to both data storage (e.g., the lab's S3 bucket)
+and compute (e.g., _AWS Batch_).
 
 >Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `scicomp` to request support from [Scientific Computing](https://centernet.fredhutch.org/cn/u/center-it/cio/scicomp.html).
 
-There are two ways to get AWS credentials. Which one to use depends on how you will use AWS, either via the command line on `rhino`/`gizmo` or via graphical programs on your local computer such as via Cyberduck or Mountain Duck.
+There are two ways to get AWS credentials. Which one to use depends on how you will use AWS, either via the command line (on `rhino`/`gizmo`) or via graphical programs on your local computer such as Cyberduck or Mountain Duck.
 
 
 ### Command Line (Rhino/Gizmo) Instructions
