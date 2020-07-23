@@ -8,7 +8,7 @@ Object storage systems are not directly attached to your computer via drive mapp
 ### Object Storage PI Allocations
 As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.  Each PI is provided with 5TB of free storage space via `Economy` storage above which a relatively low cost per TB per month is charged.
 
->Note:  Currently it is recommended to use a combination of `Economy`, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+>Note:  Currently it is recommended to use a combination of `Economy`, [`Scratch`](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
 
 `Economy` is less expensive than [`Fast`](/scicomputing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, `Economy` would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  `Economy` serves as an archive for these data, and typically compute processes do not directly access these files.
@@ -38,14 +38,12 @@ You can access `Economy Local` or `Economy Cloud` resources with [command line t
 
 `Economy Local` is an object storage system based on Openstack Swift. `Economy Local` is recommended for research groups who keep large amounts of data (>100TB) on the Fred Hutch campus and frequently use the `Gizmo` cluster with local storage. We also recommend it for data that is explicitly forbidden to be stored in public cloud storage resources.
 
->Note: In the near future `Economy Local` will be retrofitted to become a hybrid storage solution. You will be able to access your data conveniently through a file access mount point such as `/fh/economy/` in addition to the faster object storage access.
-
 `Economy Local` is well suited to store petabytes of data at low cost and a high level of data protection. Economy File does not require tape backup as data is replicated to multiple sites. If you accidentally delete data it will be held in a "Trash can" for multiple months during which you have read-only access to the deleted data. Economy File is approved for PHI / PII data.  It is a suitable location to store genomic data  including those governed by the NIH Genomic Data Sharing policies or originating from public repositories while in use locally. Please the [demo section for examples of Economy Local](/compdemos/Economy-storage/)
 
 
-### Economy Cloud (S3)
+### Economy Cloud (S3 & Glacier)
 
-`Economy Cloud` is a public cloud based object storage service that uses Amazon Web Services Simple Storage Service (S3) to offer managed and secure (encrypted) AWS S3 buckets to Fred Hutch investigators.  While it is not accessible by non-Hutch investigators by default, you can contact `scicomp` to request access for external research groups.`Economy Cloud`  is the default choice for Object Storage for every Hutch investigator who does not have any specific requirements.
+`Economy Cloud` is a public cloud based object storage service that uses Amazon Web Services Simple Storage Service (S3) and Glacier Deep Archive to offer managed and secure (encrypted) AWS S3 buckets to Fred Hutch investigators.  While it is not accessible by non-Hutch investigators by default, you can contact `scicomp` to request access for external research groups.`Economy Cloud`  is the default choice for Object Storage for every Hutch investigator who does not have any specific requirements.
 
 You can use the `Economy Cloud` S3 buckets created for each PI to collaborate with external research groups. In addition to the `Economy Cloud` S3 buckets SciComp maintains S3 transfer buckets for external institutions and sequencing centers. These buckets may not be encrypted to increase interoperability. Please ask your PI to contact SciComp to enable the bucket of your PI for external collaboration or to enable a transfer bucket into which your sequencing center or other large scale data provider can drop large files.
 
@@ -53,11 +51,15 @@ You can use the `Economy Cloud` S3 buckets created for each PI to collaborate wi
 
 S3 (the Simple Storage Service) is an object store very much like the Economy file service, though provided by Amazon Web Services.  Storage resources in S3 are organized much like the other Fred Hutch Object and Block systems, with a "PI bucket" for each investigator at the Hutch which is analogous to the investigator directories available in the traditional file system. A specialized client (the AWS command line interface) is used to upload the data from local storage to S3 storage.  Once there, a temporary URL is created that has the necessary credentials embedded within and is then shared with those needing access.  A secure (HTTPS) connection is then used to download the data (via browser or other client like `wget` or `curl`). This URL is temporary and set with a date after which the generated URL is no longer able to access the data, though the data stored here is not removed as with the Aspera.  That temporary URL can be regenerated as necessary.
 
+>Note: In the future `Economy Cloud` will be retrofitted to become a hybrid storage solution. You will be able to access your data conveniently through a file access mount point such as `/fh/economy/` in addition to the faster object storage access.
+
 #### Backup and Security
 Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
 
 #### Credentials and Permissions
 Once you have [obtained S3 credentials](/scicomputing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j`. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  
+
+#### 
 
 #### User Demos
 We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-CyberDuck/), [via the AWS CLI](/compdemos/aws/#aws-command-line-interface-cli), [via R](/compdemos/aws/#aws-via-r), or [via Python](/compdemos/aws/#aws-via-python) and various methods for [Economy Local](/compdemos/Economy-storage/)
