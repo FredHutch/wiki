@@ -223,6 +223,13 @@ defaults:
       sidebar:
         nav: "scicomputing"
 
+  # _pathways
+  - scope:
+      path: ""
+      type: pathways
+    values:
+      layout: single
+
 
 ### PATHWAYS STUFF
 tag_archive:
