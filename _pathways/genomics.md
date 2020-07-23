@@ -1,6 +1,7 @@
 ---
 title: Genomics Pathways
 layout: tag
+permalink: /tags/genomics/
 taxonomy: genomics
 ---
 

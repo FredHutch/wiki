@@ -224,6 +224,11 @@ defaults:
         nav: "scicomputing"
 
 
+### PATHWAYS STUFF
+tag_archive:
+  type: liquid
+  path: /tags/
+
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"
