@@ -223,22 +223,6 @@ defaults:
       sidebar:
         nav: "scicomputing"
 
-# pathways tags
-  - scope:
-    path: ""
-    type: tags
-
-        # Pathways stuff
-  tag_archive:
-    type: jekyll-archives
-    path: /tags/
-  jekyll-archives:
-    enabled:
-      - tags
-    layouts:
-      tag: archive-taxonomy
-    permalinks:
-      tag: /tags/:name/
 
 webrick:
   headers:
