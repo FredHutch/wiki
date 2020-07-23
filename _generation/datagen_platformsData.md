@@ -1,7 +1,8 @@
 ---
 title: Genomics Platforms and Data Types
 last_modified_at: 2018-10-25
-primary_reviewers: 
+primary_reviewers:
+tags: genomics
 ---
 
 This guide highlights some of the genomics platforms available through the Genomics Shared Resource at Fred Hutch.  This guide is intended to give general context to each platform.  Access to many of the submission processes involved in using the Genomics Shared Resource is via [Hutchbase.](https://hutchbase.fhcrc.org/base2/)
