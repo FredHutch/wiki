@@ -223,6 +223,19 @@ defaults:
       sidebar:
         nav: "scicomputing"
 
+  # _pathways
+  - scope:
+      path: ""
+      type: pathways
+    values:
+      layout: single
+
+
+### PATHWAYS STUFF
+tag_archive:
+  type: liquid
+  path: /tags/
+
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"
