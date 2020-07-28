@@ -27,11 +27,11 @@ You will need access to the Rhinos for submitting the job
 
 ### Instructions on how to get set-up
 
-Log into a rhino or in an [NoMachine terminal session](https://sciwiki.fredhutch.org/scicomputing/access_methods/#nomachine-nx-multi-os).  Use the module commands to load R- most later versions of R in our environment have the `rslurm` module ainstalled but it is also available for installation via CRAN
+Log into a rhino or in an [NoMachine terminal session](https://sciwiki.fredhutch.org/scicomputing/access_methods/#nomachine-nx-multi-os).  Use the module commands to load R- most later versions of R in our environment have the `rslurm` module installed but it is also available for installation via CRAN
 
 ```
 > module purge
-> ml R/3.4.3-foss-2016b-fh2 #any R version will do. Just an example.
+> ml R 
 ```
 
 # `rslurm` Overview
