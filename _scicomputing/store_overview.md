@@ -38,8 +38,7 @@ The Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhut
 Storage Resource | Costs (per TB/month)\*  | Backup Location/Duration | Best Use
 --- | --- | --- | --- | ---
 `Home` | Free to 100GB limit |  7 days of Snapshots, Daily backups, Off Site copy | Data specific to a user, not shared to others, relatively small data sets
-`Fast` | $$$ beyond 5TB per PI |  Daily backups, Off Site copy | Large data sets that need high performance access to computing resources, Unix file permissioning, but neither PHI nor temporary data (such as intermediate files)
-`Secure` | $$$$ beyond 1TB per PI |  7 days of Snapshots, Daily backups, Off Site copy | PHI containing datasets or those that require auditing, relatively small datasets
+`Fast` | $$$ beyond 1TB per PI |  Daily backups, Off Site copy | Large data sets that need high performance access to computing resources, Unix file permissioning, but neither PHI nor temporary data (such as intermediate files)
 `Economy Local` and `Cloud` | $ beyond 5TB per PI |  Multi-datacenter replication, 60 day undelete with request to `helpdesk` | Best for archiving large data sets, or primary storage of large files.  Good for PHI or other data that requires encryption and auditing. *Requires Desktop Client to access, see [Object Storage page.](/scicomputing/store_objectstore/)*
 `Scratch` | Free | Not applicable | Temporary files, such as those intermediate to a final result that only need to persist during a job.  *Appropriate use  can significantly reduce data storage costs, see our [Scratch Storage](/scicomputing/store_scratch/) page.*
 
