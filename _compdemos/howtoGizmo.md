@@ -30,13 +30,9 @@ These resources are dedicated to PIs and/or projects but have been made availabl
 
 The `gizmo` nodes are available for all Fred Hutch users and as it is a community resource, Fred Hutch IT creates and manages a set of usage limits that aim to manage all the needs on campus.  These limits focus on walltime of jobs, the number of cores and nodes per PI group, the amount of memory and the total number of running jobs at a time.
 
-### Campus Partition
-The campus partition is the default- jobs submitted to this will have shared, non-exclusive, access to assigned nodes.
+### Campus-new Partition
 
-### Largenode Partition
-The largenode partition must be specifically requested by adding `--partition=largenode` to your job submission. 
-
-running jobs     |     5 per account     |          |     
+The campus-new partition is the default- jobs submitted to this will have shared, non-exclusive, access to assigned nodes.
 
 ## Simple Use
 In its most simple form your script will use a single CPU core, for example start a simple Python script using sbatch:

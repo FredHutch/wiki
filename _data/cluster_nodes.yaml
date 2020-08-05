@@ -27,7 +27,7 @@
       network: 1G (up to 100MB/s throughput)
       gpu: none
       node_count: 456
-      partition: campus
+      partition: campus-new
     -  
       node_name: g
       cores: 6
@@ -43,7 +43,7 @@
       network: 10G (upto 1GB/s throughput)
       gpu: none
       node_count: 18
-      partition: largenode
+      partition: campus-new
     -  
       node_name: h
       cores: 14
@@ -59,7 +59,7 @@
       network: 10G (upto 1GB/s throughput)
       gpu: none
       node_count: 3
-      partition: largenode
+      partition: campus-new
     -  
       node_name: j
       cores: 24
@@ -75,7 +75,7 @@
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA
       node_count: 42
-      partition: largenode
+      partition: campus-new
     -  
       node_name: k
       cores: 36
@@ -110,17 +110,11 @@
       partition: none (interactive use)
   partitions:
     -
-      partition_name: campus
+      partition_name: campus-new
       max_per_acct: 100-300 cpus
       default_per_job: 3 days
-      max_per_job: 4 cpus, 30000MB memory (effective)
+      max_per_job: 28 cpus, 768000MB memory (effective)
       min_per_job: none
-    -
-      partition_name: largenode
-      max_per_acct: 180 cpus
-      default_per_job: 1 day
-      max_per_job: 24 cpus, 768000MB memory (effective)
-      min_per_job: 6 cpus, 22000MB memory
 - cluster_name: beagle
   type: HPC
   location: AWS

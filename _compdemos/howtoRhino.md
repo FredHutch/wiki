@@ -116,7 +116,7 @@ The rstudio program (and rsession) tend to be resource hogs. For this reason, we
 
 Pybedtool and /tmp - pybedtools can be run in such a way that it leaves files in tmpdir for the duration. Please advise use to read this bug and adjust code accordingly: pybedtools issue 159.
 
-If we see a process using a huge amount of real or virtual memory (say >300 GB for a short period of time, or >90 GB for a few days), we will send an email to the user. The purpose is to find out what they are doing, and if there might be a more efficient way to do that. We have a very large memory (512 GB) cluster node, sprawl1, which can be used for this purpose without impacting others' use of the rhinos. The command for that is "grablargenode".
+If we see a process using a huge amount of real or virtual memory (say >300 GB for a short period of time, or >90 GB for a few days), we will send an email to the user. The purpose is to find out what they are doing, and if there might be a more efficient way to do that.
 
 A process that has accumulated a TIME+ >1000 but seems to be doing nothing, and hangs around for more than a week, will draw an email from us.
 
