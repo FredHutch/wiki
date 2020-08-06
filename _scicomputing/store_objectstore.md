@@ -1,12 +1,11 @@
 ---
 title: Data Storage in Object Storage Systems (Economy)
-last_modified_at: 2019-04-01
 primary_reviewers: dirkpetersen, dtenenba
 ---
 Object storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an object storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud Computing depends very much on object storage systems such as Amazon's AWS S3 or Google Cloud Storage.
 
 ### Object Storage PI Allocations
-As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.  Each PI is provided with 5TB of free storage space via `Economy` storage above which a relatively low cost per TB per month is charged.
+As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.  
 
 >Note:  Currently it is recommended to use a combination of `Economy`, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
