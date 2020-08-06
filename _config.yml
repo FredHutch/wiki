@@ -1,7 +1,7 @@
 plugins:
   - jekyll-remote-theme
-remote_theme: mmistakes/minimal-mistakes
-
+remote_theme: mmistakes/minimal-mistakes@4.20.1
+### REMEMBER TO OCCASIONALLY TEST THE NEWER VERSIONS FOR NEW GOODIES!!!!!
 minimal_mistakes_skin: contrast
 
 # Site Settings
