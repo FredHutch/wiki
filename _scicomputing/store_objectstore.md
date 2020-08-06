@@ -1,6 +1,5 @@
 ---
 title: Data Storage in Object Storage Systems (Economy)
-last_modified_at: 2020-07-30
 primary_reviewers: dirkpetersen, dtenenba
 ---
 Object storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an object storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud Computing depends very much on object storage systems such as Amazon's AWS S3 or Google Cloud Storage.
