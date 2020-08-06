@@ -1,6 +1,5 @@
 ---
 title: Data Storage in File Storage Systems
-last_modified_at: 2020-07-30
 primary_reviewer: dirkpetersen
 ---
 
