@@ -76,7 +76,7 @@ If you are off campus,
 you will need to first connect to the campus network.
 Here we describe the use of `snail` for remote login,
 since it doesn't require the use of additional software beyond what it already included in the tutorial.
-VPN may be a preferrable option for you,
+VPN may be a preferable option for you,
 especially if you are already using it to access other Hutch resources.
 For more information about remote login, please see [Access via a remote login](https://sciwiki.fredhutch.org/scicomputing/access_methods/#access-via-a-remote-location).
 
@@ -179,7 +179,7 @@ you should see in the output that there is also a module available to load as `f
 and additional information on using the modules is included as well.
 
 For more information on using the module system,
-please see the [Computing Environments page](https://sciwiki.fredhutch.org/scicomputing/compute_environments/),
+please see the [Computing Environments page](/scicomputing/compute_environments/),
 and you can view lists of available software on the [Scientific Software page](https://fredhutch.github.io/easybuild-life-sciences/).
 
 ## Logging out
@@ -219,7 +219,7 @@ You'll need to `exit` once more to leave the Fred Hutch network and see your com
 
 This demo covers the basic process of logging on and using resources for the first time.
 Once you are comfortable with the basic process,
-you should look at the complete documentation on [Large Scale Computing](https://sciwiki.fredhutch.org/scicomputing/compute_overview/)
+you should look at the complete documentation on [Large Scale Computing](/scicomputing/compute_overview/)
 for information on more advanced tasks, like:
 - executing batch jobs using `slurm`,
 including limits and recommendations for creating scripts

@@ -68,9 +68,9 @@ Since Windows lacks an X11 server, you will need to use NoMachine to run X apps 
 
 ### Everyone!
 
-X11 or X Windows is the standard and default Unix/Linux windowing system. It is used locally when you run an app on your Linux laptop/desktop to connect the app to your choosen windowing system (like Gnome, KDE, xfce, etc.), but has always had the capability of remote excecution where the windowing system the user sees and the application they are running do not have to be on the same host. The architecture of X11 is backward from what most people assume: you run an X11 server on your client device, and the applications you run are known as X clients. The version everyone uses is version 11, hence, X11.
+X11 or X Windows is the standard and default Unix/Linux windowing system. It is used locally when you run an app on your Linux laptop/desktop to connect the app to your chosen windowing system (like Gnome, KDE, xfce, etc.), but has always had the capability of remote execution where the windowing system the user sees and the application they are running do not have to be on the same host. The architecture of X11 is backward from what most people assume: you run an X11 server on your client device, and the applications you run are known as X clients. The version everyone uses is version 11, hence, X11.
 
-The application we all use to connect to remote servers, OpenSSH, does a great job of transparently tunnelling the connections required by X11. However, it can only tunnell when executed in a terminal that is set up with your X11 server. This is the default on Linux, but on macOS (with XQuartz) you need to ssh from an XQuartz terminal, not iTerm/iterm2. See the above macOS link for details on how to enable in iTerm/iterm2.
+The application we all use to connect to remote servers, OpenSSH, does a great job of transparently tunneling the connections required by X11. However, it can only tunnel when executed in a terminal that is set up with your X11 server. This is the default on Linux, but on macOS (with XQuartz) you need to ssh from an XQuartz terminal, not iTerm/iterm2. See the above macOS link for details on how to enable in iTerm/iterm2.
 
 Once you have a terminal open, use `ssh` to connect to a rhino node: `ssh rhino`. Once connected, you have two options:
 
@@ -94,7 +94,7 @@ You may see font errors and/or other warnings on your terminal when you start an
 
 If you get an error like: `Error: Can't open display:` or any other error mentioning "display" you likely do not have X enabled in the terminal on your local system in which you are running ssh to the remote server. On macOS this can also be caused by a default configuration in some cases that disabled the X forwarding. On these systems, you should ssh with '-Y' to enable trusted X forwarding like this: `ssh -Y <hutchnetid>@rhino`.
 
-A useful 'test' of the X forwarding is a simple program invoked with the command `xeyes`. This creates a small window with a pair of eyes that track the mouse cursor. It is much fast to start than either Rstudio or MATLAB, and gives a positive indication of functioning X11.
+A useful 'test' of the X forwarding is a simple program invoked with the command `xeyes`. This creates a small window with a pair of eyes that track the mouse cursor. It is much faster to start than either Rstudio or MATLAB, and gives a positive indication of functioning X11.
 
 ## Other Usage Guidance
 
