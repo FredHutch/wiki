@@ -13,6 +13,8 @@ Here's a brief overview of what will change:
 - All access credentials will change.  You'll need a new Access Key and Secret Key.
 - Some of your data may move to a different top-level folder in S3.
 - Each account will have their own dedicated AWS Batch Compute Environment.
+- Data in S3 that is not accessed frequently will be archived in order to improve the efficiency of our storage system.  In general, most data will be archived after 30 days.  If you need to access this archived data, you will need to submit a ticket to SciComp with the names of the S3 objects that you wish to retrieve and they will typically become available within a day of submitting your request.
+- If you have data that you need to be kept available at all times, please submit a ticket to SciComp.
 
 ## What's new?
 
@@ -61,7 +63,8 @@ The shared AWS Batch Compute Environments in the HSE account will be shut down a
 > TODO:  Move some of these to the updated Complete Cloud Guide (and think of a cooler name than the Complete Cloud Guide)
 
 - **How do I get my new credentials?**
-  - Hopefully the same way that you got your old ones by using the `awscreds` command on Rhino or by logging into the Toolbox.
+  - Initially, when your lab is migrated everyone will receive an encrypted email with their login and temporary password.  It will also contain their AWS access key and secret key (these are the same keys that the `awscreds` command will write to your home directory's `.aws/credentials` file).
+  - In the future, you will be able to get your credentials via the `awscreds` command on Rhino or logging into the Toolbox.  SciComp will send an announcement when this changes.
 - **How do I get more compute environments created?**
   - Email SciComp with the instance types and sizes that you need and whatever *Project*, *GrantId*, or other Name/value pair that you want to track usage and we'll do the rest.
 - **When my data is migrated from the HSE account, will my object tags also be migrated?**
