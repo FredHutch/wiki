@@ -5,14 +5,17 @@ main_author: Sam Minot & Dan Tenenbaum
 primary_reviewers: dtenenba
 ---
 
-> Note:  Scientific Computing is in the process of revising guidelines for cloud usage.
-> Please see current updates in out [Resource Library entry](/compdemos/cloudMigration/).
+FIXME JEFF: Add information about compute environments including requesting additional ones from SciComp, compute environment tagging for chargebacks, and limitations of the system (there are already limits and they aren’t really changing, we should just mention what they are)
 
-FIXME: Kate to update overview
+> Note:  Scientific Computing is in the process of revising guidelines for cloud usage.
+> Please see [this announcement](FIXME: LINK) for logistical details about the transition process, 
+> and [FAQ for cloud resources](/compdemos/cloud-faq/).
+
+FIXME KATE: update overview
 The Hutch is just getting started with cloud computing.  Options like the `beagle` and `koshu` clusters, while built _in_ the cloud, are very much a simple extension of existing infrastructure into cloud providers but does not fully or particularly efficiently utilize the real capabilities and advantages provided by cloud services.
 
 If you are at all interested or curious about cloud solutions and would like to talk over options, Scientific Computing hosts a cloud-specific office hours every week.  Dates and details for SciComp office hours can be found in
-FIXME: Kate to update broken link [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html).
+FIXME KATE: update broken link [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html).
 
 ## AWS Services
 The Amazon Web Service (AWS) is a "cloud" computing provider which sells access to computational resources on a minute-by-minute basis. The "cloud" is actually just a simple idea that you can buy *access* to computers, instead of buying the computers themselves. Anytime you have a bunch of computers sitting in a warehouse running code for a bunch of different users around the world, that's the "cloud."
@@ -25,7 +28,7 @@ a service that provides cloud-based data storage in the form of "buckets", or a 
 For more information on using AWS Batch,
 please see [this entry in the Resource Library](/compdemos/aws-batch/)
 
-FIXME: cross reference with content in /compdemos/aws-batch/, 
+FIXME JEFF: cross reference with content in /compdemos/aws-batch/, 
 confirm if anything else needs to be moved back here
 
 ## [Nextflow at Fred Hutch](/compdemos/nextflow/)

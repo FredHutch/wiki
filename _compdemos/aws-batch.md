@@ -5,8 +5,8 @@ main_author: Jeff Tucker
 primary_reviewers: tucker, dtenenba
 ---
 
-FIXME: confirm this content includes everything necessary, 
-and update levels of subheadings
+FIXME JEFF: confirm this content includes everything necessary (copied from cloud compute page) 
+FIXME KATE: update levels of subheadings
 
 ### Essential terms
 
