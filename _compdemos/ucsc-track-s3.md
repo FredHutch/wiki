@@ -29,7 +29,7 @@ By default, buckets at the Hutch do not allow access (even with credentials) fro
 
 Once your bucket's restrictions have been removed, you can use the AWS Command Line Interface (CLI) to upload files to S3.
 
-This Wiki contains some [basic instructions](https://sciwiki.fredhutch.org/compdemos/aws/#aws-command-line-interface-cli) for interacting with S3 using the CLI, and AWS provides the [full documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/).
+This Wiki contains some [basic instructions](https://sciwiki.fredhutch.org/compdemos/aws-s3/#aws-command-line-interface-cli) for interacting with S3 using the CLI, and AWS provides the [full documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/).
 
 The main thing to remember when uploading data for use with the UCSC Genome Browser is that the data will need to be publicly accessible, so your `aws s3 cp` or `aws s3 sync` commands will need to have the `--acl public-read` flag at the end.
 
