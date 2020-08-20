@@ -151,7 +151,7 @@ and to list buckets in s3 you can run
 
 ### Amazon Web Services S3 Compatibility Layer
 
-We can use AWS tools such as `awscli`, the Python module `boto3` or the R package `aws.s3` to access Swift through the AWS S3 compatibility layer.  We have generated detailed docs for using [`awscli`](/compdemos/aws-cli/), [`boto3`](/compdemos/aws-python/) and [`aws.s3`](/compdemos/aws-R/) in our Resource Library section.  Prior to using these tools, hwoever, we need to first setup the profile `s3.fhcrc.org` in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on `rhino`.  
+We can use AWS tools such as `awscli`, the Python module `boto3` or the R package `aws.s3` to access Swift through the AWS S3 compatibility layer.  We have generated detailed docs for using [`awscli`](/compdemos/aws-s3/#aws-command-line-interface-cli), [`boto3`](/compdemos/aws-s3/#aws-via-python) and [`aws.s3`](/compdemos/aws-s3/#aws-via-r) in our Resource Library section.  Prior to using these tools, hwoever, we need to first setup the profile `s3.fhcrc.org` in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on `rhino`.  
 
 ```
 > s3cfg
@@ -170,7 +170,7 @@ After running `s3cfg` you need to first put the credentials you can get from too
     > source ~/.aws/s3env.sh
 ```
 
-Now you should be able to use the `awscli` commands as [documented here](/compdemos/awscli/) to list all your directories in `Economy Local`.
+Now you should be able to use the `awscli` commands as [documented here](/compdemos/compdemos/aws-s3/#aws-command-line-interface-cli) to list all your directories in `Economy Local`.
 
 ```
     > aws s3 ls

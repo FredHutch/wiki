@@ -10,6 +10,6 @@ Storage reference: https://sciwiki.fredhutch.org/scicomputing/store_objectstore/
 
 Cloud computing reference: https://sciwiki.fredhutch.org/scicomputing/compute_cloud/
 
-Accessing AWS S3 from CLI, Python, R: https://sciwiki.fredhutch.org/compdemos/aws/
+Accessing AWS S3 from CLI, Python, R: https://sciwiki.fredhutch.org/compdemos/aws-s3/
 
 Sandboxes for using cloud credits: demo being written by Jeff
