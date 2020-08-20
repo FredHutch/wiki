@@ -2,7 +2,7 @@
 title: Cloud FAQ
 last_modified_at: 2020-08-19
 main_author: Jeff Tucker
-primary_reviewers: tucker
+primary_reviewers: jefftucker
 ---
 
 FIXME JEFF: check to see if any of this info needs to be included on main pages

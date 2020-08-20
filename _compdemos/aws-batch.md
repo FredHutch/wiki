@@ -2,7 +2,7 @@
 title: Using AWS Batch
 last_modified_at: 2020-08-19
 main_author: Jeff Tucker
-primary_reviewers: tucker, dtenenba
+primary_reviewers: jefftucker, dtenenba
 ---
 
 FIXME JEFF: confirm this content includes everything necessary (copied from cloud compute page) 
