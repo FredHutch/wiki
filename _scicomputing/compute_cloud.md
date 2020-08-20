@@ -6,7 +6,7 @@ primary_reviewers: dtenenba
 ---
 
 If you are at all interested or curious about cloud solutions and would like to talk over options, Scientific Computing hosts a cloud-specific office hours every week.  Dates and details for SciComp office hours can be found in
-FIXME: Kate to update broken link [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html).
+FIXME KATE: update broken link [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html).
 
 ## AWS Services
 The Amazon Web Service (AWS) is a "cloud" computing provider which sells access to computational resources on a minute-by-minute basis. The "cloud" is actually just a simple idea that you can buy *access* to computers, instead of buying the computers themselves. Anytime you have a bunch of computers sitting in a warehouse running code for a bunch of different users around the world, that's the "cloud."
@@ -19,7 +19,7 @@ a service that provides cloud-based data storage in the form of "buckets", or a 
 For more information on using AWS Batch,
 please see [this entry in the Resource Library](/compdemos/aws-batch/)
 
-FIXME: cross reference with content in /compdemos/aws-batch/, 
+FIXME JEFF: cross reference with content in /compdemos/aws-batch/, 
 confirm if anything else needs to be moved back here
 
 ## [Nextflow at Fred Hutch](/compdemos/nextflow/)
