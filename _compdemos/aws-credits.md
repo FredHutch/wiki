@@ -2,7 +2,7 @@
 title: Using AWS Cloud Credits
 last_modified_at: 2020-07-23
 main_author: Jeff Tucker
-primary_reviewers: tucker, dtenenba
+primary_reviewers: jefftucker, dtenenba
 ---
 
 If you have received cloud credits from AWS, you will probably need a different AWS account type in order to apply those credits in our Sandbox environment.
