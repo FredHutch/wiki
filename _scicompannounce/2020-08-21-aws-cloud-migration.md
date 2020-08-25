@@ -39,7 +39,7 @@ Some things will remain approximately the same as they were before in your new a
 - Accessibility of your data is still restricted to the Fred Hutch IP address space, so you will need to be on the VPN to access your private bucket.
 - The general setup of your AWS Batch Compute Environment will be the same, so any workflows that you were using will still function like they always did.
 - Motuz can still be used with your new account.
-- Your new account will still be covered under the Fred Hutch BAA (HIPPA Business Associate Agreement), so you will be able to store any data that requires a higher level of compliance.
+- Your new account will still be covered under the Fred Hutch BAA (HIPAA Business Associate Agreement), so you will be able to store any data that requires a higher level of compliance.
 - You will still be able to add external collaborators for AWS resources. Please contact SciComp for more information on creating new login credentials, and to review what collaborators can access in the new environment.
 
 ## What happens now and what do I need to do?
