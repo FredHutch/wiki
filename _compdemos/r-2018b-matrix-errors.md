@@ -10,7 +10,9 @@ primary_reviewers: atombaby
 
 There seems to be an error in the calculation of matrix dot products when using R built using the Easybuild toolchain `foss/2018b`.  The result of the `M %*% N` operation seem to return inconsistent and varying results.
 
-The root cause is unknown, as is the accuracy of other matrix operations.
+This has only been found in larger matrices- somewhere between 200 and 250 rows/columns- but it's unknown if this is purely due to luck or if this is a problem that only happens past a certain threshold.
+
+This is the only operation that has been tested- the accuracy of other matrix operations is still to be determined.
 
 ### How to Tell if you are at Risk
 
