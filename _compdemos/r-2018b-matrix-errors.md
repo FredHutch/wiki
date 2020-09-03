@@ -8,7 +8,7 @@ primary_reviewers: atombaby
 
 ### Overview
 
-There seems to be an error in the calculation of matrix dot products when using R built using the Easybuild toolchain `foss-2018b`.  The result of the `M %*% N` operation seem to return inconsistent and varying results.
+There seems to be an error in the calculation of matrix dot products when using R built using the Easybuild toolchain `foss/2018b`.  The result of the `M %*% N` operation seem to return inconsistent and varying results.
 
 The root cause is unknown, as is the accuracy of other matrix operations.
 
@@ -20,11 +20,33 @@ The module name will explicity indicate the toolchain. For example, "R/3.6.2-fos
 
 #### Loading _any_ R module and then loading `rstudio`
 
-If you are loading a more current R version, for example "R/4.0.2-foss-2019b" and then loading the "rstudio" module, this loads the "foss-2018b" toolchain and puts you at risk for this error
+If you are loading a more current R version, for example "R/4.0.2-foss-2019b" and then loading the "rstudio" module, this loads the "foss/2018b" toolchain and puts you at risk for this error
 
 #### Loading additional modules
 
-If you load any R version and then load any other additional modules which trigger a load of the "foss-2018b" toolchain you may be affected.
+If you load any R version and then load any other additional modules which trigger a load of the "foss/2018b" toolchain you may be affected.  These reloads will appear when you load those additional modules, indicating their replacement:
+
+```
+The following have been reloaded with a version change:
+  1) FFTW/3.3.8-gompi-2019b => FFTW/3.3.8-gompi-2018b
+  2) GCC/8.3.0 => GCC/7.3.0-2.30
+  3) GCCcore/8.3.0 => GCCcore/7.3.0
+  4) GMP/6.1.2-GCCcore-8.3.0 => GMP/6.1.2-GCCcore-7.3.0
+  5) OpenBLAS/0.3.7-GCC-8.3.0 => OpenBLAS/0.3.1-GCC-7.3.0-2.30
+  6) OpenMPI/3.1.4-GCC-8.3.0 => OpenMPI/3.1.1-GCC-7.3.0-2.30
+  7) SQLite/3.29.0-GCCcore-8.3.0 => SQLite/3.24.0-GCCcore-7.3.0
+  8) ScaLAPACK/2.0.2-gompi-2019b => ScaLAPACK/2.0.2-gompi-2018b-OpenBLAS-0.3.1
+  9) Tcl/8.6.9-GCCcore-8.3.0 => Tcl/8.6.8-GCCcore-7.3.0
+ 10) XZ/5.2.4-GCCcore-8.3.0 => XZ/5.2.4-GCCcore-7.3.0
+ 11) binutils/2.32-GCCcore-8.3.0 => binutils/2.30-GCCcore-7.3.0
+ 12) bzip2/1.0.8-GCCcore-8.3.0 => bzip2/1.0.6-GCCcore-7.3.0
+ 13) foss/2019b => foss/2018b
+ 14) gompi/2019b => gompi/2018b
+```
+
+In this example, line 13 shows that "foss/2019b" has been reloaded with "foss/2018b", indicating that I may now be at risk for this error.
+
+### A Test Case
 
 You can check if your R configuration has this error by loading your modules then running some rather simple code:
 
