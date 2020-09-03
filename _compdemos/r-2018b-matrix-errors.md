@@ -70,5 +70,7 @@ Any other result will indicate potential problems.
 
 ### How to Check Your Code
 
-As the full extent of the issue is uknown it is difficult to make a blanket diagnosis of individual codebases.  One possible method for validating would be to run your same code with a newer toolchain and look for unexpected results. As there are a limited number of R and toolchain combinations, this may require running with a newer R version as well.
+As the full extent of the issue is uknown it is difficult to make a blanket diagnosis of individual codebases.  Clearly, if you use matrix multiplication with the `%*%` operator you are likely encountering this error.
+
+One possible method for validating would be to run your same code with a newer toolchain and look for unexpected results. As there are a limited number of R and toolchain combinations this may require running with a newer R version as well.
 
