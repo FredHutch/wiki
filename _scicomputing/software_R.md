@@ -88,7 +88,7 @@ You can run this with any version of `R` that is available on our shared computi
 
 Here are the steps to run this wrapper.
 
-* Grab a node using the [grabnode](/scicomputing/compute_platforms/#gizmo-and-beagle-cluster) command. Specify how many CPUs and how much memory you want, and how many days you want to have control of the node. Remember that you can launch `slurm` jobs within RStudio, so you may not need to ask for a lot of computing power for your RStudio machine.
+* Grab a node using the [grabnode](/compdemos/first_rhino/#logging-on-to-gizmo-via-grabnode) command. Specify how many CPUs and how much memory you want, and how many days you want to have control of the node. Remember that you can launch `slurm` jobs within RStudio, so you may not need to ask for a lot of computing power for your RStudio machine.
 * Once you are on the node you grabbed, choose a version of `R` by using the [module load](/scicomputing/compute_environments/#how-to-use-environment-modules) command (`ml` for short). (Example: `ml R/3.6.1-foss-2016b`).
 * Run the `launch_rstudio_server` command. This will produce a URL that you can paste into your browser. (This URL only works inside the Hutch network, so you need to be on campus or using VPN.)
 * In your browser, log into RStudio using your HutchNet ID and password.

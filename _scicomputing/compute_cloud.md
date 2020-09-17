@@ -5,8 +5,6 @@ main_author: Sam Minot & Dan Tenenbaum
 primary_reviewers: dtenenba
 ---
 
-The Hutch is just getting started with cloud computing.  Options like the `beagle` and `koshu` clusters, while built _in_ the cloud, are very much a simple extension of existing infrastructure into cloud providers but does not fully or particularly efficiently utilize the real capabilities and advantages provided by cloud services.
-
 If you are at all interested or curious about cloud solutions and would like to talk over options, Scientific Computing hosts a cloud-specific office hours every week.  Dates and details for SciComp office hours can be found in
 [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html).
 

@@ -16,7 +16,7 @@ Please see the Service Desk site on CenterNet for more information about [HutchN
 
 ## Accessing Slurm Clusters
 
-To use Slurm clusters (like _gizmo_ and _beagle_) you also need to have your HutchNet ID associated with a PI account.  Errors similar to "Invalid account or account/partition" typically indicate that this association hasn't been set up.  Contact Scientific Computing to have this corrected.
+To use Slurm clusters like _gizmo_ you also need to have your HutchNet ID associated with a PI account.  Errors similar to "Invalid account or account/partition" typically indicate that this association hasn't been set up.  Contact Scientific Computing to have this corrected.
 
 ## GitHub.com
 

@@ -47,7 +47,7 @@ When doing large scale computing tasks, one often shifts to the use of jobs to p
 
 Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop disconnected, the job would be terminated.
 
-The batch system used at the Hutch is [Slurm](https://slurm.schedmd.com/archive/slurm-18.08.3/). Slurm provides a set of commands for submitting and managing jobs on the `gizmo` and `beagle` clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.
+The batch system used at the Hutch is [Slurm](https://slurm.schedmd.com/archive/slurm-18.08.3/). Slurm provides a set of commands for submitting and managing jobs on the `gizmo` cluster as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.
 
 ## [Parallel Computing](/scicomputing/compute_parallel/)
 
@@ -55,7 +55,7 @@ There are many approaches to parallel computing (doing many jobs simultaneously 
 
 ## [Cloud Computing](/scicomputing/compute_cloud/)
 
-Beyond on premise resources, cloud computing access is available for Fred Hutch researchers and this page provides some basics on how to get started if you are in need of cloud computing specifically.  Options like the `beagle` and `koshu` [clusters](/scicomputing/resource_overview/), while built _in_ the cloud, are very much a simple extension of existing infrastructure into cloud providers but does not fully or particularly efficiently utilize the real capabilities and advantages provided by cloud services.   Additionally, Fred Hutch users have access to the [Amazon Web Services Batch](https://aws.amazon.com/batch/) service directly, which can be a powerful tool, but may have a steeper learning curve or be more finicky than users may have the bandwidth for.
+Beyond on premise resources, cloud computing access is available for Fred Hutch researchers and this page provides some basics on how to get started if you are in need of cloud computing specifically.  Fred Hutch users have access to the [Amazon Web Services Batch](https://aws.amazon.com/batch/) service directly, which can be a powerful tool, but may have a steeper learning curve or be more finicky than users may have the bandwidth for.
 
 If you are at all interested or curious about cloud solutions and would like to
 talk over options, Scientific Computing hosts a cloud-specific office hours

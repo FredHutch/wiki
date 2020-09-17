@@ -6,7 +6,7 @@ primary_reviewers: atombaby
 
 Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system and performing tasks one by one.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop should be disconnected for any reason the job will be terminated.
 
-The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on the gizmo and beagle clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm see the section below on [Using Slurm on Fred Hutch Systems](#using-slurm-on-fred-hutch-systems), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources available
+The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on SciComp clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm see the section below on [Using Slurm on Fred Hutch Systems](#using-slurm-on-fred-hutch-systems), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources available
 
 ## Using Slurm on Fred Hutch Systems
 
@@ -211,21 +211,6 @@ Obtain a Slurm job allocation (a set of nodes), execute a command, and then rele
 #### `hitparade`
 
 The `hitparade` command will show a summary of all jobs running and queued on the cluster broken down by user and account.  Note that this isn't a Slurm command, rather something built in-house at Fred Hutch. 
-
-`hitparade` takes the `-M` argument to select a cluster about which to generate the output. 
-
-```
-rhino[~]: hitparade -M beagle
-loading Python/3.6.4-foss-2016b-fh2...
-
-  === Queue: campus ======= (R / PD) ======
-    poe_e (edgar) 300 / 72
-
-  === Queue: largenode ======= (R / PD) ===
-    schulz_cm (snoopy) 273 / 0
-
-```
-
 
 ## External Slurm and HPC Reference and Learning Resources
 For more information and education on how to use HPC resources from external sources see the following sites:
