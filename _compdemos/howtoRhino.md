@@ -6,18 +6,6 @@ primary_reviewers: atombaby, bmcgough
 
 Probably the more familiar method of computing once resources beyond those available on your desktop/laptop are needed is interactive computing.  Here, one would start a shell and enter commands to be run. In these sorts of jobs, output is directed to a terminal and input taken from a keyboard.  [`Rhino` nodes](/scicomputing/compute_platforms/#rhino) provide this capability- simply log in [via SSH](/scicomputing/access_methods/) and begin your computing.
 
-[Slurm](/scicomputing/compute_jobs/) also provides interactive computing via the `srun` command which allocates and connects you to a compute node.
-
-### Credentials
-
-To use Fred Hutch IT supported computing resources, you will need to acquire and manage various credentials. You can read more about how to get started on our [Credentials](/scicomputing/access_credentials/) page.
-
-### Access Methods
-
-There are multiple ways you can get access Scientific Computing resources which are all running on a supported version of Ubuntu Linux. The most simple form of access is using a secure shell terminal software such as ssh or putty. You may also need graphical output (GUI), for example to use tools like R Studio or advanced text editors. See our page on access [Methods](/scicomputing/access_methods/) to learn more about how to set up your connection to the `rhino` nodes.  To access SciComp resources from outside FHCRC, you have to use WebVPN (Cisco AnyConnect) to come through the FHCRC firewall.
-
-## `rhino` Compute Nodes
-
 The rhino compute nodes are large memory, shared systems. These are systems intended for:
 
 - interactive work
@@ -27,21 +15,26 @@ The rhino compute nodes are large memory, shared systems. These are systems inte
 
 Access to these systems is via secure shell (ssh). There are four rhino nodes- when you use the alias rhino, a round-robin system distributes your session to any one of the four nodes.
 
-### Guidance for Use
-
 These systems should not be used for intensive computational tasks unless the task requires significant memory (i.e. greater than 48GB). Other tasks should be limited in quantity and in run-time. Do not run multiple jobs (more than 10) or run them for a significant amount of time (1,000 CPU-seconds)
 
+## Preliminaries
+### Credentials
+To use Fred Hutch IT supported computing resources, you will need to acquire and manage various credentials. You can read more about how to get started on our [Credentials](/scicomputing/access_credentials/) page.
 
-## Storage
+### Access Methods
 
-Storage comes in four basic flavors:
+There are multiple ways you can get access Scientific Computing resources which are all running on a supported version of Ubuntu Linux. The most simple form of access is using a secure shell terminal software such as ssh or putty. You may also need graphical output (GUI), for example to use tools like R Studio or advanced text editors. See our page on access [Methods](/scicomputing/access_methods/) to learn more about how to set up your connection to the `rhino` nodes.  To access SciComp resources from outside FHCRC, you have to use WebVPN (Cisco AnyConnect) to come through the FHCRC firewall.
 
-- fast
-- economy
-- secure
-- scratch
+## Connections with Storage
 
-Each of those "flavors" is mounted on all of the gizmo compute systems- compute nodes and rhino nodes alike.  You can read more about Data Storage on our [Storage pages.](/scicomputing/store_overview/)
+Storage mounted on all rhino nodes comes in four basic flavors:
+
+- `fast`
+- `economy`
+- `secure`
+- `scratch`
+
+You can read more about Data Storage options on our [Storage pages.](/scicomputing/store_overview/)
 
 ```
 mrg@rhino$ ls -l /fh
@@ -56,7 +49,7 @@ drwxrwsr-x 4 mrg SciComp 123 Nov 17 14:16 build
 drwxrwsr-x 4 mrg SciComp  53 Aug 25 09:14 econofile
 ```
 
-## How to run GUI (X windows/X11) apps on `rhino` and `gizmo` nodes
+## How to run GUI (X windows/X11) apps on `rhino` nodes
 
 ### macOS
 
@@ -74,7 +67,7 @@ The application we all use to connect to remote servers, OpenSSH, does a great j
 
 Once you have a terminal open, use `ssh` to connect to a rhino node: `ssh rhino`. Once connected, you have two options:
 
-### Running an app on rhino
+### Running an app on `rhino`
 
 You can run an app directly on the rhino node to which you are connected. This is useful for lightweight apps and testing, but please refrain from running compute-intensive (CPU time and/or memory resources) processes as the rhino machines are a shared resource. To run directly, simply start your GUI application. Common apps include:
 
@@ -82,13 +75,13 @@ You can run an app directly on the rhino node to which you are connected. This i
   - MATLAB - run `module load matlab/R2016b` followed by `matlab` to start. There are several versions of MATLAB installed, run `module list matlab` to see them all.
   - Mozilla/Firefox - it can be handy to run a browser on the remote system sometimes. Start one by simply running the `firefox` command.
 
-### Running an app on a `gizmo` node
+### Outgrown `rhino`? 
 
-If you want to run a computationally-intensive X/GUI app, you should grab your own node to do so. This will not impact other users of the rhino systems. This method can also be used to run non-GUI apps interactively.
+If you want to run a computationally-intensive X/GUI app, you should grab your own node to do so. This will not impact other users of the `rhino` systems. This method can also be used to run non-GUI apps interactively.
 
-"Grab" a node using one of the grab commands. Once done, the grab command you used will have created an ssh session to the remote node you have reserved, and you are now ready to run your app. Use the same commands as you would on a rhino (see above).
+"Grab" a node using one of the grab commands, you can read more about how to do this both [here](/compdemos/first_rhino/) and [here.](/scicomputing/compute_platforms/#gizmo-cluster) Once done, the grab command you used will have created an ssh session to the remote node you have reserved, and you are now ready to run your app. Use the same commands as you would on a rhino (see above).
 
-### Notes
+### X Notes
 
 You may see font errors and/or other warnings on your terminal when you start and run your X11 app. Many of these can safely be ignored, but if you do experience an error or crash, often the messages on your ssh terminal can be helpful in troubleshooting.
 
@@ -96,7 +89,7 @@ If you get an error like: `Error: Can't open display:` or any other error mentio
 
 A useful 'test' of the X forwarding is a simple program invoked with the command `xeyes`. This creates a small window with a pair of eyes that track the mouse cursor. It is much fast to start than either Rstudio or MATLAB, and gives a positive indication of functioning X11.
 
-## Other Usage Guidance
+## Tips, Tricks and Gotchas
 
 We look for processes using the "top" command. If a process has accumulated >1000 ("seconds") under "TIME+", we send a warning email to the user. The purpose of the email is to remind or encourage the user to use the gizmo cluster instead for this kind of job, for example, by using the "grab" commands (look here for documentation).
 
