@@ -13,4 +13,4 @@ There are many opportunities for training (courses and tutorials) and connecting
 
 ## [Information for Grant Writers](/scicomputing/compute_grants/)
 
-This section includes boilerplate language about resources for research computing that is appropriate for inclusion in grant proposals.
+Scientific Computing has provided a description of computational and storage resources for grant writers.

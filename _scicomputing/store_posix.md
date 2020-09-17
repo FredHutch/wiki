@@ -27,7 +27,7 @@ While you are allowed up to 100GB of storage in this home directory, it is not t
 
 - You can access `Fast` from your workstation using `smb://center.fhcrc.org/fh/fast/lastname_f` on a Mac or `\\center.fhcrc.org\fh\fast\lastname_f` or `X:\fast\lastname_f` on a PC).
 
-- On Fred Hutch HPC systems (Rhino, Gizmo, Beagle and Koshu) you can access fast via `/fh/fast/lastname_f`
+- On Fred Hutch HPC systems (e.g. Rhino and Gizmo) you can access fast via `/fh/fast/lastname_f`
 
 This storage platform is appropriate for most scientific data- particularly large data sets.
 
