@@ -24,7 +24,7 @@ Please note that changing the default branch on GitHub does not change the defau
 (and vice-versa),
 so both tasks are required if you are working with repositories currently existing in both locations.
 
-#### Change Default Branch via Command Line `git`
+#### Change Default Branch via Command Line Git
 
 Make sure your checkout is current:
 ```
@@ -114,17 +114,32 @@ Rebase is different from merging,
 because the latter actually creates a *new* commit in the version history.
 Rebasing does not create a new commit unless there are conflicts that require reconciliation.
 
-## Comparison of `git` Interfaces
+## Comparison of Git Interfaces
 
-[GitHub.com](https://docs.github.com/en/github): online interface, operates in a web browser
+There are many different ways to interact with version control using Git.
+The software is developed as a [command line program](https://git-scm.com/docs).
+While the widest array of functionality and new features are available via the command line,
+and this approach may be required when working on remote HPC 
+(e.g., the on-premise clusters or cloud computing),
+it does require knowledge of basic Unix commands.
 
-[GitHub Desktop](https://docs.github.com/en/desktop)
+If you are getting started with Git,
+[GitHub Desktop](https://docs.github.com/en/desktop) is a GUI (graphical user interface) 
+that does not require command line experience,
+but still supports most common workflows.
 
-`git` [command line](https://git-scm.com/docs)
+If you're working collaboratively,
+or desire a straightforward interface with limited capacity,
+[GitHub.com](https://docs.github.com/en/github) features an in-browser interface for editing text files.
+This interface is also very useful for working with issues and pull requests. 
 
-[GitKraken](https://www.gitkraken.com)
+Once you are more comfortable with Git workflows,
+you may choose to explore more feature-rich interfaces like [GitKraken](https://www.gitkraken.com).
+This option is useful for working with complex Git workflows,
+especially when collaborating with other people,
+but does require general knowledge of version control to use effectively.
 
-Integration with other software/IDEs (integrated development environments):
+Additionally, IDEs (integrated development environments) provide the ability to work with Git while coding:
 - [RStudio](https://rstudio.com/products/rstudio/download/) is an IDE primarily for coding in R.
 Information on its integration with git is available [here](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
 - [Atom](http://atom.io) is an IDE
@@ -133,13 +148,13 @@ and has optional packages to support Git.
 More information on the main package can be found [here](https://atom.io/packages/git-gui).
 - [Visual Studio Code](https://code.visualstudio.com) is an IDE also capable of handling multiple programming languages,
 and is the preferred interface for the Hutch's Scientific Computing group.
-A description of its git interface is available [here](https://code.visualstudio.com/docs/editor/versioncontrol).
+A description of its Git interface is available [here](https://code.visualstudio.com/docs/editor/versioncontrol).
 More info on specific use in relation to Python is [here](https://sciwiki.fredhutch.org/scicomputing/software_python/#visual-studio-code).
 - [PyCharm](https://www.jetbrains.com/pycharm/) is an IDE primarily for Python.
 Information on its integration with git is [here](https://www.jetbrains.com/help/pycharm/using-git-integration.html#set-passwords-for-git-remotes);
 more info on specific use in relation to Python is [here](https://sciwiki.fredhutch.org/scicomputing/software_python/#pycharm)
 - [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/index.html) is an interface for improving interactions with Jupyter notebooks.
-Information on JupyterLab's extension for git is [here](https://github.com/jupyterlab/jupyterlab-git);
+Information on JupyterLab's extension for Git is [here](https://github.com/jupyterlab/jupyterlab-git);
 more info on specific use in relation to Python is [here](https://sciwiki.fredhutch.org/scicomputing/software_python/#jupyter-notebooks).
 
 ## To Fork or Not to Fork?
