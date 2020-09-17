@@ -134,7 +134,7 @@ This trick does currently only work with the default machine which is based on U
 You may not need to create your own Docker image, but that depends on what you  want to do. If you are using software that is readily available, there is probably already a Docker image containing that software. 
 Look around on [Docker Hub](https://hub.docker.com/) to see if there's already a Docker image available.
 
-SciComp is also developing Docker images that contain much of the software you are used to finding in `/app` on the `rhino` machines and `gizmo`/`beagle` clusters (here's the [R image](https://hub.docker.com/r/fredhutch/ls2_r/)).
+SciComp is also developing Docker images that contain much of the software you are used to finding in `/app` on the `rhino` machines the and `gizmo` clusters (here's the [R image](https://hub.docker.com/r/fredhutch/ls2_r/)).
 
 If you've found an existing Docker image that meets your needs, you don't
 need to read the rest of this section.

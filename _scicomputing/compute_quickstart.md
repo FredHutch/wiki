@@ -41,7 +41,7 @@ The ["rhino" hosts](https://sciwiki.fredhutch.org/compdemos/howtoRhino/#rhino-co
 
 ### Batch Computing
 
-The on-premise compute cluster is _gizmo_- the clusters _koshu_ and _beagle_ are based in off-site cloud providers.  You can read about these and additional resources [here](https://sciwiki.fredhutch.org/scicomputing/compute_platforms/).
+The on-premise compute cluster is _gizmo_.  You can read about this and additional resources [here](https://sciwiki.fredhutch.org/scicomputing/compute_platforms/).
 
 The compute clusters use [Slurm](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/) for workload management. This is the interface for submitting and managing batch jobs to these clusters.
 
