@@ -15,6 +15,8 @@ Specific information about which Python Modules are available, including more in
 ## Life Science/Bio Software Modules
 Other software for life sciences that are available as modules can be found below.  If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.  
 
+<!---DO NOT EDIT BELOW HERE--->
+
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)
 The AMOS consortium is committed to the development of open-source whole genome assembly software
  - [BBMap/38.44-foss-2016b](https://sourceforge.net/projects/bbmap/)
