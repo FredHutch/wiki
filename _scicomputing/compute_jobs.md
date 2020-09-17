@@ -1,6 +1,5 @@
 ---
 title: Computing Job Management
-last_modified_at: 2019-10-24
 primary_reviewers: atombaby
 ---
 
@@ -168,6 +167,13 @@ Indicates that the job is running under an account that is already using the max
 There are other reason codes that are less-common in our environment.  Email Scientific Computing for more information.
 
 ### Useful Commands
+
+#### Notifications
+`sbatch` has a variety of parameters that allow for notifications to users which can be found on the [Slurm manual page](http://schedmd.com).  An exmaple of this is if, for instance, you wanted to receive an email when your job finished.  You can include these `SBATCH` options when sending your job to make that happen. 
+```
+#SBATCH --mail-user=fred@fredhutch.org
+#SBATCH --mail-type=END
+```
 
 #### `squeue`
 
