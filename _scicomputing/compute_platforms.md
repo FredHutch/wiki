@@ -1,10 +1,9 @@
 ---
 title: Supported Technologies and Platforms
-last_modified_at: 2019-07-18
 primary_reviewers: mbcgough, dirkpetersen, atombaby
 ---
 
-The Fred Hutch provides researchers on-campus access to high performance computing using on-premise resources for computing needs that rise above those that can be met using your desktop computer.  The various technologies provided are outlined on here along with the basic information required for researchers to identify which resource might be best suited to their work. 
+The Fred Hutch provides researchers on-campus access to high performance computing using on-premise resources for computing needs that rise above those that can be met using your desktop computer.  The various technologies provided are outlined on here along with the basic information required for researchers to identify which resource might be best suited to their work.
 
 Often reasons to move to these high performance computing (HPC) resources include:
 - reproducible compute jobs
@@ -19,23 +18,25 @@ Compute Resource | Access Interface | Connection to FH Data Storage
 Rhino | CLI, FH credentials on campus/VPN off campus | Direct to all local storage types
 NoMachine | NX Client, FH credentials on campus/VPN off campus | Direct to all local storage types
 Gizmo | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Direct to all local storage types
-Beagle | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | _home_, _fast_, _economy_, AWS-S3, and Beagle-specific _scratch_
+
 
 
 ### Rhino
 `Rhino`, or more specifically the `Rhinos`, are three locally managed HPC servers all accessed via the name `rhino`. Together, they function as a data and compute hub for a variety of data storage resources and high performance computing (HPC) such as those in the table above. The specific guidance for the use of each of the approaches to HPC access are slightly different, but will all require the user to learn how to access and interact with `rhino`.
 
 More information on the topic of ssh configurations for access to `rhino` can be found [here.](/scicomputing/access_methods/)
-More information on specific guidance for using `rhino` and `gizmo` are in our Resource Library for [`rhino`](/compdemos/howtoRhino/) and for [`gizmo`](/compdemos/howtoGizmo/).
+More information on specific guidance for using `rhino` are in our Resource Library for [the basics](/compdemos/first_rhino/) and [for more detailed descriptions](/compdemos/howtoRhino/).
 
 
 ### Gizmo Cluster
 
 While we generally don't recommend interactive computing on the HPC clusters- interactive use can limit the amount of work you can do and introduce "fragility" into your computing- there are many scenarios where interactively using cluster nodes is a valid approach.  For example, if you have a single task that is too much for a `rhino`, opening a session on a cluster node is the way to go.
 
-If you need an interactive session with dedicated resources, you can start a job on the cluster using the command `grabnode`.  The `grabnode` command will start an interactive login session on a cluster node.  This command will prompt you for how many cores, how much memory, and how much time is required
+If you need an interactive session with dedicated resources, you can start a job on the cluster using the command `grabnode`.  The `grabnode` command will start an interactive login session on a cluster node.  This command will prompt you for how many cores (probably 1 unless you know your task is multi-threaded), how much memory, and how much time you estimate will be required. This command can be run from any `rhino` host.  
 
-This command can be run from any `rhino` host.  Access to the Gizmo cluster requires both a HutchNet ID and an association to a PI account on the cluster.  If you get errors like "Invalid account" when using `grabnode` or Slurm commands like `sbatch` then you will need to contact Scientific Computing to have that set up.
+For non-interactive use of `gizmo`, see our pages on [Computing Environments and Software](/scicomputing/compute_environments/) and [Job Mamagement](/scicomputing/compute_jobs/) and perhaps [Parallel Computing](/scicomputing/compute_parallel/).  
+
+Access to the Gizmo cluster requires both a HutchNet ID and an association to a PI account on the cluster.  If you get errors like "Invalid account" when using `grabnode` or Slurm commands like `sbatch` then you will need to contact Scientific Computing to have that set up.
 
 ### NoMachine Access
 
@@ -60,7 +61,7 @@ Name|Type|Authentication|Authorization|Location
 {%- endfor %}
 
 ### Cluster Node Information
-<!--This table is auto-generated based on the yaml in _data/cluster_nodes.yaml--> 
+<!--This table is auto-generated based on the yaml in _data/cluster_nodes.yaml-->
 The particular number and resources of cluster nodes available to Fred Hutch researchers depend on the resource and are described here. Details include:
 - Partition: All nodes of a given generation are in one or more partitions to facilitate resource use efficiency
 - Node Gen: Nodes are named after the their cluster + generation + sequential ID (ex: gizmoj23)
