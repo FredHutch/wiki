@@ -76,7 +76,7 @@
   url: _compdemos/ssh_host_key_management.md
 - dlm: July 14, 2020
   url: _compdemos/gizmo-bionic-changelog.md
-- dlm: November 12, 2019
+- dlm: September 17, 2020
   url: _compdemos/aws.md
 - dlm: May 14, 2020
   url: _compdemos/Checkpointing-Gizmo.md
@@ -84,15 +84,13 @@
   url: _compdemos/ucsc-track-s3.md
 - dlm: August 6, 2020
   url: _compdemos/Mountain-CyberDuck.md
-- dlm: June 9, 2020
-  url: _compdemos/cluster_koshuBeta.md
 - dlm: December 10, 2018
   url: _compdemos/snapshots.md
 - dlm: July 28, 2020
   url: _compdemos/rslurm_intro.md
 - dlm: May 1, 2019
   url: _compdemos/plyranges-workshop.md
-- dlm: June 12, 2020
+- dlm: September 17, 2020
   url: _compdemos/tensorflow-gpu.md
 - dlm: July 20, 2020
   url: _compdemos/first_rhino.md
@@ -102,7 +100,7 @@
   url: _compdemos/GDC_Data_Download.md
 - dlm: June 22, 2020
   url: _compdemos/matlab.md
-- dlm: March 19, 2020
+- dlm: September 17, 2020
   url: _compdemos/toolbox.md
 - dlm: April 6, 2020
   url: _compdemos/python_logging.md
@@ -178,7 +176,7 @@
   url: _contributors/STTR.md
 - dlm: May 2, 2019
   url: _scicomputing/store_databases.md
-- dlm: November 15, 2019
+- dlm: September 17, 2020
   url: _scicomputing/store_scratch.md
 - dlm: March 19, 2020
   url: _scicomputing/comp_index.md
@@ -190,7 +188,7 @@
   url: _scicomputing/access_methods.md
 - dlm: November 12, 2019
   url: _scicomputing/software_standards.md
-- dlm: July 20, 2020
+- dlm: September 17, 2020
   url: _scicomputing/compute_platforms.md
 - dlm: August 6, 2020
   url: _scicomputing/store_objectstore.md
@@ -202,7 +200,7 @@
   url: _scicomputing/access_overview.md
 - dlm: April 9, 2020
   url: _scicomputing/software_managecode.md
-- dlm: June 12, 2020
+- dlm: September 17, 2020
   url: _scicomputing/compute_grants.md
 - dlm: January 9, 2020
   url: _scicomputing/software_examples.md
@@ -236,8 +234,10 @@
   url: _scicomputing/reference_overview.md
 - dlm: September 17, 2020
   url: _scicomputing/software_R.md
-- dlm: August 6, 2020
+- dlm: September 17, 2020
   url: _scicomputing/store_posix.md
+- dlm: September 17, 2020
+  url: archive/cluster_koshuBeta.md
 - dlm: February 12, 2020
   url: _rModules/R-3.6.0-foss-2016b-fh1.md
 - dlm: February 12, 2020
