@@ -68,6 +68,4 @@ Graphical Processing Units (GPUs) provide acceleration for some kinds of computa
 
 [This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  [This](https://sciwiki.fredhutch.org/compdemos/tensorflow-gpu/) has a specific example of running tensorflow on SciComp clusters.
 
-## [Information for Grant Writers](/scicomputing/compute_grants/)
 
-Scientific Computing has provided a description of computational and storage resources for grant writers.
