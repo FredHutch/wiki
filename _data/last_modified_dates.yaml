@@ -1,5 +1,3 @@
-- dlm: February 12, 2020
-  url: scientificSoftware-header.md
 - dlm: November 7, 2019
   url: searchresults.md
 - dlm: August 22, 2019
@@ -54,7 +52,7 @@
   url: _compdemos/motuz.md
 - dlm: May 14, 2020
   url: _compdemos/gdc-client-hints.md
-- dlm: December 6, 2019
+- dlm: September 17, 2020
   url: _compdemos/Docker.md
 - dlm: June 20, 2019
   url: _compdemos/rslurm_example.md
@@ -88,8 +86,6 @@
   url: _compdemos/Mountain-CyberDuck.md
 - dlm: June 9, 2020
   url: _compdemos/cluster_koshuBeta.md
-- dlm: May 1, 2019
-  url: _compdemos/how_to_beagle.md
 - dlm: December 10, 2018
   url: _compdemos/snapshots.md
 - dlm: July 28, 2020
@@ -106,8 +102,6 @@
   url: _compdemos/GDC_Data_Download.md
 - dlm: June 22, 2020
   url: _compdemos/matlab.md
-- dlm: February 20, 2020
-  url: _compdemos/howtoGizmo.md
 - dlm: March 19, 2020
   url: _compdemos/toolbox.md
 - dlm: April 6, 2020
@@ -118,7 +112,7 @@
   url: _compdemos/vscode_markdown_howto.md
 - dlm: September 3, 2020
   url: _compdemos/r-2018b-matrix-errors.md
-- dlm: May 15, 2019
+- dlm: August 4, 2020
   url: _compdemos/howtoRhino.md
 - dlm: June 11, 2020
   url: _compdemos/Cromwell.md
@@ -212,9 +206,9 @@
   url: _scicomputing/compute_grants.md
 - dlm: January 9, 2020
   url: _scicomputing/software_examples.md
-- dlm: June 12, 2020
+- dlm: September 17, 2020
   url: _scicomputing/compute_environments.md
-- dlm: July 2, 2020
+- dlm: September 17, 2020
   url: _scicomputing/compute_overview.md
 - dlm: April 29, 2020
   url: _scicomputing/software_overview.md
@@ -224,23 +218,23 @@
   url: _scicomputing/software_linux101.md
 - dlm: September 12, 2019
   url: _scicomputing/access_permissions.md
-- dlm: July 20, 2020
+- dlm: September 17, 2020
   url: _scicomputing/access_credentials.md
-- dlm: October 17, 2019
+- dlm: September 17, 2020
   url: _scicomputing/compute_quickstart.md
 - dlm: June 11, 2020
   url: _scicomputing/compute_parallel.md
 - dlm: June 2, 2020
   url: _scicomputing/reference_training.md
-- dlm: May 13, 2020
+- dlm: September 17, 2020
   url: _scicomputing/compute_cloud.md
 - dlm: May 21, 2020
   url: _scicomputing/software_python.md
-- dlm: June 12, 2020
+- dlm: September 17, 2020
   url: _scicomputing/compute_jobs.md
 - dlm: April 28, 2020
   url: _scicomputing/reference_overview.md
-- dlm: May 18, 2020
+- dlm: September 17, 2020
   url: _scicomputing/software_R.md
 - dlm: August 6, 2020
   url: _scicomputing/store_posix.md
