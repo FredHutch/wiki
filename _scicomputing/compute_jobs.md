@@ -10,7 +10,7 @@ The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provid
 
 ## Using Slurm on Fred Hutch Systems
 
-This section is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the clusters available.  There are two main clusters in use today that rely on Slurm - the on-campus `Gizmo` cluster and the cloud-based `Beagle` cluster (see our [Technology page](/scicomputing/compute_platforms/) for more information about those resources.  Commands work the same in either environment. 
+This section is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the gizmo cluster.
 
 ### Examples of Use
 A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  This is an evolving example repo that new users can refer to to begin to get into parallel computing and more adept use of Slurm.  If you are a Fred Hutch user and would like to contribute to the documentation or the examples there, to share with the community how you structure your interactions with Slurm, submit a pull request there.
@@ -30,7 +30,7 @@ Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/
 
 ### Cluster
 
-A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).  At the Hutch we have two clusters, `Beagle` and `Gizmo`.  From most hosts the default cluster will be _gizmo_- selection of the target cluster is done via an argument to Slurm commands (see [Multi-Cluster Operation](#multicluster-operation) below)
+A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).
 
 ### Partition
 
@@ -72,7 +72,6 @@ by the task you are running).
 
 These two take many of the same options:
 
- - `-M` select the cluster on which the job will run
  - `-p` change the partition
  - `-t` request a certain amount of time for the job.
  - `-n` request a number of tasks (default 1)

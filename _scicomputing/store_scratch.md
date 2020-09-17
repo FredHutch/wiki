@@ -23,7 +23,7 @@ In bioinformatics workflows we are often using pipelines with many execution ste
 
 Informaticians often do not delete this data after this step because they are already off to the next task. Even worse, if temporary data is created in a standard file system such as `Fast` storage it will be picked up by the backup system and copied to the cloud the next night. If data is frequently created and deleted the backup data can grow to **5 or even 10 times the size** of the primary data which is an enormous waste. To prevent this waste every informatician or Data Scientist working with large datasets should use `Scratch` storage as part of their routine.
 
-For this purpose we have a scratch file systems attached to the `Gizmo`, `Beagle` and `Koshu` clusters. There is a different scratch file system mounted on each cluster.  Using a scratch resource has several advantages:
+For this purpose we have a scratch file systems attached to `Gizmo`.  Using a scratch resource has several advantages:
 
 - The scratch file system is free of charge
 - It is the most performant storage system connected to `Rhino`/`Gizmo`
@@ -49,7 +49,7 @@ The location of this local scratch space is stored in the environment variable "
 
 ### Persistent scratch
 
-Sometimes you need to work with temporary data that is not part of a specific pipeline, for example if you are doing manual QA on data for a few days or even weeks. The persistent scratch file system is accessible via environment variables $DELETE10, $DELETE30 and $DELETE90 and the files in these folders will be removed after 10, 30 or 90 days of inactivity. The $DELETE30 folder is currently available on Gizmo and $DELETE10 folders are currently avialble on Beagle and Koshu. These folders can also be reached from other operating systems: In Windows you can select (x:\scratch\delete30 ) and on Mac you select smb://center.fhcrc.org/fh/scratch/delete30.
+Sometimes you need to work with temporary data that is not part of a specific pipeline, for example if you are doing manual QA on data for a few days or even weeks. The persistent scratch file system is accessible via environment variables $DELETE10, $DELETE30 and $DELETE90 and the files in these folders will be removed after 10, 30 or 90 days of inactivity.  These folders can also be reached from other operating systems: In Windows you can select (x:\scratch\delete30 ) and on Mac you select smb://center.fhcrc.org/fh/scratch/delete30.
 
 ## How long will my data stay in persistent scratch?
 
@@ -78,9 +78,9 @@ As an alternative to the environment variable $DELETE30 you can also reach scrat
 
 ## How can I use Scratch?
 
-In jobs on `Gizmo`, environment variables can be used to write and then read temporary files, e.g. $SCRATCH_LOC/myfile.csv or $DELETE30/lastname_f/myfile.csv ($DELETE10 and $DELETE90 are in preparation).  Similarly, jobs on Beagle can currently use $TMPDIR/myfile.csv and $DELETE10/lastname_f/myfile.csv.
+In jobs on `Gizmo`, environment variables can be used to write and then read temporary files, e.g. $SCRATCH_LOC/myfile.csv or $DELETE30/lastname_f/myfile.csv ($DELETE10 and $DELETE90 are in preparation).
 
-The files under $SCRATCH_LOC are automatically deleted when your Gizmo or Beagle job ends. You can also reach Scratch storage space via Windows (via the X: drive) or Mac, e.g. smb://center.fhcrc.org/fh/scratch.
+The files under $SCRATCH_LOC are automatically deleted when your job ends. You can also reach Scratch storage space via Windows (via the X: drive) or Mac, e.g. smb://center.fhcrc.org/fh/scratch.
 
 >Note: lastname_f stands for the last name and the first initial of your PI. If you do not see the folder of your PI please ask `Helpdesk` to create it for you.
 
