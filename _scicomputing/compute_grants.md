@@ -1,6 +1,5 @@
 ---
 title: Scientific Computing Resource Overview for Grants and Publications
-last_modified_at: 2019-04-25
 primary_reviewers: dirkpetersen
 ---
 
@@ -23,8 +22,6 @@ The `Gizmo` cluster is currently equipped with almost 600 compute nodes, 4000 cp
 #### Cloud Computing Resources 
 
 Fred Hutch is currently using cloud computing resources from the 3 major infrastructure (IaaS) cloud service providers. The internal network has been extended into several secure Virtual Private Clouds (VPC). The private cloud networks are covered under Business Associates Agreement (BAA). This environment is fully audited and integrated with our Security Information and Event Management (SIEM) system.
-
-The `Beagle` and `Koshu` clusters are configured identical to `Gizmo`, however they execute their jobs in the cloud. More than 2000 cloud based compute cores are available to all investigators and they can seamlessly use their pipelines on premise and in the cloud.
 
 #### Data Storage Service and Network Connectivity  
 
