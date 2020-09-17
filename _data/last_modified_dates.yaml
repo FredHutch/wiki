@@ -238,10 +238,12 @@
   url: _scicomputing/store_posix.md
 - dlm: September 17, 2020
   url: archive/cluster_koshuBeta.md
-- dlm: February 12, 2020
-  url: _rModules/R-3.6.0-foss-2016b-fh1.md
-- dlm: February 12, 2020
-  url: _rModules/R-3.6.1-foss-2016b-fh1.md
+- dlm: September 17, 2020
+  url: _rModules/fhR-4.0.2-foss-2019b.md
+- dlm: September 17, 2020
+  url: _rModules/R-3.6.1-foss-2019b.md
+- dlm: September 17, 2020
+  url: _rModules/R-3.6.2-foss-2019b-fh1.md
 - dlm: November 12, 2019
   url: _posts/2019-02-21-upgrade-env-modules.md
 - dlm: November 12, 2019
@@ -252,6 +254,10 @@
   url: _posts/2019-11-01-scratch-upgrade.md
 - dlm: November 12, 2019
   url: _posts/2018-06-01-JuneComputingUpdates.md
+- dlm: September 17, 2020
+  url: _pythonModules/fhPython-3.8.2-foss-2020a-Python-3.8.2.md
+- dlm: September 17, 2020
+  url: _pythonModules/Python-3.7.4-foss-2019b-fh1.md
 - dlm: February 12, 2020
   url: _pythonModules/Python-3.7.4-foss-2016b-fh1.md
 - dlm: November 7, 2019
