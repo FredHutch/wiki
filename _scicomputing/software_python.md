@@ -3,57 +3,84 @@ title: Python
 primary_reviewers: k8hertweck, kmayerb, zyd14
 ---
 
-For beginners to python, there are a variety of options.  See our page on [Training and Finding Help](/scicomputing/reference_training/) for additional details on in-person and other training opportunities. In addition to that, there are some publicly accessible resources available to assist in getting started learning and using Python for scientific research computing.    
-  * [Getting started with Python](https://www.python.org/about/gettingstarted/)
-  * [Python scientific computing with Scipy](https://www.scipy.org/getting-started.html)
-  * [Python Data Analysis Library](http://pandas.pydata.org/pandas-docs/stable/10min.html)
-  * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
-  * [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
+FIXME: 
+- explain jargon (magic beans/magic sauce)
+- check broken links to images at end
+- formatting of keyboard shortcuts (make bold rather than in brackets)
 
-## Accessing Python
-There are many ways to use python beyond a local installation on your computer from [Python.org](https://www.python.org/downloads/).  These methods depend more on the type of computing you will need to use and in what way you want to interact with your code and it's output.  
+Whether you're new to Python or are an experienced Python coder interested in how the Coop community works with this language,
+this page is for you!
+
+## Learning Python
+
+[fredhutch.io](http://www.fredhutch.io/resources/) offers Python class material designed specifically for our research community. 
+See our page on [Training and Finding Help](/scicomputing/reference_training/)
+for additional information on Hutch support for Python learning and sharing.
+
+In addition,
+you may find the following publicly accessible resources useful as you get started learning to use Python:    
+  * [Getting started with Python](https://www.python.org/about/gettingstarted/)
+  * [Real Python](https://realpython.com)
+  * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
+
+## Accessing and using Python
+
+FIXME: intro to section
+There are many ways to use Python beyond a local installation on your computer from [Python.org](https://www.python.org/downloads/).  
+These methods depend more on the type of computing you will need to use and in what way you want to interact with your code and its output.  
+
+### Installing Python on your own computer
+
+FIXME: other installations? complete descriptions
+- Anaconda 
+- Miniconda
+
+### Common Python packages for scientific research computing
+
+FIXME: define packages/libraries, highlight selected
+* [Python scientific computing with Scipy](https://www.scipy.org/getting-started.html)
+* [Python Data Analysis Library](http://pandas.pydata.org/pandas-docs/stable/10min.html)
+* [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
+
+https://pypi.org
+
 
 **Via the local HPC cluster**  
 
-SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python Modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/_pythonModules/).  If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.  
+FIXME: clarify language
+SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).  If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences). 
+In your request, please include a link to the package source and version you require.  
 
+## Writing Python Code: Common IDEs
 
-## Writing Python Code:  Common IDEs
+FIXME: overview
 
 ### Visual Studio Code 
-This original content can still be found in it's [original repo](https://github.com/kmayerb/visual_studio_code_demo) written by a member of the Fred Hutch, this is an adaptation of that content. 
+
+This section is adapted from [original content](https://github.com/kmayerb/visual_studio_code_demo) 
+written by [Kosh Mayer-Blackwell](https://github.com/kmayerb),
+a member of the Fred Hutch research community.
 
 **Setup**
+
+The following content requires the following setup:
 1. Install [Visual Studio Code](https://code.visualstudio.com/)
-2. Add the following four key extensions (`Code Runner 0.9.16`, `Python`, `R`, `markdownlint`).
-    * Do this by clicking on the four box icon on the left sidebar.
-    * Search for the extensions by name and install
-3. Ensure you have a python >= 3.6 environment available.
+2. Add the following four key extensions by clicking on the four box icon in the left sidebar, searching for the extension by name, and installing: `Code Runner 0.9.16`, `Python`, `R`, `markdownlint`
+3. Ensure you have a Python >= 3.6 environment available.
 
-**Shortcuts for Mac**
+**Keyboard shortcuts**
 
-* ⌘ is the Command () key.
-* ⌃ is the Control key.
-* ⌥ is the Option (alt) key.
-* ⇧ is the Shift key.
-* ⇪ is the Caps Lock key.
-* Select Panes with ⌘1,⌘2, ... #n.  If n is greater than the number of open panes, this will create a new pane.
-* Select Tabs within Panes with ⌃1,⌃2, ... ⌃n.  Get to the 2nd tab in the leftmost pane [⌘1], then [⌃2].
-* Select Explorer Pane with ⌘0.  Once you are in the explorer you can use up and down keys to select files.
+For a complete list of keyboard shortcuts and instructions on custom mapping,
+please see [VS Code's Keyboard Shortcuts](https://code.visualstudio.com/docs#keyboard-shortcuts).
+FIXME: describe why these are highlighted, and fix formatting
 
-- Reveal File Paths Instantly
-Click on the file panel Use the keyboard shortcut [⌥⌘C], and bam!, the full path is copied to your clipboard (e.g., `/Users/kmayerbl/active/demo_vsc/README.md`)
+- Reveal File Paths Instantly: Click on the file panel Use the keyboard shortcut [⌥⌘C], and bam!, the full path is copied to your clipboard (e.g., `/Users/username/folder/filename`)
 
-- Reveal Paths with Clicks
-Instantly get to where your code lives on your machine. Save time by right-clicking on a folder or file, and select [Reveal in Finder] or [Open in Terminal]. Need the path just click [Copy Path].
+- Reveal paths with clicks: Instantly get to where your code lives on your machine. Save time by right-clicking on a folder or file, and select [Reveal in Finder] or [Open in Terminal]. Need the path? Just click [Copy Path].
 
-- Save one or Save all by Group
+- Save one or Save all by Group: Take a look at the icon on the browser panel. You can, with one-click, save all the files or all the files in a group.
 
-Take a look at the icon on the browser panel. You can, with one-click, save all the files or all the files in a group.
-
-- Preview your README.md
-
-VSC offers a live rendering of your markdown. To view it, right-click on your markdown file and select [Open Preview].
+- Preview files in markdown, like `README.md`: To view live rendering of markdown files, right-click on your markdown file and select [Open Preview].
 
 - Run Script or Only Part of Script With **⌃⌥N**
 
@@ -61,7 +88,7 @@ You can run a segment of a script by selecting the part you care about and hitti
 
 - Identify Problems and Their Quick Fixes
 
-[Code linters](https://dbader.org/blog/python-code-linting) help you find possible syntactical and stylistic problems quickly. Issues detected by the built-in VSCode linter are reported in the Problems tab of the  Here are two examples. 
+[Code linters](https://dbader.org/blog/python-code-linting) help you find possible syntactical and stylistic problems quickly. Issues detected by the built-in VS Code linter are reported in the Problems tab of the  Here are two examples. 
 
 * No-trailing-spaces (see one line above)
 * No-bare URLs (see in the first block)
@@ -70,12 +97,12 @@ Get to the problems quickly with this shortcut [⇧⌘ M].
 
 ![Problems and Their Fixes](https://user-images.githubusercontent.com/46639063/75186808-8c5f6c80-56fd-11ea-91c3-1d09b401b734.png)
 
-Here you can see tests that are failing, and "lint" that's piling up in your code. One of the things, I like about VSCode is that
+Here you can see tests that are failing, and "lint" that's piling up in your code. One of the things, I like about VS Code is that
 you can auto-correct simple problems like those above without even having to search through the code.
 
 **Script Debugging**
 
-When we run python hi.py we see an error. Suppose we want to see where that error emerges.
+When we run Python hi.py we see an error. Suppose we want to see where that error emerges.
 
 ```bash
 Traceback (most recent call last):
@@ -101,7 +128,7 @@ Then, step line by line through the problematic function and check whether state
 
 **Develop a Specific Unit Test**  
 
-A great thing about VSCode is how it organizes your test. You can even run them one by one.
+A great thing about VS Code is how it organizes your tests. You can even run them one by one.
 
 ![tests](https://user-images.githubusercontent.com/46639063/75184229-ea3d8580-56f8-11ea-83d3-1ee87fec849c.png)
 
@@ -113,16 +140,16 @@ pytest --doctest-modules -v
 
 **Magic Sauce and Git Interface**  
 
-The `Peak` function is Some Serious Magic beans.  Sometimes you don't want to search for where a variable or function is defined. VSCode has a peak function that lets you examine externally referenced objects, and even edit them, directly from where an object is referenced. Let's look at what the French hello should be:
+The `Peak` function is Some Serious Magic beans.  Sometimes you don't want to search for where a variable or function is defined. VS Code has a peak function that lets you examine externally referenced objects, and even edit them, directly from where an object is referenced. Let's look at what the French hello should be:
 
 ![peak](https://user-images.githubusercontent.com/46639063/75184186-d98d0f80-56f8-11ea-8e67-cd76626992f0.png)  
 
 
 **SSH Extension for remote development**  
 
-If you've ever had to access and work on files through a remote connection you've probably found yourself at the mercy of the development tools provided on the remote server you're accessing.  Luckily VSCode has a well-supported extension which can allow you to enjoy the same development experience on a remote server that you would if you were developing locally.  Follow the step-by-step instructions on setting up the [Visual Studio Code Remote - SSH](https://code.visualstudio.com/docs/remote/ssh) to get set up to run VSCode when connected to a remote server.  
+If you've ever had to access and work on files through a remote connection you've probably found yourself at the mercy of the development tools provided on the remote server you're accessing.  Luckily VS Code has a well-supported extension which can allow you to enjoy the same development experience on a remote server that you would if you were developing locally.  Follow the step-by-step instructions on setting up the [Visual Studio Code Remote - SSH](https://code.visualstudio.com/docs/remote/ssh) to get set up to run VS Code when connected to a remote server.  
 
-The [Visual Studio Code Remote - WSL](https://code.visualstudio.com/docs/remote/wsl) extension is a related extension which allows you to use VSCode with the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/). This can greatly simplify using Linux toolchains and utilities from within a Windows environment.
+The [Visual Studio Code Remote - WSL](https://code.visualstudio.com/docs/remote/wsl) extension is a related extension which allows you to use VS Code with the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/). This can greatly simplify using Linux toolchains and utilities from within a Windows environment.
 
 **Merge Conflicts example**
 
@@ -146,7 +173,7 @@ So I pulled the version on GitHub that was one commit ahead, revealing a conflic
 
 ![Merge Conlict](https://user-images.githubusercontent.com/46639063/75185762-810b4180-56fb-11ea-810d-2560939496be.png)
 
-Fortunately, VSCode makes it easy to review the confict and pick the winner (or keep both, by appending a version as new lines of code).
+Fortunately, VS Code makes it easy to review the confict and pick the winner (or keep both, by appending a version as new lines of code).
 
 ![Resolve Merge Conflict](https://user-images.githubusercontent.com/46639063/75185767-82d50500-56fb-11ea-8da1-4d32fddabe7c.png)
 
@@ -161,7 +188,7 @@ JSON file with all your user-specific settings. How to get to it? (see the commo
 
 
 ### PyCharm
-This original content can still be found in it's [original repo](https://github.com/zyd14/pycharm_demo) written by a member of the Fred Hutch, this is an adaptation of that content. 
+This original content can still be found in its [original repo](https://github.com/zyd14/pycharm_demo) written by a member of the Fred Hutch, this is an adaptation of that content. 
 
 PyCharm is an incredibly powerful IDE created by [JetBrains](https://www.jetbrains.com/pycharm/download/#section=mac).  It comes in a free, open-source community edition, and a paid-for subscription edition. 
 
@@ -201,12 +228,12 @@ or in-line type hints) and typing the '.' operator, a list of all properties and
 Furthermore, once you've selected a method and are beginning to feed it parameters, you can type **⌘p** from within the method parentheses to list all the parameters the function takes.  If you'd like to know more about how the function itself
 works, you can jump to its definition by highlighting it and typing **⌘b**
 
-**Setting the python environment**  
+**Setting the Python environment**  
 
-By associating your project with a python interpreter (whether it's a global installation, or some conda/venv/pipenv install) your IDE
+By associating your project with a Python interpreter (whether it's a global installation, or some conda/venv/pipenv install) your IDE
 will be better able to perform proper syntax highlighting and will also be able to do cool things like run tests and execute
 scripts or selected code blocks. You can even create multiple run / test configurations with different versions of Python in case you'd like to test across any differences between versions.  
-To set a python environment, open the **Preferences** pane by selecting **PyCharm > Preferences** from the toolbar (or ⌘, for shortcut).
+To set a Python environment, open the **Preferences** pane by selecting **PyCharm > Preferences** from the toolbar (or ⌘, for shortcut).
 Then from the **Project** drop-down select **Project Interpreter**.  From here you can create a new conda/pipenv/venv environment for 
 this project (generally good practice) or select an existing interpreter on your computer. To create a new environment,
 or link an existing interpreter to PyCharm select *'Add'* from the menu that appears when you click the gear next to the 
@@ -219,7 +246,7 @@ on the previous page.
 
 **Running code through the IDE**  
 
-Once you have a python interpreter associated with your project you should be able to right-click on any .py file selected 
+Once you have a Python interpreter associated with your project you should be able to right-click on any .py file selected 
 from the project navigator and select *Run*.  Any output from your project will appear in a terminal window which should appear
 when the file is run. You can customize Run configurations for each executable file, providing things like command-line 
 arguments, environment variables and further environment setup by selecting *Run > Edit Configurations* from the top toolbar,
@@ -366,10 +393,10 @@ First, it's good to know there's two distinct products associated with Jupyter. 
 
 ![](https://jupyterlab.readthedocs.io/en/stable/_images/interface_jupyterlab.png)
 
-So let's get started with JupyterLab, oh and I'll just say at the top that I do not think JupyterLab can currently replace a more engineering focused IDE application like Atom, VSCode or PyCharm but it is heading in that direction with its extensions and it does presently make a very good light-weight, browser-based analytical tool for teaching, data wrangling, modeling, scripting, cloud computing and various other analytic needs outside of engineering.
+So let's get started with JupyterLab, oh and I'll just say at the top that I do not think JupyterLab can currently replace a more engineering focused IDE application like Atom, VS Code or PyCharm but it is heading in that direction with its extensions and it does presently make a very good light-weight, browser-based analytical tool for teaching, data wrangling, modeling, scripting, cloud computing and various other analytic needs outside of engineering.
 
 1. First let's [install JupyterLab](https://jupyterlab.readthedocs.io/en/latest/getting_started/installation.html). The latest version is 2.0.1 and that's important because some of the add-ons and extensions may not work with this or other versions.
-2. By default JupyterLab installs python but to install all the other cools stuff* you'll need:
+2. By default JupyterLab installs Python but to install all the other cools stuff* you'll need:
    - A linter such as [flake8](https://github.com/mlshapiro/jupyterlab-flake8) 
    - A [debugger](https://github.com/jupyterlab/debugger)
    - [Github integration](https://github.com/jupyterlab/jupyterlab-git)
@@ -409,11 +436,11 @@ Jupyterlab offers live rendering of your markdown. To set it up, locate the mark
 
 **Run Script or Only Part of Script With ⌃⌥N**
 
-You can run a segment of a script by selecting the part you care about and hitting [⌃⌥N]. The results show up in the OUTPUT table. Take the segment of code you want to run and drop it into a new cell and Shift+Return. Seems manual but this ability to take parts of code and iterate and interact with them by dropping them into a new cell to run is what some find beatiful about Jupyter. It is like an inline console which speaking of if you want to create a new console just select File > New and you can create a new console, or a new notebook (in either a python, R, Julia or other kernel), a terminal instance, a new text file, or a markdown.
+You can run a segment of a script by selecting the part you care about and hitting [⌃⌥N]. The results show up in the OUTPUT table. Take the segment of code you want to run and drop it into a new cell and Shift+Return. Seems manual but this ability to take parts of code and iterate and interact with them by dropping them into a new cell to run is what some find beatiful about Jupyter. It is like an inline console which speaking of if you want to create a new console just select File > New and you can create a new console, or a new notebook (in either a Python, R, Julia or other kernel), a terminal instance, a new text file, or a markdown.
 
 **Identifying Problems and Their Quick Fixes**
 
-Linters help you find problems quickly and [this guy](https://github.com/mlshapiro/jupyterlab-flake8) built a good one based on the flake8 python library for linting. The only problem is that currently it doesn't work with JupyterLab 2.0 yet that doesn't mean it won't in the future ; )
+Linters help you find problems quickly and [this guy](https://github.com/mlshapiro/jupyterlab-flake8) built a good one based on the flake8 Python library for linting. The only problem is that currently it doesn't work with JupyterLab 2.0 yet that doesn't mean it won't in the future ; )
 
 ![](https://raw.githubusercontent.com/mlshapiro/jupyterlab-flake8/master/img/example.png)
 ![](https://github.com/mlshapiro/jupyterlab-flake8/raw/master/img/editor-example.png)
@@ -433,7 +460,7 @@ Ok, so the "magic beans" here with Jupyterlab is that you have a very light and 
 
 **Git extension for JupyterLab**
 
-"There's an extension for that"[...seriously!](https://github.com/jupyterlab/jupyterlab-git) Yet, it's not as nice as the github integration for VSCode or PyCharm but then again JupyterLab is new and the extensions I believe are community-driven so they haven't had the time or resources to flush it out like the others may have. There's also one specifically for [diffing and merging of notebooks](https://github.com/jupyter/nbdime).
+"There's an extension for that"[...seriously!](https://github.com/jupyterlab/jupyterlab-git) Yet, it's not as nice as the github integration for VS Code or PyCharm but then again JupyterLab is new and the extensions I believe are community-driven so they haven't had the time or resources to flush it out like the others may have. There's also one specifically for [diffing and merging of notebooks](https://github.com/jupyter/nbdime).
 
 ![](https://github.com/jupyterlab/jupyterlab-github/blob/master/gitception.png)
 
@@ -443,7 +470,7 @@ You can set system and all your user-specific settings by going to Settings > Ad
 
 **the .ipynb file**
 
-This IS the ipython notebook file or your JupyterLab file with code and markdown in it and note you can only access these from the directory you execute `jupyterlab` in so either `pwd` to make sure or have a set location of where you save the files because you'll only be able to open .ipynb files in either the start-up directory or it's sub-folders. 
+This IS the iPython notebook file or your JupyterLab file with code and markdown in it and note you can only access these from the directory you execute `jupyterlab` in so either `pwd` to make sure or have a set location of where you save the files because you'll only be able to open .ipynb files in either the start-up directory or it's sub-folders. 
 
 ### Using Jupyter Notebooks at Fred Hutch
 
@@ -482,7 +509,7 @@ From Rhino execute the `grabjupyter` command and a node will be allocated on Giz
 
 SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.  (Jupyterhub does not have the latest Python packages)
 
-Please note that only the first method (running Jupyter from your local machine) allows you to install your own python packages as administrator of your machine.
+Please note that only the first method (running Jupyter from your local machine) allows you to install your own Python packages as administrator of your machine.
 The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the --user option (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
 
 ```
@@ -502,7 +529,7 @@ Jupyterlab built upon the success of Jupyter notebook as a light-weight, browser
 
 The downside though is that version 2 was a major release for them and they are now at 2.0.1 which was released in March 6, 2020 so the project is very new which means the extensions which add a lot of features to flush out the product also need to stay update-to-date with the current code base but that can create problems. There's guides for that, ["JupyterLab 1.x to 2.x Extension Migration Guide"](https://jupyterlab.readthedocs.io/en/stable/developer/extension_migration.html), but it'll be great when everything is playing nice and you have a powerful browser-based, light-weight IDE at your finger tips.
 
-Let's hope the synergy of the versioning of the core product and the community of extensions improves. Until then there's nothing stopping a python or R user from doing all their engineering in Atom, PyCharm, RStudio, or VSCode and then the rest of their coding/management in Jupyterlab since it _is_ browser-based. Hopefully, this tutorial has heightened your interest.
+Let's hope the synergy of the versioning of the core product and the community of extensions improves. Until then there's nothing stopping a Python or R user from doing all their engineering in Atom, PyCharm, RStudio, or VS Code and then the rest of their coding/management in Jupyterlab since it _is_ browser-based. Hopefully, this tutorial has heightened your interest.
 
 
 ## More IDEs to explore  
