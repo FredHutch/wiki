@@ -37,8 +37,6 @@ You can access `Economy Local` or `Economy Cloud` resources with [command line t
 
 `Economy Local` is an object storage system based on Openstack Swift. `Economy Local` is recommended for research groups who keep large amounts of data (>100TB) on the Fred Hutch campus and frequently use the `Gizmo` cluster with local storage. We also recommend it for data that is explicitly forbidden to be stored in public cloud storage resources.
 
->Note: In the near future `Economy Local` will be retrofitted to become a hybrid storage solution. You will be able to access your data conveniently through a file access mount point such as `/fh/economy/` in addition to the faster object storage access.
-
 `Economy Local` is well suited to store petabytes of data at low cost and a high level of data protection. Economy File does not require tape backup as data is replicated to multiple sites. If you accidentally delete data it will be held in a "Trash can" for multiple months during which you have read-only access to the deleted data. Economy File is approved for PHI / PII data.  It is a suitable location to store genomic data  including those governed by the NIH Genomic Data Sharing policies or originating from public repositories while in use locally. Please the [demo section for examples of Economy Local](/compdemos/Economy-storage/)
 
 
