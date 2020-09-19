@@ -7,6 +7,7 @@ FIXME:
 - explain jargon (magic beans/magic sauce)
 - check broken links to images at end
 - formatting of keyboard shortcuts (make bold rather than in brackets)
+- include links to relevant demos as well as software development page
 
 Whether you're new to Python or are an experienced Python coder interested in how the Coop community works with this language,
 this page is for you!
@@ -35,14 +36,21 @@ FIXME: other installations? complete descriptions
 - Anaconda 
 - Miniconda
 
+FIXME: Define kernel
+
 ### Common Python packages for scientific research computing
 
 FIXME: define packages/libraries, highlight selected
-* [Python scientific computing with Scipy](https://www.scipy.org/getting-started.html)
-* [Python Data Analysis Library](http://pandas.pydata.org/pandas-docs/stable/10min.html)
-* [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
 
-https://pypi.org
+- numpy and scipy: [Python scientific computing with Scipy](https://www.scipy.org/getting-started.html)
+- pandas: [Python Data Analysis Library](http://pandas.pydata.org/pandas-docs/stable/10min.html)
+- biopython: [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
+- link to data viz page
+
+Other places to find packages:
+- https://pypi.org
+- install via github
+- write your own (link to software development page)
 
 
 **Via the local HPC cluster**  
@@ -53,17 +61,18 @@ In your request, please include a link to the package source and version you req
 
 ## Writing Python Code: Common IDEs
 
-FIXME: overview
+FIXME: overview, define IDE
 
 ### Visual Studio Code 
 
+Visual Studio Code ([VS Code](https://code.visualstudio.com)) is a code editor developed by Microsoft that is intended as a streamlined, lightweight solution for writing, debugging, and version control of scripts.
 This section is adapted from [original content](https://github.com/kmayerb/visual_studio_code_demo) 
-written by [Kosh Mayer-Blackwell](https://github.com/kmayerb),
-a member of the Fred Hutch research community.
+written by [Kosh Mayer-Blackwell](https://github.com/kmayerb)
+while a member of the Fred Hutch research community.
 
 **Setup**
 
-The following content requires the following setup:
+This demonstration requires the following setup:
 1. Install [Visual Studio Code](https://code.visualstudio.com/)
 2. Add the following four key extensions by clicking on the four box icon in the left sidebar, searching for the extension by name, and installing: `Code Runner 0.9.16`, `Python`, `R`, `markdownlint`
 3. Ensure you have a Python >= 3.6 environment available.
@@ -188,12 +197,24 @@ JSON file with all your user-specific settings. How to get to it? (see the commo
 
 
 ### PyCharm
-This original content can still be found in its [original repo](https://github.com/zyd14/pycharm_demo) written by a member of the Fred Hutch, this is an adaptation of that content. 
 
-PyCharm is an incredibly powerful IDE created by [JetBrains](https://www.jetbrains.com/pycharm/download/#section=mac).  It comes in a free, open-source community edition, and a paid-for subscription edition. 
+[PyCharm](https://www.jetbrains.com/pycharm) is an incredibly powerful IDE created by [JetBrains](https://www.jetbrains.com).  
+It comes in a free, open-source community edition,
+with upgraded version available via subscription,
+and can be downloaded [here](https://www.jetbrains.com/pycharm/download).
 
+This section is adapted from [original content](https://github.com/zyd14/pycharm_demo) 
+written by [Zach Romer](https://github.com/zyd14)
+while a member of the Fred Hutch research community.
 
-**Key shortcuts:** 
+**Keyboard shortcuts** 
+
+A complete list of keyboard shortcuts can be configured in the **Preferences > Keymap** menu. If you're a hotkey ninja (which I am not), 
+you can get set up to keep your hand off the mouse almost completely.  There are `vim` and `emacs` keymap plugins 
+which will allow you to use your `vim`/`emacs` setups in PyCharm as well.
+
+The following shortcuts are some of the most unusual or useful available in PyCharm:
+
 - **⌘k** will bring up a commit dialog box, listing all the files that have been modified.  You can 
 uncheck the checkbox next to each file that you don't want included in the commit.  A diff viewer will be present for
 each file changed, allowing you to see how the file changed for this commit.
@@ -201,7 +222,7 @@ each file changed, allowing you to see how the file changed for this commit.
 - **fn+⇧+k** will bring up the push menu, and will include a list of all the commits which will be pushed as a result of
 this action, as well as the ability to view the diffs that will be applied to each changed file.
 
-- **⌘b** will take you to the closest (scope-wise) definition of a variable you have high-lighted, whether that's
+- **⌘b** will take you to the closest (scope-wise) definition of a variable you have highlighted, whether that's
 in the current function or deep in some third-party library in your virtual environment.  I find this one
 to be invaluable when trying to trace back clues as to why an object isn't behaving the way I think it should,
 and overall better understand how those objects work.
@@ -213,12 +234,9 @@ code while you're developing.
 
 - **⇧⌘I**  will open up a small peek window with a view of the definition of an object or class you have highlighted. This
 is in contrast to **⌘b**, which will take you directly to the module and location of the declaration of the highlighted object. 
+An example of the first option is shown below.
 
 ![peek_image](https://user-images.githubusercontent.com/1015576/80849493-38c14180-8bcc-11ea-8a31-a2e1925379d6.png)
-
-All these hotkeys and tons more can be configured iin the **Preferences > Keymap** menu. If you're a hotkey ninja (which I am not), 
-you can get set up to keep your hand off the mouse almost completely.  There are `vim` and `emacs` keymap plugins 
-which will allow you to use your `vim`/`emacs` setups in PyCharm as well.
 
 **Object inspection, completion**  
 
@@ -383,20 +401,33 @@ did my 30-day free trial of the professional version.  There are many active com
 various languages.
 
 ### Jupyter Notebooks
-This original content can still be found in it's [original repo](https://github.com/Chilliwack/jupyter_demo) written by a member of the Fred Hutch, this is an adaptation of that content. 
 
-Here are some reasons to take a look at Jupyter, a linearly executed IDE, with come caveats.
+[Jupyter](https://jupyter.org) is an open-source project developed by community consensus. 
+Project Jupyter develops two products we'll discuss:
+- [Jupyter Notebooks](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html): 
+human-readable documents including code (and its output) along with rich text elements,
+Notebooks are both executable documents used to perform data analysis,
+as well as reporting documents representing the analysis description and results. 
+- [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/): a web-based interface that allows interactions with Jupyter Notebooks,
+text editors, terminals, and more.
 
-**Preliminaries**
-
-First, it's good to know there's two distinct products associated with Jupyter. The earliest and first product developed by the Jupyter team is called [Jupyter Notebook](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html). This is the one you will see discussed and screenshoted the most when surfing the web. The second and latest product developed by the Jupyter team and the one we'll discuss in further detail below is [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/). 
+This image shows multiple windows for different parts of the JupyterLab interface:
 
 ![](https://jupyterlab.readthedocs.io/en/stable/_images/interface_jupyterlab.png)
 
-So let's get started with JupyterLab, oh and I'll just say at the top that I do not think JupyterLab can currently replace a more engineering focused IDE application like Atom, VS Code or PyCharm but it is heading in that direction with its extensions and it does presently make a very good light-weight, browser-based analytical tool for teaching, data wrangling, modeling, scripting, cloud computing and various other analytic needs outside of engineering.
+This section is adapted from [original content](https://github.com/Chilliwack/jupyter_demo) 
+written by [Justin Burge](https://github.com/Chilliwack)
+while a member of the Fred Hutch research community.  
 
-1. First let's [install JupyterLab](https://jupyterlab.readthedocs.io/en/latest/getting_started/installation.html). The latest version is 2.0.1 and that's important because some of the add-ons and extensions may not work with this or other versions.
-2. By default JupyterLab installs Python but to install all the other cools stuff* you'll need:
+**Setup**
+
+This demonstration assumes the following installation:
+
+1. [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/getting_started/installation.html): Check for the latest installation! JupyterLab is currently being actively developed,
+with many additional extensions allowing additional functionality that may not be described here. 
+For information on the latest changes,
+please see the [JupyterLab Changelog](https://jupyterlab.readthedocs.io/en/latest/getting_started/changelog.html).
+1. By default JupyterLab installs Python. Additional features we'll discuss here include:
    - A linter such as [flake8](https://github.com/mlshapiro/jupyterlab-flake8) 
    - A [debugger](https://github.com/jupyterlab/debugger)
    - [Github integration](https://github.com/jupyterlab/jupyterlab-git)
@@ -440,7 +471,7 @@ You can run a segment of a script by selecting the part you care about and hitti
 
 **Identifying Problems and Their Quick Fixes**
 
-Linters help you find problems quickly and [this guy](https://github.com/mlshapiro/jupyterlab-flake8) built a good one based on the flake8 Python library for linting. The only problem is that currently it doesn't work with JupyterLab 2.0 yet that doesn't mean it won't in the future ; )
+Linters help you find problems quickly and [this guy](https://github.com/mlshapiro/jupyterlab-flake8) built a good one based on the flake8 Python library for linting. 
 
 ![](https://raw.githubusercontent.com/mlshapiro/jupyterlab-flake8/master/img/example.png)
 ![](https://github.com/mlshapiro/jupyterlab-flake8/raw/master/img/editor-example.png)
