@@ -42,6 +42,62 @@ FIXME: other installations? complete descriptions
 
 FIXME: Define kernel
 
+### Using Jupyter Notebooks at Fred Hutch
+
+FIXME: add to section above
+Jupyter Notebooks are web interfaces to interpreter shells such as Python and R. They allow the user to write code in small, executable chunks that can be interspersed with blocks of markdown. They are particularly well suited to exploring data and generating narrative-style presentations of analyses. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called 'Jupyter Lab'.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
+
+**Jupyter Notebook on your computer**
+
+Install the software on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
+
+**Jupyter on `Rhino`**  
+For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoRhino.md).  
+
+After you have connected to `rhino`, just load a Python distribution maintained by SciComp and run Jupyter lab:
+
+```
+    username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
+    username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+
+    ... or simply use the 'jupyterlab' wrapper script:
+    username@rhino1:~$ jupyterlab
+```
+
+
+Then connect to the URL, copying the link given by the previous command, which looks as follows:
+```
+       Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://rhino1:11112/?token=0eee692be6c81c1061db
+```
+**Jupyter on `Gizmo`**
+
+From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoGizmo.md)
+
+
+**Jupyter on Jupyterhub**
+
+SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.  (Jupyterhub does not have the latest Python packages)
+
+Please note that only the first method (running Jupyter from your local machine) allows you to install your own Python packages as administrator of your machine.
+The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the --user option (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
+
+```
+    username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
+    username@rhino1:~$ python3 -m venv ~/mypython
+    username@rhino1:~$ source ~/mypython/bin/activate
+    (mypython) username@rhino1:~$ jupyter lab
+    (mypython) username@rhino1:~$ deactivate
+    username@rhino1:~$
+```
+
+**Via the local HPC cluster**  
+
+FIXME: clarify language
+SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).  If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences). 
+In your request, please include a link to the package source and version you require.  
+
 ### Common Python packages for scientific research computing
 
 FIXME: define packages/libraries, highlight selected
@@ -56,13 +112,6 @@ Other places to find packages:
 - install via github
 - write your own (link to software development page)
 
-
-**Via the local HPC cluster**  
-
-FIXME: clarify language
-SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).  If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences). 
-In your request, please include a link to the package source and version you require.  
-
 ## Tools for Writing Python Code
 
 While it is possible to write and run Python code entirely from the command line,
@@ -70,6 +119,20 @@ most Python programmers use an integrated development environment, or IDE,
 to write, test, and run code.
 This section describes a few of the most common Python IDEs used at the Hutch, 
 including additional features members of our community have found helpful. 
+
+## FIXME: Compdemos
+
+For more information on coding best practices, 
+including templates for data analysis and packages in Python,
+please see our [Software Development Standards page](/scicomputing/software_standards/).
+
+accessing AWS storage /compdemos/aws/
+
+checkpointing on gizmo /compdemos/Checkpointing-Gizmo/
+
+logging in Python /compdemos/python_logging/
+
+running tensorflow /compdemos/tensorflow-gpu/
 
 ### Visual Studio Code 
 
@@ -262,7 +325,7 @@ An example of the first option is shown below.
 
 When working with objects that may have lots of methods on them, it can be easy to forget what methods are available.
 By simply typing a variable which has been prior been assigned a type (through just assigning it a value, Py3 method signature type hints,
-or in-line type hints) and typing the '.' operator, a list of all properties and methods of that variable will appear in a drop-down.
+or in-line type hints) and typing the `.` operator, a list of all properties and methods of that variable will appear in a drop-down.
 Furthermore, once you've selected a method and are beginning to feed it parameters, you can type `Cmd + P` from within the method parentheses to list all the parameters the function takes.  If you'd like to know more about how the function itself
 works, you can jump to its definition by highlighting it and typing `Cmd + B`
 
@@ -464,7 +527,12 @@ including a dark theme!
 
 ![](https://github.com/telamonian/theme-darcula/blob/master/darcula_preview.png)
 
-**Shortcuts for Mac**
+**the .ipynb file**
+
+FIXME: move up in section
+This IS the iPython notebook file or your JupyterLab file with code and markdown in it and note you can only access these from the directory you execute `jupyterlab` in so either `pwd` to make sure or have a set location of where you save the files because you'll only be able to open .ipynb files in either the start-up directory or it's sub-folders. 
+
+**Shortcuts**
 
 Some helpful shortcuts for working in JupyterLab are the following:
 
@@ -509,61 +577,6 @@ So having a debugger in your IDE that you can insert breakpoints, step in, cycle
 
 ![](https://github.com/jupyterlab/jupyterlab-github/blob/master/gitception.png)
 
-**the .ipynb file**
-
-FIXME: move up in section
-This IS the iPython notebook file or your JupyterLab file with code and markdown in it and note you can only access these from the directory you execute `jupyterlab` in so either `pwd` to make sure or have a set location of where you save the files because you'll only be able to open .ipynb files in either the start-up directory or it's sub-folders. 
-
-### Using Jupyter Notebooks at Fred Hutch
-
-FIXME: add to section above
-Jupyter Notebooks are web interfaces to interpreter shells such as Python and R. They allow the user to write code in small, executable chunks that can be interspersed with blocks of markdown. They are particularly well suited to exploring data and generating narrative-style presentations of analyses. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called 'Jupyter Lab'.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
-
-**Jupyter Notebook on your computer**
-
-Install the software on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
-
-**Jupyter on `Rhino`**  
-For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoRhino.md).  
-
-After you have connected to `rhino`, just load a Python distribution maintained by SciComp and run Jupyter lab:
-
-```
-    username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
-    username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
-
-    ... or simply use the 'jupyterlab' wrapper script:
-    username@rhino1:~$ jupyterlab
-```
-
-
-Then connect to the URL, copying the link given by the previous command, which looks as follows:
-```
-       Copy/paste this URL into your browser when you connect for the first time,
-    to login with a token:
-        http://rhino1:11112/?token=0eee692be6c81c1061db
-```
-**Jupyter on `Gizmo`**
-
-From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoGizmo.md)
-
-
-**Jupyter on Jupyterhub**
-
-SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.  (Jupyterhub does not have the latest Python packages)
-
-Please note that only the first method (running Jupyter from your local machine) allows you to install your own Python packages as administrator of your machine.
-The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the --user option (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
-
-```
-    petersen@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
-    petersen@rhino1:~$ python3 -m venv ~/mypython
-    petersen@rhino1:~$ source ~/mypython/bin/activate
-    (mypython) petersen@rhino1:~$ jupyter lab
-    (mypython) petersen@rhino1:~$ deactivate
-    petersen@rhino1:~$
-```
-
 **Conclusions**
 
 JupyterLab built upon the success of Jupyter notebook as a light-weight, browser based linearly executed IDE, but now has an updated front-end making it seem more similar to RStudio and Spyder. It comes with a much quicker backend running in your browser than Jupyter notebook and with the help of some extensions which you can theoretically load by enabling the Extension Manager in Settings you can add linting, debugging, version control and many more [(fasta render anyone?)](https://github.com/jupyterlab/jupyter-renderers).
@@ -582,17 +595,3 @@ The three IDEs described in detail on this page were chosen due to developers at
 - [Atom](https://atom.io/): a highly extensible text editor with native support for a number of languages, and a wide array of community-developed packages to support other languages. Atom has a thriving community which is constantly developing a lot of really interesting plugins and extensions.  
 - [Spyder](https://www.spyder-ide.org/): has elements of Jupyter Notebook where specific parts of a script can be executed independently, with the state of any affected variables carrying over in a session to any subsequent executions. Very handy for rapid prototyping and analysis-driven programming.  
 - [Sublime Text](https://www.sublimetext.com/): lightweight language-agnostic text editor with a rich plugin ecosystem and ability to customize for when you want more horsepower.  Has syntax highlighting for a ton of languages
-
-## FIXME: Compdemos
-
-For more information on coding best practices, 
-including templates for data analysis and packages in Python,
-please see our [Software Development Standards page](/scicomputing/software_standards/).
-
-accessing AWS storage /compdemos/aws/
-
-checkpointing on gizmo /compdemos/Checkpointing-Gizmo/
-
-logging in Python /compdemos/python_logging/
-
-running tensorflow /compdemos/tensorflow-gpu/
