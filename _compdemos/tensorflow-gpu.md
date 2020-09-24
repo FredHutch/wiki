@@ -98,7 +98,7 @@ After that load Singularity:
 After that, the only change is to enable NVIDIA support by adding the `--nv`
 flag to `singularity exec`:
 
-    singularity exec --nv docker://tensorflow/tensorflow:latest-gpu-py3 python3 ...
+    singularity exec --nv docker://tensorflow/tensorflow:latest-gpu-py3 python3
 
 Sample code is available in the [slurm-examples repository](https://github.com/FredHutch/slurm-examples/tree/master/tensorflow-gpu).
 
