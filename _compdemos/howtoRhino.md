@@ -1,6 +1,5 @@
 ---
 title: How to `Rhino`
-last_modified_at: 2019-05-14
 primary_reviewers: atombaby, bmcgough
 ---
 
@@ -15,7 +14,7 @@ The rhino compute nodes are large memory, shared systems. These are systems inte
 
 Access to these systems is via secure shell (ssh). There are four rhino nodes- when you use the alias rhino, a round-robin system distributes your session to any one of the four nodes.
 
-These systems should not be used for intensive computational tasks unless the task requires significant memory (i.e. greater than 48GB). Other tasks should be limited in quantity and in run-time. Do not run multiple jobs (more than 10) or run them for a significant amount of time (1,000 CPU-seconds)
+> These systems should not be used for intensive computational tasks unless the task requires significant memory (i.e. greater than 48GB). Other tasks should be limited in quantity and in run-time. Do not run multiple jobs (more than 10) or run them for a significant amount of time (1,000 CPU-seconds)
 
 ## Preliminaries
 ### Credentials
@@ -49,38 +48,22 @@ drwxrwsr-x 4 mrg SciComp 123 Nov 17 14:16 build
 drwxrwsr-x 4 mrg SciComp  53 Aug 25 09:14 econofile
 ```
 
-## How to run GUI (X windows/X11) apps on `rhino` nodes
-
-### macOS
-
-Much information is already detailed on this link. You need to have XQuartz installed, and you need to run commands from the XQuartz bash terminal (for other options, see previous link).
-
-### Windows
-
-Since Windows lacks an X11 server, you will need to use NoMachine to run X apps on one of the (Linux) NoMachine servers. Once logged in to a NoMachine server, you should open any terminal application.
-
-### Everyone!
-
-X11 or X Windows is the standard and default Unix/Linux windowing system. It is used locally when you run an app on your Linux laptop/desktop to connect the app to your choosen windowing system (like Gnome, KDE, xfce, etc.), but has always had the capability of remote excecution where the windowing system the user sees and the application they are running do not have to be on the same host. The architecture of X11 is backward from what most people assume: you run an X11 server on your client device, and the applications you run are known as X clients. The version everyone uses is version 11, hence, X11.
-
-The application we all use to connect to remote servers, OpenSSH, does a great job of transparently tunnelling the connections required by X11. However, it can only tunnell when executed in a terminal that is set up with your X11 server. This is the default on Linux, but on macOS (with XQuartz) you need to ssh from an XQuartz terminal, not iTerm/iterm2. See the above macOS link for details on how to enable in iTerm/iterm2.
-
-Once you have a terminal open, use `ssh` to connect to a rhino node: `ssh rhino`. Once connected, you have two options:
-
-### Running an app on `rhino`
+## Running an app on `rhino`
 
 You can run an app directly on the rhino node to which you are connected. This is useful for lightweight apps and testing, but please refrain from running compute-intensive (CPU time and/or memory resources) processes as the rhino machines are a shared resource. To run directly, simply start your GUI application. Common apps include:
 
   - Rstudio - run `module load R/3.4.1-foss-2016b-fh2 rstudio` followed by `rstudio` to start. You can load any version of the R environment module you like.
+  > The Rstudio program (and rsession) tend to be resource hogs. For this reason, we limit each user to one rstudio session per rhino (or lamprey) at a time. If we see more than one rstudio session for one user, we send a warning email, and give the user an opportunity to exit one of the sessions.
   - MATLAB - run `module load matlab/R2016b` followed by `matlab` to start. There are several versions of MATLAB installed, run `module list matlab` to see them all.
   - Mozilla/Firefox - it can be handy to run a browser on the remote system sometimes. Start one by simply running the `firefox` command.
 
-### Outgrown `rhino`? 
+## How to run GUI (X windows/X11) apps on `rhino` nodes
 
-If you want to run a computationally-intensive X/GUI app, you should grab your own node to do so. This will not impact other users of the `rhino` systems. This method can also be used to run non-GUI apps interactively.
+X11 or X Windows is the standard and default Unix/Linux windowing system. It is used locally when you run an app on your Linux laptop/desktop to connect the app to your choosen windowing system (like Gnome, KDE, xfce, etc.), but has always had the capability of remote excecution where the windowing system the user sees and the application they are running do not have to be on the same host. The architecture of X11 is backward from what most people assume: you run an X11 server on your client device, and the applications you run are known as X clients. The version everyone uses is version 11, hence, X11.
 
-"Grab" a node using one of the grab commands, you can read more about how to do this both [here](/compdemos/first_rhino/) and [here.](/scicomputing/compute_platforms/#gizmo-cluster) Once done, the grab command you used will have created an ssh session to the remote node you have reserved, and you are now ready to run your app. Use the same commands as you would on a rhino (see above).
+The application we all use to connect to remote servers, OpenSSH, does a great job of transparently tunnelling the connections required by X11. However, it can only tunnel when executed in a terminal that is set up with your X11 server. This is the default on Linux, but on macOS (with XQuartz installed) you need to ssh from an XQuartz terminal, not [iTerm/iterm2](/scicomputing/access_methods/#mac-os). Since Windows lacks an X11 server, you will need to use [NoMachine](/scicomputing/access_methods/#nomachine-nx-multi-os) to run X apps on one of the (Linux) NoMachine servers. Once logged in to a NoMachine server, you should open any terminal application.
 
+Once you have a terminal open, use `ssh` to connect to a rhino node: `ssh rhino`. Once connected, you have two options:
 ### X Notes
 
 You may see font errors and/or other warnings on your terminal when you start and run your X11 app. Many of these can safely be ignored, but if you do experience an error or crash, often the messages on your ssh terminal can be helpful in troubleshooting.
@@ -88,6 +71,14 @@ You may see font errors and/or other warnings on your terminal when you start an
 If you get an error like: `Error: Can't open display:` or any other error mentioning "display" you likely do not have X enabled in the terminal on your local system in which you are running ssh to the remote server. On macOS this can also be caused by a default configuration in some cases that disabled the X forwarding. On these systems, you should ssh with '-Y' to enable trusted X forwarding like this: `ssh -Y <hutchnetid>@rhino`.
 
 A useful 'test' of the X forwarding is a simple program invoked with the command `xeyes`. This creates a small window with a pair of eyes that track the mouse cursor. It is much fast to start than either Rstudio or MATLAB, and gives a positive indication of functioning X11.
+
+## Outgrown `rhino`? 
+
+If you want to run a computationally-intensive X/GUI app, you should grab your own node to do so. This will not impact other users of the `rhino` systems. This method can also be used to run non-GUI apps interactively.
+
+"Grab" a node using one of the grab commands, you can read more about how to do this both [here](/compdemos/first_rhino/) and [here.](/scicomputing/compute_platforms/#gizmo-cluster) Once done, the grab command you used will have created an ssh session to the remote node you have reserved, and you are now ready to run your app. Use the same commands as you would on a rhino (see above).
+
+
 
 ## Tips, Tricks and Gotchas
 
@@ -101,9 +92,7 @@ If the user still does not respond, and TIME+ for the process hits 4000, we kill
 
 If multiple processes for one user have TIME+ that adds up to >1000, we also send a warning email. The point is to maintain good interactive response on the rhinos. If one user is hogging many cpu cores, that good response time can degrade. We direct the user to do this kind of activity on a gizmo node, via the grab commands.
 
-### Use of Rstudio on the Rhinos
 
-The rstudio program (and rsession) tend to be resource hogs. For this reason, we limit each user to one rstudio session per rhino (or lamprey) at a time. If we see more than one rstudio session for one user, we send a warning email, and give the user an opportunity to exit one of the sessions.
 
 ### Other cases that usually result in a warning
 
