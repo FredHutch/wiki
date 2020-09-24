@@ -219,7 +219,7 @@ You'll need to `exit` once more to leave the Fred Hutch network and see your com
 
 This demo covers the basic process of logging on and using resources for the first time.
 Once you are comfortable with the basic process,
-you should look at the complete documentation on [Large Scale Computing](https://sciwiki.fredhutch.org/scicomputing/compute_overview/)
+you should look at the complete documentation on [Large Scale Computing](/scicomputing/compute_overview/) or over in our detailed [`rhino` documentation](/compdemos/howtoRhino/).
 for information on more advanced tasks, like:
 - executing batch jobs using `slurm`,
 including limits and recommendations for creating scripts
