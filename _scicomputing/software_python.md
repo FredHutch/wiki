@@ -3,10 +3,6 @@ title: Python
 primary_reviewers: k8hertweck, kmayerb, zyd14
 ---
 
-FIXME: 
-- explain jargon (magic beans/magic sauce)
-- check broken links to images at end
-
 Whether you're new to Python or are an experienced Python coder interested in how the Coop community works with this language,
 this page is for you!
 Here we share information on learning Python,
@@ -31,10 +27,27 @@ you may find the following resources useful as you get started learning Python:
 ## Accessing and using Python
 
 FIXME: intro to section
-There are many ways to use Python beyond a local installation on your computer from [Python.org](https://www.python.org/downloads/).  
-These methods depend more on the type of computing you will need to use and in what way you want to interact with your code and its output.  
+There are many ways to access and use Python.
+The most straightforward way to access Python is to download and install from [Python.org](https://www.python.org/downloads/).
+While this does technically allow you to write and run Python code,
+most Python coders choose to use an integrated development environment, 
+or IDE,
+for developing code. 
+An IDE is a type of software that facilitates common programming tasks,
+and makes it easier to write, test, and run code.
+If you're using any of the training materials listed in the section above,
+they will likely recommend specific IDE. 
+Your choice of how to write and run Python code for your own research, however,
+largely depends on personal preference,
+your project's computational needs, 
+and the manner in which you want to interactwith your code and its output.
+
+The sections below describe the most popular IDEs in use at Fred Hutch,
+as well as how you can access Python and associated IDEs on the Hutch's research computing resources (including HPC).
 
 ### Installing Python on your own computer
+
+
 
 FIXME: other installations? complete descriptions
 - Anaconda 
@@ -42,19 +55,19 @@ FIXME: other installations? complete descriptions
 
 FIXME: Define kernel
 
+Install the Jupyter Notebook on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
+
 ### Using Jupyter Notebooks at Fred Hutch
 
 FIXME: add to section above
-Jupyter Notebooks are web interfaces to interpreter shells such as Python and R. They allow the user to write code in small, executable chunks that can be interspersed with blocks of markdown. They are particularly well suited to exploring data and generating narrative-style presentations of analyses. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called 'Jupyter Lab'.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
+Jupyter Notebooks are web interfaces to interpreter shells such as Python and R. They allow the user to write code in small, executable chunks that can be interspersed with blocks of markdown. They are particularly well suited to exploring data and generating narrative-style presentations of analyses. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called JupyterLab.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
 
-**Jupyter Notebook on your computer**
+**Jupyter on `Rhino`** 
 
-Install the software on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
-
-**Jupyter on `Rhino`**  
 For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoRhino.md).  
 
-After you have connected to `rhino`, just load a Python distribution maintained by SciComp and run Jupyter lab:
+After you have connected to `rhino`,
+load a Python distribution maintained by SciComp and run Jupyter Lab:
 
 ```
     username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
@@ -76,12 +89,12 @@ Then connect to the URL, copying the link given by the previous command, which l
 From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoGizmo.md)
 
 
-**Jupyter on Jupyterhub**
+**Jupyter on JupyterHub**
 
-SciComp maintains an installation of [Jupyterhub](https://jupyterhub.fhcrc.org/). Login with your Hutch Net Id.  (Jupyterhub does not have the latest Python packages)
+SciComp maintains an installation of [JupyterHub](https://jupyterhub.fhcrc.org/). Login with your HutchNetId.  (JupyterHub does not have the latest Python packages)
 
 Please note that only the first method (running Jupyter from your local machine) allows you to install your own Python packages as administrator of your machine.
-The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the --user option (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
+The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the `--user option` (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
 
 ```
     username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
@@ -159,8 +172,9 @@ please see [VS Code's documentation for Python](https://code.visualstudio.com/do
 The following shortcuts represent especially handy features in VS Code,
 though many are also accessible in the right-click menu,
 with additional shortcuts viewable by scrolling over the relevant icon.
-For a complete list of keyboard shortcuts and instructions on custom mapping,
-please see [VS Code's Keyboard Shortcuts](https://code.visualstudio.com/docs#keyboard-shortcuts).
+For a complete description of how to maximize productivity using VS Code,
+please see [VS Code's Keyboard Shortcuts](https://code.visualstudio.com/docs#keyboard-shortcuts)
+and [VS Code Navigation](https://code.visualstudio.com/docs/editor/editingevolved).
 
 - Reveal file location: Click on the file name in the file explorer panel, 
 then use `Alt + Cmd + C` to copy the full path (e.g. `/Users/username/folder/filename`) 
@@ -226,8 +240,9 @@ see [Python testing in Visual Studio Code](https://code.visualstudio.com/docs/py
 
 **Peek**  
 
-FIXME: jargon
-The `Peek` function is Some Serious Magic beans.  Sometimes you don't want to search for where a variable or function is defined. VS Code has a peak function that lets you examine externally referenced objects, and even edit them, directly from where an object is referenced. Let's look at what the French hello should be:
+Sometimes you don't want to search for where a variable or function is defined.
+VS Code has a `Peek` function that lets you examine externally referenced objects, and even edit them, directly from where an object is referenced. 
+The images below illustrate the use of `Peek` in a script named `hello.py`:
 
 FIXME ![peek](https://user-images.githubusercontent.com/46639063/75184186-d98d0f80-56f8-11ea-8e67-cd76626992f0.png) 
 
@@ -406,9 +421,10 @@ clear about their purpose, without having to hunt through scores of modules to d
 
 **Find Usages**  
 
-Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where it's being used or how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages...** a small pop-up window will show where that varible is referenced throughout the entire project. This is particularly helpful for when you're cleaning up cruft and want to know if you can delete something.  'No Usages Found'? Deleted.
+Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where it's being used or how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages**, 
+a small pop-up window will show where that varible is referenced throughout the entire project. This is particularly helpful for when you're cleaning up code and want to know if you can delete something.
 
-Right-clicking an object opens a menu which contains the 'Find Usages...' button:  
+Right-clicking an object opens a menu which contains the **Find Usages** button:  
 ![find usages example](https://user-images.githubusercontent.com/1015576/80849559-7cb44680-8bcc-11ea-917c-ce156111707e.png)
 
 After clicking the **Find Usages** button, a pane will open listing all the usages of that object found throughout the
@@ -590,8 +606,4 @@ Let's hope the synergy of the versioning of the core product and the community o
 
 ## More IDEs to explore  
 
-The three IDEs described in detail on this page were chosen due to developers at the Hutch having positive experiences with them that they wanted to share.  There are many more well supported IDEs out there, and what works best for you will take a matter of experimentation to find what works best for the type of work you do. A few more common IDEs that are worth looking into are:  
-  
-- [Atom](https://atom.io/): a highly extensible text editor with native support for a number of languages, and a wide array of community-developed packages to support other languages. Atom has a thriving community which is constantly developing a lot of really interesting plugins and extensions.  
-- [Spyder](https://www.spyder-ide.org/): has elements of Jupyter Notebook where specific parts of a script can be executed independently, with the state of any affected variables carrying over in a session to any subsequent executions. Very handy for rapid prototyping and analysis-driven programming.  
-- [Sublime Text](https://www.sublimetext.com/): lightweight language-agnostic text editor with a rich plugin ecosystem and ability to customize for when you want more horsepower.  Has syntax highlighting for a ton of languages
+The three IDEs described in detail on this page were chosen due to developers at the Hutch having positive experiences with them that they wanted to share.  
