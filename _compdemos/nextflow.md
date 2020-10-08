@@ -5,7 +5,7 @@ primary_reviewers: sminot
 ---
 
 [Nextflow](https://www.nextflow.io/) is one of a handful of "workflow managers" that have become popular in the last few years. 
-Other workflow managers that people may recognize are Snakemake, Cromwell, Toil, and CWL. 
+Other workflow managers that people may recognize are Snakemake, Cromwell and Toil. 
 Generally speaking, workflow managers are software tools that make it easier to run complex bioinformatic analyses that involve multiple steps, each of which may invoke a different piece of software with different environmental dependencies or resource requirements. 
 The benefits of a workflow manager like Nextflow is that it should make it easier to run your analysis while transparently managing all of the issues that tend to crop up when running a shell script (missing dependencies, not enough resources, hard to tell where failures are coming from, not easily published or transferred to collaborators).
 
