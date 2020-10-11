@@ -116,12 +116,22 @@ You can accomplish this by executing the following command:
     grabnode
 
 You'll now be asked a series of questions about what compute resources you would like to request.
-We'll describe requesting the smallest unit of resources here for demonstration purposes.
-When prompted:
+We'll request the smallest unit of resources here for demonstration purposes.
 
-- type 1 for number of CPUs
-- hit `Enter` to select the default for memory
-- type 1 for number of days
+- *How many CPUs/cores would you like to grab on the node? [1-36]* Type 1 and hit `Enter`
+- *How much memory (GB) would you like to grab? [20]* Hit `Enter` to select the default
+- *Please enter the max number of days you would like to grab this node: [1-7]* Type 1 and hit `Enter`
+- *Do you need a GPU ? [y/N]* Hit `Enter` to select the default (No)
+
+Answering these questions submits a request to the cluster to allocate specific compute resources for your use.
+The output you see printed to the screen shows the progress of requesting and then allocating those resources.
+When the allocation is complete,
+you'll see a command prompt indicating that you are running tasks on `gizmo` instead of `rhino`:
+
+    username@gizmof127:~$
+
+You can interact with your directories the same as you would normally,
+but now your commands will run on a part of the cluster allocated to you specifically.
 
 A few extra pieces of information for new users:
 - When requesting resources for your own work,
@@ -130,14 +140,9 @@ If you aren't sure you need more than one CPU,
 you almost certainly do not.
 - There is not currently a way to execute `grabnode` with flags;
 you are required to use the interactive questions.
-- If you get an error like "Invalid Account" it indicates that your association to a PI account has not been completely set up- contact Scientific Computing.
+- If you get an error like "Invalid Account" it indicates that your association to a PI account has not been completely set up;
+please email `scicomp`.
 
-You'll note your command prompt will switch to say `gizmo` instead of `rhino`:
-
-    username@gizmof127:~$
-
-You can interact with your directories the same as you would normally,
-but now your commands will run on a part of the cluster allocated to you specifically.
 See [this documentation](https://sciwiki.fredhutch.org/compdemos/howtoRhino/#guidance-for-use)
 for more information on when to use `grabnode`.
 
