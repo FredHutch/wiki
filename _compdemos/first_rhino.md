@@ -22,7 +22,7 @@ The basic process below below includes:
 
 > This tutorial uses `snail` as the method for accessing the Fred Hutch campus network.
 This step is unnecessary if you are already connected to the network (such as through VPN).
-For more information about remote login, please see [Access via a remote login](https://sciwiki.fredhutch.org/scicomputing/access_methods/#access-via-a-remote-location).
+For more information about remote login, please see [Access via a remote login](/scicomputing/access_methods/#access-via-a-remote-location).
 
 ## Command prompts
 
@@ -78,7 +78,7 @@ Here we describe the use of `snail` for remote login,
 since it doesn't require the use of additional software beyond what it already included in the tutorial.
 VPN may be a preferrable option for you,
 especially if you are already using it to access other Hutch resources.
-For more information about remote login, please see [Access via a remote login](https://sciwiki.fredhutch.org/scicomputing/access_methods/#access-via-a-remote-location).
+For more information about remote login, please see [Access via a remote login](/scicomputing/access_methods/#access-via-a-remote-location).
 
 In your shell,
 type the following (username is your HutchNetID):
@@ -138,12 +138,12 @@ A few extra pieces of information for new users:
 choose appropriate selections to suit the needs of the task.
 If you aren't sure you need more than one CPU,
 you almost certainly do not.
-- `grabnode` will take some common `sbatch` options and flags; contact `scicomp` if you need options beyond those offered by `grabnode` prompts.
 - If you get an error like "Invalid Account" it indicates that your association to a PI account has not been completely set up;
 please email `scicomp`.
 
-See [this documentation](https://sciwiki.fredhutch.org/compdemos/howtoRhino/#guidance-for-use)
-for more information on when to use `grabnode`.
+See [this documentation](/compdemos/howtoRhino/#guidance-for-use)
+for more information on when to use `grabnode`,
+and [this page](/scicomputing/compute_platforms/#gizmo-cluster) for more information on Gizmo.
 
 ## Loading software
 
@@ -183,7 +183,7 @@ you should see in the output that there is also a module available to load as `f
 and additional information on using the modules is included as well.
 
 For more information on using the module system,
-please see the [Computing Environments page](https://sciwiki.fredhutch.org/scicomputing/compute_environments/),
+please see the [Computing Environments page](/scicomputing/compute_environments/),
 and you can view lists of available software on the [Scientific Software page](https://fredhutch.github.io/easybuild-life-sciences/).
 
 ## Logging out
