@@ -138,8 +138,7 @@ A few extra pieces of information for new users:
 choose appropriate selections to suit the needs of the task.
 If you aren't sure you need more than one CPU,
 you almost certainly do not.
-- There is not currently a way to execute `grabnode` with flags;
-you are required to use the interactive questions.
+- `grabnode` will take some common `sbatch` options and flags; contact `scicomp` if you need options beyond those offered by `grabnode` prompts.
 - If you get an error like "Invalid Account" it indicates that your association to a PI account has not been completely set up;
 please email `scicomp`.
 
