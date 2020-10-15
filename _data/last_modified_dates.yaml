@@ -94,7 +94,7 @@
   url: _scicomputing/compute_grants.md
 - dlm: September 30, 2020
   url: _scicomputing/store_posix.md
-- dlm: September 17, 2020
+- dlm: October 12, 2020
   url: _scicomputing/compute_platforms.md
 - dlm: June 11, 2020
   url: _scicomputing/compute_parallel.md
@@ -286,7 +286,7 @@
   url: _compdemos/howtoRhino.md
 - dlm: June 15, 2020
   url: _compdemos/Singularity.md
-- dlm: September 17, 2020
+- dlm: October 12, 2020
   url: _compdemos/first_rhino.md
 - dlm: September 3, 2020
   url: _compdemos/r-2018b-matrix-errors.md
