@@ -24,11 +24,26 @@ you may find the following resources useful as you get started learning Python:
   * [Real Python](https://realpython.com)
   * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
 
+## Common Python packages for scientific research computing
+
+FIXME: define packages/libraries, highlight selected
+
+- numpy and scipy: [Python scientific computing with Scipy](https://www.scipy.org/getting-started.html)
+- pandas: [Python Data Analysis Library](http://pandas.pydata.org/pandas-docs/stable/10min.html)
+- biopython: [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
+
+Other places to find packages:
+- https://pypi.org
+- install via github
+- write your own (link to software development page)
+
+FIXME: see below for more information on accessing packages on our on-premise HPC resources
+
 ## Accessing and using Python
 
-FIXME: intro to section
 There are many ways to access and use Python.
-The most straightforward way to access Python is to download and install from [Python.org](https://www.python.org/downloads/).
+The simplest (but not most user-friendly) 
+way to access Python is to download and install from [Python.org](https://www.python.org/downloads/).
 While this does technically allow you to write and run Python code,
 most Python coders choose to use an integrated development environment, 
 or IDE,
@@ -42,56 +57,42 @@ largely depends on personal preference,
 your project's computational needs, 
 and the manner in which you want to interactwith your code and its output.
 
-The sections below describe the most popular IDEs in use at Fred Hutch,
-as well as how you can access Python and associated IDEs on the Hutch's research computing resources (including HPC).
+The sections below describe some of the most popular methods for installing and running Python at Fred Hutch,
+both on your own computer and on the Hutch's high-performance computing resources.
 
 ### Installing Python on your own computer
 
+If you are new to coding and just getting started with Python,
+your best bet is to install [Anaconda](https://www.anaconda.com/products/individual),
+a set of software that allows you to install, manage, and launch applications for running Python code on your own computer.
+Following installation,
+you can use Anaconda Navigator to explore various options for running Python, 
+including Jupyter notebooks and PyCharm.
+FIXME: install http://www.fredhutch.io/software/#python-jupyter-notebooks, 
+intro: https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/master/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks
 
-
-FIXME: other installations? complete descriptions
-- Anaconda 
-- Miniconda
+> A piece of software related to Anaconda is [Miniconda](https://docs.conda.io/en/latest/miniconda.html),
+> which has the same base functionality but in a stripped-down form. 
+> We recommend Anaconda for beginners because it includes Anaconda Navigator,
+> as well as many other useful applications.
 
 FIXME: Define kernel
+https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html#kernel
 
-Install the Jupyter Notebook on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
-
-### Using Jupyter Notebooks at Fred Hutch
-
-FIXME: add to section above
+FIXME: Install the Jupyter Notebook on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
 Jupyter Notebooks are web interfaces to interpreter shells such as Python and R. They allow the user to write code in small, executable chunks that can be interspersed with blocks of markdown. They are particularly well suited to exploring data and generating narrative-style presentations of analyses. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called JupyterLab.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
 
-**Jupyter on `Rhino`** 
+FIXME: overview IDEs, and link to more extensive descriptions below
 
-For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoRhino.md).  
+- [Visual Studio Code](#visual-studio-code)
+- [PyCharm](#pycharm)
+- [Jupyter](#jupyter)
 
-After you have connected to `rhino`,
-load a Python distribution maintained by SciComp and run Jupyter Lab:
+### Python on your computer vs on a Fred Hutch HPC resource
 
-```
-    username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
-    username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
-
-    ... or simply use the 'jupyterlab' wrapper script:
-    username@rhino1:~$ jupyterlab
-```
-
-
-Then connect to the URL, copying the link given by the previous command, which looks as follows:
-```
-       Copy/paste this URL into your browser when you connect for the first time,
-    to login with a token:
-        http://rhino1:11112/?token=0eee692be6c81c1061db
-```
-**Jupyter on `Gizmo`**
-
-From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoGizmo.md)
-
-
-**Jupyter on JupyterHub**
-
-SciComp maintains an installation of [JupyterHub](https://jupyterhub.fhcrc.org/). Login with your HutchNetId.  (JupyterHub does not have the latest Python packages)
+FIXME: clarify language
+SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).  If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences). 
+In your request, please include a link to the package source and version you require.  
 
 Please note that only the first method (running Jupyter from your local machine) allows you to install your own Python packages as administrator of your machine.
 The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the `--user option` (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
@@ -105,33 +106,43 @@ The other 3 methods require you to either request a package from Scientific Comp
     username@rhino1:~$
 ```
 
-**Via the local HPC cluster**  
+### Accessing Python on `rhino`
 
-FIXME: clarify language
-SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).  If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences). 
-In your request, please include a link to the package source and version you require.  
+For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoRhino.md).  
 
-### Common Python packages for scientific research computing
+FIXME
 
-FIXME: define packages/libraries, highlight selected
+```
+username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
+```
 
-- numpy and scipy: [Python scientific computing with Scipy](https://www.scipy.org/getting-started.html)
-- pandas: [Python Data Analysis Library](http://pandas.pydata.org/pandas-docs/stable/10min.html)
-- biopython: [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
-- link to data viz page
+Accessing packages, and seeing what packages are available
 
-Other places to find packages:
-- https://pypi.org
-- install via github
-- write your own (link to software development page)
+### Jupyter Notebooks on `rhino`
 
-## Tools for Writing Python Code
+After you have connected to `rhino`,
+load a Python distribution maintained by SciComp and run Jupyter Lab:
 
-While it is possible to write and run Python code entirely from the command line,
-most Python programmers use an integrated development environment, or IDE, 
-to write, test, and run code.
-This section describes a few of the most common Python IDEs used at the Hutch, 
-including additional features members of our community have found helpful. 
+```
+    username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+
+    ... or simply use the 'jupyterlab' wrapper script:
+    username@rhino1:~$ jupyterlab
+```
+
+Then connect to the URL, copying the link given by the previous command, which looks as follows:
+```
+       Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://rhino1:11112/?token=0eee692be6c81c1061db
+```
+### Jupyter Notebooks on `gizmo`
+
+From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoGizmo.md)
+
+### Fred Hutch JupyterHub installation
+
+SciComp maintains an installation of [JupyterHub](https://jupyterhub.fhcrc.org/). Login with your HutchNetId.  (JupyterHub does not have the latest Python packages)
 
 ## FIXME: Compdemos
 
@@ -146,6 +157,14 @@ checkpointing on gizmo /compdemos/Checkpointing-Gizmo/
 logging in Python /compdemos/python_logging/
 
 running tensorflow /compdemos/tensorflow-gpu/
+
+## Python IDE comparison
+
+While it is possible to write and run Python code entirely from the command line,
+most Python programmers use an integrated development environment, or IDE, 
+to write, test, and run code.
+This section describes a few of the most common Python IDEs used at the Hutch, 
+including additional features members of our community have found helpful. 
 
 ### Visual Studio Code 
 
@@ -291,8 +310,6 @@ After resolving the conflict, remember to commit and push the resolution.
 JSON file with all your user-specific settings. How to get to it? (see the common settings wheel at the lower left)
 
 ![where is settngs dot json](https://user-images.githubusercontent.com/46639063/75194760-9ab58480-570d-11ea-95ed-d44fd5805197.png)
-
-
 
 ### PyCharm
 
@@ -465,7 +482,6 @@ From the top toolbar, select **PyCharm > Preferences > Plugins**. There are a my
 such as database connectors, AWS log and CLI plugins, Docker management tools, various language support plugins, hotkey 
 keymap setups, color schemes and more.  
 
-
 **Jupyter Notebook extension**  
 
 PyCharm is capable of running Jupyter Notebooks.  This is far from my area of expertise, but the community edition 
@@ -499,7 +515,7 @@ Jinja2 templates (and I think some light-weight javascript highlighting?), but I
 did my 30-day free trial of the professional version.  There are many active community plugin projects for supporting tons of 
 various languages.
 
-### Jupyter Notebooks
+### Jupyter
 
 [Jupyter](https://jupyter.org) is an open-source project developed by community consensus. 
 Project Jupyter develops two products we'll discuss:
@@ -508,11 +524,13 @@ human-readable documents including code (and its output) along with rich text el
 Notebooks are both executable documents used to perform data analysis,
 as well as reporting documents representing the analysis description and results. 
 - [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/): a web-based interface that allows interactions with Jupyter Notebooks,
-text editors, terminals, and more.
+text editors, terminals, and more. 
 
 This image shows multiple windows for different parts of the JupyterLab interface:
 
 ![](https://jupyterlab.readthedocs.io/en/stable/_images/interface_jupyterlab.png)
+
+FIXME: JupyterHub
 
 This section is adapted from [original content](https://github.com/Chilliwack/jupyter_demo) 
 written by [Justin Burge](https://github.com/Chilliwack)
@@ -602,8 +620,13 @@ JupyterLab built upon the success of Jupyter notebook as a light-weight, browser
 The downside though is that version 2 was a major release for them and they are now at 2.0.1 which was released in March 6, 2020 so the project is very new which means the extensions which add a lot of features to flush out the product also need to stay update-to-date with the current code base but that can create problems. There's guides for that, ["JupyterLab 1.x to 2.x Extension Migration Guide"](https://jupyterlab.readthedocs.io/en/stable/developer/extension_migration.html), but it'll be great when everything is playing nice and you have a powerful browser-based, light-weight IDE at your finger tips.
 
 Let's hope the synergy of the versioning of the core product and the community of extensions improves. Until then there's nothing stopping a Python or R user from doing all their engineering in Atom, PyCharm, RStudio, or VS Code and then the rest of their coding/management in JupyterLab since it _is_ browser-based. Hopefully, this tutorial has heightened your interest.
+ 
+## Glossary of Python terms
 
+FIXME
 
-## More IDEs to explore  
-
-The three IDEs described in detail on this page were chosen due to developers at the Hutch having positive experiences with them that they wanted to share.  
+- environment
+- kernel
+- notebook
+- IDE
+- package
