@@ -10,44 +10,54 @@ primary_reviewers: k8hertweck
 - Matlab
 - Excel
 
-## R
+## R packages
 
-- [Ggplot2](https://ggplot2.tidyverse.org/)
-  - [Ggplot2 function reference](https://ggplot2.tidyverse.org/reference/)
-  - [Ggplot2 cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
-  - [R graph gallary](https://www.r-graph-gallery.com/index.html)
+- [ggplot2](https://ggplot2.tidyverse.org/)
+  - [ggplot2 function reference](https://ggplot2.tidyverse.org/reference/)
+  - [ggplot2 cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
   - [Data visualization with ggplot2](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
   - [ggplot2: Elegant Graphics for Data Analysis - Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen](https://ggplot2-book.org/)
-- [Plotly](https://github.com/ropensci/plotly)
+- [Plotly](https://plotly-r.com/)
   - [Getting started with Plotly in ggplot2](https://plotly.com/ggplot2/getting-started/)
   - [Plotly ggplot2 graphing library](https://plotly.com/ggplot2/)
   - [Plotly community forum](https://community.plotly.com/)
 - Shiny
-  - [Fred Hutch Biomedical Data Science Wiki entry on Shiny applications](https://sciwiki.fredhutch.org/compdemos/shiny/)
   - [Learn Shiny](https://shiny.rstudio.com/tutorial/)
   - [Mastering Shiny - Hadley Wickham](https://mastering-shiny.org/)
+  - [Fred Hutch Biomedical Data Science Wiki entry on Shiny applications](https://sciwiki.fredhutch.org/compdemos/shiny/)
 
-### R resources
+## Python libraries
 
-- [R Studio Cheat Sheets: Specifically Data Visualization and Data Wrangling](https://rstudio.com/resources/cheatsheets/)
+- [Seaborn](https://seaborn.pydata.org/index.html)
+  - [Seaborn user guide and tutorials](https://seaborn.pydata.org/tutorial.html)
+  - [Python data science handbook, Chapter 4: Data visualization with Seaborn](https://jakevdp.github.io/PythonDataScienceHandbook/04.14-visualization-with-seaborn.html)
+- [Matplotlib](https://matplotlib.org/index.html)
+  - [Matplotlib tutorial](https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb)
+- [Plotnine](https://plotnine.readthedocs.io/en/stable/)
+  - Fredhutch.io's Introduction to Python course covers plot9 in [class 4](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/master/class4.ipynb)
+- [Plotly](https://plotly.com/python/)
+
+## Data Visualization Books
+
+**General**
+- [Fundamentals of Data Visualization - Claus Wilke](https://serialmentor.com/dataviz/index.html)
+- [Dear Data]
+
+**R**
 - [R for Data Science: Data Visualization and Graphics for Communication chapters](https://r4ds.had.co.nz/)
 - [Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
 - [R Graphics Cookbook](https://r-graphics.org/index.html)
-- [Tufte Handout in R](https://rstudio.github.io/tufte/)
 
-## Python
+**Python**
 
-- [Seaborn](https://seaborn.pydata.org/index.html)
-- [Matplotlib](https://matplotlib.org/index.html)
-- Plot9
-- Plotly
+
+
 
 ### Python Resources
 - [Matplotlib tutorial](https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb)
 - 
 
 ## Popular Books/Resources
-- [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/index.html)
 
 
 ## Data Viz at Fred Hutch
