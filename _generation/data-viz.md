@@ -6,7 +6,7 @@ primary_reviewers: k8hertweck
 
 ## Software
 
->Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at little to no cost to you! We've pulled out a short list of software relevant to data visualization, but you can view the entire software catelog [here](https://centernet.fredhutch.org/cn/u/center-it/software.html)
+>Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at little to no cost to you! We've pulled out a shortlist of software relevant to data visualization, but you can view the entire software catalog [here](https://centernet.fredhutch.org/cn/u/center-it/software.html)
 
 - [Tableau](https://www.tableau.com/)
   - [Internal: Fred Hutch Tableau FAQ](https://centernet.fredhutch.org/cn/u/tableau/faq.html)
