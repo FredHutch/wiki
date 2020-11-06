@@ -63,4 +63,4 @@ primary_reviewers: k8hertweck
 ## Data visualization resources at Fred Hutch
 - Join the [Coop Communities Slack](https://fhbig.slack.com/) and follow the #data-viz channel. This channel is a space to share visualization ideas, ask questions, and troubleshoot code!
 - [FredHutch.io](http://www.fredhutch.io/) offers introduction to [R](https://www.fredhutch.io/resources/#introduction-to-r) and [Python](https://www.fredhutch.io/resources/#introduction-to-python) courses that touch on data visualization along with other fundamentals for beginners.
-- [The Data Visualization Center](https://viz.fredhutch.org/)
+- [The Data Visualization Center](https://viz.fredhutch.org/) is a collaborative effort to bring visualization technologies to research labs in the Seattle area. Currently, they are focused on visualizing scRNA-Seq, ATAC-Seq, CyTOF, and other technologies relevant to immunology. 
