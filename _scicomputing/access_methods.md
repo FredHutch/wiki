@@ -27,12 +27,47 @@ This is a list of clients and servers by OS:
 | --- | --- | --- | --- |
 | MacOS | OpenSSH `ssh` | [XQuartz](https://www.xquartz.org/) | OpenSSH is already installed on MacOS
 | Linux | OpenSSH `ssh` | Xorg | Already installed on supported Ubuntu systems
-| Windows | puTTY `puTTY` | Windows Subsystem for Linux | Can be installed through "Software Center"
+| Windows | WSL2 `bash` | [VcXsrv](https://sourceforge.net/projects/vcxsrv/) | Contact your desktop support team
 
 
 ### Windows
 
-puTTy is the most widely used secure shell software for Windows. You can install puTTy through "Software Center" and then simply connect to host name `rhino`.
+While puTTy is the most widely used secure shell software for Windows and you can easily install it through "Software Center" it is now a little dated. The most flexible way to get terminal access in Windows is using WSL2. WSL2 allows you to run Linux inside Windows and it is very fast (unlike classic virtual. machines). 
+
+**WSL2**
+
+Steps: 
+- [Install WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) on your Windows 10 Computer (or ask your desktop support team to install it for you)
+
+- [Install your favorite Ubuntu](https://aka.ms/wslstore) from the MS App store
+
+Once WSL2 is installed you can just execute the `bash` command to open a linux shell and then run `ssh rhino`. 
+
+**X11 Forwarding for Windows**
+
+If you would like to use X11 forwarding on Windows we recommend the [VcXsrv X Server](https://sourceforge.net/projects/vcxsrv/) . After installation, create a new desktop shortcut add the following command in the properties → shortcut → target :
+
+
+```
+"C:\Program Files\VcXsrv\vcxsrv.exe" :0 -ac -terminate -lesspointer -multiwindow -clipboard -wgl -dpi auto
+```
+
+**Terminator**
+
+If you like to use `terminator` (see more below, terminator requires X11 forwarding) you can install it in your Linux instance in WSL2 (e.g. `sudo apt install terminator`) and then create a script file `startTerminator.vbs` on your Windows Desktop to launch the terminal. The content of this script is: 
+
+```
+args = "-c" & " -l " & """DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0 terminator"""
+WScript.CreateObject("Shell.Application").ShellExecute "bash", args, "", "open", 0
+```
+You can [replace the VBS icon with a nicer one](http://www.iconarchive.com/show/flatwoken-icons-by-alecive/Apps-Terminator-icon.html).
+
+**Windows Terminal**
+
+A new and slick alternative is [Windows Terminal](https://aka.ms/terminal) which allows you to open multiple terminals in different tabs. Windows Terminal has mature clipboard handling as appreciated by Windows users. By default Windows Terminal opens a new PowerShell shell. You can change this in the settings json file (hit ctrl + comma) by putting the guid of Ubuntu into the default profile, e.g.: 
+```
+ "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+```
 
 ### Mac OS
 
@@ -135,9 +170,12 @@ Config|Command Line|Value|Notes
 UseKeychain|-o UseKeychain|yes/no|So not all config options have easy command line options. This tells your ssh client to use your keychain for the passphrase.
 AddKeysToAgent|-o AddKeysToAgent|yes/no|Starts and ssh-agent process that will hold your unlocked key safely in memory for subsequent ssh session. Shutdown or reboot and this disappears.
 
-##### Windows/puTTY
+##### Windows
 
-On Windows, puTTY can include a key management agent called `pageant.exe` - you can download puTTY easily without it and can download it separately from [the puTTY site](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+If you are using WSL you can just install the `keychain` package in Ubuntu inside WSL2 and load it at startup as [described in this blog post](https://esc.sh/blog/ssh-agent-windows10-wsl2/).
+
+If you use puTTY it will include a key management agent called `pageant.exe` - you can download puTTY easily without it and can download it separately from [the puTTY site](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+
 
 #### Good key management
 Your SSH key is actually in two parts - the public key, and the private key. Public/Private key pairs are fascinating if you are in to encryption. Be sure to search and read all about them.
@@ -157,7 +195,7 @@ The best practices involving keys include:
 * you do not need to put both of your keys on every machine you want to use, only your client device
 
 #### Agents
-SSH supports an in-memory agent process that will hold your unlocked private key safely. This alleviates the need to type your passphrase for the duration of time the agent is running. See above for MacOS options. On Linux, you can run `eval $(ssh-agent)` to start an agent, and `ssh-add [path to keyfile if not default]` to add your key to the running agent process. On Windows, you can run puTTY's `pageant.exe`.
+SSH supports an in-memory agent process that will hold your unlocked private key safely. This alleviates the need to type your passphrase for the duration of time the agent is running. See above for MacOS options. On Linux, you can run `eval $(ssh-agent)` to start an agent, and `ssh-add [path to keyfile if not default]` to add your key to the running agent process. You can also use the `keychain` package [as described here](https://esc.sh/blog/ssh-agent-windows10-wsl2/). If you run puTTY on Windows, you can run puTTY's `pageant.exe`.
 
 You can forward key requests from remote machine back to your running agent:
 
