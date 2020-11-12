@@ -34,6 +34,8 @@ Data visualization in R has been dominated by the `ggplot` package and a wealth 
 
 ## Python libraries
 
+Scientific data visualization in Python had historically been dominated by the `Matplotlib` library. `Matplotlib` is still a powerful plotting library, but it's syntax is complex and the graphics can look outdated when compared to R's `ggplot2`. The `seaborn` library was developed as an easier to use and updated version of `Matplotlib` and the `plotnine` library was developed to mimic `ggplot`'s grammar of graphics style plotting. Still, some Python users choose to do their data processing in Python and switch to R for visualization. The `plotly` library is an option for interactive visualizations.
+
 - [Seaborn](https://seaborn.pydata.org/index.html)
   - [Seaborn user guide and tutorials](https://seaborn.pydata.org/tutorial.html)
 - [Matplotlib](https://matplotlib.org/index.html)
