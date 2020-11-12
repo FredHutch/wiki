@@ -23,6 +23,8 @@ Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at 
 
 While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/the-base-plotting-system-1.html), there are many packages available to make plotting easier and more visually appealing. Data visualization in R has been dominated by the `ggplot` package and a wealth of add-on packages that allow for further customization (such as `RColorBrewer` for color palettes and themes, etc). Meanwhile, the communication of data visualizations via interactive webapps like Shiny apps, are also R based and lend themselves well to displaying `ggplot` and `plotly` type visualizations.   
 
+**Packages for plotting**
+
 - [ggplot2](https://ggplot2.tidyverse.org/)
   - [ggplot2 cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
   - [Data visualization with ggplot2](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
@@ -33,6 +35,15 @@ While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/t
   - [Learn Shiny](https://shiny.rstudio.com/tutorial/)
   - [Mastering Shiny - Hadley Wickham](https://mastering-shiny.org/)
   - [Fred Hutch Biomedical Data Science Wiki entry on Shiny applications](https://sciwiki.fredhutch.org/compdemos/shiny/)
+
+**Packages for arranging plots**
+
+- [Cowplot](https://wilkelab.org/cowplot/articles/plot_grid.html)
+- [Patchwork](https://patchwork.data-imaginist.com/)
+
+**Packages for coloring plots**
+- [A comprehensive list of color palettes in R](https://github.com/EmilHvitfeldt/r-color-palettes)
+- [Colorblindr](https://github.com/clauswilke/colorblindr)
 
 ## Plotting in Python
 
