@@ -38,7 +38,7 @@ While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/t
 **Packages that extend ggplot capabilities**
 - [ggbeeswarm](https://github.com/eclarke/ggbeeswarm)
 - [ggtext](https://wilkelab.org/ggtext/)
-- read more about ggplot extensions [here](https://exts.ggplot2.tidyverse.org/)
+- _read more about ggplot extensions [here](https://exts.ggplot2.tidyverse.org/)_
 
 **Packages for arranging plots**
 
