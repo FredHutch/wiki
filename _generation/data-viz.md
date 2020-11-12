@@ -47,7 +47,7 @@ While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/t
 
 ## Plotting in Python
 
-Historically the `Matplotlib` had been the go-to library for scientific data visualization in Python. `Matplotlib` is still a powerful plotting tool, but it's syntax is complex and the graphics can look outdated when compared to R's `ggplot2`. The `seaborn` library was developed as an easier to use and updated version of `Matplotlib` and the `plotnine` library was developed to mimic `ggplot`'s grammar of graphics style plotting syntax. Still, some Python users choose to do their data processing in Python and switch to R for visualization. The `plotly` library is an option for interactive visualizations.
+Historically the `Matplotlib` had been the go-to library for scientific data visualization in Python. `Matplotlib` is still a powerful plotting tool, but it's syntax is complex and the graphics can look outdated when compared to R's `ggplot2`. The `seaborn` library was developed as an easier to use and updated version of `Matplotlib` and the `plotnine` library was developed to mimic `ggplot`'s grammar of graphics style plotting syntax. Still, some Python users choose to do their data processing in Python and switch to R for visualization. The `plotly` and `Altair` are two options for interactive visualizations.
 
 - [Seaborn](https://seaborn.pydata.org/index.html)
   - [Seaborn user guide and tutorials](https://seaborn.pydata.org/tutorial.html)
@@ -57,6 +57,7 @@ Historically the `Matplotlib` had been the go-to library for scientific data vis
   - Fredhutch.io's [Introduction to Python](https://github.com/fredhutchio/python_intro) course covers plotnine in [class 4](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/master/class4.ipynb)
 - [Plotly](https://plotly.com/python/)
   - [A Kaggle Plotly tutorial for beginners](https://www.kaggle.com/kanncaa1/plotly-tutorial-for-beginners/notebook)
+- [Altair](https://altair-viz.github.io/)
 
 # Resources
 
