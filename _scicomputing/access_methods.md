@@ -32,9 +32,9 @@ This is a list of clients and servers by OS:
 
 ### Windows
 
-While puTTy is the most widely used secure shell software for Windows and you can easily install it through "Software Center" it is now a little dated. The most flexible way to get terminal access in Windows is using WSL2. WSL2 allows you to run Linux inside Windows and it is very fast (unlike classic virtual. machines). 
+While puTTy is the most widely used secure shell software for Windows and you can easily install it through your Fred Hutch device's "Software Center".  The most flexible way to get terminal access in Windows is using WSL2. WSL2 allows you to run Linux inside Windows and it is very fast (unlike classic virtual machines). 
 
-**WSL2**
+#### WSL2
 
 Steps: 
 - [Install WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) on your Windows 10 Computer (or ask your desktop support team to install it for you)
@@ -43,7 +43,7 @@ Steps:
 
 Once WSL2 is installed you can just execute the `bash` command to open a linux shell and then run `ssh rhino`. 
 
-**X11 Forwarding for Windows**
+#### X11 Forwarding for Windows
 
 If you would like to use X11 forwarding on Windows we recommend the [VcXsrv X Server](https://sourceforge.net/projects/vcxsrv/) . After installation, create a new desktop shortcut add the following command in the properties → shortcut → target :
 
@@ -52,7 +52,7 @@ If you would like to use X11 forwarding on Windows we recommend the [VcXsrv X Se
 "C:\Program Files\VcXsrv\vcxsrv.exe" :0 -ac -terminate -lesspointer -multiwindow -clipboard -wgl -dpi auto
 ```
 
-**Terminator**
+#### Terminator
 
 If you like to use `terminator` (see more below, terminator requires X11 forwarding) you can install it in your Linux instance in WSL2 (e.g. `sudo apt install terminator`) and then create a script file `startTerminator.vbs` on your Windows Desktop to launch the terminal. The content of this script is: 
 
@@ -62,7 +62,7 @@ WScript.CreateObject("Shell.Application").ShellExecute "bash", args, "", "open",
 ```
 You can [replace the VBS icon with a nicer one](http://www.iconarchive.com/show/flatwoken-icons-by-alecive/Apps-Terminator-icon.html).
 
-**Windows Terminal**
+#### Windows Terminal
 
 A new and slick alternative is [Windows Terminal](https://aka.ms/terminal) which allows you to open multiple terminals in different tabs. Windows Terminal has mature clipboard handling as appreciated by Windows users. By default Windows Terminal opens a new PowerShell shell. You can change this in the settings json file (hit ctrl + comma) by putting the guid of Ubuntu into the default profile, e.g.: 
 ```
