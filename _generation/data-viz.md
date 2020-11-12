@@ -27,7 +27,6 @@ While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/t
 
 - [ggplot2](https://ggplot2.tidyverse.org/)
   - [ggplot2 cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
-  - [Data visualization with ggplot2](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
   - Fredhutch.io's [Introduction to R](https://github.com/fredhutchio/r_intro) course covers ggplot in [class 4](https://github.com/fredhutchio/r_intro/blob/master/class4.md)
 - [Plotly](https://plotly-r.com/)
   - [Getting started with Plotly in ggplot2](https://plotly.com/ggplot2/getting-started/)
@@ -35,6 +34,11 @@ While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/t
   - [Learn Shiny](https://shiny.rstudio.com/tutorial/)
   - [Mastering Shiny - Hadley Wickham](https://mastering-shiny.org/)
   - [Fred Hutch Biomedical Data Science Wiki entry on Shiny applications](https://sciwiki.fredhutch.org/compdemos/shiny/)
+
+**Packages that extend ggplot capabilities**
+- [ggbeeswarm](https://github.com/eclarke/ggbeeswarm)
+- [ggtext](https://wilkelab.org/ggtext/)
+- read more about ggplot extensions [here](https://exts.ggplot2.tidyverse.org/)
 
 **Packages for arranging plots**
 
