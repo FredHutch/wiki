@@ -1,12 +1,13 @@
 ---
-title: Data visualization
-last_modified_at: 2020-07-09
+title: Data Visualization
 primary_reviewers: k8hertweck
 ---
 
+A growing area of large scale data analysis is the visualization and sharing of results of analyses.  Because of the utility of and need to communicate results and implications of often large and complex datasets in concise and clear ways, there has been an explosion of platforms, tools, software and approaches for data visualization.  While that is a boon to your research, as there is likely a good tool ready for you, it also can be overwhelming and challenging to choose a path to follow.  Here we have tried to provide a jump start for connecting with and applying data visualization tools and approaches at the Fred Hutch.  While this is not an exhaustive list, we have highlighted what tends to be the most commonly employed or easist to access resources.   
+
 ## Software
 
->Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at little to no cost to you! We've pulled out a shortlist of software relevant to data visualization, but you can view the entire software catalog [here](https://centernet.fredhutch.org/cn/u/center-it/software.html)
+Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at little to no cost to you! We've pulled out a shortlist of software relevant to data visualization, but you can view the entire software catalog [here](https://centernet.fredhutch.org/cn/u/center-it/software.html)
 
 - [Tableau](https://www.tableau.com/)
   - [Internal: Fred Hutch Tableau FAQ](https://centernet.fredhutch.org/cn/u/tableau/faq.html)
@@ -18,6 +19,7 @@ primary_reviewers: k8hertweck
 
 
 ## R packages
+Data visualization in R has been dominated by the `ggplot` package and a wealth of add-on packages that allow for further customization (such as `RColorBrewer` for color palettes and themes, etc). Meanwhile, the communication of data visualizations via interactive webapps like Shiny apps, are also R based and lend themselves well to displaying `ggplot` and `plotly` type visualizations.   
 
 - [ggplot2](https://ggplot2.tidyverse.org/)
   - [ggplot2 cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
