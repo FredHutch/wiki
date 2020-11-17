@@ -3,6 +3,12 @@ title: Data Storage in File Storage Systems
 primary_reviewer: dirkpetersen
 ---
 
+FIXME: Moving pointers to dfs server to centernet
+
+DESCRIPTION: This content overlaps with content in Data Storage and Protection page on CenterNet (https://CenterNet.fredhutch.org/cn/u/center-it/services/storedataprotect.html). Recommend revising the SciWiki content to a summary and link to updated and expanded CenterNet section:
+
+CHANGES: CenterNet has current information on data storage systems, including file, block, and object storage, available at Fred Hutch. Some key considerations in selecting the appropriate data storage system for a project include performance, cost, data encryption and other security requirements, and compatibility with various data access tools and analysis methods. 
+
 File keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools.  These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
 There are multiple file storage resources available to researchers including:

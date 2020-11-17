@@ -4,6 +4,7 @@ last_modified_at: 2018-10-25
 main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
 primary_reviewers: JasonMajor1, sgglick
 ---
+
 ## What is de-identification?
 
 De-identification refers to the removal or dissociation of direct patient
@@ -99,4 +100,4 @@ data type and degree of processing of the specific data entity. The inclusion of
 racial, ethnic and genders in scientific research however, can be a reason to
 retain some of these indirect identifiers in the context of research datasets.
 Thus, in addition, confidentiality is supported through strong use limitations,
-data use agreements and appropriate data security.
+data use agreements and appropriate data security. Concerns about the reliability and limitations of de-identification have increased interest in differential privacy and other alternative privacy-preserving techniques. 

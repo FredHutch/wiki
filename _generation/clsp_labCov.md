@@ -36,7 +36,7 @@ The tools to capture laboratory covariates depend on the workflow needs.  Any ty
 LabArchives (Professional Edition) electronic lab notebook software is a secure, browser-based, and collaborative research-specific workflow tool that was designed for the storage, organization, sharing, and publishing of laboratory research and data for scientific research. You can create a free trial account at LabArchives to explore more.
 
 - Account creation for Non-Fred Hutch users: [Register Here](https://mynotebook.labarchives.com/sitesignup?stay=here)
-- Account creation for Fred Hutch users: [Register Here](https://mynotebook.labarchives.com/sitesignup?stay=here) Register using your Hutch ID (@fredhutch.org) email and you will be able to access your secure account through your MyHutch login. the registration will route you to access the application through your MyHutch page. For additional details on Fred Hutch ELN access, please refer to [additional documentation in CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/projects/eln-project.html)
+- Account creation for Fred Hutch users: [Register Here](https://mynotebook.labarchives.com/sitesignup?stay=here) Register using your Hutch ID (@fredhutch.org) email and you will be able to access your secure account through your HutchNetID. the registration will route you to access the application through your My Apps page. For additional details on Fred Hutch ELN access, please refer to [additional documentation in CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/projects/eln-project.html)
 
 
 ### LabMatrix

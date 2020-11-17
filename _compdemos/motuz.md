@@ -23,7 +23,7 @@ At this time, Motuz allows copying of files/objects between the following file s
 * [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 * [WebDAV](https://en.wikipedia.org/wiki/WebDAV)
 * [Dropbox](https://www.dropbox.com/) (Beta)
-* [Microsoft OneDrive](https://onedrive.live.com/about/auth/) (Beta)
+* [Microsoft OneDrive](https://onedrive.live.com/about/auth/) (Beta, does not currently support FredHutch OneDrive for Business)
 
 This demo will focus on moving files between 
 shared file systems on campus and Amazon S3.

@@ -15,6 +15,12 @@ Using these desktop computing resources, the following describes how to access a
 
 FIXME: remove specific login info for ssh
 
+DESCRIPTION: The section “Access via a Remote Location” overlaps with CenterNet pages on VPN (https://CenterNet.fredhutch.org/cn/u/center-it/help-desk/vpn.html) and RDS (https://CenterNet.fredhutch.org/cn/u/center-it/services/rds.html).  
+
+CHANGES: Recommend expanding CenterNet content to cover Snail and new SFTP service and revising the SciWiki content to a summary and link to CenterNet content:
+CenterNet has information on remote data access methods available at Fred Hutch, including VPN, RDS, and SSH/SFTP gateways. By storing data in Office 365 or other Fred Hutch-approved cloud-based systems, you can avoid having to use one of these remote network gateways to access data securely. You may contact ISO if you have security-related questions about storing or accessing data in the cloud.
+
+
 We use two common protocols to access remote compute resources. The first is the Hypertext Transfer Protocol (HTTP). This is the way your browser communicates with remote web servers. The second common protocol is Secure SHell (SSH). This is the method used to run a program on a remote server. Typically the program run is a `shell` that gives you an interactive command line on the remote host.
 
 Many programs you will want to run on a remote compute server are command line programs. These are easily executed from your `shell` remote process. You use this method when opening a terminal (`shell`) on your computer to connect to a remote compute server (like `rhino`) and typing the name of the program or script.

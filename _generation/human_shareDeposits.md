@@ -5,6 +5,10 @@ main_authors: Susan Glick, Jason Major, Karen Hansen
 primary_reviewers: sgglick, JasonMajor1
 ---
 
+FIXME: Recommend adding new section, Data Sharing Security, after Data Sharing and Management Plans.
+While data sharing has many benefits and plays an increasingly critical in advancing research, it can also introduce a number of sometimes difficult to assess risks related to information security and privacy. The information security information available on CenterNet and can help you ensure data sharing arrangements are structured to minimize risk and generally comply with Fred Hutch Information Security Standards. Because data sharing methods are diverse and constantly evolving, it may be difficult to determine whether a specific data sharing plan or application is compliant and has sufficient protections in place. If you are planning to share data, you can request a security review from the Information Security Office (ISO) in CIT. In addition to helping you determine if the data sharing plan meets fulfills security requirements, ISO and CIT may also be able to assist you in implementing a reliable, high performance architecture that takes full advantage of such key features such as integration with Fred Hutch ID  and multifactor authentication (MFA). 
+
+
 Whether required for funding and publication or desired for its beneficial impact on research progress, understanding the why and how of data sharing is essential for modern biomedical research programs.
 
 ## Benefits of Data Sharing
