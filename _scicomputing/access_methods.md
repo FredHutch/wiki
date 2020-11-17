@@ -13,6 +13,8 @@ Using these desktop computing resources, the following describes how to access a
 
 ## SSH Clients for Remote Computing Resources
 
+FIXME: remove specific login info for ssh
+
 We use two common protocols to access remote compute resources. The first is the Hypertext Transfer Protocol (HTTP). This is the way your browser communicates with remote web servers. The second common protocol is Secure SHell (SSH). This is the method used to run a program on a remote server. Typically the program run is a `shell` that gives you an interactive command line on the remote host.
 
 Many programs you will want to run on a remote compute server are command line programs. These are easily executed from your `shell` remote process. You use this method when opening a terminal (`shell`) on your computer to connect to a remote compute server (like `rhino`) and typing the name of the program or script.
