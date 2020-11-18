@@ -23,8 +23,7 @@ Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at 
 
 While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/the-base-plotting-system-1.html), there are many packages available to make plotting easier and more visually appealing. Data visualization in R has been dominated by the `ggplot` package and a wealth of add-on packages that allow for further customization (such as `RColorBrewer` for color palettes and themes, etc). Meanwhile, the communication of data visualizations via interactive webapps like Shiny apps, are also R based and lend themselves well to displaying `ggplot` and `plotly` type visualizations.   
 
-**Packages for plotting**
-
+#### Packages for plotting
 - [ggplot2](https://ggplot2.tidyverse.org/)
   - [ggplot2 cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
   - Fredhutch.io's [Introduction to R](https://github.com/fredhutchio/r_intro) course covers ggplot in [class 4](https://github.com/fredhutchio/r_intro/blob/master/class4.md)
@@ -35,17 +34,16 @@ While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/t
   - [Mastering Shiny - Hadley Wickham](https://mastering-shiny.org/)
   - [Fred Hutch Biomedical Data Science Wiki entry on Shiny applications](https://sciwiki.fredhutch.org/compdemos/shiny/)
 
-**Packages that extend ggplot capabilities**
+#### Packages that extend `ggplot` capabilities
 - [ggbeeswarm](https://github.com/eclarke/ggbeeswarm)
 - [ggtext](https://wilkelab.org/ggtext/)
 - _read more about ggplot extensions [here](https://exts.ggplot2.tidyverse.org/)_
 
-**Packages for arranging plots**
-
+#### Packages for arranging plots
 - [Cowplot](https://wilkelab.org/cowplot/articles/plot_grid.html)
 - [Patchwork](https://patchwork.data-imaginist.com/)
 
-**Packages for coloring plots**
+#### Packages for coloring plots
 - [A comprehensive list of color palettes in R](https://github.com/EmilHvitfeldt/r-color-palettes)
 - [Colorblindr](https://github.com/clauswilke/colorblindr)
 
@@ -66,27 +64,34 @@ Historically the `Matplotlib` had been the go-to library for scientific data vis
 ## Resources
 
 ### Data visualization resources at Fred Hutch
+
+Fred Hutch offers resources for researchers interested in learning more about data visualization. Fredhutch.io offers introduction to R and Python courses that touch on data visualization. The Coop Communities Slack, and more specifically the `#data-viz` channel, is always available as a space for researchers to ask questions and share resources about data visualization. 
+
 - Join the [Coop Communities Slack](https://fhbig.slack.com/) and follow the #data-viz channel. This channel is a space to share visualization ideas, ask questions, and troubleshoot code!
 - [FredHutch.io](http://www.fredhutch.io/) offers introduction to [R](https://www.fredhutch.io/resources/#introduction-to-r) and [Python](https://www.fredhutch.io/resources/#introduction-to-python) courses that touch on data visualization along with other fundamentals for beginners.
 - [The Data Visualization Center](https://viz.fredhutch.org/) is co-sponsored by Fred Hutch and Brotman Baty. They develop infrastructure and technology for visualization and analysis of data including scRNA-Seq, ATAC-Seq, and CyTOF. They focus on grant-funded collaborations involving data integration, analytical pipelines, and publishing interactive visualization websites for large-scale data.
 
-### Books on data visualization
+### Books that cover data visualization
 
-**General**
+Books can be a great way to dive deeper into a specific coding subject and fortunately many of these books are available online for free! _The Fundamentals of Data Visualization_ by Claus Wilke is a great reference for code agnostic data visualization concepts. For language specific data visualization references, books and documentation that cover a specific language (like Python or R) will often also cover the basics of plotting in that language.
+
+#### General
 - [Fundamentals of Data Visualization - Claus Wilke](https://serialmentor.com/dataviz/index.html)
 
-**R**
+#### R
 - [R for Data Science, Chapter 3: Data visualisation - Garrett Grolemund and Hadley Wickham](https://r4ds.had.co.nz/data-visualisation.html)
 - [ggplot2: Elegant Graphics for Data Analysis - Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen](https://ggplot2-book.org/)
 - [R Graphics Cookbook - Winston Chang](https://r-graphics.org/index.html)
 
-**Python**
+#### Python
 - [Python Data Science Handbook, Chapter 4: Data visualization with Seaborn - Jake VanderPlas](https://jakevdp.github.io/PythonDataScienceHandbook/04.14-visualization-with-seaborn.html)
 
 ### Other data visualization resources!
 
+Data visualization focused blogs and screencasts can be a great way to find inspiration and think outside the box.
+
+- [The TidyX Screencast](https://www.youtube.com/c/TidyX_screencast/featured)
 - [Flowing Data](https://flowingdata.com/)
 - [Nightingale: The journal of the Data Visualization Society](https://medium.com/nightingale)
 - [The Pudding](https://pudding.cool/)
 - [Information is Beautiful](https://informationisbeautiful.net/)
-- [The TidyX Screencast](https://www.youtube.com/c/TidyX_screencast/featured)
