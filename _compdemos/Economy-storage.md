@@ -33,7 +33,7 @@ Please execute 'sw2account <accountname>' to get credentials.
 Use 'sw2account --save <accountname>' to set them as default.
 ```
 
-Swift requires certain environment variables to be set for each user based on the PI's group.  You can easily set them by using `sw2account lastname_f` and providing your HutchNet ID and password.
+Swift requires certain environment variables to be set for each user based on the PI's group.  You can easily set them by using `sw2account lastname_f`.
 
 Now let's try running `swc` again, still without any command options, you are prompted for your HutchNet password:
 ```
@@ -44,45 +44,50 @@ swc supports sub commands that attempt to mimic standard unix file system tools.
 These sub commands are currently implemented: (Arguments in square brackets are
 optional).
 
-swc upload <src> <targ>   -  copy file / dirs from a file system to swift
-swc download <src> <targ> -  copy files and dirs from swift to a file system
-swc cd <folder>           -  change current folder to <folder> in swift
-swc ls [folder]           -  list contents of a folder - or the current one
-swc mkdir <folder>        -  create a folder (works only at the root)
-swc rm <path>             -  delete all file paths that start with <path>
-swc pwd                   -  display the current swift folder name
-swc cat|more|less <file>  -  download a file to TMPDIR and view with cat, more or less
-swc vi|emacs|nano <file>  -  download a file to TMPDIR and edit it with vi|emacs or nano
-swc chgrp <group> <fld.>  -  grant/remove rw access to current swift account or container
-swc rw <group> <folder>   -  add rw access to current swift account or container
-swc ro <group> <folder>   -  add ro access to current swift account or container
-swc list <folder> [filt]  -  list folder content (incl. subfolders) and filter
-swc search <str> <folder> -  search for a string in text files under /folder
-swc openwith <cmd> <file> -  download a file to TMPDIR and open it with <cmd>
-swc header <file>         -  display the header of a file in swift
-swc meta <file>           -  display custom meta data of a file in swift
-swc mtime <file>          -  show the original mtime of a file before uploaded
-swc size <folder>         -  show the size of a swift or a local folder
-swc compare <l.fld> <fld> -  compare size of a local folder with a swift folder
-swc hash <locfile> <file> -  compare the md5sum of a local file with a swift file
-swc arch <src> <targ>     -  create one tar archive for each folder level
-swc unarch <src> <targ>   -  restore folders that have been archived
-swc auth                  -  show current storage url and auth token
-swc env                   -  show authentication env vars (ST_ and OS_)
-swc clean                 -  remove current authtoken credential cache
+  swc upload <src> <targ>   -  copy file / dirs from a file system to swift
+  swc download <src> <targ> -  copy files and dirs from swift to a file system
+  swc cd <folder>           -  change current folder to <folder> in swift
+  swc ls [folder]           -  list contents of a folder - or the current one
+  swc mkdir <folder>        -  create a folder (works only at the root)
+  swc rm <path>             -  delete all file paths that start with <path>
+  swc pwd                   -  display the current swift folder name
+  swc cat|more|less <file>  -  download a file to TMPDIR and view with cat, more or less
+  swc vi|emacs|nano <file>  -  download a file to TMPDIR and edit it with vi|emacs or nano
+  swc chgrp <group> <fld.>  -  grant/remove rw access to current swift account or container
+  swc rw <group> <folder>   -  add rw access to current swift account or container
+  swc ro <group> <folder>   -  add ro access to current swift account or container
+  swc publish|hide </fld.>  -  make root folder public (web server mode) or hide it
+  swc list <folder> [filt]  -  list folder content (incl. subfolders) and filter
+  swc search <str> <folder> -  search for a string in text files under /folder
+  swc openwith <cmd> <file> -  download a file to TMPDIR and open it with <cmd>
+  swc header <file>         -  display the header of a file in swift
+  swc meta <file>           -  display custom meta data of a file in swift
+  swc mtime <file>          -  show the original mtime of a file before uploaded
+  swc size <folder>         -  show the size of a swift or a local folder
+  swc compare <l.fld> <fld> -  compare size of a local folder with a swift folder
+  swc hash <locfile> <file> -  compare the md5sum of a local file with a swift file
+  swc arch <src> <targ>     -  create one tar archive for each folder level
+  swc unarch <src> <targ>   -  restore folders that have been archived
+  swc auth                  -  show current storage url and auth token
+  swc env                   -  show authentication env vars (ST_ and OS_)
+  swc clean                 -  remove current authtoken credential cache
 
 Examples:
-swc upload /local/folder /swift/folder
-swc upload --symlinks /local/folder /swift/folder (save symlinks)
-swc compare /local/folder /swift/folder
-swc download /swift/folder /scratch/folder
-swc download /swift/folder $TMPDIR
-swc rm /archive/some_prefix
-swc more /folder/some_file.txt
-swc openwith emacs /folder/some_file.txt
+  swc upload /local/folder /my/swift/folder
+  swc upload --no-symlinks /local/folder /my/swift/folder (don't save symlinks)
+  swc compare /local/folder /my/swift/folder
+  swc download /my/swift/folder $TMPDIR (download to local scratch dir)
+  swc arch /local/folder /my/swift/folder (upload folders as tar.gz files)
+  swc unarch /my/swift/folder /scratch/folder (unpack tar.gz files)
+  swc rm /my/archive/some_prefix
+  swc less /my/swift/folder/some_file.txt (download and view with less)
+  swc openwith emacs /folder/some_file.txt
+
+Debugging:
+  export OS_SWIFT_OPTS=--info
 ```
 
-OK, we see that there are some options, the `swc` command has nearly 30 sub commands. Let's upload a folder called 'testing' that is stored somewhere locally in `Fast`. The target folder in Swift is called /test:
+OK, we see that there are some options, the `swc` command has nearly 30 sub commands. Let's upload a folder called 'testing' this is a sub folder in your current folder  in `Fast`. The target folder in Swift is called /test:
 
 ```   
 petersen@rhino04:~/sc$ swc upload ./testing /test
@@ -130,6 +135,20 @@ Please check out the `swc` page on GitHub for additional details:
 - [swift commander on github](https://github.com/FredHutch/swift-commander)
 - [Check out this video how to the swc command](https://asciinema.org/a/17172)
 
+There are further examples at the end of this page 
+
+
+## rclone 
+
+[rclone](http://rclone.org) is a swiss army knife for interacting with cloud / object storage. The benefit of using rclone is that it supports [many different cloud storage](https://rclone.org/overview/) systems and if you work with multiple systems you can use rclone to access them with one unified interface. On SciComp systems rclone is preconfigured to work with Economy Local (swift) and Economy Cloud (s3). You can use the `swc` command to create a token and this token will be used by rclone
+If you execute this command you should see at least 2 entries.
+
+`rclone listremotes`
+
+and to list buckets in s3 you can run 
+
+`rclone lsd s3:`
+
 ## Amazon Web Services S3 Compatibility Layer
 
 We can use AWS tools such as `awscli`, the Python module `boto3` or the R package `aws.s3` to access Swift through the AWS S3 compatibility layer.  We have generated detailed docs for using [`awscli`](/compdemos/aws-cli/), [`boto3`](/compdemos/aws-python/) and [`aws.s3`](/compdemos/aws-R/) in our Resource Library section.  Prior to using these tools, hwoever, we need to first setup the profile `s3.fhcrc.org` in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on `rhino`.  
@@ -176,7 +195,6 @@ and instead use the --profile option for `Economy Local`:
 ```
 
 
-
 ## Swift standard client (Python)
 
 The Swift client allows you to read and write files in your containers directly without mounting the container in the file system.  This is particularly handy for scripting and automation. The swift client is used by `swc` 'under the hood' and offers more options than `swc` but it is also slightly more difficult to use.  Do not use this tool if `swc` meets your needs.
@@ -193,10 +211,21 @@ The swift client operates similar to ftp or scp and can be used in batch mode.  
 - tempurl: creates a temporary url with expiration date that can be published within the Fred Hutch network
 
 You can supply your credentials on the command line, but this is discouraged as it can expose your password to any other user on the system.
-The easiest way to get credentials to Swift storage on a SciComp system is using `sw2account` with the id of the PI as an argument (`sw2account lastname_f`) . It is recommend that you use `sw2account` to save the credentials of the PI account you mostly work with.
+The easiest way to get credentials to Swift storage on a SciComp system is using `sw2account` with the id of the PI as an argument (`sw2account lastname_f`) . It is recommend that you then use `swc auth` to save and display a token that you can use as credential to the PI account you mostly work with. 
 
 ```
-    $ sw2account --save groudine_m
+    $ sw2account --save lastname_f
+```
+
+use the `swc auth` command (you may be prompted for your Hutch credentials) and copy and paste the 3 lines that start with `export ...` into your terminal. This will activate the authentication token for swift/
+
+```
+petersen@rhino03:~$ swc auth
+Enter your swift password/key for AUTH_Swift_lastname_f/petersen:
+Refreshing credentials ....please wait
+export OS_AUTH_URL=https://xxxxx.xxxxxx.org/auth/v2.0
+export OS_STORAGE_URL=https://xxxxx.xxxxxx.org/v1/AUTH_Swift_lastname_f
+export OS_AUTH_TOKEN=AUTH_tk7d0a4508fd284a35xxxxxxxxxxxxxxx
 ```
 
 With those environment variables set, the connection can be tested with the "stat" subcommand:
@@ -239,7 +268,7 @@ You can upload an entire folder structure using the Swift upload command. Swift 
 
 ## Python (swiftclient)
 
-Instead of using the swift command from the unix shell one can also access swift directly from python using the swiftclient python module which is also used by the swift command line client. This is a quick example that writes 100 objects / files to a swift container called prj1. create this container by using the command `swift post prj1`
+Instead of using the swift command from the unix shell one can also access swift directly from python using the swiftclient python module which is also used by the swift command line client. This is a quick example that writes 100 objects / files to a swift container called prj1. create this container by using the command `swift post prj1` .You can use the `swc auth` command to receive an authentication token for the Python client.
 
 ```
 #! /usr/bin/env python
@@ -292,9 +321,10 @@ If you have permissions to see the credentials you will get 3 entries:
 
 For tools that use S3 protocol you need _account_ and _key_. Use the entry in account for "access key id" and the entry in 'key' for "secret key id". Connect these tools to https://s3.fhcrc.org
 
-For tools that use the Swift protocol you need the account, a password, and an authentication endpoint (a URL used for authenticating your credentials). Use https://tin.fhcrc.org/auth/v1.0 for this.
+For tools that use the Swift protocol you need the account, a password, and an authentication endpoint (a URL used for authenticating your credentials). Use https://xxx.xxxxx.org/auth/v1.0 for this. Replace xxx with the hostname for swift (run `swc auth` to see this hostname)
 
-# How to migrate large data to `Economy Local`
+
+# How to migrate/archive large data to `Economy Local`
 
 The remainder of this document aims to provide some guidance for researchers interested in creating data archives in `Economy Local`.  Data archive in this document is intended to mean a long term dataset storage location where larger (>1TB) datasets can be stored, perhaps as read only for your group.  
 
@@ -338,7 +368,6 @@ Migration:
 - migrate the data
 - check to ensure complete, uncorrupted data migration
 
-
 Decide if you need assistance or if this is a task you can complete yourself.  
 
 ### Assisted Archiving
@@ -350,9 +379,7 @@ When requesting assistance with archiving your data, you may consider emailing `
 - What permissions would you like to have on that archive
 
 
-
-
-## Using `fh` Archive Tools
+## Using `fh` Archive Tools yourself
 
 Learn how archive data with little effort using the Gimzo cluster as a Helper.
 
@@ -369,10 +396,27 @@ When we migrate large amounts of data we have different use cases. First (A) we 
 Still excited to do this yourself ? SciComp offers to move the data for you. All you have to do is send the Fast file source folder and the Economy File target folder and the PI account to use to SciComp @ and the data will be moved for you.
 
 ## How do I find out if I have many small files ?
-Please see File Data Management Tips and Tricks
+
+Here we can use the `swc size` command, let's try the bin folder in $HOME which should have a number of smaller files. 
+
+```
+petersen@rhino03:~$ swc size ~/bin
+    checking posix folder /home/petersen/bin (following symlinks)...
+[Errno 2] No such file or directory: '/home/petersen/bin/R2'
+    236,505,505 bytes (225.549 MB) in /home/petersen/bin (average file size: 935.070 KB)
+    ...including 16,145 bytes (15.767 KB) for links to outside of /home/petersen/bin
+    ...including 2,133,551 bytes (2.035 MB) for duplicate inodes inside of /home/petersen/bin
+```
+
+We learn 3 things from this information:
+
+- The average file size is small/medium (935 KB or < 1MB>) so method B) may be bettera good fit
+- Traversing through the folder structure shows one error. This can have multiple reasons such as permission errors or orphaned symbolic links. We recommend to fix these issues before archiving as this eases validation and size comparisons.
+- There are some symlinks pointing to data outside the ~/bin folder. If you choose Method A) it will include that data for uploading (following symlinks) and if you choose method B) it will NOT include that data but it will store the symlinks themselves.
 
 ## How can I find my big files?
-Please check the Scientific Storage Reporter Howto
+
+Please check the [Storage Hotspots Finder](https://storage-hotspots.fhcrc.org/) 
 
 ## Preparation
 
@@ -389,21 +433,21 @@ use 'swc ls' to make sure that the destination does not already exist. data at t
 
 make sure that 'Archivelogs' is your current directory during the following archiving activities
 
-## A) Migrating medium to large size files
+## A) Migrating large size files
 
-if you have not done yet make sure you use the right Economy file account with sw2account
-submit a swc upload command to gizmo. Please check if the target folder has a trailing slash or not as this influences where you data is copied to. Also make sure that you request enough wall clock time on gizmo (in the example below 7 days)
+if you have not done this yet make sure you use the right Economy file account with `sw2account`
+before submitting a `swc upload` command to gizmo. Please check if the target folder has a trailing slash or not as this influences where you data is copied to. Also make sure that you request enough wall clock time on gizmo (in the example below 7 days)
 check the progress of your copy job using the tail command on the --output file
-use the swc compare command to make sure that source and target folder have the same size. If the size differs you may run another swc upload job
+use the `swc compare` command to make sure that source and target folder have the same size. If the size differs you may run another `swc upload` job
 ask your colleaques if the data made it over correctly before you delete the source or ask IT to delete it for you.
 
 ```
     $ sbatch -J "copy" --mail-type=ALL -t 7-0 --output=myfolder-archive.txt --wrap="swc upload /myfolder /archive"
     $ tail -f myfolder-archive.txt
     $ swc compare myfolder /archive
-
-    To make things even easier there is a wrapper script : fhUpload,  which will use one gizmof node per subfolder to move data:​​​​
-  
+```
+To make things even easier there is a wrapper script : fhUpload,  which will request 4 Gizmo cores by default, run the upload and finish up with an `swc compare`​​​​ as well as send you an email when the job starts and when it ends.
+```
     $ fhUpload /fh/fast/....../human/hg19/2013 /human/hg19/2013
     submitted batch job 27981126
     Upload job submitted to Gizmo. If you would like to monitor progress please use one of these commands:
@@ -411,23 +455,7 @@ ask your colleaques if the data made it over correctly before you delete the sou
     tail -f Upload_.....slurm.log.txt
 ```
 
-To make things a little easier if you have a folder that has multiple subfolders with large files in them you can use the fhUploadSubfolders2Economy command, which will use one gizmof node per subfolder to move data:​​​​
-
-```
-    $ fhUploadSubfolders2Economy human/hg19/2013 /human/hg19/2013
-
-    Will now submit a cluster job for each of these commands to Gizmo:
-
-    swc upload human/hg19/2013/TCGA.HNSC /human/hg19/2013/TCGA.HNSC
-    swc upload human/hg19/2013/TCGA.THCA /human/hg19/2013/TCGA.THCA
-    swc upload human/hg19/2013/TCGA.READ /human/hg19/2013/TCGA.READ
-    Do you want to continue? [y/N] n
-```
-
-if you do not want to use a separate cluster node for each sub directory you can also use the simpler fhUpload which submits an upload command for a single directory to a single Gizmo node and works very simple:
-$ fhUpload /myfolder /archive/folder
-
-## B) Migrating many small size files
+## B) Migrating / Archiving small and medium size files
 
 After you have gone through the 'Preparation' steps above you just need to use the fhArchive command to archive many small files to Economy.
 
@@ -443,9 +471,14 @@ For example if you would like to archive a sub folder ProjectA in fast file for 
 
 ```
     petersen@rhino1:/home…en/Archivelogs$ fhArchive /fh/fast/doe_j/ProjectA /archive/ProjectA /fh/scratch/delete30/doe_j/archive_verify
-    Submitted batch job 45975375
-    Archive job submitted to Gizmo. If you would like to monitor progress please use one of these commands:
-    swc size "/archive/ProjectA"
+
+    checking economy file swift account, listing containers...
+    switching to batchmode
+    ..current folder (AUTH_Swift__ADM_SciComp):
+    /
+    Submitted batch job 55465002
+    Archive job submitted to Gizmo. If you would like to monitor progress:
+    swc size "/archive/ProjectA" 
     tail -f Archive__fh_fast_doe_j_ProjectA.slurm.log.txt
 ```
 
@@ -455,7 +488,7 @@ If the sizes of source and destination are not identical, use this command to se
     grep -B5 -A5 -i error Archive__fh_fast_doe_j_ProjectA.slurm.log.txt
 ```
 
-It is strongly recommended to not archive more than 1 TB per fhArchive command because each fhArchive command uses only a single compute node with <= 100 MB/s throughput and 4 cores. It will be faster if you execute fhArchive multiple times, one for each sub directory e.g ProjectA/subproject1, ProjectA/subproject2, etc )
+It is recommended to not archive more than 5 TB per fhArchive command as this increases the likelihood that errors occur and that the process has to be repeated. Also the fhArchive command uses only a single compute node at a time requesting 4 cores by default. It will be faster if you execute fhArchive multiple times, one for each sub directory e.g ProjectA/subproject1, ProjectA/subproject2, etc )
 
 
 ## Checking results
@@ -474,10 +507,22 @@ then check the output file with the tail command, you want to see something like
     OK! The size of /fh/fast/doe_j/ProjectA and /fh/scratch/delete30/doe_j/archive_verify is identical!
     The data was uploaded and then uncompressed to scratch.
     The sizes of the source directory and the scratch directory should be identical.
+```
 
-    now you can delete everything under archive_verify. Note that fhArchive does not delete the orginal source data (e.g. under /fh/fast). You need to delete this data after you have confirmed that your data was archived successfully.
-    > rm -rf /fh/scratch/delete30/doe_j/archive_verify
-    Getting your data back is easy. Note that you do not need to restore the entire archive, you can also just restore a subdirectory. This is possible because "swc archive" creates one tar.gz archive per directory level.
+now you can delete everything under archive_verify. Note that fhArchive does not delete the orginal source data (e.g. under /fh/fast). You need to delete this data after you have confirmed that your data was archived successfully.
+`> rm -rf /fh/scratch/delete30/doe_j/archive_verify`
+
+Getting your data back is easy. Note that you do not need to restore the entire archive, you can also just restore a subdirectory. This is possible because "swc archive" creates one tar.gz archive per directory level.
+```
     swc unarch /archive/ProjectA/subproject1 /fh/scratch/delete30/doe_j/ProjectA/subproject1
 ```
+
+## Benefits of Method B
+
+Using Method B) has multiple benefits over Method A) :
+
+- Higher retrieval performance: While the archiving process can either be faster or slower than method A) the download/retrieval is much faster. We have measured a `swc unarch` performance of more than 350 MB/s 
+- Lower storage utilization: Method B) compresses data by 30% on average which means 30% lower storage cots  
+- 1:1 copy of data: All permissions (including execute bit) are retained which means we can restore an exact copy of the data with all permissions (Note: While permissions are retained upon restore, file owership is only retained if the restore is executed by SciComp staff as a root user.)
+
 
