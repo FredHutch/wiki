@@ -9,7 +9,7 @@ A growing area of large scale data analysis is the visualization and sharing of 
 
 ### Desktop software
 
-Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at little to no cost to you! We've pulled out a shortlist of software relevant to data visualization, but you can view the entire software catalog [here](https://centernet.fredhutch.org/cn/u/center-it/software.html). Tableau, MATLAB, and Microsoft Excel all are great data visualization options for users who prefer a point and click data visualization option.
+Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at little to no cost to you! We've pulled out a shortlist of software relevant to data visualization, but you can view the entire software catalog [here](https://centernet.fredhutch.org/cn/u/center-it/software.html). Tableau, MATLAB, and Microsoft Excel all are great options for users who prefer a point and click data visualization tools.
 
 - [Tableau](https://www.tableau.com/)
   - [Internal: Fred Hutch Tableau FAQ](https://centernet.fredhutch.org/cn/u/tableau/faq.html)
