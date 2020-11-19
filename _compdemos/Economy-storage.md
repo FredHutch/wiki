@@ -7,7 +7,7 @@ primary_reviewers: dirkpetersen, vortexing
 
 This demo showcases different options for accessing economy storage, including command line and API options, and how to handle the migration of large datasets to Economy Local. 
 
-# General Limitations and Notes
+## General Limitations and Notes
 
  - Files larger than 5GB require segmentation.  The value indicated with the "-S" argument is the size that files will be split into on the object store.  A segment size may be any value up to 5GB.  A reasonable default value is -S 2G which sets the maximum segment size to 2 GB, which means a file of 10GB size will be split into 5 segments.
  - using multiple segments will increase upload speeds (and download speeds in the future), setting the segment size to 1GB on a 10GB file can increase the theoretical upload performance 10 fold
@@ -17,11 +17,11 @@ This demo showcases different options for accessing economy storage, including c
  >Note: Additional details on [migrating large data to Economy Local](#how-to-migrate-large-data-to-economy-local) are available below.
 
 
-# Command Line and API Options for Accessing Economy Local Storage
+## Command Line and API Options for Accessing Economy Local Storage
 
 Access to data stored in Fred Hutch resources that are [object stores](/scicomputing/store_objectstore/) can be achieved via command line tools or the API.  This is an overview of available tools that are related to accessing `Economy Local` storage, starting with the ones you will most likely use and that are best supported.  
 
-## Swift Commander
+### Swift Commander
 Using the `swc` command is the simplest way of accessing the Swift object store. The tool includes easy to use sub commands such as `swc upload` and `swc download` as well as simplified versions of standard unix tools such as ls, cd, rm, etc. By using `swc` you can ignore most of the peculiarities of the Swift object storage system and (almost) work with it like a traditional file system. It is the best option for HPC scripting and automation.
 
 First, let's invoke the `swc` command and see what it has to offer:
@@ -138,7 +138,7 @@ Please check out the `swc` page on GitHub for additional details:
 There are further examples at the end of this page 
 
 
-## rclone 
+### rclone 
 
 [rclone](http://rclone.org) is a swiss army knife for interacting with cloud / object storage. The benefit of using rclone is that it supports [many different cloud storage](https://rclone.org/overview/) systems and if you work with multiple systems you can use rclone to access them with one unified interface. On SciComp systems rclone is preconfigured to work with Economy Local (swift) and Economy Cloud (s3). You can use the `swc` command to create a token and this token will be used by rclone
 If you execute this command you should see at least 2 entries.
@@ -149,7 +149,7 @@ and to list buckets in s3 you can run
 
 `rclone lsd s3:`
 
-## Amazon Web Services S3 Compatibility Layer
+### Amazon Web Services S3 Compatibility Layer
 
 We can use AWS tools such as `awscli`, the Python module `boto3` or the R package `aws.s3` to access Swift through the AWS S3 compatibility layer.  We have generated detailed docs for using [`awscli`](/compdemos/aws-cli/), [`boto3`](/compdemos/aws-python/) and [`aws.s3`](/compdemos/aws-R/) in our Resource Library section.  Prior to using these tools, hwoever, we need to first setup the profile `s3.fhcrc.org` in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on `rhino`.  
 
@@ -195,7 +195,7 @@ and instead use the --profile option for `Economy Local`:
 ```
 
 
-## Swift standard client (Python)
+### Swift standard client (Python)
 
 The Swift client allows you to read and write files in your containers directly without mounting the container in the file system.  This is particularly handy for scripting and automation. The swift client is used by `swc` 'under the hood' and offers more options than `swc` but it is also slightly more difficult to use.  Do not use this tool if `swc` meets your needs.
 
@@ -266,7 +266,7 @@ You can upload an entire folder structure using the Swift upload command. Swift 
 ````
 
 
-## Python (swiftclient)
+### Python (swiftclient)
 
 Instead of using the swift command from the unix shell one can also access swift directly from python using the swiftclient python module which is also used by the swift command line client. This is a quick example that writes 100 objects / files to a swift container called prj1. create this container by using the command `swift post prj1` .You can use the `swc auth` command to receive an authentication token for the Python client.
 
@@ -324,28 +324,18 @@ For tools that use S3 protocol you need _account_ and _key_. Use the entry in ac
 For tools that use the Swift protocol you need the account, a password, and an authentication endpoint (a URL used for authenticating your credentials). Use https://xxx.xxxxx.org/auth/v1.0 for this. Replace xxx with the hostname for swift (run `swc auth` to see this hostname)
 
 
-# How to migrate/archive large data to `Economy Local`
+## How to migrate/archive large data to `Economy Local`
 
 The remainder of this document aims to provide some guidance for researchers interested in creating data archives in `Economy Local`.  Data archive in this document is intended to mean a long term dataset storage location where larger (>1TB) datasets can be stored, perhaps as read only for your group.  
 
 
-## Data Sources
 Depending on where the data is being migrated from, different methods work best for archiving datasets in `Economy Local`.  
-
-### `Fast`
-
-### Web Based Resources
 
 #### AWS S3 Transfer Bucket
 How to set up an AWS S3 transfer bucket to receive data from sources such as sequencing centers, etc.
 
 ### Physical Drives
 In some cases the choice is made to receive large datasets on physical drives, such as a hard drive mailed to you from a data provider.  In this case, the physical drive might not be the best archive for a variety of reasons, but also is not an ideal working copy location either.  
-
-#### Physical Drive through Cyberduck to `Economy Local`
-
-#### Other methods
-
 
 ## Archiving Basics
 
@@ -418,7 +408,7 @@ We learn 3 things from this information:
 
 Please check the [Storage Hotspots Finder](https://storage-hotspots.fhcrc.org/) 
 
-## Preparation
+### Preparation
 
 create and switch to a folder where you keep the logs for your archiving activity. We recommend to use a folder Archivelogs in your home directory or in the fast file folder of the PI, eg. /fh/fast/lastname_f/archive/Archivelogs:
 use sw2account to switch to the economy file account of your PI.
@@ -433,7 +423,7 @@ use 'swc ls' to make sure that the destination does not already exist. data at t
 
 make sure that 'Archivelogs' is your current directory during the following archiving activities
 
-## A) Migrating large size files
+### Migrating large size files
 
 if you have not done this yet make sure you use the right Economy file account with `sw2account`
 before submitting a `swc upload` command to gizmo. Please check if the target folder has a trailing slash or not as this influences where you data is copied to. Also make sure that you request enough wall clock time on gizmo (in the example below 7 days)
@@ -455,7 +445,7 @@ To make things even easier there is a wrapper script : fhUpload,  which will req
     tail -f Upload_.....slurm.log.txt
 ```
 
-## B) Migrating / Archiving small and medium size files
+### Migrating / Archiving small and medium size files
 
 After you have gone through the 'Preparation' steps above you just need to use the fhArchive command to archive many small files to Economy.
 
@@ -491,7 +481,7 @@ If the sizes of source and destination are not identical, use this command to se
 It is recommended to not archive more than 5 TB per fhArchive command as this increases the likelihood that errors occur and that the process has to be repeated. Also the fhArchive command uses only a single compute node at a time requesting 4 cores by default. It will be faster if you execute fhArchive multiple times, one for each sub directory e.g ProjectA/subproject1, ProjectA/subproject2, etc )
 
 
-## Checking results
+### Checking results
 
 when the job finishes you should get an email from slurm with a subject line similar to this one:
 subject: SLURM Job_id=45975375 Name=Arc__fh_fast_doe_j_ProjectA Ended, Run time 00:29:56, COMPLETED, ExitCode 0
@@ -517,7 +507,7 @@ Getting your data back is easy. Note that you do not need to restore the entire 
     swc unarch /archive/ProjectA/subproject1 /fh/scratch/delete30/doe_j/ProjectA/subproject1
 ```
 
-## Benefits of Method B
+### Benefits of Method B
 
 Using Method B) has multiple benefits over Method A) :
 
