@@ -87,7 +87,7 @@ A new and slick alternative to Terminator is [Windows Terminal](https://aka.ms/t
 If your monitor is large enough you will most likely want to work with multiple terminals on a single screen. Enter Alt+Shift+plus to create a new terminal to the right Alt+Shift+minus to create one below. To save these steps you can also create a new shortcut in your desktop. Select New -> Shortcut and at "Type the location ..." you just paste in this command:
 
 ```
-wt.exe -p "Ubuntu-20.04" ; split-pane -p "Ubuntu-20.04" ; split-pane -H wsl.ex
+wt.exe -p "Ubuntu-20.04" ; split-pane -p "Ubuntu-20.04" ; split-pane -H wsl.exe
 ```
 
 When you execute this shortcut it will open a large shell on the left side and 2 smaller ones on the right. To modify the size of each shell simply use ALT+Shift and the arrow keys. 
