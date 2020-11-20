@@ -34,40 +34,64 @@ This is a list of clients and servers by OS:
 
 While puTTy is the most widely used secure shell software for Windows and you can easily install it through your Fred Hutch device's "Software Center".  The most flexible way to get terminal access in Windows is using WSL2. WSL2 allows you to run Linux inside Windows and it is very fast (unlike classic virtual machines). 
 
-#### WSL2
+#### **WSL2**
 
 Steps: 
 - [Install WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) on your Windows 10 Computer (or ask your desktop support team to install it for you)
 
 - [Install your favorite Ubuntu](https://aka.ms/wslstore) from the MS App store
 
-Once WSL2 is installed you can just execute the `bash` command to open a linux shell and then run `ssh rhino`. 
+Once WSL2 is installed you can just execute the `bash` command to open a linux shell and then run `ssh rhino`. For a better terminal please see `Windows Terminal` below.
 
-#### X11 Forwarding for Windows
+#### **X11 Forwarding for Windows**
 
-If you would like to use X11 forwarding on Windows we recommend the [VcXsrv X Server](https://sourceforge.net/projects/vcxsrv/) . After installation, create a new desktop shortcut add the following command in the properties → shortcut → target :
-
+If you would like to use graphical elements (e.g. ggplot) you need X11 forwarding on Windows. We recommend the [VcXsrv X Server](https://sourceforge.net/projects/vcxsrv/) . After installation, create a new desktop shortcut add the following command in the properties → shortcut → target :
 
 ```
 "C:\Program Files\VcXsrv\vcxsrv.exe" :0 -ac -terminate -lesspointer -multiwindow -clipboard -wgl -dpi auto
 ```
 
-#### Terminator
+To run this at Windows startup copy the new icon on your desktop, hit the Windows logo key + R and in the run command window type and execute `shell:startup` . Then paste the icon you copied before into the Startup folder in Start Menu. Restart your Computer to verify everything works. You should see a black X icon in your Windows tray.
 
-If you like to use `terminator` (see more below, terminator requires X11 forwarding) you can install it in your Linux instance in WSL2 (e.g. `sudo apt install terminator`) and then create a script file `startTerminator.vbs` on your Windows Desktop to launch the terminal. The content of this script is: 
+Now you need to set the correct DISPLAY envionment variable in your WSL2 Linux shell. Please run this command (only once):
 
 ```
-args = "-c" & " -l " & """DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0 terminator"""
+echo "export DISPLAY=\$(ip route | awk '{print \$3; exit}'):0 LIBGL_ALWAYS_INDIRECT=1" >> ~/.bashrc
+```
+and close/restart all your terminals. Then run the command `xbiff` in your ubuntu session.. It should show you a tiny graphics window with a mailbox in it.
+
+Optional advanced setup: If you have a high resolution setup **X11 apps may seem blurry**. To address this issue find the execuable `C:\Program Files\VcXsrv\vcxsrv.exe` in Windows Explorer and right click and select 'properties'. In the 'Compatibility' tab click the 'Change high DPI settings' button and under 'High DPI scaling override' check 'Override high DPI scaling behavior' and select 'Application' under 'Scaling performed by'
+
+VcXsrv X Server works very well with Windows Terminal (see below)
+
+#### **Terminator**
+
+If you like to use `terminator` (terminator requires X11 forwarding, see above) you can install it in your Linux instance in WSL2 (e.g. `sudo apt install terminator`) and then create a script file `startTerminator.vbs` on your Windows Desktop to launch the terminal. The content of this script is: 
+
+```
+args = "-c" & " -l " & """DISPLAY=$(ip route | awk '{print $3; exit}'):0 terminator"""
 WScript.CreateObject("Shell.Application").ShellExecute "bash", args, "", "open", 0
 ```
 You can [replace the VBS icon with a nicer one](http://www.iconarchive.com/show/flatwoken-icons-by-alecive/Apps-Terminator-icon.html).
 
-#### Windows Terminal
+The downside of Terminator is that it seems to have difficulties with window scolling in tmux or screen sessions. Windows Terminal does not seem to have this issue and may be the preferred solution at this time. 
 
-A new and slick alternative is [Windows Terminal](https://aka.ms/terminal) which allows you to open multiple terminals in different tabs. Windows Terminal has mature clipboard handling as appreciated by Windows users. By default Windows Terminal opens a new PowerShell shell. You can change this in the settings json file (hit ctrl + comma) by putting the guid of Ubuntu into the default profile, e.g.: 
+#### **Windows Terminal**
+
+A new and slick alternative to Terminator is [Windows Terminal](https://aka.ms/terminal) which allows you to open multiple terminals in different tabs but can also split the screen to show multiple terminals. Windows Terminal has mature clipboard handling as appreciated by Windows users. By default Windows Terminal opens a new PowerShell shell. You can change this in the settings json file (hit Ctrl + comma) by putting the guid of Ubuntu into the default profile, e.g.: 
+
 ```
  "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
 ```
+
+If your monitor is large enough you will most likely want to work with multiple terminals on a single screen. Enter Alt+Shift+plus to create a new terminal to the right Alt+Shift+minus to create one below. To save these steps you can also create a new shortcut in your desktop. Select New -> Shortcut and at "Type the location ..." you just paste in this command:
+
+```
+wt.exe -p "Ubuntu-20.04" ; split-pane -p "Ubuntu-20.04" ; split-pane -H wsl.ex
+```
+
+When you execute this shortcut it will open a large shell on the left side and 2 smaller ones on the right. To modify the size of each shell simply use ALT+Shift and the arrow keys. 
+
 
 ### Mac OS
 
