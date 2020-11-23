@@ -74,6 +74,28 @@ If your PI is Jane Doe, you will want to change these paths to something like th
 
 Again, you need to make sure that the directory `/fh/fast/doe_j/proteomics/maxquant-jobs/job20200610/`, equivalent to `X:\doe_j\proteomics\maxquant-jobs\job20200610\` on Windows) actually exists and contains your `mqpar.xml` file, your data files, your `.fasta` file, and any other optional `.xml` files.
 
+#### Change .NET setting
+
+In MaxQuant 1.6.15.0 and later, you need to make sure that the setting to use .NET Core is turned off (which it may not be by default), otherwise you may encounter an error in your run.
+
+Search for the string `useDotNetCore` in your `mqpar.xml` file. 
+
+If the string is present, change 
+
+```
+   <useDotNetCore>True</useDotNetCore>
+```
+
+to
+
+```
+   <useDotNetCore>False</useDotNetCore>
+```
+
+If the string is not present, add the above line somewhere in the `MaxQuantParams` section of your XML file. 
+A good place to put this line is in between `showIsotopeMassDifferences` and `filePaths`.
+
+
 #### Change the number of threads to match the number of data files
 
 The Windows-based pipeline took care of this step automatically, but it's a quick manual edit. Search for `<numThreads>` and change the its value to the number of 
