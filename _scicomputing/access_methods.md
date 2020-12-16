@@ -3,6 +3,8 @@ title: Computing Resource Access Methods
 primary_reviewers: bmcgough
 ---
 
+[CenterNet](https://centernet.fredhutch.org/cn/u/center-it/services/center_it_services.html) has information on remote data access methods available at Fred Hutch, including VPN, RDS, and SSH/SFTP gateways. By storing data in Microsoft 365 or other Fred Hutch-approved cloud-based systems, you can avoid having to use one of these remote network gateways to access data securely. You may contact ISO if you have security-related questions about storing or accessing data in the cloud. 
+ 
 Individual staff member's desktop computers themselves are supported by Center IT (ADM, CRD, VIDD) as well as Division IT groups (BSD, HB, PHS).  Please see Center IT's page in CenterNet about [Laptops and Desktops](https://centernet.fredhutch.org/cn/u/center-it/help-desk/laptops-and-desktops.html) for more information about support for desktop computing.
 
 > Note: If you request a Linux Desktop, Center IT will recommend that you use NoMachine from a Windows or Mac system instead as this is the most appropriate choice for most users.
@@ -188,10 +190,10 @@ Check on the remote system that you have a `DISPLAY` environment variable set us
 
 Your SSH config supports multiple 'stanzas' to help you as your config may not be the same for remote hosts. The 'stanza' keyword is `Host`. In the example below, everything from one `Host` line to the next `Host` line is applied the specified host.
 ```
-Host *.fhcrc.org !snail.fhcrc.org
+Host *.sample.org !jumphost.sample.org
 	ProxyJump snail.fhcrc.org
 
-Host *.fhcrc.org
+Host *.sample.org
 	UseKeychain yes
 	AddKeysToAgent yes
 	IdentityFile ~/.ssh/id_rsa
@@ -200,36 +202,7 @@ Host *.fhcrc.org
 	ForwardAgent yes
    	User <username>
 ```
-This config contains all of the features mentioned above and will apply them to all `fhcrc.org` hosts. It will use `snail` (the SSH gateway host) for all hosts except `snail` itself, as this would create a loop. *You must place your username in the code above*.
+This config contains all of the features mentioned above and will apply them to all `sample.org` hosts. It will use `jumphost` (the SSH gateway host) for all hosts except `jumphost` itself, as this would create a loop. *You must place your username in the code above*.
 
-One final note - SSH does not do DNS resolution before consulting the config file, so typing `ssh rhino` (or any short hostname without domain) will not trigger the `*fhcrc.org` Host entries. You can add `rhino` to the Host line to have this trigger the config as well.
+One final note - SSH does not do DNS resolution before consulting the config file, so typing `ssh server1` (or any short hostname without domain) will not trigger the `*sample.org` Host entries. You can add `server1` to the Host line to have this trigger the config as well.
 
-## Access via a Remote Location
-
-Fred Hutch supports use of a VPN to remotely connect with our network. The network is protected by a firewall and there are currently 2 options to get access to resources inside the network, using VPN or the SSH gateway `snail.fhcrc.org`. This is allowed as all SSH communication is encrypted, and the gateway system is audited.
-
-### VPN
-
-The Fred Hutch desktop VPN service is the default choice for all remote connections. Please see the [VPN page on CenterNet](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html) for more details.
-
-### ssh to `snail.fhcrc.org`
-
-Snail is a SSH gateway (also called bastion host or jump host) you can use to get remote access if you do not require the features that VPN provides. Using SSH can be easier for some users, for example if you have a network printer at home you cannot use it while connected to VPN.
-If you are outside the Fred Hutch network, use the following to connect to the Snail gateway first:
-
-```ssh username@snail.fhcrc.org```
-
-Once you are connected, from there you can then connect to the `rhinos`:
-
-```ssh username@rhino```
-
->Note:  When you disconnect from `rhino`, you will also then need to disconnect from `snail` as well. 
-To avoid this two step process, for example if you connect this way very often, you can add these 2 lines your ~/.ssh/config file you only have to type `ssh` once.
-
-```
-    Host rhino*.fhcrc.org
-    ProxyCommand ssh yourusername@snail.fhcrc.org exec nc %h %p 2> /dev/null
-```
-If you are outside the Fred Hutch network type `ssh rhino.fhcrc.org` to use the snail gateway and if you are inside type `ssh rhino` to bypass the gateway.
-
-Please see [this page](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts) to learn more about ProxyCommand.
