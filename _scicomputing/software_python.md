@@ -3,7 +3,7 @@ title: Python
 primary_reviewers: k8hertweck, kmayerb, zyd14
 ---
 
-Whether you're new to Python or are an experienced Python coder interested in how the Coop community works with this language,
+Whether you're new to Python or are an experienced Python coder interested in how members of the Coop community works with this language,
 this page is for you!
 Here we share information on learning Python,
 accessing python either locally or via remote computing at Fred Hutch,
@@ -20,19 +20,23 @@ for additional information on Hutch support for Python learning and code sharing
 
 In addition,
 you may find the following resources useful as you get started learning Python:    
-  * [Getting started with Python](https://www.python.org/about/gettingstarted/)
-  * [Real Python](https://realpython.com)
-  * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
+- [Getting started with Python](https://www.python.org/about/gettingstarted/)
+- [Real Python](https://realpython.com)
+- [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
 
 ## Common Python packages for scientific research computing
 
-FIXME: define packages/libraries, highlight selected
+Packages (sometimes also referred to as libraries) 
+are collections of related functions created and 
+made available by the Python community.
+The following packages are commonly used by our research community:
 
-- numpy and scipy: [Python scientific computing with Scipy](https://www.scipy.org/getting-started.html)
-- pandas: [Python Data Analysis Library](http://pandas.pydata.org/pandas-docs/stable/10min.html)
-- biopython: [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
+- **`numpy` and `scipy`** are complementary packages including many functions relevant for scientific computing. More information is available on the [Scipy site](https://www.scipy.org/getting-started.html). These packages are also used in fredhutch.io's [Intermediate Python: Programming class](http://www.fredhutch.io/resources/).
+- **`pandas`** is the Python Data Analysis Library, which includes capabilities for parsing, manipulating, and summarizing spreadsheet-style data as data frames. More information is available in [this introduction](http://pandas.pydata.org/pandas-docs/stable/10min.html). `pandas` is also used in fredhutch.io's [Intro to Python class](http://www.fredhutch.io/resources/).
+- **`biopython`** is a package that allows easier manipulation of genetic and genomic data. Learn more using this [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html).
 
-Other places to find packages:
+There are many other packages publicly available for use,
+which may vary in quality and functionality. Other places to find packages:
 - https://pypi.org
 - install via github
 - write your own (link to software development page)
