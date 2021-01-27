@@ -4,6 +4,12 @@ last_modified_at: 2019-04-01
 primary_reviewers: vortexing
 ---
 
+FIXME
+
+DESCRIPTION: This content overlaps with Collaboration Tools content on CenterNet (https://CenterNet.fredhutch.org/cn/u/center-it/collaboration-tools.html, Recommend revising the SciWiki content to a summary and link to CenterNet content:
+CHANGES: CenterNet has information on data storage collaboration tools available at Fred Hutch. These include the Office 365 platform, which integrates Email, Teams, OneDrive, and SharePoint, is HIPAA-compliant, and provides strong authentication and end-to-end data encryption. 
+
+
 There are Fred Hutch supported data storage systems that allow you to share data with people outside the Hutch, with or without a Hutch ID in order to facilitate data transfer and receipt in collaborations within or outside of the Fred Hutch.  
 
 ## Aspera

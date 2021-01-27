@@ -3,6 +3,8 @@ title: Overview of Data Privacy and Security
 last_modified_at: 2018-12-01
 ---
 
+FIXME: In some instances, sharing data may be possible without compromising the confidentiality of participants if privacy-preserving techniques have been properly applied, but if there are circumstances where data needs to be restricted due to the inability to protect confidentiality, this should be fully addressed in the data management and sharing plan. This section addresses various aspects of data privacy and security including data that originates from human subjects or specimens.
+
 This section contains a variety of types of information about relevant
 regulations and guidance for implementing studies using human subjects,
 human data and/or human specimens. Given the evolving conditions and rules
