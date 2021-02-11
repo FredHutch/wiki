@@ -26,7 +26,7 @@ Access to the pasture is exclusively through one of the existing farmers' gates-
 
 ## Cluster Accounts
 
-The _cluster account_ provides access to the cluster.  No one is able to submit jobs to the cluster without being associated to a cluster account.  The account provides the primary basis for measuring usage and enforcing limits.
+The [[cluster account|scicomputing/compute_accounts]] provides access to the cluster.  No one is able to submit jobs to the cluster without being associated to a cluster account.  The account provides the primary basis for measuring usage and enforcing limits.
 
 Accounts are created for Hutch Faculty and NIH grant principals.
 
@@ -36,7 +36,7 @@ In the metaphor of the farmer's pasture, the account is the gate from the farmer
 
 ## Limits and Allocations
 
-Accounts do not provide a guarantee of an explicit number of cores at any time- resources are not set aside (allocated) for any one account but are in a general pool. This oversubsription allows us to have higher limits than an explicit, dedicated per-account allocation.
+An account does not provide a guarantee of an explicit number of cores at any time- resources are not set aside (allocated) for any one account but are in a general pool. This oversubsription allows us to have higher limits than an explicit, dedicated per-account allocation.
 
 Large numbers of cores will only becore available over time- only the first few cores are instantaneously available.
 
