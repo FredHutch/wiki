@@ -40,24 +40,16 @@ Before we can get started with working directly with our code and GitHub it's im
 ### Reproducibility
 
 Just putting code and data on GitHub is not enough to make it usable and accessable to other researchers. 
+- FAIR (more like FAR for manuscirpt publishing)
+  - brief overview
+- Some resources on reproducibility (link open science series?)
 
-- 
-- 
+### Examples!
 
-
-
-
-
-
-
-
-----
-
-- Examples of manuscript code/data repos:
+Below are some examples where a lab has used a GitHub repository to share out code and data related to a project. 
   - https://github.com/jbloomlab/flu_single_cell
   - https://github.com/matsengrp/pan-CoV-manuscript
-- GitHub requires a specific workflow and uses some jargon that may be new to you! It can be overwhelming at first. 
-  - Before diving into any code get familiar with GitHub terms and workflow by reading [this document](https://guides.github.com/activities/hello-world/)
+These repositories are great examples of how to make code and data associated with a manuscript available publically and reproducible. Notice, that they contain a detailed `README` that clearly explains where to find the raw data, generated data, and scripts and how to reproduce the analysis. Both also clearly state how to find the published paper that corrosponds to the dataset.
 
 ## Data management
 - GitHub is set up so that all data and code related to a single project live in the same repository.
