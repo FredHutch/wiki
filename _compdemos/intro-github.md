@@ -35,9 +35,23 @@ Before we can get started with working directly with our code and GitHub it's im
   - Each developer creates a local repository on their own computer that corrosponds with the remote repository. Here, they are able to work on code locally. When the developer is ready they will push the fresh code up to the remote repository. Now anybody working on the project can update from the remote repository and have this new code included on their local computers!
   - Throughout this process `git` is keeping a detailed history of what lines have been added/deleted from each file, who made the changes, and when they were pushed to the repository.
   - Resources on the git and GitHub workflow
-    - [An overview of the GitHub workflow using only the website GUI](https://guides.github.com/activities/hello-world/
+    - [An overview of the GitHub workflow using only the website GUI](https://guides.github.com/activities/hello-world/)
+
+### Reproducibility
+
+Just putting code and data on GitHub is not enough to make it usable and accessable to other researchers. 
+
+- 
+- 
 
 
+
+
+
+
+
+
+----
 
 - Examples of manuscript code/data repos:
   - https://github.com/jbloomlab/flu_single_cell
