@@ -12,43 +12,23 @@ A primary goal of this process of job scheduling is to ensure sufficient idle re
 
 To this end, each group is limited to a maximum amount of computational resources- no one group can use all of the resources. Currently this is implemented as a maximum on the number of cores available.  Furthermore, as a group's usage increases, the priority of that group's waiting jobs is lowered, allowing other groups to access idle resources.  This "fairshare" algorithm looks at usage over 24 hours and adds priority to a group's jobs if that group hasn't been using the group's "fair share" of the cluster.
 
-### A Metaphor
-
-Imagine a fenced pasture for grazing.  Around this pasture are many farmers, each with a gate to the field.  Some farmers raise cattle, some sheep, and other chickens.  Each animal has different needs and requires a different amount of space in the pasture.  For example, cows need a big chunk of that pasture- sheep require less, and chickens less than sheep.
-
-All of these farmers have different needs- some don't raise a lot of livestock and can get by in a pen inside their farm.  Others raise vegetables.  Some have huge herds and flocks and are dependent on ready access to the pasture.
-
-Fitting all of that onto the pasture becomes the problem.  When farmers don't have a lot of animals this is a fairly easy problem  As the population of livestock increases, timely access to sufficient pasture becomes a problem.
-
-If farmers' gates were open all the time it would be a proper mess, so the farmers agree to limit the amount of pasture any one farmer can use at any time.
-
-Access to the pasture is exclusively through one of the existing farmers' gates- so any farmhands who want to graze need to work through one of those farmers with a gate.
-
 ## Cluster Accounts
 
-The [[cluster account|scicomputing/compute_accounts]] provides access to the cluster.  No one is able to submit jobs to the cluster without being associated to a cluster account.  The account provides the primary basis for measuring usage and enforcing limits.
+The cluster account provides access to the cluster.  No one is able to submit jobs to the cluster without being associated to a cluster account.  The account provides the primary basis for measuring usage and enforcing limits. More information about accounts is available [[here|scicomputing/compute_accounts]] 
 
-Accounts are created for Hutch Faculty and NIH grant principals.
+## Limits
 
-### A Metaphor
+> It is important to note that we do not allocate any particular resource or set of resources for accounts.  The resources in the cluster are generally available until allocated to a job.
 
-In the metaphor of the farmer's pasture, the account is the gate from the farmer's property to the pasture. 
+Limits on resource usage are the primary tool used to ensure that we maintain some idle resources to allow for instantaneous demand from accounts which do not have active work.  When an account has reached this limit, pending jobs are blocked from running until the number of cores in use by this account fall below the limit.
 
-## Limits and Allocations
+While resources are not explicitly allocated to a group, we do have a goal of providing 300 cores per account.  However, that number of cores may only become available over time- only the first few cores are instantaneously available.
 
-An account does not provide a guarantee of an explicit number of cores at any time- resources are not set aside (allocated) for any one account but are in a general pool. This oversubsription allows us to have higher limits than an explicit, dedicated per-account allocation.
-
-Large numbers of cores will only becore available over time- only the first few cores are instantaneously available.
-
-Limits do change over time.  There is a process that monitors available resources and adjusts limits up and down depending on the amount of idle resources.
-
-### A Metaphor
-
-Access to the pasture doesn't mean that the farmer has a section reserved for their animals or that they will be able to put all of their livestock out at the same time. If the pasture is very full, one or two head will have space to run, but it will be some time before all of the farmer's livestock can be put to pasture.
+The goal is a minimum target.  To improve utilization, there is a process that monitors available resources and adjusts limits up and down depending on the amount of idle resources.  These limits are tracked and times when the limit is below the goal are note in that monitoring system.
 
 ## Scheduling: Fairshare and Backfill
 
-Pending jobs are assigned a priority- jobs with higher priority are run before lower priority jobs.  This priority is primarily calculated using the "fairshare algorithm" which looks at the usage by an account over a period of time.  Older usage is decayed using something like a half-life calculation so that current usage has the greater impact on the job's priority.
+Pending jobs are assigned a priority- jobs with higher priority are run before lower priority jobs.  This priority is primarily calculated using the "fairshare algorithm" which looks at the usage by an account over a period of time.  Older usage is decayed using something like a half-life calculation so that an account's current usage has the greater impact on the job's priority.
 
 There is an additional time factor which accounts for the amount of time a job has been waiting.  This and the fairshare factor are combined to calculate the job's priority- multipliers provide different weights to those factors.  The wait-time for a job has a very small factor and only ensures basic ordering of jobs for an account.
 
@@ -56,6 +36,3 @@ The jobs with the highest priority are reserved resources- the scheduler identif
 
 However, there is another mechanism for jobs to get resources.  Once those reservations are made, jobs which can fit onto idle resources and don't block those reservations can be allocated those resources.  This "backfill" mechanism allows lower priority jobs to run on otherwise unused nodes.
 
-### A Metaphor
-
-When the pasture is filling up it becomes necessary for the farmers to have more care in putting livestock into the field.  To do this, farmers who have had a lot of livestock grazing hold back putting more livestock out to allow those who have not been grazing to put out their herd.
