@@ -32,7 +32,9 @@ Pending jobs are assigned a priority- jobs with higher priority are run before l
 
 There is an additional time factor which accounts for the amount of time a job has been waiting.  This and the fairshare factor are combined to calculate the job's priority- multipliers provide different weights to those factors.  The wait-time for a job has a very small factor and only ensures basic ordering of jobs for an account.
 
-The jobs with the highest priority are reserved resources- the scheduler identifies suitable resources which are or will be available and reserves those for the job.
+The jobs with the highest priority are allocated resources if available.  If there are no suitable resources idle, then the scheduler will identify appropriate resources and reserve those for the job.  This is done for a few of the highest priority jobs.
 
-However, there is another mechanism for jobs to get resources.  Once those reservations are made, jobs which can fit onto idle resources and don't block those reservations can be allocated those resources.  This "backfill" mechanism allows lower priority jobs to run on otherwise unused nodes.
+There is another mechanism for jobs to get resources.  Jobs which can fit onto idle resources and don't block other jobs can be allocated idle resources.  This "backfill" mechanism allows lower priority jobs to run on otherwise unused nodes.
+
+For example, if there is one idle core and two pending jobs, the higher priority job will get that core.  However, if that higher priority job requires four cores, the lower job may be run if it will complete before the other three cores become available.
 
