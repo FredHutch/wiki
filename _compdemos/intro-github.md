@@ -11,6 +11,13 @@ Using GitHub requires and basic understanding of:
   - using the command line
   - basic git and GitHub workflow
   - git jargon and syntax
+  
+Resources:
+  - [Git documentation](https://git-scm.com/doc)
+  - [Introduction to unix commands](https://kb.iu.edu/d/afsk)
+    - [`cd`](https://kb.iu.edu/d/afsk#cd)
+    - [`mv`](https://kb.iu.edu/d/afsk#mv)
+    - [`cp`](https://kb.iu.edu/d/afsk#cp)
 
 This tutorial will cover:
 - Briefly, what is version control and how does it work?
@@ -59,7 +66,7 @@ Notice, that they contain:
   - a `LICENSE.txt` file
     - [GitHub Docs: Licensing a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository)
 
-### W
+### When to make code and data available
 
 ## Tutorial
 
@@ -67,13 +74,22 @@ Notice, that they contain:
 
     A basic GitHub account is free and only requires an email address to set up. Click the link and follow the steps to set up a repo.
     
-    [GitHub Training and Guides: Getting Started with GitHub](https://www.youtube.com/watch?v=noZnOSpcjYY) (A 3 min video orienting a new user to the GitHub site)
+    _If you're interested in learning more about GitHub's capabilities check out these resources_
+    - _[GitHub Training and Guides: Getting Started with GitHub](https://www.youtube.com/watch?v=noZnOSpcjYY) (A 3 min video orienting a new user to the GitHub site)_
+    - _[GitHub Features](https://github.com/features)_
 
 2. Create your remote repository.
 
     [GitHub Docs: Creating a new repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository)
 
 3. Create your local repository.
+    
+    Navigate to or create the directory you'd like to use as your repository.
+    
+    ```
+    cd your/file/path
+    git init
+    ```
 
 4. Create a skeleton file structure in your local repository. 
 
@@ -82,12 +98,14 @@ Notice, that they contain:
 7. Commit
 
     ```
-    git init
     git add *
     git commit -m "first commit"
     git branch -M main
-    git remote add origin https://github.com/<yourGitHubUserName>/<repoName>.git
-    git push -u origin main
     ```
     
 8. Push
+
+    ```
+    git remote add origin https://github.com/<yourGitHubUserName>/<repoName>.git
+    git push -u origin main
+    ```
