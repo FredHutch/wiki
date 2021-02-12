@@ -1,5 +1,5 @@
 ---
-title: Cluster Accounts and Usage Limits
+title: Gizmo Job Scheduling
 last_modified_at: 2021-02-09
 primary_reviewer: atombaby
 ---
@@ -10,7 +10,7 @@ This is primarily seen in the Gizmo cluster, where we have limits on how much ca
 
 A primary goal of this process of job scheduling is to ensure sufficient idle resources for "new work" to start quickly ("new work" meaining jobs from cluster accounts that don't already have active jobs).  The other scheduling goal is the equitable allocation of resources, that each group has access to the same amount of resources.
 
-To this end, each group is limited to a maximum amount of computational resources- no one group can dominate the resources- currently this is implemented as a maximum on the number of cores available.  Furthermore, as a group's usage increases, the priority of that group's waiting jobs is lowered, allowing other groups to access idle resources.  This "fairshare" algorithm looks at usage over 24 hours and adds priority to a group's jobs if that group hasn't been using the group's "fair share" of the cluster.
+To this end, each group is limited to a maximum amount of computational resources- no one group can use all of the resources. Currently this is implemented as a maximum on the number of cores available.  Furthermore, as a group's usage increases, the priority of that group's waiting jobs is lowered, allowing other groups to access idle resources.  This "fairshare" algorithm looks at usage over 24 hours and adds priority to a group's jobs if that group hasn't been using the group's "fair share" of the cluster.
 
 ### A Metaphor
 
@@ -39,6 +39,8 @@ In the metaphor of the farmer's pasture, the account is the gate from the farmer
 An account does not provide a guarantee of an explicit number of cores at any time- resources are not set aside (allocated) for any one account but are in a general pool. This oversubsription allows us to have higher limits than an explicit, dedicated per-account allocation.
 
 Large numbers of cores will only becore available over time- only the first few cores are instantaneously available.
+
+Limits do change over time.  There is a process that monitors available resources and adjusts limits up and down depending on the amount of idle resources.
 
 ### A Metaphor
 
