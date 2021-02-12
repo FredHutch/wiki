@@ -5,9 +5,7 @@ main_author: Lauren Wolfe
 primary_reviewers: k8hertweck
 ---
 
-This tutorial is meant to act as a step-by-step guide for researchers interested in publishing code associated with a manuscript. While there are different ways to go about this task, this document is focused specifically on publishing to GitHub.
-
-## Getting Started
+This tutorial is meant to act as a step-by-step guide for researchers interested in publishing code and data associated with a manuscript. While there are different ways to go about this task, this document is focused specifically on publishing to GitHub.
 
 Using GitHub requires and basic understanding of:
   - using the command line
@@ -24,7 +22,7 @@ This tutorial will cover:
 
 ## Prework
 
-Before we can get started with working directly with our code and GitHub it's important to take the time to understand the basic workflows and jargon you'll come across.
+Before we can get started working directly with code and GitHub it's important to take the time to understand the basic workflows and jargon you'll come across.
 
 ### What are git and GitHub?
 
@@ -42,39 +40,54 @@ Before we can get started with working directly with our code and GitHub it's im
 Just putting code and data on GitHub is not enough to make it usable and accessable to other researchers. 
 - FAIR (more like FAR for manuscirpt publishing)
   - brief overview
-- Some resources on reproducibility (link open science series?)
+- Some resources on reproducibility (link open science series)
 
-### Examples!
+### Example repositories
 
 Below are some examples where a lab has used a GitHub repository to share out code and data related to a project. 
   - https://github.com/jbloomlab/flu_single_cell
   - https://github.com/matsengrp/pan-CoV-manuscript
-These repositories are great examples of how to make code and data associated with a manuscript available publically and reproducible. Notice, that they contain a detailed `README` that clearly explains where to find the raw data, generated data, and scripts and how to reproduce the analysis. Both also clearly state how to find the published paper that corrosponds to the dataset.
 
-## Data management
-- GitHub is set up so that all data and code related to a single project live in the same repository.
-- On your own personal computer, you will need to create a directory that will act as your local repostiory.
-  - This can go anywhere on your local computer
-  - This directory will become the repository
-  - A basic repository structure might look like:
-    - `README.md`: A document in markdown containing an overview of the software.
-    - `data-raw/`: A directory containing raw, unprocessed data
-    - `data/`
-    - `code/`
+Notice, that they contain:
+  - detailed `README`:
+    - where to find the raw data, generated data, scripts
+    - How to reproduce the analysis
+    - A pdf of the corrosponding paper and a link or note stating where it was published.
+    - Where to find related datasets hosted elsewhere (GEO, etc)
+  - directory structure:
+    - clearly named directories to hold scripts, figures, data, etc
+  - a `LICENSE.txt` file
+    - [GitHub Docs: Licensing a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository)
+
+### W
 
 ## Tutorial
 
 1. [Create a GitHub account](https://github.com/join).
 
-    A basic GitHub account is free and only requires an email address to set up.
+    A basic GitHub account is free and only requires an email address to set up. Click the link and follow the steps to set up a repo.
+    
+    [GitHub Training and Guides: Getting Started with GitHub](https://www.youtube.com/watch?v=noZnOSpcjYY) (A 3 min video orienting a new user to the GitHub site)
 
-2. Create a remote repository.
+2. Create your remote repository.
 
-3. Create a local repository.
+    [GitHub Docs: Creating a new repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository)
 
-4. Create a skeleton file structure in your local repository.
+3. Create your local repository.
 
-5. Move data into repository.
+4. Create a skeleton file structure in your local repository. 
 
-6. Fill out a README.md.
+5. Move or copy data and scripts into relevant directories in your local repository.
 
+7. Commit
+
+    ```
+    git init
+    git add *
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/<yourGitHubUserName>/<repoName>.git
+    git push -u origin main
+    ```
+    
+8. Push
