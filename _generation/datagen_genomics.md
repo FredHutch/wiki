@@ -53,7 +53,10 @@ Subheadings from https://www.fredhutch.org/en/research/shared-resources/core-fac
 
 ### RNAseq
 
-FIXME
+- [RNA sequencing: the teenage years](https://www.nature.com/articles/s41576-019-0150-2#Sec32): an overview of RNA seq technologies, methods, and where the tech is headed.
+- [A survey of best practices for RNA seq data analysis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8)
+- [University of Oregon RNA-seqlopedia](https://rnaseq.uoregon.edu/)
+- [Introduction to RNA-seq for researchers](https://www.youtube.com/watch?v=7BLS_YY9HeM&t=758s): A 30 min video reviewing RNA-sequencing concepts.
 
 https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#rna-sequencing
 
@@ -65,19 +68,23 @@ Not specifically mentioned in SR pages?
 
 https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#example--small-rnas-eg-mirna
 
-### CUT&RUN
+### Cleavage Under Targets and Release Using Nuclease (CUT&RUN)
 
-FIXME
+- [How CUT&RUN profiles chromatin](https://www.youtube.com/watch?v=9Ol055tXVvA)
+- [An efficient targeted nuclease strategy for high-resolution mapping of DNA binding sites](https://elifesciences.org/articles/21856): 
+- [Lay off the ChIPs: CUT&RUN instead](https://www.fredhutch.org/en/news/spotlight/2017/02/lay-off-the-chips--cut-run-instead.html)
 
 ### Whole exome sequencing
 
-FIXME
+- [Illumina whole-genome sequencing resources](https://www.illumina.com/techniques/sequencing/dna-sequencing/whole-genome-sequencing.html)
+
 
 https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#capture-based-sequencing---example--whole-exome-sequencing
 
 ### Targeted sequencing
 
-FIXME
+- [Illumina targeted sequencing resource](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html)
+
 
 https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#amplicon-based-sequencing---targeted-dna-sequencing
 
