@@ -67,22 +67,33 @@ Notice, that they contain:
     - [GitHub Docs: Licensing a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository)
 
 ### When to make code and data available
+- Publish code as you develop it in either a public or private repository
+  - Pros: 
+- Include code with the corresponding paper when it is submitted
+- Publish when the corresponding paper is published
+
+### Where to publish code within GitHub
+ - Your personal account
+ - A lab organization
+ - The [FredHutch organization](https://github.com/FredHutch): The FredHutch account offers higher security through [GitGuardian](https://www.gitguardian.com/). The FredHutch organization is managed by Scientific Computing. To gain access email them email at `scicomp`. 
 
 ## Tutorial
 
 1. [Create a GitHub account](https://github.com/join).
 
-    A basic GitHub account is free and only requires an email address to set up. Click the link and follow the steps to set up a repo.
+    A basic GitHub account is free and only requires an email address to set up. Click the link and follow the steps to set up an account.
     
-    _If you're interested in learning more about GitHub's capabilities check out these resources_
-    - _[GitHub Training and Guides: Getting Started with GitHub](https://www.youtube.com/watch?v=noZnOSpcjYY) (A 3 min video orienting a new user to the GitHub site)_
-    - _[GitHub Features](https://github.com/features)_
+2. [Create your remote repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository). This is the repository that is hosted on GitHub.
 
-2. Create your remote repository.
-
-    [GitHub Docs: Creating a new repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository)
-
-3. Create your local repository.
+    In this step you will make the following decisions for your repository:
+      - Owner: This can be your personal account or any organization you are a part of. See 
+      - Repository name: This should be short and descriptive. You can always [rename the repository](https://docs.github.com/en/github/administering-a-repository/renaming-a-repository) later if needed.
+      - Repository privacy: Public or private
+      - The option to initialize the repository with a:
+        -  README
+        -  License
+        -  .gitignore
+3. Create your local repository. This is the repository that is hosted on your computer.
     
     Navigate to or create the directory you'd like to use as your repository.
     
@@ -93,7 +104,19 @@ Notice, that they contain:
 
 4. Create a skeleton file structure in your local repository. 
 
+    A minimal repository will have a `README.md`, a directory to store code, and a directory to store scripts or code. Be aware that the actual directory names can vary. For example, code may be stored in a directory called 'scripts', 'code', or 'R' depending on the context.
+    ```
+    touch README.md
+    mkdir data
+    mkdir scripts
+    ```
+
 5. Move or copy data and scripts into relevant directories in your local repository.
+    
+    ```
+    cp ~/path/to/data ./data
+    cp ~/path/to/scripts ./scripts
+    ```
 
 7. Commit
 
