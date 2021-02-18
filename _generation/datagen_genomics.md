@@ -57,6 +57,7 @@ Subheadings from https://www.fredhutch.org/en/research/shared-resources/core-fac
 - [A survey of best practices for RNA seq data analysis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8)
 - [University of Oregon RNA-seqlopedia](https://rnaseq.uoregon.edu/)
 - [Introduction to RNA-seq for researchers](https://www.youtube.com/watch?v=7BLS_YY9HeM&t=758s): A 30 min video reviewing RNA-sequencing concepts.
+- [Next generation sequencing (Illumina_: an introduction](https://www.youtube.com/watch?v=CZeN-IgjYCo)
 
 https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#rna-sequencing
 
@@ -85,7 +86,8 @@ https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#capture-based-se
 ### Targeted sequencing
 
 - [Illumina targeted sequencing resource](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html)
-- 
+- [Disease-targeted sequecning: a cornerstone in the clinic](https://www.nature.com/articles/nrg3463)
+- [Applications and analysis of targeted genome sequencing in cancer studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6861594/)
 
 https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#amplicon-based-sequencing---targeted-dna-sequencing
 
@@ -93,7 +95,7 @@ https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#amplicon-based-s
 
 - [CRISPR basics](https://grcf.jhmi.edu/products/crisprs/crispr-basics/)
 - [CRISPR: Gene editing and beyond](https://www.youtube.com/watch?v=4YKFw2KZA5o)
-- 
+- [Application of CRISPR technologies in research and beyond](https://www.nature.com/articles/nbt.3659)
 
 ### ChIPseq
 
@@ -101,7 +103,9 @@ https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#chromatin-immuno
 
 ### ATACseq (DNA accessibility)
 
-FIXME
+- [Complete guide to understanding and using ATACseq](https://www.activemotif.com/blog-atac-seq)
+- [ATAC-seq: a method for assaying chromatin accessability genome-wide](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374986/)
+- [A brief overview of ATAC-seq](https://www.youtube.com/watch?v=Gy0sjLW2dxE)
 
 ### PhIPseq
 
