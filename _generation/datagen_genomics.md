@@ -76,7 +76,7 @@ https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#example--small-r
 
 ### Whole exome sequencing
 
-- [Illumina whole-genome sequencing resources](https://www.illumina.com/techniques/sequencing/dna-sequencing/whole-genome-sequencing.html)
+- [Illumina whole-exome sequencing resources](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/exome-sequencing.html)
 
 
 https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#capture-based-sequencing---example--whole-exome-sequencing
@@ -90,7 +90,9 @@ https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#amplicon-based-s
 
 ### CRISPR screens
 
-FIXME
+- [CRISPR basics](https://grcf.jhmi.edu/products/crisprs/crispr-basics/)
+- [CRISPR: Gene editing and beyond](https://www.youtube.com/watch?v=4YKFw2KZA5o)
+- 
 
 ### ChIPseq
 
