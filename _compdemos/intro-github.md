@@ -110,13 +110,15 @@ Notice, that they contain:
     ```
     # create the repository directory
     mkdir -p file/path/repoName
+    
     # go to repository
     cd file/path/repoName
+    
     # initialize git in the repository
     git init
     ```
     
-    _for more about the commands used here see these resources:_
+    _for more information about the commands used here see these resources:_
       - [_`mkdir` documentation_](https://kb.iu.edu/d/afsk#mkdir)
       - [_`cd` documentation_](https://kb.iu.edu/d/afsk#cd)     
       - [_`git init` dcoumentation_](https://git-scm.com/docs/git-init)
@@ -126,14 +128,18 @@ Notice, that they contain:
 
     A minimal repository will have a `README.md`, a directory to store code, and a directory to store scripts or code. Be aware that the actual directory names can vary. For example, code may be stored in a directory called 'scripts', 'code', or 'R' depending on the context.
    
-   ```
-   # create an empty README file. Make sure to include the '.md'.
+    ```
+    # create an empty README file. Make sure to include the '.md'.
     touch README.md
+    
     # create two directories within your new repository
     mkdir data
     mkdir scripts
     ```
-
+    
+    _for more information about the commands used here see these resources:_
+      - [_`touch` documentation_](https://man7.org/linux/man-pages/man1/touch.1.html)
+      
 5. Move or copy data and scripts into relevant directories in your local repository.
     
     ```
@@ -141,16 +147,35 @@ Notice, that they contain:
     cp ~/path/to/data ./data
     cp ~/path/to/scripts ./scripts
     ```
+    
+    _for more information about the commands used here see these resources:_
+      - [_`cp` documentation_](https://kb.iu.edu/d/afsk#cp)
 
-7. Commit
-
+7. Commit changes
+    
     ```
+    # Check the status of the files in your local repository.
+    # Untracked files are files that we have not told git to keep a history on.
+    git status
+    
+    # Add files/changed to be included in the next commit
     git add *
+    
+    # Commit your changes! Commits should include a brief explanation of the changes being made.
     git commit -m "first commit"
+    
+    # this command designates that the main branch will be called main
+    # another common term used for the main branch is 'trunk'
     git branch -M main
     ```
     
-8. Push
+    _for more information about the commands used here see these resources:_
+      - [_`git status` documentation_](https://git-scm.com/docs/git-status)
+      - [_`git add` documentation_](https://git-scm.com/docs/git-add)     
+      - [_`git commit` dcoumentation_](https://git-scm.com/docs/git-commit)
+      - [_`git branch` dcoumentation_](https://git-scm.com/docs/git-branch)
+    
+8. Push changes to your remote repository
 
     ```
     git remote add origin https://github.com/<yourGitHubUserName>/<repoName>.git
