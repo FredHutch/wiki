@@ -77,14 +77,15 @@ https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#example--small-r
 ### Whole exome sequencing
 
 - [Illumina whole-exome sequencing resources](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/exome-sequencing.html)
-
+- [Roche: whole exome sequencing](https://sequencing.roche.com/en/research-application/application/whole-exome-sequencing.html)
+- [The promise of whole-exome sequencing in medical genetics](https://www.nature.com/articles/jhg2013114)
 
 https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#capture-based-sequencing---example--whole-exome-sequencing
 
 ### Targeted sequencing
 
 - [Illumina targeted sequencing resource](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html)
-
+- 
 
 https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#amplicon-based-sequencing---targeted-dna-sequencing
 
