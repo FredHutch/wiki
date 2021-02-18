@@ -82,11 +82,11 @@ Notice, that they contain:
 
 ## Tutorial
 
-1. [Create a GitHub account](https://github.com/join).
+1. **Create a GitHub account.**
 
-    A basic GitHub account is free and only requires an email address to set up. Click the link and follow the steps to set up an account.
+    A basic GitHub account is free and only requires an email address to set up. Click [this link](https://github.com/join) and follow the steps to set up an account.
     
-2. [Create your remote repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository). This is the repository that is hosted on GitHub.
+2. Create your remote repository. This is the repository that is hosted on GitHub.
 
     In this step you will make the following decisions for your repository:
       - Owner: This can be your personal account or any organization you are a part of. See 
@@ -97,15 +97,21 @@ Notice, that they contain:
         -  License
         -  `.gitignore`
 
-    For the purpose of this tutorial, do not initialize the repository with a README, licence, or `.gitignore`
+    For the purpose of this tutorial, do not initialize the repository with a README, licence, or `.gitignore`.
+    
+    Click [this link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) and follow the steps to create a repository on GitHub
 
 3. Open the command line on your computer.
       - On a Mac the command line is an application called Terminal. Open Finder, click Applications, click Utilities, and then open Terminal.
       - On Windows
 
+FIXME - how to open command line on windows??
+
 4. If you've never worked with git before, install git on your computer. Follow [this tutorial](https://www.taniarascia.com/getting-started-with-git/) for whichever operating system you are using.
 
 5. Create your local repository. This is the repository that is hosted on your computer.
+    
+    Follow these steps by entering this code into the command line. Make sure to edit file paths and file names as needed.
     
     ```
     # create the repository directory
@@ -126,7 +132,7 @@ Notice, that they contain:
 
 6. Create a skeleton file structure in your local repository. 
 
-    A minimal repository will have a `README.md`, a directory to store code, and a directory to store scripts or code. Be aware that the actual directory names can vary. For example, code may be stored in a directory called 'scripts', 'code', or 'R' depending on the context.
+    A minimal repository will have a `README.md`, a directory to store data, and a directory to store code. Be aware that the actual directory names can vary. For example, code may be stored in a directory called 'scripts', 'code', or 'R' depending on the context. For this tutorial we call the directory 'scripts'.
    
     ```
     # create an empty README file. Make sure to include the '.md'.
