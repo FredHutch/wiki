@@ -124,6 +124,25 @@ sbatch -c 6 myscript.sh my-output
 
 ## Managing Jobs
 
+### Job Priority
+
+A job's priority determines when it will be run.  The fair-share algorithm is the primary method by which your jobs' priority is determined, but this currently only works at the account level- when you have a cluster account used by many different people or if you have different work you wish to prioritize, the current priority algorithm doesn't work as well.
+
+There is an additional factor- the "niceness" factor- which can be used to reduce the priority of some jobs allowing jobs without that factor to run ahead of those "niced" jobs.  This can be done at job submit time, with the option "--nice=<factor>" or adjusted after job submit with `scontrol update jobid=<jobid> nice=<factor>`
+
+At this time, "nice" values in the thousands should be more than sufficient to provide ordering.  Note too that `grabnode` will pass along the `--nice` flag:
+
+    grabnode --nice=1000
+
+though typically you'd prefer that grabnode has the higher priority (being an interactive process).  The strategy here is if you have a large number of batch jobs, submit those with a nice value.  Then, if you need to grab a node the grabnode jobs will have a higher priority and run ahead of the batch jobs.
+
+Some things to consider:
+
+ - too nice a factor may inhibit any jobs running.  Smaller values are effective
+ - jobs can only be nicer- adjustments can only reduce total priority
+ - thus, adding a general "middle-of-the-road" factor for all jobs will allow greater flexibility in ordering your jobs
+ - the command `sprio` can be used to see the impact of these nice factors
+
 ### Wall Time
 
 A job's "wall time" refers to the amount of time a job uses based on the clock-on-the-wall (compare to CPU time, which is time multiplied by the number of CPUs in use).  Wall time is requested using `-t` when submitting a job.  The default and the maximum time for submitted jobs depends on the cluster and partition.  The attributes of cluster partitions can be viewed with the command `scontrol show partition` or `scontrol show partition <partition name>` to see only the attributes of a single partition.
