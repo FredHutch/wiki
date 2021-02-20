@@ -124,6 +124,21 @@ sbatch -c 6 myscript.sh my-output
 
 ## Managing Jobs
 
+### Monitoring Resource Usage
+
+Monitoring the resources that jobs are using can be done using `sstat`.  This monitors the resources used by all steps in the job.  A number of different statistics are monitored- run `sstat -e` to see the full compliment of available statistics.
+
+As example, to check job memory consumption:
+
+```
+# sstat -j 90592201,90592202 -o jobid,averss,maxrss,avevmsize,maxvmsize
+       JobID     AveRSS     MaxRSS  AveVMSize  MaxVMSize
+------------ ---------- ---------- ---------- ----------
+90592201.ba+   3524552K   3524552K   4506160K   4506160K
+90592202.ba+     15088K   3527928K     56528K   4497964K
+```
+
+
 ### Job Priority
 
 A job's priority determines when it will be run.  The fair-share algorithm is the primary method by which your jobs' priority is determined, but this currently only works at the account level- when you have a cluster account used by many different people or if you have different work you wish to prioritize, the current priority algorithm doesn't work as well.
@@ -247,3 +262,4 @@ For more information and education on how to use HPC resources from external sou
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)
+
