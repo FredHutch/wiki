@@ -145,11 +145,15 @@ A job's priority determines when it will be run.  The fair-share algorithm is th
 
 There is an additional factor- the "niceness" factor- which can be used to reduce the priority of some jobs allowing jobs without that factor to run ahead of those "niced" jobs.  This can be done at job submit time, with the option "--nice=<factor>" or adjusted after job submit with `scontrol update jobid=<jobid> nice=<factor>`
 
-At this time, "nice" values in the thousands should be more than sufficient to provide ordering.  Note too that `grabnode` will pass along the `--nice` flag:
+At this time, "nice" values in the hundreds should be more than sufficient to provide ordering within your account's priority share:
 
-    grabnode --nice=1000
+    sbatch --nice=100 ...
 
-though typically you'd prefer that grabnode has the higher priority (being an interactive process).  The strategy here is if you have a large number of batch jobs, submit those with a nice value.  Then, if you need to grab a node the grabnode jobs will have a higher priority and run ahead of the batch jobs.
+Note too that `grabnode` will pass along the `--nice` flag:
+
+    grabnode --nice=10
+
+though typically you'd likely prefer that grabnode has the higher priority (being an interactive process).  The strategy here is if you have a large number of batch jobs, submit those with a nice value.  Then, if you need to grab a node the grabnode jobs will have a higher priority and run ahead of the batch jobs.
 
 Some things to consider:
 
@@ -157,6 +161,7 @@ Some things to consider:
  - jobs can only be nicer- adjustments can only reduce total priority
  - thus, adding a general "middle-of-the-road" factor for all jobs will allow greater flexibility in ordering your jobs
  - the command `sprio` can be used to see the impact of these nice factors
+ - work out a process with others in your lab.
 
 ### Wall Time
 
