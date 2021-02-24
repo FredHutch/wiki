@@ -45,6 +45,11 @@ While R and Python are interpreted languages, many libraries and modules produce
 | Last Update  | Update By  |
 |--------------|------------|
 | 2020-07-08   | mrg        |
+| 2021-02-24   | mrg        |
+
+#### Resolved
+
+The latest version of terminator (2.1.0) has been released, built, and installed on rhino nodes.
 
 #### Behavior and Errors
 

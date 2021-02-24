@@ -164,12 +164,6 @@ Libraries compiled on the Trusty platform very likely won't work when used on Bi
 
 There are a number of ways to address this problem depending on your goals- the easiest may be backing up the library install directory prior to working in the different environment.  For example, `R` installs local libraries into `$HOME/R`- back this up or move it out of the way before working with the Bionic environment.
 
-### <a name="terminator"></a>Terminator Won't Launch
-
-_Terminator_ won't start.  This is a bug in terminator with no anticipated fix in sight.  The workaround is to start terminator with the `-u` option:
-
-    terminator -u
-
 ### <a name="local-gcc"></a>GCC and Compiling Your Own Code
 
 These new hosts have a very minimal number of tools and packages installed.  While a basic compiler is installed on these hosts, it is strongly recommended that you use the tools provided by Lmod modules.  These are grouped under the module named "foss" or "fosscuda" (the latter for those needing GPU support):
