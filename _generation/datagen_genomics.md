@@ -21,6 +21,10 @@ some additional listed below "Other services" that may be included eventually (b
 Sections from wiki, not represented in SR pages
 
 https://sciwiki.fredhutch.org/generation/datagen_platformsData/#library-preparation-for-sequencing
+  - [Guide to library prep](https://genohub.com/ngs-library-preparation-kit-guide/)
+  - [NGS library preperation resources from Illumina](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html)
+  - [Illumina sequencing method explorer](https://www.illumina.com/science/sequencing-method-explorer.html)
+  - [Library construction for next-generation sequencing: Overviews and challenges](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351865/)
 
 https://sciwiki.fredhutch.org/generation/datagen_assayPrep/
 
