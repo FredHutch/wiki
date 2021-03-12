@@ -12,22 +12,6 @@
       name: slurm
       version: 1
   nodes:
-    -
-      node_name: f
-      cores: 4
-      sockets: 1
-      memory_gb: 32
-      processor_model: E3-1270v3
-      processor_manufacturer: Intel
-      manufacturer: SuperMicro
-      vendor: Silicon Mechanics
-      model: Rackform iServ R4920
-      os: Ubuntu 14.04 LTS
-      local_storage: "800GB @ /loc  (ca 100 MB/s throughput)"
-      network: 1G (up to 100MB/s throughput)
-      gpu: none
-      node_count: 456
-      partition: campus-new
     -  
       node_name: g
       cores: 6
@@ -90,7 +74,7 @@
       local_storage: "/loc"
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA
-      node_count: 42
+      node_count: 170
       partition: campus-new
     -  
       node_name: rhino
