@@ -4,6 +4,8 @@ main:
     url: /generation/gen_index/
   - title: "Scientific Computing"
     url: /scicomputing/comp_index/
+  - title: "HDC"
+    url: /hdc/hdc_index/
   - title: "About"
     url: /about/
 
@@ -185,3 +187,9 @@ scicomputing:
       - title: "Information for Grant Writers"
         url: /scicomputing/compute_grants/
 
+
+hdc:
+  - title: "Hutch Data Core"
+    children:
+      - title: "Overview"
+        url: /hdc/hdc_index/
