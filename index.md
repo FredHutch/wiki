@@ -20,7 +20,7 @@ feature_row:
 feature_row2:
   - title: "Overview of Contributing"
     excerpt: "This project relies upon the Fred Hutch research community itself to improve, review, expand and evolve over time. The content spans a wide range of research realms and thus we welcome contributions from a similarly wide range of researchers and staff.  To facilitate the curation of content seen in this site, we have employed a GitHub repository to which any Fred Hutch based researcher can contribute to.  Find more information on how to contribute here."      
-    url: https://github.com/FredHutch/wiki/blob/master/README.md
+    url: https://github.com/FredHutch/wiki/blob/main/README.md
   - title: "Add your Content!"
     excerpt: "For providers of content from Fred Hutch staff, learn how to create pages and add your content here."
     url: /contentproviders/
