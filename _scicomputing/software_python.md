@@ -454,7 +454,7 @@ Jupyter Notebooks are web interfaces to interpreter shells such as Python and R.
 Install the software on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
 
 **Jupyter on `Rhino`**  
-For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoRhino.md).  
+For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/main/_compdemos/howtoRhino.md).  
 
 After you have connected to `rhino`, just load a Python distribution maintained by SciComp and run Jupyter lab:
 
@@ -475,7 +475,7 @@ Then connect to the URL, copying the link given by the previous command, which l
 ```
 **Jupyter on `Gizmo`**
 
-From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoGizmo.md)
+From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/main/_compdemos/howtoGizmo.md)
 
 
 **Jupyter on Jupyterhub**
