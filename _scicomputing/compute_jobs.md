@@ -158,7 +158,7 @@ though typically you'd likely prefer that grabnode has the higher priority (bein
 Some things to consider:
 
  - too nice a factor may inhibit any jobs running.  Smaller values are effective
- - jobs can only be nicer- adjustments can only reduce total priority
+ - priority adjustments can only reduce total priority
  - thus, adding a general "middle-of-the-road" factor for all jobs will allow greater flexibility in ordering your jobs
  - the command `sprio` can be used to see the impact of these nice factors
  - work out a process with others in your lab.
