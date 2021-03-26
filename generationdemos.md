@@ -11,4 +11,4 @@ sort_order:  forward # (default), reverse
 sidebar:
   nav: "generation"
 ---
-> Note:  If you would like to request content for this section or are interested in writing content, please email `sciwiki`, file an issue in our GitHub repo [here](https://github.com/FredHutch/wiki/issues), or see our contribution instructions [here](https://github.com/FredHutch/wiki/blob/master/README.md).
+> Note:  If you would like to request content for this section or are interested in writing content, please email `sciwiki`, file an issue in our GitHub repo [here](https://github.com/FredHutch/wiki/issues), or see our contribution instructions [here](https://github.com/FredHutch/wiki/blob/main/README.md).

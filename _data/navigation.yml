@@ -18,7 +18,7 @@ frontpage:
       - title: "Contributors List"
         url: /contributors/
       - title: "Contributing Instructions"
-        url: https://github.com/FredHutch/wiki/blob/master/README.md
+        url: https://github.com/FredHutch/wiki/blob/main/README.md
       - title: "Outreach and Events"
         url: /outreach/
       - title: "Style Guide"

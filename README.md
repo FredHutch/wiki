@@ -44,15 +44,15 @@ For larger edits, multi-page edits, structural changes or expert users of git/Gi
 #### General Editing Process
 To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are) from GitHub, follow these steps:
 
-1. Create a branch off the master branch for your edits. Do not fork the repo or others cannot submit additional edits to your content.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with names that don't attempt to describe the types of changes made whenever possible. For your content to be merged into the master, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
-2. Commit your edits to existing markdowns as you go, and update from the master branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the master and committing frequently.  
+1. Create a branch off the main branch for your edits. Do not fork the repo or others cannot submit additional edits to your content.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with names that don't attempt to describe the types of changes made whenever possible. For your content to be merged into the main branch, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
+2. Commit your edits to existing markdowns as you go, and update from the main branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the main branch and committing frequently.  
 3. Publish/push your branch to GitHub to share your edits with the group.
 4. When you are done editing, create a pull request from your branch. This pull request step highlights your branch for consideration by potential contributors and editors! Suggest reviewers based on the content of the edits if you'd like by tagging their GitHub usernames (using @...).  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
 
     >Note: If you are editing existing content and the page has a listing for the Primary Reviewers like this:  `primary_reviewers: somegithubusername` then when you submit the pull request please request a review from those usernames.  
 
 5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  If there is a `primary_reviewers` listed for content then one of the reviews must be from one of those members.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
-6. Once approving reviews have been obtained, the pull request can be merged into the master and then any edits go live to the site [here.](https://sciwiki.fredhutch.org/)
+6. Once approving reviews have been obtained, the pull request can be merged into the main branch and then any edits go live to the site [here.](https://sciwiki.fredhutch.org/)
 
 ### The Review Process
 
@@ -70,7 +70,7 @@ Changes to the Wiki are assessed via [pull requests to this GitHub repository](h
 When a pull request is made, it automatically requests a pull request review from any member of the [Wiki Reviewer Team](https://github.com/orgs/FredHutch/teams/wiki-reviewers). While reviews from other experts is welcomed, a review from a Wiki Reviewer Team member approving the changes is *required* prior to merging the pull request (this is enforced by [protection of the main branch](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews#required-reviews)). In addition to regular communication among the Wiki Reviewer Team, we work with the the Hutch's Information Security Office to ensure published content maintains agreed upon standards for information security. 
 
 ### Getting Credit
-Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.  
+Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/main/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.  
 
 ## Contributing via an external text editor
 You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.  Also there is a tutorial on how to use [VSCode](https://sciwiki.fredhutch.org/compdemos/vscode_markdown_howto/) which is what you will want to use if you plan to contribute many screenshots or other images.  
@@ -132,23 +132,23 @@ Please if you need to reference a Fred Hutch username, do not write the entire e
 The general contributor should likely have no reason/need to edit any of the files in the main directory of the repository, nor files in any other subfolders besides the ones described below.  The folders below contain the content portions of the site, while the other folders and files contain all the necessary information to actually BUILD the website itself.  
 
 ### Content-Housing Folders
-Data Generation Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_generation
+Data Generation Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/main/_generation
 
-Data Generation Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/master/_gendemos
+Data Generation Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/main/_gendemos
 
-Scientific Computing Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/master/_scicomputing
+Scientific Computing Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/main/_scicomputing
 
-Computing Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/master/_compdemos
+Computing Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/main/_compdemos
 
-Contributors List (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/master/_contributors
+Contributors List (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/main/_contributors
 
 
 ###  Draft Folders with Templates for New Content
 >NOTE:  Any content that will need to be an entirely new page should be stored in the `draft` folder until it is ready for publication, and then an admin will move it to where it needs to go when it is considered finished.  
 
-For new content: https://github.com/FredHutch/wiki/blob/master/_drafts/contentTemplate.md
+For new content: https://github.com/FredHutch/wiki/blob/main/_drafts/contentTemplate.md
 
-For new contributor entries: https://github.com/FredHutch/wiki/blob/master/_drafts/contributorTemplate.md
+For new contributor entries: https://github.com/FredHutch/wiki/blob/main/_drafts/contributorTemplate.md
 
 
 ## Building the site locally
@@ -209,30 +209,30 @@ in the check.
 ## For Admins (everyone else, please do not edit these as your edits will be ignored/removed)
 
 ### Pages that run Demo and Contributors Collection pages:
-Generation resource library collection page:  https://github.com/FredHutch/wiki/blob/master/generationdemos.md
+Generation resource library collection page:  https://github.com/FredHutch/wiki/blob/main/generationdemos.md
 
-Computing resource library collection page:  https://github.com/FredHutch/wiki/blob/master/computingdemos.md
+Computing resource library collection page:  https://github.com/FredHutch/wiki/blob/main/computingdemos.md
 
-SciComp Announcement resource library collection page:  https://github.com/FredHutch/wiki/blob/master/scicompannounce.md
+SciComp Announcement resource library collection page:  https://github.com/FredHutch/wiki/blob/main/scicompannounce.md
 
-Contributors list collection page: https://github.com/FredHutch/wiki/blob/master/contributorslist.md
+Contributors list collection page: https://github.com/FredHutch/wiki/blob/main/contributorslist.md
 
 ### Folders containing website configuration files
-Main website configuration file: https://github.com/FredHutch/wiki/blob/master/_config.yml
+Main website configuration file: https://github.com/FredHutch/wiki/blob/main/_config.yml
 
 Navigation yml:
-https://github.com/FredHutch/wiki/tree/master/_data
+https://github.com/FredHutch/wiki/tree/main/_data
 
 Custom styling that overrides the remote theme:
-https://github.com/FredHutch/wiki/tree/master/assets/css
+https://github.com/FredHutch/wiki/tree/main/assets/css
 
 Header and footer configs:
-https://github.com/FredHutch/wiki/tree/master/_includes
+https://github.com/FredHutch/wiki/tree/main/_includes
 
 ### Other pages:
-Our index page: https://github.com/FredHutch/wiki/blob/master/index.md
-Our outreach page: https://github.com/FredHutch/wiki/blob/master/outreach.md
-Our page containing rendered draft files: https://github.com/FredHutch/wiki/blob/master/drafts.md
+Our index page: https://github.com/FredHutch/wiki/blob/main/index.md
+Our outreach page: https://github.com/FredHutch/wiki/blob/main/outreach.md
+Our page containing rendered draft files: https://github.com/FredHutch/wiki/blob/main/drafts.md
 
 
 
