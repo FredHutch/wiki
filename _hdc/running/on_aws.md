@@ -1,0 +1,10 @@
+---
+title: Hutch Data Core Trainings
+---
+
+[Running on Gizmo](on_gizmo.md)
+[Where to Run a Workflow](where_to_run.md)
+[FAQ](faq.md)
+
+Running on AWS. Data in S3. Batch config. AWS credentials.
+
