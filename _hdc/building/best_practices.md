@@ -11,3 +11,7 @@ title: Best Practices for Writing Workflows
 
 
 
+* Do one thing in each step
+* Make each step deterministic (the same input produces the same output)
+* The most important thing is to connect processes together correctly, using channels. Learning how to manipulate channels (filtering, grouping, joining, parsing) is *the* key to making effective workflows.
+

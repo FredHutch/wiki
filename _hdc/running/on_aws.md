@@ -8,3 +8,5 @@ title: Hutch Data Core Trainings
 
 Running on AWS. Data in S3. Batch config. AWS credentials.
 
+Containers: ECR, quay.io, docker. 
+

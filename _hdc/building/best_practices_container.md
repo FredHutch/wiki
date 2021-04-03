@@ -11,10 +11,21 @@ title: Best Practices with Execution Code & Containers
 
 ## Containers
 
-Finding containers
-Building them, storing them in quay.io or docker
-Using AWS ECR
-Using them in workflows
+
+### Use Existing Containers
+
+* Use existing containers. Check `quay.io`, `hub.docker.com`, and other sources
+
+
+### Build Your Own If Need Be
+
+* Use `quay.io`. Attach it to a GitHub repo.
+
+To get started, build it on a machine. Once it builds cleanly, move it to an automated system like quay.io with a GitHub repo.
+
+Use AWS ECR if need be (if you need the code kept private)
+
+### Using them in workflows
 
 
 ## Gizmo and `module-load`
