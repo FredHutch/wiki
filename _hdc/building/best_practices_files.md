@@ -1,5 +1,6 @@
 ---
 title:Best Practices with Files
+hdc: True
 ---
 
 [Best Practices](best_practices.md)

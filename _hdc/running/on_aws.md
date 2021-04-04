@@ -1,5 +1,6 @@
 ---
 title: Hutch Data Core Trainings
+hdc: True
 ---
 
 [Running on Gizmo](on_gizmo.md)

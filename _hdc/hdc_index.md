@@ -1,5 +1,6 @@
 ---
 title: Hutch Data Core
+hdc: True
 ---
 
 The Hutch Data Core is a Shared Resource at the Fred Hutchinson Cancer Research Center

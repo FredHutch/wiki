@@ -1,5 +1,6 @@
 ---
 title: Hutch Data Core Trainings
+hdc: True
 ---
 
 See [Running on AWS](running/running_on_aws.md)

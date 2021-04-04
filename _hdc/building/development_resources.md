@@ -1,5 +1,6 @@
 ---
 title: Development Resources
+hdc: True
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: Building Your First Workflow
+hdc: True
 ---
 
 [Best Practices](best_practices.md)

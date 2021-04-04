@@ -1,5 +1,6 @@
 ---
 title: Best Practices with Resources
+hdc: True
 ---
 
 [Best Practices](best_practices.md)

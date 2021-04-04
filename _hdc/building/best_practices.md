@@ -1,5 +1,6 @@
 ---
 title: Best Practices for Writing Workflows
+hdc: True
 ---
 
 [Best Practices - Files](best_practices_files.md)

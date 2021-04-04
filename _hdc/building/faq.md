@@ -1,5 +1,6 @@
 ---
 title: Frequently Asked Questions (FAQ) when Building Workflows
+hdc: True
 ---
 
 [Best Practices](best_practices.md)

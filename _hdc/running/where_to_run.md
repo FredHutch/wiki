@@ -1,5 +1,6 @@
 ---
 title: Deciding Where to Run a Workflow
+hdc: True
 ---
 
 [Running on AWS](running/running_on_aws.md)
