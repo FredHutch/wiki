@@ -1,3 +1,8 @@
+---
+title: Hutch Data Core Bioinformatics Library
+hdc: True
+---
+
 # Bioinformatics and Genomics Resource Library
 
 Relevant wiki pages are linked with each subheading.
