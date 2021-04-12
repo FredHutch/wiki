@@ -1,5 +1,5 @@
 ---
-title: Hutch Data Core Trainings
+title: Running Workflows on Gizmo
 hdc: True
 ---
 
