@@ -1,20 +1,11 @@
 ---
-title: Hutch Data Core Bioinformatics Library
+title: Hutch Data Core Bioinformatics and Genomics Library
 hdc: True
 ---
 
-# Bioinformatics and Genomics Resource Library
-
-Relevant wiki pages are linked with each subheading.
-The resources section at the end of each page is a great start;
-these links are placed under the most relevant heading or subheading.
-
-Each external (e.g., non-wiki) link should include a brief explanation of why it's included, what a reader can find there, etc.
-
-The order of subheadings can change;
-it may be useful to look at how other help sites categorize types of genomic data collection.
-
-FIXME indicates top priorities.
+Frame context for this page: 
+- curated list of resources for data generation and analysis
+- Relevant wiki pages are linked with each subheading
 
 ## Genomics
 

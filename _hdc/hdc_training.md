@@ -1,9 +1,11 @@
 ---
-title: Hutch Data Core Trainings
+title: Hutch Data Core Training and Documentation
 hdc: True
 ---
 
 Overview of training and documentation resources available through HDC.
+
+FIXME: need to reconcile and deduplicate with info [here](https://sciwiki.fredhutch.org/scicomputing/reference_training/)
 
 ## Instructor-led training
 
@@ -14,14 +16,14 @@ Overview of training and documentation resources available through HDC.
 
 - fredhutch.io courses
 - practice repositories (with code examples)
-
-[Bioinformatics resource library](hdc/bioinformatics_library)
+- [Bioinformatics and Genomics Resource Library](hdc/bioinformatics_library)
 
 ## Office hours 
 
-Link to calendar?
-
+FIXME: separate page? describe different groups holding office hours and who to ask for different questions
 - HDC (fh.io)
 - other SR groups
 - SciComp
 - CDS
+
+Link to calendar?
