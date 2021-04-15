@@ -35,7 +35,7 @@ With recent advancements in modern technology for the analysis and visualization
 
 For more information, please view the [Data Portal Resources](/hdc/hdc_portals).
 
-# Workflows
+# Bioinformatics Workflows
 
 The bioinformatic process of analyzing large datasets often requires a series of computational steps, each of which may require a different set of software dependencies. To help coordinate and streamline the execution of these workflows, researchers around the world have started to adopt a set of software tools for workflow management, such as Nextflow, Cromwell, and Snakemake. One of the ways in which the Data Core works to provide support for bioinformatic analysis is by helping to put these workflow management tools directly into the hands of Fred Hutch researchers. This includes assistance with running computational workflows on different computational resources (individual computers, the on-premise HPC cluster, or in the “cloud”), curation of pre-existing workflows for commonly used tasks, and assistance with the development of novel workflows to implement new scientific ideas.
 

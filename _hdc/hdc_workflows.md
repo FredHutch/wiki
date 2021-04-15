@@ -1,43 +1,50 @@
 ---
-title: Hutch Data Core Workflows
+title: Computational Workflows
 hdc: True
 ---
 
-(site map)
-
-Text describing workflows offered by the Hutch Data Core.
-
 # Understanding Workflows
 
-Text describing the concept of workflows
+When performing bioinformatic analysis, scientists often need to perform a series of interconnected
+computational transformations of the raw input data. While it is possible to coordinate multiple tasks
+using BASH scripts or batch submission to a SLURM cluster, it can be far more convenient to use
+software which has been specifically designed to coordinate these types of workflows. Some examples
+of those workflow managers are Snakemake, Cromwell, Galaxy, and Nextflow.
 
-For more details, see [Background on Workflows](workflow_background.md).
+At the moment, the documentation provided is focused in particular on [Nextflow](https://nextflow.io/), a
+[published](https://www.nature.com/articles/nbt.3820.epdf?author_access_token=NR5Sw5j7DhVJhsvhZX3O8NRgN0jAjWel9jnR3ZoTv0O-x-SaU0X4rrftBAum396PO2HW7nu_CY6WUD5BczKSljFiztaC_YS4qiOe1WqLsYegnGM2iRixif0sggcgrW7Y) 
+workflow management software which has been adopted by many core facilities around the world supporting
+a catalog of [community-supported bioinformatics workflows](https://nf-co.re/). As we continue to expand
+the documentation available for running workflows, we hope to add content supporting users of
+[Snakemake](https://snakemake.readthedocs.io/en/stable/) and [Cromwell](https://cromwell.readthedocs.io/en/stable/).
+We welcome the contribution of any additional workflow documentation, which can be added following these
+[guidelines for contribution to the SciWiki](https://github.com/FredHutch/wiki/blob/main/README.md).
+
+For more details on the concepts of workflow managers, see [Background on Workflows](/hdc/workflows/workflow_background).
 
 # Getting Started
 
-It'll take <10?> minutes to [run your first workflow](running/running_first_workflow.md). There is a small amount of setup required.
+If you're new to workflows, follow this guide to [run your first workflow](/hdc/workflows/running_first_workflow).
 
+# Workflow Configuration
 
-Once you've run your first workflow, take a look at the [Workflow Catalog](workflow_catalog.md) for a list of existing workflows you can run.
+One of the nice things about using a workflow manager is that you have the ability to change the way
+that a workflow is run (on what computers, using what resources, analyzing what files), without changing
+the workflow itself. This includes:
 
-If you're ready to run a workflow, you need to decide [where to run your workflow](running/where_to_run.md), on [AWS](running/on_aws.md) or [on-premise (Rhino & Gizmo)](running/on_gizmo.md).
+- [Running a workflow on SLURM (gizmo)](/hdc/workflows/running/on_gizmo)
+- [Running a workflow on AWS](/hdc/workflows/running/on_aws)
+- [Specifying computational resources](/hdc/workflows/running/process_resources)
+- [Monitoring workflows on Tower](/hdc/workflows/running/tower)
 
-If you run into issues, take a look at the [Frequently Asked Questions](running/faq.md).
+# Workflow Catalog
 
+While there are many workflows developed by researchers around the world, the Data Core is also working
+to maintain a catalog of workflows for Fred Hutch researchers. If you have any questions about using these
+workflows, or if you run into any issues, the Data Core can help provide help with troubleshooting and
+enhancements as needed.
 
-# Building Workflows
+See the [Workflow Catalog](/hdc/workflows/workflow_catalog) for a list of existing workflows you can run.
 
-## Writing Your First Workflow
-
-
-
-
-[FAQ](building/faq.md)
-[Best Practices when Building Workflows](building/best_practices.md)
-[Best Practices with Files when Building Workflows](building/best_practices_files.md)
-[Best Practices with Inputs when Building Workflows](building/best_practices_input.md)
-[Best Practices with CPU & Memory Settings when Building Workflows](building/best_practices_resources.md)
-[Best Practices with Containers & Code Libraries when Building Workflows](building/best_practices_container.md)
-[Development Resources](building/development_resources.md)
-
-
+For a longer list of workflows developed by the worldwide community of Nextflow developers, visit the
+[nf-core workflow catalog](https://nf-co.re/pipelines).
