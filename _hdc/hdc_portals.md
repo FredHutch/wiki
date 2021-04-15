@@ -1,5 +1,5 @@
 ---
-title: Hutch Data Core Portals
+title: Data Portals
 hdc: True
 ---
 
@@ -13,7 +13,8 @@ The data atlases produced using this technology can be found at https://viz.fred
 
 One of the most challenging and rewarding aspects of scientific research is the transformation of raw data into human understanding – a process which is a constant target of innovation by the research community. To support the visualization tools created and used by Fred Hutch scientists, the Data Core has developed a platform for hosting and sharing interactive datasets – Carousel. Using the Carousel platform, scientists can upload their own datasets to visualize with pre-made apps or even create their own apps with a flexible container-based visualization platform.
 
-Carousel is currently in beta testing. If you would like to learn more or participate, please [get in touch](mailto:sminot@fredhutch.org).
+Carousel is currently in beta testing at [carousel.fredhutch.org](https://carousel.fredhutch.org).
+If you would like to learn more or participate, please [contact us](mailto:sminot@fredhutch.org).
 
 
 # PubWeb

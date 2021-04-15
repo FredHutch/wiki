@@ -1,5 +1,5 @@
 ---
-title: Hutch Data Core Bioinformatics and Genomics Library
+title: Bioinformatics and Genomics Library
 hdc: True
 ---
 

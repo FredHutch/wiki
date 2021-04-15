@@ -1,5 +1,5 @@
 ---
-title: Hutch Data Core Training and Documentation
+title: Training and Documentation
 hdc: True
 ---
 

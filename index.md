@@ -15,7 +15,7 @@ feature_row:
     excerpt: "This domain houses researcher-oriented documentation for high performance computing and data management tools supported by Fred Hutch Center IT as provided by the Scientific Computing group (SciComp).  Topics include get started guides for the various computing and software tools supported by IT, guidance for data infrastructure best practices, and advanced computing worked examples and guides on a variety of topics. "
     url: /scicomputing/comp_index/
   - title: "Hutch Data Core"
-    excerpt: "This domain describes resources provided by the Hutch Data Core, a group supporting data-intensive research at Fred Hutch. Topics include training opportunities, automated analytical workflows, and data visualization tools for scientists leveraging large amounts of data for their research."
+    excerpt: "This domain describes resources provided by the Hutch Data Core, a group within Shared Resources supporting bioinformatics and data-intensive research at Fred Hutch. Topics include data analysis consulatation, training opportunities, automated analytical workflows, high-performance data atlases, and data visualization tools for scientists leveraging large amounts of data for their research."
     url: /hdc/hdc_index/
 feature_row2:
   - title: "Wiki Editor Program"
