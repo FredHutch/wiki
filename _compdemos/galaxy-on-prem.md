@@ -89,4 +89,5 @@ export GALAXY_DIR=/fh/fast/foo_b/user/alice/galaxies
 galaxy
 ```
 
+The code above set the environment variable `GALAXY_DIR` to the path before running `galaxy` as usual.
 This can also be used to create galaxy installations in non-standard locations.
