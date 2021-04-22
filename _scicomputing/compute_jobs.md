@@ -186,7 +186,7 @@ scontrol update jobid=<job ID> timelimit=+2-0
 
 Job preemption allows a queued job to preempt a running job under certain circumstances.  We can use job preemption to allow some jobs to run over the established limits with the caveat that these jobs can be preempted- that is killed- if other high priority work is queued.
 
-These jobs are run with no limits- every idle CPU is fair game.  However, any number of these jobs can be terminated at a moments notice if high priority jobs are waiting and eligible to run.  Thus it is important that you be able to recover that job without significant effort.  Workflow managers (such as cromwell, nextflow, and snakemake) are great aids for this purpose.
+These jobs are run with no limits- every idle CPU is fair game.  However, any number of these jobs can be terminated with no notice if high priority jobs are waiting and eligible to run.  Thus it is important that you be able to recover that job without significant effort.  Workflow managers (such as cromwell, nextflow, and snakemake) are great aids for this purpose.
 
 To use this feature, add the QOS "restart" to your job, _vis_:
 
@@ -194,7 +194,7 @@ To use this feature, add the QOS "restart" to your job, _vis_:
 
 As these jobs are low-priority, you must note that it can take some time for these jobs to start.  These jobs are run via the backfill mechanism which requires that the entire set of queued jobs be evaluated which can take some time.
 
-> Some may recall that we implemented this as a partition- _restart_, then _restart-new_.  Those partitions are still available but it is still necessary to add the QOS request, e.g. `sbatch -p restart-new --qos=restart`.
+> Some may recall that we implemented this as a partition- _restart_, then _restart-new_.  Those partitions are still available but it is still necessary to add the QOS request, e.g. `sbatch -p restart-new --qos=restart`. There is no effect when specifying the partition - it is now unnecessary.
 >
 > Future work may include removing these partitions.
 
