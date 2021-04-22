@@ -80,7 +80,9 @@ If toolbox is unable to identify your PI you may get a message like:
 Folder  does not exist or is not writable"
 ```
 
-In these cases identify the path to the galaxy installation- it is typically a path like `/fh/fast/<pi_d>/user/<username>/galaxies`.  Set the environment variable `GALAXY_DIR` to this path and run `galaxy` as usual:
+The default location for galaxy installations is a directory named `galaxies` in your `fast` drive.
+The path to this directory generally follows this format:`/fh/fast/<pi_d>/user/<username>/galaxies`.  
+You can specify this path as the location to install galaxy by running the following code in your shell:
 
 ```
 export GALAXY_DIR=/fh/fast/foo_b/user/alice/galaxies
