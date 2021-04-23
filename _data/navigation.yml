@@ -190,6 +190,23 @@ scicomputing:
 
 hdc:
   - title: "Hutch Data Core"
+    url: /hdc/hdc_index/
+  - title: "Trainings"
+    url: /hdc/hdc_training/
+  - title: "Bioinformatics Services"
+    url: /hdc/hdc_index/#bioinformatics-services
+  - title: "Data Portals"
+    url: /hdc/hdc_portals/
+  - title: "Bioinformatics Workflows"
+    url: /hdc/hdc_workflows/
     children:
-      - title: "Overview"
-        url: /hdc/hdc_index/
+    - title: Workflow Background
+      url: /hdc/workflows/workflow_background/
+    - title: Running Your First Workflow
+      url: /hdc/workflows/running_first_workflow/
+    - title: Running on AWS
+      url: /hdc/workflows/running/on_aws/
+    - title: Running on SLURM / gizmo
+      url: /hdc/workflows/running/on_gizmo/
+    - title: Workflow Catalog
+      url: /hdc/workflows/workflow_catalog/

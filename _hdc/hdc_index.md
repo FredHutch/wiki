@@ -14,7 +14,7 @@ computational complexity, the Data Core works to provide support via:
 - Instructor-led trainings & self-paced learning
 - Project-oriented consultation (via the Bioinformatics Core)
 - Data portals for automated analysis and visualization
-- Curated bioinformatics workflows for common tasks in genomics, imaging, proteomics, etc.
+- Automated bioinformatics workflows for common tasks in genomics, imaging, proteomics, etc.
 
 
 # Trainings
@@ -27,16 +27,47 @@ STUB: Summary paragraph on trainings offered by the Data Core
 
 The process of analyzing datasets generated for a particular experiment or project can be complex, often requiring deep expertise in the technology used to generate the raw data as well as the computational tools needed to process them. The Bioinformatics Core provides researchers with support for this analysis, engaging on the basis of specific projects.
 
-To connect with the Bioinformatics Core, please visit [their webpage](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html) or reach out directly to Matthew Fitzgibbon [by email](mailto:mfitzgib@fredhutch.org).
+Bioinformatics staff are available by appointment for one-on-one consultation. We are happy to discuss experimental design, choice of data analysis strategies and software tools, or to help with advice and troubleshooting as you conduct your own analyses.
+
+We strongly encourage researchers to consult with a bioinformatics specialist at the earliest stages of a project to ensure an appropriate experimental design is in place prior to seeking data analysis support. 
+
+To connect with the Bioinformatics Core, please visit [our webpage](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html) or reach out directly to Matthew Fitzgibbon [by email](mailto:mfitzgib@fredhutch.org).
 
 # Data Portals
 
-With recent advancements in modern technology for the analysis and visualization of complex datasets, it has become possible to connect researchers directly with their data using interactive webpages referred to as Data Portals. The Data Core is actively developing a set of data portals designed to provide scientific insight across a variety of research areas. These include resources for the high-performance visualization of large-scale datasets (such as single-cell sequencing) as "data atlases"; an interactive platform for executing bioinformatics workflows in the cloud ("PubWeb"); and a flexible system for rendering and sharing data dashboards inside virtual containers ("Carousel").
+With recent advancements in modern technology for the analysis and visualization of complex datasets,
+it has become possible to connect researchers directly with their data using interactive webpages
+referred to as Data Portals.
+
+The Data Core is actively developing a set of data portals designed to provide scientific insight
+across a variety of research areas.
+These include:
+- Data Atlases for the high-performance visualization of large-scale datasets (such as single-cell sequencing);
+- PubWeb: an interactive platform for executing bioinformatics workflows in the cloud;
+- Carousel: a flexible system for rendering and sharing interactive datasets.
 
 For more information, please view the [Data Portal Resources](/hdc/hdc_portals).
 
 # Bioinformatics Workflows
 
-The bioinformatic process of analyzing large datasets often requires a series of computational steps, each of which may require a different set of software dependencies. To help coordinate and streamline the execution of these workflows, researchers around the world have started to adopt a set of software tools for workflow management, such as Nextflow, Cromwell, and Snakemake. One of the ways in which the Data Core works to provide support for bioinformatic analysis is by helping to put these workflow management tools directly into the hands of Fred Hutch researchers. This includes assistance with running computational workflows on different computational resources (individual computers, the on-premise HPC cluster, or in the “cloud”), curation of pre-existing workflows for commonly used tasks, and assistance with the development of novel workflows to implement new scientific ideas.
+The bioinformatic process of analyzing large datasets often requires a series of computational steps,
+each of which may require a different set of software dependencies.
+To help coordinate and streamline the execution of these workflows,
+researchers around the world have started to adopt a set of software tools for workflow management,
+such as Nextflow, Cromwell, and Snakemake.
 
-For more information, please view the [Workflow Resources](/hdc/hdc_workflows).
+One of the ways in which the Data Core works to provide support for bioinformatic analysis is by
+helping to put these workflow management tools directly into the hands of Fred Hutch researchers.
+
+This includes assistance with running computational workflows on different computational resources
+(individual computers, the on-premise HPC cluster, or in the “cloud”),
+curation of pre-existing workflows for commonly used tasks, and assistance with the development of
+novel workflows to implement new scientific ideas.
+
+Our [Workflow Resources](/hdc/hdc_workflows) include:
+- Guidance for running automated workflows on Fred Hutch HPC resources (SLURM and AWS)
+- A catalog of curated bioinformatics workflows (e.g. RNAseq, pan-genome analysis)
+- Building your own automated workflows (e.g., from existing BASH scripts)
+
+If you have any questions about using automated workflows for your research, please don't hesitate
+to [get in touch](mailto:sminot@fredhutch.org).
