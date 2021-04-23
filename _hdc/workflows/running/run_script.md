@@ -43,6 +43,8 @@ ml Nextflow
 
 # Load the Singularity module (if running on rhino/gizmo with Singularity)
 ml Singularity
+# Make sure that the singularity executables are in the PATH
+export PATH=$SINGULARITYROOT/bin/:$PATH
 
 # Run the workflow
 NXF_VER=$NXF_VER \
