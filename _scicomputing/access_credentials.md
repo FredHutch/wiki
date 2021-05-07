@@ -77,24 +77,39 @@ awscreds --force
 
 ### Testing Your Credentials
 
-To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from our shared reference data bucket to your local system, and then copy that file to your PI bucket.  
+To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your 
+local computer to your PI's bucket. 
+
+In these examples, please replace `lastname-f` with the last name and first initial of your PI.
+
+#### Create a file in S3:
 
 ```
 module load awscli
-aws s3 cp s3://fh-ctr-public-reference-data/wiki_example_data/iris.csv .
+echo hello | aws s3 cp - s3://fh-pi-lastname-f/hello.txt
 ```
 
-In the commands below, replace `lastname-f` (where `f` is the PI's first name initial) with the name associated to your PI bucket:
+#### Download the file from S3
 
 ```
-aws s3 cp iris.csv s3://fh-pi-lastname-f/iris.csv
+aws s3 cp s3://fh-pi-lastname-f/hello.txt .
 ```
-If you notice any errors with this, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials.
+
+Now you can examine the file:
+
+```
+cat hello.txt
+```
+
+If you notice any errors with these, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials.
+
+#### Delete the file from S3
+
 
 Once you have confirmed your credentials, remember to remove the test file:
 
 ```
-aws s3 rm s3://fh-pi-lastname-f/iris.csv
+aws s3 rm s3://fh-pi-lastname-f/hello.txt
 ```
 
 See more about accessing AWS S3 via the command line [here](/compdemos/aws/).

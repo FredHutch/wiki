@@ -60,7 +60,7 @@ To create a connection to a Swift location, you will need your Fred Hutch ID, yo
   
   **Credentials**
   - User:  Your Fred Hutch ID
-  - Password/Key: Your Fred Hutch password
+  - Password/Key: Your Fred Hutch password (Note: you will need to update the connection when your password changes)
 
 
 

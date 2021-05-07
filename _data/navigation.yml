@@ -18,7 +18,7 @@ frontpage:
       - title: "Contributors List"
         url: /contributors/
       - title: "Contributing Instructions"
-        url: https://github.com/FredHutch/wiki/blob/master/README.md
+        url: https://github.com/FredHutch/wiki/blob/main/README.md
       - title: "Outreach and Events"
         url: /outreach/
       - title: "Style Guide"
@@ -68,6 +68,8 @@ generation:
         url: /generation/clsp_specimenBanking/
       - title: "Experimental Data"
         url: /generation/clsp_labCov/
+      - title: "Data Vizualization"
+        url: /generation/data-viz/
 
   - title: "Large Scale Data Generation"
     children:

@@ -22,7 +22,7 @@ The basic process below below includes:
 
 > This tutorial uses `snail` as the method for accessing the Fred Hutch campus network.
 This step is unnecessary if you are already connected to the network (such as through VPN).
-For more information about remote login, please see [Access via a remote login](https://sciwiki.fredhutch.org/scicomputing/access_methods/#access-via-a-remote-location).
+For more information about remote login, please see [Access via a remote login](/scicomputing/access_methods/#access-via-a-remote-location).
 
 ## Command prompts
 
@@ -78,7 +78,7 @@ Here we describe the use of `snail` for remote login,
 since it doesn't require the use of additional software beyond what it already included in the tutorial.
 VPN may be a preferrable option for you,
 especially if you are already using it to access other Hutch resources.
-For more information about remote login, please see [Access via a remote login](https://sciwiki.fredhutch.org/scicomputing/access_methods/#access-via-a-remote-location).
+For more information about remote login, please see [Access via a remote login](/scicomputing/access_methods/#access-via-a-remote-location).
 
 In your shell,
 type the following (username is your HutchNetID):
@@ -116,30 +116,34 @@ You can accomplish this by executing the following command:
     grabnode
 
 You'll now be asked a series of questions about what compute resources you would like to request.
-We'll describe requesting the smallest unit of resources here for demonstration purposes.
-When prompted:
+We'll request the smallest unit of resources here for demonstration purposes.
 
-- type 1 for number of CPUs
-- hit `Enter` to select the default for memory
-- type 1 for number of days
+- *How many CPUs/cores would you like to grab on the node? [1-36]* Type 1 and hit `Enter`
+- *How much memory (GB) would you like to grab? [20]* Hit `Enter` to select the default
+- *Please enter the max number of days you would like to grab this node: [1-7]* Type 1 and hit `Enter`
+- *Do you need a GPU ? [y/N]* Hit `Enter` to select the default (No)
+
+Answering these questions submits a request to the cluster to allocate specific compute resources for your use.
+The output you see printed to the screen shows the progress of requesting and then allocating those resources.
+When the allocation is complete,
+you'll see a command prompt indicating that you are running tasks on `gizmo` instead of `rhino`:
+
+    username@gizmof127:~$
+
+You can interact with your directories the same as you would normally,
+but now your commands will run on a part of the cluster allocated to you specifically.
 
 A few extra pieces of information for new users:
 - When requesting resources for your own work,
 choose appropriate selections to suit the needs of the task.
 If you aren't sure you need more than one CPU,
 you almost certainly do not.
-- There is not currently a way to execute `grabnode` with flags;
-you are required to use the interactive questions.
-- If you get an error like "Invalid Account" it indicates that your association to a PI account has not been completely set up- contact Scientific Computing.
+- If you get an error like "Invalid Account" it indicates that your association to a PI account has not been completely set up;
+please email `scicomp`.
 
-You'll note your command prompt will switch to say `gizmo` instead of `rhino`:
-
-    username@gizmof127:~$
-
-You can interact with your directories the same as you would normally,
-but now your commands will run on a part of the cluster allocated to you specifically.
-See [this documentation](https://sciwiki.fredhutch.org/compdemos/howtoRhino/#guidance-for-use)
-for more information on when to use `grabnode`.
+See [this documentation](/compdemos/howtoRhino/#guidance-for-use)
+for more information on when to use `grabnode`,
+and [this page](/scicomputing/compute_platforms/#gizmo-cluster) for more information on Gizmo.
 
 ## Loading software
 
@@ -179,7 +183,7 @@ you should see in the output that there is also a module available to load as `f
 and additional information on using the modules is included as well.
 
 For more information on using the module system,
-please see the [Computing Environments page](https://sciwiki.fredhutch.org/scicomputing/compute_environments/),
+please see the [Computing Environments page](/scicomputing/compute_environments/),
 and you can view lists of available software on the [Scientific Software page](https://fredhutch.github.io/easybuild-life-sciences/).
 
 ## Logging out
@@ -219,7 +223,7 @@ You'll need to `exit` once more to leave the Fred Hutch network and see your com
 
 This demo covers the basic process of logging on and using resources for the first time.
 Once you are comfortable with the basic process,
-you should look at the complete documentation on [Large Scale Computing](https://sciwiki.fredhutch.org/scicomputing/compute_overview/)
+you should look at the complete documentation on [Large Scale Computing](/scicomputing/compute_overview/) or over in our detailed [`rhino` documentation](/compdemos/howtoRhino/).
 for information on more advanced tasks, like:
 - executing batch jobs using `slurm`,
 including limits and recommendations for creating scripts

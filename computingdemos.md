@@ -14,4 +14,4 @@ sidebar:
 
 Below you will find a variety of more hands on descriptions that relate to a specific topic.  These tend to be more detailed examples of the use of resources described in the main articles of the Wiki.  
 
-> Note:  If you would like to request content for this section or are interested in writing content, please email `sciwiki`, file an issue in our GitHub repo [here](https://github.com/FredHutch/wiki/issues), or see our contribution instructions [here](https://github.com/FredHutch/wiki/blob/master/README.md).
+> Note:  If you would like to request content for this section or are interested in writing content, please email `sciwiki`, file an issue in our GitHub repo [here](https://github.com/FredHutch/wiki/issues), or see our contribution instructions [here](https://github.com/FredHutch/wiki/blob/main/README.md).

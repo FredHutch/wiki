@@ -49,6 +49,6 @@ To fulfill these two purposes we have the Wiki Writer/Editor program which is in
 
 ### Get in Touch
 
-- More information can be found at the [Biomedical Data Science Wiki](/outreach/), the [Github README](https://github.com/FredHutch/wiki/blob/master/README.md) and the [Contributing Guidelines](https://github.com/FredHutch/wiki/blob/master/CONTRIBUTING.md)
+- More information can be found at the [Biomedical Data Science Wiki](/outreach/), the [Github README](https://github.com/FredHutch/wiki/blob/main/README.md) and the [Contributing Guidelines](https://github.com/FredHutch/wiki/blob/main/CONTRIBUTING.md)
 - Join the **FHBig/Coop Communities** Slack workspace via [this link](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg), and use your `fredhutch.org`, `uw.edu`, `scharp.org`, or `sagebase.org` email to join.  In this Slack workspace we have a `#wiki-contributors` channel where you can chime in with edits, get updates about next meetings, or converse with other contributors about next steps. 
 - If you have your GitHub username linked to the Fred Hutch GitHub organization account then you can follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content. If you have not done this yet, please see more about [using GitHub at Fred Hutch](/scicomputing/software_managecode/).

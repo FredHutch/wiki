@@ -25,7 +25,7 @@ While you are allowed up to 100GB of storage in this home directory, it is not t
 
 - Each PI and division is provided with an allocation of storage space via `Fast`, though additional storage may be purchased.  
 
-- You can access `Fast` from your workstation using `smb://center.fhcrc.org/fh/fast/lastname_f` on a Mac or `\\center.fhcrc.org\fh\fast\lastname_f` or `X:\fast\lastname_f` on a PC).
+- You can access `Fast` from your workstation using  `X:\fast\lastname_f` on a Windows PC or through a [UNC path as documented here](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html)
 
 - On Fred Hutch HPC systems (e.g. Rhino and Gizmo) you can access fast via `/fh/fast/lastname_f`
 
@@ -64,6 +64,6 @@ To summarize: the folder structure on fast file looks like this: `/fh/fast/(leve
 
 `Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  This is also organized by investigator with a free allocation with additional storage available for purchase.  
 
-Secure file is available via the path `/fh/fast/secure/research/lastname_f` on SciComp Linux systems, `\\center.fhcrc.org\fh\secure\research\lastname_f` or `X:\secure\research` on Windows hosts, and `smb://center/fh/secure/research/lastname_f` on OSX.
+Secure file is available via the path `/fh/fast/secure/research/lastname_f` on SciComp Linux systems, through a [UNC path as documented here](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html) or `X:\secure\research` on Windows hosts.
 
 This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data.  
