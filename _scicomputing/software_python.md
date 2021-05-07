@@ -117,13 +117,14 @@ Specific information about which Python modules are available, including more in
 If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences).
 In your request, please include a link to the package source and version you require.  
 Alternatively, you
-can install the package in your home directory with the `--user option` (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
+can install the package in your home directory with the `--user option` (e.g. `pip3 install --upgrade --user mypkg`),
+or to create a virtual Python environment, for example:
 
 ```
     username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
     username@rhino1:~$ python3 -m venv ~/mypython
     username@rhino1:~$ source ~/mypython/bin/activate
-    (mypython) username@rhino1:~$ jupyter lab
+    (mypython) username@rhino1:~$ #python code executed in mypython environment
     (mypython) username@rhino1:~$ deactivate
     username@rhino1:~$
 ```
@@ -135,8 +136,11 @@ load a Python distribution maintained by SciComp and run Jupyter Lab:
 
 ```
     username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+```
 
-    ... or simply use the 'jupyterlab' wrapper script:
+... or use the 'jupyterlab' wrapper script:
+
+```
     username@rhino1:~$ jupyterlab
 ```
 
@@ -148,7 +152,9 @@ Then connect to the URL, copying the link given by the previous command, which l
 ```
 ### Jupyter Notebooks on `gizmo`
 
-From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](/compdemos/howtoGizmo).
+From `rhino` execute the `grabjupyter` command and a node will be allocated on Gizmo after you select the CPUs and number of days you need the node. 
+For more information on working with `gizmo`,
+see the dedicated page [here](/compdemos/howtoGizmo).
 
 ### Fred Hutch JupyterHub installation
 
@@ -433,12 +439,12 @@ leaving its trail everywhere and leaving you and your teammates to try to figure
 of bioinformatics?  PyCharm makes refactoring of variable / object names extremely easy.  Simply highlight the variable 
 or object you want to rename, click **Refactor**, then click **Rename**.  PyCharm will then search for any reference
 to that variable and present you with a list of all the places throughout the entire project that the highlighted variable occurs.  If you'd like to rename 
-all of them it's as easy as clicking **Do Refactor**.  I've found this incredibly useful for changing object names to be more
+all of them, click **Do Refactor**.  I've found this incredibly useful for changing object names to be more
 clear about their purpose, without having to hunt through scores of modules to determine where they occur. 
 
 **Find Usages**  
 
-Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where it's being used or how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages**, 
+Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where or how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages**, 
 a small pop-up window will show where that varible is referenced throughout the entire project. This is particularly helpful for when you're cleaning up code and want to know if you can delete something.
 
 Right-clicking an object opens a menu which contains the **Find Usages** button:  
@@ -568,7 +574,7 @@ including a dark theme!
 
 **the .ipynb file**
 
-This IS the iPython notebook file or your JupyterLab file with code and markdown in it and note you can only access these from the directory you execute `jupyterlab` in so either `pwd` to make sure or have a set location of where you save the files because you'll only be able to open .ipynb files in either the start-up directory or it's sub-folders. 
+This IS the iPython notebook file or your JupyterLab file with code and markdown in it and note you can only access these from the directory you execute `jupyterlab` in so either `pwd` to make sure or have a set location of where you save the files because you'll only be able to open .ipynb files in either the start-up directory or its sub-folders. 
 
 **Keyboard shortcuts**
 
@@ -614,7 +620,7 @@ So having a debugger in your IDE that you can insert breakpoints, step in, cycle
 
 **Git extension for JupyterLab**
 
-"There's an extension for that"[...seriously!](https://github.com/jupyterlab/jupyterlab-git) Yet, it's not as nice as the github integration for VS Code or PyCharm but then again JupyterLab is new and the extensions I believe are community-driven so they haven't had the time or resources to flush it out like the others may have. There's also one specifically for [diffing and merging of notebooks](https://github.com/jupyter/nbdime).
+"There's an extension for that"[...seriously!](https://github.com/jupyterlab/jupyterlab-git) Yet, it's not as nice as the GitHub integration for VS Code or PyCharm but then again JupyterLab is new and the extensions I believe are community-driven so they haven't had the time or resources to flush it out like the others may have. There's also one specifically for [diffing and merging of notebooks](https://github.com/jupyter/nbdime).
 
 ![](https://github.com/jupyterlab/jupyterlab-github/blob/master/gitception.png)
 
