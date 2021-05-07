@@ -9,6 +9,12 @@ Here we share information on learning Python,
 accessing python either locally or via remote computing at Fred Hutch,
 and overviews of a few common software options for running and writing Python code.
 
+For more information on coding best practices, 
+including templates for data analysis and packages in Python,
+please see our [Software Development Standards page](/scicomputing/software_standards/).
+Please also see our [Resource Library](/compdemos/aws/) for tutorials on a variety of Python topics,
+including checkpointing on Gizmo, logging in Python, running tensorflow, and more!
+
 ## Learning Python
  
 [fredhutch.io](http://www.fredhutch.io/resources/) offers introductory Python class material designed specifically for new coders in our research community,
@@ -41,7 +47,7 @@ which may vary in quality and functionality. Other places to find packages:
 - install via github
 - write your own (link to software development page)
 
-FIXME: see below for more information on accessing packages on our on-premise HPC resources
+Please see our [Python Module page](/pythonModules/) for more information on packages installed on our shared compute cluster.
 
 ## Accessing and using Python
 
@@ -63,6 +69,16 @@ and the manner in which you want to interactwith your code and its output.
 
 The sections below describe some of the most popular methods for installing and running Python at Fred Hutch,
 both on your own computer and on the Hutch's high-performance computing resources.
+If you are not sure about where to run Python (on your own computer, `rhino`, or `gizmo`),
+you should consider where your data are located (thus, whether it will need to be downloaded/transferred),
+what packages you'll need (and how to install/access them),
+and what kind of coding work you'll be doing (developing code, or running batch jobs).
+
+At the bottom of this page,
+you'll find more in-depth comparisons of the features associated with a few of the most common Python IDEs:
+- [Visual Studio Code](#visual-studio-code)
+- [PyCharm](#pycharm)
+- [Jupyter](#jupyter)
 
 ### Installing Python on your own computer
 
@@ -72,34 +88,36 @@ a set of software that allows you to install, manage, and launch applications fo
 Following installation,
 you can use Anaconda Navigator to explore various options for running Python, 
 including Jupyter notebooks and PyCharm.
-FIXME: install http://www.fredhutch.io/software/#python-jupyter-notebooks, 
-intro: https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/master/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks
+
+fredhutch.io's Intro to Python course uses Anaconda,
+and includes brief [installation instructions](http://www.fredhutch.io/software/#python-jupyter-notebooks)
+as well as a [walk-through of Jupyter notebooks](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/gh-pages/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks).
 
 > A piece of software related to Anaconda is [Miniconda](https://docs.conda.io/en/latest/miniconda.html),
 > which has the same base functionality but in a stripped-down form. 
 > We recommend Anaconda for beginners because it includes Anaconda Navigator,
 > as well as many other useful applications.
 
-FIXME: Define kernel
-https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html#kernel
+For more information on working with these Jupyter,
+please see the section below on [Jupyter IDEs](#jupyter).
 
-FIXME: Install the Jupyter Notebook on your own computer [install Jupyter](http://jupyter.org/install) and run locally.
-Jupyter Notebooks are web interfaces to interpreter shells such as Python and R. They allow the user to write code in small, executable chunks that can be interspersed with blocks of markdown. They are particularly well suited to exploring data and generating narrative-style presentations of analyses. They are most used by data scientists who would like to experiment with their code and easily generate charts and graphs. At Fred Hutch there are at least 4 ways how you can use Jupyter Notebooks, including the latest incarnation called JupyterLab.  You can find more information about Jupyter and related technologies [here at the Project Jupyter site.](http://jupyter.org/)
+### Accessing Python on `rhino` and `gizmo`
 
-FIXME: overview IDEs, and link to more extensive descriptions below
+If you would like to use Hutch shared compute resources to run Python,
+you would connect to `rhino` to submit batch jobs,
+and/or then connect to `gizmo` to run code interactively.
 
-- [Visual Studio Code](#visual-studio-code)
-- [PyCharm](#pycharm)
-- [Jupyter](#jupyter)
+For instructions on how to connect to `rhino` see this [tutorial](/compdemos/howtoRhino.md).  
+Once you have logged on to `rhino`,
+you will need to load a build/version of Python.
+SciComp maintains a current list of the various builds of Python available for use by researchers.
+Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on our clusters.
 
-### Python on your computer vs on a Fred Hutch HPC resource
-
-FIXME: clarify language
-SciComp maintains a current list of the various builds of Python available on `rhino` and `gizmo` for use by researchers.  Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on `gizmo`.  Specific information about which Python modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).  If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences). 
+Specific information about which Python modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).
+If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences).
 In your request, please include a link to the package source and version you require.  
-
-Please note that only the first method (running Jupyter from your local machine) allows you to install your own Python packages as administrator of your machine.
-The other 3 methods require you to either request a package from Scientific Computing or install the package in your home directory with the `--user option` (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
+Alternatively, you
+can install the package in your home directory with the `--user option` (e.g. `pip3 install --upgrade --user mypkg`) or to create a virtual Python environment, for example:
 
 ```
     username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
@@ -109,18 +127,6 @@ The other 3 methods require you to either request a package from Scientific Comp
     (mypython) username@rhino1:~$ deactivate
     username@rhino1:~$
 ```
-
-### Accessing Python on `rhino`
-
-For instructions on how to connect to `rhino` see this [page](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoRhino.md).  
-
-FIXME
-
-```
-username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
-```
-
-Accessing packages, and seeing what packages are available
 
 ### Jupyter Notebooks on `rhino`
 
@@ -142,25 +148,13 @@ Then connect to the URL, copying the link given by the previous command, which l
 ```
 ### Jupyter Notebooks on `gizmo`
 
-From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](https://github.com/FredHutch/wiki/blob/master/_compdemos/howtoGizmo.md)
+From Rhino execute the `grabjupyter` command and a node will be allocated on Gizmo after you selected the CPUs and number of days you need the node. For more information on working with `gizmo`, see the dedicated page [here](/compdemos/howtoGizmo).
 
 ### Fred Hutch JupyterHub installation
 
-SciComp maintains an installation of [JupyterHub](https://jupyterhub.fhcrc.org/). Login with your HutchNetId.  (JupyterHub does not have the latest Python packages)
-
-## FIXME: Compdemos
-
-For more information on coding best practices, 
-including templates for data analysis and packages in Python,
-please see our [Software Development Standards page](/scicomputing/software_standards/).
-
-accessing AWS storage /compdemos/aws/
-
-checkpointing on gizmo /compdemos/Checkpointing-Gizmo/
-
-logging in Python /compdemos/python_logging/
-
-running tensorflow /compdemos/tensorflow-gpu/
+SciComp maintains an installation of [JupyterHub](https://jupyterhub.fhcrc.org/),
+which is available via login with your HutchNetId.
+Please note that JupyterHub does not include the most current versions of some Python packages.
 
 ## Python IDE comparison
 
@@ -228,20 +222,20 @@ Traceback (most recent call last):
 AssertionError
 ```
 
-FIXME: If we wanted to see at what point in the script that error emerged,
-
-* Breakpoints fn + F9, or using the mouse by clicking in the left margin in the editor.
-* Click the Bug with the play icon
-* We can start at the source of the error and move inwards
+If we wanted to see at what point in the script that error emerged,
+we could view breakpoints using `fn + F9`, 
+or by using the mouse to click in the left margin in the editor.
+Then, click the Bug with the play icon,
+so we can start at the source of the error and move inwards
 
 The breakpoint is placed on line 51 at the source of the error:
 
-FIXME: ![error1](https://user-images.githubusercontent.com/46639063/75187868-d9444280-56ff-11ea-9893-e2a2fa064875.png)
+![error1](https://user-images.githubusercontent.com/46639063/75187868-d9444280-56ff-11ea-9893-e2a2fa064875.png)
 
 "Step Into" the error (that is, go to the function being called) by clicking on the downward blue arrow.
 Then, step line by line through the problematic function and check whether state of all variables meet your expectations.
 
-FIXME: ![error2 1](https://user-images.githubusercontent.com/46639063/75188401-edd50a80-5700-11ea-9836-9d400300510d.png)
+![error2 1](https://user-images.githubusercontent.com/46639063/75188401-edd50a80-5700-11ea-9836-9d400300510d.png)
 
 For more information, 
 check out the [debugging section of the VS Code documentation](https://code.visualstudio.com/docs/python/debugging)
@@ -267,9 +261,9 @@ Sometimes you don't want to search for where a variable or function is defined.
 VS Code has a `Peek` function that lets you examine externally referenced objects, and even edit them, directly from where an object is referenced. 
 The images below illustrate the use of `Peek` in a script named `hello.py`:
 
-FIXME ![peek](https://user-images.githubusercontent.com/46639063/75184186-d98d0f80-56f8-11ea-8e67-cd76626992f0.png) 
+![peek](https://user-images.githubusercontent.com/46639063/75184186-d98d0f80-56f8-11ea-8e67-cd76626992f0.png) 
 
-FIXME https://code.visualstudio.com/Docs/editor/editingevolved#_peek
+See the [VS Code documentation](https://code.visualstudio.com/Docs/editor/editingevolved#_peek) for more information on `Peek`.
 
 **SSH Extension for remote development**  
 
@@ -281,9 +275,11 @@ The [Visual Studio Code Remote - WSL](https://code.visualstudio.com/docs/remote/
 
 **Git integration**
 
-FIXME: intro, git VS Code link
+VS Code allows access to a [few different types of version control software(https://code.visualstudio.com/docs/editor/versioncontrol)].
+[Git](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support) is the most frequently used at the Hutch,
+and the VS Code Git integration includes a few nice options for dealing with common tasks.
 
-Let's look at resolving a merge conflict. A merge conflict often arises when two users commit changes to the same file. For instance, on GitHub, I wrote:
+For example, let's look at resolving a merge conflict. A merge conflict often arises when two users commit changes to the same file. For instance, on GitHub, I wrote:
 
 ```bash
 I think we should think global!
@@ -524,9 +520,13 @@ various languages.
 [Jupyter](https://jupyter.org) is an open-source project developed by community consensus. 
 Project Jupyter develops two products we'll discuss:
 - [Jupyter Notebooks](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html): 
-human-readable documents including code (and its output) along with rich text elements,
-Notebooks are both executable documents used to perform data analysis,
-as well as reporting documents representing the analysis description and results. 
+human-readable documents including code (and its output) along with rich text elements.
+They allow the user to write code in small, 
+executable chunks that can be interspersed with blocks of markdown. 
+They are particularly well suited to exploring data and generating narrative-style presentations of analyses. 
+They are most commonly used by data scientists who would like to experiment with their code and easily generate charts and graphs. 
+[JupyterHub](https://jupyter.org/hub) is a multi-user version of Jupyter notebooks used for collaboration,
+which functionally operates like a notebook.
 - [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/): a web-based interface that allows interactions with Jupyter Notebooks,
 text editors, terminals, and more. 
 
@@ -534,7 +534,8 @@ This image shows multiple windows for different parts of the JupyterLab interfac
 
 ![](https://jupyterlab.readthedocs.io/en/stable/_images/interface_jupyterlab.png)
 
-FIXME: JupyterHub
+At Fred Hutch there are at least four ways to interact with Jupyter Notebooks, including the latest incarnation called JupyterLab.
+See the above section on [Accessing and using Python](#accessing-and-using-python) for more information.
 
 This section is adapted from [original content](https://github.com/Chilliwack/jupyter_demo) 
 written by [Justin Burge](https://github.com/Chilliwack)
@@ -555,8 +556,8 @@ please see the [JupyterLab Changelog](https://jupyterlab.readthedocs.io/en/lates
    - The [variable inspector](https://github.com/lckr/jupyterlab-variableInspector)
    - And for those that use R as well there's an [R kernel](https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/) so you can run R in JupyterLab. That's nice.
 
-
-   * FIXME __Caveat here__ - some of these extensions/add-on are not as frequently updated as the core JupyterLab product and may not be available with the latest version of JupyterLab so be mindful when installing them. 
+> Some of these extensions/add-ons described here are not as frequently updated as the core JupyterLab product and may not be available with the latest version of JupyterLab.
+> Please keep this in mind when installing and working with these tools. 
 
 Once you get JupyterLab and relevant extensions updated, 
 you'll have a light and functional web-based IDE.
@@ -567,10 +568,9 @@ including a dark theme!
 
 **the .ipynb file**
 
-FIXME: move up in section
 This IS the iPython notebook file or your JupyterLab file with code and markdown in it and note you can only access these from the directory you execute `jupyterlab` in so either `pwd` to make sure or have a set location of where you save the files because you'll only be able to open .ipynb files in either the start-up directory or it's sub-folders. 
 
-**Shortcuts**
+**Keyboard shortcuts**
 
 Some helpful shortcuts for working in JupyterLab are the following:
 
@@ -583,8 +583,10 @@ Some helpful shortcuts for working in JupyterLab are the following:
 * `M` turns the selected cell to markdown cell
 * `Y` turns the selected cell to code cell
 * `R` turns the selected cell to raw format cell
+* `Cmd + S` saves the notebook (though auto-save/checkpointing also on by default)
 
-FIXME It also auto-saves checkpoints so I don't worry too much about saving but use `Cmd + S` for good measures every now and again. JupyterLab also has a text editor which has keyboard maps to popular text editors like vim, emacs or Sublime Text which you can select and edit under Settings. And if you just need a cheat sheet [BOOM!](https://blog.ja-ke.tech/assets/jupyterlab-shortcuts/Shortcuts.png)
+Click [here](https://blog.ja-ke.tech/assets/jupyterlab-shortcuts/Shortcuts.png) for a cheat sheet.
+JupyterLab also has a text editor which has keyboard maps to popular text editors like vim, emacs or Sublime Text.
 
 ![](https://miro.medium.com/max/2640/1*O20XGvUOTLoFKQ9o20usIA.png)
 
@@ -598,7 +600,8 @@ You can run a segment of a script by selecting the part you care about and hitti
 
 **Identifying Problems and Their Quick Fixes**
 
-FIXME Linters help you find problems quickly and [this guy](https://github.com/mlshapiro/jupyterlab-flake8) built a good one based on the flake8 Python library for linting. 
+Linters help you find problems with your code syntax and formatting quickly.
+[Click here](https://github.com/mlshapiro/jupyterlab-flake8) to see one option implementable in JupyterLab based on the flake8 Python library for linting. 
 
 ![](https://raw.githubusercontent.com/mlshapiro/jupyterlab-flake8/master/img/example.png)
 ![](https://github.com/mlshapiro/jupyterlab-flake8/raw/master/img/editor-example.png)
@@ -625,12 +628,3 @@ The downside though is that version 2 was a major release for them and they are 
 
 Let's hope the synergy of the versioning of the core product and the community of extensions improves. Until then there's nothing stopping a Python or R user from doing all their engineering in Atom, PyCharm, RStudio, or VS Code and then the rest of their coding/management in JupyterLab since it _is_ browser-based. Hopefully, this tutorial has heightened your interest.
  
-## Glossary of Python terms
-
-FIXME
-
-- environment
-- kernel
-- notebook
-- IDE
-- package
