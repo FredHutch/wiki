@@ -46,6 +46,19 @@ For those who aren't able to attend in-person courses we have a range of stand a
 - __Ethics and Compliance:__ Staff from the Center Information Technology (CIT) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
   - Hosted every Wednesday from 10:00 to noon, staffed by Susan Glick
 
+_Coming Soon!_
+_We are currently working to formalize office hours for many of the Shared Resources offered through Fred Hutch. Please keep an eye on this page for updates!_
+
+- __Genomics & Bioinformatics:__ Staff from the Genomics and Bioinformatics Shared Resource are available to answer questions related to the generation and analysis of genomic data from DNA array, genetic analysis and high-throughput screening methods.
+- __Image Analysis:__ Staff with expertise in image analysis are available to answer questions.
+  - Staffed by Julien Dubrulle 
+- __Flow Cytometry:__ Staff from the Flow Cytometry Shared Resource are available to answer questions from aiding scientists on panel design, and marker and color choice to data analysis and troubleshooting.
+  - Staffed by Andrew Berger
+- __Proteomics & Metabolomics:__ Staff from the Proteomics and Metabolomics Shared Resource are available to answer questions related to sample preparation, sample separation, data collection and data analysis.
+- __Cellular Imaging:__ Staff from the Cellular Imaging Shared Resource with expertise in advanced microscopy incluidng light microscopy and electron microscopy are available to answer questions.
+- __Cryo-EM:__ Staff from the Cryo-EM Shared Resource are available to answer questions realted to sample preperation, data collection, and data processing.
+  - Staffed by Caleigh Azumaya
+
 >Office hours can also be found on the Centernet Calendar.  
 >Due to COVID-19 all office hours are currently hosted through MS Teams.
 
