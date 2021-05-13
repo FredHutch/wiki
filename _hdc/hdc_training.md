@@ -48,8 +48,8 @@ Office hours are available for many of the shared resources on campus. Bring you
 - __Ethics and Compliance:__ Staff from the Center Information Technology (CIT) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
   - Hosted every Wednesday from 10:00 to noon, staffed by Susan Glick
 
-_Coming Soon!_
-_We are currently working to formalize office hours for many of the Shared Resources offered through Fred Hutch. Please keep an eye on this page for updates!_
+_Coming Soon!_  
+_We are working to formalize office hours for many of the Shared Resources offered through Fred Hutch. Please keep an eye on this page for updates!_
 
 - __Genomics & Bioinformatics:__ Staff from the Genomics and Bioinformatics Shared Resource are available to answer questions related to the generation and analysis of genomic data from DNA array, genetic analysis and high-throughput screening methods.
   - Bioinformatics staffed by Matt Fitzgibbon.
