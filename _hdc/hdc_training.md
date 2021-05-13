@@ -33,9 +33,11 @@ For those who aren't able to attend in-person courses we have a range of stand a
 
 - [Code templates and examples](../_scicomputing/software_examples.md) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as addtional examples of executable code that can be tailored to suit your own needs.
 
->Due to the nature of self-directed learning there is no instructor immediately available to answer questions or troubleshoot. Please bring questions to the relevant office hours (listed below) or to the [Coop Communities Slack](fhbig.slack.com).
+>Due to the nature of self-directed learning there is no instructor immediately available to answer questions or troubleshoot. Please bring questions to the relevant office hours (listed below) or to the [FH-BCR Slack](fhbig.slack.com).
 
 ## Office hours 
+
+Office hours are available for many of the shared resources on campus. Bring your questions and get answers! Currently most office hours are hosted on MS Teams. You can find links to office hours and get regular reminders by joining the [Fred Hutch Bioinformatics and Computational Research (FH-BCR) community Slack workspace](fhbig.slack.com).
 
 - __Hutch Data Core:__ Staff are available to assist researchers in getting started with bioinformatics and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
   - Hosted Every Tuesday from 9:00 to noon, staffed by Lauren Wolfe
@@ -50,14 +52,18 @@ _Coming Soon!_
 _We are currently working to formalize office hours for many of the Shared Resources offered through Fred Hutch. Please keep an eye on this page for updates!_
 
 - __Genomics & Bioinformatics:__ Staff from the Genomics and Bioinformatics Shared Resource are available to answer questions related to the generation and analysis of genomic data from DNA array, genetic analysis and high-throughput screening methods.
+  - Bioinformatics staffed by Matt Fitzgibbon.
+  - Genomics staffed by Cassie Sather.
 - __Image Analysis:__ Staff with expertise in image analysis are available to answer questions.
-  - Staffed by Julien Dubrulle 
+  - Staffed by Julien Dubrulle.
 - __Flow Cytometry:__ Staff from the Flow Cytometry Shared Resource are available to answer questions from aiding scientists on panel design, and marker and color choice to data analysis and troubleshooting.
-  - Staffed by Andrew Berger
+  - Staffed by Andrew Berger.
 - __Proteomics & Metabolomics:__ Staff from the Proteomics and Metabolomics Shared Resource are available to answer questions related to sample preparation, sample separation, data collection and data analysis.
+  - Staffed by Phil Gafken.
 - __Cellular Imaging:__ Staff from the Cellular Imaging Shared Resource with expertise in advanced microscopy incluidng light microscopy and electron microscopy are available to answer questions.
+  - Staffed by Peng Guo.
 - __Cryo-EM:__ Staff from the Cryo-EM Shared Resource are available to answer questions realted to sample preperation, data collection, and data processing.
-  - Staffed by Caleigh Azumaya
+  - Staffed by Caleigh Azumaya.
 
 >Office hours can also be found on the Centernet Calendar.  
 >Due to COVID-19 all office hours are currently hosted through MS Teams.
@@ -66,7 +72,6 @@ _We are currently working to formalize office hours for many of the Shared Resou
 
 - [UW Biostatistics Summer Institutes](https://www.biostat.washington.edu/suminst) offer yearly intensive courses over the summers on a wide variety of topics.
 - [Meetup](https://www.meetup.com) hosts various coding groups that meet regularly to share skills and provide networking opportunities. [RLadies Seattle](https://www.meetup.com/rladies-seattle/) and [Seattle UseR](https://www.meetup.com/Seattle-useR/) both include leaders from Fred Hutch.
-
 
 ## Resources On the Web
 
