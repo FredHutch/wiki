@@ -57,7 +57,7 @@ singularity {
     enabled = true
     autoMounts = true
     cacheDir = '<SINGULARITY_CACHE_DIR>'
-    runOptions = '--contain --no-home'
+    runOptions = '--containall --no-home'
 }
 
 workDir = '<WORK_DIR>'
