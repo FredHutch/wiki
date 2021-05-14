@@ -11,27 +11,11 @@ high-throughput imaging, electron microscopy, etc.
 While the needs of researchers vary widely by technical domain, scientific goals, and
 computational complexity, the Data Core works to provide support via:
 
-- Instructor-led trainings & self-paced learning
-- Project-oriented consultation (via the Bioinformatics Core)
 - Data portals for automated analysis and visualization
 - Automated bioinformatics workflows for common tasks in genomics, imaging, proteomics, etc.
+- Project-oriented consultation (via the Bioinformatics Core)
+- Instructor-led trainings & self-paced learning
 
-
-# Trainings
-
-STUB: Summary paragraph on trainings offered by the Data Core
-
-[Link to information on trainings](/hdc/hdc_training)
-
-# Bioinformatics Services
-
-The process of analyzing datasets generated for a particular experiment or project can be complex, often requiring deep expertise in the technology used to generate the raw data as well as the computational tools needed to process them. The Bioinformatics Core provides researchers with support for this analysis, engaging on the basis of specific projects.
-
-Bioinformatics staff are available by appointment for one-on-one consultation. We are happy to discuss experimental design, choice of data analysis strategies and software tools, or to help with advice and troubleshooting as you conduct your own analyses.
-
-We strongly encourage researchers to consult with a bioinformatics specialist at the earliest stages of a project to ensure an appropriate experimental design is in place prior to seeking data analysis support. 
-
-To connect with the Bioinformatics Core, please visit [our webpage](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html) or reach out directly to Matthew Fitzgibbon [by email](mailto:mfitzgib@fredhutch.org).
 
 # Data Portals
 
@@ -70,4 +54,27 @@ Our [Workflow Resources](/hdc/hdc_workflows) include:
 - Building your own automated workflows (e.g., from existing BASH scripts)
 
 If you have any questions about using automated workflows for your research, please don't hesitate
-to [get in touch](mailto:sminot@fredhutch.org).
+to [get in touch](mailto:hutchdatacore@fredhutch.org).
+
+# Bioinformatics Services
+
+The process of analyzing datasets generated for a particular experiment or project can be complex, often requiring deep expertise in the technology used to generate the raw data as well as the computational tools needed to process them. The Bioinformatics Core provides researchers with support for this analysis, engaging on the basis of specific projects.
+
+Bioinformatics staff are available by appointment for one-on-one consultation. We are happy to discuss experimental design, choice of data analysis strategies and software tools, or to help with advice and troubleshooting as you conduct your own analyses.
+
+We strongly encourage researchers to consult with a bioinformatics specialist at the earliest stages of a project to ensure an appropriate experimental design is in place prior to seeking data analysis support. 
+
+To connect with the Bioinformatics Core, please visit [our webpage](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html) or reach out directly [by email](mailto:bioinformatics@fredhutch.org).
+
+# Trainings
+
+While there are many resources available online for building skills in computational analysis of
+complex datasets, it often be difficult for researchers to know where to start or what approaches
+will be the most useful. To help provide some structure for researcher-driven skills development,
+we work to provide a combination of self-directed as well as in-person learning opportunities.
+
+Depending on your background and interest, you may find it helpful to sign up for an instructor-led
+training; to work through a self-directed learning module; to attend one of the office hours held
+by experts in a particular domain; or to explore a wider range of resources available on the internet.
+
+For more information, browse our [information resources for learning opportunities](/hdc/hdc_training).

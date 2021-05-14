@@ -7,17 +7,17 @@ Fred Hutch offers a variety of educational resources on aspects of bioinformatic
 
 ## Instructor-led training
 
-We hope to offer instructor-led training and workshops in the near future.
+While we are currently working to add staffing support for instructor-led training activities, we hope to offer targeted workshops in the near future.
 
 Keep an eye out for:
 - Journal clubs to bring together people with shared interests in a particular method or technology to discuss current, high-impact papers.
-- Workshops that offer training specific to Fred Hutch infrastructure such as how to effectively use the Slurm cluster or access and use AWS.
+- Workshops that offer training specific to Fred Hutch infrastructure such as how to effectively use the SLURM cluster or access and use AWS.
 
 >Instructor-led opportunties are in the planning stage and pending staff support.
 
 ## Self-directed learning
 
-For those who aren't able to attend in-person courses we have a range of stand alone resources to help guide their self-directed learning. 
+For those who aren't able to attend in-person courses we have a range of standalone resources to help guide their self-directed learning. 
 
 - Fredhutch.io is an initiative to facilitate education about and promote access to computational resources at Fred Hutch. Those interested in learning core computational skills like R and Python can work through this content at their own pace.
   - [Intro to Python](https://fredhutchio.github.io/python_intro/)
@@ -33,7 +33,7 @@ For those who aren't able to attend in-person courses we have a range of stand a
 
 - [Code templates and examples](../_scicomputing/software_examples.md) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as addtional examples of executable code that can be tailored to suit your own needs.
 
->Due to the nature of self-directed learning there is no instructor immediately available to answer questions or troubleshoot. Please bring questions to the relevant office hours (listed below) or to the [FH-BCR Slack](fhbig.slack.com).
+>Due to the nature of self-directed learning there is no instructor immediately available to answer questions or troubleshoot. Please bring questions to the relevant office hours (listed below) or to the [FH-BCR Slack](http://fhbig.slack.com).
 
 ## Office hours 
 
