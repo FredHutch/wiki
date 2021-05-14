@@ -62,6 +62,13 @@ Follow [these instructions](/hdc/workflows/running/run_script) for setting up th
 
 Now you are ready to actually run your workflow!
 
+A great workflow to run for the first time which will test that your configuration
+has been set up correctly is `nextflow run hello`. This is a very simple "Hello World"
+workflow which will simply print the word "hello" translated into different languages.
+While workflows are usually references with some combination of `<organization>/<repository>`
+syntax, the `hello` workflow is just a helpful utility which is bundled into the Nextflow
+codebase for help with testing.
+
 While the workflow is being executed, you will need to be able to keep the main process
 running which is responsible for coordinating all of the various tasks.
 If you are running the workflow from your local computer, just make sure to keep the
