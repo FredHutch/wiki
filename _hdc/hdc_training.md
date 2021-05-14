@@ -24,14 +24,14 @@ For those who aren't able to attend in-person courses we have a range of standal
   - [Intermediate Python](https://fredhutchio.github.io/python_programming/)
   - [Intro to R](https://fredhutchio.github.io/r_intro/)
 
-- [Bioinformatics and Genomics Resource Library](/bioinformatics_library.md) is a curated list of external resources related to bioinformatics and genomics including peer reviewed papers, blog posts, and video tutorials.
+- [Bioinformatics and Genomics Resource Library](/hdc/bioinformatics_library) is a curated list of external resources related to bioinformatics and genomics including peer reviewed papers, blog posts, and video tutorials.
 
-- [The Scientific Computing Resource Library](https://sciwiki.fredhutch.org/compdemos/) includes tutorials of how to perform common computational tasks using software available at Fred Hutch. Below we've highlighted a few popular links, but be sure to check out the page to see all the tutorials available.
-  - [How to Rhino](../_compdemos/howtoRhino.md)
-  - [R Tips and Tricks](../_compdemos/R_tips_tricks.md)
-  - [Accessing Economy Local Storage](../_compdemos/Economy-storage.md)
+- [The Scientific Computing Resource Library](/compdemos) includes tutorials of how to perform common computational tasks using software available at Fred Hutch. Below we've highlighted a few popular links, but be sure to check out the page to see all the tutorials available.
+  - [How to Rhino](/compdemos/howtoRhino)
+  - [R Tips and Tricks](/compdemos/R_tips_tricks)
+  - [Accessing Economy Local Storage](/compdemos/Economy-storage)
 
-- [Code templates and examples](../_scicomputing/software_examples.md) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as addtional examples of executable code that can be tailored to suit your own needs.
+- [Code templates and examples](/scicomputing/software_examples) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as addtional examples of executable code that can be tailored to suit your own needs.
 
 >Due to the nature of self-directed learning there is no instructor immediately available to answer questions or troubleshoot. Please bring questions to the relevant office hours (listed below) or to the [FH-BCR Slack](http://fhbig.slack.com).
 
