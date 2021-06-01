@@ -209,7 +209,5 @@ hdc:
       url: /hdc/workflows/running/on_gizmo/
     - title: Workflow Catalog
       url: /hdc/workflows/workflow_catalog/
-  - title: "Bioinformatics Services"
-    url: /hdc/hdc_index/#bioinformatics-services
   - title: "Trainings"
     url: /hdc/hdc_training/
