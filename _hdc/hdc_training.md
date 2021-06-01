@@ -37,7 +37,7 @@ For those who aren't able to attend in-person courses we have a range of standal
 
 ## Office hours 
 
-Office hours are available for many of the shared resources on campus. Bring your questions and get answers! Currently most office hours are hosted on MS Teams. You can find links to office hours and get regular reminders by joining the [Fred Hutch Bioinformatics and Computational Research (FH-BCR) community Slack workspace](fhbig.slack.com).
+Office hours are available for many of the shared resources on campus. Bring your questions and get answers! Currently most office hours are hosted on MS Teams. You can find links to office hours and get regular reminders by joining the [Fred Hutch Bioinformatics and Computational Research (FH-BCR) community Slack workspace](http://fhbig.slack.com).
 
 - __Hutch Data Core:__ Staff are available to assist researchers in getting started with bioinformatics and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
   - Hosted Every Tuesday from 9:00 to noon, staffed by Lauren Wolfe
