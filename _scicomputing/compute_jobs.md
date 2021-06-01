@@ -124,6 +124,45 @@ sbatch -c 6 myscript.sh my-output
 
 ## Managing Jobs
 
+### Monitoring Resource Usage
+
+Monitoring the resources that jobs are using can be done using `sstat`.  This monitors the resources used by all steps in the job.  A number of different statistics are monitored- run `sstat -e` to see the full compliment of available statistics.
+
+As example, to check job memory consumption:
+
+```
+# sstat -j 90592201,90592202 -o jobid,averss,maxrss,avevmsize,maxvmsize
+       JobID     AveRSS     MaxRSS  AveVMSize  MaxVMSize
+------------ ---------- ---------- ---------- ----------
+90592201.ba+   3524552K   3524552K   4506160K   4506160K
+90592202.ba+     15088K   3527928K     56528K   4497964K
+```
+
+
+### Job Priority
+
+A job's priority determines when it will be run.  The fair-share algorithm is the primary method by which your jobs' priority is determined, but this currently only works at the account level- when you have a cluster account used by many different people or if you have different work you wish to prioritize, the current priority algorithm doesn't work as well.
+
+There is an additional factor- the "niceness" factor- which can be used to reduce the priority of some jobs allowing jobs without that factor to run ahead of those "niced" jobs.  This can be done at job submit time, with the option "--nice=<factor>" or adjusted after job submit with `scontrol update jobid=<jobid> nice=<factor>`
+
+At this time, "nice" values in the hundreds should be more than sufficient to provide ordering within your account's priority share:
+
+    sbatch --nice=100 ...
+
+Note too that `grabnode` will pass along the `--nice` flag:
+
+    grabnode --nice=10
+
+though typically you'd likely prefer that grabnode has the higher priority (being an interactive process).  The strategy here is if you have a large number of batch jobs, submit those with a nice value.  Then, if you need to grab a node the grabnode jobs will have a higher priority and run ahead of the batch jobs.
+
+Some things to consider:
+
+ - too nice a factor may inhibit any jobs running.  Smaller values are effective
+ - priority adjustments can only reduce total priority
+ - thus, adding a general "middle-of-the-road" factor for all jobs will allow greater flexibility in ordering your jobs
+ - the command `sprio` can be used to see the impact of these nice factors
+ - work out a process with others in your lab.
+
 ### Wall Time
 
 A job's "wall time" refers to the amount of time a job uses based on the clock-on-the-wall (compare to CPU time, which is time multiplied by the number of CPUs in use).  Wall time is requested using `-t` when submitting a job.  The default and the maximum time for submitted jobs depends on the cluster and partition.  The attributes of cluster partitions can be viewed with the command `scontrol show partition` or `scontrol show partition <partition name>` to see only the attributes of a single partition.
@@ -228,3 +267,4 @@ For more information and education on how to use HPC resources from external sou
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)
+
