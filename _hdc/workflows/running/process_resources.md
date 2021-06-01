@@ -25,7 +25,7 @@ but it's generally safe to set CPU/RAM values in which either
 1CPU -> 4GB RAM (like gizmo) or 1CPU -> 8GB RAM (for higher-memory tasks).
 
 
-# Setting Resources Globally
+## Setting Resources Globally
 
 To specify that all of the processes within a workflow should use
 the same number of CPUs and RAM, a simple pair of arguments can
@@ -35,7 +35,7 @@ using the flags:
 - `-process.memory`: e.g. "1.GB"
 - `-process.cpus`: e.g. "4"
 
-# Dynamically Setting Resources Per-Process
+## Dynamically Setting Resources Per-Process
 
 We often find that the resources needed to run a workflow on one
 dataset may be different from the resources needed to run the same
@@ -47,7 +47,7 @@ We recommend using one of two different approaches to conveniently
 specify the resources needed for a particular run, while also being
 able to distinguish between light-weight vs. heavy-duty processes.
 
-## Setting Resources by Process Name
+### Setting Resources by Process Name
 
 Within the [Nextflow configuration file](/hdc/workflows/workflow_background)
 that you use to run a particular script, you can add a section which
@@ -74,7 +74,7 @@ process {
 }
 ```
 
-## Setting Resources by Process Label
+### Setting Resources by Process Label
 
 Rather than using the individual process name, which could become
 unwieldy for workflows containing many distinct tasks, you may want
@@ -106,7 +106,7 @@ process {
 ```
 
 
-# Hard-Coding Resources Per-Process
+## Hard-Coding Resources Per-Process
 
 While writing a workflow, you have the option to set the CPU/RAM
 for each individual process using the [process directives](https://www.nextflow.io/docs/latest/process.html#directives).

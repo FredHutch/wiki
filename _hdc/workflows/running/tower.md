@@ -14,7 +14,7 @@ associated with your workflow, do not use Tower. While no actual file
 data is transmitted, the file names will be contained in the associated
 logs and this external resources has not undergone any security review.
 
-# Getting Started
+## Getting Started
 
 After setting up an account at [http://tower.nf/](http://tower.nf/),
 follow their instructions to copy your private access token. That 
@@ -26,7 +26,7 @@ If you would rather use Tower for one individual workflow (and not
 add it to your global configuration), the access token can be provided
 using the `-with-tower` option in [the run script](/hdc/workflows/running/run_script).
 
-# Monitoring Workflows
+## Monitoring Workflows
 
 Once you've started a workflow, just open up [Tower](https://tower.nf)
 and select your workflow from the list. The progress of each individual

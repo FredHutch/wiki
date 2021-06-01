@@ -8,7 +8,7 @@ hdc: True
 [Running FAQ](running/running_faq.md)
 
 
-# Things to Consider
+## Things to Consider
 
 
 **Storage Size & Locations**

@@ -17,7 +17,7 @@ computational complexity, the Data Core works to provide support via:
 - Instructor-led trainings & self-paced learning
 
 
-# Data Portals
+## Data Portals
 
 With recent advancements in modern technology for the analysis and visualization of complex datasets,
 it has become possible to connect researchers directly with their data using interactive webpages
@@ -32,7 +32,7 @@ These include:
 
 For more information, please view the [Data Portal Resources](/hdc/hdc_portals).
 
-# Bioinformatics Workflows
+## Bioinformatics Workflows
 
 The bioinformatic process of analyzing large datasets often requires a series of computational steps,
 each of which may require a different set of software dependencies.
@@ -56,7 +56,7 @@ Our [Workflow Resources](/hdc/hdc_workflows) include:
 If you have any questions about using automated workflows for your research, please don't hesitate
 to [get in touch](mailto:hutchdatacore@fredhutch.org).
 
-# Bioinformatics Services
+## Bioinformatics Services
 
 The process of analyzing datasets generated for a particular experiment or project can be complex, often requiring deep expertise in the technology used to generate the raw data as well as the computational tools needed to process them. The Bioinformatics Core provides researchers with support for this analysis, engaging on the basis of specific projects.
 
@@ -66,7 +66,7 @@ We strongly encourage researchers to consult with a bioinformatics specialist at
 
 To connect with the Bioinformatics Core, please visit [our webpage](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html) or reach out directly [by email](mailto:bioinformatics@fredhutch.org).
 
-# Trainings
+## Trainings
 
 While there are many resources available online for building skills in computational analysis of
 complex datasets, it often be difficult for researchers to know where to start or what approaches

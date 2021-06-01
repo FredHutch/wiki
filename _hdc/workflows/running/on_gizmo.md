@@ -46,7 +46,7 @@ If you do not have a Tower account set up, you can easily omit the entire
 If you are interested in learning more about using Tower to monitor workflow progress,
 [read our description](/hdc/workflows/running/tower).
 
-# Nextflow Configuration - Gizmo
+## Nextflow Configuration - Gizmo
 
 Below is a template configuration file which can be used as your `nextflow.gizmo.config`.
 Please make sure to replace every placeholder value (e.g. `<SINGULARITY_CACHE_DIR>`),

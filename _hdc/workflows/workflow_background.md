@@ -3,7 +3,7 @@ title: Workflow Background
 hdc: True
 ---
 
-# The Workflow Concept
+## The Workflow Concept
 
 A [workflow in Nextflow](https://www.nextflow.io/docs/latest/getstarted.html#your-first-script) 
 is (at the minimum) a text file written in a particular format containing all of the details of
@@ -28,7 +28,7 @@ likely uses a different system for high-performance computing.
 The settings which are applied to instruct Nextflow in the appropriate computational resource to use for
 the execution are referred to as the _configuration_.
 
-# Behind the Scenes
+## Behind the Scenes
 
 When a users invokes a workflow on the command line (e.g. `nextflow run ...`), the workflow manager will:
 

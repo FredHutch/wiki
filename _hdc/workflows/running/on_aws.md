@@ -57,7 +57,7 @@ If you are interested in learning more about using Tower to monitor workflow pro
 [read our description](/hdc/workflows/running/tower).
 
 
-# Nextflow Configuration - AWS
+## Nextflow Configuration - AWS
 
 Below is a template configuration file which can be used as your `nextflow.aws.config`.
 Please make sure to replace every placeholder value (e.g. `<WORK_DIR>`),

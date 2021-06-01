@@ -3,7 +3,7 @@ title: Computational Workflows
 hdc: True
 ---
 
-# Understanding Workflows
+## Understanding Workflows
 
 When performing bioinformatic analysis, scientists often need to perform a series of interconnected
 computational transformations of the raw input data. While it is possible to coordinate multiple tasks
@@ -27,11 +27,11 @@ We welcome the contribution of any additional workflow documentation, which can 
 
 For further details on the concepts of workflow managers, see [Background on Workflows](/hdc/workflows/workflow_background).
 
-# Getting Started
+## Getting Started
 
 If you're new to workflows, follow this guide to [run your first workflow](/hdc/workflows/running_first_workflow).
 
-# Workflow Configuration
+## Workflow Configuration
 
 One of the nice things about using a workflow manager is that you have the ability to change the way
 that a workflow is run (on what computers, using what resources, analyzing what files), without changing
@@ -43,7 +43,7 @@ the workflow itself. This includes:
 - [Specifying computational resources](/hdc/workflows/running/process_resources)
 - [Monitoring workflows on Tower](/hdc/workflows/running/tower)
 
-# Workflow Catalog
+## Workflow Catalog
 
 While there are many workflows developed by researchers around the world, the Data Core is also working
 to maintain a catalog of workflows for Fred Hutch researchers. If you have any questions about using these
