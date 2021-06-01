@@ -192,12 +192,12 @@ hdc:
   - title: "Hutch Data Core"
     url: /hdc/hdc_index/
     children:
-    - title: Contact Us
-      url: /hdc/hdc_contact_us/
     - title: "Data Portals"
       url: /hdc/hdc_portals/
     - title: "Trainings"
       url: /hdc/hdc_training/
+    - title: Contact Us
+      url: /hdc/hdc_contact_us/
   - title: "Bioinformatics Workflows"
     url: /hdc/hdc_workflows/
     children:
