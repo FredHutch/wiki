@@ -194,8 +194,10 @@ hdc:
     children:
     - title: Contact Us
       url: /hdc/hdc_contact_us/
-  - title: "Data Portals"
-    url: /hdc/hdc_portals/
+    - title: "Data Portals"
+      url: /hdc/hdc_portals/
+    - title: "Trainings"
+      url: /hdc/hdc_training/
   - title: "Bioinformatics Workflows"
     url: /hdc/hdc_workflows/
     children:
@@ -209,5 +211,3 @@ hdc:
       url: /hdc/workflows/running/on_gizmo/
     - title: Workflow Catalog
       url: /hdc/workflows/workflow_catalog/
-  - title: "Trainings"
-    url: /hdc/hdc_training/
