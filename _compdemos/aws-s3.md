@@ -237,7 +237,7 @@ s3.download_file(bucket_name, "df.csv", "df.csv")
 
 # AWS via R
 
-You can use [Amazon Web Services' S3](https://aws.amazon.com/s3/) (Simple Storage Service) directly from `R`.  The `R` package which facilitates this, `aws.s3`, is included in recent builds of `R` available on the `rhino` systems and the `gizmo` and `beagle` clusters.
+You can use [Amazon Web Services' S3](https://aws.amazon.com/s3/) (Simple Storage Service) directly from `R`.  The `R` package which facilitates this, `aws.s3`, is included in recent builds of `R` available on the `rhino` systems and the `gizmo` cluster.
 
 ## Getting Started
 

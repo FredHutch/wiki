@@ -20,7 +20,7 @@ The exact file collection available is in flux but here is an extract:
 * **pi.json/csv** - a combined list of all member track Hutch faculty and Hutch staff who have been contact PI on a NIH grant in the last 5 years. Members of this list are getting certain allocations of data storage and high performance computing covered by center funds. IDs for Faculty / PI ID's are built from the PI's last name and the first initial of the preferred first name (or nick name), e.g. doe_j for Jane Doe
 * **users.json/csv** - all active hutch employees and non-employees (affiliates). If a person has a "preferred name" (aka nick name) set in the HR system, the givenName column will always be set to this entry.
 * **employees.json/csv** - all Hutch employees (Faculty and Staff)
-* **sc_users.json/csv** - all users in departments that have had at least one scientific computing user in the past. Users in this list automatically get a posix home directory (formerly known as 'Fred account') and other scientific computing accounts (such as access to the Gizmo, Beagle and Koshu compute clusters)
+* **sc_users.json/csv** - all users in departments that have had at least one scientific computing user in the past. Users in this list automatically get a posix home directory (formerly known as 'Fred account') and other scientific computing accounts (such as access to the Gizmo compute cluster)
 * **pi2user.json/csv** - get the user name (hutchnet id) of a PI when passing in the PI id (lastname_f aka doe_j)
 * **user2pi.json/csv** - get the PI id by passing in the user id of a person in the reporting line of the PI
 * **user2sup.json.csv** - get the immediate supervisor by passing in the user id

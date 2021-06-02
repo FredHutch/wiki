@@ -44,7 +44,7 @@ If required, ask the Helpdesk or your divisional IT support to be added to the s
 
 - Download and install the Software in trial mode [here](https://mountainduck.io/)
 - Download the Swiftstack profile [here](http://files.swiftstack.com/OpenStack Swift Auth v2.0 (SwiftStack HTTPS).cyberduckprofile) and open / doubleclick it from your downloaded files.
-- To get a license file, download the `fredhutch50.mountainducklicense` from [here] (https://teams.fhcrc.org/sites/citwiki/SciComp/Documents/fredhutch50.mountainducklicense) and double click the file or drag it to the Mountain Duck application icon to register.
+- To get a license file, download the `fredhutch50.mountainducklicense` from [here](https://teams.fhcrc.org/sites/citwiki/SciComp/Documents/fredhutch50.mountainducklicense) and double click the file or drag it to the Mountain Duck application icon to register.
 - Continue with [Configuring Mountain Duck](#Configuring-Mountain-Duck) below.
 
 ### Configuring Mountain Duck

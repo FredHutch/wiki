@@ -1,16 +1,15 @@
 ---
 title: Computing Job Management
-last_modified_at: 2019-10-24
 primary_reviewers: atombaby
 ---
 
 Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system and performing tasks one by one.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop should be disconnected for any reason the job will be terminated.
 
-The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on the gizmo and beagle clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm see the section below on [Using Slurm on Fred Hutch Systems](#using-slurm-on-fred-hutch-systems), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources available
+The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on SciComp clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm see the section below on [Using Slurm on Fred Hutch Systems](#using-slurm-on-fred-hutch-systems), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources available
 
 ## Using Slurm on Fred Hutch Systems
 
-This section is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the clusters available.  There are two main clusters in use today that rely on Slurm - the on-campus `Gizmo` cluster and the cloud-based `Beagle` cluster (see our [Technology page](/scicomputing/compute_platforms/) for more information about those resources.  Commands work the same in either environment. 
+This section is intended to be a basic introduction to using the workload manager for Fred Hutch managed clusters for high performance computing.  Slurm is the workload manager that manages both your jobs and the resources available in the gizmo cluster.
 
 ### Examples of Use
 A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  This is an evolving example repo that new users can refer to to begin to get into parallel computing and more adept use of Slurm.  If you are a Fred Hutch user and would like to contribute to the documentation or the examples there, to share with the community how you structure your interactions with Slurm, submit a pull request there.
@@ -30,7 +29,7 @@ Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/
 
 ### Cluster
 
-A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).  At the Hutch we have two clusters, `Beagle` and `Gizmo`.  From most hosts the default cluster will be _gizmo_- selection of the target cluster is done via an argument to Slurm commands (see [Multi-Cluster Operation](#multicluster-operation) below)
+A cluster is a collection of compute resources (nodes) under the control of the workload manager (Slurm in our case).
 
 ### Partition
 
@@ -72,7 +71,6 @@ by the task you are running).
 
 These two take many of the same options:
 
- - `-M` select the cluster on which the job will run
  - `-p` change the partition
  - `-t` request a certain amount of time for the job.
  - `-n` request a number of tasks (default 1)
@@ -126,13 +124,54 @@ sbatch -c 6 myscript.sh my-output
 
 ## Managing Jobs
 
+### Monitoring Resource Usage
+
+Monitoring the resources that jobs are using can be done using `sstat`.  This monitors the resources used by all steps in the job.  A number of different statistics are monitored- run `sstat -e` to see the full compliment of available statistics.
+
+As example, to check job memory consumption:
+
+```
+# sstat -j 90592201,90592202 -o jobid,averss,maxrss,avevmsize,maxvmsize
+       JobID     AveRSS     MaxRSS  AveVMSize  MaxVMSize
+------------ ---------- ---------- ---------- ----------
+90592201.ba+   3524552K   3524552K   4506160K   4506160K
+90592202.ba+     15088K   3527928K     56528K   4497964K
+```
+
+
+### Job Priority
+
+A job's priority determines when it will be run.  The fair-share algorithm is the primary method by which your jobs' priority is determined, but this currently only works at the account level- when you have a cluster account used by many different people or if you have different work you wish to prioritize, the current priority algorithm doesn't work as well.
+
+There is an additional factor- the "niceness" factor- which can be used to reduce the priority of some jobs allowing jobs without that factor to run ahead of those "niced" jobs.  This can be done at job submit time, with the option "--nice=<factor>" or adjusted after job submit with `scontrol update jobid=<jobid> nice=<factor>`
+
+At this time, "nice" values in the hundreds should be more than sufficient to provide ordering within your account's priority share:
+
+    sbatch --nice=100 ...
+
+Note too that `grabnode` will pass along the `--nice` flag:
+
+    grabnode --nice=10
+
+though typically you'd likely prefer that grabnode has the higher priority (being an interactive process).  The strategy here is if you have a large number of batch jobs, submit those with a nice value.  Then, if you need to grab a node the grabnode jobs will have a higher priority and run ahead of the batch jobs.
+
+Some things to consider:
+
+ - too nice a factor may inhibit any jobs running.  Smaller values are effective
+ - priority adjustments can only reduce total priority
+ - thus, adding a general "middle-of-the-road" factor for all jobs will allow greater flexibility in ordering your jobs
+ - the command `sprio` can be used to see the impact of these nice factors
+ - work out a process with others in your lab.
+
 ### Wall Time
 
-A job's "wall time" refers to the amount of time a job uses based on the clock-on-the-wall (compare to CPU time, which is time multiplied by the number of CPUs in use).  Wall time is requested using `-t` when submitting a job.  The default and the maximum time for submitted jobs depends on the cluster and partition.
+A job's "wall time" refers to the amount of time a job uses based on the clock-on-the-wall (compare to CPU time, which is time multiplied by the number of CPUs in use).  Wall time is requested using `-t` when submitting a job.  The default and the maximum time for submitted jobs depends on the cluster and partition.  The attributes of cluster partitions can be viewed with the command `scontrol show partition` or `scontrol show partition <partition name>` to see only the attributes of a single partition.
+
+In the `campus-new` partition the default wall time is 3 days and the maximum is 30 days.  Special attention should be given if you think a job requires a long wall time (around 7 days and above) as individual cluster nodes are optimized for cost-effective performance, not robust operation.  For example, nodes have a single network interface and non-redundant power.  Nodes are often shared which presents its own share of challenges as well.  If you have long-running jobs look at options like splitting the task into smaller chunks or checkpointing to mitigate potential failures.
 
 Determining how much time to request for your job is something of an art-form.  You can review historical time use for similar jobs using `sacct` to make an estimate on how much time will be required.  Erring on the side of safety- that is, requesting significantly more time than you think necessary- is usually the better way to go to avoid your job getting terminated should it run over that requested time.
 
-If you should need to increase the amount of time (i.e. increase wall time) for a running job (or jobs), email Scientific Computing at `scicomp`.  If a job has not started, you can update this yourself.  For example, to increase a job's time limit by two days:
+If you should need to increase the wall time for a running job (or jobs), email Scientific Computing at `scicomp`.  If a job has not started, you can update this yourself.  For example, to increase a job's time limit by two days:
 
 ```
 scontrol update jobid=<job ID> timelimit=+2-0
@@ -169,6 +208,13 @@ Indicates that the job is running under an account that is already using the max
 There are other reason codes that are less-common in our environment.  Email Scientific Computing for more information.
 
 ### Useful Commands
+
+#### Notifications
+`sbatch` has a variety of parameters that allow for notifications to users which can be found on the [Slurm manual page](http://schedmd.com).  An exmaple of this is if, for instance, you wanted to receive an email when your job finished.  You can include these `SBATCH` options when sending your job to make that happen. 
+```
+#SBATCH --mail-user=fred@fredhutch.org
+#SBATCH --mail-type=END
+```
 
 #### `squeue`
 
@@ -212,21 +258,6 @@ Obtain a Slurm job allocation (a set of nodes), execute a command, and then rele
 
 The `hitparade` command will show a summary of all jobs running and queued on the cluster broken down by user and account.  Note that this isn't a Slurm command, rather something built in-house at Fred Hutch. 
 
-`hitparade` takes the `-M` argument to select a cluster about which to generate the output. 
-
-```
-rhino[~]: hitparade -M beagle
-loading Python/3.6.4-foss-2016b-fh2...
-
-  === Queue: campus ======= (R / PD) ======
-    poe_e (edgar) 300 / 72
-
-  === Queue: largenode ======= (R / PD) ===
-    schulz_cm (snoopy) 273 / 0
-
-```
-
-
 ## External Slurm and HPC Reference and Learning Resources
 For more information and education on how to use HPC resources from external sources see the following sites:
 
@@ -236,3 +267,4 @@ For more information and education on how to use HPC resources from external sou
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)
+

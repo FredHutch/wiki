@@ -8,11 +8,15 @@ This section describes how to get access and credentials to computing systems on
 
 ## HutchNet ID
 
-A HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate. It is also called Network login or Active Directory credentials. You can use it to login to most resources at the Center (Desktop Computer, Employee Self Service, VPN, Webmail) as well to Scientific Computing systems such as `Rhino` (`ssh rhino`), which is the login system to large scale cluster computing resources like `Gizmo` and `Beagle`.
+A HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate. It is also called Network login or Active Directory credentials. You can use it to login to most resources at the Center (Desktop Computer, Employee Self Service, VPN, Webmail) as well to Scientific Computing systems such as `Rhino` (`ssh rhino`), which is the login system to large scale cluster computing resources like `Gizmo`.
 
 If one of your collaborators requires access to the Fred Hutch network you can submit a [non-employee action form](https://centernet.fredhutch.org/cn/f/hr/lcex/non-employee-action-form.html). Non-employees is a generic administrative term for affiliates, students, contractors, etc.
 
 Please see the Service Desk site on CenterNet for more information about [HutchNet ID](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) including password rotation, etc.
+
+## Accessing Slurm Clusters
+
+To use Slurm clusters like _gizmo_ you also need to have your HutchNet ID associated with a PI account.  Errors similar to "Invalid account or account/partition" typically indicate that this association hasn't been set up.  Contact Scientific Computing to have this corrected.
 
 ## GitHub.com
 
@@ -78,24 +82,39 @@ awscreds --force
 
 ### Testing Your Credentials
 
-To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from our shared reference data bucket to your local system, and then copy that file to your PI bucket.  
+To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your 
+local computer to your PI's bucket. 
+
+In these examples, please replace `lastname-f` with the last name and first initial of your PI.
+
+#### Create a file in S3:
 
 ```
 module load awscli
-aws s3 cp s3://fh-ctr-public-reference-data/wiki_example_data/iris.csv .
+echo hello | aws s3 cp - s3://fh-pi-lastname-f/hello.txt
 ```
 
-In the commands below, replace `lastname-f` (where `f` is the PI's first name initial) with the name associated to your PI bucket:
+#### Download the file from S3
 
 ```
-aws s3 cp iris.csv s3://fh-pi-lastname-f/iris.csv
+aws s3 cp s3://fh-pi-lastname-f/hello.txt .
 ```
-If you notice any errors with this, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials.
+
+Now you can examine the file:
+
+```
+cat hello.txt
+```
+
+If you notice any errors with these, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials.
+
+#### Delete the file from S3
+
 
 Once you have confirmed your credentials, remember to remove the test file:
 
 ```
-aws s3 rm s3://fh-pi-lastname-f/iris.csv
+aws s3 rm s3://fh-pi-lastname-f/hello.txt
 ```
 
 See more about accessing AWS S3 via the command line [here](/compdemos/aws-3/#aws-command-line-interface-cli).

@@ -6,6 +6,30 @@ primary_reviewers: atombaby
 
 ## Changes to Bionic Nodes
 
+### 14 July 2020
+
+#### Update to NoMachine
+
+Updated the NoMachine service with a valid .fhcrc.org certificate.  Now when you connect to the service you will not get a warning about an untrusted certificate.
+
+#### Enabled Arbiter
+
+Arbiter (the new [load management software](https://sciwiki.fredhutch.org/compdemos/rhino-load-management/) for the Rhino nodes) has been in debug mode for the past few weeks to get an idea of how well it would function with real load.  Thus far all appears well, so we've enabled this service to actually begin managing the load on the new Rhino nodes (i.e. enforcing limits and sending messages).
+
+### 7 July 2020
+
+#### New Local Packages
+
+These packages have been added to the OS:
+  - wkhtmltox (replaces wkthmltopdf)
+  - finger
+  - msodbcsql
+  - "atom" editor (session servers only- rhino)
+
+#### Slurm Node Features
+
+We've added new friendly names for node constraints (i.e. arguments to the Slurm option `--constraint=`).  You can now use the short name to get the desired node class, for example `--constraint=gizmok` to limit your jobs to K class nodes.
+
 ### 23 June 2020
 
 #### New Local Packages

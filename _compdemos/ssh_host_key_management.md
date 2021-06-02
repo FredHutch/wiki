@@ -4,6 +4,18 @@ main_author: Michael Gutteridge
 primary_reviewers: atombaby
 ---
 
+[SSH keys](https://www.ssh.com/ssh/key/) are used to manage access credentials to computing resources. 
+They are similar to names and passwords, 
+and confirm that the identity of individuals attempting to log on to or use a machine. 
+The first time you log on to `rhino`, 
+you'll be asked if you want to add a key to your list of known hosts.
+Every time you log on after that,
+that key will be compared to the key provided by the host (compute resource). 
+If the keys match,
+everything proceeds as expected.
+If the keys don't match, 
+you'll receive information describing what the problem might be.
+
 This page will describe SSH host keys, how they're used, and how to manage those keys for different SSH clients.  However, for now this page only describes removing bad keys, with the rest of that information to come.
 
 ## Removing Old Keys
@@ -14,15 +26,28 @@ In most cases- as our DNS is very well run- it is sufficient to remove the old k
 
 ### Removing from OSX and Linux Command Line Client
 
-The command line client for OSX and Linux behave in pretty much the same way.  The host key database is kept in a file in your home directory, in the file `~/.ssh/known_hosts`.  Modern versions of SSH encode this information in a way not readily usable by humans so using the SSH tools to remove and update the key is the best way to accomplish this (versus the old way of just editing the file with a text file).
+If you are logging on to a compute resource using OSX or Linux,
+you are probably using the command line (e.g., Terminal).
+The host key database is kept in a file in your home directory, in the file `~/.ssh/known_hosts`.  Modern versions of SSH encode this information in a way not readily usable by humans so using the SSH tools to remove and update the key is the best way to accomplish this (versus the old way of just editing the file with a text file).
 
 ```
 ssh-keygen -R <hostname>
 ssh-keygen -R <hostname>.fhcrc.org
 ```
 
+For example, to remove the key for `rhino`, you would run:
+
+```
+ssh-keygen -R rhino.fhcrc.org
+```
+
+When you next attempt to log in to `rhino`, 
+you'll be asked to add the correct key to known hosts.
+
 ### Key Conflict with PuTTY
 
+If you are logging on to a compute resource on a Windows machine using PuTTY,
+you'll need to use a different strategy since 
 PuTTY does not have similar key management tools.  However, it will prompt you to replace the key:
 
 ```

@@ -2,11 +2,11 @@
 title: Sam Minot
 ---
 ## Affiliation
-Vaccine and Infectious Disease
+Hutch Data Core
 
 
 ## Title
-Staff Scientist, Fredricks Lab
+Associate Director, Data Science Applications
 
 
 ## Contribution Domain and Type

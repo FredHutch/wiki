@@ -38,18 +38,6 @@ and run it on Gizmo with `--gres=gpu` to select a node with GPU:
     ~$ tail -f out.txt
 ```
 
-or you run it on Koshu which has slightly more powerful GPUs
-
-```
-    ~$ sbatch -M koshu -p gpu --gres=gpu -o out.txt ~/tf-test.py
-    Submitted batch job 27074536 on cluster koshu
-    ~$ tail -f out.txt
-    1.12.0
-    ['/home/petersen/.local/lib/python3.6/site-packages/tensorflow', '...']
-    ...
-    physical_device_desc: "device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0"
-```
-
 if you want to switch back to the non-GPU version of Tensorflow just uninstall the GPU version you installed under .local 
 
 ```
@@ -110,7 +98,7 @@ After that load Singularity:
 After that, the only change is to enable NVIDIA support by adding the `--nv`
 flag to `singularity exec`:
 
-    singularity exec --nv docker://tensorflow/tensorflow:latest-gpu-py3 python3 ...
+    singularity exec --nv docker://tensorflow/tensorflow:latest-gpu-py3 python3
 
 Sample code is available in the [slurm-examples repository](https://github.com/FredHutch/slurm-examples/tree/master/tensorflow-gpu).
 
@@ -145,17 +133,25 @@ Example Setup
 First verify that you have a GPU active (e.g. Tesla V100) as well as CUDA V 10.0 or newer
 
 ```
-    petersen@koshuk0:~$ nvidia-smi 
-    Thu Dec 27 14:44:19 2018       
-    +-----------------------------------------------------------------------------+
-    | NVIDIA-SMI 410.79       Driver Version: 410.79       CUDA Version: 10.0     |
-    |-------------------------------+----------------------+----------------------+
-    | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
-    | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
-    |===============================+======================+======================|
-    |   0  Tesla V100-SXM2...  Off  | 00000000:00:04.0 Off |                    0 |
-    | N/A   39C    P0    34W / 300W |      0MiB / 16130MiB |      0%      Default |
-    +-------------------------------+----------------------+----------------------+
+gizmok12[~]: nvidia-smi
+Thu Sep 17 14:54:48 2020
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.100      Driver Version: 440.100      CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 208...  Off  | 00000000:5E:00.0 Off |                  N/A |
+| 38%   42C    P0    39W / 250W |      0MiB / 11019MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+gizmok12[~]:
 ```
 
 If you see any issues here you need to contact `SciComp` to have the error corrected 

@@ -1,6 +1,5 @@
 ---
 title: Data Storage in Object Storage Systems (Economy)
-last_modified_at: 2019-04-01
 primary_reviewers: dirkpetersen, dtenenba
 ---
 
@@ -10,7 +9,7 @@ FIXME JEFF: Add FAQ for S3 that’s specific to Economy Cloud
 Object storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an object storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud Computing depends very much on object storage systems such as Amazon's AWS S3 or Google Cloud Storage.
 
 ### Object Storage PI Allocations
-As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.  Each PI is provided with 5TB of free storage space via `Economy` storage above which a relatively low cost per TB per month is charged.
+As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.  
 
 >Note:  Currently it is recommended to use a combination of `Economy`, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
@@ -41,8 +40,6 @@ You can access `Economy Local` or `Economy Cloud` resources with [command line t
 ### Economy Local (Swift)
 
 `Economy Local` is an object storage system based on Openstack Swift. `Economy Local` is recommended for research groups who keep large amounts of data (>100TB) on the Fred Hutch campus and frequently use the `Gizmo` cluster with local storage. We also recommend it for data that is explicitly forbidden to be stored in public cloud storage resources.
-
->Note: In the near future `Economy Local` will be retrofitted to become a hybrid storage solution. You will be able to access your data conveniently through a file access mount point such as `/fh/economy/` in addition to the faster object storage access.
 
 `Economy Local` is well suited to store petabytes of data at low cost and a high level of data protection. Economy File does not require tape backup as data is replicated to multiple sites. If you accidentally delete data it will be held in a "Trash can" for multiple months during which you have read-only access to the deleted data. Economy File is approved for PHI / PII data.  It is a suitable location to store genomic data  including those governed by the NIH Genomic Data Sharing policies or originating from public repositories while in use locally. Please the [demo section for examples of Economy Local](/compdemos/Economy-storage/)
 

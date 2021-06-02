@@ -1,6 +1,5 @@
 ---
 title: Data Storage in File Storage Systems
-last_modified_at: 2019-04-01
 primary_reviewer: dirkpetersen
 ---
 
@@ -24,21 +23,21 @@ While you are allowed up to 100GB of storage in this home directory, it is not t
 
 `Fast` storage is a petabyte sized high-performance posix file system that holds the bulk of the scientific data at the Fred Hutch. A quick overview: 
 
-- Each PI and each division is provided with 5TB of free storage space via `Fast` storage above which a cost per TB per month is charged.  
+- Each PI and division is provided with an allocation of storage space via `Fast`, though additional storage may be purchased.  
 
-- You can access `Fast` from your workstation using `smb://center.fhcrc.org/fh/fast/lastname_f` on a Mac or `\\center.fhcrc.org\fh\fast\lastname_f` or `X:\fast\lastname_f` on a PC).
+- You can access `Fast` from your workstation using  `X:\fast\lastname_f` on a Windows PC or through a [UNC path as documented here](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html)
 
-- On Fred Hutch HPC systems (Rhino, Gizmo, Beagle and Koshu) you can access fast via `/fh/fast/lastname_f`
+- On Fred Hutch HPC systems (e.g. Rhino and Gizmo) you can access fast via `/fh/fast/lastname_f`
 
-This storage platform is appropriate for most scientific data- particularly large data sets. There is no charge for the first 5TB of storage on this system: there is a $30 per-month charge for every terabyte above this.
+This storage platform is appropriate for most scientific data- particularly large data sets.
 
-The data in `Fast` is organized by investigator or Division - each folder at the top level is named using the investigators last name and first initial: investigator "Sneezy Smith" would have a directory on fast called `smith_s`. There are also folders for each division. Special folders \_IRC (Integrated research centers), \_CTR (center wide resources and groups not under a specific division.)
-Each folder that lives directly under `/fh/fast` has 5 terabyte free of charge and there is a $30 per-month charge for every terabyte above this.
+The data in `Fast` is organized by investigator or Division - each folder at the top level is named using the investigators last name and first initial: investigator "Sneezy Smith" would have a directory on fast called `smith_s`. There are also folders for each division. Special folders ``\_IRC` (Integrated research centers), ``\_CTR` (center wide resources and groups not under a specific division.)
+Each folder that lives directly under `/fh/fast` has a default allocation, with additional storage available to purchase.
 
-Each folder that lives directly under `/fh/fast/lastname_f` can have a different set of permissions governed by a specific Security group (collection of users authorized for a certain resource - managed by SciComp). 
-We recommend some default folders such as for data shared to any Fred Hutch user (`/pub`), to any member of the PI's immediate research group (`/grp`), group wide software / applications (`/app`) or work spaces to each individual user in a PI's immediate research group (`/user`). Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (`/SR`). Access to these default folders would be governed by a security named lastname_f_grp. This can be customized for a given researcher in conjunction with Scientific Computing (see Available Resources). 
+Each folder that lives directly under `/fh/fast/lastname_f` can have a different set of permissions governed by a specific Security group (collection of users authorized for a certain resource - managed by SciComp).
+We recommend some default folders such as for data shared to any Fred Hutch user (`/pub`), to any member of the PI's immediate research group (`/grp`), group wide software / applications (`/app`) or work spaces to each individual user in a PI's immediate research group (`/user`). Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (`/SR`). Access to these default folders would be governed by a security named lastname_f_grp. This can be customized for a given researcher in conjunction with Scientific Computing (see Available Resources).
 
-To summarize: the folder structure on fast file looks like this: /fh/fast/(level-of-charge)/(level-of-access-control)/actual/data and access to non default folders is granted by specific security groups created for each folder (see example below: lastname_f_project1_grp)
+To summarize: the folder structure on fast file looks like this: `/fh/fast/(level-of-charge)/(level-of-access-control)/actual/data` and access to non default folders is granted by specific security groups created for each folder (see example below: `lastname_f_project1_grp`)
 
 ```
 /pub​ -> publicly readable folder where data can be shared with a hutch 
@@ -63,8 +62,8 @@ To summarize: the folder structure on fast file looks like this: /fh/fast/(level
 
 ## Secure
 
-`Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  This is also organized by investigator with a 1TB free allocation above which a cost per TB per month is charged.  
+`Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  This is also organized by investigator with a free allocation with additional storage available for purchase.  
 
-Secure file is available via the path `/fh/fast/secure/research/lastname_f` on SciComp Linux systems, `\\center.fhcrc.org\fh\secure\research\lastname_f` or `X:\secure\research` on Windows hosts, and `smb://center/fh/secure/research/lastname_f` on OSX.
+Secure file is available via the path `/fh/fast/secure/research/lastname_f` on SciComp Linux systems, through a [UNC path as documented here](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html) or `X:\secure\research` on Windows hosts.
 
-This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data.  The first terabyte of data is provided by CIT with a charge of $50 per-terabyte for any amount above that.
+This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data.  
