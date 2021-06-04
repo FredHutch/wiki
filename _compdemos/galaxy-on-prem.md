@@ -54,6 +54,8 @@ To terminate the Galaxy instance just type Ctrl+c twice inside the terminal Wind
 
 ## Current Issues
 
+### Wrong Session Token
+
 When using Chrome, you might see this error message:
 
 "Wrong session Token found." 
@@ -69,3 +71,23 @@ To remove Cookies from Chrome, go to
 -> in the upper right search for fhcrc.org
 and then click Remove all shown and restart Chrome
 
+### Could not find a link to PI - Non-Standard Galaxy Directory
+
+If toolbox is unable to identify your PI you may get a message like:
+
+```
+"Could not find a link to PI or division for user: alice. Please contact SciComp.
+Folder  does not exist or is not writable"
+```
+
+The default location for galaxy installations is a directory named `galaxies` in your `fast` drive.
+The path to this directory generally follows this format:`/fh/fast/<pi_d>/user/<username>/galaxies`.  
+You can specify this path as the location to install galaxy by running the following code in your shell:
+
+```
+export GALAXY_DIR=/fh/fast/foo_b/user/alice/galaxies
+galaxy
+```
+
+The code above set the environment variable `GALAXY_DIR` to the path before running `galaxy` as usual.
+This can also be used to create galaxy installations in non-standard locations.
