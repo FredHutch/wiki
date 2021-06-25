@@ -63,19 +63,19 @@ Homepage: [https://github.com/FredHutch/multi-fastqc-nf](https://github.com/Fred
 Purpose: Analyze a set of microbial genomes with the [anvi'o](https://github.com/merenlab/anvio) pangenome pipeline
 Homepage: [https://github.com/FredHutch/nf-anvio-pangenome](https://github.com/FredHutch/nf-anvio-pangenome)
 
-## PGAP-nf
+### PGAP-nf
 
 Purpose: Annotate a set of bacterial genomes using the
 [PGAP annotation software suite](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/)
 Homepage: [https://github.com/FredHutch/PGAP-nf](https://github.com/FredHutch/PGAP-nf)
 
-## prokka-nf
+### prokka-nf
 
 Purpose: Annotate a set of bacterial genomes using the
 [Prokka annotation software suite](https://github.com/tseemann/prokka)
 Homepage: [https://github.com/FredHutch/prokka-nf](https://github.com/FredHutch/prokka-nf)
 
-## unicycler-nf
+### unicycler-nf
 
 Purpose: Perform _de novo_ assembly of bacterial genomes using the [UniCycler](https://github.com/rrwick/Unicycler) hybrid assembler
 Homepage: [https://github.com/FredHutch/unicycler-nf](https://github.com/FredHutch/unicycler-nf)
