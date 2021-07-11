@@ -57,6 +57,10 @@ Priority (the "priority score") is used to order pending jobs in the queue with 
 
 Time queued does factor in to the priority score but is a relatively minor component of the priority score
 
+### Quality of Service
+
+A "Quality of Service" is another mechanism for jobs to request certain features, scheduling priority, and limits.  The attributes of the QOS are combined with the other job features (partition, account, etc.) to achieve specific behavior on the cluster.  Notably, this is used for submitting restart jobs.
+
 ## Submitting Jobs
 
 ### `sbatch` and `srun`
@@ -76,6 +80,7 @@ These two take many of the same options:
  - `-n` request a number of tasks (default 1)
  - `-c` request a number of processors per task (default 1)
  - `-J` name a job
+ - `--qos` request a QOS
 
 ### Job Output
 
@@ -181,6 +186,22 @@ If you should need to increase the wall time for a running job (or jobs), email 
 scontrol update jobid=<job ID> timelimit=+2-0
 ```
 
+### Preemption and Restart Jobs
+
+Job preemption allows a queued job to preempt a running job under certain circumstances.  We can use job preemption to allow some jobs to run over the established limits with the caveat that these jobs can be preempted- that is killed- if other high priority work is queued.
+
+These jobs are run with no limits- every idle CPU is fair game.  However, any number of these jobs can be terminated with no notice if high priority jobs are waiting and eligible to run.  Thus it is important that you be able to recover that job without significant effort.  Workflow managers (such as cromwell, nextflow, and snakemake) are great aids for this purpose.
+
+To use this feature, add the QOS "restart" to your job, _vis_:
+
+    sbatch --qos=restart myjob.sh
+
+As these jobs are low-priority, you must note that it can take some time for these jobs to start.  These jobs are run via the backfill mechanism which requires that the entire set of queued jobs be evaluated which can take some time.
+
+> Some may recall that we implemented this as a partition- _restart_, then _restart-new_.  Those partitions are still available but it is still necessary to add the QOS request, e.g. `sbatch -p restart-new --qos=restart`. There is no effect when specifying the partition - it is now unnecessary.
+>
+> Future work may include removing these partitions.
+
 ### Why isn't my job running?
 
 There are any number of reasons why your job may not be running.  When you run `squeue` you will see the job's state as `PD` with a reason code (in the column headed with `NODELIST(REASON)`)  As suggested by the heading, this column contains the reason that the job isn't running.
@@ -214,6 +235,7 @@ There are other reason codes that are less-common in our environment.  Email Sci
 ### Useful Commands
 
 #### Notifications
+
 `sbatch` has a variety of parameters that allow for notifications to users which can be found on the [Slurm manual page](http://schedmd.com).  An exmaple of this is if, for instance, you wanted to receive an email when your job finished.  You can include these `SBATCH` options when sending your job to make that happen. 
 ```
 #SBATCH --mail-user=fred@fredhutch.org
