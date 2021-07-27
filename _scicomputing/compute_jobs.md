@@ -128,14 +128,18 @@ sbatch -c 6 myscript.sh my-output
 
 Monitoring the resources that jobs are using can be done using `sstat`.  This monitors the resources used by all steps in the job.  A number of different statistics are monitored- run `sstat -e` to see the full compliment of available statistics.
 
+By default `sstat` only shows job steps, not the stats for the batch job itself.  To see all memory use, use the `-a` option.
+
 As example, to check job memory consumption:
 
 ```
-# sstat -j 90592201,90592202 -o jobid,averss,maxrss,avevmsize,maxvmsize
+rhino03[~/tutorial/run]: sstat -a -j 31635795,31635814 -o jobid,averss,maxrss,avevmsize,maxvmsize
        JobID     AveRSS     MaxRSS  AveVMSize  MaxVMSize
 ------------ ---------- ---------- ---------- ----------
-90592201.ba+   3524552K   3524552K   4506160K   4506160K
-90592202.ba+     15088K   3527928K     56528K   4497964K
+31635795.ex+
+31635795.ba+      4072K      4136K     17768K    143812K
+31635814.ex+
+31635814.ba+      4012K      4012K     17768K    144084K
 ```
 
 
