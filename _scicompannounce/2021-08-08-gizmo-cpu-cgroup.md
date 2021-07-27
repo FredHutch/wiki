@@ -28,15 +28,26 @@ It is important to note that these cgroups are nearly transparent to the use of 
 
 ## Phase 1: CPU and GPU cgroup
 
+> Effective: 8 August 2021
+
 In this first phase we are only going to manage CPU and GPU resources.  When your job starts, it will be placed into a cgroup which is only allowed to use the number of CPUs and GPUs requested.
 
 ### What to Watch For
 
-#### Job Slowdowns
+#### Default Threads
 
-Your job may slow down if it has previously used more resources than requested.  This is often due to the default behavior of some tools and libraries- OpenBLAS is a frequent offender as it by default uses all available cores.  Picard also has a default that causes it to use all cores on a host.
+Your job may slow down if it has previously used more resources than requested.  This is often due to the default behavior of some tools and libraries- OpenBLAS is a frequent offender as it by default uses all available cores.  Picard also defaults to the all cores on a host.
 
-In general, it's a good practice to review your tool's documentation and manage the threads explicitly.  Slurm jobs will have the environment variable SLURM_CPUS_ON_NODE which you can use to indicate the number of cores available to your tools.
+In general, it's a good practice to review your tool's documentation and manage the threads explicitly.  Slurm jobs will have the environment variable SLURM_CPUS_ON_NODE which you can use to indicate the number of cores available to your tools:
 
+```
+java -jar picard.jar IlluminaBasecallsToFastq NUM_PROCESSORS=${SLURM_CPUS_ON_NODE} ...
+```
 
+## Phase 2: Memory cgroup
 
+> Effective: TBD
+
+The second phase of this work will add memory to the job cgroup.  This will allow Slurm to track the memory allocated to a job and ensure that jobs stay within that cgroup.  This change will affect how jobs are submitted as you will need to add a memory request to your jobs.  Jobs that exceed the cgroup's resources will fail, so we are proceeding carefully.
+
+This feature is still in development.  We don't have a precise timeline for adding this integration, but hope to add this in the next two-to-three months.
