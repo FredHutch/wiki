@@ -36,7 +36,7 @@ In this first phase we are only going to manage CPU and GPU resources.  When you
 
 #### Default Threads
 
-Your job may slow down if it has previously used more resources than requested.  This is often due to the default behavior of some tools and libraries- OpenBLAS is a frequent offender as it by default uses all available cores.  Picard also defaults to the all cores on a host.
+Your job may slow down if it has previously used more resources than requested.  This is often due to the default behavior of some tools and libraries- OpenBLAS is a frequent offender as it by default uses all available cores.  Picard also defaults to all of the cores on a host.
 
 In general, it's a good practice to review your tool's documentation and manage the threads explicitly.  Slurm jobs will have the environment variable SLURM_CPUS_ON_NODE which you can use to indicate the number of cores available to your tools:
 
