@@ -15,11 +15,9 @@ Singularity allows us to run containers- including Docker containers- on our sha
 
 Singularity is maintained and deployed in our environment using environment modules (lmod).  You will need to load this module before running any commands.
 
-**DO NOT USE SINGULARIY ON RHINO HOSTS**
-
-As singularity may affect the stability of a compute system to which many users are logged in at the same time, SciComp does not allow Singularity on the `Rhino` login nodes. Please use the `grabnode` command to get an interactive session on one of the compute nodes. 
-
 ## Using Singularity
+
+> Singularity is available on the rhino and gizmo compute hosts.  Please use a gizmo node if your task will be computationally intensive.  Singularity containers can be run interactively (via grabnode) and in batch processing
 
 Singularity is a module- load it with `ml`:
 
@@ -27,7 +25,7 @@ Singularity is a module- load it with `ml`:
 ml Singularity
 ```
 
-Use `ml spider` to see available versions.  Singularity itself has a number of built images that can be used directly, for example:
+Use `ml spider` to see available versions.  Courtesy of Sylabs, Singularity has a library of built images that can be used directly, for example:
 
 ```
 $ singularity pull --arch amd64 library://sylabsed/examples/lolcow:latest
