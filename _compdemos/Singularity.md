@@ -21,13 +21,13 @@ Singularity is maintained and deployed in our environment using environment modu
 
 Singularity is a module- load it with `ml`:
 
-```
-ml Singularity
+```ShellSession
+$ ml Singularity
 ```
 
 Use `ml spider` to see available versions.  Sylabs proivides a library of built images that can be used directly:
 
-```
+```ShellSession
 $ singularity pull --arch amd64 library://sylabsed/examples/lolcow:latest
 INFO:    Downloading library image
  79.91 MiB / 79.91 MiB [====================================] 100.00% 1.43 MiB/s 55s
@@ -59,7 +59,7 @@ As indicated earlier, Singularity can run Docker container images.  However, Doc
 
 This example converts a Singularity container named _r-base-latest_ from the official R Docker container and starts an interactive R session with that container
 
-```
+```ShellSession
 $ ml Singularity
 $ singularity build r-base-latest.sif docker://r-base
 INFO:    Starting build...
@@ -97,7 +97,7 @@ $
 
 You can run an R script directly in the container with:
 
-```
+```ShellSession
 singularity exec r-base-latest.sif Rscript script.R
 ```
 
@@ -135,16 +135,16 @@ More information about Singularity definition files is available [here.](https:/
 
 The build is similar to the earlier example, but instead of providing a remote image name, we point `singularity` to the definition file and indicate that the container will be built remotely:
 
-```
-singularity build --remote my_r_container.sif my.r.singularity.build.def
+```ShellSession
+$ singularity build --remote my_r_container.sif my.r.singularity.build.def
 ```
 
 #### Verify
 
 If we launch the R editor on our new Singularity container with the following command.
 
-```
-singularity exec my_r_container.sif R
+```ShellSession
+$ singularity exec my_r_container.sif R
 ```
 
 And then check all of the user installed R packages with the following command.
@@ -187,8 +187,8 @@ mkdir -p /mnt/data
 
 Rebuild the container as above:
 
-```
-singularity build --remote my_r_container.sif my.r.singularity.build.def
+```ShellSession
+$ singularity build --remote my_r_container.sif my.r.singularity.build.def
 ```
 
 #### Run with Bind
@@ -197,24 +197,24 @@ Once the container has been rebuilt we just need to run the container as earlier
 
 There are two ways to bind these paths into the container- on the command line:
 
-```
-singularity exec --bind /shared/biodata:/mnt/data my_r_container.sif R
+```ShellSession
+$ singularity exec --bind /shared/biodata:/mnt/data my_r_container.sif R
 ```
 
 or via environment variables:
 
-```
-export SINGULARITY_BIND=/shared/biodata:/mnt/data
-singularity exec my_r_container.sif R
+```ShellSession
+$ export SINGULARITY_BIND=/shared/biodata:/mnt/data
+$ singularity exec my_r_container.sif R
 ```
 
 #### Verify
 
 You can verify the bind of those paths with `shell`. Start a shell in the container and run:
 
-```
-export SINGULARITY_BIND=/shared/biodata:/mnt/data
-singularity shell my_r_container.sif
+```ShellSession
+$ export SINGULARITY_BIND=/shared/biodata:/mnt/data
+$ singularity shell my_r_container.sif
 
 Singularity> ls /mnt/data
 example_data  gmap-gsnap  humandb  microbiome  ncbi-blast  ngs	seq  tmp
