@@ -220,16 +220,3 @@ Singularity> ls /mnt/data
 example_data  gmap-gsnap  humandb  microbiome  ncbi-blast  ngs	seq  tmp
 ```
 
-## Customizing your Environment
-
-Singularity uses settings from the home directory of the invoking user on the host system, for example .bashrc. The recommended settings for ~/.bashrc: check for a Singularity symlink at the root or a SINGULARITY_NAME env var. In some cases you want bash to behave differently if you are inside a container. You can put this into ~/.bashrc.
-
-```
-    if [ -L '/singularity' ]; then
-        PS1='\u@$SINGULARITY_CONTAINER> '
-        export PROMPT_COMMAND=''
-    else
-        PS1=''
-    fi
-```
-
