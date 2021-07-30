@@ -51,7 +51,7 @@ $ singularity run ./lolcow_latest.sif
 
 ## Using Docker Containers with Singularity
 
-As indicated earlier, Singularity can run Docker container images.  However, Docker container images must first be converted to be usable by Singularity.  The process follows a few steps:
+As indicated earlier, Singularity can run Docker container images.  However, Docker container images must first be converted to be usable by Singularity.
 
  1. Load the Singularity module
  2. Convert the image
@@ -111,15 +111,13 @@ Containers can be customized by using a base container image, then adding desire
 
 Root access is typically required to build Singularity containers.  Sylabs' remote builder provides an option to build your container in Sylabs' sandbox cloud infrastructure. Once the container finishes building it will be automatically download to your working directory where it can be run.
 
-### Accessing the Remote Builder
+To use the remote builder option in Singularity you need a Sylabs account and key. The steps to set up remote builder can be found [here](https://sylabs.io/guides/3.5/user-guide/endpoint.html)
 
-To use the remote builder option in Singularity you need a Sylabs account and key. The steps to set up remote builder can be found [here](https://sylabs.io/guides/3.5/user-guide/endpoint.html) and please note you will need to generate a new key every 30 days when using Sylabs' remote builder option.
+> You will need to generate a new key every 30 days when using Sylabs' remote builder option.
 
 ### Example: Add R Libraries to the Base Container
 
-In this example, we are going to build a more complex Singularity container using the latest R Docker image.  To the base container we will add additional R modules using a Singularity definition file and Sylabs remote builder option.
-
-Read more about Singularity definition files [here.](https://sylabs.io/guides/3.6/user-guide/definition_files.html) 
+In this example, we are going to build a more complex Singularity container using the latest R Docker image.  To the base container we will add additional R modules using a Singularity definition file and then build using Sylabs' tools.
 
 #### Create a Definition File.
 
@@ -135,9 +133,11 @@ R --no-echo -e 'install.packages("devtools", repos="https://cloud.r-project.org/
 
 This file indicates that `docker` is used to build the container from a Docker image named `r-base`.  The `%post` section defines the steps we want to take to modify that original container- in this case using R to install the _devtools_ packages.
 
+More information about Singularity definition files is available [here.](https://sylabs.io/guides/3.6/user-guide/definition_files.html) 
+
 #### Build
 
-The build is similar to the earlier example, but instead of providing the image name on the command line we point `singularity` to the definition file we'ver written and indicate that the container will be built remotely:
+The build is similar to the earlier example, but instead of providing a remote image name, we point `singularity` to the definition file and indicate that the container will be built remotely:
 
 ```
 singularity build --remote my_r_container.sif my.r.singularity.build.def
@@ -172,7 +172,11 @@ If you need access to other storage paths (e.g. `/fh/scratch`, `/fh/fast`) you w
 
 ### Example: Bind Local File Systems
 
-In this example we'll make the `biodata` files maintained by Shared Resources available in our container on the path `/mnt/data`.  Modify the definition file we created earlier (`my.r.singularity.build.def`), adding a command to the `%post` section to create the directory where we will mount biodata:
+In this example we'll make the `biodata` files maintained by Shared Resources available in our container on the path `/mnt/data`.
+
+#### Create Mount Points
+
+Modify the definition file we created earlier (`my.r.singularity.build.def`), adding a command to the `%post` section to create the directory where we will mount biodata:
 
 ```
 BootStrap: docker
@@ -183,11 +187,15 @@ R --no-echo -e 'install.packages("devtools", repos="https://cloud.r-project.org/
 mkdir -p /mnt/data
 ```
 
-Then rebuild as above:
+#### Rebuild
+
+Rebuild the container as above:
 
 ```
 singularity build --remote my_r_container.sif my.r.singularity.build.def
 ```
+
+#### Run with Bind
 
 Once the container has been rebuilt we just need to run the container as earlier, but adding additional instructions to bind the local path (on the host where you are running Singularity) to the directory we created.
 
@@ -203,6 +211,8 @@ or via environment variables:
 export SINGULARITY_BIND=/shared/biodata:/mnt/data
 singularity exec my_r_container.sif R
 ```
+
+#### Verify
 
 You can verify the bind of those paths with `shell`. Start a shell in the container and run:
 
