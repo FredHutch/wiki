@@ -1,6 +1,6 @@
 ---
 title: Using Singularity Containers
-last_modified_at: 2020-03-29
+last_modified_at: 2021-07-30
 main_author: Dirk Petersen
 primary_reviewers: bmcgough, dirkpetersen
 ---
@@ -156,7 +156,7 @@ ip <- ip[is.na(ip$Priority),1:2,drop=FALSE]
 print(ip, row.names=FALSE)
 ```
 
-We can now see all of the new user installed R modules. There are two user installed R modules in the default R docker container- now you should see many more than that.
+We can now see all of the newly installed R libraries. There are two R libraries in the base R Docker container- now you should see many more than that.
 
 ## Access to Storage
 
