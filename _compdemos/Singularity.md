@@ -25,7 +25,7 @@ Singularity is a module- load it with `ml`:
 ml Singularity
 ```
 
-Use `ml spider` to see available versions.  Courtesy of Sylabs, Singularity has a library of built images that can be used directly, for example:
+Use `ml spider` to see available versions.  Sylabs proivides a library of built images that can be used directly:
 
 ```
 $ singularity pull --arch amd64 library://sylabsed/examples/lolcow:latest
@@ -64,15 +64,45 @@ As indicated earlier, Singularity can run Docker container images.  However, Doc
 This example converts a Singularity container named _r-base-latest_ from the official R Docker container and starts an interactive R session with that container
 
 ```
-ml Singularity
-singularity build r-base-latest.sif docker://r-base
-singularity exec r-base-latest.sif R
+$ ml Singularity
+$ singularity build r-base-latest.sif docker://r-base
+INFO:    Starting build...
+Getting image source signatures
+Copying blob 7b303595d9b3 skipped: already exists
+Copying blob 269a52eb0491 skipped: already exists
+Copying blob ded859387bda skipped: already exists
+Copying blob 8e9a9ca14ab5 skipped: already exists
+Copying blob b2833e2a4a5c skipped: already exists
+Copying blob 69b7b0952253 skipped: already exists
+Copying blob 13ddaffde5f2 skipped: already exists
+Copying config 4a14570ea9 done
+Writing manifest to image destination
+Storing signatures
+2021/07/30 11:51:41  info unpack layer: sha256:7b303595d9b321a9020d0ddbf1dea4c83237e2367117606a8d5466c446714ba1
+2021/07/30 11:51:44  info unpack layer: sha256:269a52eb0491fa8f50f18f968e9a26e2c3f139332e157f2af3eaaa4ad8fbdab5
+2021/07/30 11:51:44  info unpack layer: sha256:ded859387bdafb915ae926a385218acb88202f871dab977fc1f53237dfb4a079
+2021/07/30 11:51:45  info unpack layer: sha256:8e9a9ca14ab54b7dcc64efd3dd1e59caa23457c62f787811a6dd14e73aeb8421
+2021/07/30 11:51:45  info unpack layer: sha256:b2833e2a4a5cdc17504b1c82018201d1ab11fd9561b5f6b53a380150c056f80f
+2021/07/30 11:51:45  info unpack layer: sha256:69b7b0952253024702757260108e530df6c9ae666d502264c710da8fec1cfb2b
+2021/07/30 11:51:45  info unpack layer: sha256:13ddaffde5f2fd497225a2dd814720ed94058b4b8b663074160e4cea4b12c89e
+INFO:    Creating SIF file...
+INFO:    Build complete: r-base-latest.sif
+
+$ singularity exec r-base-latest.sif R
+R version 4.1.0 (2021-05-18) -- "Camp Pontanezen"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+ ...
+
+> quit()
+Save workspace image? [y/n/c]: n
+$
 ```
 
 You can run an R script directly in the container with:
 
 ```
-singularity exec r-base-latest.sif Rscript my_r_script.R
+singularity exec r-base-latest.sif Rscript script.R
 ```
 
 ## Container Customization
