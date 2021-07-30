@@ -98,7 +98,7 @@ $
 You can run an R script directly in the container with:
 
 ```ShellSession
-singularity exec r-base-latest.sif Rscript script.R
+$ singularity exec r-base-latest.sif Rscript script.R
 ```
 
 ## Container Customization
@@ -119,7 +119,7 @@ In this example, we are going to build a more complex Singularity container usin
 
 Create a definition file named `my.r.singularity.build.def` containing:
 
-```
+```Singularity
 BootStrap: docker
 From: r-base
 
@@ -160,7 +160,7 @@ We can now see all of the new user installed R modules. There are two user insta
 
 ## Access to Storage
 
-Storage on the host where you are running the container can be made available via a bind command into the container.  Many local paths are exported by default.  For example, the current working directory and your home are available in the container by default.
+Storage on the host where you are running the container can be made available via a bind command into the container.  Many local paths are bound into the container by default.  For example, the current working directory and your home are available in the container by default.
 
 > When I indicate "local path" I am including network paths _mounted_ locally- so even though fast and scratch are not technically local to the host, they appear local.
 
@@ -174,7 +174,7 @@ In this example we'll make the `biodata` files maintained by Shared Resources av
 
 Modify the definition file we created earlier (`my.r.singularity.build.def`), adding a command to the `%post` section to create the directory where we will mount biodata:
 
-```
+```Singularity
 BootStrap: docker
 From: r-base
 
