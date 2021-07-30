@@ -5,47 +5,65 @@ main_author: Dirk Petersen
 primary_reviewers: bmcgough, dirkpetersen
 ---
 
-## Why use Singularity
+## What is Singularity
 
-Docker can only run containers as root so we cannot use them in shared multi-user environments such as `Rhino`/`Gizmo` with shared storage such as `/home`, `/fh/fast` or `/fh/scratch`. Singularity can import Docker containers and run them. 
+From Sylabs' [introduction](https://sylabs.io/guides/3.5/user-guide/introduction.html#introduction-to-singularity):
 
-## Preparing Singularity
+> Singularity is a container platform. It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible. You can build a container using Singularity on your laptop, and then run it on many of the largest HPC clusters in the world, local university or company clusters, a single server, in the cloud, or on a workstation down the hall. Your container is a single file, and you don’t have to worry about how to install all the software you need on each different operating system and system.
+
+Singularity allows us to run containers- including Docker containers- on our shared systems.  Docker requires a number of adminstrative privileges which makes it unusable in shared multi-user environments with networked storage.  Singulariy remedies these problems allowing individual, non-root, users to run containers.
+
+Singularity is maintained and deployed in our environment using environment modules (lmod).  You will need to load this module before running any commands.
 
 **DO NOT USE SINGULARIY ON RHINO HOSTS**
 
 As singularity may affect the stability of a compute system to which many users are logged in at the same time, SciComp does not allow Singularity on the `Rhino` login nodes. Please use the `grabnode` command to get an interactive session on one of the compute nodes. 
 
-## Using Docker Containers with Singularity
+## Using Singularity
 
-Docker containers are the predominant storage format for containerized workflows and it is important to know that Singularity can easily import Docker containers. To create a new container from a Docker image on [DockerHub](https://hub.docker.com/) you just need to run the `singularity build` command.
-
-The basic syntax is as follows to import a Docker container and execute it.
-
-### Load Singularity.
+Singularity is a module- load it with `ml`:
 
 ```
 ml Singularity
 ```
 
-### Import and Build
-
-> The build step is only necessary the first time you convert a Docker container to a Singularity container or you want to update your Singularity container to a newer verions of a Docker container. 
+Use `ml spider` to see available versions.  Singularity itself has a number of built images that can be used directly, for example:
 
 ```
-singularity build pickanameforyourcontainer.sif docker://point-to-dockerhub-repo
+$ singularity pull --arch amd64 library://sylabsed/examples/lolcow:latest
+INFO:    Downloading library image
+ 79.91 MiB / 79.91 MiB [====================================] 100.00% 1.43 MiB/s 55s
+WARNING: unable to verify container: lolcow_latest.sif
+WARNING: Skipping container verification
+
+$ singularity run ./lolcow_latest.sif
+ _________________________________________
+/ Ships are safe in harbor, but they were \
+\ never meant to stay there.              /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
 ```
 
-### Run the container.
+> The error about container verification is not necessarily critical- if you would like to do a bit-by-bit validation of the download, [additional steps](https://sylabs.io/guides/3.5/user-guide/signNverify.html) are required.
 
-```
-singularity exec pickanameforyourcontainer.sif container-command
-```
+## Using Docker Containers with Singularity
 
-## Examples
+As indicated earlier, Singularity can run Docker container images.  However, Docker container images must first be converted to be usable by Singularity.  The process follows a few steps:
 
-### Example 1 - Build and Run latest R Docker container with Singularity
+ 1. Load the Singularity module
+ 2. Convert the image
+ 3. Run
 
-This example creates a Singularity container named _r-base-latest_ from the official R Docker container and starts an interactive R session with that container
+> The conversion step is only necessary the first time you convert a Docker container to a Singularity container or when you want to update your Singularity container (e.g. to a newer version of a Docker container).
+
+### Example - Convert and Run latest R Docker container with Singularity
+
+This example converts a Singularity container named _r-base-latest_ from the official R Docker container and starts an interactive R session with that container
 
 ```
 ml Singularity
@@ -59,17 +77,23 @@ You can run an R script directly in the container with:
 singularity exec r-base-latest.sif Rscript my_r_script.R
 ```
 
-### Example 2 - Expand upon the original Docker container with Sylabs' remote builder option.
+## Container Customization
 
-Root access is typically required to build Singularity containers from Docker containers.  Sylabs' remote builder provides an option to build your container as in Sylabs' sandbox cloud infrastructure. Once the container finishes building it will be automatically download to your working directory where it can be run.
+Containers can be customized by using a base container image, then adding desired changes via a "definition file" which has necessary steps for modifying the base container.
+
+Root access is typically required to build Singularity containers.  Sylabs' remote builder provides an option to build your container in Sylabs' sandbox cloud infrastructure. Once the container finishes building it will be automatically download to your working directory where it can be run.
+
+### Accessing the Remote Builder
 
 To use the remote builder option in Singularity you need a Sylabs account and key. The steps to set up remote builder can be found [here](https://sylabs.io/guides/3.5/user-guide/endpoint.html) and please note you will need to generate a new key every 30 days when using Sylabs' remote builder option.
 
-In this example, we are going to build a more complex Singularity container using the latest R Docker image.  To the base container we will add additional R modules and directory paths to it using a Singularity definition file and Sylabs remote builder option.
+### Example: Add R Libraries to the Base Container
+
+In this example, we are going to build a more complex Singularity container using the latest R Docker image.  To the base container we will add additional R modules using a Singularity definition file and Sylabs remote builder option.
 
 Read more about Singularity definition files [here.](https://sylabs.io/guides/3.6/user-guide/definition_files.html) 
 
-#### Create a Singularity definition file.
+#### Create a Definition File.
 
 Create a definition file named `my.r.singularity.build.def` containing:
 
@@ -81,9 +105,7 @@ From: r-base
 R --no-echo -e 'install.packages("devtools", repos="https://cloud.r-project.org/")'
 ```
 
-This file indicates that `docker` is used to build the container named `r-base`.  Some containers are available in the [Sylabs library](https://cloud.sylabs.io/library) in which case you would use `library` for `BootStrap` and indicate the Singularity image name in `From`.
-
-In the `%post` section we indicate the steps we want to take to modify that original container- in this case using R to install the _devtools_ packages.
+This file indicates that `docker` is used to build the container from a Docker image named `r-base`.  The `%post` section defines the steps we want to take to modify that original container- in this case using R to install the _devtools_ packages.
 
 #### Build
 
@@ -112,7 +134,7 @@ print(ip, row.names=FALSE)
 
 We can now see all of the new user installed R modules. There are two user installed R modules in the default R docker container- now you should see many more than that.
 
-### Example 3: Access to Storage
+## Access to Storage
 
 Storage on the host where you are running the container can be made available via a bind command into the container.  Many local paths are exported by default.  For example, the current working directory and your home are available in the container by default.
 
@@ -120,7 +142,7 @@ Storage on the host where you are running the container can be made available vi
 
 If you need access to other storage paths (e.g. `/fh/scratch`, `/fh/fast`) you will need to provide mount points (directories) in the container and explicitly bind paths to those mount points that as part of running the container.  Note that your HutchNet ID will need permissions to this storage, but root privileges are not necessary.
 
-#### Update Build
+### Example: Bind Local File Systems
 
 In this example we'll make the `biodata` files maintained by Shared Resources available in our container on the path `/mnt/data`.  Modify the definition file we created earlier (`my.r.singularity.build.def`), adding a command to the `%post` section to create the directory where we will mount biodata:
 
@@ -139,35 +161,27 @@ Then rebuild as above:
 singularity build --remote my_r_container.sif my.r.singularity.build.def
 ```
 
-#### Run with Bind
-
 Once the container has been rebuilt we just need to run the container as earlier, but adding additional instructions to bind the local path (on the host where you are running Singularity) to the directory we created.
 
 There are two ways to bind these paths into the container- on the command line:
 
 ```
-singularity exec --bind /fh/fast/_SR/Genomics/biodata:/mnt/data my_r_container.sif R
+singularity exec --bind /shared/biodata:/mnt/data my_r_container.sif R
 ```
 
 or via environment variables:
 
 ```
-export SINGULARITY_BIND=/fh/fast/_SR/Genomics/biodata:/mnt/data
+export SINGULARITY_BIND=/shared/biodata:/mnt/data
 singularity exec my_r_container.sif R
 ```
 
-#### Verify
-
-You can verify this with `shell`. Start a shell in the container:
+You can verify the bind of those paths with `shell`. Start a shell in the container and run:
 
 ```
-export SINGULARITY_BIND=/fh/fast/_SR/Genomics/biodata:/mnt/data
+export SINGULARITY_BIND=/shared/biodata:/mnt/data
 singularity shell my_r_container.sif
-```
 
-And run:
-
-```
 Singularity> ls /mnt/data
 example_data  gmap-gsnap  humandb  microbiome  ncbi-blast  ngs	seq  tmp
 ```
@@ -184,3 +198,4 @@ Singularity uses settings from the home directory of the invoking user on the ho
         PS1=''
     fi
 ```
+
