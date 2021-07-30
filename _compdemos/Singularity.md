@@ -53,10 +53,6 @@ $ singularity run ./lolcow_latest.sif
 
 As indicated earlier, Singularity can run Docker container images.  However, Docker container images must first be converted to be usable by Singularity.
 
- 1. Load the Singularity module
- 2. Convert the image
- 3. Run
-
 > The conversion step is only necessary the first time you convert a Docker container to a Singularity container or when you want to update your Singularity container (e.g. to a newer version of a Docker container).
 
 ### Example - Convert and Run latest R Docker container with Singularity
