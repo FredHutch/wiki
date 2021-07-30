@@ -216,7 +216,7 @@ You can verify the bind of those paths with `shell`. Start a shell in the contai
 $ export SINGULARITY_BIND=/shared/biodata:/mnt/data
 $ singularity shell my_r_container.sif
 
-Singularity> ls /mnt/data
+Singularity$ ls /mnt/data
 example_data  gmap-gsnap  humandb  microbiome  ncbi-blast  ngs	seq  tmp
 ```
 
