@@ -1,7 +1,7 @@
 ---
 title: Using Singularity Containers
 last_modified_at: 2021-07-30
-main_author: Dirk Petersen
+main_author: Michael Gutteridge
 primary_reviewers: bmcgough, dirkpetersen
 ---
 
