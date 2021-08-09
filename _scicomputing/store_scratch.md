@@ -39,6 +39,8 @@ For this purpose we have a scratch file systems attached to `Gizmo`.  Using a sc
 On Gizmo there are two forms of scratch space available: "node local job scratch" and "network persistent scratch".  The "node local" scratch directories and their contents exist only for the duration of the job- when the job exits, the directory and its contents are removed.  
 For more persistent scratch space, ​please see the persistent Scratch section.
 
+In AWS, there is a dedicated scratch S3 bucket in your lab's account that should have "scratch" in the name.  This bucket is optimized for use as a scratch bucket and as such does not keep deleted objects around for any length of time, unlike the Economy Cloud buckets which will keep a deleted object for 60 days.  The scratch bucket offers the prefixes `delete10/`, `delete30/` and `delete45/` which will auto-delete anything under that prefix in the number of days in the prefix's name.  No other prefixes exist automatically, however you can request additional prefixes with different numbers of days or even change the delete policy for the entire bucket by emailing `SciComp`.  You can also request additional scratch buckets if desired, however a single scratch bucket will typically meet a lab's needs.  Note that despite the different configuration, the scratch buckets are also HIPPA compliant although if you plan to use the scratch bucket to process PHI, it may be necessary to contact `SciComp` so that additional access protections can be added to your account if only a certain subset of the members of your lab are authorized to access that data.  Typically, this bucket should ONLY be used as scratch space for AWS Batch jobs.
+
 
 ### Node Local Job Scratch
 
@@ -192,7 +194,7 @@ sbatch /fh/path/miniScript.sh
 ```
 
 ### Copy Results Back to S3
-After you have performed your intended process and removed any intermediate files that are not the end result you are after and do not need to save, you can then sync the directory back up to S3.  By using `sync`, all of your output files and logs will go to S3 in a mirrored structure to that in `scratch`.  Another option is to directly sync only the files you want to save by name.   
+After you have performed your intended process and removed any intermediate files that are not the end result you are after and do not need to save, you can then sync the directory back up to S3.  By using `sync`, all of your output files and logs will go to S3 in a mirrored structure to that in `scratch`.  Another option is to directly sync only the files you want to save by name.
 
 ```
 aws s3 sync workingdir/ s3://yourbucket/yourDirectory/

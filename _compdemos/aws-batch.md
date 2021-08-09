@@ -65,6 +65,7 @@ definitive record of all of the dependencies and software needed to run your
 analysis and generate the published results.
 
 ### When to Use AWS batch
+
 AWS _Batch_ is an AWS service that uses Docker containers to build a batch
 computing system.  Batch is made up of a queueing system where jobs are defined
 and queued, and a computational resource made up of Docker containers to
@@ -93,13 +94,13 @@ SciComp provides access to AWS Batch in two ways:
 * Via the [AWS Command Line Interface (CLI)](https://docs.aws.amazon.com/cli/latest/reference/batch/index.html).
 * Via programmatic interfaces such as Python's [boto3](https://boto3.readthedocs.io/en/latest/reference/services/batch.html#client). 
 
-Access to the AWS Management Console (the web/GUI interface), is not available to end users at the Center. However, there is a customized, read-only [dashboard](https://batch-dashboard.fhcrc.org/) available which displays information about compute environments, queues, job definitions, and jobs.
+Access to the AWS Management Console (the web/GUI interface), is now available to end users at the Center.  You can use the AWS Batch service within the console to see your jobs, job queues, compute environments, and job configurations.  Additionally, you will be able to see the outputs and any errors using CloudTrail.  Typically, the job itself will have a link to the CloudTrail Logstream.  Please be aware that debug output can sometimes substantially increase the cost of running a job, since all output must also be processed by CloudTrail and CloudWatch.  Outputting some debug statements or a few values from calculations within a job is fine, however outputing an entire BAM file on every task would be extremely bad.  Once you're confident that your job runs correctly, it is strongly recommended to remove all output statements except those which are absolutely necessary such as error handling.
 
 Please report any problems you discover with this dashboard by describing the problem in an Issue in [this GitHub repository](https://github.com/FredHutch/batch-dashboard/issues/new).
 
 ## Get AWS Credentials
 
-You will need to obtain [AWS credentials](/scicomputing/access_credentials/#amazon-web-services-aws) first in order to use AWS Batch. Initially, these credentials only allow you to access your PI's S3 bucket. To use the credentials with AWS Batch, you must request access by emailing `scicomp` with the subject line **Request Access to AWS Batch**. In your email, **include** the name of your PI and a staff member will follow up with you. Note that you will not be able to create compute environments or job queues, thus if you need a custom compute environment, please email `scicomp`.
+You will need to obtain [AWS credentials](/scicomputing/access_credentials/#amazon-web-services-aws) first in order to use AWS Batch. By default, users will have access to run Batch jobs on the default queue in the compute environment, which has been pre-configured to run workflows based on the AWS Genomics Pipeline (e.g. NextFlow, Illumina Dragon, etc).  It is however possible to restrict access to Batch to only certain users or even to deny access to it entirely if the lab has requested their account to be configured in that way.  Note that you will not be able to create compute environments or job queues, thus if you need a custom compute environment, please email `scicomp`.
 
 SciComp will contact you when your access has been granted.
 
@@ -119,7 +120,7 @@ See our detailed information in the Computing Resource Library [here](/compdemos
   at `/tmp` inside the container). 
 * What (if any) IAM role your job should use for AWS permissions. This
   is important if your job requires permission to access your PI's
-  [S3](https://aws.amazon.com/s3/) bucket.
+  [S3](https://aws.amazon.com/s3/) bucket.  Typically the default role that is pre-configured in your compute environment will be suitable for this.
 
 † These items can be overridden in individual job submissions.
 
@@ -140,12 +141,13 @@ You will also need to make sure that you mount `/docker_scratch` on the host to 
 
 ## Submit your job
 
-There are currently two ways to submit jobs:
+There are currently three ways to submit jobs:
 
 1. via the AWS Command Line Interface (CLI): `aws batch submit-job`.
    Recommended for launching one or two jobs.
 1. Using Python's `boto3` library. Recommended for launching
    larger numbers of jobs.
+1. Using the AWS Batch Service from the AWS Management Console in your web browser.  This way is useful for retrying a failed job or debugging a test version of your job, but typically the other methods are preferable.
 
 AWS Batch also supports [array jobs](https://docs.aws.amazon.com/batch/latest/userguide/array_jobs.html), which are collections of related jobs.
 Each job in an array job has the exact same command line and
@@ -171,8 +173,7 @@ Now edit `job.json`, being sure to fill in the following fields:
 * `jobName` - a unique name for your job, which should include
   your HutchNet ID. . The first character must be alphanumeric, and up to 128 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed.
 * `jobQueue` - the name of the job queue to submit to (which
-   has the same name as the compute environment that will be used).
-   In most cases, you can use the `mixed` queue.
+   will typically be called "default").
 * `jobDefinition` The name and version of the job definition to use.
    This will be a string followed by a colon and version number, for
    example: `myJobDef:7`. You can see all job definitions with
@@ -180,7 +181,7 @@ Now edit `job.json`, being sure to fill in the following fields:
   optionally passing a `--job-definitions` parameter with the name
   of one (or more) job definitions. This will show you each version
   of the specified definition(s). You can also view job
-  definitions in the [dashboard](https://batch-dashboard.fhcrc.org).
+  definitions in the AWS Batch service within the AWS Management Console in your browser.
 * If you are using [fetch-and-run](https://aws.amazon.com/blogs/compute/creating-a-simple-fetch-and-run-aws-batch-job/), do NOT edit
   the `command` field. If you are not using `fetch-and-run` you may
   want to edit this field to override the default command.
@@ -218,7 +219,7 @@ like this:
 ```json
 {
     "jobName": "jdoe-test-job",
-    "jobQueue": "mixed",
+    "jobQueue": "default",
     "jobDefinition": "myJobDef:7",
     "containerOverrides": {
         "command": [
@@ -287,7 +288,7 @@ import boto3
 batch = boto3.client('batch')
 
 response = batch.submit_job(jobName='jdoe-test-job', # use your HutchNet ID instead of 'jdoe'
-                            jobQueue='mixed', # sufficient for most jobs
+                            jobQueue='default', # sufficient for most jobs
                             jobDefinition='myJobDef:7', # use a real job definition
                             containerOverrides={
                                 "command": ['echo', 'hello', 'world'], # optionally override command
@@ -314,36 +315,26 @@ loop in python (but consider using
 ### Choose a Job Queue
 
 No matter how you submit your job, you need to choose
-a queue to submit to. There are several queues to choose from:
+a queue to submit to. By default your account will only have a single compute environment with a default queue, however if you need a particular type of compute environment then you can contact SciComp for assistance.  The default vCPU limit in AWS is 128, however this can be increased by submitting a request to AWS support.  SciComp can do this for you, however Admins in your lab also have permission to make such requests.  The default queue uses SPOT instances with instance type "optimal" and a bid of 50 percent.  
 
+#### Understanding your Job queue and compute environment settings:
 
-| **Queue Name**  | **Compute Environment Name**  | **Compute Type**  | **Instance Types**  | **Maximum CPUs**  | **Bid Percentage**  |
-|---|---|---|---|---|---|
-| **cpu-spot-50**  | cpu-spot-50  | SPOT | optimal  | 500  | 50  |
-| **cpu-spot-40**  | cpu-spot-40  | SPOT | optimal  | 700  | 40  |
-| **cpu-spot-30**  | cpu-spot-30  | SPOT | optimal  | 1000 | 30  |
-| **gpu-spot-50**  | gpu-spot-50  | SPOT | p3.16xlarge  | 500  | 50  |
-
-#### Understanding this table:
-
-* **SPOT** refers to a [pricing scheme](https://aws.amazon.com/ec2/spot/) in the AWS cloud. SPOT instances (virtual machines) are cheaper than normal (known as "on-demand") instances. When a spot instance is started, a **Bid Percentage** is chosen. If the spot price rises above the chosen percentage of the on-demand price, the spot instance is terminated. This is infrequent, and if your AWS Batch job is set up to automatically retry failed jobs, you will likely not even notice. Practically speaking, a bid of 50 percent should generally be available around the clock, while a bid of 30 percent may only become available on nights and weekends. However, that availability pattern may vary by instance type, and with regional demand.
+* **SPOT** refers to a [pricing scheme](https://aws.amazon.com/ec2/spot/) in the AWS cloud. SPOT instances (virtual machines) are cheaper than normal (known as "on-demand") instances. When a spot instance is started, a **Bid Percentage** is chosen. If the spot price rises above the chosen percentage of the on-demand price, the spot instance is terminated. This is infrequent, and if your AWS Batch job is set up to automatically retry failed jobs, you will likely not even notice. Practically speaking, a bid of 50 percent should generally be available around the clock, while a bid of 30 percent may only become available on nights and weekends. However, that availability pattern may vary by instance type, and with regional demand.  Your compute environment is set to a bid of 50 percent by default.
 * **Maximum CPUs** Each queue is tied to a compute environment which
   has a maximum number of CPUs defined. No more than this number of CPUs can be in use at any given time. As an example, the total number of CPUs needed for a set of 10 jobs which each request 16 CPUs is the same as the total number of CPUs needed for a set of 160 jobs each requesting 1 CPU.
-* **Instance Types** *optimal* means that AWS Batch will choose between the C, M, and R [instance type families](https://aws.amazon.com/ec2/instance-types/). *p3.16xlarge* should only be
-used when your AWS Batch job needs access to [GPUs](https://en.wikipedia.org/wiki/Graphics_processing_unit).
+* **Instance Types** *optimal* means that AWS Batch will choose between the C, M, and R [instance type families](https://aws.amazon.com/ec2/instance-types/).  Often, these will be the previous generation of AWS instance types e.g. m4.large instead of m5.large.  The reason for this is to maximize the ability to allocate Spot instances, as the newer generations of EC2 instance types are not always as abundant as previous generations.
 
 Note that choosing a queue involves a tradeoff between capacity (maximum CPUs) and availability (lower bid percentages may result in spot instances being terminated and jobs retried).
-
 
 ### Monitor job progress
 
 Once your job has been submitted and you have a job ID, you can use it to
 retrieve the job status.
 
-#### In the web dashboard
+#### In the AWS Management Console
 
-Go to the [jobs table](https://batch-dashboard.fhcrc.org/#jobs_header) in
-the dashboard. Paste your job ID or job name into the **Search** box.
+Go to the [Batch Service ](https://us-west-2.console.aws.amazon.com/batch/v2/home?region=us-west-2#) in
+the dashboard. Select the "Jobs" item in the menu on the right-hand side and then click on your job.
 This will show the current status of your job. Click the job ID
 to see more details.
 
@@ -375,9 +366,8 @@ state, or has completed (with the `SUCCEEDED` or `FAILED` state).
 
 #### In the web dashboard
 
-Go to the [job table](https://batch-dashboard.fhcrc.org/#jobs_header) in the
-web dashboard. Paste your job's ID into the **Search** box. Click on
-the job ID. Under **Attempts**, click on the **View logs** link.
+Go to the [job section](https://us-west-2.console.aws.amazon.com/batch/v2/home?region=us-west-2#jobs) in the
+AWS Batch service from the AWS Management Console and click on the job you wish to view.  The job will have a substantial amount of detail, however the logs will be viewable under the section *Log stream name* that should take you into AWS CloudTrail where you can see the logs for that particular job.
 
 #### On the command line
 
