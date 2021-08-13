@@ -196,6 +196,8 @@ hdc:
       url: /hdc/hdc_portals/
     - title: "Trainings"
       url: /hdc/hdc_training/
+    - title: "Reference Genomes"
+      url: /hdc/hdc_refgenomes/
     - title: Contact Us
       url: /hdc/hdc_contact_us/
   - title: "Bioinformatics Workflows"

@@ -78,3 +78,16 @@ training; to work through a self-directed learning module; to attend one of the 
 by experts in a particular domain; or to explore a wider range of resources available on the internet.
 
 For more information, browse our [information resources for learning opportunities](/hdc/hdc_training).
+
+## Reference Genomes 
+
+The Data Core and Bioinformatics Core work to maintain a core set of
+data resources which are available to be used by the entire Fred Hutch
+community. The primary set of data files which are currently available
+are a collection of [frequently used reference genomes](/hdc/hdc_refgenomes) provided
+for high-performance computing on the shared filesystem. Please
+contact the Data Core if there are additional data resources which
+could be added to provide value to researchers across multiple
+research groups. 
+
+For more information, browse our [documentation of the iGenomes reference genomes hosted in `/shared/biodata/`.](/hdc/hdc_refgenomes)
