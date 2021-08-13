@@ -213,5 +213,7 @@ hdc:
       url: /hdc/workflows/running/on_aws/
     - title: Running on SLURM / gizmo
       url: /hdc/workflows/running/on_gizmo/
+    - title: Building Software Containers
+      url: /hdc/hdc_building_containers/
     - title: Workflow Catalog
       url: /hdc/workflows/workflow_catalog/
