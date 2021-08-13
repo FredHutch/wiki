@@ -207,6 +207,8 @@ hdc:
       url: /hdc/workflows/workflow_background/
     - title: Running Your First Workflow
       url: /hdc/workflows/running_first_workflow/
+    - title: Using a Run Script
+      url: /hdc/workflows/running/run_script
     - title: Running on AWS
       url: /hdc/workflows/running/on_aws/
     - title: Running on SLURM / gizmo
