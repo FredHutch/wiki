@@ -99,3 +99,30 @@ If you want to run a workflow using cached calls from a previous run, make sure 
 and that the `-resume` flag is present.
 
 More details [demystifying the resume function in Nextflow](https://www.nextflow.io/blog/2019/demystifying-nextflow-resume.html).
+
+### Software Containers
+
+One of the biggest benefits of using a workflow manager is reproducibility -- it's easy to know exactly what
+commands were run to generate a given set of outputs. However, the same command may result in a different outcome
+when the version of a piece of software changes. For that reason, some method of software versioning is needed
+for a reliable level of reproducibility in bioinformatics analysis.
+
+One method for controlling a version of software is to use the [Environment Module system](/scicomputing/compute_environments/)
+maintained in the Fred Hutch shared computing system. However, that system is only available for use with 
+on-premise computing at Fred Hutch. For robust software versioning across institutions or with cloud computing resources,
+software containers are an extremely useful approach. Conveniently, software containers can also be used
+with on-premise resources.
+
+When referring to software containers, people usually use the term "Docker" or "Singularity." While there are
+nuanced differences to these two systems, the general summary is that Singularity is a system which allows
+users to run Docker images inside shared computing systems. Docker is more commonly used in local execution,
+cloud computing, or any setting in which a user can assume root access (which is not allowed in a shared setting).
+
+To use a software container in Nextflow, simply use the `container` field when defining a process. This will ensure that
+the code defined in the process is executed inside the specified software container. You can also specify a container
+which can be used to run _all_ of the processes in a workflow (although this is less useful for complex workflows).
+For more details on the use of containers in Nextflow, see [this documentation](https://www.nextflow.io/docs/latest/docker.html).
+
+There are two options for using a container in your workflow -- use a public image or make your own. The best public resource
+for Docker images is the [BioContainers Registry](https://biocontainers.pro/registry), which has images available for
+a large number of bioinformatics tools. To build your own Docker container, [read this short guide](/hdc/hdc_building_containers/).

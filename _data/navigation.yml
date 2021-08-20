@@ -196,6 +196,8 @@ hdc:
       url: /hdc/hdc_portals/
     - title: "Trainings"
       url: /hdc/hdc_training/
+    - title: "Reference Genomes"
+      url: /hdc/hdc_refgenomes/
     - title: Contact Us
       url: /hdc/hdc_contact_us/
   - title: "Bioinformatics Workflows"
@@ -205,9 +207,13 @@ hdc:
       url: /hdc/workflows/workflow_background/
     - title: Running Your First Workflow
       url: /hdc/workflows/running_first_workflow/
+    - title: Using a Run Script
+      url: /hdc/workflows/running/run_script
     - title: Running on AWS
       url: /hdc/workflows/running/on_aws/
     - title: Running on SLURM / gizmo
       url: /hdc/workflows/running/on_gizmo/
+    - title: Building Software Containers
+      url: /hdc/hdc_building_containers/
     - title: Workflow Catalog
       url: /hdc/workflows/workflow_catalog/
