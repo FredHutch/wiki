@@ -56,6 +56,8 @@
   url: _scicomputing/access_overview.md
 - dlm: November 12, 2019
   url: _scicomputing/software_standards.md
+- dlm: August 17, 2021
+  url: _scicomputing/access_nx.md
 - dlm: September 12, 2019
   url: _scicomputing/access_permissions.md
 - dlm: November 14, 2019
@@ -92,7 +94,7 @@
   url: _scicomputing/software_overview.md
 - dlm: December 22, 2020
   url: _scicomputing/access_credentials.md
-- dlm: September 24, 2020
+- dlm: August 17, 2021
   url: _scicomputing/access_methods.md
 - dlm: October 25, 2018
   url: _generation/datagen_rnaApproaches.md
