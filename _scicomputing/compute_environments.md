@@ -112,6 +112,8 @@ At its core, Docker is a tool that lets you run code inside a totally fixed and 
 The folks at Docker are probably the best ones to answer the
 question, ["What is Docker?"](https://www.docker.com/what-docker).
 
+For more documentation and background on Docker, see [Docker for Beginners](https://docker-curriculum.com/).
+
 The reason that scientists use Docker is that it allows them
 to run computational tools using the exact same computational
 environment as another scientist, so that the same input data

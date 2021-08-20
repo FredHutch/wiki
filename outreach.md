@@ -14,11 +14,13 @@ The [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) aims to suppo
 1. create an evolving source of documentation that grows and changes along with the particular interests and research tools available to Fred Hutch researchers over time, and
 2. unify content that bridges the divide between how research processes are performed *in general* and how those processes are performed at the Fred Hutch *specifically*.
 
-To fulfill these two purposes we have the Wiki Writer/Editor program which is intended to engage current Fred Hutch based postdocs, staff scientists and research specialists over a three month timeframe to create and edit content to help the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) achieve those goals. We aim to incorporate information about new and emerging technologies or projects in which Fred Hutch researchers are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research. The Wiki Writer/Editor program engages current staff from all of the Divisions for a three month timeframe to both write and edit content with a stipend provided.
+To fulfill these two purposes we have the Wiki Writer/Editor program which is intended to engage current Fred Hutch based postdocs, staff scientists and research specialists over a three month timeframe to create and edit content to help the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) achieve those goals. We aim to incorporate information about new and emerging technologies or projects in which Fred Hutch researchers are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research.
+
+> Note: as of the pandemic, the funded Writer/Editor program is on hiatus, but any contributions pro bono are still accepted.  
 
 ## Why be a Wiki Writer/Editor?
 
-- Communicate with the research community and help improve the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) 
+- Communicate with the research community and help improve the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/)
 - Share and communicate out how to use a new tool or resource
 - Document something you find yourself explaining multiple times to your co-workers( ex. best practices, getting started, how to, things to avoid, TL;DR)
 - Get better at using GitHub
@@ -27,7 +29,7 @@ To fulfill these two purposes we have the Wiki Writer/Editor program which is in
 ## Responsibilities for a Wiki Writer/Editor
 
 - An initial one hour meeting for training on how to edit and manage contributions via GitHub (web OR desktop client training will be provided; previous experience with Github is not required).
-- Participate remotely or locally in the one hour weekly working meeting currently held on Thursdays from 10-11am PST.
+- Participate remotely or locally in the one hour weekly working meeting.
 - Write documentation in your primary area of expertise and/or editing existing documents on the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) both in and outside of your primary area of expertise. This work is done remotely, anytime during the week at your convenience and contributions are submitted regularly via GitHub. Contributions are then reviewed and incorporated along with all other contributions at the weekly Data Science Wiki work meeting.
 - Provide reviews of content for formatting, clarity and accuracy (when in your area of expertise) when other contributors submit pull requests.
 
@@ -50,5 +52,5 @@ To fulfill these two purposes we have the Wiki Writer/Editor program which is in
 ### Get in Touch
 
 - More information can be found at the [Biomedical Data Science Wiki](/outreach/), the [Github README](https://github.com/FredHutch/wiki/blob/main/README.md) and the [Contributing Guidelines](https://github.com/FredHutch/wiki/blob/main/CONTRIBUTING.md)
-- Join the **FHBig/Coop Communities** Slack workspace via [this link](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg), and use your `fredhutch.org`, `uw.edu`, `scharp.org`, or `sagebase.org` email to join.  In this Slack workspace we have a `#wiki-contributors` channel where you can chime in with edits, get updates about next meetings, or converse with other contributors about next steps. 
-- If you have your GitHub username linked to the Fred Hutch GitHub organization account then you can follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content. If you have not done this yet, please see more about [using GitHub at Fred Hutch](/scicomputing/software_managecode/).
+- Join the **FHBig/Coop Communities** Slack workspace via [this link](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg), and use your `fredhutch.org`, `uw.edu`, `scharp.org`, or `sagebase.org` email to join.  In this Slack workspace we have a `#wiki-contributors` channel where you can chime in with edits, get updates about next meetings, or converse with other contributors about next steps.
+- If you have your GitHub username linked to the Fred Hutch GitHub organization account then you can follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content.

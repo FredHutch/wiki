@@ -20,7 +20,7 @@ To contribute to the Wiki you only need to have your GitHub username added to th
 ## Content Contribution and Review Process
 
 ### Content Types
-We manage the content of this site via a set of markdown files that contain long, article-style text (our main pages in the site) and a handful of focused cookbook/demo-style documents (Resource Libraries). 
+We manage the content of this site via a set of markdown files that contain long, article-style text (our main pages in the site) and a handful of focused cookbook/demo-style documents (Resource Libraries).
 
 Articles use an outline structure to allow graduated content, starting from basic information and progressing to more detailed content for expert users/readers. Using headers (H2 through H4) in the text allows the automatically rendered Table of Contents to facilitate readers' ability to jump around the documents to get to needed content as well as the creation of anchors to allow for linking directly to portions of content in a longer page.  By keeping related text together in a small number of pages, it allows us to provide more context for people who are learning about a topic, allows finding of other related information a reader might not have known to look for, AND allows content providers to manage content in ONE PLACE rather than spread throughout the site.  
 
@@ -33,13 +33,13 @@ Both Articles and Resource Library entries are full-text searchable using the se
 ### Adding/Editing Content
 
 #### Methods to Edit
-There are multiple ways to edit content on our site, including: 
+There are multiple ways to edit content on our site, including:
 
 For spot checks, small edits/refinements or those of us not familiar with git or GitHub:
 - Clicking on the "Edit this Page" icon on any page, providing your edits, committing them to a branch and doing a pull request (GitHub will guide you in this process).
 
 For larger edits, multi-page edits, structural changes or expert users of git/GitHub:
-- Cloning the Wiki repository to your local machine, committing edits to a new branch, pushing those edits to GitHub and doing a pull request (requires knowledge of git and GitHub workflows). 
+- Cloning the Wiki repository to your local machine, committing edits to a new branch, pushing those edits to GitHub and doing a pull request (requires knowledge of git and GitHub workflows).
 
 #### General Editing Process
 To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are) from GitHub, follow these steps:
@@ -57,17 +57,17 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
 ### The Review Process
 
 #### Who can contribute content?
-This Wiki is intended to be curated by content owners, local experts, and service providers at Fred Hutch in order to ensure accuracy and relevancy to our community.  Thus, contributions and reviews can only be made by users who have GitHub usernames affiliated with the Fred Hutch institution. Individuals from other institutions who are working with the Hutch community are encouraged to contact `coophelp` at `fredhutch.org` to discuss collaboration.
+This Wiki is intended to be curated by content owners, local experts, and service providers at Fred Hutch in order to ensure accuracy and relevancy to our community.  Thus, contributions and reviews can only be made by users who have GitHub usernames affiliated with the Fred Hutch institution. Individuals from other institutions who are working with the Hutch community are encouraged to file an issue to discuss collaboration with the current project leaders.
 
 #### Who decides what is published in the Wiki?
-The core group responsible for Wiki content is the [Wiki Reviewer Team](https://github.com/orgs/FredHutch/teams/wiki-reviewers). Membership on this team is maintained by Scientific Computing (who control the Fred Hutch GitHub organization) and Amy Paguirigan (who created this repository). If you are interested in serving as a member of the Wiki Reviewer Team, email `apaguiri` to discuss expectations and requirements.
+The core group responsible for Wiki content is the [Wiki Reviewer Team](https://github.com/orgs/FredHutch/teams/wiki-reviewers). Membership on this team is maintained by Scientific Computing (who control the Fred Hutch GitHub organization) and Amy Paguirigan (project lead). If you are interested in serving as a member of the Wiki Reviewer Team, email Amy `apaguiri` or file an issue to discuss expectations and requirements.
 
-Anyone in the Fred Hutch community interested in Wiki content are welcome to attend our weekly content editing and review meetings; please see [our calendar](https://fredhutch.github.io/coop/calendar/) for time and location. Regular attendees include members of the research community as well as staff supporting data-intensive research. Topics at these meetings include reviews of recently submitted pull requests and issues, as well as discussion about what additional content to include and how it should be organized. 
+Anyone in the Fred Hutch community interested in Wiki content are welcome to attend our weekly content editing and review meetings; please see [our calendar](https://fredhutch.github.io/coop/calendar/) for time and location. Regular attendees include members of the research community as well as staff supporting data-intensive research. Topics at these meetings include reviews of recently submitted pull requests and issues, as well as discussion about what additional content to include and how it should be organized.
 
 #### How is content reviewed?
-Changes to the Wiki are assessed via [pull requests to this GitHub repository](https://github.com/fredhutch/wiki/pulls). We use the `primary_reviewers` tag in our markdowns to indicate when there is a resident expert who should be contacted via pull request review requests when content in that markdown is edited. This process of contribution and review from multiple different users allows us to make sure that the content evolves in such a way that it it both more interpretable to the intended audience (Fred Hutch affiliated staff), but also accurate, appropriate and continuously reviewed. 
+Changes to the Wiki are assessed via [pull requests to this GitHub repository](https://github.com/fredhutch/wiki/pulls). We use the `primary_reviewers` tag in our markdowns to indicate when there is a resident expert who should be contacted via pull request review requests when content in that markdown is edited. This process of contribution and review from multiple different users allows us to make sure that the content evolves in such a way that it it both more interpretable to the intended audience (Fred Hutch affiliated staff), but also accurate, appropriate and continuously reviewed.
 
-When a pull request is made, it automatically requests a pull request review from any member of the [Wiki Reviewer Team](https://github.com/orgs/FredHutch/teams/wiki-reviewers). While reviews from other experts is welcomed, a review from a Wiki Reviewer Team member approving the changes is *required* prior to merging the pull request (this is enforced by [protection of the main branch](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews#required-reviews)). In addition to regular communication among the Wiki Reviewer Team, we work with the the Hutch's Information Security Office to ensure published content maintains agreed upon standards for information security. 
+When a pull request is made, it automatically requests a pull request review from any member of the [Wiki Reviewer Team](https://github.com/orgs/FredHutch/teams/wiki-reviewers). While reviews from other experts is welcomed, a review from a Wiki Reviewer Team member approving the changes is *required* prior to merging the pull request (this is enforced by [protection of the main branch](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews#required-reviews)). In addition to regular communication among the Wiki Reviewer Team, we work with the the Hutch's Information Security Office to ensure published content maintains agreed upon standards for information security.
 
 ### Getting Credit
 Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/main/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.  
@@ -191,7 +191,7 @@ Now run
 
 #### View the built site
 
-With both methods, you should be able to see the 
+With both methods, you should be able to see the
 built site (once the build is done) by going to
 [http://localhost:7979](http://localhost:7979) in your browser.
 
@@ -233,7 +233,3 @@ https://github.com/FredHutch/wiki/tree/main/_includes
 Our index page: https://github.com/FredHutch/wiki/blob/main/index.md
 Our outreach page: https://github.com/FredHutch/wiki/blob/main/outreach.md
 Our page containing rendered draft files: https://github.com/FredHutch/wiki/blob/main/drafts.md
-
-
-
-
