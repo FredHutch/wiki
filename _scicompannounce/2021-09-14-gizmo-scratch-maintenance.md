@@ -12,4 +12,12 @@ If you are confident your job can complete before the maintenance period starts 
 scontrol update jobid=<jobid> timelimit=1-0
 ```
 
+## Updates to the Gizmo Environment
+
+### Slurm Upgrade
+
+We'll be updating Slurm to version 21.08.  There are a number of changes which we don't expect will impact our current use of Slurm but upgrading will keep us well positioned for support.
+
+Detailed changes are available in the [release notes](https://github.com/SchedMD/slurm/blob/slurm-21-08-0-1/RELEASE_NOTES).
+
 Contact Scientific Computing by filing a helpdesk ticket (`scicomp@`) if you need assistance or have further questions.
