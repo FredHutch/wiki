@@ -127,7 +127,6 @@ No one wants to type a long passphrase every time they use SSH. Creating an SSH 
 ##### MacOS Keychain
 The following steps will get your MacOS device into a state where your SSH key passphrase is unlocked for you when you log into the Mac, and is automatically supplied to SSH. You will need to be logged in to your Mac, have a terminal open, and have an SSH key to start.
 
-* Change the permissions of your public key `chmod 600 <path to keyfile>` the default is `~/.ssh/id_rsa.pub`. MacOS will not let you add your 'key' to the keychain without doing this first.
 * Add your 'key' to the keychain - run `ssh-add -K <path to keyfile>` the default is `~/.ssh/id_rsa`. This will prompt for your passphrase, and then store it in your login keychain.
 * Configure your Mac to always use the keychain for your ssh key passphrase by adding the following to your (`~/.ssh/config`) file:
 	```
