@@ -116,24 +116,24 @@ You will be prompted to enter and then confirm a passphrase. This is the best pr
 For extra points, read all about [public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) (it is very cool!).
 
 #### Key distribution
-
-You can copy your public key in any way you like. You can even cut-and-paste the key contents if that is easy. On Mac and Linux there is an auxiliary ssh command called `ssh-copy-key` which will copy your default public key to a specified remote system (asking for your password to make the ssh connect to transfer the key). On Windows it is easiest to cut-and-paste the key into a remote session opened using a password.
-
+You can copy your public key in any way you like. You can even cut-and-paste the key contents if that is easy. On Mac and Linux there is an auxiliary ssh command called `ssh-copy-id` which will copy your default public key to a specified remote system (asking for your password to make the ssh connect to transfer the key). 
+```
+ssh-copy-id HutchID@rhino
+```
+On Windows it is easiest to cut-and-paste the key into a remote session opened using a password.
 #### Passphrase management
 No one wants to type a long passphrase every time they use SSH. Creating an SSH key with no passphrase is unsafe. There must be a better way... .
 
 ##### MacOS Keychain
-
 The following steps will get your MacOS device into a state where your SSH key passphrase is unlocked for you when you log into the Mac, and is automatically supplied to SSH. You will need to be logged in to your Mac, have a terminal open, and have an SSH key to start.
 
 * Add your 'key' to the keychain - run `ssh-add -K <path to keyfile>` the default is `~/.ssh/id_rsa`. This will prompt for your passphrase, and then store it in your login keychain.
-* Tell ssh to use it - add the following to your ssh config:
-
-Config|Command Line|Value|Notes
----|---|---|---
-UseKeychain|-o UseKeychain|yes/no|So not all config options have easy command line options. This tells your ssh client to use your keychain for the passphrase.
-AddKeysToAgent|-o AddKeysToAgent|yes/no|Starts and ssh-agent process that will hold your unlocked key safely in memory for subsequent ssh session. Shutdown or reboot and this disappears.
-
+* Configure your Mac to always use the keychain for your ssh key passphrase by adding the following to your (`~/.ssh/config`) file:
+	```
+	Host rhino
+      UseKeychain yes
+      AddKeysToAgent yes
+	```
 ##### Windows/puTTY
 
 On Windows, puTTY can include a key management agent called `pageant.exe` - you can download puTTY easily without it and can download it separately from [the puTTY site](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
