@@ -50,7 +50,7 @@ NOTE:  Economy Local will no longer be available after June 2022.  It is recomme
 
 `Economy Cloud` is a public cloud based object storage service that uses Amazon Web Services Simple Storage Service (S3) to offer managed and secure (encrypted) AWS S3 buckets to Fred Hutch investigators.  While it is not accessible by non-Hutch investigators by default, you can contact `scicomp` to request access for external research groups.  `Economy Cloud`  is the default choice for Object Storage for every Hutch investigator who does not have any specific requirements.
 
-Each PI may request a dedicated AWS account for their lab if they wish to use `Economy Cloud` storage.  In the lab account, there will be two `Economy Cloud` buckets by default; contact your PI to get the names of the buckets.  There is a private bucket and a public bucket.  In this context, *private* and *public* refer to the *maximum possible level* of access to a file in that bucket.  Files uploaded to the public bucket by default will still *NOT* be publicly accessible, however if desired it is possible to change the access to one or more files or folders to make them directly accessible to the public.  For example, if you published a paper and wish to make a public refernce dataset available to accompany that paper, that reference dataset would need to go into the public bucket and then you can contact SciComp for assitance in changing the access permissions.  In the private bucket, granting public access will be impossible and even if the security policy is somehow accidentally modified to grant public access to the private bucket, the access will *still* be blocked by additional guardrails at the account level.
+Each PI may request a dedicated AWS account for their lab if they wish to use `Economy Cloud` storage.  In the lab account, there will be two `Economy Cloud` buckets by default; contact your PI to get the names of the buckets.  There is a private bucket and a public bucket.  In this context, *private* and *public* refer to the *maximum possible level* of access to a file in that bucket.  Files uploaded to the public bucket by default will still *NOT* be publicly accessible, however if desired it is possible to change the access to one or more files or folders to make them directly accessible to the public.  For example, if you published a paper and wish to make a public refernce dataset available to accompany that paper, that reference dataset would need to go into the public bucket and then you can contact SciComp for assitance in changing the access permissions.  In the private bucket, granting public access will be impossible and even if the security policy is somehow accidentally modified to grant public access to the private bucket, the access will *still* be blocked by additional guardrails at the account level.  If you are unsure which bucket to use, you should by default use the private bucket.  The data can later be moved if necessary.
 
 In the event that you need to share a very large dataset (e.g. >5TB) with an external collaborator and the collaborator intends to store that dataset within their own institutions S3 bucket, please contact SciComp for assistance.  There are ways to copy data between S3 buckets far more quickly than would otherwise be possible with any of the methods described here, however these typically require coordination between the collaborator's IT department and the SciComp team.  This can also be done for receiving very large datasets from external S3 buckets as well.  It is very rare that this method of bulk-copying data between buckets is required, however it is available if the situation warrants it.  Typically, the setup for this will take up to 48 hours.  The transfer speeds depend on a number of factors, however this has been reliably and repeatedly measured at 30TB-40TB per hour for well over 1 million files.
 
@@ -66,7 +66,11 @@ Data on this service is not backed up in the traditional sense, but rather versi
 
 Once you have [obtained S3 credentials](/scicomputing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j-eco` for the private bucket and `fh-pi-doe-j-eco-public` for the public bucket. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.
 
-By default, everyone in the lab with an AWS username will have access to all data in all buckets, however the prefixes `readonly/` and `SR/` are typically restricted.  Data Managers and Admins have full permissions on all files in all buckets.  While this default setup works well for most labs, it is possible to create additional restrictions as well if necessary.  For example, if a lab needs to store confidential PHI data such as for a clinical trial and only a certain subset of users in the lab are authorized to access that data, a specific prefix can be created that restricts access to only those authorized users.  Please contact SciComp for assistance in setting this up.
+By default, everyone in the lab with an AWS username will have access to all data in all buckets, however the prefixes `readonly/` and `SR/` are typically restricted.  Data Managers and Admins have full permissions on all files in all buckets.  While this default setup works well for most labs, it is possible to create additional restrictions as well if necessary.  For example, if a lab needs to store confidential PHI data such as for a clinical trial and only a certain subset of users in the lab are authorized to access that data, a specific prefix can be created that restricts access to only those authorized users.  Please submit a helpdesk ticket for assistance in setting this up.
+
+#### Scratch S3 bucket
+
+Each PI account has an additional scratch S3 bucket, currently called `fh-pi-lastname-f-nextflow-scratch`.  While these have "nextflow" in the name, they are a general-purpose scratch bucket that can be used for temporary data storage while you are running any workflow or for any other temporary purpose.  In this bucket, you can create/use the folders "delete10/", "delete30/", or "delete60/" and these will automatically delete any data in them 10, 30, or 60 days (respectively) after that data is initially created.  If you use any other folder in that bucket, it will default to deletion after 60 days.  Please note that this data will be deleted after the appropriate number of days from when an object was *initially created* and *NOT* from the last time that object was accessed, so accessing objects in the scratch bucket periodically will *NOT* prevent their deletion at the scheduled time.  Objects in the scratch bucket are not backed up by S3, so any deletion of the objects there is permanent immediately after it occurs.  By default, all users have full permissions on all folders of the scratch bucket and any workflows run in your default compute environment will also have full permissions on any folders in the scratch bucket.  If you need a folder to be enabled to delete objects after a different number of days for any reason, e.g. a "delete13/" folder that deletes objects after precisely 13 days, then please submit a ticket to the helpdesk.
 
 #### Sharing data with other collaborators
 
@@ -120,3 +124,42 @@ We have a number of demos in our Resource Library related to how to interact wit
 
 
 >Note: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
+
+
+#### FAQ
+
+Why does the scratch bucket have the name "nextflow" in it?  Is it only for nextflow or can I use it for other things?
+
+Unfortunately, it is impossible to rename an S3 bucket once created so when the initial compute environment was designed it was tested only against nextflow and the name has persisted.  In the future, we will be making a change to provide a new scratch bucket with a more generic name.  In the meantime, despite having "nextflow" in the name you can use the scratch bucket for any purpose you wish that is conducive to temporary data storage.
+
+I really need an additional S3 bucket created in my account for some reason.  Can I create one?
+
+In most cases you will not need any additional buckets, but it is possible to have additional S3 buckets created in your lab account if you have a reasonable justification for those buckets.  You will not be able to create them yourself, so please submit a helpdesk ticket if you have this need.
+
+I need a bucket in a location other than us-west-2, can this be done?
+
+Yes, the CLD team can create buckets in other regions if you have a need for this however in most cases this is not necessary.  If you have a specific need that would require buckets in other regions, please submit a ticket to the helpdesk.
+
+Is it possible to see who is using the data in my lab buckets?
+
+Yes, all access to your S3 buckets will be logged to a centralized location however you will not be able to access this log data by default.  This includes all buckets in all regions of your account regardless of how those buckets got created, when they were created, or who created them, and it is impossible to disable this logging.  If you have a specific concern about access to your bucket, please submit a ticket to the CLD team.
+
+I accidentally deleted something in my scratch bucket.  Is it gone forever?
+
+Yes, it is gone forever.  There is no way to recover that data.
+
+I accidentally deleted something in my public or private economy cloud bucket (or another bucket that has "eco" in the name).  Can I get this data back?
+
+Yes, deleted data can be un-deleted for up to 60 days immediately following the time that the object was deleted.  Submit a helpdesk ticket immediately and we will be able to assist you with data recovery.
+
+I accidentally uploaded a file to the wrong path and it overwrote an existing file.  Can I get the original contents of the file back?
+
+Yes, this is effectively the same scenario as if you had deleted the file instead of overwriting it.  Submit a ticket to the helpdesk immediately for assistance.
+
+I have a file in my S3 bucket that I need to permanently delete immediately instead of waiting 60 days.  Is this possible?
+
+Yes, it is possible to permanently remove the backup copy of a file that was modified or deleted prior to the 60-day period.  This is typically only necessary for regulatory compliance and in general is extremely rare, however should it be necessary then please submit a ticket to the helpdesk and we can assist you with this.
+
+I already have extensive knowledge of S3 and have been working with it for years.  Do I really need to contact the helpdesk for everything?
+
+It depends.  Certain restrictions exist in the account that cannot be overridden so you will not be able to delete an economy-cloud bucket, modify the resource policy, enable object locks or legal holds (unless this has been granted on your account; contact helpdesk for more info), adjust the object lifecycle policies, or enable an object or bucket ACL other than bucket-owner-full-control on any bucket except the public bucket.  Admins and Data Managers are able to recover non-current versions of objects, initiate Glacier retrieval requests, and submit S3 Batch jobs (depending on the circumstances, other guardrails may prevent you from running an S3 Batch job, especially if it involves invoking other AWS Service such as Lambda functions).  If you are certain that you know what you are doing, then you may proceed entirely at your own risk.
