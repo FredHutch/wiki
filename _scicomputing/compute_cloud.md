@@ -1,9 +1,28 @@
 ---
-title: Cloud Computing at Fred Hutch
-last_modified_at: 2020-03-03
-main_author: Sam Minot & Dan Tenenbaum
-primary_reviewers: dtenenba
+title: AWS Cloud Computing at Fred Hutch
+primary_reviewers: dtenenba, jefftucker, sminot, vorting
 ---
+
+There are multiple methods by which you might leverage AWS cloud computing here at the Hutch.  For less experienced cloud computing users, a workflow manager such as Cromwell or Nextflow may be of interest.  These tools abstract away the actual running of the jobs in the cloud or on Gizmo, and for very new users, Cromwell may be a simple place to start as it abstracts away the most about where the jobs actually run.  For more advanced users or for those who are more adept at programming or know they need to run primarily jobs in AWS (not in multiple locations), Nextflow may be ideal for you.  For those with needs that do not focus on the running of workflows, such as genomic analyses, AWS Batch itself may be the ideal service.  
+
+## [Cromwell at Fred Hutch](/compdemos/Cromwell/)
+Cromwell is a workflow manager software that is in use at the Hutch that works more like a work management tool than just a way to run individual workflows as it can run multiple workflows at a time and on multiple compute infrastructures (e.g., primarily both Gizmo and AWS at the Hutch, but also GCP and Azure).  It can interpret WDL and CWL based workflow languages, which are open source specifications for workflow definitions used widely.  A configuration for Hutch users that will allow for a Cromwell server to run on Gizmo, but submit workflow jobs to either Gizmo or AWS as defined by the user at the time of workflow submission is available.  More about this resource can be found in the documentation for [Cromwell at Fred Hutch](/compdemos/Cromwell/).
+
+## [Nextflow at Fred Hutch](/compdemos/nextflow/)
+
+Another option for using cloud resources, especially when performing a series of tasks (a workflow) repeated, while not necessarily having to understand or coordinate the individual components of the AWS infrastructure is to use the workflow manager [Nextflow](https://www.nextflow.io/).  Nextflow can be configured to use AWS as the backend execution resource, and thus it is very helpful to understand the basics of AWS Batch in order to get your data to a place where it can be analyzed easily via Nextflow.
+
+Ultimately, Nextflow will reduce the amount of backend retooling required when transitioning from on-premise computing to cloud computing. This is an emerging service that is not currently fully supported. However, resource documentation is available [here](/compdemos/nextflow/) and will be updated with forthcoming releases.
+
+
+- [AWS Batch](https://aws.amazon.com/batch/): a service which wraps around AWS EC2 resources such that researchers can more easily do computing processes with EC2 instances on data stored in S3.  
+For more information on using AWS Batch,
+please see [this entry in the Resource Library](/compdemos/aws-batch/)
+
+
+
+
+
 
 If you are at all interested or curious about cloud solutions and would like to talk over options, Scientific Computing hosts a cloud-specific office hours every week.  Dates and details for SciComp office hours can be found in
 FIXME KATE: update broken link [CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html).
@@ -19,11 +38,5 @@ a service that provides cloud-based data storage in the form of "buckets", or a 
 For more information on using AWS Batch,
 please see [this entry in the Resource Library](/compdemos/aws-batch/)
 
-FIXME JEFF: cross reference with content in /compdemos/aws-batch/, 
+FIXME JEFF: cross reference with content in /compdemos/aws-batch/,
 confirm if anything else needs to be moved back here
-
-## [Nextflow at Fred Hutch](/compdemos/nextflow/)
-
-Another option for using cloud resources, especially when performing a series of tasks (a workflow) repeated, while not necessarily having to understand or coordinate the individual components of the AWS infrastructure is to use the workflow manager [Nextflow](https://www.nextflow.io/).  Nextflow can be configured to use AWS as the backend execution resource, and thus it is very helpful to understand the basics of AWS Batch in order to get your data to a place where it can be analyzed easily via Nextflow.
-
-Ultimately, Nextflow will reduce the amount of backend retooling required when transitioning from on-premise computing to cloud computing. This is an emerging service that is not currently fully supported. However, resource documentation is available [here](/compdemos/nextflow/) and will be updated with forthcoming releases.
