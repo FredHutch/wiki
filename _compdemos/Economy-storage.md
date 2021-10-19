@@ -334,7 +334,8 @@ The remainder of this document aims to provide some guidance for researchers int
 Depending on where the data is being migrated from, different methods work best for archiving datasets in `Economy Local`.  
 
 #### AWS S3 Transfer Bucket
-How to set up an AWS S3 transfer bucket to receive data from sources such as sequencing centers, etc.
+
+You do not generally need to create a designated S3 bucket for transferring data, although in some cases this may be required.  Please refer to the [S3 documentation](/compdemos/aws-s3/) for more information.
 
 ### Physical Drives
 In some cases the choice is made to receive large datasets on physical drives, such as a hard drive mailed to you from a data provider.  In this case, the physical drive might not be the best archive for a variety of reasons, but also is not an ideal working copy location either.  
