@@ -30,14 +30,14 @@ Also, you will be provided with the appropriate Job Role ARN when you get set up
 // Run the analysis on AWS Batch
 process.executor = 'awsbatch'
 // Run the analysis on the specified queue in AWS Batch
-process.queue = 'cpu-spot-30'
+process.queue = 'default'
 
 // Set a place to write temporary files which can be deleted after
 // the workflow is completed. It can be useful to treat this as
-// 'scratch' space which can be automatically deleted after 30 days
-workDir = "s3://fh-pi-lastname-f/scratch-delete-30/nextflow/work/"
+// 'scratch' space which can be automatically deleted after 10 days
+workDir = "s3://fh-pi-lastname-f-nextflow-scratch/delete10/nextflow/work/"
 
-// Mount the host folder /docker_scratch to /tmp within the running job
+// Mount the host folder /var/lib/docker to /tmp within the running job
 // Use /tmp for scratch space to provide a larger working directory
 // Replace with the Job Role ARN for your account
 
@@ -51,8 +51,7 @@ aws {
     region = 'us-west-2'
     batch {
         cliPath = '/home/ec2-user/miniconda/bin/aws'
-        jobRole = '<YOUR JOB ROLE ARN HERE>'
-        volumes = ['/docker_scratch:/tmp:rw']
+        volumes = ['/var/lib/docker:/tmp:rw']
     }
     client {
         maxConnections = 4
@@ -79,7 +78,7 @@ Example script:
 ```
 #!/bin/bash
 set -e
-BASE_BUCKET="s3://fh-pi-lastname-f/lab/user_name/project_name"
+BASE_BUCKET="s3://fh-pi-lastname-f-eco/lab/user_name/project_name"
 
 # Load the module
 ml nextflow
@@ -140,21 +139,21 @@ Here is a non-comprehensive list of known solutions / best practices to help avo
 
 When you start your workflow, it will submit jobs to AWS Batch for execution. 
 Sometimes it can be hard to tell if those jobs have even started running, or if they have already been stalled. 
-The best way to check is to go to the convenient [Batch Dashboard](https://batch-dashboard.fhcrc.org/) which is accessible from inside the Fred Hutch VPN. 
-You can scroll down to the **Jobs** section and search for one of your job names (which should match the nextflow process names) in the table. That will tell you if the jobs are stuck in RUNNABLE, or if they are already RUNNING.
+The best way to check is to log into the AWS Console for your lab, select "Batch" from the list of AWS Services, and then click the compute environment or queue to see job status.
 
 **Why are my jobs stuck in "RUNNABLE"?**
 
 When a job is "RUNNABLE" in AWS Batch, this means that it is waiting to be scheduled onto a machine for execution. 
 There are a few potential reasons for this:
 
-  - The queue is busy with other jobs (check the top of the Batch Dashboard for total numbers of jobs): try using another queue (see below)
+  - The queue is busy with other jobs.  Submit a ticket if you need additional queues or a vCPU limit increase.
   - Your job is configured with a combination of CPUs and memory which does not fit onto any known machine. 
   This is likely only a problem encountered by workflow *developers*, and you can check [this link](https://aws.amazon.com/ec2/instance-types/) for a list of common instance configurations
-  - If you do not believe that either of these are the case, please contact SciComp
+  - If you do not believe that either of these are the case, please contact SciComp or CLD for assistance.
 
 **How do I pick which 'queue' to use in AWS Batch?**
 
+FIXME JEFF:  we need to update this but should we just remove instead?
 A 'queue' is a concept in AWS Batch which specifies what line a job will go into to wait to be scheduled and executed. 
 
 You can specify the queue with `process.queue = 'cpu-spot-30'` in your `nextflow.config`, or with `-process.queue cpu-spot-30` at runtime (in the `nextflow run ...` command).
@@ -164,6 +163,14 @@ Please refer to [Choosing a Job Queue](https://sciwiki.fredhutch.org/scicomputin
 It is generally reasonable to just pick one queue and use it for everything, switching to another queue if your usual queue is full.
 
 ### Montoring running jobs
+
+**How can I see the debug output of my jobs?**
+
+The output is logged in CloudTrail automatically in most cases.  To view this, go to the AWS Console and view your jobs on the job queue.  Click the job and you will be able to see information about the job, including a link that will open up the appropriate log stream that should enable you to see any output.
+
+**How much debug output should I use?**
+
+There is no hard and fast recommendation since the amount of output you add will vary depending on your needs.  However, please be advised that CloudWatch costs a very small amount of money for parsing the output of your job.  Under normal circumstances, this will fall under Free Tier and be negligible.  However, if you are printing a very large amount of debug info to the console then this can potentially add up.  For example, printing the contents of each line of a CSV file that you're processing that has 100,000 rows or outputting the entire contents of some large file will likely result in increased cost.  Please be sure to disable or at least minimize your debug output prior to running any large jobs.
 
 **Is there a better way to monitor a running workflow?**
 
