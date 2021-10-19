@@ -46,15 +46,17 @@ from summer 2020
 > NOTE: these questions haven't actually been asked frequently.  This is actually pretty common with FAQs in general. 
 > Still, it might be helpful if you're interested in the hows and whys of our current policies.
 
-- **How do I get my new credentials?**
+### Account Access
 
-  - Initially, when your lab is onboarded everyone will receive an encrypted email with their login and temporary password.  It will also contain their AWS access key and secret key (these are the same keys that the `awscreds` command will write to your home directory's `.aws/credentials` file).
+- **I'm a new PI at Fred Hutch or I do not have an AWS account for my lab and I need to store data in S3.  How do I get an account?**
 
-  - If you are new to Fred Hutch or transfer to a different lab, you will need to submit a helpdesk ticket in order to be onboarded and you will then receive an encrypted email with your credentials once CLD has completed the work.
+  - Submit a ticket to the helpdesk with the "New Account Checklist" included.
 
-- **How do I get more compute environments created?**
+- **I just joined a lab at Fred Hutch, how do I get access to my lab's AWS account?**
 
-  - Email SciComp with the instance types and sizes that you need and whatever *Project*, *GrantId*, or other Name/value pair that you want to track usage and we'll do the rest.
+  - Your lab may not have an account yet, so it may be necessary to set one up.  You can get credentials to access your lab account by sending an email to the helpdesk.  You will receive an encrypted email with your credentials and instructions for how to access the account.
+
+### S3 (Economy Cloud) storage
 
 - **Why do I get two buckets for Economy Cloud storage now instead of just one?**
 
@@ -64,6 +66,22 @@ from summer 2020
 
   - Generally, yes.  Your S3 buckets will be configured in a way that is HIPAA compliant and your account is covered under our Data Security Agreement with AWS (the BAA).  If you have an application or workflow that needs to access PHI, please contact CLD to ensure that everything gets set up in a way that's fully compliant.
 
+- **If I want to share data with a specific external collaborator, do I need to use the public bucket?**
+
+  - Not usually.  As long as you want to share data with someone that will have AWS credentials then sharing data can be enabled in the private bucket.  However, you may still grant access specifically for an individual or individuals on data in the public bucket if you would like.
+
+- **I need to share data publicly so that anyone in the world can just access it.  Can I do this?**
+
+  - Yes, this is possible for PI accounts.  Your data will need to be in the public bucket in order for it to be shared, however it will NOT automatically be made public just because it is in the public bucket.  You will need to submit a ticket to the helpdesk with the location of the data you wish to be shared and the CLD team will enable public access on just the data that you indicate.
+
+- **Why would I ever want to share data publicly with anyone?**
+
+  - Certain collaborations for data such as the UCSC Genome Browser require public access to data, so if you wanted to share data with this project then you'll need to have the CLD team enable sharing on the data which must be in your public bucket.  Additionally, if you were to publish a manuscript that included a reference data set that you wanted to be made available to anyone who reads that manuscript, then you may wish to share that reference dataset publicly.
+
+- **I need transfer or receive a very large dataset to/from an external collaborator.  Is there any way you can help me do this more easily?**
+
+  - First, you should ensure that your data is large enough to benefit from an alternative solution. If the data will fit on a thumb drive that is currently commercially available, it most likely won't benefit from this solution.  If it is larger than a thumb drive, and the data is currently stored in an S3 bucket, and is going to be copied into another S3 bucket, then there is a method that the CLD team can use to do a much faster data transfer that may be viable.  Submit a ticket to CLD or visit our office hours for more information.
+
 - **Why am I restricted to only certain prefixes for folders in S3 now?  I never was in the past.**
 
   - This has to do with how AWS object lifecycles work.  It is not possible to apply a policy globally and then create exceptions to the policy, so instead we chose to use prefixes that are already common to our Fast File storage system.
@@ -72,9 +90,33 @@ from summer 2020
 
   - In running a workflow, it is very common that large numbers of temporary files get created that only exist for the duration of the workflow.  Sometimes, if something crashes, these files do not get removed.  Other times, they stick around for far longer than they need to.  Either way, they waste money by sticking around when they are no longer needed.  Also, if versioning is enabled in an S3 bucket, even if you delete them you'll still have to pay for them for some number of days.  A scratch bucket is configured so that objects are not versioned and by default are automatically deleted after 60 days no matter where you put them in the bucket, however the same *delete10/*, *delete15/*, *delete30/*, and *delete45*/ prefixes will exist and will delete objects under those prefixes in the number of days specified.  This is customizable as well, so if you want a *delete3/* folder then we can provide that, however the largest number of custom *deleteN/* prefixes that we are willing to create is 10.  If you truly need more than that, it is likely that a scratch bucket is just not the optimal solution for you so please contact CLD and we can help to develop a solution that is better suited to your needs.
 
+### AWS Compute
+
+- **How do I get more compute environments created?**
+
+  - Email SciComp with the instance types and sizes that you need and whatever *Project*, *GrantId*, or other Name/value pair that you want to track usage and we'll do the rest.
+
+- **I can't start the EC2 instance type that I need or I can't run enough instances to actually complete my workflow analysis before the heat death of the universe.  How do I get those limits raised?**
+
+  - The PI that owns the account or any persons that they designate will have enough permissions to request limit increases for things like EC2 vCPU counts, however CLD can also help you with this as well.
+
 - **Do I need a scratch bucket for each compute environment?**
 
   - That's entirely up to you.  We can provision a single bucket that's shared between all compute environments.  If you need to track the expenses incurred by these temporary objects with more granularity than a general "Scratch storage" category, then we can set up additional scratch buckets that each have different tags to enable the level of granularity that you need.
+
+### AWS Credits and Billing
+
+- **What are virtual credits and how are they different from AWS credits?  What do I even do if I have been given a credit grant from AWS?**
+
+  - Please see the [Credits page](compdemos/aws-credits/) for more information.
+
+- **I want to apply for the AWS Cloud Credits for Research program and it's asking me for an account number.  What number do I use for the application?**
+
+  - It is not actually necessary to have an AWS account to apply for the grant due to how our new account structure is set up.  Contact CLD and we will provide you with the correct number to use for your application.
+
+- **Can I set a fixed budget amount per month for certain resources using Tags and then get alerts as I go through that budget?**
+
+  - In most cases, this is possible.  Budgets can be set up monthly, quarterly, yearly, or for a set time period.  They are typically set based on the AWS Service and can also incorporate Cost Allocation Tags so you can track different projects under different budgets.  It will be possible to set percentage thresholds when you will receive an email alert.  **THERE IS A POTENTIAL DELAY IN WHEN YOU WOULD RECEIVE THE EMAIL AND WHEN THE CHARGES ARE INCURRED** so it is possible that by the time you get the alert that you're at 95% of your budget, you're actually exceeding your budget.  Typically this delay is at most 24 hours.  Contact SciComp for more details.
 
 - **What are these 'tags' that you keep mentioning?  What's a *Project* or *GrantId* even mean in this context?**
 
@@ -84,21 +126,11 @@ from summer 2020
 
   - Possibly.  CLD is able to ensure that certain tags are created on certain types of resources and will deny permission to create the resource if those tags are not present or do not have a particular value (or one value out of a set of values).  Additionally, acounts are monitored and anything that is not tagged properly will be flagged as non-compliant so that they can be corrected more proactively.  However, not every single resource is able to be tagged when it is created and it is not possible to prevent people from choosing a valid, yet incorrect tag value.  If you have specific requirements for your accounts, contact SciComp.
 
-- **Can I set a fixed budget amount per month for certain resources using Tags and then get alerts as I go through that budget?**
-
-  - In most cases, this is possible.  Budgets can be set up monthly, quarterly, yearly, or for a set time period.  They are typically set based on the AWS Service and can also incorporate Cost Allocation Tags so you can track different projects under different budgets.  It will be possible to set percentage thresholds when you will receive an email alert.  **THERE IS A POTENTIAL DELAY IN WHEN YOU WOULD RECEIVE THE EMAIL AND WHEN THE CHARGES ARE INCURRED** so it is possible that by the time you get the alert that you're at 95% of your budget, you're actually exceeding your budget.  Typically this delay is at most 24 hours.  Contact SciComp for more details.
+### AWS User Permissions
 
 - **Can I designate people in my lab to have a higher level of access to AWS Services for configuring things, viewing budgets, seeing alerts, etc?**
 
   - Yes, however there are limits as to what permissions can be given to users in an account.  Additionally, there are permissions boundaries in place at higher levels that will restrict your access, even if you have full Administrator permissions.  For example, you will not be able to create a new VPC or create a Route53 Hosted Zone in your account.  If you need things like this, contact CLD.
-
-- **I want to apply for the AWS Cloud Credits for Research program and it's asking me for an account number.  What number do I use for the application?**
-
-  - It is not actually necessary to have an AWS account to apply for the grant due to how our new account structure is set up.  Contact CLD and we will provide you with the correct number to use for your application.
-
-- **I can't start the EC2 instance type that I need or I can't run enough instances to actually complete my workflow analysis before the heat death of the universe.  How do I get those limits raised?**
-
-  - The PI that owns the account or any persons that they designate will have enough permissions to request limit increases for things like EC2 vCPU counts, however CLD can also help you with this as well.
 
 - **I'm getting a "permission denied" error of some sort when I'm trying to create or modify something, but it looks like I have permissions for what I'm trying to do.  What's going on?**
 
@@ -110,9 +142,15 @@ from summer 2020
 
   - CLD currently maintains five separate AWS Environments consisting of over 100 accounts, each of which has to be managed, secured, monitored, and configured.  Doing this manually is simply not possible, so we leverage a large amount of automation.  Therefore, a change such as adding a user to a different group will likely just get automatically reverted the next time the automation runs (which is at least nightly but often several times per day).  If you need additional permissions or capabilities, there very well could be a gap between what CLD offers and what is actually needed so please contact CLD and we'll work out a solution.
 
-- **It sounds like CLD is going to be managing a lot of things now, so if I need something like an additional compute environment or a delete29/ prefix in a scratch bucket, how long will it take for that to be handled?**
+### Collaborators, sharing data, and working with other labs
 
-  - The entire environment was architected towards making the automation of these tasks extremely simple.  It used to take an entire day to provision a new account, set up user accounts, create S3 buckets, and create a compute environment.  As of the time of this writing, my last benchmark for this process was approximately 7 minutes due to the volume of automation that we have created.  Some requests for things that have to be done manually due to limits on automation (such as verifying an SES email address or creating a totally new domain name for an account to host a website in).  Other things will be entirely new, so automation will need to be created for these cases.  However, the vast majority of things are now substantially less work and take less time to deploy than they previously did and even totally new solutions are still much easier to create due to leveraging the automation.
+- **I want to collaborate with another Fred Hutch lab so that we can share data.  Is this possible?**
+
+  - Yes, this can be done easily.  The lab that either wants to grant access to the data OR grant access to another lab to receive data should send a ticket to the helpdesk with the lab that they want to collaborate with, the individual members of that lab that should be granted access, a list of S3 bucket folders to which those users should be granted access, and for each folder whether the user needs read, write, or both.
+
+- **I want to share data with an external collaborator.  Is this possible?**
+
+  - Yes, this can also be done several different ways depending on what that external collaborator needs to do.  First, note that some external collaborators may still be Fred Hutch affiliates or otherwise sponsored by Fred Hutch.  If the person in question has a HutchnetID, then in most cases they are considered an internal collaborator so follow the instructions for requesting access for internal collaborators.  If they do not have a HutchnetID, then submit a ticket to the helpdesk with the External Collaborator checklist.
 
 - **I have a large project that's a collaboration between several different labs.  Who's account will be used for this project?**
 
