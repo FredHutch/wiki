@@ -43,16 +43,22 @@ If you do not seem to have correct permissions to folder or stoarage location an
 - CC the PI or manager associated with the data storage location to ensure communication
 
 ### Cloud Based Storage
+
+Cloud storage is provided by default in PI accounts.  Please see the [S3 resources](/compdemos/aws-s3/) and the [FAQ](/compdemos/cloud-faq/) for more information.
+
 #### User permissions
-List
-Read
-Write
 
-#### Storage policies
-Bucket policies
+All users by default have the following permissions in all buckets except for prefixes that are restricted.
 
+- List
+- Read
+- Write
 
-Permissions granted by user and by storage location to combine to decide who has what type of access to what objects. 
+Data Managers and Admins have all permissions on all folders within their accounts' S3 buckets.
 
+#### Restricted S3 prefixes (folders)
 
-#### Requesting Changes to Permissions
+- `readonly/`
+- `SR/`
+
+The `SR/` prefix is typically used by any Data Cores within Shared Resources to deliver data into your account.  The `readonly/` folder can be useful if you have certain data that you do not want the users in your lab to be able to alter.
