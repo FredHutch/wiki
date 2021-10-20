@@ -1,20 +1,17 @@
 ---
-title: Data Storage in Object Storage Systems (Economy)
-primary_reviewers: dirkpetersen, dtenenba
+title: Data Storage in AWS S3
+primary_reviewers: jefftucker, dtenenba
 ---
-
-FIXME KATE: Economy cloud links to CompDemo on economy cloud
-FIXME JEFF: Add FAQ for S3 that’s specific to Economy Cloud
 
 Object storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an object storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud Computing depends very much on object storage systems such as Amazon's AWS S3 or Google Cloud Storage.
 
 ### Object Storage PI Allocations
 As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.  
 
->Note:  Currently it is recommended to use a combination of `Economy`, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+>Note:  Currently it is recommended to use a combination of AWS S3, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
 
-`Economy` is less expensive than [`Fast`](/scicomputing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, `Economy` would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  `Economy` serves as an archive for these data, and typically compute processes do not directly access these files.
+AWS S3 is less expensive than [`Fast`](/scicomputing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, AWS S3 would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  AWS S3 serves as an archive for these data, and typically compute processes do not directly access these files.
 
 ## Features & Benefits of Object Storage Systems
 
@@ -28,29 +25,25 @@ Some features and benefits of object storage systems include:
 
 - you can add additional and arbitrary attributes to each file. Why is this a benefit? Well, normally you just organize your files in folders but what if one file really belongs in multiple folders or projects or departments? Many users end up storing files in multiple different folders to keep relevant data together in one place. Object storage systems do away with folders all together, you just store all files in a single bucket and you can then tag it with many different attributes. These attributes or metadata are stored with the file as key=value pairs such as "cancer=breast" and "grant=P01-123456". This additional metadata makes it extremely easy to retrieve data for automated pipelines based on different criteria.
 
-Given these benefits it is expected that Object Storage systems will become more common in the future, especially as datasets are getting larger and larger.  Today Fred Hutch offers access to two different Object Storage systems through the `Economy Local` service. We recommend these systems typically for large genomic data and imaging files that require computational pipelines for processing (e.g. large BAM files) as well as for archival of infrequently used data. Both options for `Economy` storage are _encrypted at rest_ and are approved to store strictly confidential data such as PHI.
+Given these benefits it is expected that Object Storage systems will become more common in the future, especially as datasets are getting larger and larger.  Today Fred Hutch offers access to two different Object Storage systems through the `Economy Local` service. We recommend these systems typically for large genomic data and imaging files that require computational pipelines for processing (e.g. large BAM files) as well as for archival of infrequently used data. Both options for AWS S3 storage are _encrypted at rest_ and are approved to store strictly confidential data such as PHI.
 
-Access to `Economy` storage is governed by Hutch Net ID (Active Directory) authentication and group membership in a security group called `lastname_f_grp` (e.g. `groudine_m_grp`). This is the same security group that governs access to `Fast` storage.
+Access to AWS S3 storage is governed by Hutch Net ID (Active Directory) authentication and group membership in a security group called `lastname_f_grp` (e.g. `groudine_m_grp`). This is the same security group that governs access to `Fast` storage.
 
->Note: In the future Fred Hutch Shared Resources data delivery processes (e.g. through  HutchBase) will be modified to deliver data directly to `Economy` and [*Scratch*](/scicomputing/store_scratch/) storage as opposed to [`Fast`](/scicomputing/store_posix/) as it happens today.
+>Note: In the future Fred Hutch Shared Resources data delivery processes (e.g. through  HutchBase) will be modified to deliver data directly to AWS S3 and [*Scratch*](/scicomputing/store_scratch/) storage as opposed to [`Fast`](/scicomputing/store_posix/) as it happens today.
 
 ## Accessing Economy Storage
-You can access `Economy Local` or `Economy Cloud` resources with [command line tools](/compdemos/Economy-storage/) such as `swc`, `swift`, `aws s3` or `rclone` or libraries such as _swiftclient_ or _boto3_ for _Python_ or _aws.s3_ for R.  As of March 2016, Center IT officially supports the use of [Mountain Duck and Cyberduck desktop clients](/compdemos/Mountain-CyberDuck/) on Windows or Mac to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing. It is also possible to use [Synology to backup data to _Economy Local_.](/compdemos/synology/)
+You can access AWS S3 resources with [command line tools](/compdemos/aws-s3/) such as  `aws s3` or `rclone` or libraries such as or _boto3_ for _Python_ or _aws.s3_ for R.  As of March 2016, Center IT officially supports the use of [Mountain Duck and Cyberduck desktop clients](/compdemos/Mountain-CyberDuck/) on Windows or Mac to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing. 
 
 ### Economy Local (Swift)
 
-NOTE:  Economy Local will no longer be available after June 2022.  It is recommended that you move your data from Economy Local (Swift) to Economy Cloud (S3)
-
-`Economy Local` is an object storage system based on Openstack Swift. `Economy Local` is recommended for research groups who keep large amounts of data (>100TB) on the Fred Hutch campus and frequently use the `Gizmo` cluster with local storage. We also recommend it for data that is explicitly forbidden to be stored in public cloud storage resources.
-
-`Economy Local` is well suited to store petabytes of data at low cost and a high level of data protection. Economy File does not require tape backup as data is replicated to multiple sites. If you accidentally delete data it will be held in a "Trash can" for multiple months during which you have read-only access to the deleted data. Economy File is approved for PHI / PII data.  It is a suitable location to store genomic data  including those governed by the NIH Genomic Data Sharing policies or originating from public repositories while in use locally. Please the [demo section for examples of Economy Local](/compdemos/Economy-storage/)
+NOTE:  Economy Local will no longer be available after June 2022.  It is recommended that you move your data from Economy Local (Swift) to Economy Cloud (S3).  All resources for using `Economy Local` have been moved to [here for archiving](/compdemos/Economy-storage/).
 
 
-### Economy Cloud (S3)
+### AWS S3
 
-`Economy Cloud` is a public cloud based object storage service that uses Amazon Web Services Simple Storage Service (S3) to offer managed and secure (encrypted) AWS S3 buckets to Fred Hutch investigators.  While it is not accessible by non-Hutch investigators by default, you can contact `scicomp` to request access for external research groups.  `Economy Cloud`  is the default choice for Object Storage for every Hutch investigator who does not have any specific requirements.
+AWS S3 is a public based object storage service that uses Amazon Web Services Simple Storage Service (S3) to offer managed and secure (encrypted) AWS S3 buckets to Fred Hutch investigators.  While it is not accessible by non-Hutch investigators by default, you can contact `scicomp` to request access for external research groups.  AWS S3  is the default choice for Object Storage for every Hutch investigator who does not have any specific requirements.
 
-Each PI may request a dedicated AWS account for their lab if they wish to use `Economy Cloud` storage.  In the lab account, there will be two `Economy Cloud` buckets by default; contact your PI to get the names of the buckets.  There is a private bucket and a public bucket.  In this context, *private* and *public* refer to the *maximum possible level* of access to a file in that bucket.  Files uploaded to the public bucket by default will still *NOT* be publicly accessible, however if desired it is possible to change the access to one or more files or folders to make them directly accessible to the public.  For example, if you published a paper and wish to make a public refernce dataset available to accompany that paper, that reference dataset would need to go into the public bucket and then you can contact SciComp for assitance in changing the access permissions.  In the private bucket, granting public access will be impossible and even if the security policy is somehow accidentally modified to grant public access to the private bucket, the access will *still* be blocked by additional guardrails at the account level.  If you are unsure which bucket to use, you should by default use the private bucket.  The data can later be moved if necessary.
+Each PI may request a dedicated AWS account for their lab if they wish to use AWS S3 storage.  In the lab account, there will be two AWS S3 buckets by default; contact your PI to get the names of the buckets.  There is a private bucket and a public bucket.  In this context, *private* and *public* refer to the *maximum possible level* of access to a file in that bucket.  Files uploaded to the public bucket by default will still *NOT* be publicly accessible, however if desired it is possible to change the access to one or more files or folders to make them directly accessible to the public.  For example, if you published a paper and wish to make a public refernce dataset available to accompany that paper, that reference dataset would need to go into the public bucket and then you can contact SciComp for assitance in changing the access permissions.  In the private bucket, granting public access will be impossible and even if the security policy is somehow accidentally modified to grant public access to the private bucket, the access will *still* be blocked by additional guardrails at the account level.  If you are unsure which bucket to use, you should by default use the private bucket.  The data can later be moved if necessary.
 
 In the event that you need to share a very large dataset (e.g. >5TB) with an external collaborator and the collaborator intends to store that dataset within their own institutions S3 bucket, please contact SciComp for assistance.  There are ways to copy data between S3 buckets far more quickly than would otherwise be possible with any of the methods described here, however these typically require coordination between the collaborator's IT department and the SciComp team.  This can also be done for receiving very large datasets from external S3 buckets as well.  It is very rare that this method of bulk-copying data between buckets is required, however it is available if the situation warrants it.  Typically, the setup for this will take up to 48 hours.  The transfer speeds depend on a number of factors, however this has been reliably and repeatedly measured at 30TB-40TB per hour for well over 1 million files.
 
@@ -74,7 +67,7 @@ Each PI account has an additional scratch S3 bucket, currently called `fh-pi-las
 
 #### Sharing data with other collaborators
 
-You can use the `Economy Cloud` S3 buckets created for each PI to collaborate with external research groups as well as other labs within Fred Hutch. There are several ways in which this can be enabled, and it is still possible to grant external collaborators access to specific prefixes on the private bucket as well as the public bucket depending on how their access is configured.  Contact SciComp for assistance in setting up this access.  There are several ways in which data can be shared depending on the need.
+You can use the AWS S3 buckets created for each PI to collaborate with external research groups as well as other labs within Fred Hutch. There are several ways in which this can be enabled, and it is still possible to grant external collaborators access to specific prefixes on the private bucket as well as the public bucket depending on how their access is configured.  Contact SciComp for assistance in setting up this access.  There are several ways in which data can be shared depending on the need.
 
 ##### Direct access to the bucket
 
@@ -128,38 +121,46 @@ We have a number of demos in our Resource Library related to how to interact wit
 
 #### FAQ
 
-Why does the scratch bucket have the name "nextflow" in it?  Is it only for nextflow or can I use it for other things?
+> Why does the scratch bucket have the name "nextflow" in it?  Is it only for nextflow or can I use it for other things?
 
 Unfortunately, it is impossible to rename an S3 bucket once created so when the initial compute environment was designed it was tested only against nextflow and the name has persisted.  In the future, we will be making a change to provide a new scratch bucket with a more generic name.  In the meantime, despite having "nextflow" in the name you can use the scratch bucket for any purpose you wish that is conducive to temporary data storage.
 
-I really need an additional S3 bucket created in my account for some reason.  Can I create one?
+> I really need an additional S3 bucket created in my account for some reason.  Can I create one?
 
 In most cases you will not need any additional buckets, but it is possible to have additional S3 buckets created in your lab account if you have a reasonable justification for those buckets.  You will not be able to create them yourself, so please submit a helpdesk ticket if you have this need.
 
-I need a bucket in a location other than us-west-2, can this be done?
+> I need a bucket in a location other than us-west-2, can this be done?
 
 Yes, the CLD team can create buckets in other regions if you have a need for this however in most cases this is not necessary.  If you have a specific need that would require buckets in other regions, please submit a ticket to the helpdesk.
 
-Is it possible to see who is using the data in my lab buckets?
+> Is it possible to see who is using the data in my lab buckets?
 
 Yes, all access to your S3 buckets will be logged to a centralized location however you will not be able to access this log data by default.  This includes all buckets in all regions of your account regardless of how those buckets got created, when they were created, or who created them, and it is impossible to disable this logging.  If you have a specific concern about access to your bucket, please submit a ticket to the CLD team.
 
-I accidentally deleted something in my scratch bucket.  Is it gone forever?
+> I accidentally deleted something in my scratch bucket.  Is it gone forever?
 
 Yes, it is gone forever.  There is no way to recover that data.
 
-I accidentally deleted something in my public or private economy cloud bucket (or another bucket that has "eco" in the name).  Can I get this data back?
+> I accidentally deleted something in my public or private economy cloud bucket (or another bucket that has "eco" in the name).  Can I get this data back?
 
 Yes, deleted data can be un-deleted for up to 60 days immediately following the time that the object was deleted.  Submit a helpdesk ticket immediately and we will be able to assist you with data recovery.
 
-I accidentally uploaded a file to the wrong path and it overwrote an existing file.  Can I get the original contents of the file back?
+> I accidentally uploaded a file to the wrong path and it overwrote an existing file.  Can I get the original contents of the file back?
 
 Yes, this is effectively the same scenario as if you had deleted the file instead of overwriting it.  Submit a ticket to the helpdesk immediately for assistance.
 
-I have a file in my S3 bucket that I need to permanently delete immediately instead of waiting 60 days.  Is this possible?
+> I have a file in my S3 bucket that I need to permanently delete immediately instead of waiting 60 days.  Is this possible?
 
 Yes, it is possible to permanently remove the backup copy of a file that was modified or deleted prior to the 60-day period.  This is typically only necessary for regulatory compliance and in general is extremely rare, however should it be necessary then please submit a ticket to the helpdesk and we can assist you with this.
 
-I already have extensive knowledge of S3 and have been working with it for years.  Do I really need to contact the helpdesk for everything?
+> I already have extensive knowledge of S3 and have been working with it for years.  Do I really need to contact the helpdesk for everything?
 
-It depends.  Certain restrictions exist in the account that cannot be overridden so you will not be able to delete an economy-cloud bucket, modify the resource policy, enable object locks or legal holds (unless this has been granted on your account; contact helpdesk for more info), adjust the object lifecycle policies, or enable an object or bucket ACL other than bucket-owner-full-control on any bucket except the public bucket.  Admins and Data Managers are able to recover non-current versions of objects, initiate Glacier retrieval requests, and submit S3 Batch jobs (depending on the circumstances, other guardrails may prevent you from running an S3 Batch job, especially if it involves invoking other AWS Service such as Lambda functions).  If you are certain that you know what you are doing, then you may proceed entirely at your own risk.
+It depends.  Certain restrictions exist in the account that cannot be overridden so you will not be able to delete an AWS S3 bucket, modify the resource policy, enable object locks or legal holds (unless this has been granted on your account; contact helpdesk for more info), adjust the object lifecycle policies, or enable an object or bucket ACL other than bucket-owner-full-control on any bucket except the public bucket.  Admins and Data Managers are able to recover non-current versions of objects, initiate Glacier retrieval requests, and submit S3 Batch jobs (depending on the circumstances, other guardrails may prevent you from running an S3 Batch job, especially if it involves invoking other AWS Service such as Lambda functions).  If you are certain that you know what you are doing, then you may proceed entirely at your own risk.
+
+### How do I access my other AWS account resources?
+
+Once you have working credentials, you can read more about [AWS Computing](/scicomputing/compute_cloud/) in our wiki page.  
+
+## I have more questions
+
+Please check out the [FAQ](/compdemos/cloud-faq/) for more information.

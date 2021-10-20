@@ -2,26 +2,25 @@
 title: AWS Accounts at Fred Hutch
 primary_reviewers: jefftucker, dtenenba
 ---
+Each lab can be granted their own individual AWS account, giving the members of the lab access to AWS S3 for data storage, AWS Batch for running compute jobs, and many other AWS services.  In general, the lab "type" account is suitable for most AWS usage at Fred Hutch.  The lab "type" AWS accounts themselves are all regular AWS accounts and as such the [documentation that AWS provides](https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do) will be relevant for investigators looking for assistance.  What differentiates each "type" of account is how the account is pre-configured, what AWS services and regions users are allowed to use, and what restrictions are in place.
 
-# AWS accounts
+## AWS Account Types
+### Lab Account
 
-Each lab can be granted their own individual AWS account, giving the members of the lab access to S3 for data storage, AWS Batch for running compute jobs, and many other AWS services.  In general, the lab account is suitable for most AWS usage at Fred Hutch.  The CLD team designated an account "type" for each account, which is used to designate how an AWS account is pre-configured in terms of various AWS services, permissions, restrictions, etc.  The AWS accounts themselves are all regular AWS accounts and as such are no different from the documentation that AWS provides for them.  What differentiates each "type" of account is how the account is pre-configured, what AWS services and regions users are allowed to use, and what restrictions are in place.
+The Lab account type is granted to any PI at Fred Hutch that requests one via submitting a ticket to the `helpdesk`.  This account comes pre-configured with AWS S3 buckets with appropriate security rules enforced for private research data storage and a default AWS Batch compute environment suitable for running many compute workflows. In general, this account type should be suitable for almost all cases where a lab needs to use AWS.  
 
-## PI Account
+### Specialized Use Account
 
-The PI Account type is granted to any lab at Fred Hutch that requests one (submit a ticket to the helpdesk).  This account comes pre-configured with S3 buckets for data storage and a default AWS Batch compute environment suitable for running many workflows.  In general, this account type should be suitable for almost all cases where a lab needs to use AWS.  
+A Specialized Use Account type is an AWS account that allows access to almost all AWS Services with very few restrictions or guardrails.  The primary restriction is that you will not be able to grant user access to the account, however you can create just about whatever you like in terms of AWS Services.  In general, these accounts are best suited for Software Development Teams to use for specific cloud-hosted software products.  The other typical usage for these account types is if you are currently conducting a research project that requires a hosted website, dedicated persistent AWS services, or some other similar need exists that cannot be met by the Lab type account.  Specialized Use accounts are typically only granted to a lab when every single expense that would occur in the account is always a direct and will never be an indirect.  These accounts are configured in conjunction with the Cloud and Data team in CIT, via a `helpdesk` ticket.  
 
-## General-Purpose Account
+### Proof-of-concept Account
 
-A General-Purpose Account type is an AWS account that is mostly empty but allows access to almost all AWS Services with very few restrictions.  The primary restriction is that you will not be able to grant user access to the account, however you can create just about whatever you like in terms of AWS Services.  In general, these accounts are best suited for Software Development Teams to use for specific cloud-hosted software products or potentially developing new workflows.  The other typical usage for these account types is if you are currently conducting a research project that requires a hosted website, dedicated persistent AWS services, or some other similar need exists.  GP accounts are typically only granted to a lab when every single expense that would occur in the account is always a direct and will never be an indirect.
+This account type is typically used when a lab has an AWS Credit grant designated for a specific purpose related to determining if a particular technology, workflow, etc. is capable of being run effectively in AWS.  Just because you have AWS Credits does not mean that you need this account type.  These are almost always created in the Sandbox environment. These accounts are configured in conjunction with the Cloud and Data team in CIT, via a `helpdesk` ticket.  
 
-## Proof-of-concept Account
+## How do I access my AWS account resources?
 
-This account type is typically used when a lab has an AWS Credit grant designated for a specific purpose related to determining if a particular technology, workflow, etc. is capable of being run effectively in AWS.  Just because you have AWS Credits does not mean that you need this account type.  These are almost always created in the Sandbox environment.
-
-## How do I access my account?
-
-You will need [credentials](/scicomputing/access_credentials/) in order to do so.
+First, you will need [AWS credentials](/scicomputing/access_credentials/).  
+Then you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages.  
 
 ## I have more questions
 

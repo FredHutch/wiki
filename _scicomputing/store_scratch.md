@@ -1,12 +1,10 @@
 ---
 title: Data Storage in Temporary Storage (Scratch)
-last_modified_at: 2019-04-04
 primary_reviewers: vortexing
 ---
 
-FIXME JEFF: Add section on S3 scratch buckets for Batch Computing as part of Cloud Compute Environments (scratch buckets will not be part of Economy Cloud; if we were to do that, it would waste money)
 
-`Scratch` storage serves as a temporary location for large data sets that ideally reside in an archive space like [`Economy`](/scicomputing/store_objectstore/) storage, to be transferred to when compute processes are applied to them.  Data in `Scratch` are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in `Scratch` as well, and then the final data resulting from the compute process can be written to [`Fast`](/scicomputing/store_posix/) storage for the researcher.  This allows large data to be archived in [`Economy`](/scicomputing/store_objectstore/) storage, accessed by HPC when it is temporarily housed in `Scratch` and only the (typically smaller) resulting data are written to the more accessible, but more costly [`Fast`](/scicomputing/store_posix/) storage.
+`Scratch` storage serves as a temporary location for large data sets that ideally reside in an archive space like [AWS S3](/scicomputing/store_objectstore/) storage, to be transferred to when compute processes are applied to them.  Data in `Scratch` are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in `Scratch` as well, and then the final data resulting from the compute process can be written to [`Fast`](/scicomputing/store_posix/) storage for the researcher.  This allows large data to be archived in [AWS S3](/scicomputing/store_objectstore/) storage, accessed by HPC when it is temporarily housed in `Scratch` and only the (typically smaller) resulting data are written to the more accessible, but more costly [`Fast`](/scicomputing/store_posix/) storage.
 
 ## Why is Scratch Different?
 
@@ -207,3 +205,8 @@ aws s3 sync workingdir/ s3://yourbucket/yourDirectory/
 ```
 rm -rf workingdir
 ```
+
+
+
+## Do we have Scratch in the Cloud?
+Yes! Please see the [AWS S3 storage page](/scicomputing/storage_objectstore/) for more information about how to use AWS S3 Scratch buckets, which function similarly as our on premise Scratch resource does.  

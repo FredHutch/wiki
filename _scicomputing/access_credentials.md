@@ -1,6 +1,5 @@
 ---
 title: Computing Resource Credentials
-last_modified_at: 2019-04-03
 primary_reviewers: dtenenbaum, atombaby
 ---
 
@@ -123,4 +122,9 @@ See more about accessing AWS S3 via the command line [here](/compdemos/aws-3/#aw
 ### GUI Instructions
 
 Open a web browser and navigate to [the Toolbox](https://toolbox.fhcrc.org/sw2srv/aws/account).
-This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such Cyberduck,  Mountain Duck, or [Motuz](/compdemos/motuz/). See the more about how to use Cyberduck or Mountain Duck to connect to AWS S3 [here.](/compdemos/Mountain-CyberDuck/)
+This page is only accessible within the Hutch network. When prompted, enter your HutchNet ID and password. Your browser will display your access key and secret key. You can use these with graphical applications such Cyberduck, Mountain Duck, or [Motuz](/compdemos/motuz/). See the more about how to use Cyberduck or Mountain Duck to connect to AWS S3 [here.](/compdemos/Mountain-CyberDuck/)
+
+
+### How do I access my AWS account resources?
+
+Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages.  

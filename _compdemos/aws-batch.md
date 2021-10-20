@@ -1,19 +1,25 @@
 ---
 title: Using AWS Batch
-last_modified_at: 2020-08-19
 main_author: Jeff Tucker
 primary_reviewers: jefftucker, dtenenba
 ---
 
-FIXME JEFF: confirm this content includes everything necessary (copied from cloud compute page) 
-FIXME KATE: update levels of subheadings
+
+SciComp provides access to AWS Batch in two ways:
+
+* Via the [AWS Command Line Interface (CLI)](https://docs.aws.amazon.com/cli/latest/reference/batch/index.html).
+* Via programmatic interfaces such as Python's [boto3](https://boto3.readthedocs.io/en/latest/reference/services/batch.html#client). 
+
+Access to the AWS Management Console (the web/GUI interface), is now available to end users at the Center.  You can use the AWS Batch service within the console to see your jobs, job queues, compute environments, and job configurations.  Additionally, you will be able to see the outputs and any errors using CloudTrail.  Typically, the job itself will have a link to the CloudTrail Logstream.  Please be aware that debug output can sometimes substantially increase the cost of running a job, since all output must also be processed by CloudTrail and CloudWatch.  Outputting some debug statements or a few values from calculations within a job is fine, however outputing an entire BAM file on every task would be extremely bad.  Once you're confident that your job runs correctly, it is strongly recommended to remove all output statements except those which are absolutely necessary such as error handling.
+
+Please report any problems you discover with this dashboard by describing the problem in an Issue in [this GitHub repository](https://github.com/FredHutch/batch-dashboard/issues/new).
 
 ### Essential terms
 
   * Docker image: lightweight operating system / virtual machine [see Docker documentation](https://docs.docker.com/glossary/?term=image)
   * CPU: Central processing unit, basically just a unit of computation. Your laptop probably has 4 CPUs, while large servers have dozens.
 
-### How it works
+## How it works
 
 The basic idea behind AWS Batch is that it allows you to run a job,
 which consists of (1) a command, inside of a (2) Docker image on a machine,
@@ -64,50 +70,19 @@ is also very easy to publish your results and cite the Docker image as the
 definitive record of all of the dependencies and software needed to run your
 analysis and generate the published results.
 
-### When to Use AWS batch
 
-AWS _Batch_ is an AWS service that uses Docker containers to build a batch
-computing system.  Batch is made up of a queueing system where jobs are defined
-and queued, and a computational resource made up of Docker containers to
-process those jobs.  Resources are provisioned when there are jobs to be
-processed and destroyed when the work is complete.  This results in a very
-efficient and cost-effective solution for some work.
+## AWS Batch Walk-Through 
 
-_Batch_ is useful if you have a fairly standard processing workflow or at least
-a step which is fairly consistent.  The classic example for _Batch_ is image
-processing: converting a raw image to some other format.  _Batch_ is capable of
-much more complicated analyses and pipelines.
-
-As _Batch_ is very much a cloud service, some familiar resources aren't
-available when using this.  Our ubiquitous file systems (home directories,
-fast-file, scratch) are not available- data used in _Batch_ is typically stored
-in S3 or some other web-available source.  There have been some recent changes which
-expand options for data storage which may make some workloads more accessible
-to _Batch_.
-
-
-
-## Using AWS Batch
-
-SciComp provides access to AWS Batch in two ways:
-
-* Via the [AWS Command Line Interface (CLI)](https://docs.aws.amazon.com/cli/latest/reference/batch/index.html).
-* Via programmatic interfaces such as Python's [boto3](https://boto3.readthedocs.io/en/latest/reference/services/batch.html#client). 
-
-Access to the AWS Management Console (the web/GUI interface), is now available to end users at the Center.  You can use the AWS Batch service within the console to see your jobs, job queues, compute environments, and job configurations.  Additionally, you will be able to see the outputs and any errors using CloudTrail.  Typically, the job itself will have a link to the CloudTrail Logstream.  Please be aware that debug output can sometimes substantially increase the cost of running a job, since all output must also be processed by CloudTrail and CloudWatch.  Outputting some debug statements or a few values from calculations within a job is fine, however outputing an entire BAM file on every task would be extremely bad.  Once you're confident that your job runs correctly, it is strongly recommended to remove all output statements except those which are absolutely necessary such as error handling.
-
-Please report any problems you discover with this dashboard by describing the problem in an Issue in [this GitHub repository](https://github.com/FredHutch/batch-dashboard/issues/new).
-
-## Get AWS Credentials
+### Get AWS Credentials
 
 You will need to obtain [AWS credentials](/scicomputing/access_credentials/#amazon-web-services-aws) first in order to use AWS Batch. By default, users will have access to run Batch jobs on the default queue in the compute environment, which has been pre-configured to run workflows based on the AWS Genomics Pipeline (e.g. NextFlow, Illumina Dragon, etc).  It is however possible to restrict access to Batch to only certain users or even to deny access to it entirely if the lab has requested their account to be configured in that way.  Note that you will not be able to create compute environments or job queues, thus if you need a custom compute environment, please email `scicomp`.
 
 SciComp will contact you when your access has been granted.
 
-## Create and Deploy a Docker Image
+### Create and Deploy a Docker Image
 See our detailed information in the Computing Resource Library [here](/compdemos/Docker/) about creating and deploying Docker images, as well as running your own Docker Host.  
 
-## Create a Job Definition
+### Create a Job Definition
 
 [Job Definitions](https://docs.aws.amazon.com/batch/latest/userguide/job_definitions.html) specify how jobs are to be run. Some of the attributes specified in a job definition include:
 
@@ -124,7 +99,7 @@ See our detailed information in the Computing Resource Library [here](/compdemos
 
 † These items can be overridden in individual job submissions.
 
-## Using scratch space
+### Using scratch space
 
 "Scratch space" refers to extra disk space that your job may
 need in order to run. 
@@ -139,7 +114,7 @@ You will also need to make sure that you mount `/docker_scratch` on the host to 
 
 
 
-## Submit your job
+### Submit your job
 
 There are currently three ways to submit jobs:
 
@@ -158,7 +133,7 @@ that environment variable as an index into a list of files,
 to determine which file to download and process. Array jobs
 can be submitted by using either of the methods listed above.
 
-### Submitting your job via the AWS CLI
+#### Submitting your job via the AWS CLI
 
 The easiest way to submit a job is to generate a JSON skeleton
 which can (after editing) be passed to  [`aws batch submit-job`](https://docs.aws.amazon.com/cli/latest/reference/batch/submit-job.html).
@@ -251,7 +226,7 @@ aws batch submit-job --cli-input-json file://job.json
 This will return some JSON that includes the job ID. Be sure and save
 that as you will need it to track the progress of your job.
 
-### Submitting your job via `boto3`
+#### Submitting your job via `boto3`
 
 * We strongly encourage the use of Python 3. It has been the current
   version of the language since 2008. Python 2 will eventually no longer
