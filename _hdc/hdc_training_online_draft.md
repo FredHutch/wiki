@@ -23,10 +23,7 @@ __30 min - 1 hr__
 - [Tidyverse Visualization and Manipulation Basics](https://www.rstudio.com/resources/webinars/tidyverse-visualization-manipulation-basics/)
 - [Introduction to Shiny](https://www.rstudio.com/resources/webinars/introduction-to-shiny/)
 
-> For more RStudio video tutorials check out the following links:
-    - [RStudio Webinars](https://www.rstudio.com/resources/webinars/)
-    - [RStudio Essentials Tutorials](https://www.rstudio.com/collections/rstudio-essentials/)
-    - [RStudio Data Science Essentials Tutorials](https://www.rstudio.com/collections/data-science-essentials/)
+> For more RStudio video tutorials check out the following links: [RStudio Webinars](https://www.rstudio.com/resources/webinars/); [RStudio Essentials Tutorials](https://www.rstudio.com/collections/rstudio-essentials/); [RStudio Data Science Essentials Tutorials](https://www.rstudio.com/collections/data-science-essentials/)
 
 ## Python 
 ### Video tutorials from Corey Schafer
