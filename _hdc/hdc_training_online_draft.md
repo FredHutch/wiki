@@ -38,8 +38,12 @@ __30 min - 1 hr__
     - [Python Tutorial for Beginners 8: Functions](https://www.youtube.com/watch?v=9Os0o3wzS_I&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=8)
     - [Python Tutorial for Beginners 9: Import Modules and Exploring The Standard Library](https://www.youtube.com/watch?v=CqvZ3vGoGs0&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=9)
 
-> See Corey's YouTube Channel for more tutorials including intermediate and advanced Python topics: https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g
+> See Corey's [YouTube Channel](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g) for more tutorials including intermediate and advanced Python topics
+
+### Other Python Videos
 
 - [Dataschool.io - Best Practices with Pandas](https://www.dataschool.io/data-science-best-practices-with-pandas/)
 
-[Data Structures and Algorithms - Coding Dojo](https://www.youtube.com/watch?v=bum_19loj9A&list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H)
+## Core Coding Concepts
+
+- [Data Structures and Algorithms Series - Coding Dojo](https://www.youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H) (15 - 30 min)
