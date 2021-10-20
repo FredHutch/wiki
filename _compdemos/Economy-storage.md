@@ -5,7 +5,7 @@ main_author: Dirk Peterson
 primary_reviewers: dirkpetersen, vortexing
 ---
 
-FIXME JEFF: Add new policies for object archiving, restricted tags, bucket restrictions, and public/private buckets with data
+<!--FIXME JEFF: Add new policies for object archiving, restricted tags, bucket restrictions, and public/private buckets with data-->
 
 This demo showcases different options for accessing economy storage, including command line and API options, and how to handle the migration of large datasets to Economy Local. 
 
