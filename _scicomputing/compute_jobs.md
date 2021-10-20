@@ -53,7 +53,7 @@ A variety of limits are used to ensure equitable access to computing resources, 
 
 ### Priority
 
-Priority (the "priority score") is used to order pending jobs in the queue with jobs having a higher score run before those with a lower score.  The priority calculation is based primarily on the historical usage of cluster resources by an account- accounts with high utilization (i.e. lots of jobs and lots of CPUs) have lower priority scores than those accounts with lower usage.  
+Priority (the "priority score") is used to order pending jobs in the queue with jobs having a higher score run before those with a lower score.  The priority calculation is based primarily on the historical usage of cluster resources by an account- accounts with high utilization (i.e. lots of jobs and lots of CPUs) have lower priority scores than those accounts with lower usage.
 
 Time queued does factor in to the priority score but is a relatively minor component of the priority score
 
@@ -194,13 +194,9 @@ These jobs are run with no limits- every idle CPU is fair game.  However, any nu
 
 To use this feature, add the QOS "restart" to your job, _vis_:
 
-    sbatch --qos=restart myjob.sh
+    sbatch --partition=restart-new --qos=restart myjob.sh
 
 As these jobs are low-priority, you must note that it can take some time for these jobs to start.  These jobs are run via the backfill mechanism which requires that the entire set of queued jobs be evaluated which can take some time.
-
-> Some may recall that we implemented this as a partition- _restart_, then _restart-new_.  Those partitions are still available but it is still necessary to add the QOS request, e.g. `sbatch -p restart-new --qos=restart`. There is no effect when specifying the partition - it is now unnecessary.
->
-> Future work may include removing these partitions.
 
 ### Why isn't my job running?
 
