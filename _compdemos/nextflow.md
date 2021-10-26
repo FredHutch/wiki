@@ -153,14 +153,10 @@ There are a few potential reasons for this:
 
 **How do I pick which 'queue' to use in AWS Batch?**
 
-FIXME JEFF:  we need to update this but should we just remove instead?
-A 'queue' is a concept in AWS Batch which specifies what line a job will go into to wait to be scheduled and executed. 
+<!--FIXME JEFF:  we need to update this but should we just remove instead?-->
+A 'queue' is a concept in AWS Batch which specifies what line a job will go into to wait to be scheduled and executed.  In your account, by default you should only have one queue that will use spot instances.  If you require additional queues, different instance types, or cannot use spot instances for some reason then please contact CLD to discuss your needs.
 
-You can specify the queue with `process.queue = 'cpu-spot-30'` in your `nextflow.config`, or with `-process.queue cpu-spot-30` at runtime (in the `nextflow run ...` command).
-
-Please refer to [Choosing a Job Queue](https://sciwiki.fredhutch.org/scicomputing/compute_cloud/#choose-a-job-queue) for more guidance about the available queues and the differences between them.
-
-It is generally reasonable to just pick one queue and use it for everything, switching to another queue if your usual queue is full.
+If you do have additional queues, you can specify the queue with `process.queue = 'cpu-spot-30'` in your `nextflow.config`, or with `-process.queue cpu-spot-30` at runtime (in the `nextflow run ...` command).
 
 ### Montoring running jobs
 

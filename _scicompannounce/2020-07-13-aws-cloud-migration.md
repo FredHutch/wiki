@@ -2,9 +2,9 @@
 title: AWS Cloud Migration
 ---
 
-FIXME KATE: update filename so date renders correctly
 
-FIXME JEFF: double check content
+
+<!--FIXME JEFF: double check content -->
 
 We're currently getting ready to migrate to our new AWS environment!  This new environment will provide many benefits over the current account structure and enable SciComp to deliver better solutions for Economy Cloud storage, sharing data, running compute jobs in AWS Batch with various workflow engines (e.g. Nextflow, Cromwell), and whatever solutions continue to evolve in the exciting world of Scientific Computing in the Cloud.
 
@@ -17,8 +17,8 @@ Here's a brief overview of what will change:
 - All access credentials will change.  You'll need a new Access Key and Secret Key.
 - Some of your data may move to a different top-level folder in S3.
 - Each account will have their own dedicated AWS Batch Compute Environment.
-- Data in S3 that is not accessed frequently will be archived in order to improve the efficiency of our storage system.  In general, most data will be archived after 30 days.  If you need to access this archived data, you will need to submit a ticket to SciComp with the names of the S3 objects that you wish to retrieve and they will typically become available within a day of submitting your request.
-- If you have data that you need to be kept available at all times, please submit a ticket to SciComp.
+- At some point in the future, data in S3 that is not accessed frequently will be archived in order to improve the efficiency of our storage system.  In general, most data will be archived after 30 days.  If you need to access this archived data, you will need to submit a ticket to CLD with the names of the S3 objects that you wish to retrieve and they will typically become available within a day of submitting your request.
+- If you have data that you need to be kept available at all times, please submit a ticket to CLD.
 
 ## What's new?
 
@@ -31,7 +31,7 @@ Here are some highlights:
 - Sharing data with external collaborators will be much easier.
 - Tracking and controlling costs for various services will now be possible.  You'll even be able to have budgets with alert thresholds as you incur charges on various AWS Services.
 - The new accounts have improved security, monitoring, and alertings.  Most of these improvements will be completely transparent to you and are managed by SciComp, however some of these changes can help to enable better control over your own account and ensure compliance around things such as data storage.
-- If you have AWS Credits available such as through Amazon's AWS Cloud Credits for Research program, you will be able to have a dedicated account created for you to use those credits.  The setup for this is slightly different; contact SciComp for details.
+- If you have AWS Credits available such as through Amazon's AWS Cloud Credits for Research program, you will be able to have a dedicated account created for you to use those credits if required.  The setup for this is slightly different; contact CLD for details.
 
 ## What isn't changing?
 
