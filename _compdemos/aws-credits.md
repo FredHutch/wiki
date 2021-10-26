@@ -53,7 +53,7 @@ To request a Sandbox account, please submit a ticket that includes the following
 - The full name and email address of whomever is going to own this account
 - An approximate end date or duration of the project (this is strictly for forecasting our AWS needs and is **not** a hard deadline, so a best estimate is fine)
 - A list of HutchnetIDs for everyone that you want to have access to this account.  For each person, indicate whether or not they should be an Administrator or a User.  The account owner should be included in this list.
-- Any special requirements or needs that you have for this account e.g. Compute environments, a domain name for a website, types of AWS EC2 instances that you will need to create, etc.
+- Any special requirements or needs that you have for this account e.g. AWS Batch Compute environments, a domain name for a website, types of AWS EC2 instances that you will need to create, etc.
 
 Once SciComp receives the ticket and creates the account, you and all other users you have indicated will receive an encrypted email containing the account information as well as your initial credentials and instructions for accessing the account.  If you need help redeeming the credits in your account, please contact SciComp for assistance or come to SciComp's *Next Generation/Cloud Computing* office hours (currently Tuesdays at 3pm).
 
@@ -65,9 +65,9 @@ Your sandbox account is entirely separate from your lab account, so you will hav
 
 It is possible to access data in S3 buckets that are in other accounts, including your economy-cloud S3 buckets, so you will be able to transfer data both in and out of your Sandbox account (contact CLD for assistance with this).  When your project is complete, any data will need to be transfered out of your account.  It can be downloaded onto the on-prem storage systems, your local computer, or transfered into economy-cloud storage.  CLD can assist you with transferring your data.
 
-### Compute environments
+### AWS Batch Compute environments
 
-CLD can create compute environments for you that are identical to those types of environments that exist in your lab's account, so it is recommended that you have CLD do this setup for you.  However, in sandbox accounts you will have enough permissions to be able to create and configure your own compute environments if you wish to do so.  You *may* use dedicated EC2 instances for this if you need to, however it is still strongly recommended that you use spot instances whenever possible.
+CLD can create AWS Batch Compute environments for you that are identical to those types of environments that exist in your lab's account, so it is recommended that you have CLD do this setup for you.  However, in sandbox accounts you will have enough permissions to be able to create and configure your own AWS Batch Compute environments if you wish to do so.
 
 ### Restrictions in sandbox accounts
 
