@@ -57,6 +57,6 @@ SciComp will contact each lab currently using AWS in the HSE account to help you
 
 Under either option, your existing data in the HSE account bucket will be preserved for a short while, after which it will be transitioned into Glacier Deep Archive and retained for *one year*.  After *one year* that data will be permanently deleted.  If you discover that something did not copy over correctly for whatever reason, we will be able to retreive it from your previous bucket and move it again at any time.
 
-### Compute environments
+### AWS Batch Compute environments
 
 The shared AWS Batch Compute Environments in the HSE account will be shut down and each PI account will be able to have one or more dedicated Compute Environments that will be created and maintained by SciComp.  In most cases, you will not be able to create or make significant modifications to AWS Batch Compute Environments.  It will be possible to restrict access to your account's compute environments to specific users if desired, however by default all users will have access to use all compute environments.
