@@ -144,14 +144,14 @@ __Python__
     - [Loops and Iterations](https://www.youtube.com/watch?v=6iF8Xb7Z3wQ&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=7)
     - [Functions](https://www.youtube.com/watch?v=9Os0o3wzS_I&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=8)
     - [Import Modules and Exploring The Standard Library](https://www.youtube.com/watch?v=CqvZ3vGoGs0&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=9)
-    
+      
     > See Corey's [YouTube Channel](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g) for more tutorials including intermediate and advanced Python topics
 
   - [Dataschool.io - Best Practices with Pandas](https://www.dataschool.io/data-science-best-practices-with-pandas/) (2 hr)
 
 #### Core Coding Concepts
 
-- [Data Structures and Algorithms Series - Coding Dojo](https://www.youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H)(15 - 30 min / video)
+- [Data Structures and Algorithms Series - Coding Dojo](https://www.youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H) (15 - 30 min / video)
 
 ### Interactive Coding Platforms
 These resources offer classes that are work-at-your-own-pace with a major focus on hands-on problem-sets and projects.
