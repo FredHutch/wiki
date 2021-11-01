@@ -4,7 +4,7 @@ main_author: Dirk Peterson
 primary_reviewers: dirkpetersen, vortexing
 ---
 
-<!--FIXME JEFF: Add new policies for object archiving, restricted tags, bucket restrictions, and public/private buckets with data-->
+> NOTE:  Economy Local will no longer be available after June 2022.  It is recommended that you move your data from Economy Local (Swift) to Economy Cloud (S3).  All resources for using `Economy Local` have been moved to [here for archiving](/compdemos/Economy-storage/).
 
 `Economy Local` is an object storage system based on Openstack Swift. `Economy Local` is recommended for research groups who keep large amounts of data (>100TB) on the Fred Hutch campus and frequently use the `Gizmo` cluster with local storage. We also recommend it for data that is explicitly forbidden to be stored in public cloud storage resources.
 
