@@ -1,12 +1,10 @@
 ---
 title: Using AWS Cloud Credits
-last_modified_at: 2020-07-23
 main_author: Jeff Tucker
 primary_reviewers: jefftucker, dtenenba
 ---
-# AWS Credits and your account
 
-AWS credits are simple, yet applying them so that they are used optimally is surprisingly complex.  
+AWS credits are a simple idea, yet applying them so that they are used optimally is surprisingly complex.  
 
 ## Where do credits come from?
 

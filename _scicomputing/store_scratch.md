@@ -6,6 +6,10 @@ primary_reviewers: vortexing
 
 `Scratch` storage serves as a temporary location for large data sets that ideally reside in an archive space like [AWS S3](/scicomputing/store_objectstore/) storage, to be transferred to when compute processes are applied to them.  Data in `Scratch` are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in `Scratch` as well, and then the final data resulting from the compute process can be written to [`Fast`](/scicomputing/store_posix/) storage for the researcher.  This allows large data to be archived in [AWS S3](/scicomputing/store_objectstore/) storage, accessed by HPC when it is temporarily housed in `Scratch` and only the (typically smaller) resulting data are written to the more accessible, but more costly [`Fast`](/scicomputing/store_posix/) storage.
 
+
+An additional useful tool that can help you leverage `Scratch` storage space while also retaining all your final results is [Motuz](http://motuz.fredhutch.org).  `Motuz` is a tool that facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
+
+
 ## Why is Scratch Different?
 
 The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the _home_ or _fast_ file systems meant for long term data storage (these features were traded for lower cost and greater volume). Data here is purged when unused for some amount of time (10, 30, and 90 days depending on the location).

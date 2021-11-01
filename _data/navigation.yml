@@ -136,7 +136,7 @@ scicomputing:
         url: /scicomputing/store_objectstore/
       - title: "Temporary (Scratch) Storage"
         url: /scicomputing/store_scratch/
-      - title: "OneDrive"
+      - title: "Collaboration Tools"
         url: /scicomputing/store_collaboration/
 
   - title: "Software Development"

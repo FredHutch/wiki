@@ -5,13 +5,18 @@ primary_reviewers: jefftucker, dtenenba
 
 Object storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an object storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud Computing depends very much on object storage systems such as Amazon's AWS S3 or Google Cloud Storage.
 
-### Object Storage PI Allocations
+## Object Storage PI Allocations
 As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.  
 
->Note:  Currently it is recommended to use a combination of AWS S3, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+> Note:  Currently it is recommended to use a combination of AWS S3, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
 
 AWS S3 is less expensive than [`Fast`](/scicomputing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, AWS S3 would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  AWS S3 serves as an archive for these data, and typically compute processes do not directly access these files.
+
+
+### Economy Local (Swift)
+
+> NOTE:  Economy Local will no longer be available after June 2022.  It is recommended that you move your data from Economy Local (Swift) to Economy Cloud (S3).  All resources for using `Economy Local` have been moved to [here for archiving](/compdemos/Economy-storage/).
 
 ## Features & Benefits of Object Storage Systems
 
@@ -31,12 +36,11 @@ Access to AWS S3 storage is governed by Hutch Net ID (Active Directory) authenti
 
 >Note: In the future Fred Hutch Shared Resources data delivery processes (e.g. through  HutchBase) will be modified to deliver data directly to AWS S3 and [*Scratch*](/scicomputing/store_scratch/) storage as opposed to [`Fast`](/scicomputing/store_posix/) as it happens today.
 
-## Accessing Economy Storage
+## Accessing AWS S3 Storage
 You can access AWS S3 resources with [command line tools](/compdemos/aws-s3/) such as  `aws s3` or `rclone` or libraries such as or _boto3_ for _Python_ or _aws.s3_ for R.  As of March 2016, Center IT officially supports the use of [Mountain Duck and Cyberduck desktop clients](/compdemos/Mountain-CyberDuck/) on Windows or Mac to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing. 
 
-### Economy Local (Swift)
+An additional tool is [Motuz](http://motuz.fredhutch.org), a tool that facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
 
-NOTE:  Economy Local will no longer be available after June 2022.  It is recommended that you move your data from Economy Local (Swift) to Economy Cloud (S3).  All resources for using `Economy Local` have been moved to [here for archiving](/compdemos/Economy-storage/).
 
 
 ### AWS S3
