@@ -79,10 +79,7 @@ The scratch file system is a file storage system that works differently than the
 
 ### [Collaborative Storage Options](/scicomputing/store_collaboration/)
 
-These storage systems have capabilities allowing you to share data with people outside the Hutch, with or without a HutchNet ID.  These include Aspera and OneDrive.  
+These storage systems and transfer tools have capabilities allowing you to share data with people outside the Hutch, with or without a HutchNet ID.  These include Motuz and Aspera transfer tools and OneDrive for data storage, as well as information about using AWS S3 for collaboration.  
 
 
-## Data Transfer
 
-### [Motuz](http://motuz.fredhutch.org)
-To facilitate the transfer of data between Fred Hutch storage locations, a new tool has been developed and is being piloted at the Hutch called [Motuz](http://motuz.fredhutch.org).  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/)

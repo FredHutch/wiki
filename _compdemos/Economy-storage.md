@@ -1,9 +1,17 @@
 ---
 title: Accessing `Economy Local` Storage
-last_modified_at: 2019-05-31
 main_author: Dirk Peterson
 primary_reviewers: dirkpetersen, vortexing
 ---
+
+> NOTE:  Economy Local will no longer be available after June 2022.  It is recommended that you move your data from Economy Local (Swift) to Economy Cloud (S3).  All resources for using `Economy Local` have been moved to [here for archiving](/compdemos/Economy-storage/).
+
+`Economy Local` is an object storage system based on Openstack Swift. `Economy Local` is recommended for research groups who keep large amounts of data (>100TB) on the Fred Hutch campus and frequently use the `Gizmo` cluster with local storage. We also recommend it for data that is explicitly forbidden to be stored in public cloud storage resources.
+
+`Economy Local` is well suited to store petabytes of data at low cost and a high level of data protection. Economy File does not require tape backup as data is replicated to multiple sites. If you accidentally delete data it will be held in a "Trash can" for multiple months during which you have read-only access to the deleted data. Economy File is approved for PHI / PII data.  It is a suitable location to store genomic data  including those governed by the NIH Genomic Data Sharing policies or originating from public repositories while in use locally. Please the [demo section for examples of Economy Local](/compdemos/Economy-storage/)
+
+It is also possible to use [Synology to backup data to _Economy Local_.](/compdemos/synology/)
+
 
 This demo showcases different options for accessing economy storage, including command line and API options, and how to handle the migration of large datasets to Economy Local. 
 
@@ -151,7 +159,7 @@ and to list buckets in s3 you can run
 
 ### Amazon Web Services S3 Compatibility Layer
 
-We can use AWS tools such as `awscli`, the Python module `boto3` or the R package `aws.s3` to access Swift through the AWS S3 compatibility layer.  We have generated detailed docs for using [`awscli`](/compdemos/aws-cli/), [`boto3`](/compdemos/aws-python/) and [`aws.s3`](/compdemos/aws-R/) in our Resource Library section.  Prior to using these tools, hwoever, we need to first setup the profile `s3.fhcrc.org` in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on `rhino`.  
+We can use AWS tools such as `awscli`, the Python module `boto3` or the R package `aws.s3` to access Swift through the AWS S3 compatibility layer.  We have generated detailed docs for using [`awscli`](/compdemos/aws-s3/#aws-command-line-interface-cli), [`boto3`](/compdemos/aws-s3/#aws-via-python) and [`aws.s3`](/compdemos/aws-s3/#aws-via-r) in our Resource Library section.  Prior to using these tools, hwoever, we need to first setup the profile `s3.fhcrc.org` in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on `rhino`.  
 
 ```
 > s3cfg
@@ -170,7 +178,7 @@ After running `s3cfg` you need to first put the credentials you can get from too
     > source ~/.aws/s3env.sh
 ```
 
-Now you should be able to use the `awscli` commands as [documented here](/compdemos/awscli/) to list all your directories in `Economy Local`.
+Now you should be able to use the `awscli` commands as [documented here](/compdemos/compdemos/aws-s3/#aws-command-line-interface-cli) to list all your directories in `Economy Local`.
 
 ```
     > aws s3 ls
@@ -332,7 +340,8 @@ The remainder of this document aims to provide some guidance for researchers int
 Depending on where the data is being migrated from, different methods work best for archiving datasets in `Economy Local`.  
 
 #### AWS S3 Transfer Bucket
-How to set up an AWS S3 transfer bucket to receive data from sources such as sequencing centers, etc.
+
+You do not generally need to create a designated S3 bucket for transferring data, although in some cases this may be required.  Please refer to the [S3 documentation](/compdemos/aws-s3/) for more information.
 
 ### Physical Drives
 In some cases the choice is made to receive large datasets on physical drives, such as a hard drive mailed to you from a data provider.  In this case, the physical drive might not be the best archive for a variety of reasons, but also is not an ideal working copy location either.  

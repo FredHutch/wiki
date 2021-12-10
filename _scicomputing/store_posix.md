@@ -11,7 +11,12 @@ There are multiple file storage resources available to researchers including:
 - [`Scratch`](/scicomputing/store_scratch/) for personal and shared temporary data
 - `Secure` for data with higher-level security needs (PHI/encryption/auditing)
 
->Note:  Currently it is recommended to use a combination of [*Economy*](/scicomputing/store_objectstore/), [`Scratch`](/scicomputing/store_scratch/) and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+>Note:  Currently it is recommended to use a combination of [AWS S3](/scicomputing/store_objectstore/), [`Scratch`](/scicomputing/store_scratch/) and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+
+A tool that is useful for moving data between these systems is [Motuz](http://motuz.fredhutch.org).  `Motuz` facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/
+). 
+
+
 
 ## Home
 

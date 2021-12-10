@@ -121,6 +121,8 @@ scicomputing:
         url: /scicomputing/access_methods/
       - title: "Permissions"
         url: /scicomputing/access_permissions/
+      - title: "AWS Accounts"
+        url: /scicomputing/access_aws/
 
   - title: "Data Storage"
     children:
@@ -128,13 +130,13 @@ scicomputing:
         url: /scicomputing/store_overview/
       - title: "Database Systems"
         url: /scicomputing/store_databases/
-      - title: "File Storage Systems"
+      - title: "Local Storage Systems"
         url: /scicomputing/store_posix/
-      - title: "Object Storage Systems"
+      - title: "AWS S3 Storage"
         url: /scicomputing/store_objectstore/
       - title: "Temporary (Scratch) Storage"
         url: /scicomputing/store_scratch/
-      - title: "Collaborative Storage Systems"
+      - title: "Collaboration Tools"
         url: /scicomputing/store_collaboration/
 
   - title: "Software Development"
@@ -172,7 +174,7 @@ scicomputing:
         url: /scicomputing/compute_jobs/
       - title: "Parallel Computing"
         url: /scicomputing/compute_parallel/
-      - title: "Cloud Computing"
+      - title: "AWS Cloud Computing"
         url: /scicomputing/compute_cloud/
       - title: "Computing with GPU"
         url: /scicomputing/compute_gpu/

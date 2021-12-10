@@ -181,6 +181,10 @@ it can be found [here](https://www.ruby-lang.org/en/downloads/).
    installed. If nothing is returned, then
    install `bundler` with `gem install bundler`.
    If that fails, try `sudo gem install bundler`.
+1. You may need to install gems used by the site.
+   Type `gem install -g Gemfile` to install all of the gems the site uses.
+   - If you get an error `mkmf.rb can't find the headers for ruby at /some/path/to/ruby.h` or something very similar, you need to install the `ruby-dev` package.
+   - If you get an error that `zlib is missing` you need to install the `zlib1g-dev` package.
 
 
 Now run

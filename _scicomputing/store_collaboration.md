@@ -1,20 +1,28 @@
 ---
-title: Data Storage for Collaboration
-last_modified_at: 2019-04-01
+title: Data Transfer and Storage Tools for Collaborating
 primary_reviewers: vortexing
 ---
 
-There are Fred Hutch supported data storage systems that allow you to share data with people outside the Hutch, with or without a Hutch ID in order to facilitate data transfer and receipt in collaborations within or outside of the Fred Hutch.  
+## Data Transfer Tools
+In collaborative settings, often data transfer and sharing can pose significant challenges.  For specific guidance about data transfer, access or copying for your particular collaboration, please file a ticket including a basic description of the data access sitaution by emailing `scicomp`.  There are often suitable strategies for collaborative project support that do not require data duplication (and thus increased data storage costs), or use of expensive data storage or transfer tools.  Two useful data transfer tools at use at the Hutch include `Motuz` and `Aspera`.  
 
-## Aspera
+### Motuz
+[Motuz](http://motuz.fredhutch.org) is a tool that facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
 
-The Aspera is a storage appliance that runs a heavily tuned storage server and client that enables fast transfer of large data between this system and a host using the Aspera client (either command line or via a browser).  The primary method of operation is to upload the data to the server, then use the web interface to create an email with a link you would then send to those outside the Hutch network.
+### Aspera
 
-> Note: space is limited. Because of this, data stored here is deleted after a short period of time making the Aspera inappropriate for primary storage.  Always keep the primary source on one of the other options above (fast, economy, etc.)
+Aspera is a data transfer tool that enables fast transfer of large data between it and a host using the Aspera client (either command line or via a browser).  The primary method of operation is to upload the data to the Aspera server, then use the web interface to create an email with a link you would then send to those outside the Hutch network.
+
+> Note: space is limited. Because of this, data stored here is deleted after a short period of time and not backed up making the Aspera inappropriate for primary storage.  Moving data to their final, secure, backed up locations as soon as possible is important when using Aspera.
 
 Visit [the Aspera information page](https://aspera.fhcrc.org/index.html) for more details and information on using this storage service.
 
-## OneDrive
+## Data Storage for Collaboration
+
+### AWS S3
+AWS S3 storage has a variety of useful features that make it an ideal way to securely share data with collaborators, or leverage a resource as a common storage location for users at and outside of the Hutch.  You can read more about how S3 can help support your collaborations using especially large data sets [in our AWS S3 storage documentation](/scicomputing/store_objectscore/).
+
+### OneDrive 
 OneDrive is a cloud service that securely stores your files and folders in one place, share them with others, and update your files from any device. OneDrive is a benefit available individual users at the Fred Hutch that allows for private storage of files with the ability to share those files with others for collaboration.  With OneDrive you can:
 
 - Create documents on your computer and edit on your laptop, phone, or tablet

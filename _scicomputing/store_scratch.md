@@ -1,10 +1,14 @@
 ---
 title: Data Storage in Temporary Storage (Scratch)
-last_modified_at: 2019-04-04
 primary_reviewers: vortexing
 ---
 
-`Scratch` storage serves as a temporary location for large data sets that ideally reside in an archive space like [`Economy`](/scicomputing/store_objectstore/) storage, to be transferred to when compute processes are applied to them.  Data in `Scratch` are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in `Scratch` as well, and then the final data resulting from the compute process can be written to [`Fast`](/scicomputing/store_posix/) storage for the researcher.  This allows large data to be archived in [`Economy`](/scicomputing/store_objectstore/) storage, accessed by HPC when it is temporarily housed in `Scratch` and only the (typically smaller) resulting data are written to the more accessible, but more costly [`Fast`](/scicomputing/store_posix/) storage.
+
+`Scratch` storage serves as a temporary location for large data sets that ideally reside in an archive space like [AWS S3](/scicomputing/store_objectstore/) storage, to be transferred to when compute processes are applied to them.  Data in `Scratch` are typically then deleted automatically after certain timeframes when they are no longer needed. Intermediate data that is generated can be saved in `Scratch` as well, and then the final data resulting from the compute process can be written to [`Fast`](/scicomputing/store_posix/) storage for the researcher.  This allows large data to be archived in [AWS S3](/scicomputing/store_objectstore/) storage, accessed by HPC when it is temporarily housed in `Scratch` and only the (typically smaller) resulting data are written to the more accessible, but more costly [`Fast`](/scicomputing/store_posix/) storage.
+
+
+An additional useful tool that can help you leverage `Scratch` storage space while also retaining all your final results is [Motuz](http://motuz.fredhutch.org).  `Motuz` is a tool that facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
+
 
 ## Why is Scratch Different?
 
@@ -36,6 +40,8 @@ For this purpose we have a scratch file systems attached to `Gizmo`.  Using a sc
 
 On Gizmo there are two forms of scratch space available: "node local job scratch" and "network persistent scratch".  The "node local" scratch directories and their contents exist only for the duration of the job- when the job exits, the directory and its contents are removed.  
 For more persistent scratch space, ​please see the persistent Scratch section.
+
+In AWS, there is a dedicated scratch S3 bucket in your lab's account that has "scratch" in the name (no buckets are specific to a software despite their names, such as the "nextflow-scratch" bucket).  This bucket is optimized for use as a scratch bucket and as such does not keep deleted objects around for any length of time, unlike the Economy Cloud buckets which will keep a deleted object for 60 days.  The scratch bucket offers the prefixes `delete10/`, `delete30/` and `delete45/` which will auto-delete anything under that prefix in the number of days in the prefix's name.  No other prefixes exist automatically, however you can request additional prefixes with different numbers of days or even change the delete policy for the entire bucket by emailing `SciComp`.  You can also request additional scratch buckets if desired, however a single scratch bucket will typically meet a lab's needs.  Note that despite the different configuration, the scratch buckets are also HIPPA compliant although if you plan to use the scratch bucket to process PHI, it may be necessary to contact `SciComp` so that additional access protections can be added to your account if only a certain subset of the members of your lab are authorized to access that data.  Typically, this bucket should ONLY be used as scratch space for AWS Batch jobs.
 
 
 ### Node Local Job Scratch
@@ -190,7 +196,7 @@ sbatch /fh/path/miniScript.sh
 ```
 
 ### Copy Results Back to S3
-After you have performed your intended process and removed any intermediate files that are not the end result you are after and do not need to save, you can then sync the directory back up to S3.  By using `sync`, all of your output files and logs will go to S3 in a mirrored structure to that in `scratch`.  Another option is to directly sync only the files you want to save by name.   
+After you have performed your intended process and removed any intermediate files that are not the end result you are after and do not need to save, you can then sync the directory back up to S3.  By using `sync`, all of your output files and logs will go to S3 in a mirrored structure to that in `scratch`.  Another option is to directly sync only the files you want to save by name.
 
 ```
 aws s3 sync workingdir/ s3://yourbucket/yourDirectory/
@@ -203,3 +209,8 @@ aws s3 sync workingdir/ s3://yourbucket/yourDirectory/
 ```
 rm -rf workingdir
 ```
+
+
+
+## Do we have Scratch in the Cloud?
+Yes! Please see the [AWS S3 storage page](/scicomputing/storage_objectstore/) for more information about how to use AWS S3 Scratch buckets, which function similarly as our on premise Scratch resource does.  
