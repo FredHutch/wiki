@@ -18,9 +18,11 @@ something like `nextflow.aws.config`.
 ## Setting up AWS Credentials
 
 In order to run jobs on AWS Batch and access data in AWS S3, Nextflow can
-directly use the credentials set up for you by Scientific Computing.
-After setting up your credentials [with `awscreds`](_scicomputing/access_credentials),
-those credentials will be used by Nextflow when executing a workflow.
+directly use the credentials set up for you by the Cloud and Data team.
+
+You should have received an encrypted email containing your 
+AWS credentials (if not contact `helpdesk`).
+Those credentials will be used by Nextflow when executing a workflow.
 
 
 ### Expert Level: Multiple AWS Profiles
