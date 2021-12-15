@@ -178,6 +178,7 @@ These plugins help when you are editing your workflow in Atom or VS Code by colo
 - [WDL Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=broadinstitute.wdl) for VS Code
 
 These relate to the WDL workflow language itself and example workflows to start from:
+- The OpenWDL [learn WDL GitHub repo](https://github.com/openwdl/learn-wdl)
 - [Open WDL](https://github.com/openwdl/wdl) for more about development of WDL as a standard
 - [bioWDL](https://biowdl.github.io/) for template workflows relating to bioinformatics/sequencing analysis
 - The OpenWDL [WDL 1.0 specification site](https://github.com/openwdl/wdl/blob/master/versions/1.0/SPEC.md)
