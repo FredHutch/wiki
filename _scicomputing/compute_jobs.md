@@ -109,7 +109,7 @@ When you submit your script using sbatch you will be able to use a number of Slu
 
 | SLURM output variables  | Description                                           |
 |-------------------------| ------------------------------------------------------------|
-| SLURM_JOB_CPUS_PER_NODE | Number of cores allocated for the current job on this node |
+| SLURM_CPUS_ON_NODE      | Number of cores allocated for the current job on this node |
 | SLURM_JOB_ID            | Job ID, Primary identifier of a job |
 | SLURM_MEM_PER_CPU       | Memory allocated per CPU (unit: MB)
 | SLURM_JOB_NODELIST      | list of node names allocated to the current job |
