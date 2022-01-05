@@ -22,9 +22,9 @@ This effectively allows you to "burst" CPU briefly without incuring any great pe
 
 Notifications will be delivered to your email.  These will indicate that Arbiter has noticed high utilization and that it will begin restricting resources- it will contain a message similar to:
 
-> You now have the status penalty2 because your usage has exceeded the thresholds for appropriate usage on the node. Your CPU usage is now limited to 60% of your original limit (4.0 cores) for the next 60 minutes. In addition, your memory limit is 755% of your original limit (86.0 GB) for the same period of time.
+> You now have the status penalty2 because your usage has exceeded the thresholds for appropriate usage on the node. Your CPU usage is now limited to 60% of your original limit (16.0 cores) for the next 60 minutes. In addition, your memory limit is 755% of your original limit (86.0 GB) for the same period of time.
 
-Currently the memory limit indicated in this email is incorrect- the percentage isn't getting calculated properly.
+**NOTE:** The memory limit percentage indicated in this email is incorrect- the memory limit isn't changed, but this isn't getting calculated properly in the generation of the email.
 
 ## What Happens
 
@@ -35,11 +35,11 @@ If your processes should exceed the "normal" limits (in the table below), this i
 
 In each of those phases your processes will be kept for the amount of time indicated in the last column.
 
-| Stage     | CPU              | Memory      | Time   |
-|-----------|------------------|-------------|--------|
-| normal    | 8 cores (800%)   | 86GB        | n/a    |
-| penalty1  | 6 cores (640%)   | 86GB        | 30m    |
-| penalty2  | 4 cores (480%)   | 86GB        | 60m    |
+| Stage     | CPU                | Memory      | Time   |
+|-----------|--------------------|-------------|--------|
+| normal    | 16 cores (1600%)   | 86GB        | n/a    |
+| penalty1  | ~ 12 cores (1280%) | 86GB        | 30m    |
+| penalty2  | ~ 9 cores (960%)   | 86GB        | 60m    |
 
 Once you have reduced your utilization below the threshold of the penalty phase you are in, your processes will have those more restrictive limits removed.
 
