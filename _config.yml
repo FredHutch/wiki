@@ -128,6 +128,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "generation"
@@ -140,6 +141,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "generation"
@@ -152,6 +154,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "scicomputing"
@@ -164,6 +167,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "scicomputing"
@@ -176,6 +180,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "hdc"
@@ -206,6 +211,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
 
   # _posts
