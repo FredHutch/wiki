@@ -14,6 +14,9 @@ repository               : "FredHutch/wiki"
 
 
 collections:
+  glossary:
+    output: true
+    permalink: /:collection/:path/
   generation:
     output: true
     permalink: /:collection/:path/
@@ -42,6 +45,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   rModules:
+    output: true
+    permalink: /:collection/:path/
+  pathways:
     output: true
     permalink: /:collection/:path/
 
@@ -106,6 +112,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-archives
+  - jekyll-hyperlinkify-glossary
 
 
 # mimic GitHub Pages with --safe
@@ -244,7 +251,16 @@ defaults:
       type: pathways
     values:
       layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "generation"
 
+
+exclude:
+  - ".gitignore"
+  - "vendor/"
 
 ### PATHWAYS STUFF
 tag_archive:

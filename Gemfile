@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'jekyll-hyperlinkify-glossary', '~> 0.1.3', group: :jekyll_plugins
 group :development, :test do
 #   gem 'jekyll', '~> 3.8.3'
   gem "github-pages", group: :jekyll_plugins
@@ -15,4 +16,5 @@ group :development, :test do
   gem 'html-proofer', '~> 3.14.0'
   gem 'rake', '~> 12.3.0'
   gem 'faraday', '~> 0.17'
+  gem 'jekyll-hyperlinkify-glossary', '~> 0.1.3'
 end
