@@ -7,20 +7,24 @@ primary_reviewers: vortexing
 This pathway will get you to a first batch job on Gizmo using command-line interfaces
 
 ## Pre-requisites
-A desktop computer, access to the internet, a good text editor.  
+A desktop computer, access to the internet, a good text editor.
 
 ## Concepts and Vocabulary
+
 If you are unfamiliar with any of these terms, please see our [Glossary](/scicomputing/glossary/) page for definitions and links. 
  - Batch job
  - Shell
  - Scripts
  - Session
- - Workload manager
- - Slurm
  - HutchNet ID
- - Workflow manager
+ - Workflow Manager
+ - Workload Manager
+ - Slurm
+ - Home Directory
+ - Common Hutch File Systems
  - `rhino`
  - `gizmo`
+ - foo
 
 ## Steps
 
@@ -95,3 +99,4 @@ We've described a single job- when your work requires many jobs or many steps, m
 
  - Slurm [job arrays](link tbd) provide an easy mechanism for submitting thousands of homogenous jobs
  - [Workflow managers](/scicomputing/compute_parallel/#workflow-managers) are the gold-standard for managing computational workflows, particularly valuable for managing multi-step analyses.  [Cromwell](/compdemos/Cromwell/) and [Nextflow](/compdemos/nextflow/) are the two preferred workflow manager tools at the Hutch.  
+
