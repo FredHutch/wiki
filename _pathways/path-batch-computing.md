@@ -10,17 +10,17 @@ This pathway will get you to a first non-interactive computing job on the `gizmo
 A desktop computer, access to the internet, a good text editor.  
 
 ## Concepts and Vocabulary
-If you are unfamiliar with any of these terms, please see our [Glossary](/scicomputing/glossary/) page for definitions and links. 
- - Batch job
- - Shell
- - Scripts
- - Session
- - Workload manager
- - Slurm
- - HutchNet ID
- - Workflow manager
- - `rhino`
- - `gizmo`
+If you are unfamiliar with any of these terms, please see our [Glossary](/scicomputing/glossary/) page for definitions and links or click on individual items below. 
+ - [Batch job](/scicomputing/glossary#batch-job)
+ - [Shell](/scicomputing/glossary#shell)
+ - [Scripts](/scicomputing/glossary#scripts)
+ - [Session](/scicomputing/glossary#session)
+ - [Workload manager](/scicomputing/glossary#workload-0manager)
+ - [SLURM](/scicomputing/glossary#slurm)
+ - [HutchNet ID](/scicomputing/glossary#hutchnet-id)
+ - [Workflow manager](/scicomputing/glossary#workflow-manager)
+ - [`rhino`](/scicomputing/glossary#rhino)
+ - [`gizmo`](/scicomputing/glossary#gizmo)
 
 ## Steps
 
