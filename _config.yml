@@ -1,6 +1,6 @@
 plugins:
   - jekyll-remote-theme
-remote_theme: mmistakes/minimal-mistakes@4.20.1
+remote_theme: mmistakes/minimal-mistakes@4.24.1
 ### REMEMBER TO OCCASIONALLY TEST THE NEWER VERSIONS FOR NEW GOODIES!!!!!
 minimal_mistakes_skin: contrast
 
@@ -24,6 +24,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   scicomputing:
+    output: true
+    permalink: /:collection/:path/
+  pathways:
     output: true
     permalink: /:collection/:path/
   hdc:
@@ -174,6 +177,17 @@ defaults:
       share: true
       sidebar:
         nav: "scicomputing"
+# _pathways
+  - scope:
+      path: ""
+      type: pathways
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      share: true
+      sidebar:
+        nav: "scicomputing"
 
   # _hdc
   - scope:
@@ -257,7 +271,6 @@ defaults:
       sidebar:
         nav: "generation"
 
-
 exclude:
   - ".gitignore"
   - "vendor/"
@@ -274,4 +287,3 @@ webrick:
     Access-Control-Allow_Credentials: "true"
     Access-Control-Allow-Headers: "Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range"
     Access-Control-Allow-Methods: "GET,POST,OPTIONS,PUT,DELETE,PATCH"
-    

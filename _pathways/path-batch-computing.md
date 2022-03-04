@@ -1,30 +1,25 @@
 ---
 title: Pathway for Batch Computing
 main_author: Michael Gutteridge
-primary_reviewers: vortexing
+primary_reviewers: atombaby, vortexing
 ---
 
-This pathway will get you to a first batch job on Gizmo using command-line interfaces
+This pathway will get you to a first non-interactive computing job on the `gizmo` cluster using the command-line interface at the Fred Hutch.  
 
 ## Pre-requisites
 A desktop computer, access to the internet, a good text editor.
 
-## Concepts and Vocabulary
-
-If you are unfamiliar with any of these terms, please see our [Glossary](/scicomputing/glossary/) page for definitions and links. 
- - Batch job
- - Shell
- - Scripts
- - Session
- - HutchNet ID
- - Workflow Manager
- - Workload Manager
- - Slurm
- - Home Directory
- - Common Hutch File Systems
- - `rhino`
- - `gizmo`
- - foo
+If you are unfamiliar with any of these terms, please see our [Glossary](/scicomputing/glossary/) page for definitions and links or click on individual items below. 
+ - [Batch job](/scicomputing/glossary#batch-job)
+ - [Shell](/scicomputing/glossary#shell)
+ - [Scripts](/scicomputing/glossary#scripts)
+ - [Session](/scicomputing/glossary#session)
+ - [Workload manager](/scicomputing/glossary#workload-0manager)
+ - [SLURM](/scicomputing/glossary#slurm)
+ - [HutchNet ID](/scicomputing/glossary#hutchnet-id)
+ - [Workflow manager](/scicomputing/glossary#workflow-manager)
+ - [`rhino`](/scicomputing/glossary#rhino)
+ - [`gizmo`](/scicomputing/glossary#gizmo)
 
 ## Steps
 
@@ -43,7 +38,7 @@ Batch computing resources require that your local computer be connected to the c
 
 ### Start a Terminal
 
-A terminal provides a text-based interface to computers.
+A terminal provides a text-based interface to computers (the "command line").
 
 Macintosh OSX has a built in terminal application. It can be found in _Applications->Utilities->Terminal_.  Other options are available that are more full featured such as [iterm2](https://iterm2.com/), which is one free option (please consider [donating](https://iterm2.com/donate.html)!)
 
