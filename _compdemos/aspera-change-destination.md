@@ -1,8 +1,8 @@
 ---
-title: Introduction to rslurm
-date: 2020-02-27
+title: Change Download Path in the Aspera Client
+date: 2022-03-11
 main_author: Michael Gutteridge
-primary_reviewers: vortexing, atombaby, jennylsmith
+primary_reviewers:  atombaby
 ---
 
 ## Changing Download Destination for Aspera Downloads
