@@ -1,9 +1,12 @@
 source 'http://rubygems.org'
 
+group :jekyll_plugins do
+  gem 'jekyll-glossary_tooltip'
+end
+
 group :development, :test do
 #   gem 'jekyll', '~> 3.8.3'
   gem "github-pages", group: :jekyll_plugins
-  gem 'jekyll-glossary_tooltip'
   gem 'jekyll-redirect-from', '~> 0.14.0'
   gem 'jekyll-sitemap', '~> 1.2.0'
   gem "nokogiri", ">= 1.10.4"
