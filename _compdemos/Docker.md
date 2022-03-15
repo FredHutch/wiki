@@ -24,7 +24,7 @@ and develop your image on your own machine until it's ready to be deployed.
 You can deploy your own docker machine on the Proxmox virtual test environment in ca 60 sec using the `prox` command. 
 This environment uses multiple large memory machines (16 cores, 384GB memory each) which are re-purposed previous generation Rhino class machines.
 
-Login to Rhino via ssh and follow these quick steps to run your own docker host.  Pick a new host name (in this case we pick `sausage`) and  make sure it does not already exist, ping should respond "unknown host"
+Login to Rhino via {% glossary ssh %} and follow these quick steps to run your own docker host.  Pick a new host name (in this case we pick `sausage`) and  make sure it does not already exist, ping should respond "unknown host"
 
 ```
     petersen@rhino:~$ ping sausage

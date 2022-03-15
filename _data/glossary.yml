@@ -1,6 +1,6 @@
-- term: Jekyll
-  definition: A Static Site Generator (SSG) built with ruby. Widely adopted as of GitHub Pages inclusion.
-  url: https://jekyllrb.com/
+- term: ssh
+  definition: Secure Shell
+  url: https://en.wikipedia.org/wiki/Secure_Shell
 - term: SSG
   definition: A Static Site Generator compiles the website before deployment. Then the generated web content is simply retrieved as-is by the client without any code running at retrieve time.
 - term: Jamstack
