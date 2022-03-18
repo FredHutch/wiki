@@ -280,7 +280,6 @@ defaults:
 
 exclude:
   - ".gitignore"
-  - "vendor/"
 
 ### PATHWAYS STUFF
 tag_archive:
