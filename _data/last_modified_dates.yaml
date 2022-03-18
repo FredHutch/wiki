@@ -6,7 +6,7 @@
   url: searchresults.md
 - dlm: June 6, 2019
   url: drafts.md
-- dlm: February 12, 2020
+- dlm: March 4, 2022
   url: pythonModules.md
 - dlm: June 1, 2021
   url: index.md
@@ -30,10 +30,22 @@
   url: rModules.md
 - dlm: September 17, 2020
   url: _rModules/R-3.6.1-foss-2019b.md
-- dlm: September 17, 2020
+- dlm: March 4, 2022
+  url: _rModules/fhR-4.0.3-foss-2020b.md
+- dlm: March 4, 2022
+  url: _rModules/fhR-4.1.0-foss-2020b.md
+- dlm: March 4, 2022
   url: _rModules/fhR-4.0.2-foss-2019b.md
+- dlm: March 4, 2022
+  url: _rModules/fhR-4.1.1-foss-2020b.md
+- dlm: March 4, 2022
+  url: _rModules/fhR-4.0.4-foss-2020b.md
 - dlm: September 17, 2020
   url: _rModules/R-3.6.2-foss-2019b-fh1.md
+- dlm: March 4, 2022
+  url: _rModules/fhR-4.0.5-foss-2020b.md
+- dlm: March 4, 2022
+  url: _rModules/fhR-4.1.2-foss-2020b.md
 - dlm: May 7, 2021
   url: _scicomputing/software_python.md
 - dlm: April 9, 2020
@@ -86,7 +98,7 @@
   url: _scicomputing/access_aws.md
 - dlm: February 12, 2021
   url: _scicomputing/compute_accounts.md
-- dlm: August 13, 2021
+- dlm: March 4, 2022
   url: _scicomputing/compute_scientificSoftware.md
 - dlm: December 10, 2021
   url: _scicomputing/access_credentials.md
@@ -228,9 +240,9 @@
   url: _compdemos/aws-s3.md
 - dlm: February 12, 2020
   url: _pythonModules/Python-3.7.4-foss-2016b-fh1.md
-- dlm: September 17, 2020
+- dlm: March 4, 2022
   url: _pythonModules/fhPython-3.8.2-foss-2020a-Python-3.8.2.md
-- dlm: September 17, 2020
+- dlm: March 4, 2022
   url: _pythonModules/Python-3.7.4-foss-2019b-fh1.md
 - dlm: August 13, 2021
   url: _hdc/hdc_refgenomes.md
