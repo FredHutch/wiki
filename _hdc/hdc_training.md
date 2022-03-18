@@ -15,7 +15,7 @@ Keep an eye out for:
 
 >Instructor-led opportunties are in the planning stage and pending staff support.
 
-## Self-directed learning
+## Self-directed learning through Fred Hutch
 
 For those who aren't able to attend in-person courses we have a range of standalone resources to help guide their self-directed learning. 
 
@@ -73,7 +73,7 @@ _We are working to formalize office hours for many of the Shared Resources offer
 - [UW Biostatistics Summer Institutes](https://www.biostat.washington.edu/suminst) offer yearly intensive courses over the summers on a wide variety of topics.
 - [Meetup](https://www.meetup.com) hosts various coding groups that meet regularly to share skills and provide networking opportunities. [RLadies Seattle](https://www.meetup.com/rladies-seattle/) and [Seattle UseR](https://www.meetup.com/Seattle-useR/) both include leaders from Fred Hutch.
 
-## Resources On the Web
+## External Resources On the Web
 
 ### Classroom-Style Courses
 These resources are organized in a lecture type format as slides, screencasts, and video. Most are work-at-your-own-pace, but some may be linked to a course calander. 
@@ -113,6 +113,45 @@ These resources are organized in a lecture type format as slides, screencasts, a
   
 - [CalTech](http://work.caltech.edu/telecourse) Learning from Data
   - *A free YouTube series*
+
+### Video Tutorials
+
+__Command Line__
+- [Jesse Showalter - Command Line Basics](https://www.youtube.com/watch?v=5XgBd6rjuDQ[]) (<15min video)
+- [Corey Schafer - Git Tutorial for Beginners: Command-Line Fundamentals](https://www.youtube.com/watch?v=HVsySz-h9r4) (30 min video)
+
+__R__
+- Webinars from R studio (30 min - 1 hr / video)
+  - [Getting Started With R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/)
+  - [Easy Ways to Collect Different Types of Data from the Web with R | Part 1](https://www.rstudio.com/resources/webinars/part-1-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
+  - [Easy Ways to Collect Different Types of Data from the Web with R | Part 2](https://www.rstudio.com/resources/webinars/part-2-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
+  - [Debugging Techniques in RStudio](https://www.rstudio.com/resources/webinars/debugging-techniques-in-rstudio/)
+  - [A Gentle Introduction to Tidy Statistics in R](https://www.rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/)
+  - [Managing Packages for Open Source Data Science](https://www.rstudio.com/resources/webinars/managing-packages-for-open-source-data-science/)
+  - [Tidyverse Visualization and Manipulation Basics](https://www.rstudio.com/resources/webinars/tidyverse-visualization-manipulation-basics/)
+  - [Introduction to Shiny](https://www.rstudio.com/resources/webinars/introduction-to-shiny/)
+
+  > For more RStudio video tutorials check out the following links: [RStudio Webinars](https://www.rstudio.com/resources/webinars/); [RStudio Essentials Tutorials](https://www.rstudio.com/collections/rstudio-essentials/); [RStudio Data Science Essentials Tutorials](https://www.rstudio.com/collections/data-science-essentials/)
+  
+__Python__
+-  Corey Schafer - Python beginners series (15 - 30 min / video)
+    - [Install and Setup for Mac and Windows](https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=1)
+    - [Strings - Working with Textual Data](https://www.youtube.com/watch?v=k9TUPpGqYTo&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=2)
+    - [Integers and Floats - Working with Numeric Data](https://www.youtube.com/watch?v=khKv-8q7YmY&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=3)
+    - [Lists, Tuples, and Sets](https://www.youtube.com/watch?v=W8KRzm-HUcc&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=4)
+    - [Dictionaries - Working with Key-Value Pairs](https://www.youtube.com/watch?v=daefaLgNkw0&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=5)
+    - [Conditionals and Booleans](https://www.youtube.com/watch?v=DZwmZ8Usvnk&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=6)
+    - [Loops and Iterations](https://www.youtube.com/watch?v=6iF8Xb7Z3wQ&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=7)
+    - [Functions](https://www.youtube.com/watch?v=9Os0o3wzS_I&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=8)
+    - [Import Modules and Exploring The Standard Library](https://www.youtube.com/watch?v=CqvZ3vGoGs0&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=9)
+      
+    > See Corey's [YouTube Channel](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g) for more tutorials including intermediate and advanced Python topics
+
+  - [Dataschool.io - Best Practices with Pandas](https://www.dataschool.io/data-science-best-practices-with-pandas/) (2 hr)
+
+#### Core Coding Concepts
+
+- [Data Structures and Algorithms Series - Coding Dojo](https://www.youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H) (15 - 30 min / video)
 
 ### Interactive Coding Platforms
 These resources offer classes that are work-at-your-own-pace with a major focus on hands-on problem-sets and projects.

@@ -92,7 +92,7 @@ Here are the steps to run this wrapper.
 * Once you are on the node you grabbed, choose a version of `R` by using the [module load](/scicomputing/compute_environments/#how-to-use-environment-modules) command (`ml` for short). (Example: `fhR/4.0.2-foss-2019b`). **NOTE**: At present, `fhR/4.0.2-foss-2019b` is the *only* R module that will work with RStudio Server.
 * Run the `launch_rstudio_server` command. This will produce a URL that you can paste into your browser. (This URL only works inside the Hutch network, so you need to be on campus or using VPN.)
 * In your browser, log into RStudio using your HutchNet ID and password.
-* If you have previously had problems loading packages in RStudio Server, this problem has been fixed, but in order to trigger the fixed behavior, you need to quit and restart your RStudio Server session. You only have to do this once. Do it by entering the command `q()` in RStudio Server, then entering `y` or `n` to indicate whether you want to save your workspace. 
+* If you have problems loading packages in RStudio Server, Try this: `.libPaths(c("/app/software/fhR/4.0.2-foss-2019b", .libPaths()))` 
 * When you are finished using RStudio Server, you can terminate it by typing this command on the node you "grabbed" (the same machine where you launched RStudio Server): `launch_rstudio_server --kill`
 * Alternatively, you can just wait for your `grabnode` allocation (the number of days you specified when grabbing the node) to expire, and RStudio Server will become unavailable after that.
 * If you need RStudio Server again, just repeat these steps.

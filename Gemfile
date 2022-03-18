@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'jekyll-hyperlinkify-glossary', '~> 0.1.3', group: :jekyll_plugins
+group :jekyll_plugins do
+  gem 'jekyll-glossary_tooltip'
 group :development, :test do
 #   gem 'jekyll', '~> 3.8.3'
   gem "github-pages", group: :jekyll_plugins

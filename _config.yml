@@ -1,6 +1,7 @@
 plugins:
+  - jekyll-glossary_tooltip
   - jekyll-remote-theme
-remote_theme: mmistakes/minimal-mistakes@4.24.0
+remote_theme: mmistakes/minimal-mistakes@4.20.1
 ### REMEMBER TO OCCASIONALLY TEST THE NEWER VERSIONS FOR NEW GOODIES!!!!!
 minimal_mistakes_skin: contrast
 
@@ -138,6 +139,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "generation"
@@ -150,6 +152,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "generation"
@@ -162,6 +165,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "scicomputing"
@@ -174,6 +178,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "scicomputing"
@@ -197,6 +202,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
       sidebar:
         nav: "hdc"
@@ -227,6 +233,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_sticky: true
       share: true
 
   # _posts

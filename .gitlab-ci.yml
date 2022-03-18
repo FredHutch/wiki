@@ -1,0 +1,21 @@
+
+before_script:
+  - curl -LO https://releases.rancher.com/cli/v0.6.2/rancher-linux-amd64-v0.6.2.tar.gz
+  - tar zxf rancher-linux-amd64-v0.6.2.tar.gz
+  
+build_test:
+  script:
+    - docker build -t dockerimages.fhcrc.org/wiki:latest .
+
+  
+deploy:
+  stage: deploy
+  only:
+    refs:  # TODO - change this to main when the time is right
+       - self-build-and-host
+  script:
+    - docker login --username $DOCKERIMAGES_USER --password $DOCKERIMAGES_PASS https://dockerimages.fhcrc.org
+    - docker push dockerimages.fhcrc.org/wiki:latest
+    - sleep 15
+    - rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET up -d --pull --force-upgrade --confirm-upgrade --stack wiki --file docker-compose.yml --rancher-file rancher-compose.yml
+  
