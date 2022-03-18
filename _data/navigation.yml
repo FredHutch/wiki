@@ -110,7 +110,7 @@ scicomputing:
         url: /scicomputing/comp_index/
       - title: "Resource Library"
         url: /compdemos/
-     - title: "Pathways"
+      - title: "Pathways"
         url: /pathways/
       - title: "Announcements"
         url: /scicompannounce/
@@ -205,9 +205,9 @@ hdc:
     - title: "Reference Genomes"
       url: /hdc/hdc_refgenomes/
     - title: "Resource Library"
-        url: /compdemos/
+      url: /compdemos/
     - title: "Pathways"
-        url: /pathways/
+      url: /pathways/
     - title: Contact Us
       url: /hdc/hdc_contact_us/
   - title: "Bioinformatics Workflows"
