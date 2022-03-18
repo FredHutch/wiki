@@ -1,6 +1,6 @@
 ---
 title: fhPython-3.8.2-foss-2020a-Python-3.8.2
-date: 2020-09-17
+date: 2020-10-27
 ---
 
 ### Known Issues
@@ -39,15 +39,15 @@ date: 2020-09-17
   * [NanoLyse-1.1.3](https://github.com/wdecoster/nanolyse) Removing reads mapping to the lambda genome
   * [NanoPlot-1.31.0](https://github.com/wdecoster/NanoPlot) Plotting suite for Oxford Nanopore sequencing data and alignments
   * [NanoStat-1.2.1](https://github.com/wdecoster/nanostat) Calculate statistics for Oxford Nanopore sequencing data and alignments
-  * [Nuitka-0.6.8.4](http://nuitka.net) Python compiler with full language support and CPython compatibility
+  * [Nuitka-0.6.8.4](https://nuitka.net) Python compiler with full language support and CPython compatibility
   * [POT-0.7.0](https://github.com/PythonOT/POT) Python Optimal Transport Library
   * [Parsley-1.3](http://launchpad.net/parsley) Parsing and pattern matching made easy.
   * [Paste-3.4.3](https://pythonpaste.readthedocs.io/) Tools for using a Web Server Gateway Interface stack
   * [PasteDeploy-2.1.0](https://pylonsproject.org/) Load, configure, and compose WSGI applications and servers
   * [Pillow-7.2.0](https://python-pillow.org) Python Imaging Library (Fork)
-  * [PrettyTable-0.7.2](http://code.google.com/p/prettytable/) A simple Python library for easily displaying tabular data in a visually appealing ASCII table format.
+  * [PrettyTable-0.7.2](https://github.com/jazzband/prettytable) A simple Python library for easily displaying tabular data in a visually appealing ASCII table format
   * [PyChef-0.3.0](http://github.com/coderanger/pychef) Python implementation of a Chef API client.
-  * PyClone 0.13.1
+  * [PyClone-0.13.1](https://gitlab.com/ltgiv/pyclone) Wraps rclone and provides an interface for an installation at the host or container level.
   * [PyDP-0.2.4](http://www.yanjingang.com/docs/pydp/dp.html) Data Processing Lib
   * [PyGithub-1.52](http://pygithub.readthedocs.io/en/latest/) Use the full Github API v3
   * [PyGreSQL-5.2](http://www.pygresql.org) Python PostgreSQL Interfaces
@@ -96,7 +96,7 @@ date: 2020-09-17
   * [asgiref-3.2.10](https://github.com/django/asgiref/) ASGI specs, helper code, and adapters
   * [astor-0.8.1](https://github.com/berkerpeksag/astor) Read/rewrite/write Python ASTs
   * [astroid-2.4.2](https://github.com/PyCQA/astroid) An abstract syntax tree for Python with inference support.
-  * [astropy-4.0.1.post1](http://astropy.org) Community-developed python astronomy tools
+  * [astropy-4.0.1.post1](http://astropy.org) Astronomy and astrophysics core library
   * [async-timeout-3.0.1](https://github.com/aio-libs/async_timeout/) Timeout context manager for asyncio programs
   * [async_generator-1.10](https://github.com/python-trio/async_generator) Async generators and context managers for Python 3.5+
   * [atomicwrites-1.4.0](https://github.com/untitaker/python-atomicwrites) Atomic file writes.
@@ -159,7 +159,7 @@ date: 2020-09-17
   * [cwl-0.0.1](https://github.com/kislyuk/jaml) Common Workflow Language Command Line Interface
   * [cwlref-runner-1.0](http://www.commonwl.org) Common workflow language reference implementation
   * [cwltool-3.0.20200807132242](https://github.com/common-workflow-language/cwltool) Common workflow language reference implementation
-  * [cx_Freeze-6.2](https://marcelotduarte.github.io/cx_Freeze) create standalone executables from Python scripts
+  * [cx_Freeze-6.2](https://marcelotduarte.github.io/cx_Freeze) Create standalone executables from Python scripts
   * [cytoolz-0.10.1](https://github.com/pytoolz/cytoolz) Cython implementation of Toolz: High performance functional utilities
   * [daemonize-2.5.0](https://github.com/thesharp/daemonize) Library to enable your code run as a daemon process on Unix-like systems.
   * [daiquiri-2.1.1](https://github.com/jd/daiquiri) Library to configure Python logging easily
@@ -234,7 +234,7 @@ date: 2020-09-17
   * [hacking-3.2.0](https://docs.openstack.org/hacking/latest/) OpenStack Hacking Guideline Enforcement
   * [hdmedians-0.13](http://github.com/daleroberts/hdmedians) High-dimensional medians
   * [hiredis-1.1.0](https://github.com/redis/hiredis-py) Python wrapper for hiredis
-  * [httpie-2.2.0](https://httpie.org/) HTTPie - a CLI, cURL-like tool for humans.
+  * [httpie-2.2.0](https://httpie.org/) HTTPie: command-line HTTP client for the API era.
   * [httplib2-0.18.1](https://github.com/httplib2/httplib2) A comprehensive HTTP client library.
   * [humanfriendly-8.2](https://humanfriendly.readthedocs.io) Human friendly output for text interfaces using Python
   * [hunter-3.2.0](https://github.com/ionelmc/python-hunter) Hunter is a flexible code tracing toolkit.
@@ -246,7 +246,7 @@ date: 2020-09-17
   * [imagesize-1.2.0](https://github.com/shibukawa/imagesize_py) Getting image size from png/jpeg/jpeg2000/gif file
   * [importlib-1.0.4](https://github.com/brettcannon/importlib) Backport of importlib.import_module() from Python 2.7
   * [importlib-metadata-1.7.0](http://importlib-metadata.readthedocs.io/) Read metadata from Python packages
-  * [importlib-resources-3.0.0](http://importlib-resources.readthedocs.io/) Read resources from Python packages
+  * [importlib-resources-3.0.0](https://github.com/python/importlib_resources) Read resources from Python packages
   * [incremental-17.5.0](https://github.com/twisted/incremental) 
   * [inflection-0.5.0](https://github.com/jpvanhal/inflection) A port of Ruby on Rails inflector to Python
   * [iniconfig-1.0.1](http://github.com/RonnyPfannschmidt/iniconfig) iniconfig: brain-dead simple config-ini parsing
@@ -533,7 +533,7 @@ date: 2020-09-17
   * [sphinxcontrib-websupport-1.2.4](http://sphinx-doc.org/) Sphinx API for Web Apps
   * [sphinxcontrib_github_alt-1.2](https://github.com/jupyter/sphinxcontrib_github_alt) Link to GitHub issues, pull requests, commits and users from Sphinx docs.
   * [sqlalchemy-migrate-0.13.0](http://www.openstack.org/) Database schema migration for SQLAlchemy
-  * [sqlparse-0.3.1](https://github.com/andialbrecht/sqlparse) Non-validating SQL parser
+  * [sqlparse-0.3.1](https://github.com/andialbrecht/sqlparse) A non-validating SQL parser.
   * [ssh-import-id-5.10](https://launchpad.net/ssh-import-id) Authorize SSH public keys from trusted online identities
   * [stdeb-0.9.1](http://github.com/astraw/stdeb) Python to Debian source package conversion utility
   * [stdlib-list-0.7.0](https://github.com/jackmaney/python-stdlib-list) A list of Python Standard Libraries (2.6-7, 3.2-8).
@@ -547,7 +547,7 @@ date: 2020-09-17
   * [swiftly-2.06](https://github.com/gholt/swiftly/) Command line tool and client bindings for OpenStack Swift.
   * [sybil-1.4.0](https://github.com/cjw296/sybil) Automated testing for the examples in your documentation.
   * [sympy-1.6.2](https://sympy.org) Computer algebra system (CAS) in Python
-  * [synapseclient-2.1.1](http://synapse.sagebase.org/) A client for Synapse, a collaborative compute space  that allows scientists to share and analyze data together.
+  * [synapseclient-2.1.1](https://www.synapse.org) A client for Synapse, a collaborative compute space  that allows scientists to share and analyze data together.
   * [tabulator-1.52.3](https://github.com/frictionlessdata/tabulator-py) Consistent interface for stream reading and writing tabular data (csv/xls/json/etc)
   * [tenacity-6.2.0](https://github.com/jd/tenacity) Retry code until it succeeds
   * [termcolor-1.1.0](http://pypi.python.org/pypi/termcolor) ANSII Color formatting for output in terminal.
@@ -589,7 +589,7 @@ date: 2020-09-17
   * [visdom-0.1.8.9](https://github.com/facebookresearch/visdom) A tool for visualizing live, rich data for Torch and Numpy
   * [visitor-0.1.3](http://github.com/mbr/visitor) A tiny pythonic visitor implementation.
   * [vistir-0.5.2](https://github.com/sarugaku/vistir) Miscellaneous utilities for dealing with filesystems, paths, projects, subprocesses, and more.
-  * [voluptuous-0.11.7](https://github.com/alecthomas/voluptuous) # Voluptuous is a Python data validation library
+  * [voluptuous-0.11.7](https://github.com/alecthomas/voluptuous) 
   * [wadllib-1.3.4](https://launchpad.net/wadllib) Navigate HTTP resources using WADL files as guides.
   * [warlock-1.3.3](http://github.com/bcwaldon/warlock) Python object model built on JSON schema and JSON patch.
   * [watchdog-0.10.3](http://github.com/gorakhargosh/watchdog) Filesystem events monitoring
@@ -616,7 +616,7 @@ date: 2020-09-17
   * [zope.copy-4.2](http://github.com/zopefoundation/zope.copy) Pluggable object copying mechanism
   * [zope.deferredimport-4.3.1](http://github.com/zopefoundation/zope.deferredimport) zope.deferredimport allows you to perform imports names that will only be resolved when used in the code.
   * [zope.deprecation-4.4.0](https://github.com/zopefoundation/zope.deprecation) Zope Deprecation Infrastructure
-  * [zope.event-4.4](http://github.com/zopefoundation/zope.event) Very basic event publishing system
+  * [zope.event-4.4](https://github.com/zopefoundation/zope.event) Very basic event publishing system
   * [zope.exceptions-4.4](https://github.com/zopefoundation/zope.exceptions) Zope Exceptions
   * [zope.hookable-5.0.1](http://github.com/zopefoundation/zope.hookable) Zope hookable
   * [zope.i18nmessageid-5.0.1](https://github.com/zopefoundation/zope.i18nmessageid) Message Identifiers for internationalization
