@@ -33,7 +33,7 @@ generation:
         url: /generation/gen_index/
       - title: "Resource Library"
         url: /gendemos/
-     - title: "Pathways"
+      - title: "Pathways"
         url: /pathways/
 
   - title: "Study Design and Funding"
@@ -193,17 +193,6 @@ scicomputing:
       - title: "Information for Grant Writers"
         url: /scicomputing/compute_grants/
 
-
-  - title: "Scientific Computing"
-    children:
-      - title: "Overview"
-        url: /scicomputing/comp_index/
-      - title: "Resource Library"
-        url: /compdemos/
-     - title: "Pathways"
-        url: /pathways/
-      - title: "Announcements"
-        url: /scicompannounce/
 
 hdc:
   - title: "Hutch Data Core"
