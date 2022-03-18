@@ -110,8 +110,6 @@ scicomputing:
         url: /compdemos/
       - title: "Announcements"
         url: /scicompannounce/
-      - title: "Glossary"
-        url: /scicomputing/glossary/
 
   - title: "Access and Credentials"
     children:
