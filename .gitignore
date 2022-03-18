@@ -5,4 +5,3 @@ _site/
 .idea/*
 
 Gemfile.lock
-vendor/*
