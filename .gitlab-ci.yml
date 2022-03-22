@@ -11,7 +11,7 @@ build_test:
 deploy:
   stage: deploy
   only:
-    refs:  # TODO - change this to main when the time is right
+    refs:
        - main
   script:
     - docker login --username $DOCKERIMAGES_USER --password $DOCKERIMAGES_PASS https://dockerimages.fhcrc.org
