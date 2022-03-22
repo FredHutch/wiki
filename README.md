@@ -57,12 +57,8 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
 ### The Review Process
 
 #### Who can contribute content?
-This Wiki is intended to be curated by content owners, local experts, and service providers at Fred Hutch in order to ensure accuracy and relevancy to our community.  Thus, contributions and reviews can only be made by users who have GitHub usernames affiliated with the Fred Hutch institution. Individuals from other institutions who are working with the Hutch community are encouraged to file an issue to discuss collaboration with the current project leaders.
+This Wiki is intended to be curated by content owners, local experts, and service providers at Fred Hutch in order to ensure accuracy and relevancy to our community.  Anyone can file Issues with suggestions and requests at any time.  Direct contributions and reviews can only be made by users who have GitHub usernames affiliated with the Fred Hutch GitHub institution. Individuals from other institutions who are working with the Hutch community are encouraged to file an issue to discuss collaboration with the current project leaders.
 
-#### Who decides what is published in the Wiki?
-The core group responsible for Wiki content is the [Wiki Reviewer Team](https://github.com/orgs/FredHutch/teams/wiki-reviewers). Membership on this team is maintained by Scientific Computing (who control the Fred Hutch GitHub organization) and Amy Paguirigan (project lead). If you are interested in serving as a member of the Wiki Reviewer Team, email Amy `apaguiri` or file an issue to discuss expectations and requirements.
-
-Anyone in the Fred Hutch community interested in Wiki content are welcome to attend our weekly content editing and review meetings; please see [our calendar](https://fredhutch.github.io/coop/calendar/) for time and location. Regular attendees include members of the research community as well as staff supporting data-intensive research. Topics at these meetings include reviews of recently submitted pull requests and issues, as well as discussion about what additional content to include and how it should be organized.
 
 #### How is content reviewed?
 Changes to the Wiki are assessed via [pull requests to this GitHub repository](https://github.com/fredhutch/wiki/pulls). We use the `primary_reviewers` tag in our markdowns to indicate when there is a resident expert who should be contacted via pull request review requests when content in that markdown is edited. This process of contribution and review from multiple different users allows us to make sure that the content evolves in such a way that it it both more interpretable to the intended audience (Fred Hutch affiliated staff), but also accurate, appropriate and continuously reviewed.
@@ -210,6 +206,34 @@ If you are inside the Fred Hutch network, you can type
 `rake testlocal` and that will include internal URLs
 in the check.
 
+## Glossary terms
+
+The site contains functionality allowing 
+content authors to define words such that a tooltip with the definition (and optional URL)appears when the mouse hovers over the word(s).
+
+You can set this up using the following formatting:
+
+```
+{% glossary Foo %} is one of my favorite words.
+```
+
+Then in the file `_data/glossary.yml` you can add a definition like this:
+
+```yaml
+- term: foo
+  definition: A nerd term meaning anything really.
+  url: https://en.wikipedia.org/wiki/Foobar
+
+```
+
+Note that the `url` is optional. Is there is no relevant URL you can leave it out.
+
+This functionality is possible by using the [jekyll-glossary_tooltip](https://github.com/erikw/jekyll-glossary_tooltip) plugin (see [demo](https://erikw.github.io/jekyll-glossary_tooltip/)). 
+
+Note that this plugin is *not* one of the plugins approved by GitHub to be used with GitHub Pages, so this site is no longer hosted by Pages. Instead we build it ourselves using our CI/CD pipeline.
+
+**Coming Soon**: Functionality that will automatically "glossarize" the first occurrence in any Markdown file of terms that are in the glossary. This will be documented here when it is ready.
+
 ## For Admins (everyone else, please do not edit these as your edits will be ignored/removed)
 
 ### Pages that run Demo and Contributors Collection pages:
@@ -225,7 +249,7 @@ Contributors list collection page: https://github.com/FredHutch/wiki/blob/main/c
 Main website configuration file: https://github.com/FredHutch/wiki/blob/main/_config.yml
 
 Navigation yml:
-https://github.com/FredHutch/wiki/tree/main/_data
+https://github.com/FredHutch/wiki/tree/main/_data.yml
 
 Custom styling that overrides the remote theme:
 https://github.com/FredHutch/wiki/tree/main/assets/css

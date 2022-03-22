@@ -1,4 +1,5 @@
 plugins:
+  - jekyll-glossary_tooltip
   - jekyll-remote-theme
 remote_theme: mmistakes/minimal-mistakes@4.20.1
 ### REMEMBER TO OCCASIONALLY TEST THE NEWER VERSIONS FOR NEW GOODIES!!!!!
@@ -21,6 +22,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   scicomputing:
+    output: true
+    permalink: /:collection/:path/
+  pathways:
     output: true
     permalink: /:collection/:path/
   hdc:
@@ -106,6 +110,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-archives
+  - jekyll-hyperlinkify-glossary
 
 
 # mimic GitHub Pages with --safe
@@ -168,6 +173,17 @@ defaults:
       toc: true
       toc_label: "On This Page"
       toc_sticky: true
+      share: true
+      sidebar:
+        nav: "scicomputing"
+# _pathways
+  - scope:
+      path: ""
+      type: pathways
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
       share: true
       sidebar:
         nav: "scicomputing"
@@ -244,13 +260,8 @@ defaults:
       sidebar:
         nav: "scicomputing"
 
-  # _pathways
-  - scope:
-      path: ""
-      type: pathways
-    values:
-      layout: single
-
+exclude:
+  - ".gitignore"
 
 ### PATHWAYS STUFF
 tag_archive:
@@ -264,4 +275,3 @@ webrick:
     Access-Control-Allow_Credentials: "true"
     Access-Control-Allow-Headers: "Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range"
     Access-Control-Allow-Methods: "GET,POST,OPTIONS,PUT,DELETE,PATCH"
-    

@@ -33,6 +33,8 @@ generation:
         url: /generation/gen_index/
       - title: "Resource Library"
         url: /gendemos/
+      - title: "Pathways"
+        url: /pathways/
 
   - title: "Study Design and Funding"
     children:
@@ -108,6 +110,8 @@ scicomputing:
         url: /scicomputing/comp_index/
       - title: "Resource Library"
         url: /compdemos/
+      - title: "Pathways"
+        url: /pathways/
       - title: "Announcements"
         url: /scicompannounce/
 
@@ -200,6 +204,10 @@ hdc:
       url: /hdc/hdc_training/
     - title: "Reference Genomes"
       url: /hdc/hdc_refgenomes/
+    - title: "Resource Library"
+      url: /compdemos/
+    - title: "Pathways"
+      url: /pathways/
     - title: Contact Us
       url: /hdc/hdc_contact_us/
   - title: "Bioinformatics Workflows"
