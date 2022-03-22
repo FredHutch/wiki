@@ -1,6 +1,5 @@
 ---
 title: Genomics Platforms and Data Types
-last_modified_at: 2018-10-25
 primary_reviewers:
 tags: genomics
 ---

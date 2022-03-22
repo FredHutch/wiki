@@ -1,13 +1,13 @@
 ---
-title: Wiki Writer/Editor Program
+title: Contributing to the Fred Hutch SciWiki
 permalink: /outreach/
 layout: single
-classes: wide
 toc: true
+toc_sticky: true
 toc_label: "On This Page"
+sidebar:
+  nav: "generic"
 ---
-
->Note:  Being a Wiki Writer/Editor is currently open to all Fred Hutch based staff.  If you'd like support in getting started, please contact Amy Paguirigan (`apaguiri`) for additional information.
 
 The [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) aims to support ongoing biomedical research now and in the future and is the product of the Fred Hutch research community. The ongoing contribution and curation of the content in the Wiki by the Fred Hutch researcher community itself is intended to serve two purposes:
 
@@ -17,6 +17,22 @@ The [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) aims to suppo
 To fulfill these two purposes we have the Wiki Writer/Editor program which is intended to engage current Fred Hutch based postdocs, staff scientists and research specialists over a three month timeframe to create and edit content to help the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/) achieve those goals. We aim to incorporate information about new and emerging technologies or projects in which Fred Hutch researchers are involved or use, and also provide a mechanism for feedback regarding what additional documentation is needed to support their research.
 
 > Note: as of the pandemic, the funded Writer/Editor program is on hiatus, but any contributions pro bono are still accepted.  
+
+## Suggestions for Contributing to the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/)
+
+- Editing any existing content on the [SciWiki](https://sciwiki.fredhutch.org/) for accuracy, readability, and brevity.
+- Tackling some [issues](https://github.com/FredHutch/wiki/issues) on the [SciWiki](https://sciwiki.fredhutch.org/)
+- Adopting a realm or page to build and evolve content about a specific topic you see missing.  
+- Adding a demo or detailed instructions on using a resource, performing a common task, setting up a tool for use in either our [Data Generation Resource Library](/generationdemos/), or the [Scientific Computing Resource Library](/compdemos/). 
+- Propose a new [Pathway](/pathways/). 
+- Some other proposal about how to improve our site, make things more readable or findable.
+
+### Get in Touch
+
+- More information can be found in our [Github README](https://github.com/FredHutch/wiki/blob/main/README.md).
+- Join the **Fred Hutch Bioinformatics and Computational Research Community** Slack workspace via [this link](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg), and use your `fredhutch.org`, `uw.edu`, `scharp.org`, or `sagebase.org` email to join.  In this Slack workspace we have a `#wiki-contributors` channel where you can chime in with edits, get updates about next meetings, or converse with other contributors about next steps.
+
+
 
 ## Why be a Wiki Writer/Editor?
 
@@ -41,16 +57,3 @@ To fulfill these two purposes we have the Wiki Writer/Editor program which is in
 - Have an interest in contributing to the Fred Hutch research community.
 - Have an interest in learning more about biomedical research and resources here at Fred Hutch that you may not already be familiar with!
 
-## Highlighted Possibilities for contributing to the [Biomedical Data Science Wiki](https://sciwiki.fredhutch.org/)
-
-- Editing any existing content on the [SciWiki](https://sciwiki.fredhutch.org/) for accuracy, readability, and brevity.
-- Tackling some [issues](https://github.com/FredHutch/wiki/issues) on the [SciWiki](https://sciwiki.fredhutch.org/)
-- Adopting a realm or page to build and evolve content about a specific topic.  For instance, the Nextflow user group regularly updates and adds content to our [Nextflow page](/compdemos/nextflow/).
-- Adding a demo or detailed instructions on using a resource, performing a common task, setting up a tool for use in either our [Data Generation Resource Library](/generationdemos/), or the [Scientific Computing Resource Library](/compdemos/).  
-- Some other proposal about how to improve our site, make things more readable or findable.
-
-### Get in Touch
-
-- More information can be found at the [Biomedical Data Science Wiki](/outreach/), the [Github README](https://github.com/FredHutch/wiki/blob/main/README.md) and the [Contributing Guidelines](https://github.com/FredHutch/wiki/blob/main/CONTRIBUTING.md)
-- Join the **FHBig/Coop Communities** Slack workspace via [this link](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg), and use your `fredhutch.org`, `uw.edu`, `scharp.org`, or `sagebase.org` email to join.  In this Slack workspace we have a `#wiki-contributors` channel where you can chime in with edits, get updates about next meetings, or converse with other contributors about next steps.
-- If you have your GitHub username linked to the Fred Hutch GitHub organization account then you can follow along in [our GitHub repository](https://github.com/FredHutch/wiki) where we are curating this content.

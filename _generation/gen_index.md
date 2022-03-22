@@ -1,13 +1,7 @@
 ---
 title: Data Generation Overview
-last_modified_at: 2019-10-31
 ---
-
->"The data may not contain the answer. The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data." - John Tukey  
-
->"If you torture the data, it will confess to anything" - Ronald Coase.
-
-Upfront consideration to the design and execution of large scale data generating research projects can help to prevent unfortunate or costly outcomes.  This section provides guidance on and resources related to study design, consent, privacy and security when research uses human specimens or data, management of clinical and experimental data, and a review of factors to consider when choosing from some of the common large scale molecular data generating platforms.
+This section provides guidance on and resources related to study design, consent, privacy and security when research uses human specimens or data, management of clinical and experimental data, and a review of factors to consider when choosing from some of the common large scale molecular data generating platforms.
 
 ## [Study Design and Funding](/generation/study_overview/)
 This section provides guidance for researchers looking to develop a hypothesis that will have reasonable statistical power, identify the appropriate set of samples, and execute a large scale data production from those samples.  There are the two general types of studies using large scale molecular data sets, which can loosely be thought of as "investigative" and "comparative."  The two aren't completely extricable and can each can serve as groundwork for future experiments for the other.  The process to perform these types of studies, however, can be very different.  The details specific to each study type are best addressed prior to generating materials or data sets.  

@@ -1,5 +1,5 @@
 ---
-title: "Scientific Computing Pathways"
+title: "Biomedical Data Science Pathways"
 layout: collection
 classes: wide
 permalink: /pathways/
@@ -9,7 +9,7 @@ show_excerpts:  true #(default), false
 sort_by: title # date (default)
 sort_order:  forward # (default), reverse
 sidebar:
-  nav: "scicomputing"
+  nav: "generic"
 ---
 SciWiki content is primarily provided in a topically organized way, often users will need to consume a series of different topics in an order which allows specific work patterns to happen.  This Pathways page aims to provide a walk-through for users of the SciWiki content in order to perform specific tasks that are common to our computing community.  Each Pathway consists of a set of Pre-requisites, Glossary of terms, and a step by step series of links to portions of the SciWiki where you'll want to read more detailed information.  
 

@@ -8,6 +8,8 @@ entries_layout: grid # list (default),
 show_excerpts:  true #(default), false
 sort_by: title # date (default)
 sort_order:  forward # (default), reverse
+sidebar:
+  nav: "scicomputing"
 ---
 
 This Wiki is an evolving resource for a wide range of biomedical research related topics, techniques and tools.  As such, the Wiki was built upon the contributions of many people during their time working at the Fred Hutch.  Many valuable contributions have been made via comments in GitHub issues, discussions at Office Hours held by various groups, or simply collaborations between researchers and staff that have produced shared insight.  The contribution of written text, editing and reviewing, however, requires additional acknowledgement here as it is critical to the continuation of our evolving resource over time.   

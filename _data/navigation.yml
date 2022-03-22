@@ -23,8 +23,22 @@ frontpage:
         url: https://github.com/FredHutch/wiki/blob/main/README.md
       - title: "Outreach and Events"
         url: /outreach/
-      - title: "Style Guide"
-        url: /styleguide/
+
+generic:
+  - title: "Our Site"
+    children:
+      - title: "Data Generation"
+        url: /generation/gen_index/
+      - title: "Scientific Computing"
+        url: /scicomputing/comp_index/
+      - title: "HDC"
+        url: /hdc/hdc_index/
+      - title: "Pathways"
+        url: /pathways/
+      - title: "About"
+        url: /about/
+
+
 
 generation:
   - title: "Data Generation"

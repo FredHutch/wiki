@@ -30,6 +30,8 @@ The more focused, how-to style, Resource Library entries in both the Data Genera
 
 Both Articles and Resource Library entries are full-text searchable using the search feature (the magnifying glass in the header).  This search ability is the primary strength behind this Wiki and will be the primary way people will find content, as, again, no web designers or technical writers are involved in this grassroots project.  
 
+**NEW (as of March 2022)** - Introducing **Pathways**!  Pathways are a new approach we are incorporating which can be found by following the [Pathways link](https://sciwiki.fredhutch.org/pathways/) in the sidebar from any domain.  This Pathways page will host individual pages that provide users who want to do a commonly requested set of tasks, a list of pages/links in the order they'll want to read them, that will guide them along the pathway to doing what they want.  We hope this might be an alternate mode for finding content in the Wiki that the community finds useful.  If you have ideas for new Pathways, please [file an issue](https://github.com/FredHutch/wiki/issues) and tell us about it.  
+
 ### Adding/Editing Content
 
 #### Methods to Edit
@@ -44,7 +46,7 @@ For larger edits, multi-page edits, structural changes or expert users of git/Gi
 #### General Editing Process
 To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are) from GitHub, follow these steps:
 
-1. Create a branch off the main branch for your edits. Do not fork the repo or others cannot submit additional edits to your content.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with names that don't attempt to describe the types of changes made whenever possible. For your content to be merged into the main branch, it will need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
+1. Create a branch off the main branch for your edits. Do *not* fork the repo or others cannot submit additional edits to your content.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with names that don't attempt to describe the types of changes made whenever possible. For your content to be merged into the main branch, it will likely need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
 2. Commit your edits to existing markdowns as you go, and update from the main branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the main branch and committing frequently.  
 3. Publish/push your branch to GitHub to share your edits with the group.
 4. When you are done editing, create a pull request from your branch. This pull request step highlights your branch for consideration by potential contributors and editors! Suggest reviewers based on the content of the edits if you'd like by tagging their GitHub usernames (using @...).  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
@@ -138,6 +140,8 @@ Computing Resource Library (note all markdowns in this folder will be rendered):
 
 Contributors List (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/main/_contributors
 
+Pathways page (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/main/_pathways
+
 
 ###  Draft Folders with Templates for New Content
 >NOTE:  Any content that will need to be an entirely new page should be stored in the `draft` folder until it is ready for publication, and then an admin will move it to where it needs to go when it is considered finished.  
@@ -209,7 +213,7 @@ in the check.
 ## Glossary terms
 
 The site contains functionality allowing 
-content authors to define words such that a tooltip with the definition (and optional URL)appears when the mouse hovers over the word(s).
+content authors to define words such that a tooltip with the definition (and optional URL) appears when the mouse hovers over the word(s).
 
 You can set this up using the following formatting:
 
@@ -220,7 +224,7 @@ You can set this up using the following formatting:
 Then in the file `_data/glossary.yml` you can add a definition like this:
 
 ```yaml
-- term: foo
+- term: Foo
   definition: A nerd term meaning anything really.
   url: https://en.wikipedia.org/wiki/Foobar
 
@@ -237,25 +241,36 @@ Note that this plugin is *not* one of the plugins approved by GitHub to be used 
 ## For Admins (everyone else, please do not edit these as your edits will be ignored/removed)
 
 ### Pages that run Demo and Contributors Collection pages:
-Generation resource library collection page:  https://github.com/FredHutch/wiki/blob/main/generationdemos.md
+Generation resource library collection page:  
+https://github.com/FredHutch/wiki/blob/main/generationdemos.md
 
-Computing resource library collection page:  https://github.com/FredHutch/wiki/blob/main/computingdemos.md
+Computing resource library collection page:  
+https://github.com/FredHutch/wiki/blob/main/computingdemos.md
 
-SciComp Announcement resource library collection page:  https://github.com/FredHutch/wiki/blob/main/scicompannounce.md
+SciComp Announcement resource library collection page:  
+https://github.com/FredHutch/wiki/blob/main/scicompannounce.md
 
-Contributors list collection page: https://github.com/FredHutch/wiki/blob/main/contributorslist.md
+Contributors list collection page: 
+https://github.com/FredHutch/wiki/blob/main/contributorslist.md
+
+Pathways collection page:  
+https://github.com/FredHutch/wiki/blob/main/pathways.md
 
 ### Folders containing website configuration files
-Main website configuration file: https://github.com/FredHutch/wiki/blob/main/_config.yml
+Main website configuration file: 
+https://github.com/FredHutch/wiki/blob/main/_config.yml
 
 Navigation yml:
-https://github.com/FredHutch/wiki/tree/main/_data.yml
+https://github.com/FredHutch/wiki/blob/main/_data.yml
 
 Custom styling that overrides the remote theme:
-https://github.com/FredHutch/wiki/tree/main/assets/css
+https://github.com/FredHutch/wiki/blob/main/assets/css
 
 Header and footer configs:
-https://github.com/FredHutch/wiki/tree/main/_includes
+https://github.com/FredHutch/wiki/blob/main/_includes
+
+Glossary yml:
+https://github.com/FredHutch/wiki/blob/main/_data/glossary.yml
 
 ### Other pages:
 Our index page: https://github.com/FredHutch/wiki/blob/main/index.md

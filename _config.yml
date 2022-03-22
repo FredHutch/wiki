@@ -1,7 +1,22 @@
 plugins:
   - jekyll-glossary_tooltip
   - jekyll-remote-theme
-remote_theme: mmistakes/minimal-mistakes@4.20.1
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-archives
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache
+
+
+remote_theme: mmistakes/minimal-mistakes@4.24.0
 ### REMEMBER TO OCCASIONALLY TEST THE NEWER VERSIONS FOR NEW GOODIES!!!!!
 minimal_mistakes_skin: contrast
 
@@ -102,25 +117,6 @@ paginate_path: /page:num/
 timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jemoji
-  - jekyll-include-cache
-  - jekyll-archives
-  - jekyll-hyperlinkify-glossary
-
-
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jemoji
-  - jekyll-include-cache
-
 
 # Defaults
 ###NOTE:  for sciwiki, share: true will turn on the "Edit this page" function at the bottom of the pages
@@ -183,10 +179,11 @@ defaults:
     values:
       layout: single
       toc: true
+      toc_sticky: true
       toc_label: "On This Page"
       share: true
       sidebar:
-        nav: "scicomputing"
+        nav: "generic"
 
   # _hdc
   - scope:
@@ -263,7 +260,7 @@ defaults:
 exclude:
   - ".gitignore"
 
-### PATHWAYS STUFF
+#
 tag_archive:
   type: liquid
   path: /tags/

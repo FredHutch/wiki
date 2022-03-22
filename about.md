@@ -3,7 +3,10 @@ title: About the Wiki Project
 permalink: /about/
 layout: single
 toc: true
+toc_sticky: true
 toc_label: "On This Page"
+sidebar:
+  nav: "generic"
 ---
 Here we will provide some background and history of the Fred Hutch Biomedical Data Science Wiki.
 
@@ -26,6 +29,9 @@ This site is created by researchers and staff who are not web designers nor tech
 ### Resource Library Entries
 The shorter, more focused, Resource Library entries can use headers as well to population the Table of Contents. These documents are intended to be fairly detailed examples or content that is linked to by Articles, but address a specific use case or example scenario that may be only intended for advanced users/readers. Once a number of related Resource library entries are created, Editors may consider consolidating the information and moving it into the main site as a full Article to highlight the content to new readers.
 
+### Pathways
+**NEW (as of March 2022)** - Introducing **Pathways**!  Pathways are a new approach we are incorporating which can be found by following the [Pathways link](/pathways/) in the sidebar from any domain.  This Pathways page will host individual pages that provide users who want to do a commonly requested set of tasks, a list of pages/links in the order they'll want to read them, that will guide them along the pathway to doing what they want.  We hope this might be an alternate mode for finding content in the Wiki that the community finds useful.  If you have ideas for new Pathways, please [file an issue](https://github.com/FredHutch/wiki/issues) and tell us about it.  
+
 ### External Example and Template Repositories
 These are mainly explained and linked to from an article page in [our site](/scicomputing/software_examples/).  Basically we hope to highlight work contributed by others both at the Fred Hutch and elsewhere by linking to the resources they have put out into the world.  
 
@@ -45,5 +51,3 @@ Currently we have our documentation regarding instructions for how to contribute
 
 
 Our GitHub [README.md](https://github.com/FredHutch/wiki) has the main overview.
-
-Our newly emerging [Content Providers page](/contentproviders/) will have a publicly digestible version of that content and on-ramp style documentation about how to contribute to a documentation site.  So meta!!
