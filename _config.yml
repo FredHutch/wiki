@@ -27,6 +27,7 @@ description: "Collective documentation for Genomics, Bioinformatics and Scientif
 url                      : https://sciwiki.fredhutch.org
 baseurl                  : ""
 repository               : "FredHutch/wiki"
+logo                     : "/images/Biomedical-Data-Science-Wiki-logo.png"
 
 
 collections:

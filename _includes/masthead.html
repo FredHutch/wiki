@@ -1,22 +1,21 @@
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a href="{{ site.url }}"><img src="{{ site.baseurl }}/images/Biomedical-Data-Science-Wiki-logo.png"
-            alt="FH biomedical data science wiki icon" width="400" align="left|middle" hspace="0"></a>
-        <!--<a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>-->
-
+        {% unless logo_path == empty %}
+          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+        {% endunless %}
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          {{ site.masthead_title | default: "     " }} 
+        </a>
         <ul class="visible-links">
-          {% for link in site.data.navigation.main %}
-          {% if link.url contains 'http' %}
-          {% assign domain = '' %}
-          {% else %}
-          {% assign domain = site.url | append: site.baseurl %}
-          {% endif %}
-          <li class="masthead__menu-item">
-            <a href="{{ link.url }}" {% if link.description %}title="{{ link.description }}" {% endif %}>{{ link.title }}</a>
-          </li>
-          {% endfor %}
+          {%- for link in site.data.navigation.main -%}
+            <li class="masthead__menu-item">
+              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
         </ul>
         <a href="/search/" class="button" type="button">
           <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
@@ -26,7 +25,7 @@
           </svg>
         </a>
         <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</span>
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -34,3 +33,5 @@
     </div>
   </div>
 </div>
+
+
