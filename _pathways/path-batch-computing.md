@@ -9,30 +9,19 @@ This pathway will get you to a first non-interactive computing job on the `gizmo
 ## Pre-requisites
 A desktop computer, access to the internet, a good text editor.
 
-If you are unfamiliar with any of these terms, please see our [Glossary](/scicomputing/glossary/) page for definitions and links or click on individual items below. 
- - [Batch job](/scicomputing/glossary#batch-job)
- - [Shell](/scicomputing/glossary#shell)
- - [Scripts](/scicomputing/glossary#scripts)
- - [Session](/scicomputing/glossary#session)
- - [Workload manager](/scicomputing/glossary#workload-0manager)
- - [SLURM](/scicomputing/glossary#slurm)
- - [HutchNet ID](/scicomputing/glossary#hutchnet-id)
- - [Workflow manager](/scicomputing/glossary#workflow-manager)
- - [`rhino`](/scicomputing/glossary#rhino)
- - [`gizmo`](/scicomputing/glossary#gizmo)
- - foo (glossary example)
+If you are unfamiliar with any of these terms, hover over them to find more information.  
+ - {% glossary Batch job %}
+ - {% glossary Shell %}
+ - {% glossary Scripts %}
+ - {% glossary Session %}
+ - {% glossary Workload manager %}
+ - {% glossary SLURM %}
+ - {% glossary HutchNet ID %}
+ - {% glossary Workflow manager %}
+ - {% glossary `rhino` %}
+ - {% glossary `gizmo` %}
 
 ## Steps
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-This is all latin save for this phrase containing "foo" to illustrate a link to the glossary. "Bar" and "baz" are synonyms and should link to "foo" as well.
-
-What happens when the term is in script-quotes: `foo`?
-
-Suspendisse feugiat est turpis. Aliquam erat volutpat. Nulla quis urna sit amet metus varius ornare. Maecenas pulvinar blandit nibh at iaculis. Ut at libero non enim commodo lacinia. Nulla non elit facilisis ipsum iaculis volutpat. Quisque tortor turpis, lobortis at condimentum vitae, cursus ut augue.
-
-
 
 ### Get a Hutchnet ID
 In order to use Fred Hutch batch computing resources you must have valid Fred Hutch credentials.  Sepcicially a [HutchNet ID](/scicomputing/access_credentials/#hutchnet-id).

@@ -1,10 +1,24 @@
 - term: ssh
   definition: Secure Shell
   url: https://en.wikipedia.org/wiki/Secure_Shell
-- term: SSG
-  definition: A Static Site Generator compiles the website before deployment. Then the generated web content is simply retrieved as-is by the client without any code running at retrieve time.
-- term: Jamstack
-  definition: JavaScript + API + Markup - a way of building and hosting websites.
-  url: https://jamstack.org/
-- term: consideration
-  definition: a fancy word for 'thinking about'
+- term: Batch job
+  definition: A non-interactive process that occurs on a remote machine. 
+- term: Shell
+  definition: TBD
+  url: ""
+- term: Scripts
+  definition: TBD
+- term: Session
+  definition: TBD
+- term: Workload manager
+  definition: TBD
+- term: SLURM
+  definition: TBD
+- term: HutchNet ID 
+  definition: TBD
+- term: Workflow manager
+  definition: TBD
+- term: `rhino`
+  definition: TBD
+- term: `gizmo`
+  definition: TBD
