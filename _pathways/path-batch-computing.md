@@ -18,8 +18,8 @@ If you are unfamiliar with any of these terms, hover over them to find more info
  - {% glossary SLURM %}
  - {% glossary HutchNet ID %}
  - {% glossary Workflow manager %}
- - {% glossary `rhino` %}
- - {% glossary `gizmo` %}
+ - {% glossary rhino %}
+ - {% glossary gizmo %}
 
 ## Steps
 

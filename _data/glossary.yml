@@ -5,7 +5,7 @@
   definition: A non-interactive process that occurs on a remote machine. 
 - term: Shell
   definition: TBD
-  url: ""
+  url: 
 - term: Scripts
   definition: TBD
 - term: Session
@@ -18,7 +18,7 @@
   definition: TBD
 - term: Workflow manager
   definition: TBD
-- term: `rhino`
+- term: rhino
   definition: TBD
-- term: `gizmo`
+- term: gizmo
   definition: TBD
