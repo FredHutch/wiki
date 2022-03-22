@@ -8,11 +8,11 @@
   
   .jekyll-glossary .jekyll-glossary-tooltip {
     visibility: hidden;
-    width: 120px;
+    width: 200px;
     background-color: black;
     color: #fff;
     text-align: center;
-    font-size: 0.5em;
+    font-size: 0.9em;
     padding: 5px;
     border-radius: 6px;
   
@@ -20,7 +20,7 @@
     position: absolute;
     z-index: 1;
   
-    width: 160px;
+    width: 200px;
     bottom: 100%;
     left: 50%;
     margin-left: -80px; /* Use half of the width to center the tooltip */
@@ -34,7 +34,7 @@
   
   /* Style the source link (if there is one provided in the glossary entry). */
   .jekyll-glossary-source-link:before {
-    content: "[source]";  // "(reference)", "<link>" or whatever you want.
+    content: "[read more]";  // "(reference)", "<link>" or whatever you want.
   }
   
   /* Arrow created with borders. */
@@ -55,5 +55,5 @@
     transition: opacity 1s;
   }
   .jekyll-glossary:hover .jekyll-glossary-tooltip {
-    opacity: 1;
+    opacity: 0.9;
   }

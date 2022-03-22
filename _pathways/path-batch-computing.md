@@ -1,16 +1,16 @@
 ---
-title: Pathway for Batch Computing
+title: Run a Non-Interactive Job on Gizmo
 main_author: Michael Gutteridge
 primary_reviewers: atombaby, vortexing
 ---
 
-This pathway will get you to a first non-interactive computing job on the `gizmo` cluster using the command-line interface at the Fred Hutch.  
+This pathway will get you to a first non-interactive computing job on the `gizmo` computing cluster using the command-line interface at the Fred Hutch.  
 
 ## Pre-requisites
 A desktop computer, access to the internet, a good text editor.
 
 If you are unfamiliar with any of these terms, hover over them to find more information.  
- - {% glossary Batch job %}
+ - {% glossary Node %}
  - {% glossary Shell %}
  - {% glossary Scripts %}
  - {% glossary Session %}
@@ -44,25 +44,25 @@ Macintosh OSX has a built in terminal application. It can be found in _Applicati
 
 Windows has a few different terminals built in, but many of these are unsuitable for accessing Linux systems.  Two easy options are the Microsoft Terminal app (available in the App Store) and [PuTTY](scicomputing/access_methods/#windows).
 
-### Shell Connections to Login Nodes (`rhino`)
+### Shell Connections to the 'rhino' Login Nodes
 
 Once you have a connection to the Hutch network and a suitable terminal, the next step is to [connect to the login nodes known as `rhino`.](scicomputing/access_methods/#ssh-connections)
 
 ### Home Directory
 
-The "home" directory on Linux is used for storing user-specific data and as a starting point for logins.
+The "home" directory on Linux is used for storing user-specific data and is the directory you will begin in when you login to `rhino`.
 
-If you get an error like `home directory not found` when you log in, please email `SciComp` to get that set up.
+If you get an error like `Home directory not found` when you log in, please email `SciComp` to get that set up.
 
 
 ### Navigating the Compute Environment
 
-The [common storage options](scicomputing/store_posix.md) are available in the Rhino-Gizmo compute environment. These paths are available in the same location on each of these hosts.
+The [common storage options](scicomputing/store_posix.md) are available in the `rhino`-`gizmo` compute environment. These paths are available in the same location on each of these hosts.
 
 You'll be started (by default) with a bash shell and most of the common [GNU/Linux utilities](https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html)
 
-### Familiarize Yourself with Slurm
-SLURM is the workfload manager for our `gizmo` compute environment.  Review the documentation for basic information about how [SLURM works](scicomputing/compute_jobs/#basic-slurm-terminology).  Once you have logged into the login nodes (`rhino`), you will be sending non-interactive instructions to the compute nodes (`gizmo`) via these instructions.  
+### Familiarize Yourself with SLURM
+SLURM is the workload manager for our `gizmo` computing cluster.  Review the documentation for basic information about how [SLURM works](scicomputing/compute_jobs/#basic-slurm-terminology).  Once you have logged into the login nodes (`rhino`), you will be sending non-interactive instructions to the compute nodes (`gizmo`) via these instructions.  
 
 ### Create a Script
 
@@ -83,15 +83,15 @@ Use the [sbatch command](scicomputing/compute_jobs/#submitting-jobs) to submit t
 
 ### Writing More Complicated Scripts
 
-This was a simple script- you'll need more advanced scripts to run workload on the cluster. These resources are great starting points:
+This was a simple script - you'll need more advanced scripts to run workload on the cluster. These resources are great starting points:
 
  - The [Linux Documentation Project manual on bash scripting](https://tldp.org/LDP/Bash-Beginners-Guide/html/index.html)
  - The [Advanced Guide](https://tldp.org/LDP/abs/html/index.html) for bash scripting
 
 ### Larger Compute Needs
 
-We've described a single job- when your work requires many jobs or many steps, more advanced tools are necessary, and you begin to delve into [parallel computing](/scicomputing/compute_parallel/).  Two commonly used approaches at the Fred Hutch include:
+We've described a single job - when your work requires many jobs or many steps, more advanced tools are necessary, and you begin to delve into [parallel computing](/scicomputing/compute_parallel/).  Two commonly used approaches at the Fred Hutch include:
 
- - Slurm [job arrays](link tbd) provide an easy mechanism for submitting thousands of homogenous jobs
+ - SLURM job arrays provide an easy mechanism for submitting thousands of homogenous jobs
  - [Workflow managers](/scicomputing/compute_parallel/#workflow-managers) are the gold-standard for managing computational workflows, particularly valuable for managing multi-step analyses.  [Cromwell](/compdemos/Cromwell/) and [Nextflow](/compdemos/nextflow/) are the two preferred workflow manager tools at the Hutch.  
 
