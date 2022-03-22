@@ -1,20 +1,20 @@
-- dlm: March 12, 2021
+- dlm: March 22, 2022
   url: contributorslist.md
 - dlm: May 1, 2019
   url: scicompannounce.md
 - dlm: November 7, 2019
   url: searchresults.md
-- dlm: March 4, 2022
+- dlm: March 22, 2022
   url: pathways.md
 - dlm: June 6, 2019
   url: drafts.md
 - dlm: March 4, 2022
   url: pythonModules.md
-- dlm: June 1, 2021
+- dlm: March 22, 2022
   url: index.md
 - dlm: March 13, 2021
   url: computingdemos.md
-- dlm: June 1, 2021
+- dlm: March 22, 2022
   url: about.md
 - dlm: November 7, 2019
   url: search.md
@@ -24,10 +24,8 @@
   url: README.md
 - dlm: March 16, 2021
   url: generationdemos.md
-- dlm: June 1, 2021
+- dlm: March 22, 2022
   url: outreach.md
-- dlm: April 9, 2020
-  url: contentproviders.md
 - dlm: November 23, 2021
   url: rModules.md
 - dlm: September 17, 2020
@@ -306,7 +304,7 @@
   url: .github/ISSUE_TEMPLATE/technical-problem.md
 - dlm: November 7, 2019
   url: .github/ISSUE_TEMPLATE/request-for-content.md
-- dlm: November 15, 2019
+- dlm: March 22, 2022
   url: _generation/gen_index.md
 - dlm: June 2, 2020
   url: _generation/clsp_overview.md
@@ -338,7 +336,7 @@
   url: _generation/datagen_proteomics.md
 - dlm: April 2, 2019
   url: _generation/human_consentIRB.md
-- dlm: July 23, 2020
+- dlm: March 22, 2022
   url: _generation/datagen_platformsData.md
 - dlm: October 25, 2018
   url: _generation/datagen_rnaApproaches.md
