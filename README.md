@@ -206,6 +206,34 @@ If you are inside the Fred Hutch network, you can type
 `rake testlocal` and that will include internal URLs
 in the check.
 
+## Glossary terms
+
+The site contains functionality allowing 
+content authors to define words such that a tooltip with the definition (and optional URL)appears when the mouse hovers over the word(s).
+
+You can set this up using the following formatting:
+
+```
+{% glossary Foo %} is one of my favorite words.
+```
+
+Then in the file `_data/glossary.yml` you can add a definition like this:
+
+```yaml
+- term: foo
+  definition: A nerd term meaning anything really.
+  url: https://en.wikipedia.org/wiki/Foobar
+
+```
+
+Note that the `url` is optional. Is there is no relevant URL you can leave it out.
+
+This functionality is possible by using the [jekyll-glossary_tooltip](https://github.com/erikw/jekyll-glossary_tooltip) plugin (see [demo](https://erikw.github.io/jekyll-glossary_tooltip/)). 
+
+Note that this plugin is *not* one of the plugins approved by GitHub to be used with GitHub Pages, so this site is no longer hosted by Pages. Instead we build it ourselves using our CI/CD pipeline.
+
+**Coming Soon**: Functionality that will automatically "glossarize" the first occurrence in any Markdown file of terms that are in the glossary. This will be documented here when it is ready.
+
 ## For Admins (everyone else, please do not edit these as your edits will be ignored/removed)
 
 ### Pages that run Demo and Contributors Collection pages:
