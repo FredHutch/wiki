@@ -4,6 +4,8 @@
   url: scicompannounce.md
 - dlm: November 7, 2019
   url: searchresults.md
+- dlm: March 4, 2022
+  url: pathways.md
 - dlm: June 6, 2019
   url: drafts.md
 - dlm: March 4, 2022
@@ -18,7 +20,7 @@
   url: search.md
 - dlm: August 22, 2019
   url: LICENSE.md
-- dlm: October 19, 2021
+- dlm: March 22, 2022
   url: README.md
 - dlm: March 16, 2021
   url: generationdemos.md
@@ -148,6 +150,8 @@
   url: _gendemos/MakingTidyData.md
 - dlm: November 8, 2018
   url: _gendemos/HumanSpecimensStudies.md
+- dlm: March 11, 2022
+  url: _pathways/path-batch-computing.md
 - dlm: September 17, 2020
   url: archive/cluster_koshuBeta.md
 - dlm: November 23, 2020
@@ -196,7 +200,7 @@
   url: _compdemos/first_rhino.md
 - dlm: March 19, 2020
   url: _compdemos/synology.md
-- dlm: September 17, 2020
+- dlm: March 15, 2022
   url: _compdemos/Docker.md
 - dlm: January 5, 2022
   url: _compdemos/rhino-load-management.md
