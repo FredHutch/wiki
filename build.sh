@@ -7,7 +7,7 @@
 # you have ruby and bundler installed.
 
 # When done, you can browse to
-# http://localhost:7979
+# http://0.0.0.0:7979
 
 # to see the built site.
 

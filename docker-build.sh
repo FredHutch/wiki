@@ -2,7 +2,7 @@
 
 echo The site will be built and then will be available at
 echo
-echo http://localhost:7979
+echo http://0.0.0.0:7979
 echo
 echo This is your last chance to see that URL.
 echo So copy it now. 

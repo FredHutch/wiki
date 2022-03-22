@@ -3,7 +3,7 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <a href="{{ site.url }}"><img src="{{ site.baseurl }}/images/Biomedical-Data-Science-Wiki-logo.png"
-            alt="FH biomedical data science wiki icon" width="600" align="left|middle" hspace="0"></a>
+            alt="FH biomedical data science wiki icon" width="400" align="left|middle" hspace="0"></a>
         <!--<a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>-->
 
         <ul class="visible-links">
@@ -14,8 +14,7 @@
           {% assign domain = site.url | append: site.baseurl %}
           {% endif %}
           <li class="masthead__menu-item">
-            <a href="{{ link.url }}" {% if link.description %}title="{{ link.description }}" {% endif %}>{{ link.title
-              }}</a>
+            <a href="{{ link.url }}" {% if link.description %}title="{{ link.description }}" {% endif %}>{{ link.title }}</a>
           </li>
           {% endfor %}
         </ul>
