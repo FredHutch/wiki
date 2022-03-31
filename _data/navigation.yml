@@ -86,7 +86,7 @@ generation:
         url: /generation/clsp_specimenBanking/
       - title: "Experimental Data"
         url: /generation/clsp_labCov/
-      - title: "Data Vizualization"
+      - title: "Data Visualization"
         url: /generation/data-viz/
 
   - title: "Large Scale Data Generation"
