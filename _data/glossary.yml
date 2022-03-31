@@ -5,20 +5,22 @@
   definition: A non-interactive process that occurs on a remote machine. 
 - term: Shell
   definition: TBD
-  url: 
 - term: Scripts
   definition: TBD
 - term: Session
   definition: TBD
 - term: Workload manager
-  definition: TBD
+  definition: Software that coordinates job submission to nodes on a cluster. 
 - term: SLURM
-  definition: TBD
+  definition: A type of workload manager used at the Fred Hutch's gizmo computing cluster.
+  url: https://slurm.schedmd.com/
 - term: HutchNet ID 
-  definition: TBD
+  definition: A user ID specific to the Fred Hutch. 
 - term: Workflow manager
-  definition: TBD
+  definition: Software that coordinates the submission of jobs, inputs and outputs of individual jobs in a scientific workflow.  
 - term: rhino
-  definition: TBD
+  definition: The login node (actually several nodes) of the Fred Hutch high performance computing cluster.
 - term: gizmo
-  definition: TBD
+  definition: The name of the Fred Hutch high performance computing cluster's computing nodes.
+- term: node
+  definition: An individual server in a collection of networked servers that make up a computing cluster.
