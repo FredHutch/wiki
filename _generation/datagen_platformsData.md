@@ -1,6 +1,6 @@
 ---
 title: Genomics Platforms and Data Types
-primary_reviewers:
+primary_reviewers: vortexing
 tags: genomics
 ---
 
@@ -18,42 +18,38 @@ The Illumina sequencers are high read number, short read sequencers that provide
 
 Sequencer | Mode | Read Lengths | Approx. Reads per Lane | Lanes per Run
 --- | --- | --- | --- | ---
-NovaSeq 6000 | Depends on Chip Type | 50-150, depending on Chip Type | Variable | Variable
-HiSeq 2500 | High Output | 50, 100, 125 | 250M | 8\*
-HiSeq 2500 | Rapid Run | 50, 100, 150, 200, 250 | 150M | 2
-MiSeq | Version 2 Reagents | up to 250 | 15M | 1
-MiSeq | Version 3 Reagents | up to 300 | 25M | 1
+NovaSeq	SP | 650 - 800M |  |  | 
+NovaSeq	S1 | 1300 - 1600M	 |   |  | 
+NovaSeq	S2 | 3300 - 4100M	 |   |  | 
+NovaSeq	S4 | 8000 - 10000M	 |   |  | 
+NextSeq	P1 | 100M	 |   |  | 
+NextSeq	P2 | 400M	 |   |  | 
+NextSeq	P3 | 11000M	 |   |  | 
+MiSeq	Nano | 1M | Up to 300bp | 1
+MiSeq	V2 Reagent | 12 - 15M | Up to 300bp | 1
+MiSeq	V3 Reagent | 22 - 25M | Up to 300bp | 1
 
-\* High Output mode requires all 8 lanes to be run simultaneously, no partial runs.
 
-
-When deciding how much sequencing is needed for a set of libraries to provide sufficient read depth (number of reads per genomic location in the genome covered in the library), issues such as the intended data type, sample type and quality, library preparation type, number of total samples, and the applicability of multiplexing approaches need to be considered.  Consulting with the Genomics Core can help provide more clarity for individual projects.  
+When deciding how much sequencing is needed for a set of libraries to provide sufficient read depth (number of reads per genomic location in the genome covered in the library), issues such as the intended data type, sample type and quality, library preparation type, number of total samples, and the applicability of multiplexing approaches need to be considered.  Consulting with the Genomics Core can help provide more clarity for individual projects. You can request more information by emailing `genomics`.   
 
 [More from Illumina about Illumina Sequencing can be found here.](https://www.illumina.com/techniques/sequencing.html)
 
 ### Pacific Biosciences (PacBio) Long Range Sequencer
-The PacBio SMRT sequencer works differently than the Illumina sequencers in that the read length is not specified by the platform, but is limited by the library itself, with an associated reduction in confidence of the sequence as reads get longer and longer.  However, instead of being limited to sequencing only fragments of DNA, PacBio sequencing can provide long stretches of sequencing data that occur in the same fragment.  This allow for analyses such as full length isoform discovery, de novo small genome sequencing, assessing structural variants/translocations, and allele phasing.  On average the PacBio sequencer aims to provide up to 15kb of read length.  
 
-- 300-600k reads per SMRT cell
+The PacBio Sequel IIe sequencer works differently than the Illumina sequencers in that the read length is not specified by the platform, but is limited by the library itself, with an associated reduction in confidence of the sequence as reads get longer and longer. However, instead of being limited to sequencing only fragments of DNA, PacBio sequencing can provide long stretches of sequencing data that occur in the same fragment. This allow for analyses such as full length isoform discovery, de novo small genome sequencing, assessing structural variants/translocations, and allele phasing. On average the PacBio sequencer aims to provide up to 15kb of read length.
+
+- 4-5M reads per SMRT cell
 - Insert size for sequencing of 200bp minimum up to 40kb fragments
 - Library prep
-  - Reagents purchased by lab from PacBio and prepped by lab, brought to Genomics as completed library (see PacBio website for more info)
-  - OR
-  - Genomics Shared Resources can help with library prep for a service fee to process a QC'd sample into a Pac Bio library depending on library type:
+  - Reagents purchased by lab from PacBio and prepped by lab, brought to Genomics as completed library (see PacBio website for more info), OR
+  - Genomics Shared Resources can help with library prep for a service fee to process a QC’d sample into a Pac Bio library depending on library type:
     - For amplicon library prep up to 5kb
     - For large insert library prep up to 20kb
-- Multiple multiplexing schemas (in-line or ligated) - discuss details with Genomics Shared Resource to plan the approach (email `genomics`).  
-
-More about [PacBio SMRT Sequencing.](http://www.pacb.com/smrt-science/smrt-sequencing/)
-
+- Multiple multiplexing schemas (in-line or ligated) - discuss details with Genomics Shared Resource to plan the approach (email genomics).
 
 ## Array Based Platforms
  Microarrays are a sometimes less costly option that can in some cases be substituted for a wide variety of sequencing types; for example, there are SNP, gene expression, and whole exome arrays. While microarrays are not useful for discovery of novel targets, for well-established targets, assay chemistries and data analysis pipelines are well-vetted.  A discussion with the Genomics Core can be useful in helping you decide the best technologies for your work.
 
-### Single Nucleotide Polymorphism (SNP) Arrays or Methylation Arrays
-The Genomics lab is equipped to run all Illumina genotyping and methylation beadchips ([Illumina Microarrays](https://www.illumina.com/techniques/microarrays.html)).  Beadchip kits are sold in a variety of sample size kits and it is important to plan total sample sizes as well as randomizing batches to minimize batch-specific bias. Beadchip kits need to be purchased by the investigator and should be drop-shipped to the Genomics lab.  The Genomics lab then charges a fee for processing which covers all non-Illumina supplies, reagents, and labor.  Investigators should plan to provide genomic DNA for genotyping arrays, which has been quantified by a dsDNA specific method such as picogreen.  For methylation arrays, investigators may submit either genomic DNA or bisulfite converted DNA.  Again, the starting DNA should be quantified by picogreen.  
-
-Genotyping BeadChip kits vary in price ($50/sample - $600/sample), depending on content.  The Genomics Shared Resource can process samples to run for a service fee, regardless of the beadchip kit with an additional fee for DNA samples that require bisulfite conversion for methylation arrays.
 
 
 ### Nanostring Hybridization Arrays for Gene Expression
