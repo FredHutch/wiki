@@ -1,9 +1,10 @@
 ---
 title: Guidance for Imaging Data
-last_modified_at: 2018-10-25
+last_modified_at: 2022-04-07
 main_authors:
-primary_reviewers: jdberndt
+primary_reviewers: sminot
 ---
-This page provides guidance for Fred Hutch investigators generating or using imaging data, and who may be using the Fred Hutch Cellular Imaging Shared Resource.
 
-> Note: This page is in development, please comment on [this issue in GitHub](https://github.com/FredHutch/wiki/issues/158) if you'd like to see specific content be added or would like to add content yourself!  If you are not a GitHub user yet, please email `sciwiki` with your input.
+The Cellular Imaging shared resource at Fred Hutch provides advanced light microscopy services for biomedical and translational research. Our expert staff provides a complete workflow, including training for independent, 24/7 work in the core; assistance and technical support in microscopy techniques and their application; and tailored quantitative image analysis. We also offer training and support for imaging and analyzing gels and blots. We work with Fred Hutch users as well as external users from academia and industry.
+
+For more information, please visit the [Cellular Imaging Core CenterNet Page](https://www.fredhutch.org/en/research/shared-resources/core-facilities/cellular-imaging.html)
