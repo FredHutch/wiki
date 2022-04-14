@@ -73,6 +73,27 @@ Below is an example of the folders available for the UCSC human genome GRCh37/hg
 │       │       └── WholeGenomeFasta    # Genome sequence 
 ``` 
 
+## RNA-Fusion Reference Database
+
+In addition to the iGenomes references described above, the `/shared/biodata/` volume also
+hosts the reference files needed for the [nf-core/rnafusion](https://nf-co.re/rnafusion)
+analysis workflow.
+
+The reference database was downloaded [as described](https://github.com/nf-core/rnafusion/blob/1.2.0/docs/references.md)
+with version `1.2.0` of `nf-core/rnafusion` on January 18, 2022 to
+`/shared/biodata/reference/nfcore/rnafusion/1.2.0/2022-01-18`.
+
+The content of that folder includes:
+
+```
+├── arriba/                                  # Reference database for the arriba tool 
+├── Homo_sapiens.GRCh38_r97.all.fa           # Human reference genome sequence 
+├── Homo_sapiens.GRCh38_r97.cdna.all.fa.gz   # Human reference transcript sequence
+├── Homo_sapiens.GRCh38_r97.gtf              # Human reference genome annotations
+├── pipeline_info/                           # Reference database download report
+└── star-fusion/                             # Reference database for the STAR-Fusion tool
+```
+
 ## Ongoing Support
 
 To maintain the utility of this data resource, the Bioinformatics Core and the Data Core
