@@ -40,6 +40,10 @@ Depending on your research goals, you may find a workflow which performs the
 needed analysis either [in our workflow catalog](/hdc/workflows/workflow_catalog)
 or in the community-developed [nf-core workflow catalog](https://nf-co.re/pipelines).
 
+Depending on the workflow, you may find it useful to use one of the reference
+databases which have been made available on the shared filesystem
+([more details here](/hdc/hdc_refgenomes/)).
+
 If you do not see any useful options available, please don't hesitate to
 [reach out](mailto:sminot@fredhutch.org) so that we can find a solution which
 meets your needs.

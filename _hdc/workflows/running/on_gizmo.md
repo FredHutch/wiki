@@ -53,6 +53,8 @@ Please make sure to replace every placeholder value (e.g. `<SINGULARITY_CACHE_DI
 including the `<` and `>` characters.
 
 ```
+workDir = '<WORK_DIR>'
+
 singularity {
     enabled = true
     autoMounts = true
@@ -60,9 +62,10 @@ singularity {
     runOptions = '--containall --no-home'
 }
 
-workDir = '<WORK_DIR>'
-process.executor = 'slurm'
-process.queue = 'campus-new'
+process {
+    executor = 'slurm'
+    queue = 'campus-new'
+}
 
 tower {
   accessToken = '<TOWER_ACCESS_TOKEN>'
@@ -72,3 +75,8 @@ tower {
 
 If you have any problems using this configuration, please don't hesitate to
 [get in touch](mailto:sminot@fredhutch.org).
+
+## Running the workflow
+
+To run a workflow with this configuration, follow the guidance for formatting
+the appropriate [run script](/hdc/workflows/running/run_script).

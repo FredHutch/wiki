@@ -390,21 +390,21 @@
   url: _hdc/workflows/workflow_catalog.md
 - dlm: August 13, 2021
   url: _hdc/workflows/workflow_background.md
-- dlm: May 14, 2021
+- dlm: April 14, 2022
   url: _hdc/workflows/running_first_workflow.md
 - dlm: June 1, 2021
   url: _hdc/workflows/running/process_resources.md
-- dlm: April 23, 2021
+- dlm: April 14, 2022
   url: _hdc/workflows/running/run_script.md
 - dlm: June 1, 2021
   url: _hdc/workflows/running/tower.md
-- dlm: June 1, 2021
+- dlm: April 14, 2022
   url: _hdc/workflows/running/on_gizmo.md
 - dlm: April 15, 2021
   url: _hdc/workflows/running/faq.md
 - dlm: June 1, 2021
   url: _hdc/workflows/running/where_to_run.md
-- dlm: December 10, 2021
+- dlm: April 14, 2022
   url: _hdc/workflows/running/on_aws.md
 - dlm: April 15, 2021
   url: _hdc/workflows/building/best_practices_files.md

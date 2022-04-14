@@ -20,19 +20,16 @@ Here is an example of a run script, with more details and explanation below:
 ```
 #!/bin/bash
 
-set -Eeuo pipefail
+set -euo pipefail
 
 # Nextflow Version
-NXF_VER=20.10.0
+NXF_VER=21.10.6
 
 # Nextflow Configuration File
 NXF_CONFIG=/path/to/your/nextflow.config
 
 # Workflow to Run (e.g. GitHub repository)
 WORKFLOW_REPO=FredHutch/workflow-repository
-
-# Queue to use for exeution
-QUEUE=campus-new
 
 # Workflow-Specific Options
 INPUT_FOLDER=/path/to/input/folder/for/this/analysis/
@@ -54,7 +51,6 @@ nextflow \
     ${WORKFLOW_REPO} \
     --input_folder $INPUT_FOLDER \
     --output_folder $OUTPUT_FOLDER \
-    -process.queue $QUEUE \
     -with-report nextflow.report.html \
     -resume
 
@@ -62,7 +58,7 @@ nextflow \
 
 ## Header: `set` directive
 
-The line `set -Eeuo pipefail` is used to ensure that any errors that are encountered
+The line `set -euo pipefail` is used to ensure that any errors that are encountered
 while executing the BASH script will cause the entire process to halt. This is particularly
 useful if you happen to have a typo (e.g. `INPUT_FOLDER` vs. `INPT_FOLDER`) which would
 otherwise result in an empty string being unintentionally passed in as an argument
@@ -89,13 +85,6 @@ Use `NXF_CONFIG` to specify the configuration file used to run workflows either
 The `WORKFLOW_REPO` variable indicates the GitHub repository being used to host the workflow.
 For additional control over a particular release or branch to execute within that
 repository, use the `-r` flag.
-
-
-## Execution Queue
-
-The `QUEUE` variable can be used to specify which compute queue to use for
-executing jobs. On gizmo, this is `campus-new`, while on AWS Batch the name
-of the queue may depend on the setup of your particular lab's account.
 
 
 ## Workflow Specific Options
@@ -126,6 +115,8 @@ of those are not the case (not running on `gizmo` or not using Singularity),
 this can be omitted.
 
 NOTE: You should not run any workflows which use Singularity from any `rhino` node.
+Instead use the `grabnode` command to reserve the appropriate head node
+([more details](/compdemos/howtoRhino/#guidance-for-use)).
 
 
 ## Nextflow Run - Formatting

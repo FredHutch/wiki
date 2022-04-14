@@ -66,7 +66,7 @@ Please make sure to replace every placeholder value (e.g. `<WORK_DIR>`),
 including the `<` and `>` characters.
 
 ```
-docker.temp = '/var/lib/docker'
+workDir = "<WORK_DIR>"
 
 aws {
     region = 'us-west-2'
@@ -81,7 +81,10 @@ aws {
     }
 }
 
-workDir = "<WORK_DIR>"
+process {
+    queue = "default"
+    executor = "awsbatch"
+}
 
 tower {
   accessToken = '<TOWER_ACCESS_TOKEN>'
@@ -92,3 +95,7 @@ tower {
 If you have any problems using this configuration, please don't hesitate to
 [get in touch](mailto:sminot@fredhutch.org).
 
+## Running the workflow
+
+To run a workflow with this configuration, follow the guidance for formatting
+the appropriate [run script](/hdc/workflows/running/run_script).
