@@ -23,8 +23,7 @@ Some Nextflow-based tools used for microbiome analysis at Fred Hutch can be foun
 
 `nextflow.config` must contain a handful of elements in order to run correctly on AWS at Fred Hutch. 
 You don't have to understand all of these things completely. 
-Remember to [select the right job queue for your analysis.](/scicomputing/access_credentials/#choose-a-job-queue). 
-Also, you will be provided with the appropriate Job Role ARN when you get set up with your AWS credentials.
+
 
 ```
 // Run the analysis on AWS Batch
@@ -39,7 +38,7 @@ workDir = "s3://fh-pi-lastname-f-nextflow-scratch/delete10/nextflow/work/"
 
 // Mount the host folder /var/lib/docker to /tmp within the running job
 // Use /tmp for scratch space to provide a larger working directory
-// Replace with the Job Role ARN for your account
+
 
 // The use of aws.client.maxConnections = 4 is intended to prevent
 // any errors resulting from too many requests to S3. Some users have
