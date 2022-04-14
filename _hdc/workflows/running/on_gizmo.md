@@ -33,6 +33,17 @@ you use the `/fh/scratch/` filesystem for those image files.
 
 A typical `cacheDir` may be `/fh/scratch/delete30/lastname_f/nextflow/cache/`.
 
+NOTE: The single most common point of failure when running a new workflow
+on gizmo with Singularity is at the point of downloading the images for the
+first time. The process by which Singularity creates a local copy of a Docker
+image to be used in a workflow is somewhat prone to random internet connection
+failures. If this happens, you will see an error related to the `singularity pull`
+command. Fortunately, it is typically rather straightforward to just restart
+the workflow, which will prompt Nextflow to just retry the download. In short,
+if you see a `singuarlity pull` error when running a workflow on gizmo with
+Singularity for the first time, just give it another try and see if it works
+on the second attempt.
+
 ## Monitoring Workflow Progress with Tower
 
 If you have set up an account in Nextflow Tower for monitoring workflow progress,
