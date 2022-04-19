@@ -84,18 +84,32 @@ To run `R` on a gizmo node, you can follow the same instructions as for `rhino` 
 There is a wrapper script that allows you to run RStudio Server (the web-browser-based version of RStudio)
 on the HPC machines (cluster machines whose names start with `gizmo`).
 
-You can run this with any version of `R` that is available on our shared computing systems.
+You can run this with any version of `R` that is available on our shared computing systems (beginning with `fhR/4.1.2-foss-2021b`).
 
 Here are the steps to run this wrapper.
 
 * Grab a node using the [grabnode](/compdemos/first_rhino/#logging-on-to-gizmo-via-grabnode) command. Specify how many CPUs and how much memory you want, and how many days you want to have control of the node. Remember that you can launch `slurm` jobs within RStudio, so you may not need to ask for a lot of computing power for your RStudio machine.
-* Once you are on the node you grabbed, choose a version of `R` by using the [module load](/scicomputing/compute_environments/#how-to-use-environment-modules) command (`ml` for short). (Example: `fhR/4.0.2-foss-2019b`). **NOTE**: At present, `fhR/4.0.2-foss-2019b` is the *only* R module that will work with RStudio Server.
-* Run the `launch_rstudio_server` command. This will produce a URL that you can paste into your browser. (This URL only works inside the Hutch network, so you need to be on campus or using VPN.)
+* Run the `start_rstudio_server` command. This will produce a URL that you can paste into your browser. (This URL only works inside the Hutch network, so you need to be on campus or using VPN.)
 * In your browser, log into RStudio using your HutchNet ID and password.
-* If you have problems loading packages in RStudio Server, Try this: `.libPaths(c("/app/software/fhR/4.0.2-foss-2019b", .libPaths()))` 
-* When you are finished using RStudio Server, you can terminate it by typing this command on the node you "grabbed" (the same machine where you launched RStudio Server): `launch_rstudio_server --kill`
+* When you are finished using RStudio Server, you can terminate it by typing this command on the node you "grabbed" (the same machine where you launched RStudio Server): `start_rstudio_server --kill`
 * Alternatively, you can just wait for your `grabnode` allocation (the number of days you specified when grabbing the node) to expire, and RStudio Server will become unavailable after that.
 * If you need RStudio Server again, just repeat these steps.
+
+
+#### **Legacy Script**
+
+There is an older version of this script that is called
+`launch_rstudio_server`. It only works with
+`fhR/4.0.2-foss-2019b`. It remains available for
+those who wish to continue working with that version of `R`.
+Note that with this script, you must first load the `R` module with this command:
+
+```
+ml fhR/4.0.2-foss-2019b
+```
+
+When done, run `launch_rstudio_server --kill`.
+
 
 *Note*: In Rstudio Server, when trying to generate `tiff`, `jpeg`, `png` files (with `R` functions of the same names), you will need to change the default bitmap type (default is `X11`). Do this with the following command:
 
