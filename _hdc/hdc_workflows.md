@@ -54,3 +54,9 @@ See the [Workflow Catalog](/hdc/workflows/workflow_catalog) for a list of existi
 
 For a longer list of workflows developed by the worldwide community of Nextflow developers, visit the
 [nf-core workflow catalog](https://nf-co.re/pipelines).
+
+Many of the nf-core workflows use a common set of [reference genomes](https://nf-co.re/usage/reference_genomes),
+such as the [iGenomes](https://support.illumina.com/sequencing/sequencing_software/igenome.html) resource.
+For more convenient use of the nf-core workflows at Fred Hutch, a set of commonly used reference genomes
+including both the iGenomes and the human STAR-Fusion alignment index have been made available in a
+public volume on the shared filesystem ([more details here](/hdc/hdc_refgenomes)).
