@@ -81,6 +81,35 @@ To run `R` on a gizmo node, you can follow the same instructions as for `rhino` 
 
 ### Run RStudio Server on an HPC machine
 
+To run RStudio Server on the `gizmo`
+compute cluster, simply launch
+[https://rstudio-launcher.fredhutch.org](https://rstudio-launcher.fredhutch.org) and log in
+with your HutchNet ID and password.
+
+This link requires that you be on campus or
+using VPN. If you are on VPN and still having problems accessing the link, see below.
+
+This web page lets you start an RStudio
+Server session and will give you the URL
+of that session. 
+You can choose which version of R to run (beginning in April 2022 all new versions of R will be supported, but the only older version that will work is `R-4.0.2`).
+You can also specify how many CPU cores and how many GB of memory you want, as well as whether you need a GPU and how long you want the server to run. The higher these values, the longer it will take for your server to start up. 
+
+#### **Troubleshooting**
+
+If the URL above does not work, and you are connected via VPN, please do the following. You only have to do this once.
+
+* Disconnect from VPN.
+* Restart the VPN software (Cisco AnyConnect Secure Mobility Client).
+* Click `Connect`.
+* You will see a dialog box with a `Group` dropdown. Make sure the `_FHVPN` group is selected. 
+* Continue to sign in normally. The URL above should work now. 
+
+#### **Legacy Documentation**
+
+***Note***: Before this web application existed, there was a command-line script that did the same thing, in conjunction with `grabnode`. For the time being, the legacy documentation for that script will remain here.
+
+
 There is a wrapper script that allows you to run RStudio Server (the web-browser-based version of RStudio)
 on the HPC machines (cluster machines whose names start with `gizmo`).
 
