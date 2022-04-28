@@ -18,13 +18,13 @@ The Illumina sequencers are high read number, short read sequencers that provide
 
 
 Sequencer | Mode | Read Lengths | Approx. Reads per Lane | Lanes per Run
-NovaSeq	SP | 650 - 800M |  |  | 
-NovaSeq	S1 | 1300 - 1600M	 |   |  | 
-NovaSeq	S2 | 3300 - 4100M	 |   |  | 
-NovaSeq	S4 | 8000 - 10000M	 |   |  | 
-NextSeq	P1 | 100M	 |   |  | 
-NextSeq	P2 | 400M	 |   |  | 
-NextSeq	P3 | 11000M	 |   |  | 
+NovaSeq	SP | | up to 300bp | 650 - 800M | 1
+NovaSeq	S1 | | up to 300bp | 1300 - 1600M	 | 1
+NovaSeq	S2 | | up to 300bp | 3300 - 4100M	  1
+NovaSeq	S4 | | up to 300bp | 8000 - 10000M	| 1
+NextSeq	P1 | | up to 300bp | 100M	| 1
+NextSeq	P2 | | up to 300bp | 400M	 | 1
+NextSeq	P3 | | up to 300bp | 1100M	 | 1
 MiSeq	Nano | 1M | Up to 300bp | 1
 MiSeq	V2 Reagent | 12 - 15M | Up to 300bp | 1
 MiSeq	V3 Reagent | 22 - 25M | Up to 300bp | 1
