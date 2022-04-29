@@ -86,7 +86,7 @@ To run RStudio Server on the `gizmo` compute cluster, simply open a browser and 
 
 This site will help you launch, manage and kill RStudio sessions on `gizmo` without having to do so manually via terminal/`rhino`.  When you create new RStudio sessions via  the application, this single site will manage the launch process given the parameters you specify.  It will return the information you'll need to access and manage your sessions to the table in the site.  You can have mulitple RStudio sessions running simultaneously, and each session will have it's own specific URL where you will be able to use RStudio through your browser. 
 
-When starting a new RStudio session, you can choose which version of R to run (beginning in April 2022 all new versions of R will be supported, but the only older version that will work is `R-4.0.2`). You can also specify how many CPU cores and how many GB of memory you want, as well as whether you need a GPU and how long you want the server to run if the defaults specified do not meet your needs.  These parameters can be differnet for each RStudio session you create. Keep in mind that the larger the resources requested are, the longer it will take for your server to start up. 
+When starting a new RStudio session, you can choose which version of R to run (beginning in April 2022 all new versions of R will be supported, but the only older version that will work is `R-4.0.2`). You can also specify how many CPU cores and how many GB of memory you want, as well as whether you need a GPU and how long you want the server to run if the defaults specified do not meet your needs.  These parameters can be different for each RStudio session you create. Keep in mind that the larger the resources requested are, the longer it will take for your server to start up. 
 
 If you have issues or questions in using this application, please email `helpdesk` and describe the issues you're having.  
 
@@ -108,6 +108,7 @@ If the URL above does not work, and you are connected via VPN, please do the fol
 There is a wrapper script that allows you to run RStudio Server (the web-browser-based version of RStudio)
 on the HPC machines (cluster machines whose names start with `gizmo`).
 
+You can run this with any version of `R` that is available on our shared computing systems.
 
 Here are the steps to run this wrapper.
 
