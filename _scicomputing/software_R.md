@@ -102,7 +102,7 @@ If the URL above does not work, and you are connected via VPN, please do the fol
 
 #### **Legacy Documentation**
 
-***Note***: Before this web application existed, there was a command-line script that did the same thing, in conjunction with `grabnode`. For the time being, the legacy documentation for that script will remain here.  Keep in mind that this solution only works with a limited set of versions of R.  
+***Note***: Before this web application existed, there was a command-line script that did the same thing, in conjunction with `grabnode`. For the time being, the legacy documentation for that script will remain here.    
 
 
 There is a wrapper script that allows you to run RStudio Server (the web-browser-based version of RStudio)
