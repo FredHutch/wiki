@@ -81,6 +81,30 @@ To run `R` on a gizmo node, you can follow the same instructions as for `rhino` 
 
 ### Run RStudio Server on an HPC machine
 
+To run RStudio Server on the `gizmo` compute cluster, simply open a browser and go to
+[https://rstudio-launcher.fredhutch.org](https://rstudio-launcher.fredhutch.org).   You will be prompted to log in with your  Fred Hutch HutchNet ID and password.  This requires that you be on campus or using VPN. If you are on VPN and still having problems accessing the link, see the Troubleshooting section below.
+
+This site will help you launch, manage and kill RStudio sessions on `gizmo` without having to do so manually via terminal/`rhino`.  When you create new RStudio sessions via  the application, this single site will manage the launch process given the parameters you specify.  It will return the information you'll need to access and manage your sessions to the table in the site.  You can have mulitple RStudio sessions running simultaneously, and each session will have it's own specific URL where you will be able to use RStudio through your browser. 
+
+When starting a new RStudio session, you can choose which version of R to run (beginning in April 2022 all new versions of R will be supported, but the only older version that will work is `R-4.0.2`). You can also specify how many CPU cores and how many GB of memory you want, as well as whether you need a GPU and how long you want the server to run if the defaults specified do not meet your needs.  These parameters can be different for each RStudio session you create. Keep in mind that the larger the resources requested are, the longer it will take for your server to start up. 
+
+If you have issues or questions in using this application, please email `helpdesk` and describe the issues you're having.  
+
+#### **Troubleshooting**
+
+If the URL above does not work, and you are connected via VPN, please do the following. You only have to do this once.
+
+* Disconnect from VPN.
+* Restart the VPN software (Cisco AnyConnect Secure Mobility Client).
+* Click `Connect`.
+* You will see a dialog box with a `Group` dropdown. Make sure the `_FHVPN` group is selected. 
+* Continue to sign in normally. The URL above should work now. 
+
+#### **Legacy Documentation**
+
+***Note***: Before this web application existed, there was a command-line script that did the same thing, in conjunction with `grabnode`. For the time being, the legacy documentation for that script will remain here.  Keep in mind that this solution only works with a limited set of versions of R.  
+
+
 There is a wrapper script that allows you to run RStudio Server (the web-browser-based version of RStudio)
 on the HPC machines (cluster machines whose names start with `gizmo`).
 
