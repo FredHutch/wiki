@@ -36,7 +36,7 @@ Before we can use Motuz to move data, we need to add a Cloud Connection
 which will tell Motuz about our S3 account and bucket.
 
 Every researcher at Fred Hutch has access to 
-an S3 bucket belonging to their lab. If your PI's name is Jane Doe, your lab's bucket would be called `fh-pi-doe-j`. 
+an S3 bucket belonging to their lab. If your PI's name is Jane Doe, your lab's bucket would be called `fh-pi-doe-j-eco`. 
 
 Each researcher also has credentials to access 
 this bucket. See [the documentation](/scicomputing/access_credentials/#gui-instructions) for how to obtain these credentials.
@@ -45,7 +45,7 @@ In Motuz, click the `Cloud Connections` link at the top of the browser window. T
 
 ![](/assets/motuz/2019-08-23-12-30-33.png)
 
-In the `Basic` section, set `Type` to `Amazon Simple Storage Service (s3)`. Give the connection a name such as `lab s3 bucket`. Optionally enter the bucket name (`fh-pi-doe-j` here is just an example).
+In the `Basic` section, set `Type` to `Amazon Simple Storage Service (s3)`. Give the connection a name such as `lab s3 bucket`. Optionally enter the bucket name (`fh-pi-doe-j-eco` here is just an example).
 
 In the `Credentials` section, paste your access key ID and secret access key from the credentials you obtained above. You can optionally click `Verify Connection` to make sure the connection works. Then click `Create Cloud Connection`.
 
