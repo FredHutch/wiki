@@ -22,7 +22,7 @@ The Coop and FHBig also support community groups that meet regularly to discuss 
 
 - **Data Visualization Group:** Develops visualizations from data released by [TidyTuesday](https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/) and other sources. All programming languages (and even non-coders!) are welcome. Notes about this group can be found [here](https://github.com/FredHutch/community_groups/blob/master/data_viz.md). See the #data-viz channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
-- **Nextflow User Group:** Discusses issues related to the use of Nextflow (and other workflow managers like Cromwell) at Fred Hutch. The group welcomes Nextflow users of all levels of expertise as well as those just learning about the tool. See the #nextflow channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
+- **Workflow Manager User Group:** Discusses issues related to the use of workflow managers like Nextflow, Cromwell, and Snakemake at Fred Hutch. The group welcomes users of all levels of expertise as well as those just interested in learning about the tool. See the #workflow-managers channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
 - **Python User Group:** Discusses programming, data analysis, and troubleshooting in Python and related topics in general software development. Python coders of all levels of expertise are welcome. Notes about this group are recorded [here](https://github.com/FredHutch/community_groups/blob/master/python_coding.md), and check out the #python-user-comm channel on the [Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
