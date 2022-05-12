@@ -22,13 +22,13 @@ Currently, peer-to-peer training and support for data intensive work at the Fred
 
 - **R User Group:** Discusses programming, data analysis, and troubleshooting in R for users of a wide range of expertise and research topic, as well as tools based in R such as Shiny applications.  See the #r-user-comm channel on [FH-BCR Slack](https://fhbig.slack.com/) for more information.
 
-- **Python User Group:** Discusses programming, data analysis, and troubleshooting in Python and related topics in general software development. See the #python-user-comm channel  on [FH-BCR Slack](https://fhbig.slack.com/) for more information.
+- **Python User Group:** Discusses programming, data analysis, and troubleshooting in Python and related topics in general software development. See the #python-user-comm channel on [FH-BCR Slack](https://fhbig.slack.com/) for more information.
 
 
 
 ### Office Hours
 
-- **SciComp Next Gen/HPC Office Hours:** Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.  Email `scicomp` to find out the current dates, times and (typically remote) meeting lcoation information.  
+- **SciComp Next Gen/HPC Office Hours:** Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.  Email `scicomp` to find out the current dates, times and (typically remote) meeting location information.  
 
 ## Resources In Seattle
 
