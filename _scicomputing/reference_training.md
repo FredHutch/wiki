@@ -3,50 +3,32 @@ title: Training, Community and Finding Help
 last_modified_at: 2020-06-02
 primary_reviewers: k8hertweck, vortexing
 ---
-There are a variety of resources for training on various aspects of bioinformatics, analytics and data skills available at the Fred Hutch, in the Seattle area and on the web.
+There are a variety of resources for training on various aspects of bioinformatics, analytics and data skills available at the Fred Hutch, in the Seattle area and on the web.  
+
+
 
 ## Resources At Fred Hutch
+> Note:  Currently resources at the Hutch are in flux due to staffing changes and evolving data science support mechanisms.  Stay tuned for new training opportunties beyond the peer-to-peer resources dsecribed here.  
 
 ### In Person Courses
 
-[fredhutch.io](http://www.fredhutch.io/) offers frequent, on campus courses on a topics such as R, Python and GitHub; course descriptions can be found [here](http://www.fredhutch.io/resources/). Fred Hutch and SCCA employees can register for these courses by going to [MyHutch](https://fredhutch.okta.com/) and clicking on Hutch Learning. Search for "fredhutch.io" to view and register for all currently available courses. fredhutch.io also helps coordinate additional events and specialized classes in collaboration with The Coop (see below).
-
+>  All in person training has been put on hold.  
 
 ### Community Groups
 
-[The Coop](http://thecoop.fredhutch.org/) is the Fred Hutch Bioinformatics and Data Science Cooperative, and works to share information and resources about computational work across the Hutch. The Coop maintains a listserv, calendars of data science events, and [The Coop Communities Slack](https://fhbig.slack.com/), supported by FHBig. [FHBig](https://fredhutch.github.io/FHBig/) is the Fred Hutch Bioinformatics Interest Group, a community-based group that hosts a [blog](https://fredhutch.github.io/FHBig/year-archive/) and facilitates information sharing among the bioinformatics research community at the Hutch. Hutch employees can learn more through the links above or by emailing `coophelp` with questions or to be added to our email/newsletter list.
+Currently, peer-to-peer training and support for data intensive work at the Fred Hutch is mainly avilable via the Fred Hutch Bioinformatics and Computational Research (FH-BCR) Slack workspace [here](https://fhbig.slack.com/).  This Slack workspace is open to Fred Hutch Cancer Center staff (with fredhutch or scca emails) as well as collaborators at some local institutions.  The workspace hosts a question and answer channel as well as evolving chnanels to meet community needs such as supporting groups organizing to develop and distribute new resources to the community, collaborations with external companies/efforts that aim to develop shared Fred Hutch infrastructure, and topic-oriented groups like these:
 
-The Coop and FHBig also support community groups that meet regularly to discuss topics ranging from basic data literacy skill building to reproducible computational methods. To learn more about what to expect from these meetings, please visit [our Community Groups GitHub repository](https://github.com/FredHutch/community_groups). Current meeting schedules and locations are available on the [Google calendar](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ), and please contact the Coop (coophelp at fredhutch.org) or the relevant channel in [The Coop Communities Slack](https://fhbig.slack.com/) for updates or to ask questions.
+- **Workflow Manager User Group:** Discusses issues related to the use of workflow managers Nextflow and Cromwell at Fred Hutch, including support for shifting from bash or snakemake pipelines, software containerization and configuration for local and shared workflow useage. The group welcomes users of all levels of expertise as well as those just interested in learning about how workflow managers can move their science forward. See the #workflow-managers channel on [FH-BCR Slack](https://fhbig.slack.com/) for more information.
 
-- **Coop Meetings:** The Coop periodically hosts meetings that rotate among a few different formats, which in the past have included panel discussions, seminars, and community reports on topics related to data-intensive research. See [The Coop Communities Slack](https://fhbig.slack.com/) or [The Coop in MS Teams](https://teams.microsoft.com/l/team/19%3ad1df8e05407e45fa98fba7565738a526%40thread.skype/conversations?groupId=1b968d63-dc19-460f-9e6d-cdbd539d1bc6&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) (requires HutchNetID) for more information.
+- **R User Group:** Discusses programming, data analysis, and troubleshooting in R for users of a wide range of expertise and research topic, as well as tools based in R such as Shiny applications.  See the #r-user-comm channel on [FH-BCR Slack](https://fhbig.slack.com/) for more information.
 
-- **Data Visualization Group:** Develops visualizations from data released by [TidyTuesday](https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/) and other sources. All programming languages (and even non-coders!) are welcome. Notes about this group can be found [here](https://github.com/FredHutch/community_groups/blob/master/data_viz.md). See the #data-viz channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
+- **Python User Group:** Discusses programming, data analysis, and troubleshooting in Python and related topics in general software development. See the #python-user-comm channel  on [FH-BCR Slack](https://fhbig.slack.com/) for more information.
 
-- **Workflow Manager User Group:** Discusses issues related to the use of workflow managers like Nextflow, Cromwell, and Snakemake at Fred Hutch. The group welcomes users of all levels of expertise as well as those just interested in learning about the tool. See the #workflow-managers channel on [The Coop Communities Slack](https://fhbig.slack.com/) for more information.
 
-- **Python User Group:** Discusses programming, data analysis, and troubleshooting in Python and related topics in general software development. Python coders of all levels of expertise are welcome. Notes about this group are recorded [here](https://github.com/FredHutch/community_groups/blob/master/python_coding.md), and check out the #python-user-comm channel on the [Coop Communities Slack](https://fhbig.slack.com/) for more information.
-
-- **R User Group:** Discusses programming, data analysis, and troubleshooting in R. R coders of all levels of expertise are welcome. Notes about this group are located [here](https://github.com/FredHutch/community_groups/blob/master/R_coding.md), and check out the #r-user-comm channel on the [Coop Communities Slack](https://fhbig.slack.com/) for more information. 
-
-- **Technology Exchange:** Informal learning forum for employees in technology-focused jobs to share technical skills. This group is most appropriate for individuals who want to discuss the technical details of tools commonly used in positions focused on administration and infrastructure. However, anyone is welcome to attend this forum, and many topics will be relevant to researchers in positions that require technical skills. Subscribe to the [TechExchange mailing list](https://lists.fhcrc.org/mailman/listinfo/techexchange) or [visit Tech Exchange in MS Teams](https://teams.microsoft.com/l/team/19%3a300a2ba11e064d0a9254846bd3dfdbd2%40thread.skype/conversations?groupId=d57cfac0-6267-4240-a02d-edd017ba866e&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) (requires HutchNetID) for more information.
-
-- **Retired Community Groups:** All of our groups were created because of the needs voiced by our community. Sometimes those needs change, and we're happy to respond by refocusing our efforts. The following groups have been retired, but are noted here for reference purposes:
-  - ~~Software design group:~~ Discusses issues related to software engineering and interface design and invites speakers on specific topics and participants to share their coding projects. This group is not focused on a specific programming language, but rather on issues common across software projects. Notes from this group can be found [here](https://github.com/FredHutch/community_groups/blob/master/software_dev.md). *Discussions about this topic are now included periodically in the Python User Group*
-  - ~~Shiny User Group:~~ The Shiny User Group meets once monthly to discuss this method of using R to create interactive web applications for visualizing data analysis. Notes about this group are located [here](https://github.com/FredHutch/community_groups/blob/master/shiny.md). *Discussions about this topic are now included periodically in the R User Group*
 
 ### Office Hours
 
-Several groups on campus host weekly or monthly office hours to provide assistance on data related tasks. Please visit Centernet or the [Google calendar](https://calendar.google.com/calendar/r?cid=Z2QzMGRsaWZyaTRmdTdoMTA0Y3VxZGowZGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) for current scheduling, locations, and contact information.
-
-- **Data Ethics/Compliance/Security:** Staff from the Center Information Technology (CIT) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
-
-- **The Coop/fredhutch.io:** Staff are available to assist researchers in getting started with coding and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
-
-- **REDcap:** [REDCap](http://research.fhcrc.org/cds/en/redcap.html) is a secure web application for building and managing online surveys and databases and is managed by Collaborative Data Services (CDS) at Fred Hutch. Staff are available to answer questions related to REDCap functionality and troubleshooting. You can also discuss REDCap issues with staff and other researchers on the #redcap-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/).
-
-- **SciComp General Consulting:** Scientific Computing (SciComp) is the group in Hutch Data Core (HDC) that manages basic account access for research computing resources, including data storage and shared computational cluster use. Staff are available to answer questions related to access and usage of Hutch resources for computational research.
-
-- **SciComp Next Gen/HPC Office Hours:** In addition to general consulting (see above), Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.
+- **SciComp Next Gen/HPC Office Hours:** Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.  Email `scicomp` to find out the current dates, times and (typically remote) meeting lcoation information.  
 
 ## Resources In Seattle
 

@@ -2,7 +2,7 @@
 title: Cromwell Workflow Manager and WDL Workflows
 primary_reviewers: vortexing
 ---
-This page will house our Fred Hutch knowledge-base for setting up and using the [Cromwell workflow manager](https://cromwell.readthedocs.io/en/stable/) from the Broad as well as useful tidbits and links regarding WDL based workflows. If you have questions about what Cromwell is, how it might help you or to get started, feel free to email Amy Paguirigan (Senior Staff Scientist in CRD), `apaguiri`.  
+This page should get you started using using the [Cromwell workflow manager](https://cromwell.readthedocs.io/en/stable/) from the Broad as well as useful tidbits and links regarding WDL based workflows at the Fred Hutch. If you have questions about what Cromwell is, how it might help you or to get started, feel free to email Amy Paguirigan (Senior Staff Scientist in CRD), `apaguiri`.   For support or to ask questions and get help troubleshooting, please also see our #workflow-manager channel in the [FH-BCR Slack workspace](https://fhbig.slack.com/).
 
 ##  What Is Cromwell?
 Cromwell is a software tool that can be used to coordinate and streamline the actual running of bioinformatic (or other analytic) workflows. It is the software that underlies the Broad Institute's [Terra platform](https://terra.bio/).  It's one of several tools and platforms that are able to run workflows written in the WDL language, including [miniWDL](https://miniwdl.readthedocs.io/en/latest/)from the Chan-Zuckerburg initiative, [DNANexus](https://www.dnanexus.com/), and other emerging tools.  
@@ -101,16 +101,16 @@ task BwaMem {
 #### Design Recommendations for WDL workflows at Fred Hutch
 In order to improve shareability and also leverage the R package, as well as future UI based submission tools being developed, we recommend you structure your WDL based workflows with the following input files:
 
-1.  Workflow Description file:  [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/testWorkflows/localBatchFileScatter/parseBatchFile.wdl)
+1.  Workflow Description file:  [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/main/testWorkflows/localBatchFileScatter/parseBatchFile.wdl)
   - in WDL, a list of tools to be run in a sequence, likely several, otherwise using a workflow manager is not the right approach.  
   - This file describes the process that is desired to occur every time the workflow is run.
-2.  Parameters file: [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/testWorkflows/localBatchFileScatter/parse.inputs.json)
+2.  Parameters file: [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/main/testWorkflows/localBatchFileScatter/parse.inputs.json)
   - in json, a workflow-specific list of inputs and parameters that are intended to be set for every group of workflow executions.
   - Examples of what this input may include would be which genome to map to, reference data files to use, what environment modules to use, etc.
-3.  Batch file:  [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/testWorkflows/localBatchFileScatter/sample.batchfile.tsv)
+3.  Batch file:  [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/main/testWorkflows/localBatchFileScatter/sample.batchfile.tsv)
   - in csv or tsv, a batch-specific list of the raw input data sets intended to be processed using the same set of inputs/parameters for the same workflow, WITH HEADERS!!
   - This file is a list of data locations and any other sample/job-specific information the workflow needs.  Ideally this would be relatively minimal so that the consistency of the analysis between input data sets are as similar as possible to leverage the strengths of a reproducible workflow.  
-4.  Workflow options (OPTIONAL): [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/master/workflow-options/continueWhile-callcachingOn.json)
+4.  Workflow options (OPTIONAL): [Example here](https://github.com/FredHutch/diy-cromwell-server/blob/main/workflow-options/continueWhile-callcachingOn.json)
 
 Example:
 
@@ -157,7 +157,7 @@ Other public GitHub repositories containing WDL or Cromwell related content at t
 Beyond the basic workflows for testing included in the [DIY-cromwell-server repo](https://github.com/FredHutch/diy-cromwell-server), there is an example [unpaired variant calling workflow](https://github.com/FredHutch/tg-wdl-unpairedVariantCaller) that can be run by Fred Hutch users on campus that has example data linked via the inputs json file. This should be runnable by anyone at the Hutch, but alas, if that is not the case, please file an issue on that repo or email Amy Paguirigan. 
 
 
-More to come!  Contact Amy Paguirigan (`apaguiri`) for more information about using Cromwell at Fred Hutch.  Join the discussion in The Coop Slack in the [#cromwell-wdl channel](https://fhbig.slack.com/archives/CTFU13URJ).  
+More to come!  Contact Amy Paguirigan (`apaguiri`) for more information about using Cromwell at Fred Hutch.  For more support or to ask questions and get help troubleshooting, please see our #workflow-manager channel in the [FH-BCR Slack workspace](https://fhbig.slack.com/).
 
 
 
