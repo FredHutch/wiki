@@ -9,8 +9,9 @@ After several years of working with cross-divisional, interdisciplinary research
 [OpenSpecimen](https://www.openspecimen.org/) is a highly configurable web-based Biobanking Laboratory Information Management System (LIMS) used in 70+ clinical research centers across 20+ countries - including many of the world’s leading research centers. OpenSpecimen helps you collect High-quality Biospecimen Data and track biospecimens from Collection to Utilization. 
 
 ### Key Features
+
 **Collection Protocols** | **Custom Forms and Fields**
-Design study calendar and track specimen collection and lineage. | Create custom fields and forms based on the study needs using a UI form builder*.
+Design study calendar and track specimen collection and lineage. | Create custom fields and forms based on the study needs using a UI form builder.**
 **Consents** | **Freezer Management**
 Collect and track patient consent and validate during specimen distribution. | Create containers to track any type of freezers.
 **Distribution** | **Shipments**
@@ -20,18 +21,19 @@ Create carts (picklists), share with others, and perform bulk operations. | Easi
 **Dashboards** | **Printing**
 Create visually appealing dashboards per study, catalog, or system level. | Auto-generate unique specimen IDs and print labels.
 **CSV Import** | **Audit & Security**
-Import CSVs for every object to add, edit or delete data. | Every operation is audited for regulatory compliance. Single Sign On Enabled so that you don't need to remember a separate password*.
+Import CSVs for every object to add, edit or delete data. | Every operation is audited for regulatory compliance. Single Sign On Enabled so that you don't need to remember a separate password.**
 **TMA & Gels** | **User Management**
-Track DNA gel loading and tissue microarray. | Control user privileges at a granular level**.
+Track DNA gel loading and tissue microarray. | Control user privileges at a granular level.***
 
 
-* Currently managed for you by the Specimen Data Management Team only
-** Some user privileges are controlled by the Specimen Data Management Team only. Roles can be assigned by the labs/groups as needed.
+** Currently managed for you by the Specimen Data Management Team only.
+
+*** Some user privileges are controlled by the Specimen Data Management Team only. Roles can be assigned by the labs/groups as needed.
 
 Refer to the full list of [Key Features of the application here.](/assets/OpenSpecimen_Features.pdf)
 
-
-[![Open Specimen Features - Video](https://img.youtube.com/vi/pEN1P3PL4xs)](https://www.youtube.com/watch?v=pEN1P3PL4xs "Click to see the Open Specimen Features Video")
+Click here to watch our video about Open Specimen's features. 
+[![Open Specimen Features - Video](https://img.youtube.com/vi/pEN1P3PL4xs/0.jpg)](https://www.youtube.com/watch?v=pEN1P3PL4xs "Click to see the Open Specimen Features Video")
 
 ## Current Status 
 >As of May 2022
