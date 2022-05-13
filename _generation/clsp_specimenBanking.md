@@ -47,3 +47,11 @@ If you are interested in using this tool to support your work, please fill out t
 
 ### Costs
 The Specimen Data Management Project is funded to absorb the costs through the initial 2 years - the system we've chosen, Open Specimen, has a very reasonable annual maintenance cost, which in the future will be shared amongst several labs and will not ever be a big burden on any one lab. If you have any concerns about not being able to afford the system, please talk to us and we can work out a plan for you.  
+
+
+## Fred Hutch Specimen Processing Shared Resources
+Fred Hutch researchers have access to retrospectively banked specimens through Northwest Biotrust.  Additionally, the two previous shared resources called Specimen Processing and Research Cell Bank have merged and now the group is available to provide services such as receipt and processing of biospecimens with existing or researcher-defined protocols, nucleic acid extractions, DNA fingerprinting (e.g. for confirmation of cell line identities as required now by many funding agencies), to specimen storage resources.  
+
+### Available Resources
+  - Shared Resources link to how to contact Northwest Biotrust about previously banked specimens is [here.](https://sharedresources.fredhutch.org/services/access-biospecimen-samples)
+  - Shared Resources link to how to contact, what services are offered and forms required for Specimen Processing/Research Cell Bank services are  [here.](https://sharedresources.fredhutch.org/core-facilities/specimen-processingresearch-cell-bank)
