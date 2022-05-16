@@ -76,6 +76,8 @@ singularity {
 process {
     executor = 'slurm'
     queue = 'campus-new'
+    errorStrategy = 'retry'
+    maxRetries = 3
 }
 
 tower {
@@ -91,3 +93,29 @@ If you have any problems using this configuration, please don't hesitate to
 
 To run a workflow with this configuration, follow the guidance for formatting
 the appropriate [run script](/hdc/workflows/running/run_script).
+
+## Note: ERROR 151
+
+When running workflows on the gizmo SLURM cluster with Singularity, multiple users
+have observed that sometimes jobs will fail for no obvious reason with an error
+code of 151. This is more likely to happen for workflows with very large numbers
+of jobs.
+
+You can see this in the workflow execution report as:
+
+```
+Command exit status:
+    151
+```
+
+After investigation, it seems that the root cause of this error is not actually
+anything to do with the job or the content of the workflow, and if you were to
+re-run the exact same workflow then the job would most likely succeed.
+
+Instead of having to repeatedly re-start a workflow, you can set up Nextflow
+to automatically retry any failed jobs with the directives `errorStrategy = 'retry'`
+and `maxRetries = 3` in the `process` block of `nextflow.config`.
+
+It is also worth noting that this automatic re-try configuration is also helpful
+when running workflows in the AWS Batch job scheduler, due to a low rate of sporadic
+job failures which can be caused by ECS worker recycling in that environment.
