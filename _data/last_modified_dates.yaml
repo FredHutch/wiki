@@ -308,7 +308,7 @@
   url: _hdc/workflows/running/on_aws.md
 - dlm: June 1, 2021
   url: _hdc/workflows/running/where_to_run.md
-- dlm: April 14, 2022
+- dlm: May 16, 2022
   url: _hdc/workflows/running/on_gizmo.md
 - dlm: June 1, 2021
   url: _hdc/workflows/running/tower.md
