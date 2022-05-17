@@ -25,9 +25,9 @@ NovaSeq	S4 | | up to 300bp | 8000 - 10000M	| 1
 NextSeq	P1 | | up to 300bp | 100M	| 1
 NextSeq	P2 | | up to 300bp | 400M	 | 1
 NextSeq	P3 | | up to 300bp | 1100M	 | 1
-MiSeq	Nano | 1M | Up to 300bp | 1
-MiSeq	V2 Reagent | 12 - 15M | Up to 300bp | 1
-MiSeq	V3 Reagent | 22 - 25M | Up to 300bp | 1
+MiSeq	Nano | 1M | Up to 300bp | - | 1
+MiSeq	V2 Reagent | 12 - 15M | Up to 300bp | - | 1
+MiSeq	V3 Reagent | 22 - 25M | Up to 300bp | - | 1
 
 
 When deciding how much sequencing is needed for a set of libraries to provide sufficient read depth (number of reads per genomic location in the genome covered in the library), issues such as the intended data type, sample type and quality, library preparation type, number of total samples, and the applicability of multiplexing approaches need to be considered.  Consulting with the Genomics Core can help provide more clarity for individual projects. You can request more information by emailing `genomics`.   
