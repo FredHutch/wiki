@@ -283,7 +283,7 @@ The `hitparade` command will show a summary of all jobs running and queued on th
 ## External Slurm and HPC Reference and Learning Resources
 For more information and education on how to use HPC resources from external sources see the following sites:
 
-- SchedMD's [Documentation for Version 18.08](https://slurm.schedmd.com/archive/slurm-18.08.3/)
+- SchedMD's [Documentation for Version 21.08](https://slurm.schedmd.com/archive/slurm-21.08.5/)
 - Slurm [cheat sheet](https://slurm.schedmd.com/pdfs/summary.pdf)
 - University of Utah's [Slurm Docs](https://www.chpc.utah.edu/documentation/software/slurm.php)
 - Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
