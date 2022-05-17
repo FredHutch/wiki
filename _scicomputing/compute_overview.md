@@ -47,7 +47,7 @@ When doing large scale computing tasks, one often shifts to the use of jobs to p
 
 Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop disconnected, the job would be terminated.
 
-The batch system used at the Hutch is [Slurm](https://slurm.schedmd.com/archive/slurm-18.08.3/). Slurm provides a set of commands for submitting and managing jobs on the `gizmo` cluster as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.
+The batch system used at the Hutch is [Slurm](https://slurm.schedmd.com/archive/slurm-21.08.5/). Slurm provides a set of commands for submitting and managing jobs on the `gizmo` cluster as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.
 
 ## [Parallel Computing](/scicomputing/compute_parallel/)
 
