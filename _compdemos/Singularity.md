@@ -245,9 +245,5 @@ $ singularity build --tmpdir=${HOME}/tmp my.r.singularity.build.def
 
 The environment variables `SINGULARITY_TMPDIR` and `TMPDIR` are used if the command line option isn't set.  `SINGULARITY_TMPDIR` takes precedence over `TMPDIR`.
 
-#### Special Note on Temporary Files
-
-**IMPORTANT**
-
-If you set this build directory path to a location in the scratch file system you may encounter errors like "operation not permitted" when building the container.  This file system does not support file operations used by some container builds (e.g. hard links and some attributes).
+>IMPORTANT:  If you set this build directory path to a location in the Scratch file system you may encounter errors like "operation not permitted" when building the container.  This file system does not support file operations used by some container builds (e.g. hard links and some attributes).
 
