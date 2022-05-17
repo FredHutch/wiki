@@ -1,7 +1,7 @@
 ---
 title: Specimen Data Management System
 main_authors: Sunil Ayalasomayajula
-primary_reviewers: sunilayala
+primary_reviewers: sunilayala, vortexing
 ---
 After several years of working with cross-divisional, interdisciplinary research teams and key stakeholders across the Consortium, we are excited to announce that we are now implementing a Specimen Data Management System! In collaboration with these groups, we developed detailed tool requirements, evaluated top specimen data management tool providers and refined a robust and comprehensive data model, that resulted in choosing a tool that we believe will meet the diverse needs of our researchers.
 
@@ -50,8 +50,8 @@ The Specimen Data Management Project is funded to absorb the costs through the i
 
 
 ## Fred Hutch Specimen Processing Shared Resources
-Fred Hutch researchers have access to retrospectively banked specimens through Northwest Biotrust.  Additionally, the two previous shared resources called Specimen Processing and Research Cell Bank have merged and now the group is available to provide services such as receipt and processing of biospecimens with existing or researcher-defined protocols, nucleic acid extractions, DNA fingerprinting (e.g. for confirmation of cell line identities as required now by many funding agencies), to specimen storage resources.  
+Fred Hutch researchers have access to retrospectively banked specimens through Northwest Biotrust.  Additionally, the two previous shared resources called [Specimen Processing and Research Cell Bank have merged](https://www.fredhutch.org/en/research/shared-resources/core-facilities/specimen-processing-research-cell-bank.html) and now the group is available to provide services such as receipt and processing of biospecimens with existing or researcher-defined protocols, nucleic acid extractions, DNA fingerprinting (e.g. for confirmation of cell line identities as required now by many funding agencies), to specimen storage resources.  
 
 ### Available Resources
   - Shared Resources link to how to contact Northwest Biotrust about previously banked specimens is [here.](https://sharedresources.fredhutch.org/services/access-biospecimen-samples)
-  - Shared Resources link to how to contact, what services are offered and forms required for Specimen Processing/Research Cell Bank services are  [here.](https://sharedresources.fredhutch.org/core-facilities/specimen-processingresearch-cell-bank)
+  - Shared Resources link to how to contact, what services are offered and forms required for Specimen Processing/Research Cell Bank services are  [here.](https://www.fredhutch.org/en/research/shared-resources/core-facilities/specimen-processing-research-cell-bank.html)
