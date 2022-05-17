@@ -249,5 +249,5 @@ The environment variables `SINGULARITY_TMPDIR` and `TMPDIR` are used if the comm
 
 **IMPORTANT**
 
-If you set this build directory path to a location in the scratch file system you may encounter errors like "operation not permitted" when building the container.  The BeegFS file system does not support file operations used by some container builds (e.g. hard links and some attributes).
+If you set this build directory path to a location in the scratch file system you may encounter errors like "operation not permitted" when building the container.  This file system does not support file operations used by some container builds (e.g. hard links and some attributes).
 
