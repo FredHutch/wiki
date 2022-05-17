@@ -17,9 +17,9 @@ The Illumina sequencers are high read number, short read sequencers that provide
 
 
 Sequencer | Mode | Read Lengths | Approx. Reads per Lane | Lanes per Run | User Prepared Library Submission Requirements*
-MiSeq	Nano | 1M | Up to 300bp | 1 | >= 30uL at >= 4nM
-MiSeq	V2 Reagent | 12 - 15M | Up to 300bp | 1 |  >= 30uL at >= 4nM
-MiSeq	V3 Reagent | 22 - 25M | Up to 300bp | 1 |  >= 30uL at >= 4nM
+MiSeq	Nano | 1M | Up to 300bp | | 1 | >= 30uL at >= 4nM
+MiSeq	V2 Reagent | 12 - 15M | Up to 300bp | | 1 |  >= 30uL at >= 4nM
+MiSeq	V3 Reagent | 22 - 25M | Up to 300bp | | 1 |  >= 30uL at >= 4nM
 NextSeq	P1 | | up to 300bp | 100M	| 1 |  >= 30uL at >= 3nM
 NextSeq	P2 | | up to 300bp | 400M	 | 1 |  >= 30uL at >= 3nM
 NextSeq	P3 | | up to 300bp | 1100M	 | 1 |  >= 30uL at >= 3nM
