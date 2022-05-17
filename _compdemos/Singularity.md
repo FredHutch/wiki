@@ -220,3 +220,30 @@ Singularity$ ls /mnt/data
 example_data  gmap-gsnap  humandb  microbiome  ncbi-blast  ngs	seq  tmp
 ```
 
+## The Build Environment
+
+### The Image Cache
+
+Singularity caches data to speed future operations.  By default the cache is in your home directory, in a directory named `.singularity`.  This cache can be moved depending on your need- this can be controlled with the environment variable `SINGULARITY_CACHEDIR`.
+
+```ShellSession
+export SINGULARITY_CACHEDIR=${HOME}/.my_cachedir
+$ singularity build my.r.singularity.build.def
+```
+
+Note that you will need to set this environment variable every time you wish to use this cache path.
+
+### Build Temporary Files
+
+Two environment variables (and one command-line option) can be used to control where the build is done.  This includes extraction of the various downloads and other build steps necessary to create the container.
+
+The command line option `--tmpdir` takes precedence over the environment variables:
+
+```ShellSession
+$ singularity build --tmpdir=${HOME}/tmp my.r.singularity.build.def
+```
+
+The environment variables `SINGULARITY_TMPDIR` and `TMPDIR` are used if the command line option isn't set.  `SINGULARITY_TMPDIR` takes precedence over `TMPDIR`.
+
+>IMPORTANT:  If you set this build directory path to a location in the Scratch file system you may encounter errors like "operation not permitted" when building the container.  This file system does not support file operations used by some container builds (e.g. hard links and some attributes).
+
