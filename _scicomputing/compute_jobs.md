@@ -33,7 +33,7 @@ A cluster is a collection of compute resources (nodes) under the control of the 
 
 ### Partition
 
-A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required.  Gizmo resources are in the partition _campus-new_.
+A partition is a collection of resources (nodes) inside of a cluster.  There are defaults, so specifying a partition name is not required but can be specified under special circumstances (e.g. if your jobs can be preempted).
 
 ### Node
 
@@ -84,9 +84,7 @@ These two take many of the same options:
 
 ### Job Output
 
-Output (stdout and stderr) from your job script, steps, tasks, and processes is
-captured by Slurm and written to a file named _slurm-<jobid>.out_ in the
-directory from which you submitted the job.
+Output (stdout and stderr) from your job script, steps, tasks, and processes is captured by Slurm and written to a file named _slurm-<jobid>.out_ in the directory from which you submitted the job.
 
 The option `-o` will redirect this output (errors as well) to the file indicated as the argument to this option.  For example, `-o myjob.out` redirects to _myjob.out_ in the submission directory.  Adding `%j` in this file name will include the job ID.  `-o myjob-%j.out` would create a file like _myjob-12345.out_.
 
@@ -100,8 +98,7 @@ If you still want to add a memory request, use the `--mem` option.  This option 
 
 ### GPU
 
-GPUs are available on some nodes- [this page](/scicomputing/compute_gpu/)
-describes the Slurm options required to request GPUs with your job.
+GPUs are available on most nodes- [this page](/scicomputing/compute_gpu/) describes the Slurm options required to request GPUs with your job.
 
 ### Environment Variables 
 
