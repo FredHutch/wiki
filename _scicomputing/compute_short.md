@@ -9,7 +9,7 @@ The short partition is intended for high-volume, short duration jobs that need g
 
 The usage limits for the short partition are based on the amount of time committed to your account's running jobs.  "Time committed" for a job is calculated by multiplying the amount of time remaining in the job's run time with the number of cores requested. The total time committed for an account is then the sum of time committed for all jobs running in that account.
 
-> Example: An account has two jobs running in the short partition, one has 4 cores allocated and one hour remaining to run, the other has 2 cores with 10 minutes time committed.  The total time committed for the account is 4*60 + 2*10 = 260 core-minutes
+> Example: An account has two jobs running in the short partition, one has 4 cores allocated and one hour remaining to run, the other has 2 cores with 10 minutes time committed.  The total time committed for the account is 4 · 60 + 2 · 10 = 260 core-minutes
 
 There is no specific limit on the number of cores your account can use concurrently, but the total amount of time committed must be less than 480,000 core-minutes.  With this limit, you could conceivably use up to 7000 cores for an hour (depending on resource availability and queued jobs of course)
 
