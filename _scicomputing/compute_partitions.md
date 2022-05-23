@@ -9,11 +9,11 @@ Slurm _partitions_ organize and associate compute resources in the cluster. Part
 
 ## Gizmo Partition Summary
 
-| Partition Name | Nodes | Guaranteed | Priority | Max Time | Limits
-|----------------|-------|------------|----------|----------|--------
-| campus-new (*) | All   | yes        | normal   | 30 days  | 1000 cores per account
-| short          | All   | yes        | normal   | 12 hours | 8000 core-hours committed per account
-| restart        | All   | no         | low      | 7 days   | no limit
+| Partition Name | Nodes | Guaranteed | Priority | Default Time | Max Time | Limits
+|----------------|-------|------------|----------|----------|----------|--------
+| campus-new (*) | All   | yes        | normal   | 3 days   | 30 days  | 1000 cores per account
+| short          | All   | yes        | normal   | 1 hour   | 12 hours | 8000 core-hours committed per account
+| restart        | All   | no         | low      | 3 days   | 7 days   | no limit
 
 > "guaranteed" means that the job is guaranteed all of its requested time
 
