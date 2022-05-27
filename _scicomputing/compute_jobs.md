@@ -183,6 +183,12 @@ If you should need to increase the wall time for a running job (or jobs), email 
 scontrol update jobid=<job ID> timelimit=+2-0
 ```
 
+### Short Jobs
+
+If your jobs do not require a great deal of walltime, consider using the "short" partition.  This partition has a higher core limit but restricts the wall time of the job to less than 12 hours.
+
+For more information see [here](/compdemos/short_partition) 
+
 ### Preemption and Restart Jobs
 
 Job preemption allows a queued job to preempt a running job under certain circumstances.  We can use job preemption to allow some jobs to run over the established limits with the caveat that these jobs can be preempted- that is killed- if other high priority work is queued.
