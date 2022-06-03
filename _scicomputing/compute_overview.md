@@ -15,22 +15,17 @@ If you have experience working with cluster computing resources at other institu
 ## [Technologies](/scicomputing/compute_platforms/)
 This page describes all the various technologies and specifications for them that are supported by Fred Hutch for large scale computing.
 
-### Desktop computing platforms
+### Interactive Computing
 
-While most bioinformatic analysis of genomics data, for example, will likely require more compute resources than are typically available in a desktop computer, some smaller analysis jobs or training can be done on a desktop or laptop.  For these smaller compute jobs, scientific computing languages [R](https://www.r-project.org) or [Python](https://www.python.org) may be useful (see [the Software Development page](/scicomputing/software_overview/) for more information about these computing languages). You can obtain assistance in installing a copy of R and RStudio on PCs through the Center IT desktop software resource. The installation of a commonly used Python and R package management system called Conda can be done on either PCs or Macs and more information about Anaconda and Miniconda (two versions of the Python oriented version of Conda package manager) can be found [here.](https://conda.io/docs/glossary.html#anaconda)
+Web-based access to HPC resources. These resources are only available from the Fred Hutch network.
+You can use web resources remotely with VPN access. 
+You will have the same file system access as your cluster account has.
 
-### Interactive Computing:  Easy Access, Moderate Capability
-These systems are provided by the Fred Hutch to serve the community with the intention of:
-  1. being immediately accessible by everyone, regardless of skill set,
-  2. allowing for interactive development of code and/or approaches to analyses, and
-  3. being supported by compute resources larger than a typical desktop computer.
 
-These systems are best used for situations such as training of new users in development of R or python code. These systems also provide compute resources that are a step above a typical desktop computer, thus are good systems for slightly more compute-intensive jobs that still require interactivity.  Each is a managed resource with actively managed packages/modules/tools depending on the system, and thus work well for fairly standard platforms for interactive computing that does not require highly specialized software components.  Additionally, these systems may not be appropriate for analyses that require a higher level of data security, please contact FH username `scicomp` to inquire.
-
-Compute Resource | Access Interface | Resource Admin | Connection to FH Data Storage
+Compute Resource | Access Interface | Resource |
 --- | --- | --- | ---
-[RStudio Server](http://rstudio.fhcrc.org) | web, FH credentials, no setup required | Center IT | Native to python, default access to /fh/fast
-[JupyterHub](https://jupyterhub.fhcrc.org/) | web, FH credentials, no setup required | Center IT | Native to python, default access to /fh/fast
+[RStudio Server](http://rstudio-launcher.fredhutch.org) | web, FH credentials | Web IDE for R Programming |
+[Jupyter Lab](/scicomputing/software_python.md#jupyter) | web, FH credentials | Web IDE for (Python, R). Python Notebooks |
 
 ### Interactive Computing: Command Line Interface (CLI), Moderate to High Capability
 
@@ -68,4 +63,7 @@ Graphical Processing Units (GPUs) provide acceleration for some kinds of computa
 
 [This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  [This](https://sciwiki.fredhutch.org/compdemos/tensorflow-gpu/) has a specific example of running tensorflow on SciComp clusters.
 
+### Desktop computing platforms
+
+While most bioinformatic analysis of genomics data, for example, will likely require more compute resources than are typically available in a desktop computer, some smaller analysis jobs or training can be done on a desktop or laptop.  For these smaller compute jobs, scientific computing languages [R](https://www.r-project.org) or [Python](https://www.python.org) may be useful (see [the Software Development page](/scicomputing/software_overview/) for more information about these computing languages). You can obtain assistance in installing a copy of R and RStudio on PCs through the Center IT desktop software resource. The installation of a commonly used Python and R package management system called Conda can be done on either PCs or Macs and more information about Anaconda and Miniconda (two versions of the Python oriented version of Conda package manager) can be found [here.](https://conda.io/docs/glossary.html#anaconda)
 
