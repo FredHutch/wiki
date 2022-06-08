@@ -29,10 +29,10 @@ The partition "campus-new" is the default partition- this is a general purpose p
 
 "short" is a partition intended for workloads with many jobs of short duration.  The limit is a little more complicated in that it limits the amount of run time committed to the account, but allows you to run many more cores than under the campus-new partition.
 
-More information is available [here](compdemos/gizmo_short_partition/)
+More information is available [here](/compdemos/gizmo_short_partition/)
 
 ### restart
 
 The "restart" partition has no upper limit on the number of cores allocated to an account's workload.  However, these jobs are not guaranteed the requested walltime and can be preempted- the tasks killed and removed from the node- when jobs in other partitions are waiting and can use the resources allocated to restart jobs.
 
-More information is available [here](scicomputing/compute_restart/)
+More information is available [here](/scicomputing/compute_restart/)
