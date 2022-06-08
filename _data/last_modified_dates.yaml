@@ -30,7 +30,7 @@
   url: index.md
 - dlm: May 23, 2022
   url: _scicomputing/access_methods.md
-- dlm: May 7, 2021
+- dlm: June 3, 2022
   url: _scicomputing/software_python.md
 - dlm: May 2, 2019
   url: _scicomputing/store_databases.md
@@ -48,7 +48,7 @@
   url: _scicomputing/compute_job_scheduling.md
 - dlm: April 9, 2020
   url: _scicomputing/software_managecode.md
-- dlm: May 17, 2022
+- dlm: June 3, 2022
   url: _scicomputing/compute_overview.md
 - dlm: November 14, 2019
   url: _scicomputing/software_linux101.md
@@ -266,14 +266,12 @@
   url: _generation/datagen_rnaApproaches.md
 - dlm: October 25, 2018
   url: _generation/datagen_dnaApproaches.md
-- dlm: May 17, 2022
+- dlm: May 18, 2022
   url: _generation/clsp_specimenBanking.md
 - dlm: May 15, 2019
   url: _generation/study_proposal.md
 - dlm: April 17, 2020
   url: _generation/human_shareDeposits.md
-- dlm: April 7, 2022
-  url: _generation/datagen_imaging.md
 - dlm: December 18, 2019
   url: _generation/human_deidentification.md
 - dlm: April 2, 2019
@@ -298,16 +296,14 @@
   url: _generation/security_legal.md
 - dlm: December 4, 2018
   url: _generation/human_overview.md
-- dlm: March 22, 2022
+- dlm: May 18, 2022
   url: _generation/gen_index.md
 - dlm: December 19, 2019
   url: _generation/clsp_labCov.md
-- dlm: June 2, 2020
+- dlm: May 18, 2022
   url: _generation/clsp_overview.md
-- dlm: October 30, 2018
+- dlm: May 18, 2022
   url: _generation/datagen_overview.md
-- dlm: January 8, 2019
-  url: _generation/datagen_flowcytometry.md
 - dlm: June 11, 2020
   url: _generation/datagen_proteomics.md
 - dlm: May 15, 2019

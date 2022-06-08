@@ -88,18 +88,11 @@ generation:
         url: /generation/clsp_labCov/
       - title: "Data Visualization"
         url: /generation/data-viz/
-
-  - title: "Large Scale Data Generation"
-    children:
-      - title: "Overview"
+      - title: "FH Shared Resources"
         url: /generation/datagen_overview/
-      - title: "Genomics Data"
+      - title: "Genomics"
         url: /generation/datagen_platformsData/
-      - title: "Flow Cytometry Data"
-        url: /generation/datagen_flowcytometry/
-      - title: "Imaging Data"
-        url: /generation/datagen_imaging/
-      - title: "Proteomics Data"
+      - title: "Proteomics"
         url: /generation/datagen_proteomics/
 
   - title: "Other Laboratory Resources"

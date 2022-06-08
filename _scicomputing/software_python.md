@@ -15,6 +15,7 @@ please see our [Software Development Standards page](/scicomputing/software_stan
 Please also see our [Resource Library](/compdemos/aws/) for tutorials on a variety of Python topics,
 including checkpointing on Gizmo, logging in Python, running tensorflow, and more!
 
+<!--
 ## Learning Python
  
 [fredhutch.io](http://www.fredhutch.io/resources/) offers introductory Python class material designed specifically for new coders in our research community,
@@ -29,13 +30,13 @@ you may find the following resources useful as you get started learning Python:
 - [Getting started with Python](https://www.python.org/about/gettingstarted/)
 - [Real Python](https://realpython.com)
 - [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
-
+-->
 ## Common Python packages for scientific research computing
 
 Packages (sometimes also referred to as libraries) 
 are collections of related functions created and 
-made available by the Python community.
-The following packages are commonly used by our research community:
+made available by the Python community via Pypi.org. 
+The following packages are commonly used for scientific computing and are pre-installed in the fhPython module.
 
 - **`numpy` and `scipy`** are complementary packages including many functions relevant for scientific computing. More information is available on the [Scipy site](https://www.scipy.org/getting-started.html). These packages are also used in fredhutch.io's [Intermediate Python: Programming class](http://www.fredhutch.io/resources/).
 - **`pandas`** is the Python Data Analysis Library, which includes capabilities for parsing, manipulating, and summarizing spreadsheet-style data as data frames. More information is available in [this introduction](http://pandas.pydata.org/pandas-docs/stable/10min.html). `pandas` is also used in fredhutch.io's [Intro to Python class](http://www.fredhutch.io/resources/).
@@ -51,9 +52,35 @@ Please see our [Python Module page](/pythonModules/) for more information on pac
 
 ## Accessing and using Python
 
-There are many ways to access and use Python.
-The simplest (but not most user-friendly) 
-way to access Python is to download and install from [Python.org](https://www.python.org/downloads/).
+To access Python you will need to load a Python module.
+Each Python build is based on different version. Once a module is created it is not modifed and as many historic
+versions are availabe as possible. Thus identifying if an existing Python build matches your needs is a first step to using
+Python on the cluster.
+```
+module avail Python/3
+module avail fhPython
+```
+SciComp maintains a custom version of Python named fhPython. fhPython has over 1,000 pre-installed libraries,
+many of which have been requested by Fred Hutch staff. 
+The Scientific Software Inventory provides a list of Python modules and detailed information about libraries included with each version.
+[Python](https://fredhutch.github.io/easybuild-life-sciences/python/) inventory.
+If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences).
+In your request, please include a link to the package source and version you require.  
+Alternatively, you
+can install the package in your home directory with the `--user option` (e.g. `pip3 install --upgrade --user mypkg`),
+or to create a virtual Python environment, for example:
+
+```
+    username@rhino1:~$ ml fhPython/3.8.6-foss-2020b-Python-3.8.6 
+    username@rhino1:~$ python3 -m venv ~/mypython
+    username@rhino1:~$ source ~/mypython/bin/activate
+    (mypython) username@rhino1:~$ #python code executed in mypython environment
+    (mypython) username@rhino1:~$ deactivate
+    username@rhino1:~$
+```
+
+
+## Python IDE
 While this does technically allow you to write and run Python code,
 most Python coders choose to use an integrated development environment, 
 or IDE,
@@ -80,68 +107,22 @@ you'll find more in-depth comparisons of the features associated with a few of t
 - [PyCharm](#pycharm)
 - [Jupyter](#jupyter)
 
-### Installing Python on your own computer
-
-If you are new to coding and just getting started with Python,
-your best bet is to install [Anaconda](https://www.anaconda.com/products/individual),
-a set of software that allows you to install, manage, and launch applications for running Python code on your own computer.
-Following installation,
-you can use Anaconda Navigator to explore various options for running Python, 
-including Jupyter notebooks and PyCharm.
-
-fredhutch.io's Intro to Python course uses Anaconda,
-and includes brief [installation instructions](http://www.fredhutch.io/software/#python-jupyter-notebooks)
-as well as a [walk-through of Jupyter notebooks](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/gh-pages/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks).
-
-> A piece of software related to Anaconda is [Miniconda](https://docs.conda.io/en/latest/miniconda.html),
-> which has the same base functionality but in a stripped-down form. 
-> We recommend Anaconda for beginners because it includes Anaconda Navigator,
-> as well as many other useful applications.
-
-For more information on working with these Jupyter,
-please see the section below on [Jupyter IDEs](#jupyter).
-
-### Accessing Python on `rhino` and `gizmo`
-
-If you would like to use Hutch shared compute resources to run Python,
-you would connect to `rhino` to submit batch jobs,
-and/or then connect to `gizmo` to run code interactively.
-
-For instructions on how to connect to `rhino` see this [tutorial](/compdemos/howtoRhino.md).  
-Once you have logged on to `rhino`,
-you will need to load a build/version of Python.
-SciComp maintains a current list of the various builds of Python available for use by researchers.
-Each build has different modules installed and versions of Python itself, thus identifying if an existing Python build matches your needs is a first step to using Python on our clusters.
-
-Specific information about which Python modules are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).
-If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences).
-In your request, please include a link to the package source and version you require.  
-Alternatively, you
-can install the package in your home directory with the `--user option` (e.g. `pip3 install --upgrade --user mypkg`),
-or to create a virtual Python environment, for example:
-
-```
-    username@rhino1:~$ ml Python/3.6.7-foss-2016b-fh2
-    username@rhino1:~$ python3 -m venv ~/mypython
-    username@rhino1:~$ source ~/mypython/bin/activate
-    (mypython) username@rhino1:~$ #python code executed in mypython environment
-    (mypython) username@rhino1:~$ deactivate
-    username@rhino1:~$
-```
 
 ### Jupyter Notebooks on `rhino`
 
+There have been may iterations of Python Notebooks, starting wit IPython. SciComp currently supports
+(Jupyter)[https://jupyter.org]. The Jupyter user interfaces offer a foundation of interactive
+computing environments where scientific computing, data science, and analytics can be performed
+using a wide range of programming languages.  
+Jupyter can be run as a notebook or as Jupyter Lab. Jupyter Lab suports notebooks and 
+can be run as JupyterHub. We recomend that the the Jupyter Lab interface be used. 
+
+#### Starting Jupyter Lab
 After you have connected to `rhino`,
-load a Python distribution maintained by SciComp and run Jupyter Lab:
+load a Python module or load a Python based package like scanpy. The load the JuypterLab module.
 
 ```
     username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
-```
-
-... or use the 'jupyterlab' wrapper script:
-
-```
-    username@rhino1:~$ jupyterlab
 ```
 
 Then connect to the URL, copying the link given by the previous command, which looks as follows:
@@ -150,17 +131,6 @@ Then connect to the URL, copying the link given by the previous command, which l
     to login with a token:
         http://rhino1:11112/?token=0eee692be6c81c1061db
 ```
-### Jupyter Notebooks on `gizmo`
-
-From `rhino` execute the `grabjupyter` command and a node will be allocated on Gizmo after you select the CPUs and number of days you need the node. 
-For more information on working with `gizmo`,
-see the dedicated page [here](/compdemos/howtoGizmo).
-
-### Fred Hutch JupyterHub installation
-
-SciComp maintains an installation of [JupyterHub](https://jupyterhub.fhcrc.org/),
-which is available via login with your HutchNetId.
-Please note that JupyterHub does not include the most current versions of some Python packages.
 
 ## Python IDE comparison
 
@@ -634,3 +604,24 @@ The downside though is that version 2 was a major release for them and they are 
 
 Let's hope the synergy of the versioning of the core product and the community of extensions improves. Until then there's nothing stopping a Python or R user from doing all their engineering in Atom, PyCharm, RStudio, or VS Code and then the rest of their coding/management in JupyterLab since it _is_ browser-based. Hopefully, this tutorial has heightened your interest.
  
+### Installing Python on your own computer
+
+If you are new to coding and just getting started with Python,
+your best bet is to install [Anaconda](https://www.anaconda.com/products/individual),
+a set of software that allows you to install, manage, and launch applications for running Python code on your own computer.
+Following installation,
+you can use Anaconda Navigator to explore various options for running Python, 
+including Jupyter notebooks and PyCharm.
+
+fredhutch.io's Intro to Python course uses Anaconda,
+and includes brief [installation instructions](http://www.fredhutch.io/software/#python-jupyter-notebooks)
+as well as a [walk-through of Jupyter notebooks](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/gh-pages/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks).
+
+> A piece of software related to Anaconda is [Miniconda](https://docs.conda.io/en/latest/miniconda.html),
+> which has the same base functionality but in a stripped-down form. 
+> We recommend Anaconda for beginners because it includes Anaconda Navigator,
+> as well as many other useful applications.
+
+For more information on working with these Jupyter,
+please see the section below on [Jupyter IDEs](#jupyter).
+
