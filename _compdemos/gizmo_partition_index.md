@@ -3,6 +3,8 @@ title: Cluster Partitions
 primary_reviewers: atombaby
 ---
 
+This page will help you select the right partition for your jobs
+
 ## Overview
 
 Slurm _partitions_ organize and associate compute resources in the cluster. Partitions have a number of attributes that can be adjusted to suit the particular needs of the compute users- primarily we use partitions to adjust the limits and scheduling of compute jobs.
