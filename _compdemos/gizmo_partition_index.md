@@ -29,7 +29,7 @@ The partition "campus-new" is the default partition- this is a general purpose p
 
 "short" is a partition intended for workloads with many jobs of short duration.  The limit is a little more complicated in that it limits the amount of run time committed to the account, but allows you to run many more cores than under the campus-new partition.
 
-More information is available [here](scicomputing/compute_short/)
+More information is available [here](compdemos/gizmo_short_partition/)
 
 ### restart
 
