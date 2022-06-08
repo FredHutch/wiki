@@ -14,6 +14,8 @@ To contribute to the Wiki you only need to have your GitHub username added to th
 
 [Building a copy of this Wiki locally](#building-the-site-locally)
 
+[Building a copy of this Wiki on a rhino](#building-the-site-on-rhino)
+
 [For Admins](#for-admins)
 
 
@@ -105,7 +107,7 @@ Both Atom and VSCode will make a directory called `assets` in the directory wher
 
 #### Youtube
 
-When linking to videos like screencasts you typically want to show an image screenshot and clicking on that screenshot starts the video. Images of videos are stored at https://img.youtube.com/vi and they use the same video id you find in Youtube URLs, so The Gift of Time is ```https://youtu.be/rN7cmb1K2yA```. To embed, insert this into markdown:
+When linking to videos like screencasts you typically want to show an image screenshot and clicking on that screenshot starts the video. Images of videos are stored at https://img.youtube.com/vi and they use the same video id you find in Youtube URLs, so The Gift of Time is `https://youtu.be/rN7cmb1K2yA`. To embed, insert this into markdown:
 
     [![The Gift of Time](https://img.youtube.com/vi/rN7cmb1K2yA/0.jpg)](https://youtu.be/rN7cmb1K2yA "Click to see The Gift of Time")
 
@@ -209,6 +211,38 @@ links and the files they are found in.
 If you are inside the Fred Hutch network, you can type
 `rake testlocal` and that will include internal URLs
 in the check.
+
+## Building the site on rhino
+
+### Load a current Ruby version:
+
+```
+ml Ruby/2.7.2-GCCcore-10.2.0
+```
+
+### Install gems
+
+```
+bundle install
+```
+
+### Build
+
+```
+bundle exec jekyll build
+```
+
+### Serve
+
+```
+bundle exec jekyll serve -H <node IP address> -P <port>
+```
+
+Use the external IP for the host you're using.  Select an unused port over 1024.
+
+### View
+
+Point your browser at the IP and port combination you've specified in the `serve` command above.  Once this has started, the site will be rebuit when updates are made to any of the source files in the site.
 
 ## Glossary terms
 
