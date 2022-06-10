@@ -20,7 +20,7 @@ The takehome message for this example is really on RSlurm. The idea is that one 
 - Some R programming experience
 - Familiarity running Rstudio or R on the Gizmos/Rhinos
 
-If you'd like to know more about using `sbatch` on the command line, see [this page](https://github.com/FredHutch/slurm-examples/tree/master/R_and_sh_example)  and [this page](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/) for more information and some templates. Common slurm commands can also be found in the official SLURM [documentation](https://slurm.schedmd.com/sbatch.html).
+If you'd like to know more about using `sbatch` on the command line, see [this page](https://github.com/FredHutch/slurm-examples/tree/master/R_and_sh_example)  and [this page](/scicomputing/compute_jobs/) for more information and some templates. Common slurm commands can also be found in the official SLURM [documentation](https://slurm.schedmd.com/sbatch.html).
 
 ## Using RSlurm
 ### Requirements

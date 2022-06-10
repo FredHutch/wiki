@@ -60,5 +60,5 @@ every week.  Dates and details for SciComp office hours can be found in
 
 Graphical Processing Units (GPUs) provide acceleration for some kinds of computations and tools, [tensorflow](https://www.tensorflow.org/) is a notable example of such a tool.
 
-[This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  [This](https://sciwiki.fredhutch.org/compdemos/tensorflow-gpu/) has a specific example of running tensorflow on SciComp clusters.
+[This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  [This](/compdemos/tensorflow-gpu/) has a specific example of running tensorflow on SciComp clusters.
 

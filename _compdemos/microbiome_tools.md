@@ -20,7 +20,7 @@ will be updated as more are made available.
 
 The tools below happen to use Nextflow as a system for running reproducible and
 portable analytical workflows. 
-See [this documentation](https://sciwiki.fredhutch.org/compdemos/nextflow/) 
+See [this documentation](/compdemos/nextflow/) 
 for more details on running Nextflow at Fred Hutch, as well as 
 [the docs](https://www.nextflow.io/) for more details on Nextflow itself.
 

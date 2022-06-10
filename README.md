@@ -30,7 +30,7 @@ The more focused, how-to style, Resource Library entries in both the Data Genera
 
 Both Articles and Resource Library entries are full-text searchable using the search feature (the magnifying glass in the header).  This search ability is the primary strength behind this Wiki and will be the primary way people will find content, as, again, no web designers or technical writers are involved in this grassroots project.  
 
-**NEW (as of March 2022)** - Introducing **Pathways**!  Pathways are a new approach we are incorporating which can be found by following the [Pathways link](https://sciwiki.fredhutch.org/pathways/) in the sidebar from any domain.  This Pathways page will host individual pages that provide users who want to do a commonly requested set of tasks, a list of pages/links in the order they'll want to read them, that will guide them along the pathway to doing what they want.  We hope this might be an alternate mode for finding content in the Wiki that the community finds useful.  If you have ideas for new Pathways, please [file an issue](https://github.com/FredHutch/wiki/issues) and tell us about it.  
+**NEW (as of March 2022)** - Introducing **Pathways**!  Pathways are a new approach we are incorporating which can be found by following the [Pathways link](/pathways/) in the sidebar from any domain.  This Pathways page will host individual pages that provide users who want to do a commonly requested set of tasks, a list of pages/links in the order they'll want to read them, that will guide them along the pathway to doing what they want.  We hope this might be an alternate mode for finding content in the Wiki that the community finds useful.  If you have ideas for new Pathways, please [file an issue](https://github.com/FredHutch/wiki/issues) and tell us about it.  
 
 ### Adding/Editing Content
 
@@ -54,7 +54,7 @@ To edit one of the content-containing markdowns (see below regarding Repo struct
     >Note: If you are editing existing content and the page has a listing for the Primary Reviewers like this:  `primary_reviewers: somegithubusername` then when you submit the pull request please request a review from those usernames.  
 
 5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  If there is a `primary_reviewers` listed for content then one of the reviews must be from one of those members.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
-6. Once approving reviews have been obtained, the pull request can be merged into the main branch and then any edits go live to the site [here.](https://sciwiki.fredhutch.org/)
+6. Once approving reviews have been obtained, the pull request can be merged into the main branch and then any edits go live to the site [here.](/)
 
 ### The Review Process
 
@@ -71,7 +71,7 @@ When a pull request is made, it automatically requests a pull request review fro
 Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/main/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.  
 
 ## Contributing via an external text editor
-You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.  Also there is a tutorial on how to use [VSCode](https://sciwiki.fredhutch.org/compdemos/vscode_markdown_howto/) which is what you will want to use if you plan to contribute many screenshots or other images.  
+You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.  Also there is a tutorial on how to use [VSCode](/compdemos/vscode_markdown_howto/) which is what you will want to use if you plan to contribute many screenshots or other images.  
 
 ## Wiki Content Style Guide
 ### Github-Flavored Markdown

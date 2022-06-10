@@ -16,13 +16,13 @@ some additional listed below "Other services" that may be included eventually (b
 
 Sections from wiki, not represented in SR pages
 
-https://sciwiki.fredhutch.org/generation/datagen_platformsData/#library-preparation-for-sequencing
+/generation/datagen_platformsData/#library-preparation-for-sequencing
   - [Guide to library prep](https://genohub.com/ngs-library-preparation-kit-guide/): This guide is an overview of library preparation applications and kits that are in common use for next-generation sequencing.
   - [NGS library preperation resources from Illumina](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html): Illumina library prep resource page.
   - [Illumina sequencing method explorer](https://www.illumina.com/science/sequencing-method-explorer.html): Use this tool to explore cutting-edge experimental next-generation sequencing (NGS) library preparation methods compiled from scientific literature. To find a method to suit your project, along with compatible kits, select a starting material or search for a method by name.
   - [Library construction for next-generation sequencing: Overviews and challenges](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351865/): Factors such as the quantity and physical characteristics of the RNA or DNA source material as well as the desired application are addressed in the context of preparing high quality sequencing libraries.
 
-https://sciwiki.fredhutch.org/generation/datagen_assayPrep/
+/generation/datagen_assayPrep/
   - [Labome overview of RNA extraction kits and application’s](https://www.labome.com/method/RNA-Extraction.html): This article summarizes commonly used methods and kits for RNA extraction.
   - [Labome overview of DNA extraction kits and applications](https://www.labome.com/method/DNA-Extraction-and-Purification.html): A comprehensive review of DNA extraction and purification kits cited in the literature.
 
@@ -32,21 +32,21 @@ https://sciwiki.fredhutch.org/generation/datagen_assayPrep/
 
 - [Illumina Sequencing by Synthesis](https://www.youtube.com/watch?v=fCd6B5HRaZ8): A 5 min video covering the Illumina RNA sequencing technology.
 
-https://sciwiki.fredhutch.org/generation/datagen_platformsData/#illumina-sequencers
+/generation/datagen_platformsData/#illumina-sequencers
   - [Illumina sequencing resources](https://www.illumina.com/techniques/sequencing.html): Sequencing resources page on the Illumina website.
 
 ### PacBio
 
-https://sciwiki.fredhutch.org/generation/datagen_platformsData/#pacific-biosciences-pacbio-long-range-sequencer
+/generation/datagen_platformsData/#pacific-biosciences-pacbio-long-range-sequencer
   - [SMRT Sequencing](https://www.pacb.com/smrt-science/smrt-sequencing/): Resources about the SMRT sequencing technology from PacBio.
 
-https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#smrt-sequencing-pacbio
+/generation/datagen_dnaApproaches/#smrt-sequencing-pacbio
 
 ### Sanger
 
 ### 10X genomics
 
-https://sciwiki.fredhutch.org/generation/datagen_platformsData/#10x-genomics-single-cell-library-preparation-system
+/generation/datagen_platformsData/#10x-genomics-single-cell-library-preparation-system
   - [10x genomics](https://www.10xgenomics.com/): Link to the 10X genomics webpage
 
 ### Microarrays
@@ -54,7 +54,7 @@ https://sciwiki.fredhutch.org/generation/datagen_platformsData/#10x-genomics-sin
 Should we include this?
 Not mentioned on SR genomics page, but may be listed elsewhere?
 
-https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#dna-microarrays
+/generation/datagen_dnaApproaches/#dna-microarrays
   - [Methylation arrays](https://www.illumina.com/techniques/microarrays/methylation-arrays.html): Illumina resource covering Methylation arrays
   - [Genotyping arrays](https://www.illumina.com/techniques/popular-applications/genotyping.html): Illumina resource covering genotyping.
 
@@ -69,16 +69,16 @@ Subheadings from https://www.fredhutch.org/en/research/shared-resources/core-fac
 - [University of Oregon RNA-seqlopedia](https://rnaseq.uoregon.edu/)
 - [Introduction to RNA-seq for researchers](https://www.youtube.com/watch?v=7BLS_YY9HeM&t=758s): A 30 min video reviewing RNA-sequencing concepts.
 
-https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#rna-sequencing
+/generation/datagen_rnaApproaches/#rna-sequencing
    - [Illumina gene expression resource](https://www.illumina.com/techniques/popular-applications/gene-expression-transcriptome-analysis.html): Illumina resources for gene expression analysis.
 
-https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#qualitative-approaches-transcript-and-splicing-discovery
+/generation/datagen_rnaApproaches/#qualitative-approaches-transcript-and-splicing-discovery
 
 #### small RNAs (e.g., miRNA)
 
 Not specifically mentioned in SR pages?
 
-https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#example--small-rnas-eg-mirna
+/generation/datagen_rnaApproaches/#example--small-rnas-eg-mirna
   - [Genohub guide on small RNA (miRNA)](https://genohub.com/services/sequencing/illumina-miRNA-sequencing-services): Use this guide to help search for and get accurate pricing and turnaround times for small RNA, microRNA (miRNA) sequencing services. The guide includes considerations you should make before starting your small RNA sequencing project.
 
 ### Cleavage Under Targets and Release Using Nuclease (CUT&RUN)
@@ -93,7 +93,7 @@ https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#example--small-r
 - [Roche: whole exome sequencing](https://sequencing.roche.com/en/research-application/application/whole-exome-sequencing.html): A brief overview of whole exome sequencing from Roche
 - [The promise of whole-exome sequencing in medical genetics](https://www.nature.com/articles/jhg2013114): A summar of the impacts of whole-exome sequencing in medical genetics.
 
-https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#capture-based-sequencing---example--whole-exome-sequencing
+/generation/datagen_dnaApproaches/#capture-based-sequencing---example--whole-exome-sequencing
 
 ### Targeted sequencing
 
@@ -101,7 +101,7 @@ https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#capture-based-se
 - [Disease-targeted sequencing: a cornerstone in the clinic](https://www.nature.com/articles/nrg3463): A review of disease targeted sequencing and it's clinical applications.
 - [Applications and analysis of targeted genome sequencing in cancer studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6861594/): A review of how targeted sequencing is used in cancer research. This paper also presents a generalized workflow, explaining important parmeters and best practices.
 
-https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#amplicon-based-sequencing---targeted-dna-sequencing
+/generation/datagen_dnaApproaches/#amplicon-based-sequencing---targeted-dna-sequencing
   - [Optimizing coverage for targeted sequencing](https://support.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote_optimizing_coverage_for_targeted_resequencing.pdf): This tech note from Illumina describes how targeted DNA sequencing panels are designed and sequenced to maximize the data quality and coverage when used.
 
 ### CRISPR screens
@@ -112,7 +112,7 @@ https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#amplicon-based-s
 
 ### ChIPseq
 
-https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#chromatin-immunoprecipitation-sequencing-chip-seq
+/generation/datagen_dnaApproaches/#chromatin-immunoprecipitation-sequencing-chip-seq
   - [Epigenie guide to ChIPseq](https://epigenie.com/guide-getting-started-with-chip-seq/): An overview of ChIP sequencing. A good starting point with references and resources linking to more information.
 
 ### ATACseq (DNA accessibility)
@@ -132,7 +132,7 @@ https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#chromatin-immuno
 Should we include this?
 Not mentioned on SR genomics page, but may be listed elsewhere?
 
-https://sciwiki.fredhutch.org/generation/datagen_dnaApproaches/#reduced-representation-bisulfite-sequencing-rrbs
+/generation/datagen_dnaApproaches/#reduced-representation-bisulfite-sequencing-rrbs
   - [Babraham's guide to RRBS](http://www.bioinformatics.babraham.ac.uk/projects/bismark/RRBS_Guide.pdf)
 
 ### Nanostring
@@ -141,9 +141,9 @@ Should we include this,
 perhaps with RNAseq under a subheading of "gene expression"?
 Not mentioned on SR genomics page, but may be listed elsewhere?
 
-https://sciwiki.fredhutch.org/generation/datagen_platformsData/#single-nucleotide-polymorphism-snp-arrays-or-methylation-arrays
+/generation/datagen_platformsData/#single-nucleotide-polymorphism-snp-arrays-or-methylation-arrays
   - [Nanostring](https://www.nanostring.com/): Link to the Nanostring website.
   - [Illumina microarray](https://www.illumina.com/techniques/microarrays.html): Illumina resources on their microarray technology.
 
-https://sciwiki.fredhutch.org/generation/datagen_rnaApproaches/#nanostring-gene-expression-panels
+/generation/datagen_rnaApproaches/#nanostring-gene-expression-panels
   - [Illumina gene expression & transcriptome analysis](https://www.illumina.com/techniques/popular-applications/gene-expression-transcriptome-analysis.html): Resources on gene expression methods and analysis from Illumina.
