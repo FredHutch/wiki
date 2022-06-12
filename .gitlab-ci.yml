@@ -4,14 +4,14 @@ before_script:
   - tar zxf rancher-linux-amd64-v0.6.2.tar.gz
   
 build_test:
-  script:
-    - echo Information > info.txt
-    - echo "Branch: ${CI_COMMIT_BRANCH}" >> info.txt
-    - echo "Commit: ${CI_COMMIT_SHA}" >> info.txt
-    - echo "Commit comment:" >> info.txt
-    - echo " ${CI_COMMIT_MESSAGE}" >> info.txt
-    - echo "Build time: $(date)" >> info.txt
-    - docker build -t dockerimages.fhcrc.org/wiki:latest .
+  script: |
+    echo Information > info.txt
+    echo "Branch: ${CI_COMMIT_BRANCH}" >> info.txt
+    echo "Commit: ${CI_COMMIT_SHA}" >> info.txt
+    echo "Commit comment:" >> info.txt
+    echo " ${CI_COMMIT_MESSAGE}" >> info.txt
+    echo "Build time: $(date)" >> info.txt
+    docker build -t dockerimages.fhcrc.org/wiki:latest .
 
 # build for every branch EXCEPT main and push to preview site
 # https://sciwiki-preview.fredhutch.org (only accessible inside
