@@ -26,7 +26,7 @@ deploy_preview:
       - main
   script:
     - docker login --username $DOCKERIMAGES_USER --password $DOCKERIMAGES_PASS https://dockerimages.fhcrc.org
-    - docker tag dockerimages.fhcrc.org/wiki:latest dockerimages.fhcrc.org/wiki-preview-latest 
+    - docker tag dockerimages.fhcrc.org/wiki:latest dockerimages.fhcrc.org/wiki-preview:latest 
     - docker push dockerimages.fhcrc.org/wiki-preview:latest
     - sleep 15
     - rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $PREVIEW_RANCHERAPI_KEY --secret-key $PREVIEW_RANCHERAPI_SECRET up -d --pull --force-upgrade --confirm-upgrade --stack wiki --file docker-compose-preview.yml --rancher-file rancher-compose.yml
