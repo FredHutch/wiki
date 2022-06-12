@@ -150,6 +150,18 @@ For new content: https://github.com/FredHutch/wiki/blob/main/_drafts/contentTemp
 
 For new contributor entries: https://github.com/FredHutch/wiki/blob/main/_drafts/contributorTemplate.md
 
+## Automated deployment
+
+Everything merged into the `main` branch
+will be automatically deployed to 
+[https://sciwiki.fredhutch.org](https://sciwiki.fredhutch.org).
+
+Everything in any *other* branch pushed to GitHub will be deployed to 
+[https://sciwiki-preview.fredhutch.org](https://sciwiki-preview.fredhutch.org). You can check what branch and what commit is reflected by going to 
+[https://sciwiki-preview.fredhutch.org/info.txt](https://sciwiki-preview.fredhutch.org/info.txt).
+
+
+
 
 ## Building the site locally
 
