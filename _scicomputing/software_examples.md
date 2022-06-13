@@ -26,7 +26,7 @@ Other groups have developed templates for more general use:
 These repositories were created by Fred Hutch researchers and staff, and contain a variety of curated example code with documentation.
 
 - [Data Science Example Code](https://github.com/FredHutch/data-science-examples): Example code for a variety of common data science analysis tasks, longer than what appears in the [Resource Library](/compdemos/), but not so long as to warrant their own repositories.
-- [Slurm examples](https://github.com/FredHutch/slurm-examples): Examples of using Slurm (the [job management system](https://sciwiki.fredhutch.org/scicomputing/compute_overview/#job-management) used on our cluster) for life sciences research tasks.
+- [Slurm examples](https://github.com/FredHutch/slurm-examples): Examples of using Slurm (the [job management system](/scicomputing/compute_overview/#job-management) used on our cluster) for life sciences research tasks.
 - [Batch pipeline](https://github.com/FredHutch/batch_pipeline): Example workflows for a multi-step array job on AWS Batch (cloud computing)
 - [Python examples](https://github.com/FredHutch/community_groups/blob/master/python_coding.md#examples): discussed and aggregated by the Python User Group at Fred Hutch.
 - [Nextflow examples](https://github.com/FredHutch?utf8=✓&q=nf&type=&language=): this link shows all repositories containing Nextflow (`nf`) examples in the Fred Hutch GitHub organization. Each repository represents a different kind of analysis.  

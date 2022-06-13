@@ -1,12 +1,11 @@
 ---
 title: Large Scale Computing Overview
-last_modified_at: 2019-08-01
 primary_reviewers: bmcgough
 ---
 
 Researchers are more and more likely to need to analyze raw data sets using some sort of analysis process before they can be interpreted in the context of the scientific question. Raw data, whether from an array or sequencing for example, are not typically directly interpretable results, thus require some degree of processing. The nature of the processing depends on the data type, the platform with which the data were generated, and the biological question being asked of the data set. How this process is performed depends on the specific project, but support and resources for this process are available at the Fred Hutch for a variety of needs.
 
-The first step in doing this work is often as simple as asking "what computing resource do I need to use for this task?"  This section describes a range of computing resource options available to Fred Hutch researchers, all the way from a single laptop to the Fred Hutch on-premise high performance computing cluster (`gizmo`) to various cloud-based options, as well as how to get started using each platform.
+The first step in doing this work is often as simple as asking "what computing resource do I need to use for this task?" You can find a brief review of [where to run your code here.](/scicomputing/software_running/) This section describes computing resources that support work that requires additional resoruces beyond your local desktop comptuer, from the Fred Hutch on-premise high performance computing cluster (`gizmo`) to various cloud-based options, as well as how to get started using each platform.
 
 ## [Quick Start Guide](/scicomputing/compute_quickstart/)
 
@@ -61,9 +60,5 @@ every week.  Dates and details for SciComp office hours can be found in
 
 Graphical Processing Units (GPUs) provide acceleration for some kinds of computations and tools, [tensorflow](https://www.tensorflow.org/) is a notable example of such a tool.
 
-[This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  [This](https://sciwiki.fredhutch.org/compdemos/tensorflow-gpu/) has a specific example of running tensorflow on SciComp clusters.
-
-### Desktop computing platforms
-
-While most bioinformatic analysis of genomics data, for example, will likely require more compute resources than are typically available in a desktop computer, some smaller analysis jobs or training can be done on a desktop or laptop.  For these smaller compute jobs, scientific computing languages [R](https://www.r-project.org) or [Python](https://www.python.org) may be useful (see [the Software Development page](/scicomputing/software_overview/) for more information about these computing languages). You can obtain assistance in installing a copy of R and RStudio on PCs through the Center IT desktop software resource. The installation of a commonly used Python and R package management system called Conda can be done on either PCs or Macs and more information about Anaconda and Miniconda (two versions of the Python oriented version of Conda package manager) can be found [here.](https://conda.io/docs/glossary.html#anaconda)
+[This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  [This](/compdemos/tensorflow-gpu/) has a specific example of running tensorflow on SciComp clusters.
 

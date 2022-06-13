@@ -12,25 +12,10 @@ and overviews of a few common software options for running and writing Python co
 For more information on coding best practices, 
 including templates for data analysis and packages in Python,
 please see our [Software Development Standards page](/scicomputing/software_standards/).
-Please also see our [Resource Library](/compdemos/aws/) for tutorials on a variety of Python topics,
+Please also see our [Resource Library](/compdemos/) for tutorials on a variety of Python topics,
 including checkpointing on Gizmo, logging in Python, running tensorflow, and more!
 
-<!--
-## Learning Python
- 
-[fredhutch.io](http://www.fredhutch.io/resources/) offers introductory Python class material designed specifically for new coders in our research community,
-as well as intermediate Python classes.
-These materials are publicly available for work-at-your-own pace learning at any time,
-though instructor-led courses are also periodically available through Hutch Learning.
-See our page on [Training and Finding Help](/scicomputing/reference_training/)
-for additional information on Hutch support for Python learning and code sharing.
 
-In addition,
-you may find the following resources useful as you get started learning Python:    
-- [Getting started with Python](https://www.python.org/about/gettingstarted/)
-- [Real Python](https://realpython.com)
-- [Learn Python the Hard Way](http://learnpythonthehardway.org/book/)
--->
 ## Common Python packages for scientific research computing
 
 Packages (sometimes also referred to as libraries) 
@@ -52,7 +37,27 @@ Please see our [Python Module page](/pythonModules/) for more information on pac
 
 ## Accessing and using Python
 
-To access Python you will need to load a Python module.
+
+### Installing Python on your own computer
+
+If you are new to coding and just getting started with Python,
+your best bet is to install [Anaconda](https://www.anaconda.com/products/individual),
+a set of software that allows you to install, manage, and launch applications for running Python code on your own computer.
+Following installation,
+you can use Anaconda Navigator to explore various options for running Python, 
+including Jupyter notebooks and PyCharm.
+
+fredhutch.io's Intro to Python course uses Anaconda,
+and includes brief [installation instructions](http://www.fredhutch.io/software/#python-jupyter-notebooks)
+as well as a [walk-through of Jupyter notebooks](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/gh-pages/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks).
+
+A piece of software related to Anaconda is [Miniconda](https://docs.conda.io/en/latest/miniconda.html),
+which has the same base functionality but in a stripped-down form. We recommend Anaconda for beginners because it includes Anaconda Navigator,
+as well as many other useful applications.
+
+### Using Python on `rhino`
+
+To access Python on the Fred Hutch computing cluster, you will need to load a Python module.
 Each Python build is based on different version. Once a module is created it is not modifed and as many historic
 versions are availabe as possible. Thus identifying if an existing Python build matches your needs is a first step to using
 Python on the cluster.
@@ -604,24 +609,4 @@ The downside though is that version 2 was a major release for them and they are 
 
 Let's hope the synergy of the versioning of the core product and the community of extensions improves. Until then there's nothing stopping a Python or R user from doing all their engineering in Atom, PyCharm, RStudio, or VS Code and then the rest of their coding/management in JupyterLab since it _is_ browser-based. Hopefully, this tutorial has heightened your interest.
  
-### Installing Python on your own computer
-
-If you are new to coding and just getting started with Python,
-your best bet is to install [Anaconda](https://www.anaconda.com/products/individual),
-a set of software that allows you to install, manage, and launch applications for running Python code on your own computer.
-Following installation,
-you can use Anaconda Navigator to explore various options for running Python, 
-including Jupyter notebooks and PyCharm.
-
-fredhutch.io's Intro to Python course uses Anaconda,
-and includes brief [installation instructions](http://www.fredhutch.io/software/#python-jupyter-notebooks)
-as well as a [walk-through of Jupyter notebooks](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/gh-pages/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks).
-
-> A piece of software related to Anaconda is [Miniconda](https://docs.conda.io/en/latest/miniconda.html),
-> which has the same base functionality but in a stripped-down form. 
-> We recommend Anaconda for beginners because it includes Anaconda Navigator,
-> as well as many other useful applications.
-
-For more information on working with these Jupyter,
-please see the section below on [Jupyter IDEs](#jupyter).
 

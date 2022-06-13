@@ -32,11 +32,11 @@ For this upgrade we plan to use a phased approach that will not require taking t
 
 During this upgrade we will be upgrading the operating system used on each server to [Ubuntu 18.04LTS](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes#New_features_in_18.04). There will be no change to the hardware currently used in our HPC environment or change in the computing capacity.  
 
-This operating system upgrade requires that we rebuild the tools in the [/app file system](https://sciwiki.fredhutch.org/computing/cluster_software/) on the new OS using a new toolchain. At this time, we don’t know the full extent of the changes required at this time. Additional information will be provided as this work proceeds. 
+This operating system upgrade requires that we rebuild the tools in the [/app file system](/computing/cluster_software/) on the new OS using a new toolchain. At this time, we don’t know the full extent of the changes required at this time. Additional information will be provided as this work proceeds. 
 
 ## Future Communications 
 
-Throughout this upgrade Scientific Computing staff will send announcements, additional technical details and schedule updates via the [scicomp_announce mailing list](https://lists.fhcrc.org/mailman/listinfo/scicomp-announce) and the [Scientific Computing Announcements](https://sciwiki.fredhutch.org/scicompannounce/) page on SciWiki. Scientific Computing staff will also hold weekly open houses where you can come and run your jobs on the new operating system. If any problems are found, we will be on-hand to help you update your jobs and get them working. 
+Throughout this upgrade Scientific Computing staff will send announcements, additional technical details and schedule updates via the [scicomp_announce mailing list](https://lists.fhcrc.org/mailman/listinfo/scicomp-announce) and the [Scientific Computing Announcements](/scicompannounce/) page on SciWiki. Scientific Computing staff will also hold weekly open houses where you can come and run your jobs on the new operating system. If any problems are found, we will be on-hand to help you update your jobs and get them working. 
 
 As always, please email us at scicomp at fhcrc.org with any questions and concerns. 
 

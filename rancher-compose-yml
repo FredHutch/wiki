@@ -1,5 +1,5 @@
 version: '2'
 services:
-  wiki:
+  wiki_preview:
     scale: 1
     start_on_create: true

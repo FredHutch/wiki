@@ -14,7 +14,7 @@ For more details on Nextflow and workflow managers overall, please visit the wor
 ### Example workflows
 Fred Hutch researchers are building and maintaining a set of Nextflow workflows for use by the general community [here](https://github.com/FredHutch/reproducible-workflows/tree/master/nextflow), while also providing an example of how to write your own workflows.
 
-Some Nextflow-based tools used for microbiome analysis at Fred Hutch can be found in [the accompanying documentation](https://sciwiki.fredhutch.org/compdemos/microbiome_tools/)
+Some Nextflow-based tools used for microbiome analysis at Fred Hutch can be found in [the accompanying documentation](/compdemos/microbiome_tools/)
 
 ### Setup
 

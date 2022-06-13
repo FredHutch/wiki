@@ -1,4 +1,4 @@
-- dlm: March 22, 2022
+- dlm: June 13, 2022
   url: README.md
 - dlm: November 23, 2021
   url: rModules.md
@@ -16,7 +16,7 @@
   url: generationdemos.md
 - dlm: March 4, 2022
   url: pythonModules.md
-- dlm: March 22, 2022
+- dlm: June 13, 2022
   url: outreach.md
 - dlm: March 22, 2022
   url: contributorslist.md
@@ -30,7 +30,7 @@
   url: index.md
 - dlm: May 23, 2022
   url: _scicomputing/access_methods.md
-- dlm: June 3, 2022
+- dlm: June 8, 2022
   url: _scicomputing/software_python.md
 - dlm: May 2, 2019
   url: _scicomputing/store_databases.md
@@ -48,7 +48,7 @@
   url: _scicomputing/compute_job_scheduling.md
 - dlm: April 9, 2020
   url: _scicomputing/software_managecode.md
-- dlm: June 3, 2022
+- dlm: June 13, 2022
   url: _scicomputing/compute_overview.md
 - dlm: November 14, 2019
   url: _scicomputing/software_linux101.md
@@ -56,7 +56,7 @@
   url: _scicomputing/store_objectstore.md
 - dlm: November 12, 2019
   url: _scicomputing/software_standards.md
-- dlm: May 2, 2022
+- dlm: June 13, 2022
   url: _scicomputing/software_R.md
 - dlm: May 12, 2022
   url: _scicomputing/reference_training.md
@@ -68,7 +68,7 @@
   url: _scicomputing/compute_grants.md
 - dlm: November 1, 2021
   url: _scicomputing/store_overview.md
-- dlm: November 15, 2019
+- dlm: June 13, 2022
   url: _scicomputing/access_overview.md
 - dlm: October 20, 2021
   url: _scicomputing/compute_cloud.md
@@ -88,7 +88,7 @@
   url: _scicomputing/compute_jobs.md
 - dlm: August 13, 2021
   url: _scicomputing/compute_environments.md
-- dlm: March 22, 2022
+- dlm: June 13, 2022
   url: _scicomputing/software_examples.md
 - dlm: November 1, 2021
   url: _scicomputing/store_posix.md
@@ -106,7 +106,7 @@
   url: _scicompannounce/2018-06-01-JuneComputingUpdates.md
 - dlm: September 29, 2021
   url: _scicompannounce/2021-09-14-gizmo-scratch-maintenance.md
-- dlm: May 13, 2019
+- dlm: June 13, 2022
   url: _scicompannounce/2019-01-22-hpc-systems-upgrade-2019.md
 - dlm: June 6, 2018
   url: _scicompannounce/2018-05-26-pythonupdate.md
@@ -114,7 +114,7 @@
   url: _scicompannounce/2020-02-07-STAR.md
 - dlm: July 27, 2021
   url: _scicompannounce/2021-08-08-gizmo-cpu-cgroup.md
-- dlm: February 21, 2019
+- dlm: June 13, 2022
   url: _scicompannounce/2019-02-21-upgrade-env-modules.md
 - dlm: August 9, 2021
   url: _scicompannounce/2021-08-08-gizmo-grabnode.md
@@ -202,7 +202,7 @@
   url: _hdc/hdc_contact_us.md
 - dlm: June 1, 2021
   url: _hdc/hdc_portals.md
-- dlm: April 15, 2021
+- dlm: June 13, 2022
   url: _hdc/bioinformatics_library.md
 - dlm: April 14, 2022
   url: _hdc/hdc_workflows.md
@@ -260,7 +260,7 @@
   url: archive/cluster_koshuBeta.md
 - dlm: March 22, 2022
   url: _pathways/path-batch-computing.md
-- dlm: November 19, 2020
+- dlm: June 13, 2022
   url: _generation/data-viz.md
 - dlm: October 25, 2018
   url: _generation/datagen_rnaApproaches.md
@@ -308,13 +308,13 @@
   url: _generation/datagen_proteomics.md
 - dlm: May 15, 2019
   url: _generation/multiple_testing.md
-- dlm: July 14, 2020
+- dlm: June 13, 2022
   url: _compdemos/gizmo-bionic-changelog.md
 - dlm: April 22, 2021
   url: _compdemos/galaxy-on-prem.md
 - dlm: November 23, 2020
   url: _compdemos/maxquant.md
-- dlm: March 25, 2020
+- dlm: June 13, 2022
   url: _compdemos/microbiome_tools.md
 - dlm: May 14, 2020
   url: _compdemos/gdc-client-hints.md
@@ -328,11 +328,11 @@
   url: _compdemos/Checkpointing-Gizmo.md
 - dlm: October 7, 2020
   url: _compdemos/ssh_host_key_management.md
-- dlm: June 20, 2019
+- dlm: June 13, 2022
   url: _compdemos/rslurm_example.md
 - dlm: May 1, 2019
   url: _compdemos/R_tips_tricks.md
-- dlm: July 28, 2020
+- dlm: June 13, 2022
   url: _compdemos/rslurm_intro.md
 - dlm: March 15, 2022
   url: _compdemos/Docker.md
@@ -346,7 +346,7 @@
   url: _compdemos/tensorflow-gpu.md
 - dlm: December 10, 2018
   url: _compdemos/snapshots.md
-- dlm: February 24, 2021
+- dlm: June 13, 2022
   url: _compdemos/gizmo-bionic-known_issues.md
 - dlm: August 6, 2020
   url: _compdemos/Mountain-CyberDuck.md
@@ -362,9 +362,9 @@
   url: _compdemos/Economy-storage.md
 - dlm: May 1, 2019
   url: _compdemos/plyranges-workshop.md
-- dlm: April 13, 2022
+- dlm: June 13, 2022
   url: _compdemos/nextflow.md
-- dlm: November 1, 2021
+- dlm: June 13, 2022
   url: _compdemos/ucsc-track-s3.md
 - dlm: October 12, 2020
   url: _compdemos/first_rhino.md
@@ -378,7 +378,7 @@
   url: _compdemos/aspera-change-destination.md
 - dlm: May 17, 2022
   url: _compdemos/Singularity.md
-- dlm: September 17, 2020
+- dlm: June 13, 2022
   url: _compdemos/git_tips.md
 - dlm: May 12, 2022
   url: _compdemos/Cromwell.md

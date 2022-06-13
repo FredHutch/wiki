@@ -14,7 +14,7 @@ Updated the NoMachine service with a valid .fhcrc.org certificate.  Now when you
 
 #### Enabled Arbiter
 
-Arbiter (the new [load management software](https://sciwiki.fredhutch.org/compdemos/rhino-load-management/) for the Rhino nodes) has been in debug mode for the past few weeks to get an idea of how well it would function with real load.  Thus far all appears well, so we've enabled this service to actually begin managing the load on the new Rhino nodes (i.e. enforcing limits and sending messages).
+Arbiter (the new [load management software](/compdemos/rhino-load-management/) for the Rhino nodes) has been in debug mode for the past few weeks to get an idea of how well it would function with real load.  Thus far all appears well, so we've enabled this service to actually begin managing the load on the new Rhino nodes (i.e. enforcing limits and sending messages).
 
 ### 7 July 2020
 

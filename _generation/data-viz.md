@@ -32,7 +32,7 @@ While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/t
 - [Shiny](https://shiny.rstudio.com/)
   - [Learn Shiny](https://shiny.rstudio.com/tutorial/)
   - [Mastering Shiny - Hadley Wickham](https://mastering-shiny.org/)
-  - [Fred Hutch Biomedical Data Science Wiki entry on Shiny applications](https://sciwiki.fredhutch.org/compdemos/shiny/)
+  - [Fred Hutch Biomedical Data Science Wiki entry on Shiny applications](/compdemos/shiny/)
 
 #### Packages that extend `ggplot` capabilities
 - [ggbeeswarm](https://github.com/eclarke/ggbeeswarm)
