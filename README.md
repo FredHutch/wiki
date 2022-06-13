@@ -144,8 +144,8 @@ Contributors List (note all markdowns in this folder will be rendered): https://
 
 Pathways page (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/main/_pathways
 
-
 ###  Draft Folders with Templates for New Content
+
 >NOTE:  Any content that will need to be an entirely new page should be stored in the `draft` folder until it is ready for publication, and then an admin will move it to where it needs to go when it is considered finished.  
 
 For new content: https://github.com/FredHutch/wiki/blob/main/_drafts/contentTemplate.md
@@ -154,12 +154,9 @@ For new contributor entries: https://github.com/FredHutch/wiki/blob/main/_drafts
 
 ## Automated deployment
 
-Everything merged into the `main` branch
-will be automatically deployed to 
-[https://sciwiki.fredhutch.org](https://sciwiki.fredhutch.org).
+Everything merged into the `main` branch will be automatically deployed to [https://sciwiki.fredhutch.org/]https://sciwiki.fredhutch.org)
 
-Everything in any *other* branch pushed to GitHub will be deployed to 
-[https://sciwiki-preview.fredhutch.org](https://sciwiki-preview.fredhutch.org),
+Everything in any *other* branch pushed to GitHub will be deployed to [https://sciwiki-preview.fredhutch.org/](https://sciwiki-preview.fredhutch.org) ,
 which is only accessible inside the Fred Hutch network.
 You can check what branch and what commit is reflected by going to 
 [https://sciwiki-preview.fredhutch.org/info.txt](https://sciwiki-preview.fredhutch.org/info.txt).
@@ -227,6 +224,8 @@ If you are inside the Fred Hutch network, you can type
 in the check.
 
 ## Building the site on rhino
+
+This will
 
 ### Load a current Ruby version:
 
