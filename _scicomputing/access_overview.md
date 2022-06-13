@@ -3,7 +3,7 @@ title: Computing Access Overview
 last_modified_at: 2019-09-05
 primary_reviewers: vortexing
 ---
-This overview describes what types of credentials are needed for [various Fred Hutch computing resources](https://sciwiki.fredhutch.org/compdemos/) and provides instructions for accessing those supported computing resources.
+This overview describes what types of credentials are needed for [various Fred Hutch computing resources](/compdemos/) and provides instructions for accessing those supported computing resources.
 
 ## [Credentials](/scicomputing/access_credentials/)
 This section details [how to get credentials and access](/scicomputing/access_credentials/) to campus and cloud-based computing systems such as HutchNetID, Github, AWS, and Rhino/Gizmo as well as others.

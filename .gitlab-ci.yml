@@ -4,10 +4,36 @@ before_script:
   - tar zxf rancher-linux-amd64-v0.6.2.tar.gz
   
 build_test:
-  script:
-    - docker build -t dockerimages.fhcrc.org/wiki:latest .
+  script: |
+    echo Information > info.txt
+    echo "Branch: ${CI_COMMIT_BRANCH}" >> info.txt
+    echo "Commit: ${CI_COMMIT_SHA}" >> info.txt
+    echo "Commit comment:" >> info.txt
+    echo " ${CI_COMMIT_MESSAGE}" >> info.txt
+    echo "Build time: $(date)" >> info.txt
+    docker build -t dockerimages.fhcrc.org/wiki:latest .
 
-  
+# build for every branch EXCEPT main and push to preview site
+# https://sciwiki-preview.fredhutch.org (only accessible inside
+# hutch network). See 
+# https://sciwiki-preview.fredhutch.org/info.txt for branch
+# and commit information.
+
+deploy_preview:
+  stage: deploy
+  except: 
+    refs:
+      - main
+  script:
+    - docker login --username $DOCKERIMAGES_USER --password $DOCKERIMAGES_PASS https://dockerimages.fhcrc.org
+    - docker tag dockerimages.fhcrc.org/wiki:latest dockerimages.fhcrc.org/wiki-preview:latest 
+    - docker push dockerimages.fhcrc.org/wiki-preview:latest
+    - sleep 15
+    - rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $PREVIEW_RANCHERAPI_KEY --secret-key $PREVIEW_RANCHERAPI_SECRET up -d --pull --force-upgrade --confirm-upgrade --stack wiki_preview --file docker-compose-preview.yml --rancher-file rancher-compose.yml
+
+# deploy `main` branch to
+# https://sciwiki.fredhutch.org
+
 deploy:
   stage: deploy
   only:

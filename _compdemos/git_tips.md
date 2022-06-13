@@ -149,13 +149,13 @@ More information on the main package can be found [here](https://atom.io/package
 - [Visual Studio Code](https://code.visualstudio.com) is an IDE also capable of handling multiple programming languages,
 and is the preferred interface for the Hutch's Scientific Computing group.
 A description of its Git interface is available [here](https://code.visualstudio.com/docs/editor/versioncontrol).
-More info on specific use in relation to Python is [here](https://sciwiki.fredhutch.org/scicomputing/software_python/#visual-studio-code).
+More info on specific use in relation to Python is [here](/scicomputing/software_python/#visual-studio-code).
 - [PyCharm](https://www.jetbrains.com/pycharm/) is an IDE primarily for Python.
 Information on its integration with git is [here](https://www.jetbrains.com/help/pycharm/using-git-integration.html#set-passwords-for-git-remotes);
-more info on specific use in relation to Python is [here](https://sciwiki.fredhutch.org/scicomputing/software_python/#pycharm)
+more info on specific use in relation to Python is [here](/scicomputing/software_python/#pycharm)
 - [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/index.html) is an interface for improving interactions with Jupyter notebooks.
 Information on JupyterLab's extension for Git is [here](https://github.com/jupyterlab/jupyterlab-git);
-more info on specific use in relation to Python is [here](https://sciwiki.fredhutch.org/scicomputing/software_python/#jupyter-notebooks).
+more info on specific use in relation to Python is [here](/scicomputing/software_python/#jupyter-notebooks).
 
 ## To Fork or Not to Fork?
 What a question!  Different GitHub repositories will have different procedures for how to contribute to them.  Ideally these procedures are outlined in the README or in the CONTIBUTING markdowns inside the repository itself, though sometimes they are less well documented.  When a GitHub repository is created, you have the option to allow or disallow forking (the default is currently to allow forking).  You also can limit who can make a branch on the repository and additional branch/user access limitations via options in the Settings tab, for `Managing Access` or `Branches`.  There are many options to control how users can interact with a repo that are far too extensive to discuss here.  

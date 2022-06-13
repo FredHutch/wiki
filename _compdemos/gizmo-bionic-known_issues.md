@@ -93,7 +93,7 @@ The host key for the name "rhino" has changed as the name now points to a new ho
 
 #### Work Arounds / Fixes
 
-Remediation steps are platform and SSH client specific, but generally can be resolved by reviewing the documentation for your client on how to update "known hosts".  General steps are provided [here](https://sciwiki.fredhutch.org/compdemos/ssh_host_key_management/)
+Remediation steps are platform and SSH client specific, but generally can be resolved by reviewing the documentation for your client on how to update "known hosts".  General steps are provided [here](/compdemos/ssh_host_key_management/)
 
 ### Hostname "gizmo" Retired
 
