@@ -157,7 +157,9 @@ will be automatically deployed to
 [https://sciwiki.fredhutch.org](https://sciwiki.fredhutch.org).
 
 Everything in any *other* branch pushed to GitHub will be deployed to 
-[https://sciwiki-preview.fredhutch.org](https://sciwiki-preview.fredhutch.org). You can check what branch and what commit is reflected by going to 
+[https://sciwiki-preview.fredhutch.org](https://sciwiki-preview.fredhutch.org),
+which is only accessible inside the Fred Hutch network.
+You can check what branch and what commit is reflected by going to 
 [https://sciwiki-preview.fredhutch.org/info.txt](https://sciwiki-preview.fredhutch.org/info.txt).
 
 
