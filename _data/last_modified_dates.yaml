@@ -224,12 +224,16 @@
   url: _compdemos/gizmo-bionic-upgrade.md
 - dlm: September 17, 2020
   url: _compdemos/toolbox.md
+- dlm: June 8, 2022
+  url: _compdemos/gizmo_partition_index.md
 - dlm: November 23, 2020
   url: _compdemos/maxquant.md
 - dlm: August 6, 2020
   url: _compdemos/Mountain-CyberDuck.md
 - dlm: June 13, 2022
   url: _compdemos/ucsc-track-s3.md
+- dlm: June 8, 2022
+  url: _compdemos/gizmo_short_partition.md
 - dlm: May 11, 2020
   url: _compdemos/gizmo-nx-users.md
 - dlm: May 12, 2022
@@ -416,5 +420,5 @@
   url: _scicomputing/compute_job_scheduling.md
 - dlm: June 13, 2022
   url: _scicomputing/software_examples.md
-- dlm: May 17, 2022
+- dlm: May 27, 2022
   url: _scicomputing/compute_jobs.md
