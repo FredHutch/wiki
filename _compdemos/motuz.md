@@ -54,7 +54,7 @@ To create a connection to a Swift location, you will need your Fred Hutch ID, yo
 
   **Basic**
   - Connection Name:  Anything you'd like to show up in the lists
-  - Bucket Name: Unnecessary
+  - Bucket Name: *leave this blank*
   - Auth URL: "https://tin.fhcrc.org/auth/v2.0"
   - Tenant: Of the format: "AUTH_Swift_lastname_f" with lastname_f being the last name and first initial of the PI
   
