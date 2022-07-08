@@ -44,7 +44,10 @@ deploy:
     set -x
     rm -f orphans.txt*
     for F in $(find assets/* -type f) ; do grep -r -q $F * || echo "$F"; done > orphans.txt.tmp
-    cat orphans.txt.tmp | fgrep -v "assets/css/" | fgrep -v "assets/js/" > orphans.txt
+    #cat orphans.txt.tmp | fgrep -v "assets/css/" | fgrep -v "assets/js/" > orphans.txt
+    fgrep -v "assets/css/" orphans.txt.tmp > orphans.txt.tmp
+    fgrep -v "assets/js/" orphans.txt.tmp > orphans.txt
+    ls -l orphans.txt
     echo "---"
     if [ -s orphans.txt ] ; then
       echo "Orphan files found:"
