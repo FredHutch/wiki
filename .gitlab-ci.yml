@@ -39,6 +39,7 @@ deploy:
   only:
     refs:
        - main
+       - check-for-orphan-assets # remove this at some point
   script: |
     rm -f orphans.txt*
     for F in $(find assets/* -type f) ; do grep -r -q $F * || echo "$F"; done > orphans.txt.tmp
