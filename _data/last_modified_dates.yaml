@@ -220,6 +220,8 @@
   url: _compdemos/aspera-change-destination.md
 - dlm: March 19, 2020
   url: _compdemos/synology.md
+- dlm: July 8, 2022
+  url: _compdemos/AWSCLI_WSL.md
 - dlm: February 24, 2021
   url: _compdemos/gizmo-bionic-upgrade.md
 - dlm: September 17, 2020
