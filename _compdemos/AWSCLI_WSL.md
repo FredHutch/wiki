@@ -1,8 +1,11 @@
+---
+title: AWS CLI for Windows Subsystem for Linux
+primary_reviewers: staciefase
+---
 
+Windows Subsystem for Linux is a useful tool for interacting with a Windows machine using Linux commands. WSL allows users and developers to run Linux within a Windows environment partition. For many users, Linux commands are more comfortable when running scripts or just interacting programmatically with cloud resources. This guide will show you how to install the WSL on Windows 10, configure the AWS CLI to run in this environment, how to start/stop WSL, how to keep WSL up to date, and how to use WSL to interact with AWS S3 buckets.
 
-## Installing and configuring AWS Command Line Interface (CLI) for Windows using Windows Subsystem for Linux (WSL)
-
-### Helpful Links
+## Helpful Links
 
 •	[What is WSL?](https://docs.microsoft.com/en-us/windows/wsl/about)
 •	[What is the AWS CLI?](https://aws.amazon.com/cli/#:~:text=The%20AWS%20Command%20Line%20Interface,and%20automate%20them%20through%20scripts.)
@@ -14,11 +17,9 @@
 •	[Navigating to local drive in WSL](https://askubuntu.com/questions/943006/how-to-navigate-to-c-drive-in-bash-on-wsl-ubuntu)
 •	[AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html)
 
-### Overview
 
-Windows Subsystem for Linux is a useful tool for interacting with a Windows machine using Linux commands. WSL allows users and developers to run Linux within a Windows environment partition. For many users, Linux commands are more comfortable when running scripts or just interacting programmatically with cloud resources. This guide will show you how to install the WSL on Windows 10, configure the AWS CLI to run in this environment, how to start/stop WSL, how to keep WSL up to date, and how to use WSL to interact with AWS S3 buckets.
 
-### Installing WSL on Windows 10
+## Installing WSL on Windows 10
 
 Open the command line on your Windows machine (Start Menu and type “Command Prompt”). You should get a black box. This is the terminal for your machine. From here, you can tell your computer to perform a variety of tasks directly, if you know the correct commands to give it.
 
