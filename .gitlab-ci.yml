@@ -39,7 +39,6 @@ deploy:
   only:
     refs:
        - main
-       - check-for-orphan-assets # remove this at some point
   script: |
     rm -f orphans.txt*
     for F in $(find assets/* -type f) ; do grep -r -q $F * || echo "$F"; done > orphans.txt.tmp
@@ -47,7 +46,7 @@ deploy:
     if [ -s orphans.txt ] ; then
       echo "Orphan files found:"
       cat orphans.txt
-      # file an issue and assign it to whoever merged or pushed to main
+      # TODO file an issue and assign it to whoever merged or pushed to main
       # and possibly whoever wrote the PR that was merged
       exit 1
     fi
