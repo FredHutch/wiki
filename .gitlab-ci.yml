@@ -39,19 +39,19 @@ deploy:
   only:
     refs:
        - main
-  script:
-    - rm -f orphans.txt*
-    - for F in $(find assets/* -type f) ; do grep -r -q $F * || echo "$F"; done > orphans.txt.tmp
-    - cat orphans.txt.tmp | fgrep -v "assets/css/" | fgrep -v "assets/js/" > orphans.txt
-    - if [ -s orphans.txt ] ; then
-        echo "Orphan files found:"
-        cat orphans.txt
-        # file an issue and assign it to whoever merged or pushed to main
-        # and possibly whoever wrote the PR that was merged
-        exit 1
-      fi
-    - docker login --username $DOCKERIMAGES_USER --password $DOCKERIMAGES_PASS https://dockerimages.fhcrc.org
-    - docker push dockerimages.fhcrc.org/wiki:latest
-    - sleep 15
-    - rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET up -d --pull --force-upgrade --confirm-upgrade --stack wiki --file docker-compose.yml --rancher-file rancher-compose.yml
+  script: |
+    rm -f orphans.txt*
+    for F in $(find assets/* -type f) ; do grep -r -q $F * || echo "$F"; done > orphans.txt.tmp
+    cat orphans.txt.tmp | fgrep -v "assets/css/" | fgrep -v "assets/js/" > orphans.txt
+    if [ -s orphans.txt ] ; then
+      echo "Orphan files found:"
+      cat orphans.txt
+      # file an issue and assign it to whoever merged or pushed to main
+      # and possibly whoever wrote the PR that was merged
+      exit 1
+    fi
+    docker login --username $DOCKERIMAGES_USER --password $DOCKERIMAGES_PASS https://dockerimages.fhcrc.org
+    docker push dockerimages.fhcrc.org/wiki:latest
+    sleep 15
+    rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET up -d --pull --force-upgrade --confirm-upgrade --stack wiki --file docker-compose.yml --rancher-file rancher-compose.yml
   
