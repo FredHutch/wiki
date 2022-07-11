@@ -5,7 +5,6 @@ before_script:
   
 build_test:
   script: |
-    env | sort
     echo Information > info.txt
     echo "Branch: ${CI_COMMIT_BRANCH}" >> info.txt
     echo "Commit: ${CI_COMMIT_SHA}" >> info.txt
@@ -51,8 +50,23 @@ deploy:
     if [ -s orphans.txt ] ; then
       echo "Orphan files found:"
       cat orphans.txt
-      # TODO file an issue and assign it to whoever merged or pushed to main
-      # and possibly whoever wrote the PR that was merged
+      # This files an issue. 
+      # It seems to be a little tricky to figure out the github ID of
+      # whoever made the commit introducing the orphan asset(s). 
+      # So leaving that bit out for now.
+      rm -f issue.txt
+      echo "There are one or more orphan assets in the wiki. " > issue.txt
+      echo "These are images or other files that are not linked to." >> issue.txt
+      echo "Please remove them and push again." >> issue.txt
+      echo "Then you can close this issue." >> issue.txt
+      echo >> issue.txt
+      echo "Orphan files:" >> issue.txt
+      echo >> issue.txt
+      cat orphans.txt >> issue.txt
+      gh issue create --title "Orphan asset files in wiki" --body-file issue.txt
+      # Should we really break the build here? We have created an issue
+      # so not sure if breaking the build would be redundant. 
+      # Leaving it as is for now.
       exit 1
     fi
     docker login --username $DOCKERIMAGES_USER --password $DOCKERIMAGES_PASS https://dockerimages.fhcrc.org
