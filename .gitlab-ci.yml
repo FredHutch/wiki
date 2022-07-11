@@ -5,6 +5,7 @@ before_script:
   
 build_test:
   script: |
+    env | sort
     echo Information > info.txt
     echo "Branch: ${CI_COMMIT_BRANCH}" >> info.txt
     echo "Commit: ${CI_COMMIT_SHA}" >> info.txt
