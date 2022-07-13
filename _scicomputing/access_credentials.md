@@ -78,4 +78,4 @@ Once you have confirmed your credentials, remember to remove the test file:
 aws s3 rm s3://fh-pi-lastname-f-eco/hello.txt
 ```
 
-See more about accessing AWS S3 via the command line [here](/compdemos/aws-3/#aws-command-line-interface-cli).
+See more about accessing AWS S3 via the command line [here](/compdemos/aws-s3/).
