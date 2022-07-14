@@ -30,7 +30,7 @@ To fulfill these two purposes we have the Wiki Writer/Editor program which is in
 ### Get in Touch
 
 - More information can be found in our [Github README](https://github.com/FredHutch/wiki/blob/main/README.md).
-- Join the **Fred Hutch Bioinformatics and Computational Research Community** Slack workspace via [this link](https://join.slack.com/t/fhbig/shared_invite/enQtMzUyMDIxNzk3MDU3LWNjMDg3ZDVhNGZiNTBlODRmNWM5ZjczMzI1MGNmZTg4NGQ5ODgzMGNmMjcyNzMxMDc0YWFlN2VkNjI4NGZjNjg), and use your `fredhutch.org`, `uw.edu`, `scharp.org`, or `sagebase.org` email to join.  In this Slack workspace we have a `#wiki-contributors` channel where you can chime in with edits, get updates about next meetings, or converse with other contributors about next steps.
+- Join the **Fred Hutch Bioinformatics and Computational Research Community** Slack workspace via [this link](https://fhdata.slack.com), and use your `fredhutch.org`, `uw.edu`, `scharp.org`, or `sagebase.org` email to join.  In this Slack workspace we have a `#wiki-contributors` channel where you can chime in with edits, get updates about next meetings, or converse with other contributors about next steps.
 
 
 

@@ -17,13 +17,14 @@ whitelist:
 
 
 remote_theme: mmistakes/minimal-mistakes@4.24.0
+### https://github.com/mmistakes/minimal-mistakes
 ### REMEMBER TO OCCASIONALLY TEST THE NEWER VERSIONS FOR NEW GOODIES!!!!!
 minimal_mistakes_skin: contrast
 
 # Site Settings
 locale: en-US
 title: "Fred Hutch Biomedical Data Science Wiki"
-description: "Collective documentation for Genomics, Bioinformatics and Scientific Computing at the Fred Hutch"
+description: "Collective documentation for Data Science, Bioinformatics and Scientific Computing at the Fred Hutch"
 url                      : https://sciwiki.fredhutch.org
 baseurl                  : ""
 repository               : "FredHutch/wiki"
@@ -31,6 +32,9 @@ logo                     : "/images/Biomedical-Data-Science-Wiki-logo.png"
 
 
 collections:
+  datascience:
+    output: true
+    permalink: /:collection/:path/
   generation:
     output: true
     permalink: /:collection/:path/
@@ -90,7 +94,7 @@ footer:
       url: "https://github.com/FredHutch/wiki"
     - label: "Join the Conversation on Slack"
       icon: "fab fa-fw fa-slack"
-      url: "https://fhbig.slack.com/"
+      url: "https://fhdata.slack.com/"
     - label: "See our Contributors"
       icon: "fas fa-user-edit"
       url: /contributors/
@@ -122,6 +126,19 @@ timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_databas
 # Defaults
 ###NOTE:  for sciwiki, share: true will turn on the "Edit this page" function at the bottom of the pages
 defaults:
+  # _datascience
+  - scope:
+      path: ""
+      type: datascience
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      toc_sticky: true
+      share: true
+      sidebar:
+        nav: "datascience"
+
   # _generation
   - scope:
       path: ""
