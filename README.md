@@ -225,7 +225,7 @@ in the check.
 
 ## Building the site on rhino
 
-This will
+First, clone the repo on a rhino and check out the branch or commit you want to look at,.
 
 ### Load a current Ruby version:
 
@@ -248,14 +248,14 @@ bundle exec jekyll build
 ### Serve
 
 ```
-bundle exec jekyll serve -H <node IP address> -P <port>
+bundle exec jekyll serve -H 0.0.0.0 -P <port>
 ```
 
-Use the external IP for the host you're using.  Select an unused port over 1024.
+Select an unused port over 1024.
 
 ### View
 
-Point your browser at the IP and port combination you've specified in the `serve` command above.  Once this has started, the site will be rebuit when updates are made to any of the source files in the site.
+Point your browser at the IP and port combination you've specified in the `serve` command above.  Once this has started, the site will be rebuilt when updates are made to any of the source files in the site.
 
 ## Glossary terms
 
