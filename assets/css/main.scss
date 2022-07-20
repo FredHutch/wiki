@@ -15,6 +15,7 @@
 $link-color: #207c7e !default;
 $primary-color: #89c348 !default;
 $border-color: #89c348 !default;
+$footer-background-color: #123054 !default;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 

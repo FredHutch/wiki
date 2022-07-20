@@ -3,11 +3,9 @@ title: Python
 primary_reviewers: k8hertweck, kmayerb, zyd14
 ---
 
-Whether you're new to Python or are an experienced Python coder interested in how members of the Coop community works with this language,
+Whether you're new to Python or are an experienced Python coder interested in how other Fred Hutch members work with this language,
 this page is for you!
-Here we share information on learning Python,
-accessing python either locally or via remote computing at Fred Hutch,
-and overviews of a few common software options for running and writing Python code.
+Here we share information on learning Python, accessing python either locally or via remote computing at Fred Hutch, and overviews of a few common software options for running and writing Python code.
 
 For more information on coding best practices, 
 including templates for data analysis and packages in Python,

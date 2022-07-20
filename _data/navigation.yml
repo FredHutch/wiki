@@ -50,6 +50,8 @@ datascience:
         url: /datascience/dc_index/
       - title: "Pathways"
         url: /pathways/
+      - title: "FH-DaSL Courses"
+        url: "https://hutchdatascience.org/training/"
 
 
 generation:
@@ -118,6 +120,8 @@ scicomputing:
         url: /pathways/
       - title: "Announcements"
         url: /scicompannounce/
+      - title: "Information for Grant Writers"
+        url: /scicomputing/compute_grants/
 
   - title: "Access and Credentials"
     children:
@@ -187,15 +191,6 @@ scicomputing:
       - title: "Computing with GPU"
         url: /scicomputing/compute_gpu/
 
-
-  - title: "Reference and Training"
-    children:
-      - title: "Overview"
-        url: /scicomputing/reference_overview/
-      - title: "Training and Finding Help"
-        url: /scicomputing/reference_training/
-      - title: "Information for Grant Writers"
-        url: /scicomputing/compute_grants/
 
 
 hdc:

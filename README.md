@@ -70,7 +70,7 @@ Changes to the Wiki are assessed via [pull requests to this GitHub repository](h
 When a pull request is made, it automatically requests a pull request review from any member of the [Wiki Reviewer Team](https://github.com/orgs/FredHutch/teams/wiki-reviewers). While reviews from other experts is welcomed, a review from a Wiki Reviewer Team member approving the changes is *required* prior to merging the pull request (this is enforced by [protection of the main branch](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews#required-reviews)). In addition to regular communication among the Wiki Reviewer Team, we work with the the Hutch's Information Security Office to ensure published content maintains agreed upon standards for information security.
 
 ### Getting Credit
-Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/main/_drafts/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.  
+Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/main/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.  
 
 ## Contributing via an external text editor
 You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.  Also there is a tutorial on how to use [VSCode](/compdemos/vscode_markdown_howto/) which is what you will want to use if you plan to contribute many screenshots or other images.  
@@ -142,15 +142,11 @@ Computing Resource Library (note all markdowns in this folder will be rendered):
 
 Contributors List (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/main/_contributors
 
+For new contributor entries: https://github.com/FredHutch/wiki/blob/main/contributorTemplate.md
+
 Pathways page (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/main/_pathways
 
-###  Draft Folders with Templates for New Content
 
->NOTE:  Any content that will need to be an entirely new page should be stored in the `draft` folder until it is ready for publication, and then an admin will move it to where it needs to go when it is considered finished.  
-
-For new content: https://github.com/FredHutch/wiki/blob/main/_drafts/contentTemplate.md
-
-For new contributor entries: https://github.com/FredHutch/wiki/blob/main/_drafts/contributorTemplate.md
 
 ## Automated deployment
 
@@ -322,4 +318,3 @@ https://github.com/FredHutch/wiki/blob/main/_data/glossary.yml
 ### Other pages:
 Our index page: https://github.com/FredHutch/wiki/blob/main/index.md
 Our outreach page: https://github.com/FredHutch/wiki/blob/main/outreach.md
-Our page containing rendered draft files: https://github.com/FredHutch/wiki/blob/main/drafts.md

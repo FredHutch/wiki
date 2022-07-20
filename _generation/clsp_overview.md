@@ -14,12 +14,3 @@ This page contains guidance for tools of particular utility to documenting, orga
 
 ## [Data Visualization](/generation/data-viz/)
 There are a wide range of tools and resources data intensive researchers have leveraged at the Hutch to perform data visualization.  Some basics are described here.  
-
-## [Fred Hutch Shared Resources](/generation/datagen_overview/)
-The Fred Hutch hosts a wide range of Shared Resources that are available to both internal and external researchers.  Some resources or researchers have provided additional information and context for some of the resources (such as Genomics and Proteomics, as well as Flow Cytometry and Specimen Processing), but links to all of the resources available are here.  
-
-## [Genomics](/generation/datagen_platformsData/)
-We have consolidated a variety of links to the Fred Hutch Genomics Shared Resource as well as provided quick reference notes on what technologies are currently supported, how to interact with them, where to go for help and what submission requirements might exist.  
-
-## [Proteomics](/generation/datagen_proteomics/)
-In addition to links to the Proteomics Shared Resource, researchers have curated additional information of use for those embarking on a project involving proteomics.  

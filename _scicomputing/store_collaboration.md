@@ -11,7 +11,7 @@ In collaborative settings, often data transfer and sharing can pose significant 
 
 ### Aspera
 
-Aspera is a data transfer tool that enables fast transfer of large data between it and a host using the Aspera client (either command line or via a browser).  The primary method of operation is to upload the data to the Aspera server, then use the web interface to create an email with a link you would then send to those outside the Hutch network.
+Aspera is a data transfer tool that enables fast transfer of large data between it and a host using the Aspera client.  The primary method of operation is to upload the data to the Aspera server, then use the web interface to create an email with a link you would then send to those outside the Hutch network.
 
 > Note: space is limited. Because of this, data stored here is deleted after a short period of time and not backed up making the Aspera inappropriate for primary storage.  Moving data to their final, secure, backed up locations as soon as possible is important when using Aspera.
 

@@ -54,7 +54,7 @@ Beyond on premise resources, cloud computing access is available for Fred Hutch 
 If you are at all interested or curious about cloud solutions and would like to
 talk over options, Scientific Computing hosts a cloud-specific office hours
 every week.  Dates and details for SciComp office hours can be found in
-[CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html) or on the Coop Communities [calendar.](https://calendar.google.com/calendar/embed?src=gd30dlifri4fu7h104cuqdj0dg%40group.calendar.google.com&ctz=America%2FLos_Angeles) 
+[CenterNet](https://centernet.fredhutch.org/cn/e/center-it/scicomp_nextgen_officehours10092018.html) or by checking in the #question-and-answer channel in the [FH-Data Slack](https://fhdata.slack.com)
 
 ## [Computing with GPU](/scicomputing/compute_gpu/)
 
