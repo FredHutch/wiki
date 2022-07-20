@@ -114,7 +114,7 @@ you'll find more in-depth comparisons of the features associated with a few of t
 ### Jupyter Notebooks on `rhino`
 
 There have been may iterations of Python Notebooks, starting wit IPython. SciComp currently supports
-(Jupyter)[https://jupyter.org]. The Jupyter user interfaces offer a foundation of interactive
+[Jupyter](https://jupyter.org). The Jupyter user interfaces offer a foundation of interactive
 computing environments where scientific computing, data science, and analytics can be performed
 using a wide range of programming languages.  
 Jupyter can be run as a notebook or as Jupyter Lab. Jupyter Lab suports notebooks and 
