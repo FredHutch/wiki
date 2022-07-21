@@ -154,10 +154,11 @@ For new contributor entries: https://github.com/FredHutch/wiki/blob/main/_drafts
 
 ## Automated deployment
 
-Everything merged into the `main` branch will be automatically deployed to [https://sciwiki.fredhutch.org/]https://sciwiki.fredhutch.org)
+Everything merged into the `main` branch will be automatically deployed to [https://sciwiki.fredhutch.org/](https://sciwiki.fredhutch.org)
 
 Everything in any *other* branch pushed to GitHub will be deployed to [https://sciwiki-preview.fredhutch.org/](https://sciwiki-preview.fredhutch.org) ,
 which is only accessible inside the Fred Hutch network.
+This will always reflect the last (non-`main`) commit/push to the repository.
 You can check what branch and what commit is reflected by going to 
 [https://sciwiki-preview.fredhutch.org/info.txt](https://sciwiki-preview.fredhutch.org/info.txt).
 
