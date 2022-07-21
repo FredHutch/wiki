@@ -163,10 +163,8 @@ scicomputing:
         url: /scicomputing/software_linux101/
       - title: "Where to run my code?"
         url: /scicomputing/software_running/
-      - title: "Managing and Sharing Code"
+      - title: "GitHub at Fred Hutch"
         url: /scicomputing/software_managecode/
-      - title: "Software Development Standards"
-        url: /scicomputing/software_standards/
       - title: "Code Examples and Templates"
         url: /scicomputing/software_examples/
 
