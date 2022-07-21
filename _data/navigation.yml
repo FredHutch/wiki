@@ -102,8 +102,6 @@ generation:
         url: /generation/clsp_labCov/
       - title: "Data Visualization"
         url: /generation/data-viz/
-      - title: "Lab Management"
-        url: /generation/labman_overview/
       - title: "Support Software"
         url: /generation/labman_software/
 

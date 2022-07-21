@@ -14,3 +14,6 @@ This page contains guidance for tools of particular utility to documenting, orga
 
 ## [Data Visualization](/generation/data-viz/)
 There are a wide range of tools and resources data intensive researchers have leveraged at the Hutch to perform data visualization.  Some basics are described here.  
+
+## [Support Software](/generation/labman_software/)
+There are a few useful tools for wetlab support software that can be very useful in creating shared resources for your lab to communicate smoothly.  

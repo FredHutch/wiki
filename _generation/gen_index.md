@@ -14,6 +14,3 @@ The policies and processes that relate to the human subject components of any la
 ## [Clinical and Experimental Data](/generation/clsp_overview/)
 For a each study, the particular covariates associated with large scale data sets typically come from clinical or laboratory data. When these data are originating from human samples, certain protections need to be in place to ensure patient privacy.  There are resources at the Fred Hutch which can help researchers effectively manage these data so that they can be associated with downstream molecular data sets more consistently and securely.  This section also contains guidance about generating or handling large scale data from a variety of sources, highlights the particularites of each, and include information for researchers interacting with various Fred Hutch Shared Resources.  
 
-
-## [Other Laboratory Resources](/generation/labman_overview/)
-Some of the challenges associated with executing large scale data projects can be mitigated by implementing good laboratory management and data systems before beginning the project.  These sections relate to the particular systems available to Fred Hutch researchers that help them manage data generated in laboratories and also specific types of guidance about good laboratory practices with large scale data generation in mind.
