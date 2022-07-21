@@ -256,7 +256,7 @@ Select an unused port over 1024.
 
 ### View
 
-Point your browser at the IP and port combination you've specified in the `serve` command above.  Once this has started, the site will be rebuilt when updates are made to any of the source files in the site.
+Point your browser at your current hostname on the port you specified in the `serve` command above (example: `rhino01:5678`).  Once this has started, the site will be rebuilt when updates are made to any of the source files in the site.
 
 ## Glossary terms
 
