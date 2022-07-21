@@ -157,6 +157,8 @@ and to list buckets in s3 you can run
 
 `rclone lsd s3:`
 
+Note that if you are uploading data to S3 using `rclone`, you must add the `--s3-no-check-bucket` flag to the end of your command line. Otherwise rclone will try and create the bucket first, and you likely do not have permission to create buckets, so this will cause an Access Denied error. You can also turn off this behavior with an environment variable - see the [documentation](https://rclone.org/s3/#s3-no-check-bucket) for more information.
+
 ### Amazon Web Services S3 Compatibility Layer
 
 We can use AWS tools such as `awscli`, the Python module `boto3` or the R package `aws.s3` to access Swift through the AWS S3 compatibility layer.  We have generated detailed docs for using [`awscli`](/compdemos/aws-s3/#aws-command-line-interface-cli), [`boto3`](/compdemos/aws-s3/#aws-via-python) and [`aws.s3`](/compdemos/aws-s3/#aws-via-r) in our Resource Library section.  Prior to using these tools, hwoever, we need to first setup the profile `s3.fhcrc.org` in ~/.aws/config and ~/.aws/credentials. To help with this just run the script `s3cfg` on `rhino`.  
