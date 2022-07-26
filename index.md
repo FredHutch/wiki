@@ -5,7 +5,7 @@ permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /images/campus.jpeg
+  overlay_image: /images/multiwell-web.png
 excerpt: "The Biomedical Data Science Wiki aims to create a community curated knowledgebase for biomedical data science and research computing including guidance on policies, resources and tools supporting data intensive research by researchers at the Fred Hutch and beyond."
 feature_row:
   - title: "Data Science"
@@ -24,7 +24,7 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--info"
 fhDaSL:
-  - image_path: /images/FH-virtual-backgrounds-00019.png
+  - image_path: /images/Cherrytrees-web.png
     alt: "placeholder image dasl"
     title: "Fred Hutch DaSL"
     excerpt: 'The Fred Hutch Data Science Laboratory is an emerging, collaborative effort lead by the Fred Hutch Chief Data Officer, Jeff Leek.  '
@@ -32,7 +32,7 @@ fhDaSL:
     btn_label: "Learn More"
     btn_class: "btn--primary"
 TDSirc:  
-  - image_path: /images/frehutch-withjerry.jpeg
+  - image_path: /images/190423-steam-plant-westside-007cc-crop-web.png
     alt: "placeholder image tds"
     title: "Fred Hutch TDS IRC"
     excerpt: 'The Translational Data Science Integrated Research Center, established in 2018, facilitates collaboration between Fred Hutch researchers, data scientists and technology partners such as Amazon and Microsoft, with the goal of ensuring that our investigators can benefit from the latest data science techniques in their quest for new discoveries.'
