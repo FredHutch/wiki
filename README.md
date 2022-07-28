@@ -150,10 +150,11 @@ Pathways page (note all markdowns in this folder will be rendered): https://gith
 
 ## Automated deployment
 
-Everything merged into the `main` branch will be automatically deployed to [https://sciwiki.fredhutch.org/]https://sciwiki.fredhutch.org)
+Everything merged into the `main` branch will be automatically deployed to [https://sciwiki.fredhutch.org/](https://sciwiki.fredhutch.org)
 
 Everything in any *other* branch pushed to GitHub will be deployed to [https://sciwiki-preview.fredhutch.org/](https://sciwiki-preview.fredhutch.org) ,
 which is only accessible inside the Fred Hutch network.
+This will always reflect the last (non-`main`) commit/push to the repository.
 You can check what branch and what commit is reflected by going to 
 [https://sciwiki-preview.fredhutch.org/info.txt](https://sciwiki-preview.fredhutch.org/info.txt).
 
@@ -221,12 +222,12 @@ in the check.
 
 ## Building the site on rhino
 
-This will
+First, clone the repo on a rhino and check out the branch or commit you want to look at,.
 
 ### Load a current Ruby version:
 
 ```
-ml Ruby/2.7.2-GCCcore-10.2.0
+ml Ruby/3.0.1-GCCcore-11.2.0
 ```
 
 ### Install gems
@@ -244,14 +245,14 @@ bundle exec jekyll build
 ### Serve
 
 ```
-bundle exec jekyll serve -H <node IP address> -P <port>
+bundle exec jekyll serve -H 0.0.0.0 -P <port>
 ```
 
-Use the external IP for the host you're using.  Select an unused port over 1024.
+Select an unused port over 1024.
 
 ### View
 
-Point your browser at the IP and port combination you've specified in the `serve` command above.  Once this has started, the site will be rebuit when updates are made to any of the source files in the site.
+Point your browser at your current hostname on the port you specified in the `serve` command above (example: `rhino01:5678`).  Once this has started, the site will be rebuilt when updates are made to any of the source files in the site.
 
 ## Glossary terms
 

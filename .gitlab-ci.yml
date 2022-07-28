@@ -11,7 +11,26 @@ build_test:
     echo "Commit comment:" >> info.txt
     echo " ${CI_COMMIT_MESSAGE}" >> info.txt
     echo "Build time: $(date)" >> info.txt
+    rm -rf easybuild-life-sciences-main main.zip ./_scicomputing/bio-modules-18.04.md.orig
+    # faster than cloning:
+    curl -LO https://github.com/FredHutch/easybuild-life-sciences/archive/refs/heads/main.zip
+    unzip -qq main.zip
+    cp easybuild-life-sciences-main/docs/_r/* ./_rModules/
+    cp easybuild-life-sciences-main/docs/_python/* ./_pythonModules/
+    cp easybuild-life-sciences-main/docs/bio-modules-18.04.md ./_scicomputing/bio-modules-18.04.md.orig
+    FIRST_BLANK_LINE=$(grep -n -m 1 '^$' ./_scicomputing/bio-modules-18.04.md.orig | cut -d: -f1)
+    echo "---" >> ./_scicomputing/bio-modules-18.04.md
+    echo "title: Scientific Software BioModules" >> ./_scicomputing/bio-modules-18.04.md
+    echo "primary_reviewers: fizwit" >> ./_scicomputing/bio-modules-18.04.md
+    echo "toc: false" >> ./_scicomputing/bio-modules-18.04.md
+    echo  "---" >> ./_scicomputing/bio-modules-18.04.md
+    echo >> ./_scicomputing/bio-modules-18.04.md
+    tail -n +$FIRST_BLANK_LINE ./_scicomputing/bio-modules-18.04.md.orig >> ./_scicomputing/bio-modules-18.04.md
+    rm -rf easybuild-life-sciences-main main.zip ./_scicomputing/bio-modules-18.04.md.orig
+
+
     docker build -t dockerimages.fhcrc.org/wiki:latest .
+
 
 # build for every branch EXCEPT main and push to preview site
 # https://sciwiki-preview.fredhutch.org (only accessible inside
