@@ -12,6 +12,7 @@
 # to see the built site.
 
 bundle update
+gem install bundler:2.3.5
 gem install -g Gemfile
 bundle install
 bundle exec jekyll serve -H 0.0.0.0 -P 7979

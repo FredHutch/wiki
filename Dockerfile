@@ -1,6 +1,6 @@
 # build me as fredhutch/wiki
 
-FROM ruby:2.7.1
+FROM ruby:3.0.1
 
 # FROM ubuntu:18.04
 

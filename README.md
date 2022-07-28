@@ -231,7 +231,7 @@ First, clone the repo on a rhino and check out the branch or commit you want to 
 ### Load a current Ruby version:
 
 ```
-ml Ruby/2.7.2-GCCcore-10.2.0
+ml Ruby/3.0.1-GCCcore-11.2.0
 ```
 
 ### Install gems
