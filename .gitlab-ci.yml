@@ -22,6 +22,7 @@ build_test:
     echo "---" >> ./_scicomputing/bio-modules-18.04.md
     echo "title: Scientific Software BioModules" >> ./_scicomputing/bio-modules-18.04.md
     echo "primary_reviewers: fizwit" >> ./_scicomputing/bio-modules-18.04.md
+    echo "toc: false" >> ./_scicomputing/bio-modules-18.04.md
     echo  "---" >> ./_scicomputing/bio-modules-18.04.md
     echo >> ./_scicomputing/bio-modules-18.04.md
     tail -n +$FIRST_BLANK_LINE ./_scicomputing/bio-modules-18.04.md.orig >> ./_scicomputing/bio-modules-18.04.md
