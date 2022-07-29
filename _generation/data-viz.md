@@ -65,10 +65,10 @@ Historically the `Matplotlib` had been the go-to library for scientific data vis
 
 ### Data visualization resources at Fred Hutch
 
-Fred Hutch offers resources for researchers interested in learning more about data visualization. Fredhutch.io offers introduction to R and Python courses that touch on data visualization. The Coop Communities Slack, and more specifically the `#data-viz` channel, is always available as a space for researchers to ask questions and share resources about data visualization. 
+ The FH-Data Slack, and more specifically the `#data-viz` channel, is always available as a space for researchers to ask questions and share resources about data visualization. 
 
-- Join the [Coop Communities Slack](https://fhbig.slack.com/) and follow the #data-viz channel. This channel is a space to share visualization ideas, ask questions, and troubleshoot code!
-- [FredHutch.io](http://www.fredhutch.io/) offers introduction to [R](https://www.fredhutch.io/resources/#introduction-to-r) and [Python](https://www.fredhutch.io/resources/#introduction-to-python) courses that touch on data visualization along with other fundamentals for beginners.
+- Join the [FH-Data Slack](https://fhdata.slack.com/) and follow the #data-viz channel. This channel is a space to share visualization ideas, ask questions, and troubleshoot code!
+- [FredHutch.io](http://www.fredhutch.io/) has course material for introcution to [R](https://www.fredhutch.io/resources/#introduction-to-r) and [Python](https://www.fredhutch.io/resources/#introduction-to-python) courses that touch on data visualization along with other fundamentals for beginners.
 - [The Data Visualization Center](https://viz.fredhutch.org/) is co-sponsored by Fred Hutch and Brotman Baty. They develop infrastructure and technology for visualization and analysis of data including scRNA-Seq, ATAC-Seq, and CyTOF. They focus on grant-funded collaborations involving data integration, analytical pipelines, and publishing interactive visualization websites for large-scale data.
 
 ### Books that cover data visualization

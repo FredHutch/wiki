@@ -21,7 +21,3 @@ Researchers at the Hutch use reproducible computational methods to perform resea
 
 ## [Large Scale Computing](/scicomputing/compute_overview/)
 The Hutch supports both local compute clusters as well as cloud computing for researchers. This section describes available technology and how to use these resources.
-
-
-## [Reference and Training](/scicomputing/reference_overview/)
-This section includes links to training opportunities, office hours, and community groups for computational support.

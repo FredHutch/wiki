@@ -6,6 +6,19 @@ Our [Resource Library](/compdemos/) includes tutorials of how to perform common 
 
 These templates and examples are generally published as GitHub repositories. If you are unfamiliar with GitHub, please see our section on [Managing and Sharing Code]. If you have other templates or examples you would like to see posted here, please file an [issue in our GitHub repository](https://github.com/FredHutch/wiki/issues) or read our [contributing guidelines](https://github.com/FredHutch/wiki#contributing-to-sciwiki) to learn how you can add the content yourself.
 
+## Coding Practices
+
+In addition to building your project within the file structure of the templates below, you should apply these coding practices to all your software development work:
+1. Raw and processed data should be stored separately.
+1. Source code and results should be organized and clearly labeled.
+1. All projects should contain a license and a README file, with a project overview and details about each component in the README.
+1. Code should be fully documented. Additional documentation, instructions and examples can be included in a separate folder.
+1. Reuse existing code (or packages) when available.
+1. Code should be automated to reduce transcription errors.
+1. Use inline comments and meaningful variable names to help make your code readable to reviewers, researchers, and your future self.
+1. For Python packages and modules, include Help documentation.
+
+
 ## Templates for data analysis and coding
 
 The following repositories were created by researchers at Fred Hutch to assist in software development and data analysis following best practices for reproducibility.
