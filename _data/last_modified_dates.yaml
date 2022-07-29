@@ -1,4 +1,4 @@
-- dlm: March 22, 2022
+- dlm: July 14, 2022
   url: contributorslist.md
 - dlm: March 4, 2022
   url: pythonModules.md
@@ -6,7 +6,7 @@
   url: README.md
 - dlm: November 7, 2019
   url: searchresults.md
-- dlm: March 22, 2022
+- dlm: July 26, 2022
   url: index.md
 - dlm: August 22, 2019
   url: LICENSE.md
@@ -14,12 +14,12 @@
   url: search.md
 - dlm: March 22, 2022
   url: pathways.md
-- dlm: June 6, 2019
-  url: drafts.md
-- dlm: June 13, 2022
+- dlm: July 14, 2022
   url: outreach.md
 - dlm: March 13, 2021
   url: computingdemos.md
+- dlm: July 20, 2022
+  url: contributorTemplate.md
 - dlm: November 23, 2021
   url: rModules.md
 - dlm: May 1, 2019
@@ -28,56 +28,44 @@
   url: about.md
 - dlm: March 16, 2021
   url: generationdemos.md
+- dlm: July 20, 2022
+  url: _datascience/ds_index.md
 - dlm: March 22, 2022
   url: _pathways/path-batch-computing.md
 - dlm: May 15, 2019
   url: _generation/study_proposal.md
-- dlm: May 18, 2022
-  url: _generation/datagen_overview.md
 - dlm: August 2, 2019
   url: _generation/study_hypothesis.md
 - dlm: December 18, 2019
   url: _generation/human_deidentification.md
 - dlm: December 19, 2019
   url: _generation/clsp_labCov.md
-- dlm: October 25, 2018
-  url: _generation/datagen_rnaApproaches.md
 - dlm: April 17, 2020
   url: _generation/human_shareDeposits.md
 - dlm: March 19, 2019
   url: _generation/study_overview.md
-- dlm: May 18, 2022
+- dlm: July 21, 2022
   url: _generation/clsp_overview.md
-- dlm: October 30, 2018
-  url: _generation/labman_overview.md
 - dlm: April 2, 2019
   url: _generation/human_consentIRB.md
-- dlm: June 2, 2020
+- dlm: July 20, 2022
   url: _generation/clsp_clinicalCov.md
-- dlm: June 11, 2020
-  url: _generation/datagen_proteomics.md
 - dlm: December 4, 2018
   url: _generation/human_overview.md
 - dlm: May 15, 2019
   url: _generation/multiple_testing.md
-- dlm: June 13, 2022
+- dlm: July 20, 2022
   url: _generation/data-viz.md
-- dlm: October 25, 2018
-  url: _generation/datagen_assayPrep.md
 - dlm: May 18, 2022
   url: _generation/clsp_specimenBanking.md
-- dlm: May 18, 2022
+- dlm: July 21, 2022
   url: _generation/gen_index.md
 - dlm: December 5, 2019
   url: _generation/human_privacySecurity.md
-- dlm: April 25, 2022
+- dlm: July 21, 2022
   url: _generation/labman_software.md
-- dlm: May 17, 2022
-  url: _generation/datagen_platformsData.md
 - dlm: December 4, 2018
   url: _generation/security_legal.md
-- dlm: October 25, 2018
-  url: _generation/datagen_dnaApproaches.md
 - dlm: June 13, 2022
   url: _scicompannounce/2019-01-22-hpc-systems-upgrade-2019.md
 - dlm: July 27, 2021
@@ -98,6 +86,8 @@
   url: _scicompannounce/2019-02-21-upgrade-env-modules.md
 - dlm: June 6, 2018
   url: _scicompannounce/2018-05-26-pythonupdate.md
+- dlm: July 28, 2022
+  url: archive/galaxy-on-prem.md
 - dlm: September 17, 2020
   url: archive/cluster_koshuBeta.md
 - dlm: June 15, 2018
@@ -196,12 +186,8 @@
   url: _compdemos/motuz.md
 - dlm: September 24, 2020
   url: _compdemos/howtoRhino.md
-- dlm: April 22, 2021
-  url: _compdemos/galaxy-on-prem.md
 - dlm: March 11, 2022
   url: _compdemos/aspera-change-destination.md
-- dlm: March 19, 2020
-  url: _compdemos/synology.md
 - dlm: July 8, 2022
   url: _compdemos/AWSCLI_WSL.md
 - dlm: February 24, 2021
@@ -230,8 +216,6 @@
   url: _compdemos/r-2018b-matrix-errors.md
 - dlm: June 13, 2022
   url: _compdemos/gizmo-bionic-changelog.md
-- dlm: July 19, 2022
-  url: _compdemos/Economy-storage.md
 - dlm: April 17, 2020
   url: _compdemos/shiny.md
 - dlm: May 1, 2019
@@ -258,18 +242,30 @@
   url: _hdc/hdc_contact_us.md
 - dlm: October 27, 2021
   url: _hdc/hdc_training.md
+- dlm: July 14, 2022
+  url: _hdc/datagen_overview.md
 - dlm: April 14, 2022
   url: _hdc/hdc_refgenomes.md
+- dlm: July 14, 2022
+  url: _hdc/datagen_rnaApproaches.md
 - dlm: June 1, 2021
   url: _hdc/hdc_portals.md
+- dlm: July 14, 2022
+  url: _hdc/datagen_proteomics.md
 - dlm: April 14, 2022
   url: _hdc/hdc_workflows.md
 - dlm: August 13, 2021
   url: _hdc/hdc_index.md
+- dlm: July 14, 2022
+  url: _hdc/datagen_assayPrep.md
 - dlm: June 13, 2022
   url: _hdc/bioinformatics_library.md
+- dlm: July 14, 2022
+  url: _hdc/datagen_platformsData.md
 - dlm: August 13, 2021
   url: _hdc/hdc_building_containers.md
+- dlm: July 14, 2022
+  url: _hdc/datagen_dnaApproaches.md
 - dlm: June 25, 2021
   url: _hdc/workflows/workflow_catalog.md
 - dlm: August 13, 2021
@@ -316,12 +312,6 @@
   url: _gendemos/DataManagementGuidance.md
 - dlm: August 8, 2019
   url: _gendemos/Confounding.md
-- dlm: November 8, 2019
-  url: _drafts/contentTemplate.md
-- dlm: August 22, 2018
-  url: _drafts/contributorTemplate.md
-- dlm: July 18, 2019
-  url: _drafts/resource_overview.md
 - dlm: November 7, 2019
   url: .github/ISSUE_TEMPLATE/request-for-content.md
 - dlm: November 14, 2019
@@ -336,8 +326,6 @@
   url: _scicomputing/software_overview.md
 - dlm: October 19, 2021
   url: _scicomputing/compute_grants.md
-- dlm: November 12, 2019
-  url: _scicomputing/software_standards.md
 - dlm: October 20, 2021
   url: _scicomputing/access_aws.md
 - dlm: October 19, 2021
@@ -364,7 +352,7 @@
   url: _scicomputing/store_databases.md
 - dlm: June 13, 2022
   url: _scicomputing/access_overview.md
-- dlm: June 23, 2022
+- dlm: July 20, 2022
   url: _scicomputing/compute_overview.md
 - dlm: August 20, 2021
   url: _scicomputing/access_nx.md
@@ -376,27 +364,25 @@
   url: _scicomputing/store_scratch.md
 - dlm: June 11, 2020
   url: _scicomputing/compute_parallel.md
-- dlm: October 19, 2021
+- dlm: July 21, 2022
   url: _scicomputing/comp_index.md
 - dlm: July 11, 2022
   url: _scicomputing/access_credentials.md
-- dlm: September 17, 2020
-  url: _scicomputing/reference_overview.md
 - dlm: November 1, 2021
   url: _scicomputing/store_posix.md
-- dlm: June 8, 2022
+- dlm: July 20, 2022
   url: _scicomputing/software_python.md
-- dlm: September 17, 2020
+- dlm: July 20, 2022
   url: _scicomputing/compute_quickstart.md
 - dlm: July 27, 2022
   url: _scicomputing/compute_scientificSoftware.md
 - dlm: December 10, 2021
   url: _scicomputing/store_objectstore.md
-- dlm: November 1, 2021
+- dlm: July 20, 2022
   url: _scicomputing/store_collaboration.md
 - dlm: February 12, 2021
   url: _scicomputing/compute_job_scheduling.md
-- dlm: June 13, 2022
+- dlm: July 21, 2022
   url: _scicomputing/software_examples.md
 - dlm: May 27, 2022
   url: _scicomputing/compute_jobs.md
