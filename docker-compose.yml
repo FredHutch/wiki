@@ -1,7 +1,7 @@
 version: '2'
 services:
   wiki:
-    image: dockerimages.fhcrc.org/wiki-preview:latest
+    image: dockerimages.fhcrc.org/wiki:latest
     stdin_open: true
     ports:
       - "80"
