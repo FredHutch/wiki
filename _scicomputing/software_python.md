@@ -117,13 +117,26 @@ There have been many iterations of Python Notebooks, starting with IPython. SciC
 [Jupyter](https://jupyter.org). The Jupyter user interfaces offer a foundation of interactive
 computing environments where scientific computing, data science, and analytics can be performed
 using a wide range of programming languages.  
-Jupyter can be run as a notebook or as Jupyter Lab. Jupyter Lab suports notebooks and 
-can be run as JupyterHub. We recommend that the the Jupyter Lab interface be used. 
+
+Jupyter Notebook is a minimal but very capable web-based interactive computational environment. JupyterLab is the next-generation version that will eventually replace Notebook. It has a modular structure where you can open several notebooks or files (e.g. HTML, Text, Markdown etc) as tabs in the same window. It offers more of an IDE-like experience and can be extended through extensions. 
+
+#### Starting Jupyter Notebook
+After you have connected to `rhino`, load the JupyterLab module then run jupyter notebook:
+```
+    username@rhino1:~$ ml JupyterLab
+    username@rhino1:~$ jupyter notebook --ip=$(hostname) --port=$(fhfreeport) --no-browser
+```
+
+Then connect to the URL, copying the link given by the previous command, which looks as follows:
+```
+       Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://rhino1:11112/?token=0eee692be6c81c1061da
+```
 
 #### Starting Jupyter Lab
-After you have connected to `rhino`,
-load a Python module or load a Python based package like scanpy. The load the JupyterLab module.
-
+This is the same as with Jupyter Notebook, except run `jupyter lab` instead of `jupyter notebook`
+After you have connected to `rhino`, load the JupyterLab module then run jupyter lab:
 ```
     username@rhino1:~$ ml JupyterLab
     username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
