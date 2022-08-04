@@ -113,18 +113,19 @@ you'll find more in-depth comparisons of the features associated with a few of t
 
 ### Jupyter Notebooks on `rhino`
 
-There have been may iterations of Python Notebooks, starting wit IPython. SciComp currently supports
+There have been many iterations of Python Notebooks, starting with IPython. SciComp currently supports
 [Jupyter](https://jupyter.org). The Jupyter user interfaces offer a foundation of interactive
 computing environments where scientific computing, data science, and analytics can be performed
 using a wide range of programming languages.  
 Jupyter can be run as a notebook or as Jupyter Lab. Jupyter Lab suports notebooks and 
-can be run as JupyterHub. We recomend that the the Jupyter Lab interface be used. 
+can be run as JupyterHub. We recommend that the the Jupyter Lab interface be used. 
 
 #### Starting Jupyter Lab
 After you have connected to `rhino`,
-load a Python module or load a Python based package like scanpy. The load the JuypterLab module.
+load a Python module or load a Python based package like scanpy. The load the JupyterLab module.
 
 ```
+    username@rhino1:~$ ml JupyterLab
     username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
 
