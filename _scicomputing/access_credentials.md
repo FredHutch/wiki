@@ -43,22 +43,35 @@ You will receive your AWS credentials via an encrypted email when you are onboar
 
 Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
 
+### Configure AWS cli
+
+Load the awscli module, then run `aws configure` and enter your Access Key ID & Secret Access Key. You can read more about this [here]([/compdemos/aws-s3/](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config)).
+
+```
+module load awscli
+aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE 
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]: json
+```
+This will create the following files that store your credentials `~/.aws/config` & `~/.aws/credentials`
+
 ### Testing Your Credentials
 To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your local computer to your PI's bucket. 
 
-In these examples, please replace `lastname-f` with the last name and first initial of your PI.
+In these examples, please replace `lastname_f` with the last name and first initial of your PI.
 
 #### Create a file in S3:
 
 ```
-module load awscli
-echo hello | aws s3 cp - s3://fh-pi-lastname-f-eco/hello.txt
+echo hello | aws s3 cp - s3://fh-pi-lastname_f-eco/hello.txt
 ```
 
 #### Download the file from S3
 
 ```
-aws s3 cp s3://fh-pi-lastname-f-eco/hello.txt .
+aws s3 cp s3://fh-pi-lastname_f-eco/hello.txt .
 ```
 
 Now you can examine the file:
@@ -75,7 +88,7 @@ If you notice any errors with these, please email the commands you executed and 
 Once you have confirmed your credentials, remember to remove the test file:
 
 ```
-aws s3 rm s3://fh-pi-lastname-f-eco/hello.txt
+aws s3 rm s3://fh-pi-lastname_f-eco/hello.txt
 ```
 
 See more about accessing AWS S3 via the command line [here](/compdemos/aws-s3/).
