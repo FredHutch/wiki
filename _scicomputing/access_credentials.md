@@ -43,6 +43,20 @@ You will receive your AWS credentials via an encrypted email when you are onboar
 
 Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
 
+### Configure AWS cli
+
+Load the awscli module, then run `aws configure` and enter your Access Key ID & Secret Access Key. You can read more about this [here]([/compdemos/aws-s3/](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config)).
+
+```
+module load awscli
+aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE 
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]: 
+```
+This will create the following files that store your credentials `~/.aws/config` & `~/.aws/credentials`
+
 ### Testing Your Credentials
 To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your local computer to your PI's bucket. 
 
@@ -51,7 +65,6 @@ In these examples, please replace `lastname-f` with the last name and first init
 #### Create a file in S3:
 
 ```
-module load awscli
 echo hello | aws s3 cp - s3://fh-pi-lastname-f-eco/hello.txt
 ```
 
