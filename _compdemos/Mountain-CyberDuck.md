@@ -19,8 +19,7 @@ This convenience comes with a significant downside: Mountain duck is really quit
 
 It will only copy data at about 5MB/s for uploads and no more than 20MB/s for downloads. This is ok for small files but becomes prohibitive as data sizes get larger.  
 
-Email `helpdesk` or your divisional IT support and ask for an installation Mountain Duck on Windows or Mac.  
-If required, ask the Helpdesk or your divisional IT support to be added to the security group lastname_f_grp of your PI (e.g. lynch_t_grp). Make sure you CC your PI or Manager to let them know that you are requesting access if you do not already have it. 
+Email `helpdesk` or your divisional IT support and ask for an installation of Mountain Duck on Windows or Mac.  
 
 ### Installing Mountain Duck
 
