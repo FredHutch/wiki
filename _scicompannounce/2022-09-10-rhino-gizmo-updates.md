@@ -12,7 +12,9 @@ This document describes the scope of the outage, the updates we're making, and w
 
 During this maintenance the rhino login nodes and gizmo compute nodes will be unavailable for any work.  Attempts to connect via ssh will fail.  Any processes running on these nodes will be terminated.
 
-As we have done in the past, we have put in a reservation against all cluster nodes starting at midnight of the 10th. Jobs that would not complete before the maintenance will start will be held until after the work is complete.  `squeue` will show the job as pending with reason _ReqNodeNotAvail, Reserved for maintenance_.
+As we have done in the past, we have put in a reservation against all cluster nodes starting at midnight of the 10th. Pending jobs that would not complete before the maintenance window begins will be held until after the work is complete.  `squeue` will show the job as pending with reason _ReqNodeNotAvail, Reserved for maintenance_.
+
+For example, if you submit a job requesting 3 days run time on the Thursday before the maintenance starts, that job will not be run until after the maintenance is complete.  If you reduce the walltime to one day, it can be allocated resources, but would be killed if it exceeded that time limit.
 
 If you are confident your job can complete before the maintenance period starts you can reduce the time limit of the job. When submitting a job, use `--time` to adjust this:
 ```
@@ -33,7 +35,7 @@ scontrol update jobid=<jobid> timelimit=1-0
 
 ### Kernel Upgrade
 
-We'll be updating the kernel (and associated libraries) on rhino/gizmo nodes to the latese maintenance release from Canonical.  These are primarily bug and security fixes- we don't expect any changes to arise from this.
+We'll be updating the kernel (and associated libraries) on rhino/gizmo nodes to the latest maintenance release from Canonical.  These are primarily bug and security fixes- we don't expect any changes to arise from this.
 
 ### NVIDIA Driver Upgrade
 
