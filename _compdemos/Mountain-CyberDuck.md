@@ -81,7 +81,7 @@ Add the content below to the following fields:
 ```
 Confirm by simply closing this bookmark Window and then click on the bookmark. 
 
-![](/assets/screenshots/2022-08-15-10-43-48.png)
+![](/assets/mountain_cyber_duck/2022-08-15-10-43-48.png)
 
 
 
