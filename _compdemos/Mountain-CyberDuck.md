@@ -1,21 +1,19 @@
 ---
-title: Using Mountain Duck or Cyberduck for Accessing Economy Storage
-last_modified_at: 2022-08-15
-main_author: Dirk Petersen
-primary_reviewers: dirkpetersen
+title: Mountain Duck or Cyberduck for Accessing Economy Storage
+primary_reviewers: scicomp
 ---
 Access to data stored in Fred Hutch resources that are [object stores](/scicomputing/store_objectstore/) can be achieved using clients.  As of March 2016 Center IT officially supports Mountain Duck and Cyberduck clients for this purpose. You can use these Windows or Mac clients to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing.
 
-Mountain Duck can map Economy Cloud ([AWS S3](https://aws.amazon.com/s3/)) as a simple drive in Windows Explorer or in Mac Finder. Mountain Duck is the default choice for most users and you should try it first before you move to other options. The performance of Mountain Duck is limited.
+Mountain Duck can map Economy Cloud ([AWS S3](/scicomputing/store_objectstore/)) as a simple drive in Windows Explorer or in Mac Finder. Mountain Duck is the default choice for most users and you should try it first before you move to other options. The performance of Mountain Duck is limited.
 
 Mountain Duck is a commercial tool based on Cyberduck. If you don't need to mount Economy File as a drive on your computer, Cyberduck may be sufficient for you. Cyberduck copies files 5-10 times faster than Mountain Duck and it uses the same bookmarks as Mountain Duck so you need to configure each connection only once.  The two tools work great in combination.
 
 
 ## Mountain Duck
 
-Mountain Duck is best if you want to work with `Economy Cloud` ([AWS S3](https://aws.amazon.com/s3/)) storage just like a normal share or drive connected to your computer. You can navigate through the file system, double click on files to open them, modify and save them just as if the files were on your local computer. 
+Mountain Duck is best if you want to work with `Economy Cloud` ([AWS S3](/scicomputing/store_objectstore/)) storage just like a normal share or drive connected to your computer. You can navigate through the file system, double click on files to open them, modify and save them just as if the files were on your local computer. 
 
-This convenience comes with a significant downside: Mountain duck is really quite slow. 
+This convenience comes with a significant downside: Mountain duck is really quite slow and can be confusing in some situations because object stores like AWS S3 don't always behave the same as a file system on your computer.  
 
 It will only copy data at about 5MB/s for uploads and no more than 20MB/s for downloads. This is ok for small files but becomes prohibitive as data sizes get larger.  
 
