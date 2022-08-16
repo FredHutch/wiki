@@ -45,7 +45,7 @@ We will be updating Slurm to version 22.05.3.  There are a number of new feature
 
 ### NoMachine Upgrade
 
-Some time back we'd upgraded the NoMachine service on the host _rhino03_ to version 7- we'll be upgrading _rhino02_ and _rhino01_ from version 6 to version 7.
+Some time back we'd upgraded the NoMachine service on the host _rhino03_ to version 7.  This update seems to have been very successful, so we'll be upgrading _rhino02_ and _rhino01_ from version 6 to version 7 to get all of these in sync.
 
 There are no changes that will impact typical use of NoMachine in these updates.
 
@@ -59,5 +59,5 @@ This is an entirely back-end change that won't impact or change use of Slurm ser
 
 ### Reboot
 
-Lastly, everything will get a reboot.  This is required to update the kernel, but has the added benefit of "clearing out the cobwebs" that can accumulate on systems that are running for long periods of time at the high loads.
+Lastly, everything will get a reboot.  This is required to update the kernel, but has the added benefit of "clearing out the cobwebs" that can accumulate on systems that are running at high load for long periods of time.
 
