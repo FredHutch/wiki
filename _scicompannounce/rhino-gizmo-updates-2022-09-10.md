@@ -1,3 +1,6 @@
+---
+title: Rhino/Gizmo Updates, 10 September 2022
+---
 
 On 10 September 2022 the Systems Engineering team will be updating the operating system on the file server _silver_ which hosts fast, home directories, and many other file services essential to our computing environment.
 
