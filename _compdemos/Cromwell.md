@@ -2,7 +2,7 @@
 title: Cromwell Workflow Manager and WDL Workflows
 primary_reviewers: vortexing
 ---
-This page should get you started using using the [Cromwell workflow manager](https://cromwell.readthedocs.io/en/stable/) from the Broad as well as useful tidbits and links regarding WDL based workflows at the Fred Hutch. If you have questions about what Cromwell is, how it might help you or to get started, feel free to email Amy Paguirigan (Senior Staff Scientist in CRD), `apaguiri`.   For support or to ask questions and get help troubleshooting, please also see our #workflow-manager channel in the [FH-BCR Slack workspace](https://fhbig.slack.com/).
+This page should get you started using using the [Cromwell workflow manager](https://cromwell.readthedocs.io/en/stable/) from the Broad as well as useful tidbits and links regarding WDL based workflows at the Fred Hutch. If you have questions about what Cromwell is, how it might help you or to get started, feel free to email Amy Paguirigan (Senior Staff Scientist), `apaguiri`.   For support or to ask questions and get help troubleshooting, please also see our #workflow-managers channel in the [FH-Data Slack workspace](https://fhdata.slack.com/).
 
 ##  What Is Cromwell?
 Cromwell is a software tool that can be used to coordinate and streamline the actual running of bioinformatic (or other analytic) workflows. It is the software that underlies the Broad Institute's [Terra platform](https://terra.bio/).  It's one of several tools and platforms that are able to run workflows written in the WDL language, including [miniWDL](https://miniwdl.readthedocs.io/en/latest/)from the Chan-Zuckerburg initiative, [DNANexus](https://www.dnanexus.com/), and other emerging tools.  
