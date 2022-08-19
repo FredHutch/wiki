@@ -3,6 +3,21 @@ title: Using Globus Personal
 primary_reviewers: atombaby
 ---
 
+## About Globus Connect Personal
+
+"Globus Connect Personal" is a tool for using Globus infrastructure to transfer files between different systems.  The "personal" edition is a client with limited capabilities that does not require a subscription to Globus.
+
+A globus transfer is made up of:
+
+ - endpoints
+ - a control system
+
+The control system is a service hosted and managed by Globus.  This service manages things like authentication and actual initiation of the transfer, but no data actually passes through this system.
+
+The endpoints are services that have access to the data.  The control system contacts the endpoints to initiate and manage the transfer between endpoints.
+
+Monitoring of the process can happen via any browser session.  Simply navigate to https://app.globus.org/ and log in.
+
 ## Setting Up Globus Connect Personal
 
 ### Authenticating and Creating the Endpoint
