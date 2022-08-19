@@ -5,6 +5,8 @@ primary_reviewers: atombaby
 
 ## Setting Up Globus Connect Personal
 
+### Authenticating and Creating the Endpoint
+
  - Open a browser and navigate to https://app.globus.org/
  - Select "Fred Hutchinson Cancer Research Center" in the lookup box
  - This will prompt you to sign in- use your Hutchnet username and password
@@ -43,7 +45,7 @@ registered new endpoint, id: 73f653ce-b288-11eb-866b-d16fa0cfc9e7
 setup completed successfully
 ```
 
-## Configuring Globus Connect
+### Configuring Paths
 
 There aren't many things to configure in the Personal edition of the Globus Connect client.  The most important thing to configure is the path(s) available for transfers.  By default, only your home directory is available.
 
@@ -69,7 +71,6 @@ rhino03[~]: globusconnect -start
 
 > This could also run in a batch job- this is left as an exercise for the reader
 
-Now it will be available when you browse endpoints in the Globus Web UI.  To see the status of the endpoint, select the "Collections" menu from the left bar.  Transfers can be started from here or from the "File Manager" menu.
+Once started it will be available when you browse endpoints in the Globus Web UI.  To see the status of the endpoint, select the "Collections" menu from the left bar.  Transfers can be started from here or from the "File Manager" menu.
 
 > Note that you can start the endpoint on any system, including cluster nodes.  However, you will want to be certain that only one is running at any time.
-
