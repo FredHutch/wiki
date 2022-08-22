@@ -1,5 +1,5 @@
 ---
-title: Run a Non-Interactive Job on Gizmo
+title: Run a Non-Interactive Job on the Cluster
 main_author: Michael Gutteridge
 primary_reviewers: atombaby, vortexing
 ---
