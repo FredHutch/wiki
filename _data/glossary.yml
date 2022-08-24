@@ -4,11 +4,11 @@
 - term: Batch job
   definition: A non-interactive process that occurs on a remote machine. 
 - term: Shell
-  definition: TBD
+  definition: A command line user interface for Unix-like operating systems.
 - term: Scripts
-  definition: TBD
+  definition: A script is set of commands that are executed by an operating system or application.
 - term: Session
-  definition: TBD
+  definition:  A temporary and interactive information interchange between two or more communicating devices, or between a computer and user.
 - term: Workload manager
   definition: Software that coordinates job submission to nodes on a cluster. 
 - term: SLURM
