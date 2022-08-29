@@ -1,6 +1,6 @@
 
 handleSearchQuery = function (query) {
-    var url = "https://search-sciwiki-search-0-f7ntx2mpc5g6yohp6dtiwzsdiy.us-west-2.es.amazonaws.com/sciwiki0/_search";
+    var url = "/sciwiki0/_search/";
 
     var data = {
         _source: ['title'],

@@ -3,7 +3,8 @@
 .vscode/
 _site/
 .idea/*
-
 Gemfile.lock
 *.code-workspace
 _vendor/*
+info.txt
+tmp/

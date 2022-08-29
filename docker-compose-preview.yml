@@ -4,6 +4,14 @@ services:
     image: dockerimages.fhcrc.org/wiki-preview:latest
     stdin_open: true
     ports:
-      - "80"
+      - "80:80"
+    labels:
+      io.rancher.container.pull_image: always
+  elasticsearch:
+    image: dockerimages.fhcrc.org/wiki_elasticsearch-preview:latest
+    stdin_open: true
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
     labels:
       io.rancher.container.pull_image: always
