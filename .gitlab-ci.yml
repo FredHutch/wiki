@@ -49,7 +49,7 @@ build_test:
     # create sciwiki0 index
     curl -X PUT "http://localhost:9200/sciwiki0/" -H 'Content-Type: application/json'
     # index wiki pages
-    docker build -t indexer -elasticsearch/
+    docker build -t indexer elasticsearch/
     # run indexer script
     docker run --network wiki-indexer -d --rm --name indexer -v $(pwd)/tmp:/html indexer
     # save elasticsearch image (with indexed docs) 
