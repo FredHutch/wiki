@@ -5,6 +5,7 @@ before_script:
   
 build_test:
   script: |
+    set -x
     # put info about this commit/branch into /info.txt
     echo Information > info.txt
     echo "Branch: ${CI_COMMIT_BRANCH}" >> info.txt
