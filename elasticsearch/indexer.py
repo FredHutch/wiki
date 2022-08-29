@@ -16,9 +16,9 @@ INDEX_NAME="sciwiki0"
 
 from elasticsearch.helpers import bulk
 # old:
-#from elasticsearch import Elasticsearch, RequestsHttpConnection, ElasticsearchException
+from elasticsearch import Elasticsearch, RequestsHttpConnection, ElasticsearchException
 # new:
-from elasticsearch import Elasticsearch, ApiError
+# from elasticsearch import Elasticsearch, ApiError
 
 def crawl_documents():
     docs = []
@@ -58,7 +58,10 @@ def bulk_up(docs):
         print("Bulk import was successful.")
         print(retval)
         return retval
-    except ApiError as e:
+    # new:
+    # except ApiError as e:
+    # old:
+    except ElasticsearchException as e:
         print("Bulk import failed.")
         print(e)
         sys.exit(1)
