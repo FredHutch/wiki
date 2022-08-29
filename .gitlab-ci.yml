@@ -57,7 +57,7 @@ build_test:
     # save elasticsearch image (with indexed docs) 
     docker commit elasticsearch dockerimages.fhcrc.org/wiki_elasticsearch:latest
     # clean up
-    docker rm -f indexer elasticsearch
+    docker rm -f elasticsearch
     rm -rf tmp
 
 
