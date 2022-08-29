@@ -24,7 +24,7 @@ handleSearchQuery = function (query) {
         } else {
             // TODO if we got more than 100 results we should indicate that we are only showing the 1st 100
             // is pagination worth it?
-            var hitsFound = data['hits']['total'];
+            var hitsFound = data['hits']['total']['value'];
             var hitsPerPage = data['hits']['hits'].length;
             var html = "";
             html += "<span>Found " + hitsFound + " matches for '" + query + "'.</span><br/>\n";
