@@ -16,9 +16,9 @@ INDEX_NAME="sciwiki0"
 
 from elasticsearch.helpers import bulk
 # old:
-#from elasticsearch import Elasticsearch, RequestsHttpConnection, ElasticsearchException
+from elasticsearch import Elasticsearch, RequestsHttpConnection, ElasticsearchException
 # new:
-from elasticsearch import Elasticsearch, ApiError
+# from elasticsearch import Elasticsearch, ApiError
 
 def crawl_documents():
     docs = []
@@ -45,7 +45,9 @@ def wrap(docs):
     for doc in docs:
         doc_id = doc['url']
         del doc['url']
-        item = dict(_index=INDEX_NAME, _id=doc_id, _source=doc)
+        # old version requires type, new version doesn't want it.
+        doc['_type'] = 'document' # old
+        item = dict(_index=INDEX_NAME, _id=doc_id, type="document", _source=doc)
         outer.append(item)
     return outer
 
@@ -58,7 +60,10 @@ def bulk_up(docs):
         print("Bulk import was successful.")
         print(retval)
         return retval
-    except ApiError as e:
+    # new:
+    # except ApiError as e:
+    # old:
+    except ElasticsearchException as e:
         print("Bulk import failed.")
         print(e)
         sys.exit(1)
