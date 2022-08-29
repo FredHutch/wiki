@@ -44,7 +44,7 @@ build_test:
     docker pull elasticsearch:8.4.0
     docker network create wiki-indexer || true
     # run an instance of elasticsearch
-    docker rm -f elasticsearch
+    docker rm -f elasticsearch || true
     docker run --network wiki-indexer -d --name elasticsearch -p 9200:9200 -e "discovery.type=single-node" -e "xpack.security.enabled=false" elasticsearch:8.4.0
     sleep 20
     # create sciwiki0 index
