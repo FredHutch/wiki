@@ -37,7 +37,7 @@ build_test:
 
     # build search index
     # run image and copy HTML files out of it
-    docker run -d --name wiki -p dockerimages.fhcrc.org/wiki:latest
+    docker run -d --rm --name wiki dockerimages.fhcrc.org/wiki:latest
     rm -rf tmp && mkdir tmp
     docker cp wiki:/usr/share/nginx/html/ ./tmp/
     docker rm -f wiki
