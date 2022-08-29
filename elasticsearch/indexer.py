@@ -47,7 +47,7 @@ def wrap(docs):
         del doc['url']
         # old version requires type, new version doesn't want it.
         doc['_type'] = 'document'
-        item = dict(_index=INDEX_NAME, _id=doc_id, _type='document', _source=doc)
+        item = dict(_index=INDEX_NAME, _id=doc_id, _source=doc)
         outer.append(item)
     return outer
 
