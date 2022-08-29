@@ -3,8 +3,6 @@ services:
   wiki:
     image: dockerimages.fhcrc.org/wiki-preview:latest
     stdin_open: true
-    ports:
-      - "80:80"
     labels:
       io.rancher.container.pull_image: always
   elasticsearch:
