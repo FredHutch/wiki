@@ -11,5 +11,6 @@ services:
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
+      - ingest.geoip.downloader.enabled=false
     labels:
       io.rancher.container.pull_image: always
