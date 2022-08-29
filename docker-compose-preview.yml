@@ -12,5 +12,6 @@ services:
       - discovery.type=single-node
       - xpack.security.enabled=false
       - ingest.geoip.downloader.enabled=false
+      - ES_JAVA_OPTS="-Xms512m -Xmx512m"
     labels:
       io.rancher.container.pull_image: always
