@@ -51,13 +51,11 @@ Some time back we'd upgraded the NoMachine service on the host _rhino03_ to vers
 
 There are no changes that will impact typical use of NoMachine in these updates.
 
-### New Slurm Controllers
+### Updated Automount Configuration
 
-You may recall a rather lengthy outage some time back caused by a hardware failure on the Slurm controller for gizmo.  We've been running on repurposed hardware since then- this is not a desirable configuration.
+We are retiring the _very_ old systems providing information to the automount services on rhino/gizmo cluster nodes.  Automount provides dynamic connections from the nodes to networked file systems (e.g. where to find your home directory).
 
-We have two new systems to provide these controller services.  This will enable greater redundancy and reduce downtime the next time there's a hardware failure.
-
-This is an entirely back-end change that won't impact or change use of Slurm services on gizmo.
+We're updating to a new back-end (LDAP) and reconfiguring the nodes to use this new service.
 
 ### Reboot
 
