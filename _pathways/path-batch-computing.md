@@ -4,12 +4,12 @@ main_author: Michael Gutteridge
 primary_reviewers: atombaby, vortexing
 ---
 
-This pathway will get you to a first non-interactive computing job on the `gizmo` computing cluster using the command-line interface at the Fred Hutch.  
+This pathway will get you to a first non-interactive computing job on the `gizmo` computing cluster using the command-line interface at the Fred Hutch.
 
 ## Pre-requisites
 A desktop computer, access to the internet, a good text editor.
 
-If you are unfamiliar with any of these terms, hover over them to find more information.  
+If you are unfamiliar with any of these terms, hover over them to find more information.
  - {% glossary Node %}
  - {% glossary Shell %}
  - {% glossary Scripts %}
@@ -57,7 +57,7 @@ If you get an error like `Home directory not found` when you log in, please emai
 
 ### Navigating the Compute Environment
 
-The [common storage options](/scicomputing/store_posix.md) are available in the `rhino`-`gizmo` compute environment. These paths are available in the same location on each of these hosts.
+The [common storage options](/scicomputing/store_posix) are available in the `rhino`-`gizmo` compute environment. These paths are available in the same location on each of these hosts.
 
 You'll be started (by default) with a bash shell and most of the common [GNU/Linux utilities](https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html)
 
