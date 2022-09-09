@@ -7,11 +7,6 @@ Fred Hutch offers a variety of educational resources on aspects of bioinformatic
 
 ## Self-directed learning through Fred Hutch
 
-- Fredhutch.io is an initiative to facilitate education about and promote access to computational resources at Fred Hutch. Those interested in learning core computational skills like R and Python can work through this content at their own pace.
-  - [Intro to Python](https://fredhutchio.github.io/python_intro/)
-  - [Intermediate Python](https://fredhutchio.github.io/python_programming/)
-  - [Intro to R](https://fredhutchio.github.io/r_intro/)
-
 - [Bioinformatics and Genomics Resource Library](/hdc/bioinformatics_library) is a curated list of external resources related to bioinformatics and genomics including peer reviewed papers, blog posts, and video tutorials.
 
 - [The Scientific Computing Resource Library](/compdemos) includes tutorials of how to perform common computational tasks using software available at Fred Hutch. Below we've highlighted a few popular links, but be sure to check out the page to see all the tutorials available.
@@ -21,7 +16,12 @@ Fred Hutch offers a variety of educational resources on aspects of bioinformatic
 
 - [Code templates and examples](/scicomputing/software_examples) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as addtional examples of executable code that can be tailored to suit your own needs.
 
->Due to the nature of self-directed learning there is no instructor immediately available to answer questions or troubleshoot. Please bring questions to the relevant office hours (listed below) or to the [FH-BCR Slack](http://fhbig.slack.com).
+- The [Fred Hutch Data Science Lab](https://hutchdatascience.org/) curates training materials on a wide array of data science and computing topics that you can find on their [training page.](https://hutchdatascience.org/training/). 
+
+- Fredhutch.io was an initiative to facilitate education about and promote access to computational resources at Fred Hutch. Those interested in learning core computational skills like R and Python can work through this archived content at their own pace. 
+  - [Intro to Python](https://fredhutchio.github.io/python_intro/)
+  - [Intermediate Python](https://fredhutchio.github.io/python_programming/)
+  - [Intro to R](https://fredhutchio.github.io/r_intro/)
 
 ## Resources In Seattle
 
