@@ -82,7 +82,7 @@ google:
 analytics:
   provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : UA-123256805-1
+    tracking_id          : G-FXHRYCV6VK # UA-123256805-1
 
 # New as of 8/2019
 footer:
@@ -261,6 +261,18 @@ defaults:
 
 exclude:
   - ".gitignore"
+  - ".gitlab-ci.yml"
+  - "elasticsearch"
+  - "tmp"
+  - "*.py"
+  - "*.yml"
+  - "Rakefile"
+  - "*.gz"
+  - "rancher-v0.6.2"
+  - "*.sh"
+  - "Dockerfile"
+  - "Gemfile*"
+
 
 #
 tag_archive:
