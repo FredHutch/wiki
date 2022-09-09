@@ -12,7 +12,7 @@ Fred Hutch offers a variety of educational resources on aspects of bioinformatic
 - [The Scientific Computing Resource Library](/compdemos) includes tutorials of how to perform common computational tasks using software available at Fred Hutch. Below we've highlighted a few popular links, but be sure to check out the page to see all the tutorials available.
   - [How to Rhino](/compdemos/howtoRhino)
   - [R Tips and Tricks](/compdemos/R_tips_tricks)
-  - [Accessing Economy Local Storage](/compdemos/Economy-storage)
+  - [Accessing Economy storage](/scicomputing/store_objectstore/)
 
 - [Code templates and examples](/scicomputing/software_examples) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as addtional examples of executable code that can be tailored to suit your own needs.
 
