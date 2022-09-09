@@ -5,19 +5,7 @@ hdc: True
 
 Fred Hutch offers a variety of educational resources on aspects of bioinformatics, analytics, and working with data. Here you can find the opportunties for training and help offered through Fred Hutch as well as access a resource library of external online educational content.
 
-## Instructor-led training
-
-While we are currently working to add staffing support for instructor-led training activities, we hope to offer targeted workshops in the near future.
-
-Keep an eye out for:
-- Journal clubs to bring together people with shared interests in a particular method or technology to discuss current, high-impact papers.
-- Workshops that offer training specific to Fred Hutch infrastructure such as how to effectively use the SLURM cluster or access and use AWS.
-
->Instructor-led opportunties are in the planning stage and pending staff support.
-
 ## Self-directed learning through Fred Hutch
-
-For those who aren't able to attend in-person courses we have a range of standalone resources to help guide their self-directed learning. 
 
 - Fredhutch.io is an initiative to facilitate education about and promote access to computational resources at Fred Hutch. Those interested in learning core computational skills like R and Python can work through this content at their own pace.
   - [Intro to Python](https://fredhutchio.github.io/python_intro/)
@@ -35,39 +23,6 @@ For those who aren't able to attend in-person courses we have a range of standal
 
 >Due to the nature of self-directed learning there is no instructor immediately available to answer questions or troubleshoot. Please bring questions to the relevant office hours (listed below) or to the [FH-BCR Slack](http://fhbig.slack.com).
 
-## Office hours 
-
-Office hours are available for many of the shared resources on campus. Bring your questions and get answers! Currently most office hours are hosted on MS Teams. You can find links to office hours and get regular reminders by joining the [Fred Hutch Bioinformatics and Computational Research (FH-BCR) community Slack workspace](http://fhbig.slack.com).
-
-- __Hutch Data Core:__ Staff are available to assist researchers in getting started with bioinformatics and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
-  - Hosted Every Tuesday from 9:00 to noon, staffed by Lauren Wolfe
-- __Scientific Computing - General:__ Scientific Computing (SciComp) manages basic account access for research computing resources, including data storage and shared computational cluster use. Staff are available to answer questions related to access and usage of Hutch resources for computational research.
-  - Hosted every Wednesday from 10:00 to noon, staffed by Ben McGough
-- __Scientific Computing - Cloud/Next Gen:__ In addition to general consulting (see above), Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.
-  - Hosted every Tuesday from 3:00 to 4:30, staffed by Dan Tenenbaum
-- __Ethics and Compliance:__ Staff from the Center Information Technology (CIT) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
-  - Hosted every Wednesday from 10:00 to noon, staffed by Susan Glick
-
-_Coming Soon!_  
-_We are working to formalize office hours for many of the Shared Resources offered through Fred Hutch. Please keep an eye on this page for updates!_
-
-- __Genomics & Bioinformatics:__ Staff from the Genomics and Bioinformatics Shared Resource are available to answer questions related to the generation and analysis of genomic data from DNA array, genetic analysis and high-throughput screening methods.
-  - Bioinformatics staffed by Matt Fitzgibbon.
-  - Genomics staffed by Cassie Sather.
-- __Image Analysis:__ Staff with expertise in image analysis are available to answer questions.
-  - Staffed by Julien Dubrulle.
-- __Flow Cytometry:__ Staff from the Flow Cytometry Shared Resource are available to answer questions from aiding scientists on panel design, and marker and color choice to data analysis and troubleshooting.
-  - Staffed by Andrew Berger.
-- __Proteomics & Metabolomics:__ Staff from the Proteomics and Metabolomics Shared Resource are available to answer questions related to sample preparation, sample separation, data collection and data analysis.
-  - Staffed by Phil Gafken.
-- __Cellular Imaging:__ Staff from the Cellular Imaging Shared Resource with expertise in advanced microscopy incluidng light microscopy and electron microscopy are available to answer questions.
-  - Staffed by Peng Guo.
-- __Cryo-EM:__ Staff from the Cryo-EM Shared Resource are available to answer questions realted to sample preperation, data collection, and data processing.
-  - Staffed by Caleigh Azumaya.
-
->Office hours can also be found on the Centernet Calendar.  
->Due to COVID-19 all office hours are currently hosted through MS Teams.
-
 ## Resources In Seattle
 
 - [UW Biostatistics Summer Institutes](https://www.biostat.washington.edu/suminst) offer yearly intensive courses over the summers on a wide variety of topics.
@@ -78,6 +33,7 @@ _We are working to formalize office hours for many of the Shared Resources offer
 ### Classroom-Style Courses
 These resources are organized in a lecture type format as slides, screencasts, and video. Most are work-at-your-own-pace, but some may be linked to a course calander. 
 
+- [Hutch Learning playlist for Coding & Programming](https://fredhutch.csod.com/ui/lms-learner-playlist/PlaylistDetails?playlistId=88b39d59-7921-4d0f-9bca-c3df6b1fad1b)
 - [MCB517A: Tools for Computational Biology](https://github.com/fredhutchio/tfcb_2019): A graduate-level course taught for UW by Fred Hutch CompBio faculty. This links to a GitHub repository that includes all lectures and homework.
   - [How to install necessary software for this course](https://github.com/fredhutchio/tfcb_2019/tree/master/software)
   - [Ask questions about this course](https://github.com/fredhutchio/tfcb_2019/issues)
@@ -123,8 +79,8 @@ __Command Line__
 __R__
 - Webinars from R studio (30 min - 1 hr / video)
   - [Getting Started With R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/)
-  - [Easy Ways to Collect Different Types of Data from the Web with R | Part 1](https://www.rstudio.com/resources/webinars/part-1-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
-  - [Easy Ways to Collect Different Types of Data from the Web with R | Part 2](https://www.rstudio.com/resources/webinars/part-2-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
+  - [Easy Ways to Collect Different Types of Data from the Web with R - Part 1](https://www.rstudio.com/resources/webinars/part-1-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
+  - [Easy Ways to Collect Different Types of Data from the Web with R - Part 2](https://www.rstudio.com/resources/webinars/part-2-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
   - [Debugging Techniques in RStudio](https://www.rstudio.com/resources/webinars/debugging-techniques-in-rstudio/)
   - [A Gentle Introduction to Tidy Statistics in R](https://www.rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/)
   - [Managing Packages for Open Source Data Science](https://www.rstudio.com/resources/webinars/managing-packages-for-open-source-data-science/)
