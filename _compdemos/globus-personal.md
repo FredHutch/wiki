@@ -5,7 +5,7 @@ primary_reviewers: atombaby
 
 Log into Globus using https://app.globus.org/
 Your options are using a Google identity, ORCID, or HutchNet via O365 authentication.
-For HutchNet authentication, find "Fred Hutchinson Cancer Center" in the lookup box
+For HutchNet authentication, find "Fred Hutchinson Cancer Research Center" in the lookup box
 This will prompt you to sign in- use your _@fredhutch.org_ username and HutchNet password
 
 Once logged in you need to set up an endpoint.  Log into rhino, load the globus module, and set up

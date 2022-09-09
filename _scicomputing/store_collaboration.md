@@ -38,7 +38,7 @@ Visit the [OneDrive CenterNet page](https://centernet.fredhutch.org/cn/u/center-
 Examples of best practices for using OneDrive include:
   * Do not sync your Fred Hutch OneDrive with any non-Hutch device
   * Do leave copies of sensitive data on a non-Hutch device from which you have accessed OneDrive
-  * Sharing Links: Do not select “Everyone” when sharing, instead choose the “Specific people” option whenever possible. If you choose the “People in Fred Hutchinson Cancer Center” option, anyone at the Center with a link to your shared file can access it.  
+  * Sharing Links: Do not select “Everyone” when sharing, instead choose the “Specific people” option whenever possible. If you choose the “People in Fred Hutchinson Cancer Research Center” option, anyone at the Center with a link to your shared file can access it.  
   * Once a file is shared with someone and they download it to their device, they can share it with others.  File protection may also remain an appropriate practice.
   * Links that share documents do NOT expire.  Remember to remove ability to share when no longer needed.
 
