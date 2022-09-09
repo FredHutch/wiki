@@ -33,8 +33,6 @@ Some features and benefits of object storage systems include:
 Given these benefits it is expected that Object Storage systems will become more common in the future, especially as datasets are getting larger and larger.  Today Fred Hutch offers access to two different Object Storage systems through the `Economy Local` service. We recommend these systems typically for large genomic data and imaging files that require computational pipelines for processing (e.g. large BAM files) as well as for archival of infrequently used data. Both options for AWS S3 storage are _encrypted at rest_ and are approved to store strictly confidential data such as PHI.
 
 
->Note: In the future Fred Hutch Shared Resources data delivery processes (e.g. through  HutchBase) will be modified to deliver data directly to AWS S3 and [*Scratch*](/scicomputing/store_scratch/) storage as opposed to [`Fast`](/scicomputing/store_posix/) as it happens today.
-
 ## Accessing AWS S3 Storage
 You can access AWS S3 resources with [command line tools](/compdemos/aws-s3/) such as  `aws s3` or `rclone` or libraries such as or _boto3_ for _Python_ or _aws.s3_ for R.  As of March 2016, Center IT officially supports the use of [Mountain Duck and Cyberduck desktop clients](/compdemos/Mountain-CyberDuck/) on Windows or Mac to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing. 
 
@@ -116,10 +114,7 @@ If an external collaborator has an AWS account available to them through their i
 
 #### User Demos
 
-We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-CyberDuck/), [via the AWS CLI](/compdemos/aws/#aws-command-line-interface-cli), [via R](/compdemos/aws/#aws-via-r), or [via Python](/compdemos/aws/#aws-via-python) and various methods for [Economy Local](/compdemos/Economy-storage/)
-
-
->Note: This article is a work in progress. If you have suggestions or would like to contribute email `sciwiki`.  
+We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-CyberDuck/), [via the AWS CLI](/compdemos/aws/#aws-command-line-interface-cli), [via R](/compdemos/aws/#aws-via-r), or [via Python](/compdemos/aws/#aws-via-python).
 
 
 #### FAQ
@@ -164,6 +159,3 @@ It depends.  Certain restrictions exist in the account that cannot be overridden
 
 Once you have working credentials, you can read more about [AWS Computing](/scicomputing/compute_cloud/) in our wiki page.  
 
-## I have more questions
-
-Please check out the [FAQ](/compdemos/cloud-faq/) for more information.
