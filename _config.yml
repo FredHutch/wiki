@@ -261,6 +261,18 @@ defaults:
 
 exclude:
   - ".gitignore"
+  - ".gitlab-ci.yml"
+  - "elasticsearch"
+  - "tmp"
+  - "*.py"
+  - "*.yml"
+  - "Rakefile"
+  - "*.gz"
+  - "rancher-v0.6.2"
+  - "*.sh"
+  - "Dockerfile"
+  - "Gemfile*"
+
 
 #
 tag_archive:
