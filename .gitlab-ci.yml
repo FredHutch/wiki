@@ -34,13 +34,15 @@ build_test:
 
     if [ "$CI_COMMIT_BRANCH" = "main" ]; then
       export JEKYLL_ENV=production
+    else
+      export JEKYLL_ENV=development
     fi
     # build image
     docker build -t dockerimages.fhcrc.org/wiki:latest .
 
     # build search index
     # run image and copy HTML files out of it
-    docker run -d --rm --name wiki dockerimages.fhcrc.org/wiki:latest
+    docker run -e JEKYLL_ENV=$JEKYLL_ENV -d --rm --name wiki dockerimages.fhcrc.org/wiki:latest
     rm -rf tmp && mkdir tmp
     docker cp wiki:/usr/share/nginx/html/ ./tmp/
     docker rm -f wiki
