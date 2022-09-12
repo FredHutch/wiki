@@ -38,11 +38,11 @@ build_test:
       export JEKYLL_ENV=development
     fi
     # build image
-    docker build -t dockerimages.fhcrc.org/wiki:latest .
+    docker build -e JEKYLL_ENV=$JEKYLL_ENV -t dockerimages.fhcrc.org/wiki:latest .
 
     # build search index
     # run image and copy HTML files out of it
-    docker run -e JEKYLL_ENV=$JEKYLL_ENV -d --rm --name wiki dockerimages.fhcrc.org/wiki:latest
+    docker run -d --rm --name wiki dockerimages.fhcrc.org/wiki:latest
     rm -rf tmp && mkdir tmp
     docker cp wiki:/usr/share/nginx/html/ ./tmp/
     docker rm -f wiki
