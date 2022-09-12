@@ -32,6 +32,9 @@ build_test:
     tail -n +$FIRST_BLANK_LINE ./_scicomputing/bio-modules-18.04.md.orig >> ./_scicomputing/bio-modules-18.04.md
     rm -rf easybuild-life-sciences-main main.zip ./_scicomputing/bio-modules-18.04.md.orig
 
+    if [ "$CI_COMMIT_BRANCH" = "main" ]; then
+      export JEKYLL_ENV=production
+    fi
     # build image
     docker build -t dockerimages.fhcrc.org/wiki:latest .
 
