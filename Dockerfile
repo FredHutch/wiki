@@ -30,7 +30,7 @@ FROM ruby:3.0.1
 
 
 
-
+ARG JEKYLL_ENV
 
 ADD ./ /srv/jekyll
 WORKDIR /srv/jekyll/

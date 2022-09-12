@@ -12,4 +12,11 @@ echo Press Enter to continue the build or control-C to quit.
 
 read
 
-docker run  --name wiki-build --rm -v $(pwd):/work -w /work -p 7979:7979 ruby:3.0.1 ./build.sh
+if [ $(git branch --show-current) == "main" ]; then
+    export JEKYLL_ENV=production
+else
+    export JEKYLL_ENV=development
+fi
+
+
+docker run -e JEKYLL_ENV=$JEKYLL_ENV --platform linux/amd64 --name wiki-build --rm -v $(pwd):/work -w /work -p 7979:7979 ruby:3.0.1 ./build.sh
