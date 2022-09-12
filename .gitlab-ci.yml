@@ -38,7 +38,7 @@ build_test:
       export JEKYLL_ENV=development
     fi
     # build image
-    docker build -e JEKYLL_ENV=$JEKYLL_ENV -t dockerimages.fhcrc.org/wiki:latest .
+    docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t dockerimages.fhcrc.org/wiki:latest .
 
     # build search index
     # run image and copy HTML files out of it
