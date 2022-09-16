@@ -90,42 +90,6 @@ When starting a new RStudio session, you can choose which version of R to run (b
 
 If you have issues or questions in using this application, please email `helpdesk` and describe the issues you're having.  
 
-#### **Troubleshooting**
-
-If the URL above does not work, and you are connected via VPN, please do the following. You only have to do this once.
-
-* Disconnect from VPN.
-* Restart the VPN software (Cisco AnyConnect Secure Mobility Client).
-* Click `Connect`.
-* You will see a dialog box with a `Group` dropdown. Make sure the `_FHVPN` group is selected. 
-* Continue to sign in normally. The URL above should work now. 
-
-#### **Legacy Documentation**
-
-***Note***: Before this web application existed, there was a command-line script that did the same thing, in conjunction with `grabnode`. For the time being, the legacy documentation for that script will remain here.    
-
-
-There is a wrapper script that allows you to run RStudio Server (the web-browser-based version of RStudio)
-on the HPC machines (cluster machines whose names start with `gizmo`).
-
-You can run this with any version of `R` that is available on our shared computing systems.
-
-Here are the steps to run this wrapper.
-
-* Grab a node using the [grabnode](/compdemos/first_rhino/#logging-on-to-gizmo-via-grabnode) command. Specify how many CPUs and how much memory you want, and how many days you want to have control of the node. Remember that you can launch `slurm` jobs within RStudio, so you may not need to ask for a lot of computing power for your RStudio machine.
-* Run the `launch_rstudio_server` command. This will produce a URL that you can paste into your browser. (This URL only works inside the Hutch network, so you need to be on campus or using VPN.)
-* In your browser, log into RStudio using your HutchNet ID and password.
-* If you have problems loading packages in RStudio Server, Try this: `.libPaths(c("/app/software/fhR/4.0.2-foss-2019b", .libPaths()))` 
-* When you are finished using RStudio Server, you can terminate it by typing this command on the node you "grabbed" (the same machine where you launched RStudio Server): `launch_rstudio_server --kill`
-* Alternatively, you can just wait for your `grabnode` allocation (the number of days you specified when grabbing the node) to expire, and RStudio Server will become unavailable after that.
-* If you need RStudio Server again, just repeat these steps.
-
-*Note*: In Rstudio Server, when trying to generate `tiff`, `jpeg`, `png` files (with `R` functions of the same names), you will need to change the default bitmap type (default is `X11`). Do this with the following command:
-
-```
-options(bitmapType = 'cairo')
-```
-
 *Related Note*: If you are working with RMarkdown documents in RStudio Server,
 you may find that plot labels and other graphics look kind of weird.
 This is because X11 (the X Window System) is not available
