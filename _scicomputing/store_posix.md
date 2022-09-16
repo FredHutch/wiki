@@ -67,7 +67,7 @@ To summarize: the folder structure on fast file looks like this: `/fh/fast/(leve
 
 ## Secure
 
-`Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  This is also organized by investigator with a free allocation with additional storage available for purchase.  
+`Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  This is also organized by investigator.  There are no charges for data stored here but there is a limit of 750GB per PI directory in this path.
 
 Secure file is available via the path `/fh/fast/secure/research/lastname_f` on SciComp Linux systems, through a [UNC path as documented here](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html) or `X:\secure\research` on Windows hosts.
 
