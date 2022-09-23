@@ -19,7 +19,7 @@ been copied to a folder which is accessible at `/shared/biodata/reference/iGenom
 The structure of those files is described below, and moving forward additional
 reference genome indices may be generated which follow the same format and structure. 
 
-## File Structure
+### File Structure
 
 All files described below can be found within the directory `/shared/biodata/reference/iGenomes/`: 
 
@@ -46,7 +46,7 @@ All files described below can be found within the directory `/shared/biodata/ref
         - `STARIndex`: For STAR < 2.7.6a 
         - `STAR2Index`: For STAR ≥ 2.7.6a 
 
-## Example
+### Example
 
 Below is an example of the folders available for the UCSC human genome GRCh37/hg19 reference: 
 
@@ -93,6 +93,72 @@ The content of that folder includes:
 ├── pipeline_info/                           # Reference database download report
 └── star-fusion/                             # Reference database for the STAR-Fusion tool
 ```
+
+## Kraken2
+
+[Kraken2](https://ccb.jhu.edu/software/kraken2/) is a taxonomic classification tool which
+is used to identify the microbes present in a complex mixture from whole-genome shotgun
+sequencing data.
+As the reference databases needed to run this tool can be quite laborious to build, a
+public collection of reference databases can be found at:
+
+- `/shared/biodata/microbiome/kraken2`
+
+> Note: This database is automatically added to the path as `KRACKEN2_DB_PATH`
+> when loading the `Kraken2-2.0.7-beta-foss-2016b-Perl-5.28.0` module
+
+Additional databases can be downloaded as-needed from [the Langmead Lab Website](https://benlangmead.github.io/aws-indexes/k2).
+
+## CellRanger
+
+The software produced by 10X Genomics for the analysis of single-cell sequencing data is called
+[CellRanger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger).
+A set of reference databases provided for the analysis of 10X single cell data are available at:
+
+- `/shared/biodata/ngs/Reference/10X`
+
+> Note: This database is automatically added to the path as `TENX_REFDATA`
+> when loading the `CellRanger-4.0.0.eb` module
+
+## SpaceRanger
+
+[SpaceRanger](https://support.10xgenomics.com/spatial-gene-expression/software/pipelines/latest/what-is-space-ranger)
+is a software suite developed by 10X Genomics (similar to CellRanger) for the analysis of Visium
+Spatial Gene Expression data.
+This tool can be used on the rhino/gizmo cluster by loading the `SpaceRanger-1.3.0-GCC-10.2.0.eb` module.
+A set of reference databases provided for the analysis of 10X Visium data are available at:
+
+- Human: `/shared/biodata/ngs/Reference/10x/refdata-gex-GRCh38-2020-A`
+- Mouse: `/shared/biodata/ngs/Reference/10x/refdata-gex-mm10-2020-A`
+
+## ANNOVAR
+
+[ANNOVAR](https://annovar.openbioinformatics.org/en/latest/) is a software tool
+for the annotation of genomic variants.
+Reference databases for this tool can be found at:
+
+- `/shared/biodata/humandb`
+
+## GTDB-Tk
+
+GTDB-Tk ([source](https://github.com/Ecogenomics/GTDBTk)) is a software toolkit for
+assigning objective taxonomic classifications to bacterial and archaeal genomes based
+on the Genome Database Taxonomy ([GTDB](https://gtdb.ecogenomic.org/)).
+This tool can be used on the rhino/gizmo cluster by loading the
+`GTDBTk-0.1.3-foss-2016b-Python-3.6.7.eb` module.
+Reference databases for this tool can be found at:
+
+- `/shared/biodata/humand/release86`
+
+## AlphaFold
+
+[AlphaFold](https://alphafold.ebi.ac.uk/) is a powerful tool for predicting
+protein structures from primary amino acid sequences.
+This tool can be used on the rhino/gizmo cluster by loading the `AlphaFold-2.1.1` module.
+When using this tool, the environment variable `ALPHAFOLD_DATA_DIR` is set
+appropriately to reference the database files available at:
+
+- `/shared/biodata/ngs/Reference/protein`
 
 ## Ongoing Support
 
