@@ -28,12 +28,11 @@ While you are allowed up to 100GB of storage in this home directory, it is not t
 
 `Fast` storage is a petabyte sized high-performance posix file system that holds the bulk of the scientific data at the Fred Hutch. A quick overview: 
 
-- Each PI and division is provided with an allocation of storage space via `Fast`, though additional storage may be purchased.  
+- Each PI and division is provided with storage space in `Fast`
 
 This storage platform is appropriate for most scientific data- particularly large data sets.
 
 The data in `Fast` is organized by investigator or Division - each folder at the top level is named using the investigators last name and first initial: investigator "Sneezy Smith" would have a directory on fast called `smith_s`. There are also folders for each division. Special folders ``\_IRC` (Integrated research centers), ``\_CTR` (center wide resources and groups not under a specific division.)
-Each folder that lives directly under `/fh/fast` has a default allocation, with additional storage available to purchase.
 
 Each folder that lives directly under `/fh/fast/lastname_f` can have a different set of permissions governed by a specific Security group (collection of users authorized for a certain resource - managed by SciComp).
 We recommend some default folders such as for data shared to any Fred Hutch user (`/pub`), to any member of the PI's immediate research group (`/grp`), group wide software / applications (`/app`) or work spaces to each individual user in a PI's immediate research group (`/user`). Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (`/SR`). Access to these default folders would be governed by a security named lastname_f_grp. This can be customized for a given researcher in conjunction with Scientific Computing (see Available Resources).
@@ -63,7 +62,7 @@ To summarize: the folder structure on fast file looks like this: `/fh/fast/(leve
 
 ## Secure
 
-`Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  This is also organized by investigator with a free allocation with additional storage available for purchase.  
+`Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  There are no charges for data stored here but there is a limit of 750GB per PI directory in this path.  
 
 This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data.  
 
