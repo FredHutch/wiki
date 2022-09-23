@@ -28,16 +28,11 @@ While you are allowed up to 100GB of storage in this home directory, it is not t
 
 `Fast` storage is a petabyte sized high-performance posix file system that holds the bulk of the scientific data at the Fred Hutch. A quick overview: 
 
-- Each PI and division is provided with an allocation of storage space via `Fast`, though additional storage may be purchased.  
-
-- You can access `Fast` from your workstation using  `X:\fast\lastname_f` on a Windows PC or through a [UNC path as documented here](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html)
-
-- On Fred Hutch HPC systems (e.g. Rhino and Gizmo) you can access fast via `/fh/fast/lastname_f`
+- Each PI and division is provided with storage space in `Fast`
 
 This storage platform is appropriate for most scientific data- particularly large data sets.
 
 The data in `Fast` is organized by investigator or Division - each folder at the top level is named using the investigators last name and first initial: investigator "Sneezy Smith" would have a directory on fast called `smith_s`. There are also folders for each division. Special folders ``\_IRC` (Integrated research centers), ``\_CTR` (center wide resources and groups not under a specific division.)
-Each folder that lives directly under `/fh/fast` has a default allocation, with additional storage available to purchase.
 
 Each folder that lives directly under `/fh/fast/lastname_f` can have a different set of permissions governed by a specific Security group (collection of users authorized for a certain resource - managed by SciComp).
 We recommend some default folders such as for data shared to any Fred Hutch user (`/pub`), to any member of the PI's immediate research group (`/grp`), group wide software / applications (`/app`) or work spaces to each individual user in a PI's immediate research group (`/user`). Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (`/SR`). Access to these default folders would be governed by a security named lastname_f_grp. This can be customized for a given researcher in conjunction with Scientific Computing (see Available Resources).
@@ -67,8 +62,58 @@ To summarize: the folder structure on fast file looks like this: `/fh/fast/(leve
 
 ## Secure
 
-`Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  This is also organized by investigator.  There are no charges for data stored here but there is a limit of 750GB per PI directory in this path.
-
-Secure file is available via the path `/fh/fast/secure/research/lastname_f` on SciComp Linux systems, through a [UNC path as documented here](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html) or `X:\secure\research` on Windows hosts.
+`Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  There are no charges for data stored here but there is a limit of 750GB per PI directory in this path.  
 
 This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data.  
+
+## How to access Fred Hutch storage
+
+The following is a summary of how to access these storage systems from PC, Mac or Linux command line. For all of these you must either be on campus and connected to the wired network or the Marconi wireless network. If you are off-site, you must be connected to the VPN. If you frequently work both on and off site, ensure that you are disconnected from the VPN if on the campus network.
+
+**Fred Hutch PC:** 
+
+| Location | Path |
+| --- | ----------- |
+| Homelink | `\\homelink\homes` |
+| Fast | `X:\fast` |
+| Scratch | `X:\scratch` |
+| Secure | `X:\secure` |
+
+
+**Non-Fred Hutch PC:**
+
+| Location | Path |
+| --- | ----------- |
+| Homelink | `\\homelink.fhcrc.org\homes` |
+| Fast | `\\center.fhcrc.org\fh\fast` |
+| Scratch | `\\center.fhcrc.org\fh\scratch` |
+| Secure | `\\center.fhcrc.org\fh\secure` |
+
+
+**Mac:**
+
+For these paths, replace HUTCHID with your hutchid.
+
+| Location | Path |
+| --- | ----------- |
+| Homelink | `smb://fhcrc.org;HUTCHID@homelink.fhcrc.org/homes` |
+| Fast | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/fast` |
+| Scratch | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/scratch` |
+| Secure | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/secure` |
+
+
+**Linux command line:**
+
+| Location | Path |
+| --- | ----------- |
+| Homelink | `~/` or `/home/HUTCHID` |
+| Fast | `/fh/fast` |
+| Scratch | `/fh/scratch` |
+| Secure | `/fh/secure` |
+
+
+## Related Centernet links:
+
+[Mac network drive paths](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/network_drive_paths_mac.html)  
+[Windows network drive paths](https://centernet.fredhutch.org/cn/u/center-it/help-desk/windows-support/network_drive_paths_windows.html)  
+[How to map a network drive](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mapping_network_drives.html)
