@@ -4,6 +4,8 @@ before_script:
   - tar zxf rancher-linux-amd64-v0.6.2.tar.gz
   
 build_test:
+  tags:
+    - shell
   script: |
     set -x
     # put info about this commit/branch into /info.txt
@@ -77,6 +79,8 @@ build_test:
 
 deploy_preview:
   stage: deploy
+  tags:
+    - shell
   except: 
     refs:
       - main
@@ -94,6 +98,8 @@ deploy_preview:
 
 deploy:
   stage: deploy
+  tags:
+    - shell
   only:
     refs:
        - main
