@@ -3,7 +3,7 @@ default:
     - apk update
     - apk --no-cache add py3-pip python3 curl git
     - pip3 install pyyaml
-    # - curl -O https://raw.githubusercontent.com/FredHutch/swarm-build-helper/main/build_helper.py 
+    - curl -O https://raw.githubusercontent.com/FredHutch/swarm-build-helper/main/build_helper.py 
     # below is from https://stackoverflow.com/a/65810302/470769
     - mkdir -p $HOME/.docker
     - echo $DOCKER_AUTH_CONFIG > $HOME/.docker/config.json
