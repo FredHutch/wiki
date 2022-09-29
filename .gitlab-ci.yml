@@ -116,7 +116,11 @@ test:
       alias: wiki    
   script: |
     set -x
-    python3 build_helper.py docker-compose.yml > /dev/null
+    if [ "$CI_COMMIT_BRANCH" == "main" ]; then
+      python3 build_helper.py docker-compose.yml > /dev/null
+    else
+      python3 build_helper.py docker-compose-preview.yml > /dev/null
+    fi
     curl -sI http://wiki:80 | head -1 | grep -q "200 OK"
     export NUMHITS=$(curl -s -H "Content-Type: application/json" -XPOST "http://wiki_search:9200/_search" -d'
     {
