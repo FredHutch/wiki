@@ -118,6 +118,7 @@ test:
       alias: wiki    
   script: |
     set -x
+    python3 build_helper.py docker-compose.yml > /dev/null
     curl -sI http://wiki:80 | head -1 | grep -q "200 OK"
     export NUMHITS=$(curl -s -H "Content-Type: application/json" -XPOST "http://wiki_search:9200/_search" -d'
     {
@@ -214,7 +215,7 @@ deploy_preview:
     - sleep 15
     - echo $SC_SWARM_CICD_SSH_KEY | base64 -d > ./sc_swarm_cicd_ssh_key
     - chmod 0400 ./sc_swarm_cicd_ssh_key
-    - python3 build_helper.py docker-compose.yml | ssh -i ./sc_swarm_cicd_ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@sc-swarm-mgr.fhcrc.org docker stack deploy --with-registry-auth -c - sciwiki-preview
+    - python3 build_helper.py docker-compose-preview.yml | ssh -i ./sc_swarm_cicd_ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@sc-swarm-mgr.fhcrc.org docker stack deploy --with-registry-auth -c - sciwiki-preview
 
 # deploy `main` branch to
 # https://sciwiki.fredhutch.org
