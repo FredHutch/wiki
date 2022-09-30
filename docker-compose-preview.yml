@@ -2,6 +2,7 @@ version: '3.3'
 services:
   wiki:
     networks:
+      - default
       - proxy
     image: sc-registry.fredhutch.org/wiki-preview:latest
     stdin_open: true
@@ -18,8 +19,6 @@ services:
 
 
   elasticsearch:
-    networks:
-      - proxy
     image: sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
     stdin_open: true
     environment:
