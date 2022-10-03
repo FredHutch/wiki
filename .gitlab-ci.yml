@@ -74,6 +74,7 @@ create_search_index_0:
     set -x
     # build search index
     # run image and copy HTML files out of it
+    docker rm -f wiki || true
     docker run -d --rm --name wiki sc-registry.fredhutch.org/wiki:test
     rm -rf elasticsearch/tmp && mkdir elasticsearch/tmp
     docker cp wiki:/usr/share/nginx/html/ ./elasticsearch/tmp/
