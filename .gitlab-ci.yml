@@ -97,7 +97,9 @@ create_search_index_1:
   script: |
     env
     docker ps
-    CONTAINER_ID=$(docker ps | grep "$SC_REGISTRY.FREDHUTCH.ORG__WIKI_SEARCH_PART_0_NAME" | cut -d' ' -f1)
+    # CONTAINER_NAME=$(env | grep $HOSTNAME | grep "9200/tcp" | cut -d= -f2 | cut -d / -f 2)
+    # echo container name: $CONTAINER_NAME
+    CONTAINER_ID=$(docker ps | grep $HOSTNAME | grep "9200/tcp" | cut -d' ' -f1)
     docker exec $CONTAINER_ID ls -l /
     docker exec $CONTAINER_ID /indexer.sh
     rm -rf idx
