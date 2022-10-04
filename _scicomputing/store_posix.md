@@ -101,6 +101,12 @@ For these paths, replace HUTCHID with your hutchid.
 | Scratch | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/scratch` |
 | Secure | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/secure` |
 
+Note: Drive mapping with Macs can be very slow for large volumes due to the Mac wanting to index every file in a volume. Turn off volume indexing to improve the speed of drive mapping. 
+From a terminal window on your Mac, turn off all drive mapping.
+```sudo mdutil -a -i off```
+Turn indexing back on for your local drive:
+```sudo mdutil -i on /Volumes/mac-name```
+The sudo command will ask for your Mac login password. Often Mac volume names have spaces; a backslash can be used to quote spaces. `Macintosh\ HD`
 
 **Linux command line:**
 
