@@ -120,12 +120,8 @@ test:
   script: |
     set -x
     if [ "$CI_COMMIT_BRANCH" == "main" ]; then
-<<<<<<< HEAD
-      python3 build_helper.py docker-compose.yml > /dev/null
-=======
       echo "Don't check docker-compose until we deploy to swarm"
       # python3 build_helper.py docker-compose.yml > /dev/null
->>>>>>> deploy-preview-to-swarm
     else
       python3 build_helper.py docker-compose-preview.yml > /dev/null
     fi
