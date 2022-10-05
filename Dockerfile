@@ -46,6 +46,6 @@ FROM nginx
 COPY --from=0 /srv/jekyll/_site/ /usr/share/nginx/html
 RUN cp /usr/share/nginx/html/images/favicon.ico /usr/share/nginx/html/
 COPY ./info.txt /usr/share/nginx/html/
-
+RUN true # see https://stackoverflow.com/a/62409523/470769
 COPY  ./default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80

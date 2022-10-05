@@ -1,0 +1,16 @@
+
+FROM elasticsearch:8.4.2
+
+
+USER root
+
+COPY idx/data /usr/share/elasticsearch/data
+
+RUN chown -R elasticsearch /usr/share/elasticsearch/data
+
+USER elasticsearch
+
+ENV discovery.type=single-node
+ENV xpack.security.enabled=false
+ENV ingest.geoip.downloader.enabled=false
+ENV ES_JAVA_OPTS="-Xms20g -Xmx20g"

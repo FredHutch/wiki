@@ -8,3 +8,6 @@ Gemfile.lock
 _vendor/*
 info.txt
 tmp/
+_pythonModules/*
+_rModules/*
+easybuild/*

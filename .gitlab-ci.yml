@@ -1,11 +1,29 @@
+default:
+  before_script:
+    - apk update
+    - apk --no-cache add py3-pip python3 curl git jq
+    - pip3 install pyyaml
+    - curl -O https://raw.githubusercontent.com/FredHutch/swarm-build-helper/main/build_helper.py 
+    # below is from https://stackoverflow.com/a/65810302/470769
+    - mkdir -p $HOME/.docker
+    - echo $DOCKER_AUTH_CONFIG > $HOME/.docker/config.json
+    - curl -LO https://releases.rancher.com/cli/v0.6.2/rancher-linux-amd64-v0.6.2.tar.gz
+    - tar zxf rancher-linux-amd64-v0.6.2.tar.gz
+    - set -x
 
-before_script:
-  - curl -LO https://releases.rancher.com/cli/v0.6.2/rancher-linux-amd64-v0.6.2.tar.gz
-  - tar zxf rancher-linux-amd64-v0.6.2.tar.gz
-  
-build_test:
-  tags:
-    - shell
+stages:
+  - build
+  - create_search_index_0
+  - create_search_index_1
+  - test
+  - deploy
+
+
+
+build:
+  stage: build
+  tags: # TODO REMOVE after shell runner is disabled
+    - sc-swarm
   script: |
     set -x
     # put info about this commit/branch into /info.txt
@@ -40,69 +58,113 @@ build_test:
       export JEKYLL_ENV=development
     fi
     # build image
-    docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t dockerimages.fhcrc.org/wiki:latest .
+    docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t sc-registry.fredhutch.org/wiki:test .
+    docker push sc-registry.fredhutch.org/wiki:test
 
+
+create_search_index_0:
+  stage: create_search_index_0
+  tags: # TODO REMOVE after shell runner is disabled
+    - sc-swarm
+  # services: 
+  #   - name: sc-registry.fredhutch.org/elasticsearch
+  #     alias: elasticsearch
+
+  script: |
+    set -x
     # build search index
     # run image and copy HTML files out of it
-    docker run -d --rm --name wiki dockerimages.fhcrc.org/wiki:latest
-    rm -rf tmp && mkdir tmp
-    docker cp wiki:/usr/share/nginx/html/ ./tmp/
+    docker rm -f wiki || true
+    docker run -d --rm --name wiki sc-registry.fredhutch.org/wiki:test
+    rm -rf elasticsearch/tmp && mkdir elasticsearch/tmp
+    docker cp wiki:/usr/share/nginx/html/ ./elasticsearch/tmp/
     docker rm -f wiki
-    docker pull elasticsearch:8.4.0
-    docker network create wiki-indexer || true
-    # run an instance of elasticsearch
-    docker rm -f elasticsearch || true
-    docker run --network wiki-indexer -d --rm --name elasticsearch -p 9200:9200 -e "discovery.type=single-node" -e "xpack.security.enabled=false" -e "ingest.geoip.downloader.enabled=false"  elasticsearch:8.4.0
-    sleep 20
-    # create sciwiki0 index
-    curl -X PUT "http://localhost:9200/sciwiki0/" -H 'Content-Type: application/json'
-    # index wiki pages
-    docker build -t indexer elasticsearch/
-    # run indexer script
-    docker run --network wiki-indexer --rm --name indexer -v $(pwd)/tmp:/html indexer
-    curl -X POST "http://localhost:9200/sciwiki0/_flush" -H 'Content-Type: application/json'
-    # save elasticsearch image (with indexed docs) 
-    docker commit elasticsearch dockerimages.fhcrc.org/wiki_elasticsearch:latest
-    # clean up
-    docker rm -f elasticsearch
-    rm -rf tmp
+    echo fultr
+    ls -l elasticsearch
+    ls -l elasticsearch/tmp
+    docker build -t sc-registry.fredhutch.org/wiki_search_part_0 ./elasticsearch/
+    docker push sc-registry.fredhutch.org/wiki_search_part_0
 
 
+create_search_index_1:
+  stage: create_search_index_1
+  tags: # TODO REMOVE after shell runner is disabled
+    - sc-swarm
+  services: 
+    - name: sc-registry.fredhutch.org/wiki_search_part_0
+      alias: create_search_index_1
 
+  script: |
+    env
+    docker ps
+    # CONTAINER_NAME=$(env | grep $HOSTNAME | grep "9200/tcp" | cut -d= -f2 | cut -d / -f 2)
+    # echo container name: $CONTAINER_NAME
+    CONTAINER_ID=$(docker ps | grep $HOSTNAME | grep "9200/tcp" | cut -d' ' -f1)
+    docker exec $CONTAINER_ID ls -l /
+    docker exec $CONTAINER_ID /indexer.sh
+    rm -rf idx
+    mkdir idx
+    docker cp $CONTAINER_ID:/usr/share/elasticsearch/data ./idx/
+    docker build -f elasticsearch/Dockerfile2 -t sc-registry.fredhutch.org/wiki_search:test .
+    docker push sc-registry.fredhutch.org/wiki_search:test
 
+test:
+  stage: test
+  tags: # TODO REMOVE after shell runner is disabled
+    - sc-swarm
+  services:
+    - name: sc-registry.fredhutch.org/wiki_search:test
+      alias: wiki_search
+    - name: sc-registry.fredhutch.org/wiki:test
+      alias: wiki    
+  script: |
+    set -x
+    if [ "$CI_COMMIT_BRANCH" == "main" ]; then
+      python3 build_helper.py docker-compose.yml > /dev/null
+    else
+      python3 build_helper.py docker-compose-preview.yml > /dev/null
+    fi
+    curl -sI http://wiki:80 | head -1 | grep -q "200 OK"
+    export NUMHITS=$(curl -s -H "Content-Type: application/json" -XPOST "http://wiki_search:9200/_search" -d'
+    {
+      "_source": [
+        "title"
+      ],
+      "highlight": {
+        "fields": {
+          "content": {}
+        }
+      },
+      "size": 100,
+      "query": {
+        "match_phrase": {
+          "content": "gizmo"
+        }
+      }
+    }
+    ' | jq .hits.total.value)
+    echo "Number of hits: $NUMHITS"
+    if [ "$NUMHITS" -gt 0 ]; then
+      echo "Search works"
+      # exit 0
+    else
+      echo "Search does not work"
+      exit 1
+    fi
 
-# build for every branch EXCEPT main and push to preview site
-# https://sciwiki-preview.fredhutch.org (only accessible inside
-# hutch network). See 
-# https://sciwiki-preview.fredhutch.org/info.txt for branch
-# and commit information.
-
-deploy_preview:
-  stage: deploy
-  tags:
-    - shell
-  except: 
-    refs:
-      - main
-  script:
-    - docker login --username $DOCKERIMAGES_USER --password $DOCKERIMAGES_PASS https://dockerimages.fhcrc.org
-    - docker tag dockerimages.fhcrc.org/wiki:latest dockerimages.fhcrc.org/wiki-preview:latest 
-    - docker tag dockerimages.fhcrc.org/wiki_elasticsearch:latest dockerimages.fhcrc.org/wiki_elasticsearch-preview:latest
-    - docker push dockerimages.fhcrc.org/wiki-preview:latest
-    - docker push dockerimages.fhcrc.org/wiki_elasticsearch-preview:latest
-    - sleep 15
-    - rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $PREVIEW_RANCHERAPI_KEY --secret-key $PREVIEW_RANCHERAPI_SECRET up -d --pull --force-upgrade --confirm-upgrade --stack wiki_preview --file docker-compose-preview.yml --rancher-file rancher-compose.yml
-
-# deploy `main` branch to
-# https://sciwiki.fredhutch.org
-
-deploy:
-  stage: deploy
-  tags:
-    - shell
+check_for_orphan_assets:
+  stage: test
+  tags: # TODO REMOVE after shell runner is disabled
+    - sc-swarm
   only:
     refs:
        - main
+  before_script:
+    - apk add curl
+    - curl -LO https://github.com/cli/cli/releases/download/v2.16.1/gh_2.16.1_linux_amd64.tar.gz
+    - tar zxf gh_2.16.1_linux_amd64.tar.gz
+    - cp gh_2.16.1_linux_amd64/bin/gh /usr/local/bin
+    - rm -rf gh_2.16.1_linux_amd64.tar.gz gh_2.16.1_linux_amd64
   script: |
     # find orphan assets
     rm -f orphans.txt*
@@ -131,12 +193,51 @@ deploy:
       gh issue create --title "Orphan asset files in wiki" --body-file issue.txt
       # Should we really break the build here? We have created an issue
       # so not sure if breaking the build would be redundant. 
-      # Leaving it as is for now.
-      exit 1
+      # Let's not break the build for now. Commented this out:
+      ### exit 1
     fi
-    docker login --username $DOCKERIMAGES_USER --password $DOCKERIMAGES_PASS https://dockerimages.fhcrc.org
-    docker push dockerimages.fhcrc.org/wiki:latest
-    docker push dockerimages.fhcrc.org/wiki_elasticsearch:latest
+
+
+
+# build for every branch EXCEPT main and push to preview site
+# https://sciwiki-preview.fredhutch.org (only accessible inside
+# hutch network). See 
+# https://sciwiki-preview.fredhutch.org/info.txt for branch
+# and commit information.
+
+deploy_preview:
+  stage: deploy
+  tags: # TODO REMOVE after shell runner is disabled
+    - sc-swarm
+  except: 
+    refs:
+      - main
+  script:
+    - docker tag sc-registry.fredhutch.org/wiki:test sc-registry.fredhutch.org/wiki-preview:latest 
+    - docker tag sc-registry.fredhutch.org/wiki_search:test sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
+    - docker push sc-registry.fredhutch.org/wiki-preview:latest
+    - docker push sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
+    - sleep 15
+    - echo $SC_SWARM_CICD_SSH_KEY | base64 -d > ./sc_swarm_cicd_ssh_key
+    - chmod 0400 ./sc_swarm_cicd_ssh_key
+    - python3 build_helper.py docker-compose-preview.yml | ssh -i ./sc_swarm_cicd_ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@sc-swarm-mgr.fhcrc.org docker stack deploy --with-registry-auth -c - sciwiki-preview
+
+# deploy `main` branch to
+# https://sciwiki.fredhutch.org
+
+deploy:
+  stage: deploy
+  tags: # TODO REMOVE after shell runner is disabled
+    - sc-swarm
+  only:
+    refs:
+       - main
+  script: |
+    docker tag sc-registry.fredhutch.org/wiki:test sc-registry.fredhutch.org/wiki:latest 
+    docker tag sc-registry.fredhutch.org/wiki_search:test sc-registry.fredhutch.org/wiki_elasticsearch:latest
+
+    docker push sc-registry.fredhutch.org/wiki:latest
+    docker push sc-registry.fredhutch.org/wiki_elasticsearch:latest
     sleep 15
     rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET up -d --pull --force-upgrade --confirm-upgrade --stack wiki --file docker-compose.yml --rancher-file rancher-compose.yml
   
