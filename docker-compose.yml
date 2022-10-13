@@ -1,11 +1,15 @@
 version: '2'
 services:
   wiki:
+    networks:
+      - default
     image: sc-registry.fredhutch.org/wiki:latest
     stdin_open: true
     labels:
       io.rancher.container.pull_image: always
   elasticsearch:
+    networks:
+      - default
     image: sc-registry.fredhutch.org/wiki_elasticsearch:latest
     stdin_open: true
     environment:
