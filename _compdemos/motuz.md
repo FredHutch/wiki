@@ -19,7 +19,6 @@ At this time, Motuz allows copying of files/objects between the following file s
 * [Amazon S3](https://aws.amazon.com/s3/)
 * [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/)
 * [Google Cloud Bucket](https://cloud.google.com/storage/docs/json_api/v1/buckets)
-* [Swift](/compdemos/Economy-storage/) (Economy Local Storage)
 * [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 * [WebDAV](https://en.wikipedia.org/wiki/WebDAV)
 * [Dropbox](https://www.dropbox.com/) (Beta)
@@ -48,21 +47,6 @@ In Motuz, click the `Cloud Connections` link at the top of the browser window. T
 In the `Basic` section, set `Type` to `Amazon Simple Storage Service (s3)`. Give the connection a name such as `lab s3 bucket`. Optionally enter the bucket name (`fh-pi-doe-j-eco` here is just an example).
 
 In the `Credentials` section, paste your access key ID and secret access key from the credentials you obtained above. You can optionally click `Verify Connection` to make sure the connection works. Then click `Create Cloud Connection`.
-
-### Swift
-To create a connection to a Swift location, you will need your Fred Hutch ID, your password and the `lastname_f` for the PI whose Swift storage location that you have access to and the following information:
-
-  **Basic**
-  - Connection Name:  Anything you'd like to show up in the lists
-  - Bucket Name: *leave this blank*
-  - Auth URL: "https://tin.fhcrc.org/auth/v2.0"
-  - Tenant: Of the format: "AUTH_Swift_lastname_f" with lastname_f being the last name and first initial of the PI
-  
-  **Credentials**
-  - User:  Your Fred Hutch ID
-  - Password/Key: Your Fred Hutch password (Note: you will need to update the connection when your password changes)
-
-
 
 ## Copying Files to Cloud Locations
 
