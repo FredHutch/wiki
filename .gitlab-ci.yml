@@ -258,7 +258,7 @@ deploy:
       echo "Search is not working, need to send SIGHUP to nginx."
       # Get the nginx container ID:
       NGINX_CONTAINER=$(rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET ps|grep wiki:latest|cut -d ' ' -f 1)
-      rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET exec $NGINX_CONTAINER kill -SIGHUP 1
+      rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET exec $NGINX_CONTAINER /bin/kill -SIGHUP 1
       echo "SIGHUP sent, hopefully search is working now."
       sleep 5
       if [[ $(curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1)  == *"200 OK"* ]]; then
