@@ -134,7 +134,7 @@
   url: _compdemos/aws-credits.md
 - dlm: September 3, 2020
   url: _compdemos/r-2018b-matrix-errors.md
-- dlm: August 16, 2022
+- dlm: October 20, 2022
   url: _compdemos/Mountain-CyberDuck.md
 - dlm: June 13, 2022
   url: _compdemos/ucsc-track-s3.md
@@ -152,7 +152,7 @@
   url: _compdemos/aws-batch.md
 - dlm: May 25, 2021
   url: _compdemos/aspera-on-nx.md
-- dlm: July 7, 2022
+- dlm: October 20, 2022
   url: _compdemos/motuz.md
 - dlm: October 26, 2021
   url: _compdemos/aws-s3.md
@@ -180,7 +180,7 @@
   url: _compdemos/shiny.md
 - dlm: October 12, 2020
   url: _compdemos/first_rhino.md
-- dlm: October 19, 2021
+- dlm: October 20, 2022
   url: _scicomputing/compute_grants.md
 - dlm: June 11, 2020
   url: _scicomputing/compute_parallel.md
@@ -210,13 +210,13 @@
   url: _scicomputing/access_methods.md
 - dlm: November 12, 2019
   url: _scicomputing/software_running.md
-- dlm: September 9, 2022
+- dlm: October 20, 2022
   url: _scicomputing/store_objectstore.md
 - dlm: September 23, 2022
   url: _scicomputing/store_posix.md
 - dlm: August 12, 2022
   url: _scicomputing/access_credentials.md
-- dlm: October 20, 2021
+- dlm: October 11, 2022
   url: _scicomputing/access_aws.md
 - dlm: June 12, 2020
   url: _scicomputing/compute_gpu.md

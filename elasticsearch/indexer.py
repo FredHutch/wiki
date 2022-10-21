@@ -52,7 +52,7 @@ def wrap(docs):
     return outer
 
 def bulk_up(docs):
-    client = Elasticsearch("http://elasticsearch:9200",
+    client = Elasticsearch("http://localhost:9200",
       headers={'Content-Type': 'application/json'})
     print("Preparing for bulk import....")
     try:
