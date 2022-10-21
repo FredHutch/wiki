@@ -250,11 +250,16 @@ deploy:
     # A workaround is to send a SIGHUP to the nginx
     # process. Found this here, a solution to a different
     # problem: https://github.com/docker/compose/issues/2003#issuecomment-138994299
+    # Remember these commands are running in /bin/sh, not bash, so 
+    # some things are a little weird.
 
     # So first check to see if search is working:
 
-    OK="200 OK"
-    if [[ $(curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1)  == *"$OK"* ]]; then
+    set +e
+    curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1|grep "200 OK"
+    RESULT_CODE=$?
+    set -e
+    if [ $RESULTCODE -eq 0 ]; then
       echo "Search is working, we are good."
     else
       echo "Search is not working, need to send SIGHUP to nginx."
@@ -263,7 +268,13 @@ deploy:
       rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET exec $NGINX_CONTAINER /bin/kill -SIGHUP 1
       echo "SIGHUP sent, hopefully search is working now."
       sleep 5
-      if [[ $(curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1)  == *"200 OK"* ]]; then
+
+      set +e
+      curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1|grep "200 OK"
+      RESULT_CODE=$?
+      set -e
+
+      if [ $RESULTCODE -eq 0 ]; then
         echo "Search is working after SIGHUP."
       else
         echo "Search is still not working after SIGHUP."
