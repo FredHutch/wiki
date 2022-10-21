@@ -43,7 +43,7 @@ additional documentation or justification is required. An example of the Researc
 
 ### Available Resources
 
--   If you are affiliated with the the Fred Hutchinson Cancer Research Center or Seattle Cancer Care Alliance, a good place to start is the [Fred Hutch IRB.](https://centernet.fredhutch.org/cn/u/irb.html)
+-   If you are affiliated with the the Fred Hutchinson Cancer Center or Seattle Cancer Care Alliance, a good place to start is the [Fred Hutch IRB.](https://centernet.fredhutch.org/cn/u/irb.html)
 
 -   Similarly, if you work for the University of Washington, the [UW IRB](https://www.washington.edu/research/hsd/) curates that information.
 

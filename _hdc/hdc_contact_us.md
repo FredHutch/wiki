@@ -10,4 +10,4 @@ The Hutch Data Core is made up by a set of staff with complimentary domain areas
 - Matthew Fitzgibbon (Bioinformatics Services) ([email](mailto:mfitzgib@fredhutch.org))
 
 The easiest way to get in touch with the Hutch Data Core is [by email](mailto:hutchdatacore@fredhutch.org),
-and we also can be reached in the [FH Community Slack Workspace](http://fhbig.slack.com).
+and we also can be reached in the [FH-Data Slack Workspace](http://fhdata.slack.com).
