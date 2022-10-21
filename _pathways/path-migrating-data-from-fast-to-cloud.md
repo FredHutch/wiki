@@ -37,9 +37,9 @@ Documentation on Motuz is located here:
 ### Copying Data
 Motuz does not delete data.
 
-Motuz does not delete data on fast when copying data to S3.  After you have verified that your data has been successfully copied to S3, you may directly delete unwanted data from fast.
+ - Motuz does not delete data on fast when copying data to S3.  After you have verified that your data has been successfully copied to S3, you may directly delete unwanted data from fast.
 
-Motuz does not delete data on S3 when copying data to fast.  After you have verified that your data has been successfully copied to fast, you should delete unwanted data from S3 using the AWS cli.
+ - Motuz does not delete data on S3 when copying data to fast.  After you have verified that your data has been successfully copied to fast, you should delete unwanted data from S3 using the AWS cli.
 
 ## Advanced Usage
 
