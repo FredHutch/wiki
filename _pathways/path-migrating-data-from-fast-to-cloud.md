@@ -45,4 +45,4 @@ Note that the API endpoint to use with Fred Hutch's instance of Motuz is `https:
 
 ## Problems?
 
-Email `scicomp`
+Email `scicomp@fredhutch.org`
