@@ -26,7 +26,7 @@ If you need to access this data from the High Performance Compute Clusters, you 
 ### Acquire an AWS S3 account associated with your HutchNetID:
 Each employee will need AWS credentials to access S3 Economy Cloud.
  - [AWS-Credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
-New hires are assigned AWS credentials as part of onboarding, but if you were hired before this process was added, please send an email to helpdesk@fredhutch.org
+AWS credentials are assigned when each lab is given an AWS account.  If you need AWS Credentials, please send an email to helpdesk@fredhutch.org
 
 ### Set Up Motuz to Move Data
 Motuz is the recommended tool to transfer data between Fred Hutch data storage locations.
@@ -34,9 +34,14 @@ Motuz is available on FHCC Campus or through the VPN at [https://motuz.fredhutch
 Documentation on Motuz is located here:
  - [Copying Files To Cloud Locations](https://sciwiki.fredhutch.org/compdemos/motuz/#copying-files-to-cloud-locations)
 
+Motuz can copy files into S3 buckets, but is not able to dielete files from S3 buckets.  Deleting data in S3 is done through the AWS cli.
+
 ## Advanced Usage
 
-Motuz also has an API; consult its [documentation](https://github.com/FredHutch/motuz/#how-to-use-the-api). Note that the API endpoint to use with Fred Hutch's instance of Motuz is `https://motuz.fredhutch.org/api/` .
+Documentation to aid in usingthe AWS cli is located here:
+[AWS CLI](https://sciwiki.fredhutch.org/compdemos/AWSCLI_WSL/).
+
+Note that the API endpoint to use with Fred Hutch's instance of Motuz is `https://motuz.fredhutch.org/api/` .
 
 ## Problems?
 
