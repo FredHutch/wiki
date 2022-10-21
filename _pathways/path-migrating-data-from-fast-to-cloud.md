@@ -8,9 +8,9 @@ This pathway will walk you through the process of moving data from FAST to AWS S
 
 ## Prerequsites and Background:
 Familiarize yourself with available storage options
- - [Storage Overview](https://sciwiki.fredhutch.org/scicomputing/store_overview/)
- - [Storage Posix](https://sciwiki.fredhutch.org/scicomputing/store_posix/)
- - [Storage Objectives](https://sciwiki.fredhutch.org/scicomputing/store_objectstore/)
+ - [Store Overview](https://sciwiki.fredhutch.org/scicomputing/store_overview/)
+ - [Store Posix](https://sciwiki.fredhutch.org/scicomputing/store_posix/)
+ - [Store Objectstore](https://sciwiki.fredhutch.org/scicomputing/store_objectstore/)
 
 Data that is accessed less than once a month should be stored in the AWS S3 Economy Cloud.
 Each PI has been assigned two folders in the S3 Economy Cloud.
