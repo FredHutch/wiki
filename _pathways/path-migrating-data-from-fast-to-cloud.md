@@ -32,7 +32,7 @@ AWS credentials are assigned when each lab is given an AWS account.  If you need
 Motuz is the recommended tool to transfer data between Fred Hutch data storage locations.
 Motuz is available on FHCC Campus or through the VPN at [https://motuz.fredhutch.org](https://motuz.fredhutch.org).
 Documentation on Motuz is located here:
- - [Copying Files To Cloud Locations](https://sciwiki.fredhutch.org/compdemos/motuz/#copying-files-to-cloud-locations)
+ - [Copying Files To Cloud Locations Using Motuz](https://sciwiki.fredhutch.org/compdemos/motuz/#copying-files-to-cloud-locations)
 
 ### Copying Data
 Motuz does not delete data.
