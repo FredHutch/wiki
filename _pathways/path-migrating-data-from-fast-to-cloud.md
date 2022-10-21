@@ -40,4 +40,4 @@ Motuz also has an API; consult its [documentation](https://github.com/FredHutch/
 
 ## Problems?
 
-Email `scicomp` or [file an issue in the Motuz repository](https://github.com/FredHutch/motuz/issues/new).
+Email `scicomp`
