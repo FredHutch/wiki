@@ -1,7 +1,7 @@
 default:
   before_script:
     - apk update
-    - apk --no-cache add py3-pip python3 curl git jq
+    - apk --no-cache add py3-pip python3 curl git jq bash
     - pip3 install pyyaml
     - curl -O https://raw.githubusercontent.com/FredHutch/swarm-build-helper/main/build_helper.py 
     # below is from https://stackoverflow.com/a/65810302/470769
@@ -242,42 +242,4 @@ deploy:
     sleep 15
     rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET up -d --pull --force-upgrade --confirm-upgrade --stack wiki --file docker-compose.yml --rancher-file rancher-compose.yml
     sleep 20
-    # Now - there seems to be a rancher-specific problem
-    # with search. Sometimes search does not work, and it
-    # seems to have to do with nginx (or docker?) assigning
-    # an IP to the container name `elasticsearch` which
-    # can't be reached - we get "no route to host".
-    # A workaround is to send a SIGHUP to the nginx
-    # process. Found this here, a solution to a different
-    # problem: https://github.com/docker/compose/issues/2003#issuecomment-138994299
-    # Remember these commands are running in /bin/sh, not bash, so 
-    # some things are a little weird.
-
-    # So first check to see if search is working:
-
-    set +e
-    curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1|grep "200 OK"
-    RESULT_CODE=$?
-    set -e
-    if [ $RESULTCODE = "0" ]; then
-      echo "Search is working, we are good."
-    else
-      echo "Search is not working, need to send SIGHUP to nginx."
-      # Get the nginx container ID:
-      NGINX_CONTAINER=$(rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET ps|grep wiki:latest|cut -d ' ' -f 1)
-      rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET exec $NGINX_CONTAINER /bin/kill -SIGHUP 1
-      echo "SIGHUP sent, hopefully search is working now."
-      sleep 5
-
-      set +e
-      curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1|grep "200 OK"
-      RESULT_CODE=$?
-      set -e
-
-      if [ $RESULTCODE = "0" ]; then
-        echo "Search is working after SIGHUP."
-      else
-        echo "Search is still not working after SIGHUP."
-        exit 1
-      fi
-    fi
+    ./search_repair.sh
