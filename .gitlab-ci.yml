@@ -259,7 +259,7 @@ deploy:
     curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1|grep "200 OK"
     RESULT_CODE=$?
     set -e
-    if [ $RESULTCODE -eq 0 ]; then
+    if [ $RESULTCODE = "0" ]; then
       echo "Search is working, we are good."
     else
       echo "Search is not working, need to send SIGHUP to nginx."
@@ -274,7 +274,7 @@ deploy:
       RESULT_CODE=$?
       set -e
 
-      if [ $RESULTCODE -eq 0 ]; then
+      if [ $RESULTCODE = "0" ]; then
         echo "Search is working after SIGHUP."
       else
         echo "Search is still not working after SIGHUP."
