@@ -241,5 +241,3 @@ deploy:
     docker push sc-registry.fredhutch.org/wiki_elasticsearch:latest
     sleep 15
     rancher-v0.6.2/rancher --url https://ponderosa.fhcrc.org --access-key $RANCHERAPI_KEY --secret-key $RANCHERAPI_SECRET up -d --pull --force-upgrade --confirm-upgrade --stack wiki --file docker-compose.yml --rancher-file rancher-compose.yml
-    sleep 20
-    ./search_repair.sh
