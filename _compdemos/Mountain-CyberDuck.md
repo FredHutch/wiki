@@ -34,7 +34,7 @@ Email `helpdesk` or your divisional IT support and ask for an installation of Mo
 - Start (double click) file INSTALL.bat. The install script will install a tested version of Mountain Duck, a profile and a license file.
 - Continue with [Configuring Mountain Duck](#Configuring-Mountain-Duck) below.
 
-![Tray](/assets/store_objectstore_swift/2018-09-25-11-25-43.png)
+![Tray](/assets/mountain_cyber_duck/2018-09-25-11-25-43.png)
 
 
 #### Mac OSX

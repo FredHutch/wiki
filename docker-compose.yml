@@ -1,9 +1,21 @@
 version: '2'
 services:
   wiki:
-    image: dockerimages.fhcrc.org/wiki:latest
+    networks:
+      - default
+    image: sc-registry.fredhutch.org/wiki:latest
     stdin_open: true
-    ports:
-      - "80"
+    labels:
+      io.rancher.container.pull_image: always
+  elasticsearch:
+    networks:
+      - default
+    image: sc-registry.fredhutch.org/wiki_elasticsearch:latest
+    stdin_open: true
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ingest.geoip.downloader.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     labels:
       io.rancher.container.pull_image: always

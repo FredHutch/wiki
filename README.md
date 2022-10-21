@@ -280,8 +280,6 @@ This functionality is possible by using the [jekyll-glossary_tooltip](https://gi
 
 Note that this plugin is *not* one of the plugins approved by GitHub to be used with GitHub Pages, so this site is no longer hosted by Pages. Instead we build it ourselves using our CI/CD pipeline.
 
-**Coming Soon**: Functionality that will automatically "glossarize" the first occurrence in any Markdown file of terms that are in the glossary. This will be documented here when it is ready.
-
 ## For Admins (everyone else, please do not edit these as your edits will be ignored/removed)
 
 ### Pages that run Demo and Contributors Collection pages:

@@ -12,10 +12,10 @@
 // $type-size-8 : 0.625em;  // ~10px
 
 @charset "utf-8";
-$link-color: #207c7e !default;
-$primary-color: #89c348 !default;
-$border-color: #89c348 !default;
-$footer-background-color: #123054 !default;
+$link-color: #0A799A !default;
+$primary-color: #0A799A !default;
+$border-color: #00C1D5 !default;
+$footer-background-color: #1B365D !default;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
@@ -32,4 +32,9 @@ html {
     @include breakpoint($x-large) {
         font-size: 18px; // originally 22px
     }
+}
+
+/* Format inline code blocks */
+code.language-plaintext.highlighter-rouge {
+  background: #afb8c133; // originally #fafafa
 }
