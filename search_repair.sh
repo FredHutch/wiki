@@ -14,7 +14,7 @@ set -x
 
 # So first check to see if search is working:
 
-if [[ $(curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1)  == *"201 OK"* ]]; then
+if [[ $(curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1)  == *"200 OK"* ]]; then
     echo "Search is working, we are good."
     exit 0
 fi
@@ -27,7 +27,7 @@ echo "SIGHUP sent, hopefully search is working now."
 
 sleep 5
 
-if [[ $(curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1)  == *"201 OK"* ]]; then
+if [[ $(curl -siX GET https://sciwiki.fredhutch.org/sciwiki0/_search/|head -1)  == *"200 OK"* ]]; then
     echo "After SIGHUP, search is working, we are good."
     exit 0
 fi
