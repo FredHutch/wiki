@@ -7,14 +7,10 @@ primary_reviewers:
 This pathway will walk you through the process of moving data from FAST to AWS S3 Economy Cloud.
 
 ## Prerequsites and Background:
-Understand your storage options
+Familiarize yourseld with available storage options
  - [Storage Overview](https://sciwiki.fredhutch.org/scicomputing/store_overview/)
  - [Storage Posix](https://sciwiki.fredhutch.org/scicomputing/store_posix/)
  - [Storage Objectives](https://sciwiki.fredhutch.org/scicomputing/store_objectstore/)
-
-Notes (as of 2022-10-19):
- - Economy local (Swift) has been retired and all data has been migrated to the AWS S3 economy cloud storage.
- - Chargeback fees for (Fast) storage are under review and may be reduced or cancelled.
 
 Data that is accessed less than once a month should be stored in the AWS S3 Economy Cloud.
 Each PI has been assigned two folders in the S3 Economy Cloud.
