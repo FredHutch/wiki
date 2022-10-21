@@ -25,14 +25,9 @@ Fred Hutch is currently using cloud computing resources from the 3 major infrast
 
 The Fast File storage service provides a high performance Posix file system accessed via SMB and NFS protocols. A cloud-based mirror of this file system provides backup and disaster recovery capability.
 
-The Economy File storage service is backed by two different technologies: 
-
-- a high capacity object storage system that can scale to sizes > 50 Petabyte at low cost. The service is based on commodity storage hardware, open source cloud storage technology (Openstack Swift) and is commercially supported. The system is can be accessed via Swift or S3 protocols. Three replicas (copies) of the data are stored in three different buildings on campus providing high resiliency and data protection.
-
-- the economy cloud service provides a secure object storage bucket for each investigator using AWS S3. The buckets can be used to store data as well as collaborate with external investigators.
+The Economy Cloud storage service provides a secure object storage bucket for each investigator using AWS S3. The buckets can be used to store data as well as collaborate with external investigators.
 
 Both systems are equipped with a recycle bin that protects against accidental deletion of files and currently allow for data restoration within 60 days after deletion.
-
 
 ## Information for citing in publications
 

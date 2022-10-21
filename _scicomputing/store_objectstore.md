@@ -13,11 +13,6 @@ As the amount of research data grows, which can occur rapidly when new large sca
 
 AWS S3 is less expensive than [`Fast`](/scicomputing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, AWS S3 would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  AWS S3 serves as an archive for these data, and typically compute processes do not directly access these files.
 
-
-### Economy Local (Swift)
-
-> NOTE:  Economy Local will no longer be available after June 2022.  It is recommended that you move your data from Economy Local (Swift) to Economy Cloud (S3).  All resources for using `Economy Local` have been moved to [here for archiving](/compdemos/Economy-storage/).
-
 ## Features & Benefits of Object Storage Systems
 
 Some features and benefits of object storage systems include:
