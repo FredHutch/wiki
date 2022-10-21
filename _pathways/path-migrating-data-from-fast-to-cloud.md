@@ -7,7 +7,7 @@ primary_reviewers:
 This pathway will walk you through the process of moving data from FAST to AWS S3 Economy Cloud.
 
 ## Prerequsites and Background:
-Familiarize yourseld with available storage options
+Familiarize yourself with available storage options
  - [Storage Overview](https://sciwiki.fredhutch.org/scicomputing/store_overview/)
  - [Storage Posix](https://sciwiki.fredhutch.org/scicomputing/store_posix/)
  - [Storage Objectives](https://sciwiki.fredhutch.org/scicomputing/store_objectstore/)
