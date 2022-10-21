@@ -34,12 +34,15 @@ Motuz is available on FHCC Campus or through the VPN at [https://motuz.fredhutch
 Documentation on Motuz is located here:
  - [Copying Files To Cloud Locations](https://sciwiki.fredhutch.org/compdemos/motuz/#copying-files-to-cloud-locations)
 
-Motuz can copy files into S3 buckets, but is not able to dielete files from S3 buckets.  Deleting data in S3 is done through the AWS cli.
+### Copying Data
+Motuz does not delete data from fast when moving data to S3.  After you have verified that your data has been successfully copied to S3, you should delete from fast directly.
+
+When using Motuz to copy data from S3 buckets to fast, Motuz will not delete data from S3.  After you have verified that your data has been successfully copied to fast, you should delete the data directly from S3 using the AWS cli.
 
 ## Advanced Usage
 
-Documentation to aid in usingthe AWS cli is located here:
-[AWS CLI](https://sciwiki.fredhutch.org/compdemos/AWSCLI_WSL/).
+Documentation to aid in using the AWS cli is located here:
+[working-with-s3-using-the-aws-cli](https://sciwiki.fredhutch.org/compdemos/AWSCLI_WSL/#working-with-s3-using-the-aws-cli).
 
 Note that the API endpoint to use with Fred Hutch's instance of Motuz is `https://motuz.fredhutch.org/api/` .
 
