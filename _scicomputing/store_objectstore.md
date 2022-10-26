@@ -47,15 +47,18 @@ In the event that you need to share a very large dataset (e.g. >5TB) with an ext
 
 S3 (the Simple Storage Service) is an object store very much like the Economy file service, though provided by Amazon Web Services.  Storage resources in S3 are organized much like the other Fred Hutch Object and Block systems, with a "PI bucket" for each investigator at the Hutch which is analogous to the investigator directories available in the traditional file system. A specialized client (the AWS command line interface) is used to upload the data from local storage to S3 storage.
 
-#### Backup and Security
+#### Backup, Retention, and Security
 
 Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved for up to 60 days.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
+
+All Economy Cloud S3 buckets have Intelligent Tiering enabled. This means that data is automatically archived in long-term storage after it has not been accessed for a certain period of time. This is done to keep costs down for users. All files are still retrievable at any time; however there may be a short turnaround time for files that haven't been accessed in over 90 days. A full description of intelligent tiering and how it works can be found here: https://aws.amazon.com/s3/storage-classes/intelligent-tiering/
 
 #### Credentials and Permissions
 
 Once you have [obtained S3 credentials](/scicomputing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets. If you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j-eco` for the private bucket and `fh-pi-doe-j-eco-public` for the public bucket. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.
 
 By default, everyone in the lab with an AWS username will have access to all data in all buckets, however the prefixes `readonly/` and `SR/` are typically restricted.  Data Managers and Admins have full permissions on all files in all buckets.  While this default setup works well for most labs, it is possible to create additional restrictions as well if necessary.  For example, if a lab needs to store confidential PHI data such as for a clinical trial and only a certain subset of users in the lab are authorized to access that data, a specific prefix can be created that restricts access to only those authorized users.  Please submit a helpdesk ticket for assistance in setting this up.
+
 
 #### Scratch S3 bucket
 
