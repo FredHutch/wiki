@@ -88,7 +88,7 @@ type the following (username is your HutchNetID):
 You'll see a message printed to the screen that starts with:
 
 ```
-Welcome to the Fred Hutchinson Cancer Research Center
+Welcome to the Fred Hutchinson Cancer Center
 ```
 
 Your command prompt will now look something like:

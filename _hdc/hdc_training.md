@@ -3,70 +3,119 @@ title: Training and Documentation
 hdc: True
 ---
 
-Fred Hutch offers a variety of educational resources on aspects of bioinformatics, analytics, and working with data. Here you can find the opportunties for training and help offered through Fred Hutch as well as access a resource library of external online educational content.
+Here you can find the opportunities for self-learning and training in the methods used for bioinformatics and data analysis
+which may be useful for researchers in making use of large-scale datasets, in particular those produced by the instrumentation
+provided by Shared Resources.
 
-## Instructor-led training
+## Genomics
 
-While we are currently working to add staffing support for instructor-led training activities, we hope to offer targeted workshops in the near future.
+### Library prep and quality assessment
 
-Keep an eye out for:
-- Journal clubs to bring together people with shared interests in a particular method or technology to discuss current, high-impact papers.
-- Workshops that offer training specific to Fred Hutch infrastructure such as how to effectively use the SLURM cluster or access and use AWS.
+  - [Fred Hutch Guidance - Library Preparation for Sequencing](/hdc/datagen_platformsData/#library-preparation-for-sequencing)
+  - [Guide to library prep](https://genohub.com/ngs-library-preparation-kit-guide/): This guide is an overview of library preparation applications and kits that are in common use for next-generation sequencing.
+  - [NGS library preperation resources from Illumina](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html): Illumina library prep resource page.
+  - [Illumina sequencing method explorer](https://www.illumina.com/science/sequencing-method-explorer.html): Use this tool to explore cutting-edge experimental next-generation sequencing (NGS) library preparation methods compiled from scientific literature. To find a method to suit your project, along with compatible kits, select a starting material or search for a method by name.
+  - [Library construction for next-generation sequencing: Overviews and challenges](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351865/): Factors such as the quantity and physical characteristics of the RNA or DNA source material as well as the desired application are addressed in the context of preparing high quality sequencing libraries.
+  - [Fred Hutch Guidance - Assay Preparation](/hdc/datagen_assayPrep/)
+  - [Labome overview of RNA extraction kits and application’s](https://www.labome.com/method/RNA-Extraction.html): This article summarizes commonly used methods and kits for RNA extraction.
+  - [Labome overview of DNA extraction kits and applications](https://www.labome.com/method/DNA-Extraction-and-Purification.html): A comprehensive review of DNA extraction and purification kits cited in the literature.
 
->Instructor-led opportunties are in the planning stage and pending staff support.
+### Illumina
+
+  - [Fred Hutch Guidance - Illumina Sequencers](/hdc/datagen_platformsData/#illumina-sequencers)
+  - [Illumina Sequencing by Synthesis](https://www.youtube.com/watch?v=fCd6B5HRaZ8): A 5 min video covering the Illumina RNA sequencing technology.
+  - [Illumina sequencing resources](https://www.illumina.com/techniques/sequencing.html): Sequencing resources page on the Illumina website.
+
+### PacBio
+
+  - [Fred Hutch Guidance - PacBio Instrumentation](/hdc/datagen_platformsData/#pacific-biosciences-pacbio-long-range-sequencer)
+  - [Fred Hutch Guidance - DNA Preparation for PacBio](/hdc/datagen_dnaApproaches/#smrt-sequencing-pacbio)
+  - [SMRT Sequencing](https://www.pacb.com/smrt-science/smrt-sequencing/): Resources about the SMRT sequencing technology from PacBio.
+
+### 10X genomics
+
+  - [Fred Hutch Guidance - Library Preparation for 10X Genomics](/hdc/datagen_platformsData/#10x-genomics-single-cell-library-preparation-system)
+  - [10X Genomics](https://www.10xgenomics.com/): Link to the 10X genomics webpage
+
+### RNAseq
+
+  - [RNA sequencing: the teenage years](https://www.nature.com/articles/s41576-019-0150-2#Sec32): An overview of RNA seq technologies, methods, and where the tech is headed.
+  - [A survey of best practices for RNA seq data analysis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8): A review of best practices for RNA sequencing analysis covering experimental design, quality control, read alignment, quantification of gene and transcript levels, visualization, differential gene expression, alternative splicing, functional analysis, gene fusion detection and eQTL mapping.
+  - [University of Oregon RNA-seqlopedia](https://rnaseq.uoregon.edu/)
+  - [Introduction to RNA-seq for researchers](https://www.youtube.com/watch?v=7BLS_YY9HeM&t=758s): A 30 min video reviewing RNA-sequencing concepts.
+
+  - [Fred Hutch Guidance - RNA Sequencing](/hdc/datagen_rnaApproaches/#rna-sequencing)
+  - [Illumina gene expression resource](https://www.illumina.com/techniques/popular-applications/gene-expression-transcriptome-analysis.html): Illumina resources for gene expression analysis.
+
+
+#### Small RNAs (e.g., miRNA)
+
+  - [Fred Hutch Guidance - miRNA](/hdc/datagen_rnaApproaches/#example--small-rnas-eg-mirna)
+  - [Genohub guide on small RNA (miRNA)](https://genohub.com/services/sequencing/illumina-miRNA-sequencing-services): Use this guide to help search for and get accurate pricing and turnaround times for small RNA, microRNA (miRNA) sequencing services. The guide includes considerations you should make before starting your small RNA sequencing project.
+
+### Cleavage Under Targets and Release Using Nuclease (CUT&RUN)
+
+  - [How CUT&RUN profiles chromatin](https://www.youtube.com/watch?v=9Ol055tXVvA): A 3 min video explaining the basics of CUT&RUN.
+  - [An efficient targeted nuclease strategy for high-resolution mapping of DNA binding sites](https://elifesciences.org/articles/21856): The original CUT&RUN paper.
+  - [Lay off the ChIPs: CUT&RUN instead](https://www.fredhutch.org/en/news/spotlight/2017/02/lay-off-the-chips--cut-run-instead.html): A Fred Hutch spotlight explaining CUT&RUN in very accessible terms.
+
+### Whole exome sequencing
+
+  - [Fred Hutch Guidance - Whole Exome Sequencing](/hdc/datagen_dnaApproaches/#capture-based-sequencing---example--whole-exome-sequencing)
+  - [Illumina whole-exome sequencing resources](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/exome-sequencing.html): Whole exome sequencing resources from Illumina.
+  - [Roche: whole exome sequencing](https://sequencing.roche.com/en/research-application/application/whole-exome-sequencing.html): A brief overview of whole exome sequencing from Roche
+  - [The promise of whole-exome sequencing in medical genetics](https://www.nature.com/articles/jhg2013114): A summar of the impacts of whole-exome sequencing in medical genetics.
+
+### Targeted sequencing
+
+  - [Fred Hutch Guidance - Targeted DNA Sequencing](/hdc/datagen_dnaApproaches/#amplicon-based-sequencing---targeted-dna-sequencing)
+  - [Illumina targeted sequencing resource](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html): Resources on targeted sequencing.
+  - [Disease-targeted sequencing: a cornerstone in the clinic](https://www.nature.com/articles/nrg3463): A review of disease targeted sequencing and it's clinical applications.
+  - [Applications and analysis of targeted genome sequencing in cancer studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6861594/): A review of how targeted sequencing is used in cancer research. This paper also presents a generalized workflow, explaining important parmeters and best practices.
+
+  - [Optimizing coverage for targeted sequencing](https://support.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote_optimizing_coverage_for_targeted_resequencing.pdf): This tech note from Illumina describes how targeted DNA sequencing panels are designed and sequenced to maximize the data quality and coverage when used.
+
+### CRISPR screens
+
+- [CRISPR basics](https://grcf.jhmi.edu/products/crisprs/crispr-basics/): A very brief overview of CRISPR basics.
+- [CRISPR: Gene editing and beyond](https://www.youtube.com/watch?v=4YKFw2KZA5o): A 4 min video covering how the CRISPR technology works.
+- [Application of CRISPR technologies in research and beyond](https://www.nature.com/articles/nbt.3659): A paper discussing the application of CRISPR in a wide range of contexts.
+
+### ChIPseq
+
+  - [Fred Hutch Guidance - ChIPseq](/hdc/datagen_dnaApproaches/#chromatin-immunoprecipitation-sequencing-chip-seq)
+  - [Epigenie guide to ChIPseq](https://epigenie.com/guide-getting-started-with-chip-seq/): An overview of ChIP sequencing. A good starting point with references and resources linking to more information.
+
+### ATACseq (DNA accessibility)
+
+- [Complete guide to understanding and using ATACseq](https://www.activemotif.com/blog-atac-seq): An blog post from Active Motif covering what ATAC-Seq is, it’s history, how it works, and some discoveries enabled by ATAC-Seq.
+- [ATAC-seq: a method for assaying chromatin accessability genome-wide](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374986/): The original ATAC-seq paper.
+- [A brief overview of ATAC-seq](https://www.youtube.com/watch?v=Gy0sjLW2dxE): A short 7 min video explaining how ATAC-seq works and how it can be applied to epigenetics research.
+
+### Nanostring
+
+  - [Fred Hutch Guidance - SNP Arrays](/hdc/datagen_platformsData/#single-nucleotide-polymorphism-snp-arrays-or-methylation-arrays)
+  - [Fred Hutch Guidance - Nanostring](/hdc/datagen_rnaApproaches/#nanostring-gene-expression-panels)
+  - [Nanostring](https://www.nanostring.com/): Link to the Nanostring website.
+  - [Illumina microarray](https://www.illumina.com/techniques/microarrays.html): Illumina resources on their microarray technology.
+  - [Illumina gene expression & transcriptome analysis](https://www.illumina.com/techniques/popular-applications/gene-expression-transcriptome-analysis.html): Resources on gene expression methods and analysis from Illumina.
+
 
 ## Self-directed learning through Fred Hutch
-
-For those who aren't able to attend in-person courses we have a range of standalone resources to help guide their self-directed learning. 
-
-- Fredhutch.io is an initiative to facilitate education about and promote access to computational resources at Fred Hutch. Those interested in learning core computational skills like R and Python can work through this content at their own pace.
-  - [Intro to Python](https://fredhutchio.github.io/python_intro/)
-  - [Intermediate Python](https://fredhutchio.github.io/python_programming/)
-  - [Intro to R](https://fredhutchio.github.io/r_intro/)
-
-- [Bioinformatics and Genomics Resource Library](/hdc/bioinformatics_library) is a curated list of external resources related to bioinformatics and genomics including peer reviewed papers, blog posts, and video tutorials.
 
 - [The Scientific Computing Resource Library](/compdemos) includes tutorials of how to perform common computational tasks using software available at Fred Hutch. Below we've highlighted a few popular links, but be sure to check out the page to see all the tutorials available.
   - [How to Rhino](/compdemos/howtoRhino)
   - [R Tips and Tricks](/compdemos/R_tips_tricks)
-  - [Accessing Economy Local Storage](/compdemos/Economy-storage)
+  - [Accessing Economy storage](/scicomputing/store_objectstore/)
 
-- [Code templates and examples](/scicomputing/software_examples) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as addtional examples of executable code that can be tailored to suit your own needs.
+- [Code templates and examples](/scicomputing/software_examples) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as additional examples of executable code that can be tailored to suit your own needs.
 
->Due to the nature of self-directed learning there is no instructor immediately available to answer questions or troubleshoot. Please bring questions to the relevant office hours (listed below) or to the [FH-BCR Slack](http://fhbig.slack.com).
+- The [Fred Hutch Data Science Lab](https://hutchdatascience.org/) curates training materials on a wide array of data science and computing topics that you can find on their [training page.](https://hutchdatascience.org/training/). 
 
-## Office hours 
-
-Office hours are available for many of the shared resources on campus. Bring your questions and get answers! Currently most office hours are hosted on MS Teams. You can find links to office hours and get regular reminders by joining the [Fred Hutch Bioinformatics and Computational Research (FH-BCR) community Slack workspace](http://fhbig.slack.com).
-
-- __Hutch Data Core:__ Staff are available to assist researchers in getting started with bioinformatics and orienting staff to resources for improving their coding, including troubleshooting application of code to research questions.
-  - Hosted Every Tuesday from 9:00 to noon, staffed by Lauren Wolfe
-- __Scientific Computing - General:__ Scientific Computing (SciComp) manages basic account access for research computing resources, including data storage and shared computational cluster use. Staff are available to answer questions related to access and usage of Hutch resources for computational research.
-  - Hosted every Wednesday from 10:00 to noon, staffed by Ben McGough
-- __Scientific Computing - Cloud/Next Gen:__ In addition to general consulting (see above), Scientific Computing (SciComp) supports researchers interested in emerging technologies like next generation sequencing and cloud computing. Staff are available to answer questions about getting started building analytical pipelines in the cloud, and generally making computation more scalable and reproducible.
-  - Hosted every Tuesday from 3:00 to 4:30, staffed by Dan Tenenbaum
-- __Ethics and Compliance:__ Staff from the Center Information Technology (CIT) Compliance Office with expertise in information security are available to answer questions related to secure data management and resources at the Hutch for security compliance.
-  - Hosted every Wednesday from 10:00 to noon, staffed by Susan Glick
-
-_Coming Soon!_  
-_We are working to formalize office hours for many of the Shared Resources offered through Fred Hutch. Please keep an eye on this page for updates!_
-
-- __Genomics & Bioinformatics:__ Staff from the Genomics and Bioinformatics Shared Resource are available to answer questions related to the generation and analysis of genomic data from DNA array, genetic analysis and high-throughput screening methods.
-  - Bioinformatics staffed by Matt Fitzgibbon.
-  - Genomics staffed by Cassie Sather.
-- __Image Analysis:__ Staff with expertise in image analysis are available to answer questions.
-  - Staffed by Julien Dubrulle.
-- __Flow Cytometry:__ Staff from the Flow Cytometry Shared Resource are available to answer questions from aiding scientists on panel design, and marker and color choice to data analysis and troubleshooting.
-  - Staffed by Andrew Berger.
-- __Proteomics & Metabolomics:__ Staff from the Proteomics and Metabolomics Shared Resource are available to answer questions related to sample preparation, sample separation, data collection and data analysis.
-  - Staffed by Phil Gafken.
-- __Cellular Imaging:__ Staff from the Cellular Imaging Shared Resource with expertise in advanced microscopy incluidng light microscopy and electron microscopy are available to answer questions.
-  - Staffed by Peng Guo.
-- __Cryo-EM:__ Staff from the Cryo-EM Shared Resource are available to answer questions realted to sample preperation, data collection, and data processing.
-  - Staffed by Caleigh Azumaya.
-
->Office hours can also be found on the Centernet Calendar.  
->Due to COVID-19 all office hours are currently hosted through MS Teams.
+- Fredhutch.io was an initiative to facilitate education about and promote access to computational resources at Fred Hutch. Those interested in learning core computational skills like R and Python can work through this archived content at their own pace. 
+  - [Intro to Python](https://fredhutchio.github.io/python_intro/)
+  - [Intermediate Python](https://fredhutchio.github.io/python_programming/)
+  - [Intro to R](https://fredhutchio.github.io/r_intro/)
 
 ## Resources In Seattle
 
@@ -78,6 +127,7 @@ _We are working to formalize office hours for many of the Shared Resources offer
 ### Classroom-Style Courses
 These resources are organized in a lecture type format as slides, screencasts, and video. Most are work-at-your-own-pace, but some may be linked to a course calander. 
 
+- [Hutch Learning playlist for Coding & Programming](https://fredhutch.csod.com/ui/lms-learner-playlist/PlaylistDetails?playlistId=88b39d59-7921-4d0f-9bca-c3df6b1fad1b)
 - [MCB517A: Tools for Computational Biology](https://github.com/fredhutchio/tfcb_2019): A graduate-level course taught for UW by Fred Hutch CompBio faculty. This links to a GitHub repository that includes all lectures and homework.
   - [How to install necessary software for this course](https://github.com/fredhutchio/tfcb_2019/tree/master/software)
   - [Ask questions about this course](https://github.com/fredhutchio/tfcb_2019/issues)
@@ -123,8 +173,8 @@ __Command Line__
 __R__
 - Webinars from R studio (30 min - 1 hr / video)
   - [Getting Started With R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/)
-  - [Easy Ways to Collect Different Types of Data from the Web with R | Part 1](https://www.rstudio.com/resources/webinars/part-1-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
-  - [Easy Ways to Collect Different Types of Data from the Web with R | Part 2](https://www.rstudio.com/resources/webinars/part-2-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
+  - [Easy Ways to Collect Different Types of Data from the Web with R - Part 1](https://www.rstudio.com/resources/webinars/part-1-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
+  - [Easy Ways to Collect Different Types of Data from the Web with R - Part 2](https://www.rstudio.com/resources/webinars/part-2-easy-ways-to-collect-different-types-of-data-from-the-web-with-r/)
   - [Debugging Techniques in RStudio](https://www.rstudio.com/resources/webinars/debugging-techniques-in-rstudio/)
   - [A Gentle Introduction to Tidy Statistics in R](https://www.rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/)
   - [Managing Packages for Open Source Data Science](https://www.rstudio.com/resources/webinars/managing-packages-for-open-source-data-science/)

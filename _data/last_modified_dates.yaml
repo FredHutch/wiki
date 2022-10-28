@@ -30,11 +30,9 @@
   url: rModules.md
 - dlm: July 14, 2022
   url: _hdc/datagen_overview.md
-- dlm: June 13, 2022
-  url: _hdc/bioinformatics_library.md
 - dlm: July 14, 2022
   url: _hdc/datagen_proteomics.md
-- dlm: August 13, 2021
+- dlm: September 9, 2022
   url: _hdc/hdc_index.md
 - dlm: August 13, 2021
   url: _hdc/hdc_building_containers.md
@@ -42,13 +40,13 @@
   url: _hdc/hdc_refgenomes.md
 - dlm: July 14, 2022
   url: _hdc/datagen_assayPrep.md
-- dlm: October 27, 2021
+- dlm: September 16, 2022
   url: _hdc/hdc_training.md
 - dlm: July 14, 2022
   url: _hdc/datagen_platformsData.md
-- dlm: June 1, 2021
+- dlm: September 9, 2022
   url: _hdc/hdc_portals.md
-- dlm: May 14, 2021
+- dlm: September 16, 2022
   url: _hdc/hdc_contact_us.md
 - dlm: July 14, 2022
   url: _hdc/datagen_rnaApproaches.md
@@ -58,7 +56,7 @@
   url: _hdc/hdc_workflows.md
 - dlm: April 14, 2022
   url: _hdc/workflows/running_first_workflow.md
-- dlm: June 25, 2021
+- dlm: September 9, 2022
   url: _hdc/workflows/workflow_catalog.md
 - dlm: August 13, 2021
   url: _hdc/workflows/workflow_background.md
@@ -134,7 +132,7 @@
   url: _compdemos/aws-credits.md
 - dlm: September 3, 2020
   url: _compdemos/r-2018b-matrix-errors.md
-- dlm: August 16, 2022
+- dlm: October 20, 2022
   url: _compdemos/Mountain-CyberDuck.md
 - dlm: June 13, 2022
   url: _compdemos/ucsc-track-s3.md
@@ -152,7 +150,7 @@
   url: _compdemos/aws-batch.md
 - dlm: May 25, 2021
   url: _compdemos/aspera-on-nx.md
-- dlm: July 7, 2022
+- dlm: October 20, 2022
   url: _compdemos/motuz.md
 - dlm: October 26, 2021
   url: _compdemos/aws-s3.md
@@ -178,9 +176,9 @@
   url: _compdemos/Docker.md
 - dlm: April 17, 2020
   url: _compdemos/shiny.md
-- dlm: October 12, 2020
+- dlm: September 9, 2022
   url: _compdemos/first_rhino.md
-- dlm: October 19, 2021
+- dlm: October 20, 2022
   url: _scicomputing/compute_grants.md
 - dlm: June 11, 2020
   url: _scicomputing/compute_parallel.md
@@ -210,9 +208,9 @@
   url: _scicomputing/access_methods.md
 - dlm: November 12, 2019
   url: _scicomputing/software_running.md
-- dlm: September 9, 2022
+- dlm: October 20, 2022
   url: _scicomputing/store_objectstore.md
-- dlm: September 23, 2022
+- dlm: October 4, 2022
   url: _scicomputing/store_posix.md
 - dlm: August 12, 2022
   url: _scicomputing/access_credentials.md
@@ -262,7 +260,7 @@
   url: _datascience/ds_index.md
 - dlm: May 15, 2019
   url: _generation/study_proposal.md
-- dlm: April 2, 2019
+- dlm: September 9, 2022
   url: _generation/human_consentIRB.md
 - dlm: May 18, 2022
   url: _generation/clsp_specimenBanking.md
