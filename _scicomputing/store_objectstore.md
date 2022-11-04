@@ -1,14 +1,15 @@
 ---
 title: Data Storage in AWS S3
-primary_reviewers: jefftucker, dtenenba
+primary_reviewers: dtenenba, stacifase
 ---
 
 Object storage systems are not directly attached to your computer via drive mapping, a mount point or the Mac Finder, so you cannot just (double)click on a file to edit it with your favorite application. Most software used in life sciences cannot work directly with an object storage system as if the files were stored in traditional file storage systems. So why would you even want to use it if it seems more complicated than file storage? Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud Computing depends very much on object storage systems such as Amazon's AWS S3 or Google Cloud Storage.
 
 ## Object Storage PI Allocations
-As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.  
 
-> Note:  Currently it is recommended to use a combination of AWS S3, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.
+
+> Note:  Currently it is recommended to use a combination of AWS S3, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.
 
 
 AWS S3 is less expensive than [`Fast`](/scicomputing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, AWS S3 would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  AWS S3 serves as an archive for these data, and typically compute processes do not directly access these files.
@@ -27,8 +28,8 @@ Some features and benefits of object storage systems include:
 
 Given these benefits it is expected that Object Storage systems will become more common in the future, especially as datasets are getting larger and larger.  We recommend these systems typically for large genomic data and imaging files that require computational pipelines for processing (e.g. large BAM files) as well as for archival of infrequently used data. Both options for AWS S3 storage are _encrypted at rest_ and are approved to store confidential data such as PHI.
 
-
 ## Accessing AWS S3 Storage
+
 You can access AWS S3 resources with [command line tools](/compdemos/aws-s3/) such as  `aws s3` or `rclone` or libraries such as or _boto3_ for _Python_ or _aws.s3_ for R.  As of March 2016, Center IT officially supports the use of [Mountain Duck and Cyberduck desktop clients](/compdemos/Mountain-CyberDuck/) on Windows or Mac to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing. 
 
 An additional tool is [Motuz](http://motuz.fredhutch.org), a tool that facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
@@ -40,8 +41,6 @@ An additional tool is [Motuz](http://motuz.fredhutch.org), a tool that facilitat
 AWS S3 is a cloud based object storage service that uses Amazon Web Services Simple Storage Service (S3) to offer managed and secure (encrypted) AWS S3 buckets to Fred Hutch investigators.
 
 Each PI may request a dedicated AWS account for their lab if they wish to use AWS S3 storage.  In the lab account, there will be two managed AWS S3 buckets- a private bucket and a public bucket.  In this context, *private* and *public* refer to the *maximum possible level* of access to a file in that bucket.  Files uploaded to the public bucket by default will still *NOT* be publicly accessible, however if desired it is possible to change the access to one or more files or folders to make them directly accessible to the public.  For example, if you published a paper and wish to make a public refernce dataset available to accompany that paper, that reference dataset would need to go into the public bucket and then you can contact SciComp for assitance in changing the access permissions.  In the private bucket, granting public access will be impossible and even if the security policy is somehow accidentally modified to grant public access to the private bucket, the access will *still* be blocked by additional guardrails at the account level.  If you are unsure which bucket to use, you should by default use the private bucket.  The data can later be moved if necessary.
-
-In the event that you need to share a very large dataset (e.g. >5TB) with an external collaborator and the collaborator intends to store that dataset within their own institutions S3 bucket, please contact SciComp for assistance.  There are ways to copy data between S3 buckets far more quickly than would otherwise be possible with any of the methods described here, however these typically require coordination between the collaborator's IT department and the SciComp team.  This can also be done for receiving very large datasets from external S3 buckets as well.  It is very rare that this method of bulk-copying data between buckets is required, however it is available if the situation warrants it.  The transfer speeds depend on a number of factors, however this has been reliably and repeatedly measured at 30TB-40TB per hour for well over 1 million files.
 
 ### Managed S3 Buckets
 
@@ -73,11 +72,17 @@ A full description of intelligent tiering and how it works can be found [here](h
 
 #### Scratch S3 bucket
 
-Each PI account has an additional scratch S3 bucket, currently called `fh-pi-lastname-f-nextflow-scratch`.  While these have "nextflow" in the name, they are a general-purpose scratch bucket that can be used for temporary data storage while you are running any workflow or for any other temporary purpose.  In this bucket, you can create/use the folders "delete10/", "delete30/", or "delete60/" and these will automatically delete any data in them 10, 30, or 60 days (respectively) after that data is initially created.  If you use any other folder in that bucket, it will default to deletion after 60 days.  Please note that this data will be deleted after the appropriate number of days from when an object was *initially created* and *NOT* from the last time that object was accessed, so accessing objects in the scratch bucket periodically will *NOT* prevent their deletion at the scheduled time.  Objects in the scratch bucket are not backed up by S3, so any deletion of the objects there is permanent immediately after it occurs.  By default, all users have full permissions on all folders of the scratch bucket and any workflows run in your default compute environment will also have full permissions on any folders in the scratch bucket.  If you need a folder to be enabled to delete objects after a different number of days for any reason, e.g. a "delete13/" folder that deletes objects after precisely 13 days, then please submit a ticket to the helpdesk.
+Each PI account has an additional scratch S3 bucket, currently called `fh-pi-lastname-f-nextflow-scratch`.
+
+> While these have "nextflow" in the name, this bucket is a general-purpose scratch bucket that can be used for temporary data storage while you are running any workflow or for any other temporary purpose.
+
+In this bucket, you can create/use the folders "delete10/", "delete30/", or "delete60/" and these will automatically delete any data in them 10, 30, or 60 days (respectively) after that data is initially created.  If you use any other folder in that bucket, it will default to deletion after 60 days.  Please note that this data will be deleted after the appropriate number of days from when an object was *initially created* and *NOT* from the last time that object was accessed, so accessing objects in the scratch bucket periodically will *NOT* prevent their deletion at the scheduled time.  Objects in the scratch bucket are not backed up by S3, so any deletion of the objects there is permanent immediately after it occurs.  By default, all users have full permissions on all folders of the scratch bucket and any workflows run in your default compute environment will also have full permissions on any folders in the scratch bucket.  If you need a folder to be enabled to delete objects after a different number of days for any reason, e.g. a "delete13/" folder that deletes objects after precisely 13 days, then please submit a ticket to the helpdesk.
 
 #### Sharing data with other collaborators
 
 You can use the AWS S3 buckets created for each PI to collaborate with external research groups as well as other labs within Fred Hutch. There are several ways in which this can be enabled, and it is still possible to grant external collaborators access to specific prefixes on the private bucket as well as the public bucket depending on how their access is configured.  Contact SciComp for assistance in setting up this access.  There are several ways in which data can be shared depending on the need.
+
+In the event that you need to share a very large dataset (e.g. >5TB) with an external collaborator and the collaborator intends to store that dataset within their own institutions S3 bucket, please contact SciComp for assistance.  There are ways to copy data between S3 buckets far more quickly than would otherwise be possible with any of the methods described here, however these typically require coordination between the collaborator's IT department and the SciComp team.  This can also be done for receiving very large datasets from external S3 buckets as well.  It is very rare that this method of bulk-copying data between buckets is required, however it is available if the situation warrants it.  The transfer speeds depend on a number of factors, however this has been reliably and repeatedly measured at 30TB-40TB per hour for well over 1 million files.
 
 ##### Direct access to the bucket
 
