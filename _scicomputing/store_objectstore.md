@@ -47,11 +47,19 @@ In the event that you need to share a very large dataset (e.g. >5TB) with an ext
 
 S3 (the Simple Storage Service) is an object store very much like the Economy file service, though provided by Amazon Web Services.  Storage resources in S3 are organized much like the other Fred Hutch Object and Block systems, with a "PI bucket" for each investigator at the Hutch which is analogous to the investigator directories available in the traditional file system. A specialized client (the AWS command line interface) is used to upload the data from local storage to S3 storage.
 
-#### Backup, Retention, and Security
+#### Backup and Retention
 
-Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved for up to 60 days.  The Fred Hutch supported PI buckets in S3 are appropriate for storage of restricted data, including PHI.
+Data on this service is not backed up in the traditional sense, but rather versioned: if a new version of a file is uploaded, the older version is saved in S3.  Similarly, if data is deleted, the versions aren't and can be retrieved for up to 60 days.
 
-All Economy Cloud S3 buckets have Intelligent Tiering enabled. This means that data is automatically archived in long-term storage after it has not been accessed for a certain period of time. This is done to keep costs down for users. All files are still retrievable at any time; however there may be a short turnaround time for files that haven't been accessed in over 90 days. A full description of intelligent tiering and how it works can be found here: https://aws.amazon.com/s3/storage-classes/intelligent-tiering/
+#### Security
+
+The Fred Hutch managed PI buckets in S3 (`fh-pi-eco` and `fh-pi-eco-public`) are appropriate for storage of restricted data, including PHI.
+
+#### Storage Tiering and Retrieval
+
+All managed S3 buckets (`fh-pi-eco` and `fh-pi-eco-public`) have Intelligent Tiering enabled. This means that data can be automatically moved to a different AWS S3 storage class after it has not been accessed for a certain period of time.  All files are still retrievable at any time and the URL for accessing this data does not change; however files that have not been accessed for 90 days are migrated to the "Archive Access" tier which has a standard retrieval time of 3 to 5 hours.
+
+A full description of intelligent tiering and how it works can be found here: https://aws.amazon.com/s3/storage-classes/intelligent-tiering/
 
 #### Credentials and Permissions
 
