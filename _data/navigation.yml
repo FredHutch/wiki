@@ -50,8 +50,16 @@ datascience:
         url: /datascience/dc_index/
       - title: "Pathways"
         url: /pathways/
-      - title: "FH-DaSL Courses"
+  - title: "Data Management"
+    children:
+      - title: "NIH Data Sharing"
+        url: /data_sharing/
+  - title: "Training"
+      - title: "DaSL Courses for the Hutch"
+        url: /hutch_courses/
+      - title: "All DaSL Courses"
         url: "https://hutchdatascience.org/training/"
+
 
 
 generation:
