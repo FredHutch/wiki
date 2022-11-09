@@ -55,6 +55,7 @@ datascience:
       - title: "NIH Data Sharing"
         url: /data_sharing/
   - title: "Training"
+    children:
       - title: "DaSL Courses for the Hutch"
         url: /hutch_courses/
       - title: "All DaSL Courses"
