@@ -1,6 +1,6 @@
 
 main:
-  - title: "Data Science"
+  - title: "Data Science Lab"
     url: /datascience/ds_index/
   - title: "Data Generation"
     url: /generation/gen_index/
@@ -53,13 +53,13 @@ datascience:
   - title: "Data Management"
     children:
       - title: "NIH Data Sharing"
-        url: /nih_data_sharing/
+        url: /datascience/nih_data_sharing/
       - title: "Data Sharing Approaches"
-        url: /execute_sharing/
+        url: /datascience/execute_sharing/
   - title: "Training"
     children:
       - title: "DaSL Courses for the Hutch"
-        url: /hutch_courses/
+        url: /datascience/hutch_courses/
       - title: "All DaSL Courses"
         url: "https://hutchdatascience.org/training/"
 
