@@ -18,7 +18,7 @@ Why is the NIH doing this? There are several reasons why sharing data can be ben
 - **More efficient and cost effective** - Some data are especially difficult or expensive to produce.
 - **Supports Researcher Inclusion** - Data generation can be especially difficult for those at institutes with less resources. Publicly available data can therefore be used by these researchers to better enable their participation. 
 - **Increased impact** - Papers that share their data in repositories appear to be cited more.
-- **Increased collaboration opportunity** - Having data available can encourage other researchers to expand the research in a new direction or extend it further and they may reach out to collaborate.
+- **Increased collaboration opportunity** - Having data available can encourage other researchers to expand the research in a new direction or reach out to collaborate.
 - **Data Citations** - Due to the importance of data generation and sharing to the NIH, data will now be seen as research product that demonstrates a contribution to the scientific community.
 
 
