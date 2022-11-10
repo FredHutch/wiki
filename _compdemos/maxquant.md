@@ -185,7 +185,7 @@ Create a script with the following contents using your favorite text editor and 
 # Number of cores per task, CHANGE THIS:
 #SBATCH -c 24
 # Amount of memory to use. CHANGE THIS to what you need:
-#SBATCH --mem-per-cpu 1G
+#SBATCH --mem-per-cpu 10G
 # Number of days to let the job run. CHANGE THIS. 
 # In this case, 3 is the number to change:
 #SBATCH -t 3-0
