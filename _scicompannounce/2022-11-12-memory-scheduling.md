@@ -14,6 +14,20 @@ As memory available to all jobs on a node is otherwise unconstrained, we frequen
 
 We will be updating the configuration of Slurm to constrain memory available to a job.  Jobs that attempt to allocate more memory will fail.  Jobs that do not explictly request memory will be given a default request of 10MB per core requested.  The maximum memory per core is 20GB.
 
+## How to Request Memory
+
+There are two flags you can use to request memory:
+
+ - `--mem` will request a total amount of memory for the job
+ - `--mem-per-cpu` will request memory per core allocated
+
+
+The value provided to this flag can take a unit in addition to the numeric value- the default unit is megabytes.  Units can be specified as `K`,`M`,`G`,`T`,
+
+The `--mem-per-cpu` will request memory equal to the product of this value and the number of cores requested.
+
+> If `--mem` specifies a value more than the maximum memory per core the job will have its core request automatically increased.  This is not always what we want so our recomendation is to use the `--mem-per-cpu` option
+
 ## FAQ
 
 ### How can I determine how much memory my job will need?
@@ -33,3 +47,7 @@ Limits are still set on the number of cores a PI account is using.  Without a ma
 ### I used `--mem` to request memory and the number of cores I requested increased
 
 If the gross amount of memory requested by a job (i.e. `sbatch --mem`) exceeds the memory-per-core limit then Slurm will attempt to adjust the number of cores for a job to meet this limit.  This may have unintended side effects.
+
+### How is memory measured
+
+Slurm uses the resident set size (RSS) to evaluate a job's memory use

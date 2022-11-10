@@ -79,6 +79,7 @@ These two take many of the same options:
  - `-t` request a certain amount of time for the job.
  - `-n` request a number of tasks (default 1)
  - `-c` request a number of processors per task (default 1)
+ - `--mem-per-cpu` requests memory for each allocated CPU (default 10M)
  - `-J` name a job
  - `--qos` request a QOS
 
@@ -90,11 +91,24 @@ The option `-o` will redirect this output (errors as well) to the file indicated
 
 ### Memory
 
-Currently memory (or RAM) is not scheduled by Slurm.  This means that requesting memory has little effect on the job or its available resources.  Memory is currently only advisory: Slurm will only ensure that the node allocated to the job has more memory installed than the amount requested by the job- it does not look at memory availability or what is consumed by yours or other jobs on the node.
+The best way to specify the amount of memory you will need is to use the `--mem-per-cpu` option.  The `--mem-per-cpu` will request memory equal to the product of this value and the number of cores requested.  The default value for this is 10 MB per CPU and the maximum per CPU is 20GB.
 
-When your job needs "a lot" of memory use CPUs as a proxy for the memory you expect to be needed.  If you think your job will need more than 4GB of memory, request one CPU for every 4GB required.  For example, if you think your job will need 6GB of RAM, you would request 2 CPUs (adjust upward when the desired memory isn't a multiple of four).
+The value provided to this flag can take a unit in addition to the numeric value- the default unit is megabytes.  Units can be specified as `K`,`M`,`G`,`T`,
 
-If you still want to add a memory request, use the `--mem` option.  This option takes an argument: a number indicating the amount of memory required on the node.  The default unit is megabytes- to specify the unit, append `K`, `M`, `G`, or `T` for kilobytes, megabytes, gigabytes, or terabytes.
+#### The `--mem` Option
+
+`--mem` can also be used to specify a total amount of memory for a job.  It is important to note that if `--mem` specifies a value more than the maximum memory per core the job will have its core request automatically increased.  This is not always what we want so our recomendation is to use the `--mem-per-cpu` option
+
+#### Examples
+
+`sbatch -c 4` will request a total of 4 cores * 10MB = 40MB
+
+`sbatch -c 4 --mem-per-cpu=4G` will request a total of 4 cores * 4 GB = 16GB of memory
+
+`sbatch -c 4 --mem-per-cpu=24G` will fail
+
+`sbatch -c 4 --mem=600GB` will be increased to use 30 cores
+
 
 ### GPU
 
