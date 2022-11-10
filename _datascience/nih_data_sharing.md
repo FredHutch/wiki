@@ -93,4 +93,6 @@ response to the NIH Data Sharing Policy.
 We have created and are actively developing a guide you can [find here](https://hutchdatascience.org/NIH_Data_Sharing/) that walks you through the process of complying with this policy.  
 
 Additionally we have created a set of detailed guides and checklists that aim to support grant writers in developing their plans.  We welcome comments/feedback on these initial drafts either in the documents themselves (permissions should allow you to add comments). Note that these documents (linked to from [our website](https://hutchdatascience.org/news/NIH-Data-Sharing-Policy-Draft/)) are a work in progress and are in very active development due to the tight 
-timeline for responding to the NIH data sharing policy. We hope to have more formal versions of these documents ready for use by mid-December 2022 and will be actively curating and updating them over time as this policy and its implementation evovles.   
+timeline for responding to the NIH data sharing policy. We hope to have more formal versions of these documents ready for use by mid-December 2022 and will be actively curating and updating them over time as this policy and its implementation evolves.   
+
+

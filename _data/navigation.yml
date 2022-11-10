@@ -29,7 +29,7 @@ frontpage:
 generic:
   - title: "Our Site"
     children:
-      - title: "Data Science"
+      - title: "Data Science Lab"
         url: /datascience/ds_index/
       - title: "Data Generation"
         url: /generation/gen_index/
@@ -44,7 +44,7 @@ generic:
 
 
 datascience:
-  - title: "Data Science"
+  - title: "Data Science Lab"
     children:
       - title: "Overview"
         url: /datascience/dc_index/
@@ -53,7 +53,9 @@ datascience:
   - title: "Data Management"
     children:
       - title: "NIH Data Sharing"
-        url: /data_sharing/
+        url: /nih_data_sharing/
+      - title: "Data Sharing Approaches"
+        url: /execute_sharing/
   - title: "Training"
     children:
       - title: "DaSL Courses for the Hutch"
