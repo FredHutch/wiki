@@ -6,18 +6,18 @@ primary_reviewers: vortexing
 ## New Data Sharing Policy
 > What you should know about the new 2023 NIH Data Management and Sharing Policy
 
-Starting January 25th, 2023, the NIH will implement a new policy that requires new grant applications or renewals that generate scientific data to include a detailed data management and sharing plan (DMSP). The NIH expects all shareable data to be made available, whether it is associated with a publication or not. The DMS Policy is similar to what other funding agencies call a data management plan (DMP). The goals of this new policy are to establish the expectation for the management and sharing of scientific data generated from NIH-funded or conducted research, and to emphasize the importance of good data management practices.
+Starting January 25th, 2023, the NIH will implement a new policy that requires new grant applications or renewals that generate scientific data to include a detailed data management and sharing plan. The NIH expects all shareable data to be made available, whether it is associated with a publication or not. The goals of this new policy are to establish the expectation for the management and sharing of scientific data generated from NIH-funded or conducted research, and to emphasize the importance of good data management practices.
 
 
 ### Why?
 Why is the NIH doing this? There are several reasons why sharing data can be beneficial to the scientific community.
 
-- **Supports transparency** - Sharing data provides more clarity about how studies are performed. Many scientists also believe in an ethical responsibility to study participants [@bauchner_citation_2016].
+- **Supports transparency** - Sharing data provides more clarity about how studies are performed. Many scientists also believe in an ethical responsibility to study participants.
 - **Encourages reproducibility and rigor** - Having the data accessible, allows others to try to reproduce study findings. This can further enable studies that may replicate or validate the initial findings with different data. 
-- **Supports multi-modal work** - When more data of various types are easily available it makes it easier for scientist to perform studies with multiple types of data [@thessen_citation_2021]. 
+- **Supports multi-modal work** - When more data of various types are easily available it makes it easier for scientist to perform studies with multiple types of data. 
 - **More efficient and cost effective** - Some data are especially difficult or expensive to produce.
 - **Supports Researcher Inclusion** - Data generation can be especially difficult for those at institutes with less resources. Publicly available data can therefore be used by these researchers to better enable their participation. 
-- **Increased impact** - Papers that share their data in repositories appear to be cited more based on the study by @colavizza_citation_2020 .
+- **Increased impact** - Papers that share their data in repositories appear to be cited more.
 - **Increased collaboration opportunity** - Having data available can encourage other researchers to expand the research in a new direction or extend it further and they may reach out to collaborate.
 - **Data Citations** - Due to the importance of data generation and sharing to the NIH, data will now be seen as research product that demonstrates a contribution to the scientific community.
 
@@ -34,9 +34,9 @@ For certain grant mechanisms for projects that do not generate data, compliance 
 > What grant mechanisms require compliance with the DMS policy? 
 
 
-The DMS Policy applies to all research that generates [scientific data](#scientific-data), including:
+The DMS Policy applies to all research that generates scientific data, including:
 
-- Research Projects
+- Research Projects (R)
 - Some Career Development Awards (K)
 - Small Business SBIR/STTR 
 - Research Centers
@@ -92,7 +92,6 @@ response to the NIH Data Sharing Policy.
 
 We have created and are actively developing a guide you can [find here](https://hutchdatascience.org/NIH_Data_Sharing/) that walks you through the process of complying with this policy.  
 
-Additionally we have created a set of detailed guides and checklists that aim to support grant writers in developing their plans.  We welcome comments/feedback on these initial drafts either in the documents themselves (permissions should allow you to add comments). Note that these documents (linked to from [our website](https://hutchdatascience.org/news/NIH-Data-Sharing-Policy-Draft/)) are a work in progress and are in very active development due to the tight 
-timeline for responding to the NIH data sharing policy. We hope to have more formal versions of these documents ready for use by mid-December 2022 and will be actively curating and updating them over time as this policy and its implementation evolves.   
+Additionally we have created a set of detailed guides and checklists that aim to support grant writers in developing their plans.  We welcome comments/feedback on these initial drafts either in the documents themselves (permissions should allow you to add comments). Note that these documents (linked to from [our website](https://hutchdatascience.org/news/NIH-Data-Sharing-Policy-Draft/)) are a work in progress and are in very active development due to the tight timeline for responding to the NIH data sharing policy. We hope to have more formal versions of these documents ready for use by mid-December 2022 and will be actively curating and updating them over time as this policy and its implementation evolves.   
 
 
