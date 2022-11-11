@@ -34,35 +34,3 @@ fully addressed in the data management and sharing plan.  This section addresses
 ## [Compliance and Legal Agreements]({{ site.baseurl }}/generation/security_legal/)
 When sharing data, there are additional issues that might arise regarding appropriate use of those data.  This section provides information about how to obtain the relevant legal agreements involved when compliance with data use restrictions is required for a project. 
 
-
-
-## [De-Identification of Specimens and Data]({{ site.baseurl }}/generation/human_deidentification/)
-
-De-identification generally refers to the removal of 18 identifiers as listed in
-HIPAA regulation 45 CFR 164.514(b). However, de-identification also means that
-in addition to the removal of these identifiers, the risk of re-identification,
-including applying methods which utilize publicly available data, is very small.
-Even without the 18 identifiers, individual-level genomics data could
-potentially identify an individual. Therefore, de-identification of genomics
-data also heavily relies on additional methods of privacy and security, such as
-adherence to strong data use limitations and practices, and strict security
-policy. In this section we address more specific approaches to address the need
-for de-identification of specimens and datasets for translational genomics
-studies.
-
-## [Data Sharing and Public Repository Deposition]({{ site.baseurl }}/generation/human_shareDeposits/)
-
-Data Sharing in the realm of genomics and large scale datasets has highlighted
-some specific new challenges and possibilities. The sharing of large scale
-research data has potential to strengthen academic medical research, the
-practice of medicine, and the integrity of the clinical trial system. Some
-benefits are obvious: when researchers have access to complete data, they can
-answer new questions, explore different lines of analysis, and more efficiently
-conduct large-scale analyses across trials or projects. However, our evolving
-collective understanding of data sharing practices when large-scale datasets are
-involved can tend to result in an unnecessary burden on the
-research(ers) that is actually both counterproductive and may not necessarily make
-the patient or researcher any safer. This section can help guide decision making
-and actions to successfully share and manage research data to allow for the most
-productivity and facilitation of the original research itself while balancing
-the data privacy and security needs of those involved.

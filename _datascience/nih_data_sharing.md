@@ -95,3 +95,17 @@ We have created and are actively developing a guide you can [find here](https://
 Additionally we have created a set of detailed guides and checklists that aim to support grant writers in developing their plans.  We welcome comments/feedback on these initial drafts either in the documents themselves (permissions should allow you to add comments). Note that these documents (linked to from [our website](https://hutchdatascience.org/news/NIH-Data-Sharing-Policy-Draft/)) are a work in progress and are in very active development due to the tight timeline for responding to the NIH data sharing policy. We hope to have more formal versions of these documents ready for use by mid-December 2022 and will be actively curating and updating them over time as this policy and its implementation evolves.   
 
 
+## Data Management Guidance in the Wild
+
+
+-   [Dataverse](http://best-practices.dataverse.org/data-management/index.html) has basic best practices guidance for data management plans.
+
+-   [DMPTool](https://dmptool.org/) from University of California
+
+-   [Duke University Data Management Guide](https://guides.library.duke.edu/c.php?g=633433&p=4429249)
+
+-   [Stanford University Library](https://library.stanford.edu/research/data-management-services/data-management-plans) includes some sample DMPs from NIH and other resources.
+
+-   [NIAID Sample Data Sharing Plan](https://www.niaid.nih.gov/research/sample-data-sharing-plan)
+
+-   [FAIRSharing policies](https://fairsharing.org/policies/):  A catalogue of data preservation, management and sharing policies form international funding agencies, regulators and journals. 
