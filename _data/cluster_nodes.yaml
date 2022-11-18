@@ -11,6 +11,39 @@
     -
       name: slurm
       version: 1
+  old_nodes:
+    -  
+      node_name: g
+      cores: 6
+      sockets: 2
+      memory_gb: 256
+      processor_model: E5-2667v3
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: SiliconMechanics
+      model: 6028U 2U Ultra NVMe Server
+      os: Ubuntu 14.04 LTS
+      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOPS) and 200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
+      network: 10G (upto 1GB/s throughput)
+      gpu: none
+      node_count: 18
+      partition: campus-new
+    -  
+      node_name: h
+      cores: 14
+      sockets: 2
+      memory_gb: 768
+      processor_model: E5-2697v3
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: 6028U 2U Ultra NVMe Server
+      os: Ubuntu 14.04 LTS
+      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOps) and 200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
+      network: 10G (upto 1GB/s throughput)
+      gpu: none
+      node_count: 3
+      partition: campus-new
   nodes:
     -  
       node_name: j
@@ -26,6 +59,9 @@
       local_storage: "7TB @ /loc (300MB/s throughput / 1000 IOps)"
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA RTX1080ti
+      gpu_count: 1
+      gpu_memory: 10.92 GB 
+      gpu_compute_capability: 6.1
       node_count: 42
       partition: all
     -  
@@ -42,6 +78,9 @@
       local_storage: "6TB @ /loc"
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA RTX2080ti
+      gpu_count: 1
+      gpu_memory: 10.76 GB 
+      gpu_compute_capability: 7.5
       node_count: 170
       partition: all
     -  

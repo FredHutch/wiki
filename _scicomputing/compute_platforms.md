@@ -84,6 +84,11 @@ Location: {{ resource.location }}
 {{ node.partition }}|{{ node.node_name }}|{{ node.node_count }}|{{ node.processor_manufacturer }} {{ node.processor_model }}|{{ node.cores }}|{{ node.memory_gb }}GB
 {%- endfor %}
 
+|Partition | Node Gen | GPU Count | GPU | Compute Capability | GPU Memory|
+|---|:---:|:---:|---:|:---:|
+{%- for node in resource.nodes %}
+{{ node.partition }}|{{ node.node_name }}|{{ node.gpu_count }}|{{ node.gpu }} {{ node.gpu_compute_capability }}||{{ node.gpu_memory }}
+{%- endfor %}
 {%- endfor %}
 
 ### Resource Detail
