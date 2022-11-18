@@ -13,38 +13,6 @@
       version: 1
   nodes:
     -  
-      node_name: g
-      cores: 6
-      sockets: 2
-      memory_gb: 256
-      processor_model: E5-2667v3
-      processor_manufacturer: Intel
-      manufacturer: SuperMicro
-      vendor: SiliconMechanics
-      model: 6028U 2U Ultra NVMe Server
-      os: Ubuntu 14.04 LTS
-      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOPS) and 200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
-      network: 10G (upto 1GB/s throughput)
-      gpu: none
-      node_count: 18
-      partition: campus-new
-    -  
-      node_name: h
-      cores: 14
-      sockets: 2
-      memory_gb: 768
-      processor_model: E5-2697v3
-      processor_manufacturer: Intel
-      manufacturer: SuperMicro
-      vendor: Silicon Mechanics
-      model: 6028U 2U Ultra NVMe Server
-      os: Ubuntu 14.04 LTS
-      local_storage: "5TB @ /loc (300MB/s throughput / 1000 IOps) and 200GB @ /loc/ssd (1GB/s throughput / 500k IOPS)"
-      network: 10G (upto 1GB/s throughput)
-      gpu: none
-      node_count: 3
-      partition: campus-new
-    -  
       node_name: j
       cores: 24
       sockets: 2
@@ -97,5 +65,11 @@
       partition_name: campus-new
       max_per_acct: 100-300 cpus
       default_per_job: 3 days
-      max_per_job: 28 cpus, 768000MB memory (effective)
+      max_per_job: 36 cpus, 768000MB memory (effective)
+      min_per_job: none
+    -
+      partition_name: short
+      max_per_acct: 8000 core*minutes
+      default_per_job: 60 minutes
+      max_per_job: 36 cpus, 768000MB memory (effective)
       min_per_job: none
