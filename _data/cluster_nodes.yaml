@@ -22,40 +22,40 @@
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
       model: 6029U 2U Ultra NVMe Server
-      os: Ubuntu 14.04 LTS
+      os: Ubuntu 18.04 LTS
       local_storage: "7TB @ /loc (300MB/s throughput / 1000 IOps)"
       network: 10G (up to 1GB/s throughput)
-      gpu: NVIDIA
+      gpu: NVIDIA RTX1080ti
       node_count: 42
-      partition: campus-new
+      partition: all
     -  
       node_name: k
       cores: 36
       sockets: 2
       memory_gb: 768
-      processor_model: TBD
+      processor_model: Gold 6154
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
       model: 6029U 2U Ultra NVMe Server
       os: Ubuntu 18.04 LTS
-      local_storage: "/loc"
+      local_storage: "6TB @ /loc"
       network: 10G (up to 1GB/s throughput)
-      gpu: NVIDIA
+      gpu: NVIDIA RTX2080ti
       node_count: 170
-      partition: campus-new
+      partition: all
     -  
       node_name: rhino
       cores: 14
       sockets: 2
       memory_gb: 384
-      processor_model: E5-2697v3
+      processor_model: Gold 6154
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
       model: Super Server
-      os: Ubuntu 14.04 LTS
-      local_storage: "5TB @ /loc (300MB/s throughput/ 1000 IOps)"
+      os: Ubuntu 18.04 LTS
+      local_storage: "6TB @ /loc"
       network: 10G (up to 1GB/s throughput)
       gpu: none
       node_count: 3
