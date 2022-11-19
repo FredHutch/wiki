@@ -12,6 +12,22 @@
       name: slurm
       version: 1
   old_nodes:
+    -
+      node_name: f
+      begin_production:  2014
+      decommission: 2020-04-0
+      cores: 4
+      sockets: 1
+      memory_gb: 32
+      processor_model: E3-1270v3
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: Rackform iServ R4920
+      os: Ubuntu 14.04 LTS
+      local_storage: "HDD 800GB @ /loc (ext4)"
+      partition: campus
+      node_count: 456
     -  
       node_name: g
       cores: 6
