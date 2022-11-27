@@ -62,6 +62,14 @@ datascience:
         url: /datascience/data_viz/
       - title: "Data Deidentification"
         url: /datascience/deidentification/
+  - title: "Consent, Privacy and Security"
+    children:
+      - title: "Consenting and the IRB"
+        url: /datascience/consent_IRB/
+      - title: "Data Privacy and Security"
+        url: /datascience/privacy_security/
+      - title: "Compliance and Legal"
+        url: /datascience/compliance_legal/
   - title: "Training"
     children:
       - title: "DaSL Courses for the Hutch"
@@ -92,16 +100,7 @@ generation:
       - title: "Multiple Testing"
         url: /generation/multiple_testing/
 
-  - title: "Consent, Privacy and Security"
-    children:
-      - title: "Overview"
-        url: /generation/human_overview/
-      - title: "Consenting and IRB"
-        url: /generation/human_consentIRB/
-      - title: "Data Privacy and Security"
-        url: /generation/human_privacySecurity/
-      - title: "Compliance and Legal"
-        url: /generation/security_legal/
+
 
   - title: "Clinical and Experimental Data"
     children:
