@@ -1,4 +1,5 @@
 # Contributing to SciWiki
+
 This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the Wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff.  Whether this contribution is as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them, no contribution is too little (or too large).
 
 To contribute to the Wiki you only need to have your GitHub username added to the Fred Hutch Github Institution (and the AllFredHutchTeam).  Email `scicomp` and provide your GitHub username and request to be added.  If you are interested in being part of the Wiki Reviewers Team (see below for their role), please email `apaguiri` and Amy will add you to the GitHub team for that.  
