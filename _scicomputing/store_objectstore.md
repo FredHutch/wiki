@@ -66,7 +66,7 @@ The Fred Hutch managed PI buckets in S3 (`fh-pi-doe-j-eco` and `fh-pi-doe-j-eco-
 
 #### Storage Tiering and Retrieval
 
-All managed S3 buckets (`fh-pi-doe-j-eco` and `fh-pi-doe-j-eco-public`) have Intelligent Tiering enabled. This means that data can be automatically moved to a different AWS S3 storage class after it has not been accessed for a certain period of time.  All files are still retrievable at any time and the URL for accessing this data does not change.
+All managed S3 buckets (`fh-pi-doe-j-eco` and `fh-pi-doe-j-eco-public`) have Intelligent Tiering enabled. This means that data can be automatically labelled with a different AWS S3 storage class after it has not been accessed for a certain period of time.  All files are still retrievable at any time and the URL for accessing this data does not change.
 
 A full description of intelligent tiering and how it works can be found [here](https://aws.amazon.com/s3/storage-classes/intelligent-tiering/).
 
