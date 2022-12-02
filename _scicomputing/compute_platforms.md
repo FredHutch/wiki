@@ -87,7 +87,7 @@ Location: {{ resource.location }}
 |Partition | Node Gen | GPU Count | GPU | Compute Capability | GPU Memory|
 |---|:---:|:---:|---:|:---:|
 {%- for node in resource.nodes %}
-{{ node.partition }}|{{ node.node_name }}|{{ node.gpu_count }}|{{ node.gpu }} {{ node.gpu_compute_capability }}||{{ node.gpu_memory }}
+{{ node.partition }}|{{ node.node_name }}|{{ node.gpu_count }}|{{ node.gpu }}|{{ node.gpu_compute_capability }}|{{ node.gpu_memory }}|
 {%- endfor %}
 {%- endfor %}
 
