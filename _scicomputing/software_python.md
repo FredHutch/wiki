@@ -35,7 +35,6 @@ Please see our [Python Module page](/pythonModules/) for more information on pac
 
 ## Accessing and using Python
 
-
 ### Installing Python on your own computer
 
 If you are new to coding and just getting started with Python,
@@ -82,80 +81,58 @@ or to create a virtual Python environment, for example:
     username@rhino1:~$
 ```
 
-
-## Python IDE
-While this does technically allow you to write and run Python code,
-most Python coders choose to use an integrated development environment, 
-or IDE,
-for developing code. 
-An IDE is a type of software that facilitates common programming tasks,
-and makes it easier to write, test, and run code.
-If you're using any of the training materials listed in the section above,
-they will likely recommend specific IDE. 
-Your choice of how to write and run Python code for your own research, however,
-largely depends on personal preference,
-your project's computational needs, 
-and the manner in which you want to interactwith your code and its output.
-
-The sections below describe some of the most popular methods for installing and running Python at Fred Hutch,
-both on your own computer and on the Hutch's high-performance computing resources.
-If you are not sure about where to run Python (on your own computer, `rhino`, or `gizmo`),
-you should consider where your data are located (thus, whether it will need to be downloaded/transferred),
-what packages you'll need (and how to install/access them),
-and what kind of coding work you'll be doing (developing code, or running batch jobs).
-
-At the bottom of this page,
-you'll find more in-depth comparisons of the features associated with a few of the most common Python IDEs:
-- [Visual Studio Code](#visual-studio-code)
-- [PyCharm](#pycharm)
-- [Jupyter](#jupyter)
-
-
-### Jupyter Notebooks on `rhino`
+### Using Jupyter on `rhino`
 
 There have been many iterations of Python Notebooks, starting with IPython. SciComp currently supports
 [Jupyter](https://jupyter.org). The Jupyter user interfaces offer a foundation of interactive
 computing environments where scientific computing, data science, and analytics can be performed
 using a wide range of programming languages.  
 
-Jupyter Notebook is a minimal but very capable web-based interactive computational environment. JupyterLab is the next-generation version that will eventually replace Notebook. It has a modular structure where you can open several notebooks or files (e.g. HTML, Text, Markdown etc) as tabs in the same window. It offers more of an IDE-like experience and can be extended through extensions. 
+Jupyter Notebook is a minimal but very capable web-based interactive computational environment. JupyterLab is the next-generation version that will eventually replace Notebook. It has a modular structure where you can open several notebooks or files (e.g. HTML, Text, Markdown etc) as tabs in the same window. It offers more of an IDE-like experience and can be extended through extensions. Jupyter is covered in more depth in the [Python IDE Comparison](#jupyter) section below.
 
-#### Starting Jupyter Notebook
-After you have connected to `rhino`, load the JupyterLab module then run jupyter notebook:
+**Jupyter Notebook**
+
+After you have connected to `rhino`, load the fhPython module then run jupyter notebook:
 ```
-    username@rhino1:~$ ml JupyterLab
+    username@rhino1:~$ ml fhPython
     username@rhino1:~$ jupyter notebook --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
-
 Then connect to the URL, copying the link given by the previous command, which looks as follows:
 ```
        Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://rhino1:11112/?token=0eee692be6c81c1061da
 ```
+If you would like to use a different version of Python than what is in the default fhPython module, run `ml avail fhPython` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml fhPython/3.8.6-foss-2020b-Python-3.8.6` in place of `ml fhPython` above.
 
-#### Starting Jupyter Lab
-This is the same as with Jupyter Notebook, except run `jupyter lab` instead of `jupyter notebook`
+**Jupyter Lab**
+
 After you have connected to `rhino`, load the JupyterLab module then run jupyter lab:
 ```
     username@rhino1:~$ ml JupyterLab
     username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
-
 Then connect to the URL, copying the link given by the previous command, which looks as follows:
 ```
        Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://rhino1:11112/?token=0eee692be6c81c1061db
 ```
+If you would like to use a different version of Python than what is in the default JupyterLab module, run `ml avail JupyterLab` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml JupyterLab/2.2.5-foss-2020a-Python-3.8.2` in place of `ml JupyterLab` above.
 
 ## Python IDE comparison
 
-While it is possible to write and run Python code entirely from the command line,
-most Python programmers use an integrated development environment, or IDE, 
-to write, test, and run code.
-This section describes a few of the most common Python IDEs used at the Hutch, 
-including additional features members of our community have found helpful. 
+While it is possible to write and run Python code entirely from the command line, most Python programmers use an integrated development environment, or IDE, to write, test, and run code. An IDE is a type of software that facilitates common programming tasks,
+and makes it easier to write, test, and run code. This section describes a few of the most common Python IDEs used at the Hutch, including additional features members of our community have found helpful. 
+
+If you're using any of the training materials listed in the section above, they will likely recommend a specific IDE. Your choice of how to write and run Python code for your own research, however, largely depends on personal preference, and your project's computational needs, 
+and the manner in which you want to interact with your code and its output. If you are not sure about where to run Python (on your own computer, `rhino`, or `gizmo`), you should consider where your data are located (thus, whether it will need to be downloaded/transferred), what packages you'll need (and how to install/access them), and what kind of coding work you'll be doing (developing code, or running batch jobs).
+
+The sections below describe some of the most popular methods for installing and running Python at Fred Hutch, both on your own computer and on the Hutch's high-performance computing resources. Below, you'll find more in-depth comparisons of the features associated with a few of the most common Python IDEs:
+
+- [Visual Studio Code](#visual-studio-code)
+- [PyCharm](#pycharm)
+- [Jupyter](#jupyter)
 
 ### Visual Studio Code 
 
@@ -620,5 +597,3 @@ JupyterLab built upon the success of Jupyter notebook as a light-weight, browser
 The downside though is that version 2 was a major release for them and they are now at 2.0.1 which was released in March 6, 2020 so the project is very new which means the extensions which add a lot of features to flush out the product also need to stay update-to-date with the current code base but that can create problems. There's guides for that, ["JupyterLab 1.x to 2.x Extension Migration Guide"](https://jupyterlab.readthedocs.io/en/stable/developer/extension_migration.html), but it'll be great when everything is playing nice and you have a powerful browser-based, light-weight IDE at your finger tips.
 
 Let's hope the synergy of the versioning of the core product and the community of extensions improves. Until then there's nothing stopping a Python or R user from doing all their engineering in Atom, PyCharm, RStudio, or VS Code and then the rest of their coding/management in JupyterLab since it _is_ browser-based. Hopefully, this tutorial has heightened your interest.
- 
-
