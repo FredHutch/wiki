@@ -46,7 +46,7 @@ Each PI may request a dedicated AWS account for their lab if they wish to use AW
 
 Managed S3 buckets in S3 are created and named for each investigator account.  As an example, if you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j-eco` for the private bucket and `fh-pi-doe-j-eco-public` for the public bucket. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  These managed buckets have a standard configuration and are subidized by the Hutch.
 
-A specialized client is required to upload data into S3 storage.
+A specialized client is required to upload data into S3 storage. [Mountain Duck](/compdemos/Mountain-CyberDuck/), [CyberDuck](/compdemos/Mountain-CyberDuck/), [Motuz](/compdemos/motuz/), and the [AWS CLI](/compdemos/aws-s3/) are all good options for uploading data into S3 buckets.
 
 #### Credentials and Permissions
 
