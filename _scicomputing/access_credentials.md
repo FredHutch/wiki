@@ -19,11 +19,11 @@ Please see the Service Desk site on CenterNet for more information about [HutchN
 
 - Add a new member to your lab group 
 - Enable cluster access for yourself under your lab's Slurm account
-- Check to see if you have the correct access needed to complete the Cluster 101 course
+- Check to see if you have the correct access needed to complete the [Cluster 101 course](https://hutchdatascience.org/FH_Cluster_Guide/)
 
 ## Accessing Slurm Clusters
 
-To use Slurm clusters like _gizmo_ you also need to have your HutchNet ID associated with a PI account.  Errors similar to "Invalid account or account/partition" typically indicate that this association hasn't been set up.  Contact Scientific Computing to have this corrected or use [SciComp Self-Service](#scicomp-self-service).
+To use Slurm clusters like `gizmo` you also need to have your HutchNet ID associated with a PI account.  Errors similar to "Invalid account or account/partition" typically indicate that this association hasn't been set up.  Contact Scientific Computing to have this corrected or use [SciComp Self-Service](#scicomp-self-service).
 
 ## GitHub.com
 
