@@ -56,6 +56,20 @@ datascience:
         url: /datascience/nih_data_sharing/
       - title: "Data Sharing Approaches"
         url: /datascience/execute_sharing/
+  - title: "Working With Data"
+    children:
+      - title: "Data Visualization"
+        url: /datascience/data_viz/
+      - title: "Data Deidentification"
+        url: /datascience/deidentification/
+  - title: "Consent, Privacy and Security"
+    children:
+      - title: "Consenting and the IRB"
+        url: /datascience/consent_IRB/
+      - title: "Data Privacy and Security"
+        url: /datascience/privacy_security/
+      - title: "Compliance and Legal"
+        url: /datascience/compliance_legal/
   - title: "Training"
     children:
       - title: "DaSL Courses for the Hutch"
@@ -86,20 +100,7 @@ generation:
       - title: "Multiple Testing"
         url: /generation/multiple_testing/
 
-  - title: "Consent, Privacy and Security"
-    children:
-      - title: "Overview"
-        url: /generation/human_overview/
-      - title: "Consenting and IRB"
-        url: /generation/human_consentIRB/
-      - title: "Data Privacy and Security"
-        url: /generation/human_privacySecurity/
-      - title: "Compliance and Legal"
-        url: /generation/security_legal/
-      - title: "De-identification"
-        url: /generation/human_deidentification/
-      - title: "Data Sharing and Public Repositories"
-        url: /generation/human_shareDeposits/
+
 
   - title: "Clinical and Experimental Data"
     children:
@@ -111,8 +112,6 @@ generation:
         url: /generation/clsp_specimenBanking/
       - title: "Experimental Data"
         url: /generation/clsp_labCov/
-      - title: "Data Visualization"
-        url: /generation/data-viz/
       - title: "Support Software"
         url: /generation/labman_software/
 

@@ -314,11 +314,11 @@
   url: _scicomputing/software_python.md
 - dlm: May 2, 2019
   url: _scicomputing/store_databases.md
-- dlm: April 9, 2020
+- dlm: November 11, 2022
   url: _scicomputing/software_managecode.md
 - dlm: October 12, 2020
   url: _scicomputing/compute_platforms.md
-- dlm: October 20, 2022
+- dlm: December 2, 2022
   url: _scicomputing/store_objectstore.md
 - dlm: November 14, 2019
   url: _scicomputing/software_linux101.md
@@ -326,7 +326,7 @@
   url: _scicomputing/software_R.md
 - dlm: February 12, 2021
   url: _scicomputing/compute_accounts.md
-- dlm: August 12, 2022
+- dlm: December 2, 2022
   url: _scicomputing/access_credentials.md
 - dlm: October 20, 2022
   url: _scicomputing/compute_grants.md
@@ -338,17 +338,13 @@
   url: _generation/human_consentIRB.md
 - dlm: May 15, 2019
   url: _generation/multiple_testing.md
-- dlm: December 18, 2019
-  url: _generation/human_deidentification.md
-- dlm: July 20, 2022
-  url: _generation/data-viz.md
 - dlm: July 21, 2022
   url: _generation/labman_software.md
 - dlm: December 4, 2018
   url: _generation/security_legal.md
 - dlm: July 20, 2022
   url: _generation/clsp_clinicalCov.md
-- dlm: April 17, 2020
+- dlm: November 27, 2022
   url: _generation/human_shareDeposits.md
 - dlm: July 21, 2022
   url: _generation/gen_index.md
@@ -358,11 +354,11 @@
   url: _generation/human_privacySecurity.md
 - dlm: May 15, 2019
   url: _generation/study_proposal.md
-- dlm: July 21, 2022
+- dlm: November 11, 2022
   url: _generation/clsp_overview.md
 - dlm: March 19, 2019
   url: _generation/study_overview.md
-- dlm: December 4, 2018
+- dlm: November 27, 2022
   url: _generation/human_overview.md
 - dlm: August 2, 2019
   url: _generation/study_hypothesis.md
@@ -390,11 +386,21 @@
   url: _scicompannounce/2022-08-15-rhino-gizmo-updates.md
 - dlm: June 13, 2022
   url: _scicompannounce/2019-02-21-upgrade-env-modules.md
-- dlm: November 10, 2022
+- dlm: November 11, 2022
   url: _datascience/nih_data_sharing.md
-- dlm: November 17, 2022
+- dlm: November 19, 2022
   url: _datascience/hutch_courses.md
+- dlm: November 11, 2022
+  url: _datascience/compliance_legal.md
+- dlm: November 11, 2022
+  url: _datascience/data_viz.md
+- dlm: November 11, 2022
+  url: _datascience/consent_IRB.md
+- dlm: November 11, 2022
+  url: _datascience/privacy_security.md
 - dlm: November 10, 2022
   url: _datascience/ds_index.md
-- dlm: November 10, 2022
+- dlm: November 11, 2022
+  url: _datascience/deidentification.md
+- dlm: November 11, 2022
   url: _datascience/execute_sharing.md
