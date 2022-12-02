@@ -1,9 +1,21 @@
 ---
 title: De-identification of Specimens and Data
-last_modified_at: 2018-10-25
 main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
 primary_reviewers: JasonMajor1, sgglick
 ---
+
+De-identification generally refers to the removal of 18 identifiers as listed in
+HIPAA regulation 45 CFR 164.514(b). However, de-identification also means that
+in addition to the removal of these identifiers, the risk of re-identification,
+including applying methods which utilize publicly available data, is very small.
+Even without the 18 identifiers, individual-level genomics data could
+potentially identify an individual. Therefore, de-identification of genomics
+data also heavily relies on additional methods of privacy and security, such as
+adherence to strong data use limitations and practices, and strict security
+policy. In this section we address more specific approaches to address the need
+for de-identification of specimens and datasets for translational genomics
+studies.
+
 ## What is de-identification?
 
 De-identification refers to the removal or dissociation of direct patient

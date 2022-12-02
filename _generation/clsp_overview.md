@@ -12,8 +12,5 @@ This page contains guidance for using available software for prospective specime
 ## [Experimental Covariate Management Approaches](/generation/clsp_labCov/)
 This page contains guidance for tools of particular utility to documenting, organizing and linking descriptions of laboratory based processes or experimental conditions in such a way as to provide accurate and easy linking of these data to the downstream large data sets.  
 
-## [Data Visualization](/generation/data-viz/)
-There are a wide range of tools and resources data intensive researchers have leveraged at the Hutch to perform data visualization.  Some basics are described here.  
-
 ## [Support Software](/generation/labman_software/)
 There are a few useful tools for wetlab support software that can be very useful in creating shared resources for your lab to communicate smoothly.  
