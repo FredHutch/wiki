@@ -3,6 +3,27 @@ title: NIH Data Sharing
 primary_reviewers: vortexing
 ---
 
+## DaSL Support for NIH Data Sharing
+We have begun drafting documents for supporting researchers at the Hutch in response to the NIH Data Sharing Policy. We took comments/feedback/input from across the Fred Hutch community during October and November of 2022.  Moving forward, the Fred Hutch Data Science Lab will continue to maintain and periodically update the resulting support materials for investigators developing NIH DSMP plans.  In an attempt to catch people where they are, we will be creating a home for these materials here in SciWiki, on our [site's NIH Data Sharing project page](https://hutchdatascience.org/projects/nihdatasharing/), and in our future CenterNet page.  Keep checking back for updates, as this entire policy and the scientific community's response to it will likely evolve over 2023 and beyond.  
+
+We are always open for feedback, corrections and contributions from the Fred Hutch community and beyond. If you like these materials and use them, let us know! If you have developed a great plan and want to share it with us, please do!  If you have other feed back about our evolving support materials or the guide, we want to hear it.  You can contact us by emailing `data@fredhutch.org` anytime.  
+
+
+### NIH Data Sharing Guide
+We have created and are actively developing a guide you can [find here](https://hutchdatascience.org/NIH_Data_Sharing/) that walks you through the process of complying with the new 2023 NIH Data Sharing Policy. 
+>If you take this course and want to give us feedback or would like to learn more about it, you can share your thoughts in [the FH Data Slack in the #ask-dasl channel](https://fhdata.slack.com/archives/C043ZVCBY9Z)) or you can file an issue on [the course's GitHub repository](https://github.com/fhdsl/NIH_Data_Sharing) or email us at `data@fredhutch.org`. 
+
+
+### NIH Data Sharing Documents and Templates
+- [DaSL NIH DMS Plan Checklist](../../assets/DaSL-NIHDataSharing/22-12-05-FHDaSLDMSPCheckList.docx)
+- [DaSL NIH DMS Plan Cheat Sheet](../../assets/DaSL-NIHDataSharing/22-12-05-NIHDMSPCheatSheet.pdf)
+- [DaSL NIH DMS Plan Guidance](../../assets/DaSL-NIHDataSharing/22-12-05-FHDaSLNIHDMSPGuidance.docx)
+- [DaSL NIH DMS Plan Template Text](../../assets/DaSL-NIHDataSharing/22-12-05-FHDaSLNIHDMSPTemplateText.docx)
+
+
+We're actively working on improving and editing these documents as well as building a "Mad Libs" style template document for everyone to leverage.  If you'd like to contribute to the Mad Libs template, you can provide example text using our [Google Form](https://forms.gle/vXWGndZ9fMsn6zgP7).  The more the merrier!  
+
+
 ## New Data Sharing Policy
 > What you should know about the new 2023 NIH Data Management and Sharing Policy
 
@@ -85,14 +106,6 @@ We outline these essential components in more depth in our DaSL developed resour
 6. **Oversight** - describe who will manage compliance of the DMS plan (likely a member of your group)
 
 
-
-## DaSL Guides, Checklists and Templates
-The Fred Hutch Data Science Lab has begun drafting documents for supporting researchers at the Hutch in 
-response to the NIH Data Sharing Policy. 
-
-We have created and are actively developing a guide you can [find here](https://hutchdatascience.org/NIH_Data_Sharing/) that walks you through the process of complying with this policy.  
-
-Additionally we have created a set of detailed guides and checklists that aim to support grant writers in developing their plans.  We welcome comments/feedback on these initial drafts either in the documents themselves (permissions should allow you to add comments). Note that these documents (linked to from [our website](https://hutchdatascience.org/news/NIH-Data-Sharing-Policy-Draft/)) are a work in progress and are in very active development due to the tight timeline for responding to the NIH data sharing policy. We hope to have more formal versions of these documents ready for use by mid-December 2022 and will be actively curating and updating them over time as this policy and its implementation evolves.   
 
 
 ## Data Management Guidance in the Wild
