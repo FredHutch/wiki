@@ -15,10 +15,10 @@ We have created and are actively developing a guide you can [find here](https://
 
 
 ### NIH Data Sharing Documents and Templates
-- [DaSL NIH DMS Plan Checklist](../../assets/DaSL-NIHDataSharing/22-12-05-FHDaSLDMSPCheckList.docx)
-- [DaSL NIH DMS Plan Cheat Sheet](../../assets/DaSL-NIHDataSharing/22-12-05-NIHDMSPCheatSheet.pdf)
-- [DaSL NIH DMS Plan Guidance](../../assets/DaSL-NIHDataSharing/22-12-05-FHDaSLNIHDMSPGuidance.docx)
-- [DaSL NIH DMS Plan Template Text](../../assets/DaSL-NIHDataSharing/22-12-05-FHDaSLNIHDMSPTemplateText.docx)
+- [DaSL NIH DMS Plan Checklist](../../assets/DaSL-NIHDataSharing/FHDaSLDMSPCheckList.docx)
+- [DaSL NIH DMS Plan Cheat Sheet](../../assets/DaSL-NIHDataSharing/NIHDMSPCheatSheet.pdf)
+- [DaSL NIH DMS Plan Guidance](../../assets/DaSL-NIHDataSharing/FHDaSLNIHDMSPGuidance.docx)
+- [DaSL NIH DMS Plan Template Text](../../assets/DaSL-NIHDataSharing/FHDaSLNIHDMSPTemplateText.docx)
 
 
 We're actively working on improving and editing these documents as well as building a "Mad Libs" style template document for everyone to leverage.  If you'd like to contribute to the Mad Libs template, you can provide example text using our [Google Form](https://forms.gle/vXWGndZ9fMsn6zgP7).  The more the merrier!  
