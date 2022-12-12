@@ -191,7 +191,8 @@ check_for_orphan_assets:
       echo "Orphan files:" >> issue.txt
       echo >> issue.txt
       cat orphans.txt >> issue.txt
-      gh issue create --title "Orphan asset files in wiki" --body-file issue.txt
+      # TODO fix this:
+      ######## gh issue create --title "Orphan asset files in wiki" --body-file issue.txt
       # Should we really break the build here? We have created an issue
       # so not sure if breaking the build would be redundant. 
       # Let's not break the build for now. Commented this out:
