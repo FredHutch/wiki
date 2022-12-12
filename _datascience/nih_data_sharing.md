@@ -15,10 +15,11 @@ We have created and are actively developing a guide you can [find here](https://
 
 
 ### NIH Data Sharing Documents and Templates
-- [DaSL NIH DMS Plan Checklist](../../assets/DaSL-NIHDataSharing/FHDaSLDMSPCheckList.docx)
-- [DaSL NIH DMS Plan Cheat Sheet](../../assets/DaSL-NIHDataSharing/NIHDMSPCheatSheet.pdf)
-- [DaSL NIH DMS Plan Guidance](../../assets/DaSL-NIHDataSharing/FHDaSLNIHDMSPGuidance.docx)
-- [DaSL NIH DMS Plan Template Text](../../assets/DaSL-NIHDataSharing/FHDaSLNIHDMSPTemplateText.docx)
+- [NIH Data Sharing Guide](https://hutchdatascience.org/NIH_Data_Sharing/) 
+- [DaSL NIH DMS Plan Checklist](https://docs.google.com/document/d/1g_N_k9hLBP224v7oOulT3H6PQLr7vePP/edit?usp=sharing&ouid=115226163311121677414&rtpof=true&sd=true)
+- [DaSL NIH DMS Plan Cheat Sheet](https://drive.google.com/file/d/1qU9fireItkQHdw0eoRQXQMTHPU2xu189/view?usp=sharing)
+- [DaSL NIH DMS Plan Guidance](https://docs.google.com/document/d/1_MW-ryjETilW74AniePyyUc474XXPqBG/edit?usp=sharing&ouid=115226163311121677414&rtpof=true&sd=true)
+- [DaSL NIH DMS Plan Template Text](https://docs.google.com/document/d/1L9hpc259T5hRfEKL9ArNw_yYIWHddkR_/edit?usp=sharing&ouid=115226163311121677414&rtpof=true&sd=true)
 
 
 We're actively working on improving and editing these documents as well as building a "Mad Libs" style template document for everyone to leverage.  If you'd like to contribute to the Mad Libs template, you can provide example text using our [Google Form](https://forms.gle/vXWGndZ9fMsn6zgP7).  The more the merrier!  
