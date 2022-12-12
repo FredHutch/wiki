@@ -161,7 +161,7 @@ check_for_orphan_assets:
     refs:
        - main
   before_script:
-    - apk add curl
+    - apk add curl git
     - curl -LO https://github.com/cli/cli/releases/download/v2.16.1/gh_2.16.1_linux_amd64.tar.gz
     - tar zxf gh_2.16.1_linux_amd64.tar.gz
     - cp gh_2.16.1_linux_amd64/bin/gh /usr/local/bin
