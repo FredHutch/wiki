@@ -26,3 +26,7 @@ services:
       - xpack.security.enabled=false
       - ingest.geoip.downloader.enabled=false
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+
+networks:
+  proxy:
+    external: true
