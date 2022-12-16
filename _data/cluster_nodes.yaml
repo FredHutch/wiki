@@ -74,7 +74,7 @@
       os: Ubuntu 18.04 LTS
       local_storage: "7TB @ /loc (300MB/s throughput / 1000 IOps)"
       network: 10G (up to 1GB/s throughput)
-      gpu: NVIDIA RTX1080ti
+      gpu: NVIDIA GTX 1080ti
       gpu_count: 1
       gpu_memory: 10.92 GB 
       gpu_compute_capability: 6.1
@@ -93,7 +93,7 @@
       os: Ubuntu 18.04 LTS
       local_storage: "6TB @ /loc"
       network: 10G (up to 1GB/s throughput)
-      gpu: NVIDIA RTX2080ti
+      gpu: NVIDIA RTX 2080ti
       gpu_count: 1
       gpu_memory: 10.76 GB 
       gpu_compute_capability: 7.5
