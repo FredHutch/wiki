@@ -267,9 +267,9 @@ When I tried to, push the second commit, my push was rejected:
 
 So I pulled the version on GitHub that was one commit ahead, revealing a conflict without an auto-resolution. Git cannot merge two versions of the same file, if they have different content on the same line! How would git know which was correct?
 
-![Merge Conlict](https://user-images.githubusercontent.com/46639063/75185762-810b4180-56fb-11ea-810d-2560939496be.png)
+![Merge Conflict](https://user-images.githubusercontent.com/46639063/75185762-810b4180-56fb-11ea-810d-2560939496be.png)
 
-Fortunately, VS Code makes it easy to review the confict and pick the winner (or keep both, by appending a version as new lines of code).
+Fortunately, VS Code makes it easy to review the conflict and pick the winner (or keep both, by appending a version as new lines of code).
 
 ![Resolve Merge Conflict](https://user-images.githubusercontent.com/46639063/75185767-82d50500-56fb-11ea-8da1-4d32fddabe7c.png)
 
@@ -279,7 +279,7 @@ After resolving the conflict, remember to commit and push the resolution.
 
 JSON file with all your user-specific settings. How to get to it? (see the common settings wheel at the lower left)
 
-![where is settngs dot json](https://user-images.githubusercontent.com/46639063/75194760-9ab58480-570d-11ea-95ed-d44fd5805197.png)
+![where is settings dot json](https://user-images.githubusercontent.com/46639063/75194760-9ab58480-570d-11ea-95ed-d44fd5805197.png)
 
 ### PyCharm
 
@@ -409,7 +409,7 @@ clear about their purpose, without having to hunt through scores of modules to d
 **Find Usages**  
 
 Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where or how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages**, 
-a small pop-up window will show where that varible is referenced throughout the entire project. This is particularly helpful for when you're cleaning up code and want to know if you can delete something.
+a small pop-up window will show where that variable is referenced throughout the entire project. This is particularly helpful for when you're cleaning up code and want to know if you can delete something.
 
 Right-clicking an object opens a menu which contains the **Find Usages** button:  
 ![find usages example](https://user-images.githubusercontent.com/1015576/80849559-7cb44680-8bcc-11ea-917c-ce156111707e.png)
@@ -566,7 +566,7 @@ JupyterLab offers live rendering of your markdown. To set it up, locate the mark
 
 **Run Script or Only Part of Script**
 
-You can run a segment of a script by selecting the part you care about and hitting `Ctrl + Alt + N`. The results show up in the OUTPUT table. Take the segment of code you want to run and drop it into a new cell and `Shift + Return`. Seems manual but this ability to take parts of code and iterate and interact with them by dropping them into a new cell to run is what some find beatiful about Jupyter. It is like an inline console which speaking of if you want to create a new console just select **File > New** and you can create a new console, or a new notebook (in either a Python, R, Julia or other kernel), a terminal instance, a new text file, or a markdown.
+You can run a segment of a script by selecting the part you care about and hitting `Ctrl + Alt + N`. The results show up in the OUTPUT table. Take the segment of code you want to run and drop it into a new cell and `Shift + Return`. Seems manual but this ability to take parts of code and iterate and interact with them by dropping them into a new cell to run is what some find beautiful about Jupyter. It is like an inline console which speaking of if you want to create a new console just select **File > New** and you can create a new console, or a new notebook (in either a Python, R, Julia or other kernel), a terminal instance, a new text file, or a markdown.
 
 **Identifying Problems and Their Quick Fixes**
 
