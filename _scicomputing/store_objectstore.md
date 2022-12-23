@@ -40,11 +40,11 @@ An additional tool is [Motuz](http://motuz.fredhutch.org), a tool that facilitat
 
 AWS S3 is a cloud based object storage service that uses Amazon Web Services Simple Storage Service (S3) to offer managed and secure (encrypted) AWS S3 buckets to Fred Hutch investigators.
 
-Each PI may request a dedicated AWS account for their lab if they wish to use AWS S3 storage.  In the lab account, there will be two managed AWS S3 buckets- a private bucket and a public bucket.  In this context, *private* and *public* refer to the *maximum possible level* of access to a file in that bucket.  Files uploaded to the public bucket by default will still *NOT* be publicly accessible, however if desired it is possible to change the access to one or more files or folders to make them directly accessible to the public.  For example, if you published a paper and wish to make a public refernce dataset available to accompany that paper, that reference dataset would need to go into the public bucket and then you can contact SciComp for assitance in changing the access permissions.  In the private bucket, granting public access will be impossible and even if the security policy is somehow accidentally modified to grant public access to the private bucket, the access will *still* be blocked by additional guardrails at the account level.  If you are unsure which bucket to use, you should by default use the private bucket.  The data can later be moved if necessary.
+Each PI may request a dedicated AWS account for their lab if they wish to use AWS S3 storage.  In the lab account, there will be two managed AWS S3 buckets- a private bucket and a public bucket.  In this context, *private* and *public* refer to the *maximum possible level* of access to a file in that bucket.  Files uploaded to the public bucket by default will still *NOT* be publicly accessible, however if desired it is possible to change the access to one or more files or folders to make them directly accessible to the public.  For example, if you published a paper and wish to make a public reference dataset available to accompany that paper, that reference dataset would need to go into the public bucket and then you can contact SciComp for assistance in changing the access permissions.  In the private bucket, granting public access will be impossible and even if the security policy is somehow accidentally modified to grant public access to the private bucket, the access will *still* be blocked by additional guardrails at the account level.  If you are unsure which bucket to use, you should by default use the private bucket.  The data can later be moved if necessary.
 
 ### Managed S3 Buckets
 
-Managed S3 buckets in S3 are created and named for each investigator account.  As an example, if you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j-eco` for the private bucket and `fh-pi-doe-j-eco-public` for the public bucket. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  These managed buckets have a standard configuration and are subidized by the Hutch.
+Managed S3 buckets in S3 are created and named for each investigator account.  As an example, if you work in the lab of the PI Jane Doe, your lab's S3 bucket name will be `fh-pi-doe-j-eco` for the private bucket and `fh-pi-doe-j-eco-public` for the public bucket. Please substitute your lab's actual bucket name when using the examples in our Resource Library demos.  These managed buckets have a standard configuration and are subsidized by the Hutch.
 
 A specialized client is required to upload data into S3 storage. [Mountain Duck](/compdemos/Mountain-CyberDuck/), [CyberDuck](/compdemos/Mountain-CyberDuck/), [Motuz](/compdemos/motuz/), and the [AWS CLI](/compdemos/aws-s3/) are all good options for uploading data into S3 buckets.
 
@@ -120,7 +120,7 @@ NOTE:  Public access is read-only.  Write access will *NEVER* be granted to the 
 
 ##### Direct access via collaborator's AWS account
 
-If an external collaborator has an AWS account available to them through their institution, it is possible to set up sharing so that they can access your data by using their own AWS user credentials.  This typically requires some coordination between SciComp and the external collaborator's IT department and may not be suitable for all cases even if the collaborator *does* have access to their own AWS account.  The main advantages of this method are improved security and accessiblity:
+If an external collaborator has an AWS account available to them through their institution, it is possible to set up sharing so that they can access your data by using their own AWS user credentials.  This typically requires some coordination between SciComp and the external collaborator's IT department and may not be suitable for all cases even if the collaborator *does* have access to their own AWS account.  The main advantages of this method are improved security and accessibility:
 
 - It is not necessary to send credentials to an external individual so there is no chance of credentials being intercepted or otherwise acquired by unauthorized individuals.
 - If the external collaborator is offboarded from their organization, their access will typically be terminated automatically.
@@ -128,7 +128,7 @@ If an external collaborator has an AWS account available to them through their i
 
 #### User Demos
 
-We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-CyberDuck/), [via the AWS CLI](/compdemos/aws/#aws-command-line-interface-cli), [via R](/compdemos/aws/#aws-via-r), or [via Python](/compdemos/aws/#aws-via-python).
+We have a number of demos in our Resource Library related to how to interact with Economy Storage, specifically via [a desktop client](/compdemos/Mountain-CyberDuck/), [via the AWS CLI](/compdemos/aws-s3/#aws-command-line-interface-cli), [via R](/compdemos/aws-s3/#aws-via-r), or [via Python](/compdemos/aws-s3/#aws-via-python).
 
 
 #### FAQ
