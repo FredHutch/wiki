@@ -8,7 +8,7 @@ Before ingesting any external data sets, please refer to the [Overview of Data S
 
 Once you have an idea where the data will need to live at Fred Hutch, you can begin the process of transferring them to Fred Hutch supported data storage systems.  
 
-Ideally, one wouldn't transfer large amounts of data intended to be temporary into systems like *Fast* storage as that data will be included in the frequent snapshots for backup purposes in that storage system.  This means these data will have a large footprint in the overall system, requiring long term backup of what are actually temporary data (ironic in a way). A better way to ingest and store large data sets is to first ingest the data into *Scratch* storage and then move them into secure, stable object storage systems like *Economy* (either *Local* or *Cloud*).  
+Ideally, one wouldn't transfer large amounts of data intended to be temporary into systems like *Fast* storage as that data will be included in the frequent snapshots for backup purposes in that storage system.  This means these data will have a large footprint in the overall system, requiring long term backup of what are actually temporary data (ironic in a way). A better way to ingest and store large data sets is to first ingest the data into *Scratch* storage and then move them into secure, stable object storage systems like AWS S3.
 
 ## FTP to *Scratch*
 First, make a directory in Scratch for the data you want to ingest.  Then use `wget` to copy, in this case recursively, the data from the ftp url (e.g., ftp.broadinstitute.org/bundle/) using the username (user) and password (pass) required.  
@@ -74,8 +74,8 @@ chmod u=rw,go-rwx $HOME/.wgetrc
 chmod u=rw,go-rwx $HOME/data_download.txt
 ```
 
-## Sync to AWS S3 *Economy Cloud* Storage
-Once you've confirmed that the intended data has been fully transferred to *Scratch* then transfer these data to the intended final location in *Economy*, in this case AWS S3 (*Economy Cloud*).  
+## Sync to AWS S3 *
+Once you've confirmed that the intended data has been fully transferred to *Scratch* then transfer these data to the intended final location in AWS S3.  
 
 ```
 aws s3 sync /ingestedDataDir/ s3://your-pi-bucket-name/theseData/
