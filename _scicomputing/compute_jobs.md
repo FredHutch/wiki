@@ -185,9 +185,9 @@ scontrol update jobid=<job ID> timelimit=+2-0
 
 ### Short Jobs
 
-If your jobs do not require a great deal of walltime, consider using the "short" partition.  This partition has a higher core limit but restricts the wall time of the job to less than 12 hours.
+If your jobs do not require a great deal of walltime, consider using the `short` partition.  This partition has a higher core limit but restricts the wall time of the job to less than 12 hours.
 
-For more information see [here](/compdemos/short_partition) 
+For more information see [our page on `short` parition use](/compdemos/gizmo_short_partition/).
 
 ### Preemption and Restart Jobs
 
