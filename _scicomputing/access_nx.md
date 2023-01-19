@@ -46,3 +46,25 @@ Finally you will be asked whether to create a new virtual desktop or a custom co
 
 This will create a new Linux desktop session.
 
+## Other Methods for Connecting
+
+### Custom Sessions
+
+You can now run X11 based software in a NoMachine session without launching a full desktop session.  This is still something of an experimental feature, but thus far seems to work well.
+
+A custom session has a number of different options. For this example we'll run a single X client to create a terminal on the NoMachine server.  When you select the "custom session" option above, you'll have an option to "run the following command". In the field following that radio button enter `mate-terminal`.  To have the command run in a window without the full desktop, make sure that "Run the command in a floating window" is selected.
+
+With these options you'll get a window on your desktop with a prompt on the NoMachine server you've connected to.  This connection will persist even if you stop the NoMachine client on your computer.
+
+Contact Scientific Computing if more help is required
+
+### Browser Based Access
+
+There is now support for sessions in a browser window.  This is a rather more experimental feature.  For these style connections point a browser to a URL:
+
+ - https://rhino01.fhcrc.org:4443/nxwebplayer
+ - https://rhino02.fhcrc.org:4443/nxwebplayer
+ - https://rhino03.fhcrc.org:4443/nxwebplayer
+
+You will be prompted to enter your username and password.  There are options for both virtual desktop and custom session that function much as the full client does.
+
