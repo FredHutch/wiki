@@ -66,8 +66,6 @@
   url: _compdemos/snapshots.md
 - dlm: October 20, 2022
   url: _compdemos/motuz.md
-- dlm: February 24, 2021
-  url: _compdemos/gizmo-bionic-upgrade.md
 - dlm: June 13, 2022
   url: _compdemos/microbiome_tools.md
 - dlm: May 1, 2019
@@ -76,8 +74,6 @@
   url: _compdemos/aws-s3.md
 - dlm: June 13, 2022
   url: _compdemos/ucsc-track-s3.md
-- dlm: May 11, 2020
-  url: _compdemos/gizmo-nx-users.md
 - dlm: June 13, 2022
   url: _compdemos/git_tips.md
 - dlm: May 14, 2020
@@ -108,16 +104,12 @@
   url: _compdemos/toolbox.md
 - dlm: June 13, 2022
   url: _compdemos/rslurm_intro.md
-- dlm: June 13, 2022
-  url: _compdemos/gizmo-bionic-changelog.md
 - dlm: September 26, 2018
   url: _compdemos/vscode_markdown_howto.md
 - dlm: June 13, 2022
   url: _compdemos/nextflow.md
 - dlm: April 6, 2020
   url: _compdemos/python_logging.md
-- dlm: June 13, 2022
-  url: _compdemos/gizmo-bionic-known_issues.md
 - dlm: January 5, 2022
   url: _compdemos/rhino-load-management.md
 - dlm: November 23, 2020
@@ -302,7 +294,7 @@
   url: _scicomputing/access_overview.md
 - dlm: October 11, 2022
   url: _scicomputing/access_aws.md
-- dlm: August 20, 2021
+- dlm: January 19, 2023
   url: _scicomputing/access_nx.md
 - dlm: October 20, 2021
   url: _scicomputing/compute_cloud.md
@@ -368,12 +360,20 @@
   url: _scicompannounce/2021-09-14-gizmo-scratch-maintenance.md
 - dlm: June 13, 2022
   url: _scicompannounce/2019-01-22-hpc-systems-upgrade-2019.md
+- dlm: January 18, 2023
+  url: _scicompannounce/2020-07-06-gizmo-bionic-known_issues.md
 - dlm: July 27, 2021
   url: _scicompannounce/2021-08-08-gizmo-cpu-cgroup.md
 - dlm: June 6, 2018
   url: _scicompannounce/2018-06-01-JuneComputingUpdates.md
 - dlm: November 12, 2019
   url: _scicompannounce/2019-11-01-scratch-upgrade.md
+- dlm: January 18, 2023
+  url: _scicompannounce/2020-05-06-gizmo-nx-users.md
+- dlm: January 18, 2023
+  url: _scicompannounce/2020-07-14-gizmo-bionic-changelog.md
+- dlm: January 18, 2023
+  url: _scicompannounce/2020-04-29-gizmo-bionic-upgrade.md
 - dlm: August 9, 2021
   url: _scicompannounce/2021-08-08-gizmo-grabnode.md
 - dlm: June 6, 2018
