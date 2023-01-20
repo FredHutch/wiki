@@ -23,15 +23,17 @@ Please check with your supervisor before you store any [PHI data](https://cphs.b
 
 This is an overview of supported features:
 
-|  Feature 	| Secure File	| Fast File | Economy File |  OneDrive 	|
-|:-	|:-:	|:-:	|:-:	|:-:	|
-|  Encryption at Rest 	|   -	|   X	|   X	|   X	|
+|  Feature 	| Secure File	| Fast File | Economy Cloud |  OneDrive 	|
+|:-	        |:-:	        |:-:	      |:-:	         |:-:	        |
+|  Encryption at Rest 	|   X	|   X	|   X	|   X	|
 |  Encryption in Transit	|  X *) |   X *)	|   X	|   X	|
-|  Access auditing 	|   X	|   -	|   X	|   X 	|
-|  Approved for PHI by ISO 	|   Yes	|   No **)	|   Yes	|   Yes	|
+|  Access auditing 	|   X	|   X	|   X	|   X 	|
+|  Approved for PHI by ISO 	|   Yes	|   No &Dagger;	|   Yes	|   Yes	|
 
 *) Only Windows 10 and latest Mac, not NFS/HPC/Linux
-**) Please contact ISO
+&Dagger;) Please contact ISO
+
+At this time both _fast_ and _secure_ storage platforms have the same capabilities for encryption, access auditing, and backups.  _Secure_ has a more capable mechanism for managing access permissions that allows more flexibility in assigning those permissions.  Contact scicomp if you think you may need these capabilities.
 
 The Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhutch.org/cn/u/irb/hipaa-compliance.html) can be found at the linked CenterNet pages.  
 
@@ -39,10 +41,10 @@ The Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhut
 
 Storage Resource | Costs (per TB/month)\*  | Backup Location/Duration | Best Use
 --- | --- | --- | --- | ---
-`Home` | Free to 100GB limit |  7 days of Snapshots, Daily backups, Off Site copy | Only use this location for software and settings specific to a user, not for data, not shared to others. HARD LIMIT, cannot be expanded
-`Fast` | $$$ beyond 1TB per PI |  7 days of Snapshots, Daily backups, Off Site copy | Large instrument files and data sets that need high performance access to computing resources, Unix file permissions, but not temporary data (such as intermediate files)
-`Economy Local` and `Cloud` | $ beyond 100TB per PI |  Multi-datacenter replication, 90 day undelete (Trashcan) with request to `helpdesk` | Best for archiving large data sets, or primary storage of large files.  Good for PHI or other data that requires encryption and auditing. *Requires Desktop Client to access, see [Object Storage page.](/scicomputing/store_objectstore/)*
-`Scratch` | Free | Not applicable | Temporary files, such as those intermediate to a final result that only need to persist during a job.  *Appropriate use  can significantly reduce data storage costs, see our [Scratch Storage](/scicomputing/store_scratch/) page.*
+Home | Free to 100GB limit |  7 days of Snapshots, Daily backups, Off Site copy | Only use this location for software and settings specific to a user, not for data, not shared to others. HARD LIMIT, cannot be expanded
+Fast | $$$ beyond 1TB per PI |  7 days of Snapshots, Daily backups, Off Site copy | Large instrument files and data sets that need high performance access to computing resources, Unix file permissions, but not temporary data (such as intermediate files)
+Economy Cloud | $ beyond 100TB per PI |  Multi-datacenter replication, 90 day undelete (Trashcan) with request to `helpdesk` | Best for archiving large data sets, or primary storage of large files.  Good for PHI or other data that requires encryption and auditing. *Requires Desktop Client to access, see [Object Storage page.](/scicomputing/store_objectstore/)*
+Scratch | Free | Not applicable | Temporary files, such as those intermediate to a final result that only need to persist during a job.  *Appropriate use  can significantly reduce data storage costs, see our [Scratch Storage](/scicomputing/store_scratch/) page.*
 
 Additional details for other CIT file services such as `Secure File` (aka J or R drive) features are available on [Centernet](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html). For expenses charged to your group for data storage in these systems, please see the [storage usage dashboard](https://grafana.fredhutch.org/d/dy5I3SIMk/data-core-storage-usage/). If you are interested in a breakdown of your storage ulitization by folder you can get these details at [Storage HotSpots](https://storage-hotspots.fhcrc.org/). Please select your PI as owner. You can also export all data as CSV. (Please note: for performance reasons only folders > 1GB without subfolders are shown here) . For pricing information please check [this page](https://centernet.fredhutch.org/cn/u/shared-resources/data-resource.html) on CenterNet. 
 
