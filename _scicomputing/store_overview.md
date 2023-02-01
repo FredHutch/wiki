@@ -25,12 +25,13 @@ This is an overview of supported features:
 
 |  Feature 	                | Secure File	| Fast File | Economy Cloud |  Scratch  	|  OneDrive 	|
 |:-	                        |:-:	        |:-:	      |:-:	          |:-:	        |:-:	        |
-|  Encryption at Rest 	    |          X  |        X  |            X	|          X	|          X	|
-|  Encryption in Transit    |          X* |        X* |            X	|          X* |          X	|
-|  Access auditing 	        |          X	|        X  |    	       X  |           	|          X	|
-|  Approved for PHI by ISO 	|         Yes	| No &Dagger;	|        Yes	|         No	|        Yes	|
+|  Encryption at Rest 	    |        Yes  |      Yes  |          Yes	|        Yes	|        Yes	|
+|  Encryption in Transit    |        Yes* |      Yes* |          Yes	|        Yes* |        Yes	|
+|  Access auditing 	        |        Yes	|      Yes  |    	     Yes  |         No	|        Yes	|
+|  Approved for PHI by ISO 	|        Yes  | No &Dagger;	|        Yes	|         No	|        Yes	|
 
 *) Only Windows 10 and latest Mac, not NFS/HPC/Linux
+
 &Dagger;) Please contact ISO (email _infosec_)
 
 At this time both _fast_ and _secure_ storage platforms have the same capabilities for encryption, access auditing, and backups.  _Secure_ has a more capable mechanism for managing access permissions that allows more flexibility in assigning those permissions.  Contact scicomp if you think you may need these capabilities.
