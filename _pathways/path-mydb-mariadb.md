@@ -20,7 +20,6 @@ If you are unfamiliar with any of these terms, hover over them to find more info
 Browse to https://mydb.fredhutch.org/login and enter your HutchNet ID
 
 ### Create the Database Container
-[HutchNet ID](/scicomputing/access_credentials/#hutchnet-id).
 
 Once logged into db4sci, click over to "Create DB Container" and select "MariaDB (MySQL)" from the list.  This will present a form with a number of fields describing the database and configuring the administrative credentials.  The full reference for these fields is available [here](/scicomputing/store_db4sci/#common-fields)
 
