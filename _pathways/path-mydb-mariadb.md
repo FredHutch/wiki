@@ -20,17 +20,9 @@ If you are unfamiliar with any of these terms, hover over them to find more info
 Browse to https://mydb.fredhutch.org/login and enter your HutchNet ID
 
 ### Create the Database Container
+[HutchNet ID](/scicomputing/access_credentials/#hutchnet-id).
 
-Once logged into db4sci, click over to "Create DB Container" and select "MariaDB (MySQL)" from the list.  This will present a form with a number of fields you must fill in:
-
- - DB/Container Name: make this something significant to you. This does _not_ need to match the name of the database you create
- - DB Username: this is the username you will use to connect to the database.  The exact name is not important, but you will need to record it.  This username will have administrative privileges to the database.
- - DB Password: password for that admin account.
- - Contact Name: Your full name
- - Contact Email: Your HutchNet email address
- - Description: some general information about the database and its application.
-
-Update the other drop-downs for the database parameters- these are often simply advisory to SciComp, others may affect backups and where data is stored.  For _most_ applications the defaults are sufficient.
+Once logged into db4sci, click over to "Create DB Container" and select "MariaDB (MySQL)" from the list.  This will present a form with a number of fields describing the database and configuring the administrative credentials.  The full reference for these fields is available [here](/scicomputing/store_db4sci/#common-fields)
 
 Click "Submit" and your container will be created.  It can take 30 seconds to a minute for the container to be created- when complete you will be presented with a page with the parameters you'd entered and a sample `mysql` command line.  This sample command line contains the port number you will use for connecting to this database.
 
