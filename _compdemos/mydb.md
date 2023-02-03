@@ -1,5 +1,5 @@
 ---
-title: Configuring Database on db4sci
+title: Configuring Databases on mydb
 last_modified_at: 2023-02-02
 primary_reviewers: fizwit, atombaby
 ---
