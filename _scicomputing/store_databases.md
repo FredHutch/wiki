@@ -43,13 +43,14 @@ For further info about how to get started with a SQL server, please see [the Dat
 ## MyDB
 
 MyDB is a service supported by Scientific Computing (SciComp) that allows you to provision a dedicated server (aka, instance).  MyDB is a self-service website for creating containerized databases. The service is available to anyone at the center without cost. Users are given full admin rights to the database but are not given shell access to the database system. The MyDB service performs daily database backups which are stored in the Amazon cloud.
-To access [MyDB](https://mydb.fredhutch.org/) click the link and use your Hutch credentials to log in.
+
+To access [MyDB](https://mydb.fredhutch.org/) click the link and use your Hutch credentials to log in.  Detailed documentation can be found [here](/compdemos/mydb/)
 
 - **MariaDB** Is the latest open source version of MySQL. MariaDB is traditional
 relational database that supports SQL. MariaDB has an option
 for data encryption and data encryption in transit (TLS).  If your project
 requires encryption at rest you should use MariaDB. For more information
-visit the [MariaDB official site](https://mariadb.org)
+visit the [MariaDB official site](https://mariadb.org).  A quick-start pathway can be found [here](/pathways/path-mydb-mariadb/)
 - **Postgres** Postgres is a very popular open source relational database.
 Postgres is very performant and capable of storing large databases. For more information
 visit the [Postgres official site.](https://www.postgresql.org)
