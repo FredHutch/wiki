@@ -21,7 +21,7 @@ Browse to https://mydb.fredhutch.org/login and enter your HutchNet ID
 
 ### Create the Database Container
 
-Once logged into MyDB, click over to "Create DB Container" and select "MariaDB (MySQL)" from the list.  This will present a form with a number of fields describing the database and configuring the administrative credentials.  The full reference for these fields is available [here](/scicomputing/store_db4sci/#common-fields)
+Once logged into MyDB, click over to "Create DB Container" and select "MariaDB (MySQL)" from the list.  This will present a form with a number of fields describing the database and configuring the administrative credentials.  The full reference for these fields is available [here](/compdemos/mydb/#common-fields)
 
 Click "Submit" and your container will be created.  It can take 30 seconds to a minute for the container to be created- when complete you will be presented with a page with the parameters you'd entered and a sample `mysql` command line.  This sample command line contains the port number you will use for connecting to this database.
 
