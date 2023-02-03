@@ -21,11 +21,7 @@ Browse to https://mydb.fredhutch.org/login and enter your HutchNet ID
 
 ### Create the Database Container
 
-Once logged into MyDB, click over to "Create DB Container" and select "MariaDB (MySQL)" from the list.  This will present a form with a number of fields describing the database and configuring the administrative credentials.  The full reference for these fields is available [here](/compdemos/mydb/#common-fields)
-
-Click "Submit" and your container will be created.  It can take 30 seconds to a minute for the container to be created- when complete you will be presented with a page with the parameters you'd entered and a sample `mysql` command line.  This sample command line contains the port number you will use for connecting to this database.
-
-Record the username, password, and port in a secure location.
+Follow the instructions [here](/compdemos/mydb) to configure an instance of a MariaDB container.  Record the username, password, and port in a secure location.
 
 ### Start a Session on a Rhino
 
@@ -37,26 +33,7 @@ Load the MariaDB module with the command `ml MariaDB`.
 
 ### Connect to the Database
 
-Use the `mariadb` command to connect to the database.  The command and options are very nearly identical to the `mysql` commands:
-
-```
-mariadb --host mydb --port <port> --user <username> --password
-```
-fill in the values for port and username you'd recorded earlier.  You will be prompted to enter the password.  If the connection is successful you will be given a prompt for the database:
-
-```
-rhino03[~]: mariadb --host mydb.fhcrc.org --port <port> --user <username> --password
-Enter password: *********
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 9
-Server version: 10.3.5-MariaDB-10.3.5+maria~jessie mariadb.org binary distribution
-
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-MariaDB [(none)]>
-```
+Use the command you recieved when you created the database container to connect to the database.  Full documentation is available [here](/compdemos/mydb). 
 
 ## Where to go from here
 

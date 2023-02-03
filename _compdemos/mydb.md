@@ -95,13 +95,46 @@ Unused
 
 Unused
 
-## Notes for Database Technologies
+## Notes for Database Platforms
 
 ### MariaDB
 
 MariaDB is a relational database supporting Structured Query Language (SQL).  It is an open-source fork of MySQL.
 
 To provision a new MariaDB database select "MariaDB" from the list.  Currently versions 10.3 and 10.1 are available.
+
+#### Provisioning
+
+Once logged into MyDB, click over to "Create DB Container" and select "MariaDB (MySQL)" from the list.  This will present a form with fields describing the database and configuring the administrative credentials.  The full reference for these fields is available [here](/compdemos/mydb/#common-fields)
+
+Click "Submit" and your container will be created.  It can take 30 seconds to a minute for the container to be created- when complete you will be presented with a page with the parameters you'd entered and a sample `mysql` command line.  This sample command line contains the port number you will use for connecting to this database.
+
+Record the username, password, and port in a safe and secure location.
+
+#### Use
+
+Many MySQL tools will also work with MariaDB.  There is also a module in the rhino/gizmo compute environment: this can be loaded with the command `ml MariaDB`.
+
+To use your database from a rhino/gizmo node, load the MariaDB module and use the `mariadb` command to connect to the database.  The command and options are very nearly identical to the `mysql` commands:
+
+```
+mariadb --host mydb --port <port> --user <username> --password
+```
+fill in the values for port and username you'd recorded earlier.  You will be prompted to enter the password.  If the connection is successful you will be given a prompt for the database:
+
+```
+rhino03[~]: mariadb --host mydb.fhcrc.org --port <port> --user <username> --password
+Enter password: *********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 9
+Server version: 10.3.5-MariaDB-10.3.5+maria~jessie mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+```
 
 ### Postgres
 
