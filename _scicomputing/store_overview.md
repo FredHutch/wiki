@@ -23,15 +23,16 @@ Please check with your supervisor before you store any [PHI data](https://cphs.b
 
 This is an overview of supported features:
 
-|  Feature 	| Secure File	| Fast File | Economy File |  OneDrive 	|
-|:-	|:-:	|:-:	|:-:	|:-:	|
-|  Encryption at Rest 	|   -	|   X	|   X	|   X	|
-|  Encryption in Transit	|  X *) |   X *)	|   X	|   X	|
-|  Access auditing 	|   X	|   -	|   X	|   X 	|
-|  Approved for PHI by ISO 	|   Yes	|   No **)	|   Yes	|   Yes	|
+|  Feature 	                | Secure File	| Fast File | Economy Cloud |  Scratch  	|  OneDrive 	|
+|:-	                        |:-:	        |:-:	      |:-:	          |:-:	        |:-:	        |
+|  Encryption at Rest 	    |        Yes  |      Yes  |          Yes	|        Yes	|        Yes	|
+|  Encryption in Transit    |        Yes* |      Yes* |          Yes	|        Yes* |        Yes	|
+|  Access auditing 	        |        Yes	|      Yes  |    	     Yes  |         No	|        Yes	|
+|  Approved for PHI by ISO 	|        Yes  |      No   |          Yes  |         No	|        Yes	|
 
-*) Only Windows 10 and latest Mac, not NFS/HPC/Linux
-**) Please contact ISO
+*) Transit encryption is only available when the data is accessed by SMB mounts- Windows and newer OSX systems use SMB. The HPC systems (e.g. rhino, gizmo) use NFS which is not encrypted.  However, this traffic is confined to a secure data center.
+
+At this time both _fast_ and _secure_ storage platforms have the same capabilities for encryption, access auditing, and backups.  _Secure_ has a more capable mechanism for managing access permissions that allows more flexibility in assigning those permissions.  Contact scicomp if you think you may need these capabilities.
 
 The Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhutch.org/cn/u/irb/hipaa-compliance.html) can be found at the linked CenterNet pages.  
 
@@ -39,15 +40,16 @@ The Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhut
 
 Storage Resource | Costs (per TB/month)\*  | Backup Location/Duration | Best Use
 --- | --- | --- | --- | ---
-`Home` | Free to 100GB limit |  7 days of Snapshots, Daily backups, Off Site copy | Only use this location for software and settings specific to a user, not for data, not shared to others. HARD LIMIT, cannot be expanded
-`Fast` | $$$ beyond 1TB per PI |  7 days of Snapshots, Daily backups, Off Site copy | Large instrument files and data sets that need high performance access to computing resources, Unix file permissions, but not temporary data (such as intermediate files)
-`Economy Local` and `Cloud` | $ beyond 100TB per PI |  Multi-datacenter replication, 90 day undelete (Trashcan) with request to `helpdesk` | Best for archiving large data sets, or primary storage of large files.  Good for PHI or other data that requires encryption and auditing. *Requires Desktop Client to access, see [Object Storage page.](/scicomputing/store_objectstore/)*
-`Scratch` | Free | Not applicable | Temporary files, such as those intermediate to a final result that only need to persist during a job.  *Appropriate use  can significantly reduce data storage costs, see our [Scratch Storage](/scicomputing/store_scratch/) page.*
+Home | Free to 100GB limit |  7 days of Snapshots, Daily backups, Off Site copy | Only use this location for software and settings specific to a user, not for data, not shared to others. HARD LIMIT, cannot be expanded
+Fast | $$$ beyond 1TB per PI |  7 days of Snapshots, Daily backups, Off Site copy | Large instrument files and data sets that need high performance access to computing resources, Unix file permissions, but not temporary data (such as intermediate files)
+Economy Cloud | $ beyond 100TB per PI |  Multi-datacenter replication, 90 day undelete (Trashcan) with request to `helpdesk` | Best for archiving large data sets, or primary storage of large files.  Good for PHI or other data that requires encryption and auditing. *Requires Desktop Client to access, see [Object Storage page.](/scicomputing/store_objectstore/)*
+Scratch | Free | Not backed up | Temporary files, such as those intermediate to a final result that only need to persist during a job, and secondary copies of files used in analysis but with a primary copy on more durable storage  *Appropriate use  can significantly reduce data storage costs- see the [Scratch Storage](/scicomputing/store_scratch/) page.*
+OneDrive | None | Recycle Bin available | Documents, spreadsheets, and other similar administrative files
 
 Additional details for other CIT file services such as `Secure File` (aka J or R drive) features are available on [Centernet](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html). For expenses charged to your group for data storage in these systems, please see the [storage usage dashboard](https://grafana.fredhutch.org/d/dy5I3SIMk/data-core-storage-usage/). If you are interested in a breakdown of your storage ulitization by folder you can get these details at [Storage HotSpots](https://storage-hotspots.fhcrc.org/). Please select your PI as owner. You can also export all data as CSV. (Please note: for performance reasons only folders > 1GB without subfolders are shown here) . For pricing information please check [this page](https://centernet.fredhutch.org/cn/u/shared-resources/data-resource.html) on CenterNet. 
 
-
 ### Data Locations for Fred Hutch Shared Resource-Generated Data
+
 For data made by Fred Hutch researchers via the Genomics Shared Resource, the default data deposition is currently managed directly by Genomics, and will result in the data being made available to the researchers via their `Fast` storage ( e.g., at path `/fh/fast/lastname_f/SR/ngs` for sequencing data).  Other types of datasets are transferred to researchers in either a `dnaarray` directory or via other forms of transfer specific to the platform type or data source.  This allows for rapid access to recently generated datasets.  However, once data generated via the Genomics Core becomes of primary interest to archive for occasional use, it is a good idea to consider implementing the active data management scheme described above with the assistance of Scientific Computing.  
 
 For example, depending on the intended use of the datasets, it may be desirable once data is generated by the Genomics Shared Resource to archive the data to the researcher's `Economy Local` storage space, with a copy put in `Scratch` or `Economy Cloud` for immediate processing.  The specific organization of archive and working copies of data will depend on the particular project involved.  
