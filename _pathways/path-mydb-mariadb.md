@@ -21,7 +21,7 @@ Browse to https://mydb.fredhutch.org/login and enter your HutchNet ID
 
 ### Create the Database Container
 
-Follow the instructions [here](/compdemos/mydb) to configure an instance of a MariaDB container.  Record the username, password, and port in a secure location.
+Follow the instructions [here](/compdemos/mydb#provisioning) to configure an instance of a MariaDB container.  Record the username, password, and port in a secure location.
 
 ### Start a Session on a Rhino
 
@@ -33,7 +33,7 @@ Load the MariaDB module with the command `ml MariaDB`.
 
 ### Connect to the Database
 
-Use the command you recieved when you created the database container to connect to the database.  Full documentation is available [here](/compdemos/mydb). 
+Use the command you recieved when you created the database container to connect to the database.  Detailed documentation on using your database is available [here](/compdemos/mydb#use). 
 
 ## Where to go from here
 
