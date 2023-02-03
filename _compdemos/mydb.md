@@ -1,19 +1,19 @@
 ---
-title: Configuring Databases on mydb
+title: Configuring Databases on MyDB
 last_modified_at: 2023-02-02
 primary_reviewers: fizwit, atombaby
 ---
 
 ## Overview
 
-_db4sci_ is a "database as a service" (DbAAS) providing straightforward, forms-based configuraiton of many different database technologies.  At this time the following databases are available:
+_MyDB_ is a "database as a service" (DbAAS) providing straightforward, forms-based configuration of many different database technologies.  At this time the following databases are available:
 
  - postgres
  - mariadb
  - mongodb
  - neo4j
 
-This guide will describe how to select, configure, and provision databases using db4sci.
+This guide will describe how to select, configure, and provision databases using MyDB.
 
 ### Selection Guide
 
@@ -21,7 +21,7 @@ This guide will describe how to select, configure, and provision databases using
 
 ### Logging In
 
-Browse to https://mydb.fhcrc.org/login and use your HutchNet ID to log in.
+Browse to https://MyDB.fhcrc.org/login and use your HutchNet ID to log in.
 
 ## Provisioning Databases
 
@@ -33,7 +33,7 @@ In many cases the defaults are sufficient- if you have a question as to whether 
 
 #### DB/Container Name
 
-db4sci databases are hosted in a docker container- the name cannot match an existing container name, must be less than 128 characters, and be made up of _only_ alphanumeric characters (A-z, 0-9), underscore, period, or dash.
+MyDB databases are hosted in a docker container- the name cannot match an existing container name, must be less than 128 characters, and be made up of _only_ alphanumeric characters (A-z, 0-9), underscore, period, or dash.
 
 This is not used in the connection string but only identifies the container on the host system. As such, make it significant to you and easy to pick out in a long list.
 
@@ -61,19 +61,21 @@ This is optional- if this database is supporting an application (e.g. labkey) yo
 
 #### Support Level
 
-Makes no difference
+Unused
 
 #### Data Volume Type
 
-There is only "standard" at this time.  _<describe disk volume with databases>_
+There is only "standard" at this time.  MyDB storage is currently on redundant NVMe drives.
 
 #### Data Includes PHI or PII
 
-> At this time we do not support storage of PHI/PII. This will have significance when db4sci better supports encryption
+Unused
+
+> At this time we do not support storage of PHI/PII.
 
 #### Expected Life of DB
 
-This is an advisory for SciComp- should we run into constraints on the system (e.g. disk space) we'll use this information to contact you to see if the database is still needed.
+Unused
 
 #### Frequency of Backup
 
@@ -83,15 +85,15 @@ Note that backups are made to a bucket in AWS's S3 storage, so if there are rest
 
 #### Maintenance Window
 
-Advisory- indicates to SciComp when containers can be restarted.
+Unused
 
 #### Application Type
 
-Advisory
+Unused
 
 #### Preferred time to backup
 
-Indicates a window of time for backing up the database.  If you have regularly scheduled high-demand processing it may be advisable to schedule backups outside that time frame.
+Unused
 
 ## Notes for Database Technologies
 

@@ -58,9 +58,9 @@ For example, depending on the intended use of the datasets, it may be desirable 
 
 ## Data Storage Types
 
-### [Database Storage Systems: REDCap, SQL and DB4Sci](/scicomputing/store_databases/)
+### [Database Storage Systems: REDCap, SQL and MyDB](/scicomputing/store_databases/)
 
-There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [DB4Sci](https://mydb.fredhutch.org/) (aka MyDB, supported by SciComp, and provides access to four database engine types including Postgres, MariaDB (MySQL), MongoDB, and Neo4j).  
+There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [MyDB](https://mydb.fredhutch.org/) (supported by SciComp providing access to four database engine types: Postgres, MariaDB (MySQL), MongoDB, and Neo4j).  
 
 
 ### [File Storage: Storage in Home, Fast, Secure](/scicomputing/store_posix/)
