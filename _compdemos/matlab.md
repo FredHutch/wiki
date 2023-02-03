@@ -23,7 +23,7 @@ From a terminal in a noMachine session:
 
   - `ssh rhino`
   - Type `grabnode`, then answer the questions about how many CPUs and Memory you require. When your `grabnode` is successful you will have a Linux command prompt on a gizmo cluster node.
-  - `module load matlab/2019a`
+  - `module load MATLAB/R2022B`
   - Type `matlab` and press enter.  The Matlab window should open in your Linux session. Success!
 
 ## Running Matlab Batch Jobs on a Cluster
@@ -40,7 +40,7 @@ When you have the data in place, start a session on a `rhino` using `ssh` or [_N
 #
 # These two lines need to be in your script to set up the Matlab environment
 . /app/lmod/lmod/init/profile
-module load matlab/2019a
+module load MATLAB/R2022B
 
 matlab -nodisplay -nosplash -nodesktop -r  "run('myAnalysisJob.m $1 $2'); exit;"
 ```
