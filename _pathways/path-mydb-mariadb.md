@@ -10,7 +10,11 @@ This pathway will show you how to configure a MariaDB (MySQL) database on MyDB a
 A workstation, HutchNet ID, access to the internet and campus network, and browser
 
 If you are unfamiliar with any of these terms, hover over them to find more information.
+
  - {% glossary rhino %}
+ - {% glossary mysql %}
+ - {% glossary db4sci %}
+ - {% glossary mydb %}
  - {% glossary gizmo %}
 
 ## Steps
