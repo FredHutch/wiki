@@ -36,6 +36,8 @@
   url: _compdemos/microbiome_tools.md
 - dlm: October 20, 2022
   url: _compdemos/motuz.md
+- dlm: February 3, 2023
+  url: _compdemos/mydb.md
 - dlm: August 19, 2022
   url: _compdemos/globus-personal.md
 - dlm: June 13, 2022
@@ -206,6 +208,8 @@
   url: _generation/labman_software.md
 - dlm: October 26, 2022
   url: _pathways/path-migrating-data-from-fast-to-cloud.md
+- dlm: February 8, 2023
+  url: _pathways/path-mydb-mariadb.md
 - dlm: September 6, 2022
   url: _pathways/path-batch-computing.md
 - dlm: September 6, 2022
@@ -318,13 +322,13 @@
   url: _scicomputing/compute_gpu.md
 - dlm: February 12, 2021
   url: _scicomputing/compute_accounts.md
-- dlm: February 1, 2023
+- dlm: February 3, 2023
   url: _scicomputing/store_overview.md
 - dlm: October 20, 2022
   url: _scicomputing/compute_grants.md
 - dlm: November 11, 2022
   url: _scicomputing/software_managecode.md
-- dlm: May 2, 2019
+- dlm: February 3, 2023
   url: _scicomputing/store_databases.md
 - dlm: December 23, 2022
   url: _scicomputing/software_python.md
