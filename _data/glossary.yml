@@ -33,3 +33,11 @@
 - term: Economy Cloud
   definition: Economy Cloud is a term for the managed buckets in AWS S3- the "fh-pi-eco" and "fh-pi-eco-public"
   url: https://sciwiki.fredhutch.org/scicomputing/store_objectstore/
+- term: mariadb
+  definition: A relational database management system based on MySQL, but completely open source.
+- term: mysql
+  definition: A relational database management system.
+- term: db4sci
+  definition: An [opensource project](https://github.com/FredHutch/DB4SCI) managing database services on-demand. A Database as a Service system.
+- term: mydb
+  definition: mydb [here](https://mydb.fredhutch.org) is the SciComp maintained implementation of db4sci.
