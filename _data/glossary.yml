@@ -40,4 +40,4 @@
 - term: db4sci
   definition: An [opensource project](https://github.com/FredHutch/DB4SCI) managing database services on-demand. A Database as a Service system.
 - term: mydb
-  definition: mydb [here](https://mydb.fhcrc.org) is the SciComp maintained implementation of db4sci.
+  definition: mydb [here](https://mydb.fredhutch.org) is the SciComp maintained implementation of db4sci.
