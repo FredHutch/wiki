@@ -31,11 +31,11 @@ Follow the instructions [here](/compdemos/mydb#provisioning) to configure an ins
 
 ### Start a Session on a Rhino
 
-Open a shell on rhino with SSH or NoMachine.
+[Start a shell](/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources) on rhino with SSH or NoMachine.
 
 ### Load the MariaDB Module
 
-Load the MariaDB module with the command `ml MariaDB`.
+Load the [MariaDB module](/scicomputing/compute_scientificSoftware/) with the command `ml MariaDB`.
 
 ### Connect to the Database
 
