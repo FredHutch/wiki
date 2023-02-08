@@ -6,6 +6,8 @@ primary_reviewers: atombaby, dtenenba, fizwit
 
 This pathway will show you how to configure a MariaDB (MySQL) database on MyDB and connect to it using the command line tools on a rhino/gizmo node.
 
+> MyDB supports other databases- postgres, mongodb, and neo4j.  Refer to the main [mydb documentation](/compdemos/mydb) for more information on those DBMS's
+
 ## Pre-requisites
 A workstation, HutchNet ID, access to the internet and campus network, and browser
 
