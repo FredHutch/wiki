@@ -10,7 +10,7 @@ There is a known issue with the way the application interacts with the version o
 
 ## Workarounds
 
-### Use `Fast` instead of `Scratch`
+### Use Fast instead of Scratch
 
 One option is to use `Fast` storage instead of `Scratch` for temporary data. A major downside to this approach is that it can end up creating a significant amount of wasted space in backups, particularly when data is frequently created and deleted. Additionally, performance may be significantly lower than with `Scratch` when used for temporary data.
 
@@ -20,6 +20,6 @@ Another alternative is to use the local scratch space available on the cluster n
 
 It is important to note that this location only exists for the duration of the job, so any data here that needs to be kept would need to be copied to persistent storage (e.g. `Scratch` or `Fast`) by the job before it exits.
 
-The amount of local scratch space needed should be specified with the "--tmp" argument to sbatch when submitting a job.
+The amount of local scratch space needed should be specified with the **--tmp** argument to `sbatch` when submitting a job.
 
 More information on node local scratch space is available at the [Scratch storage page](/scicomputing/store_scratch/#node-local-job-scratch)
