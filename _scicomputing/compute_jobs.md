@@ -161,6 +161,12 @@ Note too that `grabnode` will pass along the `--nice` flag:
 
 though typically you'd likely prefer that grabnode has the higher priority (being an interactive process).  The strategy here is if you have a large number of batch jobs, submit those with a nice value.  Then, if you need to grab a node the grabnode jobs will have a higher priority and run ahead of the batch jobs.
 
+If you want to adjust a pending job you can use `scontrol` to adjust the nice value:
+
+```
+scontrol update jobid=<jobid> nice=100
+```
+
 Some things to consider:
 
  - too nice a factor may inhibit any jobs running.  Smaller values are effective
