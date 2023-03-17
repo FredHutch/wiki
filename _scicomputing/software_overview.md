@@ -19,7 +19,7 @@ It's important to be deliberate in your choice of first language to learn, becau
 
 ### Getting Started with Common Languages
 
-If you are new to coding, or are interested in learning about coding languages for research software, the Fred Hutch offers training resources for many of the common languages and tools listed below. For more information on training opportunities, cooperative learning groups, and how to get started, please see the [reference page](/scicomputing/reference_overview/).
+If you are new to coding, or are interested in learning about coding languages for research software, the Fred Hutch offers training resources for many of the common languages and tools listed below. For more information on training opportunities, cooperative learning groups, and how to get started, please see the [reference page](/scicomputing/comp_index/).
 
 The remainder of the Software Development content will presume a basic skill level in at least one common language, as well as a basic understanding of [GitHub](/scicomputing/software_managecode/) for version control.
 

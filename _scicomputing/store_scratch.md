@@ -138,7 +138,7 @@ Using `Economy Cloud` storage (AWS S3) can be a more affordable way to store lar
 
 
 ### Connect to rhino
-See our pages on [Access Methods](/scicomputing/access_methods/) and an overview of the [Technologies Supported](/scicomputing/reference_overview/) to learn more about what `rhino` is and how to use it.
+See our pages on [Access Methods](/scicomputing/access_methods/) and an overview of the [Technologies Supported](/scicomputing/comp_index/) to learn more about what `rhino` is and how to use it.
 
 ### Find Scratch space
 Head over to some `Scratch` space for your PI.  
