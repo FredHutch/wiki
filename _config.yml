@@ -28,7 +28,7 @@ description: "Collective documentation for Data Science, Bioinformatics and Scie
 url                      : https://sciwiki.fredhutch.org
 baseurl                  : ""
 repository               : "FredHutch/wiki"
-logo                     : "/images/Biomedical-Data-Science-Wiki-logo.png"
+logo                     : "/images/biomedical-wiki-2023.png"
 
 
 collections:
