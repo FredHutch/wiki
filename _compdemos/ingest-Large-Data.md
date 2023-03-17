@@ -4,7 +4,7 @@ main_author: Amy Paguirigan
 primary_reviewers: vortexing
 ---
 
-Before ingesting any external data sets, please refer to the [Overview of Data Storage at Fred Hutch](/computing/store_overview/) page to begin to identify the final home of the data you are ingesting.  Choosing a location will depend on how large the data are, how often you need to access them, and what type of security concerns might apply to the dataset.  
+Before ingesting any external data sets, please refer to the [Overview of Data Storage at Fred Hutch](/scicomputing/store_overview/) page to begin to identify the final home of the data you are ingesting.  Choosing a location will depend on how large the data are, how often you need to access them, and what type of security concerns might apply to the dataset.  
 
 Once you have an idea where the data will need to live at Fred Hutch, you can begin the process of transferring them to Fred Hutch supported data storage systems.  
 
