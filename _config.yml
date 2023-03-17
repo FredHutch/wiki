@@ -92,7 +92,7 @@ footer:
       url: "https://github.com/FredHutch/wiki"
     - label: "Join the Conversation on Slack"
       icon: "fab fa-fw fa-slack"
-      url: "https://fhdata.slack.com/"
+      url: "https://hutchdatascience.org/joinslack/"
     - label: "See our Contributors"
       icon: "fas fa-user-edit"
       url: /contributors/
