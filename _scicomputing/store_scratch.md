@@ -213,4 +213,4 @@ rm -rf workingdir
 
 
 ## Do we have Scratch in the Cloud?
-Yes! Please see the [AWS S3 storage page](/scicomputing/storage_objectstore/) for more information about how to use AWS S3 Scratch buckets, which function similarly as our on premise Scratch resource does.  
+Yes! Please see the [AWS S3 storage page](/scicomputing/store_objectstore/) for more information about how to use AWS S3 Scratch buckets, which function similarly as our on premise Scratch resource does.  
