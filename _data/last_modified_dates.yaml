@@ -108,7 +108,7 @@
   url: _compdemos/Singularity.md
 - dlm: September 24, 2020
   url: _compdemos/howtoRhino.md
-- dlm: January 6, 2023
+- dlm: March 17, 2023
   url: _compdemos/ingest-Large-Data.md
 - dlm: December 10, 2018
   url: _compdemos/snapshots.md
@@ -160,25 +160,25 @@
   url: _generation/clsp_overview.md
 - dlm: May 15, 2019
   url: _generation/study_proposal.md
-- dlm: November 27, 2022
+- dlm: March 17, 2023
   url: _generation/human_overview.md
 - dlm: March 19, 2019
   url: _generation/study_overview.md
 - dlm: July 21, 2022
   url: _generation/gen_index.md
-- dlm: November 27, 2022
+- dlm: March 17, 2023
   url: _generation/human_shareDeposits.md
 - dlm: December 19, 2019
   url: _generation/clsp_labCov.md
 - dlm: July 21, 2022
   url: _generation/labman_software.md
-- dlm: December 5, 2019
+- dlm: March 17, 2023
   url: _generation/human_privacySecurity.md
 - dlm: May 15, 2019
   url: _generation/multiple_testing.md
 - dlm: August 2, 2019
   url: _generation/study_hypothesis.md
-- dlm: July 14, 2022
+- dlm: March 17, 2023
   url: _hdc/datagen_dnaApproaches.md
 - dlm: September 23, 2022
   url: _hdc/hdc_refgenomes.md
@@ -208,7 +208,7 @@
   url: _hdc/workflows/workflow_catalog.md
 - dlm: August 13, 2021
   url: _hdc/workflows/workflow_background.md
-- dlm: April 14, 2022
+- dlm: March 17, 2023
   url: _hdc/workflows/running_first_workflow.md
 - dlm: April 15, 2021
   url: _hdc/workflows/building/best_practices.md
@@ -250,7 +250,7 @@
   url: _datascience/compliance_legal.md
 - dlm: November 11, 2022
   url: _datascience/data_viz.md
-- dlm: November 11, 2022
+- dlm: March 17, 2023
   url: _datascience/privacy_security.md
 - dlm: November 11, 2022
   url: _datascience/deidentification.md
@@ -352,7 +352,7 @@
   url: _scicomputing/compute_restart.md
 - dlm: October 19, 2021
   url: _scicomputing/access_permissions.md
-- dlm: July 20, 2022
+- dlm: March 17, 2023
   url: _scicomputing/compute_overview.md
 - dlm: December 2, 2022
   url: _scicomputing/compute_platforms.md
@@ -364,13 +364,13 @@
   url: _scicomputing/access_methods.md
 - dlm: January 19, 2023
   url: _scicomputing/access_nx.md
-- dlm: December 10, 2021
+- dlm: March 17, 2023
   url: _scicomputing/store_scratch.md
 - dlm: June 11, 2020
   url: _scicomputing/compute_parallel.md
-- dlm: July 20, 2022
+- dlm: March 17, 2023
   url: _scicomputing/store_collaboration.md
-- dlm: April 29, 2020
+- dlm: March 17, 2023
   url: _scicomputing/software_overview.md
 - dlm: August 13, 2021
   url: _scicomputing/compute_environments.md
@@ -390,7 +390,7 @@
   url: _scicomputing/software_managecode.md
 - dlm: August 22, 2022
   url: _scicomputing/comp_index.md
-- dlm: December 23, 2022
+- dlm: March 17, 2023
   url: _scicomputing/software_python.md
 - dlm: June 12, 2020
   url: _scicomputing/compute_gpu.md
