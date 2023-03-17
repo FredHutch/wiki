@@ -46,10 +46,6 @@ While version control software has evolved over time, a new evolution that is ha
 
 You have the option to run code on a local (desktop) computer, or on a shared computing cluster. This section helps you figure out what will work best for your task and help you make sense of the [Large Scale Computing](/scicomputing/compute_overview/) section if you do need more computing resources than your local computer.  
 
-## [Software Development Standards](/scicomputing/software_standards/)
-
-In an effort to create high-quality, transparent, and reproducible software-aided research, it is important that best practices be fused into the process of code development. This section documents coding standards for research software, templates for different types of coding projects, and examples coding projects.
-
 ## [Code Examples and Templates](/scicomputing/software_examples/)
 
 
