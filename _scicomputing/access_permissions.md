@@ -59,11 +59,12 @@ Using the UNC path `smb://center.fhcrc.org/fh/` to then attempt to browse (or cl
 
 #### Requesting Changes to Permissions
 
-If you do not seem to have correct permissions to folder or stoarage location and have tested the above connection instructions, email `scicomp` the following information:
+If you do not seem to have correct permissions to the folder and have tested the above connection instructions, email `scicomp` the following information:
 
-- The most restricted path to the folder where permissions are needed
+- The path to the folder you are attempting to access
 - Whether you need read-only permissions or read and write permissions
-- CC the PI or manager associated with the data storage location to ensure communication
+
+> IMPORTANT: Please CC the PI or manager associated for this location with your request to `scicomp`
 
 ### Cloud Based Storage
 
