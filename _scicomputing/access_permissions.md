@@ -6,29 +6,27 @@ primary_reviewers:
 
 ## Overview of Permissions
 
-### Local Filesystems
+### Permissions on the Fast Filesystem
 
-#### Types of permissions and users
-Read
-Write
-Execute
+#### Permissions and Roles
 
-User 
-Group
+Permissions on the fast file system are controlled using UNIX traditional access control lists (ACLs).  These ACLs provide access controls based on your role and what activities your role is allowed.
 
+For the purpose of determining your access to a directory of file, you will have the role of "user" (the owner of the file), "group", or "other" (for everyone else).  For each of those roles you can have one or more of read, write, and execute activities allowed.  The operating system will look at your login and use that to first determine which of those roles you have.  Once the OS has determined your role, it will look at the activities allowed for that role when accessing the directory or file and compare that to the activity you wish to perform.  Based on that, you will either be allowed or denied the desired access.
 
-Local data storage permissions are organized typically by PI, such as in `fast` where a PI folder would have the name `lastname_f`.  Each PI has a group of members, typically those direct reports or other members who have been manually added due to requests as part of collaborations.  Folders within the PI folder can then have more limited access to sub-groups or even to the level of a single individual.
+Fast file data storage permissions are organized by PI: a PI folder would have the name `lastname_f`.  Each PI has a default group, typically (though not exclusively) lab members.  Within the PI folder there can be folders that have different ACLs, allowing for collaborations and other activities requiring access from others outside the PI's lab.
 
-#### Collaborating with other labs
+#### Collaboration Folder Permissions
 
-Members of other labs can be added to a lab's group or a subgroup to allow those individuals access to shared file locations. When requesting a user be added, please email `scicomp` with your request and include the following information:
+A collaboration folder is set up to allow members of other labs access. In most cases, a bespoke group will be set up that includes the lab members and the members of those other labs.  Email `scicomp` to get this set up- include the following information:
 
-- Hutch ID of the user to be given access
-- The most restricted path to the folder where permissions need to be given
-- Whether the user should be given read-only permissions or if they need read and write permissions
-- CC the PI or manager associated with the data storage location to ensure communication
+- The Hutchnet ID of the user(s) to be given access
+- The path to a folder where collaboration data will be stored
+- Whether you need read-only permissions or read and write permissions for members of the group
 
-#### Cross Lab Collaboration Subfolders
+> IMPORTANT: Please CC the PI or manager associated for this location with your request to `scicomp`
+
+#### Accessing Collaboration Folders
 
 Sometimes you can have access to a folder but not access to the folders that contain this folder. This will manifest as "permission denied" when you try to access those parent folders, either via `cd` from a shell session or if you browse through `smb://center/fh/fast`.  These parent directories are "blind", meaning you can pass through, but you cannot read or see any of the files or directories in that parent directory.
 
