@@ -242,6 +242,8 @@
   url: _hdc/workflows/running/tower.md
 - dlm: December 12, 2022
   url: _datascience/nih_data_sharing.md
+- dlm: March 24, 2023
+  url: _datascience/stewardship.md
 - dlm: November 11, 2022
   url: _datascience/execute_sharing.md
 - dlm: November 11, 2022
@@ -380,9 +382,9 @@
   url: _scicomputing/compute_job_scheduling.md
 - dlm: June 13, 2022
   url: _scicomputing/access_overview.md
-- dlm: February 3, 2023
+- dlm: March 24, 2023
   url: _scicomputing/store_overview.md
-- dlm: January 27, 2023
+- dlm: March 24, 2023
   url: _scicomputing/store_posix.md
 - dlm: November 12, 2019
   url: _scicomputing/software_running.md
