@@ -45,7 +45,9 @@ These storage systems and transfer tools have capabilities allowing you to share
 
 ## Security Capabilities
 
-> these are the security capabilities of storage
+You will need to consider the security needs of your data sets before placing data on shared storage- in many cases it can be difficult to scrub data out of the storage system.
+
+This table describes some of the most common security needs for data sets and how or if each storage system implements that security capability.
 
 |  Feature 	                | Secure File	| Fast File | Economy Cloud |  Scratch  	|  OneDrive 	|
 |:-	                        |:-:	        |:-:	      |:-:	          |:-:	        |:-:	        |
