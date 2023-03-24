@@ -21,13 +21,7 @@ For all of your files, presentations, figures, protocols and the like you'll wan
 - Automatically sync files to your desktop for offline access
 - Simultaneously edit shared files with other collaborators
 
-The Home and OneDrive storage options are avilable for storing everyday files such as Word docs, papers, and other data that aren't large scientific data sets.
-
 The "home" drive is of most interest to users of the HPC compute environments- it is a file-based storage system much like fast and secure, but is not accessible by others.
-
-OneDrive is useful for those everyday files that you may share with others.
-
-> home, onedrive
 
 ### [Relational Database Storage Systems: REDCap, SQL and MyDB](/scicomputing/store_databases/)
 
