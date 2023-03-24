@@ -12,7 +12,14 @@ For more guidance about how to think about Reserach Data Stewardship and designi
 
 ## Data Storage Types
 
-### [Everyday Files and Documents](/scicomputing/store_onedrive/)
+### [Everyday Files and Documents](https://centernet.fredhutch.org/cn/u/center-it/help-desk/onedrive.html)
+For all of your files, presentations, figures, protocols and the like you'll want to store those in OneDrive.  With OneDrive you can:
+
+- Create documents on your computer and edit on your laptop, phone, or tablet
+- Collaborate with others in real time
+- View, store and share files and folders easily
+- Automatically sync files to your desktop for offline access
+- Simultaneously edit shared files with other collaborators
 
 ### [Relational Database Storage Systems: REDCap, SQL and MyDB](/scicomputing/store_databases/)
 
