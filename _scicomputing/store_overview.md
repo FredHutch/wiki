@@ -12,6 +12,8 @@ For more guidance about how to think about Reserach Data Stewardship and designi
 
 ## Data Storage Types
 
+### [Everyday Files and Documents](/scicomputing/store_onedrive/)
+
 ### [Relational Database Storage Systems: REDCap, SQL and MyDB](/scicomputing/store_databases/)
 
 There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [MyDB](https://mydb.fredhutch.org/) (supported by SciComp providing access to four database engine types: Postgres, MariaDB (MySQL), MongoDB, and Neo4j).
