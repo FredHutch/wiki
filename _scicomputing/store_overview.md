@@ -1,10 +1,12 @@
 ---
 title: Overview of Data Storage at Fred Hutch
-last_modified_at: 2019-08-22
-primary_reviewers: dirkpetersen
+last_modified_at: 2023-03-24
+primary_reviewers: 
 ---
 
-The Hutch supports a number of options for storing your data such as _database_, _file_, _scratch_, _object_ and _collaborative storage_ options. The storage you use to store your data will depend on the nature of the data and your anticipated use. Below is an overview of what data storage resources are available. For more detailed information, including setup instructions and limitations, please see the links and articles in the sidebar.  
+The Hutch provides many platforms for storing, using, moving, and sharing your data- relational databases, block-based network file storage, and cloud object datastores.  Each of these platforms have options as well- these options to address the diverse needs of modern biomedical and bioinformatic research.  The platform you use will depend on the nature of the data and how you plan to use it.
+
+This article is an overview of the available storage platforms and options. More detailed information- including setup instructions and limitations- can be found in the pages and articles linked in the sidebar.
 
 ## Data Storage Guidance
 
@@ -64,24 +66,23 @@ For example, depending on the intended use of the datasets, it may be desirable 
 
 There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [MyDB](https://mydb.fredhutch.org/) (supported by SciComp providing access to four database engine types: Postgres, MariaDB (MySQL), MongoDB, and Neo4j).  
 
-
 ### [File Storage: Storage in Home, Fast, Secure](/scicomputing/store_posix/)
 
 File storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
-
-### [Economy Storage: Object Storage](/scicomputing/store_objectstore/)
-
-Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud computing depends very much on object storage systems such as Amazon's AWS S3. There are a number of features and benefits of object storage systems, such as better sharing of data and much better handling of meta data (e.g. annotations). At Fred Hutch we use object storage predominantly for very large files (e.g. BAM files) and for archiving purposes.
-
 
 ### [Temporary Storage: Scratch](/scicomputing/store_scratch/)
 
 The scratch file system is a file storage system that works differently than the systems intended for long term data storage. It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
 
 
+### [Economy Storage: Object Storage](/scicomputing/store_objectstore/)
+
+Object storage systems scale better in capacity and performance and are much cheaper to operate than traditional file storage systems. Cloud computing depends very much on object storage systems such as Amazon's AWS S3. There are a number of features and benefits of object storage systems, such as better sharing of data and much better handling of meta data (e.g. annotations). At Fred Hutch we use object storage predominantly for very large files (e.g. BAM files) and for archiving purposes.
+
+
 ### [Collaborative Storage Options](/scicomputing/store_collaboration/)
 
-These storage systems and transfer tools have capabilities allowing you to share data with people outside the Hutch, with or without a HutchNet ID.  These include Motuz and Aspera transfer tools and OneDrive for data storage, as well as information about using AWS S3 for collaboration.  
+These storage systems and transfer tools have capabilities allowing you to share data with people outside the Hutch, with or without a HutchNet ID.  These include Motuz and Aspera transfer tools and OneDrive for data storage, as well as information about using AWS S3 for collaboration.
 
 
 
