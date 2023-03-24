@@ -236,9 +236,9 @@
   url: _hdc/workflows/running/on_aws.md
 - dlm: April 14, 2022
   url: _hdc/workflows/running/run_script.md
-- dlm: May 16, 2022
-  url: _hdc/workflows/running/on_gizmo.md
 - dlm: March 23, 2023
+  url: _hdc/workflows/running/on_gizmo.md
+- dlm: June 1, 2021
   url: _hdc/workflows/running/tower.md
 - dlm: December 12, 2022
   url: _datascience/nih_data_sharing.md
