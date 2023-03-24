@@ -32,7 +32,7 @@ While you are allowed up to 100GB of storage in this home directory, it is not t
 
 This storage platform is appropriate for most scientific data- particularly large data sets.
 
-The data in `Fast` is organized by investigator or Division - each folder at the top level is named using the investigators last name and first initial: investigator "Sneezy Smith" would have a directory on fast called `smith_s`. There are also folders for each division. Special folders ``\_IRC` (Integrated research centers), ``\_CTR` (center wide resources and groups not under a specific division.)
+The data in `Fast` is organized by investigator or Division - each folder at the top level is named using the investigators last name and first initial: investigator "Sneezy Smith" would have a directory on fast called `smith_s`. There are also folders for each division. Special folders `_IRC` (Integrated research centers), `_CTR` (center wide resources and groups not under a specific division.)
 
 Each folder that lives directly under `/fh/fast/lastname_f` can have a different set of permissions governed by a specific Security group (collection of users authorized for a certain resource - managed by SciComp).
 We recommend some default folders such as for data shared to any Fred Hutch user (`/pub`), to any member of the PI's immediate research group (`/grp`), group wide software / applications (`/app`) or work spaces to each individual user in a PI's immediate research group (`/user`). Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (`/SR`). Access to these default folders would be governed by a security named lastname_f_grp. This can be customized for a given researcher in conjunction with Scientific Computing (see Available Resources).
@@ -40,7 +40,7 @@ We recommend some default folders such as for data shared to any Fred Hutch user
 To summarize: the folder structure on fast file looks like this: `/fh/fast/(level-of-charge)/(level-of-access-control)/actual/data` and access to non default folders is granted by specific security groups created for each folder (see example below: `lastname_f_project1_grp`)
 
 ```
-/pub​ -> publicly readable folder where data can be shared with a hutch 
+/pub -> publicly readable folder where data can be shared with a hutch 
         wide community
 
 /SR  -> folder with potentially many subfolders (e.g. /SR/genomics/, /SR/compbio)

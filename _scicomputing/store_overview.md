@@ -10,7 +10,6 @@ This article is an overview of the available storage platforms and options and p
 
 For more guidance about how to think about Reserach Data Stewardship and designing a data storage strategy for your research, you can find the Data Science Lab's [data stewardship page](/datascience/stewardship/).
 
-
 ## Data Storage Types
 
 ### [Relational Database Storage Systems: REDCap, SQL and MyDB](/scicomputing/store_databases/)
@@ -88,6 +87,3 @@ For example, depending on the intended use of the datasets, it may be desirable 
   - For consulting about how to handle large amounts of externally or internally generated data email `scicomp`.
   - For additional assistance regarding data generated via the Fred Hutch Genomics Shared Resource, email `bioinformatics`.
   - For consultation about data management and strategies, schedule a [Data House Call](https://hutchdatascience.org/datahousecalls/) with the Data Science Lab. 
-
-
-
