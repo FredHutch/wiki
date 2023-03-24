@@ -6,11 +6,26 @@ primary_reviewers: dirkpetersen
 
 The Hutch supports a number of options for storing your data such as _database_, _file_, _scratch_, _object_ and _collaborative storage_ options. The storage you use to store your data will depend on the nature of the data and your anticipated use. Below is an overview of what data storage resources are available. For more detailed information, including setup instructions and limitations, please see the links and articles in the sidebar.  
 
-## Data Storage Guidance
+## Data Management Guidance
 
-Most Fred Hutch based researchers using large scale biomedical data sets initially store their data using Fast storage alongside their smaller scale laboratory data. This provides direct, rapid access to files both manually (e.g., via mapping a drive to a workstation) and to local computing resources (via our HPC cluster, see below). However, a strategy for where, when and for how long to store what size data is important to create to ensure that data access by researcher or compute resource, transfer and archiving are not unnecessarily complicated thus hindering the research process.
+Most Fred Hutch based researchers have multiple types of data they need to store while they are performing their research.  Broadly speaking these types of data can be categorized as:
+- Raw laboratory results and data - e.g. raw sequencing data, unprocessed images, large numbers of raw flow cytometry files
+- Files and copies generated during the process of transforming, analyzing, and consolidating raw data - e.g. aligned but not de-deuplicated bam files from sequencing experiments, working copies of the raw images being used to develop a novel analysis approach, etc
+- Analyzed results, plots, documents, protocols and other small files and documents involved in the research process - e.g. Word docs containing the laboratory protocols used to generate experiments, Excel files of sample lists and metadata, plots and figures being consolidated for publications or incorporated into presentations
+
+For these broad types of data, when determining how to manage all of your research data types, it's important also to think about a few features of the data you're storing:
+- How big is the total dataset? Are your individual files relatively small (~1MB files) or relatively large (~1GB)?  Do you have thousands of related files (like a cohort), or just a few? 
+- How do are these files typically accessed - by a computer or by a human?  An example of this is a fastq.gz full of sequencing reads that likely will need to be analyzed via a non-interactive computing process versus a pdf of an output plot that a human will look at and use in presentation.  
+- Is this file a derivative of another - and how easy is it to remake it?  For instance, if you have a cram file of compressed sequencing data that would be hard or impossible to recreate, that's not a deriative file and should be archived, while a vcf of variant calls from the data in that cram file is derived through a process that can be easily defined and re-run using a series of scripts or bioinformatic workflow.  
+- What resources do you have to offset costs of storage of data and does it make sense to use them to store a specific dataset for additional use?  While much of data storage resources at the Fred Hutch are subsidized, if your research is very data intensive, you're going to need to make data stewardship more of a focus of your work so you do not end up having to use additional grant funds to pay for data you're no longer using.  
+- Do I need to share these data with others at the Fred Hutch or beyond?  Some systems make it easier to collaborate on data without having to duplicate it than others, and depending on who needs to use these data as well, some systems might be better suited than others.  Copying data should be your last resort.  
+
 
 Depending on the type of data used by a research group, different combinations of data storage options may be appropriate. Assessing the strengths, mode of access, and interactivity with computing resources of each of these types of data storage options alongside an assessment of the types of data a research group use and the type of interactions with those data is becoming more important for researchers. This assessment also is becoming more important to repeat over time as data storage and connectivity infrastructure changes and as the particular data types and interactions of research groups evolve.
+
+
+There are multiple resources at the Fred Hutch to help you design and implement a data management plan for your research.  The Fred Hutch [Data Science Lab](https://hutchdatascience.org/) offers a [Data House Calls](https://hutchdatascience.org/datahousecalls/) service to get a consultation to discuss your data needs and how you might design a plan, while Scientific Computing can help you with the tools and resources you need to implement that plan (email `scicomp` for help).
+
 
 
 ### Storing protected health information (PHI) data
@@ -50,12 +65,13 @@ Additional details for other CIT file services such as `Secure File` (aka J or R
 
 ### Data Locations for Fred Hutch Shared Resource-Generated Data
 
-For data made by Fred Hutch researchers via the Genomics Shared Resource, the default data deposition is currently managed directly by Genomics, and will result in the data being made available to the researchers via their `Fast` storage ( e.g., at path `/fh/fast/lastname_f/SR/ngs` for sequencing data).  Other types of datasets are transferred to researchers in either a `dnaarray` directory or via other forms of transfer specific to the platform type or data source.  This allows for rapid access to recently generated datasets.  However, once data generated via the Genomics Core becomes of primary interest to archive for occasional use, it is a good idea to consider implementing the active data management scheme described above with the assistance of Scientific Computing.  
+For data made by Fred Hutch researchers via the Genomics Shared Resource, the default data deposition is currently managed directly by Genomics, and will result in the data being made available to the researchers via their `Fast` storage ( e.g., at path `/fh/fast/lastname_f/SR/ngs` for sequencing data).  Other types of datasets are transferred to researchers in either a `dnaarray` directory or via other forms of transfer specific to the platform type or data source.  This allows for rapid access to recently generated datasets.  However, once data generated via the Genomics Core becomes of primary interest to archive for occasional use, it is a good idea to consider implementing the active data management scheme described above with the assistance of Scientific Computing (email `scicomp`).
 
-For example, depending on the intended use of the datasets, it may be desirable once data is generated by the Genomics Shared Resource to archive the data to the researcher's `Economy Local` storage space, with a copy put in `Scratch` or `Economy Cloud` for immediate processing.  The specific organization of archive and working copies of data will depend on the particular project involved.  
+For example, depending on the intended use of the datasets, it may be desirable once data is generated by the Genomics Shared Resource to archive the data to the researcher's `Economy` storage space (AWS S3 "PI buckets"), with a copy put in `Scratch` for immediate processing.  The specific organization of archive and working copies of data will depend on the particular project involved.  
 
-  - For consulting about how to handle large amounts of externally or internally generated data email `scicomp`.
+  - For technical assistance in handling large amounts of externally or internally generated data email `scicomp`.
   - For additional assistance regarding data generated via the Fred Hutch Genomics Shared Resource, email `bioinformatics`.
+  - For consultation about data management and strategies, schedule a [Data House Call](https://hutchdatascience.org/datahousecalls/) with the Data Science Lab. 
 
 
 ## Data Storage Types
