@@ -38,7 +38,7 @@ These storage systems and transfer tools have capabilities allowing you to share
 
 ## Security Capabilities
 
-<fixme> these are the security capabilities of storage
+> these are the security capabilities of storage
 
 |  Feature 	                | Secure File	| Fast File | Economy Cloud |  Scratch  	|  OneDrive 	|
 |:-	                        |:-:	        |:-:	      |:-:	          |:-:	        |:-:	        |
