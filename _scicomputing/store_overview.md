@@ -14,18 +14,25 @@ For more guidance about how to think about Reserach Data Stewardship and designi
 
 ### [Everyday Files and Documents](/scicomputing/store_onedrive/)
 
+The Home and OneDrive storage options are avilable for storing everyday files such as Word docs, papers, and other data that aren't large scientific data sets.
+
+The "home" drive is of most interest to users of the HPC compute environments- it is a file-based storage system much like fast and secure, but is not accessible by others.
+
+OneDrive is useful for those everyday files that you may share with others.
+
+> home, onedrive
+
 ### [Relational Database Storage Systems: REDCap, SQL and MyDB](/scicomputing/store_databases/)
 
 There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [MyDB](https://mydb.fredhutch.org/) (supported by SciComp providing access to four database engine types: Postgres, MariaDB (MySQL), MongoDB, and Neo4j).
 
-### [File Storage: Storage in Home, Fast, Secure](/scicomputing/store_posix/)
+### [Scientific File Storage: Storage in Fast, Secure, and Scratch](/scicomputing/store_posix/)
 
 File storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
-### [Temporary Storage: Scratch](/scicomputing/store_scratch/)
+#### [Temporary Storage: Scratch](/scicomputing/store_scratch/)
 
 The scratch file system is a file storage system that works differently than the systems intended for long term data storage. It is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the home or fast file systems (these features were traded for lower cost and greater volume)- that said, it has shown itself to be quite reliable and reasonably fault tolerant.
-
 
 ### [Economy Storage: Object Storage](/scicomputing/store_objectstore/)
 
