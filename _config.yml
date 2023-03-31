@@ -107,6 +107,8 @@ include:
   - _data
   - assets
   - _layouts
+exclude:
+  - archive
 
 
 
