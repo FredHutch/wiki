@@ -70,7 +70,7 @@
   url: _compdemos/r-2018b-matrix-errors.md
 - dlm: February 3, 2023
   url: _compdemos/matlab.md
-- dlm: September 24, 2020
+- dlm: March 31, 2023
   url: _compdemos/tensorflow-gpu.md
 - dlm: February 3, 2023
   url: _compdemos/mydb.md
@@ -394,7 +394,7 @@
   url: _scicomputing/comp_index.md
 - dlm: March 17, 2023
   url: _scicomputing/software_python.md
-- dlm: June 12, 2020
+- dlm: March 31, 2023
   url: _scicomputing/compute_gpu.md
 - dlm: May 12, 2022
   url: _scicomputing/reference_training.md
