@@ -48,6 +48,8 @@ When connecting to a `rhino` with `ssh` always use the -Y flag to forward your X
 ssh -Y HutchID@rhino
 ```
 
+*(Replace **HutchID** with your HutchNet ID)*
+
 After connecting to a `rhino` verify that your X11 client is working by typing `xeyes`.
 
 
@@ -120,6 +122,10 @@ You can copy your public key in any way you like. You can even cut-and-paste the
 ```
 ssh-copy-id HutchID@rhino
 ```
+
+*(Replace **HutchID** with your HutchNet ID)*
+
+
 On Windows it is easiest to cut-and-paste the key into a remote session opened using a password.
 #### Passphrase management
 No one wants to type a long passphrase every time they use SSH. Creating an SSH key with no passphrase is unsafe. There must be a better way... .
