@@ -13,9 +13,17 @@ If one of your collaborators requires access to the Fred Hutch network you can s
 
 Please see the Service Desk site on CenterNet for more information about [HutchNet ID](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) including password rotation, etc.
 
+## SciComp Self-Service
+
+[SciComp Self-Service](https://scicomp-self-service.fredhutch.org/) allows you to gain access to some resources without submitting a ticket.  You can currently use this to do the following:
+
+- Add a new member to your lab group 
+- Enable cluster access for yourself under your lab's Slurm account
+- Check to see if you have the correct access needed to complete the [Cluster 101 course](https://hutchdatascience.org/FH_Cluster_Guide/)
+
 ## Accessing Slurm Clusters
 
-To use Slurm clusters like _gizmo_ you also need to have your HutchNet ID associated with a PI account.  Errors similar to "Invalid account or account/partition" typically indicate that this association hasn't been set up.  Contact Scientific Computing to have this corrected.
+To use Slurm clusters like `gizmo` you also need to have your HutchNet ID associated with a PI account.  Errors similar to "Invalid account or account/partition" typically indicate that this association hasn't been set up.  Contact Scientific Computing to have this corrected or use [SciComp Self-Service](#scicomp-self-service).
 
 ## GitHub.com
 

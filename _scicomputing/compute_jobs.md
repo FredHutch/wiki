@@ -175,6 +175,12 @@ Note too that `grabnode` will pass along the `--nice` flag:
 
 though typically you'd likely prefer that grabnode has the higher priority (being an interactive process).  The strategy here is if you have a large number of batch jobs, submit those with a nice value.  Then, if you need to grab a node the grabnode jobs will have a higher priority and run ahead of the batch jobs.
 
+If you want to adjust a pending job you can use `scontrol` to adjust the nice value:
+
+```
+scontrol update jobid=<jobid> nice=100
+```
+
 Some things to consider:
 
  - too nice a factor may inhibit any jobs running.  Smaller values are effective
@@ -199,9 +205,9 @@ scontrol update jobid=<job ID> timelimit=+2-0
 
 ### Short Jobs
 
-If your jobs do not require a great deal of walltime, consider using the "short" partition.  This partition has a higher core limit but restricts the wall time of the job to less than 12 hours.
+If your jobs do not require a great deal of walltime, consider using the `short` partition.  This partition has a higher core limit but restricts the wall time of the job to less than 12 hours.
 
-For more information see [here](/compdemos/short_partition) 
+For more information see [our page on `short` parition use](/compdemos/gizmo_short_partition/).
 
 ### Preemption and Restart Jobs
 

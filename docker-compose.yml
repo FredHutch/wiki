@@ -1,15 +1,24 @@
-version: '2'
+version: '3.3'
 services:
   wiki:
     networks:
-      - default
+      - proxy
     image: sc-registry.fredhutch.org/wiki:latest
     stdin_open: true
-    labels:
-      io.rancher.container.pull_image: always
+    deploy:
+      restart_policy:
+        condition: on-failure
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.sciwiki.rule=Host(`sciwiki.fredhutch.org`)"
+        - "traefik.http.routers.sciwiki-secured.rule=Host(`sciwiki.fredhutch.org`)"
+        - "traefik.http.routers.sciwiki.entrypoints=web,web-secured"
+        - "traefik.http.services.sciwiki.loadbalancer.server.port=80" # it seems you always need to give traefik a port so it 'notices' the service
+        - "traefik.http.routers.sciwiki.tls=true"
+
   elasticsearch:
     networks:
-      - default
+      - proxy
     image: sc-registry.fredhutch.org/wiki_elasticsearch:latest
     stdin_open: true
     environment:
@@ -17,5 +26,7 @@ services:
       - xpack.security.enabled=false
       - ingest.geoip.downloader.enabled=false
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-    labels:
-      io.rancher.container.pull_image: always
+
+networks:
+  proxy:
+    external: true

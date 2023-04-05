@@ -46,12 +46,12 @@ generic:
 datascience:
   - title: "Data Science Lab"
     children:
-      - title: "Overview"
-        url: /datascience/dc_index/
       - title: "Pathways"
         url: /pathways/
   - title: "Data Management"
     children:
+      - title: "Data Stewardship"
+        url: /datascience/stewardship/
       - title: "NIH Data Sharing"
         url: /datascience/nih_data_sharing/
       - title: "Data Sharing Approaches"

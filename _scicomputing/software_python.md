@@ -7,9 +7,6 @@ Whether you're new to Python or are an experienced Python coder interested in ho
 this page is for you!
 Here we share information on learning Python, accessing python either locally or via remote computing at Fred Hutch, and overviews of a few common software options for running and writing Python code.
 
-For more information on coding best practices, 
-including templates for data analysis and packages in Python,
-please see our [Software Development Standards page](/scicomputing/software_standards/).
 Please also see our [Resource Library](/compdemos/) for tutorials on a variety of Python topics,
 including checkpointing on Gizmo, logging in Python, running tensorflow, and more!
 
@@ -34,7 +31,6 @@ which may vary in quality and functionality. Other places to find packages:
 Please see our [Python Module page](/pythonModules/) for more information on packages installed on our shared compute cluster.
 
 ## Accessing and using Python
-
 
 ### Installing Python on your own computer
 
@@ -82,80 +78,58 @@ or to create a virtual Python environment, for example:
     username@rhino1:~$
 ```
 
-
-## Python IDE
-While this does technically allow you to write and run Python code,
-most Python coders choose to use an integrated development environment, 
-or IDE,
-for developing code. 
-An IDE is a type of software that facilitates common programming tasks,
-and makes it easier to write, test, and run code.
-If you're using any of the training materials listed in the section above,
-they will likely recommend specific IDE. 
-Your choice of how to write and run Python code for your own research, however,
-largely depends on personal preference,
-your project's computational needs, 
-and the manner in which you want to interactwith your code and its output.
-
-The sections below describe some of the most popular methods for installing and running Python at Fred Hutch,
-both on your own computer and on the Hutch's high-performance computing resources.
-If you are not sure about where to run Python (on your own computer, `rhino`, or `gizmo`),
-you should consider where your data are located (thus, whether it will need to be downloaded/transferred),
-what packages you'll need (and how to install/access them),
-and what kind of coding work you'll be doing (developing code, or running batch jobs).
-
-At the bottom of this page,
-you'll find more in-depth comparisons of the features associated with a few of the most common Python IDEs:
-- [Visual Studio Code](#visual-studio-code)
-- [PyCharm](#pycharm)
-- [Jupyter](#jupyter)
-
-
-### Jupyter Notebooks on `rhino`
+### Using Jupyter on `rhino`
 
 There have been many iterations of Python Notebooks, starting with IPython. SciComp currently supports
 [Jupyter](https://jupyter.org). The Jupyter user interfaces offer a foundation of interactive
 computing environments where scientific computing, data science, and analytics can be performed
 using a wide range of programming languages.  
 
-Jupyter Notebook is a minimal but very capable web-based interactive computational environment. JupyterLab is the next-generation version that will eventually replace Notebook. It has a modular structure where you can open several notebooks or files (e.g. HTML, Text, Markdown etc) as tabs in the same window. It offers more of an IDE-like experience and can be extended through extensions. 
+Jupyter Notebook is a minimal but very capable web-based interactive computational environment. JupyterLab is the next-generation version that will eventually replace Notebook. It has a modular structure where you can open several notebooks or files (e.g. HTML, Text, Markdown etc) as tabs in the same window. It offers more of an IDE-like experience and can be extended through extensions. Jupyter is covered in more depth in the [Python IDE Comparison](#jupyter) section below.
 
-#### Starting Jupyter Notebook
-After you have connected to `rhino`, load the JupyterLab module then run jupyter notebook:
+**Jupyter Notebook**
+
+After you have connected to `rhino`, load the fhPython module then run jupyter notebook:
 ```
-    username@rhino1:~$ ml JupyterLab
+    username@rhino1:~$ ml fhPython
     username@rhino1:~$ jupyter notebook --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
-
 Then connect to the URL, copying the link given by the previous command, which looks as follows:
 ```
        Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://rhino1:11112/?token=0eee692be6c81c1061da
 ```
+If you would like to use a different version of Python than what is in the default fhPython module, run `ml avail fhPython` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml fhPython/3.8.6-foss-2020b-Python-3.8.6` in place of `ml fhPython` above.
 
-#### Starting Jupyter Lab
-This is the same as with Jupyter Notebook, except run `jupyter lab` instead of `jupyter notebook`
+**Jupyter Lab**
+
 After you have connected to `rhino`, load the JupyterLab module then run jupyter lab:
 ```
     username@rhino1:~$ ml JupyterLab
     username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
-
 Then connect to the URL, copying the link given by the previous command, which looks as follows:
 ```
        Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://rhino1:11112/?token=0eee692be6c81c1061db
 ```
+If you would like to use a different version of Python than what is in the default JupyterLab module, run `ml avail JupyterLab` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml JupyterLab/2.2.5-foss-2020a-Python-3.8.2` in place of `ml JupyterLab` above.
 
 ## Python IDE comparison
 
-While it is possible to write and run Python code entirely from the command line,
-most Python programmers use an integrated development environment, or IDE, 
-to write, test, and run code.
-This section describes a few of the most common Python IDEs used at the Hutch, 
-including additional features members of our community have found helpful. 
+While it is possible to write and run Python code entirely from the command line, most Python programmers use an integrated development environment, or IDE, to write, test, and run code. An IDE is a type of software that facilitates common programming tasks,
+and makes it easier to write, test, and run code. This section describes a few of the most common Python IDEs used at the Hutch, including additional features members of our community have found helpful. 
+
+If you're using any of the training materials listed in the section above, they will likely recommend a specific IDE. Your choice of how to write and run Python code for your own research, however, largely depends on personal preference, and your project's computational needs, 
+and the manner in which you want to interact with your code and its output. If you are not sure about where to run Python (on your own computer, `rhino`, or `gizmo`), you should consider where your data are located (thus, whether it will need to be downloaded/transferred), what packages you'll need (and how to install/access them), and what kind of coding work you'll be doing (developing code, or running batch jobs).
+
+The sections below describe some of the most popular methods for installing and running Python at Fred Hutch, both on your own computer and on the Hutch's high-performance computing resources. Below, you'll find more in-depth comparisons of the features associated with a few of the most common Python IDEs:
+
+- [Visual Studio Code](#visual-studio-code)
+- [PyCharm](#pycharm)
+- [Jupyter](#jupyter)
 
 ### Visual Studio Code 
 
@@ -290,9 +264,9 @@ When I tried to, push the second commit, my push was rejected:
 
 So I pulled the version on GitHub that was one commit ahead, revealing a conflict without an auto-resolution. Git cannot merge two versions of the same file, if they have different content on the same line! How would git know which was correct?
 
-![Merge Conlict](https://user-images.githubusercontent.com/46639063/75185762-810b4180-56fb-11ea-810d-2560939496be.png)
+![Merge Conflict](https://user-images.githubusercontent.com/46639063/75185762-810b4180-56fb-11ea-810d-2560939496be.png)
 
-Fortunately, VS Code makes it easy to review the confict and pick the winner (or keep both, by appending a version as new lines of code).
+Fortunately, VS Code makes it easy to review the conflict and pick the winner (or keep both, by appending a version as new lines of code).
 
 ![Resolve Merge Conflict](https://user-images.githubusercontent.com/46639063/75185767-82d50500-56fb-11ea-8da1-4d32fddabe7c.png)
 
@@ -302,7 +276,7 @@ After resolving the conflict, remember to commit and push the resolution.
 
 JSON file with all your user-specific settings. How to get to it? (see the common settings wheel at the lower left)
 
-![where is settngs dot json](https://user-images.githubusercontent.com/46639063/75194760-9ab58480-570d-11ea-95ed-d44fd5805197.png)
+![where is settings dot json](https://user-images.githubusercontent.com/46639063/75194760-9ab58480-570d-11ea-95ed-d44fd5805197.png)
 
 ### PyCharm
 
@@ -432,7 +406,7 @@ clear about their purpose, without having to hunt through scores of modules to d
 **Find Usages**  
 
 Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where or how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages**, 
-a small pop-up window will show where that varible is referenced throughout the entire project. This is particularly helpful for when you're cleaning up code and want to know if you can delete something.
+a small pop-up window will show where that variable is referenced throughout the entire project. This is particularly helpful for when you're cleaning up code and want to know if you can delete something.
 
 Right-clicking an object opens a menu which contains the **Find Usages** button:  
 ![find usages example](https://user-images.githubusercontent.com/1015576/80849559-7cb44680-8bcc-11ea-917c-ce156111707e.png)
@@ -589,7 +563,7 @@ JupyterLab offers live rendering of your markdown. To set it up, locate the mark
 
 **Run Script or Only Part of Script**
 
-You can run a segment of a script by selecting the part you care about and hitting `Ctrl + Alt + N`. The results show up in the OUTPUT table. Take the segment of code you want to run and drop it into a new cell and `Shift + Return`. Seems manual but this ability to take parts of code and iterate and interact with them by dropping them into a new cell to run is what some find beatiful about Jupyter. It is like an inline console which speaking of if you want to create a new console just select **File > New** and you can create a new console, or a new notebook (in either a Python, R, Julia or other kernel), a terminal instance, a new text file, or a markdown.
+You can run a segment of a script by selecting the part you care about and hitting `Ctrl + Alt + N`. The results show up in the OUTPUT table. Take the segment of code you want to run and drop it into a new cell and `Shift + Return`. Seems manual but this ability to take parts of code and iterate and interact with them by dropping them into a new cell to run is what some find beautiful about Jupyter. It is like an inline console which speaking of if you want to create a new console just select **File > New** and you can create a new console, or a new notebook (in either a Python, R, Julia or other kernel), a terminal instance, a new text file, or a markdown.
 
 **Identifying Problems and Their Quick Fixes**
 
@@ -620,5 +594,3 @@ JupyterLab built upon the success of Jupyter notebook as a light-weight, browser
 The downside though is that version 2 was a major release for them and they are now at 2.0.1 which was released in March 6, 2020 so the project is very new which means the extensions which add a lot of features to flush out the product also need to stay update-to-date with the current code base but that can create problems. There's guides for that, ["JupyterLab 1.x to 2.x Extension Migration Guide"](https://jupyterlab.readthedocs.io/en/stable/developer/extension_migration.html), but it'll be great when everything is playing nice and you have a powerful browser-based, light-weight IDE at your finger tips.
 
 Let's hope the synergy of the versioning of the core product and the community of extensions improves. Until then there's nothing stopping a Python or R user from doing all their engineering in Atom, PyCharm, RStudio, or VS Code and then the rest of their coding/management in JupyterLab since it _is_ browser-based. Hopefully, this tutorial has heightened your interest.
- 
-

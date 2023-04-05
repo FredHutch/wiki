@@ -11,7 +11,23 @@
     -
       name: slurm
       version: 1
-  nodes:
+  old_nodes:
+    -
+      node_name: f
+      begin_production:  2014
+      decommission: 2020-04-0
+      cores: 4
+      sockets: 1
+      memory_gb: 32
+      processor_model: E3-1270v3
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: Rackform iServ R4920
+      os: Ubuntu 14.04 LTS
+      local_storage: "HDD 800GB @ /loc (ext4)"
+      partition: campus
+      node_count: 456
     -  
       node_name: g
       cores: 6
@@ -44,6 +60,7 @@
       gpu: none
       node_count: 3
       partition: campus-new
+  nodes:
     -  
       node_name: j
       cores: 24
@@ -54,42 +71,51 @@
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
       model: 6029U 2U Ultra NVMe Server
-      os: Ubuntu 14.04 LTS
+      os: Ubuntu 18.04 LTS
       local_storage: "7TB @ /loc (300MB/s throughput / 1000 IOps)"
       network: 10G (up to 1GB/s throughput)
-      gpu: NVIDIA
+      gpu: NVIDIA GTX 1080ti
+      gpu_count: 1
+      gpu_memory: 10.92 GB 
+      gpu_compute_capability: 6.1
       node_count: 42
-      partition: campus-new
+      partition: all
     -  
       node_name: k
       cores: 36
       sockets: 2
       memory_gb: 768
-      processor_model: TBD
+      processor_model: Gold 6154
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
       model: 6029U 2U Ultra NVMe Server
       os: Ubuntu 18.04 LTS
-      local_storage: "/loc"
+      local_storage: "6TB @ /loc"
       network: 10G (up to 1GB/s throughput)
-      gpu: NVIDIA
+      gpu: NVIDIA RTX 2080ti
+      gpu_count: 1
+      gpu_memory: 10.76 GB 
+      gpu_compute_capability: 7.5
       node_count: 170
-      partition: campus-new
+      partition: all
     -  
       node_name: rhino
       cores: 14
       sockets: 2
       memory_gb: 384
-      processor_model: E5-2697v3
+      processor_model: Gold 6154
       processor_manufacturer: Intel
       manufacturer: SuperMicro
       vendor: Silicon Mechanics
       model: Super Server
-      os: Ubuntu 14.04 LTS
-      local_storage: "5TB @ /loc (300MB/s throughput/ 1000 IOps)"
+      os: Ubuntu 18.04 LTS
+      local_storage: "6TB @ /loc"
       network: 10G (up to 1GB/s throughput)
-      gpu: none
+      gpu: NVIDIA RTX1080ti
+      gpu_count: 1
+      gpu_memory: 10.92 GB 
+      gpu_compute_capability: 6.1
       node_count: 3
       partition: none (interactive use)
   partitions:
@@ -97,5 +123,11 @@
       partition_name: campus-new
       max_per_acct: 100-300 cpus
       default_per_job: 3 days
-      max_per_job: 28 cpus, 768000MB memory (effective)
+      max_per_job: 36 cpus, 768000MB memory (effective)
+      min_per_job: none
+    -
+      partition_name: short
+      max_per_acct: 8000 core*minutes
+      default_per_job: 60 minutes
+      max_per_job: 36 cpus, 768000MB memory (effective)
       min_per_job: none
