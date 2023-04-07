@@ -5,7 +5,7 @@ primary_reviewers: vortexing
 
 ## Overview
 
-_Task oriented storage_ is storage for data used in ad-hoc applications when the principal storage location for that data is unsuitable or undesirable for that application.
+_Task storage_ is storage for data used in ad-hoc applications when the primary or principal storage location for that data is unsuitable or undesirable for that application.
 
 For example: you have the primary copy of sequencing data in cloud storage (e.g. AWS S3).  This location is not usable for analysis on the gizmo compute cluster and thus you copy it to a location where it is usable by gizmo analysis tools (e.g. a network-attached storage server like "scratch").
 
@@ -13,15 +13,19 @@ For example: you have the primary copy of sequencing data in cloud storage (e.g.
 
 ### Recommendations
 
-Use of task storage requires careful thought and consideration. Given the volitile nature of the storage the responsibility falls to you- the data steward- to ensure that you mitigate and account for risks you take on as part of using these storage systems.
+Use of task storage requires careful thought and consideration. Given the volitile nature of the storage the responsibility falls to you- the data steward- to ensure that you have accounted for risks you take on as part of using these storage systems.
 
-> **DO NOT** keep the primary copy of data in a task storage location.  Ensure you have the primary data set in durable storage (fast, S3, or other data repository) before copying to a task storage location
+Some general guidelines for using task storage:
 
-> **DO** make sure that data generated into a task storage path is either a) easily regenerated or b) copied to durable storage immediately after generation.
+> **DO NOT** keep the primary copy of data in a task storage location.  Before storing your data set in a task storage location, ensure that the primary data set is in durable storage (such as fast or S3) or that the primary data set is easily retrievable from it's source (e.g. your collaborators, DbGap, EMBL,)
+
+> **DO** make sure that data generated into a task storage path is either a) easily regenerated or b) copied to durable storage immediately after generation.  Some intermediate data may not need to be copied if regenerating isn't too difficult or computationally costly.  This is a judgement you will have to make in determining if intermediate data requires durable storage.
 
 > **DO** consider using a workflow manager to manage data in task storage.  Workflow managers can be set up with targets to ensure data is present in task storage before the task begins as well as staging out generated data after successful completion of a task
 
-## Options for Task Storage
+The Data Science Lab and Scientific Computing teams are available to help you identify and mitigate these risks- please reach out to us with any questions or to help with your plans.
+
+## Storage Options for Tasks
 
 ### Scratch
 
