@@ -43,7 +43,7 @@ This storage space is based on a high performance file system (BeegFS) and desig
 
 To manage storage volumes, each of the directories have automatic cleanup and deletion jobs that run to prune old data.  Each parent directory indicates the age (in days) of files that will be pruned.  For example, files in /fh/scratch/delete10 will be deleted when the file hasn't been accessed in 10 days.
 
-### Job Local Temp Space
+### Job Local Task Storage
 
 | feature | availability |
 |---------|--------------|
@@ -53,7 +53,9 @@ To manage storage volumes, each of the directories have automatic cleanup and de
 | charges | 0 |
 | quota/limits | 7TB |
 
-> This is the /loc/scratch/<jobid> space that exists for the duration of the job
+When you submit a job to _gizmo_ and are allocated a node, you will also have task storage provisioned on local disk the duration of the job.  This is local to the node (i.e. a directly-attached disk), but is removed when the job is complete (failed or successful).
+
+> We ask that you use this volume and not the `/tmp` directory on the node- the task storage volume has much greater capacity.  Filling the `/tmp` directory can cause problems for your job and others on the node if it is filed.
 
 ### Cloud Scratch Storage
 
