@@ -13,13 +13,13 @@ For example: you have the primary copy of sequencing data in cloud storage (e.g.
 
 ### Recommendations
 
-Use of task storage requires careful thought and consideration- given the volitile nature of the storage, the responsibility falls to you- the data owner- to ensure that you mitigate and account for this.
+Use of task storage requires careful thought and consideration. Given the volitile nature of the storage the responsibility falls to you- the data steward- to ensure that you mitigate and account for risks you take on as part of using these storage systems.
 
-**DO NOT** keep the primary copy of data in a task storage location.  Ensure you have the primary data set in durable storage (fast, S3, or other data repository) before copying to a task storage location
+> **DO NOT** keep the primary copy of data in a task storage location.  Ensure you have the primary data set in durable storage (fast, S3, or other data repository) before copying to a task storage location
 
-**DO** make sure that data generated into a task storage path is either a) easily regenerated or b) copied to durable storage immediately after generation.
+> **DO** make sure that data generated into a task storage path is either a) easily regenerated or b) copied to durable storage immediately after generation.
 
-**DO** consider using a workflow manager to manage data in task storage.  Workflow managers can be set up with targets to ensure data is present in task storage before the task begins as well as staging out generated data after successful completion of a task
+> **DO** consider using a workflow manager to manage data in task storage.  Workflow managers can be set up with targets to ensure data is present in task storage before the task begins as well as staging out generated data after successful completion of a task
 
 ## Options for Task Storage
 
