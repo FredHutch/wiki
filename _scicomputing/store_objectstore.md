@@ -143,9 +143,9 @@ No- you will need to contact us via helpdesk to have a new bucket created.
 
 While it is possible to have additional S3 buckets created in your lab account, additional buckets are discouraged as most use cases are satisfied by the standard managed buckets.  Note too that additional buckets are not subsidised (i.e. you will pay for the full cost of data stored in these extra buckets).
 
-> I need a bucket in a location other than us-west-2, can this be done?
+> I need a bucket in a location other than `us-west-2`, can this be done?
 
-Yes, the CLD team can create buckets in other regions if you have a need for this however in most cases this is not necessary.  If you have a specific need that would require buckets in other regions, please submit a ticket to the helpdesk.
+Yes, the CLD team can create buckets in regions: `us-east-1`, `us-west-2`, and `eu-west-2`, if you have a need for this however in most cases this is not necessary.  If you have a specific need that would require buckets in other regions than `us-west-2` (our default), please submit a ticket to the helpdesk.
 
 > Is it possible to see who is using the data in my lab buckets?
 
