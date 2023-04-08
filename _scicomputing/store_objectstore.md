@@ -145,7 +145,7 @@ While it is possible to have additional S3 buckets created in your lab account, 
 
 > I need a bucket in a location other than `us-west-2`, can this be done?
 
-Yes, the CLD team can create buckets in regions: `us-east-1`, `us-west-2`, and `eu-west-2`, if you have a need for this however in most cases this is not necessary.  If you have a specific need that would require buckets in other regions than `us-west-2` (our default), please submit a ticket to the helpdesk.
+Yes, the CLD team can create buckets in regions: `us-east-1`, `us-west-2`, and `eu-west-2`, if you have a need for this. However, in most cases this is not necessary.  If you have a specific need that would require buckets in other regions than `us-west-2` (our default), please submit a ticket to the helpdesk.
 
 > Is it possible to see who is using the data in my lab buckets?
 
