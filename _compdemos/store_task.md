@@ -43,7 +43,7 @@ This storage space is based on a high performance file system (BeegFS) and desig
 
 To manage storage volumes, each of the directories have automatic cleanup and deletion jobs that run to prune old data.  Each parent directory indicates the age (in days) of files that will be pruned.  For example, files in /fh/scratch/delete10 will be deleted when the file hasn't been accessed in 10 days.
 
-### Job Local Task Storage
+### Job Local Storage
 
 | feature | availability |
 |---------|--------------|
@@ -57,7 +57,7 @@ When you submit a job to _gizmo_ and are allocated a node, you will also have ta
 
 > We ask that you use this volume and not the `/tmp` directory on the node- the task storage volume has much greater capacity.  Filling the `/tmp` directory can cause problems for your job and others on the node if it is filed.
 
-### Cloud Scratch Storage
+### Cloud Scratch
 
 | feature | availability |
 |---------|--------------|
@@ -67,4 +67,4 @@ When you submit a job to _gizmo_ and are allocated a node, you will also have ta
 | charges | 0 |
 | quota/limits | n/a |
 
-A "scratch" bucket is configured as part of the standard cloud account.  This bucket is described in greater detail [here](https://sciwiki.fredhutch.org/scicomputing/store_objectstore/#scratch-s3-bucket).  This bucket uses automatic timed deletion: if data is stored in a path with the "delete" prefix (e.g. if the path starts "delete10" data under that path will be deleted after 10 days of inactivity).
+The bucket "fh-pi-_lastname-f_-nextflow-scratch" is configured as part of the standard cloud account.  This bucket is described in greater detail [here](https://sciwiki.fredhutch.org/scicomputing/store_objectstore/#scratch-s3-bucket).  This bucket uses automatic timed deletion: if data is stored in a path with the "delete" prefix (e.g. if the path starts "delete10" data under that path will be deleted after 10 days of inactivity).
