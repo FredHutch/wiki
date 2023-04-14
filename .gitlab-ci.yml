@@ -115,7 +115,7 @@ test:
       alias: wiki_search
     - name: sc-registry.fredhutch.org/wiki:test
       alias: wiki
-      command: ["./test.sh"]
+      command: ["/test.sh"]
   script: |
     set -x
     if [ "$CI_COMMIT_BRANCH" == "main" ]; then
