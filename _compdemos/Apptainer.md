@@ -7,9 +7,11 @@ primary_reviewers: bmcgough, atombaby
 
 ## What is Apptainer
 
-From Sylabs' [introduction](https://sylabs.io/guides/3.5/user-guide/introduction.html#introduction-to-singularity):
+**Note**: Apptainer was formerly known as `Singularity`.
 
-> [Apptainer] is a container platform. It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible. You can build a container using [Apptainer] on your laptop, and then run it on many of the largest HPC clusters in the world, local university or company clusters, a single server, in the cloud, or on a workstation down the hall. Your container is a single file, and you don’t have to worry about how to install all the software you need on each different operating system and system.
+From `apptainer.org`'s [introduction](http://apptainer.org/docs/user/main/):
+
+> Apptainer is a *container* platform. It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible. You can build a container using Apptainer on your laptop, and then run it on many of the largest HPC clusters in the world, local university or company clusters, a single server, in the cloud, or on a workstation down the hall. Your container is a single file, and you don’t have to worry about how to install all the software you need on each different operating system and system.
 
 [Apptainer] allows us to run containers- including Docker containers- on our shared systems.  Docker requires a number of adminstrative privileges which makes it unusable in shared multi-user environments with networked storage.  [Apptainer] remedies these problems allowing individual, non-root, users to run containers.
 
@@ -60,10 +62,10 @@ As indicated earlier, Apptainer can run Docker container images.  However, Docke
 
 ### Example - Convert and Run latest R Docker container with Apptainer
 
-This example converts a Singularity container named _r-base-latest_ from the official R Docker container and starts an interactive R session with that container
+This example converts an Apptainer container named _r-base-latest_ from the official R Docker container and starts an interactive R session with that container
 
 ```ShellSession
-$ ml Apptainer/1.0.1
+$ ml Apptainer/1.1.6
 $ apptainer build r-base-latest.sif docker://r-base
 INFO:    Starting build...
 Getting image source signatures
@@ -121,7 +123,7 @@ Containers can be customized by using a base container image, then adding desire
 
 Root access is typically required to build Apptainer containers.  Sylabs' remote builder provides an option to build your container in Sylabs' sandbox cloud infrastructure. Once the container finishes building it will be automatically download to your working directory where it can be run.
 
-To use the remote builder option in Singularity you need a Sylabs account and key. The steps to set up remote builder can be found [here](https://sylabs.io/guides/3.5/user-guide/endpoint.html)
+To use the remote builder option in Apptainer you need a Sylabs account and key. The steps to set up remote builder can be found [here](https://sylabs.io/guides/3.5/user-guide/endpoint.html)
 
 > You will need to generate a new key every 30 days when using Sylabs' remote builder option.
 
@@ -131,7 +133,7 @@ In this example, we are going to build a more complex Apptainer container using 
 
 #### Create a Definition File.
 
-Create a definition file named `my.r.singularity.build.def` containing:
+Create a definition file named `my.r.apptainer.build.def` containing:
 
 ```Apptainer
 BootStrap: docker
@@ -150,15 +152,15 @@ More information about Apptainer definition files is available [here.](https://a
 The build is similar to the earlier example, but instead of providing a remote image name, we point `apptainer` to the definition file and indicate that the container will be built remotely:
 
 ```ShellSession
-$ apptainer build --remote my_r_container.sif my.r.singularity.build.def
+$ apptainer build --remote my_r_container.sif my.r.apptainer.build.def
 ```
 
 #### Verify
 
-If we launch the R editor on our new Singularity container with the following command.
+If we launch the R editor on our new Apptainer container with the following command.
 
 ```ShellSession
-$ singularity exec my_r_container.sif R
+$ apptainer exec my_r_container.sif R
 ```
 
 And then check all of the user installed R packages with the following command.
@@ -186,9 +188,9 @@ In this example we'll make the `biodata` files maintained by Shared Resources av
 
 #### Create Mount Points
 
-Modify the definition file we created earlier (`my.r.singularity.build.def`), adding a command to the `%post` section to create the directory where we will mount biodata:
+Modify the definition file we created earlier (`my.r.apptainer.build.def`), adding a command to the `%post` section to create the directory where we will mount biodata:
 
-```Singularity
+```Apptainer
 BootStrap: docker
 From: r-base
 
@@ -202,24 +204,24 @@ mkdir -p /mnt/data
 Rebuild the container as above:
 
 ```ShellSession
-$ singularity build --remote my_r_container.sif my.r.singularity.build.def
+$ apptainer build --remote my_r_container.sif my.r.apptainer.build.def
 ```
 
 #### Run with Bind
 
-Once the container has been rebuilt we just need to run the container as earlier, but adding additional instructions to bind the local path (on the host where you are running Singularity) to the directory we created.
+Once the container has been rebuilt we just need to run the container as earlier, but adding additional instructions to bind the local path (on the host where you are running Apptainer) to the directory we created.
 
 There are two ways to bind these paths into the container- on the command line:
 
 ```ShellSession
-$ singularity exec --bind /shared/biodata:/mnt/data my_r_container.sif R
+$ apptainer exec --bind /shared/biodata:/mnt/data my_r_container.sif R
 ```
 
 or via environment variables:
 
 ```ShellSession
-$ export SINGULARITY_BIND=/shared/biodata:/mnt/data
-$ singularity exec my_r_container.sif R
+$ export APPTAINER_BIND=/shared/biodata:/mnt/data
+$ apptainer exec my_r_container.sif R
 ```
 
 #### Verify
@@ -227,10 +229,10 @@ $ singularity exec my_r_container.sif R
 You can verify the bind of those paths with `shell`. Start a shell in the container and run:
 
 ```ShellSession
-$ export SINGULARITY_BIND=/shared/biodata:/mnt/data
-$ singularity shell my_r_container.sif
+$ export APPTAINER_BIND=/shared/biodata:/mnt/data
+$ apptainer shell my_r_container.sif
 
-Singularity$ ls /mnt/data
+Apptainer> ls /mnt/data
 example_data  gmap-gsnap  humandb  microbiome  ncbi-blast  ngs	seq  tmp
 ```
 
@@ -238,11 +240,11 @@ example_data  gmap-gsnap  humandb  microbiome  ncbi-blast  ngs	seq  tmp
 
 ### The Image Cache
 
-Singularity caches data to speed future operations.  By default the cache is in your home directory, in a directory named `.singularity`.  This cache can be moved depending on your need- this can be controlled with the environment variable `SINGULARITY_CACHEDIR`.
+Apptainer caches data to speed future operations.  By default the cache is in your home directory, in a directory named `.apptainer`.  This cache can be moved depending on your need- this can be controlled with the environment variable `APPTAINER_CACHEDIR`.
 
 ```ShellSession
-export SINGULARITY_CACHEDIR=${HOME}/.my_cachedir
-$ singularity build my.r.singularity.build.def
+export APPTAINER_CACHEDIR=${HOME}/.my_cachedir
+$ apptainer build my.r.apptainer.build.def
 ```
 
 Note that you will need to set this environment variable every time you wish to use this cache path.
@@ -254,10 +256,10 @@ Two environment variables (and one command-line option) can be used to control w
 The command line option `--tmpdir` takes precedence over the environment variables:
 
 ```ShellSession
-$ singularity build --tmpdir=${HOME}/tmp my.r.singularity.build.def
+$ apptainer build --tmpdir=${HOME}/tmp my.r.apptainer.build.def
 ```
 
-The environment variables `SINGULARITY_TMPDIR` and `TMPDIR` are used if the command line option isn't set.  `SINGULARITY_TMPDIR` takes precedence over `TMPDIR`.
+The environment variables `APPTAINER_TMPDIR` and `TMPDIR` are used if the command line option isn't set.  `APPTAINER_TMPDIR` takes precedence over `TMPDIR`.
 
 >IMPORTANT:  If you set this build directory path to a location in the Scratch file system you may encounter errors like "operation not permitted" when building the container.  This file system does not support file operations used by some container builds (e.g. hard links and some attributes).
 
