@@ -50,4 +50,6 @@ RUN cp /usr/share/nginx/html/images/favicon.ico /usr/share/nginx/html/
 COPY ./info.txt /usr/share/nginx/html/
 RUN true # see https://stackoverflow.com/a/62409523/470769
 COPY  ./default.conf /etc/nginx/conf.d/default.conf
+COPY ./wiki-only.conf /srv/jekyll/
+COPY test.sh /srv/jekyll
 EXPOSE 80
