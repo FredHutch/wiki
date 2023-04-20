@@ -231,6 +231,7 @@ Indicates that the job is running under an account that is already using the max
 | Resources             | The job will run as soon as enough compute resources become available |
 | PartitionTimeLimit    | The job is requesting more time than allowed for the partition |
 | MaxCpuPerAccount      | Account has reached the limit on the number of CPUs available to it |
+| MaxGRESPerAccount     | The account has reached the limit on the number of GPUs available to it |
 | QOSMinCpuNotSatisfied | The job isn't requesting enough CPUs for the requested partition. See [Limits](#limits) |
 | QOSMinMemory          | The job isn't requesting enough memory for the requested partition. See [Limits](#limits) |
 | MaxMemPerLimit        | The job has requested more memory than available in the partition |
