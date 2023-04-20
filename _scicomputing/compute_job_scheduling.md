@@ -10,7 +10,7 @@ This high demand for a shared resource is primarily seen in the Gizmo cluster, w
 
 A primary goal of this process of job scheduling is to ensure sufficient idle resources for "new work" to start quickly ("new work" meaning jobs from cluster accounts that don't already have active jobs). The other scheduling goal is the equitable allocation of resources that each group has access to the same amount of resources.
 
-To this end, each group is limited to a maximum amount of computational resources - no one group can use all the resources. Currently, this is implemented as a maximum on the number of cores available.  Furthermore, as a group's usage increases, the priority of that group's waiting jobs is lowered, allowing other groups to access idle resources.  This "fairshare" algorithm looks at usage over 24 hours and adds priority to a group's jobs if that group hasn't been using their "fair share" of the cluster.
+To this end, each group is limited to a maximum amount of computational resources - no one group can use all the resources. Currently there are limits on the number of CPU cores and GPUs.  Furthermore, as a group's usage increases, the priority of that group's waiting jobs is lowered, allowing other groups to access idle resources.  This "fairshare" algorithm looks at usage over 24 hours and adds priority to a group's jobs if that group hasn't been using their "fair share" of the cluster.
 
 ## Cluster Accounts
 
