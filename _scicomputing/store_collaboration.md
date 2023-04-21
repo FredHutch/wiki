@@ -20,7 +20,7 @@ Visit [the Aspera information page](https://aspera.fhcrc.org/index.html) for mor
 ## Data Storage for Collaboration
 
 ### AWS S3
-AWS S3 storage has a variety of useful features that make it an ideal way to securely share data with collaborators, or leverage a resource as a common storage location for users at and outside of the Hutch.  You can read more about how S3 can help support your collaborations using especially large data sets [in our AWS S3 storage documentation](/scicomputing/store_objectscore/).
+AWS S3 storage has a variety of useful features that make it an ideal way to securely share data with collaborators, or leverage a resource as a common storage location for users at and outside of the Hutch.  You can read more about how S3 can help support your collaborations using especially large data sets [in our AWS S3 storage documentation](/scicomputing/store_objectstore/).
 
 ### OneDrive 
 OneDrive is a cloud service that securely stores your files and folders in one place, share them with others, and update your files from any device. OneDrive is a benefit available individual users at the Fred Hutch that allows for private storage of files with the ability to share those files with others for collaboration.  With OneDrive you can:

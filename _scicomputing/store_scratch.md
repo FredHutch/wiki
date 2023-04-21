@@ -138,7 +138,7 @@ Using `Economy Cloud` storage (AWS S3) can be a more affordable way to store lar
 
 
 ### Connect to rhino
-See our pages on [Access Methods](/scicomputing/access_methods/) and an overview of the [Technologies Supported](/scicomputing/reference_overview/) to learn more about what `rhino` is and how to use it.
+See our pages on [Access Methods](/scicomputing/access_methods/) and an overview of the [Technologies Supported](/scicomputing/comp_index/) to learn more about what `rhino` is and how to use it.
 
 ### Find Scratch space
 Head over to some `Scratch` space for your PI.  
@@ -213,4 +213,4 @@ rm -rf workingdir
 
 
 ## Do we have Scratch in the Cloud?
-Yes! Please see the [AWS S3 storage page](/scicomputing/storage_objectstore/) for more information about how to use AWS S3 Scratch buckets, which function similarly as our on premise Scratch resource does.  
+Yes! Please see the [AWS S3 storage page](/scicomputing/store_objectstore/) for more information about how to use AWS S3 Scratch buckets, which function similarly as our on premise Scratch resource does.  

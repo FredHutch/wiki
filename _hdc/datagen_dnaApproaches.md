@@ -122,7 +122,7 @@ There are many vendors available to generate WGS data. <!--INSERT EXTERNAL LINK 
 
 * Illumina has a variety of ready-made targeted DNA sequencing panels. Users can also design custom panels.[Illumina Targeted Sequencing Panels](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html)
 
-* Illumina has a sequencing depth calculator tool to estimate what type of depth to expect in certain combinations of setups.  More information on the available sequencing platforms in the Genomics Shared Resource can be found on [this page.](/generation/datagen_platformsData/) [Illumina Sequencing Calculator](https://support.illumina.com/downloads/sequencing_coverage_calculator.html)
+* Illumina has a sequencing depth calculator tool to estimate what type of depth to expect in certain combinations of setups.  More information on the available sequencing platforms in the Genomics Shared Resource can be found on [this page.](/hdc/datagen_platformsData/) [Illumina Sequencing Calculator](https://support.illumina.com/downloads/sequencing_coverage_calculator.html)
 
 * PacBio Single Molecule Real-time (SMRT) technology enables long-read (>20kb) sequencing. [PacBio SMRT Sequencing](http://www.pacb.com/smrt-science/smrt-sequencing/)
 

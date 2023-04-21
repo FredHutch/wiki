@@ -94,6 +94,21 @@ If you have any problems using this configuration, please don't hesitate to
 To run a workflow with this configuration, follow the guidance for formatting
 the appropriate [run script](/hdc/workflows/running/run_script).
 
+## Note: Unexpected Errors
+
+Over the course of running many different workflows, it has become apparent
+that there are occasional errors which can be solved by removing the flag(s)
+`--containall` and/or `--no-home` from the `runOptions` setting shown above.
+
+We do not have a robust understanding for the reason behind this phenomenon.
+Nor do we recommend omitting those flags as a general rule. However, if you
+encounter an error which does not seem to have any easy solution, it is worth
+trying to run the workflow with either:
+
+- `runOptions = '--containall'`,
+- `runOptions = '--no-home'`, or
+- `runOptions = ''`
+
 ## Note: ERROR 151
 
 When running workflows on the gizmo SLURM cluster with Apptainer, multiple users
