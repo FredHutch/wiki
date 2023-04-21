@@ -24,7 +24,7 @@ Apptainer is maintained and deployed in our environment using environment module
 Apptainer is a module- load it with `ml`:
 
 ```ShellSession
-$ ml Apptainer/1.0.1
+$ ml Apptainer
 ```
 
 Use `ml spider` to see available versions.  You can download ("pull") any Docker image and it will be converted to Apptainer format:
@@ -65,7 +65,7 @@ As indicated earlier, Apptainer can run Docker container images.  However, Docke
 This example converts an Apptainer container named _r-base-latest_ from the official R Docker container and starts an interactive R session with that container
 
 ```ShellSession
-$ ml Apptainer/1.1.6
+$ ml Apptainer
 $ apptainer build r-base-latest.sif docker://r-base
 INFO:    Starting build...
 Getting image source signatures
