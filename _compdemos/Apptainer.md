@@ -7,7 +7,7 @@ primary_reviewers: bmcgough, atombaby
 
 ## What is Apptainer
 
-**Note**: Apptainer was formerly known as `Singularity`.
+**Note**: {% glossary Apptainer %} was formerly known as {% glossary Singularity %}.
 
 From `apptainer.org`'s [introduction](http://apptainer.org/docs/user/main/):
 
