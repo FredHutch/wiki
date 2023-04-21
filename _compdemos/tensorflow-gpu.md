@@ -30,11 +30,11 @@ then create a small python test script:
     chmod +x ~/tf-test.py
 ```
 
-and run it on Gizmo with `--gres=gpu` to select a node with GPU:
+and run it on Gizmo with `--gpus=1` to select a node with GPU:
 
 
 ``` 
-    ~$ sbatch -o out.txt --gres=gpu ~/tf-test.py
+    ~$ sbatch -o out.txt --gpus=1 ~/tf-test.py
     ~$ tail -f out.txt
 ```
 

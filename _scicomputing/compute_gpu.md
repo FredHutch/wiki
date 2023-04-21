@@ -1,22 +1,20 @@
 ---
 title: Computing with GPUs
-last_modified_at: 2019-06-03
+last_modified_at: 2023-03-31
 primary_reviewer: atombaby
 ---
 
 ## Requesting GPUs
 
-GPUs are requested via the GRES option:
+GPUs are requested via the `--gpus` option:
 
-    sbatch --gres=gpu ...
+    sbatch --gpus=1 ...
 
-Request multiple GPUs with:
+Specific GPU models (see table below) can be requested by indicating _model_ and _count_:
 
-    sbatch --gres=gpu:2
+    sbatch --gpus=rtx2080ti:1 ...
 
-At this time we have one GPU per node.
-
-### Nodes with GPUs
+### Nodes GPUs
 
 |Location|Partition|Node Name|GPU|
 |---|:---:|:---:|---:|

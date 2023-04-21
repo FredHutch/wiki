@@ -13,8 +13,7 @@ etc from any part of the data.
 
 The aim of de-identification is to maintain confidentiality through
 elimination of identifiers in a way that eliminates or greatly
-diminishes the risk of re-identification of an individual patient (also
-see our page on [de-identification of data or specimens](/generation/human_deidentification/)). Maintaining strong
+diminishes the risk of re-identification of an individual patient. Maintaining strong
 data security processes is an additional key measure. Sharing data
 should be done securely, after the information is de-identified and
 within a data management and sharing plan. This plan should delineate

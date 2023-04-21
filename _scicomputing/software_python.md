@@ -7,9 +7,6 @@ Whether you're new to Python or are an experienced Python coder interested in ho
 this page is for you!
 Here we share information on learning Python, accessing python either locally or via remote computing at Fred Hutch, and overviews of a few common software options for running and writing Python code.
 
-For more information on coding best practices, 
-including templates for data analysis and packages in Python,
-please see our [Software Development Standards page](/scicomputing/software_standards/).
 Please also see our [Resource Library](/compdemos/) for tutorials on a variety of Python topics,
 including checkpointing on Gizmo, logging in Python, running tensorflow, and more!
 

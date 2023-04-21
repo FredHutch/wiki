@@ -19,7 +19,7 @@ It's important to be deliberate in your choice of first language to learn, becau
 
 ### Getting Started with Common Languages
 
-If you are new to coding, or are interested in learning about coding languages for research software, the Fred Hutch offers training resources for many of the common languages and tools listed below. For more information on training opportunities, cooperative learning groups, and how to get started, please see the [reference page](/scicomputing/reference_overview/).
+If you are new to coding, or are interested in learning about coding languages for research software, the Fred Hutch offers training resources for many of the common languages and tools listed below. For more information on training opportunities, cooperative learning groups, and how to get started, please see the [reference page](/scicomputing/comp_index/).
 
 The remainder of the Software Development content will presume a basic skill level in at least one common language, as well as a basic understanding of [GitHub](/scicomputing/software_managecode/) for version control.
 
@@ -46,26 +46,22 @@ While version control software has evolved over time, a new evolution that is ha
 
 You have the option to run code on a local (desktop) computer, or on a shared computing cluster. This section helps you figure out what will work best for your task and help you make sense of the [Large Scale Computing](/scicomputing/compute_overview/) section if you do need more computing resources than your local computer.  
 
-## [Software Development Standards](/scicomputing/software_standards/)
-
-In an effort to create high-quality, transparent, and reproducible software-aided research, it is important that best practices be fused into the process of code development. This section documents coding standards for research software, templates for different types of coding projects, and examples coding projects.
-
 ## [Code Examples and Templates](/scicomputing/software_examples/)
 
 
 ## Other Languages and Tools for Data Analysis
-As we said, while there are some commonly used languages, there really are a huge variety of software people use for research.  This section includes some introductions to other types of software for which we do not specifically have an article addressing them.  Resources external to this Wiki or specific [Resource Library](compdemos/) entries are linked to where applicable.  Happy (coding) Trails!!!!
+As we said, while there are some commonly used languages, there really are a huge variety of software people use for research.  This section includes some introductions to other types of software for which we do not specifically have an article addressing them.  Resources external to this Wiki or specific [Resource Library](/compdemos/) entries are linked to where applicable.  Happy (coding) Trails!!!!
 
 ### Proprietary (Licensed) Statistics Software
 
-We encourage the use of free, open-source software at the Hutch, especially for academic research use. For projects and researchers who prefer not to use open-source software, Fred Hutch supports proprietary software through shared licenses for the following statistical analysis and visualization software: [**SAS**](https://www.sas.com/en_us/software/stat.html), [**SPSS**](https://www.ibm.com/analytics/spss-statistics-software), [**Stata**](https://www.stata.com), and [**Matlab**](https://www.mathworks.com/products/matlab.html?s_tid=hp_products_matlab) users. Please see the [Resource Library](compdemos/matlab/) for information on accessing Matlab on Fred Hutch compute resources. For more information on obtaining access to licensed software, please contact Center IT.
+We encourage the use of free, open-source software at the Hutch, especially for academic research use. For projects and researchers who prefer not to use open-source software, Fred Hutch supports proprietary software through shared licenses for the following statistical analysis and visualization software: [**SAS**](https://www.sas.com/en_us/software/stat.html), [**SPSS**](https://www.ibm.com/analytics/spss-statistics-software), [**Stata**](https://www.stata.com), and [**Matlab**](https://www.mathworks.com/products/matlab.html?s_tid=hp_products_matlab) users. Please see the [Resource Library](/compdemos/matlab/) for information on accessing Matlab on Fred Hutch compute resources. For more information on obtaining access to licensed software, please contact Center IT.
 
 There is an active [**Tableau**](https://www.tableau.com) data visualization community at Fred Hutch. For more information on help sessions, meetups, and Q&A, please see the #tableau-user-comm channel on [The Coop Communities Slack](https://fhbig.slack.com/).
 
 
 ### Workflow Managers
 
-Workflow managers are software that facilitate the setup, execution, and monitoring of scientific analyses involving multiple steps. These are especially important for complex bioinformatic analyses that require various software dependencies and resource requirements, and can make your analysis both easier to troubleshoot and more reproducible. Workflow managers common for scientific processes include: [Snakemake](https://snakemake.readthedocs.io/en/stable/), [Cromwell](https://cromwell.readthedocs.io/en/stable/tutorials/FiveMinuteIntro/), [Toil](https://toil.readthedocs.io), [CWL](https://www.commonwl.org), and [Nextflow](https://www.nextflow.io/). For more information on running **Nextflow**, please see [this demo](compdemos/nextflow/).  
+Workflow managers are software that facilitate the setup, execution, and monitoring of scientific analyses involving multiple steps. These are especially important for complex bioinformatic analyses that require various software dependencies and resource requirements, and can make your analysis both easier to troubleshoot and more reproducible. Workflow managers common for scientific processes include: [Snakemake](https://snakemake.readthedocs.io/en/stable/), [Cromwell](https://cromwell.readthedocs.io/en/stable/tutorials/FiveMinuteIntro/), [Toil](https://toil.readthedocs.io), [CWL](https://www.commonwl.org), and [Nextflow](https://www.nextflow.io/). For more information on running **Nextflow**, please see [this demo](/compdemos/nextflow/).  
 
 Nextflow and Cromwell are currently under development at the Fred Hutch for wider, supported use by researchers here.  [Nextflow](/compdemos/nextflow/) is currently available and there is a growing community group working collaboratively you can join on their [Slack channel](https://fhbig.slack.com/archives/CJFP1NYSZ), and the same is available for [Cromwell](/compdemos/Cromwell/) including a [Slack channel](https://fhbig.slack.com/archives/CTFU13URJ).
 

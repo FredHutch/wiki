@@ -137,13 +137,15 @@ We have a number of demos in our Resource Library related to how to interact wit
 
 Unfortunately, it is impossible to rename an S3 bucket once created so when the initial compute environment was designed it was tested only against nextflow and the name has persisted.  In the future, we will be making a change to provide a new scratch bucket with a more generic name.  In the meantime, despite having "nextflow" in the name you can use the scratch bucket for any purpose you wish that is conducive to temporary data storage.
 
-> I really need an additional S3 bucket created in my account for some reason.  Can I create one?
+> I need an additional S3 bucket created in my account.  Can I create one?
 
-In most cases you will not need any additional buckets, but it is possible to have additional S3 buckets created in your lab account if you have a reasonable justification for those buckets.  You will not be able to create them yourself, so please submit a helpdesk ticket if you have this need.
+No- you will need to contact us via helpdesk to have a new bucket created.
 
-> I need a bucket in a location other than us-west-2, can this be done?
+While it is possible to have additional S3 buckets created in your lab account, additional buckets are discouraged as most use cases are satisfied by the standard managed buckets.  Note too that additional buckets are not subsidised (i.e. you will pay for the full cost of data stored in these extra buckets).
 
-Yes, the CLD team can create buckets in other regions if you have a need for this however in most cases this is not necessary.  If you have a specific need that would require buckets in other regions, please submit a ticket to the helpdesk.
+> I need a bucket in a location other than `us-west-2`, can this be done?
+
+Yes, the CLD team can create buckets in regions: `us-east-1`, `us-west-2`, and `eu-west-2`, if you have a need for this. However, in most cases this is not necessary.  If you have a specific need that would require buckets in other regions than `us-west-2` (our default), please submit a ticket to the helpdesk.
 
 > Is it possible to see who is using the data in my lab buckets?
 

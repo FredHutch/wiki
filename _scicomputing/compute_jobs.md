@@ -161,6 +161,12 @@ Note too that `grabnode` will pass along the `--nice` flag:
 
 though typically you'd likely prefer that grabnode has the higher priority (being an interactive process).  The strategy here is if you have a large number of batch jobs, submit those with a nice value.  Then, if you need to grab a node the grabnode jobs will have a higher priority and run ahead of the batch jobs.
 
+If you want to adjust a pending job you can use `scontrol` to adjust the nice value:
+
+```
+scontrol update jobid=<jobid> nice=100
+```
+
 Some things to consider:
 
  - too nice a factor may inhibit any jobs running.  Smaller values are effective
@@ -225,6 +231,7 @@ Indicates that the job is running under an account that is already using the max
 | Resources             | The job will run as soon as enough compute resources become available |
 | PartitionTimeLimit    | The job is requesting more time than allowed for the partition |
 | MaxCpuPerAccount      | Account has reached the limit on the number of CPUs available to it |
+| MaxGRESPerAccount     | The account has reached the limit on the number of GPUs available to it |
 | QOSMinCpuNotSatisfied | The job isn't requesting enough CPUs for the requested partition. See [Limits](#limits) |
 | QOSMinMemory          | The job isn't requesting enough memory for the requested partition. See [Limits](#limits) |
 | MaxMemPerLimit        | The job has requested more memory than available in the partition |
