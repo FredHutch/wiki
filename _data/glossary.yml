@@ -42,6 +42,6 @@
 - term: mydb
   definition: mydb [here](https://mydb.fredhutch.org) is the SciComp maintained implementation of db4sci.
 - term: Singularity
-  definition: Singularity is the original name for the {% glossary Apptainer %} project
+  definition: Singularity is the original name for the Apptainer project
 - term: Apptainer
   definition: Apptainer is a system for using containers in an HPC environment
