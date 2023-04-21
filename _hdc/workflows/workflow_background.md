@@ -63,7 +63,7 @@ After parsing the workflow, configuration, and parameters, Nextflow will begin t
 which have been specified by the workflow. When an individual task is run, it will:
 
 1. Establish a connection to the input data files (if any). When running on a local filesystem or SLURM, those files are symlinked to the working directory for the process. When running on a cloud computing service, the files are downloaded from object storage into the working directory for the running task.
-2. Run the command specified for the task, either (a) in the local environment, (b) in a Docker container, or (c) in a Singularity image. Local execution on your individual computer can be performed with or without Docker or Singularity. Execution on SLURM (gizmo) can be done with or without Singularity. Execution on cloud services (i.e. AWS) is natively performed within a specified Docker image.
+2. Run the command specified for the task, either (a) in the local environment, (b) in a Docker container, or (c) in an Apptainer image. Local execution on your individual computer can be performed with or without Docker or Apptainer. Execution on SLURM (gizmo) can be done with or without Apptainer. Execution on cloud services (i.e. AWS) is natively performed within a specified Docker image.
 3. After execution, all outputs are reported back to the head node which is running the workflow. Those outputs include any files produced as well as the logs or errors that may have been encountered.
 4. After parsing the output of a task, the workflow may then specify that a downstream task is launched, in which case the process is repeated.
 
@@ -113,8 +113,8 @@ on-premise computing at Fred Hutch. For robust software versioning across instit
 software containers are an extremely useful approach. Conveniently, software containers can also be used
 with on-premise resources.
 
-When referring to software containers, people usually use the term "Docker" or "Singularity." While there are
-nuanced differences to these two systems, the general summary is that Singularity is a system which allows
+When referring to software containers, people usually use the term "Docker" or "Apptainer" (formerly known as Singularity). While there are
+nuanced differences to these two systems, the general summary is that Apptainer is a system which allows
 users to run Docker images inside shared computing systems. Docker is more commonly used in local execution,
 cloud computing, or any setting in which a user can assume root access (which is not allowed in a shared setting).
 

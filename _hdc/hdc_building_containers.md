@@ -11,7 +11,7 @@ for definiting the contents of a software container as code, and then setting up
 which will automatically transform that versioned code into the corresponding container.
 
 The terminology used throughout this guide will be "Docker image" and "Docker container",
-but keep in mind that any Docker image can be converted into a Singularity image 
+but keep in mind that any Docker image can be converted into an Apptainer (formerly Singularity) image.
 
 ## Step 1: Set up a GitHub repository
 

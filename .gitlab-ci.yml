@@ -112,7 +112,7 @@ test:
     - sc-swarm
   services:
     - name: sc-registry.fredhutch.org/wiki_search:test
-      alias: wiki_search
+      alias: elasticsearch
     - name: sc-registry.fredhutch.org/wiki:test
       alias: wiki
       command: ["/test.sh"]
@@ -125,7 +125,7 @@ test:
       python3 build_helper.py docker-compose-preview.yml > /dev/null
     fi
     curl -sI http://wiki:80 | head -1 | grep -q "200 OK"
-    export NUMHITS=$(curl -s -H "Content-Type: application/json" -XPOST "http://wiki_search:9200/_search" -d'
+    export NUMHITS=$(curl -s -H "Content-Type: application/json" -XPOST "http://elasticsearch:9200/_search" -d'
     {
       "_source": [
         "title"
