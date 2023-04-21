@@ -118,7 +118,7 @@
   url: _compdemos/AWSCLI_WSL.md
 - dlm: September 9, 2022
   url: _compdemos/first_rhino.md
-- dlm: March 31, 2023
+- dlm: April 21, 2023
   url: _compdemos/tensorflow-gpu.md
 - dlm: June 8, 2022
   url: _compdemos/gizmo_short_partition.md
@@ -138,20 +138,20 @@
   url: _compdemos/rslurm_intro.md
 - dlm: February 3, 2023
   url: _compdemos/matlab.md
-- dlm: March 27, 2023
+- dlm: April 21, 2023
   url: _compdemos/Cromwell.md
 - dlm: June 13, 2022
   url: _compdemos/git_tips.md
 - dlm: June 13, 2022
   url: _compdemos/rslurm_example.md
+- dlm: April 21, 2023
+  url: _compdemos/Apptainer.md
 - dlm: November 1, 2021
   url: _compdemos/aws-credits.md
 - dlm: October 20, 2022
   url: _compdemos/motuz.md
 - dlm: September 17, 2020
   url: _compdemos/toolbox.md
-- dlm: May 17, 2022
-  url: _compdemos/Singularity.md
 - dlm: May 14, 2020
   url: _compdemos/GDC_Data_Download.md
 - dlm: October 31, 2019
@@ -272,7 +272,7 @@
   url: _scicomputing/software_managecode.md
 - dlm: April 7, 2023
   url: _scicomputing/store_objectstore.md
-- dlm: August 13, 2021
+- dlm: April 21, 2023
   url: _scicomputing/compute_environments.md
 - dlm: September 17, 2020
   url: archive/cluster_koshuBeta.md
@@ -366,7 +366,7 @@
   url: _hdc/datagen_proteomics.md
 - dlm: September 16, 2022
   url: _hdc/hdc_contact_us.md
-- dlm: August 13, 2021
+- dlm: April 21, 2023
   url: _hdc/hdc_building_containers.md
 - dlm: July 14, 2022
   url: _hdc/datagen_platformsData.md
@@ -382,7 +382,7 @@
   url: _hdc/workflows/workflow_catalog.md
 - dlm: March 17, 2023
   url: _hdc/workflows/running_first_workflow.md
-- dlm: August 13, 2021
+- dlm: April 21, 2023
   url: _hdc/workflows/workflow_background.md
 - dlm: April 14, 2022
   url: _hdc/workflows/running/on_aws.md
@@ -390,13 +390,13 @@
   url: _hdc/workflows/running/where_to_run.md
 - dlm: June 1, 2021
   url: _hdc/workflows/running/process_resources.md
-- dlm: March 23, 2023
+- dlm: April 21, 2023
   url: _hdc/workflows/running/on_gizmo.md
 - dlm: June 1, 2021
   url: _hdc/workflows/running/tower.md
 - dlm: April 15, 2021
   url: _hdc/workflows/running/faq.md
-- dlm: April 14, 2022
+- dlm: April 21, 2023
   url: _hdc/workflows/running/run_script.md
 - dlm: April 15, 2021
   url: _hdc/workflows/building/best_practices_files.md
