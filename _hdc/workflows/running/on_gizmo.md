@@ -22,26 +22,26 @@ any of the final output files, and so it should ideally be located on the
 
 A typical `workDir` may be `/fh/scratch/delete30/lastname_f/nextflow/work/`.
 
-## Using Singularity
+## Using Apptainer
 
-If you would like to use Singularity to run each individual step of a workflow
+If you would like to use Apptainer (formerly Singularity) to run each individual step of a workflow
 inside a container (which also supports native execution of Docker containers),
 then you will need to specify a `cacheDir` location for those images to be stored.
 
-Due to the large size of Singularity containers, we strongly recommend that
+Due to the large size of Apptainer containers, we strongly recommend that
 you use the `/fh/scratch/` filesystem for those image files.
 
 A typical `cacheDir` may be `/fh/scratch/delete30/lastname_f/nextflow/cache/`.
 
 NOTE: The single most common point of failure when running a new workflow
-on gizmo with Singularity is at the point of downloading the images for the
-first time. The process by which Singularity creates a local copy of a Docker
+on gizmo with Apptainer is at the point of downloading the images for the
+first time. The process by which Apptainer creates a local copy of a Docker
 image to be used in a workflow is somewhat prone to random internet connection
-failures. If this happens, you will see an error related to the `singularity pull`
+failures. If this happens, you will see an error related to the `apptainer pull`
 command. Fortunately, it is typically rather straightforward to just restart
 the workflow, which will prompt Nextflow to just retry the download. In short,
-if you see a `singuarlity pull` error when running a workflow on gizmo with
-Singularity for the first time, just give it another try and see if it works
+if you see a `apptainer pull` error when running a workflow on gizmo with
+Apptainer for the first time, just give it another try and see if it works
 on the second attempt.
 
 ## Monitoring Workflow Progress with Tower
@@ -60,16 +60,16 @@ If you are interested in learning more about using Tower to monitor workflow pro
 ## Nextflow Configuration - Gizmo
 
 Below is a template configuration file which can be used as your `nextflow.gizmo.config`.
-Please make sure to replace every placeholder value (e.g. `<SINGULARITY_CACHE_DIR>`),
+Please make sure to replace every placeholder value (e.g. `<APPTAINER_CACHEDIR>`),
 including the `<` and `>` characters.
 
 ```
 workDir = '<WORK_DIR>'
 
-singularity {
+apptainer {
     enabled = true
     autoMounts = true
-    cacheDir = '<SINGULARITY_CACHE_DIR>'
+    cacheDir = '<APPTAINER_CACHEDIR>'
     runOptions = '--containall --no-home'
 }
 
@@ -111,7 +111,7 @@ trying to run the workflow with either:
 
 ## Note: ERROR 151
 
-When running workflows on the gizmo SLURM cluster with Singularity, multiple users
+When running workflows on the gizmo SLURM cluster with Apptainer, multiple users
 have observed that sometimes jobs will fail for no obvious reason with an error
 code of 151. This is more likely to happen for workflows with very large numbers
 of jobs.
