@@ -7,9 +7,15 @@ primary_reviewers: vortexing
 
 _Task storage_ is storage for data used in ad-hoc applications when the primary or principal storage location for that data is unsuitable or undesirable for that application.
 
-For example: you have the primary copy of sequencing data in cloud storage (e.g. AWS S3).  This location is not usable for analysis on the gizmo compute cluster and thus you copy it to a location where it is usable by gizmo analysis tools (e.g. a network-attached storage server like "scratch").
+> It is **critical** that you do not store the primary or only copy of a data set in locations designated as task or scratch storage.  These storage paths are not backed up and not designed for long-term storage of data.
 
-> It is **critical** that you do not store the primary or only copy of a data set in locations designated as scratch storage.  Scratch storage paths are not backed up and not designed for long-term storage of data.
+In bioinformatics workflows often use pipelines with many execution steps. Each of these steps can create a large amount of temporary data. This data often needs to be  kept for a short period of time to allow for quality assurance.  Informaticians often do not delete this data after this step because they are already off to the next task.
+
+For example: you have the primary copy of sequencing data in cloud storage (e.g. AWS S3).  This location is not usable for analysis on the gizmo compute cluster and thus you copy it to a location where it is usable by gizmo analysis tools (e.g. a network-attached storage server like _Scratch_).
+
+~if temporary data is created in a standard file system such as _Fast_ storage it will both be captured in the file system snapshots and can be picked up by the backup system and copied offsite.  If data is frequently created and deleted these snapshots and backups can grow to 5 to 10 times the size of the original data.
+
+To prevent this, everyone working with large datasets should incorporate task storage into their workflow.
 
 ### Recommendations
 
@@ -36,12 +42,11 @@ The Data Science Lab and Scientific Computing teams are available to help you id
 | offsite replication/dr | no |
 | charges | 0 |
 | quota/limits | 5PB |
+| automated delete | yes |
 
-The networked "scratch" file system is available on all rhino/gizmo compute nodes and as part of the 'center' file server (i.e. `//center.fhcrc.org/fh/scratch`)
+The networked [_Scratch_](_scicomputing/store_scratch) file system is available on all rhino/gizmo compute nodes and as part of the 'center' file server (i.e. `//center.fhcrc.org/fh/scratch`)
 
 This storage space is based on a high performance file system (BeegFS) and designed for high-throughput computing on large data sets in the rhino/gizmo environment.  This file system does not have snapshots and is not backed up.
-
-To manage storage volumes, each of the directories have automatic cleanup and deletion jobs that run to prune old data.  Each parent directory indicates the age (in days) of files that will be pruned.  For example, files in /fh/scratch/delete10 will be deleted when the file hasn't been accessed in 10 days.
 
 ### Job Local Storage
 
@@ -52,10 +57,9 @@ To manage storage volumes, each of the directories have automatic cleanup and de
 | offsite replication/dr | no |
 | charges | 0 |
 | quota/limits | 7TB |
+| automated delete | yes |
 
 When you submit a job to _gizmo_ and are allocated a node, you will also have task storage provisioned on local disk the duration of the job.  This is local to the node (i.e. a directly-attached disk), but is removed when the job is complete (failed or successful).
-
-> We ask that you use this volume and not the `/tmp` directory on the node- the task storage volume has much greater capacity.  Filling the `/tmp` directory can cause problems for your job and others on the node if it is filed.
 
 ### Cloud Scratch
 
@@ -66,5 +70,6 @@ When you submit a job to _gizmo_ and are allocated a node, you will also have ta
 | offsite replication/dr | limited |
 | charges | 0 |
 | quota/limits | n/a |
+| automated delete | yes |
 
-The bucket "fh-pi-_lastname-f_-nextflow-scratch" is configured as part of the standard cloud account.  This bucket is described in greater detail [here](https://sciwiki.fredhutch.org/scicomputing/store_objectstore/#scratch-s3-bucket).  This bucket uses automatic timed deletion: if data is stored in a path with the "delete" prefix (e.g. if the path starts "delete10" data under that path will be deleted after 10 days of inactivity).
+The bucket "fh-pi-_lastname-f_-nextflow-scratch" is configured as part of the standard cloud account.  This bucket is described in greater detail [here](scicomputing/store_objectstore/#scratch-s3-bucket).
