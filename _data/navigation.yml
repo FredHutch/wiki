@@ -154,8 +154,8 @@ scicomputing:
         url: /scicomputing/store_posix/
       - title: "AWS S3 Storage"
         url: /scicomputing/store_objectstore/
-      - title: "Temporary (Scratch) Storage"
-        url: /scicomputing/store_scratch/
+      - title: "Temporary Storage"
+        url: /scicomputing/store_task/
       - title: "Collaboration Tools"
         url: /scicomputing/store_collaboration/
 
