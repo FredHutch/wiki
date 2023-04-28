@@ -61,7 +61,7 @@ This storage space is based on a high performance file system (BeegFS) and desig
 
 When you submit a job to _gizmo_ and are allocated a node, you will also have task storage provisioned on local disk the duration of the job.  This is local to the node (i.e. a directly-attached disk), but is removed when the job is complete (failed or successful).
 
-More documentation on using this storage is available [here](/compdemos/store_job_local.md)
+More documentation on using this storage is available [here](/compdemos/store_job_local)
 
 ### Cloud Scratch
 
