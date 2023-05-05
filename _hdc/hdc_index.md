@@ -1,5 +1,6 @@
 ---
 title: Overview
+last_modified_at: 2023-05-03
 hdc: True
 ---
 
@@ -12,24 +13,51 @@ spectrometry, high-throughput imaging, electron microscopy, etc.
 While the needs of researchers vary widely by technical domain, scientific goals, and
 computational complexity, the Data Core works to broadly provide support by developing
 technological solutions which can be applied directly by researchers.
-Those solutions are focused in two categories, **data portals** to provide web-based
-access to complex datasets and **bioinformatics workflows** to help automate complex
+Those solutions are focused in three categories,
+**data atlases** for publishing complex datasets to a broad audience,
+a web-based **data portal** for large-scale data management and analysis,
+and **bioinformatics workflows** to help automate complex
 transformations of scientific data using high-performance computing systems.
 
-## Data Portals
+## Data Atlases
 
-With recent advancements in modern technology for the analysis and visualization of complex datasets,
-it has become possible to connect researchers directly with their data using interactive webpages
-referred to as Data Portals.
+To help present the results of complex, large-scale research projects to a general audience,
+the Data Core and the Data Visualization Center have developed a number of **data atlases**
+which accompany the publication of that work in peer reviewed journals.
+By presenting large datasets in visual terms, complex results can be conveyed in a
+more intuitive way to a general audience.
 
-The Data Core is actively developing a set of data portals designed to provide scientific insight
-across a variety of research areas.
-These include:
-- Data Atlases for the high-performance visualization of large-scale datasets (such as single-cell sequencing);
-- PubWeb: an interactive platform for executing bioinformatics workflows in the cloud;
-- Carousel: a flexible system for rendering and sharing interactive datasets.
+A current list of data atlases can be found at
+[viz.fredhutch.org/projects/](https://viz.fredhutch.org/projects/).
 
-For more information, please view the [Data Portal Resources](/hdc/hdc_portals).
+![](/hdc/assets/data-atlases-screenshot.png)
+
+If you are affiliated with The Fred Hutch / University of Washington Seattle Cancer Consortium
+and have an interest in using this technology for your research, we would love to [hear from you](mailto:viz@fredhutch.org).
+
+## Cirro Data Portal
+
+Researchers are often confronted with the challenges of managing the large-scale datasets
+which are produced by technical instrumentation (such as genome sequencers, flow cytometers,
+microscopes, etc.).
+Such datasets often consist of many different (large) files which need to be shared
+among collaborators, and which can often be analyzed to produce new results.
+
+The Hutch Data Core has developed the [Cirro data portal](https://cirro.bio) to help effectively
+manage this type of research data, in particular the data generated from instrumentation
+in the Shared Resources core facilities. Cirro provides functionality for:
+
+- Cost-effectively storing large datasets
+- Securely sharing data within a group of collaborators
+- Running standardized bioinformatics analysis pipelines
+
+For more information, [visit Cirro](https://data-portal.io/) or
+[read the documentation](https://docs.data-portal.io/).
+
+**Need Help?**  
+Need help using the Cirro platform for data management and analysis?
+Drop-in office hours with the Cirro team will be held every Tuesday at 2pm.
+[Teams - Cirro Office Hours](https://teams.microsoft.com/l/message/19:c505778d20754d3fb7986ac7a9332481@thread.skype/1682457978043)
 
 ## Bioinformatics Workflows
 
