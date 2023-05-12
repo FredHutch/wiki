@@ -28,10 +28,3 @@ As with other SciComp supported file systems, the _scratch_ file system is avail
 There are no charges to the investigator for data stored here.
 
 > Data on this platform is not backed up.  This storage is _not_ appropriate for storage of the primary or only copy of any data.
-
-## How can I use Scratch?
-
-In jobs on _gizmo_, environment variables can be used to reference files in _scratch_: e.g. $DELETE30/lastname_f/myfile.csv
-
->Note: lastname_f stands for the last name and the first initial of your PI and follows the format of your _fast_ file directory name. If you need assistance, please email _scicomp_.
-
