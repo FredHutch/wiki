@@ -35,7 +35,7 @@ The Data Science Lab and Scientific Computing teams are available to help you id
 
 ### Scratch
 
-The networked [_Scratch_](_scicomputing/store_scratch) file system is available on all rhino/gizmo compute nodes and as part of the 'center' file server (i.e. `//center.fhcrc.org/fh/scratch`)
+The networked [_Scratch_](/scicomputing/store_scratch) file system is available on all rhino/gizmo compute nodes and as part of the 'center' file server (i.e. `//center.fhcrc.org/fh/scratch`)
 
 This storage space is based on a high performance file system (BeegFS) and designed for high-throughput computing on large data sets in the rhino/gizmo environment.  This file system does not have snapshots and is not backed up.
 
