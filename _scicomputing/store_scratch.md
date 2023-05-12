@@ -3,7 +3,6 @@ title: Scratch File Service
 primary_reviewers: scicomp
 ---
 
-## Overview
 
 The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the _home_ or _fast_ file systems.
 
