@@ -13,7 +13,7 @@ In bioinformatics workflows often use pipelines with many execution steps. Each 
 
 For example: you have the primary copy of sequencing data in cloud storage (e.g. AWS S3).  This location is not usable for analysis on the gizmo compute cluster and thus you copy it to a location where it is usable by gizmo analysis tools (e.g. a network-attached storage server like _Scratch_).
 
-~if temporary data is created in a standard file system such as _Fast_ storage it will both be captured in the file system snapshots and can be picked up by the backup system and copied offsite.  If data is frequently created and deleted these snapshots and backups can grow to 5 to 10 times the size of the original data.
+If temporary data is created in a standard file system such as _Fast_ storage it will both be captured in the file system snapshots and can be picked up by the backup system and copied offsite.  If data is frequently created and deleted these snapshots and backups can grow to 5 to 10 times the size of the original data.
 
 To prevent this, everyone working with large datasets should incorporate task storage into their workflow.
 
