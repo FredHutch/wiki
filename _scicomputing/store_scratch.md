@@ -1,13 +1,23 @@
 ---
 title: Scratch File Service
-primary_reviewers: vortexing
+primary_reviewers: scicomp
 ---
 
 ## Overview
 
-The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the _home_ or _fast_ file systems. Data here is purged when unused for some amount of time- 10, 30, and 90 days depending on the location.
+The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the _home_ or _fast_ file systems.
 
-> Data on this platform is not backed up.  This storage is _not_ appropriate for storing the primary or only copy of any data.
+> Data on this platform is not backed up.  This storage is _not_ appropriate for storage of the primary or only copy of any data.
+
+Data in _scratch_ is purged when unused: the age at which files are purged is set by the file's path in _scratch_:
+
+| path                  | age to be purged |
+| --------------------- | -----------------|
+| /fh/scratch/delete10/ | 10 days          |
+| /fh/scratch/delete30/ | 30 days          |
+| /fh/scratch/delete90/ | 90 days          |
+
+> Data on this platform is not backed up.  This storage is _not_ appropriate for storage of the primary or only copy of any data.
 
 As with other SciComp supported file systems, the _scratch_ file system is available to most workstations connected to the campus network:
 
@@ -17,27 +27,7 @@ As with other SciComp supported file systems, the _scratch_ file system is avail
 
 There are no charges to the investigator for data stored here.
 
-## How long will my data stay in scratch?
-
-The name of the parent directory determines how long data is stored.  For example, in `delete30` the data will stay on the file system for 30 days after you have stopped accessing it. `delete90` has a 90 day timer.  Three days before the data is deleted you (the owner of the files created) will receive an email with a warning:
-
-```
-    From: fs-cleaner.py-no-reply@fhcrc.org [mailto:fs-cleaner.py-no-reply@fhcrc.org]
-    Sent: Tuesday, August 23, 2016 11:32 PM
-    To: Doe, Jane <jdoe@fredhutch.org>
-    Subject: WARNING: In 3 days will delete files in /fh/scratch/delete30!
-
-    This is a notification message from fs-cleaner.py, Please review the following message:
-
-    Please see attached list of files!
-
-The files listed in the attached text file will be deleted in 3 days when they will not have been touched for 30 days:
-
-# of files: 247, total space: 807 GB
-You can prevent deletion of these files
-by using the command 'touch -a filename'
-on each file. This will reset the access time of the file to the current date.
-```
+> Data on this platform is not backed up.  This storage is _not_ appropriate for storage of the primary or only copy of any data.
 
 ## How can I use Scratch?
 
