@@ -203,8 +203,8 @@ hdc:
   - title: "Hutch Data Core"
     url: /hdc/hdc_index/
     children:
-    - title: "Data Portals"
-      url: /hdc/hdc_portals/
+    - title: "Cirro Data Portal"
+      url: https://cirro.bio
     - title: "Trainings"
       url: /hdc/hdc_training/
     - title: "Reference Genomes"
