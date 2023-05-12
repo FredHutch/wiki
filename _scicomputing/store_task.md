@@ -1,6 +1,6 @@
 ---
 title: Task Optimized Storage
-primary_reviewers: vortexing
+primary_reviewers: scicomp
 ---
 
 ## Overview
@@ -35,6 +35,10 @@ The Data Science Lab and Scientific Computing teams are available to help you id
 
 ### Scratch
 
+The networked [_Scratch_](_scicomputing/store_scratch) file system is available on all rhino/gizmo compute nodes and as part of the 'center' file server (i.e. `//center.fhcrc.org/fh/scratch`)
+
+This storage space is based on a high performance file system (BeegFS) and designed for high-throughput computing on large data sets in the rhino/gizmo environment.  This file system does not have snapshots and is not backed up.
+
 | feature | availability |
 |---------|--------------|
 | backups | no           |
@@ -44,11 +48,11 @@ The Data Science Lab and Scientific Computing teams are available to help you id
 | quota/limits | 5PB |
 | automated delete | yes |
 
-The networked [_Scratch_](_scicomputing/store_scratch) file system is available on all rhino/gizmo compute nodes and as part of the 'center' file server (i.e. `//center.fhcrc.org/fh/scratch`)
-
-This storage space is based on a high performance file system (BeegFS) and designed for high-throughput computing on large data sets in the rhino/gizmo environment.  This file system does not have snapshots and is not backed up.
-
 ### Job Local Storage
+
+When you submit a job to _gizmo_ and are allocated a node, you will also have task storage provisioned on local disk the duration of the job.  This is local to the node (i.e. a directly-attached disk), but is removed when the job is complete (failed or successful).
+
+More documentation on using this storage is available [here](/compdemos/store_job_local)
 
 | feature | availability |
 |---------|--------------|
@@ -59,11 +63,9 @@ This storage space is based on a high performance file system (BeegFS) and desig
 | quota/limits | 7TB |
 | automated delete | yes |
 
-When you submit a job to _gizmo_ and are allocated a node, you will also have task storage provisioned on local disk the duration of the job.  This is local to the node (i.e. a directly-attached disk), but is removed when the job is complete (failed or successful).
-
-More documentation on using this storage is available [here](/compdemos/store_job_local)
-
 ### Cloud Scratch
+
+The bucket "fh-pi-_lastname-f_-nextflow-scratch" is configured as part of the standard cloud account.  This bucket is described in greater detail [here](scicomputing/store_objectstore/#scratch-s3-bucket).
 
 | feature | availability |
 |---------|--------------|
@@ -73,5 +75,3 @@ More documentation on using this storage is available [here](/compdemos/store_jo
 | charges | 0 |
 | quota/limits | n/a |
 | automated delete | yes |
-
-The bucket "fh-pi-_lastname-f_-nextflow-scratch" is configured as part of the standard cloud account.  This bucket is described in greater detail [here](scicomputing/store_objectstore/#scratch-s3-bucket).
