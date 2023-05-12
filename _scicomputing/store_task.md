@@ -70,5 +70,5 @@ The bucket "fh-pi- _lastname-f_ -nextflow-scratch" is configured as part of the 
 | backups | no           |
 | snapshots | no         |
 | offsite replication/dr | limited |
-| charges | subsidized |
+| charges | yes |
 | purged when unused | yes |
