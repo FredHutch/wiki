@@ -44,7 +44,7 @@ This storage space is based on a high performance file system (BeegFS) and desig
 | backups | no           |
 | snapshots | no         |
 | offsite replication/dr | no |
-| charges | 0 |
+| charges | none |
 | quota/limits | 5PB |
 | automated delete | yes |
 
@@ -59,7 +59,7 @@ More documentation on using this storage is available [here](/compdemos/store_jo
 | backups | no           |
 | snapshots | no         |
 | offsite replication/dr | no |
-| charges | 0 |
+| charges | none |
 | quota/limits | 7TB |
 | automated delete | yes |
 
@@ -72,6 +72,6 @@ The bucket "fh-pi-_lastname-f_-nextflow-scratch" is configured as part of the st
 | backups | no           |
 | snapshots | no         |
 | offsite replication/dr | limited |
-| charges | 0 |
+| charges | subsidized |
 | quota/limits | n/a |
 | automated delete | yes |
