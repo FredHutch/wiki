@@ -45,7 +45,6 @@ This storage space is based on a high performance file system (BeegFS) and desig
 | snapshots | no         |
 | offsite replication/dr | no |
 | charges | none |
-| quota/limits | 5PB |
 | automated delete | yes |
 
 ### Job Local Storage
@@ -60,7 +59,6 @@ More documentation on using this storage is available [here](/compdemos/store_jo
 | snapshots | no         |
 | offsite replication/dr | no |
 | charges | none |
-| quota/limits | 7TB |
 | automated delete | yes |
 
 ### Cloud Scratch
@@ -73,5 +71,4 @@ The bucket "fh-pi-_lastname-f_-nextflow-scratch" is configured as part of the st
 | snapshots | no         |
 | offsite replication/dr | limited |
 | charges | subsidized |
-| quota/limits | n/a |
 | automated delete | yes |
