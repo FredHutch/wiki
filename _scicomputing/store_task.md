@@ -3,7 +3,6 @@ title: Task Optimized Storage
 primary_reviewers: scicomp
 ---
 
-## Overview
 
 _Task storage_ is storage for data used in ad-hoc applications when the primary or principal storage location for that data is unsuitable or undesirable for that application.
 
@@ -17,7 +16,7 @@ If temporary data is created in a standard file system such as _Fast_ storage it
 
 To prevent this, everyone working with large datasets should incorporate task storage into their workflow.
 
-### Recommendations
+## Recommendations
 
 Use of task storage requires careful thought and consideration. Given the volitile nature of the storage the responsibility falls to you- the data steward- to ensure that you have accounted for risks you take on as part of using these storage systems.
 
