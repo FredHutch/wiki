@@ -9,7 +9,7 @@ In the _gizmo_ compute cluster you will be provisioned a directory on the alloca
 
 > Please use this space instead of `/tmp` for local storage.  The `/tmp` directory has less space available and (more importantly) is not automatically cleaned up after the job is finished
 
-This local storage is on an attached SSD and has approximately 7TB available on the K class nodes.  This is shared by all jobs allocated to the node, but not managed.
+This local storage is on an attached SSD and has approximately 7TB available on the K class nodes.  This storage is only available to processes running on the allocated node- it isn't shared between jobs or between jobs running on multiple nodes (e.g. an MPI job)
 
 ## Accessing Job Local Storage
 
