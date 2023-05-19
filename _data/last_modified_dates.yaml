@@ -76,15 +76,17 @@
   url: _scicomputing/comp_index.md
 - dlm: April 7, 2023
   url: _scicomputing/store_objectstore.md
+- dlm: May 12, 2023
+  url: _scicomputing/store_task.md
 - dlm: November 11, 2022
   url: _scicomputing/software_managecode.md
 - dlm: October 11, 2022
   url: _scicomputing/access_aws.md
-- dlm: March 17, 2023
+- dlm: May 12, 2023
   url: _scicomputing/store_scratch.md
 - dlm: April 19, 2023
   url: _scicomputing/compute_job_scheduling.md
-- dlm: March 24, 2023
+- dlm: May 19, 2023
   url: _scicomputing/store_overview.md
 - dlm: June 13, 2022
   url: _scicomputing/access_overview.md
@@ -206,6 +208,8 @@
   url: _compdemos/aws-s3.md
 - dlm: May 1, 2019
   url: _compdemos/R_tips_tricks.md
+- dlm: May 19, 2023
+  url: _compdemos/store_job_local.md
 - dlm: July 8, 2022
   url: _compdemos/AWSCLI_WSL.md
 - dlm: June 13, 2022
