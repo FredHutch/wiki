@@ -29,7 +29,7 @@ There are several options available at the Fred Hutch for storing data in a data
 
 ### [Scientific File Storage: Storage in Fast, Secure, and Scratch](/scicomputing/store_posix/)
 
-File storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
+Scientific file storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
 #### [Temporary Storage](/scicomputing/store_task/)
 
