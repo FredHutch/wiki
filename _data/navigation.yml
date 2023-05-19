@@ -148,15 +148,17 @@ scicomputing:
     children:
       - title: "Overview"
         url: /scicomputing/store_overview/
-      - title: "Database Systems"
+      - title: "Everyday Files and Documents"
+        url: https://centernet.fredhutch.org/cn/u/center-it/help-desk/onedrive.html
+      - title: "Relational Database Systems"
         url: /scicomputing/store_databases/
-      - title: "Local Storage Systems"
+      - title: "Scientific File Storage"
         url: /scicomputing/store_posix/
-      - title: "AWS S3 Storage"
-        url: /scicomputing/store_objectstore/
       - title: "Temporary Storage"
         url: /scicomputing/store_task/
-      - title: "Collaboration Tools"
+      - title: "AWS S3 Storage"
+        url: /scicomputing/store_objectstore/
+      - title: "Collaborative Storage"
         url: /scicomputing/store_collaboration/
 
   - title: "Software Development"
