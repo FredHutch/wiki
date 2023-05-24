@@ -30,3 +30,7 @@ SciComp Office hours https://teams.microsoft.com/l/channel/19%3abe85aa58c3624fb7
 
 The [SciWiki](https://sciwiki.fredhutch.org)
 
+## Training Resources
+
+[cluster 101](https://hutchdatascience.org/training/#cluster-101)
+[pathways](https://sciwiki.fredhutch.org/pathways/)
