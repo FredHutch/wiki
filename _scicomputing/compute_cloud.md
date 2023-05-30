@@ -49,4 +49,4 @@ You can read more about [AWS Storage](/scicomputing/store_objectstore/) in our w
 
 ## I have more questions
 
-Please check out the [FAQ](/compdemos/cloud-faq/) for more information.
+Please check out the [FAQ](/scicomputing/store_objectstore/#faq) for more information.

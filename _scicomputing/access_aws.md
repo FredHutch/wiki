@@ -38,4 +38,4 @@ Here are some links to learn more. Keep in mind that tools provided by AWS will 
 
 ## I have more questions
 
-Please check out the [FAQ](/compdemos/cloud-faq/) for more information.
+Please check out the [FAQ](/scicomputing/store_objectstore/#faq)for more information.
