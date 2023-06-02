@@ -55,7 +55,6 @@ provided by Shared Resources.
 
 ### Cleavage Under Targets and Release Using Nuclease (CUT&RUN)
 
-  - [How CUT&RUN profiles chromatin](https://www.youtube.com/watch?v=9Ol055tXVvA): A 3 min video explaining the basics of CUT&RUN.
   - [An efficient targeted nuclease strategy for high-resolution mapping of DNA binding sites](https://elifesciences.org/articles/21856): The original CUT&RUN paper.
   - [Lay off the ChIPs: CUT&RUN instead](https://www.fredhutch.org/en/news/spotlight/2017/02/lay-off-the-chips--cut-run-instead.html): A Fred Hutch spotlight explaining CUT&RUN in very accessible terms.
 
