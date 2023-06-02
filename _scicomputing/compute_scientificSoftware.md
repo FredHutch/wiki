@@ -6,11 +6,11 @@ primary_reviewers: fitzwit
 On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The modules listed here are the software modules available currently on the `gizmo` compute cluster.
 You can read more about how to use these modules and manage your compute environment on our [Compute Environments](/scicomputing/compute_environments/) page.
 
-## fh Modules
+## Custom Fred Hutch Modules
 Scientific Computing maintains custom builds of R and Python.
-The Fred Hutch modules have the prefix `fh`.  FH modules are specific to the Hutch and contain libraries which have been requested.  The Fred Hutch module inherits all
-the libraries from EasyBuild base R and Python. ` fhR` module contains many Bioconductor libraries. The custom R and Python each support over 1,000 libraries.
- 
+The Fred Hutch modules have the prefix `fh.`  FH modules are specific to the Hutch and contain libraries that have been requested. The Fred Hutch modules inherit all
+the libraries from EasyBuild base R and Python. ` fhR` module contains many Bioconductor libraries. 
+
 ## R Modules
 Specific information about which R Modules are available, including more information about packages installed in them can be found on our dedicated [R Module page](/rModules/).
 
