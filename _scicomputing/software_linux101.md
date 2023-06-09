@@ -35,7 +35,7 @@ During the course of your work you may need to do a simple task on a large numbe
 The benefits of shell scripting are:
 1. not needing to install additional software on your computer and,
 2. ease of use.
-Most Unix-based systems (eg. [Ubuntu](https://www.ubuntu.com)) come with the Bourn Again SHell ("Bash"), which are also standard on Mac OSX systems. Windows have the Command Prompt and PowerShell. You can enter shell scripting commands directly via a *command line interface* or save these commands in a *shell script* to be run immediately non-interactively.
+Most Unix-based systems (eg. [Ubuntu](https://www.ubuntu.com)) come with the Bourn Again SHell ("Bash"). [zsh](https://en.wikipedia.org/wiki/Z_shell), which is based on Bash, is now the default on macOS. Windows have the Command Prompt and PowerShell. You can enter shell scripting commands directly via a *command line interface* or save these commands in a *shell script* to be run immediately non-interactively.
 
 ### Shell Scripting Resources
 - A gentle introduction to command line interface and related concepts are [here](https://launchschool.com/books/command_line/read/command_line_interface).
