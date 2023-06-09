@@ -8,11 +8,13 @@ You can read more about how to use these modules and manage your compute environ
 
 ## Custom Fred Hutch Modules
 Scientific Computing maintains custom builds of R and Python.
-The Fred Hutch modules have the prefix `fh.`  FH modules are specific to the Hutch and contain libraries that have been requested. The Fred Hutch modules inherit all
-the libraries from EasyBuild base R and Python. ` fhR` module contains many Bioconductor libraries. 
+The Fred Hutch modules have the prefix `fh.`  FH modules are specific to the Hutch and contain libraries that users have requested. The Fred Hutch modules inherit all
+the libraries from EasyBuild base R and Python. The `fhR` module contains many Bioconductor libraries. 
+We recommended using the `fh` versions of R and Python since they
+have many BioInformatics packages. Most software package requests are already satisfied with the `fh` modules.
 
 ## R Modules
-Specific information about which R Modules are available, including more information about packages installed in them can be found on our dedicated [R Module page](/rModules/).
+Specific information about which R Modules are available, including more information about R libraries can be found on our dedicated [R Module page](/rModules/).
 
 ## Python Modules
 Specific information about which Python Modules and Bundles are available, including more information about packages installed in them can be found on our dedicated [Python Module page](/pythonModules/).
