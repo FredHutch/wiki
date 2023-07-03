@@ -140,6 +140,8 @@
   url: _contributors/jzhang23.md
 - dlm: June 22, 2018
   url: _contributors/mrg.md
+- dlm: June 26, 2023
+  url: _contributors/mgerber.md
 - dlm: January 31, 2020
   url: _contributors/eharkins.md
 - dlm: February 5, 2019
@@ -248,7 +250,7 @@
   url: _datascience/execute_sharing.md
 - dlm: November 11, 2022
   url: _datascience/consent_IRB.md
-- dlm: November 11, 2022
+- dlm: July 3, 2023
   url: _datascience/deidentification.md
 - dlm: March 24, 2023
   url: _datascience/stewardship.md
