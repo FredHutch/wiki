@@ -54,6 +54,8 @@ datascience:
         url: /datascience/stewardship/
       - title: "NIH Data Sharing"
         url: /datascience/nih_data_sharing/
+      - title: "Using DMPtool.org"
+        url: /datascience/dmptool/
       - title: "Data Sharing Approaches"
         url: /datascience/execute_sharing/
   - title: "Working With Data"
