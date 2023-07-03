@@ -5,13 +5,17 @@ primary_reviewers: vortexing, carriewright11
 ---
 
 There are two important federal regulations related to the use of "individually
-identifiable health information." The first, the [HIPAA Prvacy
+identifiable health information." 
+
+1.  The first, the [HIPAA Privacy
 Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/index.html), restricts
 use of of [protected health
 information](https://www.hhs.gov/answers/hipaa/what-is-phi/index.html) (PHI) by
 a "covered entity." HIPAA permits a covered entity to create information that is
 not individually identifiable by following specific standards for
-de-identification. The second regulation, [Protection for Human Subjects (45 CFR
+de-identification. 
+
+2.  The second regulation, [Protection for Human Subjects (45 CFR
 46)](https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/index.html),
 also known as the Common Rule, outlines protections for individuals who
 participate in research, including protections related to data and specimens
@@ -28,10 +32,10 @@ Services](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-
 > supports the secondary use of data for comparative effectiveness studies,
 > policy assessment, life sciences research, and other endeavors.
 
-More information about HIPAA compliance is available on [FHCC's IRB
+More information about HIPAA compliance is available on [Fred Hutch's IRB
 website](https://extranet.fredhutch.org/en/u/irb/hipaa-compliance.html).
 
-## Methods for creating de-identifed datasets 
+## Methods for creating de-identified datasets 
 
 The HIPAA Privacy Rule provides two methods for de-identification of PHI. The
 first method, expert determination, refers to expert application and evaluation
@@ -118,19 +122,17 @@ biospecimens are considered human subjects research. Any research study where an
 interaction with the individual, and uses, studies, or analyzes the information
 or biospecimens," is considered human subjects research. Only secondary research
 involving coded private information and coded biospecimens is considered not
-human subjects research. See the Office of Human Research Protection's [guidance
-on biospecimens use in
-research](https://www.hhs.gov/ohrp/coded-private-information-or-biospecimens-used-research.html)
+human subjects research. See the Office of Human Research Protection's [guidance on biospecimens use in research](https://www.hhs.gov/ohrp/coded-private-information-or-biospecimens-used-research.html)
 for more information on when biospecimens are considered coded or
-nonidentifiable.
+non-identifiable.
 
-## Ethical considerations for use of de-identified data and specimens
+### Ethical considerations for use of de-identified data and specimens
 
 The story of Henrietta Lacks, her descendants, and the creation of HeLa cells,
 acted as a catalyst for proposed policy changes around biospecimen use and
 started a broader public discussion around the ethics of genomic research,
 especially secondary research with specimens.[^2]<sup>, </sup> [^3] Recent
-studies have confirmed that genomic data can never be truly annoynmized, and
+studies have confirmed that genomic data can never be truly anonymized, and
 that it may be possible to re-identify seemingly de-identified data.[^2]<sup>,
 </sup> [^4] These ongoing public conversations and scholarly debates about the
 ethical issues associated with biospecimen research led to the proposal of major
