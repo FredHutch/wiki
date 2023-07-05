@@ -39,3 +39,6 @@ Special templates maintained by the specific funders such as the NIH are also av
 
 
 At any point, you can use our in-tool links to DaSL Data Sharing Resources or email us for help.  Additionally, we offer [Data House Calls](https://hutchdatascience.org/datahousecalls/) for "Study Planning, Data Sharing and Grants" which are short consulting sessions where if you've shared your plan with us through the tool, we can make recommendations on your specific plan.  
+
+> Note: NIH has some restrictions on hyperlinks in applications.  If this is an issue you can export your plan as a text file and remove the coversheet text prior to submission, OR you can uncheck the "Include a project details coversheet" box prior to exporting as a pdf. 
+> ![](/datascience/assets/dmptool/no-coversheet.png)
