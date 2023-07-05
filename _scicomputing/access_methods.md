@@ -27,12 +27,20 @@ This is a list of clients and servers by OS:
 | --- | --- | --- | --- |
 | MacOS | OpenSSH `ssh` | [XQuartz](https://www.xquartz.org/) | OpenSSH is already installed on MacOS
 | Linux | OpenSSH `ssh` | Xorg | Already installed on supported Ubuntu systems
-| Windows | puTTY `puTTY` | Windows Subsystem for Linux | Can be installed through "Software Center"
+| Windows | PuTTY `PuTTY` | Windows Subsystem for Linux | Can be installed through "Software Center"
 
 
 ### Windows
 
-puTTy is the most widely used secure shell software for Windows. You can install puTTy through "Software Center" and then simply connect to host name `rhino`.
+PuTTY is the most widely used secure shell software for Windows. You can install PuTTY through "Software Center". To connect to `rhino` using password authentication refer to the screenshots below.
+
+Open the application, enter `rhino` as the hostname then click Open.
+
+<img src="../assets/putty_main.png" width="450">
+
+Enter your hutchid then press enter. It will prompt for your password. Press enter again and you will connect.
+
+<img src="../assets/putty_loginas.png">
 
 ### Mac OS
 
@@ -111,7 +119,7 @@ If you use your password to ssh, you can certainly continue to do so. However, w
 
 #### Key Generations and passphrases
 
-Create an SSH key - on MacOS or Linux, run `ssh-keygen` and follow the prompts (change the file location if you are creating a new key but want to keep the old one). On Windows you will need `puttygen` if using puTTY or follow the Linux instructions if using Cygwin.
+Create an SSH key - on MacOS or Linux, run `ssh-keygen` and follow the prompts (change the file location if you are creating a new key but want to keep the old one). On Windows you will need `puttygen` if using PuTTY or follow the Linux instructions if using Cygwin.
 
 You will be prompted to enter and then confirm a passphrase. This is the best protection of your ssh key, and should be a longer complex passphrase. Passphrase-less ssh keys are a security violation. See below for ways to automate local unlocking of your key to avoid having to use a complex passphrase frequently.
 
@@ -140,9 +148,9 @@ The following steps will get your MacOS device into a state where your SSH key p
       UseKeychain yes
       AddKeysToAgent yes
 	```
-##### Windows/puTTY
+##### Windows/PuTTY
 
-On Windows, puTTY can include a key management agent called `pageant.exe` - you can download puTTY easily without it and can download it separately from [the puTTY site](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+On Windows, PuTTY can include a key management agent called `pageant.exe` - you can download PuTTY easily without it and can download it separately from [the PuTTY site](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 #### Good key management
 Your SSH key is actually in two parts - the public key, and the private key. Public/Private key pairs are fascinating if you are in to encryption. Be sure to search and read all about them.
@@ -162,7 +170,7 @@ The best practices involving keys include:
 * you do not need to put both of your keys on every machine you want to use, only your client device
 
 #### Agents
-SSH supports an in-memory agent process that will hold your unlocked private key safely. This alleviates the need to type your passphrase for the duration of time the agent is running. See above for MacOS options. On Linux, you can run `eval $(ssh-agent)` to start an agent, and `ssh-add [path to keyfile if not default]` to add your key to the running agent process. On Windows, you can run puTTY's `pageant.exe`.
+SSH supports an in-memory agent process that will hold your unlocked private key safely. This alleviates the need to type your passphrase for the duration of time the agent is running. See above for MacOS options. On Linux, you can run `eval $(ssh-agent)` to start an agent, and `ssh-add [path to keyfile if not default]` to add your key to the running agent process. On Windows, you can run PuTTY's `pageant.exe`.
 
 You can forward key requests from remote machine back to your running agent:
 
