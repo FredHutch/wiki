@@ -62,8 +62,7 @@ datascience:
     children:
       - title: "Data Visualization"
         url: /datascience/data_viz/
-      - title: "Data Deidentification"
-        url: /datascience/deidentification/
+
   - title: "Consent, Privacy and Security"
     children:
       - title: "Consenting and the IRB"
@@ -72,6 +71,8 @@ datascience:
         url: /datascience/privacy_security/
       - title: "Compliance and Legal"
         url: /datascience/compliance_legal/
+      - title: "Data Deidentification"
+        url: /datascience/deidentification/
   - title: "Training"
     children:
       - title: "DaSL Courses for the Hutch"
