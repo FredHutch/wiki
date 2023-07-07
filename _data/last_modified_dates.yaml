@@ -244,12 +244,14 @@
   url: .github/ISSUE_TEMPLATE/content-refresh-request.md
 - dlm: August 5, 2022
   url: .github/ISSUE_TEMPLATE/slack.md
-- dlm: December 12, 2022
+- dlm: July 3, 2023
   url: _datascience/nih_data_sharing.md
-- dlm: November 11, 2022
+- dlm: July 3, 2023
   url: _datascience/execute_sharing.md
 - dlm: November 11, 2022
   url: _datascience/consent_IRB.md
+- dlm: July 4, 2023
+  url: _datascience/dmptool.md
 - dlm: July 3, 2023
   url: _datascience/deidentification.md
 - dlm: March 24, 2023
