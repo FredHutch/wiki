@@ -12,20 +12,6 @@ research(ers) that is actually both counterproductive and may not necessarily ma
 
 
 
-## Funding Mandated Sharing
-
-
-
-
-## Publication Mandated Sharing
-
-
-
-
-## Working with Collaborators
-
-
-
 ## Data Repositories
 
 ### Public Repositories
