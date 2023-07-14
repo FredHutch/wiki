@@ -1,3 +1,8 @@
+---
+title: Aspera Faspex Storage
+primary_reviewers: atombaby
+---
+
 ## Aspera Faspex -- File Transfer Application
 
 Use [this link](https://aspera.fhcrc.org/aspera/faspex/) to skip this introduction and proceed directly to Aspera Faspex.
