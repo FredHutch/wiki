@@ -15,7 +15,7 @@ Aspera is a data transfer tool that enables fast transfer of large data between 
 
 > Note: space is limited. Because of this, data stored here is deleted after a short period of time and not backed up making the Aspera inappropriate for primary storage.  Moving data to their final, secure, backed up locations as soon as possible is important when using Aspera.
 
-Visit [the Aspera information page](/scicomputing/storage_aspera/) for more details and information on using this storage service.
+Visit [the Aspera information page](/scicomputing/store_aspera/) for more details and information on using this storage service.
 
 ## Data Storage for Collaboration
 
