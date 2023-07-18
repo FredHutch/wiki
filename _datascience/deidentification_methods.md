@@ -147,5 +147,3 @@ mydata |>
 
 You can then use this new ID number to link across multiple files.
 
-
-## Unstructured data
