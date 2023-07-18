@@ -110,4 +110,5 @@ The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordi
 
 ## Local resources
 - [Seattle useR group](http://www.meetup.com/Seattle-useR/)
+- [R-Ladies Seattle](https://www.meetup.com/rladies-seattle/)
 - [Cascadia RConf](https://cascadiarconf.com/), a local yearly conference
