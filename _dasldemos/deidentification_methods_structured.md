@@ -1,19 +1,17 @@
 ---
-title: Methods and Tools for De-identification
+title: De-identification of Structured Data
 main_authors: Monica Gerber (monicagerber)
 primary_reviewers: vortexing, carriewright11
 ---
 
-This pages outlines methods and tools that may be helpful for de-identifying data. 
+This pages outlines methods and tools that may be helpful for de-identifying structured data. 
 
 > ⚠️ While it is possible to de-identify your data yourself, unless you are an
 > expert, we suggest that you seek out an expert to help you instead. There are
 > nuances regarding privacy that you may miss without ample experience.
 
 For information about policies and regulations related to de-identification, see
-[De-identification of Data and Specimens](deidentification.md).
-
-## Structured data
+[De-identification of Data and Specimens](/datasciece/deidentification/).
 
 The R language and the tidyverse packages, especially {dplyr}, can handle many
 of the tasks of de-identification of structured data. Below are some ways you
@@ -147,5 +145,3 @@ mydata |>
 
 You can then use this new ID number to link across multiple files.
 
-
-## Unstructured data
