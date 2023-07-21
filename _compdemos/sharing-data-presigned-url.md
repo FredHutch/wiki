@@ -5,13 +5,13 @@ primary_reviewers: scicomp
 
 ## References:
 
-[Sharing objects with pre-signed URLs (Universal Resource Locators)](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)
+[Sharing objects with pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)
 
 [Working with pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html)
 
 ## What is a pre-signed URL? 
 
-In AWS (Amazon Web Services), pre-signed URLS are a way that users can control and share access to specific objects in S3 buckets. Often, they are used for one-time sharing of files between users, or for applications that require a specific URL to read data from an object. The pre-signed URL process requires the following info from you to generate it: 
+In AWS (Amazon Web Services), pre-signed Uniform Resource Locators ({% glossary URL}) are a way that users can control and share access to specific objects in S3 buckets. Often, they are used for one-time sharing of files between users, or for applications that require a specific URL to read data from an object. The pre-signed URL process requires the following info from you to generate it: 
 
  - An Amazon S3 bucket 
  - An object key (if downloading this object will be in your Amazon S3 bucket, if uploading this is the file name to be uploaded) 
@@ -20,7 +20,7 @@ In AWS (Amazon Web Services), pre-signed URLS are a way that users can control a
 
 ## Why use a pre-signed URL? 
 
-Pre-signed URLS (Universal Resource Locators) are useful for quickly sharing objects without updating your S3 bucket policy or security settings. They are also useful for when other parties want to upload objects to your bucket, but do not have permission. In addition, they can be HTTP (public), or HTTPS (private) URLs depending on your need and can expire based on the date you provide when creating it. 
+Pre-signed URLs are useful for quickly sharing objects without updating your S3 bucket policy or security settings. They are also useful for when other parties want to upload objects to your bucket, but do not have permission. In addition, they can be HTTP (public), or HTTPS (private) URLs depending on your need and can expire based on the date you provide when creating it. 
 
 ## What should I be careful about when using a pre-signed URL? 
 
@@ -32,3 +32,4 @@ See the relevant link above for instructions on how to generate pre-signed URLS 
 
 ## How do I use a pre-signed URL if I am accessing S3 via Mountain Duck/Cyber Duck? 
 
+<tbd>
