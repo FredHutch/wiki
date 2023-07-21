@@ -11,7 +11,7 @@ primary_reviewers: scicomp
 
 ## What is a pre-signed URL? 
 
-In AWS (Amazon Web Services), pre-signed Uniform Resource Locators ({% glossary URL}) are a way that users can control and share access to specific objects in S3 buckets. Often, they are used for one-time sharing of files between users, or for applications that require a specific URL to read data from an object. The pre-signed URL process requires the following info from you to generate it: 
+In AWS (Amazon Web Services), pre-signed Uniform Resource Locators ({% glossary URL%}) are a way that users can control and share access to specific objects in S3 buckets. Often, they are used for one-time sharing of files between users, or for applications that require a specific URL to read data from an object. The pre-signed URL process requires the following info from you to generate it: 
 
  - An Amazon S3 bucket 
  - An object key (if downloading this object will be in your Amazon S3 bucket, if uploading this is the file name to be uploaded) 
