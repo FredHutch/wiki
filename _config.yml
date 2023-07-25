@@ -35,6 +35,9 @@ collections:
   datascience:
     output: true
     permalink: /:collection/:path/
+  dasldemos:
+    output: true
+    permalink: /:collection/:path/
   generation:
     output: true
     permalink: /:collection/:path/
@@ -136,6 +139,18 @@ defaults:
       sidebar:
         nav: "datascience"
 
+  # _dasldemos
+  - scope:
+      path: ""
+      type: dasldemos
+    values:
+      layout: single
+      toc: true
+      toc_label: "On This Page"
+      toc_sticky: true
+      share: true
+      sidebar:
+        nav: "datascience"
   # _generation
   - scope:
       path: ""

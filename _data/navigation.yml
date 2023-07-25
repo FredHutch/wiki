@@ -46,6 +46,8 @@ generic:
 datascience:
   - title: "Data Science Lab"
     children:
+      - title: "Resource Library"
+        url: /dasldemos/
       - title: "Pathways"
         url: /pathways/
   - title: "Data Management"
