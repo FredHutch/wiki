@@ -23,7 +23,7 @@ or SQL.
 Use `dplyr::select` to remove columns:
 
 
-``` {.r .cell-code}
+``` r
 library(dplyr)
 
 mydata |> 
@@ -40,7 +40,7 @@ example if there are outlier cases or categories with low participant
 counts:
 
 
-``` {.r .cell-code}
+``` r
 mydata |> 
   mutate(
     health_score_trunc = if_else(health_score > 9, ">9", health_score),
@@ -59,7 +59,7 @@ dates.
 
 Replace date of birth with age in years:
 
-``` {.r .cell-code}
+``` r
 library(lubridate)
 
 mydata |>  
@@ -72,7 +72,7 @@ with HIPAA Safe Harbor.
 Truncate dates of events, such as diagnoses, to the year only:
 
 
-``` {.r .cell-code}
+``` r
 mydata |>  
   mutate(year_diagnosis = year(date_diagnosis))
 ```
@@ -88,7 +88,7 @@ et. al](https://doi.org/10.1093/jamia/ocw001) for more details.
 Each patient/person can be assigned a random shift value in a 1-year
 time range:
 
-``` {.r .cell-code}
+``` r
 patient_date_shifts <- mydata |>  
   mutate(random_shift = sample(-182:182, n(), replace = TRUE)) 
 ```
@@ -96,7 +96,7 @@ patient_date_shifts <- mydata |>
 Then this data frame can be joined to other data and used to shift
 diagnoses, appointments, and other dates:
 
-``` {.r .cell-code}
+``` r
 patient_diagnoses |>  
   left_join(patient_date_shifts, by = "id") %>% 
   mutate(diagnosis_date_shifted = diagnosis_date + lubridate::days(random_shift))
@@ -109,7 +109,7 @@ patient and covert dates to days since time zero.
 
 For example, calculate time since diagnosis:
 
-``` {.r .cell-code}
+``` r
 mydata |>
   # subtract the diagnosis date from each subsequent date
   mutate(
@@ -127,7 +127,7 @@ included](https://www.johndcook.com/blog/2019/08/29/zip3-privacy/) in a
 de-identified data set if they are shortened it meets certain population
 threshold criteria.
 
-``` {.r .cell-code}
+``` r
 mydata |> 
   mutate(zip_trunc = substr(zip, 1, 3))
 ```
@@ -137,7 +137,7 @@ mydata |>
 Use `dplyr::mutate` and `sample` to create random ID numbers. Then sort
 using `dplyr::arrange`:
 
-``` {.r .cell-code}
+``` r
 mydata |> 
   mutate(id = sample(1:n(), n(), replace = FALSE)) %>% 
   arrange(id)
