@@ -338,7 +338,7 @@
   url: _compdemos/maxquant.md
 - dlm: May 1, 2019
   url: _compdemos/R_tips_tricks.md
-- dlm: May 25, 2021
+- dlm: July 14, 2023
   url: _compdemos/aspera-on-nx.md
 - dlm: July 11, 2023
   url: _compdemos/Apptainer.md
@@ -354,7 +354,9 @@
   url: _compdemos/microbiome_tools.md
 - dlm: June 13, 2022
   url: _compdemos/git_tips.md
-- dlm: March 17, 2023
+- dlm: July 14, 2023
+  url: _scicomputing/store_aspera.md
+- dlm: July 14, 2023
   url: _scicomputing/store_collaboration.md
 - dlm: March 17, 2023
   url: _scicomputing/compute_overview.md
