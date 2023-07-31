@@ -130,12 +130,24 @@ IRkernel::installspec()
 {:.no_toc}
 #### Start a Jupyter server in NoMachine
 
-You will need to start a Jupyter server on a rhino node. 
+You will need to start a Jupyter server on a gizmo node. 
 Because the R+Jupyter combination has a dependency on X Windows (X11), you can't just start R in a regular terminal.
 
 The solution to this is to start the terminal inside a NoMachine session. Launch a session as described [here](/scicomputing/access_nx/). The simplest way is to use [browser-based access](/scicomputing/access_nx/#browser-based-access).
 
 Once your NoMachine session is running, start a terminal by clicking on the `Applications` menu, then choosing `System Tools` and `MATE Terminal`. 
+
+
+Now you will need to connect to a cluster (gizmo) node to run your Jupyter server. You should not be running Jupyter servers directly on the `rhino` nodes. 
+
+To connect to a gizmo node, run this in the terminal:
+
+```
+grabnode --x11
+```
+
+When prompted, answer the questions about how much CPU/memory you want and how long you plan to run the server.
+
 
 In the terminal, load the R module you loaded in the last step, and then the most recent (default) version of the `JupyterLab` module, for example:
 
