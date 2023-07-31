@@ -108,6 +108,7 @@ You can run a [Jupyter](https://jupyter.org/) Notebook or Lab on a rhino or gizm
 
 This requires that you be on campus or connected to VPN.
 
+{:.no_toc}
 #### Install a Jupyter Kernel in your desired version of R
 
 You'll need to install and activate the `IRkernel` package in the {% glossary major version of R %} you want to use with Jupyter. *You only need to do this once* for each major version.
@@ -126,6 +127,7 @@ install.packages("IRkernel", repos="https://cran.r-project.org")
 IRkernel::installspec()
 ```
 
+{:.no_toc}
 #### Start a Jupyter server in NoMachine
 
 You will need to start a Jupyter server on a rhino node. 
@@ -165,6 +167,7 @@ If you are running Jupyter Notebook, click `New` and then choose `R` from the me
 
 If you are running Jupyter Lab, click `R` under `Notebooks` or use the `File / Open` menu item to open an existing one. 
 
+{:.no_toc}
 #### Running a Jupyter Notebook in Visual Studio Code
 
 Click the `View` menu and choose `Command Palette`. Start typing `jupyter` and then choose `Create: New Jupyter Notebook`. Now click `Select Kernel`, then `Existing Jupyter Server...` and paste in the URL from the previous step (remember, this needs to be a Jupyter Notebook URL; Jupyter Lab won't work).
