@@ -110,7 +110,7 @@ This requires that you be on campus or connected to VPN.
 
 #### Install a Jupyter Kernel in your desired version of R
 
-You'll need to install and activate the `IRkernel` package in the {% glossarize major version of R %} you want to use with Jupyter. *You only need to do this once* for each major version.
+You'll need to install and activate the `IRkernel` package in the {% glossary major version of R %} you want to use with Jupyter. *You only need to do this once* for each major version.
 
 To do this, connect to a `rhino` node as described [above](#rhino) and load the desired R module and start R. For example:
 
