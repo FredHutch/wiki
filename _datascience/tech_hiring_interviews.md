@@ -10,7 +10,7 @@ There are many different ways of assessing technical skills, each has their own 
 - Who will need to evaluate the candidate's responses? What training/skills are needed to evaluate the candidate's work?
 - Who will this type of interview favor? Will it potentially deepen biases against already underrepresented groups?
 
-## Technical questions
+## Technical Questions
 
 This kind of interview is similar to normal 1-1 or panel style interview. Ask questions that will test a candidate's knowledge of technical concepts. 
 
@@ -18,7 +18,7 @@ This kind of interview is similar to normal 1-1 or panel style interview. Ask qu
 
 👎 Cons: May disfavor people who have good technical abilities, but low presentation and public speaing skills. 
 
-## Live coding
+## Live Coding
 
 In a live coding interview, the candidate solves programming problems in front of the interviewer. This is commonly done in a coding interview platform (e.g. CoderPad), an IDE of the candidate's choice, or on a whiteboard.
 
@@ -26,7 +26,7 @@ In a live coding interview, the candidate solves programming problems in front o
 
 👎 Cons: Does not represent the normal development environment and may cause the candidate stress and performance anxiety.
 
-## Take home exercises 
+## Take Home Exercises 
 
 Take home exercises allow the candidate to demonstrate their skills on their own time. Often a problem or dataset is given to the candidate, and then they are asked to demonstrate a solution or answer questions in a notebook (e.g. Jupyter or R Markdown notebook). Be sure to limit the number of (un-paid) hours that a candidate is expected to spend on a take home exercise (e.g. 2 hours max), otherwise this type of assignment can become exploitative. It should be an open-ended assignment (an analysis or a task) with plenty of room for improvisation.
 
@@ -34,7 +34,7 @@ Take home exercises allow the candidate to demonstrate their skills on their own
 
 👎 Cons: Difficult to limit the time a candidate can spend on an assignment, and has the potential to become exploitative and time-consuming.
 
-## Code review
+## Code Review
 
 In a code review-style interview, the interviewer and candidate sit down together to go over an existing piece of code. The interviewer can ask the candidate to demonstrate a review of the code, or may ask more structured set of questions about the code. This kind of interview can also include the results of code (e.g. data visualizations/figures, statistical results, applications). 
 
@@ -42,7 +42,7 @@ In a code review-style interview, the interviewer and candidate sit down togethe
 
 👎 Cons: Could cause performance anxiety and stress. Does not evaluate code that the candidate has written.
 
-## Code samples
+## Code Samples
 
 Have candidates point to a technical project on GitHub that they've already done and are proud of. If a candidate doesn't have something available on GitHub, they may still be able to share something like a Quarto document or Jupyter notebook with you. What language do they like? How do they structure code? Do they comment code and follow other good practices? What is their commit cadence like? 
 
@@ -51,7 +51,7 @@ Have candidates point to a technical project on GitHub that they've already done
 👎 Cons: May disfavor candidates who work with protected/proprietary code, or candidates who are underrepresented in open source software communities.
 
 
-## Other ways of evaluating technical abilities
+## Other Ways of Evaluating Technical Skills
 
 In addition to a technical interview, look for:
 

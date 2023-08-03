@@ -13,7 +13,7 @@ research, and evidence-based practices whenever possible. If you have
 experience, links, or comments to add, please open a pull request or an issue on
 this wiki.
 
-## Getting started
+## Getting Started
 
 At sizeable biomedical medical and academic research institutes like Fred Hutch,
 there are a wide range of roles that are being processed and supported by HR

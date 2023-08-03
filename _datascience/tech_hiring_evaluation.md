@@ -1,5 +1,5 @@
 ---
-title: Evaluating candidates for your team
+title: Evaluating Candidates for Your Team
 main_authors: vortexing, monicagerber
 primary_reviewers: seankross
 ---
