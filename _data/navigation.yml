@@ -79,6 +79,30 @@ datascience:
         url: /datascience/hutch_courses/
       - title: "All DaSL Courses"
         url: "https://hutchdatascience.org/training/"
+  - title: "Tech Hiring for Science"
+    children:
+      - title: "Overview"
+        url: /datascience/tech_hiring_overview/
+      - title: "Job Descriptions"
+        url: /datascience/tech_hiring_job_descriptions/
+      - title: "Finding Candidates"
+        url: /datascience/tech_hiring_finding_candidates/
+      - title: "Screening Applicants"
+        url: /datascience/tech_hiring_screening_applicants/
+      - title: "Technical Interviews"
+        url: /datascience/tech_hiring_interviews/
+      - title: "Developing Questions"
+        url: /datascience/tech_hiring_interview_questions/
+      - title: "Technical Questions"
+        url: /datascience/tech_hiring_technical_interview_questions/
+      - title: "Take-Home Projects"
+        url: /datascience/tech_hiring_takehomes/
+      - title: "Evaluating Candidates"
+        url: /datascience/tech_hiring_evaluation/
+      - title: "Further Reading"
+        url: /datascience/tech_hiring_further_reading/
+
+
 
 
 
