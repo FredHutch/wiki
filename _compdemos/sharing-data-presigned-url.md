@@ -3,7 +3,9 @@ title: Generating Pre-Signed URLs
 primary_reviewers: scicomp
 ---
 
-In AWS (Amazon Web Services), pre-signed Uniform Resource Locators ({% glossary URL%}) are a way that users can control and share access to specific objects in S3 buckets. Often, they are used for one-time sharing of files between users, or for applications that require a specific URL to read data from an object. The pre-signed URL process requires the following info from you to generate it: 
+In AWS (Amazon Web Services), pre-signed Uniform Resource Locators ({% glossary URL%}) are a way that users can control and share access to specific objects in S3 buckets. Often, they are used for one-time sharing of files between users or for applications that require a specific URL to read data from an object.
+
+The pre-signed URL process requires the following info from you to generate it: 
 
  - An Amazon S3 bucket 
  - An object key (if downloading this object will be in your Amazon S3 bucket, if uploading this is the file name to be uploaded) 
@@ -16,7 +18,11 @@ Pre-signed URLs are useful for quickly sharing objects without updating your S3 
 
 ## What should I be careful about when using a pre-signed URL? 
 
-It can be difficult to track who has access via a pre-signed URL, once it is created. Therefore, be extremely cautious about what kinds of objects you choose to share, and to whom. A bad actor that obtains your pre-signed URL can access your data for as long as the URL is active. For more systematic collaboration between groups, a better route would be to contact your IT (Information Technology) Helpdesk and ask for an S3 bucket policy to be created that will allow for collaborator access.
+It can be difficult to track who has access via a pre-signed URL, once it is created. Therefore, be extremely cautious about what kinds of objects you choose to share, and to whom. A bad actor that obtains your pre-signed URL can access your data for as long as the URL is active.
+
+Pre-signed URLs are also time-barred and will become inactive after a period of time- the longest a URL will be valid is 7 days.  The URL will expire and it will be necessary to create a new signed URL.
+
+For more systematic collaboration between groups, a better route would be to contact your IT (Information Technology) Helpdesk and ask for an S3 bucket policy to be created that will allow for collaborator access.
 
 ## How do I get started using pre-signed URLs? 
 
