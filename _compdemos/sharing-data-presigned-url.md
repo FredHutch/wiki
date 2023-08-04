@@ -3,14 +3,6 @@ title: Generating Pre-Signed URLs
 primary_reviewers: scicomp
 ---
 
-## References:
-
-[Sharing objects with pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)
-
-[Working with pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html)
-
-## What is a pre-signed URL? 
-
 In AWS (Amazon Web Services), pre-signed Uniform Resource Locators ({% glossary URL%}) are a way that users can control and share access to specific objects in S3 buckets. Often, they are used for one-time sharing of files between users, or for applications that require a specific URL to read data from an object. The pre-signed URL process requires the following info from you to generate it: 
 
  - An Amazon S3 bucket 
@@ -28,8 +20,15 @@ It can be difficult to track who has access via a pre-signed URL, once it is cre
 
 ## How do I get started using pre-signed URLs? 
 
-See the relevant link above for instructions on how to generate pre-signed URLS via the AWS Console, the AWS CLI (Command Line Interface), AWS SDK, AWS Toolkit for VS Code, and AWS Explorer for Visual Studio in Windows. 
+See the for instructions on how to generate pre-signed URLS via the AWS Console, the AWS CLI (Command Line Interface), AWS SDK, AWS Toolkit for VS Code, and AWS Explorer for Visual Studio in Windows. 
 
 ## How do I use a pre-signed URL?
 
 A pre-signed URL can be used as any other "regular" URL- you can paste it into the address bar of a web-browser or using command line tools like `wget` and `curl`.
+
+## References:
+
+[Sharing objects with pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)
+
+[Working with pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html)
+
