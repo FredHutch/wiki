@@ -30,6 +30,6 @@ It can be difficult to track who has access via a pre-signed URL, once it is cre
 
 See the relevant link above for instructions on how to generate pre-signed URLS via the AWS Console, the AWS CLI (Command Line Interface), AWS SDK, AWS Toolkit for VS Code, and AWS Explorer for Visual Studio in Windows. 
 
-## How do I use a pre-signed URL if I am accessing S3 via Mountain Duck/Cyber Duck? 
+## How do I use a pre-signed URL?
 
-<tbd>
+A pre-signed URL can be used as any other "regular" URL- you can paste it into the address bar of a web-browser or using command line tools like `wget` and `curl`.
