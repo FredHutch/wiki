@@ -45,3 +45,5 @@
   definition: Singularity is the original name for the Apptainer project
 - term: Apptainer
   definition: Apptainer is a system for using containers in an HPC environment
+- term: minor version of R
+  definition: All versions of R that share the same `y` of the `x.y.z` version number. For example, R-4.2.1 and R-4.2.2 share the same minor version number. R-4.1.1 and R-4.2.2 do not.
