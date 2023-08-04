@@ -20,15 +20,15 @@ It can be difficult to track who has access via a pre-signed URL, once it is cre
 
 ## How do I get started using pre-signed URLs? 
 
-See the for instructions on how to generate pre-signed URLS via the AWS Console, the AWS CLI (Command Line Interface), AWS SDK, AWS Toolkit for VS Code, and AWS Explorer for Visual Studio in Windows. 
-
-## How do I use a pre-signed URL?
-
-A pre-signed URL can be used as any other "regular" URL- you can paste it into the address bar of a web-browser or using command line tools like `wget` and `curl`.
-
-## References:
+Instructions on how to generate pre-signed URLS via the AWS Console, the AWS CLI (Command Line Interface), AWS SDK, AWS Toolkit for VS Code, and AWS Explorer for Visual Studio in Windows are available from AWS:
 
 [Sharing objects with pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)
 
 [Working with pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html)
+
+[Creating a pre-signed URL with Cyberduck or MountainDuck](https://docs.cyberduck.io/protocols/s3/#pre-signed-temporary-urls)
+
+## How do I use a pre-signed URL?
+
+A pre-signed URL can be used as any other "regular" URL- you can paste it into the address bar of a web-browser or using command line tools like `wget` and `curl`.
 
