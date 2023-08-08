@@ -29,8 +29,7 @@ def crawl_documents():
                 url = fullpath.replace('/html/html', '')
                 url = url.replace("index.html", "")
                 print(f"Processing {url} ...")
-                ret = sh.pandoc("-f", "html", "-t", "plain", fullpath)
-                text = ret.stdout.decode('utf-8')
+                text = sh.pandoc("-f", "html", "-t", "plain", fullpath)
                 with open(fullpath) as f:
                     soup = BeautifulSoup(f, "html.parser")
                 title = soup.title.string
