@@ -40,7 +40,7 @@
   url: _hdc/datagen_proteomics.md
 - dlm: July 14, 2022
   url: _hdc/datagen_platformsData.md
-- dlm: September 23, 2022
+- dlm: August 4, 2023
   url: _hdc/hdc_refgenomes.md
 - dlm: July 14, 2022
   url: _hdc/datagen_overview.md
@@ -316,7 +316,7 @@
   url: _compdemos/first_rhino.md
 - dlm: June 8, 2022
   url: _compdemos/gizmo_partition_index.md
-- dlm: April 21, 2023
+- dlm: August 8, 2023
   url: _compdemos/Cromwell.md
 - dlm: September 26, 2018
   url: _compdemos/vscode_markdown_howto.md
@@ -324,6 +324,8 @@
   url: _compdemos/Docker.md
 - dlm: February 3, 2023
   url: _compdemos/matlab.md
+- dlm: August 4, 2023
+  url: _compdemos/sharing-data-presigned-url.md
 - dlm: May 30, 2023
   url: _compdemos/onboard.md
 - dlm: May 14, 2020
@@ -388,7 +390,7 @@
   url: _scicomputing/compute_parallel.md
 - dlm: March 31, 2023
   url: _scicomputing/compute_gpu.md
-- dlm: July 18, 2023
+- dlm: August 4, 2023
   url: _scicomputing/software_R.md
 - dlm: December 2, 2022
   url: _scicomputing/access_credentials.md
