@@ -102,9 +102,9 @@ correctly without need for X11.
 knitr::opts_chunk$set(dev="CairoPNG")
 ```
 
-### Run a Jupyter Notebook or Lab on a rhino machine
+### Run a Jupyter Notebook or Lab on a cluster node
 
-You can run a [Jupyter](https://jupyter.org/) Notebook or Lab on a rhino or gizmo machine, with the R language (go [here](/scicomputing/software_python/#using-jupyter-on-rhino) if you want to use Jupyter with Python).
+You can run a [Jupyter](https://jupyter.org/) Lab on a cluster node, with the R language (go [here](/scicomputing/software_python/#using-jupyter-on-rhino) if you want to use Jupyter with Python).
 
 This requires that you be on campus or connected to VPN.
 
@@ -128,62 +128,56 @@ IRkernel::installspec()
 ```
 
 {:.no_toc}
-#### Start a Jupyter server in NoMachine
+#### Set up your .Rprofile file
+
+By default, R expects an [X11](https://en.wikipedia.org/wiki/X_Window_System) server to be running, and you need to tell it you will not be using one. To do that, edit the
+`.Rprofile` file in your home directory. Add these contents:
+
+```R
+if (!is.na(Sys.getenv("JPY_PARENT_PID", unset = NA))) {
+    options(bitmapType = 'cairo')
+}
+```
+
+This says that if you are running inside a Jupyter lab
+or notebook, to use the `Cairo`  package instead of X11.
+If you are not running in Jupyter, no change is made.
+
+
+You only need to do this once. 
+
+{:.no_toc}
+#### Grab a node
 
 You will need to start a Jupyter server on a gizmo node. 
-Because the R+Jupyter combination has a dependency on X Windows (X11), you can't just start R in a regular terminal.
+Run the `grabnode` command to get a node, and specify how many CPU cores you want, how much memory, and how long you will want your session to run.
 
-The solution to this is to start the terminal inside a NoMachine session. Launch a session as described [here](/scicomputing/access_nx/). The simplest way is to use [browser-based access](/scicomputing/access_nx/#browser-based-access).
-
-Once your NoMachine session is running, start a terminal by clicking on the `Applications` menu, then choosing `System Tools` and `MATE Terminal`. 
-
-
-Now you will need to connect to a cluster (gizmo) node to run your Jupyter server. You should not be running Jupyter servers directly on the `rhino` nodes. 
-
-To connect to a gizmo node, run this in the terminal:
-
-```
-grabnode --x11
-```
-
-When prompted, answer the questions about how much CPU/memory you want and how long you plan to run the server.
-
-
-In the terminal, load the R module you loaded in the last step, and then the most recent (default) version of the `JupyterLab` module, for example:
+At the node's command prompt, load the R module you loaded in a previous step, and then the most recent (default) version of the `JupyterLab` module, for example:
 
 ```
 ml fhR/4.3.1-foss-2022b
 ml JupyterLab
 ```
 
-Now you need to decide whether you want to run a Jupyter Notebook or a Jupyter Lab. Lab is newer and will eventually replace Notebooks, so it is the preferred choice in most cases. However, if you want to do your editing in Visual Studio Code, you need to use Notebooks.
+You will be using Jupyter Lab, not Jupyter Notebook. This should not be a problem as Lab is newer and is the recommended and supported choice going forward.
 
-To use Jupyter Notebooks, run this command:
-
-```
-jupyter notebook --ip=$(hostname) --port=$(fhfreeport) --no-browser
-```
-
-To use Jupyter Lab, run this command instead:
+To start Jupyter Lab, run this command:
 
 ```
 jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
 
-Both of these commands will spit out several URLs.
-One of the URLs will contain the machine name (starting with `rhino`). Right-click on that URL and select `Copy Link Address`. If you are using the browser-based NoMachine client, you will also need to go to the white text area at the bottom of the browser window and select and copy the URL once again. 
+This command will spit out several URLs.
+One of the URLs will contain the machine name (starting with `gizmo`). Copy that URL to your local computer's clipboard. 
 
 Now open a new browser window and paste the URL into the address bar and press Enter. 
 
-If you are running Jupyter Notebook, click `New` and then choose `R` from the menu. A new Jupyter Notebook opens up. You can also open up an existing notebook here.
-
-If you are running Jupyter Lab, click `R` under `Notebooks` or use the `File / Open` menu item to open an existing one. 
+Click `R` under `Notebooks` or use the `File / Open` menu item to open an existing one. 
 
 {:.no_toc}
-#### Running a Jupyter Notebook in Visual Studio Code
+#### Running a Jupyter Lab in Visual Studio Code
 
-Click the `View` menu and choose `Command Palette`. Start typing `jupyter` and then choose `Create: New Jupyter Notebook`. Now click `Select Kernel`, then `Existing Jupyter Server...` and paste in the URL from the previous step (remember, this needs to be a Jupyter Notebook URL; Jupyter Lab won't work).
-
+Click the `View` menu and choose `Command Palette`. Start typing `jupyter` and then choose `Create: New Jupyter Notebook`. Now click `Select Kernel`, then `Existing Jupyter Server...` and paste in the URL from the previous step.
 
 ## The Tidyverse
 The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordinate together and are commonly used for manipulating and  visualizing data in data science applications.  There are a number of useful packages for research based users that are part of the Tidyverse, and it's worth the time to learn about them and see how one might employ them to clean, analyze and convey data and results.  DataCamp has an online [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) that can be useful when first evaluating whether these packages might be useful.  
