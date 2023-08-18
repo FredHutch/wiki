@@ -10,6 +10,8 @@ Behroozi, M., Parnin, C., & Barik, T. (2019, October). [Hiring is broken: What d
 
 Cappelli, P. (2019). [Your Approach to Hiring Is All Wrong: Outsourcing and algorithm won't get you the people you need](https://hbr.org/2019/05/your-approach-to-hiring-is-all-wrong). Harvard Business Review, 97(3), 47–57.
 
+Cosgriff-Hernandez, E. M., Aguado, B. A., Akpa, B., Fleming, G. C., Moore, E., Porras, A. M., ... & Bowden, A. K. (2023). [Equitable hiring strategies towards a diversified faculty](https://www.nature.com/articles/s41551-023-01076-4). Nature Biomedical Engineering, 1-8.
+
 Knight, R. (2015). [How to conduct an effective job interview](https://hbr.org/2015/01/how-to-conduct-an-effective-job-interview). Harvard Business Review.
 
 Lerner, A. (2023). [To improve close rates for technical interviews, give applicants feedback (good or bad)](https://techcrunch.com/2023/02/06/to-improve-close-rates-for-technical-interviews-give-applicants-feedback-good-or-bad/?guccounter=1). Tech Crunch. 
