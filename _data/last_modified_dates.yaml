@@ -26,6 +26,8 @@
   url: LICENSE.md
 - dlm: November 7, 2019
   url: searchresults.md
+- dlm: July 21, 2023
+  url: dasldemos.md
 - dlm: July 14, 2022
   url: outreach.md
 - dlm: March 17, 2023
@@ -122,6 +124,8 @@
   url: archive/cluster_koshuBeta.md
 - dlm: July 28, 2022
   url: archive/galaxy-on-prem.md
+- dlm: July 25, 2023
+  url: _dasldemos/deidentification_methods_structured.md
 - dlm: October 21, 2019
   url: _contributors/tadams.md
 - dlm: February 5, 2019
