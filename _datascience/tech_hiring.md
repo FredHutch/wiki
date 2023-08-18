@@ -35,6 +35,7 @@ and scientific roles will be primarily your responsibility.
 Often the process for recruiting goes generally like this:
 
 1. Hiring manager develops the job description
+    + [Writing a Job Description for a Technical Role(/datascience/tech_hiring/tech_hiring_job_description/)
 2. Position is reviewed and approved for posting and publicizing
 3. Candidates apply by sending requested materials to HR
 4. Recruiters screen resumes for minimum qualifications and any specific
@@ -51,3 +52,4 @@ Often the process for recruiting goes generally like this:
 8. Reference checks are performed by Hiring Manager 
 9. Position is offered to candidate
 10. Details are negotiated
+
