@@ -23,4 +23,4 @@ Enter your hutchid & password here:
 
 XDMoD has built in user manual available [here](https://xdmod.fredhutch.org/user_manual/index.php) or by clicking the `help` button in the top right. 
 
-For other questions, e-mail `scicomp@fredhutch.org` to open a ticket with the Scientific Computing team.
+For other questions, e-mail `scicomp` to open a ticket with the Scientific Computing team.

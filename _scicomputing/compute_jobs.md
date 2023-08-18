@@ -186,7 +186,7 @@ In the `campus-new` partition the default wall time is 3 days and the maximum is
 
 Determining how much time to request for your job is something of an art-form.  You can review historical time use for similar jobs using `sacct` to make an estimate on how much time will be required.  Erring on the side of safety- that is, requesting significantly more time than you think necessary- is usually the better way to go to avoid your job getting terminated should it run over that requested time.
 
-If you should need to increase the wall time for a running job (or jobs), email Scientific Computing at `scicomp@fredhutch.org`.  If a job has not started, you can update this yourself.  For example, to increase a job's time limit by two days:
+If you should need to increase the wall time for a running job (or jobs), email Scientific Computing at `scicomp`.  If a job has not started, you can update this yourself.  For example, to increase a job's time limit by two days:
 
 ```
 scontrol update jobid=<job ID> timelimit=+2-0
