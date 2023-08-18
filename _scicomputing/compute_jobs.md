@@ -144,6 +144,9 @@ rhino03[~/tutorial/run]: sstat -a -j 31635795,31635814 -o jobid,averss,maxrss,av
 31635814.ba+      4012K      4012K     17768K    144084K
 ```
 
+### Viewing Utilization Metrics with XDMoD
+
+XDMoD is a powerful application that allows you to view historical cluster utilization and job level performance data. See [this page](/scicomputing/compute_xdmod/) for more information on XDMoD at Fred Hutch.
 
 ### Job Priority
 
