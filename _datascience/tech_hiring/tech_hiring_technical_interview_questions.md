@@ -1,5 +1,5 @@
 ---
-title: Developing technical questions
+title: Developing Technical Questions
 main_authors: seankross
 primary_reviewers: vortexing, monicagerber
 ---

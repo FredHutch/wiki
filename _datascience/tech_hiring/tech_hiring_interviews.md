@@ -1,5 +1,5 @@
 ---
-title: Types of technical interviews
+title: Types of Technical Interviews
 main_authors: monicagerber
 primary_reviewers: vortexing, seankross
 ---

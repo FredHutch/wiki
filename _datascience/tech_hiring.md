@@ -13,6 +13,16 @@ research, and evidence-based practices whenever possible. If you have
 experience, links, or comments to add, please open a pull request or an issue on
 this wiki.
 
+- [Writing a Job Description for a Technical Role](/datascience/tech_hiring/tech_hiring_job_description/)
+- [Finding Programmers and Data Scientists](/datascience/tech_hiring/tech_hiring_finding_candidates/)
+- [Screening Applicants](/datascience/tech_hiring/tech_hiring_finding_candidates/)
+- [Types of Technical Interviews](/datascience/tech_hiring/tech_hiring_interviews/)
+- [Developing Interview Questions](/datascience/tech_hiring/tech_hiring_interview_questions/)
+- [Developing Technical Questions](/datascience/tech_hiring/tech_hiring_technical_interview_questions/)
+- [Developing Take-Home Projects](/datascience/tech_hiring/tech_hiring_takehomes/)
+- [Evaluating Candidates for Your Team](/datascience/tech_hiring/tech_hiring_evaluation/)
+- [Further Reading and Resources](/datascience/tech_hiring/tech_hiring_further_reading/)
+
 ## Getting Started
 
 At sizeable biomedical medical and academic research institutes like Fred Hutch,
@@ -24,18 +34,19 @@ productive.
 
 [Here's](https://aiden-dataminer.medium.com/data-science-interviews-50f52b9359da)
 an example of a data science oriented description of the overall process of
-hiring.  Much of these processes and issues are also relevant for Fred Hutch
-hires.  An initial process to publicize the position, collect and review resumes
+hiring. Much of these processes and issues are also relevant for Fred Hutch
+hires. An initial process to publicize the position, collect and review resumes
 to screen applicants often happens in collaboration with your recruiting
-department if your organization has one.  However, developing the approach and
+department if your organization has one. However, developing the approach and
 process to the subsequent technical parts of the screening and hiring process
 for your own group to help you screen and hire for technical data, programming,
 and scientific roles will be primarily your responsibility. 
 
-Often the process for recruiting goes generally like this:
+## Outline of the Hiring Process
+
+The hiring process generally goes as follows:
 
 1. Hiring manager develops the job description
-    + [Writing a Job Description for a Technical Role(/datascience/tech_hiring/tech_hiring_job_description/)
 2. Position is reviewed and approved for posting and publicizing
 3. Candidates apply by sending requested materials to HR
 4. Recruiters screen resumes for minimum qualifications and any specific
@@ -52,4 +63,3 @@ Often the process for recruiting goes generally like this:
 8. Reference checks are performed by Hiring Manager 
 9. Position is offered to candidate
 10. Details are negotiated
-

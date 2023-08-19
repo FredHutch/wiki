@@ -4,6 +4,8 @@ main_authors: monicagerber
 primary_reviewers: vortexing, seankross
 ---
 
+Below are some resources gathered by the DaSL team. Please send us your own recommendations by opening a PR or issue on the wiki [GitHub repo](https://github.com/FredHutch/wiki).
+
 ## Articles
 
 Behroozi, M., Parnin, C., & Barik, T. (2019, October). [Hiring is broken: What do developers say about technical interviews?](https://www.microsoft.com/en-us/research/uploads/prod/2020/03/PID6037883.pdf). In 2019 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC) (pp. 1-9). IEEE.

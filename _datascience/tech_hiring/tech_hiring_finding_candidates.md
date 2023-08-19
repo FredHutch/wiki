@@ -4,8 +4,6 @@ main_authors: seankross, jtleek
 primary_reviewers: vortexing, seankross, monicagerber
 ---
 
-# Finding Programmers and Data Scientists
-
 Recruiting programmers and data scientists can require going beyond just writing
 a job description and posting it online. Below we describe some alternative ways
 you can find qualified candidates.
