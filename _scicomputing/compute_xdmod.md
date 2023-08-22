@@ -3,7 +3,7 @@ title: XDMoD
 primary_reviewers: chrisequalsdev
 ---
 
-XDMoD is an open source tool to collect and report cluster utilization metrics and assist operational staff in the management of high performance computing resources. It is widely deployed at academic, industrial and governmental HPC centers including here at Fred Hutch. You can read more about it here: [https://xdmod.fredhutch.org](https://xdmod.fredhutch.org)
+XDMoD is an open source tool to collect and report cluster utilization metrics and assist operational staff in the management of high performance computing resources. It is widely deployed at academic, industrial and governmental HPC centers including here at Fred Hutch. You can read more about it here: [https://open.xdmod.org](https://open.xdmod.org)
 
 ## How to Access
 
