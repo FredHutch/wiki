@@ -4,9 +4,20 @@ main_authors: Amy Paguirigan (vortexing), monicagerber
 primary_reviewers: vortexing, seankross, monicagerber
 ---
 
-Finding and recruiting talent for technical roles in a biomedical or scientific institution can feel like a difficult task! The institutions are complex and the technical roles are nuanced. Members of the Data Science Lab began to share resources and best practices with each other, which evolved into these pages on the Biomedical Data Science Wiki. 
+Finding and recruiting talent for technical roles in a biomedical or scientific
+institution can feel like a difficult task! The institutions are complex and the
+technical roles are nuanced. Members of the Data Science Lab began to share
+resources and best practices with each other, which evolved into pages on
+the Biomedical Data Science Wiki. 
 
-These pages are intended to provide guidance on hiring for technical positions, such as data scientists, programmers, and bioinformaticians, in scientific institutions like Fred Hutch Cancer Center. These pages draw on the personal experience of staff and faculty in the Data Science Lab, and they are not intended to be an authoritative or exhaustive resource. We've linked to other sources, research, and evidence-based practices whenever possible. If you have experience, links, or comments to add, please open a pull request or an issue on this wiki .
+These pages are intended to provide guidance on hiring for technical positions,
+such as data scientists, programmers, and bioinformaticians, in scientific
+institutions like Fred Hutch Cancer Center. They draw on the personal
+experience of staff and faculty in the Data Science Lab, and they are not
+intended to be an authoritative or exhaustive resource. We've linked to other
+sources, research, and evidence-based practices whenever possible. If you have
+experience, links, or comments to add, please open a pull request or an issue on
+this wiki .
 
 - [Writing a Job Description for a Technical Role](/datascience/tech_hiring/tech_hiring_job_description/)
 - [Finding Programmers and Data Scientists](/datascience/tech_hiring/tech_hiring_finding_candidates/)
