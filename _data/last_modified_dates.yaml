@@ -286,6 +286,8 @@
   url: _datascience/privacy_security.md
 - dlm: July 3, 2023
   url: _datascience/deidentification.md
+- dlm: August 23, 2023
+  url: _datascience/tech_hiring.md
 - dlm: November 11, 2022
   url: _datascience/consent_IRB.md
 - dlm: March 17, 2023
@@ -300,6 +302,26 @@
   url: _datascience/dmptool.md
 - dlm: November 11, 2022
   url: _datascience/compliance_legal.md
+- dlm: August 18, 2023
+  url: _datascience/tech_hiring/tech_hiring_takehomes.md
+- dlm: August 18, 2023
+  url: _datascience/tech_hiring/tech_hiring_interview_questions.md
+- dlm: August 19, 2023
+  url: _datascience/tech_hiring/tech_hiring_further_reading.md
+- dlm: August 19, 2023
+  url: _datascience/tech_hiring/tech_hiring_technical_interview_questions.md
+- dlm: August 18, 2023
+  url: _datascience/tech_hiring/tech_hiring_evaluation.md
+- dlm: August 19, 2023
+  url: _datascience/tech_hiring/tech_hiring_interviews.md
+- dlm: August 19, 2023
+  url: _datascience/tech_hiring/tech_hiring_finding_candidates.md
+- dlm: August 23, 2023
+  url: _datascience/tech_hiring/tech_hiring_getting_started.md
+- dlm: August 18, 2023
+  url: _datascience/tech_hiring/tech_hiring_screening_applicants.md
+- dlm: August 18, 2023
+  url: _datascience/tech_hiring/tech_hiring_job_description.md
 - dlm: September 6, 2022
   url: _pathways/path-batch-computing.md
 - dlm: October 26, 2022
