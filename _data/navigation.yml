@@ -50,6 +50,16 @@ datascience:
         url: /dasldemos/
       - title: "Pathways"
         url: /pathways/
+  - title: "General"
+    children:
+      - title: "Tech Hiring for Science"
+        url: /datascience/tech_hiring/
+  - title: "Training"
+    children:
+      - title: "DaSL Courses for the Hutch"
+        url: /datascience/hutch_courses/
+      - title: "All DaSL Courses"
+        url: "https://hutchdatascience.org/training/"
   - title: "Data Management"
     children:
       - title: "Data Stewardship"
@@ -64,7 +74,6 @@ datascience:
     children:
       - title: "Data Visualization"
         url: /datascience/data_viz/
-
   - title: "Consent, Privacy and Security"
     children:
       - title: "Consenting and the IRB"
@@ -75,12 +84,9 @@ datascience:
         url: /datascience/compliance_legal/
       - title: "Data Deidentification"
         url: /datascience/deidentification/
-  - title: "Training"
-    children:
-      - title: "DaSL Courses for the Hutch"
-        url: /datascience/hutch_courses/
-      - title: "All DaSL Courses"
-        url: "https://hutchdatascience.org/training/"
+
+
+
 
 
 
