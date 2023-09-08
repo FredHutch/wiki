@@ -2,13 +2,11 @@
 Title: fasterq-dump Causes Nodes to Hang and Require Reboot
 ---
 
-> Updated information is available [here](/scicompannounce/2023-09-01-fasterq-dump-issue/)
-
 `fasterq-dump` is a command-line utility used to extract FASTQ or FASTA data from SRA-accessions. 
 
 There is a known issue with the way the application interacts with the version of filesystem used for `Scratch` storage on the cluster. This bug causes cluster nodes to become unresponsive and require a reboot to restore to normal operation when `fasterq-dump` is used with `Scratch` for reading or writing data.
 
-**`Scratch` should therefore not be used with the `fasterq-dump` application**. To run `fasterq-dump` on the `Gizmo` cluster a workaround is required that involves using an alternative location for scratch space. 
+**_Scratch_ should not be used with the `fasterq-dump` application**. To run `fasterq-dump` on the `Gizmo` cluster please use one of the following workarounds:
 
 ## Workarounds
 
@@ -25,3 +23,7 @@ It is important to note that this location only exists for the duration of the j
 The amount of local scratch space needed should be specified with the **--tmp** argument to `sbatch` when submitting a job.
 
 More information on node local scratch space is available at the [Scratch storage page](/scicomputing/store_scratch/#node-local-job-scratch)
+
+### Use `parallel-fastq` instead
+
+`parallel-fastq` can speed some operations- this is available in the module `parallel-fastq-dump/0.6.7-GCCcore-11.2.0`.
