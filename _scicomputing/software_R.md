@@ -82,7 +82,7 @@ To run `R` on a gizmo node, you can follow the same instructions as for `rhino` 
 ### Run RStudio Server on an HPC machine
 
 To run RStudio Server on the `gizmo` compute cluster, simply open a browser and go to
-[https://rstudio-launcher.fredhutch.org](https://rstudio-launcher.fredhutch.org).   You will be prompted to log in with your  Fred Hutch HutchNet ID and password.  This requires that you be on campus or using VPN. If you are on VPN and still having problems accessing the link, see the Troubleshooting section below.
+[https://rstudio-launcher.fredhutch.org](https://rstudio-launcher.fredhutch.org).   You will be prompted to log in with your  Fred Hutch HutchNet ID and password.  This requires that you be on campus or using VPN.
 
 This site will help you launch, manage and kill RStudio sessions on `gizmo` without having to do so manually via terminal/`rhino`.  When you create new RStudio sessions via  the application, this single site will manage the launch process given the parameters you specify.  It will return the information you'll need to access and manage your sessions to the table in the site.  You can have mulitple RStudio sessions running simultaneously, and each session will have its own specific URL where you will be able to use RStudio through your browser. 
 
