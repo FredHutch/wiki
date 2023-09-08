@@ -72,7 +72,7 @@ OneDrive | No Charge | Offsite storage (cloud) with multi-datacenter replicaiton
 
 Additional details for other CIT file services such as `Secure File` (aka J or R drive) features are available on [Centernet](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html).
 
-For expenses charged to your group for data storage in these systems, please see the [storage usage dashboard](https://grafana.fredhutch.org/d/dy5I3SIMk/data-core-storage-usage/). If you are interested in a breakdown of your storage ulitization by folder you can get these details at [Storage HotSpots](https://storage-hotspots.fhcrc.org/). Please select your PI as owner. You can also export all data as CSV. (Please note: for performance reasons only folders > 1GB without subfolders are shown here). For pricing information please check [this page](https://centernet.fredhutch.org/cn/u/shared-resources/data-resource.html) on CenterNet. 
+For expenses charged to your group for data storage in these systems, please see the [storage usage dashboard](https://grafana.fredhutch.org/d/dy5I3SIMk/data-core-storage-usage/). If you are interested in a breakdown of your storage utilization by folder you can get these details at [Storage HotSpots](https://storage-hotspots.fhcrc.org/). Please select your PI as owner. You can also export all data as CSV. (Please note: for performance reasons only folders > 1GB without subfolders are shown here). For pricing information please check [this page](https://centernet.fredhutch.org/cn/u/shared-resources/data-resource.html) on CenterNet. 
 
 ## Data Storage Guidance
 
