@@ -342,12 +342,14 @@
   url: _scicompannounce/2018-06-01-JuneComputingUpdates.md
 - dlm: September 29, 2021
   url: _scicompannounce/2021-09-14-gizmo-scratch-maintenance.md
-- dlm: March 8, 2023
+- dlm: September 1, 2023
   url: _scicompannounce/2023-03-06-fasterq-dump-issue.md
 - dlm: January 18, 2023
   url: _scicompannounce/2020-05-06-gizmo-nx-users.md
 - dlm: July 27, 2021
   url: _scicompannounce/2021-08-08-gizmo-cpu-cgroup.md
+- dlm: September 1, 2023
+  url: _scicompannounce/2023-09-01-fasterq-dump-issue.md
 - dlm: June 13, 2022
   url: _scicompannounce/2019-02-21-upgrade-env-modules.md
 - dlm: November 12, 2019
