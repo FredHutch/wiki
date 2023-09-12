@@ -54,6 +54,7 @@ def crawl_documents():
                 doc = dict(url=url, content=text, title=title)
                 if ("pythonModules" in url or "rModules" in url):
                     doc['boost'] = 0.2 # default is 1
+                    print(f"de-boosting {url}...")
                 docs.append(doc)
     return docs
 
