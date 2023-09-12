@@ -82,7 +82,7 @@ If your job has high memory requirements it is necessary to request more than fo
 
 > IMPORTANT: Submitting jobs to `campus` and `largenode` from Bionic nodes will result in errors.  Please see below if you still need to use Trusty resources.
 
-### <a name="using-trusty"></a>Using Trusty Hosts
+### Using Trusty Hosts
 
 While the old nodes have been left running and will be available through this period, note that we will now begin the process of migrating hosts to the Bionic environment.
 
@@ -156,7 +156,7 @@ Will get you the latest 3.6 release of R installed in Lmod.
 
 ## Notes
 
-### <a name="locally-libraries"></a>Locally Installed Libraries
+### Locally Installed Libraries
 
 If you have compiled R and/or Python libraries installed in your home directory you need to take some extra care.
 
@@ -164,7 +164,7 @@ Libraries compiled on the Trusty platform very likely won't work when used on Bi
 
 There are a number of ways to address this problem depending on your goals- the easiest may be backing up the library install directory prior to working in the different environment.  For example, `R` installs local libraries into `$HOME/R`- back this up or move it out of the way before working with the Bionic environment.
 
-### <a name="local-gcc"></a>GCC and Compiling Your Own Code
+### GCC and Compiling Your Own Code
 
 These new hosts have a very minimal number of tools and packages installed.  While a basic compiler is installed on these hosts, it is strongly recommended that you use the tools provided by Lmod modules.  These are grouped under the module named "foss" or "fosscuda" (the latter for those needing GPU support):
 
@@ -172,24 +172,24 @@ These new hosts have a very minimal number of tools and packages installed.  Whi
 
 > NOTE: Many R and Python modules compile binaries as part of their installation process.  To prevent future problems load this toolchain _before_ you use `pip install` or `install.packages()`
 
-### <a name="compiled-apps"></a>Compiled Applications
+### Compiled Applications
 
 
 If you have compiled your own modules- including R libraries installed via CRAN or Python libraries using `pip`- you may need to rebuild or re-install these (see the above notes about the compiler).
 
-### <a name="x11-support"></a>X11 Support
+### X11 Support
 
 Starting X clients will require that you load the X11 module:
 
     ml X11
 
-### <a name="cores-hyperthreading"></a> Cores and Hyperthreading
+### Cores and Hyperthreading
 
 Hyperthreading creates multiple virtual cores from a single physical core.  All of these hosts are capable of hyperthreading. Given the intense computational demands of most work done by our cluster node, however, it provides no benefit.
 
 The interactive nature of the workload on the Rhinos makes hyperthreading a much more beneficial feature.  Thus, on the new Rhino nodes you will see 72 cores even though these have the same number of _physical_ cores as the K class nodes
 
-### <a name="node-specifications"></a> Node Specifications
+### Node Specifications
 
 The new nodes are the next generation of gizmo nodes- the "K" class.  These are configured with:
 
