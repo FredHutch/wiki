@@ -5,7 +5,7 @@ hdc: True
 
 An added feature which makes Nextflow particularly attractive is
 the ability to monitor workflow progress over the internet. This service
-is called [Tower](http://tower.nf/), and if you set up an account
+is called [Tower](https://tower.nf/), and if you set up an account
 then you will be able to log in and view the progress of any workflows
 which you have started using your private Tower token.
 
@@ -16,7 +16,7 @@ logs and this external resources has not undergone any security review.
 
 ## Getting Started
 
-After setting up an account at [http://tower.nf/](http://tower.nf/),
+After setting up an account at [https://tower.nf/](https://tower.nf/),
 follow their instructions to copy your private access token. That 
 access token can be added to your Nextflow configuration file, regardless
 of whether you are running jobs [on gizmo](/hdc/workflows/running/on_gizmo)

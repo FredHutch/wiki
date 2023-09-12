@@ -97,7 +97,7 @@ nextflow \
 
 ### Workflow script
 The command above will run the workflow in the file `path-to-workflow.nf`. 
-You can also [run a workflow directly from github](https://www.nextflow.io/docs/latest/sharing.html#running-a-pipeline) without a local copy like `nextflow run http://github.com/foo/bar
+You can also [run a workflow directly from github](https://www.nextflow.io/docs/latest/sharing.html#running-a-pipeline) without a local copy like `nextflow run https://github.com/foo/bar
 `
 ### Params
 Inside that script, the variable `${params.first_parameter}` will be replaced with `ValueForFirstParameter`, `${params.second_parameter}` will be replaced with `ValueForSecondParameter`, etc. 

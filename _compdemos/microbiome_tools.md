@@ -138,7 +138,7 @@ The tools used for microbial genome assembly have been changing rapidly with the
 of long-read sequencing. One of the tools which has emerged in this area is Circlator,
 a tool to take an existing linear genome assembly and turn it into a circular assembly
 using information from long-read sequencing. You can refer to
-[the publication](http://www.genomebiology.com/2015/16/1/294) and
+[the publication](https://www.genomebiology.com/2015/16/1/294) and
 [the documentation](https://sanger-pathogens.github.io/circlator/) for more details.
 
 Because this tool has a number of dependencies, it may be helpful to use this tool with
@@ -174,7 +174,7 @@ Manifest:
 
 Microbial researchers often need to compare multiple genomes in order to identify
 similarities and differences. The best tool available in the community for this analysis
-is the [anvi'o software suite](http://merenlab.org/software/anvio/) developed by the 
+is the [anvi'o software suite](https://merenlab.org/software/anvio/) developed by the 
 Meren Lab at the University of Chicago. The anvi'o software does _many things_, but
 we wanted to provide an easy point of entry with a workflow that imports a set of 
 bacterial genomes into the anvi'o database format, and then launches a graphical viewer

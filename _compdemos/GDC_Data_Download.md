@@ -16,7 +16,7 @@ This tutorial will demonstrate how to download the RNA-seq data from the TARGET 
 ## Installation  
 
 We will use the `GenomicDataCommons` [Bioconductor package](
-https://bioconductor.org/packages/release/bioc/vignettes/GenomicDataCommons/inst/doc/overview.html#quickstart). It should be noted that there is an alternative package, `TCGAbiolinks` for only [TCGA data](http://bioconductor.org/packages/release/bioc/vignettes/TCGAbiolinks/inst/doc/index.html), but will not be covered here.
+https://bioconductor.org/packages/release/bioc/vignettes/GenomicDataCommons/inst/doc/overview.html#quickstart). It should be noted that there is an alternative package, `TCGAbiolinks` for only [TCGA data](https://bioconductor.org/packages/release/bioc/vignettes/TCGAbiolinks/inst/doc/index.html), but will not be covered here.
 
 ```
 BiocManager::install('GenomicDataCommons')

@@ -145,7 +145,7 @@ Form E highlights include:
 
 -   The [Shared Resources Quick Reference list (current version 2017)](https://sharedresources.fredhutch.org/sites/default/files/sr_quick_reference2017.pdf) is a useful list of existing resources and the relevant contact information which may be required or helpful for a new study.
 
--   Information about the data management and statistical assistance  provided by Collaborative Data Services can be found [here.](http://research.fhcrc.org/cds/en.html)
+-   Information about the data management and statistical assistance  provided by Collaborative Data Services can be found [here.](https://research.fhcrc.org/cds/en.html)
 
 
 - Boilerplate text for proposals that require a description of what facilities, shared resources, instruments and services are available at the Fred Hutch can be obtained at the [Shared Resources site](https://sharedresources.fredhutch.org/grant-writers#cf-922).

@@ -234,7 +234,7 @@ that as you will need it to track the progress of your job.
 * We strongly encourage the use of Python 3. It has been the current
   version of the language since 2008. Python 2 will eventually no longer
   be supported.
-* We recommend using [Virtual Environments](http://docs.python-guide.org/en/latest/dev/virtualenvs/),
+* We recommend using [Virtual Environments](https://docs.python-guide.org/en/latest/dev/virtualenvs/),
   particularly [pipenv](https://docs.pipenv.org/),
   to keep the dependencies of your various projects isolated from each
   other.

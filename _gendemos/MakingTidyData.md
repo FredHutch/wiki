@@ -4,7 +4,7 @@ last_modified_at: 2019-11-06
 main_author:
 primary_reviewers: ptvan
 ---
-All collaborations, even when your collaborator is your future self, benefit from all parties learning the art of tidying data.  In many cases the best time to do this is to implement [Tidy Data](http://vita.had.co.nz/papers/tidy-data.html) approaches when the data are generated in the first place, thus minimizing issues with data loss, corruption and loss of effort to cleaning messy data.
+All collaborations, even when your collaborator is your future self, benefit from all parties learning the art of tidying data.  In many cases the best time to do this is to implement [Tidy Data](https://vita.had.co.nz/papers/tidy-data.html) approaches when the data are generated in the first place, thus minimizing issues with data loss, corruption and loss of effort to cleaning messy data.
 
 ## General Concepts
 **Use open file formats**: assume that your collaborator does not have time or resources to buy commercial software. Use plain-text .csv for numeric data, and PNG/JPEG/TIFF for image data. For data compression, use GZIP or BZIP2. If you *must* use proprietary formats, include instructions for getting free converters/processors.

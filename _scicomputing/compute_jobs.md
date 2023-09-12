@@ -5,7 +5,7 @@ primary_reviewers: atombaby
 
 Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system and performing tasks one by one.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop should be disconnected for any reason the job will be terminated.
 
-The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on SciComp clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm see the section below on [Using Slurm on Fred Hutch Systems](#using-slurm-on-fred-hutch-systems), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources available
+The batch system used at the Hutch is [Slurm](https://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on SciComp clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm see the section below on [Using Slurm on Fred Hutch Systems](#using-slurm-on-fred-hutch-systems), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources available
 
 ## Using Slurm on Fred Hutch Systems
 
@@ -245,7 +245,7 @@ There are other reason codes that are less-common in our environment.  Email Sci
 
 #### Notifications
 
-`sbatch` has a variety of parameters that allow for notifications to users which can be found on the [Slurm manual page](http://schedmd.com).  An exmaple of this is if, for instance, you wanted to receive an email when your job finished.  You can include these `SBATCH` options when sending your job to make that happen. 
+`sbatch` has a variety of parameters that allow for notifications to users which can be found on the [Slurm manual page](https://schedmd.com).  An exmaple of this is if, for instance, you wanted to receive an email when your job finished.  You can include these `SBATCH` options when sending your job to make that happen. 
 ```
 #SBATCH --mail-user=fred@fredhutch.org
 #SBATCH --mail-type=END

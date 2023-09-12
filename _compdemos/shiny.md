@@ -151,13 +151,13 @@ If you are ready with your tested Shiny app in a Fred Hutch GitHub repo and have
 
 
 ## More Information about developing and using Shiny Apps
-- [Introduction to Shiny with a cheatsheet and some example apps](http://zevross.com/blog/2016/04/19/r-powered-web-applications-with-shiny-a-tutorial-and-cheat-sheet-with-40-example-apps/)
+- [Introduction to Shiny with a cheatsheet and some example apps](https://zevross.com/blog/2016/04/19/r-powered-web-applications-with-shiny-a-tutorial-and-cheat-sheet-with-40-example-apps/)
 - [How to get started with Shiny apps](https://shiny.rstudio.com/articles/build.html)
 - [Which GitHub protocol should I use?](https://gist.github.com/grawity/4392747)
-- [Tutorial](http://shiny.rstudio.com/tutorial/)
-- [Shiny cheatsheet](http://shiny.rstudio.com/images/shiny-cheatsheet.pdf)
-- [Shiny articles](http://shiny.rstudio.com/articles/)
-- [Show me shiny](http://www.showmeshiny.com/)
-- [Shinyapps.io](http://www.shinyapps.io/)
-- [Gallery](http://shiny.rstudio.com/gallery/google-charts.html)
+- [Tutorial](https://shiny.rstudio.com/tutorial/)
+- [Shiny cheatsheet](https://shiny.rstudio.com/images/shiny-cheatsheet.pdf)
+- [Shiny articles](https://shiny.rstudio.com/articles/)
+- [Show me shiny](https://www.showmeshiny.com/)
+- [Shinyapps.io](https://www.shinyapps.io/)
+- [Gallery](https://shiny.rstudio.com/gallery/google-charts.html)
 - [Shiny Google User Group](https://groups.google.com/forum/#!forum/shiny-discuss)

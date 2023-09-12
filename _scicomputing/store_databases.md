@@ -23,11 +23,11 @@ REDCap has been used by thousands of non-profit institutions throughout the worl
 
 CDS provides backup services, database maintenance, support for developing REDCap projects, and is very accessible for staff without previous database experience.  
 
-For more information about REDCap at the Fred Hutch, training materials and documentation provided by CDS, [visit their site here.](http://research.fhcrc.org/cds/en/redcap.html)  
+For more information about REDCap at the Fred Hutch, training materials and documentation provided by CDS, [visit their site here.](https://research.fhcrc.org/cds/en/redcap.html)  
 
-Look for in-person trainings available on a regular basis around campus, [here.](http://research.fhcrc.org/cds/en/redcap-training.html) You will also find recorded training videos and presentation materials at this [url.](http://research.fhcrc.org/cds/en/redcap-training.html).
+Look for in-person trainings available on a regular basis around campus, [here.](https://research.fhcrc.org/cds/en/redcap-training.html) You will also find recorded training videos and presentation materials at this [url.](https://research.fhcrc.org/cds/en/redcap-training.html).
 
-The login page for the Fred Hutch instance is [here.](http://redcap.fredhutch.org/)
+The login page for the Fred Hutch instance is [here.](https://redcap.fredhutch.org/)
 
 ## MS SQL Server
 For groups for whom a REDCap system is not suitable, Microsoft SQL technology is available in conjunction with Database Administrator Services such as:
@@ -62,4 +62,4 @@ visit the [Neo4j official site](https://neo4j.com)
 
 More detailed information about MyDB can be found on the application website. MyDB is and open source project that is under development.
 Future features are: Self serve restore
-and Point in Time recovery. Project web site [DB4Sci.org](http://db4sci.org)
+and Point in Time recovery. Project web site [DB4Sci.org](https://db4sci.org)

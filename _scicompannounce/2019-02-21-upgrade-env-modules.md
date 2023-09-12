@@ -45,4 +45,4 @@ Links:
 
 [Environment Modules Information](/computing/cluster_software/)
 
-[18.04 (new) Environment Module list](http://fredhutch.github.io/easybuild-life-sciences/all-modules-18.04/)
+[18.04 (new) Environment Module list](https://fredhutch.github.io/easybuild-life-sciences/all-modules-18.04/)

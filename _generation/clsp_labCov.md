@@ -27,7 +27,7 @@ The following list is far from exhaustive, but here are a few important process-
 The tools to capture laboratory covariates depend on the workflow needs.  Any type of data capture (lab notebooks, excel spreadsheets, etc.) is better than nothing; however, there are some tools that make the downstream utilization of those laboratory data easier. We have a few suggestions of platforms here at Fred Hutch:
 
 ### REDCap
-  - [REDCap](https://projectredcap.org): REDCap projects are flexible and secure ways to capture multiple types of data, including experimental and laboratory covariates. REDCap includes version-control and access-restriction features. Fred Hutch has its [own instance](http://research.fhcrc.org/cds/en/redcap.html) of REDCap and offers many [training opportunities](http://research.fhcrc.org/cds/en/redcap-training.html) to support researchers.
+  - [REDCap](https://projectredcap.org): REDCap projects are flexible and secure ways to capture multiple types of data, including experimental and laboratory covariates. REDCap includes version-control and access-restriction features. Fred Hutch has its [own instance](https://research.fhcrc.org/cds/en/redcap.html) of REDCap and offers many [training opportunities](https://research.fhcrc.org/cds/en/redcap-training.html) to support researchers.
 
 
 ### LabArchives
@@ -40,5 +40,5 @@ LabArchives (Professional Edition) electronic lab notebook software is a secure,
 
 
 ### LabMatrix
-  - [LabMatrix](http://www.biofortis.com/labmatrix): LabMatrix is a specimen tracking platform that can be used to capture clinical and laboratory covariates. One of its main strengths is the ability to capture lineage of specimen processing steps in a workflow (for example, multiple nucleic acid types could be extracted from the same tissue). More information on this system can be found on the [Specimen Banking page.](/generation/clsp_specimenBanking)
+  - [LabMatrix](https://www.biofortis.com/labmatrix): LabMatrix is a specimen tracking platform that can be used to capture clinical and laboratory covariates. One of its main strengths is the ability to capture lineage of specimen processing steps in a workflow (for example, multiple nucleic acid types could be extracted from the same tissue). More information on this system can be found on the [Specimen Banking page.](/generation/clsp_specimenBanking)
 

@@ -7,7 +7,7 @@ This tutorial includes demonstrations of a few common tasks in Git and/or GitHub
 and assumes you have a basic understanding of how these tools work.
 For a general explanation of Git and GitHub,
 please see [Managing and Sharing Code](/scicomputing/software_managecode/)
-and/or fredhutch.io's course [Introduction to Git and GitHub](http://www.fredhutch.io/resources/#introduction-to-git-and-github).
+and/or fredhutch.io's course [Introduction to Git and GitHub](https://www.fredhutch.io/resources/#introduction-to-git-and-github).
 For an explanation of how to apply our Fred Hutch theme to other websites hosted by GitHub,
 see [this demo](/compdemos/github_pages_FHtheme/).
 
@@ -142,7 +142,7 @@ but does require general knowledge of version control to use effectively.
 Additionally, IDEs (integrated development environments) provide the ability to work with Git while coding:
 - [RStudio](https://rstudio.com/products/rstudio/download/) is an IDE primarily for coding in R.
 Information on its integration with git is available [here](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
-- [Atom](http://atom.io) is an IDE
+- [Atom](https://atom.io) is an IDE
 useful for working with multiple programming languages,
 and has optional packages to support Git.
 More information on the main package can be found [here](https://atom.io/packages/git-gui).

@@ -46,7 +46,7 @@ Enter your hutchid then press enter. It will prompt for your password. Press ent
 
 The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources.  We also recommend using [iTerm2](https://www.iterm2.com/) for your local terminal program on your Mac.  It has a richer feature set that comes in handy as your computing needs grow.
 
-The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](http://xquartz.macosforge.org), and download and install the latest version of XQuartz.
+The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](https://xquartz.macosforge.org), and download and install the latest version of XQuartz.
 
 After installing XQuartz just start the app. The XQuartz icon will appear in the toolbar showing that it is running. XQuartz is now running an X11 client and that is the only interaction that you need to do with XQuartz. After XQuartz is running, open the Mac terminal. The latest version of XQuartz sets the DISPLAY environment with the default Mac terminal window. We do not recommend using the terminal that comes with XQuartz.
 

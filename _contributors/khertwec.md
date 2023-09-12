@@ -2,7 +2,7 @@
 title: Kate Hertweck
 ---
 ## Affiliation
-[fredhutch.io](http://www.fredhutch.io), Computational Biology (Public Health Sciences)
+[fredhutch.io](https://www.fredhutch.io), Computational Biology (Public Health Sciences)
 
 
 ## Title
