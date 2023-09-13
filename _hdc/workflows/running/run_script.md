@@ -116,7 +116,7 @@ this can be omitted.
 
 NOTE: You should not run any workflows which use Apptainer from any `rhino` node.
 Instead use the `grabnode` command to reserve the appropriate head node
-([more details](/compdemos/howtoRhino/#guidance-for-use)).
+([more details](/compdemos/first_rhino/#logging-on-to-gizmo-via-grabnode)).
 
 
 ## Nextflow Run - Formatting
