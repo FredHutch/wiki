@@ -9,7 +9,7 @@ NoMachine provides a Linux desktop session via the NoMachine client without havi
 
 ## Installation
 
-Installation of the NoMachine client starts with download of the installer from [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client).  Choose the version for your OS and follow the instructions provided by NoMachine.
+Installation of the NoMachine client starts with download of the installer from [NoMachine](https://downloads.nomachine.com/download-enterprise/#NoMachine-Enterprise-Client).  Choose the version for your OS and follow the instructions provided by NoMachine.
 
 ## Configuration
 
