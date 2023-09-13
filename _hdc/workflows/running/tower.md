@@ -33,5 +33,3 @@ and select your workflow from the list. The progress of each individual
 job, as well as the overall workflow, will be displayed alongside
 any additional execution metadata which Nextflow can collect (e.g. 
 estimating the cost of workflows in AWS).
-
-![](https://help.tower.nf/uploads/2020/11/overview_image.png)

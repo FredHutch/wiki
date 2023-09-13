@@ -3,9 +3,9 @@ title: Deciding Where to Run a Workflow
 hdc: True
 ---
 
-[Running on AWS](/hdc/workflows/running/running_on_aws.md)
-[Running on Gizmo](/hdc/workflows/running/running_on_gizmo.md)
-[Running FAQ](/hdc/workflows/running/running_faq.md)
+[Running on AWS](/hdc/workflows/running/on_aws)
+[Running on Gizmo](/hdc/workflows/running/on_gizmo)
+[Running FAQ](/hdc/workflows/running/faq)
 
 
 ## Things to Consider
