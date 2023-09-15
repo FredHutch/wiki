@@ -1,19 +1,101 @@
 ---
-title: Clinical Data Management
+title: FHCC Patient Clinical Data for Research
 last_modified_at: 2020-05-06
-main_authors: Rachel Galbraith
-primary_reviewers: Rachierizz
+main_authors: Monica Gerber, Rachel Galbraith
+primary_reviewers: vortexing
 ---
-Whether you need clinical data for a prospective or observational study or need to be able to identify suitable biospecimens associated with a cohort (either available via collaboration with other researchers or via a specimen repository), it is critical to enable the generation of large-scale data sets associated with patient phenotypes.  On this page we describe what data management systems are available to consortium researchers. 
 
-## Medical Record Data from the University of Washington
-A feed of commonly desired medical record data from the University of Washington (Caradigm Intelligence Platform, often referred to as "Amalga") is covered by the HIDRA IRB. Data elments for our cancer patient population seen within the UWMC system (which is prescribed by a combination of encounter and diagnosis codes and includes patients seen at UWMC, SCCA, Harborview, and NWMC) are updated either daily or biweekly and include information such as demographics, lab values, encounters, diagnosis codes, radiation oncology, and a variety of unstructured radiology, pathology, and clinical narrative reports.
+Access to clinical data for Fred Hutch Cancer Center’s patient population is
+critical for research activities at FHCC. This page outlines the clinical data
+systems at FHCC that can be used for research. 
 
-## Manually Abstracted Data in Caisis
-[Caisis](http://www.caisis.org/) is an open source data management platform in use by [STTR](http://www.sttrcancer.org/) to facilitate data abstraction and programmatic resources to support translational research. Abstraction of data into Caisis is covered by the HIDRA IRB and does not require program-specific IRBs until the data is being requested out for research purposes. Caisis is centered around individual patients and helps create a story about their clinical experiences and health status at various times in the course of their treatment at UW Medicine or SCCA. Data entered into Caisis builds upon the discrete data elements available through the Hutch Data Repository. Approximately 30 fields from that data repository are fed directly into Caisis, along with a linkage to SEER data which pulls in death dates when available. Abstracted data elements are recorded in discrete fields, per data dictionaries which are set up by consensus by multiple members of each program. Wherever possible, data elements are standardized across disease programs, enabling data sharing across programs and larger research questions to be answered in the future. All data in Caisis is audited (real-time auditing is performed on at least 10% of patients entered for each program). To view fields and disease-specific data dictionaries, see the [Fred Hutch Ontology Browser](https://ontology.fredhutch.org).
+## Upcoming Opportunities
 
+Recent changes have opened up new opportunities for Fred Hutch, but to benefit
+from these changes, the institution needs to adjust its approach to leveraging
+data. In spring 2022, FHCRC and SCCA merged to form Fred Hutch Cancer Center and
+Dr. Jeff Leek was hired as Chief Data Officer. The Fred Hutch data [needs
+assessment](https://hutchdatascience.org/news/NeedsAssessmentv1/), which ran
+from April 2022 to April 2023, identified clinical data access, data governance,
+clinical data analysis support, and clinical data infrastructure as top needs
+across the institution. In April 2023, the Data Science Lab team, along with
+Legal, Compliance, and IT, finalized a new agreement with University of
+Washington that enables comprehensive data access and use. 
 
-Currently, there are 12 programs with data abstracted into Caisis:
+These exciting new opportunities for use of FHCC’s patient clinical data depend
+on the development of expanded data infrastructure and new data governance and
+stewardship policies. DaSL and its partners at FHCC have initiated a new data
+infrastructure approach and a new data governance approach for clinical data.
+This new approach envisions a future FHCC with multimodal data integration and
+democratized data access. For more information and to stay up-to-date with new
+developments, visit DaSL’s [blog](https://hutchdatascience.org/news/) and
+[newsletter](https://fhdata.substack.com/), and the Translational Analytics
+[team page](https://hutchdatascience.org/tr-analytics/).
+
+## Medical Record Data
+
+For now, medical record data for cancer consortium patients is available for
+research through the legacy repository of clinical data extracted from UW
+Medicine Analytics systems. This legacy repository is referred to as HIDRA
+(Hutch Integrated Data Repository and Archive), and the source of data is
+primarily from UW Medicine’s Clarity/DEEP tables. Previously, other sources were
+used before UW Medicine consolidated their electronic health record activities
+into Epic (e.g., UW Medicine’s Amalga analytics platform). The legacy repository
+includes tables such as demographics, lab values, encounters, diagnosis codes,
+radiation oncology, and a variety of unstructured radiology, pathology, and
+clinical narrative reports.  Currently, to request access to these data, go to
+the [Consortium Clinical Oncology Data
+Access](https://extranet.fredhutch.org/en/u/consortium-clinical-data-access.html)
+page on CenterNet.
+
+*FHCC patient population*
+
+The patient population included in HIDRA is created by filtering for patients
+across FHCC and UW Medicine in Clarity. Clarity is the name of the database that
+contains the unified Epic medical record for FHCC and UW Medicine. Patients are
+included if they have at least one oncology-related base record in any of
+Clarity’s data domains (encounters, hospital billing account, professional
+billing, referral). A base record is defined as the most relevant unit of
+activity in each of the data domains. Once a set of qualified patients with at
+least one oncology-related base record in any data domain is identified, records
+for all care for those patients are brought in (not just care directly related
+to cancer).
+
+Oncology-related records are defined in a MOU between the UW and FHCC:
+
+>1.1 Cancer-Related Care: Includes,
+>
+>1.1.1 Care provided to individuals who have had a cancer diagnosis in their lifetime at any SCCA or UW Medicine facility.
+>
+>1.1.2 Care related to bone marrow/stem cell transplants or immunotherapy for donors and recipients without a cancer diagnosis.
+>
+>1.1.3 Care provided to individuals who have a cancer-related condition (e.g. benign neoplasm), which shall include any care regardless of whether it is related to such cancer-related condition.
+>
+>1.1.4 Care related to cancer screening (e.g. mammograms, pap smears, colonoscopies, certain imaging scans) and specific cancer prevention activities (e.g. HPV vaccine).
+
+This definition which outlines which patients and records are included in HIDRA is the same definition used for the databases that contain clinical data for support of oncology-related clinical and operational activities (The Data Platform/CEDAR).
+
+## Manually Abstracted Data
+
+Until November of 2022, STTR used a data management platform called Caisis to
+facilitate data abstraction for translational research. Manually abstracted data
+built upon the discrete data elements available in HIDRA. These additional data
+elements create a story about individual patient’s clinical experiences and
+health status throughout their treatment at FHCC or UW Medicine.
+
+Approximately 30 fields from HIDRA were fed directly into Caisis, along with a
+linkage to SEER data which pulled in death dates when available. Abstracted data
+elements were recorded in discrete fields, per data dictionaries which were set
+up by consensus by multiple members of each program. Wherever possible, data
+elements were standardized across disease programs, enabling data sharing across
+programs and larger research questions to be answered in the future. All data in
+Caisis was audited (real-time auditing was performed on at least 10% of patients
+entered for each program). To view fields and disease-specific data
+dictionaries, see the [Fred Hutch Ontology
+Browser](https://ontology.fredhutch.org).
+
+There are 12 programs with data abstracted into Caisis:
+
 - Brain
 - Breast
 - Colorectal
@@ -28,40 +110,7 @@ Currently, there are 12 programs with data abstracted into Caisis:
 - Thyroid
 - Leukemia
 
-Many of these have ongoing abstraction. STTR contracts with abstractors through a company called Vasta Global at a cost of $24,000 per abstractor per year. Each group selects and prioritizes the patients for which they would like data abstracted, supplying the abstractors with an updated list on a regular basis. Please note, the contract with Vasta Global only allows them to access the UW/SCCA medical records, not those from outside institutions. The data abstracted into Caisis is available to any interested Consortium investigator, with valid IRB approval or for activities preparatory to research.
-
-## Data Requests
-To request data from the Hutch Data Repository, investigators or research coordinators need to fill in the data request form available [here](https://cdsweb07.fhcrc.org/redcap/surveys/?s=WM3CAN33YY).  Requests for data can be made for the purposes of research, preparatory for research, operations, quality assurance/quality improvement and clinical care. For research projects, IRB documentation will be requested to verify whether the requestor should be granted access to the requested data.  Requests for identified data in support of preparatory to research activities will be reviewed for potential documentation requirements, such as a confidentiality pledge.
-
-The [Fred Hutch Ontology Browser](https://ontology.fredhutch.org) can be a useful tool in developing data requests as it will help researchers understand how, when and in what format each data element is collected. 
->**Tip:** Before submitting a request, use the Ontology Browser to create an Excel file/csv containing your fields of interest that are already in existence then that file can be uploaded within the data request form.
-
-### Detailed Instructions
-
-1.	To request data from the Hutch Data Repository, investigators or research coordinators need to fill in the data request form available [here](https://cdsweb07.fhcrc.org/redcap/surveys/?s=WM3CAN33YY)
-2.  Broadly describe the request. If you are requesting CAISIS data from an STTR supported group (Lymphoma, Myeloma, etc) then you can  select “Yes” to the STTR question. This just means someone on the STTR team will help with identifying the data from our data dictionary.
-5.	PHI: Select whether you need identified data or de-identified data
-6.	Identify how you intend to use the data, whether for research (or activities preparatory to research), clinical care, etc.
-7.	Include the IRB number related to this work. If requested, include the IRB number related to this work. You can search CORE FYI to find the appropriate IRB number.
-8.	Confidentiality pledges are no longer required as per a change in Washington State law.
-9. The form does not require specific data fields to be selected. You may write in specific data fields, or broadly describe what you want. To request specific fields found within Caisis, you may refer to the existing fields listed in the Fred Hutch Ontology Browser under CAISIS [here](https://ontology.fredhutch.org). The submission form does NOT link to the Ontology Browser.
-10. If you wish to submit a list of MRN's to identify specific individuals for whom you want data, the request form allows you to upload the list, Excel format perferred.  Password protect all files with identifiable data, including lists of MRNs; the submission form will ask you to provide the password.
-12. That’s it! A data analyst from the Hutch Data Core will contact you to discuss the specifics, including how to share identifiable data.
-
-## STTR REDCap Template
-In partnership with Fred Hutch Core Data Services, STTR has created a REDCap template which is available to any Fred Hutch investigator. The template provides an opportunity for groups who are interested in abstracting their own patient/participant data (either for a specific study group, or from an outside medical institution). The template includes the fields which are common across programmatic data dictionaries and allows each group to tailor the data collection to their own needs and timeline.
-
-Whether or not a REDCap should be spun up will depend on what the investigator is intending to use the Caisis data for. If investigators will be adding their own data elements (from a survey or additional data abstraction) then spinning up a new REDCap project for their study makes sense. If investigators will be working directly with the data and performing their data cleaning and analysis, then the data should be distributed by depositing it into the investigator's Secure storage. 
-
-There are three primary scenarios where the template may be especially useful:
-A group would like to start with existing Caisis data: they could make a data request that would populate the REDCap template and the group would then have an easy interface for entering additional study-specific data.
-
-A group would like to begin data abstraction and wants the benefits of standardized data elements, but does not want to go through the formal process of beginning abstraction into Caisis: the STTR REDCap template will allow groups to being abstraction using common data elements and standards which enable sharing of data across research groups – if a group would like to follow a specific data dictionary, they can request the STTR REDCap template and then modify the interface to match the disease program data dictionary as found in the [Fred Hutch Ontology Browser](https://ontology.fredhutch.org)
-
-If a group starts abstraction using REDCap, but would like to contribute the data back to the institutional database in Caisis at a later date: When the group has finished their data entry into REDCap for their specific project, STTR will provide auditing services to determine the accuracy of the entered data and, if it passes our threshold, we can push the data into Caisis.  
-
-If your team has questions about Caisis, the STTR REDCap template, or data abstraction, please reach out to us by emailing `STTRCancer`.
-
-
-## Additional Resources
-- [REDCap](https://projectredcap.org): REDCap projects are flexible and secure ways to capture multiple types of data, including clinical covariates. REDCap includes version-control and access-restriction features. Fred Hutch has its [own instance](http://research.fhcrc.org/cds/en/redcap.html) of REDCap and offers many [training opportunities](http://research.fhcrc.org/cds/en/redcap-training.html) to support researchers.
+Data abstracted into Caisis is still available to any Cancer Consortium
+investigator, with valid IRB approval or for activities preparatory to research.
+Currently, STTR is developing new tools for data abstraction. See STTR’s
+newsletter to stay informed about new data abstraction tools.
