@@ -26,13 +26,13 @@ Email `helpdesk` or your divisional IT support and ask for an installation of Mo
 - Open Software Center and search for Mountain Duck and install the package using the Install button
 - Restart your Computer if the installer asks you to do so.
 - After install you should see an orange icon in your system tray (if you do not see it in the tray start Mountain Duck from the start menu.)
-- Continue with [Configuring Mountain Duck](#Configuring-Mountain-Duck) below.
+- Continue with [Configuring Mountain Duck](#configuring-mountain-duck) below.
 
 #### Windows 7
 
 - Open folder `X:\fast\_ADM\SciComp\setup\packages\MountainDuck\` on the Center Drive (X).  
 - Start (double click) file INSTALL.bat. The install script will install a tested version of Mountain Duck, a profile and a license file.
-- Continue with [Configuring Mountain Duck](#Configuring-Mountain-Duck) below.
+- Continue with [Configuring Mountain Duck](#configuring-mountain-duck) below.
 
 ![Tray](/assets/mountain_cyber_duck/2018-09-25-11-25-43.png)
 
@@ -41,7 +41,7 @@ Email `helpdesk` or your divisional IT support and ask for an installation of Mo
 
 - Download and install the Software in trial mode [here](https://mountainduck.io/)
 - To get a license file, download the `fredhutch50.mountainducklicense` from [here](https://teams.fhcrc.org/sites/citwiki/SciComp/Documents/fredhutch50.mountainducklicense) and double click the file or drag it to the Mountain Duck application icon to register.
-- Continue with [Configuring Mountain Duck](#Configuring-Mountain-Duck) below.
+- Continue with [Configuring Mountain Duck](#configuring-mountain-duck) below.
 
 ### Configuring Mountain Duck
 

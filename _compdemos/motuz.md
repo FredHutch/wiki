@@ -38,7 +38,7 @@ Every researcher at Fred Hutch has access to
 an S3 bucket belonging to their lab. If your PI's name is Jane Doe, your lab's bucket would be called `fh-pi-doe-j-eco`. 
 
 Each researcher also has credentials to access 
-this bucket. See [the documentation](/scicomputing/access_credentials/#gui-instructions) for how to obtain these credentials.
+this bucket. See [the documentation](/scicomputing/access_credentials/#amazon-web-services-aws) for how to obtain these credentials.
 
 In Motuz, click the `Cloud Connections` link at the top of the browser window. Then click the `New Connections` button. 
 

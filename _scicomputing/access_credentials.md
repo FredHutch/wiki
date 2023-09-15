@@ -53,7 +53,7 @@ Once you have working credentials, you can read more about [AWS Storage](/scicom
 
 ### Configure AWS cli
 
-Load the awscli module, then run `aws configure` and enter your Access Key ID & Secret Access Key. You can read more about this [here]([/compdemos/aws-s3/](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config)).
+Load the awscli module, then run `aws configure` and enter your Access Key ID & Secret Access Key. You can read more about this [here](/scicomputing/access_credentials/#configure-aws-cli)
 
 ```
 module load awscli

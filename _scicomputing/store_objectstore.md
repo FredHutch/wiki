@@ -50,7 +50,7 @@ A specialized client is required to upload data into S3 storage. [Mountain Duck]
 
 #### Credentials and Permissions
 
-Once you have [obtained S3 credentials](/scicomputing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets.
+Once you have [obtained S3 credentials](/scicomputing/access_credentials/#amazon-web-services-aws), you can use them to transfer files from/to the PI S3 buckets.
 
 By default, everyone in the lab with an AWS username will have access to all data in all buckets, however the prefixes `readonly/` and `SR/` are typically restricted.  Data Managers and Admins have full permissions on all files in all buckets.
 

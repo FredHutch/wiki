@@ -42,7 +42,7 @@ When you are logged on to Fred Hutch compute resources,
 This section assumes you are logging on from campus
 (e.g., connected to the Fred Hutch network).
 If you are logging in from off campus,
-please ensure you are connected to the Fred Hutch network using one of the options described in [off campus log-in](#off-campus-log-in).
+please ensure you are connected to the Fred Hutch network using one of the options described in [off campus log-in](#logging-on-outside-of-the-fred-hutch-network).
 
 In your shell,
 type the following (where `username` is your HutchNetID):
@@ -100,7 +100,7 @@ you can use the following shortcut to log on to `rhino`:
 
     ssh rhino
 
-Follow the process as [described above](#within-the-fred-hutch-network)
+Follow the process as [described above](#logging-on-within-the-fred-hutch-network)
 to enter your password and access `rhino`.
 
 ## Logging on to `gizmo` via `grabnode`
@@ -141,7 +141,7 @@ you almost certainly do not.
 - If you get an error like "Invalid Account" it indicates that your association to a PI account has not been completely set up;
 please email `scicomp`.
 
-See [this documentation](/compdemos/howtoRhino/#guidance-for-use)
+See [this documentation](/compdemos/first_rhino/#logging-on-to-gizmo-via-grabnode)
 for more information on when to use `grabnode`,
 and [this page](/scicomputing/compute_platforms/#gizmo-cluster) for more information on Gizmo.
 
