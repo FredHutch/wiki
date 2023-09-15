@@ -6,7 +6,7 @@ primary_reviewers: atombaby
 
 ## Known Issues in the Bionic Environment
 
-This is a summary list of the most apparent issus and limitations in the new Bionic environment.  More information on issues we are working on may be found in the [GitHub project](https://github.com/FredHutch/scicomp-todo/projects/5).
+This is a summary list of the most apparent issus and limitations in the new Bionic environment.  More information on issues we are working on may be found in the `Gizmo Bionic Upgrade` project in GitHub.
 
 ### Binary Incompatibility Between Node Classes
 

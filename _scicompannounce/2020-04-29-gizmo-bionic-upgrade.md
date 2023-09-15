@@ -54,7 +54,7 @@ The name `rhino` will now route you to a Bionic Rhino node.  The `rhino-new` nam
 
 ### Interactive Computing- NoMachine
 
-All of the NoMachine services will be migrated to the new Bionic Rhino nodes.  The current hosts- lynx, manx, and sphinx- will be retired with the Bionic Rhinos taking over those services.  You will need to create connections to one of the names `rhino01`, `rhino02`, and `rhino03`.  More information is available on [this page](/compdemos/gizmo-nx-users/)
+All of the NoMachine services will be migrated to the new Bionic Rhino nodes.  The current hosts- lynx, manx, and sphinx- will be retired with the Bionic Rhinos taking over those services.  You will need to create connections to one of the names `rhino01`, `rhino02`, and `rhino03`.  More information is available on [this page](/scicomputing/access_nx/)
 
 ### Interactive Computing- grabnode
 

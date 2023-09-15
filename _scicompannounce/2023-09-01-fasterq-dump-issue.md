@@ -22,7 +22,7 @@ It is important to note that this location only exists for the duration of the j
 
 The amount of local scratch space needed should be specified with the **--tmp** argument to `sbatch` when submitting a job.
 
-More information on node local scratch space is available at the [Scratch storage page](/scicomputing/store_scratch/#node-local-job-scratch)
+More information on node local scratch space is available at the [Job local storage page](/compdemos/store_job_local)
 
 ### Use `parallel-fastq` instead
 
