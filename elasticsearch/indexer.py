@@ -71,11 +71,13 @@ def bulk_up(docs):
     client = Elasticsearch("http://localhost:9200",
       headers={'Content-Type': 'application/json'})
     print("Preparing for bulk import....")
-    indexes = [x['_index'] for x in docs]
-    print(f"len(indexes): {len(indexes)}")
-    sindexes = set(indexes)
-    print(f"len(sindexes): {len(sindexes)}")
-    print(sindexes)
+    # overwriting docs for testing - TODO remove this
+    docs = [{'_index': 'sciwiki0', '_id': '/', '_source': {'content': 'here is some content about airplanes and birthdays', 'title': 'this is a test'}}]    
+    # indexes = [x['_index'] for x in docs]
+    # print(f"len(indexes): {len(indexes)}")
+    # sindexes = set(indexes)
+    # print(f"len(sindexes): {len(sindexes)}")
+    # print(sindexes)
     try:
         retval = bulk(client, str(docs))
         print("Bulk import was successful.")
