@@ -75,6 +75,7 @@ def bulk_up(docs):
     print(f"len(indexes): {len(indexes)}")
     sindexes = set(indexes)
     print(f"len(sindexes): {len(sindexes)}")
+    print(sindexes)
     try:
         retval = bulk(client, str(docs))
         print("Bulk import was successful.")
