@@ -72,7 +72,7 @@ def bulk_up(docs):
       headers={'Content-Type': 'application/json'})
     print("Preparing for bulk import....")
     # overwriting docs for testing - TODO remove this
-    docs = [{'_index': 'sciwiki0', '_id': '/', '_source': {'content': 'here is some content about airplanes and birthdays', 'title': 'this is a test'}}]    
+    docs = [{'index': '_sciwiki0',  '_index': 'sciwiki0', '_id': '/', '_source': {'content': 'here is some content about airplanes and birthdays', 'title': 'this is a test'}}]    
     # indexes = [x['_index'] for x in docs]
     # print(f"len(indexes): {len(indexes)}")
     # sindexes = set(indexes)
