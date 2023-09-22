@@ -51,7 +51,7 @@ def crawl_documents():
                     soup = BeautifulSoup(f, "html.parser")
                 title = soup.title.string
                 title = title.replace(" - Fred Hutch Biomedical Data Science Wiki", "").strip()
-                doc = dict(url=url, content=text, title=title)
+                doc = dict(url=url, content=str(text), title=title)
                 docs.append(doc)
     return docs
 
@@ -72,7 +72,7 @@ def bulk_up(docs):
       headers={'Content-Type': 'application/json'})
     print("Preparing for bulk import....")
     try:
-        retval = bulk(client, str(docs))
+        retval = bulk(client, docs)
         print("Bulk import was successful.")
         print(retval)
         return retval
