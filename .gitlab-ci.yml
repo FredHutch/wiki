@@ -99,6 +99,7 @@ create_search_index_1:
     # echo container name: $CONTAINER_NAME
     CONTAINER_ID=$(docker ps | grep $HOSTNAME | grep "9200/tcp" | cut -d' ' -f1)
     docker exec $CONTAINER_ID ls -l /
+    sleep 90
     docker exec $CONTAINER_ID /indexer.sh
     rm -rf idx
     mkdir idx

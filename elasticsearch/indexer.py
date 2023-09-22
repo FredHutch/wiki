@@ -73,17 +73,17 @@ def bulk_up(docs):
     print("Preparing for bulk import....")
     # overwriting docs for testing - TODO remove this
     docs = [{'index': '_sciwiki0',  '_index': 'sciwiki0', '_id': '/', '_source': {'content': 'here is some content about airplanes and birthdays', 'title': 'this is a test'}}]    
-    import bs4
-    import sh
-    import elasticsearch
-    import requests
-    print(f"bs4 version: {bs4.__version__}")
-    print(f"sh version: {sh.__version__}")
-    print(f"elasticsearch version: {elasticsearch.__version__}")
-    print(f"requests version: {requests.__version__}")
+    # import bs4
+    # import sh
+    # import elasticsearch
+    # import requests
+    # print(f"bs4 version: {bs4.__version__}")
+    # print(f"sh version: {sh.__version__}")
+    # print(f"elasticsearch version: {elasticsearch.__version__}")
+    # print(f"requests version: {requests.__version__}")
 
-    import ipython
-    print(f"ipython version: {ipython.__version__}")
+    # import ipython
+    # print(f"ipython version: {ipython.__version__}")
 
     # indexes = [x['_index'] for x in docs]
     # print(f"len(indexes): {len(indexes)}")
