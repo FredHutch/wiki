@@ -104,7 +104,18 @@ If the markdown you are editing is in one of the other folders you'll need to ch
 
 Both Atom and VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
 
+#### Custom sized images
+If you want to adjust the size of your image, you can add your image using HTML syntax. Be sure to include the `alt` attribute.
+
+```
+<img src="/compdemos/assets/2018-06-01-12-34-51.png" alt="VS Code extensions tab" width="500" height="600">
+```
+
 ### External Videos and Images
+
+#### Images
+
+Before linking to external images, consider saving a copy and creating an internal link as outlined [here](#in-text-images). This helps ensure content doesn't break over time.
 
 #### Youtube
 
