@@ -32,6 +32,6 @@ The updates of the NVIDIA drivers may have more impact on your work if you are u
 
 ## NoMachine Updates
 
-Lastly, we will be upgrading NoMachine on the rhino nodes to the latest version (8.8.1).  This won't change how we use NoMachine but will keep us up-to-date with security and bug fixes.
+Lastly, we will be upgrading NoMachine on the rhino nodes to the latest version (8.9.1).  This won't change how we use NoMachine but will keep us up-to-date with security and bug fixes.
 
 
