@@ -18,7 +18,7 @@ Some Nextflow-based tools used for microbiome analysis at Fred Hutch can be foun
 
 ### Setup
 
-  1. Get set up with [AWS Credentials](/scicomputing/access_credentials/#amazon-web-services-aws) and request access to [Batch](/scicomputing/access_credentials/#get-aws-credentials-and-access)
+  1. Get set up with [AWS Credentials](/scicomputing/access_credentials/#amazon-web-services-aws) and request access to [Batch](/compdemos/aws-batch/)
   2. Make a file named `nextflow.config` in your home directory
 
 `nextflow.config` must contain a handful of elements in order to run correctly on AWS at Fred Hutch. 
@@ -63,7 +63,7 @@ aws {
 For each project, the two things you will need to do for each individual project
 are to:
 
-  1. Make sure to locate your input data in AWS S3 (or [move it there if needed](/scicomputing/store_objectstore/#economy-cloud-s3))
+  1. Make sure to locate your input data in AWS S3 (or [move it there if needed](/scicomputing/store_objectstore/#aws-s3))
   2. Find / make the right Nextflow script for your analysis
 
 ## Running a workflow

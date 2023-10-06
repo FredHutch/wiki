@@ -20,7 +20,7 @@ deprecated and pointing to this tutorial.
 
 
 ## Running MaxQuant
-Our on-premises compute cluster ([Gizmo](/compdemos/howtoGizmo/)) can do the compute-intensive work of running MaxQuant. You still need to run MaxQuant on your local Windows machine to configure your job, but instead of running it locally (or in the cloud), you will run it  on the compute cluster.
+Our on-premises compute cluster ([Gizmo](/pathways/path-batch-computing/)) can do the compute-intensive work of running MaxQuant. You still need to run MaxQuant on your local Windows machine to configure your job, but instead of running it locally (or in the cloud), you will run it  on the compute cluster.
 
 ### Configure Job
 
@@ -261,7 +261,7 @@ Slurm Job_id=48886649 Name=submit.sh Ended, Run time 00:00:01, COMPLETED, ExitCo
 
 When `maxquant` is finished, your output files will be in this same directory, and you can access them from Windows or Linux.
 
-Check the [Gizmo documentation](/compdemos/howtoGizmo/) on this wiki for further information on running batch jobs on the Gizmo cluster.
+Check the [Gizmo documentation](/pathways/path-batch-computing/) on this wiki for further information on running batch jobs on the Gizmo cluster.
 
 If you have any questions, please contact `scicomp`.
 
