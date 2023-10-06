@@ -36,17 +36,17 @@ PuTTY is the most widely used secure shell software for Windows. You can install
 
 Open the application, enter `rhino` as the hostname then click Open.
 
-<img src="../assets/putty_main.png" width="450">
+<img src="../assets/putty_main.png" alt="Putty config window" width="450">
 
 Enter your hutchid then press enter. It will prompt for your password. Press enter again and you will connect.
 
-<img src="../assets/putty_loginas.png">
+<img src="../assets/putty_loginas.png" alt="Putty login screenshot">
 
 ### Mac OS
 
 The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources.  We also recommend using [iTerm2](https://www.iterm2.com/) for your local terminal program on your Mac.  It has a richer feature set that comes in handy as your computing needs grow.
 
-The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](http://xquartz.macosforge.org), and download and install the latest version of XQuartz.
+The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](https://xquartz.macosforge.org), and download and install the latest version of XQuartz.
 
 After installing XQuartz just start the app. The XQuartz icon will appear in the toolbar showing that it is running. XQuartz is now running an X11 client and that is the only interaction that you need to do with XQuartz. After XQuartz is running, open the Mac terminal. The latest version of XQuartz sets the DISPLAY environment with the default Mac terminal window. We do not recommend using the terminal that comes with XQuartz.
 
@@ -63,7 +63,7 @@ After connecting to a `rhino` verify that your X11 client is working by typing `
 
 ### Linux
 
-Terminator is a convenient terminal emulator that can have multiple terminals in a single window. You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend [NoMachine NX](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx) to connect to a Linux machine with Terminator.
+Terminator is a convenient terminal emulator that can have multiple terminals in a single window. You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend [NoMachine](/scicomputing/access_nx/) to connect to a Linux machine with Terminator.
 
 After starting Terminator you can right click on the terminal window and either split it horizontally or vertically. This 1 min video shows you how it works:
 
@@ -80,7 +80,7 @@ There are several ways around this:
 
 ### NoMachine NX (Multi-OS)
 
-NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `rhino01`, `rhino02` or `rhino03`.  To connect through the local Fred Hutch network or through a VPN connection please download and install the NoMachine Enterprise Client from [NoMachine's Site.](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)  Windows users can also install an older version from "Software Center".
+NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `rhino01`, `rhino02` or `rhino03`.  To connect through the local Fred Hutch network or through a VPN connection please download and install the NoMachine Enterprise Client from [NoMachine's Site.](https://downloads.nomachine.com/download-enterprise/#NoMachine-Enterprise-Client)  Windows users can also install an older version from "Software Center".
 
 Installation and configuration is described [here](/scicomputing/access_nx/).
 
@@ -98,7 +98,7 @@ GNU Screen and tmux are both terminal multiplexers. They run one or more shell p
 
 A note about tmux iterm2 integration. If you are using iterm2 on a Mac, add `-CC` to your tmux command. This will run a tmux console as well as tmux in that terminal. From there, you can use iterm2 commands to create a new tmux sessions in a new window (`command-n`) or a new tab (`command-t`). When you disconnect, simply reattach to that first tmux session, and iterm2 will re-open all your windows and/or tabs.
 
-A note about the X Window System and terminal multiplexers. As stated above, on your laptop you are running an X server, and the remote program is a client. Terminal multiplexing allow your laptop to disconnect because the multiplexing server is running on the remote system and your device is the client. When you close your laptop, the X server stops. Clients exit at that point as a client cannot do anything without a server. See [NoMachine](#nomachine-nx-(multi-os)) for a workaround for X programs.
+A note about the X Window System and terminal multiplexers. As stated above, on your laptop you are running an X server, and the remote program is a client. Terminal multiplexing allow your laptop to disconnect because the multiplexing server is running on the remote system and your device is the client. When you close your laptop, the X server stops. Clients exit at that point as a client cannot do anything without a server. See [NoMachine](/scicomputing/access_nx/) for a workaround for X programs.
 
 A note about screen:  `ssh rhino` will assign you to one of the available, specific servers (ie: rhino01, rhino02, rhino03) and _screen_ instances _are not shared across the servers_. If you are interested in using screen to run a persistent session on the rhino cluster, consider:
  1. accessing a specific server directly eg: `ssh rhino01` 

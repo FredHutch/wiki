@@ -18,9 +18,9 @@ are collections of related functions created and
 made available by the Python community via Pypi.org. 
 The following packages are commonly used for scientific computing and are pre-installed in the fhPython module.
 
-- **`numpy` and `scipy`** are complementary packages including many functions relevant for scientific computing. More information is available on the [Scipy site](https://www.scipy.org/getting-started.html). These packages are also used in fredhutch.io's [Intermediate Python: Programming class](http://www.fredhutch.io/resources/).
-- **`pandas`** is the Python Data Analysis Library, which includes capabilities for parsing, manipulating, and summarizing spreadsheet-style data as data frames. More information is available in [this introduction](http://pandas.pydata.org/pandas-docs/stable/10min.html). `pandas` is also used in fredhutch.io's [Intro to Python class](http://www.fredhutch.io/resources/).
-- **`biopython`** is a package that allows easier manipulation of genetic and genomic data. Learn more using this [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html).
+- **`numpy` and `scipy`** are complementary packages including many functions relevant for scientific computing. More information is available on the [Scipy site](https://www.scipy.org/getting-started.html). These packages are also used in fredhutch.io's [Intermediate Python: Programming class](https://www.fredhutch.io/resources/).
+- **`pandas`** is the Python Data Analysis Library, which includes capabilities for parsing, manipulating, and summarizing spreadsheet-style data as data frames. More information is available in [this introduction](https://pandas.pydata.org/pandas-docs/stable/10min.html). `pandas` is also used in fredhutch.io's [Intro to Python class](https://www.fredhutch.io/resources/).
+- **`biopython`** is a package that allows easier manipulation of genetic and genomic data. Learn more using this [Biopython tutorial](https://biopython.org/DIST/docs/tutorial/Tutorial.html).
 
 There are many other packages publicly available for use,
 which may vary in quality and functionality. Other places to find packages:
@@ -42,7 +42,7 @@ you can use Anaconda Navigator to explore various options for running Python,
 including Jupyter notebooks and PyCharm.
 
 fredhutch.io's Intro to Python course uses Anaconda,
-and includes brief [installation instructions](http://www.fredhutch.io/software/#python-jupyter-notebooks)
+and includes brief [installation instructions](https://www.fredhutch.io/software/#python-jupyter-notebooks)
 as well as a [walk-through of Jupyter notebooks](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/gh-pages/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks).
 
 A piece of software related to Anaconda is [Miniconda](https://docs.conda.io/en/latest/miniconda.html),

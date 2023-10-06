@@ -14,7 +14,7 @@ This document describes management of the Aspera plugin on NoMachine.
 > NOTE: these instructions indicate Firefox as the browser.  This process is very similar with Chromium though some of the terminology is different
 
  - Start a NoMachine session and run Firefox
- - Enter "http://aspera.fhcrc.org" in the address bar
+ - Enter "https://aspera.fhcrc.org" in the address bar
  - Log in when prompted
  - Wait a little bit- it needs a moment to detect the plugin
  - It will pop up a "Required Steps".  Step 1 is to install the add-on to the browser.  Click the "Install add-on" button.

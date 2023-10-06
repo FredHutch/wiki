@@ -44,11 +44,11 @@ In addition to mass spectrometry, other methods such as antibody microarrays and
 ### Software
 A wide variety of commercial and open source software are available. Some of the more commonly used packages are list below:
 
-- [Mascot](http://www.matrixscience.com)
+- [Mascot](https://www.matrixscience.com)
 - [Proteome Discover](https://www.thermofisher.com/order/catalog/product/OPTON-30795)
 - [Protein Pilot](https://sciex.com/products/software/proteinpilot-software)  
 - [SEQUEST Sorcerer](https://www.sagenresearch.com)  
-- [Comet](http://comet-ms.sourceforge.net)
+- [Comet](https://comet-ms.sourceforge.net)
 - [MaxQuant](https://www.maxquant.org/) (See also the [documentation](/compdemos/maxquant/) for running MaxQuant on the Gizmo cluster)
 - [Andromeda](https://omictools.com/andromeda-tool)
 - [X!tandem](https://www.thegpm.org/tandem/api/index.html)
@@ -57,6 +57,6 @@ A wide variety of commercial and open source software are available. Some of the
 
 ## Available Resources  
 - [FH Shared Resources page](https://sharedresources.fredhutch.org/core-facilities/proteomics)
-- [UW Proteomics Resource](http://proteomicsresource.washington.edu)
-- [UW Genome Sciences, see MacCoss, Bruce, and Villen labs](http://www.gs.washington.edu/index.htm)
-- [Pacific Northwest Mass Spec Group](http://www.pacmass.org)
+- [UW Proteomics Resource](https://proteomicsresource.washington.edu)
+- [UW Genome Sciences, see MacCoss, Bruce, and Villen labs](https://www.gs.washington.edu/index.htm)
+- [Pacific Northwest Mass Spec Group](https://www.pacmass.org)

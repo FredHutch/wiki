@@ -7,7 +7,7 @@ primary_reviewers: vortexing
 In collaborative settings, often data transfer and sharing can pose significant challenges.  For specific guidance about data transfer, access or copying for your particular collaboration, please file a ticket including a basic description of the data access sitaution by emailing `scicomp`.  There are often suitable strategies for collaborative project support that do not require data duplication (and thus increased data storage costs), or use of expensive data storage or transfer tools.  Two useful data transfer tools at use at the Hutch include `Motuz` and `Aspera`.  
 
 ### Motuz
-[Motuz](http://motuz.fredhutch.org) is a tool that facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
+[Motuz](https://motuz.fredhutch.org) is a tool that facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
 
 ### Aspera
 

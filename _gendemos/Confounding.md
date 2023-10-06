@@ -37,7 +37,7 @@ We are interested in the association between the horsepower of the car and the w
 within this dataset (the "hp" and "wt" columns). Looking at the relationship between these
 two variables
 
-<img src="../assets/carsplot-1.png">
+![](/assets/carsplot-1.png)
 
 
 And is there a significant association between these two variables?
@@ -73,7 +73,7 @@ the number of cylinders.
     thecols[which(mtcars$cyl==6)]<-"blue"
     plot(mtcars$hp,mtcars$wt,xlab="Horsepower",ylab="Weight",col=thecols)
 ``` 
-<img src="../assets/carsplot2-1.png">
+![](/assets/carsplot2-1.png)
 
 
 
@@ -136,7 +136,7 @@ Hopefully now you have a better understanding of confounding. Here we will just 
 Let us assume that we are interested in the association between a variable X and an outcome Y. We have the following Directed Acyclic Graph  (a DAG) that describes the relationship between X and Y. There is in addition some variable U, that may influence the analysis.
 
 ### Simulation scenario 1
-<img src="../assets/Dag1.png">
+![](/assets/Dag1.png)
 
 To read this DAG, it says U occurs before X before Y. X has an effect on Y, U affects X and affects Y (via the arrows).
 
@@ -182,7 +182,7 @@ Which is the expected result. It's much closer to 1.
 ### Simulation Scenario 2
 Now consider the following scenario.
 
-<img src="../assets/Dag1_5.png">
+![](/assets/Dag1_5.png)
 
 We would not have to adjust for U because there is no path from X to Y that goes through U. But again, this is not something you can necessarily test for. In this setting, U is not a confounder.
 
@@ -222,7 +222,7 @@ Which is again unbiased.
 ### Simulation Scenario 3
 Let us increase the complexity and add an additional variable Z. 
 
-<img src="../assets/Dag3.png" width="561.494" height="244">
+<img src="/assets/Dag3.png" alt="Dag3.png" width="561.494" height="244">
 
 We observe Z and U. If we do not adjust for Z, we will get a bias estimate of the effect of X onto Y. This is due to there being a backdoor path from X to Y that goes through Z. However, if we do adjust for Z we would be able to get an unbiased estimate of the effect of X onto Y.
 
@@ -308,7 +308,7 @@ that X has an effect on Y if we did not adjust for U or Z?
 ### Simulation Scenario 6
 Now let us look at a simulation examining collider bias. As mentioned earlier, this is fundamentally different than confounding. Suppose we have yet another variable "A" that is caused by U and Z via two independent pathways. In addition, U and Z are now independent and Z no longer has an effect on X. Finally, U only affects Y through X. In DAG form:
 
-<img src="../assets/Dag6.png" width="561.494" height="244">
+<img src="/assets/Dag6.png" alt="Dag6.png" width="561.494" height="244">
 
 
 ``` r

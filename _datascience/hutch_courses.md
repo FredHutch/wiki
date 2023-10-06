@@ -10,7 +10,7 @@ Course Name | Description | Link(s)
 [Cluster 101](/datascience/hutch_courses/#cluster-101) | Intro to using the Fred Hutch HPC cluster for new or experienced users. Provides a certification option. | [With Certification](https://leanpub.com/courses/fredhutch/fredhutchcluster101) or [Without Certification](https://hutchdatascience.org/FH_Cluster_Guide/)
 [WDL 101](/datascience/hutch_courses/#wdl-101) | Intro to using Cromwell to run WDL workflows at the Fred Hutch | [Course link](https://hutchdatascience.org/FH_WDL101_Cromwell/)
 [Code Review](/datascience/hutch_courses/#code-review) | Leading a lab with novice or experienced code writers and users?  Either way, our Code Review guidance materials include helpful suggestions for various types of lab members, expertise and group dynamics.  | [Course Link](https://hutchdatascience.org/code_review/)
-[NIH Data Sharing](/datascience/hutch_courses/#nih_data_sharing) | We have created and are actively developing a guide that walks you through the process of complying with the new 2023 NIH Data Sharing Policy.  | [Guide Link](https://hutchdatascience.org/NIH_Data_Sharing/)
+[NIH Data Sharing](/datascience/hutch_courses/#nih-data-sharing) | We have created and are actively developing a guide that walks you through the process of complying with the new 2023 NIH Data Sharing Policy.  | [Guide Link](https://hutchdatascience.org/NIH_Data_Sharing/)
 
 
 ## Cluster 101

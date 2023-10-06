@@ -32,7 +32,7 @@ Given these benefits it is expected that Object Storage systems will become more
 
 You can access AWS S3 resources with [command line tools](/compdemos/aws-s3/) such as  `aws s3` or `rclone` or libraries such as or _boto3_ for _Python_ or _aws.s3_ for R.  As of March 2016, Center IT officially supports the use of [Mountain Duck and Cyberduck desktop clients](/compdemos/Mountain-CyberDuck/) on Windows or Mac to move small amounts of data (Gigabytes rather than Terabytes) and occasionally open a file for editing. 
 
-An additional tool is [Motuz](http://motuz.fredhutch.org), a tool that facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
+An additional tool is [Motuz](https://motuz.fredhutch.org), a tool that facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
 
 
 
@@ -50,7 +50,7 @@ A specialized client is required to upload data into S3 storage. [Mountain Duck]
 
 #### Credentials and Permissions
 
-Once you have [obtained S3 credentials](/scicomputing/access_credentials/), you can use them to transfer files from/to the PI S3 buckets.
+Once you have [obtained S3 credentials](/scicomputing/access_credentials/#amazon-web-services-aws), you can use them to transfer files from/to the PI S3 buckets.
 
 By default, everyone in the lab with an AWS username will have access to all data in all buckets, however the prefixes `readonly/` and `SR/` are typically restricted.  Data Managers and Admins have full permissions on all files in all buckets.
 

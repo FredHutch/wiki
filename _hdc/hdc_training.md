@@ -131,7 +131,7 @@ These resources are organized in a lecture type format as slides, screencasts, a
   - *Course materials all available for free*
 
 - [edX](https://www.edx.org): Offers a collection of courses for [Data Analysis and Statistics](https://www.edx.org/learn/data-analysis) and [Bioinformatics](https://www.edx.org/learn/bioinformatics)
-  - [Rafael Irizarry](http://rafalab.github.io/) of Dana Farber has online programs available through edX:
+  - [Rafael Irizarry](https://rafalab.github.io/) of Dana Farber has online programs available through edX:
     - [Introduction to Data Science](https://www.edx.org/professional-certificate/harvardx-data-science)
     - [Data Analysis for Life Sciences](https://www.edx.org/professional-certificate/harvardx-data-analysis-for-life-sciences)
     - [Data Anaysis for Genomics](https://www.edx.org/professional-certificate/harvardx-data-analysis-for-genomics)
@@ -155,10 +155,10 @@ These resources are organized in a lecture type format as slides, screencasts, a
 - [CognitiveClass.ai](https://cognitiveclass.ai/) Offers a collection of courses for data science, AI, and cloud computing.
   - *All courses are free*
 
-- [The Open Source Data Science Masters](http://datasciencemasters.org): An open-source curriculum for learning data science. This is a mixed media course made up of videos, books, and slides.
+- [The Open Source Data Science Masters](https://datasciencemasters.org): An open-source curriculum for learning data science. This is a mixed media course made up of videos, books, and slides.
   - *Some content is free, some is paid*
   
-- [CalTech](http://work.caltech.edu/telecourse) Learning from Data
+- [CalTech](https://work.caltech.edu/telecourse) Learning from Data
   - *A free YouTube series*
 
 ### Video Tutorials
@@ -225,6 +225,6 @@ These resources offer classes that are work-at-your-own-pace with a major focus 
 
 - [The Carpentries](https://carpentries.org), with lessons from [Data Carpentry](https://datacarpentry.org) and [Software Carpentry](https://software-carpentry.org/lessons/)
 
-- [ROSALIND interactive bioinformatics problem set](http://rosalind.info/)
+- [ROSALIND interactive bioinformatics problem set](https://rosalind.info/)
 
 _Please reach out to the Hutch Data Core by sending an email to `hutchdatacore` with questions, comments, or suggestions related to training!_

@@ -20,7 +20,7 @@ RStudio has a few particularly useful features:
 There are a number of available resources built on R that are free and open source that can greatly expand the utility of R and RStudio for research purposes.  There are currently three main sources of R packages that are of interest to a majority of the research community.  
 
 ### Bioconductor
-[Bioconductor](https://bioconductor.org/) is a public repository of R bioinformatics packages. Bioconductor packages are curated for intercompatibility and grouped into [workflows](http://bioconductor.org/packages/3.7/workflows/) (eg. CyTOF, ChIP-seq, eQTL, etc...). New Bioinformatic tools often result in a submission of the corresponding packages to Bioconductor.  These are reliable, well vetted packages that undergo a rigorous process for submission.  
+[Bioconductor](https://bioconductor.org/) is a public repository of R bioinformatics packages. Bioconductor packages are curated for intercompatibility and grouped into [workflows](https://bioconductor.org/packages/3.7/workflows/) (eg. CyTOF, ChIP-seq, eQTL, etc...). New Bioinformatic tools often result in a submission of the corresponding packages to Bioconductor.  These are reliable, well vetted packages that undergo a rigorous process for submission.  
 
 ### CRAN
 [CRAN](https://cran.r-project.org), (Comprehensive R Archive Network) is a public repository of numerous R packages along with R itself. Numerous packages are available, though packages are not vetted as heavily as Bioconductor and generally are required to successfully be built, but may not always perform reliably, or be fully documented.  
@@ -186,6 +186,6 @@ The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordi
 [Shiny](https://shiny.rstudio.com/) is an R package bundled with RStudio that enables the creation of interactive applications powered by R code. These apps can be viewed on any computer running RStudio, or they can be hosted on a server. Scicomp provides instructions for hosting Shiny apps [here](/compdemos/shiny/).
 
 ## Local resources
-- [Seattle useR group](http://www.meetup.com/Seattle-useR/)
+- [Seattle useR group](https://www.meetup.com/Seattle-useR/)
 - [R-Ladies Seattle](https://www.meetup.com/rladies-seattle/)
 - [Cascadia RConf](https://cascadiarconf.com/), a local yearly conference

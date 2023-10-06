@@ -14,10 +14,10 @@ XDMoD is avalable at [https://xdmod.fredhutch.org](https://xdmod.fredhutch.org).
 Logging in offers additional functionality including the ability to drill down to your specific job details, run and save custom reports and export data.  To log in, click the Sign In button in the top left then:
 
 Select `Login here.` under `Sign in with FHCC:`
-<img src="../assets/xdmod_login_1.png" width="300">
+<img src="../assets/xdmod_login_1.png" alt="XDMoD login popup" width="300">
 
 Enter your hutchid & password here:
-<img src="../assets/xdmod_login_2.png">
+<img src="../assets/xdmod_login_2.png" alt="XDMoD login page">
 
 ## Getting Help
 

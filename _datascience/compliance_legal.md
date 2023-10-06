@@ -32,7 +32,7 @@ confidential or protected data.
 
 -   The Privacy Rule permits sharing of a Limited Data Set, which includes some identifiers. A LDS may be disclosed for research activities if the disclosing entity and the LDS recipient enter into a data use agreement. Limited Data Sets may be used or disclosed only for purposes of research, public health, or health care operation.
 
--   A sample Fred Hutch MTA can be found [here.](http://www.compass.fhcrc.org/caretweb/requests/caret%20dua%20final%20201405.pdf)  Contact Fred Hutch BD&S for more information on Fred Hutch DUAs.
+-   A sample Fred Hutch MTA can be found [here.](https://www.compass.fhcrc.org/caretweb/requests/caret%20dua%20final%20201405.pdf)  Contact Fred Hutch BD&S for more information on Fred Hutch DUAs.
 
 ## Material Transfer Agreement (MTA)
 

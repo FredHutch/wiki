@@ -32,6 +32,6 @@ More to come about how to identify what types of hypotheses have the possibility
 
 - [Wikipedia's page on statistical power](https://en.wikipedia.org/wiki/Statistical_power)
 
-- [GPower](http://www.gpower.hhu.de/):  Downloadable software for a variety of tests, including graphical power analysis results.  Not 'omics-specific, but a good reference.
+- [GPower](https://www.gpower.hhu.de/):  Downloadable software for a variety of tests, including graphical power analysis results.  Not 'omics-specific, but a good reference.
 
 - [Power and sample size calculations for high-throughput sequencing-based experiments](https://academic.oup.com/bib/article-lookup/doi/10.1093/bib/bbx061)(Li et al 2017):  Figure 1 and Table 1 have references to papers on computational bioinformatics tools for various power calculations
