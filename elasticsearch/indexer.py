@@ -72,7 +72,7 @@ def bulk_up(docs):
       headers={'Content-Type': 'application/json'})
     print("Preparing for bulk import....")
     try:
-        retval = bulk(client, docs)
+        retval = bulk(client, str(docs))
         print("Bulk import was successful.")
         print(retval)
         return retval

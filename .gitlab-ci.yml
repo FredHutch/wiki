@@ -95,8 +95,6 @@ create_search_index_1:
       alias: create_search_index_1
 
   script: |
-    env
-    docker ps
     # CONTAINER_NAME=$(env | grep $HOSTNAME | grep "9200/tcp" | cut -d= -f2 | cut -d / -f 2)
     # echo container name: $CONTAINER_NAME
     CONTAINER_ID=$(docker ps | grep $HOSTNAME | grep "9200/tcp" | cut -d' ' -f1)
