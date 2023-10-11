@@ -70,12 +70,12 @@ can install the package in your home directory with the `--user option` (e.g. `p
 or to create a virtual Python environment, for example:
 
 ```
-    username@rhino1:~$ ml fhPython/3.8.6-foss-2020b-Python-3.8.6 
-    username@rhino1:~$ python3 -m venv ~/mypython
-    username@rhino1:~$ source ~/mypython/bin/activate
-    (mypython) username@rhino1:~$ #python code executed in mypython environment
-    (mypython) username@rhino1:~$ deactivate
-    username@rhino1:~$
+    username@rhino01:~$ ml fhPython/3.8.6-foss-2020b-Python-3.8.6 
+    username@rhino01:~$ python3 -m venv ~/mypython
+    username@rhino01:~$ source ~/mypython/bin/activate
+    (mypython) username@rhino01:~$ #python code executed in mypython environment
+    (mypython) username@rhino01:~$ deactivate
+    username@rhino01:~$
 ```
 
 ### Using Jupyter on `rhino`
@@ -91,31 +91,43 @@ Jupyter Notebook is a minimal but very capable web-based interactive computation
 
 After you have connected to `rhino`, load the fhPython module then run jupyter notebook:
 ```
-    username@rhino1:~$ ml fhPython
-    username@rhino1:~$ jupyter notebook --ip=$(hostname) --port=$(fhfreeport) --no-browser
+    username@rhino01:~$ ml fhPython
+    username@rhino01:~$ jupyter notebook --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
 Then connect to the URL, copying the link given by the previous command, which looks as follows:
 ```
        Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
-        http://rhino1:11112/?token=0eee692be6c81c1061da
+        http://rhino01:11112/?token=0eee692be6c81c1061da
 ```
 If you would like to use a different version of Python than what is in the default fhPython module, run `ml avail fhPython` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml fhPython/3.8.6-foss-2020b-Python-3.8.6` in place of `ml fhPython` above.
 
 **Jupyter Lab**
 
-After you have connected to `rhino`, load the JupyterLab module then run jupyter lab:
+We supply a `JupyterLab` module but it is very bare-bones and does not
+by itself include packages that many people will want for bioinformatics and
+data science work. Here's are some example commands which will load
+`scipy`, `numpy`, `matplotlib`, `pandas`, `scikit-learn`, and many others, along with `JupyterLab`:
+
+After you have connected to `rhino`, run these commands:
 ```
-    username@rhino1:~$ ml JupyterLab
-    username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+    username@rhino01:~$ ml purge
+    username@rhino01:~$ ml JupyterLab SciPy-bundle matplotlib Seaborn scikit-learn
+    username@rhino01:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
-Then connect to the URL, copying the link given by the previous command, which looks as follows:
+
+You will see output like this:
+
 ```
-       Copy/paste this URL into your browser when you connect for the first time,
-    to login with a token:
-        http://rhino1:11112/?token=0eee692be6c81c1061db
+   To access the server, open this file in a browser:
+        file:///home/example-url...
+    Or copy and paste one of these URLs:
+        http://rhino01:16053/example-url...
 ```
-If you would like to use a different version of Python than what is in the default JupyterLab module, run `ml avail JupyterLab` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml JupyterLab/2.2.5-foss-2020a-Python-3.8.2` in place of `ml JupyterLab` above.
+
+Copy the second link, the one that starts with `http://` and the name of the machine you are connected to. Paste it into your browser and you will see the JupyterLab interface.
+
+If you would like to use a different version of Python than what is in the default JupyterLab module, run `ml avail JupyterLab` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml JupyterLab/2.2.5-foss-2020a-Python-3.8.2` in place of `ml JupyterLab` above. You'd need to make sure that the other packages  you need are compatible; contact `scicomp@` for assistance.
 
 ## Python IDE comparison
 
