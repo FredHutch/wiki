@@ -39,4 +39,4 @@ Leading a lab with novice or experienced code writers and users?  Either way, se
 
 ## NIH Data Sharing
 We have created and are actively developing a guide you can [find here](https://hutchdatascience.org/NIH_Data_Sharing/) that walks you through the process of complying with the new 2023 NIH Data Sharing Policy. 
->If you take this course and want to give us feedback or would like to learn more about it, you can share your thoughts in [Slack in the #ask-dasl channel](https://fhdata.slack.com/archives/C043ZVCBY9Z)) or you can file an issue on [the course's GitHub repository](https://github.com/fhdsl/NIH_Data_Sharing).
+>If you take this course and want to give us feedback or would like to learn more about it, you can share your thoughts in [Slack in the #ask-dasl channel](https://fhdata.slack.com/archives/C043ZVCBY9Z)) or you can file an issue on [the course's GitHub repository](https://github.com/fhdsl/NIH_Data_Sharing). 
