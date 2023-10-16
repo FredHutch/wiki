@@ -7,7 +7,7 @@ The Fred Hutch Data Science Lab's wider training efforts can be found on our [tr
 
 Course Name | Description | Link(s)
 ---|---|---
-[Cluster 101](/datascience/hutch_courses/#cluster-101) | Intro to using the Fred Hutch HPC cluster for new or experienced users. Provides a certification option. | [With Certification](https://leanpub.com/courses/fredhutch/fredhutchcluster101) or [Without Certification](https://hutchdatascience.org/FH_Cluster_Guide/)
+[Cluster 101](/datascience/hutch_courses/#cluster-101) | Intro to using the Fred Hutch HPC cluster for new or experienced users. Provides a certification option. | [With Certification](https://leanpub.com/courses/fredhutch/fredhutchcluster101) or [Without Certification](https://hutchdatascience.org/FH_Cluster_101/)
 [WDL 101](/datascience/hutch_courses/#wdl-101) | Intro to using Cromwell to run WDL workflows at the Fred Hutch | [Course link](https://hutchdatascience.org/FH_WDL101_Cromwell/)
 [Code Review](/datascience/hutch_courses/#code-review) | Leading a lab with novice or experienced code writers and users?  Either way, our Code Review guidance materials include helpful suggestions for various types of lab members, expertise and group dynamics.  | [Course Link](https://hutchdatascience.org/code_review/)
 [NIH Data Sharing](/datascience/hutch_courses/#nih-data-sharing) | We have created and are actively developing a guide that walks you through the process of complying with the new 2023 NIH Data Sharing Policy.  | [Guide Link](https://hutchdatascience.org/NIH_Data_Sharing/)
@@ -19,10 +19,10 @@ We collaborated with SciComp and created a course called Cluster 101, to introdu
 - If you need/want to get a certification, please take the course through Leanpub at [this link](https://leanpub.com/courses/fredhutch/fredhutchcluster101).  
 
 
-- If you do not need the certification or want to bookmark the course for future reference, you can find the material at [this link](https://hutchdatascience.org/FH_Cluster_Guide/).
+- If you do not need the certification or want to bookmark the course for future reference, you can find the material at [this link](https://hutchdatascience.org/FH_Cluster_101/).
 
 
->If you take this course and want to give us feedback or would like to learn more about it, you can share your thoughts in [Slack in the #ask-dasl channel](https://fhdata.slack.com/archives/C043ZVCBY9Z)) or you can file an issue on [the course's GitHub repository](https://github.com/fhdsl/FH_Cluster_Guide).
+>If you take this course and want to give us feedback or would like to learn more about it, you can share your thoughts in [Slack in the #ask-dasl channel](https://fhdata.slack.com/archives/C043ZVCBY9Z)) or you can file an issue on [the course's GitHub repository](https://github.com/fhdsl/FH_Cluster_101).
 
 
 ## WDL 101
