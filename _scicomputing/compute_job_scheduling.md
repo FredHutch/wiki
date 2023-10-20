@@ -14,7 +14,7 @@ To this end, each group is limited to a maximum amount of computational resource
 
 ## Cluster Accounts
 
-The cluster account provides access to the cluster. No one can submit jobs to the cluster without being associated with a cluster account. The account provides the primary basis for measuring usage and enforcing limits. More information about accounts is available [[here|scicomputing/compute_accounts]] 
+The cluster account provides access to the cluster. No one can submit jobs to the cluster without being associated with a cluster account. The account provides the primary basis for measuring usage and enforcing limits. More information about accounts is available [here](/scicomputing/compute_accounts)
 
 ## Limits
 
@@ -22,7 +22,7 @@ The cluster account provides access to the cluster. No one can submit jobs to th
 
 Limits on resource usage are the primary tool used to ensure that we maintain some idle resources to allow  instantaneous demand from accounts that do not have active work. When an account has reached this limit, pending jobs are blocked from running until the number of cores in use by this account fall below the limit.
 
-While resources are not explicitly allocated to a group, we do have a goal of providing a certain number of cores per account (currently 300). However, that number of cores may only become available over time - only the first few cores are instantaneously available.
+While resources are not explicitly allocated to a group, we do have a goal of providing a certain number of cores per account (current limits are specific to the partitions and are documented [here](/compdemos/gizmo_partition_index/)). However, that number of cores may only become available over time- only the first few cores are instantaneously available.
 
 The goal is a minimum target. There is a process that monitors available resources and adjusts limits up and down depending on the number of idle resources to improve utilization. These limits are tracked, and times when the limit is below the goal are noted in that monitoring system.
 
