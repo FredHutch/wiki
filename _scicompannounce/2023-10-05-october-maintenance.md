@@ -61,6 +61,8 @@ The kernel updates are primarily bug-fixes and should have little impact on how 
 
 However, the updates of the NVIDIA drivers may have more impact on your work if you are using GPUs and modules like tensorflow and torch.  If you would like to check your work against these updates, please email scicomp for access to the test systems with the kernel and NVIDIA driver update.
 
+> TBD: add list of updated packages
+
 ### NoMachine Updates
 
 Lastly, we will be upgrading NoMachine on the rhino nodes to the latest version (8.9.1).  This won't change how we use NoMachine but will keep us up-to-date with security and bug fixes.
