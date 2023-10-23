@@ -57,9 +57,30 @@ We do not expect any impact or changes to data stored on _scratch_.
 
 We are going to update the kernel and NVIDIA driver versions on the compute nodes (rhino and gizmo cluster nodes).  This is an operation that requires a reboot of the hosts.
 
-The kernel updates are primarily bug-fixes and should have little impact on how we use these systems.  There are a few associated OS packages that will be updated as part of this, but again, we anticipate no changes to use of rhino/gizmo nodes.
+There are a few associated OS packages that will be updated as part of this, but again, we anticipate no changes to use of rhino/gizmo nodes.
 
-However, the updates of the NVIDIA drivers may have more impact on your work if you are using GPUs and modules like tensorflow and torch.  If you would like to check your work against these updates, please email scicomp for access to the test systems with the kernel and NVIDIA driver update.
+### Kernel Update
+
+The Linux kernel will be updated from 4.15.0-192 to version 4.15.0-213. The kernel updates are primarily bug-fixes and should have little impact on how we use these systems. 
+
+### Ubuntu Nvidia Packages
+
+The updates of the NVIDIA drivers may have more impact on your work if you are using GPUs and modules like tensorflow and torch.  If you would like to check your work against these updates, please email scicomp for access to the test systems.
+
+The NVIDIA driver packages will be updated from version 470.141.03 to version 535.104.05:
+
+```
+nvidia-driver-535
+nvidia-utils-535
+libnvidia-compute-535
+libnvidia-gl-535
+libnvidia-extra-535
+nvidia-compute-utils-535
+libnvidia-decode-535
+libnvidia-encode-535
+xserver-xorg-video-nvidia-535
+libnvidia-cfg1-535
+```
 
 ### NoMachine Updates
 
