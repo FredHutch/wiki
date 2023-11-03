@@ -123,6 +123,10 @@ to achieve with any other tool apart from full virtual machines.
 It also neatly solves the problem of having to install dependencies
 in order to run a new tool in the right way.
 
+Although you cannot run Docker on our HPC cluster or on the `rhino` machines,
+you can work with Docker containers in those environments using
+[Apptainer](/compdemos/Apptainer/).
+
 ### Common Terms
 
 There are a few basic terms that will make it easier to learn
