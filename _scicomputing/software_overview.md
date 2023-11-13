@@ -13,7 +13,7 @@ One of the most commonly asked questions when researchers realize they need to u
 - What are your career goals? Are the tools you're planning to learn going to be useful only for your current position, or will they be meaningful additions to your resume?
 - What do you personally prefer? Some people simply prefer working in one language over another, because the syntax (rules about the structure of the language) makes more sense to them.  
 
-For a clear side-by-side comparison of R and Python, [this article](https://medium.com/@data_driven/python-vs-r-for-data-science-and-the-winner-is-3ebb1a968197) provides some general considerations from a data science perspective.
+For a clear side-by-side comparison of R and Python, [this article](https://medium.com/@data_driven/python-vs-r-for-data-science-and-the-winner-is-3ebb1a968197) provides some general considerations from a [data science](https://www.projectpro.io/projects/data-science-projects) perspective.
 
 It's important to be deliberate in your choice of first language to learn, because it can be a significant time investment, but it's not committing you to only using that language in the future. Just like learning human languages, learning one language generally makes it easier to learn another language later.
 
