@@ -32,6 +32,8 @@ This is a list of clients and servers by OS:
 
 ### Windows
 
+#### PuTTY
+
 PuTTY is the most widely used secure shell software for Windows. You can install PuTTY through "Software Center". To connect to `rhino` using password authentication refer to the screenshots below.
 
 Open the application, enter `rhino` as the hostname then click Open.
@@ -41,6 +43,20 @@ Open the application, enter `rhino` as the hostname then click Open.
 Enter your hutchid then press enter. It will prompt for your password. Press enter again and you will connect.
 
 <img src="../assets/putty_loginas.png" alt="Putty login screenshot">
+
+#### Command Prompt (cmd.exe)
+
+Command Prompt, also known as cmd.exe or cmd, is the default command-line interpreter on Windows. To connect to `rhino`, you must first create an ssh config file in your Windows user folder.  
+
+##### Create ssh config file
+
+When you launch Command Prompt, you should be at your user profile folder.  If not, type `cd C:\Users\<HUTCHID>`. Next, create a folder called `.ssh` with `mkdir .ssh`. You might get a message saying the folder already exists. Finally, create the needed config file with `echo MACs hmac-sha2-512 > .ssh/config` You will now be able to connect to rhino using `ssh HUTCHID@rhino`
+
+<img src="../assets/cmd_create_config.png" alt="Create ssh config with cmd.exe" width="450">
+
+#### Windows Terminal
+
+Windows Terminal is a modern terminal application with powerful features including multiple tabs. It can be installed from the Microsoft Store. To connect to `rhino`, first follow the [instructions to create an ssh config](#create-ssh-config-file) file then use `ssh HUTCHID@rhino` to connect.
 
 ### Mac OS
 

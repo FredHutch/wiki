@@ -19,7 +19,7 @@ Please see the Service Desk site on CenterNet for more information about [HutchN
 
 - Add a new member to your lab group 
 - Enable cluster access for yourself under your lab's Slurm account
-- Check to see if you have the correct access needed to complete the [Cluster 101 course](https://hutchdatascience.org/FH_Cluster_Guide/)
+- Check to see if you have the correct access needed to complete the [Cluster 101 course](https://hutchdatascience.org/FH_Cluster_101/)
 
 ## Accessing Slurm Clusters
 

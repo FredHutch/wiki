@@ -21,7 +21,7 @@ This guide will describe how to select, configure, and provision databases using
 
 ### Logging In
 
-Browse to https://MyDB.fhcrc.org/login and use your HutchNet ID to log in.
+Browse to https://MyDB.fredhutch.org/login and use your HutchNet ID to log in.
 
 ## Provisioning Databases
 
@@ -123,7 +123,7 @@ mariadb --host mydb --port <port> --user <username> --password
 fill in the values for port and username you'd recorded earlier.  You will be prompted to enter the password.  If the connection is successful you will be given a prompt for the database:
 
 ```
-rhino03[~]: mariadb --host mydb.fhcrc.org --port <port> --user <username> --password
+rhino03[~]: mariadb --host mydb.fredhutch.org --port <port> --user <username> --password
 Enter password: *********
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 9
