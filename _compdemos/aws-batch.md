@@ -349,26 +349,10 @@ AWS Batch service from the AWS Management Console and click on the job you wish 
 
 #### On the command line
 
-##### Remotely
-On the `rhino` machines or the `gizmo` cluster, there's a quick command
-to get the job output. Be sure and use your actual job ID instead of
-the example one below:
-
-```
-get_batch_job_log 2c0c87f2-ee7e-4845-9fcb-d747d5559370
-```
-
-You can also pass a log stream ID (see below) instead of a job ID.
-
-
-##### Locally
-
-If you are on another system without the `get_batch_job_log` script
-(such as your laptop), you can still monitor job logs, but you need to
+You can still monitor job logs, but you need to
 get the log stream ID first.
 
 To get the log stream for a job, run this command:
-
 
 ```
 aws batch describe-jobs --jobs 2c0c87f2-ee7e-4845-9fcb-d747d5559370
@@ -409,7 +393,4 @@ log entries at a time (up to 10,000 entries). If your job has created
 more than 1MB of output, read the
 [documentation](https://docs.aws.amazon.com/cli/latest/reference/logs/get-log-events.html)
 of the `aws batch get-log-events` command to learn about retrieving multiple
-batches of log output. (The [get_batch_job_log](#on-rhino-or-gizmo) script on rhino/gizmo automatically
-handles multiple batches of job output, using the
-[equivalent command](https://boto3.readthedocs.io/en/latest/reference/services/logs.html#CloudWatchLogs.Client.get_log_events)
-in `boto3`.
+batches of log output. 
