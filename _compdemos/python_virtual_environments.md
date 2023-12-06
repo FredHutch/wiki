@@ -17,19 +17,19 @@ A Python virtual environment allows you to create an isolated Python installatio
 
 As with most operations using Python in our environment you need to first load a Python environment module.  The _fhPython_ environment modules have many Python libraries already installed- this can present problems if you need to install a different version of a module that's already a part of the _fhPython_ environment module.  Thus we suggest you use the more bare-bones _Python_ environment modules:
 
-```shell
-rhino03[~/Work]: ml Python/3.10.8-GCCcore-12.2.0
-rhino03[~/Work]: which python
+```console
+rhino03[~/Work]$ ml Python/3.10.8-GCCcore-12.2.0
+rhino03[~/Work]$ which python
 /app/software/Python/3.10.8-GCCcore-12.2.0/bin/python
-rhino03[~/Work]: python --version
+rhino03[~/Work]$ python --version
 Python 3.10.8
-rhino03[~/Work]: python -m venv testenv
+rhino03[~/Work]$ python -m venv testenv
 ```
 
 Once created, make sure you have the correct Python environment module loaded and then activate the virtual environment:
 
 ```console
-rhino03[~/Work]: ml
+rhino03[~/Work]$ ml
 
 Currently Loaded Modules:
   1) GCCcore/12.2.0                   8) SQLite/3.39.4-GCCcore-12.2.0
@@ -40,15 +40,15 @@ Currently Loaded Modules:
   6) libreadline/8.2-GCCcore-12.2.0  13) Python/3.10.8-GCCcore-12.2.0  <-- must match python used during create
   7) Tcl/8.6.12-GCCcore-12.2.0
 
-rhino03[~/Work]: . ./testenv/bin/activate
-(testenv) rhino03[~/Work]: which python
+rhino03[~/Work]$ . ./testenv/bin/activate
+(testenv) rhino03[~/Work]$ which python
 /home/mrg/Work/testenv/bin/python
 ```
 
 `venv` uses symbolic links to create the virtual environment- for example:
 
 ```console
-(testenv) rhino03[~/Work]: ls -l /home/mrg/Work/testenv/bin/python
+(testenv) rhino03[~/Work]$ ls -l /home/mrg/Work/testenv/bin/python
 lrwxrwxrwx 1 mrg g_mrg 53 Dec  6 14:28 /home/mrg/Work/testenv/bin/python -> /app/software/Python/3.10.8-GCCcore-12.2.0/bin/python
 ```
 
