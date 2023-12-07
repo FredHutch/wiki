@@ -58,6 +58,8 @@ Anaconda and it's sibling Miniconda are essentialy distributions of Python- thes
 
 There are two options for running Anaconda- via an environment module or a stand-alone installation.  In most cases the environment module is preferable as you can load and use Anaconda with a simple module load command versus downloading and building the full Anaconda environment.
 
+> It is recommended that you use a single Anaconda installation method- using both environment module and the standalone install will lead to problems.
+
 ### Anaconda with Environment Modules
 
 The Anaconda environment module is loaded as other modules:
