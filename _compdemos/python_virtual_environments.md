@@ -60,4 +60,25 @@ There are two options for running Anaconda- via an environment module or a stand
 
 ### Anaconda with Environment Modules
 
+The Anaconda environment module is loaded as other modules:
+
+```console
+rhino03[~]: ml Anaconda3/2022.05
+```
+
+Available versions can be listed with `ml spider Anaconda`.  Once loaded initialize your environment with `conda init`:
+
+```console
+rhino03[~]: conda init bash  # assuming your shell is bash
+```
+
+If you do not initialize your shell environment, subsequent attempts to create or activate Anaconda environments will fail with a message like `your shell is not properly initialized`.
+
 ### Anaconda from Upstream
+
+It is possible to download the Anaconda installer from the Anaconda organization and install it to any location you have access to (e.g. your home directory or fast-file).  This will install a Python interpreter into the indicated path.
+
+The installation process is well documented on the [Anaconda web site](https://docs.anaconda.com/free/anaconda/install/linux/).  The prerequisites indicated there are (mostly) already available on our compute systems and can be skipped.
+
+While the Anaconda installation is largely standalone we would recommend loading additional environment modules prior to installing (and using) Anaconda.  The reason for this is that our compute systems have a minimal set of OS packages installed and often these OS packages are older versions.  For example, GCC on gizmo nodes is 7.5.0. Python is version 3.6.9. NVIDIA GPU drivers are not installed by the OS rendering many ML applications unusable.  Minimally we recommend loading GCC and some associated libraries (notably BLAS and MPI implementations) via the _foss_ environment modules.  If you have tools that are capable of using GPUs you should load a _CUDA_ module and possibly a _cuDNN_ module if you need the NVIDIA CUDA Deep Neural Network library
+
