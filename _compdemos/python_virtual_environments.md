@@ -13,8 +13,6 @@ A Python virtual environment allows you to create an isolated Python installatio
 
 `venv` is a python module that will create a virtual environment at a path on the file system.  This path will contain any libraries and executables and can be activated by sourcing (the `.` operator in bash) an activation script.
 
-### Creating a New venv
-
 As with most operations using Python in our environment you need to first load a Python environment module.  The _fhPython_ environment modules have many Python libraries already installed- this can present problems if you need to install a different version of a module that's already a part of the _fhPython_ environment module.  Thus we suggest you use the more bare-bones _Python_ environment modules:
 
 ```console
@@ -54,11 +52,11 @@ lrwxrwxrwx 1 mrg g_mrg 53 Dec  6 14:28 /home/mrg/Work/testenv/bin/python -> /app
 
 In my newly created environment the Python interpreter is just a link to the interpreter used to create the environment (the interpreter loaded by the module command).  Thus it is _imperative_ that you load the same environment module the virtual environment was created with _before_ you activate the virtual environment.  Activating the environment module after activating the environment will have unpredictable effects on how Python runs.
 
-### Using and Managing a venv
-
-### Removing a venv
-
 ## Using Anaconda to Manage a Virtual Environment
+
+Anaconda and it's sibling Miniconda are essentialy distributions of Python- these use their own library installation tools and repositories.
+
+There are two options for running Anaconda- via an environment module or a stand-alone installation.  In most cases the environment module is preferable as you can load and use Anaconda with a simple module load command versus downloading and building the full Anaconda environment.
 
 ### Anaconda with Environment Modules
 
