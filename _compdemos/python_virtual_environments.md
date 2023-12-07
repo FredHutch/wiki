@@ -6,6 +6,14 @@ primary_reviewers:
 
 A Python virtual environment allows you to create an isolated Python installation with its own set of libraries and packages.  This can be useful when you are running multiple tools or have a complex set of packages.
 
+## When to Use Virtual Environments
+
+One of the reasons SciComp provides environment modules is to give you an easy way to access software that can frequently be difficult to install- thus, our default answer is to use the _fhPython_ series of environment modules whenever possible.  However, we understand that there are many libraries that are not part of our modules. In those cases virtual environments are preferable to installing libraries in your home directory.
+
+We typically see Anaconda requested because it's a very common way for Bioinformatics software developers to document the installation of their packages.  Sometimes these instructions can be "translated" to use `pip` in a virtual environment, but this is a good use case for the Anaconda module.
+
+Using the stand-alone, upstream Anaconda installer provides you with the greatest control, but can require significant knowledge and maintenance to get to work.  Our ability to support these installations is hampered by the fact that these installations can be affected by other elements of your Linux environment (hence our recommendation to use environment modules).
+
 ## Python venv 
 
 > The venv module supports creating lightweight “virtual environments”, each with their own independent set of Python packages installed in their site directories. A virtual environment is created on top of an existing Python installation, known as the virtual environment’s “base” Python, and may optionally be isolated from the packages in the base environment, so only those explicitly installed in the virtual environment are available.
@@ -54,7 +62,7 @@ In my newly created environment the Python interpreter is just a link to the int
 
 ## Using Anaconda to Manage a Virtual Environment
 
-Anaconda and it's sibling Miniconda are essentialy distributions of Python- these use their own library installation tools and repositories.
+Anaconda and its sibling Miniconda are essentialy distributions of Python- these use their own library installation tools and repositories.
 
 There are two options for running Anaconda- via an environment module or a stand-alone installation.  In most cases the environment module is preferable as you can load and use Anaconda with a simple module load command versus downloading and building the full Anaconda environment.
 
