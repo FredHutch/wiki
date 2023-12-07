@@ -62,7 +62,7 @@ In my newly created environment the Python interpreter is just a link to the int
 
 ## Using Anaconda to Manage a Virtual Environment
 
-Anaconda and it's sibling Miniconda are essentialy distributions of Python- these use their own library installation tools and repositories.
+Anaconda and its sibling Miniconda are essentialy distributions of Python- these use their own library installation tools and repositories.
 
 There are two options for running Anaconda- via an environment module or a stand-alone installation.  In most cases the environment module is preferable as you can load and use Anaconda with a simple module load command versus downloading and building the full Anaconda environment.
 
