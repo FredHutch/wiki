@@ -5,11 +5,12 @@ primary_reviewers: vortexing
 
 > What you should know about the new 2023 NIH Data Management and Sharing Policy
 
-Starting January 25th, 2023, the NIH will implement a new policy that requires new grant applications or renewals that generate scientific data to include a detailed data management and sharing plan. The NIH expects all shareable data to be made available, whether it is associated with a publication or not. The goals of this new policy are to establish the expectation for the management and sharing of scientific data generated from NIH-funded or conducted research, and to emphasize the importance of good data management practices.
+Starting January 25th, 2023, the NIH implemented a new policy that requires new grant applications or renewals that generate scientific data to include a detailed data management and sharing plan. The NIH expects all shareable data to be made available, whether it is associated with a publication or not. The goals of this new policy are to establish the expectation for the management and sharing of scientific data generated from NIH-funded or conducted research, and to emphasize the importance of good data management practices.
+
+You can learn more about "FAIR" (Findable, Accessible, Interoperable, Reusable) data sharing [principles](https://www.nature.com/articles/sdata201618) at the [FAIRSharing site](https://fairsharing.org/) which has a catalogue of data preservation, management and sharing policies form international funding agencies, regulators and journals and a lot of other information about data standards.  
 
 ## Data Science Lab Supports
-We have a set of template materials developed in partnership with Fred Hutch Shared Resources and other groups on campus and investigators that can be a valuable resource when first writing a data sharing plan.  You can find those materials on our [NIH data sharing project page](https://hutchdatascience.org/projects/nihdatasharing/).  Also, you can learn more about "FAIR" (Findable, Accessible, Interoperable, Reusable) data sharing [principles](https://www.nature.com/articles/sdata201618) at the [FAIRSharing site](https://fairsharing.org/) which has a catalogue of data preservation, management and sharing policies form international funding agencies, regulators and journals and a lot of other information about data standards.  
-
+The Data Science Lab has generated a number of different a la carte resources to support the creation of Data Sharing and Management plans from self-paced guides to templated text to long term management of all your plans.  Our goal is to create supports that work for many different types of studies, datasets and investigators to simplify creating these plans.  
 
 ### DMPtool.org
 In response to this new, expanded scope of data sharing requirements as well as from other funding agencies, the Data Science Lab has begun customizing [dmptool.org](https://dmptool.org/) for Fred Hutch investigators.  You can learn more about this free tool on our [dmptool page](/datascience/dmptool/).
@@ -20,6 +21,20 @@ The Data Science Lab has also created a guide you can [find here](https://hutchd
 
 ### Data House Calls
 Fred Hutch staff can always schedule a "Study Planning, Data Sharing and Grants" [Data House Call](https://hutchdatascience.org/datahousecalls/) with the Data Science Lab for a quick consultation about your specific project.  
+
+
+### Other DaSL Resources
+We have a set of template materials developed in partnership with Fred Hutch Shared Resources and other groups on campus and investigators that can be a valuable resource when first writing a data sharing plan. 
+
+- [DaSL NIH DMS Plan Checklist](https://docs.google.com/document/d/1g_N_k9hLBP224v7oOulT3H6PQLr7vePP/edit?usp=sharing&ouid=115226163311121677414&rtpof=true&sd=true)
+- [DaSL NIH DMS Plan Cheat Sheet](https://drive.google.com/file/d/1qU9fireItkQHdw0eoRQXQMTHPU2xu189/view?usp=sharing)
+- [DaSL NIH DMS Plan Guidance](https://docs.google.com/document/d/1_MW-ryjETilW74AniePyyUc474XXPqBG/edit?usp=sharing&ouid=115226163311121677414&rtpof=true&sd=true)
+- [DaSL NIH DMS Plan Template Text](https://docs.google.com/document/d/1L9hpc259T5hRfEKL9ArNw_yYIWHddkR_/edit?usp=sharing&ouid=115226163311121677414&rtpof=true&sd=true)
+- [NIH DMS Plan Examples](https://sharing.nih.gov/data-management-and-sharing-policy/planning-and-budgeting-for-data-management-and-sharing/writing-a-data-management-and-sharing-plan#sample-plans)
+
+
+
+
 
 ## Why?
 Why is the NIH doing this? There are several reasons why sharing data can be beneficial to the scientific community.
