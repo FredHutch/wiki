@@ -16,3 +16,7 @@ This local storage is on an attached SSD and has approximately 7TB available on 
 In the _gizmo_ compute cluster the environment variable `$TMPDIR` will be set to the path where this storage has been provisioned.  Currently this variable is set using the job ID and uses the form `/loc/scratch/<jobid>`.  This is a directory unique to the job and owned by you.
 
 > We recommend that you use the environment variable in your scripts rather than generating this path as the path to the job local storage may change.  Using the environment variable will "future proof" your scripts.
+
+## Note for Java, GATK, and Picard Users
+
+As Java (and by extension GATK and Picard) does not follow the _TMPDIR_ convention we set the Java property `java.io.tmpdir` using the environment variable _JAVA_TOOL_OPTIONS_.  This updates the default value- if you are using GATK or Picard specific options to set the temporary directory, that option value will be used.
