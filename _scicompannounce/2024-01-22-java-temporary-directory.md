@@ -2,7 +2,7 @@
 Title: Java Temporary Directory for Gizmo Jobs
 ---
 
-On Gizmo we configure a [job local](/compdemos/store_job_local/) directory to be used by jobs- this path points to local storage and creates a managed directory for use by that job.  Once complete, that directory and its contents are removed.  To facilitate use of this path by jobs, we set an environment variable ( _TMPDIR_ ) in the job's environment- _TMPDIR_ is a Linux convention that most tools will use as the path for writing temporary files.
+On Gizmo we configure a [job local](/compdemos/store_job_local/) directory to be used by jobs- this path points to local storage and creates a managed directory for use by that job.  Once complete, that directory and its contents are removed.  To facilitate use of this path by jobs, we set an environment variable (_TMPDIR_) in the job's environment- _TMPDIR_ is a Linux convention that most tools use to identify a path to use for storage of temporary files.
 
 Java does not use this convention.  Instead it set the default path for temporary files to `/tmp`.  There is much less space available in this path and the contents of that directory are not managed- over time this leads to disk-full conditions which can cause job failures or cause the node to be taken out of service.
 
