@@ -14,4 +14,10 @@ This is most interesting for users of GATK and Picard- these tools use large vol
 
 If you are using this environment variable to set other Java options, those options will be preserved.  If you are setting `java.io.tmpdir` using _JAVA_TOOL_OPTIONS_ your value will be preferred.  If you are setting the temporary directory using GATK and Picard options, those values will be used.
 
+This will change Java output, adding the following message in the job standard output:
+
+```
+Picked up JAVA_TOOL_OPTIONS: -Djava.io.tmpdir=/loc/scratch/27072483
+```
+
 Please contact Scientific Computing if you have any questions.
