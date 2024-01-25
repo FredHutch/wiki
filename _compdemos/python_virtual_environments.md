@@ -90,18 +90,7 @@ It is possible to download the Anaconda installer from the Anaconda organization
 
 The installation process is well documented on the [Anaconda web site](https://docs.anaconda.com/free/anaconda/install/linux/).  The prerequisites indicated there are (mostly) already available on our compute systems and can be skipped.
 
-While the Anaconda installation is largely standalone we would recommend loading additional environment modules prior to installing (and using) Anaconda.  The reason for this is that our compute systems have a minimal set of OS packages installed and often these OS packages are older versions.  For example, GCC on gizmo nodes is 7.5.0. Python is version 3.6.9. NVIDIA GPU drivers are not installed by the OS rendering many ML applications unusable.  Minimally we recommend loading GCC and some associated libraries (notably BLAS and MPI implementations) via the _foss_ environment modules.  If you have tools that are capable of using GPUs you should load a _CUDA_ module and possibly a _cuDNN_ module if you need the NVIDIA CUDA Deep Neural Network library
-
-### Installation with BLAS and NVIDIA
-
-#### Load Modules
-
-The versions here are the most current as of the writing of this doc (January 2024).  Other versions of these modules would be fine to use so long as the modules are comaptible with each other, support the necessary compiler features you need for the tools you are using.
-
-```
-ml foss/2022b
-ml CUDA/11.4.1
-```
+Once your installation is complete, install the Gnu compiler tools- _gcc_linux-64_, _gxx_linux-64_, and _gfortran_linux-64_.  This will install the Anaconda toolsets and should be used over any tools installed on the OS or via environment modules.
 
 #### Get Installer
 
@@ -162,19 +151,27 @@ conda init
 
 One approach to ensure that the proper environment modules are loaded is to build those steps into a shell function that also activates the conda base environment.
 
-For my own environment, I have elected not to activate the base conda at login.  I've created a function in my `.bashrc` startup file to perform the necessary steps to load the modules and hook as indicated above:
+For my own environment, I have elected not to activate the base conda at login.  I've created a function in my `.bashrc` startup file to perform the necessary steps to enable Anaconda:
 
 ```
 enable_anaconda(){
-  # Adjust the module versions according to your need
-  # these two will create an environment with a modern GCC, BLAS, and
-  # CUDA libraries
-  ml foss/2022b
-  ml CUDA/11.4.1
-
-  # Update the path to conda below- it should point to your installation
   eval "$(/home/mrg/bin/anaconda3/bin/conda shell.bash hook)"
 }
 ```
 
-once this has been added to your environment, you can just enter the command `enable_anaconda` to load the modules and set up conda as your Python
+once this has been added to your environment, you can just enter the command `enable_anaconda` to load the modules and set up conda as your Python interpreter.
+
+#### Install the Build Tools
+
+Activate the base conda environment and install the build tools described earlier:
+
+```
+conda install gcc_linux-64 gxx_linux-64 gfortran_linux-64
+```
+
+By default this will install the most current versions available in the Conda Forge.  Specific versions can be specified using the `==` operator:
+
+```
+conda install gcc_linux-64==11.2.0 gxx_linux-64==11.2.0 gfortran_linux-64==11.2.0
+```
+
