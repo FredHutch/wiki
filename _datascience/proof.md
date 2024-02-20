@@ -8,7 +8,7 @@ primary_reviewers: vortexing
 
 **PROOF** (PRoving cOmpute On cloud Foundations) is a user-friendly tool designed for managing and executing [**WDL**](https://docs.openwdl.org/en/1.0.0/) (Workflow Description Language) workflows using the [**Cromwell**](https://cromwell.readthedocs.io/en/stable/) workflow manager, configured to run on the [**Fred Hutch cluster**.](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/) 
 
-**PROOF** :
+PROOF :
 
 - Automates all the backend configurations necessary to run your workflows instantly.
 
