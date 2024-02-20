@@ -24,17 +24,17 @@ We also have a WDL 101 course that will be a quick-start guide to building a WDL
 
 The **Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile tool for executing bioinformatics and computational workflows. WDL offers:
 
--   A **standardized approach** to describing computational tasks, including inputs, outputs, and dependencies.
+-   A **standardized** approach to describing computational tasks, including inputs, outputs, and dependencies.
   
--   A **task-oriented** approach promoting **code reuse and modularity**.
+-   A task-oriented approach promoting **code reuse** and modularity.
   
 -   Support for **parallel execution**, enabling efficient processing of large datasets.
   
--   Explicit **data type definitions** and i**mmutability of variables** by default, ensuring data consistency.
+-   Explicit data type definitions and **immutability of variables** by default, ensuring data consistency.
   
 -   Built-in support for specifying **data locations**, facilitating seamless collaboration across environments.
   
--   Support for **scatter-gather operations**, improving workflow performance.
+-   Support for **scatter-gather** operations, improving workflow performance.
   
 -   **Flexible syntax** for concise and readable workflow definitions.
   
