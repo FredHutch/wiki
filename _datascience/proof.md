@@ -19,3 +19,25 @@ primary_reviewers: vortexing
 This guide is intended to describe how you can run PROOF, catering to varying levels of computational expertise. 
 
 We also have a WDL 101 course that will be a quick-start guide to building a WDL workflow.
+
+## What is a WDL?
+
+The **Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile tool for executing bioinformatics and computational workflows. WDL offers:
+
+-   A **standardized approach** to describing computational tasks, including inputs, outputs, and dependencies.
+  
+-   A **task-oriented** approach promoting **code reuse and modularity**.
+  
+-   Support for **parallel execution**, enabling efficient processing of large datasets.
+  
+-   Explicit **data type definitions** and i**mmutability of variables** by default, ensuring data consistency.
+  
+-   Built-in support for specifying **data locations**, facilitating seamless collaboration across environments.
+  
+-   Support for **scatter-gather operations**, improving workflow performance.
+  
+-   **Flexible syntax** for concise and readable workflow definitions.
+  
+-   **Platform independence**, allows WDL workflows to run across different environments.
+  
+-   The requirement of an **engine like Cromwell** for interpreting and executing WDL on various backends enhances usability and versatility.
