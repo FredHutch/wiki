@@ -58,3 +58,35 @@ Cromwell, originally developed at the Broad Institute, is a WDL workflow engine,
 -   **Community Support and Documentation**: Cromwell benefits from a supportive community and extensive documentation, offering users access to resources, tutorials, and community-driven solutions to common challenges.
 
 -   **Open Source and Customizability**: Being open-source, Cromwell allows for customization and adaptation to specific workflow requirements, empowering users to tailor workflows to their unique needs and preferences.
+
+
+## How PROOF works and what it does for you?
+*** section in development ***
+
+
+## Things to do before you start running PROOF
+***section in development***
+
+
+## Things to do for setting up your DIY Cromwell server 
+***section in development***
+
+
+## Users guide: Running WDL workflows on the Shiny-App
+***section in development***
+
+
+## Users guide: Running WDL workflows through R (rcromwell)
+***section in development***
+
+
+## Users guide: Running WDL workflows through command line via PROOF
+***section in development***
+
+
+## Developing with PROOF API
+***section in development***
+
+
+## Resources and help
+***section in development***
