@@ -80,8 +80,29 @@ This means that individual users can:
 
  - **query** the Cromwell database for information about workflows run in the past, including where their workflow outputs were saved or a variety of other workflow and task level metadata.
 
-## How to get setup to run a WDL workflow using Cromwell at Fred Hutch
-***section in development***
+
+### How to get setup with Cromwell at Fred Hutch
+ 
+ The prerequisite to running WDL workflows using Cromwell within the Fred Hutch involves two key steps: starting a Cromwell server and having a database setup. There are currently two ways to do this:
+
+**The PROOF way _(recommended)_:**
+Using one of the three ways (see User guides below for detailed instructions) PROOF will help you
+
+ - Automatically start a Cromwell server for you
+_Note: Your Cromwell server by default runs only for 7 days. Make sure to restart it to continue submitting and running
+   jobs._
+   
+ -   Automatically sets up a MariaDB(MySql) database for you
+
+
+ **The DIY way:**
+ 
+ - Requires you to first setup a MariaBD (MySql) database
+
+ - Requires you to kick-off a Cromwell server 
+
+
+   _Note: **Irrespective** of which way you use to **start** and configure your **Cromwell** server you can validate, submit, track, troubleshoot and abort your **jobs** using PROOF. More details below in the user guides._
 
 
 ## Things to do before you start
