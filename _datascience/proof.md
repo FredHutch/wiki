@@ -60,7 +60,27 @@ Cromwell, originally developed at the Broad Institute, is a WDL workflow engine,
 -   **Open Source and Customizability**: Being open-source, Cromwell allows for customization and adaptation to specific workflow requirements, empowering users to tailor workflows to their unique needs and preferences.
 
 
-## How PROOF works and what it does for you?
+## Running a WDL workflow using Cromwell at Fred Hutch
+   
+   In general, Cromwell works best when run in **server mode**, which means that users start a **Cromwell server** as a job on our local SLURM cluster that can connect to a **database** specifically for Cromwell workflow tracking.
+  
+This Cromwell server job then behaves as the workflow **coordinator** for that **user**, allowing a user to send workflow instructions for **multiple workflows** running simultaneously.
+
+The Cromwell server will then **parse** these workflow instructions, find and copy the relevant input files, **send** the tasks to the cluster (Gizmo) to be processed, **coordinate** the results of those tasks and **record** all of the metadata about what is happening in its database.
+
+This means that individual users can:
+
+ - run **multiple independent workflows** at the same time using **one Cromwell server**
+
+ - use **cached results** when identical to the current task
+
+ - **track** the status of workflows and tasks
+ 
+ - **customize** the locations of input data, intermediate data, and workflow outputs to data storage resources appropriate to the data type (re: cost, backup and accessibility)
+
+ - **query** the Cromwell database for information about workflows run in the past, including where their workflow outputs were saved or a variety of other workflow and task level metadata.
+
+## How to get setup to run a WDL workflow using Cromwell at Fred Hutch
 ***section in development***
 
 
