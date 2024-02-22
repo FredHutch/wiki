@@ -61,7 +61,7 @@ Cromwell, originally developed at the Broad Institute, is a WDL workflow engine,
 
 
 ## How PROOF works and what it does for you?
-*** section in development ***
+***section in development***
 
 
 ## Things to do before you start running PROOF
