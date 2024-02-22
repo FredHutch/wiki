@@ -68,14 +68,6 @@ Cromwell, originally developed at the Broad Institute, is a WDL workflow engine,
 ***section in development***
 
 
-## Things to do for setting up your DIY Cromwell server 
-***section in development***
-
-
-## Users guide: Running WDL workflows on the Shiny-App
-***section in development***
-
-
 ## Users guide: Running WDL workflows through R (rcromwell)
 ***section in development***
 
