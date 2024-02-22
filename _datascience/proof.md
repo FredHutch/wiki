@@ -107,7 +107,7 @@ _Note: Your Cromwell server by default runs only for 7 days. Make sure to restar
 
 ## Things to do before you start
 ***section in development***
-
+![login](_datascience/assets/mydb_login.png)
 
 ## Users guide: Running WDL workflows through R (rcromwell)
 ***section in development***
