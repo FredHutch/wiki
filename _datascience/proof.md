@@ -395,6 +395,24 @@ There will be two sections of information that you would like to pay attention t
 
 Once your server is ready for use it you should receive and email from PROOF API ![email](/_datascience/assets/proof_101_shinyapp_email.png)
 
+
+
+### Login with your DIY Cromwell server
+
+If you generated your own Cromwell server using the DIY method you can still use this app and login with the `node:port` information. Instead of clicking the PROOF login click the "My Own Cromwell" button![proof_101_shinyapp_diy_login](/_datascience/assets/proof_101_shinyapp_diy_login.png)
+
+Next enter the `node:port` combination you were assigned when you created your started up you Cromwell server and click submit.
+>Note: You need to add http:// manually before entering your node:port combination.
+
+![proof_101_shinyapp_diy_login_2](/_datascience/assets/proof_101_shinyapp_diy_login_2.png)
+
+You know everything went well and your credential were acceptable if you see the "Exit" button on top in red. 
+![proof_101_shinyapp_diy_login_3](/_datascience/assets/proof_101_shinyapp_diy_login_3.png)
+
+If the `node:port` combination was incorrect you will be notified in the dialog box with "Not a valid Cromwell URL". Check that you entered the information correctly and try again! If you have not save the correct `node:port` combination we recommend that you cancel you Cromwell server and start again (see instructions on canceling in the the previous section) 
+
+
+
 ### Validate your WDL workflow
 
 If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL / JSONs) using the "Validate" tab. ![validate](/_datascience/assets/proof_101_shinyapp_validate.png)
