@@ -221,7 +221,7 @@ mkdir -p cromwell-home
 ```
 Wherever you decide your Cromwell home base to be suggest you create a `cromwell-home` folder (or whatever you want to call it). 
 
-**Cloning templates and test files**
+**Cloning template configuration files**
 
 Next to make the setup easy clone the following repository into your Cromwell home base. 
 
