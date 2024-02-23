@@ -395,6 +395,35 @@ There will be two sections of information that you would like to pay attention t
 
 Once your server is ready for use it you should receive and email from PROOF API ![email](/_datascience/assets/proof_101_shinyapp_email.png)
 
+### Validate your WDL workflow
+
+If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL / JSONs) using the "Validate" tab. ![validate](/_datascience/assets/proof_101_shinyapp_validate.png)
+
+You can upload your WDL workflow file and associated JSON file into the respective upload boxes. 
+
+You can either do this by dragging the files into the upload boxes or browsing to the directory where the workflow and JSON files are stored. 
+>Note: If you have more that one JSON file required to run your WDL workflow **DO NOT** upload any JSON files. You can still validate your WDL workflow but uploading only one JSON file (when two are needed) will not validate. 
+
+Once uploaded click validate. 
+> Note: You can also click "Reset" to clear the upload boxes. 
+
+
+The validation process evaluates several things:
+
+-   Ensures the files are in a known format that Cromwell can interpret.
+-   Verifies that they are properly formatted.
+-   Confirms that the tasks are wired up correctly.
+
+> Note : During a dry run, Cromwell does not test the availability of your input files. This is because Cromwell can access files from a variety of sources, including local filesystems, AWS S3, Google buckets, and Azure blobs. Testing for input availability only happens when you execute the workflow for the first time. If some input files are missing, Cromwell will continue to execute tasks for the available input files while skipping tasks where inputs cannot be located.
+
+Here is an example from the [test workflows](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation ![validate_2](/_datascience/assets/proof_101_shinyapp_validate_2.png)
+
+If your workflows and accompanying JSON files are validated you should see in the  console below 
+`$valid`
+`[1] TRUE`
+
+If your workflow does not validate the  console will provide some "helpful" information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. 
+
 ## Users guide: Running WDL workflows through R (rcromwell)
 ***section in development***
 
