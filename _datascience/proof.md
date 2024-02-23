@@ -355,7 +355,45 @@ Each of these example workflows is in a folder containing a WDL file (specifying
 > Note: For those test workflows that use [Docker](https://docs.docker.com/guides/walkthroughs/what-is-a-container/) containers, know that the first time you run them, you may notice that jobs aren't being sent very quickly. That is because for our cluster, we need to convert those Docker containers to something that can be run by Singularity. The first time a Docker container is used, it must be converted, but in the future Cromwell will used the cached version of the Docker container and jobs will be submitted more quickly.
 
 ## User guide: Running WDL workflows on the Shiny-App
-***section in development***
+The first and most user-friendly way to validate, submit, track, troubleshoot and if needed abort your WDL workflows is through our [Fred Hutch Shiny app]( https://cromwellapp.fredhutch.org). This shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  ![welcome](/_datascience/assets/proof_101_shiny_app_welcome.png) 
+
+> Note: At this point you should have either started your own DIY Cromwell server or if you have not, you can use the automation of PROOF to start one. Initially, setting up a Cromwell server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
+
+### Starting a Cromwell server via PROOF
+If you have not started your own DIY Cromwell server the first step is to log in to PROOF. ![login](/_datascience/assets/proof_101_shinyapp_proof_login.png) 
+
+When you click "PROOF Login", a box will appear where you will input your Hutch credentials and then click submit![login_2](/_datascience/assets/proof_101_shinyapp_proof_login_2.png)
+
+You know you are logged in when the page refreshes automatically and you see the log out button turn red. ![login_2](/_datascience/assets/proof_101_shinyapp_logged_in.png)
+
+Next click on "Cromwell Servers" to take you to the page where you can start a server![start_server](/_datascience/assets/proof_101_shinyapp_start_server.png)
+
+Click "Start" to open up a dialog box that asks for optional credentials to start your Cromwell server ![start_server_2](/_datascience/assets/proof_101_shinyapp_start_server_2.png)
+
+The majority of people usually are authorized to work under one slurm account (working under one PI = one slurm account). In this case just hit start and all Cromwell configurations will default under the slurm account you are authorised under.
+
+However if you have more than one slurm accounts that you can work under then here is your chance to enter the most appropriate one (for example you could be authorized to do work under two PI's with slurm accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b" enter pi_b where it asks for slurm account). ![start_server_3](/_datascience/assets/proof_101_shinyapp_start_server_3.png)
+
+You know your server is up and running when the page auto-refreshes and you see the "Start" button gray out and information about your server populated below. ![start_server_4](/_datascience/assets/proof_101_shinyapp_start_server_4.png)
+
+There will be two sections of information that you would like to pay attention to which should be populated with details that will be relevant. 
+
+**Server information**
+- Job status: it should say "RUNNING"
+- Workflow log firectory: Gives you the path to where your workflow logs will reside
+- Scratch directory: Gives you the path to where your workflow outputs will go
+- Server-time: It tells you how long your Cromwell server will be "alive". By default this is set to 7 days. 
+- Slurm job account: The slurm account (default/or if specified) under which your jobs should be running. 
+
+**Troubleshooting**
+- Slurm job ID: This is the Cromwell server job ID. You can use this to cancel your Cromwell server through `rhino`
+- Cromwell directory: The path to where you main Cromwell directory exists 
+- Server log directory: The path to where logs associated with the Cromwell server exists
+- Singularity cache directory: Path to Singularity cache directory
+- Use AWS?: This defaults currently to FALSE
+- Cromwell URL: URL for Cromwell server
+
+Once your server is ready for use it you should receive and email from PROOF API ![email](/_datascience/assets/proof_101_shinyapp_email.png)
 
 ## Users guide: Running WDL workflows through R (rcromwell)
 ***section in development***
