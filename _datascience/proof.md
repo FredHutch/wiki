@@ -201,8 +201,6 @@ Now you’re ready to go and never have to set up the database part again and yo
 
 ## User guide: Starting up your DIY Cromwell Server and testing it
 
-### Start up your first DIY Cromwell server
-
 Now that your database is set up to communicate with Cromwell and store your workflow information, you can proceed to customize Cromwell according to your preferences. Once customized, Cromwell will be tailored to work exactly how you want it to, and you'll be all set to start using it!
 
 ### Customize Your Configuration
@@ -280,7 +278,7 @@ SERVERTIME="7-0"
 > Note:  For this server, you will want multiple cores to allow it to multi-task.  If you notice issues, the particular resource request for the server job itself might be a good place to start adjusting, in conjunction with some guidance from SciComp or the Slack [Question and Answer channel](https://fhbig.slack.com/archives/CD3HGJHJT) folks.
 
 
-### Kick off your Cromwell server
+### Kick off your first Cromwell server
 
 Now that you've configured your future Cromwell servers, you can kick off your first Cromwell server job.  Go to `rhino` to your "cromwell-home" and do the following:
 ```
@@ -310,8 +308,11 @@ Go have fun now.
 ```
 > Note:  Please write down the node and port it specifies here - in this example it's `gizmob5:39071`, but yours will be a different combination.  This is the only place where you will be able to find the particular node/port for this instance of your Cromwell server, and you'll need that to be able to send jobs to the Cromwell server.
 
+Congrats you've started your first Cromwell server!! 
 
- To "see" if your Cromwell server is up and running you can do this: 
+** Checking the status of your Cromwell server on rhino and how to cancel it**
+
+To "see" if your Cromwell server is up and running you can do this once your are logged into `rhino`: 
 
 ```
 ## Here `username` is your Fred Hutch username
@@ -320,14 +321,14 @@ squeue -u username
 squeue -o '%.18i %.9P %j %.8T %.10M %.9l %.6C %R' -u username
 ```
 
-You'll see a jobname "cromwellServer".  
-
-If you ever want to shut down your server before the 7-day default run time, you can always go to Rhino in your Terminal and end the server by doing or if you forget your node and port information you must cancel your server and start a new one. 
 ![cromwell_diy](/_datascience/assets/cromwell_diy.png)
 
+You'll see a jobname "cromwellServer".  Thats your job ID for the Cromwell server.
+
+If you ever want to shut down your server before the 7-day default run time (or whichever default you set in your configuration files) or if you forget your node and port information, you can always go to `rhino` in your Terminal and end the server by doing cancel (shown above) your server and start a new one. 
 
 ### Starting up your server in the future
-Good news! The above instructions are a one time event. In the future, when you want to start up a Cromwell server to do some computing work, all you'll have to do is:
+Good news! The above instructions are a one-time event. In the future, when you want to start up a Cromwell server to do some computing work, all you'll have to do is:
 
 1. Get onto Rhino in Terminal
 
@@ -335,9 +336,17 @@ Good news! The above instructions are a one time event. In the future, when you 
 
 3. Enter: `./cromwell.sh cromUserConfig.txt` and you're off to the races!
 
+4. Wait for a successful response and the node:port information for your server!
 
-Congrats you've started your first Cromwell server!! 
+That's it! Now, your Cromwell server will run for a week by default (unless you have set a different server length in cromUserConfig.txt). 
 
+It will be accessible for submitting and executing workflows through multiple mechanisms (which we'll describe in the next chapters).
+
+Simply repeat the above process next week to restart your server, and it'll be ready again!
+
+> Note: No need to worry: if you have a workflow running at the end of the week and your server job ends, starting a new server job will automatically check for the current status of any previously running workflows and pick up where it left off. While you can adjust the configuration of your Cromwell server in your configuration file to run for more than 7 days, we've found that servers tend to run much faster when occasionally "rebooted" like this. Additionally, it's more considerate to your lab members not to always have a server running when it's not actively coordinating a workflow.
+
+### Testing your Cromwell server 
 
 ## User guide: Running WDL workflows on the Shiny-App
 ***section in development***
