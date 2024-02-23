@@ -346,7 +346,11 @@ Simply repeat the above process next week to restart your server, and it'll be r
 
 > Note: No need to worry: if you have a workflow running at the end of the week and your server job ends, starting a new server job will automatically check for the current status of any previously running workflows and pick up where it left off. While you can adjust the configuration of your Cromwell server in your configuration file to run for more than 7 days, we've found that servers tend to run much faster when occasionally "rebooted" like this. Additionally, it's more considerate to your lab members not to always have a server running when it's not actively coordinating a workflow.
 
-### Testing your Cromwell server 
+### Testing your Cromwell server using test workflows
+
+Once you have a server up and running, you'll want to check out our [Test Workflow GitHub repo](https://github.com/getwilds/wdl-test-workflows) and run through the tests specified in the markdowns there.  The next chapters will guide you through the most common mechanisms for submitting workflows to your server, so you'll want to clone this repo to your local computer so you can have the files handy.  They also are useful templates for you to start editing from to craft your first custom workflow later.  
+
+> Note: For those test workflows that use [Docker](https://docs.docker.com/guides/walkthroughs/what-is-a-container/) containers, know that the first time you run them, you may notice that jobs aren't being sent very quickly. That is because for our cluster, we need to convert those Docker containers to something that can be run by Singularity. The first time a Docker container is used, it must be converted, but in the future Cromwell will used the cached version of the Docker container and jobs will be submitted more quickly.
 
 ## User guide: Running WDL workflows on the Shiny-App
 ***section in development***
