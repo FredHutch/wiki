@@ -199,7 +199,7 @@ Now you have a “ container” in which to run a database, but the database its
  
 Now you’re ready to go and never have to set up the database part again and you can use this database to manage all your work over time!
 
-## User guide: Starting up your DIY Cromwell Server 
+## User guide: Starting up your DIY Cromwell Server and testing it
 
 ### Start up your first DIY Cromwell server
 
