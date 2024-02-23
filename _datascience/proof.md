@@ -89,8 +89,8 @@ This means that individual users can:
 Using one of the three ways (see User guides below for detailed instructions) PROOF will help you
 
  - Automatically start a Cromwell server for you
-_Note: Your Cromwell server by default runs only for 7 days. Make sure to restart it to continue submitting and running
-   jobs._
+> Note: Your Cromwell server by default runs only for 7 days. Make sure to restart it to continue submitting and running
+   jobs.
    
  -   Automatically sets up a MariaDB(MySql) database for you
 
@@ -102,7 +102,7 @@ _Note: Your Cromwell server by default runs only for 7 days. Make sure to restar
  - Requires you to kick-off a Cromwell server 
 
 
-   _Note: **Irrespective** of which way you use to **start** and configure your **Cromwell** server you can validate, submit, track, troubleshoot and abort your **jobs** using PROOF. More details below in the user guides._
+   > Note: **Irrespective** of which way you use to **start** and configure your **Cromwell** server you can validate, submit, track, troubleshoot and abort your **jobs** using PROOF. More details below in the user guides.
 
 
 ## **Things to do before you start**
@@ -113,7 +113,7 @@ _Note: Your Cromwell server by default runs only for 7 days. Make sure to restar
 
 	Once setup you can run workflows and access data stored within the Fred Hutch.
  
-  _Note: See below (Resources and help) for relevant courses to learn more._
+  > Note: See below (Resources and help) for relevant courses to learn more.
 
 
 - #### AWS credentials (need-based)
@@ -142,18 +142,18 @@ First, we need to setup a database container where the database will run. We sug
 3.  Select the Create DB Container, and choose the MariaDB (MySQL) option ![create_db](/_datascience/assets/create_db.png)              
 4.  Enter/select the following: 
 	  DB/Container Name: Give your container a name.                    
-      _Note: This will be visible to others at Fred Hutch._                    
+      > Note: This will be visible to others at Fred Hutch.                    
     
     DB Username: It can be whatever you want.                    
-     _Note: This will be visible to others at Fred Hutch._                    
+     > Note: This will be visible to others at Fred Hutch.                    
     
     DB Password: It can be whatever you want.                    
-     _Note: Should not be your Fred Hutch password. Do not use special characters. Do not start your 		password with “#”._                 
+     > Note: Should not be your Fred Hutch password. Do not use special characters. Do not start your password with “#”.                 
 	  Contact Name: Your name                    
-    _Note: This will be visible to others at Fred Hutch._                    
+    > Note: This will be visible to others at Fred Hutch.                    
     
     Contact Email: Your Fred Hutch email                    
-    _Note: This will be visible to others at Fred Hutch._                    
+    > Note: This will be visible to others at Fred Hutch.                    
     
     Description: Provide a brief description like: Cromwell database                    
     
@@ -164,13 +164,11 @@ First, we need to setup a database container where the database will run. We sug
     ![create_db2](/_datascience/assets/create_db_2.png)               
  
  6.  Save the DB/Container Name, DB Username and DB Password somewhere handy as you will need them for the configuration step.     
-     _Note: You want to make sure that you have all the cases noted._                
+     > Note: You want to make sure that you have all the cases noted.                
 
  7.  Click submit, a confirmation screen will appear (hopefully), and you’ll need to note which Port is specified to you. This is a 5 digit number currently. Save this somewhere handy as you will need them for the configuration step.
 
-  _Note: If you do not see this screen, you can go to the Manage Containers tab in the MyDB interface and scroll down for your container name, and you can look in the Port column._ 
-  
-  _Note: If you have trouble with using DB4Sci, you can email [scicomp@fredhutch.org](mailto:scicomp@fredhutch.org) and share the information or screenshots of what failed to get help._
+  > Note: If you do not see this screen, you can go to the Manage Containers tab in the MyDB interface and scroll down for your container name, and you can look in the Port column. If you have trouble with using DB4Sci, you can email [scicomp@fredhutch.org](mailto:scicomp@fredhutch.org) and share the information or screenshots of what failed to get help.
 
 #### Make Your Empty Database
 Now you have a “ container” in which to run a database, but the database itself does not yet exist. Again, this only needs to be done one time per user. You need to create an empty database in that container and then Cromwell will do the rest the first time you start up a server.
@@ -184,7 +182,7 @@ Now you have a “ container” in which to run a database, but the database its
 
    `mysql --host mydb --port <Port> --user <username> --password`
    
-   _Note: Replace <Port> and <username> including the < and > with the port and username you got while setting up your container. For example: mysql --host mydb --port 3456 --user some-username --password_
+   > Note: Replace <Port> and <username> including the < and > with the port and username you got while setting up your container. For example: mysql --host mydb --port 3456 --user some-username --password
 
 5. You will then be prompted to enter you DB password you specified during setup.
 
@@ -197,7 +195,7 @@ Now you have a “ container” in which to run a database, but the database its
     #Bye`
                                 
  
-  _Note: we suggest you name the database inside the container the same as the container, but you cannot include dashes in your database name._
+  > Note: we suggest you name the database inside the container the same as the container, but you cannot include dashes in your database name.
  
 Now you’re ready to go and never have to set up the database part again and you can use this database to manage all your work over time!
 
@@ -241,7 +239,7 @@ cp ./diy-cromwell-server/cromUserConfig.txt .
 
 After you've done this once, you just need to keep the path to the file(s) handy for the future.  
 
-*Note: You can manage multiple Cromwell profiles this way by just maintaining different files full of credentials and configuration variables that you want.*  
+> Note: You can manage multiple Cromwell profiles this way by just maintaining different files full of credentials and configuration variables that you want.
 
 In `cromUserConfig.txt` there are some variables that allow users to share a similar configuration file but tailor the particular behavior of their Cromwell server to best suit them.  
 
@@ -279,7 +277,7 @@ NCORES=4
 ## Note: when servers go down, all jobs they'd sent will continue.  When you start up a server the next time using the same database, the new server will pick up whereever the previous workflows left off.  "7-0" is 7 days, zero hours.
 SERVERTIME="7-0" 
 ```
-_Note:  For this server, you will want multiple cores to allow it to multi-task.  If you notice issues, the particular resource request for the server job itself might be a good place to start adjusting, in conjunction with some guidance from SciComp or the Slack [Question and Answer channel](https://fhbig.slack.com/archives/CD3HGJHJT) folks._
+> Note:  For this server, you will want multiple cores to allow it to multi-task.  If you notice issues, the particular resource request for the server job itself might be a good place to start adjusting, in conjunction with some guidance from SciComp or the Slack [Question and Answer channel](https://fhbig.slack.com/archives/CD3HGJHJT) folks.
 
 
 ### Kick off your Cromwell server
@@ -310,7 +308,7 @@ Submitted batch job 2733799
 Your Cromwell server is attempting to start up on node/port gizmob5:39071.  It can take up to 2 minutes prior to the port being open for use by the shiny app at https://cromwellapp.fredhutch.org or via the R package fh.wdlR. If you encounter errors, you may want to check your server logs at /home/username/cromwell-home/server-logs to see if Cromwell was unable to start up.
 Go have fun now.
 ```
-*Note:  Please write down the node and port it specifies here - in this example it's `gizmob5:39071`, but yours will be a different combination.  This is the only place where you will be able to find the particular node/port for this instance of your Cromwell server, and you'll need that to be able to send jobs to the Cromwell server.* 
+> Note:  Please write down the node and port it specifies here - in this example it's `gizmob5:39071`, but yours will be a different combination.  This is the only place where you will be able to find the particular node/port for this instance of your Cromwell server, and you'll need that to be able to send jobs to the Cromwell server.
 
 
  To "see" if your Cromwell server is up and running you can do this: 
