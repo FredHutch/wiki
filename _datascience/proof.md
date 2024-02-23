@@ -201,17 +201,17 @@ Now you have a “ container” in which to run a database, but the database its
  
 Now you’re ready to go and never have to set up the database part again and you can use this database to manage all your work over time!
 
-## Users guide: Running WDL workflows through R (rcromwell)
+## User guide: Running WDL workflows on the Shiny-App
 ***section in development***
 
+## Users guide: Running WDL workflows through R (rcromwell)
+***section in development***
 
 ## Users guide: Running WDL workflows through command line via PROOF
 ***section in development***
 
-
 ## Developing with PROOF API
 ***section in development***
-
 
 ## Resources and help
 ***section in development***
