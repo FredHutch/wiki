@@ -201,6 +201,146 @@ Now you have a “ container” in which to run a database, but the database its
  
 Now you’re ready to go and never have to set up the database part again and you can use this database to manage all your work over time!
 
+## User guide: Starting up your DIY Cromwell Server 
+
+### Start up your first DIY Cromwell server
+
+Now that your database is set up to communicate with Cromwell and store your workflow information, you can proceed to customize Cromwell according to your preferences. Once customized, Cromwell will be tailored to work exactly how you want it to, and you'll be all set to start using it!
+
+### Customize Your Configuration
+
+**Setting up your "home" base for Cromwell configuration files**
+
+To start up your first Cromwell server job, you first need some Cromwell configuration files.  But before that you must decide where the configuration files will "live" or have a "Cromwell home base". 
+
+This **must** be a place where `rhino` can access them, such as in your `homes` directory, which is typically the default directory when you connect to the `rhino`.  
+
+To get started, do the following on `rhino`:
+```
+mkdir -p cromwell-home
+```
+Wherever you decide your Cromwell home base to be suggest you create a `cromwell-home` folder (or whatever you want to call it). 
+
+**Cloning templates and test files**
+
+Next to make the setup easy clone the following repository into your Cromwell home base. 
+
+To get started, do the following on `rhino`:
+```
+cd cromwell-home
+git clone --branch main https://github.com/getwilds/diy-cromwell-server.git
+```
+**Customizing Cromwell Configuration Files**
+
+Next you'll want to move the cromUserConfig.txt template file you just downloaded into your main `cromwell-home` directory for customization and keeping in the future. 
+
+```
+cp ./diy-cromwell-server/cromUserConfig.txt .
+```
+ When you are first setting up Cromwell, you'll need to put all of your User Customizations into this `cromUserConfig.txt` which can serve as a template.  
+
+After you've done this once, you just need to keep the path to the file(s) handy for the future.  
+
+*Note: You can manage multiple Cromwell profiles this way by just maintaining different files full of credentials and configuration variables that you want.*  
+
+In `cromUserConfig.txt` there are some variables that allow users to share a similar configuration file but tailor the particular behavior of their Cromwell server to best suit them.  
+
+The following text is also in this repo but these are the customizations you'll need to decide on for your server.
+```
+################## WORKING DIRECTORY AND PATH CUSTOMIZATIONS ###################
+## Where do you want the working directory to be for Cromwell
+## Note: startng the server will create a subdirectory in the directory you specify here called "cromwell-executions"). Please include the leading and trailing slashes!!! You likely will want to include your username in the path just in case others in your lab are ALSO using Cromwell to reduce confusion.
+### Suggestion: /fh/scratch/delete90/pilastname_f/username/
+SCRATCHDIR=/fh/scratch/delete90/...
+
+## Where do you want logs about individual workflows (not jobs) to be written?
+## Note: this is a default for the server and can be overwritten for a given workflow in workflow-options.  Most of the time workflow troubleshooting occurs without having to refer to these logs, but the ability to make them can be useful if you like them. 
+### Suggestion: ~/cromwell-home/workflow-logs
+WORKFLOWLOGDIR=~/cromwell-home/workflow-logs
+
+## Where do you want to save Cromwell server logs for troubleshooting Cromwell itself?
+## You'll want this handy in the beginning as when Cromwell cannot start up, this is where you'll go to do all of your troubleshooting.  
+### Suggestion: ~/cromwell-home/server-logs
+SERVERLOGDIR=~/cromwell-home/server-logs
+
+################ DATABASE CUSTOMIZATIONS #################
+## DB4Sci MariaDB details (remove any `...`'s and use unquoted text):
+
+CROMWELLDBPORT=...
+CROMWELLDBNAME=...
+CROMWELLDBUSERNAME=...
+CROMWELLDBPASSWORD=...
+
+## Number of cores for your Cromwell server itself - usually 4 is sufficient.  
+## Increase if you want to run many, complex workflows simultaneously or notice your server is slowing down. Keep in mind these cpu's do count toward your lab's allocations, so you want to keep it fairly minimal. 
+NCORES=4
+
+## Length of time you want the server to run for.  
+## Note: when servers go down, all jobs they'd sent will continue.  When you start up a server the next time using the same database, the new server will pick up whereever the previous workflows left off.  "7-0" is 7 days, zero hours.
+SERVERTIME="7-0" 
+```
+_Note:  For this server, you will want multiple cores to allow it to multi-task.  If you notice issues, the particular resource request for the server job itself might be a good place to start adjusting, in conjunction with some guidance from SciComp or the Slack [Question and Answer channel](https://fhbig.slack.com/archives/CD3HGJHJT) folks._
+
+
+### Kick off your Cromwell server
+
+Now that you've configured your future Cromwell servers, you can kick off your first Cromwell server job.  Go to `rhino` to your "cromwell-home" and do the following:
+```
+## You'll want to put `cromwell.sh` somewhere handy for future use, we suggest:
+cp ./diy-cromwell-server/cromwell.sh .
+
+## Then you'll want to make the script "executable":
+chmod +x cromwell.sh
+
+# Then simply start up Cromwell by executing the script and passing it the path to your configuration file. 
+./cromwell.sh cromUserConfig.txt
+```
+
+
+Much like the `grabnode` command you may have used previously, the script will run and print back to the console instructions once the resources have been provisioned for the server. You should see something like this:
+
+```
+Your configuration details have been found...
+Getting an updated copy of Cromwell configs from GitHub...
+Setting up all required directories...
+Detecting existence of AWS credentials...
+Credentials found, setting appropriate configuration...
+Requesting resources from SLURM for your server...
+Submitted batch job 2733799
+Your Cromwell server is attempting to start up on node/port gizmob5:39071.  It can take up to 2 minutes prior to the port being open for use by the shiny app at https://cromwellapp.fredhutch.org or via the R package fh.wdlR. If you encounter errors, you may want to check your server logs at /home/username/cromwell-home/server-logs to see if Cromwell was unable to start up.
+Go have fun now.
+```
+*Note:  Please write down the node and port it specifies here - in this example it's `gizmob5:39071`, but yours will be a different combination.  This is the only place where you will be able to find the particular node/port for this instance of your Cromwell server, and you'll need that to be able to send jobs to the Cromwell server.* 
+
+
+ To "see" if your Cromwell server is up and running you can do this: 
+
+```
+## Here `username` is your Fred Hutch username
+squeue -u username
+## Or if you want to get fancy:
+squeue -o '%.18i %.9P %j %.8T %.10M %.9l %.6C %R' -u username
+```
+
+You'll see a jobname "cromwellServer".  
+
+If you ever want to shut down your server before the 7-day default run time, you can always go to Rhino in your Terminal and end the server by doing or if you forget your node and port information you must cancel your server and start a new one. 
+![cromwell_diy](/_datascience/assets/cromwell_diy.png)
+
+
+### Starting up your server in the future
+Good news! The above instructions are a one time event. In the future, when you want to start up a Cromwell server to do some computing work, all you'll have to do is:
+
+1. Get onto Rhino in Terminal
+
+2. Change to the `cromwell-home` directory you made in your Cromwell home base
+
+3. Enter: `./cromwell.sh cromUserConfig.txt` and you're off to the races!
+
+
+Congrats you've started your first Cromwell server!! 
+
+
 ## User guide: Running WDL workflows on the Shiny-App
 ***section in development***
 
