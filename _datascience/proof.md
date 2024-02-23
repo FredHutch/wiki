@@ -415,7 +415,8 @@ If the `node:port` combination was incorrect you will be notified in the dialog 
 
 ### Validate your WDL workflow
 
-If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL / JSONs) using the "Validate" tab. ![validate](/_datascience/assets/proof_101_shinyapp_validate.png)
+Now that you have connected to your Cromwell server (either via PROOF/your DIY Cromwell server) you are ready to start running your WDL workflows. 
+The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL / JSONs) using the "Validate" tab. ![validate](/_datascience/assets/proof_101_shinyapp_validate.png)
 
 You can upload your WDL workflow file and associated JSON file into the respective upload boxes. 
 
