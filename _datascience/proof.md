@@ -22,9 +22,9 @@ We also have a WDL 101 course that will be a quick-start guide to building a WDL
 
 ## What is a WDL?
 
-The **Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile tool for executing bioinformatics and computational workflows. WDL offers:
+**Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile workflow framework for executing bioinformatics and computational workflows. WDL offers:
 
--   A **standardized** approach to describing computational tasks, including inputs, outputs, and dependencies.
+-   A **standardized** and **modular** approach to specifying and combining computational tasks, using inputs, outputs, and dependencies.
   
 -   A task-oriented approach promoting **code reuse** and modularity.
   
