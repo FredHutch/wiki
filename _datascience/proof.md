@@ -625,7 +625,24 @@ Here is where you can find the GitHub repository that was used to build the App
 
 
 ## Users guide: Running WDL workflows through R (rcromwell)
-***section in development***
+
+### What is rcromwell? 
+
+In addition to running WDL workflows through the Shiny App you can also do this through R using the [rcromwell](https://getwilds.org/rcromwell/index.html) package. 
+
+You can also use this R package through R/RStudio on your local machine (on VPN or on campus) to directly submit workflows to your Cromwell server from the R command line, and to track calls and workflow execution status directly. 
+
+> Note: The package is set up to support both Shiny workflow and a single R user in an R session. Thus, you can pass your Cromwell url and Proof API token in function calls in your R code, but you shouldn’t . The interaface for passing through the function arguments is meant for Shiny. Instead use cromwell_config() and set the API token as an env var from proofr for better security posture.
+
+### Installation 
+
+ You must first install rcromwell by following the instructions [here](https://getwilds.org/rcromwell/index.html)
+
+### Getting started
+ To get started with submitting workflow and tracking their progress see details [here](https://getwilds.org/rcromwell/articles/rcromwell.html)
+
+### More details
+Look [here](https://getwilds.org/rcromwell/reference/index.html) for more details about the functions in rcromwell. 
 
 ## Users guide: Running WDL workflows through command line via PROOF
 ***section in development***
