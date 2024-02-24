@@ -469,6 +469,47 @@ If your workflows and accompanying JSON files are validated you should see in th
 
 If your workflow does not validate the  console will provide some "helpful" information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. 
 
+
+### Submit your workflow 
+
+Congratulations! At this point, you should have a validated WDL workflow and you are ready to submit your job. 
+
+To submit your job click the "Submit Jobs" tab on the left
+
+![proof_101_shiny_app_submit_1](/_datascience/assets/proof_101_shiny_app_submit_1.png)
+
+This will open up the "Submit Jobs" page:
+
+![proof_101_shiny_app_submit_2](/_datascience/assets/proof_101_shiny_app_submit_2.png)
+
+Here you can do the following: 
+
+- Upload your WDL workflow 
+
+- Upto 3 different JSON files that accompany your workflow
+
+> Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs note that these will be concatenates or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.  
+
+- Add a primary and secondary workflow label to easily track them 
+
+> Note: As you upload your files look for the blue uploading progress bar below the upload box. 
+
+> Note: If you need to add files different from the ones uploaded go ahead an click the "Reset" button. This will clear **all** the upload fields allowing you to upload a new set of files. 
+
+Once everything is uploaded go ahead and click the "Submit Workflow" button. 
+
+You will know that your submission has worked once you see a little table output on the same page!
+
+![proof_101_shiny_app_submit_3](/_datascience/assets/proof_101_shiny_app_submit_3.png)
+
+This output table has an ID which a long string of letters as numbers that you can use to follow-up on your workflow in the "Track Jobs" tab. This workflow id string is unique to an individual workflow run, so if you run the same workflow a second time, you'll get a different string. This means that this unique identifier string can be used to help understand the data source file(s) used to generate each set of results files, helping make your work reproducible.
+
+>Note: You don't need to copy this workflow ID, we have a nifty copy button in the "Track Jobs" tab !
+
+
+
+
+
 ## Users guide: Running WDL workflows through R (rcromwell)
 ***section in development***
 
