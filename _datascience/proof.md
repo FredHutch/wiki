@@ -486,7 +486,7 @@ Here you can do the following:
 
 - Upload your WDL workflow 
 
-- Upto 3 different JSON files that accompany your workflow
+- Upload upto 3 different JSON files that accompany your workflow
 
 > Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs note that these will be concatenates or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.  
 
