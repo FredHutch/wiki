@@ -688,3 +688,5 @@ Ted Laderas ([GitHub]()/[E-mail](mailto:))
 
 Chris Lo ([GitHub]()/[E-mail](mailto:))
 
+Taylor Firman ([GitHub]()/[E-mail](mailto:))
+
