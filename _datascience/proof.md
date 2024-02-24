@@ -83,7 +83,10 @@ This means that individual users can:
 
 ### How to get setup with Cromwell at Fred Hutch
  
- The prerequisite to running WDL workflows using Cromwell within the Fred Hutch involves two key steps: starting a Cromwell server and having a database setup. There are currently two ways to do this:
+ The prerequisite to running WDL workflows using Cromwell within the Fred Hutch involves two key steps: starting a Cromwell server and having a database setup. Additionally, Cromwell's call caching feature (keeps track of what you’ve already done so you don’t have to re-compute jobs that are done) enables efficient use of computing resources even in the event of workflow failures. Our configuration ensures this capability by setting up a Cromwell server for 7-day intervals and establishing a persistent database (only once per user for their lifetime at Hutch) for communication between Cromwell servers.
+ 
+ 
+ There are currently two ways to do this:
 
 **The PROOF way _(recommended)_:**
 Using one of the three ways (see User guides below for detailed instructions) PROOF will help you
@@ -131,9 +134,9 @@ Using one of the three ways (see User guides below for detailed instructions) PR
  - If you are off-campus make sure you are connected via    the VPN.
 
 ### Additional instructions before you start a Cromwell server DIY:
-Cromwell's call caching feature (keep track of what you’ve already done so you don’t have to re-compute jobs that are done) enables efficient use of computing resources even in the event of workflow failures. Our configuration ensures this capability by setting up a Cromwell server for 7-day intervals and establishing a persistent database (only once per user for their lifetime at Hutch) for communication between Cromwell servers.
+If you would like to setup your own Cromwell server you would need to do the following 2 things before you can start your first Cromwell server:
 
-#### Setup your database container
+#### 1. Setup your database container
 First, we need to setup a database container where the database will run. We suggest setting up a database container (once per user) this way:  
 1. Go to [DB4Sci](https://mydb.fredhutch.org/login) . To learn more about DB4Sci go [here](https://sciwiki.fredhutch.org/scicomputing/store_databases/#db4sci--previously-mydb).
  
@@ -170,7 +173,7 @@ First, we need to setup a database container where the database will run. We sug
 
   > Note: If you do not see this screen, you can go to the Manage Containers tab in the MyDB interface and scroll down for your container name, and you can look in the Port column. If you have trouble with using DB4Sci, you can email [scicomp@fredhutch.org](mailto:scicomp@fredhutch.org) and share the information or screenshots of what failed to get help.
 
-#### Make Your Empty Database
+#### 2. Make Your Empty Database
 Now you have a “ container” in which to run a database, but the database itself does not yet exist. Again, this only needs to be done one time per user. You need to create an empty database in that container and then Cromwell will do the rest the first time you start up a server.
 
 1. Go to terminal and connect to rhino.
@@ -355,26 +358,42 @@ Each of these example workflows is in a folder containing a WDL file (specifying
 > Note: For those test workflows that use [Docker](https://docs.docker.com/guides/walkthroughs/what-is-a-container/) containers, know that the first time you run them, you may notice that jobs aren't being sent very quickly. That is because for our cluster, we need to convert those Docker containers to something that can be run by Singularity. The first time a Docker container is used, it must be converted, but in the future Cromwell will used the cached version of the Docker container and jobs will be submitted more quickly.
 
 ## User guide: Running WDL workflows on the Shiny-App
-The first and most user-friendly way to validate, submit, track, troubleshoot and if needed abort your WDL workflows is through our [Fred Hutch Shiny app]( https://cromwellapp.fredhutch.org). This shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  ![welcome](/_datascience/assets/proof_101_shiny_app_welcome.png) 
+The first and most user-friendly way to validate, submit, track, troubleshoot and if needed abort your WDL workflows is through our [Fred Hutch Shiny app]( https://cromwellapp.fredhutch.org). This shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
+
+![welcome](/_datascience/assets/proof_101_shiny_app_welcome.png) 
 
 > Note: At this point you should have either started your own DIY Cromwell server or if you have not, you can use the automation of PROOF to start one. Initially, setting up a Cromwell server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
 
 ### Starting a Cromwell server via PROOF
-If you have not started your own DIY Cromwell server the first step is to log in to PROOF. ![login](/_datascience/assets/proof_101_shinyapp_proof_login.png) 
+If you have not started your own DIY Cromwell server the first step is to log in to PROOF. 
 
-When you click "PROOF Login", a box will appear where you will input your Hutch credentials and then click submit![login_2](/_datascience/assets/proof_101_shinyapp_proof_login_2.png)
+![login](/_datascience/assets/proof_101_shinyapp_proof_login.png) 
 
-You know you are logged in when the page refreshes automatically and you see the log out button turn red. ![login_2](/_datascience/assets/proof_101_shinyapp_logged_in.png)
+When you click "PROOF Login", a box will appear where you will input your Hutch credentials and then click submit
 
-Next click on "Cromwell Servers" to take you to the page where you can start a server![start_server](/_datascience/assets/proof_101_shinyapp_start_server.png)
+![login_2](/_datascience/assets/proof_101_shinyapp_proof_login_2.png)
 
-Click "Start" to open up a dialog box that asks for optional credentials to start your Cromwell server ![start_server_2](/_datascience/assets/proof_101_shinyapp_start_server_2.png)
+You know you are logged in when the page refreshes automatically and you see the log out button turn red. 
+
+![login_2](/_datascience/assets/proof_101_shinyapp_logged_in.png)
+
+Next click on "Cromwell Servers" to take you to the page where you can start a server
+
+![start_server](/_datascience/assets/proof_101_shinyapp_start_server.png)
+
+Click "Start" to open up a dialog box that asks for optional credentials to start your Cromwell server 
+
+![start_server_2](/_datascience/assets/proof_101_shinyapp_start_server_2.png)
 
 The majority of people usually are authorized to work under one slurm account (working under one PI = one slurm account). In this case just hit start and all Cromwell configurations will default under the slurm account you are authorised under.
 
-However if you have more than one slurm accounts that you can work under then here is your chance to enter the most appropriate one (for example you could be authorized to do work under two PI's with slurm accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b" enter pi_b where it asks for slurm account). ![start_server_3](/_datascience/assets/proof_101_shinyapp_start_server_3.png)
+However if you have more than one slurm accounts that you can work under then here is your chance to enter the most appropriate one (for example you could be authorized to do work under two PI's with slurm accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b" enter pi_b where it asks for slurm account). 
 
-You know your server is up and running when the page auto-refreshes and you see the "Start" button gray out and information about your server populated below. ![start_server_4](/_datascience/assets/proof_101_shinyapp_start_server_4.png)
+![start_server_3](/_datascience/assets/proof_101_shinyapp_start_server_3.png)
+
+You know your server is up and running when the page auto-refreshes and you see the "Start" button gray out and information about your server populated below. 
+
+![start_server_4](/_datascience/assets/proof_101_shinyapp_start_server_4.png)
 
 There will be two sections of information that you would like to pay attention to which should be populated with details that will be relevant. 
 
@@ -399,7 +418,9 @@ Once your server is ready for use it you should receive and email from PROOF API
 
 ### Login with your DIY Cromwell server
 
-If you generated your own Cromwell server using the DIY method you can still use this app and login with the `node:port` information. Instead of clicking the PROOF login click the "My Own Cromwell" button![proof_101_shinyapp_diy_login](/_datascience/assets/proof_101_shinyapp_diy_login.png)
+If you generated your own Cromwell server using the DIY method you can still use this app and login with the `node:port` information. Instead of clicking the PROOF login click the "My Own Cromwell" button!
+
+[proof_101_shinyapp_diy_login](/_datascience/assets/proof_101_shinyapp_diy_login.png)
 
 Next enter the `node:port` combination you were assigned when you created your started up you Cromwell server and click submit.
 >Note: You need to add http:// manually before entering your node:port combination.
@@ -407,6 +428,7 @@ Next enter the `node:port` combination you were assigned when you created your s
 ![proof_101_shinyapp_diy_login_2](/_datascience/assets/proof_101_shinyapp_diy_login_2.png)
 
 You know everything went well and your credential were acceptable if you see the "Exit" button on top in red. 
+
 ![proof_101_shinyapp_diy_login_3](/_datascience/assets/proof_101_shinyapp_diy_login_3.png)
 
 If the `node:port` combination was incorrect you will be notified in the dialog box with "Not a valid Cromwell URL". Check that you entered the information correctly and try again! If you have not save the correct `node:port` combination we recommend that you cancel you Cromwell server and start again (see instructions on canceling in the the previous section) 
@@ -415,8 +437,10 @@ If the `node:port` combination was incorrect you will be notified in the dialog 
 
 ### Validate your WDL workflow
 
-Now that you have connected to your Cromwell server (either via PROOF/your DIY Cromwell server) you are ready to start running your WDL workflows. 
-The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL / JSONs) using the "Validate" tab. ![validate](/_datascience/assets/proof_101_shinyapp_validate.png)
+Now that you have kicked off your Cromwell server (either via PROOF/your DIY Cromwell server) you are ready to start running your WDL workflows. 
+The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL / JSONs) using the "Validate" tab.
+
+![validate](/_datascience/assets/proof_101_shinyapp_validate.png)
 
 You can upload your WDL workflow file and associated JSON file into the respective upload boxes. 
 
@@ -435,7 +459,9 @@ The validation process evaluates several things:
 
 > Note : During a dry run, Cromwell does not test the availability of your input files. This is because Cromwell can access files from a variety of sources, including local filesystems, AWS S3, Google buckets, and Azure blobs. Testing for input availability only happens when you execute the workflow for the first time. If some input files are missing, Cromwell will continue to execute tasks for the available input files while skipping tasks where inputs cannot be located.
 
-Here is an example from the [test workflows](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation ![validate_2](/_datascience/assets/proof_101_shinyapp_validate_2.png)
+Here is an example from the [test workflows](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation
+
+![validate_2](/_datascience/assets/proof_101_shinyapp_validate_2.png)
 
 If your workflows and accompanying JSON files are validated you should see in the  console below 
 `$valid`
