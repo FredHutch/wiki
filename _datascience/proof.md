@@ -644,6 +644,10 @@ You can also use this R package through R/RStudio on your local machine (on VPN 
 ### More details
 Look [here](https://getwilds.org/rcromwell/reference/index.html) for more details about the functions in rcromwell. 
 
+### Where to report bugs and find help
+
+The GitHub repository for [rcromwell](https://github.com/getwilds/rcromwell) is the best place to file issues and report bugs. It also has [vignettes](https://github.com/getwilds/rcromwell/tree/971a2f90fd231dc6076f4281b457c8ed9f57a9d9/vignettes) that you may find helpful. 
+
 ## Users guide: Running WDL workflows through command line via PROOF
 ***section in development***
 
