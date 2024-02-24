@@ -433,7 +433,7 @@ You know everything went well and your credential were acceptable if you see the
 
 If the `node:port` combination was incorrect you will be notified in the dialog box with "Not a valid Cromwell URL". Check that you entered the information correctly and try again! If you have not save the correct `node:port` combination we recommend that you cancel you Cromwell server and start again (see instructions on canceling in the the previous section) 
 
-
+You can do all the next steps even if you start your Cromwell server using this method!
 
 ### Validate your WDL workflow
 
@@ -612,6 +612,16 @@ Go back to the Cromwell Server tab and click delete
 A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidently end your server.
 
 ![proof_101_shiny_app_delete_server_2](/_datascience/assets/proof_101_shiny_app_delete_server_2.png)
+
+### Where to report bugs and find help
+
+If you find something is not working with the App or you find a bug please help us make this App better by reporting here 
+
+![proof_101_shiny_app_help](/_datascience/assets/proof_101_shiny_app_help.png)
+
+Here is where you can find the GitHub repository that was used to build the App
+
+![proof_101_shiny_app_code](/_datascience/assets/proof_101_shiny_app_code.png)
 
 
 ## Users guide: Running WDL workflows through R (rcromwell)
