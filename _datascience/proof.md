@@ -575,7 +575,43 @@ Finally, once a workflow's outputs have all been created successfully, Cromwell 
 This lets you find output files and interact with them, archive them, or otherwise copy them to longer term storage for use.  
 ![proof_101_shiny_app_track_jobs_11](/_datascience/assets/proof_101_shiny_app_track_jobs_11.png)
 
+### Troubleshoot Tab
 
+Last, there is the Troubleshoot tab.  Here you can do things like Abort running workflows or get a complete metadata output for the entire workflow to parse yourself to try to find what's happening with your workflow if it failed running. 
+
+![proof_101_shiny_app_troubleshoot_1](/_datascience/assets/proof_101_shiny_app_troubleshoot_1.png)
+
+#### Abort a workflow
+
+Sometimes you realize you want to kill a workflow.  Using the workflow_id, you can kill specific workflows using this box.  
+
+![proof_101_shiny_app_abort_1](/_datascience/assets/proof_101_shiny_app_abort_1.png)
+
+> Note: it will take Cromwell some time to coordinate SLURM job cancellations particularly for complex workflows, but it will clean everything up for you. 
+
+![proof_101_shiny_app_abort_2](/_datascience/assets/proof_101_shiny_app_abort_2.png)
+
+#### Troubleshoot a workflow
+
+Especially in the beginning if you have catastrophic workflow failures and you can't even figure out what's going on, you can come back to this Troubleshoot box to retrieve the entire, unformatted JSON output of all metadata Cromwell has about your workflow.  You probably are better served by the "Track Jobs" tab for checking how your workflow is going, but if there's nothing there that's helpful, then this box is where you'll want to go.  
+
+![proof_101_shiny_app_troubleshoot_2](/_datascience/assets/proof_101_shiny_app_troubleshoot_2.png)
+
+![proof_101_shiny_app_troubleshoot_3](/_datascience/assets/proof_101_shiny_app_troubleshoot_3.png)
+
+> Note: this output is not for the faint of heart, but it will give you hints once you get used to understanding what Cromwell is telling you.  
+
+### Delete your Cromwell server
+
+Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and delete your Cromwell server. 
+
+Go back to the Cromwell Server tab and click delete
+
+![proof_101_shiny_app_delete_server_1](/_datascience/assets/proof_101_shiny_app_delete_server_1.png)
+
+A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidently end your server.
+
+![proof_101_shiny_app_delete_server_2](/_datascience/assets/proof_101_shiny_app_delete_server_2.png)
 
 
 ## Users guide: Running WDL workflows through R (rcromwell)
