@@ -507,6 +507,74 @@ This output table has an ID which a long string of letters as numbers that you c
 >Note: You don't need to copy this workflow ID, we have a nifty copy button in the "Track Jobs" tab !
 
 
+### Track your submitted jobs
+
+Once you've submitted a workflow, you can track the status of your submitted workflows using the "Track Jobs" tab
+
+![proof_101_shiny_app_track_jobs_1](/_datascience/assets/proof_101_shiny_app_track_jobs_1.png)
+
+#### Filter submitted jobs you want to track
+You can track your jobs 3 different ways!
+
+![proof_101_shiny_app_track_jobs_2](/_datascience/assets/proof_101_shiny_app_track_jobs_2.png)
+
+You can filter submitted jobs based on: 
+1. Days since your server was started
+	> Note: This maxes out 7 days. And displays history of the current Cromwell server. 
+
+2. Using the custom workflow name you have given when you submitted your job
+
+3. Based on the status of the job
+
+> Note:  You can use all these three options in succession. For example  you can display as many days of workflow history as you'd like, filter that result for workflows with a specific name or with specific status(es) like 'failed', 'succeeded', etc. This can help if you have submitted a LOT of workflows and you don't want to see them all, or if the Cromwell server is still busy working through all of your submissions and recording their status.
+
+Once you are done filtering down to your choices and click "Update View", the relevant workflows will be returned and you'll see a visual representation on  those workflows.  
+
+![proof_101_shiny_app_track_jobs_3](/_datascience/assets/proof_101_shiny_app_track_jobs_3.png)
+
+Below this tab you will also see a graph showing "Workflow Timing" information along with outcomes (Graph legend = "Status"). The x-axis shows how long it took to run a particular workflow and the y-axis will show you which workflow (from a potentially filtered list of workflows)
+
+![proof_101_shiny_app_track_jobs_4](/_datascience/assets/proof_101_shiny_app_track_jobs_4.png)
+
+Finally below this visual representation of all your workflow runs you will see a "Workflows Run" table showing metadata for each workflow.  Click on the workflow you're interested in to populate the rest of the tables (below). 
+
+> Note: Next to each workflow in the table we have a nifty "copyID" button that you can use to copy your workflow ID for use elsewhere in the app. 
+ 
+![proof_101_shiny_app_track_jobs_5](/_datascience/assets/proof_101_shiny_app_track_jobs_5.png)
+
+You can also see a visual summary of the workflow below
+
+![proof_101_shiny_app_track_jobs_6](/_datascience/assets/proof_101_shiny_app_track_jobs_6.png)
+
+#### Track workflow-level details
+
+To get more information on a particular workflow select a workflow and you'll see some summary information about that workflow as you scroll down.
+
+![proof_101_shiny_app_track_jobs_7](/_datascience/assets/proof_101_shiny_app_track_jobs_7.png)
+
+You can see a plot of the timing and outcomes of each call in that workflow.
+
+![proof_101_shiny_app_track_jobs_8](/_datascience/assets/proof_101_shiny_app_track_jobs_8.png)
+
+#### Track call-level details
+
+To get more detailed information about each "task" in your WDL workflow you can scroll down to see the "Job List" table.  This table has usefule information such as the directory where the job is working (callRoot), its SLURM "job_ID" , what computing resources or software environment were used, and the job's status.  
+
+![proof_101_shiny_app_track_jobs_9](/_datascience/assets/proof_101_shiny_app_track_jobs_9.png)
+
+You can then click on a specific task of choice to get more information on that specific task/call.
+
+You can use the Job Failures, Call Caching, tables to retrieve information relevant to those processes.  You can do this by clicking the "Get/Refresh ... Metadata" buttons (sometimes for complex workflows these can be quite large, and thus they do not load until you want them).  You can also choose to download these tables if you like. 
+
+![proof_101_shiny_app_track_jobs_10](/_datascience/assets/proof_101_shiny_app_track_jobs_10.png)
+
+#### Tracking the location of your outputs
+
+Finally, once a workflow's outputs have all been created successfully, Cromwell can tell you (and this Shiny app can help you download) a table showing where to find the workflow outputs (note this is not every file created, only the ones you specify as "results" using the WDL file's "workflow output" block).  
+
+This lets you find output files and interact with them, archive them, or otherwise copy them to longer term storage for use.  
+![proof_101_shiny_app_track_jobs_11](/_datascience/assets/proof_101_shiny_app_track_jobs_11.png)
+
 
 
 
