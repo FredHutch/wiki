@@ -95,12 +95,12 @@ Using one of the three ways (see User guides below for detailed instructions) PR
 > Note: Your Cromwell server by default runs only for 7 days. Make sure to restart it to continue submitting and running
    jobs.
    
- -   Automatically sets up a MariaDB(MySql) database for you
+ -   Automatically sets up a MariaDB (MySQL) database for you
 
 
  **The DIY way:**
  
- - Requires you to first setup a MariaBD (MySql) database
+ - Requires you to first setup a MariaDB (MySQL) database
 
  - Requires you to kick-off a Cromwell server 
 
@@ -373,7 +373,7 @@ When you click "PROOF Login", a box will appear where you will input your Hutch 
 
 ![login_2](/_datascience/assets/proof_101_shinyapp_proof_login_2.png)
 
-You know you are logged in when the page refreshes automatically and you see the log out button turn red. 
+You know you are logged in when the page refreshes automatically and you see the red log out button appear. 
 
 ![login_2](/_datascience/assets/proof_101_shinyapp_logged_in.png)
 
@@ -486,9 +486,9 @@ Here you can do the following:
 
 - Upload your WDL workflow 
 
-- Upload upto 3 different JSON files that accompany your workflow
+- Upload up to 3 different JSON files that accompany your workflow
 
-> Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs note that these will be concatenates or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.  
+> Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs note that these will be concatenated or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.  
 
 - Add a primary and secondary workflow label to easily track them 
 
@@ -646,7 +646,7 @@ Look [here](https://getwilds.org/rcromwell/reference/index.html) for more detail
 
 ### Where to report bugs and find help
 
-The GitHub repository for [rcromwell](https://github.com/getwilds/rcromwell) is the best place to file issues and report bugs. It also has [vignettes](https://github.com/getwilds/rcromwell/tree/971a2f90fd231dc6076f4281b457c8ed9f57a9d9/vignettes) that you may find helpful. 
+The GitHub repository for [rcromwell](https://github.com/getwilds/rcromwell/issues) is the best place to file issues and report bugs. It also has [vignettes](https://github.com/getwilds/rcromwell/tree/971a2f90fd231dc6076f4281b457c8ed9f57a9d9/vignettes) that you may find helpful. 
 
 ## Users guide: Running PROOF through command line
 
