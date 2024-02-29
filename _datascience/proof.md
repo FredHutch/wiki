@@ -8,12 +8,12 @@ primary_reviewers: vortexing
 1. [Background](#1---background)
 2. [Preliminary Setup](#2---preliminary-setup)
 3. [App Layout](#3---app-layout)
-4. [Starting a Cromwell Server](#4---starting-a-cromwell-server)
+4. [Starting a Proof server](#4---starting-a-cromwell-server)
 5. [Validating Your WDL Workflow](#5---validating-your-wdl-workflow)
 6. [Submitting Your WDL Workflow](#6---submitting-your-wdl-workflow)
 7. [Tracking Your Submitted Jobs](#7---tracking-your-submitted-jobs)
 8. [Troubleshooting](#8---troubleshooting)
-9. [Deleting a Cromwell Server](#9---deleting-a-cromwell-server)
+9. [Deleting a Proof server](#9---deleting-a-cromwell-server)
 10. [Resources and Help](#10---resources-and-help)
 
 # 1 - Background
@@ -89,7 +89,14 @@ This means that individual users can:
  - **Customize** the locations of input data, intermediate data, and workflow outputs into data storage resources appropriate to the data type (re: cost, backup, and accessibility)
 
  - **Query** the Cromwell database for information about workflows run in the past, including where their workflow outputs were saved or a variety of other workflow and task level metadata.
+ 
+> Quick note: the Cromwell server is referred to as a PROOF server in these instructions. PROOF handles setting up the Cromwell server for you.
 
+## The PROOF Process
+
+The following diagram shows basic usage of PROOF once you have done hte preliminary setup. Each box corresponds to a section in the documentation.
+
+![](/_datascience/assets/proof_101_workflow.png)
 
 # 2 - Preliminary Setup
 
@@ -106,7 +113,7 @@ The first and most user-friendly way to validate, submit, track, troubleshoot, a
 
 ![welcome](/_datascience/assets/proof_shiny_app_welcome.png) 
 
-# 4 - Starting a Cromwell Server
+# 4 - Starting a Proof Server
 The first step is to log in to PROOF. 
 
 ![login](/_datascience/assets/proof_101_shinyapp_proof_login.png) 
@@ -115,15 +122,15 @@ When you click "PROOF Login", a box will appear where you will input your Hutch 
 
 ![login_2](/_datascience/assets/proof_101_shinyapp_proof_login_2.png)
 
-You know you are logged in when the page refreshes automatically and you see the log out button turn red. 
+You know you are logged in when the page refreshes automatically and you see the red log out button appear.
 
 ![login_2](/_datascience/assets/proof_101_shinyapp_logged_in.png)
 
-Next click on "Cromwell Servers" to take you to the page where you can start a server.
+Next click on "Proof Servers" to take you to the page where you can start a server.
 
 ![start_server](/_datascience/assets/proof_101_shinyapp_start_server.png)
 
-Click "Start" to open up a dialog box that asks for optional credentials to start your Cromwell server.
+Click "Start" to open up a dialog box that asks for optional credentials to start your Proof Server.
 
 ![start_server_2](/_datascience/assets/proof_101_shinyapp_start_server_2.png)
 
@@ -137,7 +144,7 @@ You know your server is up and running when the page auto-refreshes and you see 
 
 ![start_server_4](/_datascience/assets/proof_101_shinyapp_start_server_4.png)
 
-> Initially, setting up a Cromwell server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
+> Initially, setting up a Proof Server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
 
 There will be two sections of information that you would like to pay attention to which should be populated with details that will be relevant. 
 
@@ -145,23 +152,23 @@ There will be two sections of information that you would like to pay attention t
 - Job status: it should say "RUNNING"
 - Workflow log firectory: Gives you the path to where your workflow logs will reside
 - Scratch directory: Gives you the path to where your workflow outputs will go
-- Server-time: It tells you how long your Cromwell server will be "alive". By default this is set to 7 days. 
+- Server-time: It tells you how long your Proof Server will be "alive". By default this is set to 7 days. 
 - Slurm job account: The slurm account (default/or if specified) under which your jobs should be running. 
 
 **Troubleshooting**
-- Slurm job ID: This is the Cromwell server job ID. You can use this to cancel your Cromwell server through `rhino`
+- Slurm job ID: This is the Proof server job ID. You can use this to cancel your Proof server through `rhino`
 - Cromwell directory: The path to where you main Cromwell directory exists 
-- Server log directory: The path to where logs associated with the Cromwell server exists
+- Server log directory: The path to where logs associated with the Proof server exists
 - Singularity cache directory: Path to Singularity cache directory
 - Use AWS?: This defaults currently to FALSE
-- Cromwell URL: URL for Cromwell server
+- Cromwell URL: URL for Proof server
 
 Once your server is ready for use, you should receive an email from PROOF API ![email](/_datascience/assets/proof_101_shinyapp_email.png)
 
 
 # 5 - Validating Your WDL Workflow
 
-Now that you have kicked off your Cromwell server, you are ready to start running your WDL workflows. The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL/JSONs) using the "Validate" tab.
+Now that you have kicked off your Proof server, you are ready to start running your WDL workflows. The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL/JSONs) using the "Validate" tab.
 
 ![validate](/_datascience/assets/proof_101_shinyapp_validate.png)
 
@@ -206,7 +213,7 @@ Here you can do the following:
 
 - Upload up to three different JSON files that accompany your workflow.
 
-> Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs note that these will be concatenates or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.  
+> Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs, note that these will be concatenated or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.
 
 - Add a primary and secondary workflow label to easily track them 
 
@@ -236,13 +243,13 @@ You can track your jobs 3 different ways!
 
 You can filter submitted jobs based on: 
 1. Days since your server was started
-	> Note: This maxes out 7 days. And displays history of the current Cromwell server. 
+	> Note: This maxes out 7 days. And displays history of the current Proof server. 
 
 2. Using the custom workflow name you have given when you submitted your job
 
 3. Based on the status of the job
 
-> Note:  You can use all these three options in succession. For example  you can display as many days of workflow history as you'd like, filter that result for workflows with a specific name or with specific status(es) like 'failed', 'succeeded', etc. This can help if you have submitted a LOT of workflows and you don't want to see them all, or if the Cromwell server is still busy working through all of your submissions and recording their status.
+> Note:  You can use all these three options in succession. For example  you can display as many days of workflow history as you'd like, filter that result for workflows with a specific name or with specific status(es) like 'failed', 'succeeded', etc. This can help if you have submitted a LOT of workflows and you don't want to see them all, or if the Proof server is still busy working through all of your submissions and recording their status.
 
 Once you are done filtering down to your choices and click "Update View", the relevant workflows will be returned and you'll see a visual representation on  those workflows.  
 
@@ -317,15 +324,15 @@ Especially in the beginning if you have catastrophic workflow failures and you c
 
 > Note: this output is not for the faint of heart, but it will give you hints once you get used to understanding what Cromwell is telling you.  
 
-# 9 - Deleting a Cromwell Server
+# 9 - Stopping a PROOF server
 
-Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and delete your Cromwell server. 
+Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and delete your Proof server. 
 
-Go back to the Cromwell Server tab and click delete
+Go back to the PROOF server tab and click Stop Server
 
 ![proof_101_shiny_app_delete_server_1](/_datascience/assets/proof_101_shiny_app_delete_server_1.png)
 
-A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidently end your server.
+A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidentally end your server.
 
 ![proof_101_shiny_app_delete_server_2](/_datascience/assets/proof_101_shiny_app_delete_server_2.png)
 
@@ -333,13 +340,11 @@ A pop-up box will show up and ask you type out the words "delete me". This is an
 
 ## Where to report bugs and find help
 
-If you find something is not working with the App or you find a bug please help us make this App better by reporting here 
+If you find something is not working with the app or you find a bug, please help us make this app better by reporting here:
 
 ![proof_101_shiny_app_help](/_datascience/assets/proof_101_shiny_app_help.png)
 
-Here is where you can find the GitHub repository that was used to build the App
-
-![proof_101_shiny_app_code](/_datascience/assets/proof_101_shiny_app_code.png)
+![proof_101_shiny_app_help2](/_datascience/assets/proof_101_shiny_app_help2.png)
 
 ## Useful courses to get started
 ### Cluster computing
@@ -362,7 +367,7 @@ We would love to get feedback on this document from the community and would love
 **Authors**
 
 - Sitapriya Moorthi ([GitHub](https://github.com/sitapriyamoorthi)/[E-mail](mailto:smoorthi@fredhutch.org))
-- Amy Paguirigan	([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
+- Amy Paguirigan ([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
 - Scott Chamberlain ([GitHub](https://github.com/sckott)/[E-mail](mailto:sachamber@fredhutch.org))
 
 **Reviewers**
