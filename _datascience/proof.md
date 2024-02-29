@@ -92,6 +92,11 @@ This means that individual users can:
  
 > Quick note: the Cromwell server is referred to as a PROOF server in these instructions. PROOF handles setting up the Cromwell server for you.
 
+## The PROOF Process
+
+The following diagram shows basic usage of PROOF once you have done hte preliminary setup. Each box corresponds to a section in the documentation.
+
+![](/_datascience/assets/proof_101_workflow.png)
 
 # 2 - Preliminary Setup
 
@@ -319,15 +324,15 @@ Especially in the beginning if you have catastrophic workflow failures and you c
 
 > Note: this output is not for the faint of heart, but it will give you hints once you get used to understanding what Cromwell is telling you.  
 
-# 9 - Deleting a Proof server
+# 9 - Stopping a Proof server
 
 Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and delete your Proof server. 
 
-Go back to the Proof server tab and click delete
+Go back to the Proof server tab and click Stop Server
 
 ![proof_101_shiny_app_delete_server_1](/_datascience/assets/proof_101_shiny_app_delete_server_1.png)
 
-A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidently end your server.
+A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidentally end your server.
 
 ![proof_101_shiny_app_delete_server_2](/_datascience/assets/proof_101_shiny_app_delete_server_2.png)
 
