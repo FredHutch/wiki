@@ -324,11 +324,11 @@ Especially in the beginning if you have catastrophic workflow failures and you c
 
 > Note: this output is not for the faint of heart, but it will give you hints once you get used to understanding what Cromwell is telling you.  
 
-# 9 - Stopping a Proof server
+# 9 - Stopping a PROOF server
 
 Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and delete your Proof server. 
 
-Go back to the Proof server tab and click Stop Server
+Go back to the PROOF server tab and click Stop Server
 
 ![proof_101_shiny_app_delete_server_1](/_datascience/assets/proof_101_shiny_app_delete_server_1.png)
 
