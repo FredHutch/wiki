@@ -344,7 +344,9 @@ If you find something is not working with the App or you find a bug please help 
 
 ![proof_101_shiny_app_help](/_datascience/assets/proof_101_shiny_app_help.png)
 
-Here is where you can find the GitHub repository that was used to build the App
+![proof_101_shiny_app_help2](/_datascience/assets/proof_101_shiny_app_help2.png)
+
+Here is where you can find the GitHub repository that was used to build the App:
 
 ![proof_101_shiny_app_code](/_datascience/assets/proof_101_shiny_app_code.png)
 
