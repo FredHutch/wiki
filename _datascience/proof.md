@@ -122,7 +122,7 @@ When you click "PROOF Login", a box will appear where you will input your Hutch 
 
 ![login_2](/_datascience/assets/proof_101_shinyapp_proof_login_2.png)
 
-You know you are logged in when the page refreshes automatically and you see the log out button turn red. 
+You know you are logged in when the page refreshes automatically and you see the red log out button appear.
 
 ![login_2](/_datascience/assets/proof_101_shinyapp_logged_in.png)
 
@@ -213,7 +213,7 @@ Here you can do the following:
 
 - Upload up to three different JSON files that accompany your workflow.
 
-> Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs note that these will be concatenates or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.  
+> Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs, note that these will be concatenated or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.
 
 - Add a primary and secondary workflow label to easily track them 
 
@@ -340,15 +340,11 @@ A pop-up box will show up and ask you type out the words "delete me". This is an
 
 ## Where to report bugs and find help
 
-If you find something is not working with the App or you find a bug please help us make this App better by reporting here 
+If you find something is not working with the app or you find a bug, please help us make this app better by reporting here:
 
 ![proof_101_shiny_app_help](/_datascience/assets/proof_101_shiny_app_help.png)
 
 ![proof_101_shiny_app_help2](/_datascience/assets/proof_101_shiny_app_help2.png)
-
-Here is where you can find the GitHub repository that was used to build the App:
-
-![proof_101_shiny_app_code](/_datascience/assets/proof_101_shiny_app_code.png)
 
 ## Useful courses to get started
 ### Cluster computing
@@ -371,7 +367,7 @@ We would love to get feedback on this document from the community and would love
 **Authors**
 
 - Sitapriya Moorthi ([GitHub](https://github.com/sitapriyamoorthi)/[E-mail](mailto:smoorthi@fredhutch.org))
-- Amy Paguirigan	([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
+- Amy Paguirigan ([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
 - Scott Chamberlain ([GitHub](https://github.com/sckott)/[E-mail](mailto:sachamber@fredhutch.org))
 
 **Reviewers**
