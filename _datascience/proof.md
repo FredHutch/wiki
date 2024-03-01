@@ -19,13 +19,16 @@ primary_reviewers: vortexing, abbywall
     - Find out more about PROOF in our [How-To in the DaSL Resource Library](/dasldemos/proof-how-to/).  
     - Learn more about developing WDL workflows using our [WDL Guide]()
 
-- Links to technical documentation for advanced users or those that would want to use our software themselves
 
 ## Release Notes
 
-### <date of release - Month and Year>
-
-- **What’s new!**
-    - Simple description of functionality
-- **Fixes**
-    - simple description of what’s been fixed
+- What’s New!
+    - PROOF has now grouped together all the components for setting up and configuring your database and Cromwell server so you don’t have to manually configure each part!
+    - You can interact with PROOF in two improved ways when running your workflows:
+        - [PROOF Shiny App](https://cromwellapp.fredhutch.org/) - an easy to use interface for running WDL workflows on our cluster
+        - [proofr](https://getwilds.org/proofr/) - an R client to run WDL workflows on PROOF
+    - We’ve made some enhancements to the way you use PROOF including:
+        - Each user must login with your Fred Hutch credentials so that no one else can access or use your PROOF server session
+        - Each user can only run one PROOF server at a time so that you don’t lose track of your workflow sessions
+- Fixes
+    - No fixes just yet, we’re launching our product. 
