@@ -41,7 +41,7 @@ This guide is intended to describe how you can run PROOF, catering to varying le
 
 ### What is Cromwell?
 
-Cromwell, originally developed at the Broad Institute, is a WDL workflow engine, that facilitates the orchestration of multi-step workflows. It efficiently handles individual tasks, monitors job metadata, offers an intuitive API interface, and enables users to oversee multiple workflows concurrently. While other WDL engines exist, here are some of the reasons Cromwell stands out:
+[Cromwell](https://github.com/broadinstitute/cromwell), originally developed at the Broad Institute, is a WDL workflow engine, that facilitates the orchestration of multi-step workflows. It efficiently handles individual tasks, monitors job metadata, offers an intuitive API interface, and enables users to oversee multiple workflows concurrently. While other WDL engines exist, here are some of the reasons Cromwell stands out:
 
 -   **Integration with the Fred Hutch cluster:** Cromwell has been configured to run on the Fred Hutch cluster to make running WDL workflows very simple. Additionally, it seamlessly integrates with various cloud platforms and workflow description formats, enhancing compatibility and facilitating workflow execution across different computing infrastructures.
 
@@ -92,14 +92,14 @@ Before you begin using PROOF, make sure you have the following:
     - If on-campus, make sure you are connected to the Marconi network.
     - If off-campus, make sure you connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn).
 - [Access to the rhino cluster of Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-clusters)
-- [AWS credentials (if needed for S3 storage)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
+- [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 
 ## App Layout
-The first and most user-friendly way to validate, submit, track, troubleshoot, and (if needed) abort your WDL workflows is through our [Fred Hutch Shiny app](https://proof.fredhutch.org). This shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
+The most user-friendly way to validate, submit, track, troubleshoot, and (if needed) abort your WDL workflows is through our [Fred Hutch PROOF Shiny app](https://proof.fredhutch.org). This Shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
 
 ![welcome](/dasldemos/assets/proof_shiny_app_welcome.png) 
 
-## Starting a Proof Server
+## Starting a PROOF Server
 The first step is to log in to PROOF. 
 
 ![login](/dasldemos/assets/proof_101_shinyapp_proof_login.png) 
@@ -112,17 +112,17 @@ You know you are logged in when the page refreshes automatically and you see the
 
 ![login_2](/dasldemos/assets/proof_101_shinyapp_logged_in.png)
 
-Next click on "Proof Servers" to take you to the page where you can start a server.
+Next click on "PROOF Servers" to take you to the page where you can start a server.
 
 ![start_server](/dasldemos/assets/proof_101_shinyapp_start_server.png)
 
-Click "Start" to open up a dialog box that asks for optional credentials to start your Proof Server.
+Click "Start" to open up a dialog box that asks for optional credentials to start your PROOF Server.
 
 ![start_server_2](/dasldemos/assets/proof_101_shinyapp_start_server_2.png)
 
-The majority of people usually are only authorized to work under one slurm account (working under one PI = one slurm account). In this case, just hit start and all Cromwell configurations will default under the slurm account you are authorised under.
+The majority of people usually are only authorized to work under one SLURM account (working under one PI = one SLURM account). In this case, just hit start and all Cromwell configurations will default under the SLURM account you are authorised under.
 
-However, if you have more than one slurm account that you can work under, then here is your chance to enter the most appropriate one (for example you could be authorized to do work under two PI's with slurm accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b" enter pi_b where it asks for slurm account). 
+However, if you have more than one SLURM account that you can work under, then here is your chance to enter the most appropriate one (for example you could be authorized to do work under two PI's with SLURM accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b" enter pi_b where it asks for SLURM account). 
 
 ![start_server_3](/dasldemos/assets/proof_101_shinyapp_start_server_3.png)
 
@@ -130,31 +130,31 @@ You know your server is up and running when the page auto-refreshes and you see 
 
 ![start_server_4](/dasldemos/assets/proof_101_shinyapp_start_server_4.png)
 
-> Initially, setting up a Proof Server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
+> Initially, setting up a PROOF Server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
 
 There will be two sections of information that you would like to pay attention to which should be populated with details that will be relevant. 
 
 **Server information**
 - Job status: it should say "RUNNING"
-- Workflow log firectory: Gives you the path to where your workflow logs will reside
+- Workflow log directory: Gives you the path to where your workflow logs will reside
 - Scratch directory: Gives you the path to where your workflow outputs will go
-- Server-time: It tells you how long your Proof Server will be "alive". By default this is set to 7 days. 
-- Slurm job account: The slurm account (default/or if specified) under which your jobs should be running. 
+- Server-time: It tells you how long your PROOF Server will be "alive". By default this is set to 7 days
+- SLURM job account: The SLURM account (default/or if specified) under which your jobs should be running 
 
 **Troubleshooting**
-- Slurm job ID: This is the Proof server job ID. You can use this to cancel your Proof server through `rhino`
+- SLURM job ID: This is the PROOF server job ID. You can use this to cancel your PROOF server through `rhino`
 - Cromwell directory: The path to where you main Cromwell directory exists 
-- Server log directory: The path to where logs associated with the Proof server exists
+- Server log directory: The path to where logs associated with the PROOF server exists
 - Singularity cache directory: Path to Singularity cache directory
 - Use AWS?: This defaults currently to FALSE
-- Cromwell URL: URL for Proof server
+- Cromwell URL: URL for PROOF server
 
 Once your server is ready for use, you should receive an email from PROOF API ![email](/dasldemos/assets/proof_101_shinyapp_email.png)
 
 
 ## Validating Your WDL Workflow
 
-Now that you have kicked off your Proof server, you are ready to start running your WDL workflows. The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL/JSONs) using the "Validate" tab.
+Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL/JSONs) using the "Validate" tab.
 
 ![validate](/dasldemos/assets/proof_101_shinyapp_validate.png)
 
@@ -223,19 +223,19 @@ Once you've submitted a workflow, you can track the status of your submitted wor
 ![proof_101_shiny_app_track_jobs_1](/dasldemos/assets/proof_101_shiny_app_track_jobs_1.png)
 
 ### Filter submitted jobs you want to track
-You can track your jobs 3 different ways!
+You can filter your jobs 3 different ways! Initially this is likely not needed, however as PROOF can manage several different workflows running at once you'll eventually want to filter results to track specific work at a time.  
 
 ![proof_101_shiny_app_track_jobs_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_2.png)
 
 You can filter submitted jobs based on: 
 1. Days since your server was started
-	> Note: This maxes out 7 days. And displays history of the current Proof server. 
+	> Note: This maxes out 7 days. And displays history of the current PROOF server. 
 
 2. Using the custom workflow name you have given when you submitted your job
 
 3. Based on the status of the job
 
-> Note:  You can use all these three options in succession. For example  you can display as many days of workflow history as you'd like, filter that result for workflows with a specific name or with specific status(es) like 'failed', 'succeeded', etc. This can help if you have submitted a LOT of workflows and you don't want to see them all, or if the Proof server is still busy working through all of your submissions and recording their status.
+> Note:  You can use all these three options in succession. For example  you can display as many days of workflow history as you'd like, filter that result for workflows with a specific name or with specific status(es) like 'failed', 'succeeded', etc. This can help if you have submitted a LOT of workflows and you don't want to see them all, or if the PROOF server is still busy working through all of your submissions and recording their status.
 
 Once you are done filtering down to your choices and click "Update View", the relevant workflows will be returned and you'll see a visual representation on  those workflows.  
 
