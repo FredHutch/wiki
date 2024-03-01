@@ -17,7 +17,7 @@ primary_reviewers: vortexing, abbywall
 - Find out more about PROOF in our [How-To in the DaSL Resource Library](/dasldemos/proof-how-to/)
 - Learn more about developing WDL workflows using our [WDL Guide](https://hutchdatascience.org/WDL_Workflows_Guide/)
 
-### PROOF Technical Documentation and Repositories
+### Technical Documentation and Repositories
 - [PROOF Shiny App](https://github.com/getwilds/shiny-cromwell)
 - [proofr](https://github.com/getwilds/proofr)
 - [rcromwell](https://github.com/getwilds/rcromwell)
