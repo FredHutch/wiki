@@ -17,7 +17,7 @@ primary_reviewers: vortexing, abbywall
 
 - Links to training materials or getting started guide
     - Find out more about PROOF in our [How-To in the DaSL Resource Library](/dasldemos/proof-how-to/).  
-    - Learn more about developing WDL workflows using our [WDL Guide]()
+    - Learn more about developing WDL workflows using our [WDL Guide](https://hutchdatascience.org/WDL_Workflows_Guide/)
 
 
 ## Release Notes

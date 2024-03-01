@@ -18,7 +18,7 @@ This guide is intended to describe how you can run PROOF, catering to varying le
 ## Background
 ### What is WDL?
 
-**Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile workflow framework for executing bioinformatics and computational workflows. WDL offers:
+**Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile, [open specification](https://openwdl.org/), workflow framework for executing bioinformatics and computational workflows. WDL offers:
 
 -   A **standardized** and **modular** approach to specifying and combining computational tasks, inputs, outputs, and dependencies.
   
@@ -338,7 +338,7 @@ If you find something is not working with the app or you find a bug, please help
 - [Cluster 101](https://leanpub.com/courses/fredhutch/fredhutchcluster101)
 
 #### Building WDL workflows
-- [WDL 101]()
+- [WDL 101](https://hutchdatascience.org/WDL_Workflows_Guide/)
 - [Open WDL Documentation](https://docs.openwdl.org/en/latest/)
 
 #### PROOF mechanics
