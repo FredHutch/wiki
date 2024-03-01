@@ -223,7 +223,7 @@ Once you've submitted a workflow, you can track the status of your submitted wor
 
 ![proof_101_shiny_app_track_jobs_1](/dasldemos/assets/proof_101_shiny_app_track_jobs_1.png)
 
-#### Filter submitted jobs you want to track
+**Filter submitted jobs you want to track**
 You can filter your jobs 3 different ways! Initially this is likely not needed, however as PROOF can manage several different workflows running at once you'll eventually want to filter results to track specific work at a time.  
 
 ![proof_101_shiny_app_track_jobs_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_2.png)
@@ -256,7 +256,7 @@ You can also see a visual summary of the workflow below
 
 ![proof_101_shiny_app_track_jobs_6](/dasldemos/assets/proof_101_shiny_app_track_jobs_6.png)
 
-#### Track workflow-level details
+**Track workflow-level details**
 
 To get more information on a particular workflow select a workflow and you'll see some summary information about that workflow as you scroll down.
 
@@ -266,7 +266,7 @@ You can see a plot of the timing and outcomes of each call in that workflow.
 
 ![proof_101_shiny_app_track_jobs_8](/dasldemos/assets/proof_101_shiny_app_track_jobs_8.png)
 
-#### Track call-level details
+**Track call-level details**
 
 To get more detailed information about each "task" in your WDL workflow you can scroll down to see the "Job List" table.  This table has usefule information such as the directory where the job is working (callRoot), its SLURM "job_ID" , what computing resources or software environment were used, and the job's status.  
 
@@ -278,7 +278,7 @@ You can use the Job Failures, Call Caching, tables to retrieve information relev
 
 ![proof_101_shiny_app_track_jobs_10](/dasldemos/assets/proof_101_shiny_app_track_jobs_10.png)
 
-#### Tracking the location of your outputs
+**Tracking the location of your outputs**
 
 Finally, once a workflow's outputs have all been created successfully, Cromwell can tell you (and this Shiny app can help you download) a table showing where to find the workflow outputs (note this is not every file created, only the ones you specify as "results" using the WDL file's "workflow output" block).  
 
