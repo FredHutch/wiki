@@ -94,7 +94,7 @@ This means that individual users can:
 
 ## The PROOF Process
 
-The following diagram shows basic usage of PROOF once you have done hte preliminary setup. Each box corresponds to a section in the documentation.
+The following diagram shows basic usage of PROOF once you have done the preliminary setup. Each box corresponds to a section in the documentation.
 
 ![](/dasldemos/assets/proof_101_workflow.png)
 
@@ -109,7 +109,7 @@ Before you begin using PROOF, make sure you have the following:
 - [AWS credentials (if needed for S3 storage)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 
 # 3 - App Layout
-The first and most user-friendly way to validate, submit, track, troubleshoot, and (if needed) abort your WDL workflows is through our [Fred Hutch Shiny app]( https://cromwellapp.fredhutch.org). This shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
+The first and most user-friendly way to validate, submit, track, troubleshoot, and (if needed) abort your WDL workflows is through our [Fred Hutch Shiny app](https://proof.fredhutch.org). This shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
 
 ![welcome](/dasldemos/assets/proof_shiny_app_welcome.png) 
 
