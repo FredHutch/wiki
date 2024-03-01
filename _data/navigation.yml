@@ -54,8 +54,6 @@ datascience:
         url: /datascience/tech_hiring/
   - title: Tools and Platforms
     children:
-      - title: Overview
-        url: /datascience/tools_overview/
       - title: PROOF
         url: /datascience/proof/
   - title: Training
