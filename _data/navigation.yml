@@ -52,6 +52,12 @@ datascience:
     children:
       - title: Tech Hiring for Science
         url: /datascience/tech_hiring/
+  - title: Tools and Platforms
+    children:
+      - title: Overview
+        url: /datascience/tools_overview/
+      - title: PROOF
+        url: /datascience/proof/
   - title: Training
     children:
       - title: DaSL Courses for the Hutch
