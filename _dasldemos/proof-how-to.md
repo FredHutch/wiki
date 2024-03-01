@@ -16,7 +16,8 @@ primary_reviewers: vortexing
 This guide is intended to describe how you can run PROOF, catering to varying levels of computational expertise. We also have a WDL 101 course that will be a quick-start guide to building a WDL workflow.
 
 ## Background
-### What is WDL?
+
+*What is WDL?*
 
 **Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile, [open specification](https://openwdl.org/), workflow framework for executing bioinformatics and computational workflows. WDL offers:
 
@@ -39,7 +40,7 @@ This guide is intended to describe how you can run PROOF, catering to varying le
 -   Requirement of a **scientific workflow engine** like Cromwell for interpreting and executing WDL on various backends, enhancing usability and versatility.
 
 
-### What is Cromwell?
+*What is Cromwell?*
 
 [Cromwell](https://github.com/broadinstitute/cromwell), originally developed at the Broad Institute, is a WDL workflow engine, that facilitates the orchestration of multi-step workflows. It efficiently handles individual tasks, monitors job metadata, offers an intuitive API interface, and enables users to oversee multiple workflows concurrently. While other WDL engines exist, here are some of the reasons Cromwell stands out:
 
@@ -56,7 +57,7 @@ This guide is intended to describe how you can run PROOF, catering to varying le
 -   **Open Source and Customizable**: Being open-source, Cromwell allows for customization and adaptation to specific workflow requirements, empowering users to tailor workflows to their unique needs and preferences.
 
 
-### How should we use Cromwell?
+*How should we use Cromwell?*
 
 In general, Cromwell works best when run in **server mode**, which means that users start a **Cromwell server** as a job on our local SLURM cluster that can connect to a **database** specifically for Cromwell workflow tracking.
   
@@ -78,13 +79,13 @@ This means that individual users can:
  
 > Quick note: the Cromwell server is referred to as a PROOF server in these instructions. PROOF handles setting up the Cromwell server for you.
 
-### The PROOF Process
+## Using PROOF
 
 The following diagram shows basic usage of PROOF once you have done the preliminary setup. Each box corresponds to a section in the documentation.
 
 ![](/dasldemos/assets/proof_101_workflow.png)
 
-## Preliminary Setup
+**Preliminary Setup**
 
 Before you begin using PROOF, make sure you have the following:
 - [Valid Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
@@ -95,7 +96,7 @@ Before you begin using PROOF, make sure you have the following:
 - [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 
 
-## Starting a PROOF Server
+### Starting a PROOF Server
 The most user-friendly way to validate, submit, track, troubleshoot, and (if needed) abort your WDL workflows is through our [Fred Hutch PROOF Shiny app](https://proof.fredhutch.org). This Shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
 
 ![welcome](/dasldemos/assets/proof_shiny_app_welcome.png) 
@@ -152,7 +153,7 @@ There will be two sections of information that you would like to pay attention t
 Once your server is ready for use, you should receive an email from PROOF API ![email](/dasldemos/assets/proof_101_shinyapp_email.png)
 
 
-## Validating Your WDL Workflow
+### Validating Your WDL Workflow
 
 Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL/JSONs) using the "Validate" tab.
 
@@ -181,7 +182,7 @@ If your workflows and accompanying JSON files are validated you should see in th
 If your workflow does not validate, the console will provide some "helpful" information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. 
 
 
-## Submitting Your WDL Workflow 
+### Submitting Your WDL Workflow 
 
 Congratulations! At this point, you should have a validated WDL workflow and you are ready to submit your job. 
 
@@ -216,13 +217,13 @@ This output table has an ID which a long string of letters as numbers that you c
 >Note: You don't need to copy this workflow ID, we have a nifty copy button in the "Track Jobs" tab !
 
 
-## Tracking Your Submitted Jobs
+### Tracking Your Submitted Jobs
 
 Once you've submitted a workflow, you can track the status of your submitted workflows using the "Track Jobs" tab
 
 ![proof_101_shiny_app_track_jobs_1](/dasldemos/assets/proof_101_shiny_app_track_jobs_1.png)
 
-### Filter submitted jobs you want to track
+#### Filter submitted jobs you want to track
 You can filter your jobs 3 different ways! Initially this is likely not needed, however as PROOF can manage several different workflows running at once you'll eventually want to filter results to track specific work at a time.  
 
 ![proof_101_shiny_app_track_jobs_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_2.png)
@@ -255,7 +256,7 @@ You can also see a visual summary of the workflow below
 
 ![proof_101_shiny_app_track_jobs_6](/dasldemos/assets/proof_101_shiny_app_track_jobs_6.png)
 
-### Track workflow-level details
+#### Track workflow-level details
 
 To get more information on a particular workflow select a workflow and you'll see some summary information about that workflow as you scroll down.
 
@@ -265,7 +266,7 @@ You can see a plot of the timing and outcomes of each call in that workflow.
 
 ![proof_101_shiny_app_track_jobs_8](/dasldemos/assets/proof_101_shiny_app_track_jobs_8.png)
 
-### Track call-level details
+#### Track call-level details
 
 To get more detailed information about each "task" in your WDL workflow you can scroll down to see the "Job List" table.  This table has usefule information such as the directory where the job is working (callRoot), its SLURM "job_ID" , what computing resources or software environment were used, and the job's status.  
 
@@ -277,20 +278,20 @@ You can use the Job Failures, Call Caching, tables to retrieve information relev
 
 ![proof_101_shiny_app_track_jobs_10](/dasldemos/assets/proof_101_shiny_app_track_jobs_10.png)
 
-### Tracking the location of your outputs
+#### Tracking the location of your outputs
 
 Finally, once a workflow's outputs have all been created successfully, Cromwell can tell you (and this Shiny app can help you download) a table showing where to find the workflow outputs (note this is not every file created, only the ones you specify as "results" using the WDL file's "workflow output" block).  
 
 This lets you find output files and interact with them, archive them, or otherwise copy them to longer term storage for use.  
 ![proof_101_shiny_app_track_jobs_11](/dasldemos/assets/proof_101_shiny_app_track_jobs_11.png)
 
-## Troubleshooting
+### Troubleshooting
 
 Last, there is the Troubleshoot tab.  Here you can do things like Abort running workflows or get a complete metadata output for the entire workflow to parse yourself to try to find what's happening with your workflow if it failed running. 
 
 ![proof_101_shiny_app_troubleshoot_1](/dasldemos/assets/proof_101_shiny_app_troubleshoot_1.png)
 
-### Abort a workflow
+**Abort a workflow**
 
 Sometimes you realize you want to kill a workflow.  Using the workflow_id, you can kill specific workflows using this box.  
 
@@ -300,7 +301,7 @@ Sometimes you realize you want to kill a workflow.  Using the workflow_id, you c
 
 ![proof_101_shiny_app_abort_2](/dasldemos/assets/proof_101_shiny_app_abort_2.png)
 
-### Troubleshoot a workflow
+**Troubleshoot a workflow**
 
 Especially in the beginning if you have catastrophic workflow failures and you can't even figure out what's going on, you can come back to this Troubleshoot box to retrieve the entire, unformatted JSON output of all metadata Cromwell has about your workflow.  You probably are better served by the "Track Jobs" tab for checking how your workflow is going, but if there's nothing there that's helpful, then this box is where you'll want to go.  
 
@@ -310,7 +311,7 @@ Especially in the beginning if you have catastrophic workflow failures and you c
 
 > Note: this output is not for the faint of heart, but it will give you hints once you get used to understanding what Cromwell is telling you.  
 
-## Stopping a PROOF server
+### Stopping a PROOF server
 
 Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and stop your PROOF server. 
 
