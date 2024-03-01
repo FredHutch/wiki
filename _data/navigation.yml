@@ -72,12 +72,6 @@ datascience:
     children:
       - title: Data Visualization
         url: /datascience/data_viz/
-  - title: Tools and Platforms
-    children:
-      - title: Overview
-        url: /datascience/tools_overview/
-      - title: PROOF
-        url: /datascience/proof/
   - title: Consent, Privacy and Security
     children:
       - title: Consenting and the IRB
