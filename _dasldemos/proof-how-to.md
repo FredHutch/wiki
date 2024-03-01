@@ -94,12 +94,12 @@ Before you begin using PROOF, make sure you have the following:
 - [Access to the rhino cluster of Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-clusters)
 - [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 
-## App Layout
+
+## Starting a PROOF Server
 The most user-friendly way to validate, submit, track, troubleshoot, and (if needed) abort your WDL workflows is through our [Fred Hutch PROOF Shiny app](https://proof.fredhutch.org). This Shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
 
 ![welcome](/dasldemos/assets/proof_shiny_app_welcome.png) 
 
-## Starting a PROOF Server
 The first step is to log in to PROOF. 
 
 ![login](/dasldemos/assets/proof_101_shinyapp_proof_login.png) 
@@ -332,16 +332,16 @@ If you find something is not working with the app or you find a bug, please help
 
 ![proof_101_shiny_app_help2](/dasldemos/assets/proof_101_shiny_app_help2.png)
 
-## Useful courses to get started
-### Cluster computing
+### Useful courses to get started
+#### Cluster computing
 - [How to Rhino](https://sciwiki.fredhutch.org/compdemos/howtoRhino/)
 - [Cluster 101](https://leanpub.com/courses/fredhutch/fredhutchcluster101)
 
-### Building WDL workflows
+#### Building WDL workflows
 - [WDL 101]()
 - [Open WDL Documentation](https://docs.openwdl.org/en/latest/)
 
-### PROOF mechanics
+#### PROOF mechanics
 - [R Client for the PROOF-API](https://github.com/getwilds/proofr)
 - [Shiny Cromwell](https://github.com/getwilds/shiny-cromwell)
 - [rcromwell](https://github.com/getwilds/rcromwell)
