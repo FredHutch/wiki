@@ -71,7 +71,7 @@ To download the files from a dataset from Cirro to a local working directory:
 ml cirro
 
 # Interactive prompt to select the dataset to download
-cirro-cli download -i
+cirro download -i
 ```
 
 **Uploading Files to Cirro**
@@ -84,7 +84,7 @@ ml cirro
 
 # Interactive prompt to select the folder to upload, and
 # the destination Cirro project / dataset
-cirro-cli upload -i
+cirro upload -i
 ```
 
 When uploading paired-end FASTQ datasets (e.g. from sequencing
