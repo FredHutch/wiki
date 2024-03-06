@@ -13,7 +13,7 @@ primary_reviewers: vortexing
 
 - Refine their workflows before potential transitions to cloud-based infrastructures, providing a 'proofing' resource of sorts.
 
-This guide is intended to describe how you can run PROOF, catering to varying levels of computational expertise. We also have a WDL 101 course that will be a quick-start guide to building a WDL workflow.
+This guide is intended to describe how you can run PROOF, catering to varying levels of computational expertise. We also have a [WDL 101](https://hutchdatascience.org/WDL_Workflows_Guide) course that will be a quick-start guide to building a WDL workflow.
 
 ## Background
 
