@@ -48,15 +48,21 @@ Enter your hutchid then press enter. It will prompt for your password. Press ent
 
 Command Prompt, also known as cmd.exe or cmd, is the default command-line interpreter on Windows. To connect to `rhino`, you must first create an ssh config file in your Windows user folder.  
 
-##### Create ssh config file
+##### Create ssh config file on Windows
 
-When you launch Command Prompt, you should be at your user profile folder.  If not, type `cd C:\Users\<HUTCHID>`. Next, create a folder called `.ssh` with `mkdir .ssh`. You might get a message saying the folder already exists. Finally, create the needed config file with `echo MACs hmac-sha2-512 > .ssh/config` You will now be able to connect to rhino using `ssh HUTCHID@rhino`
+When you launch Command Prompt, you should be at your user profile folder.  If not, type `cd C:\Users\<HUTCHID>`. Next, create a folder called `.ssh` with `mkdir .ssh`. You might get a message saying the folder already exists. Use a text editor to create a file in this location if it doesn't already exist. Here is an example of a minimal ssh config file. For more information about this file see [advanced ssh config options](#advancedoptional-setup-for-making-things-easier-the-ssh-config-file).
 
-<img src="../assets/cmd_create_config.png" alt="Create ssh config with cmd.exe" width="450">
+```
+Host rhino
+  User <HUTCHID>
+  MACs hmac-sha2-512
+```
+
+You will now be able to connect to rhino using `ssh rhino`.
 
 #### Windows Terminal
 
-Windows Terminal is a modern terminal application with powerful features including multiple tabs. It can be installed from the Microsoft Store. To connect to `rhino`, first follow the [instructions to create an ssh config](#create-ssh-config-file) file then use `ssh HUTCHID@rhino` to connect.
+Windows Terminal is a modern terminal application with powerful features including multiple tabs. It can be installed from the Microsoft Store. To connect to `rhino`, first follow these instructions: [create an ssh config file on Windows](#create-ssh-config-file-on-windows) then use `ssh rhino` to connect.
 
 ### Mac OS
 
