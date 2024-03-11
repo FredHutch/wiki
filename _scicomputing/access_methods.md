@@ -50,7 +50,7 @@ Command Prompt, also known as cmd.exe or cmd, is the default command-line interp
 
 ##### Create ssh config file on Windows
 
-When you launch Command Prompt, you should be at your user profile folder.  If not, type `cd C:\Users\<HUTCHID>`. Next, create a folder called `.ssh` with `mkdir .ssh`. You might get a message saying the folder already exists. Use a text editor to create a file in this location if it doesn't already exist. Here is an example of a minimal ssh config file. For more information about this file see [advanced ssh config options](#advancedoptional-setup-for-making-things-easier-the-ssh-config-file).
+When you launch Command Prompt, you should be at your user profile folder.  If not, type `cd C:\Users\<HUTCHID>`. Next, create a folder called `.ssh` with `mkdir .ssh`. You might get a message saying the folder already exists. Use a text editor to create a file in this location if it doesn't already exist. Here is an example of a minimal ssh config file. For more information about this file see [advanced ssh config options](#advancedoptional-setup-for-making-things-easier-the-ssh-config-file). Note that on Windows you will need to specify the MAC algorithm(s). 
 
 ```
 Host rhino
