@@ -18,7 +18,7 @@ Pre-signed URLs are useful for quickly sharing objects without updating your S3 
 
 ## What should I be careful about when using a pre-signed URL? 
 
-It can be difficult to track who has access via a pre-signed URL, once it is created. Therefore, be extremely cautious about what kinds of objects you choose to share, and to whom. A bad actor that obtains your pre-signed URL can access your data for as long as the URL is active.
+It can be difficult to track who has access via a pre-signed URL, once it is created. Therefore, be extremely cautious about what kinds of objects you choose to share, and to whom. A bad actor that obtains your pre-signed URL can access your data for as long as the URL is active. Per Fred Hutch Information Security, presigned URLS should only be used for sharing non-sensitive data (e.g., no PHI), due to the security risks involved with generating an untracked URL.
 
 Pre-signed URLs are also time-barred and will become inactive after a period of time- the longest a URL will be valid is 7 days.  The URL will expire and it will be necessary to create a new signed URL.
 
