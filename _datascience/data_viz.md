@@ -18,6 +18,7 @@ Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at 
   - [Get Started with MATLAB](https://www.mathworks.com/help/matlab/getting-started-with-matlab.html)
   - [MATLAB at Fred Hutch](https://sharedresources.fredhutch.org/libresources/matlab)
 - [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel)
+  - [Data Organization in Spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
 
 ### Plotting in R
 
