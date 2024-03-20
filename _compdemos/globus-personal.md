@@ -29,7 +29,7 @@ Monitoring of the process can happen via any browser session.  Simply navigate t
 Once logged in you need to set up an endpoint.  Log into rhino, load the globus module, and run the setup process:
 
 ```
-rhino03[~]: ml GlobusConnectPersonal/3.1.4-GCCcore-10.2.0
+rhino03[~]: ml GlobusConnectPersonal
 rhino03[~]: globusconnect -setup --no-gui
 
 Globus Connect Personal needs you to log in to continue the setup process.
@@ -60,6 +60,8 @@ registered new endpoint, id: 73f653ce-b288-11eb-866b-d16fa0cfc9e7
 setup completed successfully
 ```
 
+For the "Endpoint Name" enter something distinct to your transfer- you may need to identify your endpoint in the world-wide population of Globus endpoints.
+
 ### Configuring Paths
 
 There aren't many things to configure in the Personal edition of the Globus Connect client.  The most important thing to configure is the path(s) available for transfers.  By default, only your home directory is available.
@@ -73,18 +75,21 @@ Open the file `~/.globusonline/lta/config-paths` in a Unix text editor and edit 
 /fh/scratch/delete90/_ADM/SciComp,0,1
 ```
 
-This will make paths in my home directory and in scratch available in the Globus connect UI.  It's necessary to restart `globusconnect` after updating this file.
+This will make paths in my home directory (the tilde `~` expands to your home directory) and in scratch available in the Globus connect UI.  It's necessary to restart `globusconnect` after updating this file:
+
+```
+rhino03[~]: globusconnect -stop
+rhino03[~]: globusconnect -start
+```
 
 ## Using Globus Connect
 
 To transfer data, start the endpoint on a node- either in an interactive session on a rhino or gizmo node (via grabnode).
 
 ```
-rhino03[~]: ml GlobusConnectPersonal/3.1.4-GCCcore-10.2.0
+rhino03[~]: ml GlobusConnectPersonal
 rhino03[~]: globusconnect -start
 ```
-
-> This could also run in a batch job- this is left as an exercise for the reader
 
 Once started it will be available when you browse endpoints in the Globus Web UI.  To see the status of the endpoint, select the "Collections" menu from the left bar.  Transfers can be started from here or from the "File Manager" menu.
 
