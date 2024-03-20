@@ -91,6 +91,6 @@ rhino03[~]: ml GlobusConnectPersonal
 rhino03[~]: globusconnect -start
 ```
 
-Once started it will be available when you browse endpoints in the Globus Web UI.  To see the status of the endpoint, select the "Collections" menu from the left bar.  Transfers can be started from here or from the "File Manager" menu.
+Once started it will be available when you browse endpoints in the Globus Web UI.  To see the status of the endpoint, select the "Collections" menu from the left bar and click on "Administered By You".  Transfers can be started from here or from the "File Manager" menu.
 
 > Note that you can start the endpoint on any system, including cluster nodes.  However, you will want to be certain that only one is running at any time.
