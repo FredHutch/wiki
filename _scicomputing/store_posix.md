@@ -8,10 +8,11 @@ File keeps your data on disks and allows access to your data using familiar tool
 There are multiple file storage resources available to researchers including:
 - `Home` for personal files
 - `Fast` for shared data, including the majority of large scale research data
+- [`Temp`](/scicomputing/store_temp/) for temporary storage of files when using the cluster
 - [`Scratch`](/scicomputing/store_scratch/) for personal and shared temporary data
 - `Secure` for data with higher-level security needs (PHI/encryption/auditing)
 
->Note:  Currently it is recommended to use a combination of [AWS S3](/scicomputing/store_objectstore/), [`Scratch`](/scicomputing/store_scratch/) and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+>Note:  Currently it is recommended to use a combination of [AWS S3](/scicomputing/store_objectstore/), [`Temp`](/scicomputing/store_temp/) and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 
 A tool that is useful for moving data between these systems is [Motuz](https://motuz.fredhutch.org).  `Motuz` facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/
 ). 
@@ -121,12 +122,14 @@ The sudo command will ask for your Mac login password. Often Mac volume names ha
 | --- | ----------- |
 | Homelink | `~/` or `/home/HUTCHID` |
 | Fast | `/fh/fast` |
+| Temp | `/hpc/temp` |
 | Scratch | `/fh/scratch` |
 | Secure | `/fh/secure` |
 
 
 ## Related Centernet links:
 
-[Mac network drive paths](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/network_drive_paths_mac.html)  
-[Windows network drive paths](https://centernet.fredhutch.org/cn/u/center-it/help-desk/network_drive_paths_windows.html)  
-[How to map a network drive](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mapping_network_drives.html)
+[Mapping Network Drives](https://centernet.fredhutch.org/u/it/help-desk/mapping-network-drives.html)
+[Network Drive Paths - Mac](https://centernet.fredhutch.org/u/it/help-desk/mac-support/network-drive-paths-mac.html)  
+[Network Drive Paths - Windows](https://centernet.fredhutch.org/u/it/help-desk/network-drive-paths-windows.html)  
+
