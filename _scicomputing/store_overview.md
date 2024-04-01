@@ -27,7 +27,7 @@ The "home" drive is of most interest to users of the HPC compute environments- i
 
 There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [MyDB](https://mydb.fredhutch.org/) (supported by SciComp providing access to four database engine types: Postgres, MariaDB (MySQL), MongoDB, and Neo4j).
 
-### [Scientific File Storage: Storage in Fast, Secure, and Scratch](/scicomputing/store_posix/)
+### [Scientific File Storage: Storage in Fast, Secure, and hpc/temp](/scicomputing/store_posix/)
 
 Scientific file storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
@@ -49,7 +49,7 @@ You will need to consider the security needs of your data sets before placing da
 
 This table describes some of the most common security needs for data sets and how or if each storage system implements that security capability.
 
-|  Feature 	                | Secure File	| Fast File | Economy Cloud |  Scratch  	|  OneDrive 	|
+|  Feature 	                | Secure File	| Fast File | Economy Cloud |  hpc/temp  	|  OneDrive 	|
 |:-	                        |:-:	        |:-:	      |:-:	          |:-:	        |:-:	        |
 |  Encryption at Rest 	    |        Yes  |      Yes  |          Yes	|        Yes	|        Yes	|
 |  Encryption in Transit    |        Yes* |      Yes* |          Yes	|        Yes* |        Yes	|
@@ -67,7 +67,7 @@ Storage Resource | Costs (per TB/month)\*  | Backup Location/Duration | Best Use
 Home | No Charge (100GB limit) |  On campus storage with offsite replication. 7 days of snapshots, daily backups | Only use this location for software and settings specific to a user, not for data, not shared to others. HARD LIMIT, cannot be expanded
 Fast | $$$ beyond 5TB per PI |  On campus storage with offsite replication. 7 days of snapshots, daily backups | Large instrument files and data sets that need high performance access to computing resources, Unix file permissions, but not temporary data (such as intermediate files)
 Economy Cloud | $ beyond 100TB per PI |  Offsite storage (cloud) with multi-datacenter replication, 90 day undelete with request to `helpdesk` | Best for archiving large data sets, or primary storage of large files.  Good for PHI or other data that requires encryption and auditing. *Requires Desktop Client to access, see [Object Storage page.](/scicomputing/store_objectstore/)*
-Scratch | No Charge | On campus storage, no snapshots, not backed up | Temporary files, such as those intermediate to a final result that only need to persist during a job, and secondary copies of files used in analysis but with a primary copy on more durable storage  *Appropriate use  can significantly reduce data storage costs- see the [Scratch Storage](/scicomputing/store_scratch/) page.*
+hpc/temp | No Charge | On campus storage, no snapshots, not backed up | Temporary files, such as those intermediate to a final result that only need to persist during a job, and secondary copies of files used in analysis but with a primary copy on more durable storage  *Appropriate use  can significantly reduce data storage costs- see the [hpc/temp](/scicomputing/store_temp/) page.*
 OneDrive | No Charge | Offsite storage (cloud) with multi-datacenter replicaiton. No backups, but a "Recycle Bin" is available | Documents, spreadsheets, and other similar administrative files
 
 Additional details for other CIT file services such as `Secure File` (aka J or R drive) features are available on [Centernet](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html).
