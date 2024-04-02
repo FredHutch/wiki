@@ -13,7 +13,7 @@ Unlike other SciComp supported file systems, the _temp_ file system is only avai
 
 > Data on this platform is not backed up. This storage platform is _not_ appropriate for storaging the primary or only copy of any data. 
 
-Data in _temp_ is purged after 30 days
+Data in _temp_ is purged 30 days after creation. This is a change from previous policies that deleted files 30 or 90 days after they were last used. This policy is the most reliable system on the new storage platform and requires the least resources from Scientific Computing, RITSC, and IT.
 
 | path                  | age to be purged |
 | --------------------- | -----------------|
