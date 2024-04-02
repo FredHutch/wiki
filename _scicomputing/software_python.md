@@ -89,15 +89,18 @@ JupyterLab (formerly Notebook) is a minimal but very capable web-based interacti
 
 **Jupyter Lab**
 
+**NOTE**: Jupyter Labs were formerly known as Notebooks. Labs can do everything notebooks could do and more. If you are used to using the `jupyter notebook` command, use `jupyter lab` instead.
+
 We supply a `JupyterLab` module. It does not
 by itself include packages that many people will want for bioinformatics and
 data science work. Here's are some example commands which will load
 `scipy`, `numpy`, `matplotlib`, `pandas`, `scikit-learn`, and many others, along with `JupyterLab`:
 
 After you have connected to `rhino`, run these commands:
+
 ```
     username@rhino01:~$ ml purge
-    username@rhino01:~$ ml JupyterLab SciPy-bundle matplotlib Seaborn scikit-learn
+    username@rhino01:~$ ml JupyterLab/4.0.3-GCCcore-12.2.0  Seaborn/0.12.2-foss-2022b scikit-learn/1.2.1-gfbf-2022b
     username@rhino01:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
 
@@ -113,24 +116,6 @@ You will see output like this:
 Copy the second link, the one that starts with `http://` and the name of the machine you are connected to. Paste it into your browser and you will see the JupyterLab interface.
 
 If you would like to use a different version of Python than what is in the default JupyterLab module, run `ml avail JupyterLab` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml JupyterLab/2.2.5-foss-2020a-Python-3.8.2` in place of `ml JupyterLab` above. You'd need to make sure that the other packages  you need are compatible; contact `scicomp@` for assistance.
-
-
-**Jupyter Notebook**
-
-Note that Jupyter Notebooks are older and deprecated in favor of JupyterLab (above).
-
-After you have connected to `rhino`, load the fhPython module then run jupyter notebook:
-```
-    username@rhino01:~$ ml fhPython
-    username@rhino01:~$ jupyter notebook --ip=$(hostname) --port=$(fhfreeport) --no-browser
-```
-Then connect to the URL, copying the link given by the previous command, which looks like this:
-```
-       Copy/paste this URL into your browser when you connect for the first time,
-    to login with a token:
-        http://rhino01:11112/?token=0eee692be6c81c1061da
-```
-If you would like to use a different version of Python than what is in the default fhPython module, run `ml avail fhPython` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml fhPython/3.8.6-foss-2020b-Python-3.8.6` in place of `ml fhPython` above.
 
 
 ## Python IDE comparison
