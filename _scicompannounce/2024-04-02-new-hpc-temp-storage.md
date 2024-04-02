@@ -1,2 +1,13 @@
 ---
-## New Storage System "hpc/temp"
+Title: New Temp Storage System
+---
+
+## What
+
+## How
+
+## When
+
+## Why
+
+## Errata
