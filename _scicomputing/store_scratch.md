@@ -3,7 +3,7 @@ title: Scratch File Service
 primary_reviewers: scicomp
 ---
 
->PLEASE NOTE: the old scratch storage platform is end of life and will be retired soon. Please migrate all scripts and jobs to use [hcp/temp](scicomputing/store_temp.md).
+>PLEASE NOTE: the old scratch storage platform is end of life and will be retired soon. Please migrate all scripts and jobs to use [hpc/temp](scicomputing/store_temp.md).
 
 >Old page left for reference but will be removed following retirement of Thorium/scratch.
 
