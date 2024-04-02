@@ -3,6 +3,9 @@ title: Scratch File Service
 primary_reviewers: scicomp
 ---
 
+>PLEASE NOTE: the old scratch storage platform is end of life and will be retired soon. Please migrate all scripts and jobs to use [hcp/temp](scicomputing/store_temp.md).
+
+>Old page left for reference but will be removed following retirement of Thorium/scratch.
 
 The scratch file system is maintained by SciComp for temporary storage of research data during active analysis.  This is a large, high-performance storage system.  It is not designed to be as available or as robust as the _home_ or _fast_ file systems.
 
