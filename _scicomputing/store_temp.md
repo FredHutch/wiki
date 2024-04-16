@@ -31,4 +31,4 @@ A: Yes! This is the main use case for _temp_ storage.
 A: No. The lifecycle policy is managed by the storage platform and is based on file creation time, not read or modify time stamps.
 
 #### Q: What is a good way to automate data management for my jobs so I don't worry about data in _temp_?
-A: Use a workflow manager. Please see DaSL's [PROOF](datascience/proof)
+A: Use a workflow manager. Please see DaSL's [PROOF](/datascience/proof).
