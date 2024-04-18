@@ -72,6 +72,8 @@ datascience:
         url: /datascience/dmptool/
       - title: Data Sharing Approaches
         url: /datascience/execute_sharing/
+      - title: Specimen Data Management
+        url: /datascience/open_specimen/
   - title: Working With Data
     children:
       - title: Data Visualization
@@ -111,8 +113,6 @@ generation:
         url: /generation/clsp_overview/
       - title: Clinical Data
         url: /generation/clsp_clinicalCov/
-      - title: Specimen Data Management
-        url: /generation/clsp_specimenBanking/
       - title: Experimental Data
         url: /generation/clsp_labCov/
       - title: Support Software

@@ -1,11 +1,13 @@
 ---
 title: Specimen Data Management System
-main_authors: Sunil Ayalasomayajula
-primary_reviewers: sunilayala, vortexing
+main_authors: Cleavon Joseph
+primary_reviewers: crcjoseph, mwgerber
 ---
-After several years of working with cross-divisional, interdisciplinary research teams and key stakeholders across the Consortium, we are excited to announce that we are now implementing a Specimen Data Management System! In collaboration with these groups, we developed detailed tool requirements, evaluated top specimen data management tool providers and refined a robust and comprehensive data model, that resulted in choosing a tool that we believe will meet the diverse needs of our researchers.
+
+<add intro>
 
 ## Open Specimen For Specimen Data Management
+
 [OpenSpecimen](https://www.openspecimen.org/) is a highly configurable web-based Biobanking Laboratory Information Management System (LIMS) used in 70+ clinical research centers across 20+ countries - including many of the world’s leading research centers. OpenSpecimen helps you collect High-quality Biospecimen Data and track biospecimens from Collection to Utilization. 
 
 ### Key Features
