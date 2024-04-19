@@ -1,4 +1,22 @@
-# Why is your computing environment important?
+---
+title: Why is your computing environment important?
+main_authors: laderast
+primary_reviewers: vortexing, tfirman
+---
+
+## Learning Objectives
+
+After reading this page, you will be able to
+
+- **Describe** what the dependency nightmare is for software
+- **Utilize** software easymodules on `rhino`/`gizmo` and integrate them into your scripts
+- **Utilize** Docker containers and integrate them into your scripts
+- **Utilize** `conda` to install software on `rhino`/`gizmo` to your home directory
+- **Discuss** Why compiling software is difficult and who to talk to
+- **Describe** first steps to reproducible computing with easymodules
+- **Discuss** how to transform a snakemake script to Workflow Description Language (WDL).
+
+In this page, we talk about reproducible best practices to use software on the FH cluster (`rhino` / `gizmo`). If you're getting started on `rhino` / `gizmo`, this page is for you.
 
 ## Why can’t I just install software on `rhino`/ `gizmo` like my laptop?
 
@@ -6,7 +24,7 @@ The FH computational cluster is a shared resource. It needs to be maintained and
 
 ## The Dependency Nightmare
 
-![Part of the Hairball of Python Dependencies](/_dasldemos/assets/dependency_nightmare.png)
+![Part of the Hairball of Python Dependencies](/dasldemos/assets/dependency_nightmare.png)
 
 Source: [The b(ack)log | A nice picture of (dependency) hell (thebacklog.net)](https://www.thebacklog.net/2011/04/04/a-nice-picture-of-dependency-hell/)
 
@@ -28,14 +46,14 @@ This is where the idea of *isolated* software environments can be useful. We can
 
 ## Recommended Order of Execution
 
-![Untitled](/_dasldemos/assets/rank_flowchart.png)
+![Untitled](/dasldemos/assets/rank_flowchart.png)
 
-We’ll focus on standalone executables, such as `samtools` or `bwa mem`. The order in which you should try to run software:
+We’ll focus on standalone executables, such as `samtools` or `bwa mem`. Click on the links to jump to that section. The order in which you should try to run software:
 
-1. **Is my software already installed as an easymodule?** (Look for it using `module avail`, such as `module avail samtools`)That is, use the `module load` command to load your module, and run it. **Why**: Scientific Computing spends time optimizing the modules to run well on `rhino`/ `gizmo`, and they've solved the dependency nightmare for you.
-2. **If it's not in an easymodule, is it available as a docker container?** Then you can use a) Apptainer commands, b) a Workflow Description Language (WDL) engine, or c) Nextflow to run your software. **Why**: using containers isolates software environments and is a best practice overall.
-3. **Is my software available via `conda`?** You’ll install software with `conda env` and `conda install`. **Why**: using `conda env` will isolate your software environments, avoiding the dependency nightmare.
-4. **Do I build my package from source?** This should be your last resort, because it often requires knowledge of compilers to get it up and running. You will probably be using some variant of `make`
+1. [**Is my software already installed as an easymodule?**](#1-best-practices-when-using-easymodules) (Look for it using `module avail`, such as `module avail samtools`)That is, use the `module load` command to load your module, and run it. **Why**: Scientific Computing spends time optimizing the modules to run well on `rhino`/ `gizmo`, and they've solved the dependency nightmare for you.
+2. [**If it's not in an easymodule, is it available as a docker container?**](#2-best-practices-when-using-containers) Then you can use a) Apptainer commands, b) a Workflow Description Language (WDL) engine, or c) Nextflow to run your software. **Why**: using containers isolates software environments and is a best practice overall.
+3. [**Is my software available via `conda`?**](#3-best-practices-when-using-conda) You’ll install software with `conda env` and `conda install`. **Why**: using `conda env` will isolate your software environments, avoiding the dependency nightmare.
+4. [**Do I build my package from source?**](#4-best-practices-when-compiling-from-source) This should be your last resort, because it often requires knowledge of compilers to get it up and running. You will probably be using some variant of `make`.
 
 The next section talks about basic best practices when running software using each of these methods.
 
