@@ -4,6 +4,10 @@ main_authors: Monica Gerber (monicagerber)
 primary_reviewers: vortexing, carriewright11
 ---
 
+De-identification of patient data for research is an important way to help protect the privacy of individuals while using these data to conduct vital research. For more information on types of data sets derived from health care data, see the [PHI and Research](/datascience/phi/) page. 
+
+## Federal regulations
+
 There are two important federal regulations related to the use of "individually
 identifiable health information." 
 
