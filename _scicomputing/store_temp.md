@@ -5,7 +5,7 @@ primary_reviewers: scicomp
 
 The _temp_ file system is maintained by SciComp for temporary storage of research data during active analysis. This is a large, high-performance storage system designed to be used as temporary storage for cluster jobs.  It is not designed to be as available or as robust as the _home_ or _fast_ file systems.
 
-> Data on this platform is not backed up. This storage platform is _not_ appropriate for storaging the primary or only copy of any data. 
+> Data on this platform is not backed up. This storage platform is _not_ appropriate for storing the primary or only copy of any data. 
 
 The limitations of _temp_:
 * the storage is only accessible on cluster nodes at `/hpc/temp`
@@ -21,6 +21,9 @@ Due to the temporary nature of this storage, the lack of charges, limits of capa
 #### Q: Can I use _temp_ rather than _Fast_ for lab data to avoid storage charges?
 A: No. The _temp_ storage platform is not backed up and has automatic deletions. All data stored on _temp_ will be deleted in 30 days.
 
+#### Q: What will happen to my existing data in _scratch_?
+A: _scratch_ will be retired between July and October of 2024. Watch for further announcements with a more exact time frame. You can start moving your data off of _scratch_ right away. Data that is not moved or copied elsewhere will be deleted.
+
 #### Q: If I have data in _Economy_ storage, but need to analyze it, can I copy it to _temp_?
 A: Yes! This is the main use case for _temp_ storage.
 
@@ -28,4 +31,4 @@ A: Yes! This is the main use case for _temp_ storage.
 A: No. The lifecycle policy is managed by the storage platform and is based on file creation time, not read or modify time stamps.
 
 #### Q: What is a good way to automate data management for my jobs so I don't worry about data in _temp_?
-A: Use a workflow manager. Please see DaSL's [PROOF](datascience/proof)
+A: Use a workflow manager. Please see DaSL's [PROOF](/datascience/proof).
