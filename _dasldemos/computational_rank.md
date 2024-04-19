@@ -62,7 +62,7 @@ The next section talks about basic best practices when running software using ea
 - Before reinventing the wheel, check out the [WILDS Docker Repository](https://getwilds.org/packages.html#docker) to see if there’s a similar workflow to what you need. You may just need to [fork an existing workflow](https://getwilds.org/packages.html#wdls) (make your own version) to get started.
 - Avoid mixing and matching your software environments and loading them all at once to avoid dependency conflicts. In practice, this means sticking to either easymodules or Docker containers if possible.
 - Pick a version number for your software. This practice will keep your workflow reproducible if the latest version of the software changes. For easymodules, you can see the versions using `module avail <module-name>`, such as `module avail samtools`.
-- For Docker containers, pick a tagged container from the container image library. For example:  `[biocontainers/samtools:v1.9-4-deb_cv1`](https://hub.docker.com/layers/biocontainers/samtools/v1.9-4-deb_cv1/images/sha256-da61624fda230e94867c9429ca1112e1e77c24e500b52dfc84eaf2f5820b4a2a?context=explore)
+- For Docker containers, pick a tagged container from the container image library. For example:  [`biocontainers/samtools:v1.9-4-deb_cv1`](https://hub.docker.com/layers/biocontainers/samtools/v1.9-4-deb_cv1/images/sha256-da61624fda230e94867c9429ca1112e1e77c24e500b52dfc84eaf2f5820b4a2a?context=explore)
 
 ## 1. Best Practices when using easymodules
 
@@ -96,7 +96,7 @@ Run software in separate isolated containers rather than a monolithic environmen
 
 We recommend using `grabnode` to grab a `gizmo` node and test your script in interactive mode. This makes things a lot easier. If you don’t understand how the software is set up in the container, you can open an interactive shell into the container to test things out.
 
-Here’s an example script illustrating this:
+[Here’s an example script illustrating this:]
 
 ### Containers Option 2
 
@@ -135,7 +135,7 @@ Note that some channels require a subscription, but `bioconda` and `conda-forge`
 3. Do your work in your script with the software.
 4. When you're done with that step, `conda deactivate` the `conda` environment. For example: `conda deactivate samtools_env` 
 
-Here’s an example script that does this
+[Here’s an example script that does this]
 
 ## 4. Best Practices When Compiling from Source
 
