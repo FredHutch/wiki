@@ -15,19 +15,20 @@ Patient data for research may contain data elements that could potentially ident
 | Data Set Type | Summary    |
 | ------------- | ---------- |
 | De-Identified | A data set with health information that is not individually identifiable, as outlined by the HIPAA de-identification standard. |
-| Limited Data Set | A data set that excludes most direct identifiers and may be used or disclosed, for purposes of research, public health, or health care operations, with a data use agreement. |
+| Limited Data Set | A data set that excludes most direct identifiers. It may be used or disclosed for purposes of research, public health, or health care operations, with a data use agreement. |
 | Fully Identified | A data set with personal identifiers or any information that could be used in alone or in combination to identify an individual. | 
 
+Below we outline which data elements must be removed or coded for each data set type.
 
 | Data Element      | De-Identified Data Set | Limited Data Set  | Fully Identified Data Set |
 | ----------------- | ---------------------- | ----------------- | ------------------------- |
-| Names             | Remove/Code            | Remove/Code       | May remain                |
-| Address, city and other geographic information smaller than state.    | Remove all, except a 3-digit zip code may be included for an area where more than 20,000 people live. Use “000” if fewer than 20,000 people live there.        | Can retain city, town, state or full zip code.|
-| All elements of dates (except year); plus age and any date (including year) if age is over 89. Examples: date of birth, date of death, date of admission, date of discharge, date of service.         | Remove/Code            | True Dates Remain. For research using DOB, using just year recommended.      |
-| Telephone, fax numbers; e-mail addresses, web URL addresses, IP addresses.            | Remove            | Remove      |
-| Social security number, medical record number, health plan beneficiary number, any account number, certificate or license number             | Remove           | MRN, Health plan number may be coded. All other removed.      |
-| Vehicle identifiers and serial numbers, including license plate numbers, Device identifiers and serial numbers, biometric identifiers, indefinable photography           | Remove           | Remove    |
-| Any other unique identifying number, characteristic or code.             | Remove            | May include     |
+| Names             | Remove/Code            | Remove/Code       | May include               |
+| Address, city and other geographic information smaller than state.    | Remove all, except a 3-digit zip code may be included for an area where more than 20,000 people live. Use “000” if fewer than 20,000 people live there.        | Can retain city, town, state or full zip code.| May include |
+| All elements of dates (except year); plus age and any date (including year) if age is over 89. Examples: date of birth, date of death, date of admission, date of discharge, date of service.         | Remove/Code            | True dates may remain. For research using DOB, using just year is recommended.      |  May include                |
+| Telephone, fax numbers; e-mail addresses, web URL addresses, IP addresses.            | Remove            | Remove      |  May include                |
+| Social security number, medical record number, health plan beneficiary number, any account number, certificate or license number             | Remove           | MRN, Health plan number may be coded. All other removed.      |  May include                |
+| Vehicle identifiers and serial numbers, including license plate numbers, Device identifiers and serial numbers, biometric identifiers, indefinable photography           | Remove           | Remove    | May include                |
+| Any other unique identifying number, characteristic or code.             | Remove            | May include     |  May include                |
 
 ### Minimum Necessary PHI
 
