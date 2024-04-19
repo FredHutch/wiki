@@ -96,8 +96,6 @@ Run software in separate isolated containers rather than a monolithic environmen
 
 We recommend using `grabnode` to grab a `gizmo` node and test your script in interactive mode. This makes things a lot easier. If you don’t understand how the software is set up in the container, you can open an interactive shell into the container to test things out.
 
-[Here’s an example script illustrating this:]
-
 ### Containers Option 2
 
 Use Workflow Description Language (WDL) or Nextflow to orchestrate running containers on your data. The execution engine (such as miniWDL, Cromwell, or Nextflow) will handle loading the container as different tasks are run in your WDL script.
@@ -134,8 +132,6 @@ Note that some channels require a subscription, but `bioconda` and `conda-forge`
 2. Make sure that your software is available using `which` : `which samtools` . This should return a path to where your `samtools` binary is installed.
 3. Do your work in your script with the software.
 4. When you're done with that step, `conda deactivate` the `conda` environment. For example: `conda deactivate samtools_env` 
-
-[Here’s an example script that does this]
 
 ## 4. Best Practices When Compiling from Source
 
@@ -202,7 +198,3 @@ This assumes that nothing similar exists in [WILDS WDL Workflows](https://getwil
     2. An Easymodule with a specific version
 5. If using Docker containers: In your `runtime` block, use `docker: mycontainer:version_number` to specify your docker container. Note: `latest` is not a version number. 
 6. If using Easymodules: use `module load` and `module purge` in the script block for each task, and make sure to specify a version number.
-
-## Resources
-
-[Docker Carpentry](https://www.manicstreetpreacher.co.uk/docker-carpentry/aio/)
