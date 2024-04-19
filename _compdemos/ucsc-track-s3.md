@@ -42,7 +42,9 @@ Assume the following:
 
 You can use the following commands to upload these files:
 
-``` ml awscli
+```
+ml purge
+ml awscli
 aws s3 cp vcfs/foo.vcf.gz s3://fh-pi-doe-j-eco-public/ucsc-tracks/
 aws s3 cp vcfs/foo.vcf.gz.tbi s3://fh-pi-doe-j-eco-public/ucsc-tracks/
 ```
@@ -61,7 +63,9 @@ If you are setting up a Track Hub, you might need to upload more files, perhaps 
 
 Assuming your track hub files are in a directory called `hub`, underneath your current directory, you can copy all the contents of that directory with this single command:
 
-```ml awscli
+```
+ml purge
+ml awscli
 aws s3 sync hub s3://fh-pi-doe-j-eco-public/track-hub/ --acl public-read
 ```
 

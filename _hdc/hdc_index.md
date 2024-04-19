@@ -44,9 +44,9 @@ found [on the Cirro CenterNet page](https://centernet.fredhutch.org/cn/u/hutch-d
 
 Walkthrough videos on Cirro are provided for:
 
-- [Getting started with the platform](https://docs.cirro.bio/cirro/videos/#getting-started)
-- [Uploading datasets](https://docs.cirro.bio/cirro/videos/#adding-datasets)
-- [Running analysis pipelines](https://docs.cirro.bio/cirro/videos/#running-analysis)
+- [Getting started with the platform](https://docs.cirro.bio/overview/videos/#getting-started)
+- [Uploading datasets](https://docs.cirro.bio/overview/videos/#adding-datasets)
+- [Running analysis pipelines](https://docs.cirro.bio/overview/videos/#running-analysis)
 
 ### Accessing Cirro from the Command Line
 
@@ -60,7 +60,7 @@ To install the Cirro command-line client on your local system, use
 the command `pip install cirro` (requires Python).
 
 More extensive documentation on the Cirro CLI can be found
-[in the Cirro Documentation](https://docs.cirro.bio/cirro/cli_sdk/).
+[in the Cirro Documentation](https://docs.cirro.bio/cli-sdk/getting-started-cli-sdk/).
 
 **Downloading Files from Cirro**
 
@@ -71,7 +71,7 @@ To download the files from a dataset from Cirro to a local working directory:
 ml cirro
 
 # Interactive prompt to select the dataset to download
-cirro-cli download -i
+cirro download -i
 ```
 
 **Uploading Files to Cirro**
@@ -84,14 +84,14 @@ ml cirro
 
 # Interactive prompt to select the folder to upload, and
 # the destination Cirro project / dataset
-cirro-cli upload -i
+cirro upload -i
 ```
 
 When uploading paired-end FASTQ datasets (e.g. from sequencing
 RNA or DNA samples), it is extremely helpful to provide a samplesheet
 listing any metadata available for that batch of samples.
 To annotate a dataset of FASTQ files with that sample-level metadata
-in Cirro, [provide a samplesheet](https://docs.cirro.bio/cirro/samples/#providing-a-sample-sheet)
+in Cirro, [provide a samplesheet](https://docs.cirro.bio/features/samples/#providing-a-sample-sheet)
 in a file named `samplesheet.csv` in the same folder as those FASTQ files
 with the format below (using the example of a dataset with two sample groups, `treatment` and `control`):
 
@@ -111,7 +111,7 @@ The code for those workflows can be used from public or private GitHub repositor
 including official repositories from projects like GATK.
 
 Guidance on adding an existing WDL or Nextflow workflow to Cirro
-can be found [in the Cirro documentation](https://docs.cirro.bio/pipelines/adding_pipelines/).
+can be found [in the Cirro documentation](https://docs.cirro.bio/pipelines/adding-pipelines/).
 
 **Need Help?**  
 Need help using the Cirro platform for data management and analysis?
