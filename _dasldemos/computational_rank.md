@@ -4,6 +4,8 @@ main_authors: laderast
 primary_reviewers: vortexing, tfirman
 ---
 
+In this page, we talk about reproducible best practices to use software on the FH cluster (`rhino` / `gizmo`). If you're getting started on `rhino` / `gizmo`, this page is for you.
+
 ## Learning Objectives
 
 After reading this page, you will be able to
@@ -15,8 +17,6 @@ After reading this page, you will be able to
 - **Discuss** Why compiling software is difficult and who to talk to
 - **Describe** first steps to reproducible computing with easymodules
 - **Discuss** how to transform a snakemake script to Workflow Description Language (WDL).
-
-In this page, we talk about reproducible best practices to use software on the FH cluster (`rhino` / `gizmo`). If you're getting started on `rhino` / `gizmo`, this page is for you.
 
 ## Why can’t I just install software on `rhino`/ `gizmo` like my laptop?
 
