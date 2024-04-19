@@ -84,6 +84,8 @@ datascience:
         url: /datascience/privacy_security/
       - title: Compliance and Legal
         url: /datascience/compliance_legal/
+      - title: PHI and Research
+        url: /datascience/phi/
       - title: Data Deidentification
         url: /datascience/deidentification/
 generation:
