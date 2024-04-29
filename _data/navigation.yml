@@ -76,6 +76,8 @@ datascience:
     children:
       - title: Data Visualization
         url: /datascience/data_viz/
+      - title: Patient Data
+        url: /datascience/patient-data/
   - title: Consent, Privacy and Security
     children:
       - title: Consenting and the IRB
@@ -109,8 +111,6 @@ generation:
     children:
       - title: Overview
         url: /generation/clsp_overview/
-      - title: Clinical Data
-        url: /generation/clsp_clinicalCov/
       - title: Specimen Data Management
         url: /generation/clsp_specimenBanking/
       - title: Experimental Data
