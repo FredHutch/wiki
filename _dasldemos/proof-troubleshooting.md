@@ -113,4 +113,6 @@ We would love to get feedback on this document from the community and would love
 **Reviewers**
 
 - Ted Laderas ([GitHub](https://github.com/laderast)/[E-mail](mailto:tladera2@fredhutch.org))
+- Amy Paguirigan ([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
+- Dan Tenenbaum ([GitHub](https://github.com/dtenenba)/[E-mail](mailto:dtenenba@fredhutch.org))
 
