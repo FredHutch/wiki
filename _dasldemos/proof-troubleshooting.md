@@ -56,7 +56,7 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 ![job_failures](/dasldemos/assets/proof_ts_job_failures.png)
 
 - If these messages don’t provide enough information, navigate back to the “Job List” table and take a look at a few additional columns:
-    - **stdout & stderr**: these columns contain the location of flat files that contain the output and error messages from the command line tools used during the task(s) in question. These will help to provide tool-specific feedback as to what might be going wrong. To access these, copy the path provided, log on to Rhino, and view the text files via `vi` , `vim`, `cat` , or some other similar text viewing tool.
+    - **stdout & stderr**: these columns contain the location of flat files that contain the output and error messages from the command line tools used during the task(s) in question. These will help to provide tool-specific feedback as to what might be going wrong. To access these, copy the path provided, log on to Rhino, and view the text files via `more` , `less`, or `cat`.
     - **commandLine**: this column contains the exact command that was run during this task. Check to see if anything looks off, maybe an improper string concatenation, maybe a reference to the wrong WDL variable. If so, navigate to the “command” section of the task to see what might be causing the issue.
     - **docker**: this column contains the name of the Docker container that was used in the task. First, check for typos, but if the image name and version tag appear to be correct, try pulling the container locally using Docker (or Apptainer on Rhino/Gizmo). If it pulls successfully, try running exactly what is written in the commandLine column within the container.
 
@@ -65,7 +65,7 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 ### Check the workflow metadata
 
 - If these resources still don’t provide any sort of illumination, go back to the “Workflow Run” table and copy the workflow ID number via the “copyId” column. Navigate to the [“Troubleshoot" tab of PROOF](/dasldemos/proof-how-to#troubleshooting), paste the workflow ID into the “Troubleshoot a Workflow” section, and click “Get Complete Workflow Metadata”. This should display a large unformatted json, mostly containing the same information as the tables mentioned above, but it could contain a detail that was missed by PROOF’s user interface.
-- Along the same lines, you can also look into the raw workflow log produced by your underlying PROOF server. To do this, identify your workflow log directory on the “PROOF Server” tab (see screenshot below) and navigate to that directory on Rhino. Once there, you will see a collection of files following the naming convention of `workflow.[workflowid].log`. Open the logfile corresponding to the workflow in question using your text viewer of choice (vi, vim, cat, VS Code) to see details about the Cromwell execution of your WDL script.
+- Along the same lines, you can also look into the raw workflow log produced by your underlying PROOF server. To do this, identify your workflow log directory on the “PROOF Server” tab (see screenshot below) and navigate to that directory on Rhino. Once there, you will see a collection of files following the naming convention of `workflow.[workflowid].log`. Open the logfile corresponding to the workflow in question using your text viewer of choice (`more`, `less`, `cat`, VS Code) to see details about the Cromwell execution of your WDL script.
 
 ![workflow_logs](/dasldemos/assets/proof_ts_workflow_logs.png)
 
@@ -85,12 +85,12 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 
 ```FATAL:  While making image from oci registry: error fetching image to cache: while building SIF from layers: packer failed to pack: while unpacking tmpfs: error unpacking rootfs: unpack layer: unpack entry: usr/lib/python3.7/distutils/README: link: unpriv.link: unpriv.wrap target: operation not permitted```
 
-- Unfortunately, because the FH scratch directory doesn’t support hard links, Docker containers built with hard links cannot properly function on PROOF in the context of the Fred Hutch cluster system. Our developers are working on a [long-term solution](https://github.com/FredHutch/proof-api/issues/17) to this, but in the meantime, you’ll need to find/create an alternate version of the image that does not use hard links.
+- Unfortunately, because the FH scratch directory doesn’t support hard links, Docker containers built with hard links cannot properly function on PROOF in the context of the Fred Hutch cluster system. Our developers are working on a long-term solution to this, but in the meantime, you’ll need to find/create an alternate version of the image that does not use hard links.
 - Conda-based images run into this issue frequently as `conda` uses [hard links](https://www.anaconda.com/blog/understanding-and-improving-condas-performance) wherever possible to improve performance. To get around this, you’ll need to set the `always_copy` configuration setting to true towards the start of your `Dockerfile` (see command below or the [WILDS GATK container](https://github.com/getwilds/wilds-docker-library/blob/main/gatk/Dockerfile_latest#L16) for examples):
 
 ```RUN conda config --set always_copy true```
 
-- DaSL has a collection of images in the [WILDS Docker Library](https://github.com/orgs/getwilds/packages) that don’t use linkages and we are always looking to expand it. If you think the Fred Hutch community would benefit from a new tool in this container library, please feel free to reach out to us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) to talk through things in person!
+- DaSL has a collection of images in the [WILDS Docker Library](https://github.com/orgs/getwilds/packages) that don’t use hard links and we are always looking to expand it. If you think the Fred Hutch community would benefit from a new tool in this container library, please feel free to reach out to us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) to talk through things in person!
 
 ## Resources and Help
 
