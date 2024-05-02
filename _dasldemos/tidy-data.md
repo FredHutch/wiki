@@ -6,7 +6,7 @@ primary_reviewers: ptvan
 ---
 
 Learning how to organize your data will help reduce errors, make analysis easier, and improve collaboration (even when your collaborator is your future self). A helpful theory of data organization is called [Tidy Data](https://vita.had.co.nz/papers/tidy-data.html), as outlined in a manuscript by Hadley Wickham.
-In many cases the best time implement tidy data is when the data are generated in the first place, thus minimizing issues with data loss, corruption and loss of effort to cleaning messy data.
+In many cases the best time to implement tidy data is when the data are generated in the first place, thus minimizing issues with data loss, corruption and loss of effort to cleaning messy data.
 
 ## General Concepts
 **Use open file formats**: assume that your collaborator does not have time or resources to buy commercial software. Use plain-text .csv for numeric data, and PNG/JPEG/TIFF for image data. For data compression, use GZIP or BZIP2. If you *must* use proprietary formats, include instructions for getting free converters/processors.
