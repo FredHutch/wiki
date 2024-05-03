@@ -3,7 +3,7 @@ title: Genomics Platforms and Data Types
 primary_reviewers: vortexing
 ---
 
-This guide highlights some of the genomics platforms available through the [Genomics Shared Resource at Fred Hutch](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics.html).  This guide is intended to give general context to each platform.  Access to many of the submission processes involved in using the Genomics Shared Resource is via [Hutchbase.](https://hutchbase.fhcrc.org/base2/)
+This guide highlights some of the genomics platforms available through the [Genomics Shared Resource at Fred Hutch](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics.html).  This guide is intended to give general context to each platform.  Access to many of the submission processes involved in using the Genomics Shared Resource is via [Hutchbase.](https://hutchbase.fhcrc.org/hb/ngs/home)
 
 ## Ask Questions Early and Often
 
@@ -83,7 +83,7 @@ To obtain single cell gene expression data from RNA-seq, the Genomics lab uses t
 - [The Hutch Genomics Shared Resource](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/genomics-services.html):
 The genomics core is VERY helpful if you need guidance about reagent and platform choice for your samples.  Email `genomics` to discuss your particular project.  
 - [The Hutch Bioinformatics Core](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html): The Bioinformatics Core can help consult on the analyses needed to make use of the data produced by the Genomics Core. Email `bioinformatics` to discuss your particular project.
-- Submission of some types of samples for services to the Hutch Genomics Shared Resource is via [Hutchbase.](https://hutchbase.fhcrc.org/base2/) Instructions for accessing Hutchbase can be found [here](https://www.fredhutch.org/content/dam/www/shared-resources/gb/HutchBASE.pdf).
+- Submission of some types of samples for services to the Hutch Genomics Shared Resource is via [Hutchbase.](https://hutchbase.fhcrc.org/hb/ngs/home) Instructions for accessing Hutchbase can be found [here](https://www.fredhutch.org/content/dam/www/shared-resources/gb/HutchBASE.pdf).
 - Genohub has a compendium of library prep kits, organized by NGS application type [here](https://genohub.com/ngs-library-preparation-kit-guide/).
 - Illumina has a few interactive methods guides to help you find the most appropriate [library prep reagents](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html) and [sequencing methods](https://www.illumina.com/science/sequencing-method-explorer.html) to use in your experiments.
 - A helpful reference in considering library prep methods is [Ordoukhanian's 2014 paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4351865/).
