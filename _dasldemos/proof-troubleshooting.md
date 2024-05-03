@@ -19,6 +19,11 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 - By default, PROOF servers only last seven days before they shut down automatically. If submitting/validating a workflow produces an error message like “Your server is not up!”, you’ll need to start up another PROOF server via [the “PROOF Server” tab](/dasldemos/proof-how-to#starting-a-proof-server). Analysis jobs in progress will not be affected by the restart and all previous job history will be saved.
 - If the screen is grayed out and you’re unable to press buttons at all, your browser has timed out. You’ll need to refresh the page and log in again.
 
+### Try stopping and restarting your PROOF server
+
+- Occasionally, our product team will need to push updates to the underlying repositories of PROOF to fix issues or add functionality to PROOF servers. However, only servers created _after_ the update will get that added/fixed functionality.
+- If your server has been running for a few days, it is definitely worth [stopping and restarting](/dasldemos/proof-how-to/#stopping-a-proof-server) your PROOF server. If any recent updates have been pushed, your new server will pick them up and hopefully that will fix your issue. And even if nothing's been updated, always worth trying the old standby of "turning it off and on again."
+
 ## Workflow Level Issues
 
 ### Validate your workflow
