@@ -130,6 +130,6 @@ The sudo command will ask for your Mac login password. Often Mac volume names ha
 ## Related Centernet links:
 
 [Mapping Network Drives](https://centernet.fredhutch.org/u/it/help-desk/mapping-network-drives.html)
-[Network Drive Paths - Mac](https://centernet.fredhutch.org/u/it/help-desk/mac-support/network-drive-paths-mac.html)  
-[Network Drive Paths - Windows](https://centernet.fredhutch.org/u/it/help-desk/network-drive-paths-windows.html)  
+[Network Drive Paths - Mac](https://centernet.fredhutch.org/u/it/help-desk/mapping-network-drives.html#mac)  
+[Network Drive Paths - Windows](https://centernet.fredhutch.org/u/it/help-desk/mapping-network-drives.html#windows)  
 
