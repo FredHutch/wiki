@@ -47,6 +47,6 @@ The appropriate processes must be followed and the necessary documentation must 
 ## Resources
 
 - Fred Hutch Data Science Lab [Data Policy & Governance](https://centernet.fredhutch.org/u/data-science-lab/data-governance.html) page on CenterNet.
-- [Fred Hutch Institutional Review Board](https://centernet.fredhutch.org/u/irb.html)
-- [Fred Hutch Privacy Office](https://centernet.fredhutch.org/u/privacy.html)
+- Fred Hutch [Institutional Review Board](https://centernet.fredhutch.org/u/irb.html)
+- Fred Hutch [Privacy Office](https://centernet.fredhutch.org/u/privacy.html)
 - U.S. Department of Health and Human Services, [HIPAA Special Topics: Research](https://www.hhs.gov/hipaa/for-professionals/special-topics/research/index.html). 
