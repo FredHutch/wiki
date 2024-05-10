@@ -4,7 +4,7 @@ main_authors: Monica Gerber (monicagerber)
 primary_reviewers: vortexing
 ---
 
-Patient data that is collected over the course of clinical care may be used for research, but there are important federal protections that govern the use of these data. The [HIPAA Privacy Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html) protects the privacy of individuals, while "[ensuring that researchers continue to have access to medical information necessary to conduct vital research](https://www.hhs.gov/hipaa/for-professionals/special-topics/research/index.html)." Below we outline important considerations for use of research data derived from healthcare sources, including protected health information (PHI).
+Patient data that is collected over the course of clinical care may be used for research, but there are important federal protections that govern the use of these data. The [HIPAA Privacy Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html) protects the privacy of individuals, while "[ensuring that researchers continue to have access to medical information necessary to conduct vital research](https://www.hhs.gov/hipaa/for-professionals/special-topics/research/index.html)." Below we outline important considerations for use of research data derived from healthcare sources, including protected health information ([PHI](https://www.hhs.gov/answers/hipaa/what-is-phi/index.html)).
 
 For more information about data de-identification methods, see [De-identification of Data and Specimens](/datascience/deidentification/). 
 
