@@ -95,10 +95,6 @@ generation:
     children:
       - title: Overview
         url: /generation/gen_index/
-      - title: Resource Library
-        url: /gendemos/
-      - title: Pathways
-        url: /pathways/
   - title: Study Design and Funding
     children:
       - title: Overview
@@ -111,14 +107,8 @@ generation:
         url: /generation/multiple_testing/
   - title: Clinical and Experimental Data
     children:
-      - title: Overview
-        url: /generation/clsp_overview/
       - title: Specimen Data Management
         url: /generation/clsp_specimenBanking/
-      - title: Experimental Data
-        url: /generation/clsp_labCov/
-      - title: Support Software
-        url: /generation/labman_software/
 scicomputing:
   - title: Scientific Computing
     children:
