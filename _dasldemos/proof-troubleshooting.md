@@ -94,18 +94,7 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 
 <img src="/dasldemos/assets/proof_ts_singularity_cache.png" alt="singularity_cache" width="600"/>
 
-### Hard link issues in Docker images
-
-- Users may be seeing issues related to linkages during the pull of Docker images that produce an error message along the lines of “operation not permitted":
-
-```FATAL:  While making image from oci registry: error fetching image to cache: while building SIF from layers: packer failed to pack: while unpacking tmpfs: error unpacking rootfs: unpack layer: unpack entry: usr/lib/python3.7/distutils/README: link: unpriv.link: unpriv.wrap target: operation not permitted```
-
-- Unfortunately, because the FH scratch directory doesn’t support hard links, Docker containers built with hard links cannot properly function on PROOF in the context of the Fred Hutch cluster system. Our developers are working on a long-term solution to this, but in the meantime, you’ll need to find/create an alternate version of the image that does not use hard links.
-- Conda-based images run into this issue frequently as `conda` uses [hard links](https://www.anaconda.com/blog/understanding-and-improving-condas-performance) wherever possible to improve performance. To get around this, you’ll need to set the `always_copy` configuration setting to true towards the start of your `Dockerfile` (see command below or the [WILDS GATK container](https://github.com/getwilds/wilds-docker-library/blob/main/gatk/Dockerfile_latest#L16) for examples):
-
-```RUN conda config --set always_copy true```
-
-- DaSL has a collection of images in the [WILDS Docker Library](https://github.com/orgs/getwilds/packages) that don’t use hard links and we are always looking to expand it. If you think the Fred Hutch community would benefit from a new tool in this container library, please feel free to reach out to us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) to talk through things in person!
+- DaSL also has a collection of images for commonly used bioinformatics tools in the [WILDS Docker Library](https://github.com/orgs/getwilds/packages) and we are always looking to expand it. If you think the Fred Hutch community would benefit from a new tool in this container library, please feel free to reach out to us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) to talk through things in person!
 
 ## Resources and Help
 
