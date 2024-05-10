@@ -4,13 +4,13 @@ main_authors: Monica Gerber (monicagerber)
 primary_reviewers: vortexing
 ---
 
-Patient data that is collected over the course of clinical care may be used for research, but there are important protections that govern the use of these data. The [HIPAA Privacy Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html) protects the privacy of individuals, while "[ensuring that researchers continue to have access to medical information necessary to conduct vital research](https://www.hhs.gov/hipaa/for-professionals/special-topics/research/index.html)." Below we outline important considerations for use of research data derived from healthcare sources.
+Patient data that is collected over the course of clinical care may be used for research, but there are important federal protections that govern the use of these data. The [HIPAA Privacy Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html) protects the privacy of individuals, while "[ensuring that researchers continue to have access to medical information necessary to conduct vital research](https://www.hhs.gov/hipaa/for-professionals/special-topics/research/index.html)." Below we outline important considerations for use of research data derived from healthcare sources, including protected health information (PHI).
 
 For more information about data de-identification methods, see [De-identification of Data and Specimens](/datascience/deidentification/). 
 
 ## Types of Data Sets
 
-Patient data for research may contain data elements that could potentially identify individuals included in the data set. We refer to data sets as "de-identified," a "limited data set," or "individually identifiable PHI" based on which data elements are removed or coded. 
+Patient data for research may contain data elements that could potentially identify individuals included in the data set. Data sets may be referred to as "de-identified," a "limited data set," or "individually identifiable PHI" based on which data elements are removed or coded. 
 
 | Data Set Type | Summary    |
 | ------------- | ---------- |
@@ -18,9 +18,9 @@ Patient data for research may contain data elements that could potentially ident
 | Limited Data Set | A data set that excludes most direct identifiers. It may be used or disclosed for purposes of research, public health, or health care operations, with a data use agreement. |
 | Individually Identifiable PHI  | A data set with personal identifiers or any information that could be used in alone or in combination to identify an individual. | 
 
-Below we outline which data elements must be removed or coded for each data set type.
+Health information without any of the 18 identifiers outlined by the HIPAA privacy rule is not considered PHI. Below we outline which data elements must be removed or coded for each data set type.
 
-| Data Element      | De-Identified Data Set | Limited Data Set  | Fully Identified Data Set |
+| Data Element      | De-Identified Data Set | Limited Data Set  | Individually Identifiable PHI |
 | ----------------- | ---------------------- | ----------------- | ------------------------- |
 | Names             | Remove/Code            | Remove/Code       | May include               |
 | Address, city and other geographic information smaller than state.    | Remove all, except a 3-digit zip code may be included for an area where more than 20,000 people live. Use “000” if fewer than 20,000 people live there.        | Can retain city, town, state or full zip code.| May include |
