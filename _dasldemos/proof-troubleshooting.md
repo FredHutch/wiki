@@ -4,24 +4,19 @@ main_authors: tefirman
 primary_reviewers: laderast
 ---
 
-For users that have a well-tested and established WDL workflow, the [PROOF How-To documentation](/dasldemos/proof-how-to) should provide enough guidance to help a user through the ideal “happy-path” of job submission. However, while developing a new and untested WDL workflow, it's common to run into all sorts of issues, some as simple as typos, others as complex as entire software environments. The goal of this guide is to teach users where to find (and how to interpret) the more advanced features and behaviors of PROOF in order to debug their custom WDL scripts and get their research up and running. Specifically, we will touch on how to identify:
+For users that have a well-tested and established WDL workflow, the [PROOF How-To documentation](/dasldemos/proof-how-to/) should provide enough guidance to help a user through a typical process of job submission. However, while developing a new and untested WDL workflow, it's common to run into all sorts of issues, some as simple as typos, others as complex as entire software environments. The goal of this guide is to teach users where to find (and how to interpret) the more advanced features and behaviors of PROOF in order to debug their custom WDL scripts and get their research up and running. 
 
-- [PROOF Server Issues](#proof-server-issues)
-- [Workflow Level Issues](#workflow-level-issues)
-- [Task Level Issues](#task-level-issues)
-- [Execution Issues](#execution-issues)
-- [Docker Container Issues](#docker-container-issues)
-
-## PROOF Server Issues
+## Common PROOF Server Issues
 
 ### Make sure your PROOF server is up and running
 
-- By default, PROOF servers only last seven days before they shut down automatically. If submitting/validating a workflow produces an error message like “Your server is not up!”, you’ll need to start up another PROOF server via [the “PROOF Server” tab](/dasldemos/proof-how-to#starting-a-proof-server). Analysis jobs in progress will not be affected by the restart and all previous job history will be saved.
+- By default, PROOF servers run for seven days before they shut down automatically. If submitting/validating a workflow produces an error message like “Your server is not up!”, you’ll need to start up another PROOF server via [the “PROOF Server” tab](/dasldemos/proof-how-to#starting-a-proof-server). Analysis jobs in progress will not be affected by the restart and all previous job history will be saved.
+- If you just started your PROOF server, and received this message, the server may need additional time before it can communicate with the app, wait 1-2 minutes and try again.  
 - If the screen is grayed out and you’re unable to press buttons at all, your browser has timed out. You’ll need to refresh the page and log in again.
 
 ### Try stopping and restarting your PROOF server
 
-- Occasionally, our product team will need to push updates to the underlying repositories of PROOF to fix issues or add functionality to PROOF servers. However, only servers created _after_ the update will get that added/fixed functionality.
+- Occasionally, our product team will push updates to the underlying repositories of PROOF to fix issues and add functionalities. However, only servers created _after_ the update will get that added/fixed functionality.
 - If your server has been running for a few days, it is definitely worth [stopping and restarting](/dasldemos/proof-how-to/#stopping-a-proof-server) your PROOF server. If any recent updates have been pushed, your new server will pick them up and hopefully that will fix your issue. And even if nothing's been updated, always worth trying the old standby of "turning it off and on again."
 
 ## Workflow Level Issues
@@ -29,7 +24,7 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 ### Validate your workflow
 
 - Before submitting a job, validate your WDL script and an input json via [the “Validate” tab in PROOF](/dasldemos/proof-how-to#validating-your-wdl-workflow). This will catch typos and larger structural issues in your script. Ideally, you should see something to the effect of `$valid [1] TRUE` , but here are a few of the non-ideal scenarios:
-    - **Variable typo in the WDL**: let’s say I accidentally referred to a variable called `bedfile` as `bedFile` at some point later in the workflow. Since WDL is case-sensitive, the validation step should throw an error that looks like the screenshot below. Specifically, it will call out the mismatched variable by name (`Cannot lookup value ‘bedFile’`) and provide a list of alternatives defined in the script.
+    - **Variable typo in the WDL**: Let’s say I accidentally referred to a variable called `bedfile` as `bedFile` at some point later in the workflow. Since WDL is case-sensitive, the validation step should throw an error that looks like the screenshot below. Specifically, it will call out the mismatched variable by name (`Cannot lookup value ‘bedFile’`) and provide a list of alternatives defined in the script.
     
     ![var_typo_wdl](/dasldemos/assets/proof_ts_var_typo_wdl.png)
     
@@ -99,25 +94,11 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 
 ## Resources and Help
 
-- [PROOF How-To documentation](/dasldemos/proof-how-to)
+- [PROOF How-To documentation](/dasldemos/proof-how-to/)
 - [Developing WDL Workflows Course](https://hutchdatascience.org/WDL_Workflows_Guide/)
 - [WILDS WDL Repositories](https://github.com/getwilds?q=ww-&type=all&language=&sort=)
 - [WILDS Docker Library](https://github.com/orgs/getwilds/packages)
-- [Using Docker at Fred Hutch](/compdemos/Docker)
+- [Using Docker at Fred Hutch](/compdemos/Docker/)
 - [DaSL Research Computing Data House Calls](https://calendly.com/data-house-calls/computing)
 - [DaSL Community Studios](https://hutchdatascience.org/communitystudios/)
-
-## Document Contributions
-
-We would love to get feedback on this document from the community and would love to hear how we can make improvements to make this more helpful to you! Feel free to [email](mailto:wilds@fredhutch.org) us at or directly make recommendations on [GitHub](https://github.com/FredHutch/wiki/).
-
-**Authors**
-
-- Taylor Firman ([GitHub](https://github.com/tefirman)/[E-mail](mailto:tfirman@fredhutch.org))
-
-**Reviewers**
-
-- Ted Laderas ([GitHub](https://github.com/laderast)/[E-mail](mailto:tladera2@fredhutch.org))
-- Amy Paguirigan ([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
-- Dan Tenenbaum ([GitHub](https://github.com/dtenenba)/[E-mail](mailto:dtenenba@fredhutch.org))
 
