@@ -64,10 +64,25 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 
 ### Check the workflow metadata
 
-- If these resources still don’t provide any sort of illumination, go back to the “Workflow Run” table and copy the workflow ID number via the “copyId” column. Navigate to the [“Troubleshoot" tab of PROOF](/dasldemos/proof-how-to#troubleshooting), paste the workflow ID into the “Troubleshoot a Workflow” section, and click “Get Complete Workflow Metadata”. This should display a large unformatted json, mostly containing the same information as the tables mentioned above, but it could contain a detail that was missed by PROOF’s user interface.
+- If these resources still don’t provide any sort of illumination, go back to the “Workflows Run” table and copy the workflow ID number via the “copyId” column. Navigate to the [“Troubleshoot" tab of PROOF](/dasldemos/proof-how-to#troubleshooting), paste the workflow ID into the “Troubleshoot a Workflow” section, and click “Get Complete Workflow Metadata”. This should display a large unformatted json, mostly containing the same information as the tables mentioned above, but it could contain a detail that was missed by PROOF’s user interface.
 - Along the same lines, you can also look into the raw workflow log produced by your underlying PROOF server. To do this, identify your workflow log directory on the “PROOF Server” tab (see screenshot below) and navigate to that directory on Rhino. Once there, you will see a collection of files following the naming convention of `workflow.[workflowid].log`. Open the logfile corresponding to the workflow in question using your text viewer of choice (`more`, `less`, `cat`, VS Code) to see details about the Cromwell execution of your WDL script.
 
 ![workflow_logs](/dasldemos/assets/proof_ts_workflow_logs.png)
+
+### Abort an incorrectly submitted workflow
+
+- Let's say you realize in the middle of a running workflow that you forgot to update one of the values in your input json. The rest of the run will produce inaccurate/irrelevant results and you want to cancel that run so as not to waste time and resources.
+- Navigate to the "Workflows Run" table in the "Track Jobs" tab and copy the workflow ID number via the "copyId" column. Then switch to the ["Troubleshoot" tab of PROOF](/dasldemos/proof-how-to#troubleshooting), paste the workflow ID into the "Abort a Workflow" section, and click "Abort Workflow".
+- You should see a message pop up describing the workflow's status as "Aborting" (see screenshot below for example) and the status for the job in the "Workflows Run" table should change from "Running" to "Aborting" to "Aborted", signaling that the run in question has been successfully cancelled.
+
+![aborting](/dasldemos/assets/proof_ts_aborting.png)
+
+### Always reset forms during validation/submission
+
+- If you decide to validate/submit another workflow during the same login session, the previous values will initially remain in the form. You can still select a different file using the "Browse" button, but it is very easy to forget to update all fields, in which case PROOF will just use the previous value.
+- We highly recommend clicking the "Reset Form" button to clear previously existing values from all fields (see screenshot below). This will allow you to start from scratch and be confident that you are validating/submitting the latest version of your workflow.
+
+![reset_form](/dasldemos/assets/proof_ts_reset_form.png)
 
 ## Docker Container Issues
 
