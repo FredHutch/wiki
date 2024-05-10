@@ -41,9 +41,6 @@ collections:
   generation:
     output: true
     permalink: /:collection/:path/
-  gendemos:
-    output: true
-    permalink: /:collection/:path/
   scicomputing:
     output: true
     permalink: /:collection/:path/
