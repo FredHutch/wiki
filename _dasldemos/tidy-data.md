@@ -4,7 +4,9 @@ last_modified_at: 2019-11-06
 main_author:
 primary_reviewers: ptvan
 ---
-All collaborations, even when your collaborator is your future self, benefit from all parties learning the art of tidying data.  In many cases the best time to do this is to implement [Tidy Data](https://vita.had.co.nz/papers/tidy-data.html) approaches when the data are generated in the first place, thus minimizing issues with data loss, corruption and loss of effort to cleaning messy data.
+
+Learning how to organize your data will help reduce errors, make analysis easier, and improve collaboration (even when your collaborator is your future self). A helpful theory of data organization is called [Tidy Data](https://vita.had.co.nz/papers/tidy-data.html), as outlined in a manuscript by Hadley Wickham.
+In many cases the best time to implement tidy data is when the data are generated in the first place, thus minimizing issues with data loss, corruption and loss of effort to cleaning messy data.
 
 ## General Concepts
 **Use open file formats**: assume that your collaborator does not have time or resources to buy commercial software. Use plain-text .csv for numeric data, and PNG/JPEG/TIFF for image data. For data compression, use GZIP or BZIP2. If you *must* use proprietary formats, include instructions for getting free converters/processors.
@@ -20,5 +22,6 @@ All collaborations, even when your collaborator is your future self, benefit fro
 **Include a "data dictionary"**:  Describe what units are for each measurement and which values are acceptable. 
 
 ## External Learning
-There are a variety of online resources where you can learn more about what Tidy data is.  
+There are a variety of online resources where you can learn more about what Tidy data is. 
+- [Data Organization in Spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) 
 - [Coursera Getting and Cleaning Data Course](https://www.coursera.org/learn/data-cleaning)
