@@ -28,9 +28,7 @@ stewardship policies. DaSL and its partners at FHCC have initiated a new data
 infrastructure approach and a new data governance approach for clinical data.
 This new approach envisions a future FHCC with multimodal data integration and
 democratized data access. For more information and to stay up-to-date with new
-developments, visit DaSL’s [blog](https://hutchdatascience.org/news/) and
-[newsletter](https://fhdata.substack.com/), and the Translational Analytics
-[team page](https://hutchdatascience.org/tr-analytics/).
+developments, visit DaSL’s [home page](https://hutchdatascience.org) and [CenterNet page](https://centernet.fredhutch.org/u/data-science-lab.html). 
 
 ## Medical Record Data
 
@@ -44,9 +42,7 @@ into Epic (e.g., UW Medicine’s Amalga analytics platform). The legacy reposito
 includes tables such as demographics, lab values, encounters, diagnosis codes,
 radiation oncology, and a variety of unstructured radiology, pathology, and
 clinical narrative reports.  Currently, to request access to these data, go to
-the [Consortium Clinical Oncology Data
-Access](https://extranet.fredhutch.org/en/u/consortium-clinical-data-access.html)
-page on CenterNet.
+the [Fred Hutch Patient Data for Research](https://centernet.fredhutch.org/u/data-science-lab/patient-data.html) page on CenterNet.
 
 *FHCC patient population*
 

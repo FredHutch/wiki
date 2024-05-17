@@ -78,6 +78,8 @@ datascience:
     children:
       - title: Data Visualization
         url: /datascience/data_viz/
+      - title: Patient Data
+        url: /datascience/patient-data/
   - title: Consent, Privacy and Security
     children:
       - title: Consenting and the IRB
@@ -86,6 +88,8 @@ datascience:
         url: /datascience/privacy_security/
       - title: Compliance and Legal
         url: /datascience/compliance_legal/
+      - title: PHI and Research
+        url: /datascience/phi/
       - title: Data Deidentification
         url: /datascience/deidentification/
 generation:
@@ -93,10 +97,6 @@ generation:
     children:
       - title: Overview
         url: /generation/gen_index/
-      - title: Resource Library
-        url: /gendemos/
-      - title: Pathways
-        url: /pathways/
   - title: Study Design and Funding
     children:
       - title: Overview
@@ -107,16 +107,6 @@ generation:
         url: /generation/study_hypothesis/
       - title: Multiple Testing
         url: /generation/multiple_testing/
-  - title: Clinical and Experimental Data
-    children:
-      - title: Overview
-        url: /generation/clsp_overview/
-      - title: Clinical Data
-        url: /generation/clsp_clinicalCov/
-      - title: Experimental Data
-        url: /generation/clsp_labCov/
-      - title: Support Software
-        url: /generation/labman_software/
 scicomputing:
   - title: Scientific Computing
     children:

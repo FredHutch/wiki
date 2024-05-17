@@ -346,6 +346,7 @@ If you find something is not working with the app or you find a bug, please help
 - [R Client for the PROOF-API](https://github.com/getwilds/proofr)
 - [Shiny Cromwell](https://github.com/getwilds/shiny-cromwell)
 - [rcromwell](https://github.com/getwilds/rcromwell)
+- [PROOF Troubleshooting](/dasldemos/proof-troubleshooting)
 
 
 ## Document Contributions
