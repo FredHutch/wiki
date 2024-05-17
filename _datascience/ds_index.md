@@ -2,27 +2,18 @@
 title: Overview of Data Science at Fred Hutch
 primary_reviewers: vortexing
 ---
-Big News!  
 
-Please welcome the new Fred Hutch Data Science Lab lead by Jeff Leek, Fred Hutch Chief Data Officer!
-
-You can find more about what we're working on at our new site at [hutchdatascience.org](https://hutchdatascience.org/) or find us in the [Fred Hutch Data Slack workspace](https://hutchdatascience.org/joinslack/). 
-
-## Data House Calls
-You can now schedule a consult with DaSL staff on variety of data oriented questions. [Schedule a House Call here and bookmark this link](https://hutchdatascience.org/datahousecalls/) as it will remain our Data House Call "front door" as our group grows.
-
-Data House Call Themes currently include:
-- Data Management Planning and Sharing (such as NIH DMSP’s)
-- Code and Software: R, Python and Beyond
-- Data Access, Storage and Management
-- Bioinformatics and Computing
-- Research Applications
-- General!! 
+The Data Science Lab is the “Office of the Chief Data Officer” at Fred Hutchinson Cancer Center. You can find more about what we're working on at [hutchdatascience.org](https://hutchdatascience.org/) or connect with us in the [Fred Hutch Data Slack workspace](https://hutchdatascience.org/joinslack/). You can now schedule a consult with DaSL staff on variety of data oriented questions. [Schedule a House Call](https://hutchdatascience.org/datahousecalls/) with our staff to get your questions answered on a variety of data related topics from NIH data sharing to research software development to data science partnerships.  You can find more infomation about our events on our [Centernet page](https://centernet.fredhutch.org/u/data-science-lab.html). 
 
 
-## NIH Data Sharing Policy
-Wondering about how to share data, address NIH or other publication related requirements for data sharing plans?  Find out more about what resources the Data Science Lab is developing in this section.  
+
+Our documentation is focused on data science and related concepts and concerns relevant to a cancer care and research institute after our merger in 2022.  We are in the process of building new content that is tailored to the needs of our community so check back frequently.  If you would like to see content on a specific topic you think is relevant to this space, please feel free to leave a request via [GitHub Issue](https://github.com/FredHutch/wiki/issues) or by emailing [data@fredhutch.org](mailto:data@fredhutch.org).  
+
+- General
+- Tools and Platforms
+- Data Managment and Sharing
+- Working with Data
+- Research, Privacy and Security
 
 
-## Data Science Training
-Check out the sidebar to find more information about training materials developed by the Fred Hutch Data Science Lab.  
+
