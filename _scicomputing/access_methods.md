@@ -237,7 +237,7 @@ Host *.fhcrc.org
 ```
 This config contains all of the features mentioned above and will apply them to all `fhcrc.org` hosts. It will use `snail` (the SSH gateway host) for all hosts except `snail` itself, as this would create a loop. *You must place your username in the code above*.
 
-One final note - SSH does not do DNS resolution before consulting the config file, so typing `ssh rhino` (or any short hostname without domain) will not trigger the `*fhcrc.org` Host entries. You can add `rhino` to the Host line to have this trigger the config as well.
+One final note - SSH does not do DNS resolution before consulting the config file, so typing `ssh rhino` (or any short hostname without domain) will not trigger the `*fhcrc.org` Host entries. You can add `rhino` to the Host line to have this trigger the config as well. 
 
 ## Access via a Remote Location
 
