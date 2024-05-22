@@ -48,6 +48,8 @@ datascience:
         url: /dasldemos/
       - title: Pathways
         url: /pathways/
+      - title: Data Science Training
+        url: /datascience/hutch_courses/
   - title: General
     children:
       - title: Tech Hiring for Science
@@ -56,20 +58,12 @@ datascience:
     children:
       - title: PROOF
         url: /datascience/proof/
-  - title: Training
-    children:
-      - title: DaSL Courses for the Hutch
-        url: /datascience/hutch_courses/
-      - title: All DaSL Courses
-        url: https://hutchdatascience.org/training/
-  - title: Data Management
+  - title: Data Management and Sharing
     children:
       - title: Data Stewardship
         url: /datascience/stewardship/
       - title: NIH Data Sharing
         url: /datascience/nih_data_sharing/
-      - title: Using DMPtool.org
-        url: /datascience/dmptool/
       - title: Data Sharing Approaches
         url: /datascience/execute_sharing/
       - title: Specimen Data Management
@@ -80,7 +74,11 @@ datascience:
         url: /datascience/data_viz/
       - title: Patient Data
         url: /datascience/patient-data/
-  - title: Consent, Privacy and Security
+      - title: PHI and Research
+        url: /datascience/phi/
+      - title: Data Deidentification
+        url: /datascience/deidentification/
+  - title: Research, Privacy and Security
     children:
       - title: Consenting and the IRB
         url: /datascience/consent_IRB/
@@ -88,25 +86,14 @@ datascience:
         url: /datascience/privacy_security/
       - title: Compliance and Legal
         url: /datascience/compliance_legal/
-      - title: PHI and Research
-        url: /datascience/phi/
-      - title: Data Deidentification
-        url: /datascience/deidentification/
+
 generation:
   - title: Data Generation
     children:
       - title: Overview
         url: /generation/gen_index/
-  - title: Study Design and Funding
-    children:
-      - title: Overview
-        url: /generation/study_overview/
-      - title: Proposals and Funding
-        url: /generation/study_proposal/
-      - title: Hypotheses and Molecular Data
-        url: /generation/study_hypothesis/
-      - title: Multiple Testing
-        url: /generation/multiple_testing/
+      - title: Specimen Data Management
+        url: /generation/clsp_specimenBanking/
 scicomputing:
   - title: Scientific Computing
     children:
