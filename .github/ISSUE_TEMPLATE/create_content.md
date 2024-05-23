@@ -1,5 +1,6 @@
 ---
 name: Created Content
+about: Use this if you want to contribute an article
 description: Use this if you want to contribute an article
 title: ''
 labels: ["new content"]
