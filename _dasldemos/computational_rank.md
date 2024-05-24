@@ -4,7 +4,7 @@ main_authors: laderast
 primary_reviewers: vortexing, tfirman
 ---
 
-In this page, we talk about reproducible best practices to use software on the FH cluster (`rhino` / `gizmo`). If you're getting started on `rhino` / `gizmo`, this page is for you.
+Greetings! In this page, we talk about reproducible best practices to use software on the FH cluster (`rhino` / `gizmo`). If you're getting started on `rhino` / `gizmo`, this page is for you.
 
 ## Learning Objectives
 
