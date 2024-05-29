@@ -7,9 +7,12 @@ primary_reviewers: atombaby, vortexing
 This pathway will get you to a first non-interactive computing job on the `gizmo` computing cluster using the command-line interface at the Fred Hutch.
 
 ## Pre-requisites
+
 A desktop computer, access to the internet, a good text editor.
 
-If you are unfamiliar with any of these terms, hover over them to find more information.
+If you are unfamiliar with any of these terms or subjects, hover over them to find more information.
+
+ - [Interactive sessions on a login node](/pathways/path-interactive)
  - {% glossary Node %}
  - {% glossary Shell %}
  - {% glossary Scripts %}
@@ -23,37 +26,11 @@ If you are unfamiliar with any of these terms, hover over them to find more info
 
 ## Steps
 
-### Get a Hutchnet ID
-In order to use Fred Hutch batch computing resources you must have valid Fred Hutch credentials.  Sepcicially a [HutchNet ID](/scicomputing/access_credentials/#hutchnet-id).
-
-This HutchNet ID needs to be associated with a [PI account](/scicomputing/access_credentials/#accessing-slurm-clusters) in order to submit jobs. 
-
-
-### Connect to the Campus Network
-Batch computing resources require that your local computer be connected to the campus network.  This authenticaiton process happens differently when you're on vs off campus. 
-
-[When on campus](https://centernet.fredhutch.org/cn/u/center-it/help-desk/connecting-to-wifi.html)
-
-[When off campus](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html)
-
-### Start a Terminal
-
-A terminal provides a text-based interface to computers (the "command line").
-
-Macintosh OSX has a built in terminal application. It can be found in _Applications->Utilities->Terminal_.  Other options are available that are more full featured such as [iterm2](https://iterm2.com/), which is one free option (please consider [donating](https://iterm2.com/donate.html)!)
-
-Windows has a few different terminals built in, but many of these are unsuitable for accessing Linux systems.  Two easy options are the Microsoft Terminal app (available in the App Store) and [PuTTY](/scicomputing/access_methods/#windows).
-
-### Shell Connections to the 'rhino' Login Nodes
-
-Once you have a connection to the Hutch network and a suitable terminal, the next step is to [connect to the login nodes known as `rhino`.](/scicomputing/access_methods/#ssh-connections)
-
 ### Home Directory
 
 The "home" directory on Linux is used for storing user-specific data and is the directory you will begin in when you login to `rhino`.
 
 If you get an error like `Home directory not found` when you log in, please email `SciComp` to get that set up.
-
 
 ### Navigating the Compute Environment
 

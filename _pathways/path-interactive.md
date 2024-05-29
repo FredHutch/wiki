@@ -1,107 +1,63 @@
 ---
-title: Logging on to `rhino` for the first time
-last_modified_at: 2020-05-27
-primary_reviewers: k8hertweck
+title: Getting and Using Interactive Sessions
+last_modified_at: 2024-05-29
+primary_reviewers: atombaby
 ---
 
-This tutorial is a step-by-step introduction to logging on to `rhino`,
-a remote computing resource available to researchers at Fred Hutch.
-It assumes you have basic familiarity with navigating the command line using Unix commands like `cd`, `ls`, and `pwd`,
-and are connecting via a shell or equivalent emulator:
-on Mac, this would be Terminal;
-on Windows, this would be something like [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or Git bash,
-a part of [Git for Windows](https://gitforwindows.org).
+This pathway is a step-by-step introduction to interactive sessions in the Rhino/Gizmo compute environment.
 
-The basic process below below includes:
+## Pre-requisites
 
-- Logging on to `snail` (one option for connecting remotely)
-- Logging on to `rhino`
-- Grabbing a node to run an interactive job
-- Loading software
-- Exiting out of everything
+ - Basic Unix/Linux commands `cd`, `ls`, and `pwd`
+ - Connection to Campus Network (VPN or on-campus)
+ - A terminal emulator ( _Terminal_ on Mac, _Putty_, or _WSL_ on Windows)
+ - {% glossary Node %}
+ - {% glossary Shell %}
+ - {% glossary Prompt %}
+ - {% glossary Session %}
+ - {% glossary Slurm %}
+ - {% glossary HutchNet ID %}
+ - {% glossary rhino %}
+ - {% glossary gizmo %}
 
-> This tutorial uses `snail` as the method for accessing the Fred Hutch campus network.
-This step is unnecessary if you are already connected to the network (such as through VPN).
-For more information about remote login, please see [Access via a remote login](/scicomputing/access_methods/#access-via-a-remote-location).
+## Steps
 
-## Command prompts
+### Get a Hutchnet ID
 
-We'll be referencing your command prompt for the duration of this tutorial,
-which refers to the information printed at the start of each line in your shell where you enter commands.
-Command prompts generally take the form of:
+In order to use Fred Hutch batch computing resources you must have valid Fred Hutch credentials.  Sepcicially a [HutchNet ID](/scicomputing/access_credentials/#hutchnet-id).
 
-    username@computer:~$
+This HutchNet ID needs to be associated with a [PI account](/scicomputing/access_credentials/#accessing-slurm-clusters) in order to submit jobs.
 
-The specific symbol at the end may be different for you on your own computer,
-but the shared compute resources we'll be describing in this tutorial all use `$`.
-When you are logged on to Fred Hutch compute resources,
-`username` will always be your HutchNetID.
+### Connect to the Campus Network
 
-## Logging on within the Fred Hutch network
+Batch computing resources require that your local computer be connected to the campus network.  This authenticaiton process happens differently when you're on vs off campus.
 
-This section assumes you are logging on from campus
-(e.g., connected to the Fred Hutch network).
-If you are logging in from off campus,
-please ensure you are connected to the Fred Hutch network using one of the options described in [off campus log-in](#logging-on-outside-of-the-fred-hutch-network).
+[When on campus](https://centernet.fredhutch.org/cn/u/center-it/help-desk/connecting-to-wifi.html)
 
-In your shell,
-type the following (where `username` is your HutchNetID):
+[When off campus](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html)
 
-    ssh username@rhino
+### Start a Terminal
 
-Hit enter to execute the command.
-The first time you execute this on a computer,
-you'll receive a response similar to:
+A terminal provides a text-based interface to computers (the "command line").
 
-```
-The authenticity of host 'rhino.fhcrc.org' can't be established.
-Are you sure you want to continue connecting (yes/no)?
+Apple OSX has a built in terminal application. It can be found in _Applications->Utilities->Terminal_.  Other options are available that are more full featured such as [iterm2](https://iterm2.com/), which is one free option (please consider [donating](https://iterm2.com/donate.html)!)
 
-Type `y` and press enter.
-```
+Windows has a few different terminals built in, but many of these are unsuitable for accessing Linux systems.  Two easy options are the Microsoft Terminal app (available in the App Store) and [PuTTY](/scicomputing/access_methods/#windows).
 
-You'll be prompted to enter your username and then password
-(note that your cursor will not move as you type your password; this is normal!).
+### Shell Connection to the 'rhino' Login Nodes
 
-After you have successfully logged in,
-you'll see the information about the cluster printed to your screen.
-You'll be ready to start entering commands when you see a prompt like the following appear:
+Once you have a connection to the Hutch network and a suitable terminal, the next step is to [connect to the login nodes known as `rhino`.](/scicomputing/access_methods/#ssh-connections)
 
-    username@rhino2:~$
+This will present you with a command prompt on one of the rhino nodes- from here you can run commands, view data, and start cluster jobs.
 
-## Logging on outside of the Fred Hutch network
+## Where to go Next
 
-Logging in to `rhino` as described above assumes you are already connected to the Fred Hutch network.
-If you are off campus,
-you will need to first connect to the campus network.
-Here we describe the use of `snail` for remote login,
-since it doesn't require the use of additional software beyond what it already included in the tutorial.
-VPN may be a preferrable option for you,
-especially if you are already using it to access other Hutch resources.
-For more information about remote login, please see [Access via a remote login](/scicomputing/access_methods/#access-via-a-remote-location).
+- Start an interactive session [on a cluster node](/pathways/path-grabnode)
+- Submit a [batch job](/pathways/path-batch-computing)
 
-In your shell,
-type the following (username is your HutchNetID):
 
-    ssh username@snail.fhcrc.org
 
-You'll see a message printed to the screen that starts with:
-
-```
-Welcome to the Fred Hutchinson Cancer Center
-```
-
-Your command prompt will now look something like:
-
-    [username@ssh-gw1-prd ~]$
-
-Because you've already logged on to `snail` with your username,
-you can use the following shortcut to log on to `rhino`:
-
-    ssh rhino
-
-Follow the process as [described above](#logging-on-within-the-fred-hutch-network)
-to enter your password and access `rhino`.
+-1-1-1-1-1-1-1
 
 ## Logging on to `gizmo` via `grabnode`
 
