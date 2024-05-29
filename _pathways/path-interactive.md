@@ -50,6 +50,18 @@ Once you have a connection to the Hutch network and a suitable terminal, the nex
 
 This will present you with a command prompt on one of the rhino nodes- from here you can run commands, view data, and start cluster jobs.
 
+### Home Directory
+
+The "home" directory on Linux is used for storing user-specific data and is the directory you will begin in when you login to `rhino`.
+
+If you get an error like `Home directory not found` when you log in, please email `SciComp` to get that set up.
+
+### Navigating the Compute Environment
+
+The [common storage options](/scicomputing/store_posix) are available in the `rhino`-`gizmo` compute environment. These paths are available in the same location on each of these hosts.
+
+You'll be started (by default) with a bash shell and most of the common [GNU/Linux utilities](https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html)
+
 ## Where to go Next
 
 - Start an interactive session [on a cluster node](/pathways/path-grabnode)

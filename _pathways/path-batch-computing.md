@@ -26,18 +26,6 @@ If you are unfamiliar with any of these terms or subjects, hover over them to fi
 
 ## Steps
 
-### Home Directory
-
-The "home" directory on Linux is used for storing user-specific data and is the directory you will begin in when you login to `rhino`.
-
-If you get an error like `Home directory not found` when you log in, please email `SciComp` to get that set up.
-
-### Navigating the Compute Environment
-
-The [common storage options](/scicomputing/store_posix) are available in the `rhino`-`gizmo` compute environment. These paths are available in the same location on each of these hosts.
-
-You'll be started (by default) with a bash shell and most of the common [GNU/Linux utilities](https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html)
-
 ### Familiarize Yourself with SLURM
 SLURM is the workload manager for our `gizmo` computing cluster.  Review the documentation for basic information about how [SLURM works](/scicomputing/compute_jobs/#basic-slurm-terminology).  Once you have logged into the login nodes (`rhino`), you will be sending non-interactive instructions to the compute nodes (`gizmo`) via these instructions.
 
