@@ -34,7 +34,7 @@ The Data Science Lab and Scientific Computing teams are available to help you id
 
 ### Temp
 
-The [_Temp ](/scicomputing/store_temp) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/hpc/temp`.  This system is not backed up, but snapshots are available.  Snapshots are available- there are two snapshots made every half-hour (meaning you can go back to a copy from up to an hour ago).
+The [_Temp ](/scicomputing/store_temp) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/hpc/temp`.  This file system is not backed up, though snapshots are available.  Two snapshots are created every half-hour (meaning you can go back to a copy from up to an hour ago).
 
 Files on _temp_ are deleted 30 days after creation- this is not tied to any of the traditional Unix attributes (atime, ctime, etc.)
 
