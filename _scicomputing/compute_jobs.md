@@ -65,11 +65,11 @@ A "Quality of Service" is another mechanism for jobs to request certain features
 
 ### `sbatch` and `srun`
 
-`sbatch` is used to submit a job script to the cluster.  These run jobs without your intervention or input (i.e. non-interactively). Common arguments are:
+`sbatch` is used to submit a job script to the cluster.  The `sbatch` command returns immediately- the submitted script is queued and run when resources can be allocated to it.  `srun` is used to immediately run a task on the cluster- `srun` will block your terminal until the command executes and completes.  Both take many of the same options, but job arrays and the `--wrap` option are only available for `sbatch`.
 
-`srun` is used to run a task on the cluster.  This is an interactive session,
-where you can directly view output as it's produced or provide input (if needed
-by the task you are running).
+#### `grabnode`
+
+`grabnode` is a Hutch-specific command that allocates a terminal on a compute node.  It actually uses `srun` to create and manage this session.
 
 ### Common Options
 
@@ -83,6 +83,8 @@ These two take many of the same options:
  - `--qos` request a QOS
 
 ### Job Output
+
+> This only applies to jobs submitted with `sbatch`.  Jobs run with `srun` will have job output sent to the terminal where `srun` was executed.
 
 Output (stdout and stderr) from your job script, steps, tasks, and processes is captured by Slurm and written to a file named _slurm-<jobid>.out_ in the directory from which you submitted the job.
 
