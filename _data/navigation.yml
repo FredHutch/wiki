@@ -66,6 +66,8 @@ datascience:
         url: /datascience/nih_data_sharing/
       - title: Data Sharing Approaches
         url: /datascience/execute_sharing/
+      - title: Specimen Data Management
+        url: /datascience/open_specimen/
   - title: Working With Data
     children:
       - title: Data Visualization
