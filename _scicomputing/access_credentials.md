@@ -51,9 +51,9 @@ You will receive your AWS credentials via an encrypted email when you are onboar
 
 Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
 
-### Configure AWS cli
+### Configure AWS CLI
 
-Load the awscli module, then run `aws configure` and enter your Access Key ID & Secret Access Key. You can read more about this [here](/scicomputing/access_credentials/#configure-aws-cli)
+Load the `awscli` module, then run `aws configure` and enter your Access Key ID & Secret Access Key. You can read more about access key creation/modification [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey).
 
 ```
 module load awscli
@@ -100,3 +100,9 @@ aws s3 rm s3://fh-pi-lastname-f-eco/hello.txt
 ```
 
 See more about accessing AWS S3 via the command line [here](/compdemos/aws-s3/).
+
+## Resources
+
+- [Fred Hutch GitHub Organization](https://github.com/FredHutch)
+- [AWS S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
+- [AWS Command Line Interface (CLI) Documentation](https://docs.aws.amazon.com/cli/)
