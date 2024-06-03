@@ -32,12 +32,9 @@ The login page for the Fred Hutch instance is [here](https://redcap.fredhutch.or
 ## MS SQL Server
 For groups for whom a REDCap system is not suitable, Microsoft SQL technology is available in conjunction with Database Administrator Services such as:
 
-- Requirements analysis, review and documentation for internally developed and third party application databases
-- Provision of database environments for testing and development
-- Management of database users and permissions
-- Support for SQL reporting (SSRS), analysis (SSAS) and integrated services (SSIS) platforms
 
-For further info about how to get started with a SQL server, please see [the Database Hosting page on Centernet.](https://centernet.fredhutch.org/cn/u/center-it/services/database_hosting.html)
+
+For further info about how to get started with a SQL server, please see 
 
 
 ## MyDB
