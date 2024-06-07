@@ -99,7 +99,7 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 ## Resources and Help
 
 - [PROOF How-To documentation](/dasldemos/proof-how-to/)
-- [Developing WDL Workflows Course](https://hutchdatascience.org/WDL_Workflows_Guide/)
+- [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/)
 - [WILDS WDL Repositories](https://github.com/getwilds?q=ww-&type=all&language=&sort=)
 - [WILDS Docker Library](https://github.com/orgs/getwilds/packages)
 - [Using Docker at Fred Hutch](/compdemos/Docker/)
