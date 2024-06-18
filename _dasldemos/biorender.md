@@ -34,7 +34,7 @@ Alternatively, users may access BioRender in [Microsoft365](https://www.microsof
 ## Making Illustrations in the Web Interface
 
 The Gallery the starting point for making and accessing files (illustrations, posters, graphs, etc). As an example, we will make a new illustration file by clicking on `+ Create new`,  then `Illustration`.
-![](./assets/biorender_gallery.png)
+![](/dasldemos/assets/biorender_gallery.png)
 
 
 The left hand panel contains graphical assets that can used for your illustrations. There are over 5000 icons to use. Simply drag and drop an icon to the artboard to use in your illustration.
