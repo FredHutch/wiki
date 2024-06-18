@@ -33,7 +33,7 @@ Alternatively, users may access BioRender in [Microsoft365](https://www.microsof
 
 ## Making Illustrations in the Web Interface
 
-The Gallery the starting point for making and accessing files (illustrations, posters, graphs, etc). As an example, we will make a new illustration file by clicking on `+ Create new`,  then `Illustration`.
+The Gallery is the starting point for making and accessing files (illustrations, posters, graphs, etc). As an example, we will make a new illustration file by clicking on `+ Create new`,  then `Illustration`.
 ![](/dasldemos/assets/biorender_gallery.png)
 
 
