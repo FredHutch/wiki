@@ -41,7 +41,7 @@ The left hand panel contains graphical assets that can used for your illustratio
 ![](/dasldemos/assets/biorender_artboard.png)
 
 By clicking on the individual icon, the left hand panel contains several options to adjust color, style, and other graphical aspects. 
-![](./assets/biorender_style.png)
+![](/dasldemos/assets/biorender_style.png)
 
 
 To export illustrations, click `File` > `Export`. Here, you may set export dimensions, file type, transparency, and resolution. 
