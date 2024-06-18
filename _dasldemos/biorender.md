@@ -25,7 +25,7 @@ Long-term (over 6 years) response evaluation workflow of CD19 CAR T-cell therapy
 To access BioRender, Fred Hutch employees may sign in using their Fred Hutch institutional email or access BioRender via the Apps menu in [Microsoft365](https://www.microsoft365.com/apps?auth=2&home=1).
 
 Login to [BioRender using SSO](https://app.biorender.com/user/sso) and Fred Hutch credentials. 
-![](./assets/biorender_login.png)
+![](/dasldemos/assets/biorender_login.png)
 
 Alternatively, users may access BioRender in [Microsoft365](https://www.microsoft365.com/apps?auth=2&home=1).
 ![](./assets/biorender_apps.png)
