@@ -45,7 +45,7 @@ By clicking on the individual icon, the left hand panel contains several options
 
 
 To export illustrations, click `File` > `Export`. Here, you may set export dimensions, file type, transparency, and resolution. 
-![](./assets/biorender_export.png)
+![](/dasldemos/assets/biorender_export.png)
 
 
 ## Additional Resources
