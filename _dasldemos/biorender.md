@@ -38,7 +38,7 @@ The Gallery the starting point for making and accessing files (illustrations, po
 
 
 The left hand panel contains graphical assets that can used for your illustrations. There are over 5000 icons to use. Simply drag and drop an icon to the artboard to use in your illustration.
-![](./assets/biorender_artboard.png)
+![](/dasldemos/assets/biorender_artboard.png)
 
 By clicking on the individual icon, the left hand panel contains several options to adjust color, style, and other graphical aspects. 
 ![](./assets/biorender_style.png)
