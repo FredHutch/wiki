@@ -9,7 +9,7 @@ An institutional license for BioRender Premium is available for Fred Hutch emplo
 
 Below are some examples made by Fred Hutch researchers:
 
-![biorender_transport_example](./assets/biorender_example1.png)
+![biorender_transport_example](/dasldemos/assets/biorender_example1.png)
 Types of membrane transport mechanisms. Source: Dr. Matthew Chan
  
 ![](https://www.fredhutch.org/en/news/spotlight/2023/06/ccg-bhatia-natcommun/_jcr_content/root/responsivegrid/image.coreimg.png/1686878318112/ccg-bhatia-natcommun-figure2.png)
