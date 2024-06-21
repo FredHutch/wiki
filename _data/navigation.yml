@@ -2,8 +2,6 @@
 main:
   - title: Data Science Lab
     url: /datascience/ds_index/
-  - title: Data Generation
-    url: /generation/gen_index/
   - title: Scientific Computing
     url: /scicomputing/comp_index/
   - title: HDC
@@ -31,8 +29,6 @@ generic:
     children:
       - title: Data Science Lab
         url: /datascience/ds_index/
-      - title: Data Generation
-        url: /generation/gen_index/
       - title: Scientific Computing
         url: /scicomputing/comp_index/
       - title: HDC
@@ -87,13 +83,6 @@ datascience:
       - title: Compliance and Legal
         url: /datascience/compliance_legal/
 
-generation:
-  - title: Data Generation
-    children:
-      - title: Overview
-        url: /generation/gen_index/
-      - title: Specimen Data Management
-        url: /generation/clsp_specimenBanking/
 scicomputing:
   - title: Scientific Computing
     children:

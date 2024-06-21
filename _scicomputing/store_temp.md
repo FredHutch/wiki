@@ -32,3 +32,11 @@ A: No. The lifecycle policy is managed by the storage platform and is based on f
 
 #### Q: What is a good way to automate data management for my jobs so I don't worry about data in _temp_?
 A: Use a workflow manager. Please see DaSL's [PROOF](/datascience/proof).
+
+#### Q: Is the data on _temp_ encrypted?
+
+A: Data in _temp_ is encrypted "at rest" (meaning the data is encrypted on the devices where it is stored).  Transit encryption is very client-dependent: the mount on the rhino/gizmo nodes is not encrypted but if you mount it on your workstation, the connection will be encrypted in most cases.
+
+#### Q: Is any data in _temp_ copied or moved to off-campus storage systems?
+
+A: No- all data on _temp_ is confined to the storage system in the data center.  There are no offsite replicas nor any migration of data to offsite data stores.
