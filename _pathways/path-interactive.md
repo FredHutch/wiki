@@ -30,7 +30,7 @@ This HutchNet ID needs to be associated with a [PI account](/scicomputing/access
 
 ### Connect to the Campus Network
 
-Batch computing resources require that your local computer be connected to the campus network.  This authenticaiton process happens differently when you're on vs off campus.
+Batch computing resources require that your local computer be connected to the campus network.  This authentication process happens differently when you're on vs off campus.
 
 [When on campus](https://centernet.fredhutch.org/cn/u/center-it/help-desk/connecting-to-wifi.html)
 
