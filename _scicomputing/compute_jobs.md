@@ -301,7 +301,7 @@ For more information and education on how to use HPC resources from external sou
 - SchedMD's [Documentation for Version 21.08](https://slurm.schedmd.com/archive/slurm-21.08.5/)
 - Slurm [cheat sheet](https://slurm.schedmd.com/pdfs/summary.pdf)
 - University of Utah's [Slurm Docs](https://www.chpc.utah.edu/documentation/software/slurm.php)
-- Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
+- Princeton's [First Slurm Job.](https://researchcomputing.princeton.edu/get-started/guide-princeton-clusters/3-first-slurm-job)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)
 
