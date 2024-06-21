@@ -46,7 +46,7 @@ Windows has a few different terminals built in, but many of these are unsuitable
 
 ### Shell Connection to the 'rhino' Login Nodes
 
-Once you have a connection to the Hutch network and a suitable terminal, the next step is to [connect to the login nodes known as `rhino`.](/scicomputing/access_methods/#ssh-connections)
+Once you have a connection to the Hutch network and a suitable terminal, the next step is to [connect to the login nodes known as `rhino`.](/scicomputing/access_methods/)
 
 This will present you with a command prompt on one of the rhino nodes- from here you can run commands, view data, and start cluster jobs.
 
