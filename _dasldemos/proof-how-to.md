@@ -13,7 +13,7 @@ primary_reviewers: vortexing
 
 - Refine their workflows before potential transitions to cloud-based infrastructures, providing a 'proofing' resource of sorts.
 
-This guide is intended to describe how you can run PROOF, catering to varying levels of computational expertise. We also have a [WDL 101](https://hutchdatascience.org/WDL_Workflows_Guide) course that will be a quick-start guide to building a WDL workflow.
+This guide is intended to describe how you can run PROOF, catering to varying levels of computational expertise. We also have a [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) guide that will be a quick-start guide to building a WDL workflow.
 
 ## Background
 
@@ -339,7 +339,7 @@ If you find something is not working with the app or you find a bug, please help
 - [Cluster 101](https://leanpub.com/courses/fredhutch/fredhutchcluster101)
 
 #### Building WDL workflows
-- [WDL 101](https://hutchdatascience.org/WDL_Workflows_Guide/)
+- [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/)
 - [Open WDL Documentation](https://docs.openwdl.org/en/latest/)
 
 #### PROOF mechanics

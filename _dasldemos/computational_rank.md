@@ -120,7 +120,7 @@ Use Workflow Description Language (WDL) or Nextflow to orchestrate running conta
 
 There is a graphical user interface to running WDL scripts on your data on `gizmo` called [PROOF](https://proof.fredhutch.org/).
 
-If you want to learn how to write your own WDL files, then we have the [Developing WDL Workflows guide](https://hutchdatascience.org/WDL_Workflows_Guide/) available.
+If you want to learn how to write your own WDL files, then we have the [Developing WDL Workflows guide](https://hutchdatascience.org/Developing_WDL_Workflows/) available.
 
 ### Containers Option 3
 

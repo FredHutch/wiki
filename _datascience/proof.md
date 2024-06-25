@@ -16,7 +16,7 @@ primary_reviewers: vortexing, abbywall
 ### Training and Courses
 - Find out more about PROOF in our [How-To in the DaSL Resource Library](/dasldemos/proof-how-to/)
 - Explore more advanced troubleshooting capabilities in our [PROOF Troubleshooting Guide](/dasldemos/proof-troubleshooting/)
-- Learn more about developing WDL workflows using our [WDL Guide](https://hutchdatascience.org/WDL_Workflows_Guide/)
+- Learn more about developing WDL workflows using our [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/)
 
 ### Technical Documentation and Repositories
 - [PROOF Shiny App](https://github.com/getwilds/shiny-cromwell)
