@@ -24,6 +24,12 @@ primary_reviewers: vortexing, abbywall
 - [rcromwell](https://github.com/getwilds/rcromwell)
 
 ## Release Notes
+See our release notes in the PROOF repo for more details: 
+
+### May 2024
+**What's New**
+
+**Fixes**
 
 ### February 2024
 **What's New!**
