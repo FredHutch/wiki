@@ -26,7 +26,7 @@ primary_reviewers: vortexing, abbywall
 ## Release Notes
 See our release notes in the PROOF repo for more details: 
 
-### June 2024
+### June 2024 - v1.0
 **What's New**
 - Users can now interact with data stored in S3 buckets within WDL workflows executed in PROOF! Just make sure to have your AWS CLI credentials [established in Rhino](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#configure-aws-cli) and you can use the S3 path just like any other input.
 - GPU analysis is now possible via the `gpu` argument in your WDL task's runtime section! For an example, try running [this example script](https://github.com/getwilds/ww-test-workflows/blob/main/gpuMatrixMult/gpuMatrixMult.wdl) in the [ww-test-workflows](https://github.com/getwilds/ww-test-workflows) repo of the [DaSL WILDS](https://github.com/getwilds).
@@ -42,7 +42,7 @@ See our release notes in the PROOF repo for more details:
 - Table entries that are longer than usual will now be abbreviated to 150 characters or less to ensure a consistent display.
 - A linting GitHub action has been added to the GitHub repository for improved CI/CD. All issues identified by this linting action have also been resolved.
 
-### February 2024
+### February 2024 - v0.1
 **What's New!**
 - PROOF has now grouped together all the components for setting up and configuring your database and Cromwell server so you don’t have to manually configure each part!
 - You can interact with PROOF in two improved ways when running your workflows:
