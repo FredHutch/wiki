@@ -47,6 +47,12 @@ By clicking on the individual icon, the left hand panel contains several options
 To export illustrations, click `File` > `Export`. Here, you may set export dimensions, file type, transparency, and resolution. 
 ![](/dasldemos/assets/biorender_export.png)
 
+## Terms of Services
+The [Biorender Terms of Services](https://www.biorender.com/terms-of-service) includes a number of restrictions, to note is 1.e.i.E:
+> i) Restrictions on User-Accounts. You must not: \
+> ... \
+> E) publish Completed Graphics that include BioRender Content in **any publication if you are not cited as the first or co-first author** of the publication due to copyright ownership of the publication being attributed to the first or co-first author. Any exceptions to this restriction must be approved in writing by BioRender.
+
 
 ## Additional Resources
 - Fred Hutch hosts periodic BioRender webinars with topics ranging from introductory use, creating biological pathway diagrams, making graphical abstracts, and more. ([CenterNet Events page](https://centernet.fredhutch.org/e.html#eyJrZXl3b3JkcyI6ImJpb3JlbmRlciIsInR5cGUiOiIiLCJwYWdpbmciOjIwLCJldmVudFR5cGUiOltdLCJob3N0IjpbXSwiZGF0ZSI6e319))
