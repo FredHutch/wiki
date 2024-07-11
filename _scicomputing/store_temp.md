@@ -40,3 +40,7 @@ A: Data in _temp_ is encrypted "at rest" (meaning the data is encrypted on the d
 #### Q: Is any data in _temp_ copied or moved to off-campus storage systems?
 
 A: No- all data on _temp_ is confined to the storage system in the data center.  There are no offsite replicas nor any migration of data to offsite data stores.
+
+#### Q: Can I access _temp_ from my Windows or Mac workstation
+
+A: _temp_ can also be accessed from the Mac Finder at `smb://hpc.chromium.fhcrc.org/temp.chromium` or Windows Explorer at `\\hpc.chromium.fhcrc.org\temp.chromium`.
