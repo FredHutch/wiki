@@ -12,12 +12,12 @@ Below are some examples made by Fred Hutch researchers:
 ![biorender_transport_example](/dasldemos/assets/biorender_example1.png)
 Types of membrane transport mechanisms. Source: Dr. Matthew Chan
  
-![](https://www.fredhutch.org/en/news/spotlight/2023/06/ccg-bhatia-natcommun/_jcr_content/root/responsivegrid/image.coreimg.png/1686878318112/ccg-bhatia-natcommun-figure2.png)
+![biorender_steap_example](/dasldemos/assets/biorender_example2.png)
 STEAP1 CAR T cells and CBD-IL-12 were combined to treat mCRPR in pre-clinical models of disease and shown to modestly decrease tumor size and slightly increase survival of mouse models while enhancing anti-tumor immune cell responses. 
 [Science Spotlight link.](https://www.fredhutch.org/en/news/spotlight/2023/06/ccg-bhatia-natcommun.html)
 Source: Dr. Vipul Bhatia
 
-![](https://www.fredhutch.org/en/news/spotlight/2023/11/crd-liang-bloodadv/_jcr_content/root/responsivegrid/image.coreimg.png/1700265944560/crd-liang-bloodadv-image-sized.png)
+![biorender_cartcell_example](/dasldemos/assets/biorender_example3.png)
 Long-term (over 6 years) response evaluation workflow of CD19 CAR T-cell therapy to treat relapsed/refractory (R/R) chronic lymphocytic leukemia (CLL) in a phase I/II clinical trial. [Science Spotlight link.](https://www.fredhutch.org/en/news/spotlight/2023/11/crd-liang-bloodadv.html) Source: Dr. Emily Liang
 
 
