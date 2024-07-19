@@ -1,5 +1,5 @@
 ---
-Title: July Gizmo Maintenance
+Title: August Gizmo Maintenance
 ---
 
 On August 5th from 7:00PM to 9:00PM we are going to be working on the Gizmo cluster.  We will be upgrading to new packages and a new version of Slurm and switching the state database to a different storage backend.
