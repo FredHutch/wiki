@@ -30,12 +30,8 @@ Recorded trainings are available on the [CDS REDCap Training page](https://resea
 The login page for the Fred Hutch instance is [here](https://redcap.fredhutch.org/).
 
 ## MS SQL Server
-For groups for whom a REDCap system is not suitable, Microsoft SQL technology is available in conjunction with Database Administrator Services such as:
 
-
-
-For further info about how to get started with a SQL server, please see 
-
+Groups needing MS SQL Server Database Administration services should contact IT Helpdesk or create a ticket in Cherwell.
 
 ## MyDB
 
