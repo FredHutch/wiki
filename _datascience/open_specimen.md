@@ -12,8 +12,6 @@ To view a PDF document with the OpenSpecimen features, click [here](https://sciw
 
 To request a demo, contact OTR at `SpecimenData@fredhutch.org`.
 
-[The Office of Translational Research](https://centernet.fredhutch.org/u/otr.html) (OTR) provides OpenSpecimen at Fred Hutch. Their [CenterNet page](https://centernet.fredhutch.org/u/otr/specimen-management-tool.html) contains more information about features and how to submit an intake request.
-
 OTR works with each group to understand their unique specimen management needs and walk them through the onboarding process. Interested users should submit an intake request through the [OpenSpecimen sign-up](https://app.smartsheet.com/b/form/65d566e3d88b46a990b1f03eb64abc99).
 
 The time to go-live for each group varies based on several identified factors, however, it can be estimated fairly well if all data and needs are clearly shared by the group during the initial intake meeting.
