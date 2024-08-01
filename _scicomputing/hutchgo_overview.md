@@ -69,7 +69,12 @@ Meanwhile SciComp will set up the Globus collection for the lab/project accordin
 
 ## Sharing Data
 
-Once the base mapped collection has been created, data managers will be able to create guest collections to share data internally and externally.
+Once the base mapped collection has been created, data managers will be able to create guest collections to share data internally and externally.  Once a path within a collection has been shared, those with access will be able to access the data _as you_.  Thus you must be sure that _you_ have access to the data being shared.  When sharing data there are options to configure read-write or read-only access.  The former is required for data upload, the latter will only allow download.
+
+Your collaborator must have a Globus endpoint- this can be either a full endpoint (like we have here) or they can use Globus Connect Personal.  Connect Personal allows them to access the data you've shared and download using the workstation where they've installed Connect Personal.
+
+Globus Connect Personal is free and is available for Linux, OSX (Mac), and Windows. The host must have outbound connectivity, but inbound firewall rules are not necessary for Connect Personal.  Connect Personal cannot be used for sharing data.
+
 
 ## Monitoring and Management
 
