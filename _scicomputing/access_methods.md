@@ -46,7 +46,19 @@ Enter your hutchid then press enter. It will prompt for your password. Press ent
 
 #### Command Prompt (cmd.exe)
 
-Command Prompt, also known as cmd.exe or cmd, is the default command-line interpreter on Windows. To connect to `rhino`, you must first create an ssh config file in your Windows user folder.  
+Command Prompt, also known as cmd.exe or cmd, is the default command-line interpreter on Windows. You will need to complete the steps under [Additional configuration steps](#additional-configuration-steps) before using this application. When complete, use `ssh rhino` to connect.
+
+#### Windows Terminal
+
+Windows Terminal is a modern terminal application with powerful features including multiple tabs. It can be installed from the Microsoft Store. You will need to complete the steps under [Additional configuration steps](#additional-configuration-steps) before using this application. When complete, use `ssh rhino` to connect.
+
+#### Additional configuration steps
+
+If you want to use something other than PuTTY on Windows, you will need to complete these additional configuration steps.
+
+##### Install OpenSSH Client
+
+The ssh command on Windows requires OpenSSH Client which is not installed by default. To check, open Command Prompt or Windows Terminal, type `ssh` and press enter. If you get a message like `'ssh' is not recognized as an internal or external command, operable program or batch file.` then you will need to e-mail the Service Desk and request installation of the "OpenSSH Client optional feature". They can connect to your computer and do this remotely.
 
 ##### Create ssh config file on Windows
 
@@ -57,12 +69,6 @@ Host rhino
   User <HUTCHID>
   MACs hmac-sha2-512
 ```
-
-You will now be able to connect to rhino using `ssh rhino`.
-
-#### Windows Terminal
-
-Windows Terminal is a modern terminal application with powerful features including multiple tabs. It can be installed from the Microsoft Store. To connect to `rhino`, first follow these instructions: [create an ssh config file on Windows](#create-ssh-config-file-on-windows) then use `ssh rhino` to connect.
 
 ### Mac OS
 
