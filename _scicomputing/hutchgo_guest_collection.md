@@ -20,48 +20,36 @@ This will take you to the list of guest collections configured on the base mappe
 
 Use the "view more fields" link to show all of the fields available for the collection.  You will then see the following fields:
 
-#### Directory
+Directory
+: This should be pre-populated by the file manager when you use the "share" link.  There is also a "browse" button you can use to select the directory to share.
+: The path indicated is relative to where the base mapped collection starts, not the path on any of our servers (e.g. /fh/fast).
 
-This should be pre-populated by the file manager when you use the "share" link.  There is also a "browse" button you can use to select the directory to share.
+Display Name
+: A friendly name for the collection
 
-The path indicated is relative to where the base mapped collection starts, not the path on any of our servers (e.g. /fh/fast).
+Description
+: A short description of the share- this is not a required field, but may have use for providing some information about the share to those that will use it. Not required, but helpful.
 
-#### Display Name
+Keywords
+: Keywords aid in searching- just a space-separated list of words that your collaborators can use to locate this collection. Not required, but helpful.
 
-A friendly name for the collection
+Force Encryption (checkbox)
+: Requires encryption for the transfer- leave this checked.
 
-#### Description
+Information Link
+: An HTTP URI that hosts more information about the collection- this is not required.
 
-A short description of the share- this is not a required field, but may have use for providing some information about the share to those that will use it. Not required, but helpful.
+Contact Email
+: An email address that collection users can use to get assistance or information about the collection- typically someone from the lab who can answer questions about the data itself.
 
-#### Keywords
+Organization
+: Enter "Fred Hutch Cancer Center" here.  We're hoping to have a way of setting that automatically.
 
-Keywords aid in searching- just a space-separated list of words that your collaborators can use to locate this collection. Not required, but helpful.
+Department
+: Enter your lab's name here. Not required, but helpful.
 
-#### Force Encryption (checkbox)
+Other Contact Info
+: Just any other information you'd like to add to help people use your collection. Not required.
 
-Requires encryption for the transfer- leave this checked.
-
-#### Information Link
-
-An HTTP URI that hosts more information about the collection- this is not required.
-
-#### Contact Email
-
-An email address that collection users can use to get assistance or information about the collection- typically someone from the lab who can answer questions about the data itself.
-
-#### Organization
-
-Enter "Fred Hutch Cancer Center" here.  We're hoping to have a way of setting that automatically.
-
-#### Department
-
-Enter your lab's name here. Not required, but helpful.
-
-#### Other Contact Info
-
-Just any other information you'd like to add to help people use your collection. Not required.
-
-#### Default Directory
-
-The default directory indicates the path inside the guest collection where new connections will be started.  Typically you'll want people to connect at the top level (the path represented by `/`).
+Default Directory
+: The default directory indicates the path inside the guest collection where new connections will be started.  Typically you'll want people to connect at the top level (the path represented by `/`).
