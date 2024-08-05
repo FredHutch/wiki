@@ -53,3 +53,25 @@ Other Contact Info
 
 Default Directory
 : The default directory indicates the path inside the guest collection where new connections will be started.  Typically you'll want people to connect at the top level (the path represented by `/`).
+
+When this is all configured, click on the "Create Collection" button.  After a bit of processing the page will refresh and put you on a page where you can configure the actual sharing.
+
+## Configuring Sharing
+
+If this is a new collection you've just configured your next page will be the sharing configuration tab of the newly-created collection.  If you need to come back to this page (or to edit sharing on any collection you manage) you can find a list of your collections at [this link](https://app.globus.org/collections?scope=administered-by-me).  Select a collection and then the "Permissions" tab for that collection.
+
+The permissions tab has a list of Globus IDs and the permissions these IDs have to the collection.  The default permissions will allow the collection owner (the person who created the guest collection) read-write access.  At the upper right there is an "Add Permissions - Share With" link you can then use to give others access to data in this collection.
+
+A permission set includes a Globus ID, a path within the collection, and read-only or read and write capabilities.  You can have multiple entries within a collection for the same Globus ID and different permissions to different paths inside the collection.
+
+For example, you could share the directory "/fh/fast/pi_n/shared_data" with foo@research.org with read only permissions, but create a subdirectory "/fh/fast/pi_n/shared_data/uploads" which allows read and write for foo@research.org.
+
+### High Assurance Collections
+
+Our collections are covered by our "High Assurance" subscription.  This means that your collaborators _must_ use sign into their Globus session with the ID you've shared with.
+
+Suppose you are sharing data with "pat@example.edu". You create a guest collection to a path in the scratch file system and configure them with read-write access.
+
+Now "pat" may have multiple authentication mechanisms configured- they may have linked another institutional login (e.g. "pat@other-example.edu") with their Globus ID.  They may have also linked their Gmail account with this Globus ID.
+
+Any one of those IDs can be used by Pat to log into their Globus account- however, when they attempt to access the share you've configured, they will be prompted to log in with their "example.edu" account before they will be allowed to access your guest collection.
