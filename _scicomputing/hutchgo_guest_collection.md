@@ -66,12 +66,21 @@ A permission set includes a Globus ID, a path within the collection, and read-on
 
 For example, you could share the directory "/fh/fast/pi_n/shared_data" with foo@research.org with read only permissions, but create a subdirectory "/fh/fast/pi_n/shared_data/uploads" which allows read and write for foo@research.org.
 
+You can send an email as part of the configuration process.  This is optional- un-check the "Email Notification" box if you don't want to send this message.
+
 ### High Assurance Collections
 
 Our collections are covered by our "High Assurance" subscription.  This means that your collaborators _must_ use sign into their Globus session with the ID you've shared with.
 
-Suppose you are sharing data with "pat@example.edu". You create a guest collection to a path in the scratch file system and configure them with read-write access.
+Suppose you are sharing data with "pat@example.edu". You create a guest collection to a path in the scratch file system and give "pat@example.edu" read-write access.
 
-Now "pat" may have multiple authentication mechanisms configured- they may have linked another institutional login (e.g. "pat@other-example.edu") with their Globus ID.  They may have also linked their Gmail account with this Globus ID.
+Now Pat may have multiple authentication mechanisms configured- they may have linked another institutional login (e.g. "pat@other-example.edu") with their Globus ID.  They may have also linked their Gmail account with this Globus ID.
 
-Any one of those IDs can be used by Pat to log into their Globus account- however, when they attempt to access the share you've configured, they will be prompted to log in with their "example.edu" account before they will be allowed to access your guest collection.
+Any one of those IDs can be used by Pat to log into their Globus. However, when they attempt to access the share you've configured, they will be prompted to log in with their "example.edu" account before they will be allowed to access your guest collection.
+
+### Sharing Inside the Hutch
+
+It's completely appropriate to create a guest collection for others at the Hutch to use for upload/download of data from your lab.  The process is identical, simply search for their HutchNet ID when configuring permissions.
+
+High Assurance protections still apply- these individuals must use the ID you configured in this collection to access data.
+
