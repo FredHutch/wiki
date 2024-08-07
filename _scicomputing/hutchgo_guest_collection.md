@@ -21,8 +21,8 @@ This will take you to the list of guest collections configured on the base mappe
 Use the "view more fields" link to show all of the fields available for the collection.  You will then see the following fields:
 
 Directory
-: This should be pre-populated by the file manager when you use the "share" link.  There is also a "browse" button you can use to select the directory to share.
-: The path indicated is relative to where the base mapped collection starts, not the path on any of our servers (e.g. /fh/fast).
+: Use the "browse" button you can use to select the directory to share.
+: The path indicated is relative to where the base mapped collection starts, not the path on any of our servers
 
 Display Name
 : A friendly name for the collection
