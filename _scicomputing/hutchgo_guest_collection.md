@@ -12,7 +12,7 @@ Only data managers are allowed to create guest collections.  If you are not a da
 
 ## Creating the Collection
 
-Creating the collection begins with accessing the base mapped collection via Globus: [this link](https://app.globus.org/file-manager/collections) will take you to a page where you can locate collections you have access to.  There is a search functionality as well as quick links for bookmarked collections and collections you have access to.
+Creating the collection begins with accessing the base mapped collection via Globus: [this link](https://app.globus.org/file-manager/collections){:target="_blank"} will take you to a page where you can locate collections you have access to.  There is a search functionality as well as quick links for bookmarked collections and collections you have access to.
 
 Selecting a collection there will return you to the file manager- use the file manager browser to navigate to the directory you'd like to share and click on the "share" link between the navigation panes.
 
@@ -69,11 +69,11 @@ Group
 : shares with a _Globus_ group.  This is something you would set up using the "Groups" link in the navigation toolbar on the left of the page
 
 All Users:
-: shares with anyone logged into Globus.  **Use Carefully**
+: shares with anyone logged into Globus.  **Use Carefully.** Please do not use this to test or debug a connection problem, contact SciComp.
 
 Depending on the option selected, the form will update to allow you to enter a Globus username or email or search terms to locate a Globus user.
 
-_Permissions_ options are _read_ and _write_.   _Read_ is the base permission for anyone with permissions.  Write will allow the user to modify and write data in the path shared in this collection.  Your collaborators will not be able to upload data without adding the write permission. 
+_Permissions_ options are _read_ and _write_.   _Read_ is the base permission for anyone with permissions.  Write will allow the user to modify and write data in the path shared in this collection.  Your collaborators will not be able to upload data without adding write permission. 
 
 ### High Assurance Collections
 
