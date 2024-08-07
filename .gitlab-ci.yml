@@ -82,8 +82,8 @@ create_search_index_0:
     echo fultr
     ls -l elasticsearch
     ls -l elasticsearch/tmp
-    docker build -t sc-registry.fredhutch.org/wiki_search_part_0 ./elasticsearch/
-    docker push sc-registry.fredhutch.org/wiki_search_part_0
+    docker build -t sc-registry.fredhutch.org/wiki_search_part_0:${CI_PIPELINE_ID} ./elasticsearch/
+    docker push sc-registry.fredhutch.org/wiki_search_part_0:${CI_PIPELINE_ID}
 
 
 create_search_index_1:
@@ -91,7 +91,7 @@ create_search_index_1:
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
   services: 
-    - name: sc-registry.fredhutch.org/wiki_search_part_0
+    - name: sc-registry.fredhutch.org/wiki_search_part_0:${CI_PIPELINE_ID}
       alias: create_search_index_1
 
   script: |
@@ -103,15 +103,15 @@ create_search_index_1:
     rm -rf idx
     mkdir idx
     docker cp $CONTAINER_ID:/usr/share/elasticsearch/data ./idx/
-    docker build -f elasticsearch/Dockerfile2 -t sc-registry.fredhutch.org/wiki_search:test .
-    docker push sc-registry.fredhutch.org/wiki_search:test
+    docker build -f elasticsearch/Dockerfile2 -t sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID} .
+    docker push sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID}
 
 test:
   stage: test
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
   services:
-    - name: sc-registry.fredhutch.org/wiki_search:test
+    - name: sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID}
       alias: elasticsearch
     - name: sc-registry.fredhutch.org/wiki:test
       alias: wiki
@@ -215,7 +215,7 @@ deploy_preview:
       - main
   script:
     - docker tag sc-registry.fredhutch.org/wiki:test sc-registry.fredhutch.org/wiki-preview:latest 
-    - docker tag sc-registry.fredhutch.org/wiki_search:test sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
+    - docker tag sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID} sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
     - docker push sc-registry.fredhutch.org/wiki-preview:latest
     - docker push sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
     - sleep 15
@@ -235,7 +235,7 @@ deploy:
        - main
   script: |
     docker tag sc-registry.fredhutch.org/wiki:test sc-registry.fredhutch.org/wiki:latest 
-    docker tag sc-registry.fredhutch.org/wiki_search:test sc-registry.fredhutch.org/wiki_elasticsearch:latest
+    docker tag sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID} sc-registry.fredhutch.org/wiki_elasticsearch:latest
 
     docker push sc-registry.fredhutch.org/wiki:latest
     docker push sc-registry.fredhutch.org/wiki_elasticsearch:latest
