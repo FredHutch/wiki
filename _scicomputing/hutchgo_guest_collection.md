@@ -58,15 +58,22 @@ When this is all configured, click on the "Create Collection" button.  After a b
 
 ## Configuring Sharing
 
-If this is a new collection you've just configured your next page will be the sharing configuration tab of the newly-created collection.  If you need to come back to this page (or to edit sharing on any collection you manage) you can find a list of your collections at [this link](https://app.globus.org/collections?scope=administered-by-me).  Select a collection and then the "Permissions" tab for that collection.
+By default there are two permissions for the guest collection- you (or the creator of the collection) and a permission for the endpoint (this is administrative and necessary for Globus to share the collection).
 
-The permissions tab has a list of Globus IDs and the permissions these IDs have to the collection.  The default permissions will allow the collection owner (the person who created the guest collection) read-write access.  At the upper right there is an "Add Permissions - Share With" link you can then use to give others access to data in this collection.
+The "Add Permissions - Share With" button in the upper right is where you would add new permissions.  There are three options here:
 
-A permission set includes a Globus ID, a path within the collection, and read-only or read and write capabilities.  You can have multiple entries within a collection for the same Globus ID and different permissions to different paths inside the collection.
+User
+: shares with an individual using their email address or Globus ID
 
-For example, you could share the directory "/fh/fast/pi_n/shared_data" with foo@research.org with read only permissions, but create a subdirectory "/fh/fast/pi_n/shared_data/uploads" which allows read and write for foo@research.org.
+Group
+: shares with a _Globus_ group.  This is something you would set up using the "Groups" link in the navigation toolbar on the left of the page
 
-You can send an email as part of the configuration process.  This is optional- un-check the "Email Notification" box if you don't want to send this message.
+All Users:
+: shares with anyone logged into Globus.  **Use Carefully**
+
+Depending on the option selected, the form will update to allow you to enter a Globus username or email or search terms to locate a Globus user.
+
+_Permissions_ options are _read_ and _write_.   _Read_ is the base permission for anyone with permissions.  Write will allow the user to modify and write data in the path shared in this collection.  Your collaborators will not be able to upload data without adding the write permission. 
 
 ### High Assurance Collections
 
