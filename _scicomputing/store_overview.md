@@ -41,7 +41,7 @@ Object storage systems scale better in capacity and performance and are much che
 
 ### [Collaborative Storage Options](/scicomputing/store_collaboration/)
 
-These storage systems and transfer tools have capabilities allowing you to share data with people outside the Hutch, with or without a HutchNet ID.  These include Motuz and Aspera transfer tools and OneDrive for data storage, as well as information about using AWS S3 for collaboration.
+These storage systems and transfer tools have capabilities allowing you to share data with people outside the Hutch.  These include HutchGO (Globus), Motuz and Aspera transfer tools, and OneDrive for data storage. Here you can also find information about using AWS S3 for collaboration.
 
 ## Security Capabilities
 
