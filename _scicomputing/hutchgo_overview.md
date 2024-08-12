@@ -24,7 +24,7 @@ Central to the use of Globus is the _collection_- a collection of paths to data 
 
 There are two kinds of collections- _mapped_ and _guest_.  A mapped collection requires that you have a HutchNet ID and that your HutchNet ID has access to the storage systems underneath Globus.  Your login to Globus is _mapped_ to a HutchNet ID on the storage system by stripping off the "@fredhutch.org" portion of your email address.
 
-Guest collections are used to share data (internally and externally).  Guest does not mean anonymous access- a guest collection allows Globus users to access data _as you_ on the storage configured in the guest collection.  For that user to access the data shared in a guest collection they must have a Globus ID, the guest collection must allow that ID to access the data, and your HutchNetID must have access to the storage on the back-end (see [Permissions and Access](#Permissions and Access) below.
+Guest collections are used to share data (internally and externally).  Guest does not mean anonymous access- a guest collection allows Globus users to access data _as you_ on the storage configured in the guest collection.  For that user to access the data shared in a guest collection they must have a Globus ID, the guest collection must allow that ID to access the data, and your HutchNetID must have access to the storage on the back-end (see [Permissions and Access](#permissions-and-access) below.
 
 >NOTE: It is possible to enable public access to a collection, but "public" only means anyone with a Globus ID.  A Globus login is still required to access the collection's data
 
