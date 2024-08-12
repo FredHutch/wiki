@@ -6,7 +6,7 @@ primary_reviewers: atombaby
 
 Guest collections are used in HutchGO to share data with people outside your immediate group.  You can share data with Hutch staff or external collaborators.
 
-To create a collection your lab must already be configured to use HutchGO, including setting up the base mapped collection- see documentation [here](scicomputing/hutchgo_overview) on setting that up.
+To create a collection your lab must already be configured to use HutchGO, including setting up the base mapped collection- see documentation [here](/scicomputing/hutchgo_overview) on setting that up.
 
 Only data managers are allowed to create guest collections.  If you are not a data manager, locate your lab's data manager group [here](https://app.globus.org/groups){:target="_blank"} and reach out to one of them with the information described below.
 
