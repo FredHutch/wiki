@@ -30,9 +30,9 @@ In addition to mapped collections we have _guest_ collections.  Guest does not m
 
 > It is possible to enable public access to a collection, but "public" only means anyone with a Globus ID.  A Globus login is still required to access the collection's data
 
-### Important Roles
+### Roles for HutchGO Users
 
-Because Globus allows easy sharing of data and because we want to have the individual labs to have as much control as possible over how data is shared,  we are creating roles that control access to the various Globus capabilities.  Taking on a role means having a basic level of knowledge about how Globus works, constraints and controls necessary for the data being shared, and accepting responsibility for ongoing maintenance of data sharing within Globus.
+Because Globus allows easy sharing of data and because we want to have the individual labs to have as much control as possible over how data is shared,  we are creating specialized roles that control access to the various Globus capabilities.  Taking on a role means having a basic level of knowledge about how Globus works, constraints and controls necessary for the data being shared, and accepting responsibility for ongoing maintenance of data sharing within Globus.
 
 The Globus service is a partnership between research labs and SciComp.  We are here to support, maintain, and inform but ultimately labs are responsible for maintaining their Globus features.
 
