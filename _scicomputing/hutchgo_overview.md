@@ -63,7 +63,7 @@ Getting your data set up to be accessible via Globus starts with an email to sci
  - should the mapped collection be public or private
  - which data sources should be made available via Globus- fast, scratch, economy, temp, etc.
 
-After this the data owner and managers will be given links to information about creating guest collections for collaborations and signed up for notices about the Globus services.
+After this, the data owner and managers will be given links to information about creating guest collections for collaborations and signed up for notices about the Globus services.
 
 Meanwhile SciComp will set up the Globus collection for the lab/project according to the specifications above.  SciComp will also create the groups for the various roles and assign the appropriate person(s) to those groups.  This will make data available to lab staff via their HutchNet ID.
 
