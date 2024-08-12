@@ -22,13 +22,13 @@ As part of its services, Globus operates an _identity_ service.  Each individual
 
 Central to the use of Globus is the _collection_- a collection of paths to data on the underlying storage gateway. Data is transferred between collections.  Policies (like who can access data via Globus, how paths are shared, etc) are set on the collection.
 
-There are two kinds of collections- _mapped_ and _guest_.  A mapped collection requires that you have a HutchNet ID and that your HutchNet ID has access to the storage systems underneath Globus.  Your login to Globus is _mapped_ to a HutchNet ID on the storage system.
+There are two kinds of collections- _mapped_ and _guest_.  A mapped collection requires that you have a HutchNet ID and that your HutchNet ID has access to the storage systems underneath Globus.  Your login to Globus is _mapped_ to a HutchNet ID on the storage system by stripping off the "@fredhutch.org" portion of your email address.
 
-> For example, if I have logged into Globus using my "mrg@fredhutch.org" institutional account and I access a collection that provides access to Fast file, I will only have the access privileges that my user account has on Fast.  In the mapped collection, Globus provides no "extra" privileges.
+Guest collections are used to share data (internally and externally).  Guest does not mean anonymous access- a guest collection allows Globus users to access data _as you_ on the storage configured in the guest collection.  For that user to access the data shared in a guest collection they must have a Globus ID, the guest collection must allow that ID to access the data, and your HutchNetID must have access to the storage on the back-end (see [Permissions and Access](#Permissions and Access) below.
 
-In addition to mapped collections we have _guest_ collections.  Guest does not mean anonymous access- a guest collection allows external Globus users to access data _as you_ on the storage configured in the guest collection.  For that external user to access the data shared in a guest collection they must have a Globus ID, the guest collection must allow that ID to access the data, and your HutchNetID must have access to the storage on the back-end.
+>NOTE: It is possible to enable public access to a collection, but "public" only means anyone with a Globus ID.  A Globus login is still required to access the collection's data
 
-> It is possible to enable public access to a collection, but "public" only means anyone with a Globus ID.  A Globus login is still required to access the collection's data
+> NOTE: You can also create a guest collection to share data with other Hutch staff.  Guest collections are not limited to non-Hutch staff.
 
 ### Roles for HutchGO Users
 
@@ -50,7 +50,29 @@ Data Managers have nearly full control over data sharing within Globus.  These i
 
 If a mapped collection is marked private an additional role- the data user- is required.  Only individuals with this role (or a more privileged role) will be able to see and use a private mapped collection
 
-## Access
+### Permissions and Access Control
+
+There are multiple layers where access to files and data are enforced.
+
+#### Collection Configuration
+
+Collections (both guest and mapped) are configured with:
+
+Root Path
+:The root path controls which parts of the file system you are allowed to access via Globus
+
+Path Restrictions
+:Path restrictions configure more fine-grained access to paths inside the root path- you can configure no-access, read-only access, and read-write access on a per-directory basis within the root path
+
+#### File System Permissions
+
+When you connect to a mapped collection, your access is further controlled by your account's permissions on the file system.  If the underlying file system does not allow you to write into a path then you won't be able to write to files or directories via Globus.
+
+#### Guest Permissions
+
+When you create a guest collection, you are creating an additional layer of permissions for those configured with access to your guest collection.  Guest permissions to a collection can be read-only or read-write.
+
+## Availability
 
 HutchGO is available for all Hutch researchers and staff to use for data transfer needs in furtherance of the Hutch's mission. At this time HutchGO is not to be used to access or share covered (clinic) data.
 
