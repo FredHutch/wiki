@@ -59,10 +59,10 @@ There are multiple layers where access to files and data are enforced.
 Collections (both guest and mapped) are configured with:
 
 Root Path
-:The root path controls which parts of the file system you are allowed to access via Globus
+: The root path controls which parts of the file system you are allowed to access via Globus
 
 Path Restrictions
-:Path restrictions configure more fine-grained access to paths inside the root path- you can configure no-access, read-only access, and read-write access on a per-directory basis within the root path
+: Path restrictions configure more fine-grained access to paths inside the root path- you can configure no-access, read-only access, and read-write access on a per-directory basis within the root path
 
 #### File System Permissions
 
