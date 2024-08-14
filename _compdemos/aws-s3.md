@@ -101,7 +101,7 @@ aws s3 help
 for more information. To see documentation for a specific s3 subcommand, such as `cp`, do this:
 
 ```
-aws s3 help cp
+aws s3 cp help
 
 ```
 
