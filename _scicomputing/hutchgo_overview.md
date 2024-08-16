@@ -52,9 +52,9 @@ If a mapped collection is marked private an additional role- the data user- is r
 
 ### Permissions and Access Control
 
-There are multiple layers where access to files and data are enforced.
+There are multiple layers where access to files and data are enforced.  You can restrict which paths a collection can access on our storage systems, who has access to collection, and what kind of access is allowed via that collection.
 
-#### Collection Configuration
+#### Collection Access Controls
 
 Collections (both guest and mapped) are configured with:
 
