@@ -6,7 +6,7 @@ primary_reviewers: atombaby
 
 Guest collections are used in HutchGO to share data with people outside your immediate group.  You can share data with Hutch staff or external collaborators.
 
-To create a collection your lab must already be configured to use HutchGO, including setting up the base mapped collection- see documentation [here](/scicomputing/hutchgo_overview) on setting that up.
+To create a collection your lab must already be configured to use HutchGO, including the setup of the base mapped collection- see documentation [here](/scicomputing/hutchgo_overview) on setting that up.
 
 Only data managers are allowed to create guest collections.  If you are not a data manager, locate your lab's data manager group [here](https://app.globus.org/groups){:target="_blank"} and reach out to one of them with the information described below.
 
@@ -79,11 +79,11 @@ _Permissions_ options are _read_ and _write_.   _Read_ is the base permission fo
 
 Our collections are covered by our "High Assurance" subscription.  This means that your collaborators _must_ use sign into their Globus session with the ID you've shared with.
 
-Suppose you are sharing data with "pat@example.edu". You create a guest collection to a path in the scratch file system and give "pat@example.edu" read-write access.
+Suppose you are sharing data with "bob@example.edu". You create a guest collection to a path in the scratch file system and give "bob@example.edu" read-write access.
 
-Now Pat may have multiple authentication mechanisms configured- they may have linked another institutional login (e.g. "pat@other-example.edu") with their Globus ID.  They may have also linked their Gmail account with this Globus ID.
+Now Pat may have multiple authentication mechanisms configured- they may have linked another institutional login (e.g. "bob@other-example.edu") with their Globus ID.  They may have also linked their Gmail account with this Globus ID.
 
-Any one of those IDs can be used by Pat to log into their Globus. However, when they attempt to access the share you've configured, they will be prompted to log in with their "example.edu" account before they will be allowed to access your guest collection.
+Any one of those IDs can be used by Pat to log into their Globus account. However, when they attempt to access the share you've configured, they will be prompted to log in with their "example.edu" account before they will be allowed to access your guest collection.
 
 ### Sharing Inside the Hutch
 

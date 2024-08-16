@@ -98,4 +98,3 @@ Globus Connect Personal is free and is available for Linux, OSX (Mac), and Windo
 ## Monitoring and Management
 
 SciComp will provide (via email) monthly reports for each of the collections within the purview of the data owners and managers.  The owners and managers should use this information to regularly audit their collections to make sure that the collections are needed and that the collections have the appropriate access permissions.
-
