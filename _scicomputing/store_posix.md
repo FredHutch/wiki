@@ -86,6 +86,7 @@ The following is a summary of how to access these storage systems from PC, Mac o
 | Fast | `X:\fast` |
 | Scratch | `X:\scratch` |
 | Secure | `X:\secure` |
+| HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
 
 
 **Non-Fred Hutch PC:**
@@ -96,7 +97,7 @@ The following is a summary of how to access these storage systems from PC, Mac o
 | Fast | `\\center.fhcrc.org\fh\fast` |
 | Scratch | `\\center.fhcrc.org\fh\scratch` |
 | Secure | `\\center.fhcrc.org\fh\secure` |
-
+| HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
 
 **Mac:**
 
@@ -108,6 +109,7 @@ For these paths, replace HUTCHID with your hutchid.
 | Fast | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/fast` |
 | Scratch | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/scratch` |
 | Secure | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/secure` |
+| HPC Temp | `smb://fhcrc.org;HUTCHID@hpc.chromium.fhcrc.org/temp.chromium` |
 
 Note: Drive mapping with Macs can be very slow for large volumes due to the Mac wanting to index every file in a volume. Turn off volume indexing to improve the speed of drive mapping. 
 From a terminal window on your Mac, turn off all drive mapping.
