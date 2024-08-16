@@ -4,11 +4,11 @@ last_modified_at: 2024-07-01
 primary_reviewers: atombaby
 ---
 
-Globus is a non-profit service of the University of Chicago.  It is a combination of software (the Globus server and client tools) and services (the Globus control services) providing a number of different functions useful in research- data transfer, compute, and automation.
-
 HutchGO- Hutch Globus Online- is a deployment of the Globus data transfer services for the Hutch research community. HutchGO can be used for moving data within the Hutch and to make data available to external collaborators.  Via HutchGO you can move data between storage platforms and share data with internal and external collaborators without creating new accounts, changing storage groups, or moving data.
 
-HutchGO is available for the advancement of the Hutch's mission.  There is no charge for Globus services.
+Globus is a non-profit service of the University of Chicago.  It is a combination of software (the Globus server and client tools) and services (the Globus control services) providing a number of different functions useful in research- data transfer, compute, and automation.
+
+HutchGO is available for the research community to use in the advancement of the Hutch's mission.  There are no charges for HutchGO services.
 
 ## Key Concepts
 
@@ -34,7 +34,7 @@ Guest collections are used to share data (internally and externally).  Guest doe
 
 Because Globus allows easy sharing of data and because we want to have the individual labs to have as much control as possible over how data is shared,  we are creating specialized roles that control access to the various Globus capabilities.  Taking on a role means having a basic level of knowledge about how Globus works, constraints and controls necessary for the data being shared, and accepting responsibility for ongoing maintenance of data sharing within Globus.
 
-The Globus service is a partnership between research labs and SciComp.  We are here to support, maintain, and inform but ultimately labs are responsible for maintaining their Globus features.
+HutchGO is a partnership between research labs and SciComp.  We are here to support, maintain, and inform; ultimately labs are responsible for maintaining the HutchGO features being used.
 
 #### Data Owner
 
