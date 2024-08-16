@@ -12,11 +12,11 @@ HutchGO is available for the research community to use in the advancement of the
 
 ## Key Concepts
 
-### The Globus Identity
+### Account and Identity
 
-As part of its services, Globus operates an _identity_ service.  Each individual who uses Globus has a Globus ID.  A Globus ID can be accessed by authenticating using a number of different sources- an institutional login (e.g. our Hutch O365 login), ORCID, Google account, or GitHub login can all be used to authenticate to your Globus ID.  You can have multiple login sources connected to the same Globus ID.
+To access HutchGO you log in to a _Globus account_.  The Globus account contains one or more _identities_ provided by an "identity provider" which are connected to your Globus account.  Mutliple identity providers are available to connect to your Globus account: you can connect using your login to ORCID, Google account, GitHub account, or HutchNetID.
 
-> NOTE: while a single Globus ID can be linked to many different authentication sources, most of the operations described here require you to log into Globus with your HutchNet ID.  Logging into Globus with your ORCID will not get you access to the same resources as logging in with your "@fredhutch.org" institutional account.
+> NOTE: while a single Globus ID can be linked to many different authentication sources, most of the operations described here require you to log into Globus with your HutchNet ID.  For example, authenticating with your ORCID will not get you access to the same resources as logging in with your "@fredhutch.org" login.
 
 ### Collections 
 
