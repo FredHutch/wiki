@@ -8,8 +8,6 @@ HutchGO- Hutch Globus Online- is a deployment of the Globus data transfer servic
 
 Globus is a non-profit service of the University of Chicago.  It is a combination of software (the Globus server and client tools) and services (the Globus control services) providing a number of different functions useful in research- data transfer, compute, and automation.
 
-HutchGO is available for the research community to use in the advancement of the Hutch's mission.  There are no charges for HutchGO services.
-
 ## Key Concepts
 
 ### Account and Identity
@@ -96,7 +94,6 @@ Once the base mapped collection has been created, data managers will be able to 
 Your collaborator must have a Globus endpoint- this can be either a full endpoint (like we have here) or they can use Globus Connect Personal.  Connect Personal allows them to access the data you've shared and download using the workstation where they've installed Connect Personal.
 
 Globus Connect Personal is free and is available for Linux, OSX (Mac), and Windows. The host must have outbound connectivity, but inbound firewall rules are not necessary for Connect Personal.  Connect Personal cannot be used for sharing data.
-
 
 ## Monitoring and Management
 
