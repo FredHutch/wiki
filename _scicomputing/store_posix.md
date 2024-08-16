@@ -88,7 +88,6 @@ The following is a summary of how to access these storage systems from PC, Mac o
 | Secure | `X:\secure` |
 | HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
 
-
 **Non-Fred Hutch PC:**
 
 | Location | Path |
