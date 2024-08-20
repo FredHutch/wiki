@@ -71,7 +71,7 @@ datascience:
   - title: Biomedical Data
     children:
       - title: Real-World Data
-        url: datascience/real-world-data/
+        url: datascience/real_world_data/
       - title: Patient Data
         url: /datascience/patient-data/
   -title: Data Science
