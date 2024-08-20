@@ -74,7 +74,7 @@ datascience:
         url: datascience/real_world_data/
       - title: Patient Data
         url: /datascience/patient-data/
-  -title: Data Science
+  - title: Data Science
     children:
       - title: Data Visualization
         url: /datascience/data_viz/
