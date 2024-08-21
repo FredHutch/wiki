@@ -3,7 +3,7 @@ title: Data Visualization
 primary_reviewers: k8hertweck
 ---
 
-A growing area of large-scale data analysis is the visualization and sharing of results of analyses. Data scientists need to communicate complex data and results in concise and clear ways, and there has been an explosion of platforms, tools, software and approaches for data visualization.  
+A growing area of large-scale data analysis is the visualization and sharing of results of analyses. Data scientists need to communicate complex data and results in concise and clear ways, leading to an explosion of platforms, tools, software and approaches for data visualization.  
 
 On this page, we provide an overview of resources for learning how to visualize data, software for data visualization, and tools developed at Fred Hutch.  While this is not an exhaustive list, we have highlighted what tends to be the most commonly employed or easiest to access resources.
 
@@ -37,12 +37,16 @@ While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/t
 
 ### Plotting in Python
 
-Historically the `Matplotlib` had been the go-to library for scientific data visualization in Python. `Matplotlib` is still a powerful plotting tool, but it's syntax is complex and the graphics can look outdated when compared to R's {ggplot2}. The `seaborn` library was developed as an easier to use and updated version of `Matplotlib` and the `plotnine` library was developed to mimic {ggplot2}'s grammar of graphics style plotting syntax. Still, some Python users choose to do their data processing in Python and switch to R for visualization. The `plotly` and `Altair` are two options for interactive visualizations.
+Historically, the `Matplotlib` had been the go-to library for scientific data visualization in Python. `Matplotlib` is still a powerful plotting tool, but its syntax is complex and the graphics can look outdated when compared to R's {ggplot2}. `Matplotlib` is still often used over other Python data visualization libraries (particularly for machine learning workflows), but that this is due more to tradition in the software development community than better features.
+
+The `seaborn` library was developed as an easier to use and updated version of `Matplotlib` and the `plotnine` library was developed to mimic {ggplot2}'s grammar of graphics style plotting syntax. Still, some Python users choose to do their data processing in Python and switch to R for visualization. 
+
+The `plotly` and `Altair` libraries in Python are two options for interactive visualizations.
 
 - [Seaborn](https://seaborn.pydata.org/index.html)
   - [Seaborn user guide and tutorials](https://seaborn.pydata.org/tutorial.html)
 - [Matplotlib](https://matplotlib.org/index.html)
-  - [Matplotlib tutorial](https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb)
+  - [Matplotlib quick start guide](https://matplotlib.org/stable/users/explain/quick_start.html#quick-start)
 - [Plotnine](https://plotnine.readthedocs.io/en/stable/)
   - Fredhutch.io's [Introduction to Python](https://github.com/fredhutchio/python_intro) course covers plotnine in [class 4](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/master/class4.ipynb)
 - [Plotly](https://plotly.com/python/)
@@ -83,6 +87,7 @@ Books can be a great way to dive deeper into a specific coding subject and fortu
 #### R
 - [R for Data Science, Chapter 3: Data visualisation - Garrett Grolemund and Hadley Wickham](https://r4ds.had.co.nz/data-visualisation.html)
 - [ggplot2: Elegant Graphics for Data Analysis - Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen](https://ggplot2-book.org/)
+- [Modern Data Visualization with R - Robert Kabacoff](https://rkabacoff.github.io/datavis/)
 - [R Graphics Cookbook - Winston Chang](https://r-graphics.org/index.html)
 
 #### Python
@@ -92,9 +97,11 @@ Books can be a great way to dive deeper into a specific coding subject and fortu
 
 Data visualization focused blogs and screencasts can be a great way to find inspiration and think outside the box.
 
-- [The TidyX Screencast](https://www.youtube.com/c/TidyX_screencast/featured)
 - [Flowing Data](https://flowingdata.com/)
+- [Junk Charts](https://junkcharts.typepad.com)
 - [Nightingale: The journal of the Data Visualization Society](https://nightingaledvs.com)
 - [The Pudding](https://pudding.cool/)
 - [Information is Beautiful](https://informationisbeautiful.net/)
+- [Storytelling with Data](https://www.storytellingwithdata.com/blog)
+- [The TidyX Screencast](https://www.youtube.com/c/TidyX_screencast/featured)
 
