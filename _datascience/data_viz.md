@@ -22,7 +22,7 @@ While it is possible to [plot using base R](https://bookdown.org/rdpeng/exdata/t
   - [Mastering Shiny - Hadley Wickham](https://mastering-shiny.org/)
   - [Fred Hutch Biomedical Data Science Wiki entry on Shiny applications](/compdemos/shiny/)
 
-#### Packages that extend `ggplot` capabilities
+#### Packages that extend {ggplot} capabilities
 - [ggbeeswarm](https://github.com/eclarke/ggbeeswarm)
 - [ggtext](https://wilkelab.org/ggtext/)
 - _read more about ggplot extensions [here](https://exts.ggplot2.tidyverse.org/)_
