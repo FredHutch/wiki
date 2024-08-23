@@ -40,10 +40,6 @@ Both commercial vendors and non-profit organizations provide data products offer
 
 Institution-specific EHR data (both raw and processed/transformed) are often available in institutional data warehouses. The barriers to using these data in clinical research include lack of data standardization, proprietary data models, data quality issues, selection biases inherent in using data generated from healthcare utilization, and more. Efforts such the [Observational Health Data Sciences and Informatics](https://ohdsi.org) (OHDSI) program aim to address these issues and provide open-source solutions. 
 
-#### Data from wearable devices 
-
-In clinical practice, consumer-grade wearable devices are increasingly being used to support prediction, treatment monitoring, and rehabilitation ([review](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10994271/)). Because wearable devices are relatively new, proprietary, and rapidly changing, there are many open questions about the validity of specific endpoints and the correlation of measures across device types. Other barriers to the use of this data include the cost of devices, the difficulty of interpreting the data, and high missingness rates.
-
 ## Real-World Data Stewardship at Fred Hutch
 
 There are several groups and departments at Fred Hutch that play a critical role in stewardship of RWD and in real-world evidence generation. 
