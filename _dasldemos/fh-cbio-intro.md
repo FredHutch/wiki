@@ -18,10 +18,14 @@ cBioPortal is a powerful yet user-friendly tool that bridges the gap between cli
 
 ## Why does Fred Hutch need one?
 
-The Fred Hutch specific instance of cBioPortal provides two main advantages:
+The Fred Hutch specific instance of cBioPortal provides three main advantages:
 - Security: governed by KeyCloak, requires Fred Hutch credentials to access, PHI upload
     - By the nature of the public instance being "public", PHI (which can be incredibly relevant based on context) must be omitted from studies. That's not the case with the Fred Hutch instance!
 - Privacy: no one outside of the group/users you designate have access to your study data
+    - If you're in the exploratory phase of your research or you're not quite ready to publish yet, you can upload your study and harness the power of cBioPortal without worrying...
+- Simplicity: setting up your own local instance can be complex, requires relatively advanced coding skills
+    - Administered and maintained by the Office of the Chief Data Officer (OCDO) and Scientific Computing
+    - All you need to do is log in and the rest is point-and-click!
 
 ## What does the data look like?
 
@@ -45,9 +49,17 @@ Summary...
 
 ### Request upload access
 
-### Format your study data
+Start by filling out the cBioPortal Study Upload request form with details about your study (cancer type, IRB status, genomic data types, clinical fields of interest, etc.). This will notify a member of the OCDO Data Governance team to review your request and ensure that your study meets the requirements for upload. If any clarification is needed, OCDO will reach out to set up a quick meeting to go over things in person.
 
 ### Upload to S3
+
+Once OCDO has approved your study for upload, we will provide you with a study ID to use as the name of your study directory and within your metadata files. **Please make sure to use this exact ID, otherwise the upload procedure will automatically reject your study.** Once your study data is ready for upload, OCDO will provide you with write-only access to an S3 bucket called `fh-dasl-cbio`. Compress your study data into a zipfile with your study ID as the filename and upload the zipfile to `fh-dasl-cbio` using the AWS S3 console or the AWS S3 CLI.
+
+From there, a series of Airflow automation steps will pull your study onto the cBioPortal server and run it through a validation script to ensure everything is formatted in an acceptable fashion.
+- If your study passes this validation step, Airflow will continue through the final processing steps and send you an email notification once it has been successfully uploaded.
+- If your study fails the validation step, Airflow will halt upload and send you an email notification containing details about why your study wasn't uploaded.
+
+We highly recommend taking an iterative approach to study upload. Start with the minimal amount of data required for successful upload into cBioPortal, just to ensure that everything is formatted correctly. From there, you can always add more fields and more complex genomic data types. Reuploading the study will simply overwrite the previous version with the new copy of your data. 
 
 ### Have fun!!!
 
