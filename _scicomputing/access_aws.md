@@ -36,7 +36,7 @@ Here are some links to learn more. Keep in mind that tools provided by AWS will 
 •	[AWS Pricing Calculator](https://calculator.aws/#/?nc2=pr)
 
 ## Accessing via SSO
-In 2024 Fred Hutch undertook a large migration to move all PI and Divisional AWS account to a new, more secure architecture. One of the benefits of this is integration with our Fred Hutch domain, meaning a user can now log into their AWS account using their Fred Hutch credentials. To access your account using your Fred Hutch credentials, naviagte to the [SSO Landing Page](https://d-92674cb6d7.awsapps.com/start). Once authenticated you should see all the accounts which you have access, you may then login and use the console normally. 
+In 2024 Fred Hutch undertook a large migration to move all PI and Divisional AWS account to a new, more secure architecture. One of the benefits of this is integration with our Fred Hutch domain, meaning a user can now log into their AWS account using their Fred Hutch credentials. To access your account using your Fred Hutch credentials, naviagte to the [SSO Landing Page](https://d-92674cb6d7.awsapps.com/start). Once authenticated you should see all the accounts to which you have access, you may then login and use the console normally. 
 
 For secret/access key access you can provision temporary credentials through the webpage, or [configure your AWS CLI to use SSO](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html)
 
