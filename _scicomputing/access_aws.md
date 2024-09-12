@@ -39,6 +39,5 @@ Here are some links to learn more. Keep in mind that tools provided by AWS will 
 ## Where to go Next
 
  - For information on using storage, see the S3 storage [FAQ](/scicomputing/store_objectstore/#faq).
- - For accessing compute on AWS, we recommend using tools such as 
 
 
