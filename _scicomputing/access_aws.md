@@ -40,8 +40,8 @@ In 2024 Fred Hutch undertook a large migration to move all PI and Divisional AWS
 
 For secret/access key access you can provision temporary credentials through the webpage, or [configure your AWS CLI to use SSO](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html)
 
-## Cost Anomoly Detection
-Within your Lab accounts, if you are a PI or a delegated account admin, you can set up [Cost Anomoly Detection](https://docs.aws.amazon.com/cost-management/latest/userguide/getting-started-ad.html) to better track costs. Exact costs charged by Fred Hutch BizOps will differ from AWS costs. For further details on chargebacks, you can join the [AWS Chargebacks Teams Channel](https://teams.microsoft.com/l/channel/19:86nu83-f_YlZdMcyP7OFIKxyW_1DmMWp3woTI90H2bM1@thread.tacv2/General?groupId=24987ba0-f4d9-4a11-8de1-150b4c971610&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) where there is further documentation on chargebacks and BizOps is available to answer more specific questions
+## Cost Anomaly Detection
+Within your Lab accounts, if you are a PI or a delegated account admin, you can set up [Cost Anomaly Detection](https://docs.aws.amazon.com/cost-management/latest/userguide/getting-started-ad.html) to better track costs. Exact costs charged by Fred Hutch BizOps will differ from AWS costs. For further details on chargebacks, you can join the [AWS Chargebacks Teams Channel](https://teams.microsoft.com/l/channel/19:86nu83-f_YlZdMcyP7OFIKxyW_1DmMWp3woTI90H2bM1@thread.tacv2/General?groupId=24987ba0-f4d9-4a11-8de1-150b4c971610&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) where there is further documentation on chargebacks and BizOps is available to answer more specific questions
 
 ## Delegate Account Admins
 By default, a PI is the admin the of their lab's AWS account. But there may be cases where another member of the lab is requested to be a delegated account admin. This come with additional permissions to monitor and manage the AWS account. In order to become a delegated account admin you need PI approval and to open a ticket with IAM to get you added to the `Power User` group for your lab's AWS Account
