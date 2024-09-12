@@ -2,7 +2,11 @@
 title: AWS Accounts at Fred Hutch
 primary_reviewers: dtenenba
 ---
-Each lab can be granted their own individual AWS account, giving the members of the lab access to AWS S3 for data storage, AWS Batch for running compute jobs, and many other AWS services.  In general, the lab "type" account is suitable for most AWS usage at Fred Hutch.  The lab "type" AWS accounts themselves are all regular AWS accounts and as such the [documentation that AWS provides](https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do) will be relevant for investigators looking for assistance.  What differentiates each "type" of account is how the account is pre-configured, what AWS services and regions users are allowed to use, and what restrictions are in place.
+
+Each lab can be granted their own individual AWS account, giving the members of the lab access to AWS S3 for data storage, AWS Batch for running compute jobs, and many other AWS services.  The lab accounts are regular AWS accounts and as such the [documentation that AWS provides](https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do) will be relevant for your use of AWS services.
+
+There are restrictions on access to some services- if you encounter any problems with those access restrictions, contact the Cloud team via the Service Desk for assistance
+{: .notice--info}
 
 ## AWS Account Types
 
@@ -19,8 +23,9 @@ Then you can read more about [AWS Storage](/scicomputing/store_objectstore/) and
 
 Unless otherwise specified, all accounts follow the same pricing model:
 
-- S3 usage (sometimes called Economy Cloud) is subsidized up to 100TB.
-- After 100TB, the cost is $3/TB/Month. 
+ - S3 usage (sometimes called Economy Cloud) is subsidized up to 100TB.
+ - After 100TB, the cost is $3/TB/Month. 
+ - Compute and other services are billed back to the lab at full rate (less institutional discounts and any lab credits, see below).
 
 ### Credits
 
@@ -28,10 +33,12 @@ In the background, IT pays all AWS charges up front and then bills back to resea
 
 Here are some links to learn more. Keep in mind that tools provided by AWS will not reflect FHCC institutional discounts or offerings. However, they can be used to get a general idea of costs):
 
-- [Pricing 101](https://aws.amazon.com/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all)
-- [Pricing Calculator](https://calculator.aws/#/?nc2=pr)
+ - [Pricing 101](https://aws.amazon.com/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all)
+ - [Pricing Calculator](https://calculator.aws/#/?nc2=pr)
+
+## Where to go Next
+
+ - For information on using storage, see the S3 storage [FAQ](/scicomputing/store_objectstore/#faq).
+ - For accessing compute on AWS, we recommend using tools such as 
 
 
-## I Have More Questions
-
-Please check out the [FAQ](/scicomputing/store_objectstore/#faq)for more information.
