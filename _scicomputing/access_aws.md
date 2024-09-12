@@ -5,7 +5,7 @@ primary_reviewers: dtenenba
 
 Each lab can be granted their own individual AWS account, giving the members of the lab access to AWS S3 for data storage, AWS Batch for running compute jobs, and many other AWS services.  The lab accounts are regular AWS accounts and as such the [documentation that AWS provides](https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do) will be relevant for your use of AWS services.
 
-There are restrictions on access to some services- if you encounter any problems with those access restrictions, contact the Cloud team via the Service Desk for assistance
+There are restrictions on access to some services- if you encounter any problems with those access restrictions, email `helpdesk`
 {: .notice--info}
 
 ## AWS Account Types
