@@ -31,9 +31,9 @@ How can it be used to facilitate genomic research and visualization.
 ----------------------------
 
 -   It is a **local installation** of cBioPortal within the **Fred Hutch infrastructure**.
--   Looks exactly like the [public instance] (https://www.cbioportal.org/) and has all the **same features** as the **public** **instance**.
+-   Looks exactly like the [public instance](https://www.cbioportal.org/) and has all the **same features** as the **public** **instance**.
 -   It is a **secure** **place** to host your data.
-    -   cBioPortal has ben reviewed and approved by the Fred Hutch Information Security team. This permits users to include individually identifying research data such as PHI [Personal Health Information] (https://sciwiki.fredhutch.org/datascience/phi/#types-of-data-sets) if covered in the [IRB] (https://sciwiki.fredhutch.org/_datascience/consent_IRB/) of the study.
+    -   cBioPortal has ben reviewed and approved by the Fred Hutch Information Security team. This permits users to include individually identifying research data such as [Personal Health Information](https://sciwiki.fredhutch.org/datascience/phi/#types-of-data-sets) (PHI) if covered in your studies [IRB](https://sciwiki.fredhutch.org/_datascience/consent_IRB/).
 -   Study **data** is only **visible** to **authorized** personnel approved by the study lead/PI.
 -   Unlike the public instance, you can upload **interim data** onto the instance. This can aid your research by not having you to generate plots and graphs that can often be time consuming.
 
