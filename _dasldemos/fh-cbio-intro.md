@@ -56,7 +56,7 @@ If you are interested in uploading your own data into the Fred Hutch instance of
 3.  Get AWS credentials by emailing the [FH help desk](helpdesk@fredhutch.org)
     1.  Make sure your PI account is setup
     2.  Get AWS credentials under your PI account
-4.  Get access to the fh-dasl-cbio S3 bucket by emailing[FH help desk](helpdesk@fredhutch.org)
+4.  Get access to the fh-dasl-cbio S3 bucket by emailing [FH help desk](helpdesk@fredhutch.org)
     1.  Make sure the subject line reads: Request for access to the fh-dasl-cbio S3 bucket
     2.  Make sure to include in this email: Your PI (Who should be cc'd on this email: Taylor, Jenny anyone else?)
     3.  Request access to the fh-dasl-cbio S3 bucket for all the users that have been approved. Please provide their full names and their Fred Hutch email addresses. Also specifiy that you all should only have **WRITE** and **LIST** access.
