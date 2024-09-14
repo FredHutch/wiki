@@ -1,106 +1,112 @@
 ---
-title: Introducing the Fred Hutch instance of cBioPortal
-last_modified_at: 2024-08-23
+title: cBioPortal - the Fred Hutch instance
+last_modified_at: 2024-09-13
 main_authors: tefirman, sitapriyamoorthi
 primary_reviewers: laderast
 ---
+Learning Objectives
+-------------------
 
+After reading this article, you will learn:
 
-## Goals
-- Inform the user what cBioportal is and how can it be used to facilitate genomic research and visualization. 
-- What the FH instance of cBioportal is and how it can help the user with their research. 
-- Brief overview of file formats, how they should look, and the content they must contain. 
-- Brief overview on how to upload to the FH instance and what tools can help with formatting.
+-   what **cBioPortal** is and how it can help with your research.
+-   what the **Fred Hutch instance of cBioPortal** is and steps to take to upload your data into the instance.
+-   ways to format your data for upload into cBioPortal.
 
-## What is cBioPortal?
+**What is cBioportal?**
+-----------------------
 
-cBioPortal is a powerful yet user-friendly tool that bridges the gap between clinical and genomic data...
+-   It is an open-source web-based platform that allows for the visualization, exploration and analysis of cancer genomics data. When you upload data from your study, the portal dynamically creates graphs that allow you to analyze your data based on clinical characteristics.
+-   The public version of this instance can be accessed here: <https://www.cbioportal.org/> and hosts publicly available/published data.
+-   It is interactive and user-friendly
+-   It allows for the easy visualization of both genomic and clinical data
 
-## Why does Fred Hutch need one?
+### What can I do with cBioportal
 
-The Fred Hutch specific instance of cBioPortal provides three main advantages:
-- Security: governed by KeyCloak, requires Fred Hutch credentials to access, PHI upload
-    - By the nature of the public instance being "public", PHI (which can be incredibly relevant based on context) must be omitted from studies. That's not the case with the Fred Hutch instance!
-- Privacy: no one outside of the group/users you designate have access to your study data
-    - If you're in the exploratory phase of your research or you're not quite ready to publish yet, you can upload your study and harness the power of cBioPortal without worrying...
-- Simplicity: setting up your own local instance can be complex, requires relatively advanced coding skills
-    - Administered and maintained by the Office of the Chief Data Officer (OCDO) and Scientific Computing
-    - All you need to do is log in and the rest is point-and-click!
+How can it be used to facilitate genomic research and visualization.
 
-## What does the data look like?
+-   Links : <https://docs.cbioportal.org/user-guide/overview/>
 
-The data underneath cBioPortal is formatted in a surprisingly simple fashion. It's literally just a collection of text files (mostly tab-separated values) that can be modified with tools as simple as NotePad or Excel.
+**What is the FH instance?**
+----------------------------
 
-### Meta files
+-   It is a local **installation** of cBioPortal within the **Fred Hutch infrastructure**.
+-   Looks exactly like the public instance <https://www.cbioportal.org/> and has all the **same features** as the **public** **instance**.
+-   It is a **secure** **place** to host your data.
+    -   cBioPortal has ben reviewed and approved by the Fred Hutch Information Security team. This permits users to include individually identifying research data such as PHI (Personal Health Information) <https://sciwiki.fredhutch.org/datascience/phi/#types-of-data-sets> if covered in the IRB <https://sciwiki.fredhutch.org/_datascience/consent_IRB/> of the study.
+-   Study **data** is only **visible** to **authorized** personnel approved by the study lead/PI.
+-   Unlike the public instance, you can upload **interim data** onto the instance. This can aid your research by not having you to generate plots and graphs that can often be time consuming.
 
-Details about meta files...
+### How can I access the Fred Hutch instance of cBioportal?
 
-### Data files
+-   Before you are able to access the Fred Hutch instance of cBioPortal you must:
+    -   have Fred Hutch credentials: <https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id>
+    -   be logged in to the Fred Hutch network
+        -   If on-campus, make sure you are connected to the Marconi network.
+        -   If off-campus, make sure you connect via <https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn>
+-   You can access the Fred Hutch instance of cBioportal here: <https://cbioportal.fredhutch.org/>
+    -   Simply use your Fred Hutch credentials to log-in
+ 
+### **How can I request to upload my data into the FH instance?**
 
-Details about data files...
+If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal here are the set of steps you need to follow:
 
-### Helpful tools
+1.  Request access to upload your study here: [cBioPortal Access Request Form (fredhutch.org)](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)
+2.  Wait to get approved from the OCDO/DaSL governance team
+3.  Get AWS credentials by emailing the FH help desk here:<helpdesk@fredhutch.org>.
+    1.  Make sure your PI account is setup
+    2.  Get AWS credentials under your PI account
+4.  Get access to the fh-dasl-cbio S3 bucket by emailing:<helpdesk@fredhutch.org>
+    1.  Subject: Request for access to the fh-dasl-cbio S3 bucket
 
-Links to useful scripts or publicly available tools...
+    2.  Who should be cc'd on this email: Taylor, Jenny anyone else?
 
-## How do I get my study on the FH instance?
+    3.  Contents of the email:
 
-Summary...
+        We are members from the X Lab/Group. We have received approval from the OCDO/DaSL Governance team for upload of our groups data into the FH instance of cBioportal. We request that the following members of our team be granted access to the fh-dasl-cbio S3 bucket. All users must have WRITE and LIST access only.
 
-### Request upload access
+        | Person | FH email |
+        | --- | --- |
+        | user 1 | <flast@fredhutch.org> |
+        |  |  |
 
-Start by filling out the cBioPortal Study Upload request form with details about your study (cancer type, IRB status, genomic data types, clinical fields of interest, etc.). This will notify a member of the OCDO Data Governance team to review your request and ensure that your study meets the requirements for upload. If any clarification is needed, OCDO will reach out to set up a quick meeting to go over things in person.
+5.  Someone from the OCDO/DaSL cBioportal team will then follow up on the above email thread confirming with the cloud team that these users have been approved
+6.  Prepare your data files in the correct format (more on that below): While waiting on getting access start preparing your files for upload and test them out on a local launch of cBioportal
+7.  Transfer your data onto the fh-dasl-cbio S3 bucket. You can do that one of these 4 ways:
+    -   Console AWS: users might not be able to use this option
+    -   Motuz
+    -   Mountain Duck
+    -   Command line
+8.  Let us know that your data is in the S3 bucket/wait for a day and you should be able to see your data in the FH instance.
+9.  Go your explore data here: <https://cbioportal.fredhutch.org/>
 
-### Upload to S3
+**How do I prepare my data for upload into cBioportal**
+-------------------------------------------------------
 
-Once OCDO has approved your study for upload, we will provide you with a study ID to use as the name of your study directory and within your metadata files. **Please make sure to use this exact ID, otherwise the upload procedure will automatically reject your study.** Once your study data is ready for upload, OCDO will provide you with write-only access to an S3 bucket called `fh-dasl-cbio`. Compress your study data into a zipfile with your study ID as the filename and upload the zipfile to `fh-dasl-cbio` using the AWS S3 console or the AWS S3 CLI.
+### **Before you begin**
 
-From there, a series of Airflow automation steps will pull your study onto the cBioPortal server and run it through a validation script to ensure everything is formatted in an acceptable fashion.
-- If your study passes this validation step, Airflow will continue through the final processing steps and send you an email notification once it has been successfully uploaded.
-- If your study fails the validation step, Airflow will halt upload and send you an email notification containing details about why your study wasn't uploaded.
+-   In order to be able to upload your data into cBioportal you need to prepare a folder with all the files.
+-   The name of the folder should be study name (also referred to as the cancer_study_identifier).
+    -   *Note: Please make sure you have provided the study folder/ cancer_study_identifier name to the DaSL team so we know to expect it.*
+-   This folder should be zipped before uploading it into the fh-dasl-cbio S3 bucket
+    -   *Give an example of how to zip a folder here*
+-   **There are a few files that are required while all other files are optional.** We provide here an overview of the required files and some optional files.
+    -   *Note: Version 6 of cBioportal currently also requires in the least 1 non-clinical file to be uploaded as well. See below instructions on where to find a dummy table that you can modify to upload incase you are only uploading clinical data.*
 
-We highly recommend taking an iterative approach to study upload. Start with the minimal amount of data required for successful upload into cBioPortal, just to ensure that everything is formatted correctly. From there, you can always add more fields and more complex genomic data types. Reuploading the study will simply overwrite the previous version with the new copy of your data. 
+### **Required files**
 
-### Have fun!!!
+**Cancer Study (meta_study.txt)**
 
+-   Requirements: Required
+-   File format: Multi-line text file
+-   Purpose: This is a file that contains overall information about the study you are uploading.
+-   Detailed guidance: Link to GitHub Repo
+-   Overview of the file (required fields):
 
-
-
-## Draft Outline
-* What is cBioportal and why you would use it?
-    * Content development leads:
-        * Framework writing: Taylor
-        * Content writing: Sita, Ted
-        * Reviewers: Taylor (and anyone else)
-    * Content ideas:
-        * What is cBioportal good for?
-        * What can you do with it (usage examples)
-            * Multi-study analysis
-            * Survival analysis
-* The FH instance of cBioportal
-    * Content development leads:
-        * Framework and content writing: Taylor
-        * Reviewer: Sita, Jenny, Ty and Ted
-    * Content ideas:
-        * Advantages:
-            * PHI can be uploaded
-            * You can use it as your do your research
-        * Process about how to get your data into a FH instance (link)
-            * Write about adding your email to meta file to get notifications about
-* How to prepare your data for uploading into cBioportal
-    * Content development leads:
-        * Framework : Sita and Ted with Taylors feedback
-        * Content writing: Sita and Ted
-        * Review: Taylor and anyone else
-    * Content ideas:
-        * What are the file formats that you can upload: (nothing FH specific)
-            * Minimal requirements for successful sutdy upload
-            * Briefly describe different file formats and talk about the main contents that is needed to make these files
-            * Screenshots of how a final data file should look like (screenshot or a table)
-        * Describe any useful scripts or publicly available tools that can help you make this (link to the GitHub to give instructions on how to use this)
-
-
-
-
-
-
+```
+type_of_cancer: brca             #Note: this is the abbreviation of the cancer type. Make sure to check out this link to get the correct abbreviation: https://oncotree.mskcc.org/#/home
+cancer_study_identifier: brca_joneslab_2013             #Note: a unique name for your study
+name: Breast Cancer (Jones Lab 2013)            #Note: a more descriptive longer name for your study
+description: Comprehensive profiling of 103 breast cancer samples. Generated by the Jones Lab 2013.            #Note: description of your study. You can also add URL links here. 
+reference_genome: hg19             #Note: You should specify this or else cBioportal will assume the default reference genome.
+```
