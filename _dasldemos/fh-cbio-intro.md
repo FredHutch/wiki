@@ -133,9 +133,15 @@ genetic_alteration_type: CANCER_TYPE   #Note: Do not change
 datatype: CANCER_TYPE   #Note: Do not change
 data_filename: cancer_type.txt   #Note: name of the file with new cancer type information
 ```
-
 ### Example cancer_type.txt file
 
 ```markdown
 brca	Breast Invasive Carcinoma	HotPink	Breast
 ```
+
+### Publicly Available Tools for Data Formatting
+
+| Tool Name       | Description                                                                 | Advantages                                                                                                   | Disadvantages                                                                                                         | FH Repository Link                                                                                                   |
+|-----------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| **[Data-processor](https://github.com/cBioPortal/clinical-data-dictionary/blob/master/docs/resource_uri_to_clinical_attribute_mapping.txt)** | Formats clinical data tables in multi-tab Excel files to cBioportal format | - Useful for varied clinical data fields. <br> - Supports multi-tab Excel files. <br> - Easy terminal execution | - Does not seem to work to generate clinical data files. <br> - Requires adherence to specific clinical data variable names from [cBioPortal Clinical Data Dictionary] | [Data_processor: FH Repository]() |
+
