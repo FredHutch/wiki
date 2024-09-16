@@ -113,7 +113,33 @@ reference_genome: hg19             #Note: You should specify this or else cBiopo
 
 ```
 
-- **Clinical sample files (meta_clinical_sample.txt and data_clinical_sample.txt)**
+### **Clinical sample files**
+
+| Filename example | Is the file required? | What is the format | Purpose | Detailed guidance |
+| --- | --- | --- | --- | --- |
+| meta_clinical_sample.txt | Yes | Multi-line text file | A meta file with information about the clinical sample |  |
+| data_clinical_sample.txt | Yes |  Tab-separated file | File with the sample-level clinical covariates/metadata. |  |
+
+### **Example file: meta_clinical_sample.txt**
+
+```markdown
+cancer_study_identifier: brca_tcga_pub    #Note: must have the same value specified in meta_study.txt 
+genetic_alteration_type: CLINICAL     #Note: Dont change
+datatype: SAMPLE_ATTRIBUTES     #Note: Dont change
+data_filename: data_clinical_sample.txt  
+```
+### **Example file: data_clinical_sample.txt**
+
+```markdown
+#Patient Identifier	Sample Identifier	Subtype    #Note: Patient_ID and Sample_ID columns are required 
+#Patient identifier	Sample Identifier	Subtype description
+#STRING	STRING	STRING
+#1	1	1
+PATIENT_ID_	SAMPLE_ID	SUBTYPE
+PATIENT_ID_1	SAMPLE_ID_1	basal-like
+PATIENT_ID_2	SAMPLE_ID_2	Her2 enriched
+
+```
 
 ### **Optional files**
 
@@ -138,6 +164,38 @@ data_filename: cancer_type.txt   #Note: name of the file with new cancer type in
 ```markdown
 brca	Breast Invasive Carcinoma	HotPink	Breast
 ```
+### **Clinical patient files**
+
+| Filename example | Is the file required? | What is the format | Purpose | Detailed guidance |
+| --- | --- | --- | --- | --- |
+| meta_clinical_patient.txt | No | Multi-line text file | A meta file with information about the clinical patient |  |
+| data_clinical_patient.txt | YesNo |  Tab-separated file | File with the patient-level clinical covariates/metadata. |  |
+
+### **Example file: meta_clinical_patient.txt**
+
+```markdown
+cancer_study_identifier: brca_tcga_pub     #Note: must have the same value specified in meta_study.txt 
+genetic_alteration_type: CLINICAL     #Note: Dont change
+datatype: PATIENT_ATTRIBUTES     #Note: Dont change
+data_filename: data_clinical_patient.txt
+```
+
+### **Example file: data_clinical_patient.txt**
+
+```markdown
+#Patient Identifier	Overall Survival Status	Overall Survival (Months)	Disease Free Status	Disease Free (Months)	
+#Patient identifier	Overall survival status	Overall survival in months since diagnosis	Disease free status	Disease free in months since treatment	
+#STRING	STRING	NUMBER	STRING	NUMBER	
+#1	1	1	1	1	
+PATIENT_ID	OS_STATUS	OS_MONTHS	DFS_STATUS	DFS_MONTHS	
+PATIENT_ID_1	1:DECEASED	17.97	1:Recurred/Progressed	30.98	
+PATIENT_ID_2	0:LIVING	63.01	0:DiseaseFree	63.01	
+
+```
+
+
+
+
 
 ### Publicly Available Tools for Data Formatting
 
