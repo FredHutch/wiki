@@ -97,7 +97,7 @@ If you are interested in uploading your own data into the Fred Hutch instance of
 
 
 #### **Cancer Study**
-
+-----------------------------------
 | Filename example | Is the file required? | What is the format | Purpose | Detailed guidance |
 | --- | --- | --- | --- | --- |
 | meta_study.txt | Yes | Multi-line text file | Overall information about the study | [Readme]() |
@@ -113,14 +113,14 @@ reference_genome: hg19             #Note: You should specify this or else cBiopo
 
 ```
 
-### **Clinical sample files**
-
+#### **Clinical sample files**
+-----------------------------------
 | Filename example | Is the file required? | What is the format | Purpose | Detailed guidance |
 | --- | --- | --- | --- | --- |
 | meta_clinical_sample.txt | Yes | Multi-line text file | A meta file with information about the clinical sample |  |
 | data_clinical_sample.txt | Yes |  Tab-separated file | File with the sample-level clinical covariates/metadata. |  |
 
-### **Example file: meta_clinical_sample.txt**
+#### **Example file: meta_clinical_sample.txt**
 
 ```markdown
 cancer_study_identifier: brca_tcga_pub    #Note: must have the same value specified in meta_study.txt 
@@ -128,7 +128,7 @@ genetic_alteration_type: CLINICAL     #Note: Dont change
 datatype: SAMPLE_ATTRIBUTES     #Note: Dont change
 data_filename: data_clinical_sample.txt  
 ```
-### **Example file: data_clinical_sample.txt**
+#### **Example file: data_clinical_sample.txt**
 
 ```markdown
 #Patient Identifier	Sample Identifier	Subtype    #Note: Patient_ID and Sample_ID columns are required 
@@ -146,7 +146,7 @@ PATIENT_ID_2	SAMPLE_ID_2	Her2 enriched
 
 
 #### **Cancer Type**
-
+-----------------------------------
 | Filename example | Is the file required? | What is the format | Purpose | Detailed guidance |
 | --- | --- | --- | --- | --- |
 | meta_cancer_type.txt | No (conditional to if your cancer type file is present here) | Multi-line text file | A meta file with information about the file with new cancer type | [Readme]() |
@@ -159,19 +159,19 @@ genetic_alteration_type: CANCER_TYPE   #Note: Do not change
 datatype: CANCER_TYPE   #Note: Do not change
 data_filename: cancer_type.txt   #Note: name of the file with new cancer type information
 ```
-### Example cancer_type.txt file
+#### Example cancer_type.txt file
 
 ```markdown
 brca	Breast Invasive Carcinoma	HotPink	Breast
 ```
-### **Clinical patient files**
-
+#### **Clinical patient files**
+-----------------------------------
 | Filename example | Is the file required? | What is the format | Purpose | Detailed guidance |
 | --- | --- | --- | --- | --- |
 | meta_clinical_patient.txt | No | Multi-line text file | A meta file with information about the clinical patient |  |
 | data_clinical_patient.txt | YesNo |  Tab-separated file | File with the patient-level clinical covariates/metadata. |  |
 
-### **Example file: meta_clinical_patient.txt**
+#### **Example file: meta_clinical_patient.txt**
 
 ```markdown
 cancer_study_identifier: brca_tcga_pub     #Note: must have the same value specified in meta_study.txt 
@@ -180,7 +180,7 @@ datatype: PATIENT_ATTRIBUTES     #Note: Dont change
 data_filename: data_clinical_patient.txt
 ```
 
-### **Example file: data_clinical_patient.txt**
+#### **Example file: data_clinical_patient.txt**
 
 ```markdown
 #Patient Identifier	Overall Survival Status	Overall Survival (Months)	Disease Free Status	Disease Free (Months)	
