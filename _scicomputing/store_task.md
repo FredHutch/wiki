@@ -22,11 +22,14 @@ Use of task storage requires careful thought and consideration. Given the voliti
 
 Some general guidelines for using task storage:
 
-**DO NOT** keep the primary copy of data in a task storage location.  Before storing your data set in a task storage location, ensure that the primary data set is in durable storage (such as fast or S3) or that the primary data set is easily retrievable from it's source (e.g. your collaborators, DbGap, EMBL,){: .notice-info}
+**DO NOT** keep the primary copy of data in a task storage location.  Before storing your data set in a task storage location, ensure that the primary data set is in durable storage (such as fast or S3) or that the primary data set is easily retrievable from it's source (e.g. your collaborators, DbGap, EMBL,)
+{: .notice--info}
 
-**DO** make sure that data generated into a task storage path is either a) easily regenerated or b) copied to durable storage immediately after generation.  Some intermediate data may not need to be copied if regenerating isn't too difficult or computationally costly.  This is a judgement you will have to make in determining if intermediate data requires durable storage.{: .notice-info}
+**DO** make sure that data generated into a task storage path is either a) easily regenerated or b) copied to durable storage immediately after generation.  Some intermediate data may not need to be copied if regenerating isn't too difficult or computationally costly.  This is a judgement you will have to make in determining if intermediate data requires durable storage.
+{: .notice--info}
 
-**DO** consider using a workflow manager to manage data in task storage.  Workflow managers can be set up with targets to ensure data is present in task storage before the task begins as well as staging out generated data after successful completion of a task{: .notice-info}
+**DO** consider using a workflow manager to manage data in task storage.  Workflow managers can be set up with targets to ensure data is present in task storage before the task begins as well as staging out generated data after successful completion of a task
+{: .notice--info}
 
 The Data Science Lab and Scientific Computing teams are available to help you identify and mitigate these risks- please reach out to us with any questions or to help with your plans.
 
