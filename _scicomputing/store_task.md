@@ -37,7 +37,7 @@ The Data Science Lab and Scientific Computing teams are available to help you id
 
 ### Working
 
-The [_Working ](/scicomputing/store_working) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/fh/working`.  This file system is not backed up, though snapshots are available.  There is a quota applied at the top level of the PI directory- the default is 20TB but can be increased to 50TB- note that quota increases will incur costs.
+The [Working](/scicomputing/store_working) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/fh/working`.  This file system is not backed up, though snapshots are available.  There is a quota applied at the top level of the PI directory- the default is 20TB but can be increased to 50TB- note that quota increases will incur costs.
 
 | feature                 | availability |
 |-------------------------|--------------|
@@ -49,7 +49,7 @@ The [_Working ](/scicomputing/store_working) file system is available on all rhi
 
 ### Temp
 
-The [_Temp ](/scicomputing/store_temp) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/hpc/temp`.  This file system is not backed up, though snapshots are available.  Two snapshots are created every half-hour (meaning you can go back to a copy from up to an hour ago).
+The [Temp](/scicomputing/store_temp) file system is available on all rhino/gizmo compute nodes and can be mounted on managed OSX and Windows workstations.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/hpc/temp`.  This file system is not backed up, though snapshots are available.  Two snapshots are created every half-hour (meaning you can go back to a copy from up to an hour ago).
 
 Files on _temp_ are deleted 30 days after creation- this is not tied to any of the traditional Unix attributes (atime, ctime, etc.)
 
