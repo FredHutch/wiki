@@ -22,15 +22,27 @@ Use of task storage requires careful thought and consideration. Given the voliti
 
 Some general guidelines for using task storage:
 
-> **DO NOT** keep the primary copy of data in a task storage location.  Before storing your data set in a task storage location, ensure that the primary data set is in durable storage (such as fast or S3) or that the primary data set is easily retrievable from it's source (e.g. your collaborators, DbGap, EMBL,)
+**DO NOT** keep the primary copy of data in a task storage location.  Before storing your data set in a task storage location, ensure that the primary data set is in durable storage (such as fast or S3) or that the primary data set is easily retrievable from it's source (e.g. your collaborators, DbGap, EMBL,){: .notice-info}
 
-> **DO** make sure that data generated into a task storage path is either a) easily regenerated or b) copied to durable storage immediately after generation.  Some intermediate data may not need to be copied if regenerating isn't too difficult or computationally costly.  This is a judgement you will have to make in determining if intermediate data requires durable storage.
+**DO** make sure that data generated into a task storage path is either a) easily regenerated or b) copied to durable storage immediately after generation.  Some intermediate data may not need to be copied if regenerating isn't too difficult or computationally costly.  This is a judgement you will have to make in determining if intermediate data requires durable storage.{: .notice-info}
 
-> **DO** consider using a workflow manager to manage data in task storage.  Workflow managers can be set up with targets to ensure data is present in task storage before the task begins as well as staging out generated data after successful completion of a task
+**DO** consider using a workflow manager to manage data in task storage.  Workflow managers can be set up with targets to ensure data is present in task storage before the task begins as well as staging out generated data after successful completion of a task{: .notice-info}
 
 The Data Science Lab and Scientific Computing teams are available to help you identify and mitigate these risks- please reach out to us with any questions or to help with your plans.
 
 ## Storage Options for Tasks
+
+### Working
+
+The [_Working ](/scicomputing/store_working) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/fh/working`.  This file system is not backed up, though snapshots are available.  There is a quota applied at the top level of the PI directory- the default is 20TB but can be increased to 50TB- note that quota increases will incur costs.
+
+| feature                 | availability |
+|-------------------------|--------------|
+| backups                 | no           |
+| snapshots               | yes          |
+| offsite replication/dr  | no           |
+| charges                 | over 20tb    |
+| purged when unused      | no           |
 
 ### Temp
 
