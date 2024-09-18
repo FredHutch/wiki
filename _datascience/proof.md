@@ -26,6 +26,27 @@ primary_reviewers: vortexing, abbywall
 ## Release Notes
 See our release notes in the PROOF repo for more details: 
 
+### September 2024 - PROOF v1.1
+**What's New**
+
+- **Visualization Tabs**: To aid users in visualizing their analyses, we've added two new tabs to the PROOF user interface:
+    - **WDL**: produces [mermaid diagrams](https://github.com/chanzuckerberg/miniwdl-viz?tab=readme-ov-file#simple) for a submitted WDL script.
+    - **Viewer**: displays [input json's](https://github.com/timelyportfolio/listviewer) in a much more intuitive and collapsible way.
+- **Login Persistence**: Many users have reported issues with accidentally navigating away from PROOF and having to log back in with their Fred Hutch credentials. Through a limited utilization of cookies, authentication in PROOF will now persist much longer, regardless of any navigation away from the page.
+- **PROOF Analytics Dashboard**: To better assess how the Fred Hutch community is using the PROOF platform, we have created the initial framework for a Shiny-based analytics dashboard centered around PROOF.
+
+**Fixes**
+
+- **Cromwell Scratch Directory**: In anticipation of the [retirement](https://sciwiki.fredhutch.org/scicomputing/store_scratch/) of the `/fh/scratch/` directories of the Fred Hutch Rhino cluster, the default value for a user's Cromwell scratch directory will now be set to `/hpc/temp/` whenever possible.
+- **Zombie Tasks**: On rare occassions, tasks are cancelled by the Slurm job scheduler and Cromwell has [trouble](https://github.com/broadinstitute/cromwell/issues/1499) recognizing these cancellations. This results in the task being marked as "Running" indefinitely in the "Track Jobs" tab. We have added functionality in PROOF to identify these "zombie" tasks and correctly update their status to "Cancelled".
+- **Concurrent Docker Pulls**: Measures were taken to ensure that tasks running in parallel do not interfere with each other when pulling down the same Docker image.
+- **Other Minor Improvements**:
+    - Wording clarifications in documentation
+    - Linting corrections identified by the linting GitHub Action
+    - Version upgrades for underlying dependencies
+    - Additional testing for improved CI/CD
+    - Easier local instance creation for development purposes
+
 ### June 2024 - PROOF v1.0
 **What's New**
 - Users can now interact with data stored in S3 buckets within WDL workflows executed in PROOF! Just make sure to have your AWS CLI credentials [established in Rhino](/scicomputing/access_credentials/#configure-aws-cli) and you can use the S3 path just like any other input.
