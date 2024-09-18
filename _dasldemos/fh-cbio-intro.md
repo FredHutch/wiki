@@ -4,48 +4,59 @@ last_modified_at: 2024-09-13
 main_authors: sitapriyamoorthi, tefirman, laderast
 primary_reviewers: laderast, sonu, sckott
 ---
-Learning Objectives
--------------------
+## Learning Objectives
 
 After reading this article, you will learn:
 
--   what **cBioPortal** is and how it can help with your research.
--   what the **Fred Hutch instance of cBioPortal** is and steps to take to upload your data onto the instance.
--   ways to format your data for upload into cBioPortal.
+- What **cBioPortal** is and how it can help with your research.
+- What the **Fred Hutch instance of cBioPortal** is and steps to take to upload your data onto the instance.
+- Ways to format your data for upload into cBioPortal.
 
-**What is cBioportal?**
------------------------
-**Section in progress**
--   It is an open-source web-based platform that allows for the visualization, exploration and analysis of cancer genomics data. When you upload data from your study, the portal dynamically creates graphs that allow you to analyze your data based on clinical characteristics.
--   The public version of this instance can be accessed here: <https://www.cbioportal.org/> and hosts publicly available/published data.
--   It is interactive and user-friendly
--   It allows for the easy visualization of both genomic and clinical data
+## **What is [cBioportal](https://www.notion.so/4dfb122f3e874d0ead31fc58a0faa740?pvs=21)?**
 
-### What can I do with cBioportal
+- cBioPortal is an open-source web-based **cancer genomics database,** providing access to cancer genomics datasets from studies like TCGA and other large-scale projects.
+- It is a **visualization tool** offering interactive visualization of genomic alterations, including mutations, copy number changes, fusions, and more, across multiple cancer types.
+- cBioPortal is an easy-to use solution for **integrating clinical data** with genomics, enabling researchers to study the relationship between genetic alterations and clinical outcomes.
+- cBioPortal has a **user-friendly interface** designed to facilitate use by researchers without requiring bioinformatics expertise, thus bringing the data to the masses.
+- It supports **multi-omics** data integration and visualization  including genomics, transcriptomics, and proteomicson onto a single platform for a more comprehensive data-view.
 
-How can it be used to facilitate genomic research and visualization.
+### What can you do with cBioportal?
 
--   Links : <https://docs.cbioportal.org/user-guide/overview/>
+There are innumerable ways your can leverage the vast amount of data on cBioPortal. Here are some ways in which cBioPortal can facilitate your research:
 
-**What is the FH instance?**
-----------------------------
+- **Easy exploration of published multi-omics data:** The cBioPortal platform allows for the easy exploration of public datasets. You can explore genomic and clinical data without having to do the cumbersome task of downloading raw data files, processing them and then visualizing them in meaningful ways. cBioPortal also allows you to easily go from gene to mutation to gene-expression to protein expression in one platform. *For example, you could explore data from the TCGA studies and visualize the mutations in the gene KRAS, look at the patterns of gene expression across multiple studies and evalute corresponding protein expression.*
+- **Exploring cancer genomic alterations:** You can visualize mutations, copy number variation, structural variations, gene-expression patterns, protein expression in useful formats like bar-charts, oncoprints, lollipop plots etc . This could help validate your research findings in other cohorts similar to yours, in cohorts distinct from yours or even facilitate the finding of novel genes of interest. Additionally cBioPortals direct integration with external databases such as ClinVar, COSMIC, etc allow you to evaluate genomic alterations in the context of other resources. *For example, if you want to know the pattern of mutations of the gene KRAS in different lung cancer cohorts or across different cancer types.*
+- **Genotype-phenotype associations:** The cBioPortal platforms most exciting feature is that you can correlate genomic and clinical data. This can help you discover novel associations which could potentially impact disease progression or treatment outcomes. *For example, one could explore how KRAS mutations vary with stage of cancer, age at diagnosis, sex etc*
+- **Perform survival analysis:** Using cBioportal you can explore the relationship between genetic variations and clinical outcomes such as survival or response to treatment. These explorations could help you validate the prognostic significance of genes or pathways of interest based on evidence across one or more studies. *For example, you could want to explore if patients with KRAS mutations have a better or worse survival compared to patients without EGFR mutations.*
+- **Identify mutation co-occurence:** You can use the cBioPortal platform to also identify the pattern of co-occurence of mutations with other alterations that could help identify potential synthetic lethal interactions which could inform treatment strategies or outcomes. *For example, you could explore which other gene mutation co-occur with KRAS mutations and how do these influence survival?*
+- **Pathway-level exploration:** You could also discover the impact of genetic alterations in the context of key biological pathways. This would provide you with an understanding of the biological implications of genetic alterations of interest and potentially help you identify other drug targets as well. *For example, you could understand how KRAS mutations affects different signaling cascades. KRAS being more-or-less hard to target (apart from the newly discovered drugs that target very specific mutations types), one could use this information to identify other genes that are more amenable to targeting.*
+- **Generate custom cohorts:** Based on your research or your explorations on cBioPortal, you could also create custom cohorts based on genetics mutations or clinical characteristics. This enables you to focus your studies on subsets that are most relevent to you. *For example, you could select to explore all lung adenocarcinoma patients with KRAS mutations and a history of smoking from multiple studies. You could now explore other genetic or clinical patterns in this cohort for identifying novel targets.*
+- **Visualizing tumor evolution:** cBioPortal allows users to submit multiple samples from the same patient. This could potentially facilitate researchers to examine how tumors evolve over time by examining genomic alterations in longitudinal samples from the same patients. This could provide potentially valuable insight into progression and response to treatment. *For example, you could potentially want to know if KRAS mutant tumors are evolve to genetically more unstable states resulting in poorer overall survival.*
+- **Explore copy number alterations:** Using cBioPortal users can also explore large-scale copy number alteration in cancer genomes, explore fraction genome altered, ploidy states and could even use copy number data visualization tools on the portal to identify copy number amplifications and deletions in regions of interest. *For example, you could want to assess if KRAS mutant tumors have different copy number profiles compared to patients with no KRAS mutations. This could help you identify if patterns of copy number alterations are a consequence of the KRAS mutations.*
+- **Investigate immunogenomics:** Using cBioPortal you can also compare the relationship between genomic alterations and immunogenic characteristics such as tumor mutational burden, micro satellite instability, immune cell infiltration etc. *For example, you could explore if the tumor mutational burden of KRAS tumors is significantly higher compared to non-mutant tumors. This could suggest such KRAS tumors could potentially have an immunologically “hot” tumor microenvironment.*
 
--   It is a **local installation** of cBioPortal within the **Fred Hutch infrastructure**.
--   Looks exactly like the [public instance](https://www.cbioportal.org/) and has all the **same features** as the **public** **instance**.
--   It is a **secure** **place** to host your data.
-    -   cBioPortal has ben reviewed and approved by the Fred Hutch Information Security team. This permits users to include individually identifying research data such as [Personal Health Information](https://sciwiki.fredhutch.org/datascience/phi/#types-of-data-sets) (PHI) if covered in your studies [IRB](https://sciwiki.fredhutch.org/_datascience/consent_IRB/).
--   Study **data** is only **visible** to **authorized** personnel approved by the study lead/PI.
--   Unlike the public instance, you can upload **interim data** onto the instance. This can aid your research by not having you to generate plots and graphs that can often be time consuming.
+
+## **What is the [Fred Hutch instance](https://cbioportal.fredhutch.org/) of cBioPortal?**
+
+It is a **local installation** of [cBioPortal](https://www.cbioportal.org/) within the **Fred Hutch (FH) infrastructure**.
+
+- **Why this is useful to you as a researcher?**
+    - The FH instance of cBioPortal is useful for interim visualization of your clinical and genomic data (i.e., before publication).
+    - Hosting your data within the FH instance can also facilitate sharing and comparing of both (others) published and (your) unpublished datasets.
+    - Study **data** is only **visible** to **authorized** personnel approved by the study lead/PI.
+- **What makes my data secure?**
+    - FH cBioPortal is a secure place to store your data. It has been reviewed and approved by the Fred Hutch Information Security Team
+    - The secure nature of the FH instance of cBioPortal allows you to include individually identifying research data such as PHI [Personal Health Information] (https://sciwiki.fredhutch.org/datascience/phi/#types-of-data-sets) if covered in the [IRB] (https://sciwiki.fredhutch.org/_datascience/consent_IRB/) of the study.
 
 ### How can I access the Fred Hutch instance of cBioportal?
 
--   Before you are able to access the Fred Hutch instance of cBioPortal you must:
-    -   have [Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
-    -   be logged in to the Fred Hutch network
-        -   If on-campus, make sure you are connected to the Marconi network.
-        -   If off-campus, make sure you connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn)
--   You can access the Fred Hutch instance of cBioportal [here](https://cbioportal.fredhutch.org/)
-    -   Simply use your Fred Hutch credentials to log-in
+- Before you are able to access the Fred Hutch instance of cBioPortal you must:
+    - [ ]  have [Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
+    - [ ]  be logged in to the Fred Hutch network
+        - If on-campus, make sure you are connected to the Marconi network.
+        - If off-campus, make sure you connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn)
+- You can access the Fred Hutch instance of cBioportal [here](https://cbioportal.fredhutch.org/)
+    - Use your Fred Hutch credentials to log-in
  
 ### **How can I request to upload my data into the FH instance?**
 **Section in progress**
