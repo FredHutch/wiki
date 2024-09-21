@@ -12,7 +12,7 @@ After reading this article, you will learn:
 - What the **Fred Hutch instance of cBioPortal** is and steps to take to upload your data onto the instance.
 - Ways to format your data for upload into cBioPortal.
 
-## **What is cBioportal??**
+## **What is cBioportal?**
 
 - **[cBioPortal](https://www.notion.so/cBioPortal-4dfb122f3e874d0ead31fc58a0faa740?pvs=21_)** is a free web-based tool that provides access to a variety of **published cancer genomic datasets**.
 - Designed with **ease of use** in mind, cBioPortal is suitable for researchers without specialized knowledge in bioinformatics.
