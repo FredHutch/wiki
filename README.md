@@ -98,7 +98,7 @@ If you'd like to add images to your entry, some text editors (eg. Atom or VSCode
 
 One edit is that in order for Jekyll to correctly render the images in a page, they should be placed in the `assets` subdirectory of the directory containing the page being edited. The following text is the example format that the call to the image needs to be in for a markdown in the **_compdemos** folder:
 ```
-![](/compdemos/assets/2018-06-13-16-47-59.png)
+![](/_compdemos/assets/2018-06-13-16-47-59.png)
 ```
 If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is; please leave out the underscore at the beginning of the folder name.  
 
