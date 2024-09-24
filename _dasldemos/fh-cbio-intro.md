@@ -4,6 +4,9 @@ last_modified_at: 2024-09-13
 main_authors: sitapriyamoorthi, tefirman, laderast
 primary_reviewers: laderast, sonu, sckott
 ---
+
+Introduction to the [Fred Hutch instance of cBioPortal](https://cbioportal.fredhutch.org/) and a detailed demonstration of its usage in the context of research data.
+
 ## Learning Objectives
 
 After reading this article, you will learn:
@@ -12,46 +15,54 @@ After reading this article, you will learn:
 - What the **Fred Hutch instance of cBioPortal** is and steps to take to upload your data onto the instance.
 - Ways to format your data for upload into cBioPortal.
 
-## **What is cBioportal?**
+## What is cBioportal?
 
-- **[cBioPortal](https://www.notion.so/cBioPortal-4dfb122f3e874d0ead31fc58a0faa740?pvs=21_)** is a free web-based tool that provides access to a variety of **published cancer genomic datasets**.
+- [**cBioPortal**](https://www.cbioportal.org/) is a free web-based tool that provides access to a variety of **published cancer genomic datasets**.
 - Designed with **ease of use** in mind, cBioPortal is suitable for researchers without specialized knowledge in bioinformatics.
 - It supports a **wide range of data types** including genetic, transcriptomic, and protein-level information, allowing for a thorough analysis in one place.
 - It allows users **visually explore genetic changes** across different cancers using its **interactive tools**.
-- The platform **integrates clinical information with genetic data**, helping researchers understand how gene alterations relates to clinical metadata.
-    
-    ### What can you do with cBioportal?
-    
-    There are innumerable ways your can leverage the vast amount of data on cBioPortal. In the example below we demonstrate how you can leverage some of the capabilities of cBioPortal to facilitate your own research.
-    
-    *Let us say through your own research you have identified that KRAS is an important gene in cancer. Lets see how we can use cBioPortal to expand this observation leveraging publicly available datasets.* 
+- The platform **integrates clinical information with genetic data**, helping researchers understand how gene alterations relate to clinical metadata.
 
-***Question 1: First you want to know how often KRAS is mutated in cancer ?***
+### What can you do with cBioportal?
 
-- Using cBioPortal, you can explore *KRAS* mutations in three different cancer studies as an example; colorectal, lung, and pancreatic cancers. This analysis shows that *KRAS* is mutated in 29% of patients across these studies. You can similarly investigate other studies (over 400) on cBioPortal.![oncoprint_kras_different_studies](/_dasldemos/assets/cbio_01_oncoprint_kras_different_studies.png)
+There are innumerable ways you can leverage the vast amount of data on cBioPortal. In the example below, we demonstrate how you can harness some of the capabilities of cBioPortal to facilitate your own research.
 
-- With cBioPortal, you can explore different types of *KRAS* mutations, such as single-nucleotide variations, insertions, deletions, and copy number changes. These can be visualized in formats like oncoplots like above(showing mutations in genes for each sample) or lollipop plots like below(showing where mutations occur on the protein) and many other formats.![KRAS_lollipop](/_dasldemos/assets/cbio_02_KRAS_lollipop.png)
+*As an example, let us say through your own research you have identified that KRAS is an important gene in cancer. Let's see how we can use cBioPortal to expand this observation leveraging publicly available datasets.*
 
-- Additionally cBioPortals direct integration with external databases such as ClinVar, COSMIC, etc allows you to evaluate impact of these genomic alterations. Here you can see you can very easily see for each mutation in KRAS and its prediction of pathogenicity by OncoKB and COSMIC databases. ![KRAS_oncokb](/_dasldemos/assets/cbio_03_KRAS_oncokb.png)
+***Question 1: First, how often KRAS is mutated in cancer?***
 
-Thus with cBioPortal, exploring published multi-omics data becomes simple, without needing to download raw data files, process them, and manually create visualizations. It also provide you a one-stop shop to evaluate specific mutations by referencing to external databases as well. The platform makes the entire process seamless and user-friendly.
+- Using cBioPortal, you can explore *KRAS* mutations in three different cancer studies as an example; colorectal, lung, and pancreatic cancers. This analysis shows that *KRAS* is mutated in 29% of patients across these studies. You can similarly investigate other studies (over 400) on cBioPortal.
+![oncoprint_kras_different_studies](/dasldemos/assets/cbio_01_oncoprint_kras_different_studies.png)
 
-***Question 2: You want to know if mutations in KRAS are associated with any clinical parameters such as sex, age of the patient etc.***
-- With cBioPortal, you can visualize genomic data, such as mutations, alongside clinical factors like sex, age at diagnosis, or smoking history. This allows for a deeper understanding of how these c**linical traits may correlate with specific genetic changes**. Over here as an example you can explore mutations in *KRAS* and patient sex, age at diagnosis and history of smoking. You can see that *KRAS* mutations are frequent in individuals with a history of smoking.![KRAS_clinical_covariates](/_dasldemos/assets/cbio_04_KRAS_clinical_covariates.png)
+- With cBioPortal, you can explore different types of *KRAS* mutations, such as single-nucleotide variations, insertions, deletions, and copy number changes. These can be visualized in oncoplot format like above (showing mutations in genes for each sample), lollipop format like below (showing where mutations occur on the protein), and many others.
+![KRAS_lollipop](/dasldemos/assets/cbio_02_KRAS_lollipop.png)
 
-- You could also correlate if specific clinical covariates are associated with certain mutation types or expression. You could download the underlying data and analyze it in using other tools that you are more familiar with. ![KRAS_clinical_mut](/_dasldemos/assets/cbio_05_KRAS_clinical_mut.png)
+- Additionally, cBioPortal's direct integration with external databases such as ClinVar, COSMIC, etc. allows you to evaluate the impact of these genomic alterations. Here you can see each mutation in KRAS and its prediction of pathogenicity by OncoKB and COSMIC databases.
+![KRAS_oncokb](/dasldemos/assets/cbio_03_KRAS_oncokb.png)
+
+Thus with cBioPortal, exploring published multi-omics data becomes easier without needing to download raw data files, process them, and manually create visualizations. It also provides you with a one-stop shop to evaluate specific mutations by referencing external databases as well. The platform makes the entire process seamless and user-friendly.
+
+***Question 2: Are mutations in KRAS associated with any clinical parameters such as sex, age, etc.?***
+- With cBioPortal, you can visualize genomic data, such as mutations, alongside clinical factors like sex, age at diagnosis, or smoking history. This allows for a deeper understanding of how these **clinical traits may correlate with specific genetic changes**. Over here as an example you can explore mutations in *KRAS* and patient sex, age at diagnosis and history of smoking. You can see that *KRAS* mutations are frequent in individuals with a history of smoking.
+![KRAS_clinical_covariates](/dasldemos/assets/cbio_04_KRAS_clinical_covariates.png)
+
+- You could also correlate if specific clinical covariates are associated with certain mutation types or expression. You could download the underlying data and analyze it in using other tools that you are more familiar with.
+![KRAS_clinical_mut](/dasldemos/assets/cbio_05_KRAS_clinical_mut.png)
 
 Overlaying clinical data with genomic data is crucial for discovering novel associations between genetic mutations and patient outcomes. This integration may help you identify patterns that  may not be apparent from analyzing genetic data alone. By combining both types of data, it becomes easier to uncover critical insights that can lead to better predictions of survival and improved treatment strategies.
 
-***Question 3: You want to know if  KRAS co-occur with other mutations?***
-- You can use the cBioPortal platform to also identify if specific genes that   co-mutated  with KRAS. Alternatively you could assess if they are mutually exclusive to KRAS mutations. ![KRAS_cooccurence](/_dasldemos/assets/cbio_06_KRAS_cooccurence.png)
+***Question 3: Do KRAS mutations co-occur with other kinds of mutations?***
+- You can use the cBioPortal platform to also identify if specific genes that   co-mutated  with KRAS. Alternatively you could assess if they are mutually exclusive to KRAS mutations.
+![KRAS_cooccurence](/dasldemos/assets/cbio_06_KRAS_cooccurence.png)
 
 These analyses can reveal alternative therapeutic targets by identifying genes that often co-occur with mutations (co-occurrence) or show mutually exclusive patterns (synthetic lethal interactions). Ultimately, these findings can improve predictions for patient outcomes and guide research direction to identify personalized, effective therapies.
 
-***Question 4: You want to examine if KRAS mutations affects survival or disease progression?***
-- Using cBioportal you can explore the relationship between *KRAS* mutation and overall survival in the three cohorts. In general it appears the *KRAS* mutant tumors have a worse overall survival compared to those cancer patients with unaltered *KRAS.* ![KRAS_OS](/_dasldemos/assets/cbio_07_KRAS_OS.png)
+***Question 4: Do KRAS mutations affect survival or disease progression?***
+- Using cBioportal you can explore the relationship between *KRAS* mutation and overall survival in the three cohorts. In general it appears the *KRAS* mutant tumors have a worse overall survival compared to those cancer patients with unaltered *KRAS*.
+![KRAS_OS](/dasldemos/assets/cbio_07_KRAS_OS.png)
 
-- You can also explore if KRAS mutations affects disease free survival. In this case we see KRAS mutant tumors have a lower percentage of disease-free survival which is an important metric when considering oncogenic targets for therapeutic intervention. ![KRAS_DFS](/_dasldemos/assets/cbio_08_KRAS_DFS.png)
+- You can also explore if KRAS mutations affects disease free survival. In this case we see KRAS mutant tumors have a lower percentage of disease-free survival which is an important metric when considering oncogenic targets for therapeutic intervention.
+![KRAS_DFS](/dasldemos/assets/cbio_08_KRAS_DFS.png)
 
 cBioPortal provides a powerful platform for assessing overall survival and disease-free progression by integrating genomic alterations with clinical outcomes. The platform allows you to visualize survival curves, stratify patients by genetic features, and correlate these with clinical variables like treatment response. This helps in identifying potential biomarkers that could predict prognosis or guide personalized treatment strategies, making cBioPortal an invaluable resource for cancer research and clinical decision-making.
 
@@ -85,7 +96,7 @@ It is a **[local installation of cBioPortal](https://cbioportal.fredhutch.org/)*
 - You can access the Fred Hutch instance of cBioportal [here](https://cbioportal.fredhutch.org/)
     - Use your Fred Hutch credentials to log-in
  
-### **How can I request to upload my data into the FH instance?**
+### How can I request to upload my data into the FH instance?
 If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal here are the set of steps you need to follow:
 
 ```mermaid
@@ -117,12 +128,12 @@ If you are interested in uploading your own data into the Fred Hutch instance of
         - [ ]  IRB Approval Letter
         - [ ]  A copy of the protocol
 (Hopefully) Helpful details in filling out the cBioPortal Access Request Form
-![study_teams_details](/_dasldemos/assets/cbio_09_study_teams_details.png)
-![study_member_details](/_dasldemos/assets/cbio_10_study_member_details.png)
-![cBioPortal_Project_details](/_dasldemos/assets/cbio_11_cBioPortal_Project_details.png)
-![IRB_Details](/_dasldemos/assets/cbio_12_IRB_Details.png)
-![Dataset_Details_1](/_dasldemos/assets/cbio_13_Dataset_Details_1.png)
-![Dataset_Details_2](/_dasldemos/assets/cbio_14_Dataset_Details_2.png)
+![study_teams_details](/dasldemos/assets/cbio_09_study_teams_details.png)
+![study_member_details](/dasldemos/assets/cbio_10_study_member_details.png)
+![cBioPortal_Project_details](/dasldemos/assets/cbio_11_cBioPortal_Project_details.png)
+![IRB_Details](/dasldemos/assets/cbio_12_IRB_Details.png)
+![Dataset_Details_1](/dasldemos/assets/cbio_13_Dataset_Details_1.png)
+![Dataset_Details_2](/dasldemos/assets/cbio_14_Dataset_Details_2.png)
 2. Wait to get your study approved by the cBioPortal team . Once approved, you will receive an email.
 3. Get [AWS credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws) by emailing the [FH help desk](https://www.notion.so/fhdasl/helpdesk@fredhutch.org).
 *Note: Make sure to include your PI in this email request. If you already have AWS credentials, skip the steps below*
@@ -193,12 +204,12 @@ If you are interested in uploading your own data into the Fred Hutch instance of
         2. Login using your Fred Hutch credentials
         3. Follow the instructions  [here](https://sciwiki.fredhutch.org/compdemos/motuz/) to setup the `fh-dasl-cbio` bucket. 
         4. Click the blue arrow and it will upload luad_berger_2024 (example) to the fh-dasl-cbio S3 bucket
-        ![cbio_15_motuz_upload](/_dasldemos/assets/cbio_15_motuz_upload.png)
+        ![cbio_15_motuz_upload](/dasldemos/assets/cbio_15_motuz_upload.png)
     - **Mountain Duck:**
         1. Follow [these](https://sciwiki.fredhutch.org/compdemos/Mountain-CyberDuck/) instructions to setup Mountain Duck.
         2. Then setup the `fh-dasl-cbio` S3 bucket by following [these](https://sciwiki.fredhutch.org/compdemos/Mountain-CyberDuck/#configuring-mountain-duck) steps.
         3. Open the `fh-dasl-cbio` bucket in finder.
-        ![mountain_duck_upload](/_dasldemos/assets/cbio_16_mountain_duck_upload.png)
+        ![mountain_duck_upload](/dasldemos/assets/cbio_16_mountain_duck_upload.png)
 11. Copy over your study folder:
     1. Right-click on the study folder (wherever you have made it)
     2. Select Copy
@@ -257,7 +268,7 @@ Here is a list of the files (both required and optional) in your folder:
 | Mutation Data | Optional | `data_gene_panel_matrix.txt` | Tab Separated Value (TSV) | Sample level details of the gene panel used for the different samples.  |
 
 ### Examples of files
-### `meta_study.txt`
+**`meta_study.txt`**
 
 ```
 # Abbreviation of the cancer type. 
@@ -273,7 +284,7 @@ description: Comprehensive profiling of 103 breast cancer samples. Generated by 
 reference_genome: hg19            
 ```
 
-### `meta_cancer_type.txt file`
+**`meta_cancer_type.txt`**
 
 ```
 #Note: Do not change
@@ -285,13 +296,13 @@ data_filename: cancer_type.txt
 
 ```
 
-### `cancer_type.txt file`
+**`cancer_type.txt`**
 
 ```markdown
 brca	Breast Invasive Carcinoma	HotPink	Breast
 ```
 
-### **`meta_clinical_sample.txt`**
+**`meta_clinical_sample.txt`**
 
 ```
 cancer_study_identifier: brca_tcga_pub
@@ -303,7 +314,7 @@ datatype: SAMPLE_ATTRIBUTES
 data_filename: data_clinical_sample.txt  
 ```
 
-### **`data_clinical_sample.txt`**
+**`data_clinical_sample.txt`**
 
 ```
 #Note: Patient_ID and Sample_ID columns are required 
@@ -317,7 +328,7 @@ PATIENT_ID_2	SAMPLE_ID_2	Her2 enriched
 
 ```
 
-### **`meta_clinical_patient.txt`**
+**`meta_clinical_patient.txt`**
 
 ```
 #Note: must have the same value specified in meta_study.txt 
@@ -329,7 +340,7 @@ datatype: PATIENT_ATTRIBUTES
 data_filename: data_clinical_patient.txt
 ```
 
-### **`data_clinical_patient.txt`**
+**`data_clinical_patient.txt`**
 
 ```markdown
 #Patient Identifier	Overall Survival Status	Overall Survival (Months)	Disease Free Status	Disease Free (Months)	
@@ -342,7 +353,7 @@ PATIENT_ID_2	0:LIVING	63.01	0:DiseaseFree	63.01
 
 ```
 
-### `meta_mutations.txt`
+**`meta_mutations.txt`**
 
 ```
 #Note: must have the same value specified in meta_study.txt 
@@ -363,9 +374,9 @@ namespaces: ASCN
 
 ```
 
-### `data_mutations.txt`
+**`data_mutations.txt`**
 
-### `meta_gene_panel_matrix.txt`
+**`meta_gene_panel_matrix.txt`**
 
 ```
 #Note: must have the same value specified in meta_study.txt
@@ -378,7 +389,7 @@ datatype: GENE_PANEL_MATRIX
 data_filename: data_gene_panel_matrix.txt
 ```
 
-### `data_gene_panel_matrix.txt`
+**`data_gene_panel_matrix.txt`**
 
 ```
 | SAMPLE_ID   | mutations | gistic    |
