@@ -29,6 +29,7 @@ There are innumerable ways you can leverage the vast amount of data on cBioPorta
 
 *As an example, let us say through your own research you have identified that KRAS is an important gene in cancer. Let's see how we can use cBioPortal to expand this observation leveraging publicly available datasets.*
 
+<!-- Links to examples for these??? -->
 ***Question 1: First, how often KRAS is mutated in cancer?***
 
 - Using cBioPortal, you can explore *KRAS* mutations in three different cancer studies as an example; colorectal, lung, and pancreatic cancers. This analysis shows that *KRAS* is mutated in 29% of patients across these studies. You can similarly investigate other studies (over 400) on cBioPortal.
@@ -43,48 +44,50 @@ There are innumerable ways you can leverage the vast amount of data on cBioPorta
 Thus with cBioPortal, exploring published multi-omics data becomes easier without needing to download raw data files, process them, and manually create visualizations. It also provides you with a one-stop shop to evaluate specific mutations by referencing external databases as well. The platform makes the entire process seamless and user-friendly.
 
 ***Question 2: Are mutations in KRAS associated with any clinical parameters such as sex, age, etc.?***
-- With cBioPortal, you can visualize genomic data, such as mutations, alongside clinical factors like sex, age at diagnosis, or smoking history. This allows for a deeper understanding of how these **clinical traits may correlate with specific genetic changes**. Over here as an example you can explore mutations in *KRAS* and patient sex, age at diagnosis and history of smoking. You can see that *KRAS* mutations are frequent in individuals with a history of smoking.
+- With cBioPortal, you can visualize genomic data, such as mutations, alongside clinical factors like sex, age at diagnosis, or smoking history. This allows for a deeper understanding of how these **clinical traits may correlate with specific genetic changes**. In the example below, we explore patient sex, age at diagnosis, and history of smoking in subjects with mutations in *KRAS*. You can see that *KRAS* mutations are frequent in individuals with a history of smoking.
 ![KRAS_clinical_covariates](/dasldemos/assets/cbio_04_KRAS_clinical_covariates.png)
 
-- You could also correlate if specific clinical covariates are associated with certain mutation types or expression. You could download the underlying data and analyze it in using other tools that you are more familiar with.
+- You can also correlate if specific clinical covariates are associated with certain mutation types or expression like in the screenshot below. Even if you have a particular tool in mind that you're more comfortable with, authorized users can download the underlying data and analyze it outside of cBioPortal.
 ![KRAS_clinical_mut](/dasldemos/assets/cbio_05_KRAS_clinical_mut.png)
 
-Overlaying clinical data with genomic data is crucial for discovering novel associations between genetic mutations and patient outcomes. This integration may help you identify patterns that  may not be apparent from analyzing genetic data alone. By combining both types of data, it becomes easier to uncover critical insights that can lead to better predictions of survival and improved treatment strategies.
+Overlaying clinical data with genomic data is crucial for discovering novel associations between genetic mutations and patient outcomes. This integration can help you identify patterns that may not be apparent from analyzing genetic data alone. By combining both types of data, it becomes easier to uncover critical insights that can lead to better predictions of survival and improved treatment strategies.
 
 ***Question 3: Do KRAS mutations co-occur with other kinds of mutations?***
-- You can use the cBioPortal platform to also identify if specific genes that   co-mutated  with KRAS. Alternatively you could assess if they are mutually exclusive to KRAS mutations.
+- You can use the cBioPortal platform to also identify if specific genes that co-mutate with KRAS. Alternatively, you could assess if they are mutually exclusive to KRAS mutations.
 ![KRAS_cooccurence](/dasldemos/assets/cbio_06_KRAS_cooccurence.png)
 
 These analyses can reveal alternative therapeutic targets by identifying genes that often co-occur with mutations (co-occurrence) or show mutually exclusive patterns (synthetic lethal interactions). Ultimately, these findings can improve predictions for patient outcomes and guide research direction to identify personalized, effective therapies.
 
 ***Question 4: Do KRAS mutations affect survival or disease progression?***
-- Using cBioportal you can explore the relationship between *KRAS* mutation and overall survival in the three cohorts. In general it appears the *KRAS* mutant tumors have a worse overall survival compared to those cancer patients with unaltered *KRAS*.
-![KRAS_OS](/dasldemos/assets/cbio_07_KRAS_OS.png)
+- Using cBioportal, you can explore the relationship between *KRAS* mutation and overall survival in the three cohorts. In general, it appears the *KRAS* mutant tumors have a worse overall survival compared to those cancer patients with unaltered *KRAS*.
+![KRAS_OS](/dasldemos/assets/cbio_07_KRAS_OS.png) 
+<!-- Zoom out on this screenshot to show which tab produces this view? Or describe it in the text? -->
 
-- You can also explore if KRAS mutations affects disease free survival. In this case we see KRAS mutant tumors have a lower percentage of disease-free survival which is an important metric when considering oncogenic targets for therapeutic intervention.
+- You can also explore if KRAS mutations affect disease free survival. In this case, we see KRAS mutant tumors have a lower percentage of disease-free survival which is an important metric when considering oncogenic targets for therapeutic intervention.
 ![KRAS_DFS](/dasldemos/assets/cbio_08_KRAS_DFS.png)
+<!-- Zoom out on this screenshot to show which tab produces this view? Or describe it in the text? -->
 
 cBioPortal provides a powerful platform for assessing overall survival and disease-free progression by integrating genomic alterations with clinical outcomes. The platform allows you to visualize survival curves, stratify patients by genetic features, and correlate these with clinical variables like treatment response. This helps in identifying potential biomarkers that could predict prognosis or guide personalized treatment strategies, making cBioPortal an invaluable resource for cancer research and clinical decision-making.
 
 **Other examples of what you can explore with cBioPortal:**
 
-- **Pathway-level analysis:** Investigate how genetic changes affect key biological pathways, helping you understand their impact and find potential drug targets. *For instance, you could explore how KRAS mutations influence its signaling pathway and look at mutation frequencies in other related genes.*
-- **Copy number alterations:** Explore large-scale genomic changes, such as amplifications or deletions, using cBioPortal’s tools. *For example, you could compare copy number profiles of KRAS mutant tumors to non-mutant ones to identify patterns linked to KRAS mutations.*
+- **Pathway-level analysis:** Investigate how genetic changes affect key biological pathways using the "Pathways" tab, helping you understand their impact and find potential drug targets. *For instance, you could explore how KRAS mutations influence its signaling pathway and look at mutation frequencies in other related genes.*
+- **Copy number alterations:** Explore large-scale genomic changes, such as amplifications or deletions, using cBioPortal’s "CN Segments" tab. *For example, you could compare copy number profiles of KRAS mutant tumors to non-mutant ones to identify patterns linked to KRAS mutations.*
 - **Create custom cohorts:** Build groups based on genetic mutations or clinical data relevant to your research. *For example, you could focus on lung adenocarcinoma patients with KRAS mutations and a history of smoking to study genetic and clinical patterns.*
 - **Tumor evolution:** Examine how tumors change over time by analyzing multiple samples from the same patient. *For instance, you could investigate whether KRAS mutant tumors become more genetically unstable over time, thus potentially affecting survival.*
 - **Immuno-genomics:** Study the relationship between genetic changes and immune-related features like tumor mutational burden or immune cell infiltration. *For example, you might explore if KRAS mutant tumors have a higher mutational burden, suggesting a more immune-responsive environment.*
+<!-- Links to examples for these??? -->
 
-## **What is the Fred Hutch instance of cBioPortal?**
+## What is the Fred Hutch instance of cBioPortal?
 
 It is a **[local installation of cBioPortal](https://cbioportal.fredhutch.org/)** within the **Fred Hutch (FH) infrastructure**.
 
 - **Why this is useful to you as a researcher?**
-    - The FH instance of cBioPortal is useful for interim visualization of your clinical and genomic data (i.e., before publication).
-    - Hosting your data within the FH instance can also facilitate sharing and comparing of both (others) published and (your) unpublished datasets.
-    - Study **data** is only **visible** to **authorized** personnel approved by the study lead/PI.
+    - The FH instance of cBioPortal is useful for interim visualization of your clinical and genomic data (i.e., before publication), whether it be for an initial exploration of your dataset, comparison to well-established datasets from outside groups, or just an easy way to make professional-looking graphs!
+    - Hosting your data on the FH instance also easily facilitates sharing access with collaborators, provided they have FH credentials. Study data is **only visible to authorized personnel** approved by the study lead/PI.
 - **What makes my data secure?**
-    - FH cBioPortal is a secure place to store your data. It has been reviewed and approved by the Fred Hutch Information Security Team
-    - The secure nature of the FH instance of cBioPortal allows you to include individually identifying research data such as [PHI](https://sciwiki.fredhutch.org/datascience/phi/#types-of-data-sets) (Personal Health Information)if covered in the [IRB](https://sciwiki.fredhutch.org/_datascience/consent_IRB/) (Internal Review Board application) of the study.
+    - FH cBioPortal utilizes an open source identity and access management software called [Keycloak](https://www.keycloak.org/) to integrate the necessary [security features](https://docs.cbioportal.org/deployment/authorization-and-authentication/authenticating-and-authorizing-users-via-keycloak/) into cBioPortal. This system has been reviewed and approved by the Fred Hutch Information Security Team and will be administered by the [DaSL Data Governance team](https://hutchdatascience.org/governance/) to ensure appropriate usage through the Fred Hutch community.
+    - The secure nature of the FH instance of cBioPortal allows you to include individually identifying research data such as [PHI](https://sciwiki.fredhutch.org/datascience/phi/#types-of-data-sets) (Personal Health Information) if covered in the [IRB](https://sciwiki.fredhutch.org/_datascience/consent_IRB/) (Internal Review Board application) of the study.
 
 ### How can I access the Fred Hutch instance of cBioportal?
 
