@@ -14,21 +14,26 @@ The Fred Hutch deployment of cBioPortal allows users to:
 ## Getting Started
 
 ### Training and Courses
-- Find out more about using the Fred Hutch cBioPortal [How-To in the DaSL Resource Library]()
+- Find out more about the FH instance of cBioPortal and how to upload your study [in the DaSL Resource Library](/dasldemos/fh-cbio-intro/)
+- Explore the capabilities of cBioPortal through [MSK's YouTube series](/dasldemos/proof-troubleshooting/)
 
 ### Technical Documentation and Repositories
-- 
+- - [Public cBioPortal Documentation](https://docs.cbioportal.org/)
+- [Fred Hutch cBioPortal GitHub Repository](https://github.com/FredHutch/cbioportal-fredhutch-automation) (contact [Taylor Firman](mailto:tfirman@fredhutch.org) for access)
+- [Fred Hutch Admin Documentation](https://github.com/FredHutch/cbioportal-admin) (contact [Taylor Firman](mailto:tfirman@fredhutch.org) for access)
 
 ## Release Notes
-For comprehensive reslease notes about the public cBioPortal visit [https://github.com/cBioPortal/cbioportal/releases](https://github.com/cBioPortal/cbioportal/releases)
-### September 2024 
+
+### September 2024 - FH cBioPortal v1.0
 **What's New**
 
 - Fred Hutch cBioPortal deployment with user documentation
-- Updated to [v5.4.1](https://github.com/cBioPortal/cbioportal/releases/tag/v5.4.10)
+- Updated to [v5.4.10](https://github.com/cBioPortal/cbioportal/releases/tag/v5.4.10)
 
 **Fixes**
 
--
+- No fixes yet, just launching the product, but very open to feedback!
+
+## Contact Us
 
 
