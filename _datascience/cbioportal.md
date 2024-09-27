@@ -8,14 +8,10 @@ primary_reviewers: vortexing, abbywall
 The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) provides:
 
 - **Interim Visualization**: The FH instance of cBioPortal allows for the visualization of clinical and genomic data both published and unpublished.
-
 - **Facilitated Sharing**: Hosting your data enables easier sharing and comparison of to other datasets from the FH community and beyond.
-
 - **Controlled Access**: Study data is restricted to authorized personnel approved by the study lead or principal investigator (PI), thus protecting your research data
-
 - **Security Approval**: The FH cBioPortal is a secure storage solution, reviewed and approved by the Fred Hutch Information Security Team.
-
--**Inclusion of Sensitive Data**: The secure nature of the portal allows for the inclusion of individually identifying research data, such as Personal Health Information (PHI), if covered by the study’s IRB.
+- **Inclusion of Sensitive Data**: The secure nature of the portal allows for the inclusion of individually identifying research data, such as Personal Health Information (PHI), if covered by the study’s IRB.
 
 
 ## Getting Started
