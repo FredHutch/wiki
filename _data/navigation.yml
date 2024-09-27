@@ -54,6 +54,8 @@ datascience:
     children:
       - title: PROOF
         url: /datascience/proof/
+      - title: cBioPortal
+        url: /datascience/cbioportal/
   - title: Data Management and Sharing
     children:
       - title: Data Stewardship
