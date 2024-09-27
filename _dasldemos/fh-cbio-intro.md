@@ -20,7 +20,7 @@ After reading this article, you will learn:
 - [**cBioPortal**](https://www.cbioportal.org/) is a free web-based tool that provides access to a variety of **published cancer genomic datasets**.
 - Designed with **ease of use** in mind, cBioPortal is suitable for researchers without specialized knowledge in bioinformatics.
 - It supports a **wide range of data types** including genetic, transcriptomic, and protein-level information, allowing for a thorough analysis in one place.
-- It allows users **visually explore genetic changes** across different cancers using its **interactive tools**.
+- It allows users to **visually explore genetic changes** across different cancers using its **interactive tools**.
 - The platform **integrates clinical information with genetic data**, helping researchers understand how gene alterations relate to clinical metadata.
 
 ### What can you do with cBioportal?
@@ -31,51 +31,48 @@ There are innumerable ways you can leverage the vast amount of data on cBioPorta
 
 ***Question 1: First, how often KRAS is mutated in cancer?***
 
-- Using cBioPortal, you can explore *KRAS* mutations in three different cancer studies as an example; colorectal, lung, and pancreatic cancers. This analysis shows that *KRAS* is mutated in 29% of patients across these studies. You can similarly investigate other studies (over 400) on cBioPortal.
+- Using cBioPortal, you can explore *KRAS* mutations in three different cancer studies as an example; colorectal, lung, and pancreatic cancers. <a target="_blank" href="https://www.cbioportal.org/results/oncoprint?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival">This analysis</a> shows that *KRAS* is mutated in 26% of patients across these studies. You can similarly investigate other studies (over 400) on cBioPortal.
 ![oncoprint_kras_different_studies](/dasldemos/assets/cbio_01_oncoprint_kras_different_studies.png)
 
-- With cBioPortal, you can explore different types of *KRAS* mutations, such as single-nucleotide variations, insertions, deletions, and copy number changes. These can be visualized in oncoplot format like above (showing mutations in genes for each sample), lollipop format like below (showing where mutations occur on the protein), and many others.
+- With cBioPortal, you can explore different types of *KRAS* mutations, such as single-nucleotide variations, insertions, deletions, and copy number changes. These can be visualized in OncoPrint format like above (showing mutations in genes for each sample), <a target="_blank" href="https://www.cbioportal.org/results/mutations?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival">lollipop format</a> like below (showing where mutations occur on the protein), and many others.
 ![KRAS_lollipop](/dasldemos/assets/cbio_02_KRAS_lollipop.png)
 
-- Additionally, cBioPortal's direct integration with external databases such as ClinVar, COSMIC, etc. allows you to evaluate the impact of these genomic alterations. Here you can see each mutation in KRAS and its prediction of pathogenicity by OncoKB and COSMIC databases.
+- Additionally, cBioPortal's direct integration with external databases such as ClinVar, COSMIC, etc. allows you to evaluate the impact of these genomic alterations. <a target="_blank" href="https://www.cbioportal.org/results/mutations?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival">Here</a> you can see each mutation in KRAS and its prediction of pathogenicity by [OncoKB](https://www.oncokb.org/) and [COSMIC](https://cancer.sanger.ac.uk/cosmic) databases.
 ![KRAS_oncokb](/dasldemos/assets/cbio_03_KRAS_oncokb.png)
 
 Thus with cBioPortal, exploring published multi-omics data becomes easier without needing to download raw data files, process them, and manually create visualizations. It also provides you with a one-stop shop to evaluate specific mutations by referencing external databases as well. The platform makes the entire process seamless and user-friendly.
 
 ***Question 2: Are mutations in KRAS associated with any clinical parameters such as sex, age, etc.?***
-- With cBioPortal, you can visualize genomic data, such as mutations, alongside clinical factors like sex, age at diagnosis, or smoking history. This allows for a deeper understanding of how these **clinical traits may correlate with specific genetic changes**. In the example below, we explore patient sex, age at diagnosis, and history of smoking in subjects with mutations in *KRAS*. You can see that *KRAS* mutations are frequent in individuals with a history of smoking.
+- With cBioPortal, you can visualize genomic data, such as mutations, alongside clinical factors like sex, age at diagnosis, or smoking history. This allows for a deeper understanding of how these **clinical traits may correlate with specific genetic changes**. In the <a target="_blank" href="https://www.cbioportal.org/results/oncoprint?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival">example below</a>, we can add tracks representing patient sex, age at diagnosis, and history of smoking in subjects with mutations in *KRAS*. You can see that *KRAS* mutations are frequent in individuals with a history of smoking.
 ![KRAS_clinical_covariates](/dasldemos/assets/cbio_04_KRAS_clinical_covariates.png)
 
-- You can also correlate if specific clinical covariates are associated with certain mutation types or expression like in the screenshot below. Even if you have a particular tool in mind that you're more comfortable with, authorized users can download the underlying data and analyze it outside of cBioPortal.
+- You can also correlate if specific clinical covariates are associated with certain mutation types or expression like in the <a target="_blank" href="https://www.cbioportal.org/results/comparison?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=clinical">screenshot below</a>. Even if you have a particular tool in mind that you're more comfortable with, authorized users can download the underlying data and analyze it outside of cBioPortal.
 ![KRAS_clinical_mut](/dasldemos/assets/cbio_05_KRAS_clinical_mut.png)
 
 Overlaying clinical data with genomic data is crucial for discovering novel associations between genetic mutations and patient outcomes. This integration can help you identify patterns that may not be apparent from analyzing genetic data alone. By combining both types of data, it becomes easier to uncover critical insights that can lead to better predictions of survival and improved treatment strategies.
 
 ***Question 3: Do KRAS mutations co-occur with other kinds of mutations?***
-- You can use the cBioPortal platform to also identify if specific genes that co-mutate with KRAS. Alternatively, you could assess if they are mutually exclusive to KRAS mutations.
+- You can also utilize the cBioPortal platform to <a target="_blank" href="https://www.cbioportal.org/results/mutualExclusivity?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS%250AEGFR%250ACDKN2A&comparison_subtab=clinical&Z_SCORE_THRESHOLD=2.0&RPPA_SCORE_THRESHOLD=2.0&geneset_list=%20">identify if specific genes co-mutate</a> with KRAS. Alternatively, you could assess if they are mutually exclusive to KRAS mutations.
 ![KRAS_cooccurence](/dasldemos/assets/cbio_06_KRAS_cooccurence.png)
 
 These analyses can reveal alternative therapeutic targets by identifying genes that often co-occur with mutations (co-occurrence) or show mutually exclusive patterns (synthetic lethal interactions). Ultimately, these findings can improve predictions for patient outcomes and guide research direction to identify personalized, effective therapies.
 
 ***Question 4: Do KRAS mutations affect survival or disease progression?***
-- Using cBioportal, you can explore the relationship between *KRAS* mutation and overall survival in the three cohorts. In general, it appears the *KRAS* mutant tumors have a worse overall survival compared to those cancer patients with unaltered *KRAS*.
+- Using cBioportal, you can explore the relationship between *KRAS* mutation and overall survival in the three cohorts. In the <a target="_blank" href="https://www.cbioportal.org/results/comparison?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival&Z_SCORE_THRESHOLD=2.0&RPPA_SCORE_THRESHOLD=2.0&geneset_list=%20">analysis below</a>, it appears the *KRAS* mutant tumors have a worse overall survival compared to those cancer patients with unaltered *KRAS*.
 ![KRAS_OS](/dasldemos/assets/cbio_07_KRAS_OS.png) 
-<!-- Zoom out on this screenshot to show which tab produces this view? Or describe it in the text? -->
 
 - You can also explore if KRAS mutations affect disease free survival. In this case, we see KRAS mutant tumors have a lower percentage of disease-free survival which is an important metric when considering oncogenic targets for therapeutic intervention.
 ![KRAS_DFS](/dasldemos/assets/cbio_08_KRAS_DFS.png)
-<!-- Zoom out on this screenshot to show which tab produces this view? Or describe it in the text? -->
 
 cBioPortal provides a powerful platform for assessing overall survival and disease-free progression by integrating genomic alterations with clinical outcomes. The platform allows you to visualize survival curves, stratify patients by genetic features, and correlate these with clinical variables like treatment response. This helps in identifying potential biomarkers that could predict prognosis or guide personalized treatment strategies, making cBioPortal an invaluable resource for cancer research and clinical decision-making.
 
 **Other examples of what you can explore with cBioPortal:**
 
-- **Pathway-level analysis:** Investigate how genetic changes affect key biological pathways using the "Pathways" tab, helping you understand their impact and find potential drug targets. *For instance, you could explore how KRAS mutations influence its signaling pathway and look at mutation frequencies in other related genes.*
-- **Copy number alterations:** Explore large-scale genomic changes, such as amplifications or deletions, using cBioPortal’s "CN Segments" tab. *For example, you could compare copy number profiles of KRAS mutant tumors to non-mutant ones to identify patterns linked to KRAS mutations.*
-- **Create custom cohorts:** Build groups based on genetic mutations or clinical data relevant to your research. *For example, you could focus on lung adenocarcinoma patients with KRAS mutations and a history of smoking to study genetic and clinical patterns.*
+- <a target="_blank" href="https://www.cbioportal.org/results/pathways?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival&Z_SCORE_THRESHOLD=2.0&RPPA_SCORE_THRESHOLD=2.0&geneset_list=%20">**Pathway-level analysis:**</a> Investigate how genetic changes affect key biological pathways using the "Pathways" tab, helping you understand their impact and find potential drug targets. *For instance, you could explore how KRAS mutations influence its signaling pathway and look at mutation frequencies in other related genes.*
+- <a target="_blank" href="https://www.cbioportal.org/results/cnSegments?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival&Z_SCORE_THRESHOLD=2.0&RPPA_SCORE_THRESHOLD=2.0&geneset_list=%20">**Copy number alterations:**</a> Explore large-scale genomic changes, such as amplifications or deletions, using cBioPortal’s "CN Segments" tab. *For example, you could compare copy number profiles of KRAS mutant tumors to non-mutant ones to identify patterns linked to KRAS mutations.*
+- <a target="_blank" href="https://www.cbioportal.org/study/summary?id=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga">**Create custom cohorts:**</a> Build groups based on genetic mutations or clinical data relevant to your research. *For example, you could focus on lung adenocarcinoma patients with KRAS mutations and a history of smoking to study genetic and clinical patterns.*
 - **Tumor evolution:** Examine how tumors change over time by analyzing multiple samples from the same patient. *For instance, you could investigate whether KRAS mutant tumors become more genetically unstable over time, thus potentially affecting survival.*
 - **Immuno-genomics:** Study the relationship between genetic changes and immune-related features like tumor mutational burden or immune cell infiltration. *For example, you might explore if KRAS mutant tumors have a higher mutational burden, suggesting a more immune-responsive environment.*
-<!-- Links to examples for these??? -->
 
 ## What is the Fred Hutch instance of cBioPortal?
 
