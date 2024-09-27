@@ -9,7 +9,7 @@ The Fred Hutch deployment of cBioPortal provides:
 
 - **Interim Visualization**: The FH instance of cBioPortal allows for the visualization of clinical and genomic data both published and unpublished.
 
-- **Facilitated Sharing**: Hosting your data enables easier sharing and comparison of your datasets with those of other published datasets already on the public as well as datasets from other members in the FH community.
+- **Facilitated Sharing**: Hosting your data enables easier sharing and comparison of to other datasets from the FH community and beyond.
 
 - **Controlled Access**: Study data is restricted to authorized personnel approved by the study lead or principal investigator (PI), thus protecting your research data
 
