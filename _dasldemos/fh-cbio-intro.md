@@ -5,7 +5,7 @@ main_authors: sitapriyamoorthi, tefirman, laderast
 primary_reviewers: laderast, sonu, sckott
 ---
 
-Introduction to the [Fred Hutch instance of cBioPortal](https://cbioportal.fredhutch.org/) and a detailed demonstration of its usage in the context of research data.
+Introduction to the [Fred Hutch instance of cBioPortal](https://cbioportal.fredhutch.org/) and a demonstration of its usage in the context of research data.
 
 ## Learning Objectives
 
