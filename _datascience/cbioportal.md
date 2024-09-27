@@ -27,7 +27,6 @@ The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) pro
 ### Technical Documentation and Repositories
 - [Public cBioPortal Documentation](https://docs.cbioportal.org/)
 - [Fred Hutch cBioPortal GitHub Repository](https://github.com/FredHutch/cbioportal-fredhutch-automation) (contact [Taylor Firman](mailto:tfirman@fredhutch.org) for access)
-- [Fred Hutch Admin Documentation](https://github.com/FredHutch/cbioportal-admin) (contact [Taylor Firman](mailto:tfirman@fredhutch.org) for access)
 
 ## Release Notes
 
