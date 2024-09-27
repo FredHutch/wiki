@@ -29,7 +29,6 @@ There are innumerable ways you can leverage the vast amount of data on cBioPorta
 
 *As an example, let us say through your own research you have identified that KRAS is an important gene in cancer. Let's see how we can use cBioPortal to expand this observation leveraging publicly available datasets.*
 
-<!-- Links to examples for these??? -->
 ***Question 1: First, how often KRAS is mutated in cancer?***
 
 - Using cBioPortal, you can explore *KRAS* mutations in three different cancer studies as an example; colorectal, lung, and pancreatic cancers. This analysis shows that *KRAS* is mutated in 29% of patients across these studies. You can similarly investigate other studies (over 400) on cBioPortal.
@@ -100,26 +99,8 @@ It is a **[local installation of cBioPortal](https://cbioportal.fredhutch.org/)*
     - Use your Fred Hutch credentials to log-in
  
 ### How can I request to upload my data into the FH instance?
-If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal here are the set of steps you need to follow:
-
-```mermaid
-sequenceDiagram 
-  Actor You
-  Actor cBioPortal_Team
-  Actor FH_Help_Desk
-
-	You -->> cBioPortal_Team: Request Access Via Form
-	cBioPortal_Team -->> You: Reviews Form / Sends Approval
-	You -->> FH_Help_Desk: Request AWS access
-	FH_Help_Desk -->> You: Approval for AWS access
-	You -->> cBioPortal_Team: Request for fh-dasl-cbio S3 bucket access
-	cBioPortal_Team -->> You: Approval to upload study to S3 bucket
-	You -->> cBioPortal_Team: Communicate when study is uploaded to S3
-
-```
-If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal here are the set of steps you need to follow:
-
-*Note: The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)) and Jenny Weddle ([jweddle@fredhutch.org](mailto:jweddle@fredhutch.org))*
+If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal here are the set of ![steps you need to follow](/dasldemos/assets/cbio_17_overview_of_FH_instance_upload.png)
+*Note: The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)) and Data Governance Team, ([dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org))*
 
 1. Request access to upload your study by submitting the [cBioPortal Access Request Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW). Keep in mind these things prior to filling out the form
     1. **Study specific details**
@@ -186,9 +167,8 @@ If you are interested in uploading your own data into the Fred Hutch instance of
     
     ```
     
-7. Prepare your files for upload. This can take some time as cBioPortal requires that your data be in a very specific format.
-8.  Test your prepared files on a local launch of cBioportal. Find instructions on how to do this here. 
-9. Zip your study folder before moving it into the `fh-dasl-cbio` S3 bucket
+7. [Prepare your files for upload](https://github.com/FredHutch/tg-cbioportal-data). This can take some time as cBioPortal requires that your data be in a very specific format.
+8. Zip your study folder before moving it into the `fh-dasl-cbio` S3 bucket
     
     To zip your folder you can use this command in terminal:
     
@@ -200,8 +180,8 @@ If you are interested in uploading your own data into the Fred Hutch instance of
   # Zip the folder recursively
   zip -r cancer_study_identifier.zip .
 ```
-
-10. Transfer your data onto the `fh-dasl-cbio` S3 bucket. You can do that one of these 3 ways:
+You can also zip the folder by right clicking on your study folder and ![selecting compress](/dasldemos/assets/cbio_18_compress_by_right_click.png)
+9. Transfer your data onto the `fh-dasl-cbio` S3 bucket. You can do that one of these 3 ways:
     - **Motuz**:
         1. Go to [Motuz](https://motuz.fredhutch.org/login)
         2. Login using your Fred Hutch credentials
@@ -213,11 +193,11 @@ If you are interested in uploading your own data into the Fred Hutch instance of
         2. Then setup the `fh-dasl-cbio` S3 bucket by following [these](https://sciwiki.fredhutch.org/compdemos/Mountain-CyberDuck/#configuring-mountain-duck) steps.
         3. Open the `fh-dasl-cbio` bucket in finder.
         ![mountain_duck_upload](/dasldemos/assets/cbio_16_mountain_duck_upload.png)
-11. Copy over your study folder:
-    1. Right-click on the study folder (wherever you have made it)
-    2. Select Copy
-    3. Got to the `fh-dasl-cbio` tab or window
-    4. Right-click and click on Paste
+	4. Copy over your study folder:
+    		1. Right-click on the study folder (wherever you have made it)
+    		2. Select Copy
+    		3. Got to the `fh-dasl-cbio` tab or window
+    		4. Right-click and click on Paste
 
     **Command line:**
     Go to terminal and enter the following commands to upload your folder into the `fh-dasl-cbio` S3 bucket
@@ -237,7 +217,7 @@ If you are interested in uploading your own data into the Fred Hutch instance of
 13. Let us know that your data is in the S3 bucket or wait for a day (at the maximum) and you should be able to see your data in the FH instance.
 *Note:* If you do not receive an email notification indicating the success/failure of your study upload within 15 minutes, reach out to the cBioPortal Team for help identifying the issue.
 
-14. Go have fun and explore your data [here](https://cbioportal.fredhutch.org/).
+14. Go have fun and explore your data [on the Fred Hutch instance of cBioPortal.](https://cbioportal.fredhutch.org/).
 
 
 **How do I prepare my data for upload into cBioportal**
@@ -248,6 +228,9 @@ If you are interested in uploading your own data into the Fred Hutch instance of
 - In order to be able to upload your data into cBioportal you need to create a folder which contains all your files in the correct format.
 *Note: The name of the folder should be study name (also referred to as the cancer_study_identifier).Note: Please make sure you have provided the study folder/ cancer_study_identifier name to the DaSL team so we know to expect it.*
 - This folder should be zipped before uploading it into the fh-dasl-cbio S3 bucket. See above instructions on how to zip your study folder.
+- Once your study files and folder are prepared and ready for upload you can do the following:
+    1. You can directly try uploading it into `fh-dasl-cbio` bucket (if you have got all the permissions necessary). Upon doing this you will receive a validation report outlining errors with respect to your files if any. If everything is formatted as expected then your study will be uploaded into the FH instance of cBioPortal. 
+    2. You could also validate your study folder by [launching a local instance](https://github.com/FredHutch/tg-cbioportal-data/03_launch_local) of cBioPortal and troubleshoot through the errors (if any) of your file.
 - **There are a few files that are required while all other files are optional.** We provide here an overview of the required files and some optional files.
     - *Note: Version 6 of cBioportal currently also requires in the least 1 non-clinical file to be uploaded as well. See below instructions on where to find a dummy table that you can modify to upload incase you are only uploading clinical data.*
     
@@ -269,138 +252,6 @@ Here is a list of the files (both required and optional) in your folder:
 | Mutation Data | Optional (required for v6 of cBioPortal) | `data_mutations.txt` | Tab Separated Value (TSV) | File with mutation data |
 | Mutation Data | Optional | `meta_gene_panel_matrix.txt` | Multi-line text file | A meta file for describing the gene panel matrix file |
 | Mutation Data | Optional | `data_gene_panel_matrix.txt` | Tab Separated Value (TSV) | Sample level details of the gene panel used for the different samples.  |
-
-### Examples of files
-**`meta_study.txt`**
-
-```
-# Abbreviation of the cancer type. 
-# Make sure to check out this link to get the correct abbreviation:<https://oncotree.mskcc.org/#/home>
-type_of_cancer: brca
-#Unique name for your study (must match your zip file name)            
-cancer_study_identifier: brca_joneslab_2013
-#Note: a more descriptive longer name for your study                         
-name: Breast Cancer (Jones Lab 2013)
-#Note: description of your study. You can also add URL links here.           
-description: Comprehensive profiling of 103 breast cancer samples. Generated by the Jones Lab 2013. 
-#Note: You should specify this or else cBioportal will assume the default reference genome.
-reference_genome: hg19            
-```
-
-**`meta_cancer_type.txt`**
-
-```
-#Note: Do not change
-genetic_alteration_type: CANCER_TYPE   
-#Note: Do not change
-datatype: CANCER_TYPE   
-#Note: name of the file with new cancer type information
-data_filename: cancer_type.txt   
-
-```
-
-**`cancer_type.txt`**
-
-```markdown
-brca	Breast Invasive Carcinoma	HotPink	Breast
-```
-
-**`meta_clinical_sample.txt`**
-
-```
-cancer_study_identifier: brca_tcga_pub
-# Note: must have the same value specified in meta_study.txt   
-genetic_alteration_type: CLINICAL
-#Note: Dont change     
-datatype: SAMPLE_ATTRIBUTES     
-#Note: Dont change
-data_filename: data_clinical_sample.txt  
-```
-
-**`data_clinical_sample.txt`**
-
-```
-#Note: Patient_ID and Sample_ID columns are required 
-#Patient Identifier	Sample Identifier	Subtype    
-#Patient identifier	Sample Identifier	Subtype description
-#STRING	STRING	STRING
-#1	1	1
-PATIENT_ID_	SAMPLE_ID	SUBTYPE
-PATIENT_ID_1	SAMPLE_ID_1	basal-like
-PATIENT_ID_2	SAMPLE_ID_2	Her2 enriched
-
-```
-
-**`meta_clinical_patient.txt`**
-
-```
-#Note: must have the same value specified in meta_study.txt 
-cancer_study_identifier: brca_tcga_pub     
-#Note: Dont change
-genetic_alteration_type: CLINICAL     
-#Note: Dont change
-datatype: PATIENT_ATTRIBUTES     
-data_filename: data_clinical_patient.txt
-```
-
-**`data_clinical_patient.txt`**
-
-```markdown
-#Patient Identifier	Overall Survival Status	Overall Survival (Months)	Disease Free Status	Disease Free (Months)	
-#Patient identifier	Overall survival status	Overall survival in months since diagnosis	Disease free status	Disease free in months since treatment	
-#STRING	STRING	NUMBER	STRING	NUMBER	
-#1	1	1	1	1	
-PATIENT_ID	OS_STATUS	OS_MONTHS	DFS_STATUS	DFS_MONTHS	
-PATIENT_ID_1	1:DECEASED	17.97	1:Recurred/Progressed	30.98	
-PATIENT_ID_2	0:LIVING	63.01	0:DiseaseFree	63.01	
-
-```
-
-**`meta_mutations.txt`**
-
-```
-#Note: must have the same value specified in meta_study.txt 
-cancer_study_identifier: brca_tcga_pub
-#Note: Dont change
-genetic_alteration_type: MUTATION_EXTENDED
-#Note: Dont change
-datatype: MAF
-#Note: Note this stable_id for reference in the gene panel files
-stable_id: mutations
-show_profile_in_analysis_tab: true
-profile_description: Mutation data from whole exome sequencing.
-#Note: A name for the mutation data
-profile_name: Mutations
-data_filename: data_mutations.txt
-#Note: Leave empty if you dont intend to include special columns such ASCN: Allele Specific Copy Number information
-namespaces: ASCN
-
-```
-
-**`data_mutations.txt`**
-
-**`meta_gene_panel_matrix.txt`**
-
-```
-#Note: must have the same value specified in meta_study.txt
-cancer_study_identifier: brca_tcga_pub
-#Note: Dont change
-genetic_alteration_type: GENE_PANEL_MATRIX
-#Note: Dont change
-datatype: GENE_PANEL_MATRIX
-#Note: filename of the data table
-data_filename: data_gene_panel_matrix.txt
-```
-
-**`data_gene_panel_matrix.txt`**
-
-```
-| SAMPLE_ID   | mutations | gistic    |
-| ----------- | --------- | --------- |
-| SAMPLE_ID_1 | IMPACT410 | IMPACT410 |
-| SAMPLE_ID_2 | IMPACT410 | IMPACT410 |
-| SAMPLE_ID_3 | NA       | NA        |
-```
 
 ## Publicly available tools for data formatting
 
