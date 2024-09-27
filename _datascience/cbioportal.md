@@ -42,5 +42,6 @@ The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) pro
 - No fixes yet, just releasing this product
 
 ## Contact Us
+The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)) and Jenny Weddle ([jweddle@fredhutch.org](mailto:jweddle@fredhutch.org)). Please feel free to schedule a [Data House Call](https://calendly.com/data-house-calls/resources) with us to go over any questions you may have.
 
 
