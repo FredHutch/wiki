@@ -5,7 +5,7 @@ primary_reviewers: vortexing, abbywall
 
 [**cBioPortal**](https://www.cbioportal.org/) is an open-access, open-source resource for interactive exploration of multidimensional cancer genomics data sets developed by Memorial Sloan Kettering (MSK). The Data Science Lab (DaSL) in conjunction with the Scientific Computing Group (SciComp) at Fred Hutch have integrated a Fred Hutch instance of cBioPortal for research use only. 
 
-The Fred Hutch deployment of cBioPortal provides:
+The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) provides:
 
 - **Interim Visualization**: The FH instance of cBioPortal allows for the visualization of clinical and genomic data both published and unpublished.
 
