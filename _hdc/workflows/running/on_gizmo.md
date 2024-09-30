@@ -33,6 +33,8 @@ you use the `/hpc/temp/` filesystem for those image files.
 
 A typical `cacheDir` may be `/hpc/temp/delete30/lastname_f/nextflow/cache/`.
 
+### Recommendation: Retry on `apptainer pull` error
+
 NOTE: The single most common point of failure when running a new workflow
 on gizmo with Apptainer is at the point of downloading the images for the
 first time. The process by which Apptainer creates a local copy of a Docker
@@ -57,7 +59,11 @@ apptainer {
     enabled = true
     autoMounts = true
     cacheDir = '<APPTAINER_CACHEDIR>'
-    runOptions = '--containall --no-home'
+    runOptions = '--containall -B \$TMPDIR'
+}
+
+env {
+    TMPDIR="\$TMPDIR"
 }
 
 process {
@@ -75,21 +81,6 @@ If you have any problems using this configuration, please don't hesitate to
 
 To run a workflow with this configuration, follow the guidance for formatting
 the appropriate [run script](/hdc/workflows/running/run_script).
-
-## Note: Unexpected Errors
-
-Over the course of running many different workflows, it has become apparent
-that there are occasional errors which can be solved by removing the flag(s)
-`--containall` and/or `--no-home` from the `runOptions` setting shown above.
-
-We do not have a robust understanding for the reason behind this phenomenon.
-Nor do we recommend omitting those flags as a general rule. However, if you
-encounter an error which does not seem to have any easy solution, it is worth
-trying to run the workflow with either:
-
-- `runOptions = '--containall'`,
-- `runOptions = '--no-home'`, or
-- `runOptions = ''`
 
 ## Note: ERROR 151
 
@@ -116,3 +107,25 @@ and `maxRetries = 3` in the `process` block of `nextflow.config`.
 It is also worth noting that this automatic re-try configuration is also helpful
 when running workflows in the AWS Batch job scheduler, due to a low rate of sporadic
 job failures which can be caused by ECS worker recycling in that environment.
+
+## Job Local Storage
+
+An essential element of using the cluster effectively is making sure to use the
+temporary storage volume associated with each individual task, and not filling up
+the `/tmp` directory which is shared across all nodes. 
+More background on this topic is available on the [job local storage page](/compdemos/store_job_local).
+
+The config file above accomplishes this task in two steps:
+
+- The `env` block with `TMPDIR="\$TMPDIR"` ensures that the `TMPDIR` variable
+in the execution scope is populated with the value that is set on the worker
+node (instead of the head node)
+- The `-B \$TMPDIR` flag in the Singularity `runOptions` ensures that the
+volume is mounted into the container and can be accessed by the task process
+
+> Note: If the code running inside the task writes to `/tmp` instead of using
+`$TMPDIR` as recommended, then any large files will cause errors as it fills
+up the volume within the container.
+
+tl; dr - Use the config above and make sure that all tasks are using `$TMPDIR`
+for their temporary files and _not_ hardcoding `/tmp`.
