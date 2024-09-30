@@ -82,8 +82,3 @@ itself is run as a SLURM job.
 Another good approach is to use [tmux](https://github.com/tmux/tmux/wiki)
 to keep a session open on [a grabbed node](/compdemos/first_rhino) for running
 the head node.
-
-Regardless of where you run the workflow from, you can keep
-and eye on its progress from anywhere (even your smartphone!)
-if you make sure to set it up with [monitoring in Tower](/hdc/workflows/running/tower).
-
