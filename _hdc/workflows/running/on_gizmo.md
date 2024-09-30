@@ -18,9 +18,9 @@ something like `nextflow.gizmo.config`.
 You need to select a work directory (or `workDir`), which will contain the temporary
 files produced during the course of workflow execution. This will not contain
 any of the final output files, and so it should ideally be located on the
-`/fh/scratch/` filesystem to minimize unnecessary storage costs.
+`/hpc/temp/` filesystem to minimize unnecessary storage costs.
 
-A typical `workDir` may be `/fh/scratch/delete30/lastname_f/nextflow/work/`.
+A typical `workDir` may be `/hpc/temp/delete30/lastname_f/nextflow/work/`.
 
 ## Using Apptainer
 
@@ -29,9 +29,11 @@ inside a container (which also supports native execution of Docker containers),
 then you will need to specify a `cacheDir` location for those images to be stored.
 
 Due to the large size of Apptainer containers, we strongly recommend that
-you use the `/fh/scratch/` filesystem for those image files.
+you use the `/hpc/temp/` filesystem for those image files.
 
-A typical `cacheDir` may be `/fh/scratch/delete30/lastname_f/nextflow/cache/`.
+A typical `cacheDir` may be `/hpc/temp/delete30/lastname_f/nextflow/cache/`.
+
+### Recommendation: Retry on `apptainer pull` error
 
 NOTE: The single most common point of failure when running a new workflow
 on gizmo with Apptainer is at the point of downloading the images for the
@@ -43,19 +45,6 @@ the workflow, which will prompt Nextflow to just retry the download. In short,
 if you see a `apptainer pull` error when running a workflow on gizmo with
 Apptainer for the first time, just give it another try and see if it works
 on the second attempt.
-
-## Monitoring Workflow Progress with Tower
-
-If you have set up an account in Nextflow Tower for monitoring workflow progress,
-you can specify that access token directly in the configuration file below.
-By placing that information in your configuration file, there is no need to
-additionally specify that information for each individual run.
-
-If you do not have a Tower account set up, you can easily omit the entire
-`tower {}` section (all four lines including both brackets).
-
-If you are interested in learning more about using Tower to monitor workflow progress,
-[read our description](/hdc/workflows/running/tower).
 
 ## Nextflow Configuration - Gizmo
 
@@ -70,7 +59,11 @@ apptainer {
     enabled = true
     autoMounts = true
     cacheDir = '<APPTAINER_CACHEDIR>'
-    runOptions = '--containall --no-home'
+    runOptions = '--containall -B \$TMPDIR'
+}
+
+env {
+    TMPDIR="\$TMPDIR"
 }
 
 process {
@@ -78,11 +71,6 @@ process {
     queue = 'campus-new'
     errorStrategy = 'retry'
     maxRetries = 3
-}
-
-tower {
-  accessToken = '<TOWER_ACCESS_TOKEN>'
-  enabled = true
 }
 ```
 
@@ -93,21 +81,6 @@ If you have any problems using this configuration, please don't hesitate to
 
 To run a workflow with this configuration, follow the guidance for formatting
 the appropriate [run script](/hdc/workflows/running/run_script).
-
-## Note: Unexpected Errors
-
-Over the course of running many different workflows, it has become apparent
-that there are occasional errors which can be solved by removing the flag(s)
-`--containall` and/or `--no-home` from the `runOptions` setting shown above.
-
-We do not have a robust understanding for the reason behind this phenomenon.
-Nor do we recommend omitting those flags as a general rule. However, if you
-encounter an error which does not seem to have any easy solution, it is worth
-trying to run the workflow with either:
-
-- `runOptions = '--containall'`,
-- `runOptions = '--no-home'`, or
-- `runOptions = ''`
 
 ## Note: ERROR 151
 
@@ -134,3 +107,25 @@ and `maxRetries = 3` in the `process` block of `nextflow.config`.
 It is also worth noting that this automatic re-try configuration is also helpful
 when running workflows in the AWS Batch job scheduler, due to a low rate of sporadic
 job failures which can be caused by ECS worker recycling in that environment.
+
+## Job Local Storage
+
+An essential element of using the cluster effectively is making sure to use the
+temporary storage volume associated with each individual task, and not filling up
+the `/tmp` directory which is shared across all nodes. 
+More background on this topic is available on the [job local storage page](/compdemos/store_job_local).
+
+The config file above accomplishes this task in two steps:
+
+- The `env` block with `TMPDIR="\$TMPDIR"` ensures that the `TMPDIR` variable
+in the execution scope is populated with the value that is set on the worker
+node (instead of the head node)
+- The `-B \$TMPDIR` flag in the Singularity `runOptions` ensures that the
+volume is mounted into the container and can be accessed by the task process
+
+> Note: If the code running inside the task writes to `/tmp` instead of using
+`$TMPDIR` as recommended, then any large files will cause errors as it fills
+up the volume within the container.
+
+tl; dr - Use the config above and make sure that all tasks are using `$TMPDIR`
+for their temporary files and _not_ hardcoding `/tmp`.
