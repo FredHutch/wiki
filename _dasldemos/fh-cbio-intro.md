@@ -146,14 +146,8 @@ The cBioPortal admin team will review your submission and notify you via email o
     # List
     aws s3 ls s3://fh-dasl-cbio
     
-    # You should NOT be able to do any of these things. If you are let us know. 
-    
-    # Get object 
-    aws s3 cp s3://fh-dasl-cbio/hello.txt hello.txt
-    
-    # Delete object
-    aws s3 rm s3://fh-dasl-cbio/hello.txt
-    
+    # You should NOT be able to retrieve/delete any study data (even your own).
+    # aws s3 cp s3://fh-dasl-cbio/hello.txt hello.txt # Should error out...
     ```
     
 4. [Prepare your files for upload](https://github.com/FredHutch/tg-cbioportal-data). This can take some time as cBioPortal requires that your data be in a very specific format (more details on this step below).
@@ -192,7 +186,7 @@ The cBioPortal admin team will review your submission and notify you via email o
 
 8. Go have fun and explore your data [on the Fred Hutch instance of cBioPortal!](https://cbioportal.fredhutch.org/)
 
-9. If you would like to update your study data or add more subjects to the cohort in the future, simply update your study data locally and reupload it to `fh-dasl-cbio`. Any subsequent uploads of the same study will overwrite the previous study data.
+9. If you would like to update your study data or add more subjects to the cohort in the future, simply update your study data locally and reupload a new compressed folder to the `fh-dasl-cbio` S3 bucket using the instructions in step 6. Any subsequent uploads of the same study will overwrite the previous study data.
 
 ## How do I prepare my data for upload into cBioportal?
 
