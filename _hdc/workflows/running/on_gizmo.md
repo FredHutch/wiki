@@ -18,9 +18,9 @@ something like `nextflow.gizmo.config`.
 You need to select a work directory (or `workDir`), which will contain the temporary
 files produced during the course of workflow execution. This will not contain
 any of the final output files, and so it should ideally be located on the
-`/fh/scratch/` filesystem to minimize unnecessary storage costs.
+`/hpc/temp/` filesystem to minimize unnecessary storage costs.
 
-A typical `workDir` may be `/fh/scratch/delete30/lastname_f/nextflow/work/`.
+A typical `workDir` may be `/hpc/temp/delete30/lastname_f/nextflow/work/`.
 
 ## Using Apptainer
 
@@ -29,9 +29,9 @@ inside a container (which also supports native execution of Docker containers),
 then you will need to specify a `cacheDir` location for those images to be stored.
 
 Due to the large size of Apptainer containers, we strongly recommend that
-you use the `/fh/scratch/` filesystem for those image files.
+you use the `/hpc/temp/` filesystem for those image files.
 
-A typical `cacheDir` may be `/fh/scratch/delete30/lastname_f/nextflow/cache/`.
+A typical `cacheDir` may be `/hpc/temp/delete30/lastname_f/nextflow/cache/`.
 
 NOTE: The single most common point of failure when running a new workflow
 on gizmo with Apptainer is at the point of downloading the images for the
