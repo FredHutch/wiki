@@ -96,7 +96,8 @@ It is a **[local installation of cBioPortal](https://cbioportal.fredhutch.org/)*
  
 ### How can I request to upload my data into the FH instance?
 If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal, here are the steps you need to follow:
-![upload_steps](/dasldemos/assets/cbio_17_overview_of_FH_instance_upload.png)
+<iframe src="https://share.descript.com/embed/mDv6uZeDjVZ" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+<!-- ![upload_steps](/dasldemos/assets/cbio_17_overview_of_FH_instance_upload.png) -->
 *Note: The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)) and the DaSL Data Governance Team, ([dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org))*
 
 1. Request access to upload your study by submitting a response on the [cBioPortal Access Request REDCap Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW). Before submitting, make sure to prepare the following information.
@@ -164,18 +165,14 @@ The cBioPortal admin team will review your submission and notify you via email o
         1. Go to [Motuz](https://motuz.fredhutch.org/login)
         2. Login using your Fred Hutch credentials
         3. Follow the instructions [here](/compdemos/motuz/) to setup the `fh-dasl-cbio` bucket. 
-        4. Click the blue arrow and it will upload luad_berger_2024 (example) to the fh-dasl-cbio S3 bucket
+        4. Click the blue arrow and it will upload luad_berger_2024 (example) to the `fh-dasl-cbio` S3 bucket
         ![cbio_15_motuz_upload](/dasldemos/assets/cbio_15_motuz_upload.png)
     - **Mountain Duck:**
         1. Follow [these](/compdemos/Mountain-CyberDuck/) instructions to setup Mountain Duck.
         2. Then setup the `fh-dasl-cbio` S3 bucket by following [these](/compdemos/Mountain-CyberDuck/#configuring-mountain-duck) steps.
         3. Open the `fh-dasl-cbio` bucket in finder.
         ![mountain_duck_upload](/dasldemos/assets/cbio_16_mountain_duck_upload.png)
-        4. Copy over your study folder:
-    		1. Right-click on the study folder (wherever you have made it)
-    		2. Select Copy
-    		3. Got to the `fh-dasl-cbio` tab or window
-    		4. Right-click and click on Paste
+        4. Copy over your study folder: right-click on the study folder (wherever you have made it), select "Copy", go to the `fh-dasl-cbio` tab or window, right-click and select "Paste".
     - **Command line:**
         Go to terminal and enter the following command to upload your folder into the `fh-dasl-cbio` S3 bucket:
         ```
