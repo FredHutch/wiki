@@ -87,48 +87,40 @@ It is a **[local installation of cBioPortal](https://cbioportal.fredhutch.org/)*
 
 ### How can I access the Fred Hutch instance of cBioportal?
 
-- Before you are able to access the Fred Hutch instance of cBioPortal you must:
-    - [ ]  have [Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
-    - [ ]  be logged in to the Fred Hutch network
-        - If on-campus, make sure you are connected to the Marconi network.
-        - If off-campus, make sure you connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn)
-- You can access the Fred Hutch instance of cBioportal [here](https://cbioportal.fredhutch.org/)
-    - Use your Fred Hutch credentials to log-in
+- Before accessing the Fred Hutch instance of cBioPortal, you must:
+    - have [Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
+    - be logged in to the Fred Hutch network
+        - If on-campus, connect to the Marconi network.
+        - If off-campus, connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn).
+- Navigate to <a target="_blank" href="https://cbioportal.fredhutch.org/">cbioportal.fredhutch.org</a> and log in using your Fred Hutch credentials.
  
 ### How can I request to upload my data into the FH instance?
-If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal here are the set of ![steps you need to follow](/dasldemos/assets/cbio_17_overview_of_FH_instance_upload.png)
-*Note: The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)) and Data Governance Team, ([dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org))*
+If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal, here are the steps you need to follow:
+![upload_steps](/dasldemos/assets/cbio_17_overview_of_FH_instance_upload.png)
+*Note: The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)) and the DaSL Data Governance Team, ([dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org))*
 
-1. Request access to upload your study by submitting the [cBioPortal Access Request Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW). Keep in mind these things prior to filling out the form
-    1. **Study specific details**
-        - [ ]  Will you be uploading PHI data and if so what?
-        - [ ]  Approximately which and how many samples you plan to upload data for?
-    2. **IRB documentation details**
-        - [ ]  IRB number
-        - [ ]  RG number
-        - [ ]  IRB Approval Letter
-        - [ ]  A copy of the protocol
-(Hopefully) Helpful details in filling out the cBioPortal Access Request Form
+1. Request access to upload your study by submitting a response on the [cBioPortal Access Request REDCap Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW). Before submitting, make sure to prepare the following information.
+    - **Study specific details**
+        - Will you be uploading PHI data and if so what types?
+        - What kinds of samples do you plan to upload and approximately how many?
+        - Who will be processing the study data and uploading it to FH cBioPortal?
+        - Which group members should have access to this study upon upload?
+    - **IRB documentation details**
+        - IRB number
+        - RG number
+        - IRB Approval Letter
+        - A copy of the protocol
+The cBioPortal admin team will review your submission and notify you via email once it's been approved for upload.
 ![study_teams_details](/dasldemos/assets/cbio_09_study_teams_details.png)
 ![study_member_details](/dasldemos/assets/cbio_10_study_member_details.png)
 ![cBioPortal_Project_details](/dasldemos/assets/cbio_11_cBioPortal_Project_details.png)
 ![IRB_Details](/dasldemos/assets/cbio_12_IRB_Details.png)
 ![Dataset_Details_1](/dasldemos/assets/cbio_13_Dataset_Details_1.png)
 ![Dataset_Details_2](/dasldemos/assets/cbio_14_Dataset_Details_2.png)
-2. Wait to get your study approved by the cBioPortal team . Once approved, you will receive an email.
-3. Get [AWS credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws) by emailing the [FH help desk](https://www.notion.so/fhdasl/helpdesk@fredhutch.org).
-*Note: Make sure to include your PI in this email request. If you already have AWS credentials, skip the steps below*
-    1. Before you can get credentials your PI should have an account setup. 
-    2. Get AWS credentials under your PI account
-    
-    *Note: Both the above steps can happen together.* 
-    
-4. Once you get your credentials make sure you [test your credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#testing-your-credentials) . 
-5. Get access to the `fh-dasl-cbio` S3 bucket by emailing the cBioPortal team. Please include AWS (Amazon Web Services) Account ID number and their AWS username. Once the cBioPortal team gives you access will receive a confirmation email. 
-    
-    *Note: Make sure to include your PI on this email request.*
-    
-6. Test your access to the cBioPortal S3 bucket by following these steps in a Terminal window
+2. In the meantime, get [AWS credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws) by emailing the [FH help desk](https://www.notion.so/fhdasl/helpdesk@fredhutch.org).
+*Note: Make sure to include your PI in this email request as they'll need a lab-based account as well.* Once IT emails you back with your credentials, make sure to [test them](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#testing-your-credentials) to ensure they are functioning correctly. If you already have AWS credentials, skip this step.
+
+3. Get access to the `fh-dasl-cbio` S3 bucket by emailing the cBioPortal team your AWS (Amazon Web Services) Account ID number and AWS username. Once the cBioPortal team gives you access, you will receive a confirmation email. Test your access to the cBioPortal S3 bucket by following these steps in a terminal window:
     
     ```bash
     # How to test you have the correct access to the fh-dasl-cbio S3 bucket. 
@@ -164,8 +156,8 @@ If you are interested in uploading your own data into the Fred Hutch instance of
     
     ```
     
-7. [Prepare your files for upload](https://github.com/FredHutch/tg-cbioportal-data). This can take some time as cBioPortal requires that your data be in a very specific format.
-8. Zip your study folder before moving it into the `fh-dasl-cbio` S3 bucket
+4. [Prepare your files for upload](https://github.com/FredHutch/tg-cbioportal-data). This can take some time as cBioPortal requires that your data be in a very specific format.
+5. Zip your study folder before moving it into the `fh-dasl-cbio` S3 bucket
     
     To zip your folder you can use this command in terminal:
     
@@ -178,7 +170,7 @@ If you are interested in uploading your own data into the Fred Hutch instance of
   zip -r cancer_study_identifier.zip .
 ```
 You can also zip the folder by right clicking on your study folder and ![selecting compress](/dasldemos/assets/cbio_18_compress_by_right_click.png)
-9. Transfer your data onto the `fh-dasl-cbio` S3 bucket. You can do that one of these 3 ways:
+6. Transfer your data onto the `fh-dasl-cbio` S3 bucket. You can do that one of these 3 ways:
     - **Motuz**:
         1. Go to [Motuz](https://motuz.fredhutch.org/login)
         2. Login using your Fred Hutch credentials
@@ -190,7 +182,7 @@ You can also zip the folder by right clicking on your study folder and ![selecti
         2. Then setup the `fh-dasl-cbio` S3 bucket by following [these](https://sciwiki.fredhutch.org/compdemos/Mountain-CyberDuck/#configuring-mountain-duck) steps.
         3. Open the `fh-dasl-cbio` bucket in finder.
         ![mountain_duck_upload](/dasldemos/assets/cbio_16_mountain_duck_upload.png)
-	4. Copy over your study folder:
+        4. Copy over your study folder:
     		1. Right-click on the study folder (wherever you have made it)
     		2. Select Copy
     		3. Got to the `fh-dasl-cbio` tab or window
@@ -211,10 +203,10 @@ You can also zip the folder by right clicking on your study folder and ![selecti
     aws s3 cp /path/to/local/folder s3://fh-dasl-cbio --recursive
     ```
     
-13. Let us know that your data is in the S3 bucket or wait for a day (at the maximum) and you should be able to see your data in the FH instance.
+7. Let us know that your data is in the S3 bucket or wait for a day (at the maximum) and you should be able to see your data in the FH instance.
 *Note:* If you do not receive an email notification indicating the success/failure of your study upload within 15 minutes, reach out to the cBioPortal Team for help identifying the issue.
 
-14. Go have fun and explore your data [on the Fred Hutch instance of cBioPortal.](https://cbioportal.fredhutch.org/).
+8. Go have fun and explore your data [on the Fred Hutch instance of cBioPortal.](https://cbioportal.fredhutch.org/).
 
 
 **How do I prepare my data for upload into cBioportal**
