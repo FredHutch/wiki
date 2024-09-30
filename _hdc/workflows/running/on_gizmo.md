@@ -44,19 +44,6 @@ if you see a `apptainer pull` error when running a workflow on gizmo with
 Apptainer for the first time, just give it another try and see if it works
 on the second attempt.
 
-## Monitoring Workflow Progress with Tower
-
-If you have set up an account in Nextflow Tower for monitoring workflow progress,
-you can specify that access token directly in the configuration file below.
-By placing that information in your configuration file, there is no need to
-additionally specify that information for each individual run.
-
-If you do not have a Tower account set up, you can easily omit the entire
-`tower {}` section (all four lines including both brackets).
-
-If you are interested in learning more about using Tower to monitor workflow progress,
-[read our description](/hdc/workflows/running/tower).
-
 ## Nextflow Configuration - Gizmo
 
 Below is a template configuration file which can be used as your `nextflow.gizmo.config`.
@@ -78,11 +65,6 @@ process {
     queue = 'campus-new'
     errorStrategy = 'retry'
     maxRetries = 3
-}
-
-tower {
-  accessToken = '<TOWER_ACCESS_TOKEN>'
-  enabled = true
 }
 ```
 

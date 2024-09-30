@@ -41,7 +41,6 @@ the workflow itself. This includes:
 - [Running a workflow on AWS](/hdc/workflows/running/on_aws)
 - [Setting up a run script](/hdc/workflows/running/run_script)
 - [Specifying computational resources](/hdc/workflows/running/process_resources)
-- [Monitoring workflows on Tower](/hdc/workflows/running/tower)
 
 ## Workflow Catalog
 
