@@ -156,20 +156,15 @@ The cBioPortal admin team will review your submission and notify you via email o
     
     ```
     
-4. [Prepare your files for upload](https://github.com/FredHutch/tg-cbioportal-data). This can take some time as cBioPortal requires that your data be in a very specific format.
-5. Zip your study folder before moving it into the `fh-dasl-cbio` S3 bucket
-    
-    To zip your folder you can use this command in terminal:
-    
+4. [Prepare your files for upload](https://github.com/FredHutch/tg-cbioportal-data). This can take some time as cBioPortal requires that your data be in a very specific format (more details on this step below).
+5. Zip your study folder before moving it into the `fh-dasl-cbio` S3 bucket. On a Mac, right-click on your study directory and click "Compress". On Windows, right-click on your study directory, select "Send to", then "Compressed (zipped) folder". If you prefer to use the command line, you can zip the folder using this command:
+    ```
+    # Go to the directory where your study folder is present
+    cd /path/to/directory/cancer_study_indentifier
 
-```
-  # Go to the directory where your study folder is present
-  cd /path/to/directory/cancer_study_indentifier
-
-  # Zip the folder recursively
-  zip -r cancer_study_identifier.zip .
-```
-You can also zip the folder by right clicking on your study folder and ![selecting compress](/dasldemos/assets/cbio_18_compress_by_right_click.png)
+    # Zip the folder recursively
+    zip -r cancer_study_identifier.zip .
+    ```
 6. Transfer your data onto the `fh-dasl-cbio` S3 bucket. You can do that one of these 3 ways:
     - **Motuz**:
         1. Go to [Motuz](https://motuz.fredhutch.org/login)
@@ -187,46 +182,29 @@ You can also zip the folder by right clicking on your study folder and ![selecti
     		2. Select Copy
     		3. Got to the `fh-dasl-cbio` tab or window
     		4. Right-click and click on Paste
+    - **Command line:**
+        Go to terminal and enter the following command to upload your folder into the `fh-dasl-cbio` S3 bucket:
+        ```
+        aws s3 cp /path/to/directory/cancer_study_identifier.zip s3://fh-dasl-cbio/
+        ```
 
-    **Command line:**
-    Go to terminal and enter the following commands to upload your folder into the `fh-dasl-cbio` S3 bucket
-    
-    ```
-    ssh user@rhino
-    module load awscli
-    aws configure
-    AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE 
-    AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-    Default region name [None]: us-west-2
-    Default output format [None]: 
-    
-    aws s3 cp /path/to/local/folder s3://fh-dasl-cbio --recursive
-    ```
-    
-7. Let us know that your data is in the S3 bucket or wait for a day (at the maximum) and you should be able to see your data in the FH instance.
-*Note:* If you do not receive an email notification indicating the success/failure of your study upload within 15 minutes, reach out to the cBioPortal Team for help identifying the issue.
+7. Our Airflow automation scripts will take care of the rest of the upload process from there and send you an email notification with details about the outcome. If upload was unsuccessful, the email will contain a detailed HTML file that contains documents which parts of your study are causing the issue and need updating. *Note:* If you do not receive an email notification indicating the success/failure of your study upload within an hour, reach out to the [cBioPortal Team](mailto:tfirman@fredhutch.org) for help identifying the issue.
 
-8. Go have fun and explore your data [on the Fred Hutch instance of cBioPortal.](https://cbioportal.fredhutch.org/).
+8. Go have fun and explore your data [on the Fred Hutch instance of cBioPortal!](https://cbioportal.fredhutch.org/)
 
 
-**How do I prepare my data for upload into cBioportal**
--------------------------------------------------------
+## How do I prepare my data for upload into cBioportal?
 
-### **Before you begin**
-
-- In order to be able to upload your data into cBioportal you need to create a folder which contains all your files in the correct format.
-*Note: The name of the folder should be study name (also referred to as the cancer_study_identifier).Note: Please make sure you have provided the study folder/ cancer_study_identifier name to the DaSL team so we know to expect it.*
+### Before you begin
+- In order to be able to upload your data into cBioportal, you need to create a folder which contains all your files in the correct format. *Note: The name of the folder should be study name (also referred to as the cancer_study_identifier).Note: Please make sure you have provided the study folder/ cancer_study_identifier name to the DaSL team so we know to expect it.*
 - This folder should be zipped before uploading it into the fh-dasl-cbio S3 bucket. See above instructions on how to zip your study folder.
 - Once your study files and folder are prepared and ready for upload you can do the following:
     1. You can directly try uploading it into `fh-dasl-cbio` bucket (if you have got all the permissions necessary). Upon doing this you will receive a validation report outlining errors with respect to your files if any. If everything is formatted as expected then your study will be uploaded into the FH instance of cBioPortal. 
     2. You could also validate your study folder by [launching a local instance](https://github.com/FredHutch/tg-cbioportal-data/03_launch_local) of cBioPortal and troubleshoot through the errors (if any) of your file.
 - **There are a few files that are required while all other files are optional.** We provide here an overview of the required files and some optional files.
     - *Note: Version 6 of cBioportal currently also requires in the least 1 non-clinical file to be uploaded as well. See below instructions on where to find a dummy table that you can modify to upload incase you are only uploading clinical data.*
-    
--   **There are a few files that are required while all other files are optional.** We provide here an overview of the required files and some optional files.
-    -   *Note: Version 6 of cBioportal currently also requires in the least 1 non-clinical file to be uploaded as well. See below instructions on where to find a dummy table that you can modify to upload incase you are only uploading clinical data.*
 
-Here is a list of the files (both required and optional) in your folder:
+### Required Study Files
 
 | Type                                        | Requirement                                        | Filename example                              | Required Format                     | Purpose                                                              | Detailed Instructions                                                                              | Example                                                                                               |
 |---------------------------------------------|---------------------------------------------------|----------------------------------------------|-------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
