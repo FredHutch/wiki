@@ -5,14 +5,14 @@ main_authors: sitapriyamoorthi, tefirman, laderast
 primary_reviewers: laderast, sonu, sckott
 ---
 
-Introduction to the [Fred Hutch instance of cBioPortal](https://cbioportal.fredhutch.org/) and a demonstration of its usage in the context of research data.
+Introduction to the [Fred Hutch instance of cBioPortal](/datascience/cbioportal/) and a demonstration of its usage in the context of research data.
 
 ## Learning Objectives
 
 After reading this article, you will learn:
 
 - What **cBioPortal** is and how it can help with your research.
-- What the **Fred Hutch instance of cBioPortal** is and steps to take to upload your data onto the instance.
+- What the [**Fred Hutch instance of cBioPortal**](https://cbioportal.fredhutch.org/) is and steps to take to upload your data onto the instance.
 - Ways to format your data for upload into cBioPortal.
 
 ## What is cBioportal?
@@ -83,15 +83,15 @@ It is a **[local installation of cBioPortal](https://cbioportal.fredhutch.org/)*
     - Hosting your data on the FH instance also easily facilitates sharing access with collaborators, provided they have FH credentials. Study data is **only visible to authorized personnel** approved by the study lead/PI.
 - **What makes my data secure?**
     - FH cBioPortal utilizes an open source identity and access management software called [Keycloak](https://www.keycloak.org/) to integrate the necessary [security features](https://docs.cbioportal.org/deployment/authorization-and-authentication/authenticating-and-authorizing-users-via-keycloak/) into cBioPortal. This system has been reviewed and approved by the Fred Hutch Information Security Team and will be administered by the [DaSL Data Governance team](https://hutchdatascience.org/governance/) to ensure appropriate usage through the Fred Hutch community.
-    - The secure nature of the FH instance of cBioPortal allows you to include individually identifying research data such as [PHI](https://sciwiki.fredhutch.org/datascience/phi/#types-of-data-sets) (Personal Health Information) if covered in the [IRB](https://sciwiki.fredhutch.org/_datascience/consent_IRB/) (Internal Review Board application) of the study.
+    - The secure nature of the FH instance of cBioPortal allows you to include individually identifying research data such as [PHI](/datascience/phi/#types-of-data-sets) (Personal Health Information) if covered in the [IRB](/datascience/consent_IRB/) (Internal Review Board application) of the study.
 
 ### How can I access the Fred Hutch instance of cBioportal?
 
 - Before accessing the Fred Hutch instance of cBioPortal, you must:
-    - have [Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
+    - have [Fred Hutch credentials](/scicomputing/access_credentials/#hutchnet-id)
     - be logged in to the Fred Hutch network
         - If on-campus, connect to the Marconi network.
-        - If off-campus, connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn).
+        - If off-campus, connect via [VPN](/scicomputing/access_methods/#vpn).
 - Navigate to <a target="_blank" href="https://cbioportal.fredhutch.org/">cbioportal.fredhutch.org</a> and log in using your Fred Hutch credentials.
  
 ### How can I request to upload my data into the FH instance?
@@ -117,8 +117,8 @@ The cBioPortal admin team will review your submission and notify you via email o
 ![IRB_Details](/dasldemos/assets/cbio_12_IRB_Details.png)
 ![Dataset_Details_1](/dasldemos/assets/cbio_13_Dataset_Details_1.png)
 ![Dataset_Details_2](/dasldemos/assets/cbio_14_Dataset_Details_2.png)
-2. In the meantime, get [AWS credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws) by emailing the [FH help desk](https://www.notion.so/fhdasl/helpdesk@fredhutch.org).
-*Note: Make sure to include your PI in this email request as they'll need a lab-based account as well.* Once IT emails you back with your credentials, make sure to [test them](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#testing-your-credentials) to ensure they are functioning correctly. If you already have AWS credentials, skip this step.
+2. In the meantime, get [AWS credentials](/scicomputing/access_credentials/#amazon-web-services-aws) by emailing the [FH help desk](https://www.notion.so/fhdasl/helpdesk@fredhutch.org).
+*Note: Make sure to include your PI in this email request as they'll need a lab-based account as well.* Once IT emails you back with your credentials, make sure to [test them](/scicomputing/access_credentials/#testing-your-credentials) to ensure they are functioning correctly. If you already have AWS credentials, skip this step.
 
 3. Get access to the `fh-dasl-cbio` S3 bucket by emailing the cBioPortal team your AWS (Amazon Web Services) Account ID number and AWS username. Once the cBioPortal team gives you access, you will receive a confirmation email. Test your access to the cBioPortal S3 bucket by following these steps in a terminal window:
     
@@ -169,12 +169,12 @@ The cBioPortal admin team will review your submission and notify you via email o
     - **Motuz**:
         1. Go to [Motuz](https://motuz.fredhutch.org/login)
         2. Login using your Fred Hutch credentials
-        3. Follow the instructions  [here](https://sciwiki.fredhutch.org/compdemos/motuz/) to setup the `fh-dasl-cbio` bucket. 
+        3. Follow the instructions [here](/compdemos/motuz/) to setup the `fh-dasl-cbio` bucket. 
         4. Click the blue arrow and it will upload luad_berger_2024 (example) to the fh-dasl-cbio S3 bucket
         ![cbio_15_motuz_upload](/dasldemos/assets/cbio_15_motuz_upload.png)
     - **Mountain Duck:**
-        1. Follow [these](https://sciwiki.fredhutch.org/compdemos/Mountain-CyberDuck/) instructions to setup Mountain Duck.
-        2. Then setup the `fh-dasl-cbio` S3 bucket by following [these](https://sciwiki.fredhutch.org/compdemos/Mountain-CyberDuck/#configuring-mountain-duck) steps.
+        1. Follow [these](/compdemos/Mountain-CyberDuck/) instructions to setup Mountain Duck.
+        2. Then setup the `fh-dasl-cbio` S3 bucket by following [these](/compdemos/Mountain-CyberDuck/#configuring-mountain-duck) steps.
         3. Open the `fh-dasl-cbio` bucket in finder.
         ![mountain_duck_upload](/dasldemos/assets/cbio_16_mountain_duck_upload.png)
         4. Copy over your study folder:
@@ -188,23 +188,22 @@ The cBioPortal admin team will review your submission and notify you via email o
         aws s3 cp /path/to/directory/cancer_study_identifier.zip s3://fh-dasl-cbio/
         ```
 
-7. Our Airflow automation scripts will take care of the rest of the upload process from there and send you an email notification with details about the outcome. If upload was unsuccessful, the email will contain a detailed HTML file that contains documents which parts of your study are causing the issue and need updating. *Note:* If you do not receive an email notification indicating the success/failure of your study upload within an hour, reach out to the [cBioPortal Team](mailto:tfirman@fredhutch.org) for help identifying the issue.
+7. Our Airflow automation scripts will take care of the rest of the upload process from there and send you an email notification with details about the outcome. If upload was unsuccessful, the email will contain a detailed HTML file called a "validation report" that identifies which parts of your study are causing the issue and need updating. *Note:* If you do not receive an email notification indicating the success/failure of your study upload within an hour, reach out to the [cBioPortal Team](mailto:tfirman@fredhutch.org) for help identifying the issue.
 
 8. Go have fun and explore your data [on the Fred Hutch instance of cBioPortal!](https://cbioportal.fredhutch.org/)
 
+9. If you would like to update your study data or add more subjects to the cohort in the future, simply update your study data locally and reupload it to `fh-dasl-cbio`. Any subsequent uploads of the same study will overwrite the previous study data.
 
 ## How do I prepare my data for upload into cBioportal?
 
 ### Before you begin
-- In order to be able to upload your data into cBioportal, you need to create a folder which contains all your files in the correct format. *Note: The name of the folder should be study name (also referred to as the cancer_study_identifier).Note: Please make sure you have provided the study folder/ cancer_study_identifier name to the DaSL team so we know to expect it.*
-- This folder should be zipped before uploading it into the fh-dasl-cbio S3 bucket. See above instructions on how to zip your study folder.
-- Once your study files and folder are prepared and ready for upload you can do the following:
-    1. You can directly try uploading it into `fh-dasl-cbio` bucket (if you have got all the permissions necessary). Upon doing this you will receive a validation report outlining errors with respect to your files if any. If everything is formatted as expected then your study will be uploaded into the FH instance of cBioPortal. 
-    2. You could also validate your study folder by [launching a local instance](https://github.com/FredHutch/tg-cbioportal-data/03_launch_local) of cBioPortal and troubleshoot through the errors (if any) of your file.
-- **There are a few files that are required while all other files are optional.** We provide here an overview of the required files and some optional files.
-    - *Note: Version 6 of cBioportal currently also requires in the least 1 non-clinical file to be uploaded as well. See below instructions on where to find a dummy table that you can modify to upload incase you are only uploading clinical data.*
+- Start by creating a folder to store all of your relevant study files. **The name of the folder must be the exact study ID that was provided to you by the cBioPortal team.** If any other name is provided, the automation steps will refuse upload since the altered study ID would not be on the list of approved values. *Note: the `cancer_study_identifier` value in your meta files should also be this same study ID.*
+- Once your study files are close to complete, you can test out your file formatting using one of two validation methods:
+    1. If you've received official approval for upload, try directly uploading it into the `fh-dasl-cbio` bucket. As mentioned above, the automated upload process will send you a validation report via email outlining any issues that may have popped up.
+    2. You could also validate your study folder by [launching a local instance](https://github.com/FredHutch/tg-cbioportal-data/03_launch_local) of cBioPortal and troubleshooting the errors (if any) in your study data.
 
-### Required Study Files
+### Required/Optional Study Files
+There are a few files that are required while all other files are optional. Below is an overview of the required files and some optional files *Note: Version 6 of cBioportal currently also requires in the least 1 non-clinical file to be uploaded as well. See instructions below on where to find a dummy table that you can modify in case you are only uploading clinical data.*
 
 | Type                                        | Requirement                                        | Filename example                              | Required Format                     | Purpose                                                              | Detailed Instructions                                                                              | Example                                                                                               |
 |---------------------------------------------|---------------------------------------------------|----------------------------------------------|-------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -229,6 +228,7 @@ The cBioPortal admin team will review your submission and notify you via email o
 
 
 ## Publicly available tools for data formatting
+There are many publicly available formatting tools that may help with the formatting process. When deciding which one works best for you, it ultimately depends on what tools you're comfortable with and what kinds of data you're uploading, but here are a few options that might help get you started:
 
 | Tool Name                                                                                          | Description                                                                             | Advantages                                                                                          | Disadvantages                                                                                                           | FH Repository Link                                                                                     |
 |----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
