@@ -1,6 +1,6 @@
 ---
 title: Overview
-last_modified_at: 2023-10-09
+last_modified_at: 2024-10-01
 hdc: True
 ---
 
@@ -27,7 +27,7 @@ flow cytometers, and microscopes, can be a challenge for researchers. Such datas
 consist of many large and files that need to be shared among collaborators, and which can
 often be analyzed to produce new results.
 
-To help address these challenges, the Data Core has developed the [Cirro data portal](https://cirro.bio).
+To help address these challenges, the Data Core has developed the [Cirro data portal](https://fredhutch.cirro.bio).
 Cirro enables researchers to efficiently manage research data, especially the data
 generated from the Shared Resources core facilities. It offers:
 
@@ -36,11 +36,10 @@ generated from the Shared Resources core facilities. It offers:
 - Standardized bioinformatics analysis pipelines
 
 Fred Hutch researchers can log in directly to Cirro at
-[cirro.bio](https://cirro.bio).
+[cirro.bio](https://fredhutch.cirro.bio).
 
-An in-depth explanation of how Cirro can be used at Fred Hutch was provided
-as a seminar on July 11, 2023, and a recording of that presentation can be
-found [on the Cirro CenterNet page](https://centernet.fredhutch.org/cn/u/hutch-data-core/Cirro.html).
+A series of seminars on how Cirro can be used at Fred Hutch are available as recordings
+[on the Cirro CenterNet page](https://centernet.fredhutch.org/u/hutch-data-core/cirro.html#pastseminars).
 
 Walkthrough videos on Cirro are provided for:
 
