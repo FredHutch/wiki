@@ -90,13 +90,19 @@ When starting a new RStudio session, you can choose which version of R to run (b
 
 If you have issues or questions in using this application, please email `helpdesk` and describe the issues you're having.  
 
-*Related Note*: If you are working with RMarkdown documents in RStudio Server,
-you may find that plot labels and other graphics look kind of weird.
-This is because X11 (the X Window System) is not available
-inside RStudio Server. The solution is to make the the `Cairo`
-package is installed, and put the following line at the beginning of your first
+#### Plotting in RStudio
+
+You may discover that plots (specifically axis labels) look very low-resolution.
+The solution to that is to go to the `Tools` menu in RStudio Server, choose
+`Global Options...`, and under `General`, click on the Graphics tab.
+In the `Backend` dropdown, choose `AGG`. Now click `Apply` and then `OK`.
+The improved resolution will be visible with any new plot you create
+(it won't apply to existing plots in the `Plots` tab).
+
+To make the same change within RMarkdown documents created with the `knitr` package, 
+put the following line at the beginning of your first
 code chunk. This should cause plots and other graphics to render
-correctly without need for X11.
+with a higher resolution.
 
 ```r
 knitr::opts_chunk$set(dev="CairoPNG")
