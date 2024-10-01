@@ -54,6 +54,8 @@ datascience:
     children:
       - title: PROOF
         url: /datascience/proof/
+      - title: cBioPortal
+        url: /datascience/cbioportal/
   - title: Data Management and Sharing
     children:
       - title: Data Stewardship
@@ -64,16 +66,20 @@ datascience:
         url: /datascience/execute_sharing/
       - title: Specimen Data Management
         url: /datascience/open_specimen/
-  - title: Working With Data
-    children:
-      - title: Data Visualization
-        url: /datascience/data_viz/
-      - title: Patient Data
-        url: /datascience/patient-data/
       - title: PHI and Research
         url: /datascience/phi/
       - title: Data Deidentification
         url: /datascience/deidentification/
+  - title: Biomedical Data
+    children:
+      - title: Real-World Data
+        url: datascience/real_world_data/
+      - title: Patient Data
+        url: /datascience/patient-data/
+  - title: Data Science
+    children:
+      - title: Data Visualization
+        url: /datascience/data_viz/
   - title: Research, Privacy and Security
     children:
       - title: Consenting and the IRB

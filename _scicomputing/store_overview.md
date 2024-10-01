@@ -27,7 +27,7 @@ The "home" drive is of most interest to users of the HPC compute environments- i
 
 There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [MyDB](https://mydb.fredhutch.org/) (supported by SciComp providing access to four database engine types: Postgres, MariaDB (MySQL), MongoDB, and Neo4j).
 
-### [Scientific File Storage: Storage in Fast, Secure, and hpc/temp](/scicomputing/store_posix/)
+### [Scientific File Storage: Fast and Secure](/scicomputing/store_posix/)
 
 Scientific file storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
@@ -49,16 +49,16 @@ You will need to consider the security needs of your data sets before placing da
 
 This table describes some of the most common security needs for data sets and how or if each storage system implements that security capability.
 
-|  Feature 	                | Secure File	| Fast File | Economy Cloud |  Scratch  	|  hpc/temp  |  OneDrive 	|
-|:-	                        |:-:	        |:-:	      |:-:	          |:-:	        |:-:	       |:-:	        |
-|  Encryption at Rest 	    |        Yes  |      Yes  |          Yes	|        Yes	|       Yes	 |        Yes	|
-|  Encryption in Transit    |        Yes* |      Yes* |          Yes	|        Yes* |       Yes* |        Yes	|
-|  Access auditing 	        |        Yes	|      Yes  |    	     Yes  |         No	|        No	 |        Yes	|
-|  Approved for PHI by ISO 	|        Yes  |      No   |          Yes  |         No	|        No  |        Yes	|
+|  Feature 	                | Secure File	| Fast File | Economy Cloud |  Scratch  	| Working    |  hpc/temp  |  OneDrive 	|
+|:-	                        |:-:	        |:-:	      |:-:	          |:-:	        |:-:	       |:-:	        |:-:	        |
+|  Encryption at Rest 	    |        Yes  |      Yes  |          Yes	|        Yes	| Yes        | Yes        |        Yes	|
+|  Encryption in Transit    |        Yes* |      Yes* |          Yes	|        Yes* | Yes*       | Yes*       |        Yes	|
+|  Access auditing 	        |        Yes	|      Yes  |    	     Yes  |         No	| No         | No         |        Yes	|
+|  Approved for PHI by ISO 	|        Yes  |      No   |          Yes  |         No	| No         | No         |        Yes	|
 
 *) Transit encryption is only available when the data is accessed by SMB mounts- Windows and newer OSX systems use SMB. The HPC systems (e.g. rhino, gizmo) use NFS which is not encrypted.  However, this traffic is confined to a secure data center.
 
-At this time both _fast_ and _secure_ storage platforms have the same capabilities for encryption, access auditing, and backups.  _Secure_ has a more capable mechanism for managing access permissions that allows more flexibility in assigning those permissions.  Contact scicomp if you think you may need these capabilities.
+At this time both _fast_, _working_, and _secure_ storage platforms have the same capabilities for encryption, access auditing, and backups.  _Secure_ has a more capable mechanism for managing access permissions that allows more flexibility in assigning those permissions.  Contact scicomp if you think you may need these capabilities.
 
 ## Allocations and Costs
 
@@ -68,6 +68,7 @@ Home | No Charge (100GB limit) |  On campus storage with offsite replication. 7 
 Fast | $$$ beyond 5TB per PI |  On campus storage with offsite replication. 7 days of snapshots, daily backups | Large instrument files and data sets that need high performance access to computing resources, Unix file permissions, but not temporary data (such as intermediate files)
 Economy Cloud | $ beyond 100TB per PI |  Offsite storage (cloud) with multi-datacenter replication, 90 day undelete with request to `helpdesk` | Best for archiving large data sets, or primary storage of large files.  Good for PHI or other data that requires encryption and auditing. *Requires Desktop Client to access, see [Object Storage page.](/scicomputing/store_objectstore/)*
 Scratch | No Charge | On campus storage, no snapshots, not backed up | Temporary files, such as those intermediate to a final result that only need to persist during a job, and secondary copies of files used in analysis but with a primary copy on more durable storage  *Appropriate use  can significantly reduce data storage costs- see the [Scratch Storage](/scicomputing/store_scratch/) page.*
+Working | Charge for quotas over 20TB | On campus storage, snapshots, not backed up | Working data sets with a primary copy on durable storage (e.g. a primary copy in S3) *See [Working Storage](/scicomputing/store_working)*
 hpc/temp | No Charge | On campus storage, no snapshots, not backed up | Temporary files, such as those intermediate to a final result that only need to persist during a job, and secondary copies of files used in analysis but with a primary copy on more durable storage  *Appropriate use  can significantly reduce data storage costs- see the [hpc/temp](/scicomputing/store_temp/) page.*
 OneDrive | No Charge | Offsite storage (cloud) with multi-datacenter replicaiton. No backups, but a "Recycle Bin" is available | Documents, spreadsheets, and other similar administrative files
 
