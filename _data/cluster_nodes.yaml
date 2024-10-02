@@ -79,7 +79,7 @@
       gpu_memory: 10.92 GB 
       gpu_compute_capability: 6.1
       node_count: 42
-      partition: all
+      partition: campus, short, new
     -  
       node_name: k
       cores: 36
@@ -98,7 +98,7 @@
       gpu_memory: 10.76 GB 
       gpu_compute_capability: 7.5
       node_count: 170
-      partition: all
+      partition: campus, short, new
     -  
       node_name: harmony
       cores: 32
@@ -115,7 +115,7 @@
       gpu: NVIDIA L40S
       gpu_count: 4
       gpu_memory: 44 GB 
-      gpu_compute_capability: 7.5
+      gpu_compute_capability: 8.9
       node_count: 8
       partition: concord
     -  
