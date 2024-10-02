@@ -6,9 +6,7 @@ primary_reviewer: atombaby
 
 There are currently two capabilities available for GPUs in the gizmo.  The _J_ and _K_ class nodes have consumer-grade RTX cards.  We have recently (fall 2024) added more capable _harmony_ nodes with NVIDIA L40s cards.  These are significantly more capable systems.
 
-## Requesting GPUs
-
-### Nodes with GPUs
+### GPU Nodes
 
 |Location|Partition|Node Name|GPU|
 |---|:---:|:---:|---:|
@@ -20,27 +18,29 @@ There are currently two capabilities available for GPUs in the gizmo.  The _J_ a
 {%- endfor %}
 {%- endfor %}
 
-### Requesting GPUs on J and K class nodes
+## Accessing GPUs
+
+Different options are required to access the different capability GPUs.  The newer GPUs are only available in a new partition containing just those nodes.
 
 GPUs are requested via the `--gpus` option:
 
-    sbatch --gpus=1 ...
-
-Specific GPU models (see table below) can be requested by indicating _model_ and _count_:
-
-    sbatch --gpus=rtx2080ti:1 ...
-
-### Requesting GPUs on Harmony Nodes
-
-Access to Harmony nodes is more complex as these systems have a newer version of operating system.  These nodes also reside in a separate partition:
-
 ```
-sbatch --partition=harmony --gpus=1 ...
+sbatch --gpus=1 ...
 ```
 
-Jobs can be submitted from any gizmo node.
+Specific GPU models (except for the L40s GPUs)  can be requested by indicating _model_ and _count_:
 
-These nodes have a different set of environment modules- when submitting jobs make sure that your current environment does not have modules loaded (i.e. `module purge`) and that you are loading the new modules in your script.
+```
+sbatch --gpus=rtx2080ti:1 ...
+```
+
+Access to the L40s GPUs is more complex.  These systems have a different processor and a newer version of operating system- this requires a new set of environment modules specific to this new architecture.  These nodes also reside in a separate partition:
+
+```
+sbatch --partition=concord --gpus=1 ...
+```
+
+When submitting jobs make sure that your current environment does not have modules loaded (i.e. `module purge`) and that you are loading the new modules in your script.  You may run into conflicts with modules built for rhino/gizmo compute platforms.
 {: .notice--info}
 
 ## Using GPUs
