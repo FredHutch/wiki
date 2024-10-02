@@ -100,6 +100,25 @@
       node_count: 170
       partition: all
     -  
+      node_name: harmony
+      cores: 32
+      sockets: 1
+      memory_gb: 1536
+      processor_model: EPYC 9354P
+      processor_manufacturer: AMD
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: AS-2015HS-TNR Hyper Server
+      os: Ubuntu 24.04 LTS
+      local_storage: "3TB @ /loc"
+      network: 10G (up to 1GB/s throughput)
+      gpu: NVIDIA L40S
+      gpu_count: 4
+      gpu_memory: 44 GB 
+      gpu_compute_capability: 7.5
+      node_count: 8
+      partition: concord
+    -  
       node_name: rhino
       cores: 14
       sockets: 2
@@ -131,3 +150,9 @@
       default_per_job: 60 minutes
       max_per_job: 36 cpus, 768000MB memory (effective)
       min_per_job: none
+    -
+      partition_name: concord
+      max_per_acct: 2 GPUs
+      default_per_job: 60 minutes
+      max_per_job: 8 CPUs, 2 GPUs, 384GB RAM
+      min_per_job: 1 CPU, 1 GPU
