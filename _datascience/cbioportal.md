@@ -1,5 +1,6 @@
 ---
 title: Fred Hutch cBioPortal
+authors: tefirman, sitapriyamoorthi
 primary_reviewers: vortexing, abbywall
 ---
 
@@ -7,18 +8,20 @@ primary_reviewers: vortexing, abbywall
 
 The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) provides:
 
-- **Interim Visualization**: The FH instance of cBioPortal allows for the visualization of clinical and genomic data both published and unpublished.
-- **Facilitated Sharing**: Hosting your data enables easier sharing and comparison of to other datasets from the FH community and beyond.
+- **Interim Visualization**: The Fred Hutch instance of cBioPortal allows for the visualization of clinical and genomic data both published and unpublished.
+- **Facilitated Sharing**: Hosting your data enables  sharing and comparison of  other datasets from the Fred Hutch community and beyond.
 - **Controlled Access**: Study data is restricted to authorized personnel approved by the study lead or principal investigator (PI), thus protecting your research data
-- **Security Approval**: The FH cBioPortal is a secure storage solution, reviewed and approved by the Fred Hutch Information Security Team.
-- **Inclusion of Sensitive Data**: The secure nature of the portal allows for the inclusion of individually identifying research data, such as Personal Health Information (PHI), if covered by the study’s IRB.
+- **Inclusion of Sensitive Data**: cBioportal has been reviewed and approved by Infosec to include up to individually identifyingiable research data. 
 
 
 ## Getting Started
 
 ### Training and Courses
-- Find out more about the FH instance of cBioPortal and how to upload your study [in the DaSL Resource Library](/dasldemos/fh-cbio-intro/)
-- Explore the capabilities of cBioPortal through [MSK's YouTube series](https://docs.cbioportal.org/user-guide/overview/)
+- Find out more about the Fred Hutch instance of cBioPortal and how to upload your study [in the DaSL Resource Library](/dasldemos/fh-cbio-intro/)
+- cBioPortal instructions on how to [format your data](https://docs.cbioportal.org/file-formats/#introduction) for upload into cBioPortal.
+- Fred Hutch DaSL [repository](https://github.com/FredHutch/cbioportal-data-formatting) to help with data formatting and other useful tools.
+- [Video tutorials](https://www.youtube.com/@cbioportal) on using cBioPortal.
+
 
 ### Technical Documentation and Repositories
 - [Public cBioPortal Documentation](https://docs.cbioportal.org/)
@@ -37,6 +40,6 @@ The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) pro
 - No fixes yet, just releasing this product
 
 ## Contact Us
-The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)) and Jenny Weddle ([jweddle@fredhutch.org](mailto:jweddle@fredhutch.org)). Please feel free to schedule a [Data House Call](https://calendly.com/data-house-calls/resources) with us to go over any questions you may have.
+The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)). Please feel free to schedule a [Data House Call](https://calendly.com/data-house-calls/resources) with us to go over any questions you may have.
 
 
