@@ -84,6 +84,7 @@ It is a **[local installation of cBioPortal](https://cbioportal.fredhutch.org/)*
     - The Fred Hutch instance of cBioPortal is useful for interim visualization of your clinical and genomic data (i.e., before publication), whether it be for an initial exploration of your dataset, comparison to well-established datasets from outside groups, or just an easy way to make publication-level graphs!
     - Hosting your data on the Fred Hutch instance also easily facilitates sharing data (up to individually identifiable research data) with collaborators, provided they have Fred Hutch credentials.
     - Study data can be restricted/visible to authorized personnel approved by the study lead/PI.
+
 ### How can I access the Fred Hutch instance of cBioportal?
 
 - Before accessing the Fred Hutch instance of cBioPortal, you must:
@@ -184,7 +185,7 @@ The cBioPortal admin team will review your submission and notify you via email o
 
 9. If you would like to update your study data or add more subjects to the cohort in the future, simply update your study data locally and reupload a new compressed folder to the `fh-dasl-cbio` S3 bucket using the instructions in step 6. Any subsequent uploads of the same study will overwrite the previous study data.
 
-_Note: If you would like to upload any of the available [public studies](https://www.cbioportal.org/datasets) into your group's section of the Fred Hutch instance of cBioPortal please contact the cBioPortal team by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)) or you can directly download the dataset of your interest and upload it using the same steps as above. You are allowed to upload the public datasets without having to resubmit the cBioPortal Access Request form. Our system is setup to upload these public datasets automatically._
+_Note: If you would like to upload any of the available [public studies](https://www.cbioportal.org/datasets) into the Fred Hutch instance of cBioPortal, please contact the cBioPortal team by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org))._
 
 ## How do I prepare my data for upload into cBioportal?
 
@@ -235,23 +236,18 @@ There are many publicly available formatting tools that may help with the format
 | [shah-cbioportal-tools](https://github.com/shahcompbio/cbioportal-tools)                      | Specifically for formatting Copy Number Data expects a seg file and TITAN output      | - Could potentially be used for tools other than TITAN that generate a seg file                   | - Specific for TITAN outputs                                                                                          | [shah-cbioportal-tools](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/05_useful_tools/shah-cbioportal-tools) |
 
 ## Quick Links
-This is the public instance of [cBioPortal](https://www.cbioportal.org/)
-
-cBioPortal instructions on how to [format your data](https://docs.cbioportal.org/file-formats/#introduction) for upload into cBioPortal.
-
-Fred Hutch DaSL [repository](https://github.com/FredHutch/cbioportal-data-formatting) to help with data formatting and other useful tools.
-
-All available [public datasets](https://www.cbioportal.org/datasets) can be found and automatically uploaded into the private instance.
-
-[Video tutorials](https://www.youtube.com/@cbioportal) on using cBioPortal.
+- [Public instance of cBioPortal](https://www.cbioportal.org/)
+- [cBioPortal data formatting instructions](https://docs.cbioportal.org/file-formats/#introduction)
+- [Fred Hutch data formatting tips and tools](https://github.com/FredHutch/cbioportal-data-formatting)
+- [Publicly available cBioPortal datasets](https://www.cbioportal.org/datasets)
+- [Video tutorials on using cBioPortal](https://www.youtube.com/@cbioportal)
 
 ## Help
-Ask for help directly from the cBioPortal group through their [google group](https://groups.google.com/g/cbioportal?pli=1).
-
-Reach out to the Fred Hutch cBioPortal team at DaSL by scheduling a [Data House Call](https://calendly.com/data-house-calls/resources?month=2024-10).
+- [Public cBioPortal Google Group](https://groups.google.com/g/cbioportal?pli=1)
+- [DaSL Supported Resources Data House Call](https://calendly.com/data-house-calls/resources)
 
 ## Report bugs or issues
-To report bugs or issues with the Fred Hutch instance of cBioPortal please use [this GitHub repository](https://github.com/FredHutch/cbioportal). For this or any other issues or concerns, you can directly email the cBioPortal team at Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)). 
+To report bugs or issues with the Fred Hutch instance of cBioPortal, please [file an issue here](https://github.com/FredHutch/cbioportal-data-formatting/issues/new). For questions about using the tool and formatting your data for upload, schedule a data house call using the link above.
 
 
 
