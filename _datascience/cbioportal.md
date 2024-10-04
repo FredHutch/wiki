@@ -9,18 +9,17 @@ primary_reviewers: vortexing, abbywall
 The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) provides:
 
 - **Interim Visualization**: The Fred Hutch instance of cBioPortal allows for the visualization of clinical and genomic data both published and unpublished.
-- **Facilitated Sharing**: Hosting your data enables  sharing and comparison of  other datasets from the Fred Hutch community and beyond.
+- **Facilitated Sharing**: Hosting your data enables sharing and comparison to other datasets from the Fred Hutch community and beyond.
 - **Controlled Access**: Study data is restricted to authorized personnel approved by the study lead or principal investigator (PI), thus protecting your research data
-- **Inclusion of Sensitive Data**: cBioportal has been reviewed and approved by Infosec to include up to individually identifyingiable research data. 
+- **Inclusion of Sensitive Data**: cBioportal has been reviewed and approved by InfoSec to include up to individually identifiable research data. 
 
 
 ## Getting Started
 
 ### Training and Courses
-- Find out more about the Fred Hutch instance of cBioPortal and how to upload your study [in the DaSL Resource Library](/dasldemos/fh-cbio-intro/)
-- cBioPortal instructions on how to [format your data](https://docs.cbioportal.org/file-formats/#introduction) for upload into cBioPortal.
-- Fred Hutch DaSL [repository](https://github.com/FredHutch/cbioportal-data-formatting) to help with data formatting and other useful tools.
-- [Video tutorials](https://www.youtube.com/@cbioportal) on using cBioPortal.
+- Find out more about the Fred Hutch instance of cBioPortal and how to upload your study [in the DaSL Resource Library](/dasldemos/fh-cbio-intro/).
+- Read more the data formats required for upload and explore a selection of tools that will help with this formatting in the Fred Hutch [cbioportal-data-formatting](https://github.com/FredHutch/cbioportal-data-formatting) repository.
+- The creators of cBioPortal at [MSK](https://docs.cbioportal.org/about-us/) provide a great series of [video tutorials](https://www.youtube.com/@cbioportal) that will guide you through how to use the cBioPortal interface.
 
 
 ### Technical Documentation and Repositories
