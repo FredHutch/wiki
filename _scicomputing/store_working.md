@@ -20,7 +20,7 @@ _Working_ is available on rhino/gizmo compute nodes at the path `/fh/working`.  
 
 ## Quotas 
 
-Quotas are used to manage utilization of working.  This is a hard quota- once the limit has been reached, attempts to write to _working_ will fail.
+Quotas are used to manage utilization of working.  This is a hard quota- once the limit has been reached, attempts to write to _working_ will fail with the error "No space left on device".
 
 The default quota on _working_ is 20TB.  If this is insufficient, the PI will need to send that request to SciComp.  The maximum quota available is 50TB.
 
@@ -28,7 +28,7 @@ Optional notifications can be configured to send an e-mail when you have used 90
 
 ## Chargebacks
 
-The first 20TB of working storage is provided without charge.  If a lab has extended their quota, the lab will be charged 6$/TB/month for the allocated quota over the 20TB base quota.
+The first 20TB of working storage is provided without charge.  If a lab has extended their quota, the lab will be charged $6/TB/month for the allocated quota over the 20TB base quota.
 
-This charge is for the quota allocated, not for how much is used.  If a lab requests an increase of the quota to 30TB, that lab will be charged 10$ every month (30TB less the 20TB base is a charge of 10TB * 6$/TB/month)
+This charge is for the quota allocated, not for how much is used.  If a lab requests an increase of the quota to 30TB, that lab will be charged $60 every month (30TB less the 20TB base is a charge of 10TB * $6/TB/month)
 {: .notice--info}
