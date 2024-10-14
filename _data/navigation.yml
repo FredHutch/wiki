@@ -80,6 +80,8 @@ datascience:
     children:
       - title: Data Visualization
         url: /datascience/data_viz/
+      - title: Data Wrangling
+        url: /datascience/data_wrangling/
   - title: Research, Privacy and Security
     children:
       - title: Consenting and the IRB
