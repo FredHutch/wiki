@@ -272,9 +272,7 @@ Then within R, you can use the `aws.s3` or `paws` packages to interact with S3.
 `paws` will "just work" out of the box. To use `aws.s3` you will need to run this code
 first:
 
-<details>
-  <summary>Click to expand</summary>
-  <pre><code class="language-r">
+```r
 # Load required libraries
 library(jsonlite)
 library(lubridate)
@@ -309,9 +307,7 @@ Sys.setenv(
 # Print a message to confirm that the environment variables have been set
 cat("AWS credentials have been set from the most recent SSO cache file.\n")
 cat("They will be valid until " , expiration, "\n")
-
-  </code></pre>
-</details>
+```
 
 
 
