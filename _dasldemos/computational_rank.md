@@ -59,7 +59,7 @@ The next section talks about basic best practices when running software using ea
 
 ## General Advice
 
-- Before reinventing the wheel, check out the [WILDS Docker Repository](https://getwilds.org/packages.html#docker) to see if there’s a similar workflow to what you need. You may just need to [fork an existing workflow](https://getwilds.org/packages.html#wdls) (make your own version) to get started.
+- Before reinventing the wheel, check out the [WILDS Docker Repository](https://getwilds.org/projects.html#docker-recipes) to see if there’s a similar workflow to what you need. You may just need to [fork an existing workflow](https://getwilds.org/projects.html#wdls) (make your own version) to get started.
 - Avoid mixing and matching your software environments and loading them all at once to avoid dependency conflicts. In practice, this means sticking to either environment modules or Docker containers if possible.
 - Pick a version number for your software. This practice will keep your workflow reproducible if the latest version of the software changes. For easymodules, you can see the versions using `module avail <module-name>`, such as `module avail samtools`.
 - For Docker containers, pick a tagged container from the container image library. For example:  [`biocontainers/samtools:v1.9-4-deb_cv1`](https://hub.docker.com/layers/biocontainers/samtools/v1.9-4-deb_cv1/images/sha256-da61624fda230e94867c9429ca1112e1e77c24e500b52dfc84eaf2f5820b4a2a?context=explore)
@@ -231,7 +231,7 @@ This also has the advantage of being the first step in transforming your script 
 
 ## How do I transform a snakemake script to WDL?
 
-This assumes that nothing similar exists in [WILDS WDL Workflows](https://getwilds.org/packages.html#wdls). If something does, then fork that workflow and start from there.
+This assumes that nothing similar exists in [WILDS WDL Workflows](https://getwilds.org/projects.html#wdls). If something does, then fork that workflow and start from there.
 
 1. Start with the Bash code: separate each step into its own task. See above example.
 2. For each task, identify the inputs needed for that task and their formats. This might be an output from a previous task.
