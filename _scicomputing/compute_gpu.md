@@ -28,7 +28,7 @@ GPUs are requested via the `--gpus` option:
 sbatch --gpus=1 ...
 ```
 
-Specific GPU models (except for the L40s GPUs)  can be requested by indicating _model_ and _count_:
+Specific GPU models (except for the L40s GPUs) can be requested by indicating _model_ and _count_:
 
 ```
 sbatch --gpus=rtx2080ti:1 ...
