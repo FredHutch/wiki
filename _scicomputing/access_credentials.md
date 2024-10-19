@@ -47,25 +47,53 @@ AWS credentials are designated per user, so each Fred Hutch employee should obta
 
 >Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `helpdesk` to request support from [Scientific Computing](https://centernet.fredhutch.org/cn/u/center-it/cio/scicomp.html).
 
-You will receive your AWS credentials via an encrypted email when you are onboarded, or if you need to request credentials for an existing employee, please email `helpdesk`.  
+To get your AWS credentials, visit the [MyApps](https://myapps.microsoft.com) dashboard
+and click the square entitled `AWS IAM Identity Center - FHCC-H`. Sign in with your HutchNet ID and password. 
+
+This will take you to a screen called `AWS accounts`. You should see your accunt listed.
+For example, if your PI is Jane Doe, you should see `fh-pi-doe-j` listed.
+Click the triangle to the left of the account name. Now you'll see two links. 
+The link on the left will take you to the AWS console, which is web
+browser interface to Amazon Web Services. The link on the right,
+`Access keys` will give you the credentials you need to use AWS outside
+of a browser.
+
+The next section will describe how to configure the AWS CLI with these credentials.
 
 Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
 
 ### Configure AWS CLI
 
-Load the `awscli` module, then run `aws configure` and enter your Access Key ID & Secret Access Key. You can read more about access key creation/modification [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey).
+You should be on the `Get credentials` page as described in the previous section,
+and you should have a terminal window connected to one of the `rhino` machines via [ssh](https://sciwiki.fredhutch.org/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources). 
+
+Load the `awscli` module (with the `ml awscli` command), then run `aws configure sso`.
+For `SSO session name` you can enter any string. For `SSO start URL`, enter the `SSO start URL` shown in your browser. For `SSO region`, enter `us-west-2`. For `SSO registration scopes`, press Enter. 
+
+You will now see a URL and a code displayed. Copy and paste the URL into your browser, and enter the code on the resulting page. Click `Allow Access`. 
+
+If you have access to more than one AWS account, you should now choose the same account
+you choose in the last step, then press Enter. 
+For `CLI default client Region`, press Enter. For `CLI default output format`, press Enter.
+
+The next and final piece of information to fill in is the `CLI profile name`. 
+If you have not set up AWS credentials before, you should use the value `default`.
+
+The terminal will now display the following:
 
 ```
-module load awscli
-aws configure
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE 
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-west-2
-Default output format [None]: 
+To use this profile, specify the profile name using --profile, as shown:
+
+aws s3 ls --profile default
 ```
-This will create the following files that store your credentials `~/.aws/config` & `~/.aws/credentials`
+
+The `--profile default` flag is not necessary if you are using the default profile.
+
+The following section will describe how to test and use your credentials.
+
 
 ### Testing Your Credentials
+
 To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your local computer to your PI's bucket. 
 
 In these examples, please replace `lastname-f` with the last name and first initial of your PI.

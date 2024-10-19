@@ -256,6 +256,61 @@ s3.download_file(bucket_name, "df.csv", "df.csv")
 
 # AWS via R
 
+To use AWS from R with [AWS SSO credentials](/scicomputing/access_credentials/#amazon-web-services-aws),
+you will need to first login to an SSO session. This is not necessary when using the AWS CLI or Python.
+Note that the `aws sso login` step will require you to copy a URL into your browser and paste a code back into the terminal.  Once you've done that, you have a session that will last for 12 hours.
+
+```
+ml purge
+ml awscli
+aws sso login
+ml fhR
+R
+```
+
+Then within R, you can use the `aws.s3` or `paws` packages to interact with S3.
+`paws` will "just work" out of the box. To use `aws.s3` you will need to run this code
+first:
+
+```r
+# Load required libraries
+library(jsonlite)
+library(lubridate)
+
+# Define the path to the AWS CLI cache directory
+cache_dir <- "~/.aws/cli/cache/"
+
+# Get the list of files in the cache directory
+cache_files <- list.files(cache_dir, full.names = TRUE)
+
+# Find the most recently modified file
+latest_file <- cache_files[which.max(file.info(cache_files)$mtime)]
+
+# Read the JSON content from the latest file
+json_content <- fromJSON(latest_file)
+
+# Extract the relevant credentials
+access_key <- json_content$Credentials$AccessKeyId
+secret_key <- json_content$Credentials$SecretAccessKey
+session_token <- json_content$Credentials$SessionToken
+expiration<- as.character(with_tz(ymd_hms(json_content$Credentials$Expiration)))
+region <- "us-west-2"
+
+# Set the environment variables using the extracted credentials
+Sys.setenv(
+  AWS_ACCESS_KEY_ID = access_key,
+  AWS_SECRET_ACCESS_KEY = secret_key,
+  AWS_SESSION_TOKEN = session_token,
+  AWS_DEFAULT_REGION = region
+)
+
+# Print a message to confirm that the environment variables have been set
+cat("AWS credentials have been set from the most recent SSO cache file.\n")
+cat("They will be valid until " , expiration, "\n")
+```
+
+
+
 You can use [Amazon Web Services' S3](https://aws.amazon.com/s3/) (Simple Storage Service) directly from `R`.  The `R` package which facilitates this, `aws.s3`, is included in recent builds of `R` available on the `rhino` systems and the `gizmo` cluster.
 
 ## Getting Started
