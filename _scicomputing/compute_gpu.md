@@ -20,7 +20,9 @@ There are currently two capabilities available for GPUs in the gizmo.  The _J_ a
 
 ## Accessing GPUs
 
-Different options are required to access the different capability GPUs.  The newer GPUs are only available in a new partition containing just those nodes.
+GPUs are available in multiple partitions- the newest GPUs are in the _concord_ partition.  Refer to [this page](/compdemos/gizmo_partition_index/) for limits and other details about the partitions.
+
+### In _campus_, _short_, and _restart-new_ partitions
 
 GPUs are requested via the `--gpus` option:
 
@@ -28,13 +30,15 @@ GPUs are requested via the `--gpus` option:
 sbatch --gpus=1 ...
 ```
 
-Specific GPU models (except for the L40s GPUs) can be requested by indicating _model_ and _count_:
+Specific GPU models can be requested by indicating _model_ and _count_:
 
 ```
 sbatch --gpus=rtx2080ti:1 ...
 ```
 
-Access to the L40s GPUs is more complex.  These systems have a different processor and a newer version of operating system- this requires a new set of environment modules specific to this new architecture.  These nodes also reside in a separate partition:
+### In the _concord_ partition
+
+The new GPU systems have a different processor and a newer version of operating system- this requires a new set of environment modules specific to this new architecture.  Because of this, these nodes are separated into new partition, _concord_:
 
 ```
 sbatch --partition=concord --gpus=1 ...
@@ -45,7 +49,4 @@ When submitting jobs make sure that your current environment does not have modul
 
 ## Using GPUs
 
-When your job is assigned a GPU, Slurm sets the environment variable
-CUDA_VISIBLE_DEVICES.  This environment variable indicates the assigned GPU-
-most CUDA tools (e.g. tensorflow) use this to restrict execution to that
-device.
+When your job is assigned a GPU, Slurm sets the environment variable CUDA_VISIBLE_DEVICES.  This environment variable indicates the assigned GPU- most CUDA tools (e.g. tensorflow) use this to restrict execution to that device.
