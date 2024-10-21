@@ -108,13 +108,16 @@ There are several ways around this:
 
 ### NoMachine NX (Multi-OS)
 
-NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `rhino01`, `rhino02` or `rhino03`.  To connect through the local Fred Hutch network or through a VPN connection please download and install the NoMachine Enterprise Client from [NoMachine's Site.](https://downloads.nomachine.com/download-enterprise/#NoMachine-Enterprise-Client)  Windows users can also install an older version from "Software Center".
+NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `rhino01`, `rhino02` or `rhino03`.  NoMachine requires that your are connected to the Campus network- either through the local Fred Hutch network or through a VPN connection.
+
+To use this service, download and install the NoMachine Enterprise Client from [NoMachine's site.](https://downloads.nomachine.com/download-enterprise/#NoMachine-Enterprise-Client)  Windows users can also install from "Software Center".
 
 Installation and configuration is described [here](/scicomputing/access_nx/).
 
 One of the nicest features of NoMachine is that you can disconnect from the server's desktop environment and later resume the connection and continue right where you left off with all terminal windows in the same place. NoMachine from Windows or Mac is often a better choice than installing a Linux desktop.
 
 ### Screen and tmux
+
 GNU Screen and tmux are both terminal multiplexers. They run one or more shell processes on a remote system and enable you to disconnect and reconnect while leaving the process(es) running. They are both full-featured utilities that take a longer time to learn, but provide a useful set of features that aren't available with simpler tools. Using the command below, you can get working with tmux quickly.
 
 1. Use SSH to connect to a remote system: `ssh rhino`
@@ -251,18 +254,18 @@ Fred Hutch supports use of a VPN to remotely connect with our network. The netwo
 
 ### VPN
 
-The Fred Hutch desktop VPN service is the default choice for all remote connections. Please see the [VPN page on CenterNet](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html) for more details.
+The Fred Hutch desktop VPN service is the default choice for all remote connections. The VPN client is only available on Hutch managed (imaged and installed) devices and requires a HutchNet ID to log in.  For assistance and help with the VPN you can contact the IT Service Desk (see also the [VPN page on CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html))
 
 ### ssh to `snail.fhcrc.org`
 
 Snail is a SSH gateway (also called bastion host or jump host) you can use to get remote access if you do not require the features that VPN provides. Using SSH can be easier for some users, for example if you have a network printer at home you cannot use it while connected to VPN.
 If you are outside the Fred Hutch network, use the following to connect to the Snail gateway first:
 
-```ssh username@snail.fhcrc.org```
+`ssh username@snail.fhcrc.org`
 
 Once you are connected, from there you can then connect to the `rhinos`:
 
-```ssh username@rhino```
+`ssh username@rhino`
 
 >Note:  When you disconnect from `rhino`, you will also then need to disconnect from `snail` as well. 
 To avoid this two step process, for example if you connect this way very often, you can add these 2 lines your ~/.ssh/config file you only have to type `ssh` once.
