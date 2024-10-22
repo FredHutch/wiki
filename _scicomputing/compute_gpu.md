@@ -20,7 +20,7 @@ There are currently two capabilities available for GPUs in the gizmo.  The _J_ a
 
 ## Accessing GPUs
 
-GPUs are available in multiple partitions- the newest GPUs are in the _concord_ partition.  Refer to [this page](/compdemos/gizmo_partition_index/) for limits and other details about the partitions.
+GPUs are available in multiple partitions- the newest GPUs are in the _chorus_ partition.  Refer to [this page](/compdemos/gizmo_partition_index/) for limits and other details about the partitions.
 
 ### In _campus_, _short_, and _restart-new_ partitions
 
@@ -36,12 +36,12 @@ Specific GPU models can be requested by indicating _model_ and _count_:
 sbatch --gpus=rtx2080ti:1 ...
 ```
 
-### In the _concord_ partition
+### In the _chorus_ partition
 
-The new GPU systems have a different processor and a newer version of operating system- this requires a new set of environment modules specific to this new architecture.  Because of this, these nodes are separated into new partition, _concord_:
+The new GPU systems have a different processor and a newer version of operating system- this requires a new set of environment modules specific to this new architecture.  Because of this, these nodes are separated into new partition, _chorus_:
 
 ```
-sbatch --partition=concord --gpus=1 ...
+sbatch --partition=chorus --gpus=1 ...
 ```
 
 When submitting jobs make sure that your current environment does not have modules loaded (i.e. `module purge`) and that you are loading the new modules in your script.  You may run into conflicts with modules built for rhino/gizmo compute platforms.

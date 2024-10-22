@@ -16,7 +16,7 @@ Slurm _partitions_ organize and associate compute resources in the cluster. Part
 | campus-new (*) | All   | yes        | normal   | 3 days   | 30 days  | 1000 cores per account
 | short          | All   | yes        | normal   | 1 hour   | 12 hours | 8000 core-hours committed per account
 | restart        | All   | no         | low      | 3 days   | 7 days   | no limit
-| concord        | harmony   | yes         | normal      | 1 days   | 5 days   | min 1 GPU, max 4, max 8 CPU per job
+| chorus        | harmony   | yes         | normal      | 1 days   | 5 days   | min 1 GPU, max 4, max 8 CPU per job
 
 > "guaranteed" means that the job is guaranteed all of its requested time
 
@@ -40,6 +40,6 @@ The "restart" partition has no upper limit on the number of cores allocated to a
 
 More information is available [here](/scicomputing/compute_restart/)
 
-### concord
+### chorus
 
-The _concord_ partition contains the newest GPU capable nodes.  There are more restrictive limits here as this is a scarce resource at the moment.  Jobs in this partition must request a GPU.
+The _chorus_ partition contains the newest GPU capable nodes.  There are more restrictive limits here as this is a scarce resource at the moment.  Jobs in this partition must request a GPU.

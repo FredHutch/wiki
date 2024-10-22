@@ -117,7 +117,7 @@
       gpu_memory: 44 GB 
       gpu_compute_capability: 8.9
       node_count: 8
-      partition: concord
+      partition: chorus
     -  
       node_name: rhino
       cores: 14
@@ -151,7 +151,7 @@
       max_per_job: 36 cpus, 768000MB memory (effective)
       min_per_job: none
     -
-      partition_name: concord
+      partition_name: chorus
       max_per_acct: 2 GPUs
       default_per_job: 60 minutes
       max_per_job: 8 CPUs, 2 GPUs, 384GB RAM
