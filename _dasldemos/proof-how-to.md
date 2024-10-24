@@ -4,92 +4,21 @@ main_authors: vortexing, sitapriyamoorthi
 primary_reviewers: vortexing
 ---
 
-**NEED TO UPDATE SCREENSHOTS WITH NEW GUI!!!**
-**NEED TO UPDATE SCREENSHOTS WITH NEW GUI!!!**
-**NEED TO UPDATE SCREENSHOTS WITH NEW GUI!!!**
+**UPDATING DOCS IN PROGRESS**
+
+This guide is intended to describe how to use the [**PROOF** app](https://proof.fredhutch.org)(**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) to run [**WDL**](https://sciwiki.fredhutch.org/compdemos/Cromwell/#writing-workflows) workflows on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). Learn more about what is PROOF [here](https://sciwiki.fredhutch.org/datascience/proof/). We also have a [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) guide that will be a quick-start guide to building a WDL workflow.
 
 
-**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](https://docs.openwdl.org/en/1.0.0/) (Workflow Description Language) workflows using the [**Cromwell**](https://cromwell.readthedocs.io/en/stable/) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
-
-- Automate all the backend configurations necessary to run your workflows instantly.
-
-- Validate, troubleshoot, assess performance, and run their workflows all under one roof.
-
-- Refine their workflows before potential transitions to cloud-based infrastructures, providing a 'proofing' resource of sorts.
-
-This guide is intended to describe how you can run PROOF, catering to varying levels of computational expertise. We also have a [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) guide that will be a quick-start guide to building a WDL workflow.
-
-## Background
-
-*What is WDL?*
-
-**Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile, [open specification](https://openwdl.org/), workflow framework for executing bioinformatics and computational workflows. WDL offers:
-
--   A **standardized** and **modular** approach to specifying and combining computational tasks, inputs, outputs, and dependencies.
-  
--   A task-oriented approach promoting **code reuse** and modularity.
-  
--   Support for **parallel execution**, enabling efficient processing of large datasets.
-  
--   Explicit data type definitions and **immutability of variables** by default, ensuring data consistency.
-  
--   Built-in support for specifying **data locations**, facilitating seamless collaboration across environments.
-  
--   Support for **scatter-gather** operations, improving workflow performance.
-  
--   **Flexible syntax** for concise and readable workflow definitions.
-  
--   **Platform independence**, allowing WDL workflows to run across different environments.
-  
--   Requirement of a **scientific workflow engine** like Cromwell for interpreting and executing WDL on various backends, enhancing usability and versatility.
 
 
-*What is Cromwell?*
 
-[Cromwell](https://github.com/broadinstitute/cromwell), originally developed at the Broad Institute, is a WDL workflow engine, that facilitates the orchestration of multi-step workflows. It efficiently handles individual tasks, monitors job metadata, offers an intuitive API interface, and enables users to oversee multiple workflows concurrently. While other WDL engines exist, here are some of the reasons Cromwell stands out:
-
--   **Integration with the Fred Hutch cluster:** Cromwell has been configured to run on the Fred Hutch cluster to make running WDL workflows very simple. Additionally, it seamlessly integrates with various cloud platforms and workflow description formats, enhancing compatibility and facilitating workflow execution across different computing infrastructures.
-
--   **Robust Workflow Management**: Cromwell offers a robust engine for managing complex workflows, ensuring efficient execution of tasks and streamlined workflow orchestration.
-
--   **Scalability**: With its ability to handle large-scale workflows, Cromwell accommodates projects of varying sizes, from small-scale analyses to large-scale data processing pipelines.
-
--   **Comprehensive Job Monitoring**: It provides comprehensive job monitoring and metadata tracking, enabling users to closely monitor workflow progress, identify bottlenecks, and troubleshoot issues effectively.
-
--   **Community Support and Documentation**: Cromwell benefits from a supportive community and extensive documentation, offering users access to resources, tutorials, and community-driven solutions to common challenges.
-
--   **Open Source and Customizable**: Being open-source, Cromwell allows for customization and adaptation to specific workflow requirements, empowering users to tailor workflows to their unique needs and preferences.
-
-
-*How should we use Cromwell?*
-
-In general, Cromwell works best when run in **server mode**, which means that users start a **Cromwell server** as a job on our local SLURM cluster that can connect to a **database** specifically for Cromwell workflow tracking.
-  
-This Cromwell server job then behaves as the workflow **coordinator** for that **user**, allowing a user to send workflow instructions for **multiple workflows** running simultaneously.
-
-The Cromwell server will then **parse** these workflow instructions, find and copy the relevant input files, **send** the tasks to the cluster (Gizmo) to be processed, **coordinate** the results of those tasks and **record** all of the metadata about what is happening in its database.
-
-This means that individual users can:
-
- - Run **multiple independent workflows** at the same time using **one Cromwell server**
-
- - Use **cached results** when identical to the current task
-
- - **Track** the status of workflows and tasks
- 
- - **Customize** the locations of input data, intermediate data, and workflow outputs into data storage resources appropriate to the data type (re: cost, backup, and accessibility)
-
- - **Query** the Cromwell database for information about workflows run in the past, including where their workflow outputs were saved or a variety of other workflow and task level metadata.
- 
-> Quick note: the Cromwell server is referred to as a PROOF server in these instructions. PROOF handles setting up the Cromwell server for you.
 
 ## Using PROOF
-
 The following diagram shows basic usage of PROOF once you have done the preliminary setup. Each box corresponds to a section in the documentation.
 
-![](/dasldemos/assets/proof_101_workflow.png)
+![](/dasldemos/assets/proof_101_workflow.png) 
 
-**Preliminary Setup**
+### Before you begin
 
 Before you begin using PROOF, make sure you have the following:
 - [Valid Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
@@ -100,10 +29,11 @@ Before you begin using PROOF, make sure you have the following:
 - [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 
 
-### Starting a PROOF Server
-The most user-friendly way to validate, submit, track, troubleshoot, and (if needed) abort your WDL workflows is through our [Fred Hutch PROOF Shiny app](https://proof.fredhutch.org). This Shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
 
-![welcome](/dasldemos/assets/proof_shiny_app_welcome.png) 
+
+
+
+### Log in to PROOF with your Fred Hutch credentials
 
 The first step is to log in to PROOF. 
 
@@ -117,6 +47,13 @@ You know you are logged in when the page refreshes automatically and you see the
 
 ![login_2](/dasldemos/assets/proof_101_shinyapp_logged_in.png)
 
+
+
+
+
+### Start (or Stop) your PROOF/Cromwell server
+
+####Start your server
 Next click on "PROOF Servers" to take you to the page where you can start a server.
 
 ![start_server](/dasldemos/assets/proof_101_shinyapp_start_server.png)
@@ -156,8 +93,24 @@ There will be two sections of information that you would like to pay attention t
 
 Once your server is ready for use, you should receive an email from PROOF API ![email](/dasldemos/assets/proof_101_shinyapp_email.png)
 
+####Stopping a PROOF server
 
-### Validating Your WDL Workflow
+Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and stop your PROOF server. 
+
+Go back to the PROOF server tab and click Stop Server
+
+![proof_101_shiny_app_delete_server_1](/dasldemos/assets/proof_101_shiny_app_delete_server_1.png)
+
+A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidentally end your server.
+
+![proof_101_shiny_app_delete_server_2](/dasldemos/assets/proof_101_shiny_app_delete_server_2.png)
+
+
+
+
+
+
+### Validate your WDL
 
 Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL/JSONs) using the "Validate" tab.
 
@@ -186,7 +139,10 @@ If your workflows and accompanying JSON files are validated you should see in th
 If your workflow does not validate, the console will provide some "helpful" information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. 
 
 
-### Submitting Your WDL Workflow 
+
+
+
+### Submit your WDL and 1-2 optional json input and parameter files
 
 Congratulations! At this point, you should have a validated WDL workflow and you are ready to submit your job. 
 
@@ -221,8 +177,10 @@ This output table has an ID which a long string of letters as numbers that you c
 >Note: You don't need to copy this workflow ID, we have a nifty copy button in the "Track Jobs" tab !
 
 
-### Tracking Your Submitted Jobs
 
+
+
+### Track your workflow to see how long it takes and if it succeeds or fails
 Once you've submitted a workflow, you can track the status of your submitted workflows using the "Track Jobs" tab
 
 ![proof_101_shiny_app_track_jobs_1](/dasldemos/assets/proof_101_shiny_app_track_jobs_1.png)
@@ -232,6 +190,12 @@ You can filter your jobs 3 different ways! Initially this is likely not needed, 
 
 ![proof_101_shiny_app_track_jobs_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_2.png)
 
+
+
+
+
+
+### Check workflow details
 You can filter submitted jobs based on: 
 1. Days since your server was started
 	> Note: This maxes out 7 days. And displays history of the current PROOF server. 
@@ -289,7 +253,13 @@ Finally, once a workflow's outputs have all been created successfully, Cromwell 
 This lets you find output files and interact with them, archive them, or otherwise copy them to longer term storage for use.  
 ![proof_101_shiny_app_track_jobs_11](/dasldemos/assets/proof_101_shiny_app_track_jobs_11.png)
 
-### Troubleshooting
+
+
+
+
+
+
+### Check the troubleshooting page to dig into error messages if needed
 
 Last, there is the Troubleshoot tab.  Here you can do things like Abort running workflows or get a complete metadata output for the entire workflow to parse yourself to try to find what's happening with your workflow if it failed running. 
 
@@ -315,21 +285,10 @@ Especially in the beginning if you have catastrophic workflow failures and you c
 
 > Note: this output is not for the faint of heart, but it will give you hints once you get used to understanding what Cromwell is telling you.  
 
-### Stopping a PROOF server
-
-Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and stop your PROOF server. 
-
-Go back to the PROOF server tab and click Stop Server
-
-![proof_101_shiny_app_delete_server_1](/dasldemos/assets/proof_101_shiny_app_delete_server_1.png)
-
-A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidentally end your server.
-
-![proof_101_shiny_app_delete_server_2](/dasldemos/assets/proof_101_shiny_app_delete_server_2.png)
 
 ## Resources and Help
 
-### Where to report bugs and find help
+#### Reporting bugs
 
 If you find something is not working with the app or you find a bug, please help us make this app better by reporting here:
 
@@ -346,15 +305,13 @@ If you find something is not working with the app or you find a bug, please help
 - [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/)
 - [Open WDL Documentation](https://docs.openwdl.org/en/latest/)
 
-#### PROOF mechanics
-- [R Client for the PROOF-API](https://github.com/getwilds/proofr)
-- [Shiny Cromwell](https://github.com/getwilds/shiny-cromwell)
-- [rcromwell](https://github.com/getwilds/rcromwell)
+#### PROOF technical documentation and repositories [here](https://sciwiki.fredhutch.org/datascience/proof/#technical-documentation-and-repositories)
 - [PROOF Troubleshooting](/dasldemos/proof-troubleshooting)
 
 
 ## Document Contributions
 We would love to get feedback on this document from the community and would love to hear how we can make improvements to make this more helpful to you! Feel free to [email](mailto:wilds@fredhutch.org) us at or directly make recommendations on [GitHub](https://github.com/FredHutch/wiki/).
+
 
 **Authors**
 
@@ -367,4 +324,3 @@ We would love to get feedback on this document from the community and would love
 - Chris Lo ([GitHub](https://github.com/caalo)/[E-mail](mailto:clo2@fredhutch.org))
 - Taylor Firman ([GitHub](https://github.com/tefirman)/[E-mail](mailto:tfirman@fredhutch.org))
 - Amy Paguirigan ([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
-
