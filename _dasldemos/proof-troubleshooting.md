@@ -39,6 +39,11 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
     
     - If you see any unique messages besides these ones, please send us a screenshot at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a Research Computing DHC with the DaSL staff. We’ll help work through it with you and add it to the list!
 
+### Workflow aborted unexpectedly
+If you encounter a scenario where your validated workflow is unexpectedly aborted here is how you would troubleshoot for different use-cases:
+    1. **Missing inputs**: In this case you may have syntactically defined your input in the workflow however these inputs may not be available or accessible. In this case, in PROOF you will see in your workflow/workflow_id/task/execution/stderr file this message: "slurmstepd: error: *** JOB XXXXXXXX ON gizmoXX CANCELLED AT year-month-dayThh:mm:ss ***". This is a special feature of PROOF and lets the user know that either they don't have access to specific files required as inputs in this task or the file path given may not be accurate. 
+    2. **Output storage issues**: Another reason that your workflow fails to start could be if you do not have write permissions in the specified output directories. So evethough it might validate if you do not have write permissions this could cause your workflow to fail.
+    
 ## Task Level Issues
 
 ### Identify which task failed
