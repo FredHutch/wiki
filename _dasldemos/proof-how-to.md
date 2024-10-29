@@ -54,11 +54,11 @@ You know you are logged in when the page refreshes automatically and you see the
 ### Start (or Stop) your PROOF/Cromwell server
 
 ####Start your server
-Next click on "PROOF Servers" to take you to the page where you can start a server.
+Next click on "Server" to take you to the page where you can start a server.
 
 ![start_server](/dasldemos/assets/proof_101_shinyapp_start_server.png)
 
-Click "Start" to open up a dialog box that asks for optional credentials to start your PROOF Server.
+Click "Start Server". You will get a dialog box that asks for optional credentials to start your PROOF Server. It may take a moment to appear. 
 
 ![start_server_2](/dasldemos/assets/proof_101_shinyapp_start_server_2.png)
 
@@ -74,13 +74,13 @@ You know your server is up and running when the page auto-refreshes and you see 
 
 > Initially, setting up a PROOF Server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
 
-There will be two sections of information that you would like to pay attention to which should be populated with details that will be relevant. 
+There will be two sections of information that you would like to pay attention to which should be populated with details that will be relevant. These details may take a moment to appear on the page, even if your server is already running.
 
 **Server information**
 - Job status: it should say "RUNNING"
 - Workflow log directory: Gives you the path to where your workflow logs will reside
 - Scratch directory: Gives you the path to where your workflow outputs will go
-- Server-time: It tells you how long your PROOF Server will be "alive". By default this is set to 7 days
+- Server-time: It tells you how long your PROOF Server will be "alive". By def  bnault this is set to 7 days
 - SLURM job account: The SLURM account (default/or if specified) under which your jobs should be running 
 
 **Troubleshooting**
@@ -88,14 +88,14 @@ There will be two sections of information that you would like to pay attention t
 - Cromwell directory: The path to where you main Cromwell directory exists 
 - Server log directory: The path to where logs associated with the PROOF server exists
 - Singularity cache directory: Path to Singularity cache directory
-- Use AWS?: This defaults currently to FALSE
+- Use AWS?: This option is not currently available but may be in future.
 - Cromwell URL: URL for PROOF server
 
 Once your server is ready for use, you should receive an email from PROOF API ![email](/dasldemos/assets/proof_101_shinyapp_email.png)
 
 ####Stopping a PROOF server
 
-Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and stop your PROOF server. 
+Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and stop your PROOF server. Note that your job can run for longer than 7 days, it is only the PROOF server that will stop.
 
 Go back to the PROOF server tab and click Stop Server
 
@@ -110,15 +110,15 @@ A pop-up box will show up and ask you type out the words "delete me". This is an
 
 
 
-### Validate your WDL
-
-Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL/JSONs) using the "Validate" tab.
+### Validate your WDL (optional)
+ 
+Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. If you already have a workflow ready, you can optionally do a "dry run" with your workflow files (WDL/JSONs) using the 'Validate' tab. This tab checks to see if your workflows are runnable before you submit them, to save you time in case they are not runnable.
 
 ![validate](/dasldemos/assets/proof_101_shinyapp_validate.png)
 
-You can upload your WDL workflow file and associated JSON file into the respective upload boxes. You can do this by either dragging the files into the upload boxes or browsing to the directory where the workflow and JSON files are stored. Once uploaded, click validate.
+You can upload your WDL workflow file and associated JSON file into the respective upload boxes. You can do this by either dragging the files into the upload boxes or browsing to the directory where the workflow and JSON files are stored. Once uploaded, click 'Validate Workflow'.
 
->Note: If you have more that one JSON file required to run your WDL workflow **DO NOT** upload any JSON files. You can still validate your WDL workflow but uploading only one JSON file (when two are needed) will not validate. 
+>Note: If you have more that one JSON file required to run your WDL workflow you can consolidate them and upload them as a single file. If you do not consolidate them and only upload one then the WDL will not validate.
 
 The validation process evaluates several things:
 
@@ -146,11 +146,11 @@ If your workflow does not validate, the console will provide some "helpful" info
 
 Congratulations! At this point, you should have a validated WDL workflow and you are ready to submit your job. 
 
-To submit your job click the "Submit Jobs" tab on the left
+To submit your job click the "Submit" tab in the top menu bar.
 
 ![proof_101_shiny_app_submit_1](/dasldemos/assets/proof_101_shiny_app_submit_1.png)
 
-This will open up the "Submit Jobs" page:
+This will open up the "Submit a Workflow" page:
 
 ![proof_101_shiny_app_submit_2](/dasldemos/assets/proof_101_shiny_app_submit_2.png)
 
@@ -162,19 +162,19 @@ Here you can do the following:
 
 > Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs, note that these will be concatenated or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.
 
-- Add a primary and secondary workflow label to easily track them 
+- Add a primary and secondary workflow label to easily track your workflows (e.g., compare versions or batches). If you do not add a primary label, PROOF will autopopulate a label with an adjective and animal (e.g., "InquisitivePenguin").
 
-> Note: As you upload your files look for the blue uploading progress bar below the upload box. If you need to add files different from the ones uploaded, click the "Reset" button. This will clear **all** the upload fields allowing you to upload a new set of files. 
+> Note: As you upload your files look for the blue uploading progress bar below the upload box. If you need to add files different from the ones uploaded, click the "Reset Form" button. This will clear **all** the upload fields allowing you to upload a new set of files. 
 
 Once everything is uploaded, click the "Submit Workflow" button. 
 
-You will know that your submission has worked once you see a little table output on the same page!
+When your submissions is done, you will see a confirmation and workflow ID appear below the submit button on the form. Depending on your window size, you may need to scroll down. 
 
 ![proof_101_shiny_app_submit_3](/dasldemos/assets/proof_101_shiny_app_submit_3.png)
 
-This output table has an ID which a long string of letters as numbers that you can use to follow-up on your workflow in the "Track Jobs" tab. This workflow id string is unique to an individual workflow run, so if you run the same workflow a second time, you'll get a different string. This means that this unique identifier string can be used to help understand the data source file(s) used to generate each set of results files, helping make your work reproducible.
+The workflow ID is a long string of letters as numbers. This string is unique to an individual workflow run, so if you run the same workflow a second time, you'll get a different string. This means that this unique identifier string can be used to help understand the data source file(s) used to generate each set of results files, helping make your work reproducible.
 
->Note: You don't need to copy this workflow ID, we have a nifty copy button in the "Track Jobs" tab !
+>Note: You don't need to copy this workflow ID, it will appear on the 'Track Workflows' screen along with the workflow name and label(s).
 
 
 
