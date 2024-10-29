@@ -118,7 +118,7 @@ Now that you have kicked off your PROOF server, you are ready to start running y
 
 You can upload your WDL workflow file and associated JSON file into the respective upload boxes. You can do this by either dragging the files into the upload boxes or browsing to the directory where the workflow and JSON files are stored. Once uploaded, click 'Validate Workflow'.
 
->Note: If you have more that one JSON file required to run your WDL workflow you can consolidate them and upload them as a single file. If you do not consolidate them and only upload one then the WDL will not validate.
+>Note: If you have more than one input JSON file required to run your WDL workflow you can consolidate them and upload them as a single file. If you do not consolidate them and only upload one then the WDL will not validate.
 
 The validation process evaluates several things:
 
