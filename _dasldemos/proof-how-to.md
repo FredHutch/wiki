@@ -80,7 +80,7 @@ There will be two sections of information that you would like to pay attention t
 - Job status: it should say "RUNNING"
 - Workflow log directory: Gives you the path to where your workflow logs will reside
 - Scratch directory: Gives you the path to where your workflow outputs will go
-- Server-time: It tells you how long your PROOF Server will be "alive". By def  bnault this is set to 7 days
+- Server-time: It tells you how long your PROOF Server will be "alive". By default this is set to 7 days
 - SLURM job account: The SLURM account (default/or if specified) under which your jobs should be running 
 
 **Troubleshooting**
