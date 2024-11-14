@@ -22,7 +22,7 @@ Anyone with a HutchNetID can login to Aspera Faspex.
 
 ### Support
 
-For assistance with Aspera, email helpdesk.
+If you are unable to log in, contact HelpDesk. If you are able to log in but have other questions, contact SciComp.
 
 ## Sending Files to External Collaborators
 
