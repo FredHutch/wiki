@@ -20,7 +20,7 @@ The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) pro
 - Find out more about the Fred Hutch instance of cBioPortal and how to upload your study [in the DaSL Resource Library](/dasldemos/fh-cbio-intro/).
 - Read more the data formats required for upload and explore a selection of tools that will help with this formatting in the Fred Hutch [cbioportal-data-formatting](https://github.com/FredHutch/cbioportal-data-formatting) repository.
 - The creators of cBioPortal at [MSK](https://docs.cbioportal.org/about-us/) provide a great series of [video tutorials](https://www.youtube.com/@cbioportal) that will guide you through how to use the cBioPortal interface.
-- Check out the recording below of our Fred Hutch cBioPortal Demo Day demonstrating how to use cBioPortal in general, the benefits of the Fred-Hutch-specific instance, and how to safely and securely upload your own study data.
+- Check out the recording below of our Fred Hutch cBioPortal Demo Day demonstrating how to use cBioPortal in general, the benefits of the Fred-Hutch-specific instance, and how to safely and securely upload your own study data. (_Note: some of the processes discussed in this video are specific to Fred Hutch and do not apply to all instances of cBioPortal._)
 
 <iframe src="https://fredhutch.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1e1ae5d3-8b2f-4be7-acc6-b2290121babc&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="FredHutchcBioPortalDemoDay_111424" ></iframe>
 
