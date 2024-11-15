@@ -1,13 +1,13 @@
 ---
-title: FHCC Patient Clinical Data for Research
+title: Fred Hutch Cancer Center Patient Clinical Data for Research
 last_modified_at: 2020-05-06
 main_authors: Monica Gerber, Rachel Galbraith
 primary_reviewers: vortexing
 ---
 
 Access to clinical data for Fred Hutch Cancer Center’s patient population is
-critical for research activities at FHCC. This page outlines the clinical data
-systems at FHCC that can be used for research. 
+critical for research activities at Fred Hutch Cancer Center. This page outlines the clinical data
+systems at Fred Hutch Cancer Center that can be used for research. 
 
 ## Upcoming Opportunities
 
@@ -22,11 +22,11 @@ across the institution. In April 2023, the Data Science Lab team, along with
 Legal, Compliance, and IT, finalized a new agreement with University of
 Washington that enables comprehensive data access and use. 
 
-These exciting new opportunities for use of FHCC’s patient clinical data depend
+These exciting new opportunities for use of Fred Hutch Cancer Center’s patient clinical data depend
 on the development of expanded data infrastructure and new data governance and
-stewardship policies. DaSL and its partners at FHCC have initiated a new data
+stewardship policies. DaSL and its partners at Fred Hutch Cancer Center have initiated a new data
 infrastructure approach and a new data governance approach for clinical data.
-This new approach envisions a future FHCC with multimodal data integration and
+This new approach envisions a future Fred Hutch Cancer Center with multimodal data integration and
 democratized data access. For more information and to stay up-to-date with new
 developments, visit DaSL’s [home page](https://hutchdatascience.org) and [CenterNet page](https://centernet.fredhutch.org/u/data-science-lab.html). 
 
@@ -44,11 +44,11 @@ radiation oncology, and a variety of unstructured radiology, pathology, and
 clinical narrative reports.  Currently, to request access to these data, go to
 the [Fred Hutch Patient Data for Research](https://centernet.fredhutch.org/u/data-science-lab/patient-data.html) page on CenterNet.
 
-*FHCC patient population*
+*Fred Hutch Cancer Center patient population*
 
 The patient population included in HIDRA is created by filtering for patients
-across FHCC and UW Medicine in Clarity. Clarity is the name of the database that
-contains the unified Epic medical record for FHCC and UW Medicine. Patients are
+across Fred Hutch Cancer Center and UW Medicine in Clarity. Clarity is the name of the database that
+contains the unified Epic medical record for Fred Hutch Cancer Center and UW Medicine. Patients are
 included if they have at least one oncology-related base record in any of
 Clarity’s data domains (encounters, hospital billing account, professional
 billing, referral). A base record is defined as the most relevant unit of
@@ -57,7 +57,7 @@ least one oncology-related base record in any data domain is identified, records
 for all care for those patients are brought in (not just care directly related
 to cancer).
 
-Oncology-related records are defined in a MOU between the UW and FHCC:
+Oncology-related records are defined in a MOU between the UW and Fred Hutch Cancer Center:
 
 >1.1 Cancer-Related Care: Includes,
 >
