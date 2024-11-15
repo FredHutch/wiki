@@ -5,6 +5,9 @@ primary_reviewers: vortexing
 
 ## Data Transfer Tools
 
+Before transferring data, please make sure you have appropriate protections in place- make sure you are allowed to share data via your desired mechanism, that agreements are in place or won't be violated by transferring data.  Contact `dataprotection@fredhutch.org` if you have questions or need assistance evaluating your transfer needs.
+{: .notice--warning}
+
 In collaborative settings, often data transfer and sharing can pose significant challenges.  For specific guidance about data transfer, access or copying for your particular collaboration, please file a ticket including a basic description of the data access sitaution by emailing `scicomp`.  There are often suitable strategies for collaborative project support that do not require data duplication (and thus increased data storage costs), or use of expensive data storage or transfer tools.  Two useful data transfer tools at use at the Hutch include `Motuz` and `Aspera`.
 
 ### HutchGO
