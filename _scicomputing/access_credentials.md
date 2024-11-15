@@ -70,28 +70,45 @@ To access an AWS account using SSO authentication, a user signs in to the AWS ac
 
 After authentication with a HutchNet ID, the user will have SSO access to all AWS account and applications without additional sign-in requirements (Username and Password)  
 
-##How to navigate to the AWS SSO Portal. 
+## How to navigate to the AWS SSO Portal
+
 Key Steps: 
-* Access the SSO portal: Go to the unique SSO login URL: https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts 
-* Sign in with Credentials: Enter your HutchID to authenticate following MFA authentication. 
- ![MFA Screen](.//assets/CLD_PickAccount.png)
-* Select AWS account: Once logged in, choose the AWS account you want to access from the list of available accounts. Expanding the arrow will show the account name, the sso-role attached to the user. Each user will see only the account it has access to and the role mapped to the user. PowerUserAccess is an example. 
- ![AccountSelection](.//assets/CLD_LZALandingPage.png)
-* Choose a role: Select the specific role assigned to you within the chosen AWS account. PowerUserAccess is a link and clicking the role will take you to the AWS account. 
-*  Access AWS services: You can now access the AWS Management Console or use the AWS CLI with temporary credentials obtained from your SSO session. 
+
+1. Access the SSO portal: Go to the unique SSO login URL: [https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts ](https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts )
+2. Sign in with Credentials: Enter your HutchID to authenticate following MFA authentication. 
+ ![MFA Screen](assets/CLD_PickAccount.png)
+3. Select AWS account: Once logged in, choose the AWS account you want to access from the list of available accounts. Expanding the arrow will show the account name, the sso-role attached to the user. Each user will see only the account it has access to and the role mapped to the user. PowerUserAccess is an example. 
+ ![AccountSelection](assets/CLD_LZALandingPage.png)
+4. Choose a role: Select the specific role assigned to you within the chosen AWS account. PowerUserAccess is a link and clicking the role will take you to the AWS account. 
+5.  Access AWS services: You can now access the AWS Management Console or use the AWS CLI with temporary credentials obtained from your SSO session. 
 
 ## Using the AWS CLI with SSO: 
-# Configure SSO profile: 
-Use the command aws configure sso to set up your SSO profile locally on your machine. 
-https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-configure  
-# Login with SSO: 
-Run aws sso login in your terminal to initiate an SSO session and retrieve temporary credentials. 
-# Access AWS services: 
+
+1. Configure SSO profile: Use the command
+
+```bash
+aws configure sso 
+```
+
+to set up your SSO profile locally on your machine. [More information here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-configure  
+).
+
+2. Login with SSO: 
+
+Run `aws sso login` in your terminal to initiate an SSO session and retrieve temporary credentials. 
+3. Access AWS services:
+
 Once logged in, use the AWS CLI commands as usual, utilizing the temporary credentials obtained through SSO. 
-# Important points to remember: 
-* Session duration: SSO session have a set expiration time, so you may need to re-authenticate periodically. 
+
+<div class=".notice">
+
+## Important point to remember: 
+
+The SSO session has a set expiration time, so you may need to re-authenticate periodically. 
+</div>
 
 ### Testing Your Credentials
+
 To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your local computer to your PI's bucket. 
 
 In these examples, please replace `lastname-f` with the last name and first initial of your PI.
