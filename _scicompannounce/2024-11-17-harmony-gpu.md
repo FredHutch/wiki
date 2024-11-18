@@ -30,7 +30,7 @@ These harmony nodes have been configured into the _chorus_ partition.  There are
 Requesting the _chorus_ partition and a GPU is all that's required to allocate harmony resources to your job.  Because of the differences between the J/K class and Harmony nodes we have configured a login/dev node called _maestro_ for interactive use.  This node is something like a _rhino_ login node, but configured with the new hardware, OS, and modules.
 
 This is a shared host- please watch your utilization and limit use of its resources to the very minimum necessary to prove and develop your work.  Once you have confidence that a job will work, submit it to the _chorus_ parition.
-{: .notice-info }
+{: .notice--info }
 
 ## Last Word
 
