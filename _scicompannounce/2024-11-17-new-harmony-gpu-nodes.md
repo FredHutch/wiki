@@ -12,7 +12,7 @@ These use the AMD EPYC processor- the 9354P with 32 cores running up to 3.8GHz. 
 
 ### OS
 
-These new hosts are alwo running the latest LTS release of Ubuntu (Noble Numbat, 24.04).  Again, while there is some compatiblity with the OS on the J and K class gizmo nodes (Bionic Beaver, 18.04), there are many cases where software build on the old gizmo nodes will not run on these.
+These new hosts are alwo running the latest LTS release of Ubuntu (Noble Numbat, 24.04).  Again, while there is some compatiblity with the OS on the J and K class gizmo nodes (Bionic Beaver, 18.04), there are many cases where software built on the old gizmo nodes will not run on these.
 
 ### Environment Modules
 
@@ -28,6 +28,8 @@ These harmony nodes have been configured into the _chorus_ partition.  There are
 ### Access
 
 Requesting the _chorus_ partition and a GPU is all that's required to allocate harmony resources to your job.  Because of the differences between the J/K class and Harmony nodes we have configured a login/dev node called _maestro_ for interactive use.  This node is something like a _rhino_ login node, but configured with the new hardware, OS, and modules.
+
+_maestro_ can be accessed via SSH.  At this time we do not have NoMachine available for this node.
 
 This is a shared host- please watch your utilization and limit use of its resources to the very minimum necessary to prove and develop your work.  Once you have confidence that a job will work, submit it to the _chorus_ parition.
 {: .notice--info }
