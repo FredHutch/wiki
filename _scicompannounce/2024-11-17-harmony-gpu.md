@@ -1,5 +1,5 @@
 ---
-Title: New GPU Compute Nodes: harmony
+Title: New Harmony GPU Compute Nodes
 ---
 
 The gizmo cluster has been augmented with more capable GPU nodes which we are calling the "harmony" class node.  These systems have four NVIDIA L40S GPUs and provide significantly more memory (44GB) for GPU processes.  These should be helpful for many processes that were constrained on the old gizmo J and K class nodes.  Additional information is available on the wiki ([here](scicomputing/compute_gpu) and [here](scicomputing/compute_platforms)).
