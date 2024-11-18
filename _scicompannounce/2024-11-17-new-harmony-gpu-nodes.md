@@ -16,7 +16,7 @@ These new hosts are alwo running the latest LTS release of Ubuntu (Noble Numbat,
 
 ### Environment Modules
 
-Because of the above differences, We have built many common tools for these nodes.  However, not all of the modules available on the J and K class nodes are available on the harmony class nodes.  If you need a specific version or toolset built, please email SciComp
+Because of the above differences we have rebuilt the entire Lmod environment module tree for these new hosts.  Not all of the modules available on the J and K class nodes are available on the harmony class nodes- use `ml spider` to list available modules, and `ml spider <modulename>` to show available versions.  If you need a specific version or toolset built, please email SciComp.
 
 Please note that we are reserving these hosts for GPU workload.  We will be adding non-GPU hosts in the future, but for now we will be prioritizing modules needing GPU capabilities
 {: .notice--info }
