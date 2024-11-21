@@ -44,6 +44,23 @@ The new GPU systems have a different processor and a newer version of operating 
 sbatch --partition=chorus --gpus=1 ...
 ```
 
+There are currently only L40S GPUs, but for the sake of precision and future-proofing, you can specify the GPU as well:
+
+```
+sbatch --partition=chorus --gpus=l40s:1 ...
+```
+
+Since these nodes have more GPUs available per node, you can request more just by increasing the count:
+
+```
+sbatch --partition=chorus --gpus=3 ...
+# or:
+sbatch --partition=chorus --gpus=l40s:3 ...
+```
+
+Please make sure your code is capable of using multiple GPUs before requesting more than one,
+{: .notice--warning}
+
 When submitting jobs make sure that your current environment does not have modules loaded (i.e. `module purge`) and that you are loading the new modules in your script.  You may run into conflicts with modules built for rhino/gizmo compute platforms.
 {: .notice--info}
 

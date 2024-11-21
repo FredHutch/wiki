@@ -38,11 +38,13 @@ in S3 or some other web-available source.  There have been some recent changes w
 expand options for data storage which may make some workloads more accessible
 to _Batch_.
 
-## [CloudShell at Fred Hutch] (COMING FEB 2023)
+## CloudShell at Fred Hutch
 
 CloudShell is a browser-based shell that's native to AWS. With CloudShell, you can quickly run scripts with the AWS Command Line Interface (CLI), experiment with service APIs using the AWS CLI, and use other tools to increase your productivity. The CloudShell icon appears in AWS Regions where CloudShell is available. CloudShell inherits the credentials of the user who is signed in to the AWS Management Console. This makes authentication simpler and reduces operational burden by eliminating the need to configure and manage credentials locally. CloudShell comes with 1 GB of persistent storage for your home directory. Persistent storage enables you to store your frequently used scripts and configuration files between CloudShell sessions. For more details on persistent storage, see the [AWS CloudShell User Guide](https://docs.aws.amazon.com/cloudshell/latest/userguide/welcome.html).
 
 CloudShell will enable low-level access to AWS services when you need to create services that are not handled by the ones listed above (e.g. if you wanted to spin up a RedShift data warehouse).  There is no charge for CloudShell, but there may be charges for any services you enable.
+
+
 ## How do I access my other AWS account resources?
 
 You can read more about [AWS Storage](/scicomputing/store_objectstore/) in our wiki page.  

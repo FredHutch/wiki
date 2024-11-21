@@ -18,12 +18,18 @@ HutchGO allows transfers of data in-place from common Hutch storage locations (f
 
 ### Aspera
 
-Aspera is a data transfer tool that enables fast transfer of large data between it and a host using the Aspera client.  The primary method of operation is to upload the data to the Aspera server, then use the web interface to create an email with a link you would then send to those outside the Hutch network.
+#### Faspex
+
+Aspera Faspex is a web based data transfer tool that enables fast transfer of large data between it and a host using the Aspera client.  The primary method of operation is to upload the data to the Aspera server, then use the web interface to create an email with a link you would then send to those outside the Hutch network.
 
 Storage space in Aspera is limited. Because of this, data stored here is deleted after a short period of time and not backed up making the Aspera inappropriate for primary storage.  Moving data to their final, secure, backed up locations as soon as possible is important when using Aspera.
 {: .notice--info}
 
-Visit [the Aspera information page](/scicomputing/store_aspera/) for more details and information on using this storage service.
+Visit [the Aspera Faspex information page](/scicomputing/store_aspera/) for more details and information on using this storage service.
+
+#### Shares
+
+Aspera Shares is similar to the web interface used by Faspex but additionally offers a command line interface (CLI). While the Fred Hutch instance of Aspera does not support CLI use, the organization you are collaborating with might.  Visit [the Aspera Shares information page](/scicomputing/store_aspera_shares/) for more how to use the Aspera CLI tool on our cluster.
 
 ## Data Storage for Collaboration
 
