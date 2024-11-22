@@ -8,6 +8,9 @@ HutchGO- Hutch Globus Online- is a deployment of the Globus data transfer servic
 
 Globus is a non-profit service of the University of Chicago.  It is a combination of software (the Globus server and client tools) and services (the Globus control services) providing a number of different functions useful in research- data transfer, compute, and automation.
 
+Globus is the preferred way to transfer sensitive data, but it is essential that you are confident that transferring data with Globus won't violate any terms of use - contact `dataprotection@fredhutch.org` for advice regarding your data transfer.
+{: .notice--warning}
+
 ## Key Concepts
 
 ### Account and Identity
