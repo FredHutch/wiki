@@ -38,10 +38,10 @@ OUTPUT_FOLDER=/path/to/output/folder/for/this/analysis/
 # Load the Nextflow module (if running on rhino/gizmo)
 ml Nextflow
 
-# Load the Singularity module (if running on rhino/gizmo with Singularity)
-ml Singularity
-# Make sure that the singularity executables are in the PATH
-export PATH=$SINGULARITYROOT/bin/:$PATH
+# Load the Apptainer module (if running on rhino/gizmo with Apptainer)
+ml Apptainer
+# Make sure that the apptainer executables are in the PATH
+export PATH=$APPTAINERROOT/bin/:$PATH
 
 # Run the workflow
 NXF_VER=$NXF_VER \
@@ -107,16 +107,16 @@ but you will also need to [install Nextflow](https://www.nextflow.io/docs/latest
 on that local machine
 
 
-## Load the Singularity Module
+## Load the Apptainer Module
 
-When running on `gizmo` and using Singularity to execute within containers,
-you need to load Singularity on the head node with `ml Singularity`. If either
-of those are not the case (not running on `gizmo` or not using Singularity),
+When running on `gizmo` and using Apptainer (formerly Singularity) to execute within containers,
+you need to load Apptainer on the head node with `ml Apptainer`. If either
+of those are not the case (not running on `gizmo` or not using Apptainer),
 this can be omitted.
 
-NOTE: You should not run any workflows which use Singularity from any `rhino` node.
+NOTE: You should not run any workflows which use Apptainer from any `rhino` node.
 Instead use the `grabnode` command to reserve the appropriate head node
-([more details](/compdemos/howtoRhino/#guidance-for-use)).
+([more details](/compdemos/first_rhino/#logging-on-to-gizmo-via-grabnode)).
 
 
 ## Nextflow Run - Formatting

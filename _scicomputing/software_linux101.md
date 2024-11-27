@@ -19,7 +19,7 @@ most popular tools only run on Linux.  Thus, it's important that you become at l
 
 Learning Linux means learning the shell.  The most common shell is _bash_ and the one we'll be assuming is in use here. A good way to get started learning Linux is going through some of the many tutorials that have been developed and are readily available from various providers:
 
- - The [Unix Shell](http://swcarpentry.github.io/shell-novice/) course from Software Carpentry (note, this organization has a number of different software oriented tutorials and resources as well).
+ - The [Unix Shell](https://swcarpentry.github.io/shell-novice/) course from Software Carpentry (note, this organization has a number of different software oriented tutorials and resources as well).
  - The [Introduction to Linux](https://www.tldp.org/LDP/intro-linux/html/index.html) guide from The Linux Documentation Project
 
 The rest of this document will expect you've gone through either one of the basic introductions above.  For more advanced use of the shell, tasks like scripting or programming, see:
@@ -35,13 +35,13 @@ During the course of your work you may need to do a simple task on a large numbe
 The benefits of shell scripting are:
 1. not needing to install additional software on your computer and,
 2. ease of use.
-Most Unix-based systems (eg. [Ubuntu](https://www.ubuntu.com)) come with the Bourn Again SHell ("Bash"), which are also standard on Mac OSX systems. Windows have the Command Prompt and PowerShell. You can enter shell scripting commands directly via a *command line interface* or save these commands in a *shell script* to be run immediately non-interactively.
+Most Unix-based systems (eg. [Ubuntu](https://www.ubuntu.com)) come with the Bourn Again SHell ("Bash"). [zsh](https://en.wikipedia.org/wiki/Z_shell), which is based on Bash, is now the default on macOS. Windows have the Command Prompt and PowerShell. You can enter shell scripting commands directly via a *command line interface* or save these commands in a *shell script* to be run immediately non-interactively.
 
 ### Shell Scripting Resources
 - A gentle introduction to command line interface and related concepts are [here](https://launchschool.com/books/command_line/read/command_line_interface).
 - Some basic Bash commands can be found [here](https://whatbox.ca/wiki/Bash_Shell_Commands).
-- Slightly more advanced Bash scripting are found [here](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html).
-- [Common Bash pitfalls](http://mywiki.wooledge.org/BashPitfalls) goes into more subtle, advanced usage
+- Slightly more advanced Bash scripting are found [here](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html).
+- [Common Bash pitfalls](https://mywiki.wooledge.org/BashPitfalls) goes into more subtle, advanced usage
 - Overview of [Windows PowerShell](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/powershell) and an example [comparing Command Prompt and PowerShell](https://www.windowscentral.com/how-rename-multiple-files-bulk-windows-10#rename_filename_powershell).
 - [explainshell.com](https://explainshell.com/) is a useful, interactive site, that lets you type in shell commands and then it will explain what each of the different portions of the command is actually doing.  
 

@@ -27,18 +27,54 @@ This is a list of clients and servers by OS:
 | --- | --- | --- | --- |
 | MacOS | OpenSSH `ssh` | [XQuartz](https://www.xquartz.org/) | OpenSSH is already installed on MacOS
 | Linux | OpenSSH `ssh` | Xorg | Already installed on supported Ubuntu systems
-| Windows | puTTY `puTTY` | Windows Subsystem for Linux | Can be installed through "Software Center"
+| Windows | PuTTY `PuTTY` | Windows Subsystem for Linux | Can be installed through "Software Center"
 
 
 ### Windows
 
-puTTy is the most widely used secure shell software for Windows. You can install puTTy through "Software Center" and then simply connect to host name `rhino`.
+#### PuTTY
+
+PuTTY is the most widely used secure shell software for Windows. You can install PuTTY through "Software Center". To connect to `rhino` using password authentication refer to the screenshots below.
+
+Open the application, enter `rhino` as the hostname then click Open.
+
+<img src="../assets/putty_main.png" alt="Putty config window" width="450">
+
+Enter your hutchid then press enter. It will prompt for your password. Press enter again and you will connect.
+
+<img src="../assets/putty_loginas.png" alt="Putty login screenshot">
+
+#### Command Prompt (cmd.exe)
+
+Command Prompt, also known as cmd.exe or cmd, is the default command-line interpreter on Windows. You will need to complete the steps under [Additional configuration steps](#additional-configuration-steps) before using this application. When complete, use `ssh rhino` to connect.
+
+#### Windows Terminal
+
+Windows Terminal is a modern terminal application with powerful features including multiple tabs. It can be installed from the Microsoft Store. You will need to complete the steps under [Additional configuration steps](#additional-configuration-steps) before using this application. When complete, use `ssh rhino` to connect.
+
+#### Additional configuration steps
+
+If you want to use something other than PuTTY on Windows, you will need to complete these additional configuration steps.
+
+##### Install OpenSSH Client
+
+The ssh command on Windows requires OpenSSH Client which is not installed by default. To check, open Command Prompt or Windows Terminal, type `ssh` and press enter. If you get a message like `'ssh' is not recognized as an internal or external command, operable program or batch file.` then you will need to e-mail the Service Desk and request installation of the "OpenSSH Client optional feature". They can connect to your computer and do this remotely.
+
+##### Create ssh config file on Windows
+
+When you launch Command Prompt, you should be at your user profile folder.  If not, type `cd C:\Users\<HUTCHID>`. Next, create a folder called `.ssh` with `mkdir .ssh`. You might get a message saying the folder already exists. Use a text editor to create a file in this location if it doesn't already exist. Here is an example of a minimal ssh config file. For more information about this file see [advanced ssh config options](#advancedoptional-setup-for-making-things-easier-the-ssh-config-file). Note that on Windows you will need to specify the MAC algorithm(s). 
+
+```
+Host rhino
+  User <HUTCHID>
+  MACs hmac-sha2-512
+```
 
 ### Mac OS
 
 The default Mac terminal is a good choice for connecting to and using SciComp Linux-based resources.  We also recommend using [iTerm2](https://www.iterm2.com/) for your local terminal program on your Mac.  It has a richer feature set that comes in handy as your computing needs grow.
 
-The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](http://xquartz.macosforge.org), and download and install the latest version of XQuartz.
+The only X11 client for Mac is XQuartz. Install XQuartz before running any Linux X11 apps such as RStudio or Matlab. Go [here](https://xquartz.macosforge.org), and download and install the latest version of XQuartz.
 
 After installing XQuartz just start the app. The XQuartz icon will appear in the toolbar showing that it is running. XQuartz is now running an X11 client and that is the only interaction that you need to do with XQuartz. After XQuartz is running, open the Mac terminal. The latest version of XQuartz sets the DISPLAY environment with the default Mac terminal window. We do not recommend using the terminal that comes with XQuartz.
 
@@ -55,7 +91,7 @@ After connecting to a `rhino` verify that your X11 client is working by typing `
 
 ### Linux
 
-Terminator is a convenient terminal emulator that can have multiple terminals in a single window. You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend [NoMachine NX](https://teams.fhcrc.org/sites/citwiki/SciComp/Pages/NX%20Client%20for%20Windows.aspx) to connect to a Linux machine with Terminator.
+Terminator is a convenient terminal emulator that can have multiple terminals in a single window. You can use Terminator on your Linux desktop. Windows and Mac users will need a X11 software to use SciComp resources as graphical desktop. We recommend [NoMachine](/scicomputing/access_nx/) to connect to a Linux machine with Terminator.
 
 After starting Terminator you can right click on the terminal window and either split it horizontally or vertically. This 1 min video shows you how it works:
 
@@ -72,13 +108,16 @@ There are several ways around this:
 
 ### NoMachine NX (Multi-OS)
 
-NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `rhino01`, `rhino02` or `rhino03`.  To connect through the local Fred Hutch network or through a VPN connection please download and install the NoMachine Enterprise Client from [NoMachine's Site.](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)  Windows users can also install an older version from "Software Center".
+NoMachine NX is a remote desktop software for Linux servers that gives you full remote access to a graphical user interface from Windows or Mac clients. It is installed on the SciComp session Servers `rhino01`, `rhino02` or `rhino03`.  NoMachine requires that your are connected to the Campus network- either through the local Fred Hutch network or through a VPN connection.
+
+To use this service, download and install the NoMachine Enterprise Client from [NoMachine's site.](https://downloads.nomachine.com/download-enterprise/#NoMachine-Enterprise-Client)  Windows users can also install from "Software Center".
 
 Installation and configuration is described [here](/scicomputing/access_nx/).
 
 One of the nicest features of NoMachine is that you can disconnect from the server's desktop environment and later resume the connection and continue right where you left off with all terminal windows in the same place. NoMachine from Windows or Mac is often a better choice than installing a Linux desktop.
 
 ### Screen and tmux
+
 GNU Screen and tmux are both terminal multiplexers. They run one or more shell processes on a remote system and enable you to disconnect and reconnect while leaving the process(es) running. They are both full-featured utilities that take a longer time to learn, but provide a useful set of features that aren't available with simpler tools. Using the command below, you can get working with tmux quickly.
 
 1. Use SSH to connect to a remote system: `ssh rhino`
@@ -90,7 +129,7 @@ GNU Screen and tmux are both terminal multiplexers. They run one or more shell p
 
 A note about tmux iterm2 integration. If you are using iterm2 on a Mac, add `-CC` to your tmux command. This will run a tmux console as well as tmux in that terminal. From there, you can use iterm2 commands to create a new tmux sessions in a new window (`command-n`) or a new tab (`command-t`). When you disconnect, simply reattach to that first tmux session, and iterm2 will re-open all your windows and/or tabs.
 
-A note about the X Window System and terminal multiplexers. As stated above, on your laptop you are running an X server, and the remote program is a client. Terminal multiplexing allow your laptop to disconnect because the multiplexing server is running on the remote system and your device is the client. When you close your laptop, the X server stops. Clients exit at that point as a client cannot do anything without a server. See [NoMachine](#nomachine-nx-(multi-os)) for a workaround for X programs.
+A note about the X Window System and terminal multiplexers. As stated above, on your laptop you are running an X server, and the remote program is a client. Terminal multiplexing allow your laptop to disconnect because the multiplexing server is running on the remote system and your device is the client. When you close your laptop, the X server stops. Clients exit at that point as a client cannot do anything without a server. See [NoMachine](/scicomputing/access_nx/) for a workaround for X programs.
 
 A note about screen:  `ssh rhino` will assign you to one of the available, specific servers (ie: rhino01, rhino02, rhino03) and _screen_ instances _are not shared across the servers_. If you are interested in using screen to run a persistent session on the rhino cluster, consider:
  1. accessing a specific server directly eg: `ssh rhino01` 
@@ -111,7 +150,7 @@ If you use your password to ssh, you can certainly continue to do so. However, w
 
 #### Key Generations and passphrases
 
-Create an SSH key - on MacOS or Linux, run `ssh-keygen` and follow the prompts (change the file location if you are creating a new key but want to keep the old one). On Windows you will need `puttygen` if using puTTY or follow the Linux instructions if using Cygwin.
+Create an SSH key - on MacOS or Linux, run `ssh-keygen` and follow the prompts (change the file location if you are creating a new key but want to keep the old one). On Windows you will need `puttygen` if using PuTTY or follow the Linux instructions if using Cygwin.
 
 You will be prompted to enter and then confirm a passphrase. This is the best protection of your ssh key, and should be a longer complex passphrase. Passphrase-less ssh keys are a security violation. See below for ways to automate local unlocking of your key to avoid having to use a complex passphrase frequently.
 
@@ -140,9 +179,9 @@ The following steps will get your MacOS device into a state where your SSH key p
       UseKeychain yes
       AddKeysToAgent yes
 	```
-##### Windows/puTTY
+##### Windows/PuTTY
 
-On Windows, puTTY can include a key management agent called `pageant.exe` - you can download puTTY easily without it and can download it separately from [the puTTY site](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+On Windows, PuTTY can include a key management agent called `pageant.exe` - you can download PuTTY easily without it and can download it separately from [the PuTTY site](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 #### Good key management
 Your SSH key is actually in two parts - the public key, and the private key. Public/Private key pairs are fascinating if you are in to encryption. Be sure to search and read all about them.
@@ -162,7 +201,7 @@ The best practices involving keys include:
 * you do not need to put both of your keys on every machine you want to use, only your client device
 
 #### Agents
-SSH supports an in-memory agent process that will hold your unlocked private key safely. This alleviates the need to type your passphrase for the duration of time the agent is running. See above for MacOS options. On Linux, you can run `eval $(ssh-agent)` to start an agent, and `ssh-add [path to keyfile if not default]` to add your key to the running agent process. On Windows, you can run puTTY's `pageant.exe`.
+SSH supports an in-memory agent process that will hold your unlocked private key safely. This alleviates the need to type your passphrase for the duration of time the agent is running. See above for MacOS options. On Linux, you can run `eval $(ssh-agent)` to start an agent, and `ssh-add [path to keyfile if not default]` to add your key to the running agent process. On Windows, you can run PuTTY's `pageant.exe`.
 
 You can forward key requests from remote machine back to your running agent:
 
@@ -193,9 +232,6 @@ Check on the remote system that you have a `DISPLAY` environment variable set us
 
 Your SSH config supports multiple 'stanzas' to help you as your config may not be the same for remote hosts. The 'stanza' keyword is `Host`. In the example below, everything from one `Host` line to the next `Host` line is applied the specified host.
 ```
-Host *.fhcrc.org !snail.fhcrc.org
-	ProxyJump snail.fhcrc.org
-
 Host *.fhcrc.org
 	UseKeychain yes
 	AddKeysToAgent yes
@@ -205,36 +241,10 @@ Host *.fhcrc.org
 	ForwardAgent yes
    	User <username>
 ```
-This config contains all of the features mentioned above and will apply them to all `fhcrc.org` hosts. It will use `snail` (the SSH gateway host) for all hosts except `snail` itself, as this would create a loop. *You must place your username in the code above*.
+SSH does not do DNS resolution before consulting the config file, so typing `ssh rhino` (or any short hostname without domain) will not trigger the `*fhcrc.org` Host entries. You can add `rhino` to the Host line to have this trigger the config as well.
 
-One final note - SSH does not do DNS resolution before consulting the config file, so typing `ssh rhino` (or any short hostname without domain) will not trigger the `*fhcrc.org` Host entries. You can add `rhino` to the Host line to have this trigger the config as well.
+## Access From Outside the Campus
 
-## Access via a Remote Location
+The campus network is protected by a firewall which prevents connections from the wider Internet to FHCC compute resources.  For remote connections FHCC IT provides a VPN agent that creates a tunnel from your workstation into the campus network allowing you to use FHCC compute resources as if you were connected to the campus network.
 
-Fred Hutch supports use of a VPN to remotely connect with our network. The network is protected by a firewall and there are currently 2 options to get access to resources inside the network, using VPN or the SSH gateway `snail.fhcrc.org`. This is allowed as all SSH communication is encrypted, and the gateway system is audited.
-
-### VPN
-
-The Fred Hutch desktop VPN service is the default choice for all remote connections. Please see the [VPN page on CenterNet](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html) for more details.
-
-### ssh to `snail.fhcrc.org`
-
-Snail is a SSH gateway (also called bastion host or jump host) you can use to get remote access if you do not require the features that VPN provides. Using SSH can be easier for some users, for example if you have a network printer at home you cannot use it while connected to VPN.
-If you are outside the Fred Hutch network, use the following to connect to the Snail gateway first:
-
-```ssh username@snail.fhcrc.org```
-
-Once you are connected, from there you can then connect to the `rhinos`:
-
-```ssh username@rhino```
-
->Note:  When you disconnect from `rhino`, you will also then need to disconnect from `snail` as well. 
-To avoid this two step process, for example if you connect this way very often, you can add these 2 lines your ~/.ssh/config file you only have to type `ssh` once.
-
-```
-    Host rhino*.fhcrc.org
-    ProxyCommand ssh yourusername@snail.fhcrc.org exec nc %h %p 2> /dev/null
-```
-If you are outside the Fred Hutch network type `ssh rhino.fhcrc.org` to use the snail gateway and if you are inside type `ssh rhino` to bypass the gateway.
-
-Please see [this page](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts) to learn more about ProxyCommand.
+The VPN client is only available on Hutch managed (imaged and installed) devices and requires a HutchNet ID to log in.  For assistance and help with the VPN you can contact the IT Service Desk (see also the [VPN page on CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html))

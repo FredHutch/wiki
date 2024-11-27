@@ -1,114 +1,181 @@
 ---
-title: De-identification of Specimens and Data
-main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
-primary_reviewers: JasonMajor1, sgglick
+title: De-identification of Data and Specimens
+main_authors: Monica Gerber (monicagerber)
+primary_reviewers: vortexing, carriewright11
 ---
 
-De-identification generally refers to the removal of 18 identifiers as listed in
-HIPAA regulation 45 CFR 164.514(b). However, de-identification also means that
-in addition to the removal of these identifiers, the risk of re-identification,
-including applying methods which utilize publicly available data, is very small.
-Even without the 18 identifiers, individual-level genomics data could
-potentially identify an individual. Therefore, de-identification of genomics
-data also heavily relies on additional methods of privacy and security, such as
-adherence to strong data use limitations and practices, and strict security
-policy. In this section we address more specific approaches to address the need
-for de-identification of specimens and datasets for translational genomics
-studies.
+De-identification of patient data for research is an important way to help protect the privacy of individuals while using these data to conduct vital research. For more information on types of data sets derived from health care data, see the [PHI and Research](/datascience/phi/) page. 
 
-## What is de-identification?
+## Federal regulations
 
-De-identification refers to the removal or dissociation of direct patient
-identifiers from a research specimen or data set in order to inhibit the ability
-to deduce an individual identity. Ideally after de-identification, it would not
-be possible to use any remaining information alone or in combination with other
-readily available information to identify the subject from which the data
-originated. Furthermore, Human Subjects Protection dictates the identifiers of
-source subjects cannot be readily ascertained or otherwise associated with the
-data by the research staff or secondary data users (45 CFR 46.102(f)). The goal
-of de-identification is to reduce, to the greatest extent possible, the risk of
-identifying individuals from which specimens are obtained or associated genomic
-datasets are generated. In the setting of genomics, this would include
-considerations for the condition where genomic datasets generated from a human
-specimen may be deposited in a publicly available setting for the purposes of
-data sharing for further research. The most common method is the Safe Harbor
-method, removal of 18 identifiers as listed in [HIPAA regulation (45 CFR 164.514(b)(2).](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html) A Fred Hutch guide on HIPAA and Research is on the [HDC Compliance and Security Centernet Page.](https://centernet.fredhutch.org/cn/u/hdc/compliance---governance/_jcr_content/leftParsys/download_307265254/file.res/2019_10%2520PHI%2520and%2520Research%252018%2520HIPAA%2520Identifiers%2520and%2520More.pdf)
+There are two important federal regulations related to the use of "individually
+identifiable health information." 
 
-Ethnicity, gender, age, marital status, geographical location, and preferred
-language are types of descriptors (indirect identifiers) which when combined can
-enable a patient to be re-identified. This presents particular concerns with
-regard to privacy, stigmatization, and discrimination, since the ability to
-protect the confidentiality of these individuals or groups participating in the
-research is diminished. For example, members of an identifiable population may
-be stigmatized or discriminated against if research reveals that the group is at
-high risk of having a genetic variant associated with a particular disease. For
-some communities, close family relationships also may make it especially
-challenging to protect participants' privacy, even if research samples are
-de-identified. To ensure confidentiality, not only direct identifiers should be
-removed. Indirect identifiers, such as date of birth, location, marital status,
-preferred language and ethnicity should also be reviewed and removed when
-possible. 
+1.  The first, the [HIPAA Privacy
+Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/index.html), restricts
+use of of [protected health
+information](https://www.hhs.gov/answers/hipaa/what-is-phi/index.html) (PHI) by
+a "covered entity." HIPAA permits a covered entity to create information that is
+not individually identifiable by following specific standards for
+de-identification. 
 
-Some types of individual-level genomic data can be used to identify an
-individual even without the 18 identifiers. Thus, de-identification of genomics
-data also heavily relies on additional methods of confidentiality and security
-that are unique to the particular data type involved, such as adherence to
-strong data use limitations and practices. Genetic data (generally considered to
-refer to the sequence of a person\'s genome, though there is still ambiguity
-about how that relates to different types of genomic datasets) is considered
-Strictly Confidential under the FH Data Classification and Handling Standard.
+2.  The second regulation, [Protection for Human Subjects (45 CFR
+46)](https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/index.html),
+also known as the Common Rule, outlines protections for individuals who
+participate in research, including protections related to data and specimens
+collected from individuals for both primary and secondary research. Research
+with data and specimens that are collected for another purpose (secondary
+research) must be de-identified to be considered not human subjects
+research.[^1]
 
-## How can a specimen be de-identified?
+According to the [U.S. Department of Health and Human
+Services](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#rationale), 
 
-Under HIPAA, specimens/private information can be de-identified by replacing
-direct (and indirect) identifiers with a masking/coding schema. Masking schema
-should use coding that does not include any component of the identifiable
-patient data or have a direct relationship with them which can be ensured via
-randomization of coded identifiers. For data that may need to be re-identified
-later, retaining appropriate documentation of the mapping between identifiable
-data from patients, specimens or datasets, and the coded identifiers generated
-is critical. Depending on the study design and protocol, the entity retaining
-this mapping documentation will be responsible for preventing non-approved
-re-identification. In some cases if the research group maintains this mapping
-documentation then their research will still be considered human subjects,
-though if the mapping is maintained by a non-involved 3rd party the research may
-be considered exempt.
+> The process of de-identification, by which identifiers are removed from the
+> health information, mitigates privacy risks to individuals and thereby
+> supports the secondary use of data for comparative effectiveness studies,
+> policy assessment, life sciences research, and other endeavors.
 
-There is often a question of whether the HIPAA de-identification process is
-enough to render de-identified specimens/private information sufficiently
-non-identifiable for exemption from human subjects research. A specimen
-de-identified under HIPAA is not the same as a non-identifiable specimen for
-research (Office of Human Research Protection). Under research, a specimen
-rendered non-identifiable under 45 CFR 46.102(f) could qualify as exempt from
-human subjects research. A non-identifiable specimen (thus not human subject
-research) must meet the following two requirements:
+More information about HIPAA compliance is available on [Fred Hutch's IRB
+website](https://extranet.fredhutch.org/en/u/irb/hipaa-compliance.html).
 
-1.  The private information or specimens are NOT collected for a specific
-research project through an interaction or intervention with living
-individuals; and
+## Methods for creating de-identified datasets 
 
-2.  The investigator(s) cannot readily ascertain the identity of the
-individual(s) to whom the coded private information or specimens pertain
-because, for example:
+The HIPAA Privacy Rule provides two methods for de-identification of PHI. The
+first method, expert determination, refers to expert application and evaluation
+of methods to de-identify data. The second, safe harbor, refers to removal of
+specific identifiers from a data set.
 
--   The investigators and the holder of the key enter into an agreement
-    prohibiting the release of the key to the investigators under any
-    circumstances, until the individuals are deceased (note that the HHS
-    regulations do not require the IRB to review and approve this agreement);
+> ⚠️ While it is possible to de-identify your data yourself, unless you are an
+> expert, we suggest that you seek out an expert to help you instead. There are
+> nuances regarding privacy that you may miss without ample experience.
 
--   There are IRB-approved written policies and operating procedures for a
-    repository or data management center that prohibit the release of the key
-    to the investigators under any circumstances, until the individuals are
-    deceased; or
+### The "expert determination" method
 
--   There are other legal requirements prohibiting the release of the key to the investigators, until the individuals are deceased.
+The HIPAA Privacy Rule defines de-identification by expert determination as a
+process where a person with: 
 
-## How can a genomic dataset be de-identified?
+> appropriate knowledge of and experience with generally accepted statistical
+> and scientific principles and methods for rendering information not
+> individually identifiable,
 
-If all direct and indirect identifiers are removed from a genomic data set, the
-genomic data itself may still be able to identify a patient depending on the
-data type and degree of processing of the specific data entity. The inclusion of
-racial, ethnic and genders in scientific research however, can be a reason to
-retain some of these indirect identifiers in the context of research datasets.
-Thus, in addition, confidentiality is supported through strong use limitations,
-data use agreements and appropriate data security.
+is able to apply these principles and methods to determine:
+
+>  that the risk is very small that the information could be used, alone or in
+>  combination with other reasonably available information, by an anticipated
+>  recipient to identify an individual who is a subject of the information,
+
+and where this person is able to document:
+
+>  the methods and results of the analysis that justify such determination.
+
+In summary, an expert in methods for de-identification can apply scientific and
+statistical principles to de-identify data as long as the risk of
+re-identification is very small, and must be able to document their methods and
+reasoning. More guidance on the [expert determination method for
+de-identification](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#guidancedetermination)
+is on the HHS website.
+
+### The "safe harbor" method
+
+A data set is considered de-identified using the safe harbor method if the following identifiers are removed:
+
+  1. Names
+  2. Geographic subdivisions smaller than the state
+  3. All elements of dates (except the year); all ages over 89, including the year
+  4. Telephone numbers
+  5. Vehicle identifiers and serial numbers, including license plate numbers
+  6. Fax numbers
+  7. Device identifiers and serial numbers
+  8. Email addresses
+  9. Web Universal Resource Locators (URLs)
+  10. Social security numbers
+  11. Internet Protocol (IP) addresses
+  12. Medical record numbers
+  13. Biometric identifiers, including finger and voice prints
+  14. Health plan beneficiary numbers
+  15. Full-face photographs and any comparable images
+  16. Account numbers
+  17. Any other unique identifying number, characteristic, or code
+  18. Certificate/license numbers
+
+Additionally, the remaining information can not be used, either alone or in
+combination with other information, to identify an individual in the data set.
+More [guidance on using the safe harbor method for
+de-identification](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#safeharborguidance)
+is on the HHS website.
+
+## Limited datasets
+
+Similar to a de-identified data set, a [limited data
+set](https://www.hipaajournal.com/limited-data-set-under-hipaa/) excludes
+specific direct identifiers. However, a limited data set may include city,
+state, ZIP code, elements of a date (e.g. date of birth), and other
+characteristics or codes not listed as direct identifiers. Limited data sets may
+only be used for purposes of research, public health, and health care
+operations; and they are governed by a data use agreement. Unlike de-identified
+data sets, limited data sets are still considered to be PHI because they may
+contain identifiable information. 
+
+## De-identification of biospecimens
+
+The HIPAA Privacy Rule affects biospecimen resources when human specimens are
+accompanied by PHI. The Common Rule outlines when research studies involving
+biospecimens are considered human subjects research. Any research study where an
+"investigator obtains information or biospecimens through intervention or
+interaction with the individual, and uses, studies, or analyzes the information
+or biospecimens," is considered human subjects research. Only secondary research
+involving coded private information and coded biospecimens is considered not
+human subjects research. See the Office of Human Research Protection's [guidance on biospecimens use in research](https://www.hhs.gov/ohrp/coded-private-information-or-biospecimens-used-research.html)
+for more information on when biospecimens are considered coded or
+non-identifiable.
+
+### Ethical considerations for use of de-identified data and specimens
+
+The story of Henrietta Lacks, her descendants, and the creation of HeLa cells,
+acted as a catalyst for proposed policy changes around biospecimen use and
+started a broader public discussion around the ethics of genomic research,
+especially secondary research with specimens.[^2]<sup>, </sup> [^3] Recent
+studies have confirmed that genomic data can never be truly anonymized, and
+that it may be possible to re-identify seemingly de-identified data.[^2]<sup>,
+</sup> [^4] These ongoing public conversations and scholarly debates about the
+ethical issues associated with biospecimen research led to the proposal of major
+changes to the Common Rule, which would have considered biospecimens "inherently
+identifiable."[^5]<sup>, </sup>[^6] Ultimately, the new Common Rule, which went
+into effect in 2018, maintained existing regulations around secondary
+biospecimen use, but continues to spark discussion around the individual
+autonomy and consent, harm and stigmatization of identified groups, and the
+public benefits of secondary research.[^4]<sup>, </sup>[^5]<sup>,
+</sup>[^7]<sup>, </sup>[^8]<sup>, </sup>[^9] 
+
+## Other resources
+
+[De-Identification of Structured Data](/dasldemos/deidentification_methods_structured/), DaSL Resource Library page.
+
+[Protecting Personal Health Information in Research: Understanding the HIPAA Privacy Rule](https://privacyruleandresearch.nih.gov/pdf/HIPAA_Privacy_Rule_Booklet.pdf), NIH Booklet (NIH Publication Number 03-5388).
+
+Johns Hopkins [Protecting Human Subjects Identifiers](https://guides.library.jhu.edu/protecting_identifiers) page.
+
+ITCR Training Network: Ethical Data Handling for Cancer Research course, [Chapter 3: De-identification](https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-security.html#de-identification).
+
+## References
+
+[^1]: Implementing regulatory broad consent under the revised common rule: Clarifying key points and the need for evidence. The Journal of Law, Medicine & Ethics. 2019;47(2):213-231. doi: https://doi.org/10.1177/1073110519857277.
+
+[^2]: Beskow, L. M. (2016). Lessons from HeLa cells: the ethics and policy of biospecimens. Annual review of genomics and human genetics, 17, 395-417. doi: 10.1146/annurev-genom-083115-022536.
+
+[^3]: Callaway, E. (2013). HeLa publication brews bioethical storm. Nature, 1, 12689. Accessed at: https://www.nature.com/articles/nature.2013.12689.
+
+[^4]: Lee, S. S. J. (2021). The ethics of consent in a shifting genomic ecosystem. Annual review of biomedical data science, 4, 145-164. doi: https://doi.org/10.1146/annurev-biodatasci-030221- 125715
+
+[^5]: Spector-Bagdady K, Trinidad G, Kardia S, et al. Reported Interest in Notification Regarding Use of Health Information and Biospecimens. JAMA. 2022;328(5):474–476. doi:10.1001/jama.2022.9740
+
+[^6]: Lynch, H., Wolf, L., & Barnes, M. (2019). Implementing Regulatory Broad Consent Under the Revised Common Rule: Clarifying Key Points and the Need for Evidence. Journal of Law, Medicine & Ethics, 47(2), 213-231. doi:10.1177/1073110519857277
+
+[^7]: Spector-Bagdady, K., Tang, S., Jabbour, S., Price, W. N., Bracic, A., Creary, M. S., ... & Wiens, J. (2021). Respecting Autonomy And Enabling Diversity: The Effect Of Eligibility And Enrollment On Research Data Demographics: Study examines the effect of eligibility and enrollment on research data demographics. Health Affairs, 40(12), 1892-1899. doi: https://doi.org/10.1377/hlthaff.2021.01197
+
+[^8]: Spector‐Bagdady, K., & Beever, J. (2020). Rethinking the Importance of the Individual within a Community of Data. Hastings Center Report, 50(4), 9-11. doi:10.1002/hast.1112.
+
+[^9]: Lee, S. S. J. (2021). Obligations of the “gift”: Reciprocity and responsibility in precision medicine. The American Journal of Bioethics, 21(4), 57-66. doi: 10.1080/15265161.2020.1851813
+
+

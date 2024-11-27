@@ -19,7 +19,7 @@ Please see the Service Desk site on CenterNet for more information about [HutchN
 
 - Add a new member to your lab group 
 - Enable cluster access for yourself under your lab's Slurm account
-- Check to see if you have the correct access needed to complete the [Cluster 101 course](https://hutchdatascience.org/FH_Cluster_Guide/)
+- Check to see if you have the correct access needed to complete the [Cluster 101 course](https://hutchdatascience.org/FH_Cluster_101/)
 
 ## Accessing Slurm Clusters
 
@@ -51,9 +51,9 @@ You will receive your AWS credentials via an encrypted email when you are onboar
 
 Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
 
-### Configure AWS cli
+### Configure AWS CLI
 
-Load the awscli module, then run `aws configure` and enter your Access Key ID & Secret Access Key. You can read more about this [here]([/compdemos/aws-s3/](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config)).
+Load the `awscli` module, then run `aws configure` and enter your Access Key ID & Secret Access Key. You can read more about access key creation/modification [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey).
 
 ```
 module load awscli
@@ -64,6 +64,32 @@ Default region name [None]: us-west-2
 Default output format [None]: 
 ```
 This will create the following files that store your credentials `~/.aws/config` & `~/.aws/credentials`
+
+### Configure AWS CLI for Single Sign-on (SSO)
+To access an AWS account using SSO authentication, a user signs in to the AWS access portal URL provided, IAM Identity Center redirects the request to an authentication service. 
+
+After authentication with a HutchNet ID, the user will have SSO access to all AWS account and applications without additional sign-in requirements (Username and Password)  
+
+##How to navigate to the AWS SSO Portal. 
+Key Steps: 
+* Access the SSO portal: Go to the unique SSO login URL: https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts 
+* Sign in with Credentials: Enter your HutchID to authenticate following MFA authentication. 
+ ![MFA Screen](.//assets/CLD_PickAccount.png)
+* Select AWS account: Once logged in, choose the AWS account you want to access from the list of available accounts. Expanding the arrow will show the account name, the sso-role attached to the user. Each user will see only the account it has access to and the role mapped to the user. PowerUserAccess is an example. 
+ ![AccountSelection](.//assets/CLD_LZALandingPage.png)
+* Choose a role: Select the specific role assigned to you within the chosen AWS account. PowerUserAccess is a link and clicking the role will take you to the AWS account. 
+*  Access AWS services: You can now access the AWS Management Console or use the AWS CLI with temporary credentials obtained from your SSO session. 
+
+## Using the AWS CLI with SSO: 
+# Configure SSO profile: 
+Use the command aws configure sso to set up your SSO profile locally on your machine. 
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-configure  
+# Login with SSO: 
+Run aws sso login in your terminal to initiate an SSO session and retrieve temporary credentials. 
+# Access AWS services: 
+Once logged in, use the AWS CLI commands as usual, utilizing the temporary credentials obtained through SSO. 
+# Important points to remember: 
+* Session duration: SSO session have a set expiration time, so you may need to re-authenticate periodically. 
 
 ### Testing Your Credentials
 To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your local computer to your PI's bucket. 
@@ -100,3 +126,9 @@ aws s3 rm s3://fh-pi-lastname-f-eco/hello.txt
 ```
 
 See more about accessing AWS S3 via the command line [here](/compdemos/aws-s3/).
+
+## Resources
+
+- [Fred Hutch GitHub Organization](https://github.com/FredHutch)
+- [AWS S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
+- [AWS Command Line Interface (CLI) Documentation](https://docs.aws.amazon.com/cli/)

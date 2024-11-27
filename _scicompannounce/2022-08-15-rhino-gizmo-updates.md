@@ -10,7 +10,7 @@ This document describes the scope of the outage, the updates we're making, and w
 
 ## What to Expect
 
-During this maintenance the rhino login nodes and gizmo compute nodes will be unavailable for any work.  Attempts to connect via ssh will fail.  Any processes running on these nodes will be terminated. Any RStudio sessions started by the [RStudio Launcher](rstudio-launcher.fredhutch.org/) will fail and any active sessions will be terminated.
+During this maintenance the rhino login nodes and gizmo compute nodes will be unavailable for any work.  Attempts to connect via ssh will fail.  Any processes running on these nodes will be terminated. Any RStudio sessions started by the [RStudio Launcher](https://rstudio-launcher.fredhutch.org) will fail and any active sessions will be terminated.
 
 As we have done in the past, we have put in a reservation against all cluster nodes starting at midnight of the 10th. Pending jobs that would not complete before the maintenance window begins will be held until after the work is complete.  `squeue` will show the job as pending with reason _ReqNodeNotAvail, Reserved for maintenance_.
 

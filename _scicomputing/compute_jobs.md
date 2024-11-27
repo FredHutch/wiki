@@ -5,7 +5,7 @@ primary_reviewers: atombaby
 
 Batch computing allows you to queue up jobs and have them executed by the batch system, rather than you having to start an interactive session on a high-performance system and performing tasks one by one.  Using the batch system allows you to queue up thousands of jobs- something impractical to impossible when using an interactive session.  There are benefits when you have a smaller volume of jobs as well- interactive jobs are dependent on the shell from which they are launched- if your laptop should be disconnected for any reason the job will be terminated.
 
-The batch system used at the Hutch is [Slurm](http://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on SciComp clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm see the section below on [Using Slurm on Fred Hutch Systems](#using-slurm-on-fred-hutch-systems), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources available
+The batch system used at the Hutch is [Slurm](https://schedmd.com).  Slurm provides a set of commands for submitting and managing jobs on SciComp clusters as well as providing information on the state (success or failure) and metrics (memory and compute usage) of completed jobs.  For more detailed information about Slurm see the section below on [Using Slurm on Fred Hutch Systems](#using-slurm-on-fred-hutch-systems), which also links to a variety of detailed how-to's and examples to get you started using the on-premise HPC resources available
 
 ## Using Slurm on Fred Hutch Systems
 
@@ -65,11 +65,11 @@ A "Quality of Service" is another mechanism for jobs to request certain features
 
 ### `sbatch` and `srun`
 
-`sbatch` is used to submit a job script to the cluster.  These run jobs without your intervention or input (i.e. non-interactively). Common arguments are:
+`sbatch` is used to submit a job script to the cluster.  The `sbatch` command returns immediately- the submitted script is queued and run when resources can be allocated to it.  `srun` is used to immediately run a task on the cluster- `srun` will block your terminal until the command executes and completes.  Both take many of the same options, but job arrays and the `--wrap` option are only available for `sbatch`.
 
-`srun` is used to run a task on the cluster.  This is an interactive session,
-where you can directly view output as it's produced or provide input (if needed
-by the task you are running).
+#### `grabnode`
+
+`grabnode` is a Hutch-specific command that allocates a terminal on a compute node.  It actually uses `srun` to create and manage this session.
 
 ### Common Options
 
@@ -84,6 +84,8 @@ These two take many of the same options:
  - `--qos` request a QOS
 
 ### Job Output
+
+> This only applies to jobs submitted with `sbatch`.  Jobs run with `srun` will have job output sent to the terminal where `srun` was executed.
 
 Output (stdout and stderr) from your job script, steps, tasks, and processes is captured by Slurm and written to a file named _slurm-<jobid>.out_ in the directory from which you submitted the job.
 
@@ -158,6 +160,9 @@ rhino03[~/tutorial/run]: sstat -a -j 31635795,31635814 -o jobid,averss,maxrss,av
 31635814.ba+      4012K      4012K     17768K    144084K
 ```
 
+### Viewing Utilization Metrics with XDMoD
+
+XDMoD is a powerful application that allows you to view historical cluster utilization and job level performance data. See [this page](/scicomputing/compute_xdmod/) for more information on XDMoD at Fred Hutch.
 
 ### Job Priority
 
@@ -245,6 +250,7 @@ Indicates that the job is running under an account that is already using the max
 | Resources             | The job will run as soon as enough compute resources become available |
 | PartitionTimeLimit    | The job is requesting more time than allowed for the partition |
 | MaxCpuPerAccount      | Account has reached the limit on the number of CPUs available to it |
+| MaxGRESPerAccount     | The account has reached the limit on the number of GPUs available to it |
 | QOSMinCpuNotSatisfied | The job isn't requesting enough CPUs for the requested partition. See [Limits](#limits) |
 | QOSMinMemory          | The job isn't requesting enough memory for the requested partition. See [Limits](#limits) |
 | MaxMemPerLimit        | The job has requested more memory than available in the partition |
@@ -255,7 +261,7 @@ There are other reason codes that are less-common in our environment.  Email Sci
 
 #### Notifications
 
-`sbatch` has a variety of parameters that allow for notifications to users which can be found on the [Slurm manual page](http://schedmd.com).  An exmaple of this is if, for instance, you wanted to receive an email when your job finished.  You can include these `SBATCH` options when sending your job to make that happen. 
+`sbatch` has a variety of parameters that allow for notifications to users which can be found on the [Slurm manual page](https://schedmd.com).  An exmaple of this is if, for instance, you wanted to receive an email when your job finished.  You can include these `SBATCH` options when sending your job to make that happen. 
 ```
 #SBATCH --mail-user=fred@fredhutch.org
 #SBATCH --mail-type=END
@@ -309,7 +315,7 @@ For more information and education on how to use HPC resources from external sou
 - SchedMD's [Documentation for Version 21.08](https://slurm.schedmd.com/archive/slurm-21.08.5/)
 - Slurm [cheat sheet](https://slurm.schedmd.com/pdfs/summary.pdf)
 - University of Utah's [Slurm Docs](https://www.chpc.utah.edu/documentation/software/slurm.php)
-- Princeton's Introduction to [HPC systems and Bash.](https://princetonuniversity.github.io/hpc_beginning_workshop/slurm/)
+- Princeton's [First Slurm Job.](https://researchcomputing.princeton.edu/get-started/guide-princeton-clusters/3-first-slurm-job)
 - Harvard's [Wiki site Slurm page.](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)
 - The Carpentries [lesson on HPC and job scheduling.](https://hpc-carpentry.github.io/hpc-intro/)
 

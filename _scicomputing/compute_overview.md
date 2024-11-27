@@ -23,7 +23,7 @@ You will have the same file system access as your cluster account has.
 
 Compute Resource | Access Interface | Resource |
 --- | --- | --- | ---
-[RStudio Server](http://rstudio-launcher.fredhutch.org) | web, FH credentials | Web IDE for R Programming |
+[RStudio Server](https://rstudio-launcher.fredhutch.org) | web, FH credentials | Web IDE for R Programming |
 [Jupyter Lab](/scicomputing/software_python/#jupyter) | web, FH credentials | Web IDE for (Python, R). Python Notebooks |
 
 ### Interactive Computing: Command Line Interface (CLI), Moderate to High Capability
@@ -60,5 +60,5 @@ every week.  Dates and details for SciComp office hours can be found in
 
 Graphical Processing Units (GPUs) provide acceleration for some kinds of computations and tools, [tensorflow](https://www.tensorflow.org/) is a notable example of such a tool.
 
-[This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  [This](/compdemos/tensorflow-gpu/) has a specific example of running tensorflow on SciComp clusters.
+[This page](/scicomputing/compute_gpu/) describes in general where you can find those resources and how to request those for your jobs.  Tensorflow is now available as an Environment Module: use `ml spider Tensorflow` to see the available versions.
 

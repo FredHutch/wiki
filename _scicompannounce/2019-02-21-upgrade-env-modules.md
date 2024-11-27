@@ -12,7 +12,7 @@ We hope you are already aware of our upcoming Operating System (OS) upgrade - we
 
 There will be changes to our Environment Modules. Please refresh your understanding of Environment Modules.
 
-[Environment Module Information](/computing/cluster_software/)
+[Environment Module Information](/scicomputing/compute_scientificSoftware/)
 
 The list of available Environment Modules on the new OS is different, and this may affect your scripts.
 
@@ -43,6 +43,6 @@ Links:
 
 [OS Upgrade Announcement Two](/scicompannounce/2019-01-22-hpc-systems-upgrade-2019/)
 
-[Environment Modules Information](/computing/cluster_software/)
+[Environment Modules Information](/scicomputing/compute_scientificSoftware/)
 
-[18.04 (new) Environment Module list](http://fredhutch.github.io/easybuild-life-sciences/all-modules-18.04/)
+[18.04 (new) Environment Module list](https://fredhutch.github.io/easybuild-life-sciences/all-modules-18.04/)

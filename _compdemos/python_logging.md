@@ -261,7 +261,7 @@ most of their services (I've seen it wth EC2, ECS, Batch, and Lambda so far). By
 pertaining to any of the attributes you're logging. 
 
 Log messages a presented in a pretty nice format on CloudWatch:  
-![cloudwatchlogs](./assets/cwlogex.png)  
+![cloudwatchlogs](/compdemos/assets/cwlogex.png)  
 
 While it's not necessary to use in order to produce log messages to CloudWatch, there is a project out there called
 [WatchTower](https://github.com/kislyuk/watchtower) which can really help consolidate your logs into particular user-story
@@ -272,6 +272,3 @@ some issues (which may have more to do with how I'm creating the `WatchTower` ha
 with some of the functions hitting AWS service limits on API calls like Create/DescribeLogGroups and Create/DescribeLogStreams, 
 which can have have an affect on responsiveness and at worst can crash the Lambda call if the exceptions aren't handled properly. 
 This is particularly the case when the service is under a high load. If someone has another solution for this I'd love to hear about it!
-
-
-Give me a shout at `zromer at fredhutch.org` if you have any questions, comments, or corrections you think should be made.

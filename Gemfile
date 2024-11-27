@@ -8,7 +8,7 @@ group :development, :test do
   gem 'jekyll', '~> 3.9.2'
   gem 'jekyll-redirect-from', '~> 0.16.0'
   gem 'jekyll-sitemap', '~> 1.4.0'
-  gem "nokogiri", '~> 1.13.7'
+  gem "nokogiri", ">= 1.14.3"
   gem 'jekyll-toc', '~> 0.17.1'
   gem 'jekyll-include-cache', '~> 0.2.1'
   gem 'jekyll-remote-theme', '~> 0.4.3'

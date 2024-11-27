@@ -52,8 +52,7 @@ drwxrwsr-x 4 mrg SciComp  53 Aug 25 09:14 econofile
 
 You can run an app directly on the rhino node to which you are connected. This is useful for lightweight apps and testing, but please refrain from running compute-intensive (CPU time and/or memory resources) processes as the rhino machines are a shared resource. To run directly, simply start your GUI application. Common apps include:
 
-  - Rstudio - run `module load R/3.4.1-foss-2016b-fh2 rstudio` followed by `rstudio` to start. You can load any version of the R environment module you like.
-  > The Rstudio program (and rsession) tend to be resource hogs. For this reason, we limit each user to one rstudio session per rhino (or lamprey) at a time. If we see more than one rstudio session for one user, we send a warning email, and give the user an opportunity to exit one of the sessions.
+  - Rstudio - See the [RStudio documentation](/scicomputing/software_R/#run-rstudio-server-on-an-hpc-machine).
   - MATLAB - run `module load matlab/R2016b` followed by `matlab` to start. There are several versions of MATLAB installed, run `module list matlab` to see them all.
   - Mozilla/Firefox - it can be handy to run a browser on the remote system sometimes. Start one by simply running the `firefox` command.
 
@@ -76,7 +75,7 @@ A useful 'test' of the X forwarding is a simple program invoked with the command
 
 If you want to run a computationally-intensive X/GUI app, you should grab your own node to do so. This will not impact other users of the `rhino` systems. This method can also be used to run non-GUI apps interactively.
 
-"Grab" a node using one of the grab commands, you can read more about how to do this both [here](/compdemos/first_rhino/) and [here.](/scicomputing/compute_platforms/#gizmo-cluster) Once done, the grab command you used will have created an ssh session to the remote node you have reserved, and you are now ready to run your app. Use the same commands as you would on a rhino (see above).
+"Grab" a node using one of the grab commands, you can read more about how to do this both [here](/compdemos/first_rhino/#logging-on-to-gizmo-via-grabnode) and [here.](/scicomputing/compute_platforms/#gizmo-cluster) Once done, the grab command you used will have created an ssh session to the remote node you have reserved, and you are now ready to run your app. Use the same commands as you would on a rhino (see above).
 
 
 

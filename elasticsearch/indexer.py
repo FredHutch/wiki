@@ -20,22 +20,38 @@ from elasticsearch.helpers import bulk
 # new:
 from elasticsearch import Elasticsearch, ApiError
 
+def clean_cruft(filepath):
+    """
+    Remove left and right navigation elements from the page 
+    before we index it so we don't end up with a bunch of
+    navigation links in our search results.
+    """
+    with open(filepath) as fhnd:
+        soup = BeautifulSoup(fhnd, "html.parser")
+    nav_tags = soup.find_all('nav', class_=['toc', 'nav__list'])
+    for nav_tag in nav_tags:
+        nav_tag.decompose()
+    with open(filepath, "w") as fhnd:
+        fhnd.write(soup.prettify())
+
+
+
 def crawl_documents():
     docs = []
     for root, dirs, files in os.walk('/html/html'):
         for file in files:
             if file.endswith("index.html"):
                 fullpath = os.path.join(root, file)
+                clean_cruft(fullpath)
                 url = fullpath.replace('/html/html', '')
                 url = url.replace("index.html", "")
                 print(f"Processing {url} ...")
-                ret = sh.pandoc("-f", "html", "-t", "plain", fullpath)
-                text = ret.stdout.decode('utf-8')
+                text = sh.pandoc("-f", "html", "-t", "plain", fullpath)
                 with open(fullpath) as f:
                     soup = BeautifulSoup(f, "html.parser")
                 title = soup.title.string
                 title = title.replace(" - Fred Hutch Biomedical Data Science Wiki", "").strip()
-                doc = dict(url=url, content=text, title=title)
+                doc = dict(url=url, content=str(text), title=title)
                 docs.append(doc)
     return docs
 

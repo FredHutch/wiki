@@ -2,7 +2,9 @@ default:
   before_script:
     - apk update
     - apk --no-cache add py3-pip python3 curl git jq bash
-    - pip3 install pyyaml
+    #- pip install pip==21.3.1 # workaround: https://stackoverflow.com/a/72469586/470769
+
+    - pip3 install --break-system-packages pyyaml
     - curl -O https://raw.githubusercontent.com/FredHutch/swarm-build-helper/main/build_helper.py 
     # below is from https://stackoverflow.com/a/65810302/470769
     - mkdir -p $HOME/.docker
@@ -80,8 +82,8 @@ create_search_index_0:
     echo fultr
     ls -l elasticsearch
     ls -l elasticsearch/tmp
-    docker build -t sc-registry.fredhutch.org/wiki_search_part_0 ./elasticsearch/
-    docker push sc-registry.fredhutch.org/wiki_search_part_0
+    docker build -t sc-registry.fredhutch.org/wiki_search_part_0:${CI_PIPELINE_ID} ./elasticsearch/
+    docker push sc-registry.fredhutch.org/wiki_search_part_0:${CI_PIPELINE_ID}
 
 
 create_search_index_1:
@@ -89,12 +91,10 @@ create_search_index_1:
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
   services: 
-    - name: sc-registry.fredhutch.org/wiki_search_part_0
+    - name: sc-registry.fredhutch.org/wiki_search_part_0:${CI_PIPELINE_ID}
       alias: create_search_index_1
 
   script: |
-    env
-    docker ps
     # CONTAINER_NAME=$(env | grep $HOSTNAME | grep "9200/tcp" | cut -d= -f2 | cut -d / -f 2)
     # echo container name: $CONTAINER_NAME
     CONTAINER_ID=$(docker ps | grep $HOSTNAME | grep "9200/tcp" | cut -d' ' -f1)
@@ -103,18 +103,19 @@ create_search_index_1:
     rm -rf idx
     mkdir idx
     docker cp $CONTAINER_ID:/usr/share/elasticsearch/data ./idx/
-    docker build -f elasticsearch/Dockerfile2 -t sc-registry.fredhutch.org/wiki_search:test .
-    docker push sc-registry.fredhutch.org/wiki_search:test
+    docker build -f elasticsearch/Dockerfile2 -t sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID} .
+    docker push sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID}
 
 test:
   stage: test
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
   services:
-    - name: sc-registry.fredhutch.org/wiki_search:test
-      alias: wiki_search
+    - name: sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID}
+      alias: elasticsearch
     - name: sc-registry.fredhutch.org/wiki:test
-      alias: wiki    
+      alias: wiki
+      command: ["/test.sh"]
   script: |
     set -x
     if [ "$CI_COMMIT_BRANCH" == "main" ]; then
@@ -123,9 +124,8 @@ test:
     else
       python3 build_helper.py docker-compose-preview.yml > /dev/null
     fi
-    # TODO - re-enable test!
-    #curl -sI http://wiki:80 | head -1 | grep -q "200 OK"
-    export NUMHITS=$(curl -s -H "Content-Type: application/json" -XPOST "http://wiki_search:9200/_search" -d'
+    curl -sI http://wiki:80 | head -1 | grep -q "200 OK"
+    export NUMHITS=$(curl -s -H "Content-Type: application/json" -XPOST "http://elasticsearch:9200/_search" -d'
     {
       "_source": [
         "title"
@@ -215,7 +215,7 @@ deploy_preview:
       - main
   script:
     - docker tag sc-registry.fredhutch.org/wiki:test sc-registry.fredhutch.org/wiki-preview:latest 
-    - docker tag sc-registry.fredhutch.org/wiki_search:test sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
+    - docker tag sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID} sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
     - docker push sc-registry.fredhutch.org/wiki-preview:latest
     - docker push sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
     - sleep 15
@@ -235,7 +235,7 @@ deploy:
        - main
   script: |
     docker tag sc-registry.fredhutch.org/wiki:test sc-registry.fredhutch.org/wiki:latest 
-    docker tag sc-registry.fredhutch.org/wiki_search:test sc-registry.fredhutch.org/wiki_elasticsearch:latest
+    docker tag sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID} sc-registry.fredhutch.org/wiki_elasticsearch:latest
 
     docker push sc-registry.fredhutch.org/wiki:latest
     docker push sc-registry.fredhutch.org/wiki_elasticsearch:latest

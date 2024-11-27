@@ -35,10 +35,7 @@ collections:
   datascience:
     output: true
     permalink: /:collection/:path/
-  generation:
-    output: true
-    permalink: /:collection/:path/
-  gendemos:
+  dasldemos:
     output: true
     permalink: /:collection/:path/
   scicomputing:
@@ -136,10 +133,10 @@ defaults:
       sidebar:
         nav: "datascience"
 
-  # _generation
+  # _dasldemos
   - scope:
       path: ""
-      type: generation
+      type: dasldemos
     values:
       layout: single
       toc: true
@@ -147,20 +144,7 @@ defaults:
       toc_sticky: true
       share: true
       sidebar:
-        nav: "generation"
-
-  # _gendemos
-  - scope:
-      path: ""
-      type: gendemos
-    values:
-      layout: single
-      toc: true
-      toc_label: "On This Page"
-      toc_sticky: true
-      share: true
-      sidebar:
-        nav: "generation"
+        nav: "datascience"
 
 # _compdemos
   - scope:

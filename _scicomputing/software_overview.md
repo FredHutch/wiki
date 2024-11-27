@@ -67,7 +67,7 @@ Nextflow and Cromwell are currently under development at the Fred Hutch for wide
 
 ### Other languages
 
-The [**Julia**](https://docs.julialang.org) language aims to combine the accessible syntax of R or Python with the speed of C/C++ programs. While not currently as functional as R or Python for bioinformatic tasks, there is a growing collection of resources for [Julia for bioinformatics](http://ucidatascienceinitiative.github.io/IntroToJulia/).
+The [**Julia**](https://docs.julialang.org) language aims to combine the accessible syntax of R or Python with the speed of C/C++ programs. While not currently as functional as R or Python for bioinformatic tasks, there is a growing collection of resources for [Julia for bioinformatics](https://ucidatascienceinitiative.github.io/IntroToJulia/).
 
 **Go**, or [GoLang](https://golang.org/doc/), also has some [support for data science](https://blog.chewxy.com/2017/11/02/go-for-data-science/).
 

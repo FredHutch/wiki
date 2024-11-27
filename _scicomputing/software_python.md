@@ -13,14 +13,14 @@ including checkpointing on Gizmo, logging in Python, running tensorflow, and mor
 
 ## Common Python packages for scientific research computing
 
-Packages (sometimes also referred to as libraries) 
+Packages (sometimes also referred to as libraries or modules) 
 are collections of related functions created and 
-made available by the Python community via Pypi.org. 
+made available by the Python community via [Pypi.org](https://pypi.org). 
 The following packages are commonly used for scientific computing and are pre-installed in the fhPython module.
 
-- **`numpy` and `scipy`** are complementary packages including many functions relevant for scientific computing. More information is available on the [Scipy site](https://www.scipy.org/getting-started.html). These packages are also used in fredhutch.io's [Intermediate Python: Programming class](http://www.fredhutch.io/resources/).
-- **`pandas`** is the Python Data Analysis Library, which includes capabilities for parsing, manipulating, and summarizing spreadsheet-style data as data frames. More information is available in [this introduction](http://pandas.pydata.org/pandas-docs/stable/10min.html). `pandas` is also used in fredhutch.io's [Intro to Python class](http://www.fredhutch.io/resources/).
-- **`biopython`** is a package that allows easier manipulation of genetic and genomic data. Learn more using this [Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html).
+- **`numpy` and `scipy`** are complementary packages including many functions relevant for scientific computing. More information is available on the [Scipy site](https://www.scipy.org/getting-started.html). These packages are also used in fredhutch.io's [Intermediate Python: Programming class](https://www.fredhutch.io/resources/).
+- **`pandas`** is the Python Data Analysis Library, which includes capabilities for parsing, manipulating, and summarizing spreadsheet-style data as data frames. More information is available in [this introduction](https://pandas.pydata.org/pandas-docs/stable/10min.html). `pandas` is also used in fredhutch.io's [Intro to Python class](https://www.fredhutch.io/resources/).
+- **`biopython`** is a package that allows easier manipulation of genetic and genomic data. Learn more using this [Biopython tutorial](https://biopython.org/DIST/docs/tutorial/Tutorial.html).
 
 There are many other packages publicly available for use,
 which may vary in quality and functionality. Other places to find packages:
@@ -42,7 +42,7 @@ you can use Anaconda Navigator to explore various options for running Python,
 including Jupyter notebooks and PyCharm.
 
 fredhutch.io's Intro to Python course uses Anaconda,
-and includes brief [installation instructions](http://www.fredhutch.io/software/#python-jupyter-notebooks)
+and includes brief [installation instructions](https://www.fredhutch.io/software/#python-jupyter-notebooks)
 as well as a [walk-through of Jupyter notebooks](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/gh-pages/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks).
 
 A piece of software related to Anaconda is [Miniconda](https://docs.conda.io/en/latest/miniconda.html),
@@ -53,7 +53,7 @@ as well as many other useful applications.
 
 To access Python on the Fred Hutch computing cluster, you will need to load a Python module.
 Each Python build is based on different version. Once a module is created it is not modifed and as many historic
-versions are availabe as possible. Thus identifying if an existing Python build matches your needs is a first step to using
+versions are available as possible. Thus identifying if an existing Python build matches your needs is a first step to using
 Python on the cluster.
 ```
 module avail Python/3
@@ -70,52 +70,53 @@ can install the package in your home directory with the `--user option` (e.g. `p
 or to create a virtual Python environment, for example:
 
 ```
-    username@rhino1:~$ ml fhPython/3.8.6-foss-2020b-Python-3.8.6 
-    username@rhino1:~$ python3 -m venv ~/mypython
-    username@rhino1:~$ source ~/mypython/bin/activate
-    (mypython) username@rhino1:~$ #python code executed in mypython environment
-    (mypython) username@rhino1:~$ deactivate
-    username@rhino1:~$
+    username@rhino01:~$ ml fhPython/3.8.6-foss-2020b-Python-3.8.6 
+    username@rhino01:~$ python3 -m venv ~/mypython
+    username@rhino01:~$ source ~/mypython/bin/activate
+    (mypython) username@rhino01:~$ #python code executed in mypython environment
+    (mypython) username@rhino01:~$ deactivate
+    username@rhino01:~$
 ```
 
 ### Using Jupyter on `rhino`
 
-There have been many iterations of Python Notebooks, starting with IPython. SciComp currently supports
+There have been many iterations of Python Labs (or Notebooks), starting with IPython. SciComp currently supports
 [Jupyter](https://jupyter.org). The Jupyter user interfaces offer a foundation of interactive
 computing environments where scientific computing, data science, and analytics can be performed
 using a wide range of programming languages.  
 
-Jupyter Notebook is a minimal but very capable web-based interactive computational environment. JupyterLab is the next-generation version that will eventually replace Notebook. It has a modular structure where you can open several notebooks or files (e.g. HTML, Text, Markdown etc) as tabs in the same window. It offers more of an IDE-like experience and can be extended through extensions. Jupyter is covered in more depth in the [Python IDE Comparison](#jupyter) section below.
-
-**Jupyter Notebook**
-
-After you have connected to `rhino`, load the fhPython module then run jupyter notebook:
-```
-    username@rhino1:~$ ml fhPython
-    username@rhino1:~$ jupyter notebook --ip=$(hostname) --port=$(fhfreeport) --no-browser
-```
-Then connect to the URL, copying the link given by the previous command, which looks as follows:
-```
-       Copy/paste this URL into your browser when you connect for the first time,
-    to login with a token:
-        http://rhino1:11112/?token=0eee692be6c81c1061da
-```
-If you would like to use a different version of Python than what is in the default fhPython module, run `ml avail fhPython` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml fhPython/3.8.6-foss-2020b-Python-3.8.6` in place of `ml fhPython` above.
+JupyterLab (formerly Notebook) is a minimal but very capable web-based interactive computational environment. JupyterLab is the newest version that replaces Notebook. It has a modular structure where you can open several notebooks or files (e.g. HTML, Text, Markdown etc) as tabs in the same window. It offers more of an IDE-like experience and can be extended through extensions. Jupyter is covered in more depth in the [Python IDE Comparison](#jupyter) section below.
 
 **Jupyter Lab**
 
-After you have connected to `rhino`, load the JupyterLab module then run jupyter lab:
+**NOTE**: Jupyter Labs were formerly known as Notebooks. Labs can do everything notebooks could do and more. If you are used to using the `jupyter notebook` command, use `jupyter lab` instead.
+
+We supply a `JupyterLab` module. It does not
+by itself include packages that many people will want for bioinformatics and
+data science work. Here's are some example commands which will load
+`scipy`, `numpy`, `matplotlib`, `pandas`, `scikit-learn`, and many others, along with `JupyterLab`:
+
+After you have connected to `rhino`, run these commands:
+
 ```
-    username@rhino1:~$ ml JupyterLab
-    username@rhino1:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+    username@rhino01:~$ ml purge
+    username@rhino01:~$ ml JupyterLab/4.0.3-GCCcore-12.2.0  Seaborn/0.12.2-foss-2022b scikit-learn/1.2.1-gfbf-2022b
+    username@rhino01:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
 ```
-Then connect to the URL, copying the link given by the previous command, which looks as follows:
+
+You will see output like this:
+
 ```
-       Copy/paste this URL into your browser when you connect for the first time,
-    to login with a token:
-        http://rhino1:11112/?token=0eee692be6c81c1061db
+   To access the server, open this file in a browser:
+        file:///home/example-url...
+    Or copy and paste one of these URLs:
+        http://rhino01:16053/example-url...
 ```
-If you would like to use a different version of Python than what is in the default JupyterLab module, run `ml avail JupyterLab` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml JupyterLab/2.2.5-foss-2020a-Python-3.8.2` in place of `ml JupyterLab` above.
+
+Copy the second link, the one that starts with `http://` and the name of the machine you are connected to. Paste it into your browser and you will see the JupyterLab interface.
+
+If you would like to use a different version of Python than what is in the default JupyterLab module, run `ml avail JupyterLab` then load the specific module you want. For example, if you wanted to use Python 3.8 you would use `ml JupyterLab/2.2.5-foss-2020a-Python-3.8.2` in place of `ml JupyterLab` above. You'd need to make sure that the other packages  you need are compatible; contact `scicomp@` for assistance.
+
 
 ## Python IDE comparison
 
@@ -486,6 +487,14 @@ various languages.
 
 [Jupyter](https://jupyter.org) is an open-source project developed by community consensus. 
 Project Jupyter develops two products we'll discuss:
+
+- [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/): a web-based interface that allows interactions with Jupyter Notebooks,
+text editors, terminals, and more. 
+
+This image shows multiple windows for different parts of the JupyterLab interface:
+
+![](https://jupyterlab.readthedocs.io/en/stable/_images/jupyterlab.png)
+
 - [Jupyter Notebooks](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html): 
 human-readable documents including code (and its output) along with rich text elements.
 They allow the user to write code in small, 
@@ -494,14 +503,8 @@ They are particularly well suited to exploring data and generating narrative-sty
 They are most commonly used by data scientists who would like to experiment with their code and easily generate charts and graphs. 
 [JupyterHub](https://jupyter.org/hub) is a multi-user version of Jupyter notebooks used for collaboration,
 which functionally operates like a notebook.
-- [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/): a web-based interface that allows interactions with Jupyter Notebooks,
-text editors, terminals, and more. 
 
-This image shows multiple windows for different parts of the JupyterLab interface:
-
-![](https://jupyterlab.readthedocs.io/en/stable/_images/interface_jupyterlab.png)
-
-At Fred Hutch there are at least four ways to interact with Jupyter Notebooks, including the latest incarnation called JupyterLab.
+At Fred Hutch there are at least four ways to interact with Jupyter Notebooks, including the most recent (and recommended) incarnation called JupyterLab.
 See the above section on [Accessing and using Python](#accessing-and-using-python) for more information.
 
 This section is adapted from [original content](https://github.com/Chilliwack/jupyter_demo) 
@@ -531,7 +534,7 @@ you'll have a light and functional web-based IDE.
 Check out options for customization via **Settings > JupyterLab Theme**,
 including a dark theme!
 
-![](https://github.com/telamonian/theme-darcula/blob/master/darcula_preview.png)
+![](https://raw.githubusercontent.com/telamonian/theme-darcula/master/darcula_preview.png)
 
 **the .ipynb file**
 
@@ -589,8 +592,3 @@ So having a debugger in your IDE that you can insert breakpoints, step in, cycle
 
 JupyterLab built upon the success of Jupyter notebook as a light-weight, browser based linearly executed IDE, but now has an updated front-end making it seem more similar to RStudio and Spyder. It comes with a much quicker backend running in your browser than Jupyter notebook and with the help of some extensions which you can theoretically load by enabling the Extension Manager in Settings you can add linting, debugging, version control and many more [(fasta render anyone?)](https://github.com/jupyterlab/jupyter-renderers).
 
-![](https://camo.githubusercontent.com/6aa00b126595f41bc5bee84a6696234b63036fda/687474703a2f2f672e7265636f726469742e636f2f74656d697a6a616539582e676966)
-
-The downside though is that version 2 was a major release for them and they are now at 2.0.1 which was released in March 6, 2020 so the project is very new which means the extensions which add a lot of features to flush out the product also need to stay update-to-date with the current code base but that can create problems. There's guides for that, ["JupyterLab 1.x to 2.x Extension Migration Guide"](https://jupyterlab.readthedocs.io/en/stable/developer/extension_migration.html), but it'll be great when everything is playing nice and you have a powerful browser-based, light-weight IDE at your finger tips.
-
-Let's hope the synergy of the versioning of the core product and the community of extensions improves. Until then there's nothing stopping a Python or R user from doing all their engineering in Atom, PyCharm, RStudio, or VS Code and then the rest of their coding/management in JupyterLab since it _is_ browser-based. Hopefully, this tutorial has heightened your interest.

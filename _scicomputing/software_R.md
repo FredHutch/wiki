@@ -20,7 +20,7 @@ RStudio has a few particularly useful features:
 There are a number of available resources built on R that are free and open source that can greatly expand the utility of R and RStudio for research purposes.  There are currently three main sources of R packages that are of interest to a majority of the research community.  
 
 ### Bioconductor
-[Bioconductor](https://bioconductor.org/) is a public repository of R bioinformatics packages. Bioconductor packages are curated for intercompatibility and grouped into [workflows](http://bioconductor.org/packages/3.7/workflows/) (eg. CyTOF, ChIP-seq, eQTL, etc...). New Bioinformatic tools often result in a submission of the corresponding packages to Bioconductor.  These are reliable, well vetted packages that undergo a rigorous process for submission.  
+[Bioconductor](https://bioconductor.org/) is a public repository of R bioinformatics packages. Bioconductor packages are curated for intercompatibility and grouped into [workflows](https://bioconductor.org/packages/3.7/workflows/) (eg. CyTOF, ChIP-seq, eQTL, etc...). New Bioinformatic tools often result in a submission of the corresponding packages to Bioconductor.  These are reliable, well vetted packages that undergo a rigorous process for submission.  
 
 ### CRAN
 [CRAN](https://cran.r-project.org), (Comprehensive R Archive Network) is a public repository of numerous R packages along with R itself. Numerous packages are available, though packages are not vetted as heavily as Bioconductor and generally are required to successfully be built, but may not always perform reliably, or be fully documented.  
@@ -82,7 +82,7 @@ To run `R` on a gizmo node, you can follow the same instructions as for `rhino` 
 ### Run RStudio Server on an HPC machine
 
 To run RStudio Server on the `gizmo` compute cluster, simply open a browser and go to
-[https://rstudio-launcher.fredhutch.org](https://rstudio-launcher.fredhutch.org).   You will be prompted to log in with your  Fred Hutch HutchNet ID and password.  This requires that you be on campus or using VPN. If you are on VPN and still having problems accessing the link, see the Troubleshooting section below.
+[https://rstudio-launcher.fredhutch.org](https://rstudio-launcher.fredhutch.org).   You will be prompted to log in with your  Fred Hutch HutchNet ID and password.  This requires that you be on campus or using VPN.
 
 This site will help you launch, manage and kill RStudio sessions on `gizmo` without having to do so manually via terminal/`rhino`.  When you create new RStudio sessions via  the application, this single site will manage the launch process given the parameters you specify.  It will return the information you'll need to access and manage your sessions to the table in the site.  You can have mulitple RStudio sessions running simultaneously, and each session will have its own specific URL where you will be able to use RStudio through your browser. 
 
@@ -90,17 +90,100 @@ When starting a new RStudio session, you can choose which version of R to run (b
 
 If you have issues or questions in using this application, please email `helpdesk` and describe the issues you're having.  
 
-*Related Note*: If you are working with RMarkdown documents in RStudio Server,
-you may find that plot labels and other graphics look kind of weird.
-This is because X11 (the X Window System) is not available
-inside RStudio Server. The solution is to make the the `Cairo`
-package is installed, and put the following line at the beginning of your first
+#### Plotting in RStudio
+
+You may discover that plots (specifically axis labels) look very low-resolution.
+The solution to that is to go to the `Tools` menu in RStudio Server, choose
+`Global Options...`, and under `General`, click on the Graphics tab.
+In the `Backend` dropdown, choose `AGG`. Now click `Apply` and then `OK`.
+The improved resolution will be visible with any new plot you create
+(it won't apply to existing plots in the `Plots` tab).
+
+To make the same change within RMarkdown documents created with the `knitr` package, 
+put the following line at the beginning of your first
 code chunk. This should cause plots and other graphics to render
-correctly without need for X11.
+with a higher resolution.
 
 ```r
 knitr::opts_chunk$set(dev="CairoPNG")
 ```
+
+### Run a Jupyter Notebook or Lab on a cluster node
+
+You can run a [Jupyter](https://jupyter.org/) Lab on a cluster node, with the R language (go [here](/scicomputing/software_python/#using-jupyter-on-rhino) if you want to use Jupyter with Python).
+
+This requires that you be on campus or connected to VPN.
+
+{:.no_toc}
+#### Install a Jupyter Kernel in your desired version of R
+
+You'll need to install and activate the `IRkernel` package in the {% glossary minor version of R %} you want to use with Jupyter. *You only need to do this once* for each minor version.
+
+To do this, connect to a `rhino` node as described [above](#rhino) and load the desired R module and start R. For example:
+
+```
+ml fhR/4.3.1-foss-2022b
+R
+```
+
+In R, run these commands:
+
+```
+install.packages("IRkernel", repos="https://cran.r-project.org")
+IRkernel::installspec()
+```
+
+{:.no_toc}
+#### Set up your .Rprofile file
+
+By default, R expects an [X11](https://en.wikipedia.org/wiki/X_Window_System) server to be running, and you need to tell it you will not be using one. To do that, edit the
+`.Rprofile` file in your home directory. Add these contents:
+
+```R
+if (!is.na(Sys.getenv("JPY_PARENT_PID", unset = NA))) {
+    options(bitmapType = 'cairo')
+}
+```
+
+This says that if you are running inside a Jupyter lab
+or notebook, to use the `Cairo`  package instead of X11.
+If you are not running in Jupyter, no change is made.
+
+
+You only need to do this once. 
+
+{:.no_toc}
+#### Grab a node
+
+You will need to start a Jupyter server on a gizmo node. 
+Run the `grabnode` command to get a node, and specify how many CPU cores you want, how much memory, and how long you will want your session to run.
+
+At the node's command prompt, load the R module you loaded in a previous step, and then the most recent (default) version of the `JupyterLab` module, for example:
+
+```
+ml fhR/4.3.1-foss-2022b
+ml JupyterLab
+```
+
+You will be using Jupyter Lab, not Jupyter Notebook. This should not be a problem as Lab is newer and is the recommended and supported choice going forward.
+
+To start Jupyter Lab, run this command:
+
+```
+jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+```
+
+This command will spit out several URLs.
+One of the URLs will contain the machine name (starting with `gizmo`). Copy that URL to your local computer's clipboard. 
+
+Now open a new browser window and paste the URL into the address bar and press Enter. 
+
+Click `R` under `Notebooks` or use the `File / Open` menu item to open an existing one. 
+
+{:.no_toc}
+#### Running a Jupyter Lab in Visual Studio Code
+
+Click the `View` menu and choose `Command Palette`. Start typing `jupyter` and then choose `Create: New Jupyter Notebook`. Now click `Select Kernel`, then `Existing Jupyter Server...` and paste in the URL from the previous step.
 
 ## The Tidyverse
 The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordinate together and are commonly used for manipulating and  visualizing data in data science applications.  There are a number of useful packages for research based users that are part of the Tidyverse, and it's worth the time to learn about them and see how one might employ them to clean, analyze and convey data and results.  DataCamp has an online [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) that can be useful when first evaluating whether these packages might be useful.  
@@ -109,5 +192,6 @@ The [Tidyverse](https://www.tidyverse.org/) is a group of R packages that coordi
 [Shiny](https://shiny.rstudio.com/) is an R package bundled with RStudio that enables the creation of interactive applications powered by R code. These apps can be viewed on any computer running RStudio, or they can be hosted on a server. Scicomp provides instructions for hosting Shiny apps [here](/compdemos/shiny/).
 
 ## Local resources
-- [Seattle useR group](http://www.meetup.com/Seattle-useR/)
+- [Seattle useR group](https://www.meetup.com/Seattle-useR/)
+- [R-Ladies Seattle](https://www.meetup.com/rladies-seattle/)
 - [Cascadia RConf](https://cascadiarconf.com/), a local yearly conference

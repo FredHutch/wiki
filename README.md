@@ -33,7 +33,7 @@ The more focused, how-to style, Resource Library entries in both the Data Genera
 
 Both Articles and Resource Library entries are full-text searchable using the search feature (the magnifying glass in the header).  This search ability is the primary strength behind this Wiki and will be the primary way people will find content, as, again, no web designers or technical writers are involved in this grassroots project.  
 
-**NEW (as of March 2022)** - Introducing **Pathways**!  Pathways are a new approach we are incorporating which can be found by following the [Pathways link](/pathways/) in the sidebar from any domain.  This Pathways page will host individual pages that provide users who want to do a commonly requested set of tasks, a list of pages/links in the order they'll want to read them, that will guide them along the pathway to doing what they want.  We hope this might be an alternate mode for finding content in the Wiki that the community finds useful.  If you have ideas for new Pathways, please [file an issue](https://github.com/FredHutch/wiki/issues) and tell us about it.  
+**NEW (as of March 2022)** - Introducing **Pathways**!  Pathways are a new approach we are incorporating which can be found by following the [Pathways link](https://sciwiki.fredhutch.org/pathways/) in the sidebar from any domain.  This Pathways page will host individual pages that provide users who want to do a commonly requested set of tasks, a list of pages/links in the order they'll want to read them, that will guide them along the pathway to doing what they want.  We hope this might be an alternate mode for finding content in the Wiki that the community finds useful.  If you have ideas for new Pathways, please [file an issue](https://github.com/FredHutch/wiki/issues) and tell us about it.  
 
 ### Adding/Editing Content
 
@@ -104,7 +104,18 @@ If the markdown you are editing is in one of the other folders you'll need to ch
 
 Both Atom and VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
 
+#### Custom sized images
+If you want to adjust the size of your image, you can add your image using HTML syntax. Be sure to include the `alt` attribute.
+
+```
+<img src="/compdemos/assets/2018-06-01-12-34-51.png" alt="VS Code extensions tab" width="500" height="600">
+```
+
 ### External Videos and Images
+
+#### Images
+
+Before linking to external images, consider saving a copy and creating an internal link as outlined [here](#in-text-images). This helps ensure content doesn't break over time.
 
 #### Youtube
 

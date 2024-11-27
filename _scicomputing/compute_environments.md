@@ -123,6 +123,10 @@ to achieve with any other tool apart from full virtual machines.
 It also neatly solves the problem of having to install dependencies
 in order to run a new tool in the right way.
 
+Although you cannot run Docker on our HPC cluster or on the `rhino` machines,
+you can work with Docker containers in those environments using
+[Apptainer](/compdemos/Apptainer/).
+
 ### Common Terms
 
 There are a few basic terms that will make it easier to learn
@@ -165,11 +169,11 @@ The best page to get started at the Hutch is the [Computing Resource Library](/c
 
 Because Docker requires root access, it cannot be run on shared
 compute environments such as `Rhino` / `Gizmo`. Instead,
-developers at LBL have developed a utility called Singularity which can be used to run Docker images within an environment
-like `Rhino` / `Gizmo` at Fred Hutch. Additional information on using Singularity can be found at the
-[sylabs.io](https://www.sylabs.io/docs/) site and more [details about using Singularity at Fred Hutch](/compdemos/Singularity/) on `Gizmo`.
+developers at LBL have developed a utility called Apptainer (formerly Singularity) which can be used to run Docker images within an environment
+like `Rhino` / `Gizmo` at Fred Hutch. Additional information on using Apptainer can be found at the
+[apptainer.org](https://apptainer.org/docs/) site and more [details about using Apptainer at Fred Hutch](/compdemos/Apptainer/) on `Gizmo`.
 
-**Words of Wisdom:** Singularity also has its own image format, however we do not recommend to use it and instead import Docker containers as they can be used more universally, e.g. in cloud computing.
+**Words of Wisdom:** Apptainer also has its own image format, however we do not recommend to use it and instead import Docker containers as they can be used more universally, e.g. in cloud computing.
 
 Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/scicomputing/compute_cloud/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
 executed with that system.

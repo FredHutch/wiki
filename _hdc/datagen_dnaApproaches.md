@@ -118,13 +118,13 @@ There are many vendors available to generate WGS data. <!--INSERT EXTERNAL LINK 
 
 * Agilent also has several exome sequencing options, including a more clinically focused option. [Agilent Exome Sequencing ](https://www.genomics.agilent.com/en/SureSelect-DNA-Target-Enrichment-Baits-NEW/SureSelect-Human-All-Exon-V6/?cid=AG-PT-124&tabId=AG-PR-1308)
 
-* Roche NimbleGen has several exome and other bait sets. [Roche NimbleGen Exome Sequencing](http://sequencing.roche.com/en/products-solutions/by-category/target-enrichment/hybridization.html)
+* Roche NimbleGen has several exome and other bait sets. [Roche NimbleGen Exome Sequencing](https://sequencing.roche.com/en/products-solutions/by-category/target-enrichment/hybridization.html)
 
 * Illumina has a variety of ready-made targeted DNA sequencing panels. Users can also design custom panels.[Illumina Targeted Sequencing Panels](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html)
 
 * Illumina has a sequencing depth calculator tool to estimate what type of depth to expect in certain combinations of setups.  More information on the available sequencing platforms in the Genomics Shared Resource can be found on [this page.](/hdc/datagen_platformsData/) [Illumina Sequencing Calculator](https://support.illumina.com/downloads/sequencing_coverage_calculator.html)
 
-* PacBio Single Molecule Real-time (SMRT) technology enables long-read (>20kb) sequencing. [PacBio SMRT Sequencing](http://www.pacb.com/smrt-science/smrt-sequencing/)
+* PacBio Single Molecule Real-time (SMRT) technology enables long-read (>20kb) sequencing. [PacBio SMRT Sequencing](https://www.pacb.com/smrt-science/smrt-sequencing/)
 
 ## DNA Microarrays
 
@@ -159,8 +159,8 @@ RRBS uses a combination of CpG island-specific restriction enzymes with bisulfit
 
 ### Available Resources
 
-* Epigenie has a useful guide to getting started with ChIP-seq. [Epigenie's Guide to ChIP-seq](http://epigenie.com/guide-getting-started-with-chip-seq/)
+* Epigenie has a useful guide to getting started with ChIP-seq. [Epigenie's Guide to ChIP-seq](https://epigenie.com/guide-getting-started-with-chip-seq/)
 
-* The genomics core uses the Kapa Hyper Prep kit for ChiP-seq. [Kapa Hyper Prep for ChIP-seq](http://sequencing.roche.com/en/products-solutions/by-application/research/chip-sequencing.html)
+* The genomics core uses the Kapa Hyper Prep kit for ChiP-seq. [Kapa Hyper Prep for ChIP-seq](https://sequencing.roche.com/en/products-solutions/by-application/research/chip-sequencing.html)
 
-* The Babraham Institute has a brief guide to the biology and bioinformatics of RRBS. [Babraham Institute's Guide to RRBS](http://www.bioinformatics.babraham.ac.uk/projects/bismark/RRBS_Guide.pdf)
+* The Babraham Institute has a brief guide to the biology and bioinformatics of RRBS. [Babraham Institute's Guide to RRBS](https://www.bioinformatics.babraham.ac.uk/projects/bismark/RRBS_Guide.pdf)

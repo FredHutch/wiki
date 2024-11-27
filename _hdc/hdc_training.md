@@ -55,9 +55,7 @@ provided by Shared Resources.
 
 ### Cleavage Under Targets and Release Using Nuclease (CUT&RUN)
 
-  - [How CUT&RUN profiles chromatin](https://www.youtube.com/watch?v=9Ol055tXVvA): A 3 min video explaining the basics of CUT&RUN.
   - [An efficient targeted nuclease strategy for high-resolution mapping of DNA binding sites](https://elifesciences.org/articles/21856): The original CUT&RUN paper.
-  - [Lay off the ChIPs: CUT&RUN instead](https://www.fredhutch.org/en/news/spotlight/2017/02/lay-off-the-chips--cut-run-instead.html): A Fred Hutch spotlight explaining CUT&RUN in very accessible terms.
 
 ### Whole exome sequencing
 
@@ -77,7 +75,6 @@ provided by Shared Resources.
 
 ### CRISPR screens
 
-- [CRISPR basics](https://grcf.jhmi.edu/products/crisprs/crispr-basics/): A very brief overview of CRISPR basics.
 - [CRISPR: Gene editing and beyond](https://www.youtube.com/watch?v=4YKFw2KZA5o): A 4 min video covering how the CRISPR technology works.
 - [Application of CRISPR technologies in research and beyond](https://www.nature.com/articles/nbt.3659): A paper discussing the application of CRISPR in a wide range of contexts.
 
@@ -89,7 +86,7 @@ provided by Shared Resources.
 ### ATACseq (DNA accessibility)
 
 - [Complete guide to understanding and using ATACseq](https://www.activemotif.com/blog-atac-seq): An blog post from Active Motif covering what ATAC-Seq is, it’s history, how it works, and some discoveries enabled by ATAC-Seq.
-- [ATAC-seq: a method for assaying chromatin accessability genome-wide](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374986/): The original ATAC-seq paper.
+- [ATAC-seq: a method for assaying chromatin accessibility genome-wide](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374986/): The original ATAC-seq paper.
 - [A brief overview of ATAC-seq](https://www.youtube.com/watch?v=Gy0sjLW2dxE): A short 7 min video explaining how ATAC-seq works and how it can be applied to epigenetics research.
 
 ### Nanostring
@@ -110,7 +107,7 @@ provided by Shared Resources.
 
 - [Code templates and examples](/scicomputing/software_examples) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as additional examples of executable code that can be tailored to suit your own needs.
 
-- The [Fred Hutch Data Science Lab](https://hutchdatascience.org/) curates training materials on a wide array of data science and computing topics that you can find on their [training page.](https://hutchdatascience.org/training/). 
+- The [Fred Hutch Data Science Lab](https://hutchdatascience.org/) curates training materials on a wide array of data science and computing topics that you can find on their [training page](https://hutchdatascience.org/training/). 
 
 - Fredhutch.io was an initiative to facilitate education about and promote access to computational resources at Fred Hutch. Those interested in learning core computational skills like R and Python can work through this archived content at their own pace. 
   - [Intro to Python](https://fredhutchio.github.io/python_intro/)
@@ -133,8 +130,8 @@ These resources are organized in a lecture type format as slides, screencasts, a
   - [Ask questions about this course](https://github.com/fredhutchio/tfcb_2019/issues)
   - *Course materials all available for free*
 
-- [edX](https://www.edx.org): Offers a collection of courses for [Data Analysis and Statistics](https://www.edx.org/course/subject/data-analysis-statistics) and [Bioinformatics](https://www.edx.org/learn/bioinformatics)
-  - [Rafael Irizarry](http://rafalab.github.io/) of Dana Farber has online programs available through edX:
+- [edX](https://www.edx.org): Offers a collection of courses for [Data Analysis and Statistics](https://www.edx.org/learn/data-analysis) and [Bioinformatics](https://www.edx.org/learn/bioinformatics)
+  - [Rafael Irizarry](https://rafalab.github.io/) of Dana Farber has online programs available through edX:
     - [Introduction to Data Science](https://www.edx.org/professional-certificate/harvardx-data-science)
     - [Data Analysis for Life Sciences](https://www.edx.org/professional-certificate/harvardx-data-analysis-for-life-sciences)
     - [Data Anaysis for Genomics](https://www.edx.org/professional-certificate/harvardx-data-analysis-for-genomics)
@@ -158,10 +155,10 @@ These resources are organized in a lecture type format as slides, screencasts, a
 - [CognitiveClass.ai](https://cognitiveclass.ai/) Offers a collection of courses for data science, AI, and cloud computing.
   - *All courses are free*
 
-- [The Open Source Data Science Masters](http://datasciencemasters.org): An open-source curriculum for learning data science. This is a mixed media course made up of videos, books, and slides.
+- [The Open Source Data Science Masters](https://datasciencemasters.org): An open-source curriculum for learning data science. This is a mixed media course made up of videos, books, and slides.
   - *Some content is free, some is paid*
   
-- [CalTech](http://work.caltech.edu/telecourse) Learning from Data
+- [CalTech](https://work.caltech.edu/telecourse) Learning from Data
   - *A free YouTube series*
 
 ### Video Tutorials
@@ -228,6 +225,6 @@ These resources offer classes that are work-at-your-own-pace with a major focus 
 
 - [The Carpentries](https://carpentries.org), with lessons from [Data Carpentry](https://datacarpentry.org) and [Software Carpentry](https://software-carpentry.org/lessons/)
 
-- [ROSALIND interactive bioinformatics problem set](http://rosalind.info/)
+- [ROSALIND interactive bioinformatics problem set](https://rosalind.info/)
 
 _Please reach out to the Hutch Data Core by sending an email to `hutchdatacore` with questions, comments, or suggestions related to training!_

@@ -5,7 +5,7 @@ main_author: Michael Gutteridge
 primary_reviewers: atombaby
 ---
 
-Aspera can be used on the NoMachine systems (rhino).  Using Aspera requires that the plugin be installed in the browser you are running in a NoMachine session- this is a per-user installation.
+[Aspera](/scicomputing/store_aspera/) can be used on the NoMachine systems (rhino).  Using Aspera requires that the plugin be installed in the browser you are running in a NoMachine session- this is a per-user installation.
 
 This document describes management of the Aspera plugin on NoMachine.
 
@@ -14,7 +14,7 @@ This document describes management of the Aspera plugin on NoMachine.
 > NOTE: these instructions indicate Firefox as the browser.  This process is very similar with Chromium though some of the terminology is different
 
  - Start a NoMachine session and run Firefox
- - Enter "http://aspera.fhcrc.org" in the address bar
+ - Enter "https://aspera.fhcrc.org" in the address bar
  - Log in when prompted
  - Wait a little bit- it needs a moment to detect the plugin
  - It will pop up a "Required Steps".  Step 1 is to install the add-on to the browser.  Click the "Install add-on" button.

@@ -67,7 +67,7 @@ library(tximport)
 ?tximport
 ```
 
-Next, create a dataframe that will map your transcript ID to Gene IDs. This file is created from any range of different ways, like `AnnotationHub`, `EnsemblDB`, or even a flat GTF file, or many other options on [bioconductor](http://bioconductor.org/packages/release/BiocViews.html#___AnnotationWorkflow)
+Next, create a dataframe that will map your transcript ID to Gene IDs. This file is created from any range of different ways, like `AnnotationHub`, `EnsemblDB`, or even a flat GTF file, or many other options on [bioconductor](https://bioconductor.org/packages/release/BiocViews.html#___AnnotationWorkflow)
 
 I am providing the tx2gene dataframe here which is a snippet of a GTF file that I parsed previously.
 
