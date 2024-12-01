@@ -76,9 +76,9 @@ Key Steps:
 
 1. Access the SSO portal: Go to the unique SSO login URL: [https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts ](https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts )
 2. Sign in with Credentials: Enter your HutchID to authenticate following MFA authentication. 
- ![MFA Screen](assets/CLD_PickAccount.png)
+ ![MFA Screen](../assets/CLD_PickAccount.png)
 3. Select AWS account: Once logged in, choose the AWS account you want to access from the list of available accounts. Expanding the arrow will show the account name, the sso-role attached to the user. Each user will see only the account it has access to and the role mapped to the user. PowerUserAccess is an example. 
- ![AccountSelection](assets/CLD_LZALandingPage.png)
+ ![AccountSelection](../assets/CLD_LZALandingPage.png)
 4. Choose a role: Select the specific role assigned to you within the chosen AWS account. PowerUserAccess is a link and clicking the role will take you to the AWS account. 
 5.  Access AWS services: You can now access the AWS Management Console or use the AWS CLI with temporary credentials obtained from your SSO session. 
 
