@@ -5,6 +5,10 @@ main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
 primary_reviewers: JasonMajor1, sgglick, jli-fh
 ---
 
+<div class=".notice">
+The best and most current resource for data protection policies (broken out by Research or Clinical objectives), along with current, executive-approved InfoSec Policy, Data Classification Policy and others, is located here: https://centernet.fredhutch.org/u/data-science-lab/data-governance.html
+</div>
+
 Every effort must be made to protect the privacy and confidentiality of
 participants regardless of the type of data being used as part of a research project. A key protective measure is to de-identify datasets.  
 Typically, this involves removing 18 key direct identifiers as described
