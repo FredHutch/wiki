@@ -42,8 +42,7 @@ this bucket. See [the documentation](/scicomputing/access_credentials/#amazon-we
 
 In Motuz, click the `Cloud Connections` link at the top of the browser window. Then click the `New Connections` button. 
 
-
-There are two kinds of credentials - Single Sign-On (SSO) and long-term. By default (since 2024), all users can use SSO credentials, which last for 12 hours. If you need longer-lasting credentials, such as for a long-running transfer, please contact the Cloud Team by emailing `helpdesk`. 
+There are two kinds of credentials - Single Sign-On (SSO) and IAM Access Key Pairs. By default (since 2024), all users can use SSO credentials, which last for 12 hours. IAM Access Key Pairs do not expire. If you need longer-lasting credentials, such as for a long-running transfer, please contact the Cloud Team by emailing `helpdesk`. 
 
 To obtain AWS SSO credentials, navigate to the [AWS SSO Portal](https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts) (documented [here](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#how-to-navigate-to-the-aws-sso-portal)). Choose your account and click the triangle to its left:
 
