@@ -42,11 +42,29 @@ this bucket. See [the documentation](/scicomputing/access_credentials/#amazon-we
 
 In Motuz, click the `Cloud Connections` link at the top of the browser window. Then click the `New Connections` button. 
 
-![](/assets/motuz/2019-08-23-12-30-33.png)
 
-In the `Basic` section, set `Type` to `Amazon Simple Storage Service (s3)`. Give the connection a name such as `lab s3 bucket`. Optionally enter the bucket name (`fh-pi-doe-j-eco` here is just an example).
+There are two kinds of credentials - Single Sign-On (SSO) and long-term. By default (since 2024), all users can use SSO credentials, which last for 12 hours. If you need longer-lasting credentials, such as for a long-running transfer, please contact the Cloud Team by emailing `helpdesk`. 
 
-In the `Credentials` section, paste your access key ID and secret access key from the credentials you obtained above. You can optionally click `Verify Connection` to make sure the connection works. Then click `Create Cloud Connection`.
+To obtain AWS SSO credentials, navigate to the [AWS SSO Portal](https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts) (documented [here](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#how-to-navigate-to-the-aws-sso-portal)). Choose your account and click the triangle to its left:
+
+![alt text](/assets/motuz/triangle_open.png)
+
+Click `Access Keys`. Scroll to the bottom, where you will see `Option 3`:
+
+![alt text](/assets/motuz/option3.png)
+
+Go to Motuz [Cloud Connections](https://motuz.fredhutch.org/clouds) page and click `New Connection` (or click an existing connection to update its credentials). Be sure to change `S3 Connection Type` in the dropdown list to `Temporary Security Credentials (STS)`:
+
+![alt text](/assets/motuz/sts.png)
+
+Copy and paste the respective values (access key ID, secret key, and session token) from the AWS SSO page into the appropriate fields in the Motuz Cloud Connection page:
+
+![alt text](/assets/motuz/cloud-connection-values.png)
+
+In the `Basic` section, set `Type` to `Amazon Simple Storage Service (s3)`. Give the connection a name such as `lab s3 bucket`. Optionally enter the bucket name (for example, `fh-pi-doe-j-eco`).
+
+Click on `Verify Connection` to make sure the connection works. Then click `Create Cloud Connection`, or (if you are modifying an existing connection) `Update Connection`. 
+
 
 ## Copying Files to Cloud Locations
 
