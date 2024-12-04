@@ -50,7 +50,7 @@ You'll know you are logged in when the page refreshes automatically and a red lo
 
 ### Setup your PROOF/Cromwell server
 
-#### Starting a PROOF server
+**Starting a PROOF server**
 Next click on "Server" to take you to the page where you can start a server.
 
 ![start_server](/dasldemos/assets/proof_101_shinyapp_start_server.png)
@@ -90,13 +90,13 @@ There will be two sections of information to pay attention to which should be po
 
 Once your server is ready for use, you should receive an email from PROOF API ![email](/dasldemos/assets/proof_101_shinyapp_email.png)
 
-#### Stopping a PROOF server
+**Stopping a PROOF server**
 
 Finally, if your workflow has finished running before the 7-day timeline (or whatever custom timeline you set up), you can stop your PROOF server. Note that your job can run for longer than 7 days, it is only the PROOF server that will stop. At the bottom of the PROOF server tab, click "Stop a PROOF Server":
 
 ![proof_101_shiny_app_delete_server_1](/dasldemos/assets/proof_101_shiny_app_delete_server_1.png)
 
-A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidentally end your server.
+A pop-up box will show up and ask you to confirm that you would like to stop your server as this action cannot be undone, but you can always start up a new server anytime!
 
 ![proof_101_shiny_app_delete_server_2](/dasldemos/assets/proof_101_shiny_app_delete_server_2.png)
 
@@ -105,15 +105,15 @@ A pop-up box will show up and ask you type out the words "delete me". This is an
 
 
 
-### Validate your WDL (optional)
+### Validate your WDL workflow
 
 Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. If you already have a workflow ready, you can optionally do a "dry run" with your workflow files (WDL/JSONs) using the 'Validate' tab. This tab checks to see if your workflows are formatted correctly before you submit them, to save you time in case they are not runnable.
 
 ![validate](/dasldemos/assets/proof_101_shinyapp_validate.png)
 
-You can upload your WDL workflow file and associated JSON file into the respective upload boxes. You can do this by either dragging the files into the upload boxes or browsing to the directory where the workflow and JSON files are stored. Once uploaded, click 'Validate Workflow'.
+You can upload your WDL workflow file and associated JSON file into the upload boxes by either dragging the files into the respective boxes or browsing to the directory where the workflow and JSON files are stored. Once uploaded, click 'Validate Workflow'.
 
->Note: If you have more than one input JSON file required to run your WDL workflow you can consolidate them and upload them as a single file. If you do not consolidate them and only upload one then the WDL will not validate.
+>Note: If you have more than one input JSON file required to run your WDL workflow, you'll need to consolidate them and upload them as a single file. If you do not consolidate them and only upload one, the WDL will not validate correctly.
 
 The validation process evaluates several things:
 
@@ -121,39 +121,30 @@ The validation process evaluates several things:
 -   Verifies that they are properly formatted.
 -   Confirms that the tasks are wired up correctly.
 
-> Note : During a dry run, Cromwell does not test the availability of your input files. This is because Cromwell can access files from a variety of sources, including local filesystems, AWS S3, Google buckets, and Azure blobs. Testing for input availability only happens when you execute the workflow for the first time. If some input files are missing, Cromwell will continue to execute tasks for the available input files while skipping tasks where inputs cannot be located.
+> Note: During a dry run, Cromwell does not test the availability of your input files. This is because Cromwell can access files from a variety of sources, including local filesystems, AWS S3, Google buckets, and Azure blobs. Testing for input availability only happens when you execute the workflow for the first time. If some input files are missing, Cromwell will continue to execute tasks for the available input files while skipping tasks where inputs cannot be located.
 
-Here is an example from the [test workflows](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation
+Here is an example from the [test workflows](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation:
 
 ![validate_2](/dasldemos/assets/proof_101_shinyapp_validate_2.png)
 
-If your workflows and accompanying JSON files are validated you should see in the  console below 
-`$valid`
-`[1] TRUE`
+If your workflow and accompanying JSON files are validated, you should see `$valid` `[1] TRUE` in the textbox beneath the submission form.
 
-If your workflow does not validate, the console will provide some "helpful" information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. 
+If your workflow does not validate, the console will provide some helpful information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. For pointers and examples on how to use this validation tool, check out our [troubleshooting documentation](/dasldemos/proof-troubleshooting/#validate-your-workflow).
 
 
 
 
 
-### Submit your WDL
+### Submit your WDL workflow
 
-Congratulations! At this point, you should have a validated WDL workflow and you are ready to submit your job. 
-
-To submit your job click the "Submit" tab in the top menu bar.
-
-![proof_101_shiny_app_submit_1](/dasldemos/assets/proof_101_shiny_app_submit_1.png)
-
-This will open up the "Submit a Workflow" page:
+Congratulations! At this point, you should have a validated WDL workflow and you are ready to submit your job. First, click on the "Submit" tab on the top menu bar to open up the "Submit a Workflow" page:
 
 ![proof_101_shiny_app_submit_2](/dasldemos/assets/proof_101_shiny_app_submit_2.png)
 
 Here you can do the following: 
 
 - Upload your WDL workflow 
-
-- Upload up to three different JSON files that accompany your workflow.
+- Upload up to three different input/options JSON files that accompany your workflow.
 
 > Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs, note that these will be concatenated or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.
 
@@ -175,7 +166,7 @@ The workflow ID is a long string of letters as numbers. This string is unique to
 
 
 
-### Track your workflow to see how long it takes and if it succeeds or fails
+### Track your WDL workflow
 Once you've submitted a workflow, you can track the status of your submitted workflows using the "Track Jobs" tab
 
 ![proof_101_shiny_app_track_jobs_1](/dasldemos/assets/proof_101_shiny_app_track_jobs_1.png)
@@ -304,18 +295,7 @@ If you find something is not working with the app or you find a bug, please help
 - [PROOF Troubleshooting](/dasldemos/proof-troubleshooting)
 
 
-## Document Contributions
-We would love to get feedback on this document from the community and would love to hear how we can make improvements to make this more helpful to you! Feel free to [email](mailto:wilds@fredhutch.org) us at or directly make recommendations on [GitHub](https://github.com/FredHutch/wiki/).
+### Contact Us
+We would love to get feedback on this document from the community and would love to hear how we can make improvements to make this more helpful to you! Feel free to [email](mailto:wilds@fredhutch.org) us or directly make recommendations on [GitHub](https://github.com/FredHutch/wiki/). Or if you'd like to talk through things face-to-face, schedule a [Data House Call](https://calendly.com/data-house-calls/resources?back=1&month=2024-12) with us! 
 
 
-**Authors**
-
-- Sitapriya Moorthi ([GitHub](https://github.com/sitapriyamoorthi)/[E-mail](mailto:smoorthi@fredhutch.org))
-- Scott Chamberlain ([GitHub](https://github.com/sckott)/[E-mail](mailto:sachamber@fredhutch.org))
-
-**Reviewers**
-
-- Ted Laderas ([GitHub](https://github.com/laderast)/[E-mail](mailto:tladera2@fredhutch.org))
-- Chris Lo ([GitHub](https://github.com/caalo)/[E-mail](mailto:clo2@fredhutch.org))
-- Taylor Firman ([GitHub](https://github.com/tefirman)/[E-mail](mailto:tfirman@fredhutch.org))
-- Amy Paguirigan ([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
