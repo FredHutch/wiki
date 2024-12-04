@@ -30,7 +30,7 @@ Before you begin using PROOF, make sure you have the following:
 
 
 
-### Log in to PROOF with your Fred Hutch credentials
+### Log in to PROOF
 
 The first step is to log in to PROOF. 
 
@@ -48,9 +48,9 @@ You'll know you are logged in when the page refreshes automatically and a red lo
 
 
 
-### Start (or Stop) your PROOF/Cromwell server
+### Setup your PROOF/Cromwell server
 
-####Start your server
+#### Starting a PROOF server
 Next click on "Server" to take you to the page where you can start a server.
 
 ![start_server](/dasldemos/assets/proof_101_shinyapp_start_server.png)
@@ -59,42 +59,40 @@ Click "Start Server". You will get a dialog box that asks for optional credentia
 
 ![start_server_2](/dasldemos/assets/proof_101_shinyapp_start_server_2.png)
 
-The majority of people usually are only authorized to work under one SLURM account (working under one PI = one SLURM account). In this case, just hit start and all Cromwell configurations will default under the SLURM account you are authorised under.
+The majority of people are only authorized to work under one SLURM account (working under one PI = one SLURM account). In this case, just hit start and all Cromwell configurations will default under the SLURM account you are authorized under.
 
-However, if you have more than one SLURM account that you can work under, then here is your chance to enter the most appropriate one (for example you could be authorized to do work under two PI's with SLURM accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b" enter pi_b where it asks for SLURM account). 
+However, if you have more than one SLURM account that you can work under, then here is your chance to enter the most appropriate one. For example, you could be authorized to do work under two PI's with SLURM accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b", enter "pi_b" where it asks for SLURM account.
 
 ![start_server_3](/dasldemos/assets/proof_101_shinyapp_start_server_3.png)
 
-You know your server is up and running when the page auto-refreshes and you see the "Start" button gray out and information about your server populated below. 
+You know your server is up and running when the page auto-refreshes, the "Start" button grays out, and information about your server populates below. 
 
 ![start_server_4](/dasldemos/assets/proof_101_shinyapp_start_server_4.png)
 
 > Initially, setting up a PROOF Server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
 
-There will be two sections of information that you would like to pay attention to which should be populated with details that will be relevant. These details may take a moment to appear on the page, even if your server is already running.
+There will be two sections of information to pay attention to which should be populated with relevant details. These details may take a moment to appear on the page, even if your server is already running.
 
 **Server information**
-- Job status: it should say "RUNNING"
-- Workflow log directory: Gives you the path to where your workflow logs will reside
-- Scratch directory: Gives you the path to where your workflow outputs will go
-- Server-time: It tells you how long your PROOF Server will be "alive". By default this is set to 7 days
-- SLURM job account: The SLURM account (default/or if specified) under which your jobs should be running 
+- Job status: should say "RUNNING"
+- Workflow log directory: path to where your workflow logs will reside
+- Scratch directory: path to where your workflow outputs will go
+- Server-time: how long your PROOF Server will be "alive" (set to 7 days by default)
+- SLURM job account: SLURM account (default/or if specified) under which your jobs should be running 
 
 **Troubleshooting**
-- SLURM job ID: This is the PROOF server job ID. You can use this to cancel your PROOF server through `rhino`
-- Cromwell directory: The path to where you main Cromwell directory exists 
-- Server log directory: The path to where logs associated with the PROOF server exists
-- Singularity cache directory: Path to Singularity cache directory
+- SLURM job ID: PROOF server job ID that can be used to cancel your PROOF server through `rhino`
+- Cromwell directory: path of your main Cromwell directory 
+- Server log directory: path where logs associated with the PROOF server will be saved
+- Singularity cache directory: path where Singularity/Apptainer/Docker images will be saved for caching purposes
 - Use AWS?: This option is not currently available but may be in future.
 - Cromwell URL: URL for PROOF server
 
 Once your server is ready for use, you should receive an email from PROOF API ![email](/dasldemos/assets/proof_101_shinyapp_email.png)
 
-####Stopping a PROOF server
+#### Stopping a PROOF server
 
-Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and stop your PROOF server. Note that your job can run for longer than 7 days, it is only the PROOF server that will stop.
-
-Go back to the PROOF server tab and click Stop Server
+Finally, if your workflow has finished running before the 7-day timeline (or whatever custom timeline you set up), you can stop your PROOF server. Note that your job can run for longer than 7 days, it is only the PROOF server that will stop. At the bottom of the PROOF server tab, click "Stop a PROOF Server":
 
 ![proof_101_shiny_app_delete_server_1](/dasldemos/assets/proof_101_shiny_app_delete_server_1.png)
 
@@ -108,8 +106,8 @@ A pop-up box will show up and ask you type out the words "delete me". This is an
 
 
 ### Validate your WDL (optional)
- 
-Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. If you already have a workflow ready, you can optionally do a "dry run" with your workflow files (WDL/JSONs) using the 'Validate' tab. This tab checks to see if your workflows are runnable before you submit them, to save you time in case they are not runnable.
+
+Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. If you already have a workflow ready, you can optionally do a "dry run" with your workflow files (WDL/JSONs) using the 'Validate' tab. This tab checks to see if your workflows are formatted correctly before you submit them, to save you time in case they are not runnable.
 
 ![validate](/dasldemos/assets/proof_101_shinyapp_validate.png)
 
@@ -139,7 +137,7 @@ If your workflow does not validate, the console will provide some "helpful" info
 
 
 
-### Submit your WDL and 1-2 optional json input and parameter files
+### Submit your WDL
 
 Congratulations! At this point, you should have a validated WDL workflow and you are ready to submit your job. 
 
