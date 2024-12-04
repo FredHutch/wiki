@@ -4,10 +4,6 @@ main_authors: tefirman
 primary_reviewers: laderast
 ---
 
-**NEED TO UPDATE SCREENSHOTS WITH NEW GUI!!!**
-**NEED TO UPDATE SCREENSHOTS WITH NEW GUI!!!**
-**NEED TO UPDATE SCREENSHOTS WITH NEW GUI!!!**
-
 For users that have a well-tested and established WDL workflow, the [PROOF How-To documentation](/dasldemos/proof-how-to/) should provide enough guidance to help a user through a typical process of job submission. However, while developing a new and untested WDL workflow, it's common to run into all sorts of issues, some as simple as typos, others as complex as entire software environments. The goal of this guide is to teach users where to find (and how to interpret) the more advanced features and behaviors of PROOF in order to debug their custom WDL scripts and get their research up and running. 
 
 ## Common PROOF Server Issues
