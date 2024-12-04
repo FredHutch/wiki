@@ -4,10 +4,7 @@ main_authors: vortexing, sitapriyamoorthi
 primary_reviewers: vortexing
 ---
 
-**UPDATING DOCS IN PROGRESS**
-
-This guide is intended to describe how to use the [**PROOF** app](https://proof.fredhutch.org)(**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) to run [**WDL**](https://sciwiki.fredhutch.org/compdemos/Cromwell/#writing-workflows) workflows on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). Learn more about what is PROOF [here](https://sciwiki.fredhutch.org/datascience/proof/). We also have a [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) guide that will be a quick-start guide to building a WDL workflow.
-
+This guide is intended to describe how to use the [**PROOF** app](https://proof.fredhutch.org) (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) to run [**WDL**](https://sciwiki.fredhutch.org/compdemos/Cromwell/#writing-workflows) workflows on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). Learn more about PROOF on its [SciWiki product page](https://sciwiki.fredhutch.org/datascience/proof/), read through our [quick-start guide](https://hutchdatascience.org/Developing_WDL_Workflows/) to building a WDL workflow, and check out our pre-built [WILDS WDL workflows](https://github.com/getwilds?q=ww-&type=all&language=&sort=) for ready-to-submit bioinformatic pipelines.
 
 
 
@@ -23,7 +20,7 @@ The following diagram shows basic usage of PROOF once you have done the prelimin
 Before you begin using PROOF, make sure you have the following:
 - [Valid Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
 - Access to the Fred Hutch network
-    - If on-campus, make sure you are connected to the Marconi network.
+    - If on-campus, make sure you are connected to the Research Staff network.
     - If off-campus, make sure you connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn).
 - [Access to the rhino cluster of Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-clusters)
 - [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
@@ -43,9 +40,9 @@ When you click "PROOF Login", a box will appear where you will input your Hutch 
 
 ![login_2](/dasldemos/assets/proof_101_shinyapp_proof_login_2.png)
 
-You know you are logged in when the page refreshes automatically and you see the red log out button appear.
+You'll know you are logged in when the page refreshes automatically and a red logout button appears in the top right corner.
 
-![login_2](/dasldemos/assets/proof_101_shinyapp_logged_in.png)
+![login_2](/dasldemos/assets/proof_101_shinyapp_loggedin.png)
 
 
 
