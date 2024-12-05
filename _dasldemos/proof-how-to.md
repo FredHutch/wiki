@@ -1,7 +1,5 @@
 ---
 title: How to Use PROOF
-main_authors: vortexing, sitapriyamoorthi
-primary_reviewers: vortexing
 ---
 
 This guide is intended to describe how to use the [**PROOF** app](https://proof.fredhutch.org) (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) to run [**WDL**](https://sciwiki.fredhutch.org/compdemos/Cromwell/#writing-workflows) workflows on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). Learn more about PROOF on its [SciWiki product page](https://sciwiki.fredhutch.org/datascience/proof/), read through our [quick-start guide](https://hutchdatascience.org/Developing_WDL_Workflows/) to building a WDL workflow, and check out our pre-built [WILDS WDL workflows](https://github.com/getwilds?q=ww-&type=all&language=&sort=) for ready-to-submit bioinformatic pipelines.
