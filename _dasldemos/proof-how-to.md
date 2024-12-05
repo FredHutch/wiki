@@ -123,7 +123,7 @@ The validation process evaluates several things:
 
 > Note: During a dry run, Cromwell does not test the availability of your input files. This is because Cromwell can access files from a variety of sources, including local filesystems, AWS S3, Google buckets, and Azure blobs. Testing for input availability only happens when you execute the workflow for the first time. If some input files are missing, Cromwell will continue to execute tasks for the available input files while skipping tasks where inputs cannot be located.
 
-Here is an example from the [test workflows](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation:
+Here is an example from a ["hello world" workflow](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation:
 
 ![validate_2](/dasldemos/assets/proof_101_shinyapp_validate_2.png)
 
@@ -141,38 +141,30 @@ Congratulations! At this point, you should have a validated WDL workflow and you
 
 ![proof_101_shiny_app_submit_2](/dasldemos/assets/proof_101_shiny_app_submit_2.png)
 
-Here you can do the following: 
-
-- Upload your WDL workflow 
-- Upload up to three different input/options JSON files that accompany your workflow.
-
-> Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs, note that these will be concatenated or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.
-
-- Add a primary and secondary workflow label to easily track your workflows (e.g., compare versions or batches). If you do not add a primary label, PROOF will autopopulate a label with an adjective and animal (e.g., "InquisitivePenguin").
+Here you can upload your WDL workflow and its associated input/options JSON files. If desired, you can also add a primary and secondary workflow label to easily track your workflows (e.g., compare versions or batches). If you do not add a primary label, PROOF will autopopulate a label upon submission with an adjective and animal (e.g., "InquisitivePenguin").
 
 > Note: As you upload your files look for the blue uploading progress bar below the upload box. If you need to add files different from the ones uploaded, click the "Reset Form" button. This will clear **all** the upload fields allowing you to upload a new set of files. 
 
-Once everything is uploaded, click the "Submit Workflow" button. 
-
-When your submissions is done, you will see a confirmation and workflow ID appear below the submit button on the form. Depending on your window size, you may need to scroll down. 
+Once everything is uploaded, click the "Submit Workflow" button. When your submission is done, you will see a confirmation and workflow ID appear below the submit button on the form. Depending on your window size, you may need to scroll down. 
 
 ![proof_101_shiny_app_submit_3](/dasldemos/assets/proof_101_shiny_app_submit_3.png)
 
-The workflow ID is a long string of letters as numbers. This string is unique to an individual workflow run, so if you run the same workflow a second time, you'll get a different string. This means that this unique identifier string can be used to help understand the data source file(s) used to generate each set of results files, helping make your work reproducible.
+The workflow ID is a long string of letters and numbers. This string is unique to an individual workflow run, so if you run the same workflow a second time, you'll get a different string. This means that this unique identifier string can be used to help understand the data source file(s) used to generate each set of results files, helping make your work reproducible.
 
->Note: You don't need to copy this workflow ID, it will appear on the 'Track Workflows' screen along with the workflow name and label(s).
+> Note: You don't need to copy this workflow ID, it will appear on the 'Track Workflows' screen along with the workflow name and label(s).
 
 
 
 
 
 ### Track your WDL workflow
-Once you've submitted a workflow, you can track the status of your submitted workflows using the "Track Jobs" tab
+Once you've submitted a workflow, you can track the status of your submitted workflows using the "Track Jobs" tab:
 
 ![proof_101_shiny_app_track_jobs_1](/dasldemos/assets/proof_101_shiny_app_track_jobs_1.png)
 
 **Filter submitted jobs you want to track**
-You can filter your jobs 3 different ways! Initially this is likely not needed, however as PROOF can manage several different workflows running at once you'll eventually want to filter results to track specific work at a time.  
+
+In the "Workflow Runs" table, you can filter your jobs three different ways: workflow name, status, and date. Initially, this is likely not needed, however as you submit more analyses via PROOF (potentially at the same time), you'll eventually want to filter results to track specific work over time.
 
 ![proof_101_shiny_app_track_jobs_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_2.png)
 
@@ -181,26 +173,23 @@ You can filter your jobs 3 different ways! Initially this is likely not needed, 
 
 
 
-### Check workflow details
+### Check WDL workflow details
 You can filter submitted jobs based on: 
-1. Days since your server was started
-	> Note: This maxes out 7 days. And displays history of the current PROOF server. 
+1. Submission date range
+2. Workflow name provided in the WDL script
+3. Job status
 
-2. Using the custom workflow name you have given when you submitted your job
+> Note: You can use all these three options in succession. For example, you can display as many days of workflow history as you'd like, filter that result for workflows with a specific name or with specific status(es) like 'failed', 'succeeded', etc. This can help if you have submitted a LOT of workflows and you don't want to see them all, or if the PROOF server is still busy working through all of your submissions and recording their status.
 
-3. Based on the status of the job
-
-> Note:  You can use all these three options in succession. For example  you can display as many days of workflow history as you'd like, filter that result for workflows with a specific name or with specific status(es) like 'failed', 'succeeded', etc. This can help if you have submitted a LOT of workflows and you don't want to see them all, or if the PROOF server is still busy working through all of your submissions and recording their status.
-
-Once you are done filtering down to your choices and click "Update View", the relevant workflows will be returned and you'll see a visual representation on  those workflows.  
+Once you are done filtering down to your choices and click "Update View", the relevant workflows will be returned and you'll see a comprehensive list of details about those workflows.
 
 ![proof_101_shiny_app_track_jobs_3](/dasldemos/assets/proof_101_shiny_app_track_jobs_3.png)
 
-Below this tab you will also see a graph showing "Workflow Timing" information along with outcomes (Graph legend = "Status"). The x-axis shows how long it took to run a particular workflow and the y-axis will show you which workflow (from a potentially filtered list of workflows)
+Next to "Workflow Runs", you will also see a tab for "Workflow Timing" which displays a graph containing timing information along with workflow outcomes (Graph legend = "Status"). The x-axis shows how long it took to run a particular workflow and the y-axis shows workflow name (from a potentially filtered list of workflows).
 
 ![proof_101_shiny_app_track_jobs_4](/dasldemos/assets/proof_101_shiny_app_track_jobs_4.png)
 
-Finally below this visual representation of all your workflow runs you will see a "Workflows Run" table showing metadata for each workflow.  Click on the workflow you're interested in to populate the rest of the tables (below). 
+Finally, below this visual representation of all your workflow runs, you will see a "Workflow Runs" table showing metadata for each workflow. Click on the workflow you're interested in to populate the rest of the tables (below). 
 
 > Note: Next to each workflow in the table we have a nifty "copyID" button that you can use to copy your workflow ID for use elsewhere in the app. 
  
@@ -245,7 +234,7 @@ This lets you find output files and interact with them, archive them, or otherwi
 
 
 
-### Check the troubleshooting page to dig into error messages if needed
+### Troubleshoot your WDL workflow
 
 Last, there is the Troubleshoot tab.  Here you can do things like Abort running workflows or get a complete metadata output for the entire workflow to parse yourself to try to find what's happening with your workflow if it failed running. 
 
