@@ -15,16 +15,18 @@ The following diagram shows basic usage of PROOF once you have done the prelimin
 
 ![](/dasldemos/assets/proof_101_workflow.png) 
 
-### Before you begin
 
+
+
+
+### Before you begin
 Before you begin using PROOF, make sure you have the following:
 - [Valid Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
 - Access to the Fred Hutch network
-    - If on-campus, make sure you are connected to the Research Staff network.
+    - If on-campus, make sure you are connected to the Fred Hutch network.
     - If off-campus, make sure you connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn).
 - [Access to the rhino cluster of Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-clusters)
-- [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
-
+- [AWS credentials (if you have files stored on S3 required to run your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 
 
 
@@ -32,19 +34,17 @@ Before you begin using PROOF, make sure you have the following:
 
 ### Log in to PROOF
 
-The first step is to log in to PROOF. 
+The first step to get started on submitting you WDL workflows via PROOF is to login by clicking the green **PROOF Login** button (green).
 
 ![login](/dasldemos/assets/proof_101_shinyapp_proof_login.png) 
 
-When you click "PROOF Login", a box will appear where you will input your Hutch credentials and then click submit.
+When you click "PROOF Login", a pop-up will appear where you need to input your Hutch credentials and then click submit.
 
-![login_2](/dasldemos/assets/proof_101_shinyapp_proof_login_2.png)
+![login_popup](/dasldemos/assets/proof_101_shinyapp_proof_login_2.png)
 
 You'll know you are logged in when the page refreshes automatically and a red logout button appears in the top right corner.
 
 ![login_2](/dasldemos/assets/proof_101_shinyapp_loggedin.png)
-
-
 
 
 
@@ -55,7 +55,7 @@ Next click on "Server" to take you to the page where you can start a server.
 
 ![start_server](/dasldemos/assets/proof_101_shinyapp_start_server.png)
 
-Click "Start Server". You will get a dialog box that asks for optional credentials to start your PROOF Server. It may take a moment to appear. 
+Click "Start" to open up a dialog box that asks for optional credentials to start your PROOF Server.
 
 ![start_server_2](/dasldemos/assets/proof_101_shinyapp_start_server_2.png)
 
@@ -143,7 +143,7 @@ Congratulations! At this point, you should have a validated WDL workflow and you
 
 Here you can upload your WDL workflow and its associated input/options JSON files. If desired, you can also add a primary and secondary workflow label to easily track your workflows (e.g., compare versions or batches). If you do not add a primary label, PROOF will autopopulate a label upon submission with an adjective and animal (e.g., "InquisitivePenguin").
 
-> Note: As you upload your files look for the blue uploading progress bar below the upload box. If you need to add files different from the ones uploaded, click the "Reset Form" button. This will clear **all** the upload fields allowing you to upload a new set of files. 
+> Note: As you upload your files look for the blue uploading progress bar below the upload box. If you need to add files different from the ones uploaded, click the "Reset" button. This will clear **all** the upload fields allowing you to upload a new set of files. 
 
 Once everything is uploaded, click the "Submit Workflow" button. When your submission is done, you will see a confirmation and workflow ID appear below the submit button on the form. Depending on your window size, you may need to scroll down. 
 
@@ -167,8 +167,6 @@ Once you've submitted a workflow, you can track the status of your submitted wor
 In the "Workflow Runs" table, you can filter your jobs three different ways: workflow name, status, and date. Initially, this is likely not needed, however as you submit more analyses via PROOF (potentially at the same time), you'll eventually want to filter results to track specific work over time.
 
 ![proof_101_shiny_app_track_jobs_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_2.png)
-
-
 
 
 
@@ -198,9 +196,6 @@ Finally, below this visual representation of all your workflow runs, you will se
 You can also see a visual summary of the workflow below
 
 ![proof_101_shiny_app_track_jobs_6](/dasldemos/assets/proof_101_shiny_app_track_jobs_6.png)
-
-**Track workflow-level details**
-
 To get more information on a particular workflow select a workflow and you'll see some summary information about that workflow as you scroll down.
 
 ![proof_101_shiny_app_track_jobs_7](/dasldemos/assets/proof_101_shiny_app_track_jobs_7.png)
@@ -209,38 +204,7 @@ You can see a plot of the timing and outcomes of each call in that workflow.
 
 ![proof_101_shiny_app_track_jobs_8](/dasldemos/assets/proof_101_shiny_app_track_jobs_8.png)
 
-**Track call-level details**
-
-To get more detailed information about each "task" in your WDL workflow you can scroll down to see the "Job List" table.  This table has usefule information such as the directory where the job is working (callRoot), its SLURM "job_ID" , what computing resources or software environment were used, and the job's status.  
-
-![proof_101_shiny_app_track_jobs_9](/dasldemos/assets/proof_101_shiny_app_track_jobs_9.png)
-
-You can then click on a specific task of choice to get more information on that specific task/call.
-
-You can use the Job Failures, Call Caching, tables to retrieve information relevant to those processes.  You can do this by clicking the "Get/Refresh ... Metadata" buttons (sometimes for complex workflows these can be quite large, and thus they do not load until you want them).  You can also choose to download these tables if you like. 
-
-![proof_101_shiny_app_track_jobs_10](/dasldemos/assets/proof_101_shiny_app_track_jobs_10.png)
-
-**Tracking the location of your outputs**
-
-Finally, once a workflow's outputs have all been created successfully, Cromwell can tell you (and this Shiny app can help you download) a table showing where to find the workflow outputs (note this is not every file created, only the ones you specify as "results" using the WDL file's "workflow output" block).  
-
-This lets you find output files and interact with them, archive them, or otherwise copy them to longer term storage for use.  
-![proof_101_shiny_app_track_jobs_11](/dasldemos/assets/proof_101_shiny_app_track_jobs_11.png)
-
-
-
-
-
-
-
-### Troubleshoot your WDL workflow
-
-Last, there is the Troubleshoot tab.  Here you can do things like Abort running workflows or get a complete metadata output for the entire workflow to parse yourself to try to find what's happening with your workflow if it failed running. 
-
-![proof_101_shiny_app_troubleshoot_1](/dasldemos/assets/proof_101_shiny_app_troubleshoot_1.png)
-
-**Abort a workflow**
+###Abort a workflow
 
 Sometimes you realize you want to kill a workflow.  Using the workflow_id, you can kill specific workflows using this box.  
 
@@ -250,7 +214,176 @@ Sometimes you realize you want to kill a workflow.  Using the workflow_id, you c
 
 ![proof_101_shiny_app_abort_2](/dasldemos/assets/proof_101_shiny_app_abort_2.png)
 
-**Troubleshoot a workflow**
+
+
+## Workflow Details
+While you are on the "Track workflows" page you can click the **Workflow Details** button to dig into the details of the jobs within the workflow of your interest. 
+
+![view_workflow_details](/dasldemos/assets/proof_101_shiny_app_track_jobs_5.png)
+
+
+### Job List
+The first page that you get to when you click the **Workflow Details** button on the "Track workflows" page lands on this Job List page. 
+
+![workflow_details_job_list](/dasldemos/assets/proof_101_shiny_app_track_jobs_7.png)
+
+The **Job List** tab and other workflow information is intended to provide you with relevant information as it pertains to your workflow.
+
+You can download the entire table shown here by clickin the **Download Workflows Jobs Data** button. You can also adjust the number of entries to view in a given page by adjusting the "Show ____ entries" dropdown.
+The Job List page summarizes all the information you need about each of your jobs/tasks/calls that are being executed in your workflow. 
+
+
+
+| **Field**                  | **Description**                                                                                                                                                                |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **detailedSubName**        | Detailed name for the sub-task or call.                                                                                                                                      |
+| **callName**               | The name of the task or call.                                                                                                                                                 |
+| **executionStatus**        | Current status of the task or call.                                                                                                                                          |
+| **shardIndex**             | The specific sub-task or call being processed within a parallelized workflow.                                                                                                |
+| **callRoot**               | Path to the directory where outputs of a specific workflow task or call are stored.                                                                                          |
+| **start**                  | Start date and time of the task or call.                                                                                                                                     |
+| **end**                    | End date and time of the task or call.                                                                                                                                       |
+| **callDuration**           | Total time taken to finish the task or call.                                                                                                                                 |
+| **docker**                 | The Docker container used to perform the task or call.                                                                                                                       |
+| **modules**                | The module used to perform the task or call, if applicable.                                                                                                                 |
+| **workflowName**           | Name of the workflow.                                                                                                                                                         |
+| **stdout**                 | Contains all standard output messages generated by commands run within the task, such as print statements or command-line output.                                            |
+| **compressedDockerSize**   | Size of the compressed Docker image used for the task.                                                                                                                      |
+| **returnCode**             | Exit code of the task's command; 0 indicates success, and any non-zero value indicates an error.                                                                             |
+| **backend**                | Execution environment or platform (e.g., Local, Google, AWS Batch, SLURM) where the task is run.                                                                            |
+| **stderr**                 | All error messages and diagnostic output generated by the task's command, stored in a file within the task’s execution directory.                                             |
+| **attempt**                | Number of times a task has been retried; 1 represents the first attempt, with higher numbers for subsequent retries.                                                          |
+| **failOnStderr**           | Parameter that, when set to true, causes the task to fail if any output is written to `stderr`, treating error messages as fatal.                                            |
+| **partition**              | Subset of resources allocated for running the task or call.                                                                                                                  |
+| **continueOnReturnCode**   | Allows the workflow to proceed to subsequent tasks even if the current task returns a specified non-zero exit code, permitting certain failures without halting the workflow. |
+| **gpus**                   | Specifies the number of GPU resources requested for the task.                                                                                                               |
+| **maxRetries**             | Maximum number of times a task can be retried upon failure, allowing automated attempts to complete the task before ultimately failing the workflow.                         |
+| **cpu**                    | Number of CPU resources allocated for the task.                                                                                                                              |
+| **memory**                 | Amount of RAM allocated for the task.                                                                                                                                         |
+| **commandLine**            | The exact command executed for a task or call, including any parameters and arguments specified in the WDL script.                                                            |
+| **jobId**                  | Unique identifier assigned by the execution backend (like a cluster or cloud provider) to track and manage the specific job associated with a task or call.                  |
+| **backendStatus**          | Status of a task or call on the execution backend, showing states like "Queued," "Running," or "Done."                                                                       |
+| **dockerImageUsed**        | Specific Docker image utilized for running the task.                                                                                                                          |
+| **workflow_id**            | Unique identifier assigned to each workflow run.                                                                                                                              |
+
+
+
+### Workflow Description
+The workflow description tab provides information of the entire workflow.
+
+![workflow_description](/dasldemos/assets/proof_101_shiny_app_track_jobs_6.png)
+
+| Field                             | Description                                                                                     |
+|-----------------------------------|-------------------------------------------------------------------------------------------------|
+| **workflowName**                  | Name of your workflow               |
+| **workflowRoot**                  | The root directory of the workflow, where the workflow files and any associated resources are stored. |
+| **submission**                    | The timestamp indicating when the workflow was submitted for execution.                       |
+| **start**                         | The timestamp marking the beginning of the workflow execution.                                 |
+| **end**                           | The timestamp when the workflow execution completed.                                          |
+| **status**                        | The current state of the workflow (e.g., Completed, Running, Failed).                        |
+| **workflowDuration**              | The total time taken for the workflow to execute, typically displayed in a human-readable format (e.g., minutes, hours). |
+| **actualWorkflowLanguageVersion** | The version of the Workflow Description Language that the workflow adheres to.                 |
+| **actualWorkflowLanguage**        | The programming or scripting language used in the workflow, usually WDL for Cromwell.        |
+| **workflow_id**                  | A unique identifier assigned to the workflow run, which can be used to track or reference it in logs or reports. |
+| **secondaryLabel**               | An optional label that can be used to provide additional categorization or identification for the workflow run. |
+| **Label**                         | A general label for the workflow that can provide additional context or categorization.       |
+| **workflowType**                  | The type of workflow being executed, which might include designations such as "AppSubmission" |
+| **root**                          | Similar to `workflowRoot`, this field indicates the main directory or starting point for the workflow. |
+| **option**                        | A parameter or setting that can modify the behavior of the workflow, often specified at submission time. |
+| **workflowUrl**                  | A URL linking to the workflow's details or execution logs, useful for debugging or review purposes. |
+
+### Diagram
+This is a pictorial representation of you workflow to understand how different tasks are connected.
+
+![Diagram](/dasldemos/assets/proof_101_shiny_app_track_jobs_9.png)
+
+### Job Failures
+If one or more of your tasks/calls fail this is where you will find information about what happened.
+You may have to click the "Get/Refresh Failed Job Metadata" button to get a table with information about failed tasks/calls.
+![Job_failures_1](/dasldemos/assets/proof_101_shiny_app_track_jobs_10.png)
+
+You can also downlad the table on this page using the "Download Call Failure Data"
+
+![Job_failures_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_11.png)
+
+### Troubleshoot your WDL workflow
+
+| Field               | Description                                                                                  |
+|---------------------|----------------------------------------------------------------------------------------------|
+| **callName**        | The name of the specific task/call within the workflow that failed.                       |
+| **workflow_id**     | A unique identifier assigned to the workflow run    |
+| **shardIndex**      | The index of the shard in the case of parallel execution, indicating which subset of data failed. |
+| **attempt**         | The number of attempts made to execute the call, useful for tracking retries.                |
+| **failures.message**| The error message or reason provided for the failure, giving insight into what went wrong.   |
+| **workflowName**     | The name assigned to the workflow          |
+
+### Call Caching
+Call caching is a feature that allows the reuse of task outputs when the same inputs have been provided. This significantly improves efficiency by skipping redundant computations for tasks that have been previously run with identical parameters. Cached results are automatically invalidated if inputs change or if the task code is updated, ensuring that users always have access to the most current outputs.
+
+You may have to click the "Get/Refresh Call Caching Metadata" button to get a table with information about cache information.
+![Call_caching](/dasldemos/assets/proof_101_shiny_app_track_jobs_12.png)
+
+You can also download the table on this page using the "Download Call Caching Data"
+
+| Field                                      | Description                                                                                     |
+|--------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **workflow_id**                            | A unique identifier assigned to the workflow run    |
+| **callName**                               | The name of the specific task/call within the workflow.                                     |
+| **shardIndex**                             | The index of the shard in the case of parallel execution, indicating which subset of data was processed. |
+| **executionStatus**                        | The current status of the task execution (e.g., Running, Succeeded, Failed).                   |
+| **workflowName**                           | The name assigned to the workflow               |
+| **output.analysisReadySorted**             | The output indicating whether the analysis results are sorted and ready for further use.       |
+| **callCaching.effectiveCallCachingMode**   | The mode of call caching applied to the task (e.g., ReadAndWriteCache, CallCahingOff                          |
+| **callCaching.result**                     | Indicates whether the cached result was used for the task execution (e.g., Cache Hit, Cache Miss). |
+| **callCaching.allowResultReuse**          | A flag indicating whether result reuse is permitted for this task.                             |
+| **callCaching.hit**                        | The inputs that matched the cached results, leading to a cache hit for the task.              |
+| **inputs**                                 | The inputs provided to the task for execution, which may include file paths and parameter values. |
+| **returnCode**                             | The exit code returned by the task execution, indicating success (0) or failure (non-zero).   |
+| **jobId**                                  | A unique identifier for the specific job or execution instance of the task.                    |
+| **outputs**                                | The outputs produced by the task, which may include results, files, or other data types.      |
+
+
+### Workflow Options
+
+This tab provides configuration settings that influence the execution and management of the workflow specified by the user. Parameters such as the directory for final outputs, the maximum number of retries for tasks in case of failure, and the failure mode of the workflow (e.g., whether it should continue or abort on errors) can be provided when submitting the workflow. It also includes options for selecting the execution backend, determining whether to read from and write to the cache, and specifying the use of relative output paths. These options help optimize workflow performance, enhance fault tolerance, and manage output handling efficiently.
+
+![Workflow_Options](/dasldemos/assets/proof_101_shiny_app_track_jobs_16.png)
+
+| Field                             | Description                                                                                      |
+|-----------------------------------|--------------------------------------------------------------------------------------------------|
+| **final_workflow_outputs_dir**    | The directory where the final outputs of the workflow will be written |
+| **maxRetries**                    | The maximum number of times a task will be retried in case of failure, allowing for fault tolerance in execution. |
+| **workflow_failure_mode**         | Specifies the behavior of the workflow in case of failure, such as "Continue" or "Abort".      |
+| **backend**                       | The execution backend used for running the workflow, such as Local, Google Cloud, or AWS.      |
+| **read_from_cache**              | A flag indicating whether to read results from the cache if available, enabling faster execution by avoiding redundant calculations. |
+| **use_relative_output_paths**     | A flag indicating whether to use relative paths for output files instead of absolute paths, which can aid in portability. |
+| **write_to_cache**                | A flag indicating whether to write task results to cache, allowing for future reuse of outputs. |
+
+### Workflow Inputs
+
+This tab shows the user all the input file and their paths being used to run the workflow. This can be a handy tab especially when trying to troubleshoot errors that are caused due to input issues. 
+
+![Workflow_Inputs](/dasldemos/assets/proof_101_shiny_app_track_jobs_14.png)
+
+### Workflow Outputs
+
+The Workflow Outputs tab displays the results produced by the executed workflow. It includes essential information allowing users to easily locate and access the results, thus providing a comprehensive summary of the results generated by the workflow.
+
+![Workflow_Outputs](/dasldemos/assets/proof_101_shiny_app_track_jobs_17.png)
+
+| Field                | Description                                                                                   |
+|----------------------|-----------------------------------------------------------------------------------------------|
+| **workflowName**     | The name of the workflow, which helps identify the specific workflow that produced the outputs. |
+| **workflowOutputType** | The type of output generated by the workflow, which may include results, reports, or other data types. |
+| **pathToOutput**     | The file path or URI where the output files are located, indicating where results can be accessed. |
+| **shardIndex**       | The index of the shard for outputs generated from parallel execution, indicating which subset of data the output corresponds to. |
+| **workflow_id**      | A unique identifier for the workflow run, used to track or reference the specific execution and its outputs. |
+
+
+### Troubleshoot
+Last, there is the Troubleshoot tab.  Here you can do things like Abort running workflows or get a complete metadata output for the entire workflow to parse yourself to try to find what's happening with your workflow if it failed running. 
+
+![proof_101_shiny_app_troubleshoot_1](/dasldemos/assets/proof_101_shiny_app_troubleshoot_1.png)
 
 Especially in the beginning if you have catastrophic workflow failures and you can't even figure out what's going on, you can come back to this Troubleshoot box to retrieve the entire, unformatted JSON output of all metadata Cromwell has about your workflow.  You probably are better served by the "Track Jobs" tab for checking how your workflow is going, but if there's nothing there that's helpful, then this box is where you'll want to go.  
 
@@ -263,7 +396,7 @@ Especially in the beginning if you have catastrophic workflow failures and you c
 
 ## Resources and Help
 
-#### Reporting bugs
+### Reporting bugs
 
 If you find something is not working with the app or you find a bug, please help us make this app better by reporting here:
 
