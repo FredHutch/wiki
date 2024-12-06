@@ -30,17 +30,17 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
     
     <img src="/dasldemos/assets/proof_ts_var_typo_json.png" alt="var_type_json" width="500"/>
     
-    - **File path typo in the input json**: let’s say I accidentally point the `batch_file` variable in the input json to `/path_to_inputs/inputs.tsv`, when it’s actually located at `/path_to_tsvs/inputs.tsv`. Or maybe I accidentally put the relative path instead of the absolute path, e.g. `inputs.tsv`. Unfortunately, the validation feature only checks for WDL syntax errors, not whether a provided input will actually run within a given task. So in this case, the typo would slip past the validation step and the logs would indicate that the WDL script and input json are valid. Only upon actual submission of the workflow will this issue be identified ([see below](/dasldemos/proof-troubleshooting/#check-the-workflow-metadata) for tips on this scenario).
+    - **Bad file path in the input json**: let’s say I accidentally point the `batch_file` variable in the input json to `/path_to_inputs/inputs.tsv`, when it’s actually located at `/path_to_tsvs/inputs.tsv`. Or maybe I accidentally put the relative path instead of the absolute path, e.g. `inputs.tsv`. Or maybe I forgot that I deleted `inputs.tsv` last week. Unfortunately, the validation feature only checks for WDL syntax errors, not whether a provided input exists or will actually run within a given task. So in this case, the typo would slip past the validation step and the logs would indicate that the WDL script and input json are valid. Only upon actual submission of the workflow will this issue be identified ([see below](/dasldemos/proof-troubleshooting/#check-the-workflow-metadata) for tips on this scenario).
     - **Missing closing bracket in workflow/task**: let’s say that in all of my development enthusiasm, I forgot to put a closing bracket on one of the sections of my workflow and/or task. The resulting validation message should say something to the effect of `ERROR: Unexpected symbol (line ##, col #)… Expected rbrace, got <something else>`. If you navigate to the line in question, the missing closing bracket should be a few lines above that. In addition, the [WDL Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=broadinstitute.wdl) extension in VS Code is a huge help in identifying these kinds of typos.
     
     <img src="/dasldemos/assets/proof_ts_missing_bracket.png" alt="missing_bracket" width="650"/>
     
     - If you see any unique messages besides these ones, please send us a screenshot at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a Research Computing DHC with the DaSL staff. We’ll help work through it with you and add it to the list!
 
-### Workflow aborted unexpectedly
-If you encounter a scenario where your validated workflow is unexpectedly aborted here is how you would troubleshoot for different use-cases:
-    1. **Missing inputs**: In this case you may have syntactically defined your input in the workflow however these inputs may not be available or accessible. In this case, in PROOF you will see in your workflow/workflow_id/task/execution/stderr file this message: "slurmstepd: error: *** JOB XXXXXXXX ON gizmoXX CANCELLED AT year-month-dayThh:mm:ss ***". This is a special feature of PROOF and lets the user know that either they don't have access to specific files required as inputs in this task or the file path given may not be accurate. 
-    2. **Output storage issues**: Another reason that your workflow fails to start could be if you do not have write permissions in the specified output directories. So evethough it might validate if you do not have write permissions this could cause your workflow to fail.
+### Check permissions for input/output files
+
+- **Missing inputs**: let's say you provide an input file from an S3 bucket that you don't have access to. In this case, PROOF will automatically shut down the task and let the user know that either they don't have access to specific files required as inputs for this task or the file path given may not be accurate. 
+- **Output storage issues**: Another reason that your workflow fails could be if you do not have write permissions in the specified output directories. So even though the workflow might validate correctly, if you do not have write permissions on the specified output directory, this could cause your workflow to fail.
     
 ## Task Level Issues
 
