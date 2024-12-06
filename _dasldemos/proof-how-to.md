@@ -129,7 +129,7 @@ Here is an example from a ["hello world" workflow](https://github.com/getwilds/w
 
 If your workflow and accompanying JSON files are validated, you should see `$valid` `[1] TRUE` in the textbox beneath the submission form.
 
-If your workflow does not validate, the console will provide some helpful information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. For pointers and examples on how to use this validation tool, check out our [troubleshooting documentation](/dasldemos/proof-troubleshooting/#validate-your-workflow).
+If your workflow does not validate, the console will provide some helpful information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. For pointers and examples on how to use this validation tool, check out our [troubleshooting documentation](/dasldemos/proof-troubleshooting/#check-the-workflow-metadata).
 
 
 
