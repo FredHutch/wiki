@@ -232,9 +232,6 @@ Check on the remote system that you have a `DISPLAY` environment variable set us
 
 Your SSH config supports multiple 'stanzas' to help you as your config may not be the same for remote hosts. The 'stanza' keyword is `Host`. In the example below, everything from one `Host` line to the next `Host` line is applied the specified host.
 ```
-Host *.fhcrc.org !snail.fhcrc.org
-	ProxyJump snail.fhcrc.org
-
 Host *.fhcrc.org
 	UseKeychain yes
 	AddKeysToAgent yes
@@ -244,36 +241,10 @@ Host *.fhcrc.org
 	ForwardAgent yes
    	User <username>
 ```
-This config contains all of the features mentioned above and will apply them to all `fhcrc.org` hosts. It will use `snail` (the SSH gateway host) for all hosts except `snail` itself, as this would create a loop. *You must place your username in the code above*.
+SSH does not do DNS resolution before consulting the config file, so typing `ssh rhino` (or any short hostname without domain) will not trigger the `*fhcrc.org` Host entries. You can add `rhino` to the Host line to have this trigger the config as well.
 
-One final note - SSH does not do DNS resolution before consulting the config file, so typing `ssh rhino` (or any short hostname without domain) will not trigger the `*fhcrc.org` Host entries. You can add `rhino` to the Host line to have this trigger the config as well.
+## Access From Outside the Campus
 
-## Access via a Remote Location
+The campus network is protected by a firewall which prevents connections from the wider Internet to FHCC compute resources.  For remote connections FHCC IT provides a VPN agent that creates a tunnel from your workstation into the campus network allowing you to use FHCC compute resources as if you were connected to the campus network.
 
-Fred Hutch supports use of a VPN to remotely connect with our network. The network is protected by a firewall and there are currently 2 options to get access to resources inside the network, using VPN or the SSH gateway `snail.fhcrc.org`. This is allowed as all SSH communication is encrypted, and the gateway system is audited.
-
-### VPN
-
-The Fred Hutch desktop VPN service is the default choice for all remote connections. The VPN client is only available on Hutch managed (imaged and installed) devices and requires a HutchNet ID to log in.  For assistance and help with the VPN you can contact the IT Service Desk (see also the [VPN page on CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html))
-
-### ssh to `snail.fhcrc.org`
-
-Snail is a SSH gateway (also called bastion host or jump host) you can use to get remote access if you do not require the features that VPN provides. Using SSH can be easier for some users, for example if you have a network printer at home you cannot use it while connected to VPN.
-If you are outside the Fred Hutch network, use the following to connect to the Snail gateway first:
-
-`ssh username@snail.fhcrc.org`
-
-Once you are connected, from there you can then connect to the `rhinos`:
-
-`ssh username@rhino`
-
->Note:  When you disconnect from `rhino`, you will also then need to disconnect from `snail` as well. 
-To avoid this two step process, for example if you connect this way very often, you can add these 2 lines your ~/.ssh/config file you only have to type `ssh` once.
-
-```
-    Host rhino*.fhcrc.org
-    ProxyCommand ssh yourusername@snail.fhcrc.org exec nc %h %p 2> /dev/null
-```
-If you are outside the Fred Hutch network type `ssh rhino.fhcrc.org` to use the snail gateway and if you are inside type `ssh rhino` to bypass the gateway.
-
-Please see [this page](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts) to learn more about ProxyCommand.
+The VPN client is only available on Hutch managed (imaged and installed) devices and requires a HutchNet ID to log in.  For assistance and help with the VPN you can contact the IT Service Desk (see also the [VPN page on CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html))

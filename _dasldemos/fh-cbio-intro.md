@@ -236,6 +236,7 @@ There are many publicly available formatting tools that may help with the format
 | [shah-cbioportal-tools](https://github.com/shahcompbio/cbioportal-tools)                      | Specifically for formatting Copy Number Data expects a seg file and TITAN output      | - Could potentially be used for tools other than TITAN that generate a seg file                   | - Specific for TITAN outputs                                                                                          | [shah-cbioportal-tools](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/05_useful_tools/shah-cbioportal-tools) |
 
 ## Quick Links
+- [Fred Hutch cBioPortal Demo Day Recording](https://fredhutch.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1e1ae5d3-8b2f-4be7-acc6-b2290121babc)
 - [Public instance of cBioPortal](https://www.cbioportal.org/)
 - [cBioPortal data formatting instructions](https://docs.cbioportal.org/file-formats/#introduction)
 - [Fred Hutch data formatting tips and tools](https://github.com/FredHutch/cbioportal-data-formatting)
