@@ -1,167 +1,119 @@
 ---
 title: How to Use PROOF
-main_authors: vortexing, sitapriyamoorthi
-primary_reviewers: vortexing
 ---
 
-
-**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](https://docs.openwdl.org/en/1.0.0/) (Workflow Description Language) workflows using the [**Cromwell**](https://cromwell.readthedocs.io/en/stable/) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
-
-- Automate all the backend configurations necessary to run your workflows instantly.
-
-- Validate, troubleshoot, assess performance, and run their workflows all under one roof.
-
-- Refine their workflows before potential transitions to cloud-based infrastructures, providing a 'proofing' resource of sorts.
-
-This guide is intended to describe how you can run PROOF, catering to varying levels of computational expertise. We also have a [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) guide that will be a quick-start guide to building a WDL workflow.
-
-## Background
-
-*What is WDL?*
-
-**Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile, [open specification](https://openwdl.org/), workflow framework for executing bioinformatics and computational workflows. WDL offers:
-
--   A **standardized** and **modular** approach to specifying and combining computational tasks, inputs, outputs, and dependencies.
-  
--   A task-oriented approach promoting **code reuse** and modularity.
-  
--   Support for **parallel execution**, enabling efficient processing of large datasets.
-  
--   Explicit data type definitions and **immutability of variables** by default, ensuring data consistency.
-  
--   Built-in support for specifying **data locations**, facilitating seamless collaboration across environments.
-  
--   Support for **scatter-gather** operations, improving workflow performance.
-  
--   **Flexible syntax** for concise and readable workflow definitions.
-  
--   **Platform independence**, allowing WDL workflows to run across different environments.
-  
--   Requirement of a **scientific workflow engine** like Cromwell for interpreting and executing WDL on various backends, enhancing usability and versatility.
+This guide is intended to describe how to use the [**PROOF** app](https://proof.fredhutch.org) (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) to run [**WDL**](https://sciwiki.fredhutch.org/compdemos/Cromwell/#writing-workflows) workflows on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). Learn more about PROOF on its [SciWiki product page](https://sciwiki.fredhutch.org/datascience/proof/), read through our [quick-start guide](https://hutchdatascience.org/Developing_WDL_Workflows/) to building a WDL workflow, and check out our pre-built [WILDS WDL workflows](https://github.com/getwilds?q=ww-&type=all&language=&sort=) for ready-to-submit bioinformatic pipelines.
 
 
-*What is Cromwell?*
-
-[Cromwell](https://github.com/broadinstitute/cromwell), originally developed at the Broad Institute, is a WDL workflow engine, that facilitates the orchestration of multi-step workflows. It efficiently handles individual tasks, monitors job metadata, offers an intuitive API interface, and enables users to oversee multiple workflows concurrently. While other WDL engines exist, here are some of the reasons Cromwell stands out:
-
--   **Integration with the Fred Hutch cluster:** Cromwell has been configured to run on the Fred Hutch cluster to make running WDL workflows very simple. Additionally, it seamlessly integrates with various cloud platforms and workflow description formats, enhancing compatibility and facilitating workflow execution across different computing infrastructures.
-
--   **Robust Workflow Management**: Cromwell offers a robust engine for managing complex workflows, ensuring efficient execution of tasks and streamlined workflow orchestration.
-
--   **Scalability**: With its ability to handle large-scale workflows, Cromwell accommodates projects of varying sizes, from small-scale analyses to large-scale data processing pipelines.
-
--   **Comprehensive Job Monitoring**: It provides comprehensive job monitoring and metadata tracking, enabling users to closely monitor workflow progress, identify bottlenecks, and troubleshoot issues effectively.
-
--   **Community Support and Documentation**: Cromwell benefits from a supportive community and extensive documentation, offering users access to resources, tutorials, and community-driven solutions to common challenges.
-
--   **Open Source and Customizable**: Being open-source, Cromwell allows for customization and adaptation to specific workflow requirements, empowering users to tailor workflows to their unique needs and preferences.
 
 
-*How should we use Cromwell?*
-
-In general, Cromwell works best when run in **server mode**, which means that users start a **Cromwell server** as a job on our local SLURM cluster that can connect to a **database** specifically for Cromwell workflow tracking.
-  
-This Cromwell server job then behaves as the workflow **coordinator** for that **user**, allowing a user to send workflow instructions for **multiple workflows** running simultaneously.
-
-The Cromwell server will then **parse** these workflow instructions, find and copy the relevant input files, **send** the tasks to the cluster (Gizmo) to be processed, **coordinate** the results of those tasks and **record** all of the metadata about what is happening in its database.
-
-This means that individual users can:
-
- - Run **multiple independent workflows** at the same time using **one Cromwell server**
-
- - Use **cached results** when identical to the current task
-
- - **Track** the status of workflows and tasks
- 
- - **Customize** the locations of input data, intermediate data, and workflow outputs into data storage resources appropriate to the data type (re: cost, backup, and accessibility)
-
- - **Query** the Cromwell database for information about workflows run in the past, including where their workflow outputs were saved or a variety of other workflow and task level metadata.
- 
-> Quick note: the Cromwell server is referred to as a PROOF server in these instructions. PROOF handles setting up the Cromwell server for you.
 
 ## Using PROOF
-
 The following diagram shows basic usage of PROOF once you have done the preliminary setup. Each box corresponds to a section in the documentation.
 
-![](/dasldemos/assets/proof_101_workflow.png)
+![](/dasldemos/assets/proof_101_workflow.png) 
 
-**Preliminary Setup**
 
+
+
+
+### Before you begin
 Before you begin using PROOF, make sure you have the following:
 - [Valid Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
 - Access to the Fred Hutch network
-    - If on-campus, make sure you are connected to the Marconi network.
+    - If on-campus, make sure you are connected to the Fred Hutch network.
     - If off-campus, make sure you connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn).
 - [Access to the rhino cluster of Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-clusters)
-- [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
+- [AWS credentials (if you have files stored on S3 that are required to run your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 
 
-### Starting a PROOF Server
-The most user-friendly way to validate, submit, track, troubleshoot, and (if needed) abort your WDL workflows is through our [Fred Hutch PROOF Shiny app](https://proof.fredhutch.org). This Shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
 
-![welcome](/dasldemos/assets/proof_shiny_app_welcome.png) 
 
-The first step is to log in to PROOF. 
+
+### Log in to PROOF
+
+The first step in the process is to login by clicking the green **PROOF Login** button.
 
 ![login](/dasldemos/assets/proof_101_shinyapp_proof_login.png) 
 
-When you click "PROOF Login", a box will appear where you will input your Hutch credentials and then click submit.
+When you click "PROOF Login", a pop-up will appear where you need to input your Hutch credentials and then click submit.
 
-![login_2](/dasldemos/assets/proof_101_shinyapp_proof_login_2.png)
+![login_popup](/dasldemos/assets/proof_101_shinyapp_proof_login_2.png)
 
-You know you are logged in when the page refreshes automatically and you see the red log out button appear.
+You'll know you are logged in when the page refreshes automatically and a red logout button appears in the top right corner.
 
-![login_2](/dasldemos/assets/proof_101_shinyapp_logged_in.png)
+![login_2](/dasldemos/assets/proof_101_shinyapp_loggedin.png)
 
-Next click on "PROOF Servers" to take you to the page where you can start a server.
+
+
+### Setup your PROOF server
+
+**Starting a PROOF server**
+
+First, you'll need to create what is called a PROOF server, which is essentially a scheduler/coordinator of all the tasks you submit via PROOF. It takes care of the complicated stuff underneath the hood involving SLURM so you don't have to. To get started, click on the "Server" tab at the top of the page.
 
 ![start_server](/dasldemos/assets/proof_101_shinyapp_start_server.png)
 
-Click "Start" to open up a dialog box that asks for optional credentials to start your PROOF Server.
+From there, click "Start a PROOF Server" to open up a dialog box that asks for optional information to start your PROOF Server.
 
 ![start_server_2](/dasldemos/assets/proof_101_shinyapp_start_server_2.png)
 
-The majority of people usually are only authorized to work under one SLURM account (working under one PI = one SLURM account). In this case, just hit start and all Cromwell configurations will default under the SLURM account you are authorised under.
+The majority of people are only authorized to work under one [SLURM account](/scicomputing/compute_jobs/#account) (working under one PI = one SLURM account). In this case, just hit start and the Cromwell configuration will default to the SLURM account you are authorized under.
 
-However, if you have more than one SLURM account that you can work under, then here is your chance to enter the most appropriate one (for example you could be authorized to do work under two PI's with SLURM accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b" enter pi_b where it asks for SLURM account). 
+However, if you have more than one SLURM account that you can work under, then here is your chance to enter the most appropriate one. For example, you could be authorized to do work under two PI's with SLURM accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b", enter "pi_b" where it asks for SLURM account.
 
 ![start_server_3](/dasldemos/assets/proof_101_shinyapp_start_server_3.png)
 
-You know your server is up and running when the page auto-refreshes and you see the "Start" button gray out and information about your server populated below. 
+You know your server is up and running when the page auto-refreshes, the "Start" button grays out, and information about your server populates below. 
 
 ![start_server_4](/dasldemos/assets/proof_101_shinyapp_start_server_4.png)
 
 > Initially, setting up a PROOF Server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
 
-There will be two sections of information that you would like to pay attention to which should be populated with details that will be relevant. 
+There will be two sections of server information populated with relevant details. These details may take a moment to appear on the page, even if your server is already running.
 
 **Server information**
-- Job status: it should say "RUNNING"
-- Workflow log directory: Gives you the path to where your workflow logs will reside
-- Scratch directory: Gives you the path to where your workflow outputs will go
-- Server-time: It tells you how long your PROOF Server will be "alive". By default this is set to 7 days
-- SLURM job account: The SLURM account (default/or if specified) under which your jobs should be running 
+- Job status: should say "RUNNING"
+- Workflow log directory: path where your workflow logs will be saved
+- Scratch directory: path where your intermediate workflow data will be saved (`/hpc/temp/` by default)
+- Server-time: how long your PROOF Server will be "alive" (set to 7 days by default)
+- SLURM job account: SLURM account (default/or if specified) under which your jobs should be running 
 
 **Troubleshooting**
-- SLURM job ID: This is the PROOF server job ID. You can use this to cancel your PROOF server through `rhino`
-- Cromwell directory: The path to where you main Cromwell directory exists 
-- Server log directory: The path to where logs associated with the PROOF server exists
-- Singularity cache directory: Path to Singularity cache directory
-- Use AWS?: This defaults currently to FALSE
+- SLURM job ID: PROOF server job ID that can be used to cancel your PROOF server through `rhino`
+- Cromwell directory: path of your main Cromwell directory 
+- Server log directory: path where logs associated with the PROOF server will be saved
+- Singularity cache directory: path where Singularity/Apptainer/Docker images will be saved for caching purposes
+- Use AWS?: This option is not currently available but may be in future.
 - Cromwell URL: URL for PROOF server
 
-Once your server is ready for use, you should receive an email from PROOF API ![email](/dasldemos/assets/proof_101_shinyapp_email.png)
+Once your server is ready for use, you should receive an email from PROOF API like the one shown below:
+![email](/dasldemos/assets/proof_101_shinyapp_email.png)
+
+**Stopping a PROOF server**
+
+Finally, if your workflow has finished running and you're done with your server before its 7-day lifespan, you can stop your PROOF server manually. At the bottom of the PROOF server tab, click "Stop a PROOF Server":
+
+![proof_101_shiny_app_delete_server_1](/dasldemos/assets/proof_101_shiny_app_delete_server_1.png)
+
+A pop-up box will show up and ask you to confirm that you would like to stop your server as this action cannot be undone, but you can always start up a new server anytime!
+
+![proof_101_shiny_app_delete_server_2](/dasldemos/assets/proof_101_shiny_app_delete_server_2.png)
 
 
-### Validating Your WDL Workflow
 
-Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL/JSONs) using the "Validate" tab.
+
+
+
+### Validate a WDL workflow
+
+Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. If you already have a workflow ready, you can optionally do a "dry run" with your workflow files (WDL/JSONs) using the 'Validate' tab. This tab checks to see if your workflows are formatted correctly before you submit them, to save you time in case they are not runnable.
 
 ![validate](/dasldemos/assets/proof_101_shinyapp_validate.png)
 
-You can upload your WDL workflow file and associated JSON file into the respective upload boxes. You can do this by either dragging the files into the upload boxes or browsing to the directory where the workflow and JSON files are stored. Once uploaded, click validate.
+You can upload your WDL workflow file and associated JSON file into the upload boxes by either dragging the files into the respective boxes or browsing to the directory where the workflow and JSON files are stored. Once uploaded, click 'Validate Workflow'.
 
->Note: If you have more that one JSON file required to run your WDL workflow **DO NOT** upload any JSON files. You can still validate your WDL workflow but uploading only one JSON file (when two are needed) will not validate. 
+>Note: If you have more than one input JSON file required to run your WDL workflow, you'll need to consolidate them and upload them as a single file. If you do not consolidate them and only upload one, the WDL will not validate correctly.
 
 The validation process evaluates several things:
 
@@ -169,198 +121,262 @@ The validation process evaluates several things:
 -   Verifies that they are properly formatted.
 -   Confirms that the tasks are wired up correctly.
 
-> Note : During a dry run, Cromwell does not test the availability of your input files. This is because Cromwell can access files from a variety of sources, including local filesystems, AWS S3, Google buckets, and Azure blobs. Testing for input availability only happens when you execute the workflow for the first time. If some input files are missing, Cromwell will continue to execute tasks for the available input files while skipping tasks where inputs cannot be located.
+> Note: During a dry run, Cromwell does not test the availability of your input files. This is because Cromwell can access files from a variety of sources, including local filesystems, AWS S3, Google buckets, and Azure blobs. Testing for input availability only happens when you execute the workflow for the first time. If some input files are missing, Cromwell will continue to execute tasks for the available input files while skipping tasks where inputs cannot be located.
 
-Here is an example from the [test workflows](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation
+Here is an example from a ["hello world" workflow](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation:
 
 ![validate_2](/dasldemos/assets/proof_101_shinyapp_validate_2.png)
 
-If your workflows and accompanying JSON files are validated you should see in the  console below 
-`$valid`
-`[1] TRUE`
+If your workflow and accompanying JSON files are validated, you should see `$valid` `[1] TRUE` in the textbox beneath the submission form.
 
-If your workflow does not validate, the console will provide some "helpful" information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. 
+If your workflow does not validate, the console will provide some helpful information on what could potentially be wrong. You can then go back to the drawing board to fix the errors and re-validate. For pointers and examples on how to use this validation tool, check out our [troubleshooting documentation](/dasldemos/proof-troubleshooting/#check-the-workflow-metadata).
 
 
-### Submitting Your WDL Workflow 
 
-Congratulations! At this point, you should have a validated WDL workflow and you are ready to submit your job. 
 
-To submit your job click the "Submit Jobs" tab on the left
 
-![proof_101_shiny_app_submit_1](/dasldemos/assets/proof_101_shiny_app_submit_1.png)
+### Submit a WDL workflow run
 
-This will open up the "Submit Jobs" page:
+Congratulations! At this point, you should have a validated WDL workflow and you are ready to submit your job. First, click on the "Submit" tab on the top menu bar to open up the "Submit a Workflow" page:
 
 ![proof_101_shiny_app_submit_2](/dasldemos/assets/proof_101_shiny_app_submit_2.png)
 
-Here you can do the following: 
-
-- Upload your WDL workflow 
-
-- Upload up to three different JSON files that accompany your workflow.
-
-> Note: You can run a workflow with no input JSON or 1-3 input JSONs. If you have multiple JSONs, note that these will be concatenated or the second will overwrite the first if the same variable is declared in both.  You can upload a workflow options JSON, as well as providing text labels of your choosing to workflows if you'd like.
-
-- Add a primary and secondary workflow label to easily track them 
+Here you can upload your WDL workflow and its associated input/options JSON files. If desired, you can also add a primary and secondary workflow label to easily track your workflows (e.g., compare versions or batches). If you do not add a primary label, PROOF will autopopulate a label upon submission with an adjective and animal (e.g., "InquisitivePenguin").
 
 > Note: As you upload your files look for the blue uploading progress bar below the upload box. If you need to add files different from the ones uploaded, click the "Reset" button. This will clear **all** the upload fields allowing you to upload a new set of files. 
 
-Once everything is uploaded, click the "Submit Workflow" button. 
-
-You will know that your submission has worked once you see a little table output on the same page!
+Once everything is uploaded, click the "Submit Workflow" button. When your submission is done, you will see a confirmation and workflow ID appear below the submit button on the form. Depending on your window size, you may need to scroll down. 
 
 ![proof_101_shiny_app_submit_3](/dasldemos/assets/proof_101_shiny_app_submit_3.png)
 
-This output table has an ID which a long string of letters as numbers that you can use to follow-up on your workflow in the "Track Jobs" tab. This workflow id string is unique to an individual workflow run, so if you run the same workflow a second time, you'll get a different string. This means that this unique identifier string can be used to help understand the data source file(s) used to generate each set of results files, helping make your work reproducible.
+The workflow ID is a long string of letters and numbers. This string is unique to an individual workflow run, so if you run the same workflow a second time, you'll get a different string. This means that this unique identifier string can be used to help understand the data source file(s) used to generate each set of results files, helping make your work reproducible.
 
->Note: You don't need to copy this workflow ID, we have a nifty copy button in the "Track Jobs" tab !
+> Note: You don't need to copy this workflow ID, it will appear on the 'Track Workflows' screen along with the workflow name and label(s).
 
 
-### Tracking Your Submitted Jobs
 
-Once you've submitted a workflow, you can track the status of your submitted workflows using the "Track Jobs" tab
+
+
+### Track WDL workflow runs
+Once you've submitted a workflow, you can track the status of your submitted workflow runs using the "Track Jobs" tab:
 
 ![proof_101_shiny_app_track_jobs_1](/dasldemos/assets/proof_101_shiny_app_track_jobs_1.png)
 
 **Filter submitted jobs you want to track**
-You can filter your jobs 3 different ways! Initially this is likely not needed, however as PROOF can manage several different workflows running at once you'll eventually want to filter results to track specific work at a time.  
+
+In the "Workflow Runs" table, you can filter your jobs three different ways: 
+
+1. Submission date range
+2. Workflow name provided in the WDL script
+3. Job status
+
+> Note: You can use all these three options in succession. For example, you can display as many days of workflow history as you'd like, filter that result for workflows with a specific name or with specific status(es) like 'failed', 'succeeded', etc. This can help if you have submitted a LOT of workflows and you don't want to see them all, or if the PROOF server is still busy working through all of your submissions and recording their status.
+
+Once you are done filtering down to your choices and click "Update View", the relevant workflows will be returned and you'll see a comprehensive list of details about those workflows. Initially, this filtering is likely not needed, however as you submit more analyses via PROOF (potentially at the same time), you'll eventually want to filter results to track specific work over time.
 
 ![proof_101_shiny_app_track_jobs_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_2.png)
 
-You can filter submitted jobs based on: 
-1. Days since your server was started
-	> Note: This maxes out 7 days. And displays history of the current PROOF server. 
-
-2. Using the custom workflow name you have given when you submitted your job
-
-3. Based on the status of the job
-
-> Note:  You can use all these three options in succession. For example  you can display as many days of workflow history as you'd like, filter that result for workflows with a specific name or with specific status(es) like 'failed', 'succeeded', etc. This can help if you have submitted a LOT of workflows and you don't want to see them all, or if the PROOF server is still busy working through all of your submissions and recording their status.
-
-Once you are done filtering down to your choices and click "Update View", the relevant workflows will be returned and you'll see a visual representation on  those workflows.  
-
-![proof_101_shiny_app_track_jobs_3](/dasldemos/assets/proof_101_shiny_app_track_jobs_3.png)
-
-Below this tab you will also see a graph showing "Workflow Timing" information along with outcomes (Graph legend = "Status"). The x-axis shows how long it took to run a particular workflow and the y-axis will show you which workflow (from a potentially filtered list of workflows)
+Next to "Workflow Runs", you will also see a tab for "Workflow Timing" which displays a graph containing timing information along with workflow outcomes (Graph legend = "Status"). The x-axis shows how long it took to run a particular workflow and the y-axis shows workflow name (from a potentially filtered list of workflows).
 
 ![proof_101_shiny_app_track_jobs_4](/dasldemos/assets/proof_101_shiny_app_track_jobs_4.png)
 
-Finally below this visual representation of all your workflow runs you will see a "Workflows Run" table showing metadata for each workflow.  Click on the workflow you're interested in to populate the rest of the tables (below). 
+### Abort a WDL workflow run
 
-> Note: Next to each workflow in the table we have a nifty "copyID" button that you can use to copy your workflow ID for use elsewhere in the app. 
- 
-![proof_101_shiny_app_track_jobs_5](/dasldemos/assets/proof_101_shiny_app_track_jobs_5.png)
-
-You can also see a visual summary of the workflow below
-
-![proof_101_shiny_app_track_jobs_6](/dasldemos/assets/proof_101_shiny_app_track_jobs_6.png)
-
-**Track workflow-level details**
-
-To get more information on a particular workflow select a workflow and you'll see some summary information about that workflow as you scroll down.
-
-![proof_101_shiny_app_track_jobs_7](/dasldemos/assets/proof_101_shiny_app_track_jobs_7.png)
-
-You can see a plot of the timing and outcomes of each call in that workflow.
-
-![proof_101_shiny_app_track_jobs_8](/dasldemos/assets/proof_101_shiny_app_track_jobs_8.png)
-
-**Track call-level details**
-
-To get more detailed information about each "task" in your WDL workflow you can scroll down to see the "Job List" table.  This table has usefule information such as the directory where the job is working (callRoot), its SLURM "job_ID" , what computing resources or software environment were used, and the job's status.  
-
-![proof_101_shiny_app_track_jobs_9](/dasldemos/assets/proof_101_shiny_app_track_jobs_9.png)
-
-You can then click on a specific task of choice to get more information on that specific task/call.
-
-You can use the Job Failures, Call Caching, tables to retrieve information relevant to those processes.  You can do this by clicking the "Get/Refresh ... Metadata" buttons (sometimes for complex workflows these can be quite large, and thus they do not load until you want them).  You can also choose to download these tables if you like. 
-
-![proof_101_shiny_app_track_jobs_10](/dasldemos/assets/proof_101_shiny_app_track_jobs_10.png)
-
-**Tracking the location of your outputs**
-
-Finally, once a workflow's outputs have all been created successfully, Cromwell can tell you (and this Shiny app can help you download) a table showing where to find the workflow outputs (note this is not every file created, only the ones you specify as "results" using the WDL file's "workflow output" block).  
-
-This lets you find output files and interact with them, archive them, or otherwise copy them to longer term storage for use.  
-![proof_101_shiny_app_track_jobs_11](/dasldemos/assets/proof_101_shiny_app_track_jobs_11.png)
-
-### Troubleshooting
-
-Last, there is the Troubleshoot tab.  Here you can do things like Abort running workflows or get a complete metadata output for the entire workflow to parse yourself to try to find what's happening with your workflow if it failed running. 
-
-![proof_101_shiny_app_troubleshoot_1](/dasldemos/assets/proof_101_shiny_app_troubleshoot_1.png)
-
-**Abort a workflow**
-
-Sometimes you realize you want to kill a workflow.  Using the workflow_id, you can kill specific workflows using this box.  
+Sometimes, due to unforeseen circumstances, you might realize you want to prematurely stop a workflow. On the far right of each entry in the "Workflow Runs" table, you'll notice an "Abort Workflow" button. To cancel a specific workflow run, simply click the corresponding "Abort Workflow" button and it should update to "Workflow aborted!" upon successful cancellation.
 
 ![proof_101_shiny_app_abort_1](/dasldemos/assets/proof_101_shiny_app_abort_1.png)
 
 > Note: it will take Cromwell some time to coordinate SLURM job cancellations particularly for complex workflows, but it will clean everything up for you. 
 
-![proof_101_shiny_app_abort_2](/dasldemos/assets/proof_101_shiny_app_abort_2.png)
 
-**Troubleshoot a workflow**
+### Get workflow run details
+On the "Track workflows" page, you'll notice that each entry has a "**Workflow Details**" button just above the "Abort Workflow" button. If you have a particular workflow run of interest that you'd like a detailed status report on, click on the corresponding "Workflow Details" button to dig into the details of the jobs within the workflow of your interest. 
 
-Especially in the beginning if you have catastrophic workflow failures and you can't even figure out what's going on, you can come back to this Troubleshoot box to retrieve the entire, unformatted JSON output of all metadata Cromwell has about your workflow.  You probably are better served by the "Track Jobs" tab for checking how your workflow is going, but if there's nothing there that's helpful, then this box is where you'll want to go.  
+![view_workflow_details](/dasldemos/assets/proof_101_shiny_app_track_jobs_5.png)
 
-![proof_101_shiny_app_troubleshoot_2](/dasldemos/assets/proof_101_shiny_app_troubleshoot_2.png)
+On this page, you'll notice nine sub-tabs containing different kinds of metadata about the workflow run of interest:
 
-![proof_101_shiny_app_troubleshoot_3](/dasldemos/assets/proof_101_shiny_app_troubleshoot_3.png)
+![workflow_details_job_list](/dasldemos/assets/proof_101_shiny_app_track_jobs_7.png)
 
-> Note: this output is not for the faint of heart, but it will give you hints once you get used to understanding what Cromwell is telling you.  
+**Job List**
 
-### Stopping a PROOF server
+The first page upon clicking "Workflow Details" will be the **Job List** page (see screenshot above). This provides a wealth of details about each task within the workflow, things like status, duration, working directory, software environment, CPU/memory usage, and logfile locations. You can download the entire table shown here by clicking the **Download Workflows Jobs Data** button. You can also adjust the number of entries to view in a given page by adjusting the "Show ____ entries" dropdown.
 
-Finally if your workflow has finished running before the 7-day timeline (or whatever custom time you set up) you can go ahead and stop your PROOF server. 
 
-Go back to the PROOF server tab and click Stop Server
+<!-- | **Field**                  | **Description**                                                                                                                                                                |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **detailedSubName**        | Detailed name for the sub-task or call.                                                                                                                                      |
+| **callName**               | The name of the task or call.                                                                                                                                                 |
+| **executionStatus**        | Current status of the task or call.                                                                                                                                          |
+| **shardIndex**             | The specific sub-task or call being processed within a parallelized workflow.                                                                                                |
+| **callRoot**               | Path to the directory where outputs of a specific workflow task or call are stored.                                                                                          |
+| **start**                  | Start date and time of the task or call.                                                                                                                                     |
+| **end**                    | End date and time of the task or call.                                                                                                                                       |
+| **callDuration**           | Total time taken to finish the task or call.                                                                                                                                 |
+| **docker**                 | The Docker container used to perform the task or call.                                                                                                                       |
+| **modules**                | The module used to perform the task or call, if applicable.                                                                                                                 |
+| **workflowName**           | Name of the workflow.                                                                                                                                                         |
+| **stdout**                 | Contains all standard output messages generated by commands run within the task, such as print statements or command-line output.                                            |
+| **compressedDockerSize**   | Size of the compressed Docker image used for the task.                                                                                                                      |
+| **returnCode**             | Exit code of the task's command; 0 indicates success, and any non-zero value indicates an error.                                                                             |
+| **backend**                | Execution environment or platform (e.g., Local, Google, AWS Batch, SLURM) where the task is run.                                                                            |
+| **stderr**                 | All error messages and diagnostic output generated by the task's command, stored in a file within the task’s execution directory.                                             |
+| **attempt**                | Number of times a task has been retried; 1 represents the first attempt, with higher numbers for subsequent retries.                                                          |
+| **failOnStderr**           | Parameter that, when set to true, causes the task to fail if any output is written to `stderr`, treating error messages as fatal.                                            |
+| **partition**              | Subset of resources allocated for running the task or call.                                                                                                                  |
+| **continueOnReturnCode**   | Allows the workflow to proceed to subsequent tasks even if the current task returns a specified non-zero exit code, permitting certain failures without halting the workflow. |
+| **gpus**                   | Specifies the number of GPU resources requested for the task.                                                                                                               |
+| **maxRetries**             | Maximum number of times a task can be retried upon failure, allowing automated attempts to complete the task before ultimately failing the workflow.                         |
+| **cpu**                    | Number of CPU resources allocated for the task.                                                                                                                              |
+| **memory**                 | Amount of RAM allocated for the task.                                                                                                                                         |
+| **commandLine**            | The exact command executed for a task or call, including any parameters and arguments specified in the WDL script.                                                            |
+| **jobId**                  | Unique identifier assigned by the execution backend (like a cluster or cloud provider) to track and manage the specific job associated with a task or call.                  |
+| **backendStatus**          | Status of a task or call on the execution backend, showing states like "Queued," "Running," or "Done."                                                                       |
+| **dockerImageUsed**        | Specific Docker image utilized for running the task.                                                                                                                          |
+| **workflow_id**            | Unique identifier assigned to each workflow run.                                                                                                                              | -->
 
-![proof_101_shiny_app_delete_server_1](/dasldemos/assets/proof_101_shiny_app_delete_server_1.png)
 
-A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidentally end your server.
 
-![proof_101_shiny_app_delete_server_2](/dasldemos/assets/proof_101_shiny_app_delete_server_2.png)
+**Workflow Description**
+
+The workflow description tab provides summary details of the overarching workflow run, such as status, duration, workflow ID, and user-provided labels.
+
+![workflow_description](/dasldemos/assets/proof_101_shiny_app_track_jobs_6.png)
+
+<!-- | Field                             | Description                                                                                     |
+|-----------------------------------|-------------------------------------------------------------------------------------------------|
+| **workflowName**                  | Name of your workflow               |
+| **workflowRoot**                  | The root directory of the workflow, where the workflow files and any associated resources are stored. |
+| **submission**                    | The timestamp indicating when the workflow was submitted for execution.                       |
+| **start**                         | The timestamp marking the beginning of the workflow execution.                                 |
+| **end**                           | The timestamp when the workflow execution completed.                                          |
+| **status**                        | The current state of the workflow (e.g., Completed, Running, Failed).                        |
+| **workflowDuration**              | The total time taken for the workflow to execute, typically displayed in a human-readable format (e.g., minutes, hours). |
+| **actualWorkflowLanguageVersion** | The version of the Workflow Description Language that the workflow adheres to.                 |
+| **actualWorkflowLanguage**        | The programming or scripting language used in the workflow, usually WDL for Cromwell.        |
+| **workflow_id**                  | A unique identifier assigned to the workflow run, which can be used to track or reference it in logs or reports. |
+| **secondaryLabel**               | An optional label that can be used to provide additional categorization or identification for the workflow run. |
+| **Label**                         | A general label for the workflow that can provide additional context or categorization.       |
+| **workflowType**                  | The type of workflow being executed, which might include designations such as "AppSubmission" |
+| **root**                          | Similar to `workflowRoot`, this field indicates the main directory or starting point for the workflow. |
+| **option**                        | A parameter or setting that can modify the behavior of the workflow, often specified at submission time. |
+| **workflowUrl**                  | A URL linking to the workflow's details or execution logs, useful for debugging or review purposes. | -->
+
+**Diagram**
+
+This tab produces a pictorial representation of you workflow to understand how different tasks are connected.
+
+> Note: currently, this visualization tool does not support "Object" datatypes, which were rendered obsolete in WDL v1.1+.
+
+![Diagram](/dasldemos/assets/proof_101_shiny_app_track_jobs_9.png)
+
+**Job Failures**
+
+If one or more of your tasks fail, this tab is where you will find information about what may have happened. To populate the table with failure metadata, click the "Get/Refresh Failed Job Metadata" button. You can also download the table on this page using the "Download Call Failure Data".
+
+![Job_failures_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_11.png)
+
+<!-- | Field               | Description                                                                                  |
+|---------------------|----------------------------------------------------------------------------------------------|
+| **callName**        | The name of the specific task/call within the workflow that failed.                       |
+| **workflow_id**     | A unique identifier assigned to the workflow run    |
+| **shardIndex**      | The index of the shard in the case of parallel execution, indicating which subset of data failed. |
+| **attempt**         | The number of attempts made to execute the call, useful for tracking retries.                |
+| **failures.message**| The error message or reason provided for the failure, giving insight into what went wrong.   |
+| **workflowName**     | The name assigned to the workflow          | -->
+
+**Call Caching**
+
+Call caching is a feature that allows the reuse of task outputs when the same inputs and commands have been provided. This significantly improves efficiency by skipping redundant computations for tasks that have been previously run with identical parameters. Cached results are automatically invalidated if inputs change or if the task code is updated, ensuring that users always have access to the most current outputs. To populate the table with caching metadata, click the "Get/Refresh Call Caching Metadata" button. You can also download the table on this page using the "Download Call Caching Data".
+
+![Call_caching](/dasldemos/assets/proof_101_shiny_app_track_jobs_12.png)
+
+<!-- | Field                                      | Description                                                                                     |
+|--------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **workflow_id**                            | A unique identifier assigned to the workflow run    |
+| **callName**                               | The name of the specific task/call within the workflow.                                     |
+| **shardIndex**                             | The index of the shard in the case of parallel execution, indicating which subset of data was processed. |
+| **executionStatus**                        | The current status of the task execution (e.g., Running, Succeeded, Failed).                   |
+| **workflowName**                           | The name assigned to the workflow               |
+| **output.analysisReadySorted**             | The output indicating whether the analysis results are sorted and ready for further use.       |
+| **callCaching.effectiveCallCachingMode**   | The mode of call caching applied to the task (e.g., ReadAndWriteCache, CallCahingOff                          |
+| **callCaching.result**                     | Indicates whether the cached result was used for the task execution (e.g., Cache Hit, Cache Miss). |
+| **callCaching.allowResultReuse**          | A flag indicating whether result reuse is permitted for this task.                             |
+| **callCaching.hit**                        | The inputs that matched the cached results, leading to a cache hit for the task.              |
+| **inputs**                                 | The inputs provided to the task for execution, which may include file paths and parameter values. |
+| **returnCode**                             | The exit code returned by the task execution, indicating success (0) or failure (non-zero).   |
+| **jobId**                                  | A unique identifier for the specific job or execution instance of the task.                    |
+| **outputs**                                | The outputs produced by the task, which may include results, files, or other data types.      | -->
+
+
+**Workflow Options**
+
+This tab provides configuration settings that influence the execution and management of the workflow specified by the user. Parameters such as the directory for final outputs, the maximum number of retries for tasks in case of failure, and the failure mode of the workflow (e.g., whether it should continue or abort on errors) can be provided when submitting the workflow. It also includes options for selecting the execution backend, determining whether to read from and write to the cache, and specifying the use of relative output paths. These options help optimize workflow performance, enhance fault tolerance, and manage output handling efficiently.
+
+![Workflow_Options](/dasldemos/assets/proof_101_shiny_app_track_jobs_16.png)
+
+<!-- | Field                             | Description                                                                                      |
+|-----------------------------------|--------------------------------------------------------------------------------------------------|
+| **final_workflow_outputs_dir**    | The directory where the final outputs of the workflow will be written |
+| **maxRetries**                    | The maximum number of times a task will be retried in case of failure, allowing for fault tolerance in execution. |
+| **workflow_failure_mode**         | Specifies the behavior of the workflow in case of failure, such as "Continue" or "Abort".      |
+| **backend**                       | The execution backend used for running the workflow, such as Local, Google Cloud, or AWS.      |
+| **read_from_cache**              | A flag indicating whether to read results from the cache if available, enabling faster execution by avoiding redundant calculations. |
+| **use_relative_output_paths**     | A flag indicating whether to use relative paths for output files instead of absolute paths, which can aid in portability. |
+| **write_to_cache**                | A flag indicating whether to write task results to cache, allowing for future reuse of outputs. | -->
+
+**Workflow Inputs**
+
+This tab shows the user the specific input json file that was used for the workflow run in question. This can be a handy tab especially when trying to troubleshoot errors that are caused due to input issues.
+
+![Workflow_Inputs](/dasldemos/assets/proof_101_shiny_app_track_jobs_14.png)
+
+**Workflow Outputs**
+
+This tab displays the results produced by the executed workflow and where they were saved to. It includes essential information allowing users to easily locate and access the results, thus providing a comprehensive summary of the results generated by the workflow.
+
+![Workflow_Outputs](/dasldemos/assets/proof_101_shiny_app_track_jobs_17.png)
+
+<!-- | Field                | Description                                                                                   |
+|----------------------|-----------------------------------------------------------------------------------------------|
+| **workflowName**     | The name of the workflow, which helps identify the specific workflow that produced the outputs. |
+| **workflowOutputType** | The type of output generated by the workflow, which may include results, reports, or other data types. |
+| **pathToOutput**     | The file path or URI where the output files are located, indicating where results can be accessed. |
+| **shardIndex**       | The index of the shard for outputs generated from parallel execution, indicating which subset of data the output corresponds to. |
+| **workflow_id**      | A unique identifier for the workflow run, used to track or reference the specific execution and its outputs. | -->
+
+
+**Troubleshoot**
+
+Lastly, there is the "Troubleshoot" tab. Here you can access a complete metadata output for the mechanics of the WDL workflow itself, i.e. not the commands within the tasks themselves but rather the connections between tasks. For instance, if the output from one task is improperly linked to the input of the next task, or if the workflow can't find one of the inputs you provided, this is the most likely place where you'll find that error message.
+
+![proof_101_shiny_app_troubleshoot_1](/dasldemos/assets/proof_101_shiny_app_troubleshoot_1.png)
+
+Especially in the beginning, if you have catastrophic workflow failures and you can't even figure out what's going on, you can come to this Troubleshoot box to retrieve the entire, unformatted JSON output of all metadata that Cromwell has about your workflow. For more details on how to use this troubleshooting tool, check out our [PROOF Troubleshooting documentation](/dasldemos/proof-troubleshooting/#validate-your-workflow).
 
 ## Resources and Help
 
-### Where to report bugs and find help
-
-If you find something is not working with the app or you find a bug, please help us make this app better by reporting here:
+### PROOF "Help" Tab
 
 ![proof_101_shiny_app_help](/dasldemos/assets/proof_101_shiny_app_help.png)
 
 ![proof_101_shiny_app_help2](/dasldemos/assets/proof_101_shiny_app_help2.png)
 
-### Useful courses to get started
-#### Cluster computing
+### Useful Courses & Documentation
+
+**Cluster computing**
 - [How to Rhino](https://sciwiki.fredhutch.org/compdemos/howtoRhino/)
 - [Cluster 101](https://leanpub.com/courses/fredhutch/fredhutchcluster101)
 
-#### Building WDL workflows
+**Building WDL workflows**
 - [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/)
 - [Open WDL Documentation](https://docs.openwdl.org/en/latest/)
 
-#### PROOF mechanics
-- [R Client for the PROOF-API](https://github.com/getwilds/proofr)
-- [Shiny Cromwell](https://github.com/getwilds/shiny-cromwell)
-- [rcromwell](https://github.com/getwilds/rcromwell)
+**Additional PROOF documentation**
+- [PROOF GitHub Repository](https://github.com/getwilds/proof)
 - [PROOF Troubleshooting](/dasldemos/proof-troubleshooting)
 
+### Contact Us
+We would love to get feedback on this document from the community and would love to hear how we can make improvements to make this more helpful to you! Feel free to [email](mailto:wilds@fredhutch.org) us or directly make recommendations on [GitHub](https://github.com/FredHutch/wiki/). Or if you'd like to talk through things face-to-face, schedule a [Data House Call](https://calendly.com/data-house-calls/resources) with us! 
 
-## Document Contributions
-We would love to get feedback on this document from the community and would love to hear how we can make improvements to make this more helpful to you! Feel free to [email](mailto:wilds@fredhutch.org) us at or directly make recommendations on [GitHub](https://github.com/FredHutch/wiki/).
-
-**Authors**
-
-- Sitapriya Moorthi ([GitHub](https://github.com/sitapriyamoorthi)/[E-mail](mailto:smoorthi@fredhutch.org))
-- Scott Chamberlain ([GitHub](https://github.com/sckott)/[E-mail](mailto:sachamber@fredhutch.org))
-
-**Reviewers**
-
-- Ted Laderas ([GitHub](https://github.com/laderast)/[E-mail](mailto:tladera2@fredhutch.org))
-- Chris Lo ([GitHub](https://github.com/caalo)/[E-mail](mailto:clo2@fredhutch.org))
-- Taylor Firman ([GitHub](https://github.com/tefirman)/[E-mail](mailto:tfirman@fredhutch.org))
-- Amy Paguirigan ([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
 

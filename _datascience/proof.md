@@ -19,14 +19,36 @@ primary_reviewers: vortexing, abbywall
 - Learn more about developing WDL workflows using our [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/)
 
 ### Technical Documentation and Repositories
-- [PROOF Shiny App](https://github.com/getwilds/shiny-cromwell)
-- [proofr](https://github.com/getwilds/proofr)
-- [rcromwell](https://github.com/getwilds/rcromwell)
+- [PROOF project repository](https://github.com/getwilds/proof)
+    - [shiny-cromwell](https://github.com/getwilds/shiny-cromwell)
+    - [proof-api](https://github.com/getwilds/proof-api)
+    - [proofr](https://github.com/getwilds/proofr)
+    - [rcromwell](https://github.com/getwilds/rcromwell)
 
 ## Release Notes
 See our release notes in the PROOF repo for more details: 
 
-### September 2024 - PROOF v1.1
+### December 2024 - [PROOF v1.2](https://github.com/getwilds/proof/releases/tag/v1.2)
+**What's New**
+
+- **User Interface Upgrade**: After extensive user studies, we have redesigned the user interface of PROOF to 
+provide a better experience for our users throughout their research. By transitioning the framework of our 
+Shiny app to bslib, the new interface will provide:
+    - A cleaner and more modern-looking interface
+    - Improved usability for researchers with less scrolling
+    - An updated version of bootstrap for easier programming and improved performance
+
+**Fixes**
+
+- **Scratch Directory Requirement**: With `/fh/scratch/` becoming read-only in early December 2024, users will now be required to have an `/hpc/temp/` directory in order to use PROOF.
+- **Glob Functionality**: Because `/fh/scratch/` did not allow linkages, [globbing functionality](https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md#glob) was disabled for PROOF, but now that users are moving to `/hpc/temp/`, users can now provide glob arrays as outputs.
+- **Other Minor Improvements**:
+    - Expanded functionality of "zombie killer" process
+    - No longer restricted to `rhino01`
+
+
+
+### September 2024 - [PROOF v1.1](https://github.com/getwilds/proof/releases/tag/v1.1)
 **What's New**
 
 - **Visualization Tabs**: To aid users in visualizing their analyses, we've added two new tabs to the PROOF user interface:
@@ -47,7 +69,9 @@ See our release notes in the PROOF repo for more details:
     - Additional testing for improved CI/CD
     - Easier local instance creation for development purposes
 
-### June 2024 - PROOF v1.0
+
+
+### June 2024 - [PROOF v1.0](https://github.com/getwilds/proof/releases/tag/v1.0)
 **What's New**
 - Users can now interact with data stored in S3 buckets within WDL workflows executed in PROOF! Just make sure to have your AWS CLI credentials [established in Rhino](/scicomputing/access_credentials/#configure-aws-cli) and you can use the S3 path just like any other input.
 - GPU analysis is now possible via the `gpu` argument in your WDL task's runtime section! For an example, try running [this example script](https://github.com/getwilds/ww-test-workflows/blob/main/gpuMatrixMult/gpuMatrixMult.wdl) in the [ww-test-workflows](https://github.com/getwilds/ww-test-workflows) repo of the [DaSL WILDS](https://github.com/getwilds).
@@ -63,6 +87,8 @@ See our release notes in the PROOF repo for more details:
 - Session persistence or "stickiness" has been added to the Shiny app to ensure users only speak to one instance at a time.
 - Table entries that are longer than usual will now be abbreviated to 150 characters or less to ensure a consistent display.
 - A linting GitHub action has been added to the GitHub repository for improved CI/CD. All issues identified by this linting action have also been resolved.
+
+
 
 ### February 2024 - PROOF v0.1
 **What's New!**
