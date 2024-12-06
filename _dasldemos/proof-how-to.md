@@ -50,15 +50,15 @@ You'll know you are logged in when the page refreshes automatically and a red lo
 
 **Starting a PROOF server**
 
-Next, click on "Server" to take you to the page where you can start a server.
+First, you'll need to create what is called a PROOF server, which is essentially a scheduler/coordinator of all the tasks you submit via PROOF. It takes care of the complicated stuff underneath the hood involving SLURM so you don't have to. To get started, click on the "Server" tab at the top of the page.
 
 ![start_server](/dasldemos/assets/proof_101_shinyapp_start_server.png)
 
-Click "Start a PROOF Server" to open up a dialog box that asks for optional information to start your PROOF Server.
+From there, click "Start a PROOF Server" to open up a dialog box that asks for optional information to start your PROOF Server.
 
 ![start_server_2](/dasldemos/assets/proof_101_shinyapp_start_server_2.png)
 
-The majority of people are only authorized to work under one SLURM account (working under one PI = one SLURM account). In this case, just hit start and the Cromwell configuration will default to the SLURM account you are authorized under.
+The majority of people are only authorized to work under one [SLURM account](/scicomputing/compute_jobs/#account) (working under one PI = one SLURM account). In this case, just hit start and the Cromwell configuration will default to the SLURM account you are authorized under.
 
 However, if you have more than one SLURM account that you can work under, then here is your chance to enter the most appropriate one. For example, you could be authorized to do work under two PI's with SLURM accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b", enter "pi_b" where it asks for SLURM account.
 
@@ -92,7 +92,7 @@ Once your server is ready for use, you should receive an email from PROOF API li
 
 **Stopping a PROOF server**
 
-Finally, if your workflow has finished running and you're done with your server before its 7-day lifespan, you can stop your PROOF server manually. Note that your _analyses_ submitted by the server can run for longer than 7 days, it is only the PROOF server that will stop. At the bottom of the PROOF server tab, click "Stop a PROOF Server":
+Finally, if your workflow has finished running and you're done with your server before its 7-day lifespan, you can stop your PROOF server manually. At the bottom of the PROOF server tab, click "Stop a PROOF Server":
 
 ![proof_101_shiny_app_delete_server_1](/dasldemos/assets/proof_101_shiny_app_delete_server_1.png)
 
