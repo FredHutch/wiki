@@ -12,7 +12,7 @@ These use the AMD EPYC processor- the 9354P with 32 cores running up to 3.8GHz. 
 
 ### OS
 
-These new hosts are alwo running the latest LTS release of Ubuntu (Noble Numbat, 24.04).  Again, while there is some compatiblity with the OS on the J and K class gizmo nodes (Bionic Beaver, 18.04), there are many cases where software built on the old gizmo nodes will not run on these.
+These new hosts are also running the latest LTS release of Ubuntu (Noble Numbat, 24.04).  Again, while there is some compatiblity with the OS on the J and K class gizmo nodes (Bionic Beaver, 18.04), there are many cases where software built on the old gizmo nodes will not run on these.
 
 ### Environment Modules
 
