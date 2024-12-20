@@ -27,11 +27,11 @@ Then you can read more about [AWS Storage](/scicomputing/store_objectstore/) and
 Unless otherwise specified, all accounts follow the same pricing model:
 •	S3 usage (sometimes called Economy Cloud) is free up to 100TBs.
 •	After 100TB, the cost is $3/TB/Month. 
-•	There is a free tier for compute that comes standard with every AWS account. After that free tier, charges are pay-as-you-go (minus an 11% discount FHCC has negotiated with AWS). 
+•	There is a free tier for compute that comes standard with every AWS account. After that free tier, charges are pay-as-you-go (minus an 11% discount Fred Hutch Cancer Center has negotiated with AWS). 
 
 In the background, IT pays all AWS charges up front and then bills back to researchers; this is done to maximize the institutional discount. Any credits that get issued to a researcher are redeemed with IT; IT tracks them on researchers’ behalf and subtracts them from monthly bills until the credits have been used. When a researcher begins to use AWS services, they will receive a monthly invoice from IT BizOps with itemized charges; those charges are assigned to grants (Project IDs) and the amounts deducted accordingly. 
 
-Here are some links to learn more. Keep in mind that tools provided by AWS will not reflect FHCC institutional discounts or offerings. However, they can be used to get a general idea of costs):
+Here are some links to learn more. Keep in mind that tools provided by AWS will not reflect Fred Hutch Cancer Center institutional discounts or offerings. However, they can be used to get a general idea of costs):
 •	[AWS Pricing 101](https://aws.amazon.com/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all)
 •	[AWS Pricing Calculator](https://calculator.aws/#/?nc2=pr)
 
