@@ -31,7 +31,10 @@ Requesting the _chorus_ partition and a GPU is all that's required to allocate h
 
 _maestro_ can be accessed via SSH.  At this time we do not have NoMachine available for this node.
 
-This is a shared host- please watch your utilization and limit use of its resources to the very minimum necessary to prove and develop your work.  Once you have confidence that a job will work, submit it to the _chorus_ parition.
+_maestro_ is a shared host- please watch your utilization and limit use of its resources to the very minimum necessary to prove and develop your work.  Once you have confidence that a job will work, submit it to the _chorus_ parition.
+{: .notice--info }
+
+At this time we aren't allocating rstudio or grabnode jobs to chorus nodes.  Interactive sessions are very inefficient and at this time we do not have enough of these GPU resources to support this workload.
 {: .notice--info }
 
 ## Last Word
