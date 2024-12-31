@@ -5,15 +5,20 @@ main_author: John Dey
 primary_reviewers: 
 ---
 
+How to use AlphaFold3 on the new chorus GPU nodes.
+
 ## AlphaFold 3 
 
-How to use AlphaFold3 with the new chorus GPU nodes.
- 
-Reference data is available here: `/shared/biodata/alphafold3`
+#### Reference Data
+
+Reference data is available here: `/shared/biodata/alphafold3`. This data volume is
+only available on the Chorus nodes. The reference data is located the HPC Vast storage
+system. AlphaFold expects the 
+public data to be mapped to `/root/public_databases` within the container.
 
 #### Model Parameters
 You will need to download your own personal copy of the parameter data. The request form has been 
-sent to Hutch Legal Console for approval. I will download and share when the paper work is done.
+sent to Hutch Legal Console for approval. I will download the parameter data when the paperwork is finalized. 
 To request access to the AlphaFold 3 model parameters, please complete 
 [this form](https://forms.gle/svvpY4u2jsHEwWYS6). 
 
