@@ -40,4 +40,4 @@ We'll be updating the Slurm controllers to the latest OS release (Ubuntu Noble, 
 
 ### Pruning Slurm Accounting Data
 
-We need to reduce the number of records we maintain in the Slurm accounting data base (the long-term records stored for each job).  The database is currently over 90GB in size which makes maintenance and management cumbersome.  We are going to prune records older than 90 days, moving those to a backup database.
+We need to reduce the number of records we maintain in the Slurm accounting database (the long-term records stored for each job).  The database is currently over 90GB in size which makes maintenance and management cumbersome.  We are going to prune records older than 90 days, moving those to a backup database. Job records going back to mid 2021 are still available in [XDMoD](https://sciwiki.fredhutch.org/scicomputing/compute_xdmod/).
