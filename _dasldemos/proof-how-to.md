@@ -94,7 +94,7 @@ Before you begin using PROOF, make sure you have the following:
     - If off-campus, make sure you connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn).
 - [Access to the rhino cluster of Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-clusters)
 - [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
-- A lab [/hpc/temp](https://sciwiki.fredhutch.org/scicompannounce/2024-04-02-new-hpc-temp-storage/#how) storage account setup
+- Lab-based directory on the [/hpc/temp](https://sciwiki.fredhutch.org/scicompannounce/2024-04-02-new-hpc-temp-storage/#how) storage platform
 
 
 ### Starting a PROOF Server
