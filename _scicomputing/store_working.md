@@ -24,7 +24,7 @@ Quotas are used to manage utilization of working.  This is a hard quota- once th
 
 The default quota on _working_ is 20TB.  If this is insufficient, the PI will need to send that request to SciComp.  The maximum quota available is 50TB.
 
-Notifications will be sent via e-mail when you have used 90% of your allocated quota and when you reach 100%. Contact Scicomp and provide a contact e-mail address to have this enabled for your account. Notifications can be sent a single email address or multiple. You can also use a mailing or distribution list for the notification address. The contact list will need to be kept current, e-mail Scicomp to make any changes. 
+Notifications will be sent via e-mail when you have used 90% of your allocated quota and when you reach 100%. When requesting access to _working_, specify who should receive these emails. Notifications can be sent a single email address or multiple. You can also use a mailing or distribution list for the notification address. The contact list will need to be kept current, e-mail Scicomp to make any changes. 
 
 ## Chargebacks
 
