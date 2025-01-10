@@ -1,11 +1,9 @@
 ---
 main:
-  - title: Data Science Lab
+  - title: Data Science
     url: /datascience/ds_index/
   - title: Scientific Computing
     url: /scicomputing/comp_index/
-  - title: HDC
-    url: /hdc/hdc_index/
   - title: About
     url: /about/
 frontpage:
@@ -27,18 +25,16 @@ frontpage:
 generic:
   - title: Our Site
     children:
-      - title: Data Science Lab
+      - title: Data Science
         url: /datascience/ds_index/
       - title: Scientific Computing
         url: /scicomputing/comp_index/
-      - title: HDC
-        url: /hdc/hdc_index/
       - title: Pathways
         url: /pathways/
       - title: About
         url: /about/
 datascience:
-  - title: Data Science Lab
+  - title: Data Science
     children:
       - title: Resource Library
         url: /dasldemos/
@@ -50,7 +46,7 @@ datascience:
     children:
       - title: Tech Hiring for Science
         url: /datascience/tech_hiring/
-  - title: Tools and Platforms
+  - title: Tools and Applications
     children:
       - title: PROOF
         url: /datascience/proof/
