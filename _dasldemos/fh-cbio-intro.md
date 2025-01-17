@@ -112,6 +112,9 @@ If you are interested in uploading your own data into the Fred Hutch instance of
         - IRB Approval Letter
         - A copy of the protocol
 The cBioPortal admin team will review your submission and notify you via email once it's been approved for upload.
+
+_Note: Study approval is specific to the IRB and datatypes specified in the REDcap form. While periodic auditing will be performed by the DaSL team, it is the lab's responsibility to ensure that only the approved datatypes are uploaded to the platform. Failure to do so will result in study removal from the FH cBioPortal platform. If you would like to upload any new datatypes for an existing study, please reach out to the [Data Governance team](mailto:dataprotection@fredhutch.org) as this will require additional review. If you would like to create a new project covered under a different IRB, please submit another response to the [REDCap Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)._
+
 ![study_teams_details](/dasldemos/assets/cbio_09_study_teams_details.png)
 ![study_member_details](/dasldemos/assets/cbio_10_study_member_details.png)
 ![cBioPortal_Project_details](/dasldemos/assets/cbio_11_cBioPortal_Project_details.png)
@@ -190,7 +193,7 @@ _Note: If you would like to upload any of the available [public studies](https:/
 ## How do I prepare my data for upload into cBioportal?
 
 ### Before you begin
-- Start by creating a folder to store all of your relevant study files. **The name of the folder must be the exact study ID that was provided to you by the cBioPortal team.** If any other name is provided, the automation steps will refuse upload since the altered study ID would not be on the list of approved values. *Note: the `cancer_study_identifier` value in your meta files should also be this same study ID.*
+- Start by creating a folder to store all of your relevant study files. **The name of the folder must be the exact study ID that was provided to you by the cBioPortal team.** If any other name is provided, the automation steps will refuse upload since the altered study ID would not be on the list of approved values. The `cancer_study_identifier` value in your meta files should also be this same study ID. *Note: the study ID can be updated if desired, just reach out to the [Data Governance team](mailto:dataprotection@fredhutch.org) with your preferred ID.*
 - Once your study files are close to complete, you can test out your file formatting using one of two validation methods:
     1. If you've received official approval for upload, try directly uploading it into the `fh-dasl-cbio` bucket. As mentioned above, the automated upload process will send you a validation report via email outlining any issues that may have popped up.
     2. You could also validate your study folder by [launching a local instance](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/03_launch_local) of cBioPortal and troubleshooting the errors (if any) in your study data.
