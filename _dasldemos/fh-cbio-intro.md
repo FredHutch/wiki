@@ -98,7 +98,7 @@ It is a **[local installation of cBioPortal](https://cbioportal.fredhutch.org/)*
 If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal, here are the steps you need to follow:
 <iframe src="https://share.descript.com/embed/mDv6uZeDjVZ" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 <!-- ![upload_steps](/dasldemos/assets/cbio_17_overview_of_FH_instance_upload.png) -->
-*Note: The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)) and the DaSL Data Governance Team, ([dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org))*
+*Note: The cBioPortal team can be contacted via the [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3) channel on [FH-Data Slack](https://fhdata.slack.com/), or reach out directly to the DaSL Data Governance Team at [dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org).*
 
 1. Request access to upload your study by submitting a response on the [cBioPortal Access Request REDCap Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW). Before submitting, make sure to prepare the following information.
     - **Study specific details**
@@ -112,6 +112,9 @@ If you are interested in uploading your own data into the Fred Hutch instance of
         - IRB Approval Letter
         - A copy of the protocol
 The cBioPortal admin team will review your submission and notify you via email once it's been approved for upload.
+
+_Note: Study approval is specific to the IRB and datatypes specified in the REDcap form. While periodic auditing will be performed by the DaSL team, it is the lab's responsibility to ensure that only the approved datatypes are uploaded to the platform. Failure to do so will result in study removal from the FH cBioPortal platform. If you would like to upload any new datatypes for an existing study, please reach out to the [Data Governance team](mailto:dataprotection@fredhutch.org) as this will require additional review. If you would like to create a new project covered under a different IRB, please submit another response to the [REDCap Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)._
+
 ![study_teams_details](/dasldemos/assets/cbio_09_study_teams_details.png)
 ![study_member_details](/dasldemos/assets/cbio_10_study_member_details.png)
 ![cBioPortal_Project_details](/dasldemos/assets/cbio_11_cBioPortal_Project_details.png)
@@ -179,18 +182,18 @@ The cBioPortal admin team will review your submission and notify you via email o
         aws s3 cp /path/to/directory/cancer_study_identifier.zip s3://fh-dasl-cbio/
         ```
 
-7. Our Airflow automation scripts will take care of the rest of the upload process from there and send you an email notification with details about the outcome. If upload was unsuccessful, the email will contain a detailed HTML file called a "validation report" that identifies which parts of your study are causing the issue and need updating. *Note:* If you do not receive an email notification indicating the success/failure of your study upload within an hour, reach out to the [cBioPortal Team](mailto:tfirman@fredhutch.org) for help identifying the issue.
+7. Our Airflow automation scripts will take care of the rest of the upload process from there and send you an email notification with details about the outcome. If upload was unsuccessful, the email will contain a detailed HTML file called a "validation report" that identifies which parts of your study are causing the issue and need updating. *Note:* If you do not receive an email notification indicating the success/failure of your study upload within an hour, reach out to the [cBioPortal Team](https://fhdata.slack.com/archives/C088E41ARV3) for help identifying the issue.
 
 8. Go have fun and explore your data [on the Fred Hutch instance of cBioPortal!](https://cbioportal.fredhutch.org/)
 
 9. If you would like to update your study data or add more subjects to the cohort in the future, simply update your study data locally and reupload a new compressed folder to the `fh-dasl-cbio` S3 bucket using the instructions in step 6. Any subsequent uploads of the same study will overwrite the previous study data.
 
-_Note: If you would like to upload any of the available [public studies](https://www.cbioportal.org/datasets) into the Fred Hutch instance of cBioPortal, please contact the cBioPortal team by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org))._
+_Note: If you would like to upload any of the available [public studies](https://www.cbioportal.org/datasets) into the Fred Hutch instance of cBioPortal, please contact the cBioPortal team via the [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3) channel on [FH-Data Slack](https://fhdata.slack.com/)._
 
 ## How do I prepare my data for upload into cBioportal?
 
 ### Before you begin
-- Start by creating a folder to store all of your relevant study files. **The name of the folder must be the exact study ID that was provided to you by the cBioPortal team.** If any other name is provided, the automation steps will refuse upload since the altered study ID would not be on the list of approved values. *Note: the `cancer_study_identifier` value in your meta files should also be this same study ID.*
+- Start by creating a folder to store all of your relevant study files. **The name of the folder must be the exact study ID that was provided to you by the cBioPortal team.** If any other name is provided, the automation steps will refuse upload since the altered study ID would not be on the list of approved values. The `cancer_study_identifier` value in your meta files should also be this same study ID. *Note: the study ID can be updated if desired, just reach out to the [Data Governance team](mailto:dataprotection@fredhutch.org) with your preferred ID.*
 - Once your study files are close to complete, you can test out your file formatting using one of two validation methods:
     1. If you've received official approval for upload, try directly uploading it into the `fh-dasl-cbio` bucket. As mentioned above, the automated upload process will send you a validation report via email outlining any issues that may have popped up.
     2. You could also validate your study folder by [launching a local instance](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/03_launch_local) of cBioPortal and troubleshooting the errors (if any) in your study data.
