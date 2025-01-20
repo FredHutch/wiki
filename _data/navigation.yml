@@ -122,7 +122,7 @@ scicomputing:
         url: /scicomputing/store_overview/
       - title: Everyday Files and Documents
         url: https://centernet.fredhutch.org/cn/u/center-it/help-desk/onedrive.html
-      - title: Relational Database Systems
+      - title: Databases
         url: /scicomputing/store_databases/
       - title: Scientific File Storage
         url: /scicomputing/store_posix/
