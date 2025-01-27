@@ -1,7 +1,5 @@
 ---
 title: PROOF Troubleshooting
-main_authors: tefirman
-primary_reviewers: laderast
 ---
 
 For users that have a well-tested and established WDL workflow, the [PROOF How-To documentation](/dasldemos/proof-how-to/) should provide enough guidance to help a user through a typical process of job submission. However, while developing a new and untested WDL workflow, it's common to run into all sorts of issues, some as simple as typos, others as complex as entire software environments. The goal of this guide is to teach users where to find (and how to interpret) the more advanced features and behaviors of PROOF in order to debug their custom WDL scripts and get their research up and running. 
@@ -41,8 +39,10 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
 
 ### Workflow aborted unexpectedly
 If you encounter a scenario where your validated workflow is unexpectedly aborted here is how you would troubleshoot for different use-cases:
-    1. **Missing inputs**: In this case you may have syntactically defined your input in the workflow however these inputs may not be available or accessible. In this case, in PROOF you will see in your workflow/workflow_id/task/execution/stderr file this message: "slurmstepd: error: *** JOB XXXXXXXX ON gizmoXX CANCELLED AT year-month-dayThh:mm:ss ***". This is a special feature of PROOF and lets the user know that either they don't have access to specific files required as inputs in this task or the file path given may not be accurate. 
-    2. **Output storage issues**: Another reason that your workflow fails to start could be if you do not have write permissions in the specified output directories. So evethough it might validate if you do not have write permissions this could cause your workflow to fail.
+
+1. **Missing inputs**: In this case you may have syntactically defined your input in the workflow however these inputs may not be available or accessible. In this case, you will see in your stderr file this message: `slurmstepd: error: *** JOB XXXXXXXX ON gizmoXX CANCELLED AT year-month-dayThh:mm:ss ***`. This is a special feature of PROOF and lets the user know that either they don't have access to specific files required as inputs in this task or the file path given may not be accurate.
+
+2. **Output storage issues**: Another reason that your workflow fails to start could be if you do not have write permissions in the specified output directories. So even though it might validate, if you do not have write permissions, this could cause your workflow to fail.
     
 ## Task Level Issues
 
