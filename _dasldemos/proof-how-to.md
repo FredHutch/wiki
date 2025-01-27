@@ -1,7 +1,5 @@
 ---
 title: How to Use PROOF
-main_authors: vortexing, sitapriyamoorthi
-primary_reviewers: vortexing
 ---
 
 
@@ -350,18 +348,6 @@ If you find something is not working with the app or you find a bug, please help
 - [PROOF Troubleshooting](/dasldemos/proof-troubleshooting)
 
 
-## Document Contributions
+## Document Feedback
 We would love to get feedback on this document from the community and would love to hear how we can make improvements to make this more helpful to you! Feel free to [email](mailto:wilds@fredhutch.org) us at or directly make recommendations on [GitHub](https://github.com/FredHutch/wiki/).
-
-**Authors**
-
-- Sitapriya Moorthi ([GitHub](https://github.com/sitapriyamoorthi)/[E-mail](mailto:smoorthi@fredhutch.org))
-- Scott Chamberlain ([GitHub](https://github.com/sckott)/[E-mail](mailto:sachamber@fredhutch.org))
-
-**Reviewers**
-
-- Ted Laderas ([GitHub](https://github.com/laderast)/[E-mail](mailto:tladera2@fredhutch.org))
-- Chris Lo ([GitHub](https://github.com/caalo)/[E-mail](mailto:clo2@fredhutch.org))
-- Taylor Firman ([GitHub](https://github.com/tefirman)/[E-mail](mailto:tfirman@fredhutch.org))
-- Amy Paguirigan ([GitHub](https://github.com/vortexing)/[E-mail](mailto:apaguiri@fredhutch.org))
 
