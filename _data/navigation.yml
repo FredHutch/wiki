@@ -84,7 +84,7 @@ datascience:
   - title: Hutch Resources
     children:
       - title: Reference Genomes
-       url: /datascience/refgenomes/
+        url: /datascience/refgenomes/
       - title: Generating Genomics Data
         url: /datascience/datagen_assayPrep/
       - title: Nextflow Catalog
