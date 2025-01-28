@@ -1,6 +1,5 @@
 ---
 title: Building Software Containers
-hdc: True
 ---
 
 This guide outlines the steps needed to create a software container which is automatically

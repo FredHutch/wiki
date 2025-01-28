@@ -1,6 +1,6 @@
 ---
-title: Workflow Catalog
-hdc: True
+title: Nextflow Workflow Catalog
+
 ---
 
 The Hutch Data Core works to support researchers by providing access to a set of

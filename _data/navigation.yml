@@ -20,8 +20,8 @@ frontpage:
         url: /contributors/
       - title: Contributing Instructions
         url: https://github.com/FredHutch/wiki/blob/main/README.md
-      - title: Fred Hutch Data Science Lab
-        url: https://data.fredhutch.org
+      - title: Fred Hutch Data Science Lab (OCDO)
+        url: https://ocdo.fredhutch.org
 generic:
   - title: Our Site
     children:
@@ -42,50 +42,66 @@ datascience:
         url: /pathways/
       - title: Data Science Training
         url: /datascience/hutch_courses/
+      - title: Other Resources
+        url: /datascience/misc_training/
   - title: General
     children:
+      - title: Data Visualization
+        url: /datascience/data_viz/
+      - title: Data Wrangling
+        url: /datascience/data_wrangling/
+      - title: Building Software Containers
+        url: /datascience/building_containers/
       - title: Tech Hiring for Science
         url: /datascience/tech_hiring/
-  - title: Tools and Applications
-    children:
-      - title: PROOF
-        url: /datascience/proof/
-      - title: cBioPortal
-        url: /datascience/cbioportal/
   - title: Data Management and Sharing
     children:
       - title: Data Stewardship
         url: /datascience/stewardship/
+      - title: Consenting and the IRB
+        url: /datascience/consent_IRB/
+      - title: PHI and Research
+        url: /datascience/phi/
+      - title: Data Deidentification
+        url: /datascience/deidentification/
+      - title: Data Privacy and Security
+        url: /datascience/privacy_security/
+      - title: Compliance and Legal
+        url: /datascience/compliance_legal/
       - title: NIH Data Sharing
         url: /datascience/nih_data_sharing/
       - title: Data Sharing Approaches
         url: /datascience/execute_sharing/
       - title: Specimen Data Management
         url: /datascience/open_specimen/
-      - title: PHI and Research
-        url: /datascience/phi/
-      - title: Data Deidentification
-        url: /datascience/deidentification/
-  - title: Biomedical Data
+
+  - title: Working with Biomedical Data
     children:
       - title: Real-World Data
         url: datascience/real_world_data/
       - title: Patient Data
         url: /datascience/patient-data/
-  - title: Data Science
+  - title: Hutch Resources
     children:
-      - title: Data Visualization
-        url: /datascience/data_viz/
-      - title: Data Wrangling
-        url: /datascience/data_wrangling/
-  - title: Research, Privacy and Security
+      - title: Reference Genomes
+       url: /datascience/refgenomes/
+      - title: Generating Genomics Data
+        url: /datascience/datagen_assayPrep/
+      - title: Nextflow Catalog
+        url: /datascience/nextflow_catalog/
+  - title: Tools and Applications
     children:
-      - title: Consenting and the IRB
-        url: /datascience/consent_IRB/
-      - title: Data Privacy and Security
-        url: /datascience/privacy_security/
-      - title: Compliance and Legal
-        url: /datascience/compliance_legal/
+      - title: PROOF
+        url: /datascience/proof/
+      - title: cBioPortal
+        url: /datascience/cbioportal/
+      - title: Workflow Managers
+        url: /datascience/using_workflows/
+      - title: Cirro
+        url: /datascience/cirro/
+        
+
+
 
 scicomputing:
   - title: Scientific Computing
@@ -164,49 +180,4 @@ scicomputing:
         url: /scicomputing/compute_cloud/
       - title: Computing with GPU
         url: /scicomputing/compute_gpu/
-hdc:
-  - title: Hutch Data Core
-    url: /hdc/hdc_index/
-    children:
-      - title: Cirro Data Portal
-        url: https://fredhutch.cirro.bio
-      - title: Trainings
-        url: /hdc/hdc_training/
-      - title: Reference Genomes
-        url: /hdc/hdc_refgenomes/
-      - title: Resource Library
-        url: /compdemos/
-      - title: Pathways
-        url: /pathways/
-      - title: Contact Us
-        url: /hdc/hdc_contact_us/
-  - title: Bioinformatics Workflows
-    url: /hdc/hdc_workflows/
-    children:
-      - title: Workflow Background
-        url: /hdc/workflows/workflow_background/
-      - title: Running Your First Workflow
-        url: /hdc/workflows/running_first_workflow/
-      - title: Using a Run Script
-        url: /hdc/workflows/running/run_script
-      - title: Running on AWS
-        url: /hdc/workflows/running/on_aws/
-      - title: Running on SLURM / gizmo
-        url: /hdc/workflows/running/on_gizmo/
-      - title: Building Software Containers
-        url: /hdc/hdc_building_containers/
-      - title: Workflow Catalog
-        url: /hdc/workflows/workflow_catalog/
-  - title: FH Shared Resources
-    url: /hdc/datagen_overview/
-    children:
-      - title: Assay Material Prep and QC
-        url: /hdc/datagen_assayPrep/
-      - title: DNA-Based Approaches
-        url: /hdc/datagen_dnaApproaches/
-      - title: RNA-Based Approaches
-        url: /hdc/datagen_rnaApproaches/
-      - title: Genomics
-        url: /hdc/datagen_platformsData/
-      - title: Proteomics
-        url: /hdc/datagen_proteomics/
+

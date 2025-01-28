@@ -1,8 +1,5 @@
 ---
 title: Compliance and Legal Agreements
-last_modified_at: 2018-12-01
-main_authors: Susan Glick, Jason Major, Jennifer Kogut, Karen Hansen
-primary_reviewers: JasonMajor1, sgglick
 ---
 
 ## Data Use Agreements (DUA)

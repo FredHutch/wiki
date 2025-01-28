@@ -44,9 +44,6 @@ collections:
   pathways:
     output: true
     permalink: /:collection/:path/
-  hdc:
-    output: true
-    permalink: /:collection/:path/
   contributors:
     output: true
     permalink: /:collection/:path/
@@ -89,7 +86,7 @@ footer:
       url: "https://github.com/FredHutch/wiki"
     - label: "Join the Conversation on Slack"
       icon: "fab fa-fw fa-slack"
-      url: "https://hutchdatascience.org/joinslack/"
+      url: "https://join.slack.com/t/fhdata/signup"
     - label: "See our Contributors"
       icon: "fas fa-user-edit"
       url: /contributors/
@@ -183,19 +180,6 @@ defaults:
       share: true
       sidebar:
         nav: "generic"
-
-  # _hdc
-  - scope:
-      path: ""
-      type: hdc
-    values:
-      layout: single
-      toc: true
-      toc_label: "On This Page"
-      toc_sticky: true
-      share: true
-      sidebar:
-        nav: "hdc"
 
 # _contributors
   - scope:
