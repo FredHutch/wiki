@@ -16,6 +16,5 @@ group :development, :test do
   gem 'html-proofer', '~> 4.2.0'
   gem 'rake', '~> 13.0.6'
   gem 'faraday', '~> 2.3.0'
-  gem 'webrick', '~> 1.7.0'
 end
 
