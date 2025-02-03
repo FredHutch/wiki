@@ -24,7 +24,7 @@ The FH computational cluster is a shared resource. It needs to be maintained and
 
 ## The Dependency Nightmare
 
-![Part of the Hairball of Python Dependencies](/dasldemos/assets/dependency_nightmare.png)
+![Part of the Hairball of Python Dependencies](/datademos/assets/dependency_nightmare.png)
 
 Source: [The b(ack)log | A nice picture of (dependency) hell (thebacklog.net)](https://www.thebacklog.net/2011/04/04/a-nice-picture-of-dependency-hell/)
 
@@ -46,7 +46,7 @@ This is where the idea of *isolated* software environments can be useful. We can
 
 ## Recommended Order of Execution
 
-![Untitled](/dasldemos/assets/rank_flowchart.png)
+![Untitled](/datademos/assets/rank_flowchart.png)
 
 We’ll focus on standalone executables, such as `samtools` or `bwa mem`. Click on the links to jump to that section. The order in which you should try to run software:
 

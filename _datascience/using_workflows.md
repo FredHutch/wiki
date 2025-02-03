@@ -31,10 +31,10 @@ One of the nice things about using a workflow manager is that you have the abili
 that a workflow is run (on what computers, using what resources, analyzing what files), without changing
 the workflow itself. This includes:
 
-- [Running a workflow on SLURM (gizmo)](/dasldemos/workflows/running/on_gizmo)
-- [Running a workflow on AWS](/dasldemos/workflows/running/on_aws)
-- [Setting up a run script](/dasldemos/workflows/running/run_script)
-- [Specifying computational resources](/dasldemos/workflows/running/process_resources)
+- [Running a workflow on SLURM (gizmo)](/datademos/workflows/running/on_gizmo)
+- [Running a workflow on AWS](/datademos/workflows/running/on_aws)
+- [Setting up a run script](/datademos/workflows/running/run_script)
+- [Specifying computational resources](/datademos/workflows/running/process_resources)
 
 ### Workflow Catalog
 

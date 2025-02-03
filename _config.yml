@@ -35,7 +35,7 @@ collections:
   datascience:
     output: true
     permalink: /:collection/:path/
-  dasldemos:
+  datademos:
     output: true
     permalink: /:collection/:path/
   scicomputing:
@@ -46,7 +46,7 @@ collections:
     permalink: /:collection/:path/
   contributors:
     output: true
-    permalink: /:collection/:path/
+    permalink: /about/:path/
   compdemos:
     output: true
     permalink: /:collection/:path/
@@ -143,10 +143,10 @@ defaults:
       sidebar:
         nav: "datascience"
 
-  # _dasldemos
+  # _datademos
   - scope:
       path: ""
-      type: dasldemos
+      type: datademos
     values:
       layout: single
       toc: true
@@ -201,6 +201,13 @@ defaults:
     values:
       layout: single
       share: false
+      toc: true
+      toc_label: "On This Page"
+      toc_sticky: true
+      share: true
+      sidebar:
+        nav: "generic"
+
 
 # _scicompannounce
   - scope:

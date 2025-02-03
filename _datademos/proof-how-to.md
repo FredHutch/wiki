@@ -81,7 +81,7 @@ This means that individual users can:
 
 The following diagram shows basic usage of PROOF once you have done the preliminary setup. Each box corresponds to a section in the documentation.
 
-![](/dasldemos/assets/proof_101_workflow.png)
+![](/datademos/assets/proof_101_workflow.png)
 
 **Preliminary Setup**
 
@@ -98,37 +98,37 @@ Before you begin using PROOF, make sure you have the following:
 ### Starting a PROOF Server
 The most user-friendly way to validate, submit, track, troubleshoot, and (if needed) abort your WDL workflows is through our [Fred Hutch PROOF Shiny app](https://proof.fredhutch.org). This Shiny app will let you use a graphic interface to submit and manage workflows you've written in WDL.  
 
-![welcome](/dasldemos/assets/proof_shiny_app_welcome.png) 
+![welcome](/datademos/assets/proof_shiny_app_welcome.png) 
 
 The first step is to log in to PROOF. 
 
-![login](/dasldemos/assets/proof_101_shinyapp_proof_login.png) 
+![login](/datademos/assets/proof_101_shinyapp_proof_login.png) 
 
 When you click "PROOF Login", a box will appear where you will input your Hutch credentials and then click submit.
 
-![login_2](/dasldemos/assets/proof_101_shinyapp_proof_login_2.png)
+![login_2](/datademos/assets/proof_101_shinyapp_proof_login_2.png)
 
 You know you are logged in when the page refreshes automatically and you see the red log out button appear.
 
-![login_2](/dasldemos/assets/proof_101_shinyapp_logged_in.png)
+![login_2](/datademos/assets/proof_101_shinyapp_logged_in.png)
 
 Next click on "PROOF Servers" to take you to the page where you can start a server.
 
-![start_server](/dasldemos/assets/proof_101_shinyapp_start_server.png)
+![start_server](/datademos/assets/proof_101_shinyapp_start_server.png)
 
 Click "Start" to open up a dialog box that asks for optional credentials to start your PROOF Server.
 
-![start_server_2](/dasldemos/assets/proof_101_shinyapp_start_server_2.png)
+![start_server_2](/datademos/assets/proof_101_shinyapp_start_server_2.png)
 
 The majority of people usually are only authorized to work under one SLURM account (working under one PI = one SLURM account). In this case, just hit start and all Cromwell configurations will default under the SLURM account you are authorised under.
 
 However, if you have more than one SLURM account that you can work under, then here is your chance to enter the most appropriate one (for example you could be authorized to do work under two PI's with SLURM accounts "pi_a" and "pi_b". If the current workflow you want to submit is for "pi_b" enter pi_b where it asks for SLURM account). 
 
-![start_server_3](/dasldemos/assets/proof_101_shinyapp_start_server_3.png)
+![start_server_3](/datademos/assets/proof_101_shinyapp_start_server_3.png)
 
 You know your server is up and running when the page auto-refreshes and you see the "Start" button gray out and information about your server populated below. 
 
-![start_server_4](/dasldemos/assets/proof_101_shinyapp_start_server_4.png)
+![start_server_4](/datademos/assets/proof_101_shinyapp_start_server_4.png)
 
 > Initially, setting up a PROOF Server may take a few minutes as it configures the database and performs background tasks. Once it's ready to receive workflows, it will begin listening for instructions via the Shiny app or other methods (discussed later). Please allow 2-3 minutes for setup the first time; subsequent setups will be faster, typically around 1 minute.
 
@@ -149,14 +149,14 @@ There will be two sections of information that you would like to pay attention t
 - Use AWS?: This defaults currently to FALSE
 - Cromwell URL: URL for PROOF server
 
-Once your server is ready for use, you should receive an email from PROOF API ![email](/dasldemos/assets/proof_101_shinyapp_email.png)
+Once your server is ready for use, you should receive an email from PROOF API ![email](/datademos/assets/proof_101_shinyapp_email.png)
 
 
 ### Validating Your WDL Workflow
 
 Now that you have kicked off your PROOF server, you are ready to start running your WDL workflows. The first step to submitting your workflow is to validate if your WDL workflow and accompanying JSON files are "runnable". If you already have a workflow ready, you can perform a "dry run" to check your workflow files (WDL/JSONs) using the "Validate" tab.
 
-![validate](/dasldemos/assets/proof_101_shinyapp_validate.png)
+![validate](/datademos/assets/proof_101_shinyapp_validate.png)
 
 You can upload your WDL workflow file and associated JSON file into the respective upload boxes. You can do this by either dragging the files into the upload boxes or browsing to the directory where the workflow and JSON files are stored. Once uploaded, click validate.
 
@@ -172,7 +172,7 @@ The validation process evaluates several things:
 
 Here is an example from the [test workflows](https://github.com/getwilds/wdl-test-workflows/tree/main) showing successful validation
 
-![validate_2](/dasldemos/assets/proof_101_shinyapp_validate_2.png)
+![validate_2](/datademos/assets/proof_101_shinyapp_validate_2.png)
 
 If your workflows and accompanying JSON files are validated you should see in the  console below 
 `$valid`
@@ -187,11 +187,11 @@ Congratulations! At this point, you should have a validated WDL workflow and you
 
 To submit your job click the "Submit Jobs" tab on the left
 
-![proof_101_shiny_app_submit_1](/dasldemos/assets/proof_101_shiny_app_submit_1.png)
+![proof_101_shiny_app_submit_1](/datademos/assets/proof_101_shiny_app_submit_1.png)
 
 This will open up the "Submit Jobs" page:
 
-![proof_101_shiny_app_submit_2](/dasldemos/assets/proof_101_shiny_app_submit_2.png)
+![proof_101_shiny_app_submit_2](/datademos/assets/proof_101_shiny_app_submit_2.png)
 
 Here you can do the following: 
 
@@ -209,7 +209,7 @@ Once everything is uploaded, click the "Submit Workflow" button.
 
 You will know that your submission has worked once you see a little table output on the same page!
 
-![proof_101_shiny_app_submit_3](/dasldemos/assets/proof_101_shiny_app_submit_3.png)
+![proof_101_shiny_app_submit_3](/datademos/assets/proof_101_shiny_app_submit_3.png)
 
 This output table has an ID which a long string of letters as numbers that you can use to follow-up on your workflow in the "Track Jobs" tab. This workflow id string is unique to an individual workflow run, so if you run the same workflow a second time, you'll get a different string. This means that this unique identifier string can be used to help understand the data source file(s) used to generate each set of results files, helping make your work reproducible.
 
@@ -220,12 +220,12 @@ This output table has an ID which a long string of letters as numbers that you c
 
 Once you've submitted a workflow, you can track the status of your submitted workflows using the "Track Jobs" tab
 
-![proof_101_shiny_app_track_jobs_1](/dasldemos/assets/proof_101_shiny_app_track_jobs_1.png)
+![proof_101_shiny_app_track_jobs_1](/datademos/assets/proof_101_shiny_app_track_jobs_1.png)
 
 **Filter submitted jobs you want to track**
 You can filter your jobs 3 different ways! Initially this is likely not needed, however as PROOF can manage several different workflows running at once you'll eventually want to filter results to track specific work at a time.  
 
-![proof_101_shiny_app_track_jobs_2](/dasldemos/assets/proof_101_shiny_app_track_jobs_2.png)
+![proof_101_shiny_app_track_jobs_2](/datademos/assets/proof_101_shiny_app_track_jobs_2.png)
 
 You can filter submitted jobs based on: 
 1. Days since your server was started
@@ -239,74 +239,74 @@ You can filter submitted jobs based on:
 
 Once you are done filtering down to your choices and click "Update View", the relevant workflows will be returned and you'll see a visual representation on  those workflows.  
 
-![proof_101_shiny_app_track_jobs_3](/dasldemos/assets/proof_101_shiny_app_track_jobs_3.png)
+![proof_101_shiny_app_track_jobs_3](/datademos/assets/proof_101_shiny_app_track_jobs_3.png)
 
 Below this tab you will also see a graph showing "Workflow Timing" information along with outcomes (Graph legend = "Status"). The x-axis shows how long it took to run a particular workflow and the y-axis will show you which workflow (from a potentially filtered list of workflows)
 
-![proof_101_shiny_app_track_jobs_4](/dasldemos/assets/proof_101_shiny_app_track_jobs_4.png)
+![proof_101_shiny_app_track_jobs_4](/datademos/assets/proof_101_shiny_app_track_jobs_4.png)
 
 Finally below this visual representation of all your workflow runs you will see a "Workflows Run" table showing metadata for each workflow.  Click on the workflow you're interested in to populate the rest of the tables (below). 
 
 > Note: Next to each workflow in the table we have a nifty "copyID" button that you can use to copy your workflow ID for use elsewhere in the app. 
  
-![proof_101_shiny_app_track_jobs_5](/dasldemos/assets/proof_101_shiny_app_track_jobs_5.png)
+![proof_101_shiny_app_track_jobs_5](/datademos/assets/proof_101_shiny_app_track_jobs_5.png)
 
 You can also see a visual summary of the workflow below
 
-![proof_101_shiny_app_track_jobs_6](/dasldemos/assets/proof_101_shiny_app_track_jobs_6.png)
+![proof_101_shiny_app_track_jobs_6](/datademos/assets/proof_101_shiny_app_track_jobs_6.png)
 
 **Track workflow-level details**
 
 To get more information on a particular workflow select a workflow and you'll see some summary information about that workflow as you scroll down.
 
-![proof_101_shiny_app_track_jobs_7](/dasldemos/assets/proof_101_shiny_app_track_jobs_7.png)
+![proof_101_shiny_app_track_jobs_7](/datademos/assets/proof_101_shiny_app_track_jobs_7.png)
 
 You can see a plot of the timing and outcomes of each call in that workflow.
 
-![proof_101_shiny_app_track_jobs_8](/dasldemos/assets/proof_101_shiny_app_track_jobs_8.png)
+![proof_101_shiny_app_track_jobs_8](/datademos/assets/proof_101_shiny_app_track_jobs_8.png)
 
 **Track call-level details**
 
 To get more detailed information about each "task" in your WDL workflow you can scroll down to see the "Job List" table.  This table has usefule information such as the directory where the job is working (callRoot), its SLURM "job_ID" , what computing resources or software environment were used, and the job's status.  
 
-![proof_101_shiny_app_track_jobs_9](/dasldemos/assets/proof_101_shiny_app_track_jobs_9.png)
+![proof_101_shiny_app_track_jobs_9](/datademos/assets/proof_101_shiny_app_track_jobs_9.png)
 
 You can then click on a specific task of choice to get more information on that specific task/call.
 
 You can use the Job Failures, Call Caching, tables to retrieve information relevant to those processes.  You can do this by clicking the "Get/Refresh ... Metadata" buttons (sometimes for complex workflows these can be quite large, and thus they do not load until you want them).  You can also choose to download these tables if you like. 
 
-![proof_101_shiny_app_track_jobs_10](/dasldemos/assets/proof_101_shiny_app_track_jobs_10.png)
+![proof_101_shiny_app_track_jobs_10](/datademos/assets/proof_101_shiny_app_track_jobs_10.png)
 
 **Tracking the location of your outputs**
 
 Finally, once a workflow's outputs have all been created successfully, Cromwell can tell you (and this Shiny app can help you download) a table showing where to find the workflow outputs (note this is not every file created, only the ones you specify as "results" using the WDL file's "workflow output" block).  
 
 This lets you find output files and interact with them, archive them, or otherwise copy them to longer term storage for use.  
-![proof_101_shiny_app_track_jobs_11](/dasldemos/assets/proof_101_shiny_app_track_jobs_11.png)
+![proof_101_shiny_app_track_jobs_11](/datademos/assets/proof_101_shiny_app_track_jobs_11.png)
 
 ### Troubleshooting
 
 Last, there is the Troubleshoot tab.  Here you can do things like Abort running workflows or get a complete metadata output for the entire workflow to parse yourself to try to find what's happening with your workflow if it failed running. 
 
-![proof_101_shiny_app_troubleshoot_1](/dasldemos/assets/proof_101_shiny_app_troubleshoot_1.png)
+![proof_101_shiny_app_troubleshoot_1](/datademos/assets/proof_101_shiny_app_troubleshoot_1.png)
 
 **Abort a workflow**
 
 Sometimes you realize you want to kill a workflow.  Using the workflow_id, you can kill specific workflows using this box.  
 
-![proof_101_shiny_app_abort_1](/dasldemos/assets/proof_101_shiny_app_abort_1.png)
+![proof_101_shiny_app_abort_1](/datademos/assets/proof_101_shiny_app_abort_1.png)
 
 > Note: it will take Cromwell some time to coordinate SLURM job cancellations particularly for complex workflows, but it will clean everything up for you. 
 
-![proof_101_shiny_app_abort_2](/dasldemos/assets/proof_101_shiny_app_abort_2.png)
+![proof_101_shiny_app_abort_2](/datademos/assets/proof_101_shiny_app_abort_2.png)
 
 **Troubleshoot a workflow**
 
 Especially in the beginning if you have catastrophic workflow failures and you can't even figure out what's going on, you can come back to this Troubleshoot box to retrieve the entire, unformatted JSON output of all metadata Cromwell has about your workflow.  You probably are better served by the "Track Jobs" tab for checking how your workflow is going, but if there's nothing there that's helpful, then this box is where you'll want to go.  
 
-![proof_101_shiny_app_troubleshoot_2](/dasldemos/assets/proof_101_shiny_app_troubleshoot_2.png)
+![proof_101_shiny_app_troubleshoot_2](/datademos/assets/proof_101_shiny_app_troubleshoot_2.png)
 
-![proof_101_shiny_app_troubleshoot_3](/dasldemos/assets/proof_101_shiny_app_troubleshoot_3.png)
+![proof_101_shiny_app_troubleshoot_3](/datademos/assets/proof_101_shiny_app_troubleshoot_3.png)
 
 > Note: this output is not for the faint of heart, but it will give you hints once you get used to understanding what Cromwell is telling you.  
 
@@ -316,11 +316,11 @@ Finally if your workflow has finished running before the 7-day timeline (or what
 
 Go back to the PROOF server tab and click Stop Server
 
-![proof_101_shiny_app_delete_server_1](/dasldemos/assets/proof_101_shiny_app_delete_server_1.png)
+![proof_101_shiny_app_delete_server_1](/datademos/assets/proof_101_shiny_app_delete_server_1.png)
 
 A pop-up box will show up and ask you type out the words "delete me". This is an added measure so you don't accidentally end your server.
 
-![proof_101_shiny_app_delete_server_2](/dasldemos/assets/proof_101_shiny_app_delete_server_2.png)
+![proof_101_shiny_app_delete_server_2](/datademos/assets/proof_101_shiny_app_delete_server_2.png)
 
 ## Resources and Help
 
@@ -328,9 +328,9 @@ A pop-up box will show up and ask you type out the words "delete me". This is an
 
 If you find something is not working with the app or you find a bug, please help us make this app better by reporting here:
 
-![proof_101_shiny_app_help](/dasldemos/assets/proof_101_shiny_app_help.png)
+![proof_101_shiny_app_help](/datademos/assets/proof_101_shiny_app_help.png)
 
-![proof_101_shiny_app_help2](/dasldemos/assets/proof_101_shiny_app_help2.png)
+![proof_101_shiny_app_help2](/datademos/assets/proof_101_shiny_app_help2.png)
 
 ### Useful courses to get started
 #### Cluster computing
@@ -345,7 +345,7 @@ If you find something is not working with the app or you find a bug, please help
 - [R Client for the PROOF-API](https://github.com/getwilds/proofr)
 - [Shiny Cromwell](https://github.com/getwilds/shiny-cromwell)
 - [rcromwell](https://github.com/getwilds/rcromwell)
-- [PROOF Troubleshooting](/dasldemos/proof-troubleshooting)
+- [PROOF Troubleshooting](/datademos/proof-troubleshooting)
 
 
 ## Document Feedback

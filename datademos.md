@@ -1,9 +1,9 @@
 ---
-title: "Data Science Lab Resource Library"
+title: "Data Science Resource Library"
 layout: collection
 classes: wide
-permalink: /dasldemos/
-collection: dasldemos # collection name
+permalink: /datademos/
+collection: datademos # collection name
 entries_layout: grid # list (default),
 show_excerpts:  true #(default), false
 sort_by: title # date (default)

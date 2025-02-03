@@ -27,7 +27,7 @@ fhDaSL:
   - image_path: /images/Cherrytrees-web.png
     alt: "placeholder image dasl"
     title: "Data Science Lab"
-    excerpt: 'The Fred Hutch Data Science Laboratory is an emerging, collaborative effort lead by the Fred Hutch Chief Data Officer, Jeff Leek.  '
+    excerpt: 'The Fred Hutch Data Science Laboratory is an emerging, collaborative effort at the Fred Hutch which provides a variety of training, community and consulting support for data science related topics.'
     url: "https://hutchdatascience.org"
     btn_label: "Learn More"
     btn_class: "btn--primary"
