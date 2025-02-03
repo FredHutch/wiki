@@ -1,18 +1,11 @@
 <section class="page__share">
-<font size="2">
-  
-            {%- for resource in site.data.last_modified_dates %}
-          {% if resource.url == page.relative_path %}
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> {{resource.dlm}}</p>
-          {% endif %}
-          {%- endfor %}
   
   <a href="{{site.github.repository_url}}/blob/main/{{page.relative_path}}"><i class="fas fa-pen-square"></i>
   <span> Edit this Page via GitHub</span></a> &nbsp; &nbsp; &nbsp;
   <a href="{{site.github.repository_url}}/issues"><i class="far fa-comment-dots"></i><span> Comment by Filing an Issue</span></a>&nbsp; &nbsp; &nbsp;
   <a href="https://fhdata.slack.com/archives/CD3HGJHJT"><i class="fas fa-question-circle"></i>
   <span> Have Questions? Ask them here.</span></a>
-</font>
+
 </section>
 
 
