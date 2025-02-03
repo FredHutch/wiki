@@ -101,9 +101,22 @@ include:
   - _data
   - assets
   - _layouts
-exclude:
-  - archive
 
+exclude:
+  - ".gitignore"
+  - ".gitlab-ci.yml"
+  - "elasticsearch"
+  - "tmp"
+  - "*.py"
+  - "*.yml"
+  - "Rakefile"
+  - "*.gz"
+  - "rancher-v0.6.2"
+  - "*.sh"
+  - "Dockerfile"
+  - "Gemfile*"
+  - _hdc
+  - archive
 
 
 # Outputting
@@ -229,19 +242,7 @@ defaults:
       sidebar:
         nav: "scicomputing"
 
-exclude:
-  - ".gitignore"
-  - ".gitlab-ci.yml"
-  - "elasticsearch"
-  - "tmp"
-  - "*.py"
-  - "*.yml"
-  - "Rakefile"
-  - "*.gz"
-  - "rancher-v0.6.2"
-  - "*.sh"
-  - "Dockerfile"
-  - "Gemfile*"
+
 
 
 #
