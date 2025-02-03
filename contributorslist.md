@@ -2,7 +2,7 @@
 title: "Fred Hutch Biomedical Data Science Wiki Contributors List"
 # layout: collection
 # classes: wide
-permalink: /about/
+#permalink: /about/
 # collection: contributors # collection name
 # entries_layout: grid # list (default),
 # show_excerpts:  true #(default), false
