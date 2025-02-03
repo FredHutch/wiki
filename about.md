@@ -3,9 +3,9 @@ title: About the Wiki Project
 permalink: /about/
 layout: collection
 classes: wide
-toc: true
-toc_sticky: true
-toc_label: "On This Page"
+# toc: true
+# toc_sticky: true
+# toc_label: "On This Page"
 collection: contributors # collection name
 entries_layout: grid # list (default),
 show_excerpts:  true #(default), false
