@@ -31,34 +31,34 @@ repository               : "FredHutch/wiki"
 logo                     : "/images/biomedical-wiki-2023.png"
 
 
-collections:
-  datascience:
-    output: true
-    permalink: /:collection/:path/
-  datademos:
-    output: true
-    permalink: /:collection/:path/
-  scicomputing:
-    output: true
-    permalink: /:collection/:path/
-  pathways:
-    output: true
-    permalink: /:collection/:path/
-  contributors:
-    output: true
-    permalink: /about/:path/
-  compdemos:
-    output: true
-    permalink: /:collection/:path/
-  scicompannounce:
-    output: true
-    permalink: /:collection/:path/
-  pythonModules:
-    output: true
-    permalink: /:collection/:path/
-  rModules:
-    output: true
-    permalink: /:collection/:path/
+# collections:
+#   datascience:
+#     output: true
+#     permalink: /:collection/:path/
+#   datademos:
+#     output: true
+#     permalink: /:collection/:path/
+#   scicomputing:
+#     output: true
+#     permalink: /:collection/:path/
+#   pathways:
+#     output: true
+#     permalink: /:collection/:path/
+#   contributors:
+#     output: true
+#     permalink: /about/:path/
+#   compdemos:
+#     output: true
+#     permalink: /:collection/:path/
+#   scicompannounce:
+#     output: true
+#     permalink: /:collection/:path/
+#   pythonModules:
+#     output: true
+#     permalink: /:collection/:path/
+#   rModules:
+#     output: true
+#     permalink: /:collection/:path/
 
 
 atom_feed:
