@@ -1,10 +1,16 @@
 ---
 title: About the Wiki Project
 permalink: /about/
-layout: single
+layout: collection
+classes: wide
 toc: true
 toc_sticky: true
 toc_label: "On This Page"
+collection: contributors # collection name
+entries_layout: grid # list (default),
+show_excerpts:  true #(default), false
+sort_by: title # date (default)
+sort_order:  forward # (default), reverse
 sidebar:
   nav: "generic"
 ---
@@ -51,3 +57,8 @@ Currently we have our documentation regarding instructions for how to contribute
 
 
 Our GitHub [README.md](https://github.com/FredHutch/wiki) has the main overview.
+
+
+
+## Our Contributors
+

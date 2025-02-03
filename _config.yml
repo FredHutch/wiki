@@ -16,7 +16,7 @@ whitelist:
   - jekyll-include-cache
 
 
-remote_theme: mmistakes/minimal-mistakes@4.24.0
+remote_theme: mmistakes/minimal-mistakes@4.26.2
 ### https://github.com/mmistakes/minimal-mistakes
 ### REMEMBER TO OCCASIONALLY TEST THE NEWER VERSIONS FOR NEW GOODIES!!!!!
 minimal_mistakes_skin: contrast
@@ -89,10 +89,10 @@ footer:
       url: "https://join.slack.com/t/fhdata/signup"
     - label: "See our Contributors"
       icon: "fas fa-user-edit"
-      url: /contributors/
-    - label: "About this Resource"
-      icon: "fas fa-landmark"
       url: /about/
+    - label: "Make a Contribution"
+      icon: "fas fa-landmark"
+      url: https://github.com/FredHutch/wiki/blob/main/README.md
 
 
 
