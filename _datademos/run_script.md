@@ -1,6 +1,5 @@
 ---
-title: Workflow Run Script
-hdc: True
+title: Nextflow Workflow Run Script
 ---
 
 Each workflow which you run with Nextflow should ideally be run from its own directory.

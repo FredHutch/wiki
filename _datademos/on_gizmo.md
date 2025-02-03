@@ -1,6 +1,5 @@
 ---
-title: Running Workflows on Gizmo
-hdc: True
+title: Running Nextflow Workflows on Gizmo
 ---
 
 In order to execute a workflow using the `gizmo` SLURM cluster, follow these

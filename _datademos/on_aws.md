@@ -1,6 +1,5 @@
 ---
-title: Running Workflows on AWS
-hdc: True
+title: Running Nextflow Workflows on AWS
 ---
 
 

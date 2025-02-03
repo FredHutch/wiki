@@ -50,8 +50,6 @@ datascience:
         url: /datascience/data_viz/
       - title: Data Wrangling
         url: /datascience/data_wrangling/
-      - title: Building Software Containers
-        url: /datascience/building_containers/
       - title: Tech Hiring for Science
         url: /datascience/tech_hiring/
   - title: Data Management and Sharing

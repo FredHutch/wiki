@@ -1,6 +1,5 @@
 ---
-title: Specifying Workflow Resources
-hdc: True
+title: Specifying Nextflow Workflow Resources
 ---
 
 One of the really appealing things about a workflow manager is that

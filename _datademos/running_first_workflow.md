@@ -1,6 +1,5 @@
 ---
-title: Running Your First Workflow
-hdc: True
+title: Running Your First Nextflow Workflow
 ---
 
 If you are working to run a workflow for the first time, you will need to:

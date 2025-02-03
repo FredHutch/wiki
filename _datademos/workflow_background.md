@@ -1,6 +1,5 @@
 ---
-title: Workflow Background
-hdc: True
+title: Nextflow Workflow Background
 ---
 
 ## The Workflow Concept
