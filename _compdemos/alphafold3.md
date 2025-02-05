@@ -63,6 +63,7 @@ mkdir -p $OUTPUT_DIR
 apptainer exec \
   --nv \
   --bind $DOWNLOAD_DIR:/root/public_databases \
+  --bind $MODEL_PATH=/root/models \
   $SIF \
   python /app/alphafold/run_alphafold.py \
   --json_path=$JSON_PATH \
