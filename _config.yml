@@ -101,8 +101,10 @@ footer:
 
 # Reading Files
 include:
-  - _data
-  - assets
+  # - _data
+  # - assets
+  # - _layouts
+  # - _includes
 
 exclude:
   - ".gitignore"
