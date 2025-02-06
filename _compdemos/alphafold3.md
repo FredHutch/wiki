@@ -40,8 +40,8 @@ more, your job will stay in the pending (PD) state.
 
 # Do not change these paths:
 
-# path to model parameters inside the container
-export MODEL_PATH=/root/public_databases/parameter_models/
+# path to model parameters and reference data
+export MODEL_PATH=/shared/biodata/alphafold3/parameter_models
 export DOWNLOAD_DIR=/shared/biodata/alphafold3
 SIF=/app/software/AlphaFold/containers/alpafold3.sif
 
@@ -62,8 +62,8 @@ mkdir -p $OUTPUT_DIR
 
 apptainer exec \
   --nv \
-  --bind $DOWNLOAD_DIR:/root/public_databases \
   --bind $MODEL_PATH=/root/models \
+  --bind $DOWNLOAD_DIR:/root/public_databases \
   $SIF \
   python /app/alphafold/run_alphafold.py \
   --json_path=$JSON_PATH \
