@@ -62,7 +62,7 @@ mkdir -p $OUTPUT_DIR
 
 apptainer exec \
   --nv \
-  --bind $MODEL_PATH=/root/models \
+  --bind $MODEL_PATH:/root/models \
   --bind $DOWNLOAD_DIR:/root/public_databases \
   $SIF \
   python /app/alphafold/run_alphafold.py \
