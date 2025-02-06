@@ -118,8 +118,7 @@ exclude:
   - "Dockerfile"
   - "Gemfile*"
   - _hdc
-  - archive
-
+  # - archive # uncommenting this breaks stuff!
 
 # Outputting
 permalink: /:categories/:title/
