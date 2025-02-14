@@ -23,7 +23,7 @@ minimal_mistakes_skin: contrast
 
 # Site Settings
 locale: en-US
-title: "Fred Hutch Biomedical Data Science Wiki"
+title: "  "
 description: "Collective documentation for Data Science, Bioinformatics and Scientific Computing at the Fred Hutch"
 url                      : https://sciwiki.fredhutch.org
 baseurl                  : ""
