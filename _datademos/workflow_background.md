@@ -2,7 +2,6 @@
 title: Nextflow Workflow Background
 ---
 
-## The Workflow Concept
 
 A [workflow in Nextflow](https://www.nextflow.io/docs/latest/getstarted.html#your-first-script) 
 is (at the minimum) a text file written in a particular format containing all of the details of
@@ -78,7 +77,7 @@ we strongly suggest that scratch storage be used for this directory.
 
 The phrase "data locality" is used to refer to the general principal that the location of the data storage
 should generally be adjacent to (or easily accessed by) the compute resource being used. For large data files
-being processed by a workflow, execution on SLURM/gizmo is best using files stored in `/fh/fast/` or `/fh/scratch/`;
+being processed by a workflow, execution on SLURM/gizmo is best using files stored in our local filesystem 
 while execution on AWS is best using files stored in AWS S3.
 
 ### Call caching
@@ -124,4 +123,4 @@ For more details on the use of containers in Nextflow, see [this documentation](
 
 There are two options for using a container in your workflow -- use a public image or make your own. The best public resource
 for Docker images is the [BioContainers Registry](https://biocontainers.pro/registry), which has images available for
-a large number of bioinformatics tools. To build your own Docker container, [read this short guide](/hdc/hdc_building_containers/).
+a large number of bioinformatics tools. To build your own Docker container search this site for more guidance using search function.  
