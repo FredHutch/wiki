@@ -1,27 +1,7 @@
 ---
-title: Training and Documentation
-hdc: True
+title: Other Training and Documentation
 ---
 
-Here you can find the opportunities for self-learning and training in the methods used for bioinformatics and data analysis
-which may be useful for researchers in making use of large-scale datasets, in particular those produced by the instrumentation
-provided by Shared Resources.
-
-## Self-directed learning through Fred Hutch
-
-- [The Scientific Computing Resource Library](/compdemos) includes tutorials of how to perform common computational tasks using software available at Fred Hutch. Below we've highlighted a few popular links, but be sure to check out the page to see all the tutorials available.
-  - [How to Rhino](/compdemos/howtoRhino)
-  - [R Tips and Tricks](/compdemos/R_tips_tricks)
-  - [Accessing Economy storage](/scicomputing/store_objectstore/)
-
-- [Code templates and examples](/scicomputing/software_examples) have been developed for those who are interested in implementing methods from the Scientific Computing Resource Library on their own data following best practices for reproducibility. Code templates are provided for setting up your own analyses, as well as additional examples of executable code that can be tailored to suit your own needs.
-
-- The [Fred Hutch Data Science Lab](https://hutchdatascience.org/) curates training materials on a wide array of data science and computing topics that you can find on their [training page](https://hutchdatascience.org/training/). 
-
-- Fredhutch.io was an initiative to facilitate education about and promote access to computational resources at Fred Hutch. Those interested in learning core computational skills like R and Python can work through this archived content at their own pace. 
-  - [Intro to Python](https://fredhutchio.github.io/python_intro/)
-  - [Intermediate Python](https://fredhutchio.github.io/python_programming/)
-  - [Intro to R](https://fredhutchio.github.io/r_intro/)
 
 ## Resources In Seattle
 
@@ -136,4 +116,3 @@ These resources offer classes that are work-at-your-own-pace with a major focus 
 
 - [ROSALIND interactive bioinformatics problem set](https://rosalind.info/)
 
-_Please reach out to the Hutch Data Core by sending an email to `hutchdatacore` with questions, comments, or suggestions related to training!_
