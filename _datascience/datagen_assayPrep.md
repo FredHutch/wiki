@@ -2,70 +2,119 @@
 title: Generating Genomics Data
 ---
 
-## Fred Hutch Shared Resources
-In general, there are many Fred Hutch Shared Resource groups at the Center, from specimen processing to genomics.  To get an overview of the current offerings of all the Fred Hutch Shared Resources see [their landing page here.](https://centernet.fredhutch.org/cn/u/shared-resources.html)
+Multiple processes are involved in the preparation of biological materials before genomic sequencing can even begin. The details of the methods of DNA or RNA extraction and quality assessment process can have a large impact on the quality, relevance, and interpretability of the resulting genomics data. Thus, it is critical to ensure that the most appropriate set of conditions are chosen for preparing your samples before you send them for sequencing of any kind.
 
-## Genomics Shared Resource
-> The Fred Hutch Genomics Shared Resource offers researchers, both at the Fred Hutch and externally, access to a wide range of genomics platforms via fee for service accessible via [Hutchbase.](https://hutchbase.fhcrc.org/base2/)   
+## Considerations Regarding Extraction of Nucleic Acid
 
-The [Genomics and Bioinformatics landing page is here.](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics.html) Services that are available range from study planning, nucleic acid quality assessment, to sample or library preparation, to data generation and basic bioinformatics. This page provides an overview of the currently available platforms, the types of support available through Genomics, strengths and weaknesses of each technology, and guidance for who to contact for consulting about your specific project.  The Fred Hutch Genomics Shared Resource is a valuable wealth of knowledge about all types of genomic assays and are a first stop for more detailed experimental design advice and support for particular projects.  
+When deciding which approach of nucleic acid isolation you should use you must consider atleast these three things:
 
-## Sample Prep for Genomics
+- The **quantity and quality** of nucleic acid you need for the genomic assay you wish to use.
+     
+- **Source of samples** for extracting the nucleic acid for the assay.
 
-Multiple processes can be involved in the isolation, quality assessment and preparation of biological materials upstream of large scale data collection. For many types of datasets, the particulars of the method of nucleic acid extraction and quality assessment process can have a large impact on the quality, relevance, and interpretability of the resulting data. Thus, it is critical to ensure that a correct set of conditions are chosen before any specimens are prepared for analysis.
+- **DNA or RNA** specific considerations.
 
-The sections below contain an array of background information about isolation and quality control (QC) of nucleic acids when the downstream application is a large scale molecular data type.
+When weighing your options also thing about the inherent sample preparation steps involved in generating those data. 
 
-### Nucleic Acid Isolation Methods
 
-There is a tradeoff between purity and yield when it comes to nucleic acid isolation. Thus choosing an appropriate nucleic acid isolation method for the sample and the data intended to be made is critical. Precipitation-based methods tend to provide a larger representation of total nucleic acid types (both large and small fragments), but can have higher levels of "contaminating" nucleic acid types that are not the intended target (e.g., miRNA in the mRNA, RNA in the genomic DNA). Selection-based isolation techniques (affinity column or magnetic-bead) tend to produce higher purity nucleic acids at the expense of yield due to their selectivity. Important considerations for which approach to isolation is desired will include the minimum amount of nucleic acid required for a given assay as well as the inherent sample preparation steps involved in generating those data. Specimen preservation types can also influence the type of nucleic acid extraction approaches that are desirable. For example, cryopreserved, viable cell suspensions tend to provide more intact nucleic acids, while FFPE tissues will tend to produce fragmented nucleic acids due solely to their preservation method, even without issues such as degradation and human error in processing.
+### Extraction Methods
 
-#### RNA Considerations
+| **Method**                 | **Purity vs. Yield Tradeoff** | **Advantages** | **Disadvantages** | **Best For** |  
+|----------------------------|-----------------------------|---------------|------------------|-------------|  
+| **Precipitation-based** | **Higher yield, lower purity** | Captures total nucleic acids (large & small fragments) | May contain contaminants (e.g., miRNA in mRNA prep, RNA in DNA prep) | Applications needing total DNA or RNA |  
+| **Selection-based (affinity column or magnetic-bead)** | **Higher purity, lower yield** | Removes contaminants for high-specificity extraction | Loss of total nucleic acid, may exclude small RNA or fragmented DNA | High-purity applications |  
 
-RNA extraction kits will typically isolate total RNA (small RNAs, mRNAs, rRNAs among [other types of RNA](https://en.wikipedia.org/wiki/RNA#Types_of_RNA) or are moiety-specific (such as mRNAs only). Depending on the downstream application, one approach may be more successful than another despite the intended target. An example is in the case of cDNA preparation for mRNA sequencing via Illumina's TruSeq reagent set. While the final cDNA that is sequenced is enriched for mRNA, the first step in the sample preparation is an mRNA bead based isolation, which means upstream, the ideal sample would be intact, pure total RNA of sufficient quantity and isolating mRNA specifically can be redundant and can result in insufficient yields. Thus, matching isolation approaches to the downstream sample preparation and data type is important to consider prior to beginning a project.
+### Impact of Sample Source
 
-#### DNA considerations
+| **Method**                 | **Purity vs. Yield Tradeoff** | **Advantages** | **Disadvantages** | **Best For** |  
+|----------------------------|-----------------------------|---------------|------------------|-------------|  
+ **Cryopreserved Samples** | **Higher purity, higher integrity** | Preserves intact nucleic acids | Requires careful storage | Long-read sequencing, high-integrity studies |  
+| **FFPE Samples** | **Lower purity, fragmented nucleic acids** | Enables analysis of archived samples | DNA/RNA fragmentation may affect sequencing success | Exome sequencing, targeted mutation analysis |  
 
-DNA extraction from samples of varying quantities and preservation methods can be limited by the fragment length of the isolated DNA and its appropriateness to the downstream sample prep steps. Choosing a method that incorporates the specimen type is important to avoid situations where sufficient yield of DNA is obtained, but the resulting fragments are so small that they are incompatible with the analysis type. For example, fragmented DNA may not provide usable data for a capture based sample preparation, such as an exome sequencing library preparation, that starts with a probe based hybridization because the selected fragments bound to the probes may not be long enough to then sequence sufficiently far to produce usable data.
+### Nucleic Acid Type
+| **Method**                 | **Purity vs. Yield Tradeoff** | **Advantages** | **Disadvantages** | **Best For** |  
+|----------------------------|-----------------------------|---------------|------------------|-------------|  
+| **Total RNA Extraction** | **Moderate purity & yield** | Captures all RNA types (mRNA, rRNA, miRNA) | May require additional purification for specific RNA types | General RNA-based applications, RNA-seq |  
+| **mRNA-Specific Isolation (e.g., Poly(A) Selection)** | **Higher purity, lower yield** | Removes rRNA and other unwanted RNA | Lower total RNA yield, can be redundant if total RNA is available | mRNA-seq, gene expression analysis |  
+| **Genomic DNA Extraction** | **Moderate purity & yield** | Good for whole-genome sequencing | May contain RNA contamination if not treated | WGS, PCR, genotyping |  
+| **Fragmented DNA Extraction (e.g., FFPE DNA Isolation)** | **Lower purity & yield** | Allows recovery from FFPE samples | Fragmentation limits some sequencing applications | Targeted sequencing, mutation analysis |  
 
-#### Available Resources
+ 
+### Useful Links For Further Reading 
 
-Some summaries of extraction kits can be found at the following links:
+  * Here is a useful reference outlining the amount/quality of a few [FFPE nucleic acid extraction kits.](https://doi.org/10.1016/j.ab.2010.01.014)
 
-  * DNA extraction - [Labome overview of DNA extraction kits and applications](https://www.labome.com/method/DNA-Extraction-and-Purification.html)
+## Yield (Quanitity)
 
-  * RNA extraction - [Labome overview of RNA extraction kits and application's](https://www.labome.com/method/RNA-Extraction.html)
+There are two main approaches to quantifying nucleic acids after isolation. Both provide important information that will influence what downstream analyses are possible and suitable, but are not interchangeable, thus it is important to know what types of data describing the nucleic acids can be obtained via each method.
 
-### Quantification Methods
+| **Method**               | **Principle** | **What It Measures** | **Advantages** | **Disadvantages** | **Best For** |  
+|--------------------------|--------------|----------------------|----------------|-------------------|--------------|  
+| **Spectrophotometric (e.g., NanoDrop)** | Measures absorbance at specific wavelengths | Total nucleic acid concentration (260 nm) and purity (260/280, 260/230 ratios) | - Quick, no reagents needed  <br> - Measures contaminants (protein, organic solvents, salts) | - Cannot differentiate DNA vs. RNA <br> - No quality assessment <br> - Less sensitive for low concentrations | Routine nucleic acid quantification when purity ratios are needed |  
+| **Fluorometric (e.g., Qubit)** | Fluorescent dyes bind specifically to nucleic acids | Specific quantification of DNA, RNA, or protein in a sample | - Highly sensitive <br> - Differentiates DNA vs. RNA <br> - Works well for low concentrations | - Requires specialized reagents <br> - Does not measure purity | Accurate quantification of specific nucleic acid types, even in mixed samples |  
 
-There are two main approaches to quantifying nucleic acids in solution after isolation. Both provide important information that will influence what downstream analyses are possible and suitable, but are not interchangeable, thus it is important to know what types of data describing the nucleic acids can be obtained via each method.
+### Useful Links For Further Reading 
 
-#### Spectrophotometric analysis
+- [NanoDrop systems](https://www.thermofisher.com/us/en/home/industrial/spectroscopy-elemental-isotope-analysis/molecular-spectroscopy/ultraviolet-visible-visible-spectrophotometry-uv-vis-vis/uv-vis-vis-instruments/nanodrop-microvolume-spectrophotometers/nanodrop-products-guide.html) 
+- [Qubit](https://www.thermofisher.com/us/en/home/industrial/spectroscopy-elemental-isotope-analysis/molecular-spectroscopy/fluorometers/qubit.html)
 
-Spectrophotometic analysis (e.g. via [NanoDrop systems](https://www.thermofisher.com/us/en/home/industrial/spectroscopy-elemental-isotope-analysis/molecular-spectroscopy/ultraviolet-visible-visible-spectrophotometry-uv-vis-vis/uv-vis-vis-instruments/nanodrop-microvolume-spectrophotometers/nanodrop-products-guide.html) is a common quantification method that allows measurement of quantity and purity of nucleic acid samples, via their absorbance of light. Total amount of nucleic acid is determined by the absorbance at 260nm. Amounts of common contaminants can also be measured with this method - remaining protein is measured via absorbance at 280nm; remaining organic solvents and salts are measured via absorbance at 230nm. Purity of the sample is assessed by calculating ratios of absorbances: 260/280 and 260/230. Nucleic acid samples are generally considered pure enough for sequencing if 260/280 > 1.8 and 260/230 > 1.7.
+### Tapestation
 
->Note: Both RNA and DNA absorb light at 260nm. Spectrophotometric analysis will tell you the **total** amount of nucleic acid (all moieties) in your sample. Also, this analysis does not give information about the quality of the nucleic acid in the sample. To assess amounts of specific nucleic acid, use a fluorescent dye-tagging quantification (fluorimetric) method; in addition, assessment of nucleic acid quality requires electrophoresis via TapeStation (see below).
+TapeStation is a tool used to **assess the quality** of nucleic acids by running an **electrophoresis-based analysis**. Unlike spectrophotometric or fluorometric methods, which measure quantity, TapeStation helps determine **fragmentation and degradation** in your sample.  
 
-#### Fluorimetric analysis
+#### How It Works
+- **Separates nucleic acid fragments** based on **size and charge**  
+- **Provides a visual representation** of sample integrity  
+- Can also **quantify** nucleic acids, but **does not assess purity**  
 
-Fluorometric analysis (e.g. via a [Qubit](https://www.thermofisher.com/us/en/home/industrial/spectroscopy-elemental-isotope-analysis/molecular-spectroscopy/fluorometers/qubit.html)) relies on fluorescent dyes that bind to specific types of nucleic acid (RNA, dsDNA, ssDNA) or protein. Fluorescence assays can thus be more sensitive than spectrophotometric assays for nucleic acid quantification, can provide quantitation of specific moieties of nucleic acids even in mixed solutions, but do not give any information about nucleic acid purity or quality. Qubit systems are often in many labs around the Hutch and consist of a base reader as well as specific assays for the different types and concentrations of nucleic acid.
+#### Why It’s Important
+For **RNA samples**, TapeStation calculates an **RNA Integrity Number (RIN)**, which measures RNA quality based on the ratio of **28S and 18S rRNA**.  
+- **High RIN (>8):** RNA is intact, good for sequencing  
+- **Low RIN (<8):** Indicates RNA degradation, which may impact downstream applications  
 
-### Quality Assessment Methods
+#### Things to Keep in Mind
+- **Extraction method affects RIN values:**  
+  - **Phenol-chloroform (precipitation-based) extractions** may lower RIN because they retain **small RNAs**  
+  - **Column-based extractions** may falsely increase RIN by removing **small RNA fragments**  
+- **Use TapeStation results to confirm quality before sequencing** to avoid failed experiments  
 
-#### TapeStation
+#### Useful Links For Further Reading 
+ - For more information on [RIN definition and background for why it is important to consider when using RNA as an assay material, this article provides additional information.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1413964/)
 
-To assess nucleic acid quality, it is necessary to perform electrophoresis. This process separates nucleic acid fragments by size and charge in order to evaluate the amount of fragmentation and degradation in a sample. Often these types of analysis will also quantitate the amount of nucleic acid in the sample but does not give any information about nucleic acid purity.
+#### Useful Links on Genomic Data Generation
 
-For RNA samples, you can use the results of electrophoresis to calculate an RNA Integrity Number (RIN) value. RIN is a calculated ratio of 28S and 18S rRNA amounts, and is used as a metric of RNA quality. Higher RINs reflect less fragmentation and higher quality RNA; lower RINs indicate RNA degradation. The extraction method itself can have an effect on RIN values and how they should be interpreted. Phenol-chloroform (precipitation-based) extractions may result in lower RIN due to inclusion small RNA types; conversely, column-based extractions may falsely inflate RIN due to exclusion of small RNAs/degradation products in the final isolate analyzed via TapeStation. In general, RIN values > 8 are considered appropriate for sequencing.
+## Library Preparation & Quality Assessment
+| Topic | Description | Resources |
+|-------|------------|-----------|
+| **Library Preparation for Sequencing** | Overview of library prep applications, methods, and challenges | [Genohub Guide](https://genohub.com/ngs-library-preparation-kit-guide/), [Illumina Resources](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html), [Method Explorer](https://www.illumina.com/science/sequencing-method-explorer.html) |
+| **Quality Assessment** | Best practices for assessing nucleic acid purity and integrity | [Labome RNA Extraction](https://www.labome.com/method/RNA-Extraction.html), [Labome DNA Extraction](https://www.labome.com/method/DNA-Extraction-and-Purification.html) |
 
-#### Additional Resources
+### Sequencing Platforms
+| Technology | Description | Resources |
+|------------|-------------|-----------|
+| **Illumina Sequencing** | Short-read sequencing platform using Sequencing-by-Synthesis (SBS) technology | [Illumina Overview](https://www.illumina.com/techniques/sequencing.html), [SBS Video](https://www.youtube.com/watch?v=fCd6B5HRaZ8) |
+| **PacBio SMRT Sequencing** | Long-read sequencing technology for full-length transcripts & high accuracy |[PacBio SMRT Science](https://www.pacb.com/smrt-science/smrt-sequencing/) |
+| **10X Genomics** | Single-cell and spatial genomics platform | [10X Genomics Website](https://www.10xgenomics.com/) |
 
-* Consider emailing the `reagents` listserv in order to find laboratories near you that have a Qubit reader.
+### Sequencing Applications
+| Application | Description | Resources |
+|-------------|-------------|-----------|
+| **RNA Sequencing (RNA-seq)** | Profiling gene expression & transcriptome analysis |[RNA-seqlopedia](https://rnaseq.uoregon.edu/), [Best Practices](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8) |
+| **Small RNA Sequencing** | Focused on miRNA and other small RNAs | [Genohub miRNA Guide](https://genohub.com/services/sequencing/illumina-miRNA-sequencing-services) |
+| **CUT&RUN** | Nuclease-based chromatin profiling for protein-DNA interactions | [Original CUT&RUN Paper](https://elifesciences.org/articles/21856) |
+| **Whole Exome Sequencing (WES)** | Targets protein-coding regions of the genome | [Illumina WES](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/exome-sequencing.html) |
+| **Targeted Sequencing** | Focused sequencing of specific genomic regions | [[Illumina Targeted Sequencing](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html) |
+| **CRISPR Screens** | Genome-wide screening for gene function | [CRISPR Overview Video](https://www.youtube.com/watch?v=4YKFw2KZA5o), [Applications in Research](https://www.nature.com/articles/nbt.3659) |
+| **ChIP-seq** | Chromatin immunoprecipitation for studying protein-DNA interactions | [ChIP-seq Overview](https://epigenie.com/guide-getting-started-with-chip-seq/) |
+| **ATAC-seq** | Assays chromatin accessibility genome-wide | [ATAC-seq Guide](https://www.activemotif.com/blog-atac-seq), [ATAC-seq Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374986/) |
+| **Nanostring** | Digital gene expression profiling technology | [Nanostring Website](https://www.nanostring.com/) |
 
-* The Fred Hutch Genomics lab members are very helpful and can provide guidance for what works best for different types of genomics assays. [The Hutch Genomics Core site is here along with the relevant contact info for the group.](https://sharedresources.fredhutch.org/core-facilities/genomics)
 
-* The Fred Hutch Genomics lab also provides access to TapeStation analysis for nucleic acids (to determine RIN for RNA or fragment sizes for DNA). Samples can be submitted for fee-for-service via [Hutchbase.](https://hutchbase.fhcrc.org/base2/) Check in with the Genomics lab members for specific instructions on sample concentration and volume requirements as well as assay choice (there are several different assays that can be run on the TapeStation).
 
-* For more information on [RIN definition and background for why it is important to consider when using RNA as an assay material, this article provides additional information.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1413964/)
+## Fred Hutch Specific Resources
 
-* Here is a useful reference outlining the amount/quality of a few [FFPE nucleic acid extraction kits.](https://doi.org/10.1016/j.ab.2010.01.014)
+| **Resource** | **Description** | **Relevant Links** |  
+|-------------|---------------|---------------------|  
+| **Qubit Reader Access** | Researchers can email the `reagents` listserv to find nearby labs with a Qubit reader. | N/A |  
+| **Genomics  Core** | Fred Hutch provides multiple shared resource groups, from specimen processing to genomics.  | [Genomics Core Site](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics.html) |  
+| **Bioinformatics Core** | Offers to discuss experimental design, choice of data analysis strategies and software tools via fee-for-service. | [Bioinformatics Core Site](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html)|  
