@@ -1,13 +1,8 @@
 ---
 title: Nextflow Workflows Catalog
-last_modified_at: 2025-02-12
-main_author: Sam Minot
-primary_reviewers: Sitapriya Moorthi
-
 ---
-## Nextflow Workflows Catalog
 
-Each of the workflows below has a short description and a link to the repository, which contains documentation on how to run the workflow.
+Each of the workflows below has a short description and a link to the repository, which contains documentation on how to run the workflow. Please contact the creators of the repositories for help using their code by filing an issue in their GitHub repositories first!
 
 | Workflow | Purpose | Homepage |
 |----------|---------|----------|
@@ -32,7 +27,7 @@ Each of the workflows below has a short description and a link to the repository
 
 ## Workflow Support
 If any of these materials are insufficient you can get support via:
-- Slack [#workflow-managers](https://fhdata.slack.com/archives/CJFP1NYSZ) channel
-- [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) 
+- The FH Data Slack [#workflow-managers](https://fhdata.slack.com/archives/CJFP1NYSZ) channel
+- Schedule a [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) 
 
 
