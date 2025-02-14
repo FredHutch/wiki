@@ -1,6 +1,5 @@
 ---
 title: Other Training and Documentation
-hdc: True
 ---
 
 
@@ -117,4 +116,3 @@ These resources offer classes that are work-at-your-own-pace with a major focus 
 
 - [ROSALIND interactive bioinformatics problem set](https://rosalind.info/)
 
-_Please reach out to the Hutch Data Core by sending an email to `hutchdatacore` with questions, comments, or suggestions related to training!_
