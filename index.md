@@ -7,7 +7,7 @@ header:
   overlay_filter: "0.5"
   overlay_image: /images/multiwell-web.png
 excerpt: "The Biomedical Data Science Wiki aims to create a community curated knowledgebase for biomedical data science and research computing including guidance on policies, resources and tools supporting data intensive research by researchers at the Fred Hutch and beyond."
-data_science:
+wiki_sections:
   - title: "Data Science"
     excerpt: "This domain contains documentation supporting researchers using biomedical data at Fred Hutch and beyond."
     url: /datascience/ds_index/
@@ -23,7 +23,7 @@ data_science:
     url: /about/
     btn_label: "Read More"
     btn_class: "btn--info"
-fhDaSL:
+hutch_highlights:
   - image_path: /images/Cherrytrees-web.png
     alt: "placeholder image dasl"
     title: "Data Science Lab"
@@ -38,24 +38,19 @@ fhDaSL:
     url: "https://www.fredhutch.org/en/research/institutes-networks-ircs/translational-data-science-integrated-research-center.html"
     btn_label: "Learn More"
     btn_class: "btn--primary"
-  - title: "How to Contribute"
+  - image_path: /images/woman-reading-her-computer-screen.jpg
+    alt: "placeholder image contributor"
+    title: "How to Contribute"
     excerpt: "This project relies upon the Fred Hutch research community itself to improve, review, expand and evolve over time. The content spans a wide range of research realms and thus we welcome contributions from a similarly wide range of researchers and staff. Find more information on how to contribute here."      
     url: https://github.com/FredHutch/wiki/blob/main/README.md
-    btn_label: "Read More"
-    btn_class: "btn--info"
-
-contributors:
-  - title: "Our Contributors"
-    excerpt: "The content of this Wiki is generated through the work of researcher and staff content providers, novice and expert reviews, and valuable editing input. Find out more about who has made this site what it is here."
-    url: /contributors/
-    btn_label: "Read More"
+    btn_label: "Learn More"
     btn_class: "btn--info"
 ---
 
 
-{% include feature_row id="data_science" %}
+{% include feature_row id="wiki_sections" %}
 
 
-{% include feature_row id="fhDaSL" %}
+{% include feature_row id="hutch_highlights" %}
 
 

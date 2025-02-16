@@ -32,12 +32,14 @@ When weighing your options also thing about the inherent sample preparation step
 | **FFPE Samples** | **Lower purity, fragmented nucleic acids** | Enables analysis of archived samples | DNA/RNA fragmentation may affect sequencing success | Exome sequencing, targeted mutation analysis |  
 
 ### Nucleic Acid Type
+
 | **Method**                 | **Purity vs. Yield Tradeoff** | **Advantages** | **Disadvantages** | **Best For** |  
 |----------------------------|-----------------------------|---------------|------------------|-------------|  
 | **Total RNA Extraction** | **Moderate purity & yield** | Captures all RNA types (mRNA, rRNA, miRNA) | May require additional purification for specific RNA types | General RNA-based applications, RNA-seq |  
 | **mRNA-Specific Isolation (e.g., Poly(A) Selection)** | **Higher purity, lower yield** | Removes rRNA and other unwanted RNA | Lower total RNA yield, can be redundant if total RNA is available | mRNA-seq, gene expression analysis |  
 | **Genomic DNA Extraction** | **Moderate purity & yield** | Good for whole-genome sequencing | May contain RNA contamination if not treated | WGS, PCR, genotyping |  
-| **Fragmented DNA Extraction (e.g., FFPE DNA Isolation)** | **Lower purity & yield** | Allows recovery from FFPE samples | Fragmentation limits some sequencing applications | Targeted sequencing, mutation analysis |  
+| **Fragmented DNA Extraction (e.g., FFPE DNA Isolation)** | **Lower purity & yield** | Allows recovery from FFPE samples | Fragmentation limits some sequencing applications | Targeted sequencing, mutation analysis | 
+
 
  
 ### Useful Links For Further Reading 
@@ -84,26 +86,29 @@ For **RNA samples**, TapeStation calculates an **RNA Integrity Number (RIN)**, w
 #### Useful Links on Genomic Data Generation
 
 ## Library Preparation & Quality Assessment
+
 | Topic | Description | Resources |
 |-------|------------|-----------|
 | **Library Preparation for Sequencing** | Overview of library prep applications, methods, and challenges | [Genohub Guide](https://genohub.com/ngs-library-preparation-kit-guide/), [Illumina Resources](https://www.illumina.com/techniques/sequencing/ngs-library-prep.html), [Method Explorer](https://www.illumina.com/science/sequencing-method-explorer.html) |
 | **Quality Assessment** | Best practices for assessing nucleic acid purity and integrity | [Labome RNA Extraction](https://www.labome.com/method/RNA-Extraction.html), [Labome DNA Extraction](https://www.labome.com/method/DNA-Extraction-and-Purification.html) |
 
 ### Sequencing Platforms
-| Technology | Description | Resources |
-|------------|-------------|-----------|
-| **Illumina Sequencing** | Short-read sequencing platform using Sequencing-by-Synthesis (SBS) technology | [Illumina Overview](https://www.illumina.com/techniques/sequencing.html), [SBS Video](https://www.youtube.com/watch?v=fCd6B5HRaZ8) |
-| **PacBio SMRT Sequencing** | Long-read sequencing technology for full-length transcripts & high accuracy |[PacBio SMRT Science](https://www.pacb.com/smrt-science/smrt-sequencing/) |
-| **10X Genomics** | Single-cell and spatial genomics platform | [10X Genomics Website](https://www.10xgenomics.com/) |
+
+| Technology | Description | Resources |  
+|------------|-------------|-----------|  
+| **Illumina Sequencing** | Short-read sequencing platform using Sequencing-by-Synthesis (SBS) technology | [Illumina Overview](https://www.illumina.com/techniques/sequencing.html), [SBS Video](https://www.youtube.com/watch?v=fCd6B5HRaZ8) |  
+| **PacBio SMRT Sequencing** | Long-read sequencing technology for full-length transcripts & high accuracy |[PacBio SMRT Science](https://www.pacb.com/smrt-science/smrt-sequencing/) |  
+| **10X Genomics** | Single-cell and spatial genomics platform | [10X Genomics Website](https://www.10xgenomics.com/) |  
 
 ### Sequencing Applications
-| Application | Description | Resources |
-|-------------|-------------|-----------|
-| **RNA Sequencing (RNA-seq)** | Profiling gene expression & transcriptome analysis |[RNA-seqlopedia](https://rnaseq.uoregon.edu/), [Best Practices](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8) |
+
+| Application | Description | Resources |  
+|-------------|-------------|-----------|  
+| **RNA Sequencing (RNA-seq)** | Profiling gene expression & transcriptome analysis |[RNA-seqlopedia](https://rnaseq.uoregon.edu/), [Best Practices](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8) |  
 | **Small RNA Sequencing** | Focused on miRNA and other small RNAs | [Genohub miRNA Guide](https://genohub.com/services/sequencing/illumina-miRNA-sequencing-services) |
 | **CUT&RUN** | Nuclease-based chromatin profiling for protein-DNA interactions | [Original CUT&RUN Paper](https://elifesciences.org/articles/21856) |
 | **Whole Exome Sequencing (WES)** | Targets protein-coding regions of the genome | [Illumina WES](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/exome-sequencing.html) |
-| **Targeted Sequencing** | Focused sequencing of specific genomic regions | [[Illumina Targeted Sequencing](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html) |
+| **Targeted Sequencing** | Focused sequencing of specific genomic regions | [Illumina Targeted Sequencing](https://www.illumina.com/techniques/sequencing/dna-sequencing/targeted-resequencing/targeted-panels.html) |
 | **CRISPR Screens** | Genome-wide screening for gene function | [CRISPR Overview Video](https://www.youtube.com/watch?v=4YKFw2KZA5o), [Applications in Research](https://www.nature.com/articles/nbt.3659) |
 | **ChIP-seq** | Chromatin immunoprecipitation for studying protein-DNA interactions | [ChIP-seq Overview](https://epigenie.com/guide-getting-started-with-chip-seq/) |
 | **ATAC-seq** | Assays chromatin accessibility genome-wide | [ATAC-seq Guide](https://www.activemotif.com/blog-atac-seq), [ATAC-seq Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374986/) |
