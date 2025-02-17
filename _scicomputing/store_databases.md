@@ -23,11 +23,9 @@ REDCap has been used by thousands of non-profit institutions throughout the worl
 
 CDS provides backup services, database maintenance, support for developing REDCap projects, and is very accessible for staff without previous database experience.  
 
-For more information about REDCap at the Fred Hutch, training materials and documentation provided by CDS, [visit their site here](https://research.fredhutch.org/cds/en/redcap.html).
+For more information about REDCap at the Fred Hutch, login information and training materials and documentation provided by CDS, [visit their site here]([https://research.fredhutch.org/cds/en/redcap.html](https://redcap.fredhutch.org/)).
 
 Recorded trainings are available on the [CDS REDCap Training page](https://research.fredhutch.org/cds/en/redcap/redcap-training.html).
-
-The login page for the Fred Hutch instance is [here](https://redcap.fredhutch.org/).
 
 ## MS SQL Server
 

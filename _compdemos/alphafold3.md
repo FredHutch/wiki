@@ -67,7 +67,8 @@ apptainer exec \
   python /app/alphafold/run_alphafold.py \
   --json_path=$JSON_PATH \
   --model_dir=$MODEL_PATH \
-  --output_dir=$OUTPUT_DIR
+  --output_dir=$OUTPUT_DIR \
+  --db_dir=/root/public_databases
 ```
 
 If the above script is saved as `script.sh`, you can run it with the command `sbatch script.sh`.

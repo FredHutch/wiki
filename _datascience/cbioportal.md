@@ -27,7 +27,7 @@ The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) pro
 
 ### Technical Documentation and Repositories
 - [Public cBioPortal Documentation](https://docs.cbioportal.org/)
-- [Fred Hutch cBioPortal GitHub Repository](https://github.com/FredHutch/cbioportal-fredhutch-automation) (contact [Taylor Firman](mailto:tfirman@fredhutch.org) for access)
+- [Fred Hutch cBioPortal GitHub Repository](https://github.com/FredHutch/cbioportal-fredhutch-automation) (contact the [cBioPortal team](https://fhdata.slack.com/archives/C088E41ARV3) for access)
 
 ## Release Notes
 
@@ -42,6 +42,6 @@ The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) pro
 - No fixes yet, just releasing this product
 
 ## Contact Us
-The cBioPortal team can be contacted by emailing Taylor Firman ([tfirman@fredhutch.org](mailto:tfirman@fredhutch.org)). Please feel free to schedule a [Data House Call](https://calendly.com/data-house-calls/resources) with us to go over any questions you may have.
+The cBioPortal team can be contacted via the [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3) channel on [FH-Data Slack](https://fhdata.slack.com/). Please feel free to schedule a [Data House Call](https://calendly.com/data-house-calls/resources) with us to go over any questions you may have.
 
 
