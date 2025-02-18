@@ -42,8 +42,6 @@ datascience:
         url: /pathways/
       - title: Data Science Training
         url: /datascience/hutch_courses/
-      - title: Other Resources
-        url: /datascience/misc_training/
   - title: General
     children:
       - title: Data Visualization
