@@ -123,9 +123,12 @@ Different sequencing applications serve distinct research goals, and choosing th
 
 ## Fred Hutch Specific Resources
 Fred Hutch provides several specialized resources to support researchers throughout their genomics workflows, from sample preparation to data analysis. This table lists resources available to Fred Hutch researchers, such as access to the Genomics Core and Bioinformatics Core. Whether you need guidance on experimental design, access to shared equipment, or bioinformatics support, these resources can streamline your research process. The table links to relevant Fred Hutch websites, providing easy access to additional details and support services.
+Here are some resources:  
+
 | **Resource** | **Description** | **Relevant Links** |  
 |-------------|---------------|---------------------|  
 | **Qubit Reader Access** | Researchers can email the `reagents` listserv to find nearby labs with a Qubit reader. | N/A |  
-| **Genomics  Core** | Fred Hutch provides multiple shared resource groups, from specimen processing to genomics.  | [Genomics Core Site](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics.html) |  
-| **Bioinformatics Core** | Offers to discuss experimental design, choice of data analysis strategies and software tools via fee-for-service. | [Bioinformatics Core Site](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html)|  
-| **Data House Calls** | Offers free consultations to discuss effective data science and bioinformatics strategies available to all Fred Hutch staff | [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html)|  
+| **Genomics Core** | Fred Hutch provides multiple shared resource groups, from specimen processing to genomics. | [Genomics Core Site](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics.html) |  
+| **Bioinformatics Core** | Offers to discuss experimental design, choice of data analysis strategies and software tools via fee-for-service. | [Bioinformatics Core Site](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html) |  
+| **Data House Calls** | Offers free consultations to discuss effective data science and bioinformatics strategies available to all Fred Hutch staff. | [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html) |  
+
