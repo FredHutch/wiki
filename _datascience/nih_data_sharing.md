@@ -13,7 +13,7 @@ You can learn more about "FAIR" (Findable, Accessible, Interoperable, Reusable) 
 The Data Science Lab has generated a number of different a la carte resources to support the creation of Data Sharing and Management plans from self-paced guides to templated text to long term management of all your plans.  Our goal is to create supports that work for many different types of studies, datasets and investigators to simplify creating these plans.  
 
 ### DMPtool.org
-In response to this new, expanded scope of data sharing requirements as well as from other funding agencies, the Data Science Lab has begun customizing [dmptool.org](https://dmptool.org/) for Fred Hutch investigators.  You can learn more about this free tool on our [dmptool page](/dasldemos/dmptool/).
+In response to this new, expanded scope of data sharing requirements as well as from other funding agencies, the Data Science Lab has begun customizing [dmptool.org](https://dmptool.org/) for Fred Hutch investigators.  You can learn more about this free tool on our [dmptool page](/datademos/dmptool/).
 
 ### NIH Data Sharing Guide
 The Data Science Lab has also created a guide you can [find here](https://hutchdatascience.org/NIH_Data_Sharing/) that walks you through the process of complying with the new 2023 NIH Data Sharing Policy. 

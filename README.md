@@ -144,9 +144,8 @@ Please if you need to reference a Fred Hutch username, do not write the entire e
 The general contributor should likely have no reason/need to edit any of the files in the main directory of the repository, nor files in any other subfolders besides the ones described below.  The folders below contain the content portions of the site, while the other folders and files contain all the necessary information to actually BUILD the website itself.  
 
 ### Content-Housing Folders
-Data Generation Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/main/_generation
 
-Data Generation Resource Library (note all markdowns in this folder will be rendered): https://github.com/FredHutch/wiki/tree/main/_gendemos
+Data Science Content is here: https://github.com/FredHutch/wiki/tree/main/_datascience
 
 Scientific Computing Content, organized with filenames that start with xxx_ based on what section they are intended to show up in the sidebar: https://github.com/FredHutch/wiki/tree/main/_scicomputing
 
@@ -295,8 +294,8 @@ Note that this plugin is *not* one of the plugins approved by GitHub to be used 
 ## For Admins (everyone else, please do not edit these as your edits will be ignored/removed)
 
 ### Pages that run Demo and Contributors Collection pages:
-Generation resource library collection page:  
-https://github.com/FredHutch/wiki/blob/main/generationdemos.md
+Data Science resource library collection page:  
+https://github.com/FredHutch/wiki/blob/main/datademos.md
 
 Computing resource library collection page:  
 https://github.com/FredHutch/wiki/blob/main/computingdemos.md
@@ -328,4 +327,4 @@ https://github.com/FredHutch/wiki/blob/main/_data/glossary.yml
 
 ### Other pages:
 Our index page: https://github.com/FredHutch/wiki/blob/main/index.md
-Our outreach page: https://github.com/FredHutch/wiki/blob/main/outreach.md
+

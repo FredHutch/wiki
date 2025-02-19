@@ -49,7 +49,10 @@ def crawl_documents():
                 text = sh.pandoc("-f", "html", "-t", "plain", fullpath)
                 with open(fullpath) as f:
                     soup = BeautifulSoup(f, "html.parser")
-                title = soup.title.string
+                if soup.title is None:
+                    title = " - Fred Hutch Biomedical Science Wiki"
+                else:
+                    title = soup.title.string
                 title = title.replace(" - Fred Hutch Biomedical Data Science Wiki", "").strip()
                 doc = dict(url=url, content=str(text), title=title)
                 docs.append(doc)

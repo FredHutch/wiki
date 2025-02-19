@@ -1,6 +1,6 @@
 ---
 title: Fred Hutch Oriented DaSL Training
-primary_reviewers: vortexing
+
 ---
 
 The Fred Hutch Data Science Lab's wider training efforts can be found on our [training page](https://hutchdatascience.org/training/).  However, in addition to data science training courses we create that are focused on a wider audience, we have also created a number of Fred Hutch oriented training materials.  
