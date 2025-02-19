@@ -2,7 +2,9 @@
 title: Nextflow Workflows Catalog
 ---
 
-Each of the workflows below has a short description and a link to the repository, which contains documentation on how to run the workflow. Please contact the creators of the repositories for help using their code by filing an issue in their GitHub repositories first!
+This table provides a collection of bioinformatics workflows designed for a variety of applications in genomic and transcriptomic research. Each workflow is linked to its corresponding GitHub repository, where you can find documentation on how to run the analysis, as well as instructions for filing an issue if you need assistance. The workflows cover a wide range of tasks, including RNA sequencing analysis, microbial genome assembly, quality control, and more.
+
+Use the descriptions provided to determine which workflow best suits your research needs. If you're looking for a specific analysis type, such as differential expression analysis, microbial taxonomic classification, or gene set enrichment, simply look for the relevant workflow and follow the link to the GitHub repository for detailed usage instructions.
 
 | Workflow | Purpose | Homepage |
 |----------|---------|----------|
