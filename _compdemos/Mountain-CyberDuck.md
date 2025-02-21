@@ -21,26 +21,25 @@ Email `helpdesk` or your divisional IT support and ask for an installation of Mo
 
 ### Installing Mountain Duck
 
+**NOTE**: These instructions only work for computers which were issued by Fred Hutch.
+If you have a non-Fred Hutch computer, consider using the free software 
+[Cyberduck](#installing-cyberduck) instead of Mountain Duck.
+
 #### Windows 10
 
 - Open Software Center and search for Mountain Duck and install the package using the Install button
 - Restart your Computer if the installer asks you to do so.
-- After install you should see an orange icon in your system tray (if you do not see it in the tray start Mountain Duck from the start menu.)
 - Continue with [Configuring Mountain Duck](#configuring-mountain-duck) below.
-
-#### Windows 7
-
-- Open folder `X:\fast\_ADM\SciComp\setup\packages\MountainDuck\` on the Center Drive (X).  
-- Start (double click) file INSTALL.bat. The install script will install a tested version of Mountain Duck, a profile and a license file.
-- Continue with [Configuring Mountain Duck](#configuring-mountain-duck) below.
-
-![Tray](/assets/mountain_cyber_duck/2018-09-25-11-25-43.png)
 
 
 #### Mac OSX
 
-- Download and install the Software in trial mode [here](https://mountainduck.io/)
-- To get a license file, download the `fredhutch50.mountainducklicense` from [here](https://teams.fhcrc.org/sites/citwiki/SciComp/Documents/fredhutch50.mountainducklicense) and double click the file or drag it to the Mountain Duck application icon to register.
+- Open the Self Service app
+- Search for Mountain Duck
+- Click `Install`
+- Go to Finder, navigate to Applications, and double-click on Mountain Duck.
+  You should see a duck icon in the top right of the screen,
+  to the right of the Help menu.
 - Continue with [Configuring Mountain Duck](#configuring-mountain-duck) below.
 
 ### Configuring Mountain Duck

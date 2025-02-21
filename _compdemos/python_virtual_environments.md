@@ -10,9 +10,7 @@ A Python virtual environment allows you to create an isolated Python installatio
 
 One of the reasons SciComp provides environment modules is to give you an easy way to access software that can frequently be difficult to install- thus, our default answer is to use the _fhPython_ series of environment modules whenever possible.  However, we understand that there are many libraries that are not part of our modules. In those cases virtual environments are preferable to installing libraries in your home directory.
 
-We typically see Anaconda requested because it's a very common way for Bioinformatics software developers to document the installation of their packages.  Sometimes these instructions can be "translated" to use `pip` in a virtual environment, but this is a good use case for the Anaconda module.
-
-Using the stand-alone, upstream Anaconda installer provides you with the greatest control, but can require significant knowledge and maintenance to get to work.  Our ability to support these installations is hampered by the fact that these installations can be affected by other elements of your Linux environment (hence our recommendation to use environment modules).
+Using the stand-alone, upstream Miniforge installer provides you with the greatest control, but can require significant knowledge and maintenance to get to work.  Our ability to support these installations is hampered by the fact that these installations can be affected by other elements of your Linux environment.
 
 ## Python venv 
 
@@ -60,110 +58,33 @@ lrwxrwxrwx 1 mrg g_mrg 53 Dec  6 14:28 /home/mrg/Work/testenv/bin/python -> /app
 
 In my newly created environment the Python interpreter is just a link to the interpreter used to create the environment (the interpreter loaded by the module command).  Thus it is _imperative_ that you load the same environment module the virtual environment was created with _before_ you activate the virtual environment.  Activating the environment module after activating the environment will have unpredictable effects on how Python runs.
 
-## Using Anaconda to Manage a Virtual Environment
+## The Conda Installer
 
-Anaconda and its sibling Miniconda are essentialy distributions of Python- these use their own library installation tools and repositories.
+"Conda" is a suite of tools for managing independent Python environments a'la `venv` but with some additional features.  The most common Conda installers are Anaconda, Miniconda, and Miniforge.  The currently supported Conda installer is [miniforge](https://conda-forge.org/) from the Conda project.
 
-There are two options for running Anaconda- via an environment module or a stand-alone installation.  In most cases the environment module is preferable as you can load and use Anaconda with a simple module load command versus downloading and building the full Anaconda environment.
+### Miniforge from Upstream
 
-> It is recommended that you use one or the other of these installation methods (either environment module _or_ standalone).  Installing and using Anaconda with both methods will cause problems.
+[Download the appropriate Miniforge](https://conda-forge.org/download/) for your workstation and install according the the instructions on that page.  The installer does have help (`bash Miniforge3-$(uname)-$(uname -m).sh -h`) if there are additional features you'd like to use during install.
 
-### Anaconda with Environment Modules
+Once installed you will need to configure your channels- please follow the instructions [here](https://conda-forge.fredhutch.org/) to complete that configuration (VPN required)
 
-When using the environment module to use Anaconda, this module must be loaded before activating any _conda_ environments.  The Anaconda environment module is loaded as other environment modules:
+#### Configuring the Shell Environment
 
-```console
-rhino03[~]: ml Anaconda3/2022.05
-```
-
-Available versions can be listed with `ml spider Anaconda`.  Once loaded initialize your environment with `conda init`:
-
-```console
-rhino03[~]: conda init bash  # assuming your shell is bash
-```
-
-If you do not initialize your shell environment, subsequent attempts to create or activate Anaconda environments will fail with a message like `your shell is not properly initialized`.
-
-### Anaconda from Upstream
-
-It is possible to download the Anaconda installer from the Anaconda organization and install it to any location you have access to (e.g. your home directory or fast-file).  This will install a Python interpreter into the indicated path.
-
-The installation process is well documented on the [Anaconda web site](https://docs.anaconda.com/free/anaconda/install/linux/).  The prerequisites indicated there are (mostly) already available on our compute systems and can be skipped.
-
-Once your installation is complete, install the Gnu compiler tools- _gcc_linux-64_, _gxx_linux-64_, and _gfortran_linux-64_.  This will install the Anaconda toolsets and should be used over any tools installed on the OS or via environment modules.
-
-#### Get Installer
-
-Download and run the installer script according to the instructions from Anaconda.  In this example I will be installing into my home directory.
+For my own environment, I have elected not to activate the base conda at login (I ran the installer with the `-s` option skipping install of the init scripts).  I've created a function in my `.bashrc` startup file to perform the necessary steps to enable conda:
 
 ```
-rhino03[~/Work/conda]: wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
---2024-01-24 11:16:38--  https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
-Resolving repo.anaconda.com (repo.anaconda.com)... 104.16.131.3, 104.16.130.3, 2606:4700::6810:8303, ...
-Connecting to repo.anaconda.com (repo.anaconda.com)|104.16.131.3|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 1153404010 (1.1G) [application/x-sh]
-Saving to: ‘Anaconda3-2023.09-0-Linux-x86_64.sh’
-
-Anaconda3-2023.09-0- 100%[======================>]   1.07G   222MB/s    in 5.2s
-
-2024-01-24 11:16:44 (213 MB/s) - ‘Anaconda3-2023.09-0-Linux-x86_64.sh’ saved [1153404010/1153404010]
-
-rhino03[~/Work/conda]: /bin/bash ./Anaconda3-2023.09-0-Linux-x86_64.sh
-
-Do you accept the license terms? [yes|no]
-[no] >>> yes
-
-Anaconda3 will now be installed into this location:
-/home/mrg/anaconda3
-
-  - Press ENTER to confirm the location
-  - Press CTRL-C to abort the installation
-  - Or specify a different location below
-
-[/home/mrg/anaconda3] >>> /home/mrg/bin/anaconda3
-PREFIX=/home/mrg/bin/anaconda3
-```
-
-At the end of the installation you can have Conda activate the base environment at login.  This can cause problems with some environment modules- activating and deactivating this feature is easy enough, so feel free to try either approach to see which works best for you.
-
-```
-installation finished.
-Do you wish to update your shell profile to automatically initialize conda?
-This will activate conda on startup and change the command prompt when activated.
-If you'd prefer that conda's base environment not be activated on startup,
-   run the following command when conda is activated:
-
-conda config --set auto_activate_base false
-
-You can undo this by running `conda init --reverse $SHELL`? [yes|no]
-[no] >>>
-
-You have chosen to not have conda modify your shell scripts at all.
-To activate conda's base environment in your current shell session:
-
-eval "$(/home/mrg/bin/anaconda3/bin/conda shell.YOUR_SHELL_NAME hook)"
-
-To install conda's shell functions for easier access, first activate, then:
-
-conda init
-```
-
-One approach to ensure that the proper environment modules are loaded is to build those steps into a shell function that also activates the conda base environment.
-
-For my own environment, I have elected not to activate the base conda at login.  I've created a function in my `.bashrc` startup file to perform the necessary steps to enable Anaconda:
-
-```
-enable_anaconda(){
-  eval "$(/home/mrg/bin/anaconda3/bin/conda shell.bash hook)"
+enable_conda(){
+  eval "$(/home/mrg/bin/miniforge3/bin/conda shell.bash hook)"
 }
 ```
 
-once this has been added to your environment, you can just enter the command `enable_anaconda` to load the modules and set up conda as your Python interpreter.
+You will need to upate the path to `conda` with the path to your installation.  Once this has been added to your environment, you can just enter the command `enable_conda` to load the modules and set up conda as your Python interpreter.
 
 #### Install the Build Tools
 
-Activate the base conda environment and install the build tools described earlier:
+You may run into problems installing some packages which require compiling binaries.  The options here are to load an Lmod module with a newer compiler or install the build tools from Conda
+
+Activate the base conda environment and install the build tools:
 
 ```
 conda install gcc_linux-64 gxx_linux-64 gfortran_linux-64
@@ -175,3 +96,4 @@ By default this will install the most current versions available in the Conda Fo
 conda install gcc_linux-64==11.2.0 gxx_linux-64==11.2.0 gfortran_linux-64==11.2.0
 ```
 
+> NOTE: these are instructions for linux- you will need to check if build tools are available for your workstation.

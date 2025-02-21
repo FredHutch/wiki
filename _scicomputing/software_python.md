@@ -34,34 +34,18 @@ Please see our [Python Module page](/pythonModules/) for more information on pac
 
 ### Installing Python on your own computer
 
-If you are new to coding and just getting started with Python,
-your best bet is to install [Anaconda](https://www.anaconda.com/products/individual),
-a set of software that allows you to install, manage, and launch applications for running Python code on your own computer.
-Following installation,
-you can use Anaconda Navigator to explore various options for running Python, 
-including Jupyter notebooks and PyCharm.
+If you are new to coding and just getting started with Python the easiest way to install Python on your workstation is to use either [Miniforge](https://conda-forge.org/) or [uv](https://github.com/astral-sh/uv).  `uv` is relatively new but has shown some significant interest in the Python community.
 
-fredhutch.io's Intro to Python course uses Anaconda,
-and includes brief [installation instructions](https://www.fredhutch.io/software/#python-jupyter-notebooks)
-as well as a [walk-through of Jupyter notebooks](https://nbviewer.jupyter.org/github/fredhutchio/python_intro/blob/gh-pages/class1.ipynb#A-brief-orientation-to-Python-and-Jupyter-notebooks).
-
-A piece of software related to Anaconda is [Miniconda](https://docs.conda.io/en/latest/miniconda.html),
-which has the same base functionality but in a stripped-down form. We recommend Anaconda for beginners because it includes Anaconda Navigator,
-as well as many other useful applications.
+Use the instructions for installing Miniforge from conda-forge project and then configure as described [here](https://conda-forge.fredhutch.org).  More information on Conda installers is also [available on Centernet](https://centernet.fredhutch.org/u/it/scicomp/anaconda-license-faq.html) (VPN required)
 
 ### Using Python on `rhino`
 
-To access Python on the Fred Hutch computing cluster, you will need to load a Python module.
-Each Python build is based on different version. Once a module is created it is not modifed and as many historic
-versions are available as possible. Thus identifying if an existing Python build matches your needs is a first step to using
-Python on the cluster.
+To access Python on the Fred Hutch computing cluster, you will need to load a Python module.  Each Python build is based on different version. Once a module is created it is not modifed and as many historic versions are available as possible. Thus identifying if an existing Python build matches your needs is a first step to using Python on the cluster.
 ```
 module avail Python/3
 module avail fhPython
 ```
-SciComp maintains a custom version of Python named fhPython. fhPython has over 1,000 pre-installed libraries,
-many of which have been requested by Fred Hutch staff. 
-The Scientific Software Inventory provides a list of Python modules and detailed information about libraries included with each version.
+SciComp maintains a custom version of Python named fhPython. fhPython has over 1,000 pre-installed libraries, many of which have been requested by Fred Hutch staff.  The Scientific Software Inventory provides a list of Python modules and detailed information about libraries included with each version.
 [Python](https://fredhutch.github.io/easybuild-life-sciences/python/) inventory.
 If you do not see the software you desire, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences GitHub repository](https://github.com/FredHutch/easybuild-life-sciences).
 In your request, please include a link to the package source and version you require.  
