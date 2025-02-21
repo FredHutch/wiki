@@ -14,8 +14,8 @@ primary_reviewers: vortexing, abbywall
 ## Getting Started
 
 ### Training and Courses
-- Find out more about PROOF in our [How-To in the DaSL Resource Library](/dasldemos/proof-how-to/)
-- Explore more advanced troubleshooting capabilities in our [PROOF Troubleshooting Guide](/dasldemos/proof-troubleshooting/)
+- Find out more about PROOF in our [How-To in the DaSL Resource Library](/datademos/proof-how-to/)
+- Explore more advanced troubleshooting capabilities in our [PROOF Troubleshooting Guide](/datademos/proof-troubleshooting/)
 - Learn more about developing WDL workflows using our [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/)
 
 ### Technical Documentation and Repositories

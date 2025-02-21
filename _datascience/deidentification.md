@@ -150,7 +150,7 @@ public benefits of secondary research.[^4]<sup>, </sup>[^5]<sup>,
 
 ## Other resources
 
-[De-Identification of Structured Data](/dasldemos/deidentification_methods_structured/), DaSL Resource Library page.
+[De-Identification of Structured Data](/datademos/deidentification_methods_structured/), DaSL Resource Library page.
 
 [Protecting Personal Health Information in Research: Understanding the HIPAA Privacy Rule](https://privacyruleandresearch.nih.gov/pdf/HIPAA_Privacy_Rule_Booklet.pdf), NIH Booklet (NIH Publication Number 03-5388).
 

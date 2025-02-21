@@ -15,6 +15,7 @@ Slurm _partitions_ organize and associate compute resources in the cluster. Part
 |----------------|-------|------------|----------|----------|----------|--------
 | campus-new (*) | All   | yes        | normal   | 3 days   | 30 days  | 1000 cores per account
 | short          | All   | yes        | normal   | 1 hour   | 12 hours | 8000 core-hours committed per account
+| interactive    | All   | yes        | higher   | 1 day    | 7 days   | 36 cores per user, 1 GPU per user
 | restart        | All   | no         | low      | 3 days   | 7 days   | no limit
 | chorus        | harmony   | yes         | normal      | 1 days   | 5 days   | min 1 GPU, max 4, max 8 CPU per job
 
@@ -33,6 +34,10 @@ The partition "campus-new" is the default partition- this is a general purpose p
 "short" is a partition intended for workloads with many jobs of short duration.  The limit is a little more complicated in that it limits the amount of run time committed to the account, but allows you to run many more cores than under the campus-new partition.
 
 More information is available [here](/compdemos/gizmo_short_partition/)
+
+### interactive
+
+The "interactive" partition is for jobs that use nodes interactively- right now this is being used by `grabnode`.  This partition is different in that the limits are _per_user_ instead of account.  This partition does have a higher priority to improve allocation times.
 
 ### restart
 
