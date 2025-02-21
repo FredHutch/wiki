@@ -97,7 +97,7 @@ It is a **[local installation of cBioPortal](https://cbioportal.fredhutch.org/)*
 ### How can I request to upload my data into the Fred Hutch instance?
 If you are interested in uploading your own data into the Fred Hutch instance of cBioPortal, here are the steps you need to follow:
 <iframe src="https://share.descript.com/embed/mDv6uZeDjVZ" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-<!-- ![upload_steps](/dasldemos/assets/cbio_17_overview_of_FH_instance_upload.png) -->
+<!-- ![upload_steps](/datademos/assets/cbio_17_overview_of_FH_instance_upload.png) -->
 *Note: The cBioPortal team can be contacted via the [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3) channel on [FH-Data Slack](https://fhdata.slack.com/), or reach out directly to the DaSL Data Governance Team at [dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org).*
 
 1. Request access to upload your study by submitting a response on the [cBioPortal Access Request REDCap Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW). Before submitting, make sure to prepare the following information.
@@ -115,12 +115,12 @@ The cBioPortal admin team will review your submission and notify you via email o
 
 _Note: Study approval is specific to the IRB and datatypes specified in the REDcap form. While periodic auditing will be performed by the DaSL team, it is the lab's responsibility to ensure that only the approved datatypes are uploaded to the platform. Failure to do so will result in study removal from the FH cBioPortal platform. If you would like to upload any new datatypes for an existing study, please reach out to the [Data Governance team](mailto:dataprotection@fredhutch.org) as this will require additional review. If you would like to create a new project covered under a different IRB, please submit another response to the [REDCap Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)._
 
-![study_teams_details](/dasldemos/assets/cbio_09_study_teams_details.png)
-![study_member_details](/dasldemos/assets/cbio_10_study_member_details.png)
-![cBioPortal_Project_details](/dasldemos/assets/cbio_11_cBioPortal_Project_details.png)
-![IRB_Details](/dasldemos/assets/cbio_12_IRB_Details.png)
-![Dataset_Details_1](/dasldemos/assets/cbio_13_Dataset_Details_1.png)
-![Dataset_Details_2](/dasldemos/assets/cbio_14_Dataset_Details_2.png)
+![study_teams_details](/datademos/assets/cbio_09_study_teams_details.png)
+![study_member_details](/datademos/assets/cbio_10_study_member_details.png)
+![cBioPortal_Project_details](/datademos/assets/cbio_11_cBioPortal_Project_details.png)
+![IRB_Details](/datademos/assets/cbio_12_IRB_Details.png)
+![Dataset_Details_1](/datademos/assets/cbio_13_Dataset_Details_1.png)
+![Dataset_Details_2](/datademos/assets/cbio_14_Dataset_Details_2.png)
 2. In the meantime, get [AWS credentials](/scicomputing/access_credentials/#amazon-web-services-aws) by emailing the [Fred Hutch help desk](helpdesk@fredhutch.org).
 *Note: Make sure to include your PI in this email request as they'll need a lab-based account as well.* Once Fred Hutch help desk emails you back with your credentials, make sure to [test them](/scicomputing/access_credentials/#testing-your-credentials) to ensure they are functioning correctly. If you already have AWS credentials, skip this step.
 
