@@ -92,7 +92,7 @@ The `--profile default` flag is not necessary if you are using the default profi
 The following section will describe how to test and use your credentials.
 
 
-### Configure AWS CLI for Single Sign-on (SSO)
+### Configure Motuz and AWS CLI for Single Sign-on (SSO)
 To access an AWS account using SSO authentication, a user signs in to the AWS access portal URL provided, IAM Identity Center redirects the request to an authentication service. 
 
 After authentication with a HutchNet ID, the user will have SSO access to all AWS account and applications without additional sign-in requirements (Username and Password)  
@@ -108,6 +108,12 @@ Key Steps:
  ![AccountSelection](../assets/CLD_LZALandingPage.png)
 4. Choose a role: Select the specific role assigned to you within the chosen AWS account. PowerUserAccess is a link and clicking the role will take you to the AWS account. 
 5.  Access AWS services: You can now access the AWS Management Console or use the AWS CLI with temporary credentials obtained from your SSO session. 
+
+## Using Motuz with SSO:
+
+To use [Motuz](/compdemos/motuz/) with SSO credentials, click `Access keys` in the SSO portal for your account. Scroll down to the bottom where it says `Option 3`. 
+In Motuz, create a new Cloud Connection. Be sure and change `S3 Connection Type` to `Temporary Security Credentials (STS)`. Copy and paste the values for Access Key ID, Secret Access Key, and Session Token from the SSO portal to the corresponding fields in Motuz. 
+You will need to update these fields each time you use motuz, as the credentials expire after 8 hours. 
 
 ## Using the AWS CLI with SSO: 
 
@@ -127,12 +133,10 @@ Run `aws sso login` in your terminal to initiate an SSO session and retrieve tem
 
 Once logged in, use the AWS CLI commands as usual, utilizing the temporary credentials obtained through SSO. 
 
-<div class=".notice">
-
 ## Important point to remember: 
 
 The SSO session has a set expiration time, so you may need to re-authenticate periodically. 
-</div>
+
 
 ### Testing Your Credentials
 
