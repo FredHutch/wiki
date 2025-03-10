@@ -21,7 +21,7 @@ This guide will describe how to select, configure, and provision databases using
 
 ### Logging In
 
-Browse to https://MyDB.fredhutch.org/login and use your HutchNet ID to log in.
+Browse to [https://MyDB.fredhutch.org/login](https://MyDB.fredhutch.org/login) and use your HutchNet ID to log in.
 
 ## Provisioning Databases
 
