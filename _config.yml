@@ -107,7 +107,6 @@ include:
 exclude:
   - ".gitignore"
   - ".gitlab-ci.yml"
-  - "elasticsearch"
   - "tmp"
   - "*.py"
   - "*.yml"
