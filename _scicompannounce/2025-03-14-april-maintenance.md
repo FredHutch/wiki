@@ -2,7 +2,7 @@
 Title: April Maintenance for Rhino/Gizmo Compute Environment
 ---
 
-On Sunday, 27 April 2025, SciComp will be performing maintenance on systems in the Rhino/Gizmo compute environment.  We expect this to take most of Sunday- during this time jobs will not be run and access to some systems will be intermittent.
+On Sunday, 27 April 2025, SciComp will be performing maintenance on systems in the Rhino/Gizmo compute environment.  We expect this to take most of Sunday- during this work, access to some systems will be intermittent.
 
 If you have questions about any of this work, please email Scientific Computing.
 
@@ -20,7 +20,9 @@ Scratch will be removed from the rhino nodes, Motuz, and from the systems provid
 
 ### Rhino Maintenance
 
-We need to reboot the rhino nodes- as part of this work we'll be updating NoMachine and rebooting the network switches connected to rhino nodes.
+We need to reboot all of the rhino nodes- rhino01, rhino02, and rhino03.  As part of this work we'll be updating NoMachine and rebooting the network switches connected to rhino nodes.
+
+Please note that any running processes, any NoMachine sessions, and **any grabnode sessions** started from these nodes will be killed.
 
 ### Slurm Update
 
