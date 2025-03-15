@@ -2,5 +2,4 @@
 tmp/
 *.gz
 rancher-v0.6.2
-elasticsearch/
 .gitlab-ci.yml

@@ -16,16 +16,6 @@ services:
         - "traefik.http.services.sciwiki.loadbalancer.server.port=80" # it seems you always need to give traefik a port so it 'notices' the service
         - "traefik.http.routers.sciwiki.tls=true"
 
-  elasticsearch:
-    networks:
-      - proxy
-    image: sc-registry.fredhutch.org/wiki_elasticsearch:latest
-    stdin_open: true
-    environment:
-      - discovery.type=single-node
-      - xpack.security.enabled=false
-      - ingest.geoip.downloader.enabled=false
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
 
 networks:
   proxy:
