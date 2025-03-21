@@ -13,8 +13,6 @@ default:
 
 stages:
   - build
-  - create_search_index_0
-  - create_search_index_1
   - test
   - deploy
 
@@ -62,57 +60,12 @@ build:
     docker push sc-registry.fredhutch.org/wiki:test
 
 
-create_search_index_0:
-  stage: create_search_index_0
-  tags: # TODO REMOVE after shell runner is disabled
-    - sc-swarm
-  # services: 
-  #   - name: sc-registry.fredhutch.org/elasticsearch
-  #     alias: elasticsearch
-
-  script: |
-    set -x
-    # build search index
-    # run image and copy HTML files out of it
-    CONTAINER_NAME=wiki_${CI_JOB_ID}
-    docker run -d --rm --name $CONTAINER_NAME sc-registry.fredhutch.org/wiki:test
-    rm -rf elasticsearch/tmp && mkdir elasticsearch/tmp
-    docker cp $CONTAINER_NAME:/usr/share/nginx/html/ ./elasticsearch/tmp/
-    docker rm -f $CONTAINER_NAME || true
-    echo fultr
-    ls -l elasticsearch
-    ls -l elasticsearch/tmp
-    docker build -t sc-registry.fredhutch.org/wiki_search_part_0:${CI_PIPELINE_ID} ./elasticsearch/
-    docker push sc-registry.fredhutch.org/wiki_search_part_0:${CI_PIPELINE_ID}
-
-
-create_search_index_1:
-  stage: create_search_index_1
-  tags: # TODO REMOVE after shell runner is disabled
-    - sc-swarm
-  services: 
-    - name: sc-registry.fredhutch.org/wiki_search_part_0:${CI_PIPELINE_ID}
-      alias: create_search_index_1
-
-  script: |
-    # CONTAINER_NAME=$(env | grep $HOSTNAME | grep "9200/tcp" | cut -d= -f2 | cut -d / -f 2)
-    # echo container name: $CONTAINER_NAME
-    CONTAINER_ID=$(docker ps | grep $HOSTNAME | grep "9200/tcp" | cut -d' ' -f1)
-    docker exec $CONTAINER_ID ls -l /
-    docker exec $CONTAINER_ID /indexer.sh
-    rm -rf idx
-    mkdir idx
-    docker cp $CONTAINER_ID:/usr/share/elasticsearch/data ./idx/
-    docker build -f elasticsearch/Dockerfile2 -t sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID} .
-    docker push sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID}
 
 test:
   stage: test
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
   services:
-    - name: sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID}
-      alias: elasticsearch
     - name: sc-registry.fredhutch.org/wiki:test
       alias: wiki
       command: ["/test.sh"]
@@ -125,32 +78,6 @@ test:
       python3 build_helper.py docker-compose-preview.yml > /dev/null
     fi
     curl -sI http://wiki:80 | head -1 | grep -q "200 OK"
-    export NUMHITS=$(curl -s -H "Content-Type: application/json" -XPOST "http://elasticsearch:9200/_search" -d'
-    {
-      "_source": [
-        "title"
-      ],
-      "highlight": {
-        "fields": {
-          "content": {}
-        }
-      },
-      "size": 100,
-      "query": {
-        "match_phrase": {
-          "content": "gizmo"
-        }
-      }
-    }
-    ' | jq .hits.total.value)
-    echo "Number of hits: $NUMHITS"
-    if [ "$NUMHITS" -gt 0 ]; then
-      echo "Search works"
-      # exit 0
-    else
-      echo "Search does not work"
-      exit 1
-    fi
 
 check_for_orphan_assets:
   stage: test
@@ -215,9 +142,7 @@ deploy_preview:
       - main
   script:
     - docker tag sc-registry.fredhutch.org/wiki:test sc-registry.fredhutch.org/wiki-preview:latest 
-    - docker tag sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID} sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
     - docker push sc-registry.fredhutch.org/wiki-preview:latest
-    - docker push sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
     - sleep 15
     - echo $SC_SWARM_CICD_SSH_KEY | base64 -d > ./sc_swarm_cicd_ssh_key
     - chmod 0400 ./sc_swarm_cicd_ssh_key
@@ -235,10 +160,8 @@ deploy:
        - main
   script: |
     docker tag sc-registry.fredhutch.org/wiki:test sc-registry.fredhutch.org/wiki:latest 
-    docker tag sc-registry.fredhutch.org/wiki_search:${CI_PIPELINE_ID} sc-registry.fredhutch.org/wiki_elasticsearch:latest
 
     docker push sc-registry.fredhutch.org/wiki:latest
-    docker push sc-registry.fredhutch.org/wiki_elasticsearch:latest
     sleep 15
     echo $SC_SWARM_CICD_SSH_KEY | base64 -d > ./sc_swarm_cicd_ssh_key
     chmod 0400 ./sc_swarm_cicd_ssh_key
