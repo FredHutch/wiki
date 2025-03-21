@@ -18,22 +18,6 @@ There are currently two capabilities available for GPUs in the gizmo.  The _J_ a
 {%- endfor %}
 {%- endfor %}
 
-## lala
-
-here is mermaid:
-
-```mermaid
-sequenceDiagram
-autoNumber
-  Alice->>John: Hello John, how are you?
-  John-->>Alice: Great!
-  Alice-)John: See you later!
-```
-
-there it was
-
-
-
 ## Accessing GPUs
 
 GPUs are available in multiple partitions- the newest GPUs are in the _chorus_ partition.  Refer to [this page](/compdemos/gizmo_partition_index/) for limits and other details about the partitions.
