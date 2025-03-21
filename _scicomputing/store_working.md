@@ -5,7 +5,7 @@ primary_reviewers: scicomp
 
 ## Overview
 
-The _working_ storage platform provides a location for longer term storage of research data.  It is intended to be used much like _scratch_ is today.  _Working_ is more robust than _scratch_ with more redundancy built into its service.
+The _working_ storage platform provides a location for longer term storage of research data.  It is similar to [temp](scicomputing/store_temp) but allows data to be stored for longer than 30 days.
 
 _Working_ is not backed up and **must not** be used as a primary data store.
 {: .notice--warning}
@@ -14,7 +14,7 @@ As with other SciComp supported file systems, the _working_ file system is avail
 
 ## Using Working Storage
 
-_Working_ is provisioned on-request.  If your lab would like to use this storage system, please have your lab's PI email SciComp.  It is organized similar to how we have organized _fast_, _temp_, and _scratch_, with subdirectories named for the lab (e.g. `/fh/working/pi_n`)
+_Working_ is provisioned on-request.  If your lab would like to use this storage system, please have your lab's PI email SciComp.  It is organized similar to how we have organized _fast_ and _temp_, with subdirectories named for the lab (e.g. `/fh/working/pi_n`)
 
 _Working_ is available on rhino/gizmo compute nodes at the path `/fh/working`.  Mac and Windows workstations have access via smb://center.fhcrc.org/fh/working.
 

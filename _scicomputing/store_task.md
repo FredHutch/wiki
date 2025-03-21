@@ -65,6 +65,8 @@ Files on _temp_ are deleted 30 days after creation- this is not tied to any of t
 
 The networked [_Scratch_](/scicomputing/store_scratch) file system is available on all rhino/gizmo compute nodes and as part of the 'center' file server (i.e. `//center.fhcrc.org/fh/scratch`)
 
+> Scratch is deprecated and scheduled for retirement on 27 April 2025. Please do not add data to scratch and please migrate data off of scratch
+
 This storage space is based on a high performance file system (BeegFS) and designed for high-throughput computing on large data sets in the rhino/gizmo environment.  This file system does not have snapshots and is not backed up.
 
 | feature | availability |
