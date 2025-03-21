@@ -1,6 +1,6 @@
 ---
 title: Data Storage in File Storage Systems
-primary_reviewer: dirkpetersen
+primary_reviewer: scicomp
 ---
 
 File keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools.  These storage systems are similar to the hard drive on your computer, just typically larger and faster.
@@ -10,7 +10,7 @@ There are multiple file storage resources available to researchers including:
 - `Fast` for shared data, including the majority of large scale research data
 - [`Temp`](/scicomputing/store_temp/) for temporary storage of files when using the cluster
 - [`Scratch`](/scicomputing/store_scratch/) for personal and shared temporary data
-- `Secure` for data with higher-level security needs (PHI/encryption/auditing)
+- `Secure` for data with higher-level security needs
 
 >Note:  Currently it is recommended to use a combination of [AWS S3](/scicomputing/store_objectstore/), [`Temp`](/scicomputing/store_temp/) and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
 

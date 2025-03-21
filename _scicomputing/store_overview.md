@@ -54,7 +54,7 @@ This table describes some of the most common security needs for data sets and ho
 |  Encryption at Rest 	    |        Yes  |      Yes  |          Yes	|        Yes	| Yes        | Yes        |        Yes	|
 |  Encryption in Transit    |        Yes* |      Yes* |          Yes	|        Yes* | Yes*       | Yes*       |        Yes	|
 |  Access auditing 	        |        Yes	|      Yes  |    	     Yes  |         No	| No         | No         |        Yes	|
-|  Approved for PHI by ISO 	|        Yes  |      No   |          Yes  |         No	| No         | No         |        Yes	|
+|  Approved for PII by IS 	|        Yes  |      No   |          Yes  |         No	| No         | No         |        Yes	|
 
 *) Transit encryption is only available when the data is accessed by SMB mounts- Windows and newer OSX systems use SMB. The HPC systems (e.g. rhino, gizmo) use NFS which is not encrypted.  However, this traffic is confined to a secure data center.
 
