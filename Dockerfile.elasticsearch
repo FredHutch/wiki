@@ -1,6 +1,0 @@
-FROM elasticsearch:8.4.2
-
-ENV discovery.type=single-node
-ENV xpack.security.enabled=false
-ENV ingest.geoip.downloader.enabled=false
-

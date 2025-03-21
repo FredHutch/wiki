@@ -22,7 +22,7 @@ Due to the temporary nature of this storage, the lack of charges, limits of capa
 A: No. The _temp_ storage platform is not backed up and has automatic deletions. All data stored on _temp_ will be deleted in 30 days.
 
 #### Q: What will happen to my existing data in _scratch_?
-A: _scratch_ will be retired between July and October of 2024. Watch for further announcements with a more exact time frame. You can start moving your data off of _scratch_ right away. Data that is not moved or copied elsewhere will be deleted.
+A: _scratch_ will be retired on the 27th of April.  You can start moving your data off of _scratch_ right away. Data that is not moved or copied elsewhere will be deleted.
 
 #### Q: If I have data in _Economy_ storage, but need to analyze it, can I copy it to _temp_?
 A: Yes! This is the main use case for _temp_ storage.
