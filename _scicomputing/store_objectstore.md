@@ -9,7 +9,7 @@ Object storage systems are not directly attached to your computer via drive mapp
 
 As the amount of research data grows, which can occur rapidly when new large scale data is generated, existing externally generated datasets are transferred into the `Fast` storage, OR if existing data is inadvertently duplicated.  When the space requirements become larger, it is recommended that researchers begin implementing a set of more active data management practices.
 
-> Note:  Currently it is recommended to use a combination of AWS S3, [*Scratch*](/scicomputing/store_scratch/) and [`Fast`](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.
+> Note:  Currently it is recommended to use a combination of AWS S3, [*temp*](/scicomputing/store_temp/), [*working*](/scicomputing/store_working/) and [*fast*](/scicomputing/store_posix/).  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.
 
 
 AWS S3 is less expensive than [`Fast`](/scicomputing/store_posix/) and is suitable for large scale data sets that are not frequently accessed (i.e., ~monthly or less) but that require a relatively large amount of storage space.  For example, AWS S3 would be suitable for a set of large files such as fastq's or bam's that on a daily basis are not accessed, but when a new bioinformatic process is desired, a large "burst" of activity will be occurring that will need to interact with the data.  AWS S3 serves as an archive for these data, and typically compute processes do not directly access these files.
