@@ -15,7 +15,7 @@ The following diagram shows the main differences between the two cluster types:
 	- Contains GPU enabled nodes
 	- Use if you need to run GPU-enabled software (PyTorch, etc.)
 
-```{mermaid}
+```mermaid
 graph TD
 A[Need a GPU?] --yes--> B[Harmony Nodes]
 A -- no --> C[Gizmo Nodes]
