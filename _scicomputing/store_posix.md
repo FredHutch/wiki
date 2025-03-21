@@ -8,16 +8,15 @@ File keeps your data on disks and allows access to your data using familiar tool
 There are multiple file storage resources available to researchers including:
 - `Home` for personal files
 - `Fast` for shared data, including the majority of large scale research data
-- [`Temp`](/scicomputing/store_temp/) for temporary storage of files when using the cluster
+- [`Temp`](/scicomputing/store_temp/) for temporary storage of files when using the cluster- not backed up
+- [`Working`](/scicomputing/store_working/) for secondary (working) copies of data- not backed up
 - [`Scratch`](/scicomputing/store_scratch/) for personal and shared temporary data
 - `Secure` for data with higher-level security needs
 
->Note:  Currently it is recommended to use a combination of [AWS S3](/scicomputing/store_objectstore/), [`Temp`](/scicomputing/store_temp/) and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
+> NOTE: Scratch is scheduled to be retired on the 27th of April.  Please move any data here onto another storage platform.
 
 A tool that is useful for moving data between these systems is [Motuz](https://motuz.fredhutch.org).  `Motuz` facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/
 ). 
-
-
 
 ## Home
 
@@ -75,7 +74,7 @@ Additionally, links to other data sources can appear here, such as data from the
 
 `Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  There are no charges for data stored here but there is a limit of 750GB per PI directory in this path.  
 
-This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data.  
+If you think you need secure storage, please contact OCDO and request a [data housecall](https://ocdo.fredhutch.org/programs/dhc.html) to confirm that this platform is appropriate for the data you are storing.
 
 ## How to access Fred Hutch storage
 
@@ -89,6 +88,7 @@ The following is a summary of how to access these storage systems from PC, Mac o
 | Fast | `X:\fast` |
 | Scratch | `X:\scratch` |
 | Secure | `X:\secure` |
+| Working | `X:\working` |
 | HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
 
 **Non-Fred Hutch PC:**
@@ -99,6 +99,7 @@ The following is a summary of how to access these storage systems from PC, Mac o
 | Fast | `\\center.fhcrc.org\fh\fast` |
 | Scratch | `\\center.fhcrc.org\fh\scratch` |
 | Secure | `\\center.fhcrc.org\fh\secure` |
+| Working | `\\center.fhcrc.org\fh\working` |
 | HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
 
 **Mac:**
@@ -111,6 +112,7 @@ For these paths, replace HUTCHID with your hutchid.
 | Fast | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/fast` |
 | Scratch | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/scratch` |
 | Secure | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/secure` |
+| Working | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/working` |
 | HPC Temp | `smb://fhcrc.org;HUTCHID@hpc.chromium.fhcrc.org/temp.chromium` |
 
 Note: Drive mapping with Macs can be very slow for large volumes due to the Mac wanting to index every file in a volume. Turn off volume indexing to improve the speed of drive mapping. 
@@ -128,6 +130,7 @@ The sudo command will ask for your Mac login password. Often Mac volume names ha
 | Fast | `/fh/fast` |
 | Temp | `/hpc/temp` |
 | Scratch | `/fh/scratch` |
+| Working | `/fh/working` |
 | Secure | `/fh/secure` |
 
 
