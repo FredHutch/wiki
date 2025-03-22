@@ -1,7 +1,7 @@
 default:
   before_script:
     - apk update
-    - apk --no-cache add py3-pip python3 curl git jq bash
+    - apk --no-cache add py3-pip python3 curl git jq bash zip
     #- pip install pip==21.3.1 # workaround: https://stackoverflow.com/a/72469586/470769
 
     - pip3 install --break-system-packages pyyaml
@@ -24,7 +24,7 @@ build:
     - sc-swarm
   artifacts:
     paths:
-      - _site
+      - site.zip
     expire_in: 2w
   script: |
     set -x
@@ -61,13 +61,21 @@ build:
     fi
     # build image
     docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t sc-registry.fredhutch.org/wiki:test .
+
+
     rm -rf _site && mkdir _site
+
+
     docker run --rm --name grab-site-files \
-      -v $CI_PROJECT_DIR/_site:/data sc-registry.fredhutch.org/wiki:test \
-      sh -c "cp -r /usr/share/nginx/html/* /data/"
-    ls -altr
-    echo _site:
+      -v "$CI_PROJECT_DIR/_site:/data" \
+      sc-registry.fredhutch.org/wiki:test \
+      sh -c "ls -l /usr/share/nginx/html && cp -r /usr/share/nginx/html/* /data/ && ls -l /data"
+
+    echo "Host-side check of _site:"
     ls -altr _site
+
+    zip -rv site.zip _site
+
     # docker run --rm --name grab-site-files \
     #   -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
     #   sh -c "ls -l /data"
