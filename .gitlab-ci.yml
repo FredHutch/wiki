@@ -65,6 +65,7 @@ build:
 
     rm -rf _site && mkdir _site
 
+    echo CI_PROJECT_DIR is $CI_PROJECT_DIR
 
     docker run --rm --name grab-site-files \
       -v "$CI_PROJECT_DIR/_site:/data" \
