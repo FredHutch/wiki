@@ -24,7 +24,7 @@ build:
     - sc-swarm
   artifacts:
     paths:
-      - _site
+      - html
     expire_in: 2w
   script: |
     set -x
@@ -62,24 +62,14 @@ build:
     # build image
     docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t sc-registry.fredhutch.org/wiki:test .
 
-
-    rm -rf _site && mkdir _site
-
     docker create --name grab-site-files sc-registry.fredhutch.org/wiki:test
-    docker cp grab-site-files:/usr/share/nginx/html _site
+    docker cp grab-site-files:/usr/share/nginx/html ./
     docker rm grab-site-files
   
-  
-    echo "Host-side check of _site:"
+    echo "Host-side check of html:"
 
-    ls -altr _site
+    ls -altr html/
 
-    # cd _site
-    # zip -r ../artifact.zip ./*
-
-    # docker run --rm --name grab-site-files \
-    #   -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
-    #   sh -c "ls -l /data"
     docker push sc-registry.fredhutch.org/wiki:test
 
 
