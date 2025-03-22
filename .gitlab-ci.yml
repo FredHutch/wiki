@@ -62,13 +62,11 @@ build:
     # build image
     docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t sc-registry.fredhutch.org/wiki:test .
 
+    # create artifact
+    rm -rf html/ # we are going to recreate it
     docker create --name grab-site-files sc-registry.fredhutch.org/wiki:test
     docker cp grab-site-files:/usr/share/nginx/html ./
     docker rm grab-site-files
-  
-    echo "Host-side check of html:"
-
-    ls -altr html/
 
     docker push sc-registry.fredhutch.org/wiki:test
 
