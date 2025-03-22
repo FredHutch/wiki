@@ -62,9 +62,13 @@ build:
     # build image
     docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t sc-registry.fredhutch.org/wiki:test .
     # rm -rf _site && mkdir _site
+    echo current directory is
+    pwd
+
     docker run --rm --name grab-site-files \
       -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
       sh -c "mkdir -p /data/_site && cp -r /usr/share/nginx/html/* /data/_site/"
+    ls -l
     # docker run --rm --name grab-site-files \
     #   -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
     #   sh -c "ls -l /data"
