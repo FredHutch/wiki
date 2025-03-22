@@ -24,7 +24,7 @@ build:
     - sc-swarm
   artifacts:
     paths:
-      - site.zip
+      - artifact.zip
     expire_in: 2w
   script: |
     set -x
@@ -71,9 +71,12 @@ build:
   
   
     echo "Host-side check of _site:"
+
     ls -altr _site
 
-    zip -rv site.zip _site
+    # cd _site
+    # zip -r ../artifact.zip ./*
+    zip -rv artifact.zip _site/
 
     # docker run --rm --name grab-site-files \
     #   -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
