@@ -21,11 +21,11 @@ stages:
 build:
   stage: build
   tags: # TODO REMOVE after shell runner is disabled
-  #   - sc-swarm
-  # artifacts:
-  #   paths:
-  #     - _site
-  #   expire_in: 2w
+    - sc-swarm
+  artifacts:
+    paths:
+      - _site
+    expire_in: 2w
   script: |
     set -x
     # put info about this commit/branch into /info.txt
@@ -61,13 +61,13 @@ build:
     fi
     # build image
     docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t sc-registry.fredhutch.org/wiki:test .
-    rm -rf _site && mkdir _site
-    # docker run --rm --name grab-site-files \
-    #   -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
-    #   sh -c "cp -r /usr/share/nginx/html/* /data/_site/"
+    # rm -rf _site && mkdir _site
     docker run --rm --name grab-site-files \
       -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
-      sh -c "ls -l /data"
+      sh -c "mkdir -p /data/_site && cp -r /usr/share/nginx/html/* /data/_site/"
+    # docker run --rm --name grab-site-files \
+    #   -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
+    #   sh -c "ls -l /data"
     docker push sc-registry.fredhutch.org/wiki:test
 
 
