@@ -21,11 +21,11 @@ stages:
 build:
   stage: build
   tags: # TODO REMOVE after shell runner is disabled
-    - sc-swarm
-  artifacts:
-    paths:
-      - _site
-    expire_in: 2w
+  #   - sc-swarm
+  # artifacts:
+  #   paths:
+  #     - _site
+  #   expire_in: 2w
   script: |
     set -x
     # put info about this commit/branch into /info.txt
@@ -62,14 +62,18 @@ build:
     # build image
     docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t sc-registry.fredhutch.org/wiki:test .
     rm -rf _site && mkdir _site
+    # docker run --rm --name grab-site-files \
+    #   -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
+    #   sh -c "cp -r /usr/share/nginx/html/* /data/_site/"
     docker run --rm --name grab-site-files \
       -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
-      sh -c "cp -r /usr/share/nginx/html/* /data/_site/"
+      sh -c "ls -l /data"
     docker push sc-registry.fredhutch.org/wiki:test
 
 
 
 test:
+  dependencies: []
   stage: test
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
@@ -88,6 +92,7 @@ test:
     curl -sI http://wiki:80 | head -1 | grep -q "200 OK"
 
 check_for_orphan_assets:
+  dependencies: []
   stage: test
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
@@ -142,6 +147,7 @@ check_for_orphan_assets:
 # and commit information.
 
 deploy_preview:
+  dependencies: []
   stage: deploy
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
@@ -160,6 +166,7 @@ deploy_preview:
 # https://sciwiki.fredhutch.org
 
 deploy:
+  dependencies: []
   stage: deploy
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
