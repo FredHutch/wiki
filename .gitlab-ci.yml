@@ -24,7 +24,7 @@ build:
     - sc-swarm
   artifacts:
     paths:
-      - artifact.zip
+      - _site
     expire_in: 2w
   script: |
     set -x
@@ -76,7 +76,6 @@ build:
 
     # cd _site
     # zip -r ../artifact.zip ./*
-    zip -rv artifact.zip _site/
 
     # docker run --rm --name grab-site-files \
     #   -v $(pwd):/data sc-registry.fredhutch.org/wiki:test \
