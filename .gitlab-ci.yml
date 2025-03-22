@@ -65,13 +65,11 @@ build:
 
     rm -rf _site && mkdir _site
 
-    echo CI_PROJECT_DIR is $CI_PROJECT_DIR
-
-    docker run --rm --name grab-site-files \
-      -v "$CI_PROJECT_DIR/_site:/data" \
-      sc-registry.fredhutch.org/wiki:test \
-      sh -c "ls -l /usr/share/nginx/html && cp -r /usr/share/nginx/html/* /data/ && ls -l /data"
-
+    docker create --name grab-site-files sc-registry.fredhutch.org/wiki:test
+    docker cp grab-site-files:/usr/share/nginx/html _site
+    docker rm grab-site-files
+  
+  
     echo "Host-side check of _site:"
     ls -altr _site
 
