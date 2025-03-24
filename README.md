@@ -13,6 +13,8 @@ To contribute to the Wiki you only need to have your GitHub username added to th
 
 [Repository structure](#repo-structure)
 
+[Viewing rendered changes to non-`main` branches](#viewing-test-builds)
+
 [Building a copy of this Wiki locally](#building-the-site-locally)
 
 [Building a copy of this Wiki on a rhino](#building-the-site-on-rhino)
@@ -171,6 +173,30 @@ You can check what branch and what commit is reflected by going to
 
 
 
+## Viewing Test Builds
+
+There are two ways to view changes to the wiki (that have not been pushed to the `main` branch) without building the site yourself (for that, see the next section).
+
+The first way is to view the [preview site](#automated-deployment). This has some limitations, as described in that link.
+
+The other way is to download a build artifact, which is a zip file containing the static, rendered pages of the site.
+
+These artifacts are only produced when there is a *successful* build of the site on any branch.
+
+You can access the build artifacts [here](https://wiki-artifact-app.fredhutch.org/) (within the Fred Hutch network only).
+This will show recent builds of the CI/CD pipeline, starting with the most recent. It gives information about the commit and who created it. You can download the associated build artifact by clickng "Download static files". This will download a file called `artifact.zip` to your local machine.
+
+Unzip the file. You will see that it contains an `html` directory at the top level.
+
+In order to view the site properly, you must use a web server. if you just try to open the `index.html` file inside the `html` directory in your browser, the site will not render properly.
+
+One easy way to serve the site with a web server is to use Python. If you are in the directory where you downloaded and unzipped `artifact.zip`, you can just run this command:
+
+```bash
+python3 -m http.server -d html
+```
+
+That will make the site available at the URL `http://localhost:8000`.
 
 ## Building the site locally
 
