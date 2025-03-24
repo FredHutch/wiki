@@ -198,6 +198,8 @@ python3 -m http.server -d html
 
 That will make the site available at the URL `http://localhost:8000`.
 
+Note that build artifacts expire after 2 weeks, at which point they can't be downloaded.
+
 ## Building the site locally
 
 You may want to build a copy of this wiki locally (on your own computer) to make sure that it looks the way you want before pushing your changes.
