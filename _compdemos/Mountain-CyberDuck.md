@@ -96,4 +96,4 @@ Mountainduck & Cyberduck are designed to work with AWS access keys. With the cha
 
 ![](/_compdemos/assets/sso-duck.png)
 
-At this point you should be able to access S3 resources in the application. Note that when your SSO credentials expire, you will need to manually reauthenticate to continue to access files. 
+At this point you should be able to access S3 resources in the application. Note that when your SSO credentials expire, you will need to manually reauthenticate to continue to access files in the application.
