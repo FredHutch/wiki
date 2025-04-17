@@ -3,32 +3,41 @@ title: Testing access to Fred Hutch cBioPortal S3 bucket
 main_authors: sitapriyamoorthi
 primary_reviewers: tfirman
 ---
-Testing AWS credentials
-   
-    ```bash
-    # How to test you have the correct access to the fh-dasl-cbio S3 bucket. 
-    
-    # Do the following to test if you have the correct access to the fh-dasl-cbio bucket. 
-    # You should only be able to write and list files to this S3 bucket.
-    
-    # ssh into rhino and follow the instructions here to configure AWS CLI (https://sciwiki.fredhutch.org/scicomputing/access_credentials/#configure-aws-cli)
-    
-    ssh user@rhino
-    module load awscli
-    aws configure
-    AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE 
-    AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-    Default region name [None]: us-west-2
-    Default output format [None]: 
-    
-    # You should be able to write a file into the S3 bucket 
-    
-    # Write a simple text file into the s3 bucket 
-    echo hello | aws s3 cp - s3://fh-dasl-cbio/hello.txt
-    
-    # List
-    aws s3 ls s3://fh-dasl-cbio
-    
-    # You should NOT be able to retrieve/delete any study data (even your own).
-    # aws s3 cp s3://fh-dasl-cbio/hello.txt hello.txt # Should error out...
-    ```
+## :accessibility: Testing access to the `fh-dasl-cbio` S3 bucket
+
+To confirm your access to the `fh-dasl-cbio` S3 bucket, follow the steps below. You should only be able to **write** and **list** files in this bucket.
+
+1. **Connect to Rhino and configure AWS CLI:**
+
+```bash
+ssh your_hutch_id@rhino
+module load awscli
+aws configure
+
+# Use the credentials provided to you:
+AWS Access Key ID [None]: <your access key>
+AWS Secret Access Key [None]: <your secret key>
+Default region name [None]: us-west-2
+Default output format [None]:
+```
+
+2. **Test your write and list permissions:**
+
+```bash
+# Create and upload a simple test file
+echo "hello" | aws s3 cp - s3://fh-dasl-cbio/hello.txt
+
+# List contents of the bucket to verify write access
+aws s3 ls s3://fh-dasl-cbio
+```
+
+3. **You should NOT be able to read or delete existing files (including your own):**
+
+```bash
+# This should return an error, as read access is restricted
+aws s3 cp s3://fh-dasl-cbio/hello.txt hello.txt
+```
+
+If you can write and list files but cannot download them, your access is correctly configured as write-only.
+
+
