@@ -5,7 +5,10 @@ primary_reviewers: tfirman
 ---
 ## :accessibility: Testing access to the `fh-dasl-cbio` S3 bucket
 
-To confirm your access to the `fh-dasl-cbio` S3 bucket, follow the steps below. You should only be able to **write** and **list** files in this bucket.
+To confirm your access to the `fh-dasl-cbio` S3 bucket, follow the steps below. 
+
+> 📝 *Note:*
+> *You should only be able to **write** and **list** files in this bucket.*
 
 1. **Connect to Rhino and configure AWS CLI:**
 
