@@ -61,3 +61,7 @@ aws s3 cp /path/to/cancer_study_identifier.zip s3://fh-dasl-cbio/
 ```
 
 > 📝 *Note: Make sure your AWS credentials are correctly set up and your lab account has write-only permissions to `fh-dasl-cbio`.*
+
+---
+
+↩️ [Back to: Prepare & Upload Your Study](/datascience/fh-cbio-intro#prepare--upload-your-study)
