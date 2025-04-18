@@ -177,3 +177,18 @@ scicomputing:
       - title: Computing with GPU
         url: /scicomputing/compute_gpu/
 
+pathways:
+  - title: Pathways
+    children:
+      - title: MariaDB
+        url: /pathways/path-mydb-mariadb/
+      - title: Grabnode on Gizmo
+        url: /pathways/path-grab/
+      - title: Interactive Sessions
+        url: /pathways/path-interactive/
+      - title: Upload to FH cBioPortal
+        url: /pathways/path-cbio-fh-instance/
+      - title: Migrating Data to S3
+        url: /pathways/path-migrating-data-from-fast-to-cloud/
+      - title: Batch Computing on Gizmo
+        url: /pathways/path-batch-computing/

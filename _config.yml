@@ -107,6 +107,7 @@ include:
 exclude:
   - ".gitignore"
   - ".gitlab-ci.yml"
+  - "elasticsearch"
   - "tmp"
   - "*.py"
   - "*.yml"
@@ -192,7 +193,7 @@ defaults:
       toc_label: "On This Page"
       share: true
       sidebar:
-        nav: "generic"
+        nav: "pathways"
 
 # _contributors
   - scope:
@@ -262,7 +263,3 @@ webrick:
     Access-Control-Allow_Credentials: "true"
     Access-Control-Allow-Headers: "Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range"
     Access-Control-Allow-Methods: "GET,POST,OPTIONS,PUT,DELETE,PATCH"
-
-after_footer_scripts:
-  - https://cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.js
-  - assets/js/mermaid.js
