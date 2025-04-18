@@ -1,7 +1,8 @@
 ---
 title: cBioPortal - The Fred Hutch instance
 last_modified_at: 2025-04-18
-authors: sitapriyamoorthi, tefirman
+main_authors: sitapriyamoorthi
+primary_reviewers: tfirman, laderast  
 ---
 
 ## What is cBioPortal?
