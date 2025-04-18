@@ -28,7 +28,7 @@ but it's generally safe to set CPU/RAM values in which either
 
 To specify that all of the processes within a workflow should use
 the same number of CPUs and RAM, a simple pair of arguments can
-be provided [in the run script](/hdc/workflows/running/run_script)
+be provided [in the run script](/datademos/run_script/)
 using the flags:
 
 - `-process.memory`: e.g. "1.GB"
@@ -48,7 +48,7 @@ able to distinguish between light-weight vs. heavy-duty processes.
 
 ### Setting Resources by Process Name
 
-Within the [Nextflow configuration file](/hdc/workflows/workflow_background)
+Within the [Nextflow configuration file](/datademos/workflow_background/)
 that you use to run a particular script, you can add a section which
 sets the amount of CPU/RAM for each individual process _by name_.
 
