@@ -116,7 +116,7 @@ For more background and public access options:
 - 🔗 [GENIE Terms of Use Agreement](https://docs.google.com/forms/d/e/1FAIpQLSfzQBxAbXWTIKNwML1JcxXd6peiTHbGFZNnN9c2aHKEDmqC5A/viewform)
 
 
-The Fred Hutch private instance of cBioPortal hosts internal access to AACR Project GENIE data. Go [here](/datademos/how_to_get_genie_on_fh_cbio.md) to find out how you can get access to the GENIE dataset.
+The Fred Hutch private instance of cBioPortal hosts internal access to AACR Project GENIE data. Go [here](/datademos/cbio_how_to_get_genie_on_fh_cbio.md) to find out how you can get access to the GENIE dataset.
 
 ---
 
