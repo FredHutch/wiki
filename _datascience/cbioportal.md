@@ -98,6 +98,28 @@ Once your study files are formatted correctly follow there [upload steps](/datad
 🎉 Once uploaded, [start exploring](https://cbioportal.fredhutch.org/)!
 
 ---
+
+## Accessing AACR Project GENIE Data on the Fred Hutch cBioPortal
+
+### What is the AACR Project GENIE?
+
+**AACR Project GENIE® (Genomics Evidence Neoplasia Information Exchange)** is a multi-institutional, global data-sharing initiative that powers precision oncology through real-world, clinico-genomic data integration.
+
+- Integrates **clinical-grade genomic sequencing** with patient outcomes.
+- Provides access to one of the **largest public cancer genomics datasets**.
+- Supports clinical decision-making, therapeutic discovery, and biomarker-driven trial design.
+
+For more background and public access options:
+- 🔗 [AACR Project GENIE Overview](https://www.aacr.org/professionals/research/aacr-project-genie/aacr-project-genie-data/)
+- 🔗 [Public GENIE on cBioPortal](https://www.cbioportal.org/genie/)
+- 🔗 [Download Data from Synapse](https://synapse.org/genie)
+- 🔗 [GENIE Terms of Use Agreement](https://docs.google.com/forms/d/e/1FAIpQLSfzQBxAbXWTIKNwML1JcxXd6peiTHbGFZNnN9c2aHKEDmqC5A/viewform)
+
+
+The Fred Hutch private instance of cBioPortal hosts internal access to AACR Project GENIE data. Go [here](/datademos/how_to_get_genie_on_fh_cbio.md) to find out how you can get access to the GENIE dataset.
+
+---
+
 ## 📎 Quick Links
 <details>
 <summary><strong>Click to expand helpful navigation links</strong></summary>
