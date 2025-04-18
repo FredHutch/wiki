@@ -124,7 +124,7 @@ If you want to learn how to write your own WDL files, then we have the [Developi
 
 ### Containers Option 3
 
-Use Nextflow to run your software. Requires knowledge of Nextflow and Nextflow workflows. For more info on running Nextflow at Fred Hutch, [check this link out](https://sciwiki.fredhutch.org/hdc/hdc_workflows/).
+Use Nextflow to run your software. Requires knowledge of Nextflow and Nextflow workflows. For more info on running Nextflow at Fred Hutch, [check this link out](/datascience/using_workflows).
 
 ## 3. Best Practices When Using Conda
 

@@ -78,4 +78,4 @@ If you have any problems using this configuration, please don't hesitate to
 ## Running the workflow
 
 To run a workflow with this configuration, follow the guidance for formatting
-the appropriate [run script](/hdc/workflows/running/run_script).
+the appropriate [run script](/datademos/run_script/).

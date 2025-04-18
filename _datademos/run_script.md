@@ -75,8 +75,8 @@ for an added level of reproducibility.
 ## Nextflow Configuration File
 
 Use `NXF_CONFIG` to specify the configuration file used to run workflows either
-[on SLURM/gizmo](/hdc/workflows/running/on_gizmo) or
-[on AWS](/hdc/workflows/running/on_aws).
+[on SLURM/gizmo](/datademos/on_gizmo) or
+[on AWS](/datademos/on_aws).
 
 
 ## Workflow Repository
