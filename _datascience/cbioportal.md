@@ -40,8 +40,6 @@ Key features:
 
 Follow [these](/pathways/path-cbio-fh-instance.md) steps to upload your own data into the [Fred Hutch insance of cBioPortal](https://cbioportal.fredhutch.org/) 
 
-![how_to_upload](/datademos/assets/cbio_17_overview_of_FH_instance_upload.jpg)
-
 ### Pre-requisites
 
 -  You should have Fred Hutch credentials or [HutchNet ID](/scicomputing/access_credentials/#hutchnet-id)
