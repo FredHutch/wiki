@@ -62,8 +62,8 @@ cBioPortal offers countless ways to explore and interpret cancer genomics data�
 ### More Ways to Use cBioPortal
 
 - 🔬 [**Pathway analysis**](https://www.cbioportal.org/results/pathways?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival&Z_SCORE_THRESHOLD=2.0&RPPA_SCORE_THRESHOLD=2.0&geneset_list=%20): Explore how mutations impact KRAS-related signaling pathways.
-- 🧬 [**Copy number analysis**]("https://www.cbioportal.org/results/cnSegments?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival&Z_SCORE_THRESHOLD=2.0&RPPA_SCORE_THRESHOLD=2.0&geneset_list=%20"): Compare CNAs in KRAS mutant vs. wild-type tumors.
-- 🧑‍🤝‍🧑 [**Custom cohort building**]([https://www.cbioportal.org/study/summary?...](https://www.cbioportal.org/study/summary?id=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga): Focus on subsets (e.g., smokers with KRAS mutations).
+- 🧬 [**Copy number analysis**](https://www.cbioportal.org/results/cnSegments?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival&Z_SCORE_THRESHOLD=2.0&RPPA_SCORE_THRESHOLD=2.0&geneset_list=%20): Compare CNAs in KRAS mutant vs. wild-type tumors.
+- 🧑‍🤝‍🧑 [**Custom cohort building**](https://www.cbioportal.org/study/summary?id=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga): Focus on subsets (e.g., smokers with KRAS mutations).
 - ⏳ **Tumor evolution**: Analyze multi-sample progression from the same patient.
 - 🛡️ **Immuno-genomics**: Study KRAS links to immune response (e.g., mutational burden).
 
