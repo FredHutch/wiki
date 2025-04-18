@@ -44,4 +44,8 @@ aws s3 cp s3://fh-dasl-cbio/hello.txt hello.txt
 
 If you can write and list files but cannot download them, your access is correctly configured as write-only.
 
+---
+
+↩️ [Back to: Request S3 Bucket Access](/datascience/fh-cbio-intro#request-s3-bucket-access)
+
 
