@@ -47,4 +47,10 @@ For more details, explore the full formatting documentation and helper tools her
 
 🔗 [Full File Format Guide by cBioPortal](https://docs.cbioportal.org/file-formats/)
 
-🔧 Overview of what a [completed data "package"] (https://github.com/FredHutch/cbioportal-data-formatting/tree/main/04_example_study) would look like for upload into cBioportal.
+🔧 Overview of what a [completed data "package"](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/04_example_study) would look like for upload into cBioportal.
+
+---
+
+↩️ [Back to: Prepare & Upload Your Study](/datascience/fh-cbio-intro#prepare--upload-your-study)
+
+
