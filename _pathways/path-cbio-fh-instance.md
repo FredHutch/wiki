@@ -61,7 +61,7 @@ Once credentials are working:
 
 ## Step 4: Prepare Your Files
 
-Data must be formatted following [cBioPortal data structure](https://docs.cbioportal.org/file-formats/). We also provide [Fred Hutch-specific guides](/datademos/cbio_how_to_prepare_files.md) and examples.
+Data must be formatted following [cBioPortal data structure](https://docs.cbioportal.org/file-formats/). We also provide [Fred Hutch-specific guides](/datademos/cbio_how_to_prepare_files/) and examples.
 
 Minimum required files:
 - `meta_study.txt`
@@ -96,7 +96,7 @@ Once uploaded, an automated pipeline will validate and load your data.
 ## Where to Go From Here
 
 - Start exploring your data at [cbioportal.fredhutch.org](https://cbioportal.fredhutch.org/)
-- Use [this guide](/datademos/cbio_examples_of_using_cbio.md) to explore mutations, clinical features, and survival
+- Use [this guide](/datademos/cbio_examples_of_using_cbio/) to explore mutations, clinical features, and survival
 - Contact us via Slack or email for support
 
 ---

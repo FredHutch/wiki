@@ -11,16 +11,16 @@ primary_reviewers: tfirman, laderast
 
 You can:
 
-- **[Visualize](/datademos/cbio_examples_of_using_cbio.md#q1-how-often-is-kras-mutated-in-cancer)**
+- **[Visualize](/datademos/cbio_examples_of_using_cbio#q1-how-often-is-kras-mutated-in-cancer)**
  mutations, gene expression, copy number changes, and more
   
-- **[Compare](/datademos/cbio_examples_of_using_cbio.md#q2-are-kras-mutations-associated-with-clinical-factors)** genetic data with clinical factors like stage, survival, and diagnosis age
+- **[Compare](/datademos/cbio_examples_of_using_cbio#q2-are-kras-mutations-associated-with-clinical-factors)** genetic data with clinical factors like stage, survival, and diagnosis age
   
-- Generate **[publication-ready plots](/datademos/cbio_examples_of_using_cbio.md#q4-do-kras-mutations-affect-survival)** like oncoprints and Kaplan-Meier survival curves
+- Generate **[publication-ready plots](/datademos/cbio_examples_of_using_cbio#q4-do-kras-mutations-affect-survival)** like oncoprints and Kaplan-Meier survival curves
   
 
 
-🔍 [Explore more usage examples here](/datademos/cbio_examples_of_using_cbio.md)
+🔍 [Explore more usage examples here](/datademos/cbio_examples_of_using_cbio/)
 
 ---
 
@@ -38,7 +38,7 @@ Key features:
 
 ## Uploading Your Own Data
 
-Follow [these](/pathways/path-cbio-fh-instance.md) steps to upload your own data into the [Fred Hutch insance of cBioPortal](https://cbioportal.fredhutch.org/) 
+Follow [these](/pathways/path-cbio-fh-instance/) steps to upload your own data into the [Fred Hutch insance of cBioPortal](https://cbioportal.fredhutch.org/) 
 
 ### Pre-requisites
 
@@ -78,7 +78,6 @@ Make sure your lab has an [AWS lab account](https://sciwiki.fredhutch.org/scicom
 
 Once your AWS credentials are ready:
 - Contact the [cBioPortal Team on Slack](https://fhdata.slack.com/archives/C088E41ARV3)
-- Share AWS usernames and account IDs
 - We'll help coordinate write-only access to the `fh-dasl-cbio` bucket
 
 > 📝 *Note:*
@@ -86,9 +85,9 @@ Once your AWS credentials are ready:
 
 ### 4. Prepare & Upload Your Study
 
-Preparing your study files involves following very specific instructions. We have some helpful information on how to format your data files [here]((/datademos/cbio_how_to_prepare_files.md))
+Preparing your study files involves following very specific instructions. We have some helpful information on how to format your data files [here](/datademos/cbio_how_to_prepare_files/)
 
-Once your study files are formatted correctly follow there [upload steps](/datademos/cbio_how_to_upload_data_to_cbio_s3.md) to upload your study folder into the `fh-dasl-cbio`.
+Once your study files are formatted correctly follow there [upload steps](/datademos/cbio_how_to_upload_data_to_cbio_s3/) to upload your study folder into the `fh-dasl-cbio`.
 
 🚀 Our automated system will load your data and notify you by email.
 
@@ -109,10 +108,10 @@ Here are quicklinks to help you get started and navigate the Fred Hutch instance
 ### 🧭 Explore cBioPortal
 
 - 🔍 [What is cBioPortal?](/datademos/fh-cbio-intro#what-is-cbioportal)
-- 📊 [Visualize mutations, gene expression, and CNVs](/datademos/cbio_examples_of_using_cbio.md#q1-how-often-is-kras-mutated-in-cancer)
-- 🧬 [Compare mutations to clinical factors](/datademos/cbio_examples_of_using_cbio.md#q2-are-kras-mutations-associated-with-clinical-factors)
-- 📈 [Generate publication-ready plots](/datademos/cbio_examples_of_using_cbio.md#q4-do-kras-mutations-affect-survival)
-- 📚 [Explore more usage examples](/datademos/cbio_examples_of_using_cbio.md)
+- 📊 [Visualize mutations, gene expression, and CNVs](/datademos/cbio_examples_of_using_cbio#q1-how-often-is-kras-mutated-in-cancer)
+- 🧬 [Compare mutations to clinical factors](/datademos/cbio_examples_of_using_cbio#q2-are-kras-mutations-associated-with-clinical-factors)
+- 📈 [Generate publication-ready plots](/datademos/cbio_examples_of_using_cbio#q4-do-kras-mutations-affect-survival)
+- 📚 [Explore more usage examples](/datademos/cbio_examples_of_using_cbio/)
 
 ---
 
@@ -120,7 +119,7 @@ Here are quicklinks to help you get started and navigate the Fred Hutch instance
 
 - 🏥 [What is the Fred Hutch Instance?](/datademos/fh-cbio-intro#what-is-the-fred-hutch-instance-of-cbioportal)
 - 🔐 [Request Access to Upload Data](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)
-- 🧪 [Pathway for the whole process specific to Fred Hutch](/pathways/path-cbio-fh-instance.md)
+- 🧪 [Pathway for the whole process specific to Fred Hutch](/pathways/path-cbio-fh-instance/)
 
 ---
 
@@ -129,9 +128,9 @@ Here are quicklinks to help you get started and navigate the Fred Hutch instance
 - 🧾 [Request Upload Access](/datademos/fh-cbio-intro#1-request-upload-access)
 - 🔑 [Get AWS Credentials](/datademos/fh-cbio-intro#2-get-aws-credentials)
 - 🪣 [Request S3 Bucket Access](/datademos/fh-cbio-intro#3-request-s3-bucket-access)
-- 🗂️ [Prepare Your Files for Upload](/datademos/cbio_how_to_prepare_files.md)
-- 🚀 [Upload Files to S3 Bucket](/datademos/cbio_how_to_upload_data_to_cbio_s3.md)
-- 📩 [Test Access to S3 Bucket](/datademos/cbio_test_access_to_cbio_s3_bucket.md)
+- 🗂️ [Prepare Your Files for Upload](/datademos/cbio_how_to_prepare_files/)
+- 🚀 [Upload Files to S3 Bucket](/datademos/cbio_how_to_upload_data_to_cbio_s3/)
+- 📩 [Test Access to S3 Bucket](/datademos/cbio_test_access_to_cbio_s3_bucket/)
 
 ---
 
@@ -173,7 +172,7 @@ Maybe. If they’re covered under your IRB and have Hutch credentials, yes. If e
 
 <details>
 <summary><strong>Can the OCDO team help format our data?</strong></summary>
-Not directly, but we offer [resources](/datademos/cbio_how_to_prepare_files.md) and [Data House Calls](https://calendly.com/data-house-calls/resources) to help troubleshoot.
+Not directly, but we offer [resources](/datademos/cbio_how_to_prepare_files/) and [Data House Calls](https://calendly.com/data-house-calls/resources) to help troubleshoot.
 </details>
 
 </details>
