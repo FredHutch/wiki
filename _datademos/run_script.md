@@ -75,8 +75,8 @@ for an added level of reproducibility.
 ## Nextflow Configuration File
 
 Use `NXF_CONFIG` to specify the configuration file used to run workflows either
-[on SLURM/gizmo](/datademos/on_gizmo) or
-[on AWS](/datademos/on_aws).
+[on SLURM/gizmo](/datademos/on_gizmo/) or
+[on AWS](/datademos/on_aws/).
 
 
 ## Workflow Repository
@@ -115,7 +115,7 @@ this can be omitted.
 
 NOTE: You should not run any workflows which use Apptainer from any `rhino` node.
 Instead use the `grabnode` command to reserve the appropriate head node
-([more details](/compdemos/first_rhino/#logging-on-to-gizmo-via-grabnode)).
+([more details](/pathways/path-grab/)).
 
 
 ## Nextflow Run - Formatting
