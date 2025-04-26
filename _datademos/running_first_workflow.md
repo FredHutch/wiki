@@ -26,12 +26,12 @@ We recommend that you set up a small "configuration" file which records which ty
 compute resources should be used to execute a workflow.
 
 For example, if you would like to run a workflow on SLURM, then
-[follow this guide](/datademos/on_gizmo) to create a file called
-`nextflow.slurm.config`. Similarly, to [run a workflow on AWS](/datademos/on_aws)
+[follow this guide](/datademos/on_gizmo/) to create a file called
+`nextflow.slurm.config`. Similarly, to [run a workflow on AWS](/datademos/on_aws/)
 you may create a file called `nextflow.aws.config`.
 
 The appropriate config file can then be reused to specify compute resources
-when running any number of workflows by pointing to it [in the run script](/datademos/run_script).
+when running any number of workflows by pointing to it [in the run script](/datademos/run_script/).
 
 ## Pick the workflow you want to run
 
@@ -43,9 +43,6 @@ Depending on the workflow, you may find it useful to use one of the reference
 databases which have been made available on the shared filesystem
 ([more details here](/datascience/refgenomes/)).
 
-If you do not see any useful options available, please don't hesitate to
-[reach out](mailto:sminot@fredhutch.org) so that we can find a solution which
-meets your needs.
 
 ## Set up a run script
 
@@ -59,7 +56,7 @@ The "run script" will contain the full `nextflow run ...` command, as well as al
 of the settings and parameters used to run that particular workflow on your particular
 dataset.
 
-Follow [these instructions](/datademos/run_script) for setting up that run script.
+Follow [these instructions](/datademos/run_script/) for setting up that run script.
 
 ## Run the workflow
 
@@ -79,5 +76,5 @@ computer on and connected to the internet (if running on AWS).
 If running a workflow on the SLURM, a good option is to use `sbatch` so that the head node
 itself is run as a SLURM job.
 Another good approach is to use [tmux](https://github.com/tmux/tmux/wiki)
-to keep a session open on [a grabbed node](/compdemos/first_rhino) for running
+to keep a session open on [a grabbed node](/compdemos/first_rhino/) for running
 the head node.
