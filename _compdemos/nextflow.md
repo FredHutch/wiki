@@ -9,7 +9,7 @@ Other workflow managers that people may recognize are Snakemake, Cromwell and To
 Generally speaking, workflow managers are software tools that make it easier to run complex bioinformatic analyses that involve multiple steps, each of which may invoke a different piece of software with different environmental dependencies or resource requirements. 
 The benefits of a workflow manager like Nextflow is that it should make it easier to run your analysis while transparently managing all of the issues that tend to crop up when running a shell script (missing dependencies, not enough resources, hard to tell where failures are coming from, not easily published or transferred to collaborators).
 
-For more details on Nextflow and workflow managers overall, please visit the workflow documentation available [here](/datascience/using_workflows).
+For more details on Nextflow and workflow managers overall, please visit the workflow documentation available [here](/datascience/using_workflows/).
 
 ### Example workflows
 Fred Hutch researchers are building and maintaining a set of Nextflow workflows for use by the general community [here](https://github.com/FredHutch/reproducible-workflows/tree/master/nextflow), while also providing an example of how to write your own workflows.
