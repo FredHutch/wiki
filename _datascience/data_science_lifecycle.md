@@ -19,11 +19,11 @@ Another model is depicted in [Veridical Data Science](https://vdsbook.com/02-dsl
 
 Many research-focused models tend to conclude with the interpretation and communication of results. Other models, such as those [developed by Microsoft](https://microsoft.github.io/azureml-ops-accelerator/1-MLOpsFoundation/2-SkillsRolesAndResponsibilities/1-AdoptingDSProcess.html) or the [Data Science PM](https://www.datascience-pm.com/data-science-life-cycle/), place more emphasis on the resources and organization needed for deploying and monitoring models in production. 
 
-There are many other examples of DSLC models. See "additional examples" at the bottom of this article to explore these.
+There are many other examples of DSLC models. See "DSLC examples" at the bottom of this article to explore these.
 
 ## Why the DSLC matters in (biomedical) data science
 
-Biomedical data science often involves diverse teams of contributors, with each person bringing in specialized knowledge and expertise. Laying out a pattern of working allows you to understand if you have the necessary ingredients for a successful project. Whether your working on a team of data scientists, or your developing code on your own, defining a lifecycle for your work will help you with:
+Biomedical data science often involves diverse teams of contributors, with each person bringing in specialized knowledge and expertise. Laying out a pattern of working allows you to understand if you have the necessary ingredients for a successful project. Whether you're working on a team of data scientists, or your developing code on your own, defining a lifecycle for your work will help you with:
 
 - understanding the problem at hand and _why_ you should focus on it,
 - standardizing projects to make it easier to find information about them,
@@ -32,7 +32,7 @@ Biomedical data science often involves diverse teams of contributors, with each 
 
 ## An example DSLC in biomedical data science
 
-We'll go through an example DSLC designed for a biomedical data science team at Fred Hutch Cancer Center. This example borrows heavily from the Verdical Data Science and Data Science PM models.
+We'll go through an example DSLC designed for a biomedical data science team at Fred Hutch Cancer Center. This example borrows heavily from the [Veridical Data Science](https://vdsbook.com/02-dslc) and [the Data Science PM](https://www.datascience-pm.com/data-science-life-cycle/) models.
 
 ### Problem definition and planning
 
@@ -49,11 +49,11 @@ We use repeatable components or templates to standardize this step:
 
 In this phase we acquire, prepare, and document data sets. We check any issues or inconsistencies in the data with visualizations and summaries that are presented to our stakeholders. Each step is documented in a reproducible notebook or script in our project structure.
 
-We begin by using a template repository on GitHub to set up the standardized structure for our project. Within this repo, there are defined folders for [data cleaning](https://fredhutch.on.worldcat.org/oclc/1430660766), pre-processing data, and exploratory data analysis. This structure is outlined in the repository README. In this step, it's important to present summaries and visualizations to our stakeholders for early feedback and gut checks.
+We begin by using a template repository on GitHub to set up the standardized structure for our project. Within this repo, there are defined folders for [data cleaning](https://vdsbook.com/04-data_cleaning#sec-data-cleaning-procedure), pre-processing data, and exploratory data analysis. This structure is outlined in the repository README. In this step, it's important to present summaries and visualizations to our stakeholders for early feedback and gut checks.
 
 Examples of data science project repo templates:
 
-- [dslp-repo-template](https://fredhutch.on.worldcat.org/oclc/1430660766)
+- [dslp-repo-template](https://github.com/dslp/dslp-repo-template)
 - [VISC templates](https://github.com/FredHutch/VISCtemplates)
 - [Research Compendia](https://book.the-turing-way.org/reproducible-research/compendia), The Turing Way
 
