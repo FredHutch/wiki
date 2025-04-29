@@ -45,7 +45,7 @@ We use repeatable components or templates to standardize this step:
 - Project intake form for engaging with stakeholders ([example](https://www.caitlinhudon.com/posts/2020/09/16/data-intake-form))
 - Project charter ([example](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md))
 
-### Data reparation & exploratory data analysis
+### Data preparation & exploratory data analysis
 
 In this phase we acquire, prepare, and document data sets. We check any issues or inconsistencies in the data with visualizations and summaries that are presented to our stakeholders. Each step is documented in a reproducible notebook or script in our project structure.
 
