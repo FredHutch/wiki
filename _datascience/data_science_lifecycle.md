@@ -67,7 +67,7 @@ Again, remember to present and incorporate feedback from stakeholders!
 
 ### Distribution
 
-There are many ways of distributing the results of a project or putting a project into production. Some projects will be deployed, while others will be disseminated. A deployed project is one that will continue to be used, often with updated data or interactive elements, over time — for example, a dashboard or a predictive model applied in the clinic. Disseminated projects result in static outputs, like a manuscript. How will you make sure your project/analysis is findable--on your team, in your org, and on the wider internet? How will you make sure that it will continue to run (or be reproduced) over time?
+There are many ways of distributing the results of a project and making it available for others. Some projects will be deployed "in production", while other projects may take a more traditional research route of communication and dissemination. A deployed project is one that will continue to be used, often with updated data or interactive elements, over time — for example, a dashboard or a predictive model applied in the clinic. Other projects result in static outputs, like a manuscript. How will you make sure your project/analysis is findable--for [future us](https://www.youtube.com/watch?v=OVM5Ok7W1NQ), in the organization, or on the wider internet? How will you make sure that it will continue to run (or be reproduced) over time?
 
 ### DataOps
 
