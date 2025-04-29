@@ -5,15 +5,11 @@ main_authors: sitapriyamoorthi
 primary_reviewers: tfirman, laderast  
 ---
 
-This pathway will walk you through using the Fred Hutch instance of cBioPortal to explore your own study data. You’ll learn what cBioPortal is, how it’s set up at the Hutch, and how to upload your data.
+This pathway will walk you through how to upload your study data into the [Fred Hutch instance of cBioPortal](https://cbioportal.fredhutch.org/).
 
-## Pre-requisites
+---
 
-- HutchNet ID and access to the Fred Hutch network
-- IRB approval (if uploading sensitive data)
-- AWS credentials and an S3 bucket with write access
-
-If you're unsure about any of these terms, hover or click below:
+Glossary of terms used in this article:
 
 - {% glossary HutchNet ID %}
 - {% glossary VPN %}
@@ -24,26 +20,24 @@ If you're unsure about any of these terms, hover or click below:
 
 ---
 
-## Step 1: Request Upload Access
+## Pre-requisites
 
-To upload a study to the Fred Hutch cBioPortal instance:
+- You must have a [HutchNet ID](/scicomputing/access_credentials/#hutchnet-id) and access to the Fred Hutch [network](/scicomputing/access_methods/#vpn)
+- IRB approval for the study you wish to upload (if applicable)
 
-- Fill out the [Access Request Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)
-- Share details such as:
-  - IRB number, RG number, and approval docs
-  - Whether the data contains identifiable information
+## Step 1: [Request Upload Access](/datascience/cbioportal#1-request-upload-access)
 
-> 📝 *Note: Uploading non-approved data may result in the study being removed. If in doubt, reach out to [dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org).*
+To upload a study to the Fred Hutch cBioPortal instance you need to fill out the [Access Request Form](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW).
+
+Once your study upload request is approved, the [Data Governance & Protection](mailto:dataprotection@fredhutch.org) team will reach out to you to confirm
 
 ---
 
-## Step 2: Set Up AWS Credentials
+## Step 2: [Set Up AWS Credentials](/datascience/cbioportal#2-get-aws-credentials)
 
-You’ll need:
-- A [Fred Hutch AWS lab account](https://sciwiki.fredhutch.org/scicomputing/access_aws/#lab-account)
-- [Individual AWS credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
+Once approved you will need to make sure your team has a [Fred Hutch AWS lab account](https://sciwiki.fredhutch.org/scicomputing/access_aws/#lab-account). And all individuals on your team that have been approved to upload data are setup under the lab/team account with their [individual AWS credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 
-> 📝 *Note: You can test your credentials by running `aws s3 ls s3://fh-dasl-cbio/` on `rhino`.*
+> 📝 *Note: You can test your credentials by following [these*
 
 ---
 
@@ -52,7 +46,6 @@ You’ll need:
 Once credentials are working:
 
 - Contact the cBioPortal team on Slack via [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3)
-- Share your AWS account ID and username
 - You'll be given write-only access to the `fh-dasl-cbio` bucket
 
 > 📝 *Note: Make sure to test your access using `aws s3 cp` or try uploading via Motuz.*
@@ -106,4 +99,8 @@ Once uploaded, an automated pipeline will validate and load your data.
 - 📬 Email: [dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org)
 - 🤝 Slack: [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3)
 - 📅 Book a [Data House Call](https://calendly.com/data-house-calls/resources)
+
+---
+
+↩️ [Back to: What is cBioPortal?](/datascience/fh-cbio-intro#what-is-cbioportal)
 
