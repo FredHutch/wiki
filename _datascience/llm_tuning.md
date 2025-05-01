@@ -34,7 +34,7 @@ This document provides introductory guidance — not an exhaustive review or a p
 
 - Check if your use case requires disclosure of LLM usage or if specific datasets prohibit AI-based analysis or result generation such as for some clinical trials or grants.  
 
-- inimize sensitive data exposure: mask, randomize, anonymize, or de-identify input data before model use. Always identify and use the minimum data required for a process (e.g., if identifiers or unnecessary data are not part of the training or fine-tuning simply remove or code them prior to execution to reduce risk). 
+- Minimize sensitive data exposure: mask, randomize, anonymize, or de-identify input data before model use. Always identify and use the minimum data required for a process (e.g., if identifiers or unnecessary data are not part of the training or fine-tuning simply remove or code them prior to execution to reduce risk). 
 
 - Only use the minimum data necessary for tuning, training, or processing tasks. 
 
