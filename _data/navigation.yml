@@ -45,7 +45,7 @@ datascience:
   - title: General
     children:
       - title: Data Science Lifecycle
-        url: datascience/data_science_lifecycle/
+        url: /datascience/data_science_lifecycle/
       - title: Data Visualization
         url: /datascience/data_viz/
       - title: Data Wrangling
