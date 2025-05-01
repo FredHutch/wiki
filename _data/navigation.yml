@@ -60,8 +60,6 @@ datascience:
         url: /datascience/consent_IRB/
       - title: PHI and Research
         url: /datascience/phi/
-      - title: Data Deidentification
-        url: /datascience/deidentification/
       - title: Data Privacy and Security
         url: /datascience/privacy_security/
       - title: Compliance and Legal
@@ -79,6 +77,12 @@ datascience:
         url: datascience/real_world_data/
       - title: Patient Data
         url: /datascience/patient-data/
+      - title: AI for Coding
+        url: /datascience/ai_coding/
+      - title: Tuning and Training LLMs
+        url: /datascience/llm_tuning/
+      - title: Data Deidentification
+        url: /datascience/deidentification/
   - title: Hutch Resources
     children:
       - title: Reference Genomes
