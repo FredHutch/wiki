@@ -13,20 +13,20 @@ As you explore how AI can help with coding, remember: AI is a tool, not a substi
 
 ## Secure and Compliant AI Tool Selection
 
-✅ **What to Do:**
+**What to Do:**
 
 - Choose enterprise-supported or locally hosted AI models rather than public, cloud-based tools that may store or log sensitive code or data.
 - Request expert reviews from experts in security, technology, software and data protection on the appropriateness of the tools for your use case.
 - Understand open-source licensing risks (e.g., GPL, MIT, Apache) when using AI-generated code. Some licenses, like GPL, may require releasing your own source code.
 - Validate that AI-generated code does not introduce non-compliant licenses or expose your research intellectual property.
 
-❌ **What NOT to Do:**
+**What NOT to Do:**
 
 - Do not use public AI chatbots (e.g., free-tier ChatGPT, Bard) for generating code that touches sensitive data.
 - Do not use AI-generated code without checking the licensing terms of the training data.
 - Do not assume AI-generated code is secure—always conduct security reviews and ensure you understand what the code is doing prior to executing it.
 
-🤖 **Examples of How AI Can Help:**
+**Examples of How AI Can Help:**
 
 - Prompt AI to generate security-hardened code (e.g., “Write a secure API endpoint using OAuth2 authentication”).
 - Ask AI to explain security vulnerabilities (e.g., “What are common security risks in Python Flask applications?”).
@@ -34,7 +34,7 @@ As you explore how AI can help with coding, remember: AI is a tool, not a substi
 
 ## Data, Code, and Credential Protection
 
-✅ **What to Do:**
+**What to Do:**
 
 - Use synthetic data for coding and testing with a validated answer.
 - Store credentials in environment variables or secrets management tools rather than hardcoding them.
@@ -42,7 +42,7 @@ As you explore how AI can help with coding, remember: AI is a tool, not a substi
 - Avoid uploading any sensitive research or patient data into AI tools that may expose or train on user input.
 - Mask or anonymize any sensitive data when using AI for processing tasks.
 
-❌ **What NOT to Do:**
+**What NOT to Do:**
 
 - Do not copy full project repositories into AI tools for debugging.
 - Do not allow AI-generated code to handle sensitive data without proper masking or privacy techniques.
@@ -50,7 +50,7 @@ As you explore how AI can help with coding, remember: AI is a tool, not a substi
 - Never input protected health information (PHI), personally identifiable information (PII), API keys, or credentials into unapproved AI tools.
 - Do not run AI-generated queries against sensitive databases without human vetting.
 
-🤖 **Examples of How AI Can Help:**
+**Examples of How AI Can Help:**
 
 - Generate secure boilerplate code (e.g., “Create a Python script that connects to a database using environment variables.”).
 - Create synthetic datasets for testing (e.g., “Generate a synthetic patient dataset.”).
