@@ -44,6 +44,8 @@ datascience:
         url: /datascience/hutch_courses/
   - title: General
     children:
+      - title: Data Science Lifecycle
+        url: datascience/dslc/
       - title: Data Visualization
         url: /datascience/data_viz/
       - title: Data Wrangling
