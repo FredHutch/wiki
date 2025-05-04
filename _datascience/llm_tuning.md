@@ -67,7 +67,7 @@ This document provides introductory guidance — not an exhaustive review or a p
 
 - Keep thorough records of training data sources, fine-tuning processes, and model changes using version-controlled repositories to track model iterations and ensure auditability. 
 
-- Create a model card for each LLM deployment which is a document that provides essential information about a machine learning or AI model, including its purpose, performance, limitations, and ethical considerations (learn more from (IAPP)[https://iapp.org/news/a/5-things-to-know-about-ai-model-cards]). 
+- Create a model card for each LLM deployment which is a document that provides essential information about a machine learning or AI model, including its purpose, performance, limitations, and ethical considerations (learn more from the [IAPP](https://iapp.org/news/a/5-things-to-know-about-ai-model-cards)). 
 
 - Use diverse, representative datasets for tuning and training to minimize demographic and historical bias.  Even language models trained on large datasets are not necessarily free from demographic, historical, algorithmic or geographic biases among others. 
 
