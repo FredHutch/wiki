@@ -42,7 +42,7 @@ This document provides introductory guidance — not an exhaustive review or a p
 
 ### What NOT to Do
 
-- Do not assume that open-source (e.g., Llama3), publicly available tools (e.g., ChatGPT) or enterprise-grade LLMs (e.g., Claude) automatically comply with regulatory standards—always verify their data handling policies with support from dataprotection@fredhutch.org. 
+- Do not assume that open-source (e.g., Llama3), publicly available tools (e.g., ChatGPT) or enterprise-grade LLMs (e.g., Claude) automatically comply with regulatory standards—always verify their data handling policies with support from your institution.  
 
 - Do NOT use public, consumer-facing tools or LLM APIs like OpenAI’s free-tier ChatGPT, Gemini, or Claude for healthcare or sensitive data research tasks or decision making. This would be data that is classified as Confidential per the Data Classification Policy and presents an ethical risk as well as a data security risk.  
 
