@@ -6,9 +6,10 @@ title: LLM Tuning and Training in Healthcare and Research
 
 Large Language Models (LLMs) can provide powerful tools for data science, research, and healthcare applications, enabling tasks like automated summarization, predictive modeling, and more efficient knowledge extraction. However, the sensitive nature of clinical and biomedical research data requires careful risk management when tuning, training, and deploying these models. 
 
- 
 
-This document provides introductory guidance — not an exhaustive review or a policy — to help you navigate data security, regulatory compliance, and ethical risks when working with LLMs.  As AI tools and LLMs evolve, we will periodically edit and update this guidance in response to policies, available tools and models, and Fred Hutch-specific guidance and implementation as they become available.  
+This document provides introductory guidance — not an exhaustive review or a policy — to help you navigate data security, regulatory compliance, and ethical risks when working with LLMs.  As AI tools and LLMs evolve, we will periodically edit and update this guidance in response to policies, available tools and models, and guidance and implementation details as they become available.  
+
+
 
  
 
@@ -16,9 +17,9 @@ This document provides introductory guidance — not an exhaustive review or a p
 
 - This guidance does not imply explicit recommendation or approval of a process, tool or project.  Compliance with current Fred Hutch or your institution's policies and processes remains your responsibility.   
 
-- If you aren’t sure whether the LLM or AI tool you’re working with will learn from or retain your data or if there might be a risk of disclosing sensitive data, or using intellectual property without permission, find support at your institution from an expert first.   
+- If you aren’t sure whether the LLM or AI tool you’re working with will learn from or retain your data or if there might be a risk of disclosing sensitive data, or using intellectual property without permission, find support at your institution from the appropriate departments or experts.    
 
-
+> At Fred Hutch you can contact [dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org) to find support for current policies, best practices and resources related to this content.  
 
  
 
@@ -34,11 +35,8 @@ This document provides introductory guidance — not an exhaustive review or a p
 
 - Check if your use case requires disclosure of LLM usage or if specific datasets prohibit AI-based analysis or result generation such as for some clinical trials or grants.  
 
-- Minimize sensitive data exposure: mask, randomize, anonymize, or de-identify input data before model use. Always identify and use the minimum data required for a process (e.g., if identifiers or unnecessary data are not part of the training or fine-tuning simply remove or code them prior to execution to reduce risk). 
+- Minimize sensitive data exposure: mask, subset, randomize, anonymize, or de-identify input data before model use. Always identify and use the minimum data required for a process (e.g., if identifiers or unnecessary data are not part of the training or fine-tuning simply remove or code them prior to execution to reduce risk). 
 
-- Only use the minimum data necessary for tuning, training, or processing tasks. 
-
- 
 
  
 
@@ -57,7 +55,6 @@ This document provides introductory guidance — not an exhaustive review or a p
  
 
  
-
  
 
 ## Performance, Ethics and Bias Mitigation 
@@ -66,11 +63,11 @@ This document provides introductory guidance — not an exhaustive review or a p
 
 ### Guidance
 
-- Choose LLMs with clear, research-friendly licenses (e.g., Apache 2.0, MIT) aligned with institutional IP policies. 
+- Choose LLMs with clear, research-friendly licenses (e.g., Apache 2.0, MIT) aligned with your institutional IP policies. 
 
 - Keep thorough records of training data sources, fine-tuning processes, and model changes using version-controlled repositories to track model iterations and ensure auditability. 
 
-- Create a model card for each LLM deployment which is a document that provides essential information about a machine learning or AI model, including its purpose, performance, limitations, and ethical considerations. (learn more). 
+- Create a model card for each LLM deployment which is a document that provides essential information about a machine learning or AI model, including its purpose, performance, limitations, and ethical considerations (learn more from (IAPP)[https://iapp.org/news/a/5-things-to-know-about-ai-model-cards]). 
 
 - Use diverse, representative datasets for tuning and training to minimize demographic and historical bias.  Even language models trained on large datasets are not necessarily free from demographic, historical, algorithmic or geographic biases among others. 
 
