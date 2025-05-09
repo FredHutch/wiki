@@ -35,7 +35,9 @@ Once your study upload request is approved, the [Data Governance & Protection](m
 
 ## Step 2: [Set Up AWS Credentials](/datascience/cbioportal#2-get-aws-credentials)
 
-Once approved you will need to make sure your team has a [Fred Hutch AWS lab account](https://sciwiki.fredhutch.org/scicomputing/access_aws/#lab-account). And all individuals on your team that have been approved to upload data are setup under the lab/team account with their [individual AWS credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
+Once approved you will need to make sure your team has a [Fred Hutch AWS lab account](https://sciwiki.fredhutch.org/scicomputing/access_aws/#lab-account). And all individuals on your team that have been approved to upload data are setup under the lab/team account with their [individual AWS credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws).
+
+
 
 > 📝 *Note: You can test your credentials by following [these*
 
@@ -75,7 +77,7 @@ Then upload using one of the following methods:
 
 - **Motuz:** Upload via [motuz.fredhutch.org](https://motuz.fredhutch.org)
 - **Mountain Duck:** Mount `fh-dasl-cbio` as a drive and drag/drop
-- **Command Line:**
+- **Command Line:** begin by configuring the [AWS CLI](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#configure-aws-cli) and upload via the following command
 ```bash
 aws s3 cp cancer_study_identifier.zip s3://fh-dasl-cbio/
 ```
