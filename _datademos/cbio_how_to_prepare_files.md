@@ -27,7 +27,7 @@ This guide provides an overview of the process and links to examples, validation
 
 To be accepted for upload, your study must contain some required files. Others are optional but recommended depending on your dataset.
 
-👉 [Explore file format guide](https://github.com/FredHutch/cbioportal-data-formatting/blob/main/01_file_formats/Readme.md) 
+👉 [Explore file format guide](https://github.com/FredHutch/cbioportal-data-formatting/blob/main/01_file_formats/Readme) 
 
 > 📝 *Note: Version 6 of cBioPortal requires at least one non-clinical file.*  
 
