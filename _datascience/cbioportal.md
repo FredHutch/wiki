@@ -81,7 +81,7 @@ Once your AWS credentials are ready:
 - We'll help coordinate write-only access to the `fh-dasl-cbio` bucket
 
 > 📝 *Note:*
-> *Before emailing us make sure to [test access](/datademos/cbio_test_access_to_cbio_s3_bucket.md) to `fh-dasl-cbio`*
+> *Before emailing us make sure to [test access](/datademos/cbio_test_access_to_cbio_s3_bucket) to `fh-dasl-cbio`*
 
 ### 4. Prepare & Upload Your Study
 
@@ -98,116 +98,72 @@ Once your study files are formatted correctly follow there [upload steps](/datad
 
 ---
 ## 📎 Quick Links
-<details>
-<summary><strong>Click to expand helpful navigation links</strong></summary>
-
-Here are quicklinks to help you get started and navigate the Fred Hutch instance of cBioPortal efficiently:
-
----
 
 ### 🧭 Explore cBioPortal
 
-- 🔍 [What is cBioPortal?](/datademos/fh-cbio-intro#what-is-cbioportal)
-- 📊 [Visualize mutations, gene expression, and CNVs](/datademos/cbio_examples_of_using_cbio#q1-how-often-is-kras-mutated-in-cancer)
-- 🧬 [Compare mutations to clinical factors](/datademos/cbio_examples_of_using_cbio#q2-are-kras-mutations-associated-with-clinical-factors)
-- 📈 [Generate publication-ready plots](/datademos/cbio_examples_of_using_cbio#q4-do-kras-mutations-affect-survival)
-- 📚 [Explore more usage examples](/datademos/cbio_examples_of_using_cbio/)
-
----
+* 🔍 [What is cBioPortal?](/datademos/fh-cbio-intro#what-is-cbioportal)
+* 📊 [Visualize mutations, gene expression, and CNVs](/datademos/cbio_examples_of_using_cbio#q1-how-often-is-kras-mutated-in-cancer)
+* 🧬 [Compare mutations to clinical factors](/datademos/cbio_examples_of_using_cbio#q2-are-kras-mutations-associated-with-clinical-factors)
+* 📈 [Generate publication-ready plots](/datademos/cbio_examples_of_using_cbio#q4-do-kras-mutations-affect-survival)
+* 📚 [Explore more usage examples](/datademos/cbio_examples_of_using_cbio/)
 
 ### 🔐 Fred Hutch cBioPortal Instance
 
-- 🏥 [What is the Fred Hutch Instance?](/datademos/fh-cbio-intro#what-is-the-fred-hutch-instance-of-cbioportal)
-- 🔐 [Request Access to Upload Data](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)
-- 🧪 [Pathway for the whole process specific to Fred Hutch](/pathways/path-cbio-fh-instance/)
-
----
+* 🏥 [What is the Fred Hutch Instance?](/datademos/fh-cbio-intro#what-is-the-fred-hutch-instance-of-cbioportal)
+* 🔐 [Request Access to Upload Data](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)
+* 🧪 [Pathway for the whole process specific to Fred Hutch](/pathways/path-cbio-fh-instance/)
 
 ### 📤 Upload Your Data
 
-- 🧾 [Request Upload Access](/datademos/fh-cbio-intro#1-request-upload-access)
-- 🔑 [Get AWS Credentials](/datademos/fh-cbio-intro#2-get-aws-credentials)
-- 🪣 [Request S3 Bucket Access](/datademos/fh-cbio-intro#3-request-s3-bucket-access)
-- 🗂️ [Prepare Your Files for Upload](/datademos/cbio_how_to_prepare_files/)
-- 🚀 [Upload Files to S3 Bucket](/datademos/cbio_how_to_upload_data_to_cbio_s3/)
-- 📩 [Test Access to S3 Bucket](/datademos/cbio_test_access_to_cbio_s3_bucket/)
-
----
+* 🧾 [Request Upload Access](/datademos/fh-cbio-intro#1-request-upload-access)
+* 🔑 [Get AWS Credentials](/datademos/fh-cbio-intro#2-get-aws-credentials)
+* 🪣 [Request S3 Bucket Access](/datademos/fh-cbio-intro#3-request-s3-bucket-access)
+* 🗂️ [Prepare Your Files for Upload](/datademos/cbio_how_to_prepare_files/)
+* 🚀 [Upload Files to S3 Bucket](/datademos/cbio_how_to_upload_data_to_cbio_s3/)
+* 📩 [Test Access to S3 Bucket](/datademos/cbio_test_access_to_cbio_s3_bucket/)
 
 ### 🎓 Learn by Example
 
-- 📽️ **Fred Hutch cBioPortal Demo Day**  
+📽️ **Fred Hutch cBioPortal Demo Day**
 Check out the recording to see how to use the portal, upload data, and more.
-
-<iframe src="https://fredhutch.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1e1ae5d3-8b2f-4be7-acc6-b2290121babc&autoplay=false" height="405" width="720" allowfullscreen></iframe>
-
-</details>
+👉 [Watch the recording (Panopto)](https://fredhutch.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1e1ae5d3-8b2f-4be7-acc6-b2290121babc&autoplay=false)
 
 ---
 
 ## ❓ Frequently Asked Questions
 
-
-<details>
-<summary><strong>Click to expand FAQ</strong></summary>
-
-
-<details>
-<summary><strong>Can I add more data to my study?</strong></summary>
+**Can I add more data to my study?**
 Yes, if it’s covered under your approved IRB. Email [dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org) if unsure.
-</details>
 
-
-<details>
-<summary><strong>How do I update a study?</strong></summary>
+**How do I update a study?**
 Just reupload a new version to the S3 bucket—this will replace the existing version.
-</details>
 
-
-<details>
-<summary><strong>Can collaborators access my study?</strong></summary>
+**Can collaborators access my study?**
 Maybe. If they’re covered under your IRB and have Hutch credentials, yes. If external, contact us—this needs review.
-</details>
 
-
-<details>
-<summary><strong>Can the OCDO team help format our data?</strong></summary>
+**Can the OCDO team help format our data?**
 Not directly, but we offer [resources](/datademos/cbio_how_to_prepare_files/) and [Data House Calls](https://calendly.com/data-house-calls/resources) to help troubleshoot.
-</details>
-
-</details>
 
 ---
 
 ## 📝 Release Notes
-<details>
-<summary><strong>Click to view release details</strong></summary>
 
 ### September 2024
-- First release of Fred Hutch cBioPortal instance
-- Deployed with user documentation
-- Running version [v5.4.10](https://github.com/cBioPortal/cbioportal/releases/tag/v5.4.10)
 
-#### Fixes
+* First release of Fred Hutch cBioPortal instance
+* Deployed with user documentation
+* Running version [v5.4.10](https://github.com/cBioPortal/cbioportal/releases/tag/v5.4.10)
 
-- No fixes yet.
+**Fixes**
 
-</details>
+* No fixes yet.
 
 ---
 
 ## 📬 Contact Us
-<details>
-<summary><strong>Click to expand contact options</strong></summary>
 
-- Slack: [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3)
-- Email: [dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org)
-- Book a [Data House Call](https://calendly.com/data-house-calls/resources) for personalized help
-
-</details>
-
-
-
-
+* Slack: [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3)
+* Email: [dataprotection@fredhutch.org](mailto:dataprotection@fredhutch.org)
+* Book a [Data House Call](https://calendly.com/data-house-calls/resources) for personalized help
 
 
