@@ -43,7 +43,7 @@ build:
     unzip -qq main.zip
     cp easybuild-life-sciences-main/docs/_r/* ./_rModules/
     cp easybuild-life-sciences-main/docs/_python/* ./_pythonModules/
-    cp easybuild-life-sciences-main/docs/bio-modules-18.04.md ./_scicomputing/bio-modules-18.04.md.orig
+    cp easybuild-life-sciences-main/docs/sw_inventory/gizmo-bio-modules-18.04.md ./_scicomputing/bio-modules-18.04.md.orig
     FIRST_BLANK_LINE=$(grep -n -m 1 '^$' ./_scicomputing/bio-modules-18.04.md.orig | cut -d: -f1)
     echo "---" >> ./_scicomputing/bio-modules-18.04.md
     echo "title: Scientific Software BioModules" >> ./_scicomputing/bio-modules-18.04.md
