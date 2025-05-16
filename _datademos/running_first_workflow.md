@@ -76,5 +76,5 @@ computer on and connected to the internet (if running on AWS).
 If running a workflow on the SLURM, a good option is to use `sbatch` so that the head node
 itself is run as a SLURM job.
 Another good approach is to use [tmux](https://github.com/tmux/tmux/wiki)
-to keep a session open on [a grabbed node](/compdemos/first_rhino/) for running
+to keep a session open on [a grabbed node](/compdemos/grabnode/) for running
 the head node.
