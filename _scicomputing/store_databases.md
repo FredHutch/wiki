@@ -15,7 +15,7 @@ Important issues to consider before choosing a data storage location for a data 
 Depending on the particular needs of the project, there are different data set storage options available supported by the Fred Hutch.  
 
 ## REDCap
-[REDCap](https://projectredcap.org/about/), or Research Electronic Data Capture, is an open source, mature, secure web application for building and managing CRFs, data forms, and participant-completed surveys. REDCap is HIPAA-compliant and supports advanced features such as logging, validation, branching logic, e-signatures, randomization, calculated fields, and programming hooks. REDCap's mobile app allows allows for offline data capture using iPad and Android tablets. Collected data can be easily exported from REDCap to Excel and common statistical packages (SPSS, SAS, Stata, and R) and has an API.
+<a target="blank" href="https://projectredcap.org/about/">REDCap</a>, or Research Electronic Data Capture, is an open source, mature, secure web application for building and managing CRFs, data forms, and participant-completed surveys. REDCap is HIPAA-compliant and supports advanced features such as logging, validation, branching logic, e-signatures, randomization, calculated fields, and programming hooks. REDCap's mobile app allows allows for offline data capture using iPad and Android tablets. Collected data can be easily exported from REDCap to Excel and common statistical packages (SPSS, SAS, Stata, and R) and has an API.
 
 The beauty of REDCap is that it's easy to get started but it also has advanced features and programming hooks to serve researchers needs when creating simple surveys all the way to conducting large complex research studies and projects.  For other types of research data, the ability to customize the data dictionary to meet the needs of a particular use make it an excellent option to consider when multiple users need to have a common data source with easy access and no database management knowledge is required.  
 
@@ -23,9 +23,9 @@ REDCap has been used by thousands of non-profit institutions throughout the worl
 
 CDS provides backup services, database maintenance, support for developing REDCap projects, and is very accessible for staff without previous database experience.  
 
-For more information about REDCap at the Fred Hutch, login information and training materials and documentation provided by CDS, [visit their site here](https://redcap.fredhutch.org/).
+For more information about REDCap at the Fred Hutch, login information and training materials and documentation provided by CDS, <a target="_blank" href="https://redcap.fredhutch.org/">visit their site here.</a>
 
-Recorded trainings are available on the [CDS REDCap Training page](https://www.fredhutch.org/en/research/divisions/public-health-sciences-division/research/collaborative-data-services/redcap-training.html).
+Recorded trainings are available on the <a target="blank" href="https://www.fredhutch.org/en/research/divisions/public-health-sciences-division/research/collaborative-data-services/redcap-training.html">CDS REDCap Training page</a>.
 
 ## MS SQL Server
 
