@@ -1,3 +1,9 @@
+---
+title: Cluster Environments Compared
+last_modified_at: 2025-05-19
+primary_reviewer: laderast
+---
+
 ## Which Cluster Architecture Should I Use?
 
 > IMPORTANT: THIS IS JUST A DRAFT! This is just to mock up what documentation will look like with multiple cluster environments.  No numbers or paths are to be trusted in this version of the doc.
@@ -15,6 +21,11 @@ The following diagram shows the main differences between the two cluster types:
 	- Older, less capable GPU compute nodes
 - Chorus Cluster
 	- More capable GPU nodes
+
+More detailed documentation on these systems can be found:
+
+ - [gizmo](/scicomputing/gizmo/gizmo_index/)
+ - [chorus](/scicomputing/chorus/chorus_index/)
 
 ```mermaid
 graph TD
