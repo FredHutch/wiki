@@ -131,7 +131,7 @@ Use Nextflow to run your software. Requires knowledge of Nextflow and Nextflow w
 ### Starting Out
 
 1. Conda documentation is [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). If you don’t know where to start, [this page by the Turing Way](https://book.the-turing-way.org/reproducible-research/renv/renv-package) is one of the best resources I can find. 
-2. Use the `miniconda` environment module to load `conda`. For example, `ml Miniconda3`
+2. Use the `Miniforge3` environment module to load `conda`. For example, `ml Miniforge3`
 3. **Make sure that you’ve updated your conda channels first.** To do this, please see the instructions and guidelines [here](https://conda-forge.fredhutch.org/) **You will get errors from conda operations without updating your conda channels as described there.**
 
 ### Making a conda environment
@@ -140,7 +140,7 @@ Use Nextflow to run your software. Requires knowledge of Nextflow and Nextflow w
 
 ### In Your Script
 
-1. Load the `Miniconda3` environment module: `ml Miniconda3`
+1. Load the `Miniforge3` environment module: `ml Miniforge3`
 2. When using your software, activate your environment using `conda activate`. For example: `conda activate samtools_env` 
 3. Make sure that your software is available using `which` : `which samtools`. This should return a path to where your `samtools` binary is installed.
 4. Do your work in your script with the software.
@@ -150,7 +150,7 @@ Here's an example script, assuming you have installed `samtools` into an environ
 
 ```bash
 #!/bin/bash
-ml Miniconda3
+ml Miniforge3
 conda activate samtools_env
 samtools view -c $1 > counts.txt
 conda deactivate
