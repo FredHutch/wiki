@@ -109,7 +109,7 @@ Once your study files are formatted correctly follow there [upload steps](/datad
 
 ### 🔐 Fred Hutch cBioPortal Instance
 
-* 🏥 [What is the Fred Hutch Instance?](/datademos/fh-cbio-intro#what-is-the-fred-hutch-instance-of-cbioportal)
+* 🏥 [What is the Fred Hutch Instance?](/datascience/cbioportal#what-is-the-fred-hutch-instance-of-cbioportal)
 * 🔐 [Request Access to Upload Data](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)
 * 🧪 [Pathway for the whole process specific to Fred Hutch](/pathways/path-cbio-fh-instance/)
 
