@@ -51,6 +51,6 @@ For more details, explore the full formatting documentation and helper tools her
 
 ---
 
-↩️ [Back to: Prepare & Upload Your Study](/datascience/cbioportal#prepare--upload-your-study)
+↩️ [Back to: Prepare & Upload Your Study](/datascience/cbioportal#4-prepare--upload-your-study)
 
 
