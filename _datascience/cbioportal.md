@@ -115,7 +115,7 @@ Once your study files are formatted correctly follow there [upload steps](/datad
 
 ### 📤 Upload Your Data
 
-* 🧾 [Request Upload Access](/datademos/fh-cbio-intro#1-request-upload-access)
+* 🧾 [Request Upload Access](/datascience/cbioportal#1-request-upload-access)
 * 🔑 [Get AWS Credentials](/datademos/fh-cbio-intro#2-get-aws-credentials)
 * 🪣 [Request S3 Bucket Access](/datascience/cbioportal#3-request-s3-bucket-access)
 * 🗂️ [Prepare Your Files for Upload](/datademos/cbio_how_to_prepare_files/)
