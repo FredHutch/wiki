@@ -101,7 +101,7 @@ Once your study files are formatted correctly follow there [upload steps](/datad
 
 ### 🧭 Explore cBioPortal
 
-🔍 [What is cBioPortal?](/datademos/fh-cbio-intro#what-is-cbioportal)
+🔍 [What is cBioPortal?](/datascience/cbioportal#what-is-cbioportal)
 📊 [Visualize mutations, gene expression, and CNVs](/datademos/cbio_examples_of_using_cbio#q1-how-often-is-kras-mutated-in-cancer)
 🧬 [Compare mutations to clinical factors](/datademos/cbio_examples_of_using_cbio#q2-are-kras-mutations-associated-with-clinical-factors)
 📈 [Generate publication-ready plots](/datademos/cbio_examples_of_using_cbio#q4-do-kras-mutations-affect-survival)
