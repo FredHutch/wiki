@@ -64,4 +64,4 @@ aws s3 cp /path/to/cancer_study_identifier.zip s3://fh-dasl-cbio/
 
 ---
 
-↩️ [Back to: Prepare & Upload Your Study](/datascience/fh-cbio-intro#prepare--upload-your-study)
+↩️ [Back to: Prepare & Upload Your Study](/datascience/cbioportal#4-prepare--upload-your-study)
