@@ -27,7 +27,7 @@ This guide provides an overview of the process and links to examples, validation
 
 To be accepted for upload, your study must contain some required files. Others are optional but recommended depending on your dataset.
 
-👉 [Explore file format guide](https://github.com/FredHutch/cbioportal-data-formatting/blob/main/01_file_formats/Readme) 
+👉 [Explore file format guide](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats#file-formats) 
 
 > 📝 *Note: Version 6 of cBioPortal requires at least one non-clinical file.*  
 
@@ -51,6 +51,6 @@ For more details, explore the full formatting documentation and helper tools her
 
 ---
 
-↩️ [Back to: Prepare & Upload Your Study](/datascience/fh-cbio-intro#prepare--upload-your-study)
+↩️ [Back to: Prepare & Upload Your Study](/datascience/cbioportal#prepare--upload-your-study)
 
 
