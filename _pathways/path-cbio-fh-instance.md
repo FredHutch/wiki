@@ -50,7 +50,7 @@ Once credentials are working:
 - Contact the cBioPortal team on Slack via [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3)
 - You'll be given write-only access to the `fh-dasl-cbio` bucket
 
-> 📝 *Note: Make sure to test your access using `aws s3 cp` or try uploading via Motuz.*
+> 📝 *Note: Make sure to [test your access](/datademos/cbio_test_access_to_cbio_s3_bucket) using `aws s3 cp` or try uploading via Motuz.*
 
 ---
 
