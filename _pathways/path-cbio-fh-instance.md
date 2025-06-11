@@ -39,7 +39,7 @@ Once approved you will need to make sure your team has a [Fred Hutch AWS lab acc
 
 
 
-> 📝 *Note: You can test your credentials by following [these*
+> 📝 *Note: You can test your credentials by following [these steps](/scicomputing/access_credentials/#testing-your-credentials).*
 
 ---
 
