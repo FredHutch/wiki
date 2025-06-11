@@ -84,7 +84,7 @@ aws s3 cp cancer_study_identifier.zip s3://fh-dasl-cbio/
 
 Once uploaded, an automated pipeline will validate and load your data.
 
-> 📝 *Note: You'll receive a validation email. If there are errors, it will include details.*
+> 📝 *Note: You'll receive a validation email. If there are errors, it will include details in an attached report.*
 
 ---
 
