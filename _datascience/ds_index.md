@@ -2,7 +2,7 @@
 title: Data Science Support at Fred Hutch
 ---
 
-Our Biomedical Data Science Wiki documentation spans translational data-related topics from data stewardship and policy to working with data to complex data analysis building and tooling. We are in the process of building new content that is tailored to the needs of our community so check back frequently.  If you would like to see content on a specific topic you think is relevant to this space, please feel free to leave a request via [GitHub Issue](https://github.com/FredHutch/wiki/issues) or by emailing [data@fredhutch.org](mailto:data@fredhutch.org).  
+Our Biomedical Data Science Wiki documentation spans translational data-related topics from data stewardship and policy to working with data to complex data analysis building and tooling. We are in the process of building new content that is tailored to the needs of our community so check back frequently.  If you would like to see content on a specific topic you think is relevant to this space, please feel free to leave a request via [GitHub Issue](https://github.com/FredHutch/wiki/issues) or by emailing [datascience@fredhutch.org](mailto:datascience@fredhutch.org).  
 
 
 ## Learning and Community
