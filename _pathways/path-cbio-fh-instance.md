@@ -104,5 +104,5 @@ Once uploaded, an automated pipeline will validate and load your data.
 
 ---
 
-↩️ [Back to: What is cBioPortal?](/datascience/fh-cbio-intro#what-is-cbioportal)
+↩️ [Back to: What is cBioPortal?](/datascience/cbioportal#what-is-cbioportal)
 
