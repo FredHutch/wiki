@@ -30,9 +30,9 @@ Fred Hutch’s internal [cBioPortal instance](https://cbioportal.fredhutch.org/)
 
 Key features:
 
-- 🔐 **Controlled access** – Only approved users can view & upload  data
+🔐 **Controlled access** – Only approved users can view & upload  data
   
-- 🧬 **Sensitive data allowed** – IRB-approved studies with identifiable data can be included
+🧬 **Sensitive data allowed** – IRB-approved studies with identifiable data can be included
 
 ---
 
@@ -101,26 +101,26 @@ Once your study files are formatted correctly follow there [upload steps](/datad
 
 ### 🧭 Explore cBioPortal
 
-* 🔍 [What is cBioPortal?](/datademos/fh-cbio-intro#what-is-cbioportal)
-* 📊 [Visualize mutations, gene expression, and CNVs](/datademos/cbio_examples_of_using_cbio#q1-how-often-is-kras-mutated-in-cancer)
-* 🧬 [Compare mutations to clinical factors](/datademos/cbio_examples_of_using_cbio#q2-are-kras-mutations-associated-with-clinical-factors)
-* 📈 [Generate publication-ready plots](/datademos/cbio_examples_of_using_cbio#q4-do-kras-mutations-affect-survival)
-* 📚 [Explore more usage examples](/datademos/cbio_examples_of_using_cbio/)
+🔍 [What is cBioPortal?](/datascience/cbioportal#what-is-cbioportal)
+📊 [Visualize mutations, gene expression, and CNVs](/datademos/cbio_examples_of_using_cbio#q1-how-often-is-kras-mutated-in-cancer)
+🧬 [Compare mutations to clinical factors](/datademos/cbio_examples_of_using_cbio#q2-are-kras-mutations-associated-with-clinical-factors)
+📈 [Generate publication-ready plots](/datademos/cbio_examples_of_using_cbio#q4-do-kras-mutations-affect-survival)
+📚 [Explore more usage examples](/datademos/cbio_examples_of_using_cbio/)
 
 ### 🔐 Fred Hutch cBioPortal Instance
 
-* 🏥 [What is the Fred Hutch Instance?](/datascience/cbioportal#what-is-the-fred-hutch-instance-of-cbioportal)
-* 🔐 [Request Access to Upload Data](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)
-* 🧪 [Pathway for the whole process specific to Fred Hutch](/pathways/path-cbio-fh-instance/)
+🏥 [What is the Fred Hutch Instance?](/datascience/cbioportal#what-is-the-fred-hutch-instance-of-cbioportal)
+🔐 [Request Access to Upload Data](https://redcap.fredhutch.org/surveys/?s=AWWH7TC88TEC9DKW)
+🧪 [Pathway for the whole process specific to Fred Hutch](/pathways/path-cbio-fh-instance/)
 
 ### 📤 Upload Your Data
 
-* 🧾 [Request Upload Access](/datascience/cbioportal#1-request-upload-access)
-* 🔑 [Get AWS Credentials](/datascience/cbioportal#2-get-aws-credentials)
-* 🪣 [Request S3 Bucket Access](/datascience/cbioportal#3-request-s3-bucket-access)
-* 🗂️ [Prepare Your Files for Upload](/datademos/cbio_how_to_prepare_files/)
-* 🚀 [Upload Files to S3 Bucket](/datademos/cbio_how_to_upload_data_to_cbio_s3/)
-* 📩 [Test Access to S3 Bucket](/datademos/cbio_test_access_to_cbio_s3_bucket/)
+🧾 [Request Upload Access](/datascience/cbioportal#1-request-upload-access)
+🔑 [Get AWS Credentials](/datascience/cbioportal#2-get-aws-credentials)
+🪣 [Request S3 Bucket Access](/datascience/cbioportal#3-request-s3-bucket-access)
+🗂️ [Prepare Your Files for Upload](/datademos/cbio_how_to_prepare_files/)
+🚀 [Upload Files to S3 Bucket](/datademos/cbio_how_to_upload_data_to_cbio_s3/)
+📩 [Test Access to S3 Bucket](/datademos/cbio_test_access_to_cbio_s3_bucket/)
 
 ### 🎓 Learn by Example
 

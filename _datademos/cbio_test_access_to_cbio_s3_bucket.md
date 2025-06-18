@@ -45,6 +45,6 @@ If you can write and list files but cannot download them, your access is correct
 
 ---
 
-↩️ [Back to: Request S3 Bucket Access](/datascience/fh-cbio-intro#request-s3-bucket-access)
+↩️ [Back to: Request S3 Bucket Access](/datascience/cbioportal#3-request-s3-bucket-access)
 
 

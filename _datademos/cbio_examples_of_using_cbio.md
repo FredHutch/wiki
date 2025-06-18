@@ -53,7 +53,7 @@ cBioPortal offers countless ways to explore and interpret cancer genomics data�
   
 ![KRAS_OS](/datademos/assets/cbio_07_KRAS_OS.png)
 
-- Explore [disease-free survival](https://www.cbioportal.org/results/comparison?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival&Z_SCORE_THRESHOLD=2.0&RPPA_SCORE_THRESHOLD=2.0&geneset_list=%20) → *Patients with mutant KRAS have lower disease-free survival.*
+- Explore [disease-free survival](https://www.cbioportal.org/results/comparison/survival?cancer_study_list=nsclc_tcga_broad_2016%2Cpaad_tcga%2Ccoadread_tcga&tab_index=tab_visualize&profileFilter=mutations%2Cgistic%2Ccna%2Cstructural_variants&case_set_id=all&Action=Submit&gene_list=KRAS&comparison_subtab=survival&Z_SCORE_THRESHOLD=2.0&RPPA_SCORE_THRESHOLD=2.0&geneset_list=%20) → *Patients with mutant KRAS have lower disease-free survival.*
   
 ![KRAS_DFS](/datademos/assets/cbio_08_KRAS_DFS.png)
 
@@ -69,4 +69,4 @@ cBioPortal offers countless ways to explore and interpret cancer genomics data�
 
 ---
 
-↩️ [Back to: What is cBioPortal?](/datascience/fh-cbio-intro#what-is-cbioportal)
+↩️ [Back to: What is cBioPortal?](/datascience/cbioportal#what-is-cbioportal)
