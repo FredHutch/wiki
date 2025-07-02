@@ -62,6 +62,8 @@ In my newly created environment the Python interpreter is just a link to the int
 
 "Conda" is a suite of tools for managing independent Python environments a'la `venv` but with some additional features.  The most common Conda installers are Anaconda, Miniconda, and Miniforge.  The current recommended Conda installer is [Miniforge](https://conda-forge.org/) from the Conda project.
 
+The Anaconda installer requires a license and cannot be used at this time.  Please refer to the information [here](https://conda-forge.fredhutch.org/) for more details on this.{: .notice--warn}
+
 ### Miniforge from Upstream
 
 [Download the appropriate Miniforge](https://conda-forge.org/download/) for your workstation and install according the the instructions on that page.  The installer does have help (`bash Miniforge3-$(uname)-$(uname -m).sh -h`) if there are additional features you'd like to use during install.
