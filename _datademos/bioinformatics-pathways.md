@@ -54,7 +54,7 @@ These file systems have the advantage of being directly connected to the cluster
 To move files, you can use [Motuz](https://sciwiki.fredhutch.org/compdemos/motuz/), which is the web app, to move files back and forth from 
     - your computer
     - from other Fred Hutch storage (such as `/fast/`) 
-    - or from Fred Hutch's S3 bucket
+    - or from an AWS S3 bucket
 
 [HutchGO is also available for transferring files](https://sciwiki.fredhutch.org/scicomputing/hutchgo_overview/), which uses an App called Globus Connect. 
 
