@@ -60,7 +60,10 @@ In my newly created environment the Python interpreter is just a link to the int
 
 ## The Conda Installer
 
-"Conda" is a suite of tools for managing independent Python environments a'la `venv` but with some additional features.  The most common Conda installers are Anaconda, Miniconda, and Miniforge.  The currently supported Conda installer is [miniforge](https://conda-forge.org/) from the Conda project.
+"Conda" is a suite of tools for managing independent Python environments a'la `venv` but with some additional features.  The most common Conda installers are Anaconda, Miniconda, and Miniforge.  The current recommended Conda installer is [Miniforge](https://conda-forge.org/) from the Conda project.
+
+The Anaconda installer is a licensed product- we are not covered by Anaconda's non-profit/educational license and any use would require a paid subscription.  Please refer to the information [here](https://conda-forge.fredhutch.org/) for more details on this.
+{: .notice--warning}
 
 ### Miniforge from Upstream
 

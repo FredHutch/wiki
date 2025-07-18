@@ -2,9 +2,7 @@
 title: Sitapriya Moorthi
 ---
 ## Affiliation
-Human Biology Division
-Data Science Lab 
-
+Office of the Chief Data Officer
 
 ## Title
 Staff Scientist
@@ -14,9 +12,11 @@ Staff Scientist
 
 Data Generation - writing and editing
 
-Bioinformatics - editing
+Data Analysis - writing and editing 
+
+Bioinformatics & Computational Tools - writing and editing
 
 
 
 ## Github
-
+[sitapriyamoorthi](https://github.com/sitapriyamoorthi)

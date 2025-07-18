@@ -79,7 +79,7 @@ If you have any problems using this configuration, please don't hesitate to
 ## Running the workflow
 
 To run a workflow with this configuration, follow the guidance for formatting
-the appropriate [run script](/hdc/workflows/running/run_script).
+the appropriate [run script](/datademos/run_script/).
 
 ## Note: ERROR 151
 
@@ -112,7 +112,7 @@ job failures which can be caused by ECS worker recycling in that environment.
 An essential element of using the cluster effectively is making sure to use the
 temporary storage volume associated with each individual task, and not filling up
 the `/tmp` directory which is shared across all nodes. 
-More background on this topic is available on the [job local storage page](/compdemos/store_job_local).
+More background on this topic is available on the [job local storage page](/compdemos/store_job_local/).
 
 The config file above accomplishes this task in two steps:
 
