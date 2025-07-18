@@ -14,13 +14,13 @@ Here is a visual index of the steps you need to get up and running on the cluste
 graph TD
 G[Get Credentials] --> A
 A[Logging into the Cluster] --> B
-B[Uploading Your Data] --> H
+B[Uploading Your Data] --> C
 H[Find Your Software] --> C
 C[Write a Bash Script] --> D
-C --> H[Run Using a Workflow Manager]
+C --> L[Run Using a Workflow Manager]
+L --> F
 D[Run your script using SLURM] --> E
 E[Check job status] --> F
-H --> F
 F[Locate your outputs]
 click G "#credentials"
 click A "#logging-in"
@@ -28,7 +28,6 @@ click B "/scicomputing/store_collaboration/"
 click C "/scicomputing/software_linux101/#shell-scripting"
 click D "/pathways/path-batch-computing/#steps"
 click E "/scicomputing/compute_jobs/#managing-jobs"
-click F ""
 ```
 
 ### Credentials
