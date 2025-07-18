@@ -27,13 +27,19 @@ zip -r cancer_study_identifier.zip .
 
 ---
 
-### ✅ Step 2: Upload Your Zipped Folder to the S3 Bucket
+### 🚫 Step 2: Make sure to set up your SSO credentials
 
-You have three ways to upload your data. Choose the one you're most comfortable with:
+Make sure you have configured your single-sign-on (SSO) credentials using [these steps](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#configure-aws-cli)
 
 ---
 
-### 🟦 Option 1: Using Motuz (Simple Web Interface)
+### ✅ Step 3: Upload Your Zipped Folder to the S3 Bucket
+
+You have three ways to upload your data. Choose the one you're most comfortable with:
+
+
+
+#### 🟦 Option 1: Using Motuz (Simple Web Interface)
 
 1. Go to [Motuz](https://motuz.fredhutch.org/login)  
 2. Log in with your Fred Hutch credentials  
@@ -41,9 +47,9 @@ You have three ways to upload your data. Choose the one you're most comfortable 
 4. Select your `.zip` file and click the **blue arrow** to upload  
 ![Motuz upload example](/datademos/assets/cbio_15_motuz_upload.png)
 
----
 
-### 🟨 Option 2: Using Mountain Duck (Drag-and-Drop)
+
+#### 🟨 Option 2: Using Mountain Duck (Drag-and-Drop)
 
 1. Follow the [Mountain Duck setup guide](https://sciwiki.fredhutch.org/compdemos/Mountain-CyberDuck/#installing-mountain-duck)  
 2. Then configure the `fh-dasl-cbio` bucket.
@@ -51,9 +57,9 @@ You have three ways to upload your data. Choose the one you're most comfortable 
 4. **Copy and paste** your `.zip` file into the folder  
 ![Mountain Duck upload](/datademos/assets/cbio_16_mountain_duck_upload.png)
 
----
 
-### 🟫 Option 3: Using the Command Line (for power users)
+
+#### 🟫 Option 3: Using the Command Line (for power users)
 
 If you’re comfortable using the terminal and have AWS CLI configured, use:
 ```bash
