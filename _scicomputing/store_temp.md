@@ -43,4 +43,4 @@ A: No- all data on _temp_ is confined to the storage system in the data center. 
 
 #### Q: Can I access _temp_ from my Windows or Mac workstation
 
-A: _temp_ can also be accessed from the Mac Finder at `smb://fhcrc.org;USERNAME@hpc.chromium.fhcrc.org/temp.chromium` (replacing `USERNAME` with your HutchNet ID) or Windows Explorer at `\\hpc.chromium.fhcrc.org\temp.chromium`.
+A: _temp_ can also be accessed using Finder on Mac or File Explorer on Windows. See [How to access Fred Hutch storage](/scicomputing/store_posix/#how-to-access-fred-hutch-storage).
