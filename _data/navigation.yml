@@ -45,7 +45,7 @@ datascience:
       - title: Pathways
         url: /pathways/
       - title: Data Science Training
-        url: /datascience/hutch_courses/
+        url: https://hutchdatascience.org/courses/
   - title: General
     children:
       - title: Tech Hiring for Science
