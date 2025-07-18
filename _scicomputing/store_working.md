@@ -5,7 +5,7 @@ primary_reviewers: scicomp
 
 ## Overview
 
-The _working_ storage platform provides a location for longer term storage of research data.  It is similar to [temp](scicomputing/store_temp) but allows data to be stored for longer than 30 days.
+The _working_ storage platform provides a location for longer term storage of research data.  It is similar to [temp](/scicomputing/store_temp) but allows data to be stored for longer than 30 days.
 
 _Working_ is not backed up and **must not** be used as a primary data store.
 {: .notice--warning}

@@ -2,7 +2,9 @@
 title: PROOF Troubleshooting
 ---
 
-- [PROOF Server](#common-proof-server-issues)
+[proof.fredhutch.org](https://proof.fredhutch.org) on the Fred Hutch Network
+
+- [PROOF Server Issues](#common-proof-server-issues)
 - [Workflow Level Issues](#workflow-level-issues)
 - [Task Level Issues](#task-level-issues)
 - [Execution Issues](#execution-issues)

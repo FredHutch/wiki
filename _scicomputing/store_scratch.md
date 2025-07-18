@@ -3,7 +3,7 @@ title: Scratch File Service
 primary_reviewers: scicomp
 ---
 
->PLEASE NOTE: the old scratch storage platform is end of life and will be retired on the 27th of April. Please migrate all scripts and jobs to use [temp](scicomputing/store_temp) or [working](scicomputing/store_working).
+>PLEASE NOTE: the old scratch storage platform is end of life and will be retired on the 27th of April. Please migrate all scripts and jobs to use [temp](/scicomputing/store_temp) or [working](/scicomputing/store_working).
 
 > Scratch is currently only accessible on the rhino nodes, via Motuz, or via a mount on your workstation.  On the 27th we will be removing that access.
 

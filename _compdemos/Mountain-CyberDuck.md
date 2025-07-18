@@ -83,3 +83,17 @@ Confirm by simply closing this bookmark Window and then click on the bookmark.
 
 
 To get a general feel how the software works please see [this video on youtube](https://www.youtube.com/watch?v=mzDqIhLuX_A​)  Another [video](https://www.youtube.com/watch?v=it4NyAH6ml8) shows a user who is working with Cyberduck on a Mac.
+
+## Using with SSO
+
+Mountainduck & Cyberduck are designed to work with AWS access keys. With the change to [SSO](/scicomputing/access_aws/#accessing-via-sso) you can can still use these applications, however the setup process is slightly different and you need to re-authenticate whenever your SSO credentials expire. 
+
+### Configure using SSO credentials
+
+- First [setup access using the AWS CLI](/scicomputing/access_aws/#accessing-via-sso)
+- Select "New Bookmark" and then profile "S3 (Credentials from AWS Command Line Interface)" from the pull down menu. You may have to select "More options" then search for "s3" to see this profile.
+- Add the profile name from the command line to "Profile Name in ~/.aws.credentials" in the application
+
+![](/_compdemos/assets/sso-duck.png)
+
+At this point you should be able to access S3 resources in the application. Note that when your SSO credentials expire, you will need to manually reauthenticate to continue to access files in the application.

@@ -51,3 +51,15 @@
   definition: All versions of R that share the same `y` of the `x.y.z` version number. For example, R-4.2.1 and R-4.2.2 share the same minor version number. R-4.1.1 and R-4.2.2 do not.
 - term: Prompt
   definition: A "prompt" indicates that the terminal session is ready for input.  Prompts typically have a structure indicating the username and host, followed by a blinking square. AKA "command prompt".
+- term: VPN
+  definition: A Virtual Private Network that allows secure access to the Fred Hutch network from off-campus.
+  url: https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn
+- term: AWS
+  definition: Amazon Web Services – a cloud platform used to store and access research data and tools.
+  url: https://sciwiki.fredhutch.org/scicomputing/access_aws/
+- term: S3
+  definition: Amazon S3 (Simple Storage Service) is a cloud-based object storage service used to store and retrieve data.
+  url: https://sciwiki.fredhutch.org/scicomputing/store_objectstore/#s3-buckets
+- term: IRB
+  definition: Institutional Review Board – a committee that reviews and approves research involving human subjects to ensure ethical standards are met.
+  url: https://extranet.fredhutch.org/en/u/irb.html
