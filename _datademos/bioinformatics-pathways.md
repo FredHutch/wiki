@@ -11,6 +11,7 @@ We'll use the example of aligning multiple FASTA files using BWA.
 Here is a visual index of the steps you need to get up and running on the cluster:
 
 ```mermaid
+graph TD
 G[Get Credentials] --> A
 A[Logging into the Cluster] --> B
 B[Uploading Your Data] --> H
@@ -46,19 +47,19 @@ https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-c
 
 The next thing to do is to move your files to either:
 
-- `/temp` 
-- `/working`
+- `/hpc/temp` 
+- `/fh/working`
 
-These file systems have the advantage of being directly connected to the cluster and are faster. They are meant to be working storage, so when you are done processing your files, you will need to transfer them back to either `fast/` or your own system. 
+[These file systems]( https://sciwiki.fredhutch.org/scicomputing/store_overview/) have the advantage of being directly connected to the cluster and are faster. They are meant to be *working storage*, so when you are done processing your files, you will need to transfer them back to either `/fh/fast/` or your own system. Note that `/hpc/temp/` and `/fh/working/`
 
 To move files, you can use [Motuz](https://sciwiki.fredhutch.org/compdemos/motuz/), which is the web app, to move files back and forth from 
     - your computer
-    - from other Fred Hutch storage (such as `/fast/`) 
+    - from other Fred Hutch storage (such as `/fh/fast/`) 
     - or from an AWS S3 bucket
 
 [HutchGO is also available for transferring files](https://sciwiki.fredhutch.org/scicomputing/hutchgo_overview/), which uses an App called Globus Connect. 
 
-You can also use an SFTP (secure FTP) client such as Mountain Duck to transfer files as well. 
+You can also use an SFTP (secure FTP) client such as [Mountain Duck to transfer files as well. 
 
 ### Find the Reference Genome
 
@@ -85,8 +86,8 @@ We will get the following response:
   Where:
    D:  Default Module
 
-Use "module spider" to find all possible modules and extensions.
-Use "module keyword key1 key2 ..." to search for all possible modules matching
+Use `module spider` to find all possible modules and extensions.
+Use `module keyword key1 key2 ...` to search for all possible modules matching
 any of the "keys"
 ```
 
@@ -104,7 +105,7 @@ If you can't find a software module, there is [Apptainer and other ways](https:/
 At this point, we have two main paths to run the software:
 
 1. We can use the built in job scheduler, SLURM, to batch process our files. 
-2. We can automate our batching using a WDL (Workflow Description Language) file and PROOF
+2. We can automate our batching using a [WDL (Workflow Description Language)](https://hutchdatascience.org/Developing_WDL_Workflows/) file and [PROOF](https://sciwiki.fredhutch.org/datademos/proof-how-to/)
 
 ### Using SLURM
 
