@@ -2,10 +2,10 @@
 title: Project Management and Team Communication Tools For Research Labs
 last_modified_at: 2025-04-18
 main_authors: sitapriyamoorthi
-primary_reviewers:  
+primary_reviewers:
 ---
 
-Here’s a **collaborative-friendly outline** with section skeletons and bullet points. 
+Here’s a **collaborative-friendly outline** with section skeletons and bullet points.
 It’s organized for modular contributions so multiple folks can fill in sections asynchronously.
 
 > **Purpose**: Provide an overview of best practices and recommended tools for managing projects, tracking work, and facilitating communication in computational and experimental research labs.
@@ -14,13 +14,13 @@ It’s organized for modular contributions so multiple folks can fill in section
 
 ## 🗂️ Table of Contents
 
-1. [Overview & Goals](#overview--goals)  
-2. [Core Project Management Needs in Research](#core-project-management-needs-in-research)  
-3. [Common Tool Categories](#common-tool-categories)  
-4. [Recommended Tools and Practices](#recommended-tools-and-practices)  
-5. [Case Studies and Lab Use Examples](#case-studies-and-lab-use-examples)  
-6. [Tips for Adoption and Onboarding](#tips-for-adoption-and-onboarding)  
-7. [FAQs and Troubleshooting](#faqs-and-troubleshooting)  
+1. [Overview & Goals](#overview--goals)
+2. [Core Project Management Needs in Research](#core-project-management-needs-in-research)
+3. [Common Tool Categories](#common-tool-categories)
+4. [Recommended Tools and Practices](#recommended-tools-and-practices)
+5. [Case Studies and Lab Use Examples](#case-studies-and-lab-use-examples)
+6. [Tips for Adoption and Onboarding](#tips-for-adoption-and-onboarding)
+7. [FAQs and Troubleshooting](#faqs-and-troubleshooting)
 8. [Resources & Further Reading](#resources--further-reading)
 
 ---
