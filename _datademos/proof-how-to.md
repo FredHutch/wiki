@@ -336,7 +336,7 @@ If you find something is not working with the app or you find a bug, please help
 ### Useful courses to get started
 #### Cluster computing
 - [How to Rhino](https://sciwiki.fredhutch.org/compdemos/howtoRhino/)
-- [Cluster 101](https://leanpub.com/courses/fredhutch/fredhutchcluster101)
+- [Intro to Fred Hutch Cluster Computing](https://hutchdatascience.org/FH_Cluster_101/index.html)
 
 #### Building WDL workflows
 - [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/)
