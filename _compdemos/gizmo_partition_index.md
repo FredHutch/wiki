@@ -13,7 +13,7 @@ Slurm _partitions_ organize and associate compute resources in the cluster. Part
 
 | Partition Name | Nodes | Guaranteed | Priority | Default Time | Max Time | Limits
 |----------------|-------|------------|----------|----------|----------|--------
-| campus-new (*) | All   | yes        | normal   | 3 days   | 30 days  | 1000 cores per account
+| campus-new (*) | All   | yes        | normal   | 3 days   | 30 days  | 800 cores per account, 800 cores per user
 | short          | All   | yes        | normal   | 1 hour   | 12 hours | 8000 core-hours committed per account
 | interactive    | All   | yes        | higher   | 1 day    | 7 days   | 36 cores per user, 1 GPU per user
 | restart        | All   | no         | low      | 3 days   | 7 days   | no limit
