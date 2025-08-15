@@ -94,6 +94,7 @@ Before you begin using PROOF, make sure you have the following:
 - [Access to the rhino cluster of Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-clusters)
 - [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 - Lab-based directory on the [/hpc/temp](https://sciwiki.fredhutch.org/scicompannounce/2024-04-02-new-hpc-temp-storage/#how) storage platform
+- If your data is stored in an S3 bucket make sure to follow [these AWS SSO instructions](https://sciwiki.fredhutch.org/scicomputing/access_aws/#accessing-via-sso) to be able to use this data via PROOF.
 
 
 ### Starting a PROOF Server
