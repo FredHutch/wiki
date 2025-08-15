@@ -42,23 +42,13 @@ One issue to note when using GitHub to do version control in your code is that i
 
 ## Amazon Web Services (AWS)
 
-[Amazon Web Services](https://aws.amazon.com/) (AWS) credentials are required to use AWS.
-AWS credentials are designated per user, so each Fred Hutch employee should obtain their own credentials. Each lab has their own AWS account, allowing access to both data storage (e.g., the lab's S3 bucket) and compute (e.g., _AWS Batch_).
+[Amazon Web Services](https://aws.amazon.com/) (AWS) credentials are required to use AWS.  AWS credentials are designated per user, so each Fred Hutch employee should obtain their own credentials. Each lab has their own AWS account, allowing access to both data storage (e.g., the lab's S3 bucket) and compute (e.g., _AWS Batch_).
 
->Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `helpdesk` to request support from [Scientific Computing](https://centernet.fredhutch.org/cn/u/center-it/cio/scicomp.html).
+>Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `helpdesk` to request support from the cloud team (CLD)
 
-To get your AWS credentials, visit the [MyApps](https://myapps.microsoft.com) dashboard
-and click the square entitled `AWS IAM Identity Center`. Sign in with your HutchNet ID and password. 
+To get AWS credentials, visit the [MyApps](https://myapps.microsoft.com) dashboard and click the square entitled `AWS IAM Identity Center`. Sign in with your HutchNet ID and password. 
 
-This will take you to a screen called `AWS accounts`. You should see your accunt listed.
-For example, if your PI is Jane Doe, you should see `fh-pi-doe-j` listed.
-Click the triangle to the left of the account name. Now you'll see two links. 
-The link on the left will take you to the AWS console, which is web
-browser interface to Amazon Web Services. The link on the right,
-`Access keys` will give you the credentials you need to use AWS outside
-of a browser.
-
-The next section will describe how to configure the AWS CLI with these credentials.
+This will take you to a screen called `AWS accounts`. You should see your accunt listed.  For example, if your PI is Jane Doe, you should see `fh-pi-doe-j` listed.  Click the triangle to the left of the account name. Now you'll see two links.  The link on the left will take you to the AWS console, which is web browser interface to Amazon Web Services. The link on the right (`Access keys`) will give you the credentials you need to use AWS outside of a browser.
 
 Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
 
