@@ -31,7 +31,7 @@ Storage mounted on all rhino nodes comes in four basic flavors:
 - `fast`
 - `economy`
 - `secure`
-- `scratch`
+- `temp`
 
 You can read more about Data Storage options on our [Storage pages.](/scicomputing/store_overview/)
 
