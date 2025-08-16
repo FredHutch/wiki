@@ -14,7 +14,7 @@ If you are unfamiliar with any of these terms, hover over them to find more info
 
  - {% glossary HutchNet ID %}
  - {% glossary Fast File %}
- - {% glossary Scratch %}
+ - {% glossary Temp %}
  - {% glossary Economy Cloud %}
 
 
@@ -41,7 +41,7 @@ Follow the steps documented [here](https://sciwiki.fredhutch.org/compdemos/motuz
 
 ### Copy Files
 
-With a valid connection you can now [follow these steps](https://sciwiki.fredhutch.org/compdemos/motuz/#copying-files-to-cloud-locations) to copy files from Fast or Scratch into Economy Cloud.
+With a valid connection you can now [follow these steps](https://sciwiki.fredhutch.org/compdemos/motuz/#copying-files-to-cloud-locations) to copy files from Fast or Temp into Economy Cloud.
 
-> Motuz can copy files but **does not** delete files.  Deleting data from Fast or Scratch is a separate process you would undertake after the copy is successful.
+> Motuz can copy files but **does not** delete files.  Deleting data from Fast or Temp is a separate process you would undertake after the copy is successful.
 

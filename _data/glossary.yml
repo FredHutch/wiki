@@ -27,9 +27,9 @@
 - term: Fast File
   definition: The primary storage location for research data. Often available via the "X:" drive or "\\center\fh\fast"
   url: https://sciwiki.fredhutch.org/scicomputing/store_posix/#fast
-- term: Scratch
-  definition: Scratch storage is a working space primarily for use in the Rhino/Gizmo compute environment. This storage is not backed up
-  url: https://sciwiki.fredhutch.org/scicomputing/store_posix/#secure
+- term: Temp
+  definition: Temp storage is a working space primarily for use in the Rhino/Gizmo compute environment. This storage is not backed up
+  url: https://sciwiki.fredhutch.org/scicomputing/store_temp/ 
 - term: Economy Cloud
   definition: Economy Cloud is a term for the managed buckets in AWS S3- the "fh-pi-eco" and "fh-pi-eco-public"
   url: https://sciwiki.fredhutch.org/scicomputing/store_objectstore/

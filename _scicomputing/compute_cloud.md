@@ -33,7 +33,7 @@ much more complicated analyses and pipelines.
 
 As _Batch_ is very much a cloud service, some familiar resources aren't
 available when using this.  Our ubiquitous file systems (home directories,
-fast-file, scratch) are not available- data used in _Batch_ is typically stored
+fast-file, temp) are not available- data used in _Batch_ is typically stored
 in S3 or some other web-available source.  There have been some recent changes which
 expand options for data storage which may make some workloads more accessible
 to _Batch_.
