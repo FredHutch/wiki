@@ -90,10 +90,11 @@ Mountainduck & Cyberduck are designed to work with AWS access keys. With the cha
 
 ### Configure using SSO credentials
 
-- First [setup access using the AWS CLI](/scicomputing/access_aws/#accessing-via-sso)
-- Select "New Bookmark" and then profile "S3 (Credentials from AWS Command Line Interface)" from the pull down menu. You may have to select "More options" then search for "s3" to see this profile.
+- First follow the steps to [configure AWS CLI access using SSO](/scicomputing/access_aws/#accessing-via-sso)
+- Open Cyberduck then add a new connection by clicking the "+" arrow in the bottom left of the window.
+- In the drop down menu at the top, select "S3 (Credentials from AWS Command Line Interface)". You may have to select "More options" then search for "s3" to see this option.
 - Add the profile name from the command line to "Profile Name in ~/.aws.credentials" in the application
 
-![](/_compdemos/assets/sso-duck.png)
+![](/assets/mountain_cyber_duck/sso-duck.png)
 
 At this point you should be able to access S3 resources in the application. Note that when your SSO credentials expire, you will need to manually reauthenticate to continue to access files in the application.
