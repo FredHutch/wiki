@@ -91,9 +91,12 @@ Mountainduck & Cyberduck are designed to work with AWS access keys. With the cha
 ### Configure using SSO credentials
 
 - First follow the steps to [configure AWS CLI access using SSO](/scicomputing/access_aws/#accessing-via-sso)
+- Go to myapps.microsoft.com and click on "AWS IAM Identity Center"
+- Locate the AWS account you wish to access, click the arrow to the left then select "Access keys" 
+- Follow the instructions in "Option 2: Add a profile to your AWS credentials file" to add a profile to `~/.aws/credentials` 
 - Open Cyberduck then add a new connection by clicking the "+" arrow in the bottom left of the window.
 - In the drop down menu at the top, select "S3 (Credentials from AWS Command Line Interface)". You may have to select "More options" then search for "s3" to see this option.
-- Add the profile name from the command line to "Profile Name in ~/.aws.credentials" in the application
+- Add the profile from `~/.aws/credentials` to the "Profile Name" box in your new Cyberduck connection
 
 ![](/assets/mountain_cyber_duck/sso-duck.png)
 
