@@ -14,7 +14,7 @@ A globus transfer is made up of:
 
 The control system is a service hosted and managed by Globus.  This service manages things like authentication and actual initiation of the transfer, but no data actually passes through this system.
 
-The endpoints are services that have access to the data.  The control system contacts the endpoints to initiate and manage the transfer between endpoints.  You can use your workstation, but in most cases we want to download data onto one of the campus file systems (fast, scratch, temp).  The instructions below will configure an endpoint on a rhino or gizmo node which will provide you with fast access to that back-end storage.
+The endpoints are services that have access to the data.  The control system contacts the endpoints to initiate and manage the transfer between endpoints.  You can use your workstation, but in most cases we want to download data onto one of the campus file systems (fast, working, temp).  The instructions below will configure an endpoint on a rhino or gizmo node which will provide you with fast access to that back-end storage.
 
 Management and monitoring of the process can happen via any browser session.  Simply navigate to https://app.globus.org/ and log in.  From the Web UI you can see your endpoint and move data between it and other Globus endpoints around the world.
 
@@ -93,10 +93,10 @@ Open the file `~/.globusonline/lta/config-paths` in a Unix text editor and edit 
 
 ```
 ~/,0,1
-/fh/scratch/delete90/_ADM/SciComp,0,1
+/hpc/temp/_ADM/SciComp,0,1
 ```
 
-The format of this file is `<path>,<sharing>,<read|write>`.  Sharing is not currently possible- any values here are ignored.  The read/write field uses `0` for read-only, and `1` for read-write.  In this example I can see my home directory (the tilde is expanded to your home directory) and a path in scratch.  In both locations I'm allowing read-write so I can both upload data to another Globus endpoint and download into a local path.
+The format of this file is `<path>,<sharing>,<read|write>`.  Sharing is not currently possible- any values here are ignored.  The read/write field uses `0` for read-only, and `1` for read-write.  In this example I can see my home directory (the tilde is expanded to your home directory) and a path in temp.  In both locations I'm allowing read-write so I can both upload data to another Globus endpoint and download into a local path.
 
 It's necessary to restart `globusconnect` after any updates to this file:
 
