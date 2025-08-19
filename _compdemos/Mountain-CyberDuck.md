@@ -90,14 +90,32 @@ Mountainduck & Cyberduck are designed to work with AWS access keys. With the cha
 
 ### Configure using SSO credentials
 
-- First follow the steps to [configure AWS CLI access using SSO](/scicomputing/access_aws/#accessing-via-sso)
-- Go to myapps.microsoft.com and click on "AWS IAM Identity Center"
-- Locate the AWS account you wish to access, click the arrow to the left then select "Access keys" 
+- Review the steps required to [configure AWS CLI access using SSO](/scicomputing/access_aws/#accessing-via-sso)
+- In the AWS IAM Identity Center, locate the AWS account you wish to access
+- Click the arrow to the left of the account then select "Access keys" 
 - Follow the instructions in "Option 2: Add a profile to your AWS credentials file" to add a profile to `~/.aws/credentials` 
-- Open Cyberduck then add a new connection by clicking the "+" arrow in the bottom left of the window.
-- In the drop down menu at the top, select "S3 (Credentials from AWS Command Line Interface)". You may have to select "More options" then search for "s3" to see this option.
+- Open Cyberduck then open a new connection
+
+![](/assets/mountain_cyber_duck/1_open_new_connection.png)
+
+- Select the profile dropdown at the top
+
+![](/assets/mountain_cyber_duck/2_select_correct_profile.png)
+
+-  Click "More Options"
+
+![](/assets/mountain_cyber_duck/3_search_for_correct_profile.png)
+
+- Search for "S3 (Cred" and select "S3 (Credentials from AWS Command Line Interface)"
+
+![](/assets/mountain_cyber_duck/4_select_awscli_creds_profile.png)
+
+- Now add a new connection using "S3 (Credentials from AWS Command Line Interface)"
+
+![](/assets/mountain_cyber_duck/5_open_new_connection.png)
+
 - Add the profile from `~/.aws/credentials` to the "Profile Name" box in your new Cyberduck connection
 
-![](/assets/mountain_cyber_duck/sso-duck.png)
+![](/assets/mountain_cyber_duck/6_add_cli_profile.png)
 
-At this point you should be able to access S3 resources in the application. Note that when your SSO credentials expire, you will need to manually reauthenticate to continue to access files in the application.
+At this point you should be able to access S3 resources in Cyberduck. Note that when your SSO credentials expire, you will need to update your credentials in `~/.aws/credentials` to continue to access files in the application.
