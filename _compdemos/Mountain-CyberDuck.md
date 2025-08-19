@@ -94,7 +94,7 @@ Mountainduck & Cyberduck are designed to work with AWS access keys. With the cha
 - In the AWS IAM Identity Center, locate the AWS account you wish to access
 - Click the arrow to the left of the account then select "Access keys" 
 - Follow the instructions in "Option 2: Add a profile to your AWS credentials file" to add a profile to `~/.aws/credentials` 
-- Open Cyberduck then open a new connection
+- Open Mountainduck then open a new connection
 
 ![](/assets/mountain_cyber_duck/1_open_new_connection.png)
 
@@ -114,7 +114,7 @@ Mountainduck & Cyberduck are designed to work with AWS access keys. With the cha
 
 ![](/assets/mountain_cyber_duck/5_open_new_connection.png)
 
-- Add the profile from `~/.aws/credentials` to the "Profile Name" box in your new Cyberduck connection
+- Add the profile from `~/.aws/credentials` to the "Profile Name" box in your new Mountainduck connection
 
 ```
 [ProfileNameHere]
@@ -125,4 +125,4 @@ aws_session_token=
 
 ![](/assets/mountain_cyber_duck/6_add_cli_profile.png)
 
-At this point you should be able to access S3 resources in Cyberduck. Note that when your SSO credentials expire, you will need to update your credentials in `~/.aws/credentials` to continue to access files in the application.
+At this point you should be able to access S3 resources in Mountainduck. Note that when your SSO credentials expire, you will need to update your credentials in `~/.aws/credentials` to continue to access files in the application.
