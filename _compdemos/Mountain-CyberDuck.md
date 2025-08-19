@@ -98,7 +98,7 @@ Mountainduck & Cyberduck are designed to work with AWS access keys. With the cha
 
 ![](/assets/mountain_cyber_duck/1_open_new_connection.png)
 
-- Select the profile dropdown at the top
+- Select the connection type dropdown at the top
 
 ![](/assets/mountain_cyber_duck/2_select_correct_profile.png)
 
@@ -115,6 +115,13 @@ Mountainduck & Cyberduck are designed to work with AWS access keys. With the cha
 ![](/assets/mountain_cyber_duck/5_open_new_connection.png)
 
 - Add the profile from `~/.aws/credentials` to the "Profile Name" box in your new Cyberduck connection
+
+```
+[ProfileNameHere]
+aws_access_key_id=
+aws_secret_access_key=
+aws_session_token=
+```
 
 ![](/assets/mountain_cyber_duck/6_add_cli_profile.png)
 
