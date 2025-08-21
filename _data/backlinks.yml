@@ -1,0 +1,2025 @@
+---
+backlinks:
+  "/scicomputing/compute_environments/":
+  - url: "/compdemos/Apptainer/"
+    title: Using Apptainer Containers
+    excerpt: What is Apptainer
+  - url: "/compdemos/Cromwell/"
+    title: Cromwell Workflow Manager and WDL Workflows
+    excerpt: This page should get you started using using the Cromwell workflow managerhttps://cromwell.readthedocs.io/en/stable/
+      from the Broad as well as usefu...
+  - url: "/datademos/workflow_background/"
+    title: Nextflow Workflow Background
+    excerpt: "A workflow in Nextflowhttps://www.nextflow.io/docs/latest/getstarted.htmlyour-first-script
+      \nis at the minimum a text file written in a particular fo..."
+  - url: "/datascience/cirro/"
+    title: Cirro.bio
+    excerpt: |-
+      While researchers’ needs vary widely across technical domains, scientific goals, and
+      computational complexity, the Data Core provides broad support ...
+  - url: "/scicomputing/compute_overview/"
+    title: Large Scale Computing Overview
+    excerpt: Researchers are more and more likely to need to analyze raw data sets
+      using some sort of analysis process before they can be interpreted in the cont...
+  - url: "/scicomputing/compute_platforms/"
+    title: Supported Technologies and Platforms
+    excerpt: The Fred Hutch provides researchers on-campus access to high performance
+      computing using on-premise resources for computing needs that rise above th...
+  - url: "/scicomputing/compute_scientificSoftware/"
+    title: Scientific Software Modules
+    excerpt: On the command line and in scripts, we use the Environment Module system
+      to make software versions available in a modular and malleable way. Environ...
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  - url: "/scicomputing/software_running/"
+    title: Where to run my code?
+    excerpt: For R and Python, you can run the code you have written locally on your
+      computer, or remotely on the Linux clusters/scicomputing/computeplatforms/.
+      ...
+  - url: "/site/BACKLINKS/"
+    title: Backlinks
+    excerpt: Backlinks Feature
+  - url: "/BACKLINKS/"
+    title: Backlinks
+    excerpt: Backlinks Feature
+  "/scicomputing/compute_scientificSoftware/":
+  - url: "/compdemos/Cromwell/"
+    title: Cromwell Workflow Manager and WDL Workflows
+    excerpt: This page should get you started using using the Cromwell workflow managerhttps://cromwell.readthedocs.io/en/stable/
+      from the Broad as well as usefu...
+  - url: "/pathways/path-mydb-mariadb/"
+    title: Configure and Use a MariaDB Database on MyDB
+    excerpt: This pathway will show you how to configure a MariaDB MySQL database
+      on MyDB and connect to it using the command line tools on a rhino/gizmo node.
+  - url: "/scicompannounce/2019-01-22-hpc-systems-upgrade-2019/"
+    title: High Performance Computing Systems Upgrade 2019 Announcement
+    excerpt: |-
+      > UPDATE: This work has been delayed.  Dates indicated below are no longer
+      > accurate and will be corrected in a later announcement
+  - url: "/scicompannounce/2019-02-21-upgrade-env-modules/"
+    title: Environment Modules after Upgrade
+    excerpt: Hello to all Data Scientists and HPC Users!
+  - url: "/scicomputing/compute_environments/"
+    title: Computing Environments and Containers
+    excerpt: The Fred Hutch provides researchers on campus access to high performance
+      computing using on-premise resources.  The various technologies provided ar...
+  "/scicomputing/store_scratch/":
+  - url: "/compdemos/Cromwell/"
+    title: Cromwell Workflow Manager and WDL Workflows
+    excerpt: This page should get you started using using the Cromwell workflow managerhttps://cromwell.readthedocs.io/en/stable/
+      from the Broad as well as usefu...
+  "/scicomputing/store_objectstore/":
+  - url: "/compdemos/Cromwell/"
+    title: Cromwell Workflow Manager and WDL Workflows
+    excerpt: This page should get you started using using the Cromwell workflow managerhttps://cromwell.readthedocs.io/en/stable/
+      from the Broad as well as usefu...
+  - url: "/compdemos/Mountain-CyberDuck/"
+    title: Mountain Duck or Cyberduck for Accessing Economy Storage
+    excerpt: Access to data stored in Fred Hutch resources that are object stores/scicomputing/storeobjectstore/
+      can be achieved using clients.  As of March 2016...
+  - url: "/compdemos/nextflow/"
+    title: Nextflow - an Emerging Service for Workflow Management
+    excerpt: "Nextflowhttps://www.nextflow.io/ is one of a handful of \"workflow managers\"
+      that have become popular in the last few years. \nOther workflow managers..."
+  - url: "/scicomputing/access_aws/"
+    title: AWS Accounts at Fred Hutch
+    excerpt: Each lab can be granted their own individual AWS account, giving the
+      members of the lab access to AWS S3 for data storage, AWS Batch for running
+      com...
+  - url: "/scicomputing/access_credentials/"
+    title: Computing Resource Credentials
+    excerpt: This section describes how to get access and credentials to computing
+      systems on campus and in the cloud.
+  - url: "/scicomputing/compute_cloud/"
+    title: AWS Cloud Computing at Fred Hutch
+    excerpt: There are multiple methods by which you might leverage AWS cloud computing
+      here at the Hutch.  For less experienced cloud computing users, a workflo...
+  - url: "/scicomputing/store_collaboration/"
+    title: Data Transfer and Storage Tools for Collaborating
+    excerpt: Before transferring data, please make sure you have appropriate protections
+      in place- make sure you are allowed to share data via your desired mecha...
+  - url: "/scicomputing/store_overview/"
+    title: Overview of Data Storage at Fred Hutch
+    excerpt: The Hutch provides many platforms for storing, using, moving, and sharing
+      your data- relational databases, block-based network file storage, and clo...
+  - url: "/scicomputing/store_task/"
+    title: Task Optimized Storage
+    excerpt: Task storage is storage for data used in ad-hoc applications when the
+      primary or principal storage location for that data is unsuitable or undesirab...
+  "/compdemos/Apptainer/":
+  - url: "/compdemos/Docker/"
+    title: using Docker at Fred Hutch
+    excerpt: |-
+      Accessing Docker
+      You can either install Docker on your own machine or you can run Apptainer/compdemos/Apptainer/.
+  - url: "/scicomputing/compute_environments/"
+    title: Computing Environments and Containers
+    excerpt: The Fred Hutch provides researchers on campus access to high performance
+      computing using on-premise resources.  The various technologies provided ar...
+  "/scicomputing/software_managecode/":
+  - url: "/compdemos/Docker/"
+    title: using Docker at Fred Hutch
+    excerpt: |-
+      Accessing Docker
+      You can either install Docker on your own machine or you can run Apptainer/compdemos/Apptainer/.
+  - url: "/compdemos/git_tips/"
+    title: Tips and tricks for Git and GitHub
+    excerpt: |-
+      This tutorial includes demonstrations of a few common tasks in Git and/or GitHub,
+      and assumes you have a basic understanding of how these tools work...
+  - url: "/compdemos/shiny/"
+    title: Shiny Applications
+    excerpt: Shiny is an R package that makes it easy to build interactive web apps
+      straight from R. You can host standalone apps on a webpage or embed them in
+      R...
+  - url: "/datademos/building_containers/"
+    title: Building Software Containers
+    excerpt: |-
+      This guide outlines the steps needed to create a software container which is automatically
+      built and hosted publicly, which is convenient for use wi...
+  - url: "/scicomputing/access_credentials/"
+    title: Computing Resource Credentials
+    excerpt: This section describes how to get access and credentials to computing
+      systems on campus and in the cloud.
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  "/compdemos/shiny/":
+  - url: "/compdemos/Docker/"
+    title: using Docker at Fred Hutch
+    excerpt: |-
+      Accessing Docker
+      You can either install Docker on your own machine or you can run Apptainer/compdemos/Apptainer/.
+  - url: "/datascience/data_viz/"
+    title: Data Visualization
+    excerpt: A growing area of large-scale data analysis is the visualization and
+      sharing of results of analyses. Data scientists need to communicate complex
+      dat...
+  - url: "/scicomputing/software_R/"
+    title: R and RStudio
+    excerpt: R is a common statistical and computing language used in a variety of
+      biomedical data analyses, visualizations and computing settings.  R itself can...
+  "/scicomputing/access_credentials/":
+  - url: "/compdemos/Mountain-CyberDuck/"
+    title: Mountain Duck or Cyberduck for Accessing Economy Storage
+    excerpt: Access to data stored in Fred Hutch resources that are object stores/scicomputing/storeobjectstore/
+      can be achieved using clients.  As of March 2016...
+  - url: "/compdemos/aws-batch/"
+    title: Using AWS Batch
+    excerpt: 'SciComp provides direct access to AWS Batch in two ways:'
+  - url: "/compdemos/aws-s3/"
+    title: Accessing AWS S3 from the CLI, Python, or R
+    excerpt: This demo provides specific examples of how to access AWS S3 object storage
+      via the AWS CLI, Python, and R.
+  - url: "/compdemos/howtoRhino/"
+    title: How to `Rhino`
+    excerpt: Probably the more familiar method of computing once resources beyond
+      those available on your desktop/laptop are needed is interactive computing.  He...
+  - url: "/compdemos/motuz/"
+    title: Using Motuz to Move Large Data
+    excerpt: This demo provides specific examples of how to use the new tool, Motuz,
+      to transfer data between Fred Hutch data storage locations.
+  - url: "/compdemos/nextflow/"
+    title: Nextflow - an Emerging Service for Workflow Management
+    excerpt: "Nextflowhttps://www.nextflow.io/ is one of a handful of \"workflow managers\"
+      that have become popular in the last few years. \nOther workflow managers..."
+  - url: "/compdemos/ucsc-track-s3/"
+    title: Uploading Tracks to view with the UCSC Genome Browser
+    excerpt: This demo provides specific examples of how to upload tracks or track
+      hubs for viewing in the UCSC Genome Browser.
+  - url: "/datascience/cbioportal/"
+    title: cBioPortal - The Fred Hutch instance
+    excerpt: What is cBioPortal?
+  - url: "/datascience/proof/"
+    title: PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  - url: "/pathways/path-cbio-fh-instance/"
+    title: How to upload your study into the Fred Hutch instance of cBioPortal
+    excerpt: This pathway will walk you through how to upload your study data into
+      the Fred Hutch instance of cBioPortalhttps://cbioportal.fredhutch.org/.
+  - url: "/pathways/path-interactive/"
+    title: Getting and Using Interactive Sessions
+    excerpt: This pathway is a step-by-step introduction to interactive sessions in
+      the Rhino/Gizmo compute environment.
+  - url: "/scicomputing/access_aws/"
+    title: AWS Accounts at Fred Hutch
+    excerpt: Each lab can be granted their own individual AWS account, giving the
+      members of the lab access to AWS S3 for data storage, AWS Batch for running
+      com...
+  - url: "/scicomputing/access_overview/"
+    title: Computing Access Overview
+    excerpt: This overview describes what types of credentials are needed for various
+      Fred Hutch computing resources/compdemos/ and provides instructions for acc...
+  - url: "/scicomputing/software_managecode/"
+    title: Managing and Sharing Code
+    excerpt: Version control software allows anyone using a computer to track changes
+      made to computer files over time, which allows both referencing and reverti...
+  - url: "/scicomputing/store_objectstore/"
+    title: Data Storage in AWS S3
+    excerpt: Object storage systems are not directly attached to your computer via
+      drive mapping, a mount point or the Mac Finder, so you cannot just doubleclick...
+  "/scicomputing/access_aws/":
+  - url: "/compdemos/Mountain-CyberDuck/"
+    title: Mountain Duck or Cyberduck for Accessing Economy Storage
+    excerpt: Access to data stored in Fred Hutch resources that are object stores/scicomputing/storeobjectstore/
+      can be achieved using clients.  As of March 2016...
+  "/scicomputing/store_aspera/":
+  - url: "/compdemos/aspera-on-nx/"
+    title: Managing Aspera Connect on NoMachine
+    excerpt: Aspera/scicomputing/storeaspera/ can be used on the NoMachine systems
+      rhino.  Using Aspera requires that the plugin be installed in the browser you
+      ...
+  - url: "/scicomputing/store_collaboration/"
+    title: Data Transfer and Storage Tools for Collaborating
+    excerpt: Before transferring data, please make sure you have appropriate protections
+      in place- make sure you are allowed to share data via your desired mecha...
+  "/compdemos/Cromwell/":
+  - url: "/compdemos/aws-batch/"
+    title: Using AWS Batch
+    excerpt: 'SciComp provides direct access to AWS Batch in two ways:'
+  - url: "/datascience/cirro/"
+    title: Cirro.bio
+    excerpt: |-
+      While researchers’ needs vary widely across technical domains, scientific goals, and
+      computational complexity, the Data Core provides broad support ...
+  - url: "/datascience/using_workflows/"
+    title: Using Workflows
+    excerpt: ">Note: this page is under re-construction as we clean up our various
+      components of documentation around workflow managers.  Please pardon our dust
+      o..."
+  - url: "/pathways/path-batch-computing/"
+    title: Run a Non-Interactive Job on the Cluster
+    excerpt: This pathway will get you to a first non-interactive computing job on
+      the gizmo computing cluster using the command-line interface at the Fred Hutch.
+  - url: "/scicomputing/compute_cloud/"
+    title: AWS Cloud Computing at Fred Hutch
+    excerpt: There are multiple methods by which you might leverage AWS cloud computing
+      here at the Hutch.  For less experienced cloud computing users, a workflo...
+  - url: "/scicomputing/compute_environments/"
+    title: Computing Environments and Containers
+    excerpt: The Fred Hutch provides researchers on campus access to high performance
+      computing using on-premise resources.  The various technologies provided ar...
+  - url: "/scicomputing/compute_jobs/"
+    title: Computing Job Management
+    excerpt: Batch computing allows you to queue up jobs and have them executed by
+      the batch system, rather than you having to start an interactive session on
+      a ...
+  - url: "/scicomputing/compute_parallel/"
+    title: Parallel Computing on Slurm Clusters
+    excerpt: |-
+      Parallel computing is an approach to computing where many tasks are done
+      simultaneously- either on a single device or on multiple independent device...
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  "/compdemos/nextflow/":
+  - url: "/compdemos/aws-batch/"
+    title: Using AWS Batch
+    excerpt: 'SciComp provides direct access to AWS Batch in two ways:'
+  - url: "/compdemos/microbiome_tools/"
+    title: Bioinformatics Tools for Microbiome Analysis
+    excerpt: |-
+      Data generated from microbiome experiments tends to require a distinct analytical
+      approach, one that takes into account the many different organisms...
+  - url: "/pathways/path-batch-computing/"
+    title: Run a Non-Interactive Job on the Cluster
+    excerpt: This pathway will get you to a first non-interactive computing job on
+      the gizmo computing cluster using the command-line interface at the Fred Hutch.
+  - url: "/scicomputing/compute_cloud/"
+    title: AWS Cloud Computing at Fred Hutch
+    excerpt: There are multiple methods by which you might leverage AWS cloud computing
+      here at the Hutch.  For less experienced cloud computing users, a workflo...
+  - url: "/scicomputing/compute_environments/"
+    title: Computing Environments and Containers
+    excerpt: The Fred Hutch provides researchers on campus access to high performance
+      computing using on-premise resources.  The various technologies provided ar...
+  - url: "/scicomputing/compute_jobs/"
+    title: Computing Job Management
+    excerpt: Batch computing allows you to queue up jobs and have them executed by
+      the batch system, rather than you having to start an interactive session on
+      a ...
+  - url: "/scicomputing/compute_parallel/"
+    title: Parallel Computing on Slurm Clusters
+    excerpt: |-
+      Parallel computing is an approach to computing where many tasks are done
+      simultaneously- either on a single device or on multiple independent device...
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  "/compdemos/Docker/":
+  - url: "/compdemos/aws-batch/"
+    title: Using AWS Batch
+    excerpt: 'SciComp provides direct access to AWS Batch in two ways:'
+  - url: "/datademos/proof-troubleshooting/"
+    title: PROOF Troubleshooting
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  - url: "/scicomputing/compute_environments/"
+    title: Computing Environments and Containers
+    excerpt: The Fred Hutch provides researchers on campus access to high performance
+      computing using on-premise resources.  The various technologies provided ar...
+  - url: "/site/BACKLINKS/"
+    title: Backlinks
+    excerpt: Backlinks Feature
+  - url: "/BACKLINKS/"
+    title: Backlinks
+    excerpt: Backlinks Feature
+  "/compdemos/github_pages-FHtheme/":
+  - url: "/compdemos/git_tips/"
+    title: Tips and tricks for Git and GitHub
+    excerpt: |-
+      This tutorial includes demonstrations of a few common tasks in Git and/or GitHub,
+      and assumes you have a basic understanding of how these tools work...
+  "/master/":
+  - url: "/compdemos/git_tips/"
+    title: Tips and tricks for Git and GitHub
+    excerpt: |-
+      This tutorial includes demonstrations of a few common tasks in Git and/or GitHub,
+      and assumes you have a basic understanding of how these tools work...
+  "/scicomputing/software_python/":
+  - url: "/compdemos/git_tips/"
+    title: Tips and tricks for Git and GitHub
+    excerpt: |-
+      This tutorial includes demonstrations of a few common tasks in Git and/or GitHub,
+      and assumes you have a basic understanding of how these tools work...
+  - url: "/scicomputing/compute_overview/"
+    title: Large Scale Computing Overview
+    excerpt: Researchers are more and more likely to need to analyze raw data sets
+      using some sort of analysis process before they can be interpreted in the cont...
+  - url: "/scicomputing/software_R/"
+    title: R and RStudio
+    excerpt: R is a common statistical and computing language used in a variety of
+      biomedical data analyses, visualizations and computing settings.  R itself can...
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  "/compdemos/gizmo_short_partition/":
+  - url: "/compdemos/gizmo_partition_index/"
+    title: Cluster Partitions
+    excerpt: This page will help you select the right partition for your jobs
+  - url: "/scicomputing/compute_jobs/"
+    title: Computing Job Management
+    excerpt: Batch computing allows you to queue up jobs and have them executed by
+      the batch system, rather than you having to start an interactive session on
+      a ...
+  "/scicomputing/compute_restart/":
+  - url: "/compdemos/gizmo_partition_index/"
+    title: Cluster Partitions
+    excerpt: This page will help you select the right partition for your jobs
+  "/scicomputing/compute_platforms/":
+  - url: "/compdemos/howtoRhino/"
+    title: How to `Rhino`
+    excerpt: Probably the more familiar method of computing once resources beyond
+      those available on your desktop/laptop are needed is interactive computing.  He...
+  - url: "/scicompannounce/2024-11-17-new-harmony-gpu-nodes/"
+    title: 2024 11 17 New Harmony Gpu Nodes
+    excerpt: The gizmo cluster has been augmented with more capable GPU nodes which
+      we are calling the "harmony" class node.  These systems have four NVIDIA L40S...
+  - url: "/scicomputing/access_methods/"
+    title: Computing Resource Access Methods
+    excerpt: Individual staff member's desktop computers themselves are supported
+      by Center IT ADM, CRD, VIDD as well as Division IT groups BSD, HB, PHS.  Please...
+  - url: "/scicomputing/compute_environments/"
+    title: Computing Environments and Containers
+    excerpt: The Fred Hutch provides researchers on campus access to high performance
+      computing using on-premise resources.  The various technologies provided ar...
+  - url: "/scicomputing/compute_overview/"
+    title: Large Scale Computing Overview
+    excerpt: Researchers are more and more likely to need to analyze raw data sets
+      using some sort of analysis process before they can be interpreted in the cont...
+  - url: "/scicomputing/software_running/"
+    title: Where to run my code?
+    excerpt: For R and Python, you can run the code you have written locally on your
+      computer, or remotely on the Linux clusters/scicomputing/computeplatforms/.
+      ...
+  "/scicomputing/access_methods/":
+  - url: "/compdemos/howtoRhino/"
+    title: How to `Rhino`
+    excerpt: Probably the more familiar method of computing once resources beyond
+      those available on your desktop/laptop are needed is interactive computing.  He...
+  - url: "/compdemos/matlab/"
+    title: Matlab
+    excerpt: |-
+      The majority of Matlab users at the Hutch have Matlab installed on their
+      desktop system. Most users have dedicated licenses for their desktop instal...
+  - url: "/compdemos/maxquant/"
+    title: Proteomics using Maxquant on Gizmo
+    excerpt: MaxQuanthttps://maxquant.org/ is a quantitative proteomics software package
+      designed for analyzing large mass-spectrometric data sets. This demo giv...
+  - url: "/compdemos/rslurm_intro/"
+    title: Introduction to rslurm
+    excerpt: The rslurmhttps://cran.r-project.org/web/packages/rslurm/index.html library
+      creates a mechanism for distributing R calcuations across a set of Slurm...
+  - url: "/datascience/cbioportal/"
+    title: cBioPortal - The Fred Hutch instance
+    excerpt: What is cBioPortal?
+  - url: "/pathways/path-cbio-fh-instance/"
+    title: How to upload your study into the Fred Hutch instance of cBioPortal
+    excerpt: This pathway will walk you through how to upload your study data into
+      the Fred Hutch instance of cBioPortalhttps://cbioportal.fredhutch.org/.
+  - url: "/pathways/path-interactive/"
+    title: Getting and Using Interactive Sessions
+    excerpt: This pathway is a step-by-step introduction to interactive sessions in
+      the Rhino/Gizmo compute environment.
+  - url: "/pathways/path-mydb-mariadb/"
+    title: Configure and Use a MariaDB Database on MyDB
+    excerpt: This pathway will show you how to configure a MariaDB MySQL database
+      on MyDB and connect to it using the command line tools on a rhino/gizmo node.
+  - url: "/scicomputing/access_overview/"
+    title: Computing Access Overview
+    excerpt: This overview describes what types of credentials are needed for various
+      Fred Hutch computing resources/compdemos/ and provides instructions for acc...
+  - url: "/scicomputing/compute_platforms/"
+    title: Supported Technologies and Platforms
+    excerpt: The Fred Hutch provides researchers on-campus access to high performance
+      computing using on-premise resources for computing needs that rise above th...
+  - url: "/scicomputing/store_aspera_shares/"
+    title: Aspera Shares Storage
+    excerpt: Aspera Shares CLI
+  "/scicomputing/store_overview/":
+  - url: "/compdemos/howtoRhino/"
+    title: How to `Rhino`
+    excerpt: Probably the more familiar method of computing once resources beyond
+      those available on your desktop/laptop are needed is interactive computing.  He...
+  - url: "/compdemos/ingest-Large-Data/"
+    title: Ingesting Externally Hosted Large Datasets
+    excerpt: Before ingesting any external data sets, please refer to the Overview
+      of Data Storage at Fred Hutch/scicomputing/storeoverview/ page to begin to ide...
+  - url: "/datascience/stewardship/"
+    title: Research Data Stewardship
+    excerpt: As research increasingly relies on effective and large scale use of data,
+      our skills and attention around data stewardship become increasingly impor...
+  - url: "/scicomputing/comp_index/"
+    title: Overview of Scientific Computing at Fred Hutch
+    excerpt: Various groups support computational capacity at the Hutch. Center IT
+      supports general computing tasks, such as email and desktop computer software;...
+  "/scicomputing/software_R/":
+  - url: "/compdemos/howtoRhino/"
+    title: How to `Rhino`
+    excerpt: Probably the more familiar method of computing once resources beyond
+      those available on your desktop/laptop are needed is interactive computing.  He...
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  "/compdemos/grabnode/":
+  - url: "/compdemos/howtoRhino/"
+    title: How to `Rhino`
+    excerpt: Probably the more familiar method of computing once resources beyond
+      those available on your desktop/laptop are needed is interactive computing.  He...
+  - url: "/datademos/running_first_workflow/"
+    title: Running Your First Nextflow Workflow
+    excerpt: |-
+      If you are working to run a workflow for the first time, you will need to:
+      1. Decide where you want the workflow to run
+      2. Set up your Nextflow conf...
+  - url: "/pathways/path-grab/"
+    title: Getting an Interactive Session on a Gizmo Node
+    excerpt: This pathway will get you an interactive, login session on a gizmo compute
+      node.  This can be useful when developing and prototyping larger compute ...
+  - url: "/scicomputing/store_aspera_shares/"
+    title: Aspera Shares Storage
+    excerpt: Aspera Shares CLI
+  "/scicomputing/compute_jobs/":
+  - url: "/compdemos/matlab/"
+    title: Matlab
+    excerpt: |-
+      The majority of Matlab users at the Hutch have Matlab installed on their
+      desktop system. Most users have dedicated licenses for their desktop instal...
+  - url: "/compdemos/rslurm_example/"
+    title: Rslurm and Tximport Example
+    excerpt: This is an example of Rslurm for a bioinformatics application with the
+      tximport package for reading in transcript level RNA-seq count data. I used
+      t...
+  - url: "/pathways/path-batch-computing/"
+    title: Run a Non-Interactive Job on the Cluster
+    excerpt: This pathway will get you to a first non-interactive computing job on
+      the gizmo computing cluster using the command-line interface at the Fred Hutch.
+  - url: "/pathways/path-grab/"
+    title: Getting an Interactive Session on a Gizmo Node
+    excerpt: This pathway will get you an interactive, login session on a gizmo compute
+      node.  This can be useful when developing and prototyping larger compute ...
+  - url: "/scicomputing/access_methods/"
+    title: Computing Resource Access Methods
+    excerpt: Individual staff member's desktop computers themselves are supported
+      by Center IT ADM, CRD, VIDD as well as Division IT groups BSD, HB, PHS.  Please...
+  - url: "/scicomputing/compute_overview/"
+    title: Large Scale Computing Overview
+    excerpt: Researchers are more and more likely to need to analyze raw data sets
+      using some sort of analysis process before they can be interpreted in the cont...
+  - url: "/scicomputing/compute_platforms/"
+    title: Supported Technologies and Platforms
+    excerpt: The Fred Hutch provides researchers on-campus access to high performance
+      computing using on-premise resources for computing needs that rise above th...
+  "/pathways/path-batch-computing/":
+  - url: "/compdemos/maxquant/"
+    title: Proteomics using Maxquant on Gizmo
+    excerpt: MaxQuanthttps://maxquant.org/ is a quantitative proteomics software package
+      designed for analyzing large mass-spectrometric data sets. This demo giv...
+  - url: "/pathways/path-grab/"
+    title: Getting an Interactive Session on a Gizmo Node
+    excerpt: This pathway will get you an interactive, login session on a gizmo compute
+      node.  This can be useful when developing and prototyping larger compute ...
+  - url: "/pathways/path-interactive/"
+    title: Getting and Using Interactive Sessions
+    excerpt: This pathway is a step-by-step introduction to interactive sessions in
+      the Rhino/Gizmo compute environment.
+  - url: "/scicomputing/compute_quickstart/"
+    title: Quick Start Guide to Fred Hutch Research Computing
+    excerpt: |-
+      This content is now housed on our Pathways page in this Pathway for introduction to using our HPC cluster./pathways/path-batch-computing/
+      Please upd...
+  "/assets/motuz/triangle_open.png":
+  - url: "/compdemos/motuz/"
+    title: Using Motuz to Move Large Data
+    excerpt: This demo provides specific examples of how to use the new tool, Motuz,
+      to transfer data between Fred Hutch data storage locations.
+  "/assets/motuz/option3.png":
+  - url: "/compdemos/motuz/"
+    title: Using Motuz to Move Large Data
+    excerpt: This demo provides specific examples of how to use the new tool, Motuz,
+      to transfer data between Fred Hutch data storage locations.
+  "/assets/motuz/sts.png":
+  - url: "/compdemos/motuz/"
+    title: Using Motuz to Move Large Data
+    excerpt: This demo provides specific examples of how to use the new tool, Motuz,
+      to transfer data between Fred Hutch data storage locations.
+  "/assets/motuz/cloud-connection-values.png":
+  - url: "/compdemos/motuz/"
+    title: Using Motuz to Move Large Data
+    excerpt: This demo provides specific examples of how to use the new tool, Motuz,
+      to transfer data between Fred Hutch data storage locations.
+  "/datascience/using_workflows/":
+  - url: "/compdemos/nextflow/"
+    title: Nextflow - an Emerging Service for Workflow Management
+    excerpt: "Nextflowhttps://www.nextflow.io/ is one of a handful of \"workflow managers\"
+      that have become popular in the last few years. \nOther workflow managers..."
+  - url: "/datademos/computational_rank/"
+    title: Why is your computing environment important?
+    excerpt: In this page, we talk about reproducible best practices to use software
+      on the FH cluster rhino / gizmo. If you're getting started on rhino / gizmo,...
+  "/compdemos/microbiome_tools/":
+  - url: "/compdemos/nextflow/"
+    title: Nextflow - an Emerging Service for Workflow Management
+    excerpt: "Nextflowhttps://www.nextflow.io/ is one of a handful of \"workflow managers\"
+      that have become popular in the last few years. \nOther workflow managers..."
+  "/compdemos/aws-batch/":
+  - url: "/compdemos/nextflow/"
+    title: Nextflow - an Emerging Service for Workflow Management
+    excerpt: "Nextflowhttps://www.nextflow.io/ is one of a handful of \"workflow managers\"
+      that have become popular in the last few years. \nOther workflow managers..."
+  - url: "/scicomputing/compute_cloud/"
+    title: AWS Cloud Computing at Fred Hutch
+    excerpt: There are multiple methods by which you might leverage AWS cloud computing
+      here at the Hutch.  For less experienced cloud computing users, a workflo...
+  "/compdemos/assets/cwlogex.png":
+  - url: "/compdemos/python_logging/"
+    title: Logging in Python
+    excerpt: |-
+      Logging in Python is performed through the simple and elegant logging module which comes in the standard
+      Python library for both Python 2 and 3. The...
+  "/compdemos/aws-s3/":
+  - url: "/compdemos/ucsc-track-s3/"
+    title: Uploading Tracks to view with the UCSC Genome Browser
+    excerpt: This demo provides specific examples of how to upload tracks or track
+      hubs for viewing in the UCSC Genome Browser.
+  - url: "/scicomputing/access_credentials/"
+    title: Computing Resource Credentials
+    excerpt: This section describes how to get access and credentials to computing
+      systems on campus and in the cloud.
+  - url: "/scicomputing/store_objectstore/"
+    title: Data Storage in AWS S3
+    excerpt: Object storage systems are not directly attached to your computer via
+      drive mapping, a mount point or the Mac Finder, so you cannot just doubleclick...
+  "/":
+  - url: "/compdemos/vscode_markdown_howto/"
+    title: Using Markdown with Visual Studio Code
+    excerpt: Markdownhttps://en.wikipedia.org/wiki/Markdown is a formatting language
+      used when the resulting document will be rendered or converted into html doc...
+  - url: "/site/README/"
+    title: Readme
+    excerpt: Contributing to SciWiki
+  - url: "/README/"
+    title: Readme
+    excerpt: Contributing to SciWiki
+  "/datademos/assets/biorender_example1.png":
+  - url: "/datademos/biorender/"
+    title: BioRender
+    excerpt: "BioRenderhttps://www.biorender.com/ is a web application that creates
+      scientific figures, illustrations, and diagrams. \nAn institutional license
+      for..."
+  "/datademos/assets/biorender_example2.png":
+  - url: "/datademos/biorender/"
+    title: BioRender
+    excerpt: "BioRenderhttps://www.biorender.com/ is a web application that creates
+      scientific figures, illustrations, and diagrams. \nAn institutional license
+      for..."
+  "/datademos/assets/biorender_example3.png":
+  - url: "/datademos/biorender/"
+    title: BioRender
+    excerpt: "BioRenderhttps://www.biorender.com/ is a web application that creates
+      scientific figures, illustrations, and diagrams. \nAn institutional license
+      for..."
+  "/datademos/assets/cbio_01_oncoprint_kras_different_studies.png":
+  - url: "/datademos/cbio_examples_of_using_cbio/"
+    title: How you can use cBioPortal
+    excerpt: cBioPortal offers countless ways to explore and interpret cancer genomics
+      data—without needing to code. Below, we walk through a series of research ...
+  "/datademos/assets/cbio_02_KRAS_lollipop.png":
+  - url: "/datademos/cbio_examples_of_using_cbio/"
+    title: How you can use cBioPortal
+    excerpt: cBioPortal offers countless ways to explore and interpret cancer genomics
+      data—without needing to code. Below, we walk through a series of research ...
+  "/datademos/assets/cbio_03_KRAS_oncokb.png":
+  - url: "/datademos/cbio_examples_of_using_cbio/"
+    title: How you can use cBioPortal
+    excerpt: cBioPortal offers countless ways to explore and interpret cancer genomics
+      data—without needing to code. Below, we walk through a series of research ...
+  "/datademos/assets/cbio_04_KRAS_clinical_covariates.png":
+  - url: "/datademos/cbio_examples_of_using_cbio/"
+    title: How you can use cBioPortal
+    excerpt: cBioPortal offers countless ways to explore and interpret cancer genomics
+      data—without needing to code. Below, we walk through a series of research ...
+  "/datademos/assets/cbio_05_KRAS_clinical_mut.png":
+  - url: "/datademos/cbio_examples_of_using_cbio/"
+    title: How you can use cBioPortal
+    excerpt: cBioPortal offers countless ways to explore and interpret cancer genomics
+      data—without needing to code. Below, we walk through a series of research ...
+  "/datademos/assets/cbio_06_KRAS_cooccurence.png":
+  - url: "/datademos/cbio_examples_of_using_cbio/"
+    title: How you can use cBioPortal
+    excerpt: cBioPortal offers countless ways to explore and interpret cancer genomics
+      data—without needing to code. Below, we walk through a series of research ...
+  "/datademos/assets/cbio_07_KRAS_OS.png":
+  - url: "/datademos/cbio_examples_of_using_cbio/"
+    title: How you can use cBioPortal
+    excerpt: cBioPortal offers countless ways to explore and interpret cancer genomics
+      data—without needing to code. Below, we walk through a series of research ...
+  "/datademos/assets/cbio_08_KRAS_DFS.png":
+  - url: "/datademos/cbio_examples_of_using_cbio/"
+    title: How you can use cBioPortal
+    excerpt: cBioPortal offers countless ways to explore and interpret cancer genomics
+      data—without needing to code. Below, we walk through a series of research ...
+  "/datascience/cbioportal/":
+  - url: "/datademos/cbio_examples_of_using_cbio/"
+    title: How you can use cBioPortal
+    excerpt: cBioPortal offers countless ways to explore and interpret cancer genomics
+      data—without needing to code. Below, we walk through a series of research ...
+  - url: "/datademos/cbio_how_to_prepare_files/"
+    title: Helpful tips on how to prepare files for cBioPortal
+    excerpt: "Preparing your files for upload to cBioPortal requires careful formatting
+      and planning. \nThis guide provides an overview of the process and links to..."
+  - url: "/datademos/cbio_how_to_upload_data_to_cbio_s3/"
+    title: Uploading your study into `fh-dasl-cbio` S3 bucket
+    excerpt: Once your study files are formatted and validated, follow these steps
+      to upload them to the fh-dasl-cbio bucket.
+  - url: "/datademos/cbio_test_access_to_cbio_s3_bucket/"
+    title: Testing access to Fred Hutch cBioPortal S3 bucket
+    excerpt: To confirm your access to the fh-dasl-cbio S3 bucket, follow the steps
+      below.
+  - url: "/pathways/path-cbio-fh-instance/"
+    title: How to upload your study into the Fred Hutch instance of cBioPortal
+    excerpt: This pathway will walk you through how to upload your study data into
+      the Fred Hutch instance of cBioPortalhttps://cbioportal.fredhutch.org/.
+  "/compdemos/motuz/":
+  - url: "/datademos/cbio_how_to_upload_data_to_cbio_s3/"
+    title: Uploading your study into `fh-dasl-cbio` S3 bucket
+    excerpt: Once your study files are formatted and validated, follow these steps
+      to upload them to the fh-dasl-cbio bucket.
+  - url: "/scicomputing/access_credentials/"
+    title: Computing Resource Credentials
+    excerpt: This section describes how to get access and credentials to computing
+      systems on campus and in the cloud.
+  - url: "/scicomputing/store_objectstore/"
+    title: Data Storage in AWS S3
+    excerpt: Object storage systems are not directly attached to your computer via
+      drive mapping, a mount point or the Mac Finder, so you cannot just doubleclick...
+  - url: "/scicomputing/store_posix/"
+    title: Data Storage in File Storage Systems
+    excerpt: 'File keeps your data on disks and allows access to your data using familiar
+      tools you''re used to: Unix commands like cat, cp, ls, and rm,  browser t...'
+  "/datademos/assets/cbio_15_motuz_upload.png":
+  - url: "/datademos/cbio_how_to_upload_data_to_cbio_s3/"
+    title: Uploading your study into `fh-dasl-cbio` S3 bucket
+    excerpt: Once your study files are formatted and validated, follow these steps
+      to upload them to the fh-dasl-cbio bucket.
+  "/datademos/assets/cbio_16_mountain_duck_upload.png":
+  - url: "/datademos/cbio_how_to_upload_data_to_cbio_s3/"
+    title: Uploading your study into `fh-dasl-cbio` S3 bucket
+    excerpt: Once your study files are formatted and validated, follow these steps
+      to upload them to the fh-dasl-cbio bucket.
+  "/datademos/assets/dependency_nightmare.png":
+  - url: "/datademos/computational_rank/"
+    title: Why is your computing environment important?
+    excerpt: In this page, we talk about reproducible best practices to use software
+      on the FH cluster rhino / gizmo. If you're getting started on rhino / gizmo,...
+  "/datademos/assets/rank_flowchart.png":
+  - url: "/datademos/computational_rank/"
+    title: Why is your computing environment important?
+    excerpt: In this page, we talk about reproducible best practices to use software
+      on the FH cluster rhino / gizmo. If you're getting started on rhino / gizmo,...
+  "/datasciece/deidentification/":
+  - url: "/datademos/deidentification_methods_structured/"
+    title: De-identification of Structured Data
+    excerpt: This pages outlines methods and tools that may be helpful for de-identifying
+      structured data.
+  "/datademos/run_script/":
+  - url: "/datademos/on_aws/"
+    title: Running Nextflow Workflows on AWS
+    excerpt: |-
+      In order to execute a workflow on AWS, follow these instructions in order to
+      create a Nextflow config file.
+      We recommend creating this file in a loc...
+  - url: "/datademos/on_gizmo/"
+    title: Running Nextflow Workflows on Gizmo
+    excerpt: |-
+      In order to execute a workflow using the gizmo SLURM cluster, follow these
+      instructions in order to create a Nextflow config file. We recommend crea...
+  - url: "/datademos/process_resources/"
+    title: Specifying Nextflow Workflow Resources
+    excerpt: |-
+      One of the really appealing things about a workflow manager is that
+      you have the ability to specify how much CPU and RAM is used for each
+      individual...
+  - url: "/datademos/running_first_workflow/"
+    title: Running Your First Nextflow Workflow
+    excerpt: |-
+      If you are working to run a workflow for the first time, you will need to:
+      1. Decide where you want the workflow to run
+      2. Set up your Nextflow conf...
+  "/compdemos/store_job_local/":
+  - url: "/datademos/on_gizmo/"
+    title: Running Nextflow Workflows on Gizmo
+    excerpt: |-
+      In order to execute a workflow using the gizmo SLURM cluster, follow these
+      instructions in order to create a Nextflow config file. We recommend crea...
+  - url: "/scicompannounce/2023-03-06-fasterq-dump-issue/"
+    title: 2023 03 06 Fasterq Dump Issue
+    excerpt: "> Updated information is available here/scicompannounce/2023-09-01-fasterq-dump-issue/"
+  - url: "/scicompannounce/2023-09-01-fasterq-dump-issue/"
+    title: 2023 09 01 Fasterq Dump Issue
+    excerpt: fasterq-dump is a command-line utility used to extract FASTQ or FASTA
+      data from SRA-accessions.
+  - url: "/scicompannounce/2024-01-22-java-temporary-directory/"
+    title: 2024 01 22 Java Temporary Directory
+    excerpt: On Gizmo we configure a job local/compdemos/storejoblocal/ directory
+      to be used by jobs- this path points to local storage and creates a managed
+      dir...
+  - url: "/scicompannounce/2024-02-26-fasterq-dump-issue/"
+    title: 2024 02 26 Fasterq Dump Issue
+    excerpt: 'Update 26 Feb 2024:'
+  - url: "/scicomputing/store_task/"
+    title: Task Optimized Storage
+    excerpt: Task storage is storage for data used in ad-hoc applications when the
+      primary or principal storage location for that data is unsuitable or undesirab...
+  "/datademos/workflow_background/":
+  - url: "/datademos/process_resources/"
+    title: Specifying Nextflow Workflow Resources
+    excerpt: |-
+      One of the really appealing things about a workflow manager is that
+      you have the ability to specify how much CPU and RAM is used for each
+      individual...
+  - url: "/datademos/running_first_workflow/"
+    title: Running Your First Nextflow Workflow
+    excerpt: |-
+      If you are working to run a workflow for the first time, you will need to:
+      1. Decide where you want the workflow to run
+      2. Set up your Nextflow conf...
+  "/datademos/assets/proof_shiny_app_welcome.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_proof_login.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_proof_login_2.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_logged_in.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_start_server.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_start_server_2.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_start_server_3.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_start_server_4.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_email.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_validate.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shinyapp_validate_2.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_submit_1.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_submit_2.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_submit_3.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_1.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_2.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_3.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_4.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_5.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_6.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_7.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_8.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_9.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_10.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_track_jobs_11.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_troubleshoot_1.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_abort_1.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_abort_2.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_troubleshoot_2.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_troubleshoot_3.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_delete_server_1.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_delete_server_2.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_help.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_101_shiny_app_help2.png":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/proof-troubleshooting/":
+  - url: "/datademos/proof-how-to/"
+    title: How to Use PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  - url: "/datascience/proof/"
+    title: PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/proof-how-to/":
+  - url: "/datademos/proof-troubleshooting/"
+    title: PROOF Troubleshooting
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  - url: "/datascience/proof/"
+    title: PROOF
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_ts_var_typo_wdl.png":
+  - url: "/datademos/proof-troubleshooting/"
+    title: PROOF Troubleshooting
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_ts_job_list_failed_task.png":
+  - url: "/datademos/proof-troubleshooting/"
+    title: PROOF Troubleshooting
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_ts_job_failures.png":
+  - url: "/datademos/proof-troubleshooting/"
+    title: PROOF Troubleshooting
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_ts_workflow_logs.png":
+  - url: "/datademos/proof-troubleshooting/"
+    title: PROOF Troubleshooting
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_ts_aborting.png":
+  - url: "/datademos/proof-troubleshooting/"
+    title: PROOF Troubleshooting
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/assets/proof_ts_reset_form.png":
+  - url: "/datademos/proof-troubleshooting/"
+    title: PROOF Troubleshooting
+    excerpt: proof.fredhutch.orghttps://proof.fredhutch.org on the Fred Hutch Network
+  "/datademos/on_gizmo/":
+  - url: "/datademos/run_script/"
+    title: Nextflow Workflow Run Script
+    excerpt: |-
+      Each workflow which you run with Nextflow should ideally be run from its own directory.
+      The reason we recommend this is that Nextflow uses a small d...
+  - url: "/datademos/running_first_workflow/"
+    title: Running Your First Nextflow Workflow
+    excerpt: |-
+      If you are working to run a workflow for the first time, you will need to:
+      1. Decide where you want the workflow to run
+      2. Set up your Nextflow conf...
+  "/datademos/on_aws/":
+  - url: "/datademos/run_script/"
+    title: Nextflow Workflow Run Script
+    excerpt: |-
+      Each workflow which you run with Nextflow should ideally be run from its own directory.
+      The reason we recommend this is that Nextflow uses a small d...
+  - url: "/datademos/running_first_workflow/"
+    title: Running Your First Nextflow Workflow
+    excerpt: |-
+      If you are working to run a workflow for the first time, you will need to:
+      1. Decide where you want the workflow to run
+      2. Set up your Nextflow conf...
+  "/pathways/path-grab/":
+  - url: "/datademos/run_script/"
+    title: Nextflow Workflow Run Script
+    excerpt: |-
+      Each workflow which you run with Nextflow should ideally be run from its own directory.
+      The reason we recommend this is that Nextflow uses a small d...
+  "/datascience/nextflow_catalog/":
+  - url: "/datademos/running_first_workflow/"
+    title: Running Your First Nextflow Workflow
+    excerpt: |-
+      If you are working to run a workflow for the first time, you will need to:
+      1. Decide where you want the workflow to run
+      2. Set up your Nextflow conf...
+  - url: "/datascience/using_workflows/"
+    title: Using Workflows
+    excerpt: ">Note: this page is under re-construction as we clean up our various
+      components of documentation around workflow managers.  Please pardon our dust
+      o..."
+  "/datascience/refgenomes/":
+  - url: "/datademos/running_first_workflow/"
+    title: Running Your First Nextflow Workflow
+    excerpt: |-
+      If you are working to run a workflow for the first time, you will need to:
+      1. Decide where you want the workflow to run
+      2. Set up your Nextflow conf...
+  "/datademos/cbio_examples_of_using_cbio/":
+  - url: "/datascience/cbioportal/"
+    title: cBioPortal - The Fred Hutch instance
+    excerpt: What is cBioPortal?
+  - url: "/pathways/path-cbio-fh-instance/"
+    title: How to upload your study into the Fred Hutch instance of cBioPortal
+    excerpt: This pathway will walk you through how to upload your study data into
+      the Fred Hutch instance of cBioPortalhttps://cbioportal.fredhutch.org/.
+  "/pathways/path-cbio-fh-instance/":
+  - url: "/datascience/cbioportal/"
+    title: cBioPortal - The Fred Hutch instance
+    excerpt: What is cBioPortal?
+  "/datademos/cbio_test_access_to_cbio_s3_bucket/":
+  - url: "/datascience/cbioportal/"
+    title: cBioPortal - The Fred Hutch instance
+    excerpt: What is cBioPortal?
+  - url: "/pathways/path-cbio-fh-instance/"
+    title: How to upload your study into the Fred Hutch instance of cBioPortal
+    excerpt: This pathway will walk you through how to upload your study data into
+      the Fred Hutch instance of cBioPortalhttps://cbioportal.fredhutch.org/.
+  "/datademos/cbio_how_to_prepare_files/":
+  - url: "/datascience/cbioportal/"
+    title: cBioPortal - The Fred Hutch instance
+    excerpt: What is cBioPortal?
+  - url: "/pathways/path-cbio-fh-instance/"
+    title: How to upload your study into the Fred Hutch instance of cBioPortal
+    excerpt: This pathway will walk you through how to upload your study data into
+      the Fred Hutch instance of cBioPortalhttps://cbioportal.fredhutch.org/.
+  "/datademos/cbio_how_to_upload_data_to_cbio_s3/":
+  - url: "/datascience/cbioportal/"
+    title: cBioPortal - The Fred Hutch instance
+    excerpt: What is cBioPortal?
+  "/_datascience/assets/dslc/dslc-wickham.png":
+  - url: "/datascience/data_science_lifecycle/"
+    title: The Data Science Lifecycle
+    excerpt: The Data Science Lifecycle DSLC is the conceptual model used to describe
+      a data science process. It describes the iterative steps taken to develop a...
+  "/_datascience/assets/dslc/dslc-yu.png":
+  - url: "/datascience/data_science_lifecycle/"
+    title: The Data Science Lifecycle
+    excerpt: The Data Science Lifecycle DSLC is the conceptual model used to describe
+      a data science process. It describes the iterative steps taken to develop a...
+  "/datascience/phi/":
+  - url: "/datascience/deidentification/"
+    title: De-identification of Data and Specimens
+    excerpt: De-identification of patient data for research is an important way to
+      help protect the privacy of individuals while using these data to conduct vita...
+  "/datademos/deidentification_methods_structured/":
+  - url: "/datascience/deidentification/"
+    title: De-identification of Data and Specimens
+    excerpt: De-identification of patient data for research is an important way to
+      help protect the privacy of individuals while using these data to conduct vita...
+  ? |-
+    /Implementing regulatory broad consent under the revised common rule: Clarifying key points and the need for evidence. The Journal of Law, Medicine & Ethics. 2019;47(2):213-231. doi: https:/doi.org/10.1177/1073110519857277.
+
+    [^2]: Beskow, L. M. (2016). Lessons from HeLa cells: the ethics and policy of biospecimens. Annual review of genomics and human genetics, 17, 395-417. doi: 10.1146/annurev-genom-083115-022536.
+
+    [^3]: Callaway, E. (2013). HeLa publication brews bioethical storm. Nature, 1, 12689. Accessed at: https:/www.nature.com/articles/nature.2013.12689.
+
+    [^4]: Lee, S. S. J. (2021). The ethics of consent in a shifting genomic ecosystem. Annual review of biomedical data science, 4, 145-164. doi: https:/doi.org/10.1146/annurev-biodatasci-030221- 125715
+
+    [^5]: Spector-Bagdady K, Trinidad G, Kardia S, et al. Reported Interest in Notification Regarding Use of Health Information and Biospecimens. JAMA. 2022;328(5):474–476. doi:10.1001/jama.2022.9740
+
+    [^6]: Lynch, H., Wolf, L., & Barnes, M. (2019). Implementing Regulatory Broad Consent Under the Revised Common Rule: Clarifying Key Points and the Need for Evidence. Journal of Law, Medicine & Ethics, 47(2), 213-231. doi:10.1177/1073110519857277
+
+    [^7]: Spector-Bagdady, K., Tang, S., Jabbour, S., Price, W. N., Bracic, A., Creary, M. S., ... & Wiens, J. (2021). Respecting Autonomy And Enabling Diversity: The Effect Of Eligibility And Enrollment On Research Data Demographics: Study examines the effect of eligibility and enrollment on research data demographics. Health Affairs, 40(12), 1892-1899. doi: https:/doi.org/10.1377/hlthaff.2021.01197
+
+    [^8]: Spector‐Bagdady, K., & Beever, J. (2020). Rethinking the Importance of the Individual within a Community of Data. Hastings Center Report, 50(4), 9-11. doi:10.1002/hast.1112.
+
+    [^9]: Lee, S. S. J. (2021). Obligations of the “gift”: Reciprocity and responsibility in precision medicine. The American Journal of Bioethics, 21(4), 57-66. doi: 10.1080/15265161.2020.1851813
+  : - url: "/datascience/deidentification/"
+      title: De-identification of Data and Specimens
+      excerpt: De-identification of patient data for research is an important way
+        to help protect the privacy of individuals while using these data to conduct
+        vita...
+  "/datademos/dmptool/":
+  - url: "/datascience/nih_data_sharing/"
+    title: NIH Data Sharing
+    excerpt: "> What you should know about the new 2023 NIH Data Management and Sharing
+      Policy"
+  "/datascience/deidentification/":
+  - url: "/datascience/phi/"
+    title: PHI and Research
+    excerpt: Patient data that is collected over the course of clinical care may be
+      used for research, but there are important federal protections that govern th...
+  "/datascience/tech_hiring/tech_hiring_getting_started/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/tech_hiring/tech_hiring_job_description/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/tech_hiring/tech_hiring_finding_candidates/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/tech_hiring/tech_hiring_screening_applicants/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/tech_hiring/tech_hiring_interviews/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/tech_hiring/tech_hiring_interview_questions/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/tech_hiring/tech_hiring_technical_interview_questions/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/tech_hiring/tech_hiring_takehomes/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/tech_hiring/tech_hiring_evaluation/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/tech_hiring/tech_hiring_further_reading/":
+  - url: "/datascience/tech_hiring/"
+    title: Tech Hiring for Science
+    excerpt: |-
+      Finding and recruiting talent for technical roles in a biomedical or scientific
+      institution can feel like a difficult task! The institutions are com...
+  "/datascience/proof/":
+  - url: "/datascience/using_workflows/"
+    title: Using Workflows
+    excerpt: ">Note: this page is under re-construction as we clean up our various
+      components of documentation around workflow managers.  Please pardon our dust
+      o..."
+  - url: "/scicomputing/store_temp/"
+    title: Temp File System
+    excerpt: The temp file system is maintained by SciComp for temporary storage of
+      research data during active analysis. This is a large, high-performance stora...
+  "/datademos/":
+  - url: "/datascience/using_workflows/"
+    title: Using Workflows
+    excerpt: ">Note: this page is under re-construction as we clean up our various
+      components of documentation around workflow managers.  Please pardon our dust
+      o..."
+  "/pathways/path-interactive/":
+  - url: "/pathways/path-batch-computing/"
+    title: Run a Non-Interactive Job on the Cluster
+    excerpt: This pathway will get you to a first non-interactive computing job on
+      the gizmo computing cluster using the command-line interface at the Fred Hutch.
+  - url: "/pathways/path-grab/"
+    title: Getting an Interactive Session on a Gizmo Node
+    excerpt: This pathway will get you an interactive, login session on a gizmo compute
+      node.  This can be useful when developing and prototyping larger compute ...
+  - url: "/scicomputing/compute_platforms/"
+    title: Supported Technologies and Platforms
+    excerpt: The Fred Hutch provides researchers on-campus access to high performance
+      computing using on-premise resources for computing needs that rise above th...
+  "/scicomputing/compute_parallel/":
+  - url: "/pathways/path-batch-computing/"
+    title: Run a Non-Interactive Job on the Cluster
+    excerpt: This pathway will get you to a first non-interactive computing job on
+      the gizmo computing cluster using the command-line interface at the Fred Hutch.
+  - url: "/scicomputing/compute_overview/"
+    title: Large Scale Computing Overview
+    excerpt: Researchers are more and more likely to need to analyze raw data sets
+      using some sort of analysis process before they can be interpreted in the cont...
+  - url: "/scicomputing/compute_platforms/"
+    title: Supported Technologies and Platforms
+    excerpt: The Fred Hutch provides researchers on-campus access to high performance
+      computing using on-premise resources for computing needs that rise above th...
+  "/scicomputing/store_posix/":
+  - url: "/pathways/path-interactive/"
+    title: Getting and Using Interactive Sessions
+    excerpt: This pathway is a step-by-step introduction to interactive sessions in
+      the Rhino/Gizmo compute environment.
+  - url: "/scicomputing/store_objectstore/"
+    title: Data Storage in AWS S3
+    excerpt: Object storage systems are not directly attached to your computer via
+      drive mapping, a mount point or the Mac Finder, so you cannot just doubleclick...
+  - url: "/scicomputing/store_overview/"
+    title: Overview of Data Storage at Fred Hutch
+    excerpt: The Hutch provides many platforms for storing, using, moving, and sharing
+      your data- relational databases, block-based network file storage, and clo...
+  - url: "/scicomputing/store_temp/"
+    title: Temp File System
+    excerpt: The temp file system is maintained by SciComp for temporary storage of
+      research data during active analysis. This is a large, high-performance stora...
+  "/pathways/path-grabnode/":
+  - url: "/pathways/path-interactive/"
+    title: Getting and Using Interactive Sessions
+    excerpt: This pathway is a step-by-step introduction to interactive sessions in
+      the Rhino/Gizmo compute environment.
+  "/compdemos/mydb/":
+  - url: "/pathways/path-mydb-mariadb/"
+    title: Configure and Use a MariaDB Database on MyDB
+    excerpt: This pathway will show you how to configure a MariaDB MySQL database
+      on MyDB and connect to it using the command line tools on a rhino/gizmo node.
+  - url: "/scicomputing/store_databases/"
+    title: Data Storage in Databases
+    excerpt: Database Management Systems DBMS are useful if you need to manage large
+      data tables of structured data and / or multiple tables that can be linked t...
+  "/scicompannounce/":
+  - url: "/scicompannounce/2019-01-22-hpc-systems-upgrade-2019/"
+    title: High Performance Computing Systems Upgrade 2019 Announcement
+    excerpt: |-
+      > UPDATE: This work has been delayed.  Dates indicated below are no longer
+      > accurate and will be corrected in a later announcement
+  - url: "/scicomputing/comp_index/"
+    title: Overview of Scientific Computing at Fred Hutch
+    excerpt: Various groups support computational capacity at the Hutch. Center IT
+      supports general computing tasks, such as email and desktop computer software;...
+  - url: "/scicomputing/compute_environments/"
+    title: Computing Environments and Containers
+    excerpt: The Fred Hutch provides researchers on campus access to high performance
+      computing using on-premise resources.  The various technologies provided ar...
+  "/scicompannounce/2019-01-22-hpc-systems-upgrade-2019/":
+  - url: "/scicompannounce/2019-02-21-upgrade-env-modules/"
+    title: Environment Modules after Upgrade
+    excerpt: Hello to all Data Scientists and HPC Users!
+  "/scicomputing/access_nx/":
+  - url: "/scicompannounce/2020-04-29-gizmo-bionic-upgrade/"
+    title: Gizmo Bionic Upgrade
+    excerpt: The current operating system used on the Gizmo cluster and Rhino login
+      nodes is Ubuntu 14.04.  This version has been out of support for some time no...
+  - url: "/scicomputing/access_methods/"
+    title: Computing Resource Access Methods
+    excerpt: Individual staff member's desktop computers themselves are supported
+      by Center IT ADM, CRD, VIDD as well as Division IT groups BSD, HB, PHS.  Please...
+  "/compdemos/ssh_host_key_management/":
+  - url: "/scicompannounce/2020-07-06-gizmo-bionic-known_issues/"
+    title: Gizmo Bionic Updates
+    excerpt: Known Issues in the Bionic Environment
+  "/compdemos/rhino-load-management/":
+  - url: "/scicompannounce/2020-07-14-gizmo-bionic-changelog/"
+    title: Gizmo Bionic Updates
+    excerpt: Changes to Bionic Nodes
+  "/scicompannounce/2023-09-01-fasterq-dump-issue/":
+  - url: "/scicompannounce/2023-03-06-fasterq-dump-issue/"
+    title: 2023 03 06 Fasterq Dump Issue
+    excerpt: "> Updated information is available here/scicompannounce/2023-09-01-fasterq-dump-issue/"
+  "/rstudio-launcher.fredhutch.org/":
+  - url: "/scicompannounce/2023-10-05-october-maintenance/"
+    title: 2023 10 05 October Maintenance
+    excerpt: On Sunday, 29 October from 12:00PM PDT until 5:00PM PDT Scientific Computing
+      will be upgrading and replacing a number of the systems and components ...
+  "/scicomputing/compute_gpu/":
+  - url: "/scicompannounce/2024-11-17-new-harmony-gpu-nodes/"
+    title: 2024 11 17 New Harmony Gpu Nodes
+    excerpt: The gizmo cluster has been augmented with more capable GPU nodes which
+      we are calling the "harmony" class node.  These systems have four NVIDIA L40S...
+  - url: "/scicomputing/compute_jobs/"
+    title: Computing Job Management
+    excerpt: Batch computing allows you to queue up jobs and have them executed by
+      the batch system, rather than you having to start an interactive session on
+      a ...
+  - url: "/scicomputing/compute_overview/"
+    title: Large Scale Computing Overview
+    excerpt: Researchers are more and more likely to need to analyze raw data sets
+      using some sort of analysis process before they can be interpreted in the cont...
+  "/scicomputing/compute_cloud/":
+  - url: "/scicomputing/access_aws/"
+    title: AWS Accounts at Fred Hutch
+    excerpt: Each lab can be granted their own individual AWS account, giving the
+      members of the lab access to AWS S3 for data storage, AWS Batch for running
+      com...
+  - url: "/scicomputing/access_credentials/"
+    title: Computing Resource Credentials
+    excerpt: This section describes how to get access and credentials to computing
+      systems on campus and in the cloud.
+  - url: "/scicomputing/compute_environments/"
+    title: Computing Environments and Containers
+    excerpt: The Fred Hutch provides researchers on campus access to high performance
+      computing using on-premise resources.  The various technologies provided ar...
+  - url: "/scicomputing/compute_overview/"
+    title: Large Scale Computing Overview
+    excerpt: Researchers are more and more likely to need to analyze raw data sets
+      using some sort of analysis process before they can be interpreted in the cont...
+  - url: "/scicomputing/store_objectstore/"
+    title: Data Storage in AWS S3
+    excerpt: Object storage systems are not directly attached to your computer via
+      drive mapping, a mount point or the Mac Finder, so you cannot just doubleclick...
+  "/datascience/privacy_security/":
+  - url: "/scicomputing/access_credentials/"
+    title: Computing Resource Credentials
+    excerpt: This section describes how to get access and credentials to computing
+      systems on campus and in the cloud.
+  - url: "/scicomputing/software_managecode/"
+    title: Managing and Sharing Code
+    excerpt: Version control software allows anyone using a computer to track changes
+      made to computer files over time, which allows both referencing and reverti...
+  "/compdemos/": &7
+  - url: "/scicomputing/access_overview/"
+    title: Computing Access Overview
+    excerpt: This overview describes what types of credentials are needed for various
+      Fred Hutch computing resources/compdemos/ and provides instructions for acc...
+  - url: "/scicomputing/comp_index/"
+    title: Overview of Scientific Computing at Fred Hutch
+    excerpt: Various groups support computational capacity at the Hutch. Center IT
+      supports general computing tasks, such as email and desktop computer software;...
+  - url: "/scicomputing/software_examples/"
+    title: Code Examples and Templates
+    excerpt: Our Resource Library/compdemos/ includes tutorials of how to perform
+      common computational tasks using software available at Fred Hutch. If you're
+      in...
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  - url: "/scicomputing/software_python/"
+    title: Python
+    excerpt: |-
+      Whether you're new to Python or are an experienced Python coder interested in how other Fred Hutch members work with this language,
+      this page is for...
+  "/scicomputing/access_permissions/":
+  - url: "/scicomputing/access_overview/"
+    title: Computing Access Overview
+    excerpt: This overview describes what types of credentials are needed for various
+      Fred Hutch computing resources/compdemos/ and provides instructions for acc...
+  "/scicomputing/access_overview/":
+  - url: "/scicomputing/comp_index/"
+    title: Overview of Scientific Computing at Fred Hutch
+    excerpt: Various groups support computational capacity at the Hutch. Center IT
+      supports general computing tasks, such as email and desktop computer software;...
+  "/scicomputing/software_overview/":
+  - url: "/scicomputing/comp_index/"
+    title: Overview of Scientific Computing at Fred Hutch
+    excerpt: Various groups support computational capacity at the Hutch. Center IT
+      supports general computing tasks, such as email and desktop computer software;...
+  "/scicomputing/compute_overview/":
+  - url: "/scicomputing/comp_index/"
+    title: Overview of Scientific Computing at Fred Hutch
+    excerpt: Various groups support computational capacity at the Hutch. Center IT
+      supports general computing tasks, such as email and desktop computer software;...
+  - url: "/scicomputing/software_examples/"
+    title: Code Examples and Templates
+    excerpt: Our Resource Library/compdemos/ includes tutorials of how to perform
+      common computational tasks using software available at Fred Hutch. If you're
+      in...
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  "/compdemos/gizmo_partition_index/":
+  - url: "/scicomputing/compute_gpu/"
+    title: Computing with GPUs
+    excerpt: There are currently two capabilities available for GPUs in the gizmo.  The
+      J and K class nodes have consumer-grade RTX cards.  We have recently fall...
+  - url: "/scicomputing/compute_job_scheduling/"
+    title: Gizmo Job Scheduling
+    excerpt: The compute resources provided by Scientific Computing are available
+      to all Hutch researchers. As a shared resource in high demand, it's necessary
+      t...
+  "/scicomputing/compute_accounts/":
+  - url: "/scicomputing/compute_job_scheduling/"
+    title: Gizmo Job Scheduling
+    excerpt: The compute resources provided by Scientific Computing are available
+      to all Hutch researchers. As a shared resource in high demand, it's necessary
+      t...
+  "/scicomputing/compute_xdmod/":
+  - url: "/scicomputing/compute_jobs/"
+    title: Computing Job Management
+    excerpt: Batch computing allows you to queue up jobs and have them executed by
+      the batch system, rather than you having to start an interactive session on
+      a ...
+  "/scicomputing/software_running/":
+  - url: "/scicomputing/compute_overview/"
+    title: Large Scale Computing Overview
+    excerpt: Researchers are more and more likely to need to analyze raw data sets
+      using some sort of analysis process before they can be interpreted in the cont...
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  "/scicomputing/compute_quickstart/":
+  - url: "/scicomputing/compute_overview/"
+    title: Large Scale Computing Overview
+    excerpt: Researchers are more and more likely to need to analyze raw data sets
+      using some sort of analysis process before they can be interpreted in the cont...
+  "/compdemos/howtoRhino/":
+  - url: "/scicomputing/compute_platforms/"
+    title: Supported Technologies and Platforms
+    excerpt: The Fred Hutch provides researchers on-campus access to high performance
+      computing using on-premise resources for computing needs that rise above th...
+  "/rModules/":
+  - url: "/scicomputing/compute_scientificSoftware/"
+    title: Scientific Software Modules
+    excerpt: On the command line and in scripts, we use the Environment Module system
+      to make software versions available in a modular and malleable way. Environ...
+  - url: "/scicomputing/software_R/"
+    title: R and RStudio
+    excerpt: R is a common statistical and computing language used in a variety of
+      biomedical data analyses, visualizations and computing settings.  R itself can...
+  "/pythonModules/":
+  - url: "/scicomputing/compute_scientificSoftware/"
+    title: Scientific Software Modules
+    excerpt: On the command line and in scripts, we use the Environment Module system
+      to make software versions available in a modular and malleable way. Environ...
+  - url: "/scicomputing/software_python/"
+    title: Python
+    excerpt: |-
+      Whether you're new to Python or are an experienced Python coder interested in how other Fred Hutch members work with this language,
+      this page is for...
+  "/scicomputing/bio-modules-18.04/":
+  - url: "/scicomputing/compute_scientificSoftware/"
+    title: Scientific Software Modules
+    excerpt: On the command line and in scripts, we use the Environment Module system
+      to make software versions available in a modular and malleable way. Environ...
+  "/scicomputing/hutchgo_overview/":
+  - url: "/scicomputing/hutchgo_guest_collection/"
+    title: Creating Guest Collections in HutchGO
+    excerpt: Guest collections are used in HutchGO to share data with people outside
+      your immediate group.  You can share data with Hutch staff or external colla...
+  - url: "/scicomputing/store_collaboration/"
+    title: Data Transfer and Storage Tools for Collaborating
+    excerpt: Before transferring data, please make sure you have appropriate protections
+      in place- make sure you are allowed to share data via your desired mecha...
+  "/scicomputing/hutchgo_guest_collection/":
+  - url: "/scicomputing/hutchgo_overview/"
+    title: Hutch Globus Online - HutchGO
+    excerpt: HutchGO- Hutch Globus Online- is a deployment of the Globus data transfer
+      services for the Hutch research community. HutchGO can be used for moving ...
+  "/scicomputing/comp_index/":
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  - url: "/hdc/hdc_index/"
+    title: HDC Materials Moved!
+    excerpt: As of Feb 2025, most all of the prior content in the Hutch Data Core
+      section of this Wiki has been moved into the Data Science/datascience/dsindex.m...
+  "/scicomputing/software_linux101/":
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  "/scicomputing/software_examples/":
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  - url: "/about/"
+    title: About the Wiki Project
+    excerpt: Here we will provide some background and history of the Fred Hutch Biomedical
+      Data Science Wiki.
+  "/compdemos/matlab/":
+  - url: "/scicomputing/software_overview/"
+    title: Overview of Software Development at Fred Hutch
+    excerpt: Frequently in scientific research, we must write code in order to perform
+      our desired analysis. Whether we are writing a short script for our own ma...
+  "/scicomputing/reference_training/":
+  - url: "/scicomputing/software_python/"
+    title: Python
+    excerpt: |-
+      Whether you're new to Python or are an experienced Python coder interested in how other Fred Hutch members work with this language,
+      this page is for...
+  "/scicomputing/store_aspera_shares/":
+  - url: "/scicomputing/store_collaboration/"
+    title: Data Transfer and Storage Tools for Collaborating
+    excerpt: Before transferring data, please make sure you have appropriate protections
+      in place- make sure you are allowed to share data via your desired mecha...
+  "/pathways/path-mydb-mariadb/":
+  - url: "/scicomputing/store_databases/"
+    title: Data Storage in Databases
+    excerpt: Database Management Systems DBMS are useful if you need to manage large
+      data tables of structured data and / or multiple tables that can be linked t...
+  "/scicomputing/store_temp/":
+  - url: "/scicomputing/store_objectstore/"
+    title: Data Storage in AWS S3
+    excerpt: Object storage systems are not directly attached to your computer via
+      drive mapping, a mount point or the Mac Finder, so you cannot just doubleclick...
+  - url: "/scicomputing/store_overview/"
+    title: Overview of Data Storage at Fred Hutch
+    excerpt: The Hutch provides many platforms for storing, using, moving, and sharing
+      your data- relational databases, block-based network file storage, and clo...
+  - url: "/scicomputing/store_posix/"
+    title: Data Storage in File Storage Systems
+    excerpt: 'File keeps your data on disks and allows access to your data using familiar
+      tools you''re used to: Unix commands like cat, cp, ls, and rm,  browser t...'
+  - url: "/scicomputing/store_task/"
+    title: Task Optimized Storage
+    excerpt: Task storage is storage for data used in ad-hoc applications when the
+      primary or principal storage location for that data is unsuitable or undesirab...
+  - url: "/scicomputing/store_working/"
+    title: Working File Service
+    excerpt: Overview
+  "/scicomputing/store_working/":
+  - url: "/scicomputing/store_objectstore/"
+    title: Data Storage in AWS S3
+    excerpt: Object storage systems are not directly attached to your computer via
+      drive mapping, a mount point or the Mac Finder, so you cannot just doubleclick...
+  - url: "/scicomputing/store_overview/"
+    title: Overview of Data Storage at Fred Hutch
+    excerpt: The Hutch provides many platforms for storing, using, moving, and sharing
+      your data- relational databases, block-based network file storage, and clo...
+  - url: "/scicomputing/store_posix/"
+    title: Data Storage in File Storage Systems
+    excerpt: 'File keeps your data on disks and allows access to your data using familiar
+      tools you''re used to: Unix commands like cat, cp, ls, and rm,  browser t...'
+  - url: "/scicomputing/store_task/"
+    title: Task Optimized Storage
+    excerpt: Task storage is storage for data used in ad-hoc applications when the
+      primary or principal storage location for that data is unsuitable or undesirab...
+  "/compdemos/Mountain-CyberDuck/":
+  - url: "/scicomputing/store_objectstore/"
+    title: Data Storage in AWS S3
+    excerpt: Object storage systems are not directly attached to your computer via
+      drive mapping, a mount point or the Mac Finder, so you cannot just doubleclick...
+  "/datascience/stewardship/":
+  - url: "/scicomputing/store_overview/"
+    title: Overview of Data Storage at Fred Hutch
+    excerpt: The Hutch provides many platforms for storing, using, moving, and sharing
+      your data- relational databases, block-based network file storage, and clo...
+  "/scicomputing/store_databases/":
+  - url: "/scicomputing/store_overview/"
+    title: Overview of Data Storage at Fred Hutch
+    excerpt: The Hutch provides many platforms for storing, using, moving, and sharing
+      your data- relational databases, block-based network file storage, and clo...
+  "/scicomputing/store_task/":
+  - url: "/scicomputing/store_overview/"
+    title: Overview of Data Storage at Fred Hutch
+    excerpt: The Hutch provides many platforms for storing, using, moving, and sharing
+      your data- relational databases, block-based network file storage, and clo...
+  "/scicomputing/store_collaboration/":
+  - url: "/scicomputing/store_overview/"
+    title: Overview of Data Storage at Fred Hutch
+    excerpt: The Hutch provides many platforms for storing, using, moving, and sharing
+      your data- relational databases, block-based network file storage, and clo...
+  "/path/to/page/":
+  - url: "/site/BACKLINKS/"
+    title: Backlinks
+    excerpt: Backlinks Feature
+  - url: "/BACKLINKS/"
+    title: Backlinks
+    excerpt: Backlinks Feature
+  "/compdemos/vscode_markdown_howto/":
+  - url: "/site/README/"
+    title: Readme
+    excerpt: Contributing to SciWiki
+  - url: "/README/"
+    title: Readme
+    excerpt: Contributing to SciWiki
+  "/domain/markdownfile_name/":
+  - url: "/site/README/"
+    title: Readme
+    excerpt: Contributing to SciWiki
+  - url: "/README/"
+    title: Readme
+    excerpt: Contributing to SciWiki
+  "/API-Updates-in-v0.5.0":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.2.3/CHANGELOG/"
+    title: Changelog
+    excerpt: Current
+  - url: "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.3.1/CHANGELOG/"
+    title: Changelog
+    excerpt: Current
+  - url: "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.3.5/CHANGELOG/"
+    title: Changelog
+    excerpt: Current
+  "/docs-source/synchronization/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.2.3/README/"
+    title: Readme
+    excerpt: Concurrent Ruby
+  - url: "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.3.1/README/"
+    title: Readme
+    excerpt: Concurrent Ruby
+  - url: "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.3.5/README/"
+    title: Readme
+    excerpt: Concurrent Ruby
+  "/CONTRIBUTING/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/execjs-2.10.0/README/"
+    title: Readme
+    excerpt: |-
+      ExecJS
+      ======
+  - url: "/vendor/bundle/ruby/3.1.0/gems/execjs-2.9.1/README/"
+    title: Readme
+    excerpt: |-
+      ExecJS
+      ======
+  - url: "/vendor/bundle/ruby/3.1.0/gems/liquid-4.0.3/README/"
+    title: Readme
+    excerpt: |-
+      !Build Statushttps://api.travis-ci.org/Shopify/liquid.svg?branch=masterhttp://travis-ci.org/Shopify/liquid
+      !Inline docshttp://inch-ci.org/github/Sho...
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.16.5-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.18.9-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  - url: "/vendor/bundle/ruby/3.1.0/gems/sawyer-0.9.2/README/"
+    title: Readme
+    excerpt: Sawyer
+  "/MIT-LICENSE/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/execjs-2.10.0/README/"
+    title: Readme
+    excerpt: |-
+      ExecJS
+      ======
+  - url: "/vendor/bundle/ruby/3.1.0/gems/execjs-2.9.1/README/"
+    title: Readme
+    excerpt: |-
+      ExecJS
+      ======
+  "/./docs/assets/img/repo-card-slim.png":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/faraday-2.3.0/README/"
+    title: Readme
+    excerpt: "!Faraday./docs/assets/img/repo-card-slim.pngwebsite"
+  "/rubygems/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/faraday-net_http-2.1.0/README/"
+    title: Readme
+    excerpt: Faraday Net::HTTP adapter
+  "/Gemfile/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/html-pipeline-2.14.3/README/"
+    title: Readme
+    excerpt: HTML::Pipeline !Build Statushttps://travis-ci.org/jch/html-pipeline.svg?branch=masterhttps://travis-ci.org/jch/html-pipeline
+  "/about/": &1 []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-3.9.2/lib/site_template/about/": *1
+  "/CODE_OF_CONDUCT/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-avatar-0.7.0/docs/CONTRIBUTING/"
+    title: Contributing
+    excerpt: Contributing to Jekyll Avatar
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.16.5-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.18.9-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  - url: "/vendor/bundle/ruby/3.1.0/gems/octokit-4.25.1/CONTRIBUTING/"
+    title: Contributing
+    excerpt: Submitting a Pull Request
+  - url: "/vendor/bundle/ruby/3.1.0/gems/octokit-4.25.1/README/"
+    title: Readme
+    excerpt: Octokit
+  "/lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-glossary_tooltip-1.4.0/README/"
+    title: Readme
+    excerpt: Jekyll Glossary Tooltip Tag Plugin !Tweethttps://img.shields.io/twitter/url/http/shields.io.svg?style=socialhttps://twitter.com/intent/tweet?text=Ge...
+  "/lib/jekyll-glossary_tooltip/tag.rb":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-glossary_tooltip-1.4.0/README/"
+    title: Readme
+    excerpt: Jekyll Glossary Tooltip Tag Plugin !Tweethttps://img.shields.io/twitter/url/http/shields.io.svg?style=socialhttps://twitter.com/intent/tweet?text=Ge...
+  "/Appraisals/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-glossary_tooltip-1.4.0/README/"
+    title: Readme
+    excerpt: Jekyll Glossary Tooltip Tag Plugin !Tweethttps://img.shields.io/twitter/url/http/shields.io.svg?style=socialhttps://twitter.com/intent/tweet?text=Ge...
+  "/gemfiles/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-glossary_tooltip-1.4.0/README/"
+    title: Readme
+    excerpt: Jekyll Glossary Tooltip Tag Plugin !Tweethttps://img.shields.io/twitter/url/http/shields.io.svg?style=socialhttps://twitter.com/intent/tweet?text=Ge...
+  "/tags/how we work/": &2 []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-redirect-from-0.16.0/spec/fixtures/tags/how we work/": *2
+  "/installation/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-seo-tag-2.8.0/docs/README/"
+    title: Readme
+    excerpt: About Jekyll SEO Tag
+  "/usage/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-seo-tag-2.8.0/docs/README/"
+    title: Readme
+    excerpt: About Jekyll SEO Tag
+  "/advanced-usage/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-seo-tag-2.8.0/docs/README/"
+    title: Readme
+    excerpt: About Jekyll SEO Tag
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-seo-tag-2.8.0/docs/usage/"
+    title: Usage
+    excerpt: Usage
+  "/permalink/": &3 []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-sitemap-1.4.0/spec/fixtures/_my_collection/custom_permalink/": *3
+  "/permalink/unique_name.html": &4 []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-sitemap-1.4.0/spec/fixtures/_my_collection/custom_permalink_2/": *4
+  "/this url has an ümlaut/": &5 []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-sitemap-1.4.0/spec/fixtures/_my_collection/this-has-non-standard-chars/": *5
+  "/thumbnail.png":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-architect-0.2.0/README/"
+    title: Readme
+    excerpt: The Architect theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-cayman-0.2.0/README/"
+    title: Readme
+    excerpt: The Cayman theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-dinky-0.2.0/README/"
+    title: Readme
+    excerpt: The Dinky theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-hacker-0.2.0/README/"
+    title: Readme
+    excerpt: The Hacker theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-leap-day-0.2.0/README/"
+    title: Readme
+    excerpt: The Leap day theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-merlot-0.2.0/README/"
+    title: Readme
+    excerpt: The Merlot theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-midnight-0.2.0/README/"
+    title: Readme
+    excerpt: The Midnight theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-minimal-0.2.0/README/"
+    title: Readme
+    excerpt: The Minimal theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-modernist-0.2.0/README/"
+    title: Readme
+    excerpt: The Modernist theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-primer-0.6.0/README/"
+    title: Readme
+    excerpt: The Primer theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-slate-0.2.0/README/"
+    title: Readme
+    excerpt: The Slate theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-tactile-0.2.0/README/"
+    title: Readme
+    excerpt: The Tactile theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-time-machine-0.2.0/README/"
+    title: Readme
+    excerpt: The Time machine theme
+  "/docs/CONTRIBUTING/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-architect-0.2.0/README/"
+    title: Readme
+    excerpt: The Architect theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-cayman-0.2.0/README/"
+    title: Readme
+    excerpt: The Cayman theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-dinky-0.2.0/README/"
+    title: Readme
+    excerpt: The Dinky theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-hacker-0.2.0/README/"
+    title: Readme
+    excerpt: The Hacker theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-leap-day-0.2.0/README/"
+    title: Readme
+    excerpt: The Leap day theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-merlot-0.2.0/README/"
+    title: Readme
+    excerpt: The Merlot theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-midnight-0.2.0/README/"
+    title: Readme
+    excerpt: The Midnight theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-minimal-0.2.0/README/"
+    title: Readme
+    excerpt: The Minimal theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-modernist-0.2.0/README/"
+    title: Readme
+    excerpt: The Modernist theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-primer-0.6.0/README/"
+    title: Readme
+    excerpt: The Primer theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-slate-0.2.0/README/"
+    title: Readme
+    excerpt: The Slate theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-tactile-0.2.0/README/"
+    title: Readme
+    excerpt: The Tactile theme
+  - url: "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-time-machine-0.2.0/README/"
+    title: Readme
+    excerpt: The Time machine theme
+  "/History/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/liquid-4.0.3/README/"
+    title: Readme
+    excerpt: |-
+      !Build Statushttps://api.travis-ci.org/Shopify/liquid.svg?branch=masterhttp://travis-ci.org/Shopify/liquid
+      !Inline docshttp://inch-ci.org/github/Sho...
+  "/BSDL/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/logger-1.6.6/README/"
+    title: Readme
+    excerpt: Logger
+  "/screenshot.png":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/minima-2.5.1/README/"
+    title: Readme
+    excerpt: minima
+  "/_includes/head.html":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/minima-2.5.1/README/"
+    title: Readme
+    excerpt: minima
+  "/assets/main.scss":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/minima-2.5.1/README/"
+    title: Readme
+    excerpt: minima
+  "/SECURITY/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.16.5-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.18.9-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  - url: "/vendor/bundle/ruby/3.1.0/gems/public_suffix-4.0.7/README/"
+    title: Readme
+    excerpt: Public Suffix <small>for Ruby</small>
+  "/ROADMAP/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.16.5-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.18.9-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  "/LICENSE-DEPENDENCIES/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.16.5-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.18.9-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  "/LICENSE/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.16.5-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  - url: "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.18.9-arm64-darwin/README/"
+    title: Readme
+    excerpt: <div><img src="https://nokogiri.org/images/nokogiri-serif-black.png"
+      align="right"/></div>
+  "/README/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/octokit-4.25.1/CONTRIBUTING/"
+    title: Contributing
+    excerpt: Submitting a Pull Request
+  "/2.0-Upgrade/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/public_suffix-4.0.7/README/"
+    title: Readme
+    excerpt: Public Suffix <small>for Ruby</small>
+  "/CHANGELOG/":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/public_suffix-4.0.7/README/"
+    title: Readme
+    excerpt: Public Suffix <small>for Ruby</small>
+  "/LICENSE.txt":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/rexml-3.2.8/README/"
+    title: Readme
+    excerpt: REXML
+  - url: "/vendor/bundle/ruby/3.1.0/gems/rexml-3.4.1/README/"
+    title: Readme
+    excerpt: REXML
+  "/lib/sawyer.rb":
+  - url: "/vendor/bundle/ruby/3.1.0/gems/sawyer-0.9.2/README/"
+    title: Readme
+    excerpt: Sawyer
+  "/404.html": &6 []
+  "/404/": *6
+  "/pathways/":
+  - url: "/about/"
+    title: About the Wiki Project
+    excerpt: Here we will provide some background and history of the Fred Hutch Biomedical
+      Data Science Wiki.
+  "/contributors/":
+  - url: "/about/"
+    title: About the Wiki Project
+    excerpt: Here we will provide some background and history of the Fred Hutch Biomedical
+      Data Science Wiki.
+  "/computingdemos/": *7
+  "/datascience/ds_index/":
+  - url: "/hdc/hdc_index/"
+    title: HDC Materials Moved!
+    excerpt: As of Feb 2025, most all of the prior content in the Hutch Data Core
+      section of this Wiki has been moved into the Data Science/datascience/dsindex.m...
+  "/hdc/hdc_index/": &8 []
+  "/redirect_hdc_index/": *8
+  "/hdc/hdc_workflows/": &9 []
+  "/redirect_hdcworkflows/": *9
+  "/hdc/hdc_refgenomes/": &10 []
+  "/redirect_refgenomes/": *10
+  "/hdc/workflows/workflow_background/": &11 []
+  "/redirect_workflow_background/": *11
+  "/https:/centernet.fredhutch.org/cn/u/sciwiki.html": []
+  "/https:/github.com/FredHutch/wiki/blob/main/README/": []
+  "/https:/ocdo.fredhutch.org": []
+  "/https:/hutchdatascience.org/courses/": []
+  "/datascience/data_science_lifecycle/": []
+  "/datascience/data_viz/": []
+  "/datascience/data_wrangling/": []
+  "/datascience/tech_hiring/": []
+  "/datascience/consent_IRB/": []
+  "/datascience/compliance_legal/": []
+  "/datascience/nih_data_sharing/": []
+  "/datascience/execute_sharing/": []
+  "/datascience/open_specimen/": []
+  "/datascience/real_world_data/": []
+  "/datascience/patient-data/": []
+  "/datascience/ai_coding/": []
+  "/datascience/llm_tuning/": []
+  "/datascience/datagen_assayPrep/": []
+  "/datascience/cirro/": []
+  "/scicomputing/compute_grants/": []
+  "/https:/centernet.fredhutch.org/cn/u/center-it/help-desk/onedrive.html": []
+  "/compdemos/AWSCLI_WSL/": []
+  "/compdemos/Checkpointing-Gizmo/": []
+  "/compdemos/GDC_Data_Download/": []
+  "/compdemos/R_tips_tricks/": []
+  "/compdemos/VS-Code_lmod/": []
+  "/compdemos/alphafold3/": []
+  "/compdemos/aspera-change-destination/": []
+  "/compdemos/aspera-on-nx/": []
+  "/compdemos/aws-credits/": []
+  "/compdemos/gdc-client-hints/": []
+  "/compdemos/git_tips/": []
+  "/compdemos/globus-personal/": []
+  "/compdemos/ingest-Large-Data/": []
+  "/compdemos/managing-module-versions/": []
+  "/compdemos/maxquant/": []
+  "/compdemos/onboard/": []
+  "/compdemos/plyranges-workshop/": []
+  "/compdemos/python_logging/": []
+  "/compdemos/python_virtual_environments/": []
+  "/compdemos/r-2018b-matrix-errors/": []
+  "/compdemos/rslurm_example/": []
+  "/compdemos/rslurm_intro/": []
+  "/compdemos/sharing-data-presigned-url/": []
+  "/compdemos/snapshots/": []
+  "/compdemos/toolbox/": []
+  "/compdemos/ucsc-track-s3/": []
+  "/datascience/fh_dasl/": []
+  "/datascience/misc_training/": []
+  "/pathways/path-migrating-data-from-fast-to-cloud/": []
+  "/scicompannounce/2018-05-26-pythonupdate/": []
+  "/scicompannounce/2018-06-01-JuneComputingUpdates/": []
+  "/scicompannounce/2019-02-21-upgrade-env-modules/": []
+  "/scicompannounce/2019-11-01-scratch-upgrade/": []
+  "/scicompannounce/2020-02-07-STAR/": []
+  "/scicompannounce/2020-04-29-gizmo-bionic-upgrade/": []
+  "/scicompannounce/2020-05-06-gizmo-nx-users/": []
+  "/scicompannounce/2020-07-06-gizmo-bionic-known_issues/": []
+  "/scicompannounce/2020-07-14-gizmo-bionic-changelog/": []
+  "/scicompannounce/2020-08-21-aws-cloud-migration/": []
+  "/scicompannounce/2021-08-08-gizmo-cpu-cgroup/": []
+  "/scicompannounce/2021-08-08-gizmo-grabnode/": []
+  "/scicompannounce/2022-08-15-rhino-gizmo-updates/": []
+  "/scicompannounce/2023-03-06-fasterq-dump-issue/": []
+  "/scicompannounce/2023-04-19-gpu-limits/": []
+  "/scicompannounce/2023-10-05-october-maintenance/": []
+  "/scicompannounce/2023-12-15-vscode-lmod-and-python/": []
+  "/scicompannounce/2024-01-22-java-temporary-directory/": []
+  "/scicompannounce/2024-02-26-fasterq-dump-issue/": []
+  "/scicompannounce/2024-04-02-new-hpc-temp-storage/": []
+  "/scicompannounce/2024-07-17-august-gizmo-maintenance/": []
+  "/scicompannounce/2024-09-18-hpc-temp-empty-directories/": []
+  "/scicompannounce/2024-11-17-new-harmony-gpu-nodes/": []
+  "/scicompannounce/2025-01-03-february-maintenance/": []
+  "/scicompannounce/2025-03-14-april-maintenance/": []
+  "/scicompannounce/2025-04-01-silver-latency/": []
+  "/scicomputing/cluster_environments/": []
+  "/scicomputing/compute_job_scheduling/": []
+  "/site/BACKLINKS/": []
+  "/BACKLINKS/": []
+  "/datademos/building_containers/": []
+  "/datademos/running_first_workflow/": []
+  "/datademos/computational_rank/": []
+  "/site/README/": []
+  "/datademos/biorender/": []
+  "/datademos/process_resources/": []
+  "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.2.3/CHANGELOG/": []
+  "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.3.1/CHANGELOG/": []
+  "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.3.5/CHANGELOG/": []
+  "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.2.3/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.3.1/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/concurrent-ruby-1.3.5/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/execjs-2.10.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/execjs-2.9.1/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/liquid-4.0.3/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.16.5-arm64-darwin/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/nokogiri-1.18.9-arm64-darwin/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/sawyer-0.9.2/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/faraday-2.3.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/faraday-net_http-2.1.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/html-pipeline-2.14.3/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-avatar-0.7.0/docs/CONTRIBUTING/": []
+  "/vendor/bundle/ruby/3.1.0/gems/octokit-4.25.1/CONTRIBUTING/": []
+  "/vendor/bundle/ruby/3.1.0/gems/octokit-4.25.1/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-glossary_tooltip-1.4.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-seo-tag-2.8.0/docs/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-seo-tag-2.8.0/docs/usage/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-architect-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-cayman-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-dinky-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-hacker-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-leap-day-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-merlot-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-midnight-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-minimal-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-modernist-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-primer-0.6.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-slate-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-tactile-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/jekyll-theme-time-machine-0.2.0/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/logger-1.6.6/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/minima-2.5.1/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/public_suffix-4.0.7/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/rexml-3.2.8/README/": []
+  "/vendor/bundle/ruby/3.1.0/gems/rexml-3.4.1/README/": []
+generated_at: '2025-08-21 16:05:52'
