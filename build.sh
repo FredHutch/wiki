@@ -2,8 +2,8 @@
 
 # This script builds the Jekyll site with backlinks generation
 # Usage:
-#   ./build.sh          - Generate backlinks and build site
-#   ./build.sh serve    - Generate backlinks and serve site locally
+#   ./build.sh          - Generate backlinks and serve site locally
+#   ./build.sh build    - Generate backlinks and build site
 #   ./build.sh --help   - Show help
 
 set -e
