@@ -21,15 +21,21 @@ To access HutchGO you log in to a _Globus account_.  The Globus account contains
 
 ### Collections 
 
-Central to the use of Globus is the _collection_- a collection of paths to data on the underlying storage gateway. Data is transferred between collections.  Policies (like who can access data via Globus, how paths are shared, etc) are set on the collection.
+Central to the use of Globus is the _collection_- a collection of paths to data on the underlying storage gateway. Data is transferred between collections.  Policies (like who can access data via Globus, how paths are shared, etc) are set on the collection. There are two kinds of collections- _mapped_ and _guest_.  
 
-There are two kinds of collections- _mapped_ and _guest_.  A mapped collection _maps_ the Globus identity to an identity on the storage behind the collection.  For example, when accessing fast via a mapped collection, the "you@fredhutch.org" identity you used to authenticate is _mapped_ to your HutchNet ID on the storage system by stripping off the "@fredhutch.org" portion of your email address: "alice@fredhutch.org" is mapped to the user "alice" on the storage.
+#### Mapped Collection
+
+A mapped collection _maps_ the Globus identity to an identity on the storage behind the collection.  For example, when accessing fast via a mapped collection, the "you@fredhutch.org" identity you used to authenticate is _mapped_ to your HutchNet ID on the storage system by stripping off the "@fredhutch.org" portion of your email address: "alice@fredhutch.org" is mapped to the user "alice" on the storage.
+
+#### Guest Collection
 
 Guest collections are used to share data (internally and externally).  Guest does not mean anonymous access- a guest collection allows Globus users to access data _as you_ on the storage configured in the guest collection.  For your "guest" user to access the data shared in a guest collection they must have a Globus ID, the guest collection must allow their Globus identity to access the data, and your HutchNetID must have access to the storage on the back-end (see [Permissions and Access](#permissions-and-access-control) below.
 
->NOTE: It is possible to enable public access to a collection, but "public" only means anyone with a Globus ID.  A Globus login is still required to access the collection's data
-
 > NOTE: You can also create a guest collection to share data with other Hutch staff.  Guest collections are not limited to non-Hutch staff.
+
+#### Collection visibility
+
+Collections can be set to _private_ or _public_. A public collection may show up in search results for any Globus users. A private collection is only visible to Globus users with role assignments to the collection.
 
 ### Roles
 
@@ -83,7 +89,7 @@ Getting your data set up to be accessible via Globus starts with an email to sci
 
  - who is the data owner (where it's not a lab PI)
  - who are the data managers
- - should the mapped collection be public or private
+ - should the mapped collection be [public or private](#collection_visibility)
  - which data sources should be made available via Globus- fast, working, economy, temp, etc.
 
 After this, the data owner and managers will be given links to information about creating guest collections for collaborations and signed up for notices about the Globus services.
