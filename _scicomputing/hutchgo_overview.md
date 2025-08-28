@@ -35,7 +35,10 @@ Guest collections are used to share data (internally and externally).  Guest doe
 
 #### Collection visibility
 
-Collections can be set to _private_ or _public_. A public collection may show up in search results for any Globus users. A private collection is only visible to Globus users with role assignments to the collection.
+Mapped collections can be set to _private_ or _public_. A public collection may show up in search results for anyone logged into Globus.  A private collection is only visible to Globus users with role assignments to the collection.
+
+> [!IMPORTANT]
+> This only manages visibilty of the collection _metadata_: the collection name, description, organization, UUID, and other attributes describing the collection.  A public collection's contents are **not accessible without a HutchNetID allowing access to the collection contents**.
 
 ### Roles
 
