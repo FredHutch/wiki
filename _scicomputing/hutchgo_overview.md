@@ -85,7 +85,7 @@ HutchGO is available for all Hutch researchers and staff to use for data transfe
 
 ### Getting Set Up
 
-Getting your data set up to be accessible via Globus starts with an email to scicomp with the folowing information:
+Getting your data set up to be accessible via Globus starts with an email to scicomp with the following information:
 
  - who is the data owner (where it's not a lab PI)
  - who are the data managers
