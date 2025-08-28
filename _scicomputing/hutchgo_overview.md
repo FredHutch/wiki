@@ -21,7 +21,7 @@ To access HutchGO you log in to a _Globus account_.  The Globus account contains
 
 ### Collections 
 
-Central to the use of Globus is the _collection_- a collection of paths to data on the underlying storage gateway. Data is transferred between collections.  Policies (like who can access data via Globus, how paths are shared, etc) are set on the collection. There are two kinds of collections- _mapped_ and _guest_.  
+Central to the use of Globus is the _collection_- a collection of paths to data on the underlying storage gateway. Data is transferred between collections.  Policies (like who can access data via Globus, how paths are shared, etc) are set on the collection. There are two kinds of collections- _mapped_ and _guest_.
 
 #### Mapped Collection
 
@@ -33,7 +33,7 @@ Guest collections are used to share data (internally and externally).  Guest doe
 
 > NOTE: You can also create a guest collection to share data with other Hutch staff.  Guest collections are not limited to non-Hutch staff.
 
-#### Collection visibility
+#### Collection Visibility
 
 Mapped collections can be set to _private_ or _public_. A public collection may show up in search results for anyone logged into Globus.  A private collection is only visible to Globus users with role assignments to the collection.
 
@@ -66,13 +66,13 @@ There are multiple layers where access to files and data are enforced.  You can 
 
 #### Collection Access Controls
 
-Collections (both guest and mapped) are configured with:
+Mapped collections are configured with:
 
 Root Path
 : The root path controls which parts of the file system you are allowed to access via Globus
 
 Path Restrictions
-: Path restrictions configure more fine-grained access to paths inside the root path- you can configure no-access, read-only access, and read-write access on a per-directory basis within the root path
+: Path restrictions control guest collection access- paths can be configured with no-access, read-only access, and read-write access on a per-directory basis within the root path.  "No access" will prevent guest collections from being created.  "Read Write" and "Read Only" will control access for guest collection users.
 
 #### File System Permissions
 
