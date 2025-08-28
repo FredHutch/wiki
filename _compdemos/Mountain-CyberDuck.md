@@ -93,7 +93,7 @@ Mountainduck & Cyberduck are designed to work with AWS access keys. With the cha
 - Review the steps required to [configure AWS CLI access using SSO](/scicomputing/access_aws/#accessing-via-sso)
 - In the AWS IAM Identity Center, locate the AWS account you wish to access
 - Click the arrow to the left of the account then select "Access keys" 
-- Follow the instructions in "Option 2: Add a profile to your AWS credentials file" to add a profile to `~/.aws/credentials` 
+- Follow the instructions in "Option 2: Add a profile to your AWS credentials file" to add a profile to `~/.aws/credentials` on your Mac. You will need to create the `~/.aws` folder if you do not have aws-cli installed.
 - Open Mountainduck then open a new connection
 
 ![](/assets/mountain_cyber_duck/1_open_new_connection.png)
