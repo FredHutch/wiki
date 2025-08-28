@@ -37,8 +37,8 @@ Guest collections are used to share data (internally and externally).  Guest doe
 
 Mapped collections can be set to _private_ or _public_. A public collection may show up in search results for anyone logged into Globus.  A private collection is only visible to Globus users with role assignments to the collection.
 
-> [!IMPORTANT]
-> This only manages visibilty of the collection _metadata_: the collection name, description, organization, UUID, and other attributes describing the collection.  A public collection's contents are **not accessible without a HutchNetID allowing access to the collection contents**.
+This only manages visibilty of the collection _metadata_: the collection name, description, organization, UUID, and other attributes describing the collection.  A public collection's contents are **not accessible without a HutchNetID allowing access to the collection contents**.
+{: .notice--info}
 
 ### Roles
 
@@ -90,6 +90,7 @@ HutchGO is available for all Hutch researchers and staff to use for data transfe
 
 Getting your data set up to be accessible via Globus starts with an email to scicomp with the following information:
 
+ - are necessary agreements in place? Do you have a DUA or DTA?
  - who is the data owner (where it's not a lab PI)
  - who are the data managers
  - should the mapped collection be [public or private](#collection_visibility)
