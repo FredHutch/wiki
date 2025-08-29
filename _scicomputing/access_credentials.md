@@ -42,7 +42,9 @@ One issue to note when using GitHub to do version control in your code is that i
 
 ## Amazon Web Services (AWS)
 
-[Amazon Web Services](https://aws.amazon.com/) (AWS) credentials are required to use AWS.  AWS credentials are designated per user, so each Fred Hutch employee should obtain their own credentials. Each lab has their own AWS account, allowing access to both data storage (e.g., the lab's S3 bucket) and compute (e.g., _AWS Batch_).
+[Amazon Web Services](https://aws.amazon.com/) (AWS) credentials are required to use AWS.  AWS credentials are tied to HutchNet IDs. Using your HutchNet ID you can obtain temporary Access and Secret Keys. HutchNet are designated per user, so each Fred Hutch employee should obtain their own credentials. Each lab has their own AWS account, allowing access to both data storage (e.g., the lab's S3 bucket) and compute (e.g., _AWS Batch_).
+
+>Note: Access and Secret Keys obtain through the AWS SSO portal are temporary and must be refreshed after 12 hours
 
 >Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `helpdesk` to request support from the cloud team (CLD)
 
@@ -66,26 +68,27 @@ If you have access to more than one AWS account, you should now choose the same 
 you choose in the last step, then press Enter. 
 For `CLI default client Region`, press Enter. For `CLI default output format`, press Enter.
 
-The next and final piece of information to fill in is the `CLI profile name`. 
-If you have not set up AWS credentials before, you should use the value `default`.
+The next and final piece of information to fill in is the `CLI profile name`. If you have access to more than one AWS account, it is suggested to set a profile per AWS account. Use a name which will be easy to remember and differentiate from other accounts. 
 
 The terminal will now display the following:
 
 ```
 To use this profile, specify the profile name using --profile, as shown:
 
-aws s3 ls --profile default
+aws s3 ls --profile yourProfileName
 ```
 
 The `--profile default` flag is not necessary if you are using the default profile.
 
-The following section will describe how to test and use your credentials.
+The following section will describe how to test and use your credentials. To use your profile you can use `aws sso login --profile yourProfileName`, this will log you into your SSO profile for the duration of the session length (8 hours)
 
 
 ### Configure Motuz and AWS CLI for Single Sign-on (SSO)
 To access an AWS account using SSO authentication, a user signs in to the AWS access portal URL provided, IAM Identity Center redirects the request to an authentication service. 
 
-After authentication with a HutchNet ID, the user will have SSO access to all AWS account and applications without additional sign-in requirements (Username and Password)  
+After authentication with a HutchNet ID, the user will have SSO access to all AWS accounts through the AWS console and applications without additional sign-in requirements (Username and Password)
+
+To use the AWS CLI with your sso credentials please follow the instructions for configuring your CLI profiles. You can configure an AWS CLI profile for each AWS account you have access to, allowing you to make differing CLI commands based on the access you have in each account.
 
 
 ## Using Motuz with SSO:
