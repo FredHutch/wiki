@@ -2,6 +2,10 @@
 Title: fasterq-dump Causes Nodes to Hang and Require Reboot (Updated)
 ---
 
+## Update 26 Aug 2025:
+
+The scratch file system has been retired: this announcement no longer applies. `fasterq-dump` can be used on any file system.
+
 ## Update 26 Feb 2024:
 
 We have added some guardrails to the configuration of the gizmo cluster nodes to prevent fasterq-dump from being run against the Scratch file system.  This function operates at the kernel level and prevents read and write operations.
