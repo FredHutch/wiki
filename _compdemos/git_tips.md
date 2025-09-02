@@ -74,7 +74,7 @@ Since GitHub "sees" the rename of the branch as simply a new branch, it is neces
 
 You will want to ensure that all repository contributors are aware of what's happening and know what steps to take to make sure their work is not disrupted.
 
-Contributors with "push" rights will be able to ressurect the old branch- even unintentionally- by pushing changes to the old name.  Ensure that they have pulled changes (which should update the HEAD reference), merged any local changes from the old branch to the new, and deleted the old branch.  In the example (changing `master` to `main`) the steps would look like:
+Contributors with "push" rights will be able to resurrect the old branch- even unintentionally- by pushing changes to the old name.  Ensure that they have pulled changes (which should update the HEAD reference), merged any local changes from the old branch to the new, and deleted the old branch.  In the example (changing `master` to `main`) the steps would look like:
 
 ```
 git pull
@@ -142,10 +142,6 @@ but does require general knowledge of version control to use effectively.
 Additionally, IDEs (integrated development environments) provide the ability to work with Git while coding:
 - [RStudio](https://rstudio.com/products/rstudio/download/) is an IDE primarily for coding in R.
 Information on its integration with git is available [here](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN).
-- [Atom](https://atom.io) is an IDE
-useful for working with multiple programming languages,
-and has optional packages to support Git.
-More information on the main package can be found [here](https://atom.io/packages/git-gui).
 - [Visual Studio Code](https://code.visualstudio.com) is an IDE also capable of handling multiple programming languages,
 and is the preferred interface for the Hutch's Scientific Computing group.
 A description of its Git interface is available [here](https://code.visualstudio.com/docs/editor/versioncontrol).
@@ -158,7 +154,7 @@ Information on JupyterLab's extension for Git is [here](https://github.com/jupyt
 more info on specific use in relation to Python is [here](/scicomputing/software_python/#using-jupyter-on-rhino).
 
 ## To Fork or Not to Fork?
-What a question!  Different GitHub repositories will have different procedures for how to contribute to them.  Ideally these procedures are outlined in the README or in the CONTIBUTING markdowns inside the repository itself, though sometimes they are less well documented.  When a GitHub repository is created, you have the option to allow or disallow forking (the default is currently to allow forking).  You also can limit who can make a branch on the repository and additional branch/user access limitations via options in the Settings tab, for `Managing Access` or `Branches`.  There are many options to control how users can interact with a repo that are far too extensive to discuss here.  
+What a question!  Different GitHub repositories will have different procedures for how to contribute to them.  Ideally these procedures are outlined in the README or in the CONTRIBUTING markdowns inside the repository itself, though sometimes they are less well documented.  When a GitHub repository is created, you have the option to allow or disallow forking (the default is currently to allow forking).  You also can limit who can make a branch on the repository and additional branch/user access limitations via options in the Settings tab, for `Managing Access` or `Branches`.  There are many options to control how users can interact with a repo that are far too extensive to discuss here.  
 
 ### Fork!  
 When a user forks a repo, it creates a duplicate repository that is administered by the user themselves and shows up in their own user's list of repo's.  This allows the user to make any changes desired on their own version of the repo but then requires a pull request from the forked repo TO the original repo in order to contribute any commits back to the original repo. Reasons you would want to fork a repo include:

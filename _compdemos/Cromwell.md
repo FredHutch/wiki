@@ -8,7 +8,7 @@ This page should get you started using using the [Cromwell workflow manager](htt
 Cromwell is a software tool that can be used to coordinate and streamline the actual running of bioinformatic (or other analytic) workflows. It is the software that underlies the Broad Institute's [Terra platform](https://terra.bio/).  It's one of several tools and platforms that are able to run workflows written in the WDL language, including [miniWDL](https://miniwdl.readthedocs.io/en/latest/)from the Chan-Zuckerburg initiative, [DNANexus](https://www.dnanexus.com/), and other emerging tools.  
 
 ### Abstracting Storage and Computing Details
-At the Hutch, we have many resources for data storage, software installations and high performance computing available to researchers, which themselves are evolving.  Using a workflow manager that is configured specifically to the types of data storages available at an institution can provide the benefits of "abstracting" or hiding some degree of the logistics involved with actually accessing those data for use in an analysis from the user.  
+At the Hutch, we have many resources for data storage, software installations and high performance computing available to researchers, which themselves are evolving.  Using a workflow manager that is configured specifically to the types of data storage available at an institution can provide the benefits of "abstracting" or hiding some degree of the logistics involved with actually accessing those data for use in an analysis from the user.  
 
 For instance, beyond data storage in our local file system, researchers now have the ability to store data in AWS S3 storage.  Accessing those data for the purposes of using them in workflows requires slightly different knowledge and mechanisms of retrieval (e.g. knowledge of how to use the AWS CLI).  By providing one configuration (or set of instructions for accessing data) for Cromwell that is tailored to what is available at the Hutch, any individual researcher can use Cromwell as an interface to their data, wherever they may be stored.  This intermediate tool then reduces the amount of time and effort on the part of the researcher in understanding the data storage flavor of the day, allowing them to focus more on their data and their analyses.
 
@@ -61,7 +61,7 @@ This means that individual users can:
 ### Writing Workflows
 The Workflow Description Language, or WDL, is intended to be a relatively easy to read workflow language.  There are other workflow languages and workflow managers that run them, but WDL was/is primarily intended to be shared and interpreted by others that may or may not have experience with any given domain-specific language (like Nextflow).  Writing workflows in WDL, therefore, has a fairly low barrier to entry for those of us new to writing workflows.  The specification of the language is actually open source itself, and more about the language can be [found at the OpenWDL site](https://openwdl.org/).  
 
->From OpenWDL:  The Workflow Description Language (WDL) is a way to specify data processing workflows with a human-readable and -writeable syntax. WDL makes it straightforward to define analysis tasks, chain them together in workflows, and parallelize their execution. The language makes common patterns simple to express, while also admitting uncommon or complicated behavior; and strives to achieve portability not only across execution platforms, but also different types of users. Whether one is an analyst, a programmer, an operator of a production system, or any other sort of user, WDL should be accessible and understandable.
+>From OpenWDL:  The Workflow Description Language (WDL) is a way to specify data processing workflows with a human-readable and -writable syntax. WDL makes it straightforward to define analysis tasks, chain them together in workflows, and parallelize their execution. The language makes common patterns simple to express, while also admitting uncommon or complicated behavior; and strives to achieve portability not only across execution platforms, but also different types of users. Whether one is an analyst, a programmer, an operator of a production system, or any other sort of user, WDL should be accessible and understandable.
 
 The basics of this workflow language includes a similar pattern where you specify workflow inputs, the order of tasks and how they pass data between them, and which files are the outputs of the workflow itself.  Then tasks are constructed in the same WDL file  by naming them and providing similar information.  Here's an example of a task that runs `bwa mem` on an interleaved fastq file using a Fred Hutch docker container.  Notice there are sections for the relevant portions of the task, such as `input` (what files or variables are needed), `command` (or what it should run), `output` (which of the generated files is considered the output of the task), and `runtime` (such as what HPC resources and software should be used for this task).  
 
@@ -99,7 +99,7 @@ task BwaMem {
 ```
 
 
-You can find additional WDL documentation in the wild at the [WDL-docs site](https://wdl-docs.readthedocs.io/en/stable/) and the Data Science Lab's [future WDL 102 class that is under devleopment](https://hutchdatascience.org/FH_WDL102_Workflows/).
+You can find additional WDL documentation in the wild at the [WDL-docs site](https://wdl-docs.readthedocs.io/en/stable/) and the Data Science Lab's [future WDL 102 class that is under development](https://hutchdatascience.org/FH_WDL102_Workflows/).
 
 ### Submitting and Monitoring Workflows
 The real strength of Cromwell in particular, as a workflow manager, is that baked into the tool is the ability to interact with the server via an API.  That means that the language of the server is defined and that you can talk to it via anything that can speak that language.  At the Hutch we currently have three ways to interact with Cromwell servers:
@@ -116,7 +116,7 @@ If you make your GitHub repository public, then that repository can be directly 
 
 ## Cromwell Resources at Fred Hutch
 
-To run your own Cromwell server at the Fred Hutch, a variety of possible configurations tailored to the specific resources at Fred Hutch have been created.  You can get started running Cromwell at Fred Hutch using this [Data Science Lab guide: Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/), and there are example workflows to get you started [in this GitHub repo](https://github.com/FredHutch/wdl-test-workflows) and the wider list of Fred Hutch WDL workflwo repo's(https://github.com/fredhutch?q=wdl&type=all&language=&sort=). There is also an associated R package called [fh.wdlR](https://github.com/FredHutch/fh.wdlR) should you want to interact with your server primarily from your desktop R/RStudio.  
+To run your own Cromwell server at the Fred Hutch, a variety of possible configurations tailored to the specific resources at Fred Hutch have been created.  You can get started running Cromwell at Fred Hutch using this [Data Science Lab guide: Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/), and there are example workflows to get you started [in this GitHub repo](https://github.com/FredHutch/wdl-test-workflows) and the wider list of Fred Hutch WDL workflow repo's(https://github.com/fredhutch?q=wdl&type=all&language=&sort=). There is also an associated R package called [fh.wdlR](https://github.com/FredHutch/fh.wdlR) should you want to interact with your server primarily from your desktop R/RStudio.  
 
 Other public GitHub repositories containing WDL or Cromwell related content at the Fred Hutch can be found [via this link to search results](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) and also the [Fred Hutch Workflow Manager GitHub Project](https://github.com/orgs/FredHutch/projects/8) is a resource that is intended to be a collection of links for either of the two Fred Hutch workflow managers that Sam Minot and Amy Paguirigan will be maintaining.  
 
@@ -137,8 +137,7 @@ If you are using Cromwell with containers, there some Docker containers suitable
 
 ## Additional WDL Resources
 
-These plugins help when you are editing your workflow in Atom or VS Code by color coding and finding errors:
-- [WDL Viewer Package](https://atom.io/packages/atom-wdl-viewer) for Atom
+There are plugins available to help when you are editing your workflow in VS Code by color coding and finding errors:
 - [WDL Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=broadinstitute.wdl) for VS Code
 
 These relate to the WDL workflow language itself and example workflows to start from:
