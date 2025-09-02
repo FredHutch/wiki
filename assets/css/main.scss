@@ -38,3 +38,55 @@ html {
 code.language-plaintext.highlighter-rouge {
   background: #afb8c133; // originally #fafafa
 }
+
+/* Notion-like callouts for Minimal Mistakes */
+blockquote.callout {
+  margin: 1.25rem 0;
+  padding: 0.875rem 1rem;
+  border: 0;
+  border-left: 6px solid #d0d7de;
+  border-radius: 10px;
+  background: #f6f8fa;
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+
+  /* remove default MM blockquote styles */
+  font-style: normal;
+}
+
+blockquote.callout > .callout-icon {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: .2rem; /* nudge to align with text */
+  flex: 0 0 auto;
+}
+
+blockquote.callout > .callout-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Title inside callout */
+blockquote.callout .callout-title {
+  font-weight: 700;
+  margin: 0 0 .25rem 0;
+}
+
+/* Variants */
+blockquote.callout--info   { background: #eef6ff; border-left-color: #2b6cb0; }
+blockquote.callout--tip    { background: #ecfdf5; border-left-color: #047857; }
+blockquote.callout--warn   { background: #fff7ed; border-left-color: #c2410c; }
+blockquote.callout--error  { background: #fef2f2; border-left-color: #b91c1c; }
+blockquote.callout--quote  { background: #f6f6ff; border-left-color: #6d28d9; }
+
+blockquote.callout p {
+  margin: 0;            /* tighter paragraph rhythm */
+}
+
+blockquote.callout p + p {
+  margin-top: .5rem;    /* small spacing for multiple paragraphs */
+}
+
+/* Optional: make links stand out a bit */
+blockquote.callout a { text-decoration: underline; }
