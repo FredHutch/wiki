@@ -27,7 +27,7 @@ The "home" drive is of most interest to users of the HPC compute environments- i
 
 There are several options available at the Fred Hutch for storing data in a database system.  These supported systems span a wide range of services to meet the various needs of Fred Hutch researchers.  These include REDCap (supported by Collaborative Data Services based in PHS), MSSQL Server (supported by CIT Enterprise Application Services) and [MyDB](https://mydb.fredhutch.org/) (supported by SciComp providing access to four database engine types: Postgres, MariaDB (MySQL), MongoDB, and Neo4j).
 
-### [Scientific File Storage: Fast and Secure](/scicomputing/store_posix/)
+### [Scientific File Storage: Fast, Working, Secure, and Regulated](/scicomputing/store_posix/)
 
 Scientific file storage keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools. These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
@@ -49,16 +49,16 @@ You will need to consider the security needs of your data sets before placing da
 
 This table describes some of the most common security needs for data sets and how or if each storage system implements that security capability.
 
-|  Feature 	                | Secure File	| Fast File | Economy Cloud | Working    |  hpc/temp  |  OneDrive 	|
-|:-	                        |:-:	        |:-:	    |:-:	        |:-:	     |:-:	      |:-:	        |
-|  Encryption at Rest 	    |        Yes    |      Yes  |          Yes	| Yes        | Yes        |        Yes	|
-|  Encryption in Transit    |        Yes*   |      Yes* |          Yes	| Yes*       | Yes*       |        Yes	|
-|  Access auditing 	        |        Yes	|      Yes  |          Yes  | No         | No         |        Yes	|
-|  Approved for PII by IS 	|        Yes    |      No   |          Yes  | No         | No         |        Yes	|
+|  Feature 	                | Secure File	| Fast File | Economy Cloud | Regulated | Working |  hpc/temp  |  OneDrive 	|
+|:-	                        |:-:	        |:-:	      |:-:	          |:-:        |:-:	    |:-:	       |:-:	        |
+|  Encryption at Rest 	    |        Yes  |      Yes  |          Yes	| Yes       | Yes     | Yes        |        Yes	|
+|  Encryption in Transit    |        Yes* |      Yes* |          Yes	| Yes*      | Yes*    | Yes*       |        Yes	|
+|  Access auditing 	        |        Yes	|      Yes  |          Yes  | No        | No      | No         |        Yes	|
+|  Approved for PII by IS 	|        Yes  |      No   |          Yes  | No        | No      | No         |        Yes	|
 
 *) Transit encryption is only available when the data is accessed by SMB mounts- Windows and newer OSX systems use SMB. The HPC systems (e.g. rhino, gizmo) use NFS which is not encrypted.  However, this traffic is confined to a secure data center.
 
-At this time both _fast_, _working_, and _secure_ storage platforms have the same capabilities for encryption, access auditing, and backups.  _Secure_ has a more capable mechanism for managing access permissions that allows more flexibility in assigning those permissions.  Contact scicomp if you think you may need these capabilities.
+At this time both _fast_, _working_, _regulated_, and _secure_ storage platforms have the similar capabilities for encryption and access auditing.  _Secure_ has a more capable mechanism for managing access permissions that allows more flexibility in assigning those permissions.
 
 ## Allocations and Costs
 
