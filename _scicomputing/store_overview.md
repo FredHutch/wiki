@@ -68,18 +68,21 @@ Home | No Charge (100GB limit) |  On campus storage with offsite replication. 7 
 Fast | $$$ beyond 5TB per PI |  On campus storage with offsite replication. 7 days of snapshots, daily backups | Large instrument files and data sets that need high performance access to computing resources, Unix file permissions, but not temporary data (such as intermediate files)
 Economy Cloud | $ beyond 100TB per PI |  Offsite storage (cloud) with multi-datacenter replication, 90 day undelete with request to `helpdesk` | Best for archiving large data sets, or primary storage of large files.  Good for PHI or other data that requires encryption and auditing. *Requires Desktop Client to access, see [Object Storage page.](/scicomputing/store_objectstore/)*
 Working | Charge for quotas over 20TB | On campus storage, snapshots, not backed up | Working data sets with a primary copy on durable storage (e.g. a primary copy in S3) *See [Working Storage](/scicomputing/store_working)*
+Regulated | TBD | On campus storage, snapshots, not backed up | Data sets covered by regulation or agreement with a primary copy on durable storage (e.g. a primary copy in S3) *See [Regulated Storage](/scicomputing/store_regulated)*
 hpc/temp | No Charge | On campus storage, no snapshots, not backed up | Temporary files, such as those intermediate to a final result that only need to persist during a job, and secondary copies of files used in analysis but with a primary copy on more durable storage  *Appropriate use  can significantly reduce data storage costs- see the [hpc/temp](/scicomputing/store_temp/) page.*
 OneDrive | No Charge | Offsite storage (cloud) with multi-datacenter replicaiton. No backups, but a "Recycle Bin" is available | Documents, spreadsheets, and other similar administrative files
 
 Additional details for other CIT file services such as `Secure File` (aka J or R drive) features are available on [Centernet](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html).
 
-For expenses charged to your group for data storage in these systems, please see the [storage usage dashboard](https://grafana.fredhutch.org/d/dy5I3SIMk/data-core-storage-usage/). If you are interested in a breakdown of your storage utilization by folder you can get these details at [Storage HotSpots](https://storage-hotspots.fhcrc.org/). Please select your PI as owner. You can also export all data as CSV. (Please note: for performance reasons only folders > 1GB without subfolders are shown here). For pricing information please check [this page](https://centernet.fredhutch.org/cn/u/shared-resources/data-resource.html) on CenterNet. 
+For chargeback information and amounts please check [this page](https://centernet.fredhutch.org/cn/u/shared-resources/data-resource.html) on CenterNet. 
 
 ## Data Storage Guidance
 
 Most Fred Hutch based researchers using large scale biomedical data sets initially store their data using Fast storage alongside their smaller scale laboratory data. This provides direct, rapid access to files both manually (e.g., via mapping a drive to a workstation) and to local computing resources (via our HPC cluster, see below). However, a strategy for where, when and for how long to store what size data is important to create to ensure that data access by researcher or compute resource, transfer and archiving are not unnecessarily complicated thus hindering the research process.
 
 Depending on the type of data used by a research group, different combinations of data storage options may be appropriate. Assessing the strengths, mode of access, and interactivity with computing resources of each of these types of data storage options alongside an assessment of the types of data a research group use and the type of interactions with those data is becoming more important for researchers. This assessment also is becoming more important to repeat over time as data storage and connectivity infrastructure changes and as the particular data types and interactions of research groups evolve.
+
+For help determining what storage options are appropriate for your data, schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) with Data Governance
 
 ### Storing protected health information (PHI) data
 
@@ -93,4 +96,4 @@ The Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhut
 
   - For consulting about how to handle large amounts of externally or internally generated data email `scicomp`.
   - For additional assistance regarding data generated via the Fred Hutch Genomics Shared Resource, email `bioinformatics`.
-  - For consultation about data management and strategies, schedule a [Data House Call](https://hutchdatascience.org/datahousecalls/) with the Data Science Lab. 
+  - For consultation about data management and strategies, schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) with the Data Science Lab. 
