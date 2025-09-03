@@ -10,8 +10,11 @@ To meet the data management and access requirements for data sets covered by dat
 Currently the regulated storage service is designed to meet the data management and access requirements in the [NIH Genomic Data Sharing (GDS) Policy][gds-policy] outlined in NIH notice [NOT-OD-24-157][nih-notice]. While we are not currently configuring regulated storage for other DUAs, this is on the roadmap for this service.
 {: .notice--info}
 
-For more information about regulated storage please email `scicomp` or schedule
-a [Data House Call][dhc].
+For more information about regulated storage please email `scicomp` or schedule a [Data House Call][dhc].
+
+## Provisioning
+
+Regulated data storage is provisioned by [SciComp](https://centernet.fredhutch.org/u/it/scicomp.html) after a data stewardship agreement has been created and executed.  Contact [Data Governance](https://centernet.fredhutch.org/u/data-science-lab/data-governance.html) to start that process.
 
 ## Data Protection
 
