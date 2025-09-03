@@ -7,104 +7,114 @@ This section describes how to get access and credentials to computing systems on
 
 ## HutchNet ID
 
-A HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate. It is also called Network login or Active Directory credentials. You can use it to login to most resources at the Center (Desktop Computer, Employee Self Service, VPN, Webmail) as well to Scientific Computing systems such as `Rhino` (`ssh rhino`), which is the login system to large scale cluster computing resources like `Gizmo`.
+### Overview
+- HutchNet ID is the standard login name and password you receive when you start working at the Hutch or are an official affiliate.
+- Also known as Network login or Active Directory credentials.
+- Use it to login to most resources at the Center (e.g., Desktop Computer, Employee Self Service, VPN, Webmail) and to Scientific Computing systems like `Rhino` (`ssh rhino`).
 
-If one of your collaborators requires access to the Fred Hutch network you can submit a [non-employee action form](https://centernet.fredhutch.org/cn/f/hr/lcex/non-employee-action-form.html). Non-employees is a generic administrative term for affiliates, students, contractors, etc.
+### Collaboration
+- For collaborators requiring access to the Fred Hutch network, submit a [non-employee action form](https://centernet.fredhutch.org/cn/f/hr/lcex/non-employee-action-form.html).
+- Non-employees include affiliates, students, contractors, etc.
 
-Please see the Service Desk site on CenterNet for more information about [HutchNet ID](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html) including password rotation, etc.
+### More Information
+- Visit the Service Desk site on CenterNet for more details about [HutchNet ID](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html), including password rotation.
 
 ## SciComp Self-Service
 
-[SciComp Self-Service](https://scicomp-self-service.fredhutch.org/) allows you to gain access to some resources without submitting a ticket.  You can currently use this to do the following:
+[SciComp Self-Service](https://scicomp-self-service.fredhutch.org/) allows you to access some resources without submitting a ticket.
 
-- Add a new member to your lab group 
-- Enable cluster access for yourself under your lab's Slurm account
-- Check to see if you have the correct access needed to complete the [Intro to Fred Hutch Cluster Computing workshop](https://hutchdatascience.org/FH_Cluster_101/)
+### Features
+- Add a new member to your lab group.
+- Enable cluster access for yourself under your lab's Slurm account.
+- Ensure you have the correct access for the [Intro to Fred Hutch Cluster Computing workshop](https://hutchdatascience.org/FH_Cluster_101/).
 
 ## Accessing Slurm Clusters
 
-To use Slurm clusters like `gizmo` you also need to have your HutchNet ID associated with a PI account.  Errors similar to "Invalid account or account/partition" typically indicate that this association hasn't been set up.  Contact Scientific Computing to have this corrected or use [SciComp Self-Service](#scicomp-self-service).
+### Requirements
+- HutchNet ID must be associated with a PI account to use Slurm clusters like `gizmo`.
+- Errors like "Invalid account or account/partition" indicate issues with this setup.
+- Contact Scientific Computing for corrections or use [SciComp Self-Service](#scicomp-self-service).
 
 ## GitHub.com
 
-The [Fred Hutch GitHub organization](https://github.com/FredHutch) offers free access to public and private git repositories to all Fred Hutch staff and collaborators. If you are a Fred Hutch employee working with source code and don't have a github.com account yet, please [create one](https://github.com/join) and email `scicomp`: "Please add my GitHub user id `xyz` to organization github.com/FredHutch". Once you are a member of the organization you can create repositories, teams and invite external collaborators to share and edit code.
+### Fred Hutch GitHub Organization
+- Provides free access to public and private repositories to all Fred Hutch staff and collaborators.
+- If you are a Fred Hutch employee working with source code, create a GitHub account and email `scicomp` to add your user ID to the organization.
 
->Note: www.github.com/FredHutch is the only officially approved cloud based source code system at Fred Hutch. It has security features that are otherwise not available via other systems.
+> Note: www.github.com/FredHutch is the only officially approved cloud-based source code system at Fred Hutch, featuring security not available in other systems.
 
-Once you are a member of the organization you can create repositories and invite external collaborators to share and edit code. If you plan to work collaboratively with a group of people, we recommend you learn about roles available to GitHub users, and consider creating a team to control permissions and access (members of the Fred Hutch GitHub organization are allowed to create teams). Please see [this GitHub help article](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/organizing-members-into-teams) for more information.
+### Collaboration
+- Create repositories, teams, and invite external collaborators post membership.
+- Consider creating a team for permissions control when collaborating.
+- See [GitHub help article](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/organizing-members-into-teams) for more information.
 
-A GitHub account is different from other accounts in that your account is independent from your employment at the Hutch. If you end your employment with the Hutch, you will be removed from the Fred Hutch organization on GitHub. If you have continuing collaborations, your colleagues still working at the Hutch can add you as an external collaborator to their GitHub repositories.
+### Account Independence
+- GitHub account is independent from employment at Hutch.
+- Upon leaving, you will be removed from the Fred Hutch organization but can be added as an external collaborator.
 
-We have a Code Management primer that provides more information about [git and GitHub](/scicomputing/software_managecode/) in general and specifically here at the Fred Hutch.  
+### Code Management Primer
+- Provides more information on [git and GitHub](/scicomputing/software_managecode/) at Fred Hutch.
 
-### Guidance for Managing Credentials and Passwords
-One issue to note when using GitHub to do version control in your code is that it can be very straightforward to inadvertently push content to GitHub that includes things such as API tokens, usernames and passwords, or even your AWS credentials themselves.  Please take care to structure your code in such a way that these "secrets" or anything you perceive to be private information (see our [Security page](/datascience/privacy_security/) for more information about what this might be) are loaded from an external file or environment variables that themselves are not sent to GitHub!!
+### Credential Management
+- Avoid pushing sensitive data like API tokens, usernames, passwords, or AWS credentials to GitHub.
+- Structure code to load secrets from external files or environment variables.
+- Refer to the [Security page](/datascience/privacy_security/) for more details.
 
 ## Amazon Web Services (AWS)
 
-[Amazon Web Services](https://aws.amazon.com/) (AWS) credentials are required to use AWS.  AWS credentials are tied to HutchNet IDs. Using your HutchNet ID you can obtain temporary Access and Secret Keys. HutchNet are designated per user, so each Fred Hutch employee should obtain their own credentials. Each lab has their own AWS account, allowing access to both data storage (e.g., the lab's S3 bucket) and compute (e.g., _AWS Batch_).
+### Access Requirements
+- AWS credentials tied to HutchNet IDs; necessary for using AWS services.
+- Obtain temporary Access and Secret Keys using your HutchNet ID.
+- Separate credentials needed for each employee and lab account.
 
->Note: Access and Secret Keys obtained through the AWS SSO portal are temporary and must be refreshed after 12 hours
+> Note: Keys obtained through AWS SSO portal are temporary and must be refreshed every 12 hours.
 
->Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `helpdesk` to request support from the cloud team (CLD)
+### Security Precautions
+- Ensure AWS credentials are never shared directly or indirectly.
+- For external collaborator credentials or permissions issues, contact `helpdesk` for cloud team support (CLD).
 
-To get AWS credentials, visit the [MyApps](https://myapps.microsoft.com) dashboard and click the square entitled `AWS IAM Identity Center`. Sign in with your HutchNet ID and password. 
+### Obtaining Credentials
+- Visit [MyApps](https://myapps.microsoft.com) dashboard and select `AWS IAM Identity Center`.
+- Sign in with your HutchNet ID and password.
+- Your account will be listed (e.g., `fh-pi-doe-j` for PI Jane Doe).
+- Two links provided:
+  - **Left**: AWS console (web browser interface).
+  - **Right**: `Access keys` for AWS usage outside a browser.
 
-This will take you to a screen called `AWS accounts`. You should see your account listed.  For example, if your PI is Jane Doe, you should see `fh-pi-doe-j` listed.  Click the triangle to the left of the account name. Now you'll see two links.  The link on the left will take you to the AWS console, which is web browser interface to Amazon Web Services. The link on the right (`Access keys`) will give you the credentials you need to use AWS outside of a browser.
-
-Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
+### More Information
+- Read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) on our wiki pages.
 
 ### Configure AWS CLI
 
-You should be on the `Get credentials` page as described in the previous section,
-and you should have a terminal window connected to one of the `rhino` machines via [ssh](https://sciwiki.fredhutch.org/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources). 
+- Connect to a `rhino` machine via [ssh](https://sciwiki.fredhutch.org/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources).
+- Load the `awscli` module (`ml awscli`).
+- Run `aws configure sso` and follow prompts:
 
-Load the `awscli` module (with the `ml awscli` command), then run `aws configure sso`.
-For `SSO session name` you can enter any string. For `SSO start URL`, enter the `SSO start URL` shown in your browser. For `SSO region`, enter `us-west-2`. For `SSO registration scopes`, press Enter. 
+  - For `SSO session name`, enter any string.
+  - For `SSO start URL`, enter the URL shown in your browser.
+  - For `SSO region`, enter `us-west-2`.
+  - For `SSO registration scopes`, press Enter.
 
-You will now see a URL and a code displayed. Copy and paste the URL into your browser, and enter the code on the resulting page. Click `Allow Access`. 
+- Follow further instructions to authorize access and set up the CLI profile.
 
-If you have access to more than one AWS account, you should now choose the same account
-you choose in the last step, then press Enter. 
-For `CLI default client Region`, press Enter. For `CLI default output format`, press Enter.
+### Using Motuz and AWS CLI for SSO
 
-The next and final piece of information to fill in is the `CLI profile name`. If you have access to more than one AWS account, it is suggested to set a profile per AWS account. Use a name which will be easy to remember and differentiate from other accounts. 
+- Access AWS accounts using SSO authentication via provided portal URL.
+- Configure AWS CLI profiles for each account, allowing specific command executions.
+- Use [Motuz](/compdemos/motuz/) with SSO credentials:
+  - Select `Access keys` in the SSO portal.
+  - Set `S3 Connection Type` to `Temporary Security Credentials (STS)`.
+  - Paste Access Key ID, Secret Access Key, and Session Token.
+  - Update these every 8 hours due to credential expiration.
 
-The terminal will now display the following:
+## Using the AWS CLI with SSO:
 
-```
-To use this profile, specify the profile name using --profile, as shown:
+### Steps
+1. **Configure SSO profile:** 
 
-aws s3 ls --profile yourProfileName
-```
-
-The `--profile default` flag is not necessary if you are using the default profile.
-
-The following section will describe how to test and use your credentials. To use your profile you can use `aws sso login --profile yourProfileName`, this will log you into your SSO profile for the duration of the session length (8 hours)
-
-
-### Configure Motuz and AWS CLI for Single Sign-on (SSO)
-To access an AWS account using SSO authentication, a user signs in to the AWS access portal URL provided, IAM Identity Center redirects the request to an authentication service. 
-
-After authentication with a HutchNet ID, the user will have SSO access to all AWS accounts through the AWS console and applications without additional sign-in requirements (Username and Password)
-
-To use the AWS CLI with your sso credentials please follow the instructions for configuring your CLI profiles. You can configure an AWS CLI profile for each AWS account you have access to, allowing you to make differing CLI commands based on the access you have in each account.
-
-
-## Using Motuz with SSO:
-
-To use [Motuz](/compdemos/motuz/) with SSO credentials, click `Access keys` in the SSO portal for your account. Scroll down to the bottom where it says `Option 3`. 
-In Motuz, create a new Cloud Connection. Be sure and change `S3 Connection Type` to `Temporary Security Credentials (STS)`. Copy and paste the values for Access Key ID, Secret Access Key, and Session Token from the SSO portal to the corresponding fields in Motuz. 
-You will need to update these fields each time you use motuz, as the credentials expire after 8 hours. 
-
-## Using the AWS CLI with SSO: 
-
-1. Configure SSO profile: Use the command
-
-```bash
-aws configure sso 
-```
-
+   ```bash
+   aws configure sso
+   ```
 to set up your SSO profile locally on your machine. [More information here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-configure  
 ).
 
