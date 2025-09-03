@@ -63,3 +63,10 @@ the [PROOF guide](/datademos/proof-how-to) for more information.
 [gds-policy]: https://grants.nih.gov/grants/guide/notice-files/not-od-14-124.html
 [nih-notice]: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-24-157.html
 [dhc]: https://ocdo.fredhutch.org/programs/dhc.html
+
+## Quotas and Charges
+
+There are currently no quotas or charges for _regulated_ storage.
+
+This will change- the exact parameters have not been determined at this time (Sep 2025) but there will be some chargeback for usage and a quota to manage space on the underlying storage server
+{: .notice--warning}
