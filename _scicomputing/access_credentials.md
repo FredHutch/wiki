@@ -105,7 +105,7 @@ This section describes how to get access and credentials to computing systems on
   - Select `Access keys` in the SSO portal.
   - Set `S3 Connection Type` to `Temporary Security Credentials (STS)`.
   - Paste Access Key ID, Secret Access Key, and Session Token.
-  - Update these every 8 hours due to credential expiration.
+  - Update these every 12 hours due to credential expiration.
 
 ## Using the AWS CLI with SSO:
 
