@@ -1,6 +1,8 @@
 ---
 title: Large Scale Computing Overview
 primary_reviewers: bmcgough
+layout: single_with_categories
+categories: ["computing_platforms", "software_development"]
 ---
 
 Researchers are more and more likely to need to analyze raw data sets using some sort of analysis process before they can be interpreted in the context of the scientific question. Raw data, whether from an array or sequencing for example, are not typically directly interpretable results, thus require some degree of processing. The nature of the processing depends on the data type, the platform with which the data were generated, and the biological question being asked of the data set. How this process is performed depends on the specific project, but support and resources for this process are available at the Fred Hutch for a variety of needs.
