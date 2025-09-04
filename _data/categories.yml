@@ -1,0 +1,100 @@
+# Category definitions for Wikipedia-style category boxes
+# Each category has an id, title, description, and list of related articles/links
+
+computing_platforms:
+  title: "Computing Platforms"
+  description: "Articles related to high-performance computing, cloud computing, and computational resources"
+  color: "#e3f2fd"  # light blue
+  links:
+    - title: "Gizmo Cluster"
+      url: "/scicomputing/compute_platforms/"
+    - title: "Cloud Computing"
+      url: "/scicomputing/compute_cloud/"
+    - title: "GPU Computing"
+      url: "/scicomputing/compute_gpu/"
+    - title: "Job Scheduling"
+      url: "/scicomputing/compute_job_scheduling/"
+
+data_storage:
+  title: "Data Storage"
+  description: "Resources for storing, managing, and accessing research data"
+  color: "#f3e5f5"  # light purple
+  links:
+    - title: "Storage Overview"
+      url: "/scicomputing/store_overview/"
+    - title: "POSIX Storage"
+      url: "/scicomputing/store_posix/"
+    - title: "Object Storage (S3)"
+      url: "/scicomputing/store_objectstore/"
+    - title: "Databases"
+      url: "/scicomputing/store_databases/"
+
+software_development:
+  title: "Software Development"
+  description: "Programming languages, development tools, and coding best practices"
+  color: "#e8f5e8"  # light green
+  links:
+    - title: "R and RStudio"
+      url: "/scicomputing/software_R/"
+    - title: "Python"
+      url: "/scicomputing/software_python/"
+    - title: "Linux/Unix"
+      url: "/scicomputing/software_linux101/"
+    - title: "Code Management"
+      url: "/scicomputing/software_managecode/"
+
+data_science:
+  title: "Data Science"
+  description: "Data analysis, visualization, and scientific computing workflows"
+  color: "#fff3e0"  # light orange
+  links:
+    - title: "Data Science Lifecycle"
+      url: "/datascience/data_science_lifecycle/"
+    - title: "Data Visualization"
+      url: "/datascience/data_viz/"
+    - title: "Workflow Managers"
+      url: "/datascience/using_workflows/"
+    - title: "Reference Genomes"
+      url: "/datascience/refgenomes/"
+
+security_compliance:
+  title: "Security & Compliance"
+  description: "Data privacy, security protocols, and regulatory compliance"
+  color: "#ffebee"  # light red
+  links:
+    - title: "Data Privacy & Security"
+      url: "/datascience/privacy_security/"
+    - title: "PHI and Research"
+      url: "/datascience/phi/"
+    - title: "IRB and Consenting"
+      url: "/datascience/consent_IRB/"
+    - title: "NIH Data Sharing"
+      url: "/datascience/nih_data_sharing/"
+
+access_credentials:
+  title: "Access & Credentials"
+  description: "Authentication, permissions, and system access methods"
+  color: "#f1f8e9"  # light lime
+  links:
+    - title: "Access Overview"
+      url: "/scicomputing/access_overview/"
+    - title: "Credentials"
+      url: "/scicomputing/access_credentials/"
+    - title: "Permissions"
+      url: "/scicomputing/access_permissions/"
+    - title: "AWS Access"
+      url: "/scicomputing/access_aws/"
+
+bioinformatics:
+  title: "Bioinformatics"
+  description: "Genomics, proteomics, and biological data analysis tools"
+  color: "#e0f2f1"  # light teal
+  links:
+    - title: "Reference Genomes"
+      url: "/datascience/refgenomes/"
+    - title: "Nextflow Catalog"
+      url: "/datascience/nextflow_catalog/"
+    - title: "cBioPortal"
+      url: "/datascience/cbioportal/"
+    - title: "Generating Genomics Data"
+      url: "/datascience/datagen_assayPrep/"
