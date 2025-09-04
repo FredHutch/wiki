@@ -180,4 +180,4 @@ deploy:
     sleep 15
     echo $SC_SWARM_CICD_SSH_KEY | base64 -d > ./sc_swarm_cicd_ssh_key
     chmod 0400 ./sc_swarm_cicd_ssh_key
-    python3 build_helper.py docker-compose.yml | ssh -i ./sc_swarm_cicd_ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@sc-swarm-mgr.fhcrc.org docker stack deploy --with-registry-auth -c - wiki
+    python3 build_helper.py --no-logging docker-compose.yml | ssh -i ./sc_swarm_cicd_ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@sc-swarm-mgr.fhcrc.org docker stack deploy --with-registry-auth -c - wiki
