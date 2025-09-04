@@ -74,7 +74,7 @@ This section describes how to get access and credentials to computing systems on
 - For external collaborator credentials or permissions issues, contact `helpdesk` for cloud team support (CLD).
 
 ### Obtaining Credentials
-- Visit [MyApps](https://myapps.microsoft.com) dashboard and select `AWS IAM Identity Center`.
+- Visit [MyApps](https://myapps.microsoft.com) dashboard and select `AWS Portal`.
 - Sign in with your HutchNet ID and password.
 - Your account will be listed (e.g., `fh-pi-doe-j` for PI Jane Doe).
 - Two links provided:
@@ -120,7 +120,7 @@ to set up your SSO profile locally on your machine. [More information here](http
 
 2. Login with SSO: 
 
-Run `aws sso login` in your terminal to initiate an SSO session and retrieve temporary credentials. 
+Run `aws sso login --profile yourProfileName` in your terminal to initiate an SSO session and retrieve temporary credentials. If you are using the default profile you do not need to specify the profile name 
 3. Access AWS services:
 
 Once logged in, use the AWS CLI commands as usual, utilizing the temporary credentials obtained through SSO. 
