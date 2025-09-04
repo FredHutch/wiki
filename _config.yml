@@ -62,6 +62,9 @@ collections:
   rModules:
     output: true
     permalink: /:collection/:path/
+  backlinks:
+    output: true
+    permalink: /backlinks/:path/
 
 
 atom_feed:
@@ -246,6 +249,16 @@ defaults:
       share: true
       sidebar:
         nav: "scicomputing"
+# _backlinks
+  - scope:
+      path: ""
+      type: backlinks
+    values:
+      layout: single
+      share: false
+      sitemap: false
+      search: false
+      toc: false
 
 
 
