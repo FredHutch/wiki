@@ -95,7 +95,7 @@ Getting your data set up to be accessible via Globus starts with an email to sci
  - are necessary agreements in place? Do you have a DUA or DTA?
  - who is the data owner (where it's not a lab PI)
  - who are the data managers
- - should the mapped collection be [public or private](#collection_visibility)
+ - should the mapped collection be [public or private](#collection-visibility)
  - which data sources should be made available via Globus- fast, working, economy, temp, etc.
 
 After this, the data owner and managers will be given links to information about creating guest collections for collaborations and signed up for notices about the Globus services.
