@@ -25,7 +25,7 @@ Fred Hutch Cloud offers access to Amazon Batch Computing environments and AWS EC
 ## Adding IAM Role to Existing EC2 Instance
 
 Follow [this guide](https://repost.aws/knowledge-center/attach-replace-ec2-instance-profile) to add the IAM role to the EC2 instance profile. 
-**Note:** Stop and start the instance for SSM Agent to recognize the change.
+> **Note:** Stop and start the instance for SSM Agent to recognize the change.
 
 ## Generate a Key Pair (Optional)
 
@@ -48,7 +48,7 @@ Two ways to access EC2 via command line:
    ```sh
    aws ssm start-session --target <instance-id> --profile <sso-profile>
    ```
-2. Using SSH with SSM 
+2. **Using SSH with SSM**
 Uses SSH as the frontend and SSM start-session as the proxy.
 Requires SSH keys.
          
@@ -58,8 +58,8 @@ Requires SSH keys.
 
 Configure AWS CLI to log into the right account: 
 sh
-1. aws configure sso
-Follow the AWS SSO guide . 
+1. **aws configure sso**
+Follow the AWS SSO guide under `Access Credentials` section. 
 
 2. Access EC2 Using SSM start-session 
 Follow the guide  to start a session with EC2 using SSM start-session. 
