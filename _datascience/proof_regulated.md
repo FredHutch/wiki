@@ -28,8 +28,10 @@ checkbox with the option to use regulated data:
 
 ![](/datascience/assets/proof/start-proof-reg-server.png)
 
-Check the box and click "Start." If you already had a PROOF server running, you
-will need to stop that server, and then start a new regulated server.
+Check the box and click "Start."
+
+If you already had a PROOF server running, you will need to stop that server, and then start a new regulated server.
+{: .notice--warn}
 
 Once the server starts, there will be several indications that you are using a
 regulated PROOF server:
