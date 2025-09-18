@@ -95,6 +95,8 @@ datascience:
     children:
       - title: PROOF
         url: /datascience/proof/
+      - title: WILDS Docker Library
+        url: /datascience/wilds_docker/
       - title: cBioPortal
         url: /datascience/cbioportal/
       - title: Workflow Managers
