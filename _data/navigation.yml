@@ -95,6 +95,8 @@ datascience:
     children:
       - title: PROOF
         url: /datascience/proof/
+      - title: WILDS WDL Library
+        url: /datascience/wilds_wdl/
       - title: cBioPortal
         url: /datascience/cbioportal/
       - title: Workflow Managers
