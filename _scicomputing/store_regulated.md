@@ -5,20 +5,20 @@ primary_reviewers: scicomp
 
 ## Overview
 
-To meet the data management and access requirements for data sets covered by data use agreements, regulated storage can be configured for each of these datasets.  Regulated storage tailors backup, retention, and access policies for a regulated directory to align with the data use agreement.
+To meet NIH Genomic Data Security Policy, regulated storage is configured for datasets covered by Data Use Certifications (DUC). 
 
-Currently the regulated storage service is designed to meet the data management and access requirements in the [NIH Genomic Data Sharing (GDS) Policy][gds-policy] outlined in NIH notice [NOT-OD-24-157][nih-notice]. While we are not currently configuring regulated storage for other DUAs, this is on the roadmap for this service.
+Currently the regulated storage service is designed to meet the data management and access requirements in the [NIH Genomic Data Sharing (GDS) Policy][gds-policy] outlined in NIH notice [NOT-OD-24-157][nih-notice]. While we are not currently configuring regulated storage for other DUCs or DUAs, this is on the roadmap for this service.
 {: .notice--info}
 
-For more information about regulated storage please email `scicomp` or schedule a [Data House Call][dhc] with the Data Governance team.
+For more information about access and use regulated storage please email `scicomp`. If you would like to learn about the process of creating an appropriate data stewardship plan, schedule a [Data House Call][dhc] with the Data Governance team.
 
 ## Provisioning
 
-Regulated data storage is provisioned by [SciComp](https://centernet.fredhutch.org/u/it/scicomp.html) after a data stewardship agreement has been created and executed.  Contact [Data Governance](https://centernet.fredhutch.org/u/data-science-lab/data-governance.html) to start that process.
+Regulated data storage is provisioned by [SciComp](https://centernet.fredhutch.org/u/it/scicomp.html) after a data stewardship plan has been created and executed. You can visit the Data Governance team's page about [NIH Repository Data Access][ocdodg-nihrda] for more information, including how to start that process.
 
-## Data Protection
+## Data Loss Safeguards
 
-Data protection in _regulated_ is minimal.  There are two snapshots taken approximately 30 minutes apart.  There are no backups or replicas (on or off campus).
+Data loss safeguards in _regulated_ are minimal.  There are two snapshots taken approximately 30 minutes apart.  There are no backups or replicas (on or off campus).
 
 
 Backups are being considered, but there are no immediate plans to provide backups of data in regulated storage.
@@ -73,3 +73,4 @@ This will change- the exact parameters have not been determined at this time (Se
 [gds-policy]: https://grants.nih.gov/grants/guide/notice-files/not-od-14-124.html
 [nih-notice]: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-24-157.html
 [dhc]: https://ocdo.fredhutch.org/programs/dhc.html
+[ocdodg-nihrda]: https://centernet.fredhutch.org/u/data-science-lab/data-governance/data-access-request-data-use-certification-agreement.html
