@@ -24,15 +24,6 @@ Data protection in _regulated_ is minimal.  There are two {% glossary snapshot, 
 Backups are being considered, but there are no immediate plans to provide backups of data in regulated storage.
 {: .notice--info}
 
-## Data Lifecycle
-
-Data in the `temp` directories are purged after 30 days similar to data in the _temp_ filesystem.
-
-Data in regulated directories are not lifecycled or purged.
-
-The data steward for the project is responsible for removing regulated data upon the expiry of the data use agreement
-{: .notice--warning}
-
 ## Accessing Regulated Storage
 
 Regulated storage is available in the rhino/gizmo compute environment under the path `/fh/regulated`.  This is organized by PI, with each regulated data set stored in its own directory:
@@ -54,6 +45,15 @@ There are also directories configured for each user with access to a regulated d
         ├── usera
         ├── userb
 ```
+
+## Data Lifecycle
+
+Data in the `temp` directories are purged after 30 days similar to data in the _temp_ filesystem.
+
+Data in regulated directories are not lifecycled or purged.
+
+The data steward for the project is responsible for removing regulated data upon the expiry of the data use agreement
+{: .notice--warning}
 
 ### PROOF Compatibility
 
