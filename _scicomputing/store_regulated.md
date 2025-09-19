@@ -59,7 +59,7 @@ The data steward for the project is responsible for removing regulated data upon
 
 We recommend using [PROOF](/datascience/proof) to orchestrate the analysis 
 of genomic data stored on `/fh/regulated`. PROOF has features to ensure that
-**some but not all** of the intermediate files and artifacts are created during
+**some but not all** of the intermediate files and artifacts created during
 genomic data analysis are handled in compliance with the NIH GDS Policy. See
 the [PROOF guide](/datademos/proof-how-to) for more information.
 
