@@ -137,7 +137,6 @@ If there's a tool you'd like to see or a task you want written you can file an [
 
 - [WDL Best Practices Guide](https://getwilds.org/guide/)
 - [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library)
-- [Fred Hutch Scientific Computing](https://sciwiki.fredhutch.org/)
 - [Contributing Guidelines](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md)
 
 
