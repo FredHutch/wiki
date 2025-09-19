@@ -53,6 +53,7 @@ Fill out the [Access Request Form](https://redcap.fredhutch.org/surveys/?s=AWWH7
 You'll need:
 - Info on whether your data includes **identifiable patient information**
 - Your **IRB details** (IRB #, RG #, approval letter, protocol)
+- Gene panel (if available) _If your dataset was generated using a sequencing panel, that panel must first be uploaded into the FH cBioPortal before your dataset can be added. You can check the list of available panels [here](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/6_available_panels_on_fh_cbio_instance) or learn more about formatting your own custom panel [here](https://docs.cbioportal.org/import-gene-panels/#gene-panel-file-format)._
 
 ⚠️ Only upload data approved for the IRB and data types listed in your form. Violations may result in study removal.
 
