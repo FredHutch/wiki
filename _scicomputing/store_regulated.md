@@ -18,7 +18,7 @@ Regulated data storage is provisioned by [SciComp](https://centernet.fredhutch.o
 
 ## Data Protection
 
-Data protection in _regulated_ is minimal.  There are two {% glossary snapshots %} taken approximately 30 minutes apart.  There are no {% glossary backups %} or replicas (on or off campus).
+Data protection in _regulated_ is minimal.  There are two {% glossary snapshot, display: snapshots %} taken approximately 30 minutes apart.  There are no {% glossary backup, display: backups %} or replicas (on or off campus).
 
 
 Backups are being considered, but there are no immediate plans to provide backups of data in regulated storage.
