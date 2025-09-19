@@ -58,7 +58,7 @@ This table describes some of the most common security needs for data sets and ho
 
 *) Transit encryption is only available when the data is accessed by SMB mounts- Windows and newer OSX systems use SMB. The HPC systems (e.g. rhino, gizmo) use NFS which is not encrypted.  However, this traffic is confined to a secure data center.
 
-At this time both _fast_, _working_, _regulated_, and _secure_ storage platforms have the similar capabilities for encryption and access auditing.  _Secure_ has a more capable mechanism for managing access permissions that allows more flexibility in assigning those permissions.
+At this time _fast_, _working_, _regulated_, and _secure_ storage platforms have the similar capabilities for encryption and access auditing.  _Secure_ has a more capable mechanism for managing access permissions that allows more flexibility in assigning those permissions.
 
 ## Allocations and Costs
 
