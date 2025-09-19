@@ -63,3 +63,7 @@
 - term: IRB
   definition: Institutional Review Board – a committee that reviews and approves research involving human subjects to ensure ethical standards are met.
   url: https://extranet.fredhutch.org/en/u/irb.html
+- term: backup
+  definition: "backup" is a nebulous term- typically when we use this term we are referring to images of file systems taken at a point in time and available when the storage system is unavailable
+- term: snapshot
+  definition: A snapshot is a point-in-time image of a file system that is accessible from the file system.  Snapshots are not substitutes for backups.
