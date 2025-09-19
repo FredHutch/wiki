@@ -4,11 +4,11 @@ main_author: Amy Paguirigan
 primary_reviewers: vortexing
 ---
 
-Before ingesting any external data sets, please refer to the [Overview of Data Storage at Fred Hutch](/scicomputing/store_overview/) page to begin to identify the final home of the data you are ingesting.  Choosing a location will depend on how large the data are, how often you need to access them, and what type of security concerns might apply to the dataset.  
+Before ingesting any external data sets, please refer to the [Overview of Data Storage at Fred Hutch](/scicomputing/store_overview/) page to begin to identify the final home of the data you are ingesting.  Choosing a location will depend on how large the data are, how often you need to access them, and what type of security concerns might apply to the dataset.
 
-Once you have an idea where the data will need to live at Fred Hutch, you can begin the process of transferring them to Fred Hutch supported data storage systems.  
+Once you have an idea where the data will need to live at Fred Hutch, you can begin the process of transferring them to Fred Hutch supported data storage systems.
 
-Ideally, one wouldn't transfer large amounts of data intended to be temporary into systems like *Fast* storage as that data will be included in the frequent snapshots for backup purposes in that storage system.  This means these data will have a large footprint in the overall system, requiring long term backup of what are actually temporary data (ironic in a way). A better way to ingest and store large data sets is to first ingest the data into *Scratch* storage and then move them into secure, stable object storage systems like AWS S3.
+Ideally, one wouldn't transfer large amounts of data intended to be temporary into systems like *Fast* storage as that data will be included in the frequent snapshots for backup purposes in that storage system.  This means these data will have a large footprint in the overall system, requiring long term backup of what are actually temporary data (ironic in a way). A better way to ingest and store large data sets is to first ingest the data into one of the task (or temporary) [storage options](/scicomputing/store_task/) and then move them into secure, stable object storage systems like [AWS S3](/scicomputing/store_objectstore/).
 
 ## FTP to *Scratch*
 First, make a directory in Scratch for the data you want to ingest.  Then use `wget` to copy, in this case recursively, the data from the ftp url (e.g., ftp.broadinstitute.org/bundle/) using the username (user) and password (pass) required.  
