@@ -95,7 +95,7 @@ workflow my_analysis {
 
 ## Available WDLs
 
-See our [GitHub README page](https://github.com/getwilds/wilds-wdl-library?tab=readme-ov-file#available-components) for the most current list.
+See our [GitHub page](https://github.com/getwilds/wilds-wdl-library?tab=readme-ov-file#available-components) for the current list of WILDS WDLs.
 
 Some popular tools we have modules for:
 - BWA
@@ -122,6 +122,7 @@ If there's a tool you'd like to see or a task you want written you can file an [
 - Standardized structure across all components
 - Comprehensive documentation and inline comments
 - WDL 1.0 specification compliance
+
 
 ## Links
 
@@ -161,7 +162,6 @@ Modules and vignettes are well-tested building blocks. Complete workflows in the
 **How do I get help with a specific workflow?**
 
 Contact the WILDS team at wilds@fredhutch.org or open an issue on [GitHub](https://github.com/getwilds/wilds-wdl-library/issues).
-
 
 
 ## Release Notes
