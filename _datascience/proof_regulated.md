@@ -36,19 +36,21 @@ If you already had a PROOF server running, you will need to stop that server, an
 Once the server starts, there will be several indications that you are using a
 regulated PROOF server:
 
-1. A badge that says "Using regulated data" will appear in the navigation bar
+1. You will receive an email confirming that you started a regulated server.
+2. A badge that says "Using regulated data" will appear in the navigation bar
 on every page.
-2. On the server tab, the scratch directory will be a sub-folder of
+3. On the server tab, the scratch directory will be a sub-folder of
 `/fh/regulated/`.
-3. On the server tab, "Use regulated data" under the troubleshooting heading
+4. On the server tab, "Use regulated data" under the troubleshooting heading
 will be `TRUE`.
 
 ![](/datascience/assets/proof/proof-reg-server-page.png)
 
 ## Important Considerations When Using a Regulated PROOF Server
 
-- Good data stewardship practices still apply when using this resource. A
-regulated PROOF server's main feature is that it automatically utilizes a user's
+- Good data stewardship practices, which should be outlined your
+[data stewardship plan][ocdodg-nihrda], still apply when using this resource.
+A regulated PROOF server's main feature is that it automatically utilizes a user's
 `temp` directory within `/fh/regulated/`. You can read more about these directories on our page about
 [regulated storage][wiki-reg].
 - Use of a regulated PROOF server is necessary but not sufficient for using
