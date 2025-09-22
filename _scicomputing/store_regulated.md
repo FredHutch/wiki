@@ -18,8 +18,7 @@ Regulated data storage is provisioned by [SciComp](https://centernet.fredhutch.o
 
 ## Data Loss Safeguards
 
-Data loss safeguards in _regulated_ are minimal.  There are two snapshots taken approximately 30 minutes apart.  There are no backups or replicas (on or off campus).
-
+Data protection in _regulated_ is minimal.  There are two {% glossary snapshot, display: snapshots %} taken approximately 30 minutes apart.  There are no {% glossary backup, display: backups %} or replicas (on or off campus).
 
 Backups are being considered, but there are no immediate plans to provide backups of data in regulated storage.
 {: .notice--info}
@@ -53,11 +52,20 @@ There are also directories configured for each user with access to a regulated d
         ├── userb
 ```
 
+## Data Lifecycle
+
+Data in the `temp` directories are purged after 30 days similar to data in the _temp_ filesystem.
+
+Data in regulated directories are not lifecycled or purged.
+
+The data steward for the project is responsible for removing regulated data upon the expiry of the data use agreement
+{: .notice--warning}
+
 ### PROOF Compatibility
 
 We recommend using [PROOF](/datascience/proof) to orchestrate the analysis 
 of genomic data stored on `/fh/regulated`. PROOF has features to ensure that
-**some but not all** of the intermediate files and artifacts are created during
+**some but not all** of the intermediate files and artifacts created during
 genomic data analysis are handled in compliance with the NIH GDS Policy. See
 the [PROOF guide](/datademos/proof-how-to) and our page about 
 [PROOF Regulated](/datascience/proof_regulated) for more information.
