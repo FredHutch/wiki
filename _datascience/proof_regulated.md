@@ -49,7 +49,7 @@ will be `TRUE`.
 
 - Good data stewardship practices still apply when using this resource. A
 regulated PROOF server's main feature is that it automatically utilizes a user's
-`temp` directory. You can read more about these directories on our page about
+`temp` directory within `/fh/regulated/`. You can read more about these directories on our page about
 [regulated storage][wiki-reg].
 - Use of a regulated PROOF server is necessary but not sufficient for using
 PROOF in a compliant manner. Please be sure the WDL you are running with PROOF
