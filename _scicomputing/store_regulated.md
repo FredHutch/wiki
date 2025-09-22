@@ -10,7 +10,7 @@ To meet NIH Genomic Data Security Policy, regulated storage is configured for da
 Currently the regulated storage service is designed to meet the data management and access requirements in the [NIH Genomic Data Sharing (GDS) Policy][gds-policy] outlined in NIH notice [NOT-OD-24-157][nih-notice]. While we are not currently configuring regulated storage for other DUCs or DUAs, this is on the roadmap for this service.
 {: .notice--info}
 
-For more information about access and use regulated storage please email `scicomp`. If you would like to learn about the process of creating an appropriate data stewardship plan, schedule a [Data House Call][dhc] with the Data Governance team.
+For more information about access and use regulated storage please email `scicomp`. If you would like to learn more about the process of creating an appropriate data stewardship plan, please visit the Data Governance team's page about [NIH Repository Data Access][ocdodg-nihrda].
 
 ## Provisioning
 
