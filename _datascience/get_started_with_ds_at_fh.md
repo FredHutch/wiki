@@ -5,22 +5,40 @@ primary_reviewers:
 ---
 
 ---
+# Getting Started with Data Science at Fred Hutch – A Cheat Sheet (Draft)
 
-### 1. **Welcome to Data Science at Fred Hutch**
+This is a **living document** designed to be a quick-reference **cheat sheet** for data science at Fred Hutch.  It’s not about writing new content but pointing to existing resources and identifying where new documentation is needed.  
 
-* Quick intro: What is data science all the relevant groups.
+### How You Can Contribute to This Article
+
+This is meant to be a crowdsourced living guide to data science at Fred Hutch. If you’ve found a useful resource, written documentation, or know of something that should be linked here, please add it! Contributions don’t need to be polished—just drop in a link or note and others can refine it later.
+
+Ways you can help:
+- Add links to existing SciWiki pages, Centernet articles, or other Hutch resources.
+- Suggest missing categories or topics that would make this index more complete (maybe report this as an issue for this page).
+- Flag places where new documentation is needed so others can create it (maybe report this as an issue for this page).
+- Share events, communities, or learning spaces that new researchers should know about.
+
+Think of this as a cheat sheet for data science at the Hutch—every small contribution helps make it more useful for the next person.
+
+---
+### Welcome to Data Science at Fred Hutch!
+
+_A little snippet about what this article is about_
 
 ---
 
-### 2. **Getting Help**
-
-* **How to Ask for Help**: Link to Hutch Data House Calls, DS Help Slack channels etc.
-* **Office Hours**: Schedule and links for consulting services.
+### Resources for help
+_Here we want to list all the resources you or someone you know may have used to solve their Data Science problems at the Hutch_
+  - [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html): Get expert help from the Data Science Lab
+  - [FH-Data Slack]( ): This is the slack space where Scientific Computing and the Data Science Lab tend to hangout! Here are some useful channels where you can ask questions to the larger FH Data Science community:
+  - [SciWiki](https://sciwiki.fredhutch.org/): Go here for detailed information of Fred Hutch computational and data science resources.
+  - [Scientific Computing Office Hours] Schedule and links for consulting services.
 
 ---
 
-### 3. **Research Computing: Getting Set Up**
-
+### Getting Setup to do Data Science at the Fred Hutch
+_What are all the things users generally should be doing to leverage the computational and data science resources here at the Hutch_
 * **HutchNet ID**: Accounts you need.
 * **VPN and Remote Access**: How to access Fred Hutch resources off-site.
 * **Rhino and Gizmo**: What they are and how to get access.
@@ -28,23 +46,25 @@ primary_reviewers:
 
 ---
 
-### 4. **Data Storage and Management**
-
+### Data generation storage and management
+_What should users know about the resources present for generating, storing and managing their data at FH_
 * **Where to Store Your Data**: Scratch, Home, Project space.
 * **Data Retention and Sharing Policies**.
 * **Globus and File Transfer Basics**.
-
+*  Fred Hutch Shared Resources Cores
+ https://bashforbio.netlify.app/01_basics#sec-filesystems
 ---
 
-### 5. **Key Software and Tools Available**
-
+### Key Software and Tools Available
+_What are some of the software and tools that we make available here at the FH to make the life of the data scientist easier_
 * **Basic Scientific Software**: R, Python, etc.
 * **High-Performance Computing Tools**: Slurm, Cromwell/WDL, Docker/Singularity.
 * **Web Apps and Portals**: cBioPortal, HutchBase.
 
 ---
 
-### 6. **Training and Learning Opportunities**
+### Training and Learning Opportunities
+_What are ways in which people can upskill_
 
 * **Workshops and Training**: Fred Hutch Learning.
 * **Self-Paced Resources**: 
@@ -52,55 +72,38 @@ primary_reviewers:
 
 ---
 
-### 7. **Getting Access to Data Science Support Teams**
+### Policies and Compliance
+_What are data and computational policies people at the Hutch working with data should know about_
 
-* **Data Science Lab (DaSL)**: Overview and services.
 
 ---
 
-### 8. **Working with Sensitive Data**
-
+### Best Practices 
+_What are some of the best data science and computational practices to follow._
 * **HIPAA and PHI Guidance**.
 * **Secure Computing Resources** (e.g., protected environment options).
+* DHC with data governance.
+* DUA requirements (e.g., TCGA needs a DUA).  
 
 ---
 
-### 9. **Best Practices for Research Computing**
-
-* **File Organization and Naming**.
-* **Version Control Basics**: GitHub/GitLab intro.
-* **Reproducibility Tips**: Documentation, environment management.
-
----
-
-### 10. **Community and Collaboration**
-
+### Community and Collaboration
+_What community spaces are there at the Hutch that can facilitate community interactions and learning_
 * **Slack Channels**: Fred Hutch Slack communities
-* **Meetups and Seminars**: 
+* SASC
+* R Ladies
+* [Herbold Computational Biology Events](https://www.fredhutch.org/en/research/divisions/public-health-sciences-division/research/computational-biology/Program-Events.html)
+* What websites should folks be paying attention and for what
+* MMDS
+* Centernet
+*  1. Centernet
+2. SciWiki
+3. Hutch Data Science 
+4. MMDS
 
 ---
-
-### 11. **Policies and Compliance**
-
-* **Data Security Policies**.
-* **Responsible Conduct of Research** 
-
----
-
-### 12. **FAQ and Troubleshooting**
-
-
-
----
-
-### 9. **Glossary**
-
+### Glossary
+_THink of terms that we often use but maybe someone new to this area of work might not know about and add a link you think will help them understand that term much better!_
 * Common terms — e.g., what is SLURM, what is HPC, what is an S3 bucket.
-
-
----
-#### 10. **New User Checklist**
-
-* * A quick checklist of first steps 
 
 ---
