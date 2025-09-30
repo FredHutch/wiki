@@ -37,7 +37,7 @@ To be accepted for upload, your study must contain some required files. Others a
 
 If you have generated data using a panel, your panel should be uploaded into the FH instance of cBioPortal before you upload your data. 
 
-👉 Checkout the available panels on the FH instance [here](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/6_available_panels_on_fh_cbio_instance)
+👉 Checkout the available panels on the FH instance [here](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/06_available_panels_on_fh_cbio_instance)
 👉 Learn more about gene panel formatting [here](https://docs.cbioportal.org/import-gene-panels/#gene-panel-file-format)
 
 ---

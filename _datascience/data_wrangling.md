@@ -14,7 +14,7 @@ Beyond wrangling/cleaning your data, the practice of “data tidying” ensures 
 ### Resources related to tidy data
 
 -   ["Tidy data"](https://vita.had.co.nz/papers/tidy-data.pdf) by Hadley Wickham
--   ["Data Organization in Spreadsheets"](https://www.tandfonline.com/doi/epdf/10.1080/00031305.2017.1375989?needAccess=true) by Karl Broman and Kara Hoo
+-   ["Data Organization in Spreadsheets"](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) by Karl Broman and Kara Hoo
 
 # **Code-based data wrangling**
 
