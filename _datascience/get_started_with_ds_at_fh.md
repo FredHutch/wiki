@@ -59,7 +59,11 @@ _What should users know about the resources present for generating, storing and 
 _What are some of the software and tools that we make available here at the FH to make the life of the data scientist easier_
 * **Basic Scientific Software**: R, Python, etc.
 * **High-Performance Computing Tools**: Slurm, Cromwell/WDL, Docker/Singularity.
-* **Web Apps and Portals**: cBioPortal, HutchBase.
+* **Web Apps and Portals**: cBioPortal,
+
+#### Making figures
+
+-  **[Biorender](https://sciwiki.fredhutch.org/datademos/biorender/)**: BioRender is a web application for creating scientific figures, illustrations, and diagrams, and Fred Hutch offers an institutional BioRender Premium license. 
 
 ---
 
