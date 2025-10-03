@@ -148,9 +148,9 @@ If there's a tool you'd like to see or a task you want written you can file an [
 ## Key Features of the WILDS WDL Library
 
 ### **Quality Assurance**
-- **Automated Testing**: All components tested on every update
+- **Automated Testing**: all scripts automatically execute full test runs before merging to main
 - **Multi-Executor Support**: Compatible with Cromwell, miniWDL, and Sprocket
-- **Real Data Validation**: Tested with authentic bioinformatics datasets
+- **Real Data Validation**: Tested with realistic bioinformatics datasets
 
 ### **Container Management**
 - Versioned, tested Docker images from the [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library)
