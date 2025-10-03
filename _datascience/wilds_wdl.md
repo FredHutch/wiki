@@ -12,7 +12,7 @@ You can:
 
 - **Build workflows faster** from reusable, tested modules without reinventing common tasks
 - **Ensure reproducibility** with versioned Docker containers and standardized components
-- **Execute workflows** on multiple platforms including [PROOF](/datascience/proof/), Cromwell, miniWDL, and Sprocket
+- **Execute workflows confidently** on multiple platforms including [PROOF](/datascience/proof/), Cromwell, miniWDL, and Sprocket
 - **Learn WDL best practices** through well-documented examples and vignettes
 
 
@@ -142,7 +142,7 @@ Then we can provide custom inputs using an `inputs.json` file:
 |----------|-------------|
 | [`ww-leukemia`](https://github.com/getwilds/wilds-wdl-library/tree/main/workflows/ww-leukemia) | Consensus variant calling workflow for targeted DNA sequencing |
 
-If there's a tool you'd like to see or a task you want written you can file an [issue](https://github.com/getwilds/wilds-wdl-library/issues) or make a [contribution](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md)
+If there's a tool you'd like to see or a task you want written you can file an [issue](https://github.com/getwilds/wilds-wdl-library/issues), reach out to us directly ([see below](#contact-us)), or make a [contribution](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md)
 
 
 ## Key Features of the WILDS WDL Library
