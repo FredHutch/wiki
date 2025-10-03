@@ -99,7 +99,7 @@ workflow my_analysis {
 ```
 >Note: Fred Hutch users must use WDL `version 1.0` to run on PROOF
 
-Then we can provide custom inputs using an `inputs.json` file:
+Then you can provide custom inputs using an `inputs.json` file:
 
 ```
 {
@@ -170,7 +170,7 @@ Yes! All workflows are designed to be portable and work with any WDL executor (C
 
 **Do I need to manually download Docker containers locally?**
 
-Docker will take care of pulling the necessary containers automatically when you run a workflow, so you'll need Docker installed but don't worry about pulling individual containers.
+No, Docker will take care of pulling the necessary containers automatically when you run a workflow. You'll need Docker installed but you don't have to worry about pulling individual containers.
 
 **How can I contribute to the library?**
 
@@ -184,7 +184,7 @@ Yes! All components undergo rigorous testing:
 - **Vignettes**: Integration tests verify that modules work together seamlessly. These are manually tested with real data to ensure practical usability.
 - **Workflows**: Complete end-to-end workflows in the `workflows/` directory undergo comprehensive validation with realistic datasets and are suitable for research publications.
 
-All testing is tracked through our [continuous integration system](https://github.com/getwilds/wilds-wdl-library/actions).
+All testing is run through our [continuous integration system](https://github.com/getwilds/wilds-wdl-library/actions). To see the input data used during these test runs, check out the tasks defined in the [ww-testdata](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-testdata) WILDS WDL module.
 
 **How do I get help with a specific workflow?**
 
