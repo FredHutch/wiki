@@ -52,11 +52,11 @@ We recommend users start their exploration at the vignette level to learn how ta
 
 You can use **[PROOF](/datascience/proof/)** to submit WDL workflows to the cluster through a user-friendly interface:
 
-1. Ensure your input data are accessible via the cluster
-2. Navigate to [proof.fredhutch.org](https://proof.fredhutch.org)
+1. Ensure you have access to the data you plan to analyze via the cluster
+2. Make sure you are connected to the FH network and navigate to [proof.fredhutch.org](https://proof.fredhutch.org)
 3. Log in with your Fred Hutch credentials
-4. Upload a WDL and inputs.json file
-5. Submit and monitor your job through the dashboard
+4. Upload a WDL and its accompanying JSON files
+5. Submit and monitor your job through the PROOF dashboard
 
 ### Everyone
 
@@ -97,7 +97,7 @@ workflow my_analysis {
   }
 }
 ```
->Note: Fred Hutch users must use `version 1.0` to run on PROOF
+>Note: Fred Hutch users must use WDL `version 1.0` to run on PROOF
 
 Then we can provide custom inputs using an `inputs.json` file:
 
