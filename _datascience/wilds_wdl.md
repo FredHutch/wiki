@@ -193,7 +193,7 @@ Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org), sch
 
 ## Release Notes
 
-### September 18, 2024
+### October 2025 - WILDS WDL Library v0.1.0
 - Three-tier architecture with modules, vignettes, and workflows
 - Comprehensive automated testing with multiple WDL executors at the module level
 - Manual testing with real bioinformatics data at the vignette and workflow levels
