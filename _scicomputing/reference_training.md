@@ -32,7 +32,7 @@ Currently, peer-to-peer training and support for data intensive work at the Fred
 
 ## Resources In Seattle
 
-- [UW Biostatistics Summer Institutes](https://www.biostat.washington.edu/suminst) offer yearly intensive courses over the summers on a wide variety of topics.
+- [UW Biostatistics Summer Institutes](https://si.biostat.washington.edu/) offer yearly intensive courses over the summers on a wide variety of topics.
 - [Meetup](https://www.meetup.com) hosts various coding groups that meet regularly to share skills and provide networking opportunities. [RLadies Seattle](https://www.meetup.com/rladies-seattle/) and [Seattle UseR](https://www.meetup.com/Seattle-useR/) both include leaders from Fred Hutch.
 
 
@@ -60,7 +60,7 @@ These resources are organized in a lecture type format as slides, screencasts, a
   - [Python Programming](https://www.coursera.org/specializations/data-science-python): An intermediate-level program that takes about 4 months to complete.
   - *Coursera offers a 7-day free trial, and is a paid subscription service after*
 
-- [Udacity](https://www.udacity.com): Offers a collection of courses for [Data Science](https://www.udacity.com/courses/school-of-data-science)
+- [Udacity](https://www.udacity.com): Offers a collection of courses for [Data Science](https://www.udacity.com/course/data-scientist-nanodegree--nd025)
   - *Udacity is a paid subscription service*
   - [Currently offering one month free for their Nanodegree programs.](https://blog.udacity.com/2020/03/one-month-free-on-nanodegrees.html)
 
@@ -71,7 +71,7 @@ These resources are organized in a lecture type format as slides, screencasts, a
 - [CognitiveClass.ai](https://cognitiveclass.ai/) Offers a collection of courses for data science, AI, and cloud computing.
   - *All courses are free*
 
-- [The Open Source Data Science Masters](https://datasciencemasters.org): An open-source curriculum for learning data science. This is a mixed media course made up of videos, books, and slides.
+- [The Open Source Data Science Masters](https://github.com/datasciencemasters/go): An open-source curriculum for learning data science. This is a mixed media course made up of videos, books, and slides.
   - *Some content is free, some is paid*
   
 - [CalTech](https://work.caltech.edu/telecourse) Learning from Data

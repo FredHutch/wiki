@@ -46,7 +46,7 @@ One issue to note when using GitHub to do version control in your code is that i
 
 >Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `helpdesk` to request support from the cloud team (CLD)
 
-To get AWS credentials, visit the [MyApps](https://myapps.microsoft.com) dashboard and click the square entitled `AWS IAM Identity Center`. Sign in with your HutchNet ID and password. 
+To get AWS credentials, visit the [MyApps](https://myapps.microsoft.com) dashboard and click the square entitled `AWS Portal` (or, for some accounts, it will be called `AWS IAM Identity Center`). Sign in with your HutchNet ID and password. 
 
 This will take you to a screen called `AWS accounts`. You should see your account listed.  For example, if your PI is Jane Doe, you should see `fh-pi-doe-j` listed.  Click the triangle to the left of the account name. Now you'll see two links.  The link on the left will take you to the AWS console, which is web browser interface to Amazon Web Services. The link on the right (`Access keys`) will give you the credentials you need to use AWS outside of a browser.
 
