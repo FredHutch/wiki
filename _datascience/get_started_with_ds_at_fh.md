@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Data Science at Fred Hutch
-authors: sitapriyamoorthi
+authors: S. Moorthi, E.Bishop, V. Sriram
 primary_reviewers: 
 ---
 
@@ -63,7 +63,9 @@ _What are some of the software and tools that we make available here at the FH t
 
 #### Making figures
 
--  **[Biorender](https://sciwiki.fredhutch.org/datademos/biorender/)**: BioRender is a web application for creating scientific figures, illustrations, and diagrams, and Fred Hutch offers an institutional BioRender Premium license. 
+-  **[Biorender](https://sciwiki.fredhutch.org/datademos/biorender/)**: BioRender is a web application for creating scientific figures, illustrations, and diagrams, and Fred Hutch offers an institutional BioRender Premium license.
+-  [Data Visualizations](https://sciwiki.fredhutch.org/datascience/data_viz/) and [Data Wrangling](https://sciwiki.fredhutch.org/datascience/data_wrangling/)
+-  
 
 ---
 
@@ -104,6 +106,8 @@ _What community spaces are there at the Hutch that can facilitate community inte
 2. SciWiki
 3. Hutch Data Science 
 4. MMDS
+5. Mailing lists:
+   - [Steam Plant Seminar Series](https://lists.fhcrc.org/postorius/lists/steamplant-)seminar.lists.fhcrc.org/
 
 ---
 ### Glossary
