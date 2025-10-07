@@ -6,7 +6,7 @@ main_authors: tefirman, emjbishop
 
 <img src="/datascience/assets/wildswdl/WILDSWDLLogo.jpeg" alt="WILDS WDL Logo" width="200" align="right" style="margin-left: 20px;">
 
-The [**WILDS WDL Library**](https://github.com/getwilds/wilds-wdl-library) is a collection of workflow description language (WDL) scripts that provide reusable, well-tested bioinformatics tasks that can be combined into pipelines for research. It eliminates the need to write WDL workflows from scratch, ensures reproducibility through standardized containerization, and reduces debugging time with pre-tested, validated components.
+The [**WILDS WDL Library**](https://github.com/getwilds/wilds-wdl-library) is a collection of workflow description language (WDL) scripts that provide reusable, well-tested bioinformatics tasks that can be combined into pipelines for research. All components are validated with real-world bioinformatics datasets to ensure they perform correctly in production environments. The library eliminates the need to write WDL workflows from scratch, ensures reproducibility through standardized containerization, and reduces debugging time with pre-tested, validated components.
 
 You can:
 
@@ -40,6 +40,23 @@ Complete, publication-ready analysis pipelines.
 - **Content**: Complex workflows combining multiple modules and custom logic
 - **Testing**: Comprehensive validation with realistic datasets
 - **Usage**: Production analyses requiring minimal customization
+
+
+## Testing & Validation
+
+All WILDS WDLs undergo rigorous testing with real-world bioinformatics data to ensure production readiness:
+
+### Automated Testing
+- **Cross-platform validation**: All modules are automatically tested using Cromwell, miniWDL, and Sprocket executors
+- **Continuous integration**: Every code change triggers [automated test runs](https://github.com/getwilds/wilds-wdl-library/actions) before merging
+- **Real data requirements**: Tests use authentic bioinformatics datasets from the [ww-testdata](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-testdata) module
+
+### Validation by Component Type
+- **Modules**: Unit tests with real sequencing files (FASTQ, BAM, VCF) verify each task functions correctly
+- **Vignettes**: Integration tests confirm modules work together using representative analysis datasets
+- **Workflows**: End-to-end validation with realistic research datasets suitable for publication-quality analyses
+
+This multi-layered testing approach ensures that WILDS WDLs perform reliably from individual tasks through complete analytical pipelines.
 
 
 ## Getting Started
