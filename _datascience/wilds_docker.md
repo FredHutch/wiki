@@ -1,6 +1,6 @@
 ---
 title: WILDS Docker Library
-last_modified_at: 2025-09-18
+last_modified_at: 2025-10-09
 main_authors: tefirman
 ---
 
@@ -82,7 +82,7 @@ The library includes 40+ Docker images for popular bioinformatics tools:
 - **gtf-smash** (`getwilds/gtf-smash`) - GTF file manipulation
 - **ArcPy** (`getwilds/arcpy`) - Python package for spatial analysis
 
-[Browse all available tools and versions →](https://github.com/getwilds/wilds-docker-library)
+[Browse all available images on Docker Hub →](https://hub.docker.com/u/getwilds) | [View Dockerfiles on GitHub →](https://github.com/getwilds/wilds-docker-library)
 
 ## Getting Started
 
@@ -160,7 +160,7 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) workflows use containers from t
 ### **Security & Quality Assurance**
 - **Automated vulnerability scanning**: All images scanned monthly using Docker Scout
 - **Build-time security checks**: Every new image is scanned before publication
-- **Vulnerability reports**: Detailed CVE reports available in each tool's directory
+- **Vulnerability reports**: CVE reports available in each tool's directory
 - **Automated linting**: Dockerfiles checked for best practices and security issues
 
 ### **Version Management**
@@ -169,9 +169,10 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) workflows use containers from t
 - **Consistent tagging**: Clear version tags (e.g., `1.19`, `latest`) for easy reference
 
 ### **Distribution & Accessibility**
-- **Dual registry support**: Available on both Docker Hub (`getwilds/`) and GitHub Container Registry (`ghcr.io/getwilds/`)
+- **Dual registry support**: Available on [Docker Hub](https://hub.docker.com/u/getwilds) (recommended) and GitHub Container Registry for maximum flexibility
 - **WDL integration**: Seamlessly integrated with the [WILDS WDL Library](/datascience/wilds_wdl/)
-- **Cross-platform support**: Works with Docker, Singularity, and Apptainer
+- **Cross-platform support**: Works with Docker and Singularity/Apptainer
+- **Multi-architecture builds**: Most images support both linux/amd64 and linux/arm64 for broad hardware compatibility
 
 ### **Documentation & Support**
 - **Tool-specific READMEs**: Each tool directory contains comprehensive documentation
@@ -183,15 +184,6 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) workflows use containers from t
 **How do I know which version to use?**
 
 Each tool's directory in the [GitHub repository](https://github.com/getwilds/wilds-docker-library) contains a README listing available versions. The WILDS WDL Library modules specify tested version combinations. You can also use `latest` for the most recent build, though pinning specific versions is recommended for reproducibility.
-
-**Are these containers secure for production use?**
-
-Yes. All images undergo:
-- Monthly automated security scans using Docker Scout
-- Build-time vulnerability assessments
-- Continuous monitoring with detailed CVE reports
-
-While we work to minimize vulnerabilities, some dependencies may have known issues. Review the CVE reports in each tool's directory, and contact us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) if specific vulnerabilities concern you.
 
 **Can I request a new tool or version?**
 
@@ -214,9 +206,22 @@ Yes! Containers work with:
 
 **What's the difference between Docker Hub and GitHub Container Registry?**
 
-Both registries host identical images. Use whichever is more convenient:
-- Docker Hub: `docker pull getwilds/toolname:version`
+Both registries host identical images, but we recommend using [Docker Hub](https://hub.docker.com/u/getwilds) as your primary source for better reliability and performance:
+- **Docker Hub (recommended)**: `docker pull getwilds/toolname:version`
 - GitHub Container Registry: `docker pull ghcr.io/getwilds/toolname:version`
+
+Docker Hub provides more robust infrastructure for container distribution and is the standard for most containerized workflows. Use GitHub Container Registry if you prefer GitHub's ecosystem or experience issues with Docker Hub.
+
+**Do these containers work on Apple Silicon (M1/M2/M3) Macs or ARM-based systems?**
+
+Most WILDS Docker images support both linux/amd64 (Intel/AMD) and linux/arm64 (ARM) architectures, so they'll work natively on Apple Silicon Macs and ARM-based HPC systems. However, some tools have platform-specific limitations:
+
+**AMD64-only images** (won't run natively on ARM):
+- BWA, DESeq2, HISAT2, python-dl, RTorch, scvi-tools, SRA-tools
+
+These limitations are due to architecture-specific code optimizations, compilation issues, or build resource constraints. Each tool's README includes a "Platform Availability" section when restrictions apply. Docker Desktop on Apple Silicon can run AMD64 images through emulation, though with reduced performance.
+
+For ARM-specific support requests, file an [issue](https://github.com/getwilds/wilds-docker-library/issues) or contact [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 
 ## Automated Workflows
 
@@ -240,7 +245,7 @@ The library uses GitHub Actions to maintain quality and security:
 
 ## Release Notes
 
-### January 2025 - WILDS Docker Library v0.1.0
+### October 2025 - WILDS Docker Library v0.1.0
 - 40+ bioinformatics tools with multiple versions
 - Automated monthly security scanning with Docker Scout
 - Dual distribution via Docker Hub and GitHub Container Registry
@@ -252,7 +257,8 @@ The library uses GitHub Actions to maintain quality and security:
 ## Links
 
 ### Get Started
-- [Browse Available Images](https://github.com/getwilds/wilds-docker-library)
+- [Browse Images on Docker Hub](https://hub.docker.com/u/getwilds)
+- [View Dockerfiles and Source Code](https://github.com/getwilds/wilds-docker-library)
 - [View Security Reports](https://github.com/getwilds/wilds-docker-library/tree/main)
 - [Use with WILDS WDL Library](/datascience/wilds_wdl/)
 - [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library#contributing)
@@ -260,7 +266,7 @@ The library uses GitHub Actions to maintain quality and security:
 ### Learn More
 - [Docker Documentation](https://docs.docker.com/)
 - [Singularity/Apptainer Documentation](https://apptainer.org/docs/)
-- [WDL Best Practices Guide](https://getwilds.org/guide/)
+- [WDL Documentation](https://docs.openwdl.org/)
 - [PROOF Platform](/datascience/proof/)
 
 ## Contact Us
