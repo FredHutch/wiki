@@ -169,6 +169,8 @@ If there's a tool you'd like to see or a task you want written you can file an [
 - **Multi-Executor Support**: Compatible with Cromwell, miniWDL, and Sprocket
 - **Real Data Validation**: Tested with realistic bioinformatics datasets
 
+Different research institutions use different [WDL execution engines](https://docs.openwdl.org/getting-started/ecosystem.html#execution-engines) (e.g., St. Jude's uses Sprocket, CZI uses miniWDL, Broad Institute uses Cromwell). While these engines follow the same WDL specification, they have subtle differences in how they handle file paths and other execution details. The WILDS WDL Library is designed and tested to work seamlessly across all three major engines, ensuring your workflows remain portable regardless of which platform you or your collaborators use. This is particularly valuable as the WDL ecosystem continues to evolve, with institutions gradually migrating from Cromwell to newer engines like Sprocket and miniWDL.
+
 ### **Container Management**
 - Versioned, tested Docker images from the [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library)
 - Consistent container standards across all modules
@@ -201,7 +203,7 @@ Yes! All components undergo rigorous testing:
 - **Vignettes**: Integration tests verify that modules work together seamlessly. These are manually tested with real data to ensure practical usability.
 - **Workflows**: Complete end-to-end workflows in the `workflows/` directory undergo comprehensive validation with realistic datasets and are suitable for research publications.
 
-All testing is run through our [continuous integration system](https://github.com/getwilds/wilds-wdl-library/actions). To see the input data used during these test runs, check out the tasks defined in the [ww-testdata](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-testdata) WILDS WDL module.
+All testing is run through our [continuous integration system](https://github.com/getwilds/wilds-wdl-library/actions). Users can reproduce these tests locally using the repository [Makefile](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md#testing-requirements) and test data from the [ww-testdata](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-testdata) module.
 
 **How do I get help with a specific workflow?**
 
