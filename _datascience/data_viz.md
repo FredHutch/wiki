@@ -1,6 +1,8 @@
 ---
 title: Data Visualization
 primary_reviewers: k8hertweck
+layout: single_with_categories
+categories: ["data_science", "software_development"]
 ---
 
 A growing area of large-scale data analysis is the visualization and sharing of results of analyses. Data scientists need to communicate complex data and results in concise and clear ways, leading to an explosion of platforms, tools, software and approaches for data visualization.  
