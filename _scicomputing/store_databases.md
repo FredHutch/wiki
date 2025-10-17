@@ -35,7 +35,7 @@ Groups needing MS SQL Server Database Administration services should contact IT 
 
 MyDB is a service supported by Scientific Computing (SciComp) that allows you to provision a dedicated server (aka, instance).  MyDB is a self-service website for creating containerized databases. The service is available to anyone at the center without cost. Users are given full admin rights to the database but are not given shell access to the database system. The MyDB service performs daily database backups which are stored in the Amazon cloud.
 
-To access [MyDB](https://mydb.fredhutch.org/) click the link and use your Hutch credentials to log in.  Detailed documentation can be found [here](/compdemos/mydb/)
+To access [MyDB](https://mydb.fredhutch.org/login) click the link and use your Hutch credentials to log in.  Detailed documentation can be found [here](/compdemos/mydb/)
 
 - **MariaDB** Is the latest open source version of MySQL. MariaDB is traditional
 relational database that supports SQL. MariaDB has an option
