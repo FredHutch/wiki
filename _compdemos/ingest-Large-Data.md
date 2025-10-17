@@ -85,7 +85,7 @@ aws s3 sync /ingestedDataDir/ s3://your-pi-bucket-name/theseData/
 
 ## Clean out temporary storage
 
-While the data in are not backed up (and in the case of _temp_, regularly deleted), the system does have a finite amount of space available to users.  Especially when your temporary data is 100s of GB or into the TB range, it's preferred that after the data are confirmed to have been transferred to the final location that you remove your own data from the download location.  This eliminates the possibility of someone else having to delete your data if another investigator needs a large amount of space.
+While data stored on _temp_ is not backed up and regularly deleted, the system does have a finite amount of space available to users. Especially when your temporary data is hundreds of gigabytes or even terabytes in size, it’s preferred that, once the data have been confirmed as transferred to the final location, you remove your own data from the download location. This eliminates the possibility of someone else having to delete your data if another investigator needs a large amount of space.
 
 > Note:  Only ever use `rm -rf` when you are CERTAIN that a complete, permanent delete that cannot be retrieved is what you want.
 
