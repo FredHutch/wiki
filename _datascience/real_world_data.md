@@ -62,6 +62,6 @@ The [Office of the Chief Data Officer](https://centernet.fredhutch.org/u/data-sc
 ## Resources to Learn More
 
 - [Oncologists Must Consider Participant Data When Using Large-Scale Cancer Data Sets](https://doi.org/10.1200/CCI.23.00245)
-- [Real-World Database Studies in Oncology: A Call for Standards](https://doi.org/10.1200/JCO.23.0239)
+- [Real-World Database Studies in Oncology: A Call for Standards](https://doi.org/10.1200/JCO.23.02399)
 - [Assessing Real-World Data From Electronic Health Records for Health Technology Assessment: The SUITABILITY Checklist: A Good Practices Report of an ISPOR Task Force](https://doi.org/10.1016/j.jval.2024.01.019)
 - [An overview of real-world data sources for oncology and considerations for research](https://doi.org/10.3322/caac.21714)
