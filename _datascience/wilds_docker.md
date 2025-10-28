@@ -1,6 +1,6 @@
 ---
 title: WILDS Docker Library
-last_modified_at: 2025-10-09
+last_modified_at: 2025-10-28
 main_authors: tefirman
 ---
 
@@ -28,7 +28,7 @@ For bioinformatics workflows, containers are essential for reproducibility—the
 
 ## Available Images
 
-The library includes 40+ Docker images for popular bioinformatics tools:
+The library includes 30+ Docker images for popular bioinformatics tools:
 
 ### Alignment & Mapping
 - **BWA** (`getwilds/bwa`) - Burrows-Wheeler Aligner for DNA sequences
@@ -312,7 +312,7 @@ The library uses GitHub Actions to maintain quality and security:
 ## Release Notes
 
 ### October 2025 - WILDS Docker Library v0.1.0
-- 40+ bioinformatics tools with multiple versions
+- 30+ bioinformatics tools with multiple versions
 - Automated monthly security scanning with Docker Scout
 - Dual distribution via Docker Hub and GitHub Container Registry
 - Full integration with WILDS WDL Library
