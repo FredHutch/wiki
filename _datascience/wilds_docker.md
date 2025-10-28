@@ -6,7 +6,7 @@ main_authors: tefirman
 
 <img src="/datascience/assets/wildsdocker/wdlib_logo_raw.jpeg" alt="WILDS Docker Library Logo" width="200" align="right" style="margin-left: 20px;">
 
-The [**WILDS Docker Library**](https://github.com/getwilds/wilds-docker-library) is a curated collection of Docker images for reproducible bioinformatics workflows. It provides versioned, security-scanned containers for popular bioinformatics tools, ensuring consistent execution environments across different platforms and eliminating "it works on my machine" problems.
+The [**WILDS Docker Library**](https://github.com/getwilds/wilds-docker-library) is a curated collection of [Docker images](#what-are-docker-containers) for reproducible bioinformatics workflows, providing versioned, security-scanned containers for many popular bioinformatics tools.
 
 You can:
 
@@ -86,6 +86,10 @@ The library includes 40+ Docker images for popular bioinformatics tools:
 
 ## Getting Started
 
+### Installing Docker
+
+To use these images, you'll need Docker installed on your system. Download and install [Docker Desktop](https://docs.docker.com/get-docker/) for your operating system (Windows, Mac, or Linux). For HPC environments that use Singularity/Apptainer instead, see the section below.
+
 ### Using with Docker
 
 Pull and run any image from Docker Hub or GitHub Container Registry:
@@ -107,7 +111,7 @@ docker run --rm -v /path/to/data:/data getwilds/star:2.7.6a \
 
 ### Using with Singularity/Apptainer
 
-For HPC environments that use Singularity or Apptainer:
+For HPC environments that use Singularity or Apptainer (including the Fred Hutch Gizmo cluster):
 
 ```bash
 # Pull from Docker Hub
@@ -155,6 +159,55 @@ task star_align {
 
 All [WILDS WDL Library](/datascience/wilds_wdl/) workflows use containers from this library automatically.
 
+## Contributing & Development
+
+The WILDS Docker Library welcomes contributions from the Fred Hutch community and beyond! Whether you want to add a new tool, update an existing image, or improve documentation, we provide templates and testing tools to help you through the process.
+
+### Quick Start for Contributors
+
+1. **Use our template**: Start with our comprehensive [Dockerfile template](https://github.com/getwilds/wilds-docker-library/blob/main/template/Dockerfile_template) that includes detailed guidance and examples
+
+2. **Test locally with the Makefile**: We provide automated testing tools to validate your images before submitting:
+   ```bash
+   # See all available commands
+   make help
+
+   # Test a specific image: lint and build for both architectures
+   make validate IMAGE=toolname
+   ```
+
+3. **Submit a pull request**: Once tested, submit your contribution following our [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md)
+
+### Local Testing Made Easy
+
+Before submitting contributions, you can test Docker images locally using our automated Makefile:
+
+```bash
+# Lint Dockerfiles for best practices
+make lint IMAGE=toolname
+
+# Build for both AMD64 and ARM64 architectures
+make build IMAGE=toolname
+
+# Full validation: lint + build for both platforms
+make validate IMAGE=toolname
+
+# Clean up test images
+make clean IMAGE=toolname
+```
+
+The Makefile handles multi-platform builds, dependency checking, and cleanup automatically, ensuring your contributions meet WILDS standards before submission.
+
+### What You Can Contribute
+
+- **New tools**: Add Docker images for bioinformatics tools not yet in the library
+- **Version updates**: Provide new versions of existing tools
+- **Bug fixes**: Address issues in existing Dockerfiles or documentation
+- **Documentation**: Improve README files, add usage examples, fix typos
+- **Optimizations**: Reduce image sizes, improve build times, add platform support
+
+See our [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) for detailed requirements and best practices.
+
 ## Key Features
 
 ### **Security & Quality Assurance**
@@ -178,6 +231,7 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) workflows use containers from t
 - **Tool-specific READMEs**: Each tool directory contains comprehensive documentation
 - **Usage examples**: Practical examples for Docker, Singularity, and WDL
 - **Active maintenance**: Regular updates and community-driven improvements
+- **Contributor-friendly tooling**: Template Dockerfile and automated Makefile for easy local development and testing
 
 ## Frequently Asked Questions
 
@@ -191,11 +245,23 @@ Absolutely! File an [issue](https://github.com/getwilds/wilds-docker-library/iss
 
 **How do I contribute my own Dockerfiles?**
 
-We welcome contributions! See our [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library#contributing) for details on:
-- Directory structure requirements
-- Required container labels
-- Testing and validation procedures
-- Pull request process
+We welcome contributions! We've streamlined the process to make it easy:
+
+1. **Start with our template**: Use the comprehensive [Dockerfile template](https://github.com/getwilds/wilds-docker-library/blob/main/template/Dockerfile_template) that includes step-by-step guidance, best practices, and examples for different tool types
+
+2. **Test locally**: Use our Makefile to validate your image before submitting:
+   ```bash
+   make validate IMAGE=toolname
+   ```
+   This automatically lints your Dockerfile and builds for both AMD64 and ARM64 architectures
+
+3. **Submit a pull request**: Follow our [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) which cover:
+   - Directory structure requirements
+   - Required container labels
+   - Documentation standards
+   - Pull request process
+
+For detailed guidance, see our [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md), or contact us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 
 **Do containers work on Fred Hutch systems?**
 
@@ -259,9 +325,11 @@ The library uses GitHub Actions to maintain quality and security:
 ### Get Started
 - [Browse Images on Docker Hub](https://hub.docker.com/u/getwilds)
 - [View Dockerfiles and Source Code](https://github.com/getwilds/wilds-docker-library)
+- [Dockerfile Template](https://github.com/getwilds/wilds-docker-library/blob/main/template/Dockerfile_template)
+- [Local Testing Makefile](https://github.com/getwilds/wilds-docker-library/blob/main/Makefile_Docker)
 - [View Security Reports](https://github.com/getwilds/wilds-docker-library/tree/main)
 - [Use with WILDS WDL Library](/datascience/wilds_wdl/)
-- [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library#contributing)
+- [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md)
 
 ### Learn More
 - [Docker Documentation](https://docs.docker.com/)
