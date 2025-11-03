@@ -23,11 +23,11 @@ While you are allowed up to 1TB of storage in this home directory, it is not tai
 
 ### A Note on "Homelink"
 
-"homelink" enables the use of links from your home directory into the fast and secure file systems.  It functions by collecting these file systems onto a single mount and then sharing that via the SMB workstation protocol.  "homelink" itself stores no data.
+`homelink` enables the use of links from your `home` directory into the `fast` and `secure` file systems.  It functions by collecting these file systems onto a single mount and then sharing that via the SMB workstation protocol.  `homelink` itself stores no data.
 
-"homelink" is most commonly used when you have a shortcut into your lab's shared directory in fast.
+`homelink` is most commonly used when you have a shortcut into your lab's shared directory in `fast`.
 
-In general you should avoid "homelink" where possible and use the home, fast, and secure file servers directly as [described below](#how-to-access-fred-hutch-storage).  "homelink" is a small Linux-based host without the failover features or the performance capabilities of the underlying file systems it re-shares.
+In general you should avoid `homelink` where possible and use the `home`, `fast`, and `secure` file servers directly as [described below](#how-to-access-fred-hutch-storage).  `homelink` is a small Linux-based host without the failover features or the performance capabilities of the underlying file systems it re-shares.
 
 ## Fast
 
