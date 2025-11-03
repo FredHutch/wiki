@@ -83,21 +83,23 @@ _Regulated_ is not currently available for access via your desktop workstation
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `\\homelink\homes` |
 | Fast | `X:\fast` |
 | Secure | `X:\secure` |
 | Working | `X:\working` |
 | HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
+| Homes | `H:\\` |
+| Homes via Homelink | `\\homelink\homes` |
 
-**Non-Fred Hutch PC:**
+**Hutch PC without drive mapping:**
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `\\homelink.fhcrc.org\homes` |
 | Fast | `\\center.fhcrc.org\fh\fast` |
 | Secure | `\\center.fhcrc.org\fh\secure` |
 | Working | `\\center.fhcrc.org\fh\working` |
 | HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
+| Homelink | `\\home.fhcrc.org\homes` |
+| Homes via Homelink | `\\homelink\homes` |
 
 **Mac:**
 
@@ -105,11 +107,12 @@ For these paths, replace HUTCHID with your hutchid.
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `smb://fhcrc.org;HUTCHID@homelink.fhcrc.org/homes` |
 | Fast | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/fast` |
 | Secure | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/secure` |
 | Working | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/working` |
 | HPC Temp | `smb://fhcrc.org;HUTCHID@hpc.chromium.fhcrc.org/temp.chromium` |
+| Homes | `smb://fhcrc.org;HUTCHID@home.fhcrc.org/homes` |
+| Homes via Homelink | `smb://fhcrc.org;HUTCHID@homelink.fhcrc.org/homes` |
 
 Note: Drive mapping with Macs can be very slow for large volumes due to the Mac wanting to index every file in a volume. Turn off volume indexing to improve the speed of drive mapping. 
 From a terminal window on your Mac, turn off all drive mapping.
@@ -128,7 +131,7 @@ The sudo command will ask for your Mac login password. Often Mac volume names ha
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `~/` or `/home/HUTCHID` |
+| Home | `~/` or `/home/HUTCHID` |
 | Fast | `/fh/fast` |
 | Temp | `/hpc/temp` |
 | Working | `/fh/working` |
