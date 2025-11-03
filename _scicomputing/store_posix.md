@@ -21,6 +21,12 @@ A tool that is useful for moving data between these systems is [Motuz](https://m
 
 While you are allowed up to 1TB of storage in this home directory, it is not tailored for heavy use and won't accommodate large data sets- the 1TB limit cannot be extended.  Also, data in this file system cannot be shared with others.
 
+### A Note on "Homelink"
+
+"homelink" is a specialized system that re-shares other file systems to allow some specialized functionality- specifically enabling links from your home directory into those other file systems (like your lab's fast-file directory) to work by collecting all the file systems onto a single mount and then sharing those via the SMB workstation protocol.
+
+In general you should avoid the "homelink" where possible.  This is a small Linux-based host without the failover features or the performance of the underlying file systems it re-shares.
+
 ## Fast
 
 `Fast` storage is a petabyte sized high-performance posix file system that holds the bulk of the scientific data at the Fred Hutch. A quick overview: 
