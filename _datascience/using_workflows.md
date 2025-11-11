@@ -18,7 +18,7 @@ and [Nextflow](https://nextflow.io/).
 
 ## Getting Started with WDL
 
-You can find a wealth of information on getting started using WDL workflows at Fred Hutch on the [Resource Library entry for WDL](/compdemos/Cromwell/) and on our [PROOF page](/datascience/proof/).  PROOF is a tool that wraps the Cromwell workflow manager for use at Fred Hutch.  
+You can find a wealth of information on getting started using WDL workflows at Fred Hutch on our [WDL Workflows guide](/datascience/wdl_workflows/) and [WDL Execution Engines guide](/datascience/wdl_execution_engines/). For running WDL workflows at Fred Hutch, check out our [PROOF page](/datascience/proof/) - PROOF is a user-friendly tool that wraps the Cromwell workflow manager for use on our cluster.  
 
 
 

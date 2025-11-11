@@ -63,7 +63,7 @@ There is an active [**Tableau**](https://www.tableau.com) data visualization com
 
 Workflow managers are software that facilitate the setup, execution, and monitoring of scientific analyses involving multiple steps. These are especially important for complex bioinformatic analyses that require various software dependencies and resource requirements, and can make your analysis both easier to troubleshoot and more reproducible. Workflow managers common for scientific processes include: [Snakemake](https://snakemake.readthedocs.io/en/stable/), [Cromwell](https://cromwell.readthedocs.io/en/stable/tutorials/FiveMinuteIntro/), [Toil](https://toil.readthedocs.io), [CWL](https://www.commonwl.org), and [Nextflow](https://www.nextflow.io/). For more information on running **Nextflow**, please see [this demo](/compdemos/nextflow/).  
 
-Nextflow and Cromwell are currently under development at the Fred Hutch for wider, supported use by researchers here.  [Nextflow](/compdemos/nextflow/) is currently available and there is a growing community group working collaboratively you can join on their [Slack channel](https://fhbig.slack.com/archives/CJFP1NYSZ), and the same is available for [Cromwell](/compdemos/Cromwell/) including a [Slack channel](https://fhbig.slack.com/archives/CTFU13URJ).
+At Fred Hutch, [Nextflow](/compdemos/nextflow/) and [WDL workflows](/datascience/wdl_workflows/) (with [multiple execution engines](/datascience/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket) are supported and actively used by researchers. There is a growing community working collaboratively - join the [#workflow-managers Slack channel](https://fhbig.slack.com/archives/CJFP1NYSZ) to connect with other users and get help.
 
 ### Other languages
 
