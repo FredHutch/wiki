@@ -8,11 +8,23 @@ The Workflow Description Language (WDL) is an open-source language for describin
 
 ## Why Use WDL?
 
+### Easy to Read and Share
+WDL's design emphasizes clarity and simplicity:
+- **Human-readable syntax** makes workflows easy to understand, review, and customize as necessary
+- **Standardized format** enables sharing across institutions and research groups
+- **Reusable components** through task libraries like the [WILDS WDL Library](/datascience/wilds_wdl/)
+
+### Easy to Execute
+WDL separates the scientific logic (what to compute) from infrastructure details (where and how to compute):
+- No need to write SLURM submission scripts or cloud deployment code
+- Execution engines handle job scheduling, resource allocation, and data staging
+- Focus on your science, not on system administration
+
 ### Reproducibility
 WDL workflows explicitly define every aspect of your analysis:
 - **Exact software versions** through containerization (Docker/Apptainer)
-- **Complete dependency trees** with all required inputs specified
 - **Deterministic execution** that produces identical results across different platforms
+- All required inputs and files clearly specified upfront
 
 This means a workflow written today will produce the same results months or years later, regardless of changes to your computing environment.
 
@@ -24,18 +36,6 @@ Write once, run anywhere. WDL workflows can execute on:
 - Workflow platforms (Terra, DNAnexus, [PROOF](/datascience/proof/))
 
 The same workflow file runs identically across all these environments without modification.
-
-### Collaboration and Sharing
-- **Human-readable syntax** makes workflows easy to understand and review
-- **Standardized format** enables sharing across institutions and research groups
-- **Version control friendly** with plain text files suitable for Git
-- **Reusable components** through task libraries like the [WILDS WDL Library](/datascience/wilds_wdl/)
-
-### Abstraction of Technical Details
-WDL separates the scientific logic (what to compute) from infrastructure details (where and how to compute):
-- No need to write SLURM submission scripts or cloud deployment code
-- Execution engines handle job scheduling, resource allocation, and data staging
-- Focus on your science, not on system administration
 
 ## WDL Fundamentals
 
@@ -57,21 +57,17 @@ task BwaMem {
     File input_fastq
     String base_file_name
     File ref_fasta
-    File ref_fasta_index
-    File ref_dict
-    File ref_alt
-    File ref_amb
-    File ref_ann
-    File ref_bwt
-    File ref_pac
-    File ref_sa
   }
 
   command <<<
-    bwa mem \
-      -p -v 3 -t 16 -M \
+    # Index reference if needed
+    bwa index ~{ref_fasta}
+
+    # Align reads
+    bwa mem -p -v 3 -t 16 -M \
       ~{ref_fasta} ~{input_fastq} > ~{base_file_name}.sam
 
+    # Convert to BAM
     samtools view -1bS -@ 15 -o ~{base_file_name}.aligned.bam ~{base_file_name}.sam
   >>>
 
@@ -134,7 +130,7 @@ workflow AlignAndCallVariants {
 **Key features:**
 
 - Tasks are executed using `call` statements
-- Task outputs are referenced as `TaskName.output_name`
+- Task outputs are referenced as `TaskName.output_name` and passed as inputs to subsequent tasks
 - Workflow inputs can be passed to multiple tasks
 - Workflow outputs define which files to keep as final results
 
@@ -144,8 +140,8 @@ Inputs are typically provided via JSON files:
 
 ```json
 {
-  "AlignAndCallVariants.input_fastq": "s3://my-bucket/sample1.fastq.gz",
-  "AlignAndCallVariants.reference_genome": "/shared/genomes/hg38.fa",
+  "AlignAndCallVariants.input_fastq": "/path/to/sample1.fastq.gz",
+  "AlignAndCallVariants.reference_genome": "/path/to/hg38.fa",
   "AlignAndCallVariants.sample_name": "patient_001"
 }
 ```
@@ -172,15 +168,18 @@ runtime {
 }
 ```
 
-The [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library) provides pre-built, tested containers for common bioinformatics tools.
+The [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library) provides pre-built, tested containers for common bioinformatics tools. For more on using Docker at Fred Hutch, see our [Docker guide](/compdemos/Docker/).
 
 ### Apptainer (formerly Singularity)
 
-On HPC clusters that don't allow Docker (like Fred Hutch's Gizmo), execution engines can automatically convert Docker images to Apptainer format:
+On HPC clusters that don't allow Docker (like Fred Hutch's Gizmo), WDL execution engines can be configured to use Apptainer instead:
 
 - You still specify `docker:` in your WDL runtime section
-- The execution engine handles the conversion transparently
-- Your workflow remains portable across Docker and Apptainer environments
+- The execution engine (when properly configured) converts Docker images to Apptainer format
+- Your workflow code remains portable - the same WDL works with both Docker and Apptainer
+- Note: This requires the execution engine to be set up with Apptainer support (platforms like [PROOF](/datascience/proof/) handle this configuration for you)
+
+For more details on using Apptainer at Fred Hutch, see our [Apptainer guide](/compdemos/Apptainer/).
 
 ### Environment Modules (HPC-specific)
 
@@ -192,7 +191,7 @@ runtime {
 }
 ```
 
-However, this approach reduces portability since modules are institution-specific. For workflows you plan to share, containers are preferred.
+However, this approach reduces portability since modules are institution-specific. For workflows you plan to share, containers are preferred. Learn more about environment modules and containers in our [Computing Environments guide](/scicomputing/compute_environments/).
 
 ## Advanced Features
 
@@ -279,23 +278,27 @@ runtime {
 - [WDL Docs](https://wdl-docs.readthedocs.io/) - Additional documentation and guides
 
 **Fred Hutch Resources:**
-- [Data Science Lab: Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive course
+- [DaSL Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive course
+- [PROOF](/datascience/proof/) - User-friendly WDL execution platform
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Ready-to-use tasks and workflows
-- [Fred Hutch WDL Repositories](https://github.com/fredhutch?q=wdl&type=all) - Example workflows
+- [WILDS Docker Library](/datascience/wilds_docker/) - Pre-built containers for bioinformatics tools
 
 **Community Resources:**
-- [bioWDL](https://biowdl.github.io/) - Bioinformatics workflow templates
+- [WARP](https://broadinstitute.github.io/warp/docs/get-started) - Broad Institute's WDL workflows
 - [GATK Workflows](https://github.com/gatk-workflows) - Production genomics pipelines
-- [Dave Tang's WDL Blog](https://davetang.org/muse/2020/01/09/learning-wdl/) - Learning guide
+- [bioWDL](https://biowdl.github.io/) - Bioinformatics workflow templates
 
 ### Development Tools
 
 **VS Code Extension:**
 - [WDL Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=broadinstitute.wdl) - Syntax highlighting and error detection
+- [Sprocket Extension](https://marketplace.visualstudio.com/items?itemName=stjude-rust-labs.sprocket-vscode) - Integrated WDL execution and debugging with Sprocket
+
 
 **Validation Tools:**
-- `womtool validate` - Check WDL syntax without running
+- `sprocket lint` - Lint WDL files for best practices
 - `miniwdl check` - Lint and validate WDL files
+- `womtool validate` - Check WDL syntax without running
 
 ## Running WDL Workflows
 
@@ -306,7 +309,7 @@ WDL workflows require an execution engine to run. See our guide on [WDL Executio
 
 At Fred Hutch, you can also use [PROOF](/datascience/proof/) for a user-friendly interface to submit WDL workflows to our cluster.
 
-## Example: Importing from WILDS WDL Library
+## Utilizing the WILDS WDL Library
 
 The [WILDS WDL Library](/datascience/wilds_wdl/) provides tested, reusable components:
 
@@ -341,33 +344,7 @@ workflow RNAseqFromSRA {
 }
 ```
 
-This approach lets you build complex workflows quickly without writing every task from scratch.
-
-## Workflow Sharing and Publishing
-
-### For Fred Hutch Researchers
-
-To share workflows within our community:
-
-1. **Create a GitHub repository** in the [FredHutch organization](https://github.com/FredHutch)
-2. **Name it with `-wdl` suffix** (e.g., `variant-calling-wdl`)
-3. **Include these files:**
-   - WDL workflow file
-   - Example inputs JSON
-   - README explaining purpose and usage
-4. **Make it public** if you want to cite it in publications
-
-Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or join the [#workflow-managers Slack channel](https://fhdata.slack.com/archives/CJFP1NYSZ) for help.
-
-### For Publications
-
-When publishing research, include:
-- Link to your workflow's GitHub repository
-- Specific Git commit or release tag used
-- Example inputs (with synthetic data if real data is sensitive)
-- Container image versions
-
-This ensures others can reproduce your exact analysis.
+This approach lets you build complex workflows quickly without writing every task from scratch. If there's a tool/workflow that you think would be useful, feel free to file an issue in the [WILDS WDL Library GitHub repo](https://github.com/getwilds/wilds-wdl-library/issues) or [reach out to us directly!](#getting-help)
 
 ## Getting Help
 
