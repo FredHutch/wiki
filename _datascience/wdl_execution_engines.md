@@ -1,23 +1,22 @@
 ---
 title: WDL Execution Engines
-primary_reviewers: vortexing, tefirman
 last_modified_at: 2025-11-11
 ---
 
 WDL workflows are written in a standardized language, but they need an execution engine to actually run. This guide covers the three main execution engines and how to use them, with specific guidance for Fred Hutch researchers.
 
-> **New to WDL?** Start with our [WDL Workflows guide](/datascience/wdl_workflows/) to learn about the language itself before diving into execution engines.
+> **New to WDL?** Start with our [WDL Workflow guide](/datascience/wdl_workflows/) to learn about the language itself before diving into execution engines.
 
 ## Execution Engine Comparison
 
-| Feature | Cromwell | miniWDL | Sprocket |
-|---------|----------|---------|----------|
-| **Best For** | Shared HPC systems, production pipelines | Local development, testing workflows | Local execution, modern alternative |
-| **Ease of Setup** | Complex (server mode recommended) | Simple (single command install) | Simple (single binary) |
-| **Key Features** | Call caching, server mode, extensive backend support | Fast local execution, good error messages | Lightweight, modern architecture |
-| **Fred Hutch Support** | Full (PROOF, fh.wdlR, dedicated configs) | Community support | Community support |
+| Feature | Cromwell | Sprocket | miniWDL |
+|---------|----------|----------|---------|
+| **Best For** | Shared HPC systems, production pipelines | Local execution, development and testing | Alternative for local testing |
+| **Ease of Setup** | Complex (server mode recommended) | Simple (single binary) | Simple (single command install) |
+| **Key Features** | Call caching, server mode, extensive backend support | Lightweight, modern architecture, active development | Fast local execution, good error messages |
+| **Fred Hutch Support** | Full (PROOF, dedicated configs) | Community support | Community support |
 | **Learning Curve** | Steeper | Gentle | Gentle |
-| **When to Use** | Running on Gizmo, AWS Batch; production workflows | Quick local testing, learning WDL | Alternative to miniWDL for local work |
+| **When to Use** | Running on Gizmo, AWS Batch; production workflows | Local testing and development; actively maintained | Local testing when Sprocket isn't available |
 
 All three engines follow the [WDL specification](https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md), so workflows written for one should work on others with minimal changes.
 
@@ -55,42 +54,7 @@ At Fred Hutch, Cromwell is the primary execution engine for WDL workflows on our
 
 PROOF handles all Cromwell server setup, configuration, and job scheduling automatically.
 
-#### Running Your Own Cromwell Server
-
-For more control or to run multiple workflows efficiently, you can run a personal Cromwell server on Gizmo. The server acts as a workflow coordinator, managing job submission, tracking, and result collection.
-
-**Getting Started:**
-- Follow the [Data Science Lab guide: Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/)
-- Use Fred Hutch-specific configurations from [wdl-test-workflows](https://github.com/FredHutch/wdl-test-workflows)
-- Configure backends for Gizmo (SLURM) or AWS Batch
-
-**Server Mode Benefits:**
-- Run multiple workflows simultaneously
-- Access call caching across workflow runs
-- Query workflow history from the database
-- Submit workflows via API from your desktop
-
-#### Interacting with Cromwell
-
-**Web-based Options:**
-
-1. **Swagger UI**: Cromwell's built-in API interface
-   - Automatically served by your Cromwell server
-   - Direct access to all API endpoints
-   - Good for one-off operations
-
-2. **cromwellapp**: Fred Hutch Shiny application
-   - Available at [cromwellapp.fredhutch.org](https://cromwellapp.fredhutch.org/) (on-campus only)
-   - User-friendly interface for workflow submission and monitoring
-   - Developed by Amy Paguirigan at Fred Hutch
-
-**Programmatic Options:**
-
-3. **fh.wdlR**: R package for Cromwell interaction
-   - [GitHub: FredHutch/fh.wdlR](https://github.com/FredHutch/fh.wdlR)
-   - Submit workflows, check status, query results from R/RStudio
-   - Parses API responses into data frames
-   - Ideal for integrating workflows into R-based analyses
+It is possible to set up and run your own Cromwell server on Fred Hutch's Gizmo cluster, however this requires more advanced configuration and maintenance. We recommend using PROOF for most users, but for more details on manually running your own Cromwell server, see the [diy-cromwell-server](https://github.com/FredHutch/diy-cromwell-server) for instructions and corresponding configuration files.
 
 #### Cromwell Key Features
 
@@ -107,6 +71,8 @@ If Cromwell finds an exact match in its database, it reuses the previous output 
 - Testing parameter changes - only affected tasks re-run
 - Running similar analyses - shared preprocessing steps are cached
 
+PROOF is pre-configured to enable call caching when requested via the `write_to_cache` and `read_from_cache` arguments in the options json.
+
 ##### Workflow Restarts and Retries
 
 Cromwell can automatically retry failed tasks and restart workflows from the point of failure:
@@ -122,36 +88,9 @@ Combined with call caching, this means you can restart a complex workflow after 
 
 ##### Using Scratch Space
 
-At Fred Hutch, configure Cromwell to use `/fh/scratch` for intermediate files:
-
-- Large intermediate files stay in temporary storage
-- Final outputs are copied to long-term storage (`Fast` file)
-- Reduces storage costs and cleanup burden
-- Works with [Fred Hutch's scratch storage policies](/scicomputing/store_scratch/)
-
-In AWS, configure S3 prefixes similarly:
-- Working directory for intermediate files
-- Final output prefix for results
-- Enables bulk deletion of intermediate data
+When submitted through a Cromwell server via PROOF, workflows are automatically configured to use `/fh/scratch` for intermediate files. This allows large intermediate files to stay in temporary storage while final outputs can be copied to your long-term storage location via the `final_workflow_outputs_dir` argument in the options json. This reduces storage costs and cleanup burden, while also abiding by [Fred Hutch's scratch storage policies](/scicomputing/store_scratch/).
 
 This approach is critical for genomics workflows that generate terabytes of intermediate data but only need gigabytes of final results.
-
-#### Fred Hutch Cromwell Resources
-
-**Configuration Files:**
-- [wdl-test-workflows](https://github.com/FredHutch/wdl-test-workflows) - Example workflows with Fred Hutch configurations
-- [Fred Hutch WDL repositories](https://github.com/fredhutch?q=wdl&type=all) - Community workflows
-
-**Tools:**
-- [fh.wdlR](https://github.com/FredHutch/fh.wdlR) - R package for Cromwell interaction
-- [cromwellapp](https://cromwellapp.fredhutch.org/) - Web-based submission interface
-
-**Example Workflows:**
-- [unpaired variant caller](https://github.com/FredHutch/tg-wdl-unpairedVariantCaller) - Production example with test data
-
-**Docker Containers:**
-- [Fred Hutch DockerHub](https://hub.docker.com/u/fredhutch) - Containers for workflow use
-- [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library) - Tested bioinformatics containers
 
 ### Cromwell Documentation
 
@@ -160,17 +99,79 @@ This approach is critical for genomics workflows that generate terabytes of inte
 - [Terra WDL Tutorials](https://support.terra.bio/hc/en-us/sections/360007347652)
 - [Terra Support Forum](https://support.terra.bio/hc/en-us/sections/360007274612)
 
+## Sprocket
+
+[Sprocket](https://sprocket.bio/) is a modern WDL execution engine developed at St. Jude Children's Research Hospital. It's designed for ease of use with a focus on local execution and cloud platforms, with active ongoing development.
+
+### Why Choose Sprocket?
+
+**Advantages:**
+- **Simple installation**: Single binary download, no dependencies
+- **Clear error messages**: Helpful, actionable feedback when things go wrong
+- **Modern architecture**: Built with recent WDL specifications in mind
+- **Active development**: Regularly updated with new features and improvements from St. Jude
+- **Cloud-native design**: Good AWS/Azure integration
+- **Lightweight**: Fast execution with minimal overhead
+
+**Considerations:**
+- Younger project with smaller community than Cromwell
+- Less third-party documentation compared to more established tools
+
+### Installing Sprocket
+
+```bash
+# Download the latest release from GitHub
+# https://github.com/stjudecloud/sprocket/releases
+
+# Make executable
+chmod +x sprocket
+
+# Run a workflow
+./sprocket workflow.wdl --inputs inputs.json
+```
+
+### Running WILDS WDL Library with Sprocket
+
+```bash
+# Clone the library
+git clone https://github.com/getwilds/wilds-wdl-library.git
+cd wilds-wdl-library
+
+# Run a vignette
+cd vignettes/ww-sra-star
+sprocket ww-sra-star.wdl --inputs inputs.json
+```
+
+Sprocket automatically:
+- Pulls required Docker containers
+- Manages input/output files
+- Creates run directories with results and logs
+
+### Sprocket at Fred Hutch
+
+While PROOF uses Cromwell, Sprocket is our recommended tool for local workflow development:
+- **Test workflows locally** before submitting to PROOF
+- **Develop new tasks** with quick iteration cycles
+- **Learn WDL** with clear error messages and fast feedback
+
+All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with Sprocket and work identically on PROOF/Cromwell.
+
+### Sprocket Documentation
+
+- [Sprocket Official Site](https://sprocket.bio/)
+- [Sprocket GitHub Repository](https://github.com/stjudecloud/sprocket)
+- [Installation Guide](https://sprocket.bio/installation.html)
+
 ## miniWDL
 
-[miniWDL](https://miniwdl.readthedocs.io/) is a lightweight WDL execution engine developed by the Chan Zuckerberg Initiative. It's designed for simplicity and ease of use, making it ideal for local development and testing.
+[miniWDL](https://miniwdl.readthedocs.io/) is a lightweight WDL execution engine developed by the Chan Zuckerberg Initiative. It's an alternative option for local development and testing.
 
 ### Why Choose miniWDL?
 
 **Advantages:**
 - **Simple setup**: Install with `pip install miniwdl`
 - **Fast execution**: Minimal overhead for local workflows
-- **Excellent error messages**: Clear, actionable feedback when things go wrong
-- **Good for learning**: Straightforward behavior makes WDL concepts easier to grasp
+- **Good error messages**: Clear, actionable feedback when things go wrong
 - **Local-first**: Designed for running on your own machine
 
 **Considerations:**
@@ -225,7 +226,7 @@ miniWDL automatically:
 
 ### miniWDL at Fred Hutch
 
-While PROOF uses Cromwell, you can use miniWDL to:
+While PROOF uses Cromwell, you can use miniWDL as an alternative to Sprocket for:
 - **Test workflows locally** before submitting to PROOF
 - **Develop new tasks** with quick iteration cycles
 - **Learn WDL** with immediate feedback
@@ -238,51 +239,6 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with mini
 - [miniWDL GitHub Repository](https://github.com/chanzuckerberg/miniwdl)
 - [Getting Started Guide](https://miniwdl.readthedocs.io/en/latest/getting_started.html)
 
-## Sprocket
-
-[Sprocket](https://sprocket.bio/) is a modern WDL execution engine developed at St. Jude Children's Research Hospital. It's designed for ease of use with a focus on local execution and cloud platforms.
-
-### Why Choose Sprocket?
-
-**Advantages:**
-- **Modern architecture**: Built with recent WDL specifications in mind
-- **Simple installation**: Single binary, no dependencies
-- **Cloud-native design**: Good AWS/Azure integration
-- **Active development**: Newer project with modern tooling
-
-**Considerations:**
-- Younger project with smaller community than Cromwell or miniWDL
-- Feature set still evolving
-- Less documentation and fewer examples available
-
-### Installing Sprocket
-
-```bash
-# Download the latest release from GitHub
-# https://github.com/stjudecloud/sprocket/releases
-
-# Make executable
-chmod +x sprocket
-
-# Run a workflow
-./sprocket workflow.wdl --inputs inputs.json
-```
-
-### When to Use Sprocket
-
-Sprocket is a good choice if:
-- You want an alternative to miniWDL for local testing
-- You're running workflows on AWS or Azure
-- You want to explore newer WDL execution technology
-
-At Fred Hutch, Sprocket is an option for local workflow development, similar to miniWDL. All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with Sprocket.
-
-### Sprocket Documentation
-
-- [Sprocket Official Site](https://sprocket.bio/)
-- [Sprocket GitHub Repository](https://github.com/stjudecloud/sprocket)
-- [Installation Guide](https://sprocket.bio/installation.html)
-
 ## Choosing the Right Engine
 
 ### Decision Guide
@@ -290,11 +246,11 @@ At Fred Hutch, Sprocket is an option for local workflow development, similar to 
 **For Fred Hutch researchers running on Gizmo or AWS Batch:**
 - Use **PROOF** (Cromwell backend) for user-friendly workflow submission
 - Use **Cromwell server mode** for advanced features and multiple workflows
-- Use **miniWDL or Sprocket** locally to test before scaling up
+- Use **Sprocket or miniWDL** locally to test before scaling up
 
 **For local workflow development and testing:**
-- Use **miniWDL** for the easiest setup and best error messages
-- Use **Sprocket** if you prefer alternatives or need specific features
+- Use **Sprocket** for easy installation, clear error messages, and actively maintained modern execution
+- Use **miniWDL** as an alternative if Sprocket doesn't meet your needs
 - Consider testing locally before submitting to PROOF/Cromwell
 
 **For production pipelines:**
@@ -334,6 +290,6 @@ A key benefit of WDL is that workflows written for one engine generally work on 
 ## Next Steps
 
 1. **Learn WDL basics** - See [WDL Workflows guide](/datascience/wdl_workflows/)
-2. **Try local execution** - Install miniWDL and run a [WILDS WDL vignette](/datascience/wilds_wdl/)
+2. **Try local execution** - Install Sprocket or miniWDL and run a [WILDS WDL vignette](/datascience/wilds_wdl/)
 3. **Scale to HPC** - Use [PROOF](/datascience/proof/) to run on Fred Hutch infrastructure
 4. **Join the community** - Connect in [#workflow-managers Slack](https://fhdata.slack.com/archives/CJFP1NYSZ)
