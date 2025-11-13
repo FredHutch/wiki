@@ -83,14 +83,8 @@ datascience:
         url: /datascience/llm_tuning/
       - title: Data Deidentification
         url: /datascience/deidentification/
-  - title: Hutch Resources
-    children:
-      - title: Reference Genomes
-        url: /datascience/refgenomes/
-      - title: Generating Genomics Data
-        url: /datascience/datagen_assayPrep/
-      - title: Nextflow Catalog
-        url: /datascience/nextflow_catalog/
+      - title: Workflow Managers
+        url: /datascience/using_workflows/
   - title: Tools and Applications
     children:
       - title: PROOF
@@ -101,10 +95,16 @@ datascience:
         url: /datascience/wilds_docker/
       - title: cBioPortal
         url: /datascience/cbioportal/
-      - title: Workflow Managers
-        url: /datascience/using_workflows/
       - title: Cirro
         url: /datascience/cirro/
+  - title: Hutch Resources
+    children:
+      - title: Reference Genomes
+        url: /datascience/refgenomes/
+      - title: Generating Genomics Data
+        url: /datascience/datagen_assayPrep/
+      - title: Nextflow Catalog
+        url: /datascience/nextflow_catalog/
         
 
 
