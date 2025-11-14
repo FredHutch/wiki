@@ -119,16 +119,7 @@ This approach is critical for genomics workflows that generate terabytes of inte
 
 ### Installing Sprocket
 
-```bash
-# Download the latest release from GitHub
-# https://github.com/stjudecloud/sprocket/releases
-
-# Make executable
-chmod +x sprocket
-
-# Run a workflow
-./sprocket workflow.wdl --inputs inputs.json
-```
+Sprocket is distributed as a single binary with no dependencies. For installation instructions, see the [Sprocket Installation Guide](https://sprocket.bio/installation.html).
 
 ### Running WILDS WDL Library with Sprocket
 
@@ -137,7 +128,7 @@ chmod +x sprocket
 git clone https://github.com/getwilds/wilds-wdl-library.git
 cd wilds-wdl-library
 
-# Run a vignette
+# Run a vignette (update values in inputs.json as needed)
 cd vignettes/ww-sra-star
 sprocket ww-sra-star.wdl --inputs inputs.json
 ```
@@ -149,7 +140,7 @@ Sprocket automatically:
 
 ### Sprocket at Fred Hutch
 
-While PROOF uses Cromwell, Sprocket is our recommended tool for local workflow development:
+While PROOF uses Cromwell in the Fred Hutch HPC environment, Sprocket is our recommended tool for _local_ workflow development:
 - **Test workflows locally** before submitting to PROOF
 - **Develop new tasks** with quick iteration cycles
 - **Learn WDL** with clear error messages and fast feedback
@@ -159,7 +150,7 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with Spro
 ### Sprocket Documentation
 
 - [Sprocket Official Site](https://sprocket.bio/)
-- [Sprocket GitHub Repository](https://github.com/stjudecloud/sprocket)
+- [Sprocket GitHub Repository](https://github.com/stjude-rust-labs/sprocket)
 - [Installation Guide](https://sprocket.bio/installation.html)
 
 ## miniWDL
