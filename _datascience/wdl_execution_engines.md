@@ -166,7 +166,7 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with Spro
 - **Local-first**: Designed for running on your own machine
 
 **Considerations:**
-- Less feature-rich than Cromwell (no call caching)
+- Less feature-rich than Cromwell
 - Primarily focused on local execution
 - Limited backend options compared to Cromwell
 
@@ -205,7 +205,7 @@ miniwdl check workflow.wdl
 git clone https://github.com/getwilds/wilds-wdl-library.git
 cd wilds-wdl-library
 
-# Run a vignette
+# Run a vignette (update values in inputs.json as needed)
 cd vignettes/ww-sra-star
 miniwdl run ww-sra-star.wdl -i inputs.json
 ```
@@ -214,13 +214,6 @@ miniWDL automatically:
 - Pulls required Docker containers
 - Manages input/output files
 - Creates run directories with results and logs
-
-### miniWDL at Fred Hutch
-
-While PROOF uses Cromwell, you can use miniWDL as an alternative to Sprocket for:
-- **Test workflows locally** before submitting to PROOF
-- **Develop new tasks** with quick iteration cycles
-- **Learn WDL** with immediate feedback
 
 All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with miniWDL and work identically on PROOF/Cromwell.
 
@@ -235,8 +228,7 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with mini
 ### Decision Guide
 
 **For Fred Hutch researchers running on Gizmo or AWS Batch:**
-- Use **PROOF** (Cromwell backend) for user-friendly workflow submission
-- Use **Cromwell server mode** for advanced features and multiple workflows
+- Use **PROOF** (Cromwell backend) for workflow submission with all features managed for you
 - Use **Sprocket or miniWDL** locally to test before scaling up
 
 **For local workflow development and testing:**
@@ -247,7 +239,6 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with mini
 **For production pipelines:**
 - Use **Cromwell** for call caching, server mode, and robust HPC integration
 - Leverage PROOF if you want infrastructure managed for you
-- Set up a personal Cromwell server for maximum control
 
 ### Workflow Portability
 
@@ -263,14 +254,9 @@ A key benefit of WDL is that workflows written for one engine generally work on 
 
 ### Fred Hutch Support
 
-**For Cromwell/PROOF questions:**
 - Email [wilds@fredhutch.org](mailto:wilds@fredhutch.org)
 - Schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management)
 - Join [#workflow-managers Slack](https://fhdata.slack.com/archives/CJFP1NYSZ)
-
-**For general WDL help:**
-- Contact Amy Paguirigan (`apaguiri`)
-- Post in [#workflow-managers Slack](https://fhdata.slack.com/archives/CJFP1NYSZ)
 
 ### Community Resources
 
