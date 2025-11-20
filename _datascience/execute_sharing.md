@@ -7,28 +7,12 @@ This page provides guidance on sharing research data for publication or as requi
 
 > For information about the 2023 NIH Data Management and Sharing Policy see: [NIH Data Sharing](/datascience/nih_data_sharing/)
 
+## Choosing a Data Repository (NIH Guidance)
 
+The type of data, your funder's requirements, and your field of research will all influence which repository is right for your project.
 
-## Data Repositories
-
-### Public Repositories
-
-We here provide some details on a few (by no mean exhaustive) public repositories. If you know of another repository that would like to see added to this page please contact us. Some of these repositories do require IRB approval to download the data. Please correspond with the proper administration authority. 
-
-- [GTEx](https://gtexportal.org/home/): The Genotype-Tissue Expression  project is aiming to understand the difference and regulation of gene expression by tissue across 53 different tissues.
-- [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga): The Cancer Genome Atlas is a joint effort by the NCI and the NHGRI to moleculary characterize approximately 20000 primary cancer in comparison to matched normal over 33 cancer types. 
-- [1000 genomes](https://www.internationalgenome.org/home): The 1000 genomes project sequenced 1000 genomes to find genetic variants with at least 1% variation in the human population. A useful source
-- [GEO](https://www.ncbi.nlm.nih.gov/geo/): Gene expression Omnbinus  is a public genomics data repository. 
-- [gnomAD](https://gnomad.broadinstitute.org): The genotype aggression database  is working to aggregate and harmonize sequencing data across multiple studies. 
-- [TOPMed](https://www.nhlbiwgs.org): TOPMed is brought to you by NIH and NHLBI. Trans-Omics for Precision Medicine (TOPmed) aims to "understand of the fundamental biological processes that underlie heart, lung, blood, and sleep (HLBS) disorders." 
-- [dbsnp](https://www.ncbi.nlm.nih.gov/snp): Provides information about single nuclotide polymorphisms (SNPs), as well as tracking these SNPs publication history. 
-- [UK Biobank](https://www.ukbiobank.ac.uk): Prospective cohort study with a wealth of genetic and health data on 500,000 participants. 
-- [cBioPortal](https://www.cbioportal.org/):  This is an excellent resource for viewing/accessing TCGA cancer genomics data.  
-- [Sage's Synapse.org](https://www.synapse.org/) is not only useful for sharing (privately or publicly) your own research data, but also where [several open datasets are hosted](https://www.synapse.org/#!StandaloneWiki:OpenResearchProjects), and also interact with the various [DREAM Challenges they host](https://dreamchallenges.org/).
-
-
-
-## Genomic Data Sharing
+- [Selecting a Data Repository](https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/dms/selecting-a-data-repository) - Guidelines for choosing the appropriate repository based on your data type, discipline, and funder requirements
+- [Data management and sharing policies](https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/accessing-data/scientific) - Information on NIH data sharing policies and procedures for accessing shared scientific data
 
 As noted by the NIH and others, the nature of genomic data requires several specific considerations be kept in mind. In addition to being personal and unique to each individual, genomic data may, for example:
 
