@@ -3,12 +3,9 @@ title: Data Sharing
 primary_reviewers: vortexing
 ---
 
-More to come here.  We will develop and share guidance and information about useful tools, approaches, software and strategies for sharing data, be it as a requirement from a funding source, a publication, or during the course of your research with collaborators.  
+This page provides guidance on sharing research data for publication or as required by funding agencies. Many journals have data and code availability requirements where data must be promptly available and accessible to readers upon publication.
 
-Data Sharing in the realm of genomics and large scale datasets has highlighted some specific new challenges and possibilities. The sharing of large scale research data has potential to strengthen academic medical research, the
-practice of medicine, and the integrity of the clinical trial system. Some benefits are obvious: when researchers have access to complete data, they can answer new questions, explore different lines of analysis, and more efficiently
-conduct large-scale analyses across trials or projects. However, our evolving collective understanding of data sharing practices when large-scale datasets are involved can tend to result in an unnecessary burden on the
-research(ers) that is actually both counterproductive and may not necessarily make the patient or researcher any safer. This section can help guide decision making and actions to successfully share and manage research data to allow for the most productivity and facilitation of the original research itself while balancing the data privacy and security needs of those involved.
+> For information about the 2023 NIH Data Management and Sharing Policy see: [NIH Data Sharing](/datascience/nih_data_sharing/)
 
 
 
