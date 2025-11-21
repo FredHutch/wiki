@@ -97,6 +97,8 @@ datascience:
         url: /datascience/proof/
       - title: WILDS WDL Library
         url: /datascience/wilds_wdl/
+      - title: WILDS Docker Library
+        url: /datascience/wilds_docker/
       - title: cBioPortal
         url: /datascience/cbioportal/
       - title: Workflow Managers

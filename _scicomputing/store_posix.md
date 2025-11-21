@@ -19,7 +19,15 @@ A tool that is useful for moving data between these systems is [Motuz](https://m
 
 `Home` storage is your own personal file storage space at the Fred Hutch.  It is a default place for your [shell login files](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) as well as an appropriate place to store your own private information.
 
-While you are allowed up to 100GB of storage in this home directory, it is not tailored for heavy use and won't accommodate large data sets- the 100GB limit cannot be extended.  Also, data in this file system cannot be shared with others.
+While you are allowed up to 1TB of storage in this home directory, it is not tailored for heavy use and won't accommodate large data sets- the 1TB limit cannot be extended.  Also, data in this file system cannot be shared with others.
+
+### A Note on "Homelink"
+
+`homelink` enables the use of links from your `home` directory into the `fast` and `secure` file systems.  It functions by collecting these file systems onto a single mount and then sharing that via the SMB workstation protocol.  `homelink` itself stores no data.
+
+`homelink` is most commonly used when you have a shortcut into your lab's shared directory in `fast`.
+
+In general you should avoid `homelink` where possible and use the `home`, `fast`, and `secure` file servers directly as [described below](#how-to-access-fred-hutch-storage).  `homelink` is a small Linux-based host without the failover features or the performance capabilities of the underlying file systems it re-shares.
 
 ## Fast
 
@@ -83,21 +91,23 @@ _Regulated_ is not currently available for access via your desktop workstation
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `\\homelink\homes` |
 | Fast | `X:\fast` |
 | Secure | `X:\secure` |
 | Working | `X:\working` |
 | HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
+| Homes | `H:\\` |
+| Homes via Homelink | `\\homelink\homes` |
 
-**Non-Fred Hutch PC:**
+**Hutch PC without drive mapping:**
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `\\homelink.fhcrc.org\homes` |
 | Fast | `\\center.fhcrc.org\fh\fast` |
 | Secure | `\\center.fhcrc.org\fh\secure` |
 | Working | `\\center.fhcrc.org\fh\working` |
 | HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
+| Homelink | `\\home.fhcrc.org\homes` |
+| Homes via Homelink | `\\homelink\homes` |
 
 **Mac:**
 
@@ -105,11 +115,12 @@ For these paths, replace HUTCHID with your hutchid.
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `smb://fhcrc.org;HUTCHID@homelink.fhcrc.org/homes` |
 | Fast | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/fast` |
 | Secure | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/secure` |
 | Working | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/working` |
 | HPC Temp | `smb://fhcrc.org;HUTCHID@hpc.chromium.fhcrc.org/temp.chromium` |
+| Homes | `smb://fhcrc.org;HUTCHID@home.fhcrc.org/homes` |
+| Homes via Homelink | `smb://fhcrc.org;HUTCHID@homelink.fhcrc.org/homes` |
 
 Note: Drive mapping with Macs can be very slow for large volumes due to the Mac wanting to index every file in a volume. Turn off volume indexing to improve the speed of drive mapping. 
 From a terminal window on your Mac, turn off all drive mapping.
@@ -128,7 +139,7 @@ The sudo command will ask for your Mac login password. Often Mac volume names ha
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `~/` or `/home/HUTCHID` |
+| Home | `~/` or `/home/HUTCHID` |
 | Fast | `/fh/fast` |
 | Temp | `/hpc/temp` |
 | Working | `/fh/working` |
