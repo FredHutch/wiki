@@ -15,14 +15,14 @@ This section is intended to be a basic introduction to using the workload manage
 A GitHub repository has been created that is an evolving resource for the community containing working examples of using Slurm at Fred Hutch.  Please see the [Slurm Examples repo](https://github.com/FredHutch/slurm-examples) for more specific guidance on using Slurm in variety of settings.  This is an evolving example repo that new users can refer to to begin to get into parallel computing and more adept use of Slurm.  If you are a Fred Hutch user and would like to contribute to the documentation or the examples there, to share with the community how you structure your interactions with Slurm, submit a pull request there.
 
 ### Using SLURM with Workflow Managers
-If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
+If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a [workflow manager](/datascience/using_workflows/).  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
 - sending the jobs to the compute resources, 
 - deciding what tasks can be done in parallel, 
 - staging data for use and keeping track of inputs and outputs,
 - environment management (via docker containers or environment modules)
 - monitoring jobs and providing you with metadata about them and the workflow itself. 
 
-At Fred Hutch, [Nextflow](/compdemos/nextflow/) and [WDL workflows](/datascience/wdl_workflows/) are the primary workflow systems in use. WDL workflows can be executed using [multiple engines](/datascience/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket. Users are actively curating shared support and resources, with workflow-related information collected in a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl&type=&language=) which often contain shared workflows or configuration information.
+At Fred Hutch, [Nextflow](/compdemos/nextflow/) and [WDL workflows](/datascience/wdl_workflows/) are the primary workflow systems in use. WDL workflows can be executed using [multiple engines](/datascience/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket, while Nextflow has its own execution engine. Users are actively curating shared support and resources, with the [WILDS WDL Library](/datascience/wilds_wdl/) being a key resource for WDL workflows, and the [Fred Hutch NextFlow catalog](/datascience/nextflow_catalog/) being a key resource for Nextflow workflows. See the [Using Workflows](/datascience/using_workflows/) page for more information on workflow systems.
 
 
 ## Basic Slurm Terminology
