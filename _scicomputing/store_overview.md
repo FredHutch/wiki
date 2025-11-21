@@ -74,7 +74,7 @@ OneDrive | No Charge | Offsite storage (cloud) with multi-datacenter replicaiton
 
 Additional details for other CIT file services such as `Secure File` (aka J or R drive) features are available on [Centernet](https://centernet.fredhutch.org/cn/u/center-it/services/storedataprotect.html).
 
-For chargeback information and amounts please check [this page](https://centernet.fredhutch.org/cn/u/shared-resources/data-resource.html) on CenterNet. 
+For chargeback information and amounts please check [this page](https://centernet.fredhutch.org/u/it/scicomp/data-resource.html) on CenterNet. 
 
 ## Data Storage Guidance
 
