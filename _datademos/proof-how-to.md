@@ -4,7 +4,7 @@ title: How to Use PROOF
 
 [proof.fredhutch.org](https://proof.fredhutch.org) on the Fred Hutch Network
 
-**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](https://docs.openwdl.org/) (Workflow Description Language) workflows using the [**Cromwell**](https://cromwell.readthedocs.io/en/stable/) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
+**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](/datascience/wdl_workflows/) (Workflow Description Language) workflows using the [**Cromwell**](/datascience/wdl_execution_engines/#cromwell) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
 
 - Automate all the backend configurations necessary to run your workflows instantly.
 
@@ -16,67 +16,26 @@ This guide is intended to describe how you can run PROOF, catering to varying le
 
 ## Background
 
-*What is WDL?*
+Before diving into PROOF, it helps to understand the underlying technologies:
 
-**Workflow Description Language** (**WDL**, pronounced '**widdle**') is a versatile, [open specification](https://openwdl.org/), workflow framework for executing bioinformatics and computational workflows. WDL offers:
+- **[WDL (Workflow Description Language)](/datascience/wdl_workflows/)** - A standardized, modular language for defining computational workflows. WDL offers platform independence, parallel execution support, and explicit data type definitions.
 
--   A **standardized** and **modular** approach to specifying and combining computational tasks, inputs, outputs, and dependencies.
-  
--   A task-oriented approach promoting **code reuse** and modularity.
-  
--   Support for **parallel execution**, enabling efficient processing of large datasets.
-  
--   Explicit data type definitions and **immutability of variables** by default, ensuring data consistency.
-  
--   Built-in support for specifying **data locations**, facilitating seamless collaboration across environments.
-  
--   Support for **scatter-gather** operations, improving workflow performance.
-  
--   **Flexible syntax** for concise and readable workflow definitions.
-  
--   **Platform independence**, allowing WDL workflows to run across different environments.
-  
--   Requirement of a **scientific workflow engine** like Cromwell for interpreting and executing WDL on various backends, enhancing usability and versatility.
+- **[Cromwell](/datascience/wdl_execution_engines/#cromwell)** - The WDL execution engine used by PROOF. Cromwell orchestrates multi-step workflows, handles job monitoring, and integrates with the Fred Hutch cluster.
 
+- **[WILDS WDL Library](/datascience/wilds_wdl/)** - Looking for a workflow to try? Browse our collection of tested, ready-to-use WDL workflows and vignettes.
 
-*What is Cromwell?*
+For a deeper dive into WDL concepts, see our [WDL Workflows Guide](/datascience/wdl_workflows/). To learn about other WDL execution options beyond Cromwell, see [WDL Execution Engines](/datascience/wdl_execution_engines/).
 
-[Cromwell](https://github.com/broadinstitute/cromwell), originally developed at the Broad Institute, is a WDL workflow engine, that facilitates the orchestration of multi-step workflows. It efficiently handles individual tasks, monitors job metadata, offers an intuitive API interface, and enables users to oversee multiple workflows concurrently. While other WDL engines exist, here are some of the reasons Cromwell stands out:
+### How PROOF Uses Cromwell
 
--   **Integration with the Fred Hutch cluster:** Cromwell has been configured to run on the Fred Hutch cluster to make running WDL workflows very simple. Additionally, it seamlessly integrates with various cloud platforms and workflow description formats, enhancing compatibility and facilitating workflow execution across different computing infrastructures.
+PROOF runs Cromwell in **server mode**, automatically handling all the configuration for you. When you start a PROOF server, it launches a Cromwell server as a job on the Fred Hutch cluster connected to a database for workflow tracking. This allows you to:
 
--   **Robust Workflow Management**: Cromwell offers a robust engine for managing complex workflows, ensuring efficient execution of tasks and streamlined workflow orchestration.
+- Run **multiple workflows** simultaneously from a single PROOF server
+- **Track** the status of all your workflows and tasks in one place
+- Use **cached results** to skip redundant computations
+- **Query** your workflow history for outputs and metadata
 
--   **Scalability**: With its ability to handle large-scale workflows, Cromwell accommodates projects of varying sizes, from small-scale analyses to large-scale data processing pipelines.
-
--   **Comprehensive Job Monitoring**: It provides comprehensive job monitoring and metadata tracking, enabling users to closely monitor workflow progress, identify bottlenecks, and troubleshoot issues effectively.
-
--   **Community Support and Documentation**: Cromwell benefits from a supportive community and extensive documentation, offering users access to resources, tutorials, and community-driven solutions to common challenges.
-
--   **Open Source and Customizable**: Being open-source, Cromwell allows for customization and adaptation to specific workflow requirements, empowering users to tailor workflows to their unique needs and preferences.
-
-
-*How should we use Cromwell?*
-
-In general, Cromwell works best when run in **server mode**, which means that users start a **Cromwell server** as a job on our local SLURM cluster that can connect to a **database** specifically for Cromwell workflow tracking.
-  
-This Cromwell server job then behaves as the workflow **coordinator** for that **user**, allowing a user to send workflow instructions for **multiple workflows** running simultaneously.
-
-The Cromwell server will then **parse** these workflow instructions, find and copy the relevant input files, **send** the tasks to the cluster (Gizmo) to be processed, **coordinate** the results of those tasks and **record** all of the metadata about what is happening in its database.
-
-This means that individual users can:
-
- - Run **multiple independent workflows** at the same time using **one Cromwell server**
-
- - Use **cached results** when identical to the current task
-
- - **Track** the status of workflows and tasks
- 
- - **Customize** the locations of input data, intermediate data, and workflow outputs into data storage resources appropriate to the data type (re: cost, backup, and accessibility)
-
- - **Query** the Cromwell database for information about workflows run in the past, including where their workflow outputs were saved or a variety of other workflow and task level metadata.
- 
-> Quick note: the Cromwell server is referred to as a PROOF server in these instructions. PROOF handles setting up the Cromwell server for you.
+> Quick note: Throughout this guide, "PROOF server" and "Cromwell server" refer to the same thing - PROOF just handles all the Cromwell setup for you.
 
 ## Using PROOF
 
@@ -340,8 +299,11 @@ If you find something is not working with the app or you find a bug, please help
 - [Intro to Fred Hutch Cluster Computing](https://hutchdatascience.org/FH_Cluster_101/index.html)
 
 #### Building WDL workflows
-- [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/)
-- [Open WDL Documentation](https://docs.openwdl.org/en/latest/)
+- [WDL Workflows Guide](/datascience/wdl_workflows/) - Fred Hutch wiki guide to WDL fundamentals
+- [WDL Execution Engines](/datascience/wdl_execution_engines/) - Understanding Cromwell and other WDL engines
+- [WILDS WDL Library](/datascience/wilds_wdl/) - Tested, ready-to-use WDL workflows and vignettes
+- [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive DaSL course
+- [Open WDL Documentation](https://docs.openwdl.org/en/latest/) - Official WDL specification
 
 #### PROOF mechanics
 - [R Client for the PROOF-API](https://github.com/getwilds/proofr)
