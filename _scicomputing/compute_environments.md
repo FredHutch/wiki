@@ -1,6 +1,6 @@
 ---
 title: Computing Environments and Containers
-last_modified_at: 2019-04-26
+last_modified_at: 2025-11-11
 primary_reviewers: bmcgough
 ---
 
@@ -178,11 +178,18 @@ like `Rhino` / `Gizmo` at Fred Hutch. Additional information on using Apptainer 
 Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/scicomputing/compute_cloud/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
 executed with that system.
 
-### Other Docker Resources
+### Docker Resources
 
-  * The most commonly used server to share Docker images is called [Docker Hub](https://hub.docker.com/).
-  * Another commonly used server to share Docker images is called [Quay](https://quay.io/).
-  * [BioContainers](https://biocontainers.pro/) is a free and open source project to collect a set of images that contain useful bioinformatics tools.
+#### Fred Hutch Resources
+
+  * **WILDS Docker Library ([GitHub](https://github.com/getwilds/wilds-docker-library), [DockerHub](https://hub.docker.com/u/getwilds))** - Tested, versioned Docker containers for bioinformatics tools, built and maintained by the WILDS team at Fred Hutch. These containers are designed to work seamlessly with WDL workflows and other workflow systems.
+  * **[Fred Hutch DockerHub](https://hub.docker.com/u/fredhutch)** - Additional containers available for Fred Hutch researchers.
+
+#### Community Resources
+
+  * **[Docker Hub](https://hub.docker.com/)** - The most commonly used server to share Docker images.
+  * **[Quay](https://quay.io/)** - Another commonly used server to share Docker images.
+  * **[BioContainers](https://biocontainers.pro/)** - A free and open source project to collect a set of images that contain useful bioinformatics tools.
 
 
 ## Installing Custom Software Packages
