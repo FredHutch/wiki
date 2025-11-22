@@ -16,7 +16,7 @@ interested in using it, please visit the Data Governance team's page about
 [NIH Repository Data Access][ocdodg-nihrda] to learn more.
 
 [PROOF][how-to-proof] is configured to store the intermediate data files
-generated during WDL execution in a compliant location. If a user has access
+generated during [WDL][wdl-workflows] execution in a compliant location. If a user has access
 to data on *regulated*, PROOF will automatically create a directory at
 `/fh/regulated/[PI name]/temp/user/[username]/cromwell-scratch/`
 which will contain the intermediate files produced while running a workflow.
@@ -59,9 +59,19 @@ stores appropriate artifacts on regulated storage. We are happy to help make
 sure your WDLs are compliant if you schedule a
 [Research Computing Data House Call][dhc].
 
+## Resources
+
+- [PROOF How-To][how-to-proof] - Step-by-step guide to using PROOF
+- [WDL Workflows Guide][wdl-workflows] - Learn the fundamentals of WDL
+- [WDL Execution Engines][wdl-engines] - Understanding Cromwell and other WDL engines
+- [WILDS WDL Library][wilds-wdl] - Tested, ready-to-use WDL workflows and modules
+
 <!--- Always keep this block of links at the bottom --->
 [wiki-reg]: /scicomputing/store_regulated
 [how-to-proof]: /datademos/proof-how-to
 [dhc]: https://ocdo.fredhutch.org/programs/dhc.html
 [dg-centernet]: https://centernet.fredhutch.org/u/data-science-lab/data-governance.html
 [ocdodg-nihrda]: https://centernet.fredhutch.org/u/data-science-lab/data-governance/data-access-request-data-use-certification-agreement.html
+[wdl-workflows]: /datascience/wdl_workflows/
+[wdl-engines]: /datascience/wdl_execution_engines/
+[wilds-wdl]: /datascience/wilds_wdl/
