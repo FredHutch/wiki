@@ -16,9 +16,9 @@ Reasons to use scientific software maintained by SciComp include:
 
 ## Environment Modules
 
-On the command line and in scripts, we use Environment Modules to make different versions of software easily available in a modular and changeable way. Loading specific versions of software packages helps stabilize your environment and improves reproducibility of your work.
+On the command line and in scripts, we use Environment Modules to make different versions of software easily available in a modular and changeable way. Loading specific versions of software packages helps stabilize your environment and improves repeatability of your work.
 
-We use [TACC Lmod Environment Modules](https://tacc.utexas.edu/research/tacc-research/lmod/) to manage your software environment.  The commands you use to interact with Environment Modules are `module` or `ml`.  These commands take subcommands (e.g. `module load`) which direct Lmod to update the Environment Modules in use.
+We use [TACC Lmod Environment Modules](https://tacc.utexas.edu/research/tacc-research/lmod/) to manage your software environment.  The commands you use to interact with Environment Modules are `module` or `ml`.  These commands take sub-commands (e.g. `module load`) which direct Lmod to update the Environment Modules in use.
 
 > [!NOTE]
 > For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.
@@ -27,9 +27,9 @@ We use [EasyBuild](https://easybuild.io/) to build software and create Environme
 
 ### How to Use Environment Modules
 
-As you will learn below, Environment Modules can be referred to in two ways- generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
+As you will learn below, Environment Modules can be referred to in two ways- generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the repeatability supporting features of Environment Modules. 
 
-The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.
+The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the version of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both repeatability of your processes as well as making sure your process continues to work over time.
 
 #### Using Environment Modules Interactively
 
@@ -155,7 +155,7 @@ For more documentation and background on Docker, see [Docker for Beginners](http
 The reason that scientists use Docker is that it allows them to run
 computational tools using the exact same computational environment as another
 scientist, so that the same input data will (by definition) yield the exact
-same set of results. This is a level of reproducibility that is essentially
+same set of results. This is a level of repeatability that is essentially
 impossible to achieve with any other tool apart from full virtual machines.  It
 also neatly solves the problem of having to install dependencies in order to
 run a new tool in the right way.
@@ -188,9 +188,9 @@ sets.
 
 By default, Docker containers do not have access to the file system for the
 computer that they are being run on. In order to pass files back and forth
-between the running Docker container and the host filesystem, you must make a
+between the running Docker container and the host file system, you must make a
 "mount point." The mount point is a folder that is shared between the Docker
-container and the host filesystem, allowing you to read and write data.
+container and the host file system, allowing you to read and write data.
 
 #### Pull / Push
 
@@ -272,7 +272,7 @@ If you want to install or build a standalone software package, you are also welc
 1. *Only bash?*
   - Our recommendation is to use bash as your shell. If you wish to use a different shell, please contact SciComp.
 1. *Is there a faster way?*
-  - The command `ml` is a shortcut for `module` and implies `module load` but will work with other `module` subcommands (ex: `ml R/3.5.0-foss-2016b-fh1` or `ml avail Python/3.5`)
+  - The command `ml` is a shortcut for `module` and implies `module load` but will work with other `module` sub-commands (ex: `ml R/3.5.0-foss-2016b-fh1` or `ml avail Python/3.5`)
 1. *What is this "foss-2016b" stuff?*
   - The EasyBuild project supports many different toolchains. The toolchain defines a compiler and library set, and also has a number of common support libraries (things like libTIFF) associated with it.
 1. *Should I load default modules?*
