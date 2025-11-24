@@ -111,6 +111,9 @@ Attempting to load those two modules at the same will produce a warning like "Th
 
 This may still run, but can produce odd failures or unanticipated output.
 
+> [!NOTE]
+> When you require multiple modules loaded concurrently (for example, _reticulate_ which requires R and Python), you'll need to take additional steps to ensure that dependencies match.  Checking toolchain versions is one way, trial-and-error another.
+
 ##### Clean Before you Load
 
 A good habit to have is cleaning your environment before loading any modules.  The `purge` command will remove any configurations from any applied module and ready your environment for subsequent modules.
