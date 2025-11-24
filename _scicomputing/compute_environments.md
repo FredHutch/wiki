@@ -26,11 +26,13 @@ We use [TACC Lmod Environment Modules](https://tacc.utexas.edu/research/tacc-res
 We use [EasyBuild](https://easybuild.io/) to build software and create Environment Modules for everyone to use- there are over a thousand modules already available.
 
 ### How to Use Environment Modules
+
 As you will learn below, Environment Modules can be referred to in two ways- generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
 
 The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.
 
-#### Interactively
+#### Using Environment Modules Interactively
+
 When you log in to any SciComp managed server, your terminal session will have **Lmod** loaded. Commonly used shell commands for Environment Modules include:
 
 Command | Action
@@ -77,7 +79,9 @@ ml fhR/4.4.1-foss-2023b-R-4.4.1
 
 This will then load the module then run the rest of the commands in your script. There are some recommendations for using modules in your scripts:
 
-##### Use the Full Module Name
+### Lmod Hints and Tips
+
+#### Use the Full Module Name
 
 Scripts are expected to be reproducible, so specifying the Environment Module with its version is recommended.  For example, instead of:
 
@@ -92,7 +96,7 @@ module load Python/3.5.1-foss-2016b-fh1
 
 The default version loaded by the first command will change as we install new versions of that module (default always tracks the most recent).  While some changes may be trivial, other changes may break your script.  This allows you to have a stable environment for your work and ensures that others who use your code know which module version is supported.
 
-##### One at a Time
+#### One at a Time
 
 Loading multiple modules concurrently can lead to compatibility problems.  Each module is built with a specific set of dependencies: if two different modules use different versions of the same dependency the resulting conflict can cause unexpected behavior.
 
@@ -122,7 +126,7 @@ This may still run, but can produce odd failures or unanticipated output.
 > [!NOTE]
 > When you require multiple modules loaded concurrently (for example, _reticulate_ which requires R and Python), you'll need to take additional steps to ensure that dependencies match.  Aligning toolchain versions is one way, trial-and-error another.  Contact SciComp if you need more help.
 
-##### Clean Before you Load
+#### Clean Before you Load
 
 A good habit to have is cleaning your environment before loading any modules.  The `purge` command will remove any configurations from any applied module and ready your environment for subsequent modules.
 
