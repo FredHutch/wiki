@@ -16,13 +16,13 @@ Reasons to use scientific software maintained by SciComp include:
 
 ## Environment Modules
 
-On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.  For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.  
+On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.  For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.
 
 
 ### How to Use Environment Modules
-As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
+As you will learn below, Environment Modules can be referred to in two ways- generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
 
-The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.  
+The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.
 
 #### Interactively
 When you log in to any SciComp managed server, your terminal session has **Lmod** pre-loaded. Commonly used shell commands around Environment Modules include:
@@ -58,7 +58,7 @@ $ which python
 ```
 
 #### Scripting with Environment Modules
-To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work. 
+To use Environment Modules in a bash script, there are two best practices we highly recommend you integrate into your work. 
 
 ##### Best Practice 1
 
@@ -102,7 +102,7 @@ If desired, one way to manage jobs, environments, and data transfers particularl
 - environment management (via docker containers or environment modules)
 - monitoring jobs and providing you with metadata about them and the workflow itself
 
-Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.  
+Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.
 
 
 ## Docker Containers
@@ -114,14 +114,13 @@ question, ["What is Docker?"](https://www.docker.com/what-docker).
 
 For more documentation and background on Docker, see [Docker for Beginners](https://docker-curriculum.com/).
 
-The reason that scientists use Docker is that it allows them
-to run computational tools using the exact same computational
-environment as another scientist, so that the same input data
-will (by definition) yield the exact same set of results. This
-is a level of reproducibility that is essentially impossible
-to achieve with any other tool apart from full virtual machines.
-It also neatly solves the problem of having to install dependencies
-in order to run a new tool in the right way.
+The reason that scientists use Docker is that it allows them to run
+computational tools using the exact same computational environment as another
+scientist, so that the same input data will (by definition) yield the exact
+same set of results. This is a level of reproducibility that is essentially
+impossible to achieve with any other tool apart from full virtual machines.  It
+also neatly solves the problem of having to install dependencies in order to
+run a new tool in the right way.
 
 Although you cannot run Docker on our HPC cluster or on the `rhino` machines,
 you can work with Docker containers in those environments using
@@ -134,25 +133,26 @@ about Docker:
 
 #### Image
 
-A Docker image is basically a file that is built from a [Dockerfile](https://docs.docker.com/engine/reference/builder/). The image functions like a recipe for the process you want to have the Docker container execute. It specifies all the details, such as tools, processes and parameters needed for the process to occur in the Docker container that could be created from it.  
+A Docker image is basically a file that is built from a [Dockerfile](https://docs.docker.com/engine/reference/builder/). The image functions like a recipe for the process you want to have the Docker container execute. It specifies all the details, such as tools, processes and parameters needed for the process to occur in the Docker container that could be created from it.
 
 #### Container
 
-A Docker container is a Docker image that is being executed or actively applied. Once you launch an image and start doing things (writing files,
-running commands, etc.) it becomes a container. The useful reason
-behind the distinction between images and containers is that once
-you are done using a container, you usually delete it. However,
-the image that you launched the container from remains untouched,
-and can be used to launch more containers in the future should the same exact process be needed again for different data sets.  
+A Docker container is a Docker image that is being executed or actively
+applied. Once you launch an image and start doing things (writing files,
+running commands, etc.) it becomes a container. The useful reason behind the
+distinction between images and containers is that once you are done using a
+container, you usually delete it. However, the image that you launched the
+container from remains untouched, and can be used to launch more containers in
+the future should the same exact process be needed again for different data
+sets.
 
 #### Mount Point
 
-By default, Docker containers do not have access to the file system
-for the computer that they are being run on. In order to pass
-files back and forth between the running Docker container and the host
-filesystem, you must make a "mount point." The mount point is a folder
-that is shared between the Docker container and the host filesystem,
-allowing you to read and write data.
+By default, Docker containers do not have access to the file system for the
+computer that they are being run on. In order to pass files back and forth
+between the running Docker container and the host filesystem, you must make a
+"mount point." The mount point is a folder that is shared between the Docker
+container and the host filesystem, allowing you to read and write data.
 
 #### Pull / Push
 
@@ -167,13 +167,18 @@ environment.
 
 The best page to get started at the Hutch is the [Computing Resource Library](/compdemos/Docker/) about Docker.
 
-Because Docker requires root access, it cannot be run on shared
-compute environments such as `Rhino` / `Gizmo`. Instead,
-developers at LBL have developed a utility called Apptainer (formerly Singularity) which can be used to run Docker images within an environment
-like `Rhino` / `Gizmo` at Fred Hutch. Additional information on using Apptainer can be found at the
-[apptainer.org](https://apptainer.org/docs/) site and more [details about using Apptainer at Fred Hutch](/compdemos/Apptainer/) on `Gizmo`.
+Because Docker requires root access, it cannot be run on shared compute
+environments such as `Rhino` / `Gizmo`. Instead, developers at LBL have
+developed a utility called Apptainer (formerly Singularity) which can be used
+to run Docker images within an environment like `Rhino` / `Gizmo` at Fred
+Hutch. Additional information on using Apptainer can be found at the
+[apptainer.org](https://apptainer.org/docs/) site and more [details about using
+Apptainer at Fred Hutch](/compdemos/Apptainer/) on `Gizmo`.
 
-**Words of Wisdom:** Apptainer also has its own image format, however we do not recommend to use it and instead import Docker containers as they can be used more universally, e.g. in cloud computing.
+> [!NOTE]
+> Apptainer also has its own image format, however we do not recommend to use
+> it and instead import Docker containers as they can be used more universally,
+> e.g. in cloud computing.
 
 Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/scicomputing/compute_cloud/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
 executed with that system.
@@ -215,7 +220,10 @@ If you want to install or build a standalone software package, you are also welc
 - If you loaded a toolchain module when installing or building new software, you will must load that toolchain module before running that software, or you will get library errors.
 
 ## Frequently Asked Questions
-> Note:  For announcements from Scientific Computing, please see the [Announcements page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the Events page in CenterNet for current Office Hours.  
+> [!NOTE]
+> For announcements from Scientific Computing, please see the [Announcements
+> page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the
+> Events page in CenterNet for current Office Hours.
 
 1. *Something weird is going on with my shell and/or job!?!*
   - "Reset" your shell by logging out and back in. This will clear your environment. Users using screen or tmux will need to exit their session to clear their environment.
