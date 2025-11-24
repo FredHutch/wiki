@@ -113,12 +113,14 @@ python /path/to/a/python/script.py
 
 ```
 
+Take the same approach in interactive sessions: `purge` then `load` the needed module.
+
 Attempting to load those two modules at the same will produce a warning like "The following have been reloaded with a version change" and a list of incompatible modules.
 
 This may still run, but can produce odd failures or unanticipated output.
 
 > [!NOTE]
-> When you require multiple modules loaded concurrently (for example, _reticulate_ which requires R and Python), you'll need to take additional steps to ensure that dependencies match.  Checking toolchain versions is one way, trial-and-error another.
+> When you require multiple modules loaded concurrently (for example, _reticulate_ which requires R and Python), you'll need to take additional steps to ensure that dependencies match.  Aligning toolchain versions is one way, trial-and-error another.  Contact SciComp if you need more help.
 
 ##### Clean Before you Load
 
