@@ -130,19 +130,6 @@ When you require multiple modules loaded concurrently (for example, _reticulate_
 
 A good habit to have is cleaning your environment before loading any modules.  The `purge` command will remove any configurations from any applied module and ready your environment for subsequent modules.
 
-#### With Workflow Managers
-
-If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
-
-- sending the jobs to the compute resources
-- deciding what tasks can be done in parallel
-- staging data for use and keeping track of inputs and outputs
-- environment management (via docker containers or environment modules)
-- monitoring jobs and providing you with metadata about them and the workflow itself
-
-Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.
-
-
 ## Docker Containers
 
 At its core, Docker is a tool that lets you run code inside a totally fixed and reproducible computational environment. If you have used virtual machines, then you can think of a Docker container as being a lightweight, portable, intuitive system for building and running virtual machines. The major difference between a Docker container and virtual machine is that Docker doesn't come with operating system, which makes it more lightweight and portable.  However, Docker containers do require the Docker engine to run them, which is a client-side application.
