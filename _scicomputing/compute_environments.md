@@ -20,8 +20,8 @@ On the command line and in scripts, we use Environment Modules to make different
 
 We use [TACC Lmod Environment Modules](https://tacc.utexas.edu/research/tacc-research/lmod/) to manage your software environment.  The commands you use to interact with Environment Modules are `module` or `ml`.  These commands take sub-commands (e.g. `module load`) which direct Lmod to update the Environment Modules in use.
 
-> [!NOTE]
-> For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.
+For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.
+{: .notice--info}
 
 We use [EasyBuild](https://easybuild.io/) to build software and create Environment Modules for everyone to use- there are over a thousand modules already available.
 
@@ -123,8 +123,8 @@ Attempting to load those two modules at the same will produce a warning like "Th
 
 This may still run, but can produce odd failures or unanticipated output.
 
-> [!NOTE]
-> When you require multiple modules loaded concurrently (for example, _reticulate_ which requires R and Python), you'll need to take additional steps to ensure that dependencies match.  Aligning toolchain versions is one way, trial-and-error another.  Contact SciComp if you need more help.
+When you require multiple modules loaded concurrently (for example, _reticulate_ which requires R and Python), you'll need to take additional steps to ensure that dependencies match.  Aligning toolchain versions is one way, trial-and-error another.  Contact SciComp if you need more help.
+{: .notice--info}
 
 #### Clean Before you Load
 
@@ -213,10 +213,10 @@ Hutch. Additional information on using Apptainer can be found at the
 [apptainer.org](https://apptainer.org/docs/) site and more [details about using
 Apptainer at Fred Hutch](/compdemos/Apptainer/) on `Gizmo`.
 
-> [!NOTE]
-> Apptainer also has its own image format, however we do not recommend to use
-> it and instead import Docker containers as they can be used more universally,
-> e.g. in cloud computing.
+Apptainer also has its own image format, however we do not recommend to use
+it and instead import Docker containers as they can be used more universally,
+e.g. in cloud computing.
+{: .notice--info}
 
 Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/scicomputing/compute_cloud/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
 executed with that system.
@@ -258,10 +258,11 @@ If you want to install or build a standalone software package, you are also welc
 - If you loaded a toolchain module when installing or building new software, you will must load that toolchain module before running that software, or you will get library errors.
 
 ## Frequently Asked Questions
-> [!NOTE]
-> For announcements from Scientific Computing, please see the [Announcements
-> page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the
-> Events page in CenterNet for current Office Hours.
+
+For announcements from Scientific Computing, please see the [Announcements
+page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the
+Events page in CenterNet for current Office Hours.
+{: .notice--info}
 
 1. *Something weird is going on with my shell and/or job!?!*
   - "Reset" your shell by logging out and back in. This will clear your environment. Users using screen or tmux will need to exit their session to clear their environment.
