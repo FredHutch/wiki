@@ -4,7 +4,7 @@ last_modified_at: 2019-04-26
 primary_reviewers: bmcgough
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which SciComp resource might be best suited to their particular computing needs.
 
 The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
