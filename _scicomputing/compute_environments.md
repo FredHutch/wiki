@@ -111,6 +111,10 @@ Attempting to load those two modules at the same will produce a warning like "Th
 
 This may still run, but can produce odd failures or unanticipated output.
 
+##### Clean Before you Load
+
+A good habit to have is cleaning your environment before loading any modules.  The `purge` command will remove any configurations from any applied module and ready your environment for subsequent modules.
+
 #### With Workflow Managers
 
 If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
