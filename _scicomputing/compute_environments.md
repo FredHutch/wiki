@@ -86,6 +86,31 @@ module load Python/3.5.1-foss-2016b-fh1
 
 The default version loaded by the first command will change as we install new versions of that module (default always tracks the most recent).  While some changes may be trivial, other changes may break your script.  This allows you to have a stable environment for your work and ensures that others who use your code know which module version is supported.
 
+##### One at a Time
+
+Loading multiple modules concurrently can lead to compatibility problems.  Each module is built with a specific set of dependencies: if two different modules use different versions of the same dependency the resulting conflict can cause unexpected behavior.
+
+Thus, when possible, load and purge modules on an as-needed basis in your script.  For example, if your script calls an R script and then a Python script:
+
+```bash
+#!/bin/bash
+
+ml fhR/4.4.1-foss-2023b-R-4.4.1
+
+Rscript /path/to/your/script.R
+
+ml purge
+
+ml Python/3.9.6-GCCcore-11.2.0
+
+python /path/to/a/python/script.py
+
+```
+
+Attempting to load those two modules at the same will produce a warning like "The following have been reloaded with a version change" and a list of incompatible modules.
+
+This may still run, but can produce odd failures or unanticipated output.
+
 #### With Workflow Managers
 
 If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
