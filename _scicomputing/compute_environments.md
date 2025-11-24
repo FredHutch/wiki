@@ -25,7 +25,7 @@ As you will learn below, Environment Modules can be referred to in two ways- gen
 The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.
 
 #### Interactively
-When you log in to any SciComp managed server, your terminal session has **Lmod** pre-loaded. Commonly used shell commands around Environment Modules include:
+When you log in to any SciComp managed server, your terminal session will have **Lmod** loaded. Commonly used shell commands for Environment Modules include:
 
 Command | Action
 --- | ---
@@ -58,39 +58,33 @@ $ which python
 ```
 
 #### Scripting with Environment Modules
-To use Environment Modules in a bash script, there are two best practices we highly recommend you integrate into your work. 
 
-##### Best Practice 1
+Lmod environment modules can be used in your job scripts- just insert the `module` or `ml` command into your script in the same way you'd use it interactively:
 
-Interactive shell session have the required `module` commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the `module` command. Add the follow lines to the top of your script:
-
-```
+```bash
 #!/bin/bash
-source /app/lmod/lmod/init/profile
+
+ml fhR/4.4.1-foss-2023b-R-4.4.1
+
+# the rest of your script...
 ```
 
-This snippet can be used as a template for bash shell scripts.
+This will then load the module then run the rest of the commands in your script. There are some recommendations for using modules in your scripts:
 
-The `source` like activates the `module` and `ml` commands for you current shell. The `module` and `ml` commands are then available in your script:
+##### Use the Full Module Name
 
-```
-module load R/3.5.1-foss-2016b-fh1
-```
+Scripts are expected to be reproducible, so specifying the Environment Module with its version is recommended.  For example, instead of:
 
-This would load that specific Environment Module for use in your script.
-
-##### Best Practice 2
-Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
-```
-module load Python/3.5.1-foss-2016b-fh1
-```
-Rather than:
 ```
 module load Python
 ```
-The above line will load a different version of the software package over time as the "pointer" to a specific version is changed.
 
-> Note: This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
+load the module with the version included:
+```
+module load Python/3.5.1-foss-2016b-fh1
+```
+
+The default version loaded by the first command will change as we install new versions of that module (default always tracks the most recent).  While some changes may be trivial, other changes may break your script.  This allows you to have a stable environment for your work and ensures that others who use your code know which module version is supported.
 
 #### With Workflow Managers
 
