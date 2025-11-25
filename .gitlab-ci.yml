@@ -3,8 +3,9 @@ default:
     - apk update
     - apk --no-cache add py3-pip python3 curl git jq bash
     #- pip install pip==21.3.1 # workaround: https://stackoverflow.com/a/72469586/470769
-
-    - pip3 install --break-system-packages pyyaml
+    - python3 -m venv $HOME/.venv
+    - export PATH=$HOME/.venv/bin:$PATH
+    - pip3 install pyyaml
     - curl -O https://raw.githubusercontent.com/FredHutch/swarm-build-helper/main/build_helper.py 
     # below is from https://stackoverflow.com/a/65810302/470769
     - mkdir -p $HOME/.docker
@@ -180,4 +181,4 @@ deploy:
     sleep 15
     echo $SC_SWARM_CICD_SSH_KEY | base64 -d > ./sc_swarm_cicd_ssh_key
     chmod 0400 ./sc_swarm_cicd_ssh_key
-    python3 build_helper.py docker-compose.yml | ssh -i ./sc_swarm_cicd_ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@sc-swarm-mgr.fhcrc.org docker stack deploy --with-registry-auth -c - wiki
+    python3 build_helper.py --no-logging docker-compose.yml | ssh -i ./sc_swarm_cicd_ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@sc-swarm-mgr.fhcrc.org docker stack deploy --with-registry-auth -c - wiki

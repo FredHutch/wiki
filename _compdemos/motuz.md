@@ -15,7 +15,7 @@ Log in with your HutchNet ID and password.
 
 At this time, Motuz allows copying of files/objects between the following file storage systems (with more to come):
 
-* Shared file systems on campus (your home directory, `/fh/fast`, `/fh/scratch`)
+* Shared file systems on campus (your home directory, `/fh/fast`, `/hpc/temp`)
 * [Amazon S3](https://aws.amazon.com/s3/)
 * [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/)
 * [Google Cloud Bucket](https://cloud.google.com/storage/docs/json_api/v1/buckets)

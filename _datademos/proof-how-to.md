@@ -4,7 +4,7 @@ title: How to Use PROOF
 
 [proof.fredhutch.org](https://proof.fredhutch.org) on the Fred Hutch Network
 
-**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](https://docs.openwdl.org/en/1.0.0/) (Workflow Description Language) workflows using the [**Cromwell**](https://cromwell.readthedocs.io/en/stable/) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
+**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](https://docs.openwdl.org/) (Workflow Description Language) workflows using the [**Cromwell**](https://cromwell.readthedocs.io/en/stable/) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
 
 - Automate all the backend configurations necessary to run your workflows instantly.
 
@@ -94,6 +94,7 @@ Before you begin using PROOF, make sure you have the following:
 - [Access to the rhino cluster of Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-clusters)
 - [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
 - Lab-based directory on the [/hpc/temp](https://sciwiki.fredhutch.org/scicompannounce/2024-04-02-new-hpc-temp-storage/#how) storage platform
+- If your data is stored in an S3 bucket make sure to follow [these AWS SSO instructions](https://sciwiki.fredhutch.org/scicomputing/access_aws/#accessing-via-sso) to be able to use this data via PROOF.
 
 
 ### Starting a PROOF Server
@@ -336,7 +337,7 @@ If you find something is not working with the app or you find a bug, please help
 ### Useful courses to get started
 #### Cluster computing
 - [How to Rhino](https://sciwiki.fredhutch.org/compdemos/howtoRhino/)
-- [Cluster 101](https://leanpub.com/courses/fredhutch/fredhutchcluster101)
+- [Intro to Fred Hutch Cluster Computing](https://hutchdatascience.org/FH_Cluster_101/index.html)
 
 #### Building WDL workflows
 - [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/)
