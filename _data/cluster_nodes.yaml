@@ -1,3 +1,4 @@
+---
 - cluster_name: gizmo
   type: HPC
   location: FHCRC
@@ -14,7 +15,7 @@
   old_nodes:
     -
       node_name: f
-      begin_production:  2014
+      begin_production: 2014
       decommission: 2020-04-0
       cores: 4
       sockets: 1
@@ -28,7 +29,7 @@
       local_storage: "HDD 800GB @ /loc (ext4)"
       partition: campus
       node_count: 456
-    -  
+    -
       node_name: g
       cores: 6
       sockets: 2
@@ -44,7 +45,7 @@
       gpu: none
       node_count: 18
       partition: campus-new
-    -  
+    -
       node_name: h
       cores: 14
       sockets: 2
@@ -61,7 +62,7 @@
       node_count: 3
       partition: campus-new
   nodes:
-    -  
+    -
       node_name: j
       cores: 24
       sockets: 2
@@ -76,11 +77,11 @@
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA GTX 1080ti
       gpu_count: 1
-      gpu_memory: 10.92 GB 
+      gpu_memory: 10.92 GB
       gpu_compute_capability: 6.1
       node_count: 42
       partition: campus, short, new
-    -  
+    -
       node_name: k
       cores: 36
       sockets: 2
@@ -95,11 +96,11 @@
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA RTX 2080ti
       gpu_count: 1
-      gpu_memory: 10.76 GB 
+      gpu_memory: 10.76 GB
       gpu_compute_capability: 7.5
       node_count: 170
       partition: campus, short, new
-    -  
+    -
       node_name: harmony
       cores: 32
       sockets: 1
@@ -114,11 +115,11 @@
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA L40S
       gpu_count: 4
-      gpu_memory: 44 GB 
+      gpu_memory: 44 GB
       gpu_compute_capability: 8.9
       node_count: 8
       partition: chorus
-    -  
+    -
       node_name: rhino
       cores: 14
       sockets: 2
@@ -133,7 +134,7 @@
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA RTX1080ti
       gpu_count: 1
-      gpu_memory: 10.92 GB 
+      gpu_memory: 10.92 GB
       gpu_compute_capability: 6.1
       node_count: 3
       partition: none (interactive use)
@@ -156,7 +157,6 @@
       default_per_job: 60 minutes
       max_per_job: 8 CPUs, 2 GPUs, 384GB RAM
       min_per_job: 1 CPU, 1 GPU
-
 - cluster_name: chorus
   type: HPC
   location: Day Campus
@@ -171,7 +171,7 @@
       name: slurm
       version: 1
   nodes:
-    -  
+    -
       node_name: harmony
       cores: 31
       sockets: 1
@@ -186,11 +186,11 @@
       network: 100G
       gpu: NVIDIA L40S
       gpu_count: 4
-      gpu_memory: 46 GB 
+      gpu_memory: 46 GB
       gpu_compute_capability: 6.1
       node_count: 8
       partition: harmony
-    -  
+    -
       node_name: canto
       cores: 36
       sockets: 2
@@ -205,11 +205,11 @@
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA RTX 2080ti
       gpu_count: 1
-      gpu_memory: 10.76 GB 
+      gpu_memory: 10.76 GB
       gpu_compute_capability: 7.5
       node_count: 4
       partition: canto
-    -  
+    -
       node_name: harmony
       cores: 32
       sockets: 1
@@ -224,11 +224,11 @@
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA L40S
       gpu_count: 4
-      gpu_memory: 44 GB 
+      gpu_memory: 44 GB
       gpu_compute_capability: 8.9
       node_count: 8
       partition: chorus
-    -  
+    -
       node_name: maestro
       cores: 24
       sockets: 1
@@ -243,7 +243,7 @@
       network: 10G (up to 1GB/s throughput)
       gpu: NVIDIA L40S
       gpu_count: 1
-      gpu_memory: 46 GB 
+      gpu_memory: 46 GB
       gpu_compute_capability: 6.1
       node_count: 1
       partition: none (interactive use)
