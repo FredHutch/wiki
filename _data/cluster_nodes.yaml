@@ -227,7 +227,7 @@
       gpu_memory: 44 GB
       gpu_compute_capability: 8.9
       node_count: 8
-      partition: chorus
+      partition: harmony
     -
       node_name: maestro
       cores: 24
