@@ -156,3 +156,107 @@
       default_per_job: 60 minutes
       max_per_job: 8 CPUs, 2 GPUs, 384GB RAM
       min_per_job: 1 CPU, 1 GPU
+
+- cluster_name: chorus
+  type: HPC
+  location: Day Campus
+  access:
+    -
+      type: terminal
+      url: ssh://maestro
+      auth: hutchnetID
+      auth_type: LDAP
+  scheduler:
+    -
+      name: slurm
+      version: 1
+  nodes:
+    -  
+      node_name: harmony
+      cores: 31
+      sockets: 1
+      memory_gb: 1536
+      processor_model: AMD
+      processor_manufacturer: AMD
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: 6029U 2U Ultra NVMe Server
+      os: Ubuntu 24.04 LTS
+      local_storage: "3TB @ /loc"
+      network: 100G
+      gpu: NVIDIA L40S
+      gpu_count: 4
+      gpu_memory: 46 GB 
+      gpu_compute_capability: 6.1
+      node_count: 8
+      partition: harmony
+    -  
+      node_name: canto
+      cores: 36
+      sockets: 2
+      memory_gb: 1536
+      processor_model: Gold 6154
+      processor_manufacturer: Intel
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: 6029U 2U Ultra NVMe Server
+      os: Ubuntu 18.04 LTS
+      local_storage: "6TB @ /loc"
+      network: 10G (up to 1GB/s throughput)
+      gpu: NVIDIA RTX 2080ti
+      gpu_count: 1
+      gpu_memory: 10.76 GB 
+      gpu_compute_capability: 7.5
+      node_count: 4
+      partition: canto
+    -  
+      node_name: harmony
+      cores: 32
+      sockets: 1
+      memory_gb: 1536
+      processor_model: EPYC 9354P
+      processor_manufacturer: AMD
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: AS-2015HS-TNR Hyper Server
+      os: Ubuntu 24.04 LTS
+      local_storage: "3TB @ /loc"
+      network: 10G (up to 1GB/s throughput)
+      gpu: NVIDIA L40S
+      gpu_count: 4
+      gpu_memory: 44 GB 
+      gpu_compute_capability: 8.9
+      node_count: 8
+      partition: chorus
+    -  
+      node_name: maestro
+      cores: 24
+      sockets: 1
+      memory_gb: 786
+      processor_model: EPYC 9224
+      processor_manufacturer: AMD
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: Super Server
+      os: Ubuntu 24.04 LTS
+      local_storage: "3TB @ /loc"
+      network: 10G (up to 1GB/s throughput)
+      gpu: NVIDIA L40S
+      gpu_count: 1
+      gpu_memory: 46 GB 
+      gpu_compute_capability: 6.1
+      node_count: 1
+      partition: none (interactive use)
+  partitions:
+    -
+      partition_name: canto
+      max_per_acct: 1 node
+      default_per_job: 1 day
+      max_per_job: 36 cpus, 768000MB memory (effective)
+      min_per_job: none
+    -
+      partition_name: harmony
+      max_per_acct: 2 GPUs
+      default_per_job: 60 minutes
+      max_per_job: 8 CPUs, 2 GPUs, 384GB RAM
+      min_per_job: 1 CPU, 1 GPU
