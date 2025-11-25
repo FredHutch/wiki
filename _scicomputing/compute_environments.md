@@ -67,10 +67,13 @@ $ which python
 
 #### Scripting with Environment Modules
 
-Lmod environment modules can be used in your job scripts- just insert the `module` or `ml` command into your script in the same way you'd use it interactively:
+Lmod environment modules can be used in your job scripts- just initialize Lmod and insert the `module` or `ml` command into your script in the same way you'd use it interactively:
 
 ```bash
 #!/bin/bash
+
+# "." will initialize the Lmod environment
+. /app/lmod/lmod/init/profile
 
 ml fhR/4.4.1-foss-2023b-R-4.4.1
 
@@ -78,6 +81,18 @@ ml fhR/4.4.1-foss-2023b-R-4.4.1
 ```
 
 This will then load the module then run the rest of the commands in your script. There are some recommendations for using modules in your scripts:
+
+If you are using a language or interpreter other than _bash_, you'll need to initialize Lmod with a different command and path.  For example, if you are using _tcsh_:
+
+```tcsh
+#!/usr/bin/tcsh
+
+# source will initialize the Lmod environment
+source /app/lmod/lmod/init/tcsh
+
+ml Python/3.10.8-GCCcore-12.2.0
+# the rest of your script
+```
 
 ### Lmod Hints and Tips
 
