@@ -19,7 +19,7 @@ Please see the Service Desk site on CenterNet for more information about [HutchN
 
 - Add a new member to your lab group 
 - Enable cluster access for yourself under your lab's Slurm account
-- Check to see if you have the correct access needed to complete the [Cluster 101 course](https://hutchdatascience.org/FH_Cluster_101/)
+- Check to see if you have the correct access needed to complete the [Intro to Fred Hutch Cluster Computing workshop](https://hutchdatascience.org/FH_Cluster_101/)
 
 ## Accessing Slurm Clusters
 
@@ -42,23 +42,13 @@ One issue to note when using GitHub to do version control in your code is that i
 
 ## Amazon Web Services (AWS)
 
-[Amazon Web Services](https://aws.amazon.com/) (AWS) credentials are required to use AWS.
-AWS credentials are designated per user, so each Fred Hutch employee should obtain their own credentials. Each lab has their own AWS account, allowing access to both data storage (e.g., the lab's S3 bucket) and compute (e.g., _AWS Batch_).
+[Amazon Web Services](https://aws.amazon.com/) (AWS) credentials are required to use AWS.  AWS credentials are designated per user, so each Fred Hutch employee should obtain their own credentials. Each lab has their own AWS account, allowing access to both data storage (e.g., the lab's S3 bucket) and compute (e.g., _AWS Batch_).
 
->Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `helpdesk` to request support from [Scientific Computing](https://centernet.fredhutch.org/cn/u/center-it/cio/scicomp.html).
+>Note: Beyond precautions taken to protect any other credentials listed here, take care to ensure AWS credentials are never shared with or disclosed to any other user, directly (e.g., by email) or indirectly (e.g., by including them in code and sharing the code/committing to GitHub).  If you need credentials for an external collaborator, or if you are having a permissions issue, please email `helpdesk` to request support from the cloud team (CLD)
 
-To get your AWS credentials, visit the [MyApps](https://myapps.microsoft.com) dashboard
-and click the square entitled `AWS IAM Identity Center - FHCC-H`. Sign in with your HutchNet ID and password. 
+To get AWS credentials, visit the [MyApps](https://myapps.microsoft.com) dashboard and click the square entitled `AWS Portal` (or, for some accounts, it will be called `AWS IAM Identity Center`). Sign in with your HutchNet ID and password. 
 
-This will take you to a screen called `AWS accounts`. You should see your accunt listed.
-For example, if your PI is Jane Doe, you should see `fh-pi-doe-j` listed.
-Click the triangle to the left of the account name. Now you'll see two links. 
-The link on the left will take you to the AWS console, which is web
-browser interface to Amazon Web Services. The link on the right,
-`Access keys` will give you the credentials you need to use AWS outside
-of a browser.
-
-The next section will describe how to configure the AWS CLI with these credentials.
+This will take you to a screen called `AWS accounts`. You should see your account listed.  For example, if your PI is Jane Doe, you should see `fh-pi-doe-j` listed.  Click the triangle to the left of the account name. Now you'll see two links.  The link on the left will take you to the AWS console, which is web browser interface to Amazon Web Services. The link on the right (`Access keys`) will give you the credentials you need to use AWS outside of a browser.
 
 Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
 
@@ -97,17 +87,6 @@ To access an AWS account using SSO authentication, a user signs in to the AWS ac
 
 After authentication with a HutchNet ID, the user will have SSO access to all AWS account and applications without additional sign-in requirements (Username and Password)  
 
-## How to navigate to the AWS SSO Portal
-
-Key Steps: 
-
-1. Access the SSO portal: Go to the unique SSO login URL: [https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts ](https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts )
-2. Sign in with Credentials: Enter your HutchID to authenticate following MFA authentication. 
- ![MFA Screen](../assets/CLD_PickAccount.png)
-3. Select AWS account: Once logged in, choose the AWS account you want to access from the list of available accounts. Expanding the arrow will show the account name, the sso-role attached to the user. Each user will see only the account it has access to and the role mapped to the user. PowerUserAccess is an example. 
- ![AccountSelection](../assets/CLD_LZALandingPage.png)
-4. Choose a role: Select the specific role assigned to you within the chosen AWS account. PowerUserAccess is a link and clicking the role will take you to the AWS account. 
-5.  Access AWS services: You can now access the AWS Management Console or use the AWS CLI with temporary credentials obtained from your SSO session. 
 
 ## Using Motuz with SSO:
 

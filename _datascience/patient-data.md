@@ -42,7 +42,7 @@ into Epic (e.g., UW Medicine’s Amalga analytics platform). The legacy reposito
 includes tables such as demographics, lab values, encounters, diagnosis codes,
 radiation oncology, and a variety of unstructured radiology, pathology, and
 clinical narrative reports.  Currently, to request access to these data, go to
-the [Fred Hutch Patient Data for Research](https://centernet.fredhutch.org/u/data-science-lab/patient-data.html) page on CenterNet.
+the [Fred Hutch Patient Data for Research](https://centernet.fredhutch.org/u/data-science-lab/data-governance/patient-data.html) page on CenterNet.
 
 *Fred Hutch Cancer Center patient population*
 

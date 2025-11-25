@@ -3,8 +3,9 @@ default:
     - apk update
     - apk --no-cache add py3-pip python3 curl git jq bash
     #- pip install pip==21.3.1 # workaround: https://stackoverflow.com/a/72469586/470769
-
-    - pip3 install --break-system-packages pyyaml
+    - python3 -m venv $HOME/.venv
+    - export PATH=$HOME/.venv/bin:$PATH
+    - pip3 install pyyaml
     - curl -O https://raw.githubusercontent.com/FredHutch/swarm-build-helper/main/build_helper.py 
     # below is from https://stackoverflow.com/a/65810302/470769
     - mkdir -p $HOME/.docker
@@ -22,6 +23,10 @@ build:
   stage: build
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
+  artifacts:
+    paths:
+      - html
+    expire_in: 2w
   script: |
     set -x
     # put info about this commit/branch into /info.txt
@@ -39,7 +44,7 @@ build:
     unzip -qq main.zip
     cp easybuild-life-sciences-main/docs/_r/* ./_rModules/
     cp easybuild-life-sciences-main/docs/_python/* ./_pythonModules/
-    cp easybuild-life-sciences-main/docs/bio-modules-18.04.md ./_scicomputing/bio-modules-18.04.md.orig
+    cp easybuild-life-sciences-main/docs/sw_inventory/gizmo-bio-modules-18.04.md ./_scicomputing/bio-modules-18.04.md.orig
     FIRST_BLANK_LINE=$(grep -n -m 1 '^$' ./_scicomputing/bio-modules-18.04.md.orig | cut -d: -f1)
     echo "---" >> ./_scicomputing/bio-modules-18.04.md
     echo "title: Scientific Software BioModules" >> ./_scicomputing/bio-modules-18.04.md
@@ -57,11 +62,19 @@ build:
     fi
     # build image
     docker build --build-arg JEKYLL_ENV=$JEKYLL_ENV -t sc-registry.fredhutch.org/wiki:test .
+
+    # create artifact
+    rm -rf html/ # we are going to recreate it
+    docker create --name grab-site-files sc-registry.fredhutch.org/wiki:test
+    docker cp grab-site-files:/usr/share/nginx/html ./
+    docker rm grab-site-files
+
     docker push sc-registry.fredhutch.org/wiki:test
 
 
 
 test:
+  dependencies: []
   stage: test
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
@@ -80,6 +93,7 @@ test:
     curl -sI http://wiki:80 | head -1 | grep -q "200 OK"
 
 check_for_orphan_assets:
+  dependencies: []
   stage: test
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
@@ -134,6 +148,7 @@ check_for_orphan_assets:
 # and commit information.
 
 deploy_preview:
+  dependencies: []
   stage: deploy
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
@@ -152,6 +167,7 @@ deploy_preview:
 # https://sciwiki.fredhutch.org
 
 deploy:
+  dependencies: []
   stage: deploy
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
@@ -165,4 +181,4 @@ deploy:
     sleep 15
     echo $SC_SWARM_CICD_SSH_KEY | base64 -d > ./sc_swarm_cicd_ssh_key
     chmod 0400 ./sc_swarm_cicd_ssh_key
-    python3 build_helper.py docker-compose.yml | ssh -i ./sc_swarm_cicd_ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@sc-swarm-mgr.fhcrc.org docker stack deploy --with-registry-auth -c - wiki
+    python3 build_helper.py --no-logging docker-compose.yml | ssh -i ./sc_swarm_cicd_ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@sc-swarm-mgr.fhcrc.org docker stack deploy --with-registry-auth -c - wiki

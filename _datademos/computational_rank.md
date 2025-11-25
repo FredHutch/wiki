@@ -124,33 +124,15 @@ If you want to learn how to write your own WDL files, then we have the [Developi
 
 ### Containers Option 3
 
-Use Nextflow to run your software. Requires knowledge of Nextflow and Nextflow workflows. For more info on running Nextflow at Fred Hutch, [check this link out](https://sciwiki.fredhutch.org/hdc/hdc_workflows/).
+Use Nextflow to run your software. Requires knowledge of Nextflow and Nextflow workflows. For more info on running Nextflow at Fred Hutch, [check this link out](/datascience/using_workflows/).
 
 ## 3. Best Practices When Using Conda
 
 ### Starting Out
 
 1. Conda documentation is [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). If you don’t know where to start, [this page by the Turing Way](https://book.the-turing-way.org/reproducible-research/renv/renv-package) is one of the best resources I can find. 
-2. Use the `Anaconda` environment module to load `conda`. For example, `ml Anaconda3/2023.09-0`
-3. Make sure that you’ve updated your conda channels first. To do this, run the following code in your terminal (you only need to do this once, as it creates a configuration file in your home directory).
-
-```bash
-conda config --add channels bioconda
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-```
-
-Your `~/.condarc" (conda config) file should look like this:
-
-```
-channels:
-  - conda-forge
-  - bioconda
-  - defaults
-channel_priority: strict
-```
-
-Note that some channels (like `defaults`) require a subscription, but `bioconda` and `conda-forge` do not. You can remove the `- defaults` line to avoid this.
+2. Use the `Miniforge3` environment module to load `conda`. For example, `ml Miniforge3`
+3. **Make sure that you’ve updated your conda channels first.** To do this, please see the instructions and guidelines [here](https://conda-forge.fredhutch.org/) **You will get errors from conda operations without updating your conda channels as described there.**
 
 ### Making a conda environment
 
@@ -158,7 +140,7 @@ Note that some channels (like `defaults`) require a subscription, but `bioconda`
 
 ### In Your Script
 
-1. Load the `Anaconda` environment module: `ml Anaconda3/2023.09-0`
+1. Load the `Miniforge3` environment module: `ml Miniforge3`
 2. When using your software, activate your environment using `conda activate`. For example: `conda activate samtools_env` 
 3. Make sure that your software is available using `which` : `which samtools`. This should return a path to where your `samtools` binary is installed.
 4. Do your work in your script with the software.
@@ -168,7 +150,7 @@ Here's an example script, assuming you have installed `samtools` into an environ
 
 ```bash
 #!/bin/bash
-ml Anaconda3/2023.09-0
+ml Miniforge3
 conda activate samtools_env
 samtools view -c $1 > counts.txt
 conda deactivate
@@ -187,7 +169,7 @@ module purge
 
 ## What if I Inherited a script or workflow?
 
-Your future self (and future lab mates) will thank you for taking the time to disentangle the code and solve the dependency nightmare once and for all. If you need help, be sure to schedule a [Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) with the Data Science Lab and [Join the Fred Hutch Data Slack](https://www.notion.so/hutchdatascience-org-14048b387dcd48b5907189afe139a4af?pvs=21) and join the #workflow-managers channel. 
+Your future self (and future lab mates) will thank you for taking the time to disentangle the code and solve the dependency nightmare once and for all. If you need help, be sure to schedule a [Data House Call](https://calendly.com/data-house-calls/computing) with the Data Science Lab and [Join the Fred Hutch Data Slack](https://www.notion.so/hutchdatascience-org-14048b387dcd48b5907189afe139a4af?pvs=21) and join the #workflow-managers channel. 
 
 For community support (you’re not doing this alone!), consider joining the [Research Informatics Community Studios](https://www.notion.so/DMPtool-org-Support-b204d4960e384ef09edd048106903519?pvs=21).
 

@@ -1,22 +1,20 @@
 ---
-title: Load Management for Rhino Hosts
+title: Resource management for interactive login nodes
 main_author: Michael Gutteridge
-primary_reviewers: atombaby
+primary_reviewers: atombaby, chrisequalsdev
 ---
 
-The Rhino hosts provide interactive login sessions to Hutch researchers.  These are intended for cluster job management, development work, and NoMachine sessions.  Given the number of users and the varied and high-profile nature of Rhino services, an individual's actions can have a great impact on many others- thus we utilize load management to control processes that are using resources beyond what is appropriate for these nodes.
+The Rhino hosts and Maestro permit interactive login sessions to Hutch researchers.  These nodes are intended for cluster job management, development work, and NoMachine sessions.  Given the number of users and the varied use cases, an individual's actions can have a great impact on many others- thus we utilize load management to control processes that are using resources beyond what is appropriate for these nodes.
 
-Up till now we have used "loadwatcher".  This was a service that polled load periodically and would either warn individuals about high use or (in more extreme circumstances) remove processes.  While effective, this system is a bit draconian in that all of a user's processes were killed when high usage was detected.  We are therefore switching to a new system called "Arbiter" which instead provides restrictions on how much of the Rhino nodes any one user can use.
-
-This document describes what you can expect from this new system.
+Previously, we have used "loadwatcher".  This was a service that polled load periodically and would either warn individuals about high use or (in more extreme circumstances) remove processes.  While effective, this system is a bit draconian in that all of a user's processes were killed when high usage was detected.  We are therefore switching to a new system called "Arbiter" which instead provides restrictions on how much of the Rhino nodes any one user can use.
 
 ## About Arbiter
 
-[Arbiter](https://gitlab.chpc.utah.edu/arbiter2/arbiter2) (or more precisely "Arbiter2") is a project from the University of Utah Center for High Performance Computing which developed this for their interactive nodes.
+Arbiter is a project from the University of Utah Center for High Performance Computing which developed this for their interactive nodes. We currently use two versions of Arbiter: [Arbiter2](https://gitlab.chpc.utah.edu/arbiter2/arbiter2) on the rhinos and [Arbiter3](https://github.com/chpc-uofu/arbiter) on newer systems like maestro. While they function in a similar fashion, the configured limits and e-mail notifications are slightly different.
 
 Arbiter runs in the background, configuring [cgroups](https://www.kernel.org/doc/Documentation/cgroup-v1/cgroups.txt) for logged-in users.  These cgroups put limits on how much CPU and memory any one user can use.  Arbiter allows us to put generous limits on user sessions that are then restricted should a user exceed usage limits.  This has the effect of slowing down- rather than killing- processes and allows the user to correct and end processes in a graceful fashion.
 
-This effectively allows you to "burst" CPU briefly without incuring any great penalty.  But should your high usage continue, Arbiter will restrict available resources.
+This effectively allows you to "burst" CPU briefly without incurring any great penalty.  But should your high usage continue, Arbiter will restrict available resources.
 
 ## Notifications
 

@@ -83,3 +83,47 @@ Confirm by simply closing this bookmark Window and then click on the bookmark.
 
 
 To get a general feel how the software works please see [this video on youtube](https://www.youtube.com/watch?v=mzDqIhLuX_A​)  Another [video](https://www.youtube.com/watch?v=it4NyAH6ml8) shows a user who is working with Cyberduck on a Mac.
+
+## Using with SSO
+
+Mountainduck & Cyberduck are designed to work with AWS access keys. With the change to [SSO](/scicomputing/access_aws/#accessing-via-sso) you can can still use these applications, however the setup process is slightly different and you need to re-authenticate whenever your SSO credentials expire. 
+
+### Configure using SSO credentials
+
+- Review the steps required to [configure AWS CLI access using SSO](/scicomputing/access_aws/#accessing-via-sso)
+- In the AWS IAM Identity Center, locate the AWS account you wish to access
+- Click the arrow to the left of the account then select "Access keys" 
+- Follow the instructions in "Option 2: Add a profile to your AWS credentials file" to add a profile to `~/.aws/credentials` on your Mac. You will need to create the `~/.aws` folder if you do not have aws-cli installed.
+- Open Mountainduck then open a new connection
+
+![](/assets/mountain_cyber_duck/1_open_new_connection.png)
+
+- Select the connection type dropdown at the top
+
+![](/assets/mountain_cyber_duck/2_select_correct_profile.png)
+
+-  Click "More Options"
+
+![](/assets/mountain_cyber_duck/3_search_for_correct_profile.png)
+
+- Search for "S3 (Cred" and select "S3 (Credentials from AWS Command Line Interface)"
+
+![](/assets/mountain_cyber_duck/4_select_awscli_creds_profile.png)
+
+- Now add a new connection using "S3 (Credentials from AWS Command Line Interface)"
+
+![](/assets/mountain_cyber_duck/5_open_new_connection.png)
+
+- Add the profile from `~/.aws/credentials` to the "Profile Name" box in your new Mountainduck connection
+
+```
+[ProfileNameHere]
+aws_access_key_id=
+aws_secret_access_key=
+aws_session_token=
+```
+- Also add the path to the S3 bucket in the path field.
+- 
+![](/assets/mountain_cyber_duck/6_add_cli_profile.png)
+
+At this point you should be able to access S3 resources in Mountainduck. Note that when your SSO credentials expire, you will need to update your credentials in `~/.aws/credentials` to continue to access files in the application.

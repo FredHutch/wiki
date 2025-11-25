@@ -37,5 +37,5 @@ The [SciWiki](https://sciwiki.fredhutch.org) is a community maintained wiki that
 
 ## Training Resources
 
-The [Cluster 101](https://hutchdatascience.org/training/#cluster-101) training course is good for those new to cluster computing as well as those new to the Hutch's computing infrastructure.
+The [Intro to Fred Hutch Cluster Computing](https://hutchdatascience.org/FH_Cluster_101/index.html) training course is good for those new to cluster computing as well as those new to the Hutch's computing infrastructure.
 The [pathways](https://sciwiki.fredhutch.org/pathways/) section of the wiki contains step-by-step instructions on specific series of tasks that are commonly strung together.  

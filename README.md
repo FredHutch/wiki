@@ -13,6 +13,8 @@ To contribute to the Wiki you only need to have your GitHub username added to th
 
 [Repository structure](#repo-structure)
 
+[Viewing rendered changes to non-`main` branches](#viewing-test-builds)
+
 [Building a copy of this Wiki locally](#building-the-site-locally)
 
 [Building a copy of this Wiki on a rhino](#building-the-site-on-rhino)
@@ -74,7 +76,8 @@ When a pull request is made, it automatically requests a pull request review fro
 Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/main/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.  
 
 ## Contributing via an external text editor
-You can also contribute to the wiki from external editors that can interoperate with GitHub. We have had good experience with [Atom](https://github.atom.io/) but other text editors have GitHub integration as well.  Also there is a tutorial on how to use [VSCode](/compdemos/vscode_markdown_howto/) which is what you will want to use if you plan to contribute many screenshots or other images.  
+You can also contribute to the wiki from external editors that can interoperate with GitHub. We
+recommend [VSCode](https://code.visualstudio.com/) because it has good GitHub integration, and we have prepared a VSCode [tutorial](/compdemos/vscode_markdown_howto/) which you should reference if you plan to contribute screenshots or other images.  
 
 ## Wiki Content Style Guide
 ### Github-Flavored Markdown
@@ -94,7 +97,7 @@ If it is a link to an external site use:
 
 
 ### In-text Images
-If you'd like to add images to your entry, some text editors (eg. Atom or VSCode via their respective plugins) allow for copy-and-pasting of images.  You can read some instructions on how to get set up with VSCode in one of the Computing Demo's.  
+If you'd like to add images to your entry, some text editors (eg. VSCode via its respective plugins) allow for copy-and-pasting of images.  You can read some instructions on how to get set up with VSCode in one of the Computing Demo's.  
 
 One edit is that in order for Jekyll to correctly render the images in a page, they should be placed in the `assets` subdirectory of the directory containing the page being edited. The following text is the example format that the call to the image needs to be in for a markdown in the **_compdemos** folder:
 ```
@@ -102,7 +105,7 @@ One edit is that in order for Jekyll to correctly render the images in a page, t
 ```
 If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is; please leave out the underscore at the beginning of the folder name.  
 
-Both Atom and VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
+VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
 
 #### Custom sized images
 If you want to adjust the size of your image, you can add your image using HTML syntax. Be sure to include the `alt` attribute.
@@ -117,9 +120,9 @@ If you want to adjust the size of your image, you can add your image using HTML 
 
 Before linking to external images, consider saving a copy and creating an internal link as outlined [here](#in-text-images). This helps ensure content doesn't break over time.
 
-#### Youtube
+#### YouTube
 
-When linking to videos like screencasts you typically want to show an image screenshot and clicking on that screenshot starts the video. Images of videos are stored at https://img.youtube.com/vi and they use the same video id you find in Youtube URLs, so The Gift of Time is `https://youtu.be/rN7cmb1K2yA`. To embed, insert this into markdown:
+When linking to videos like screencasts you typically want to show an image screenshot and clicking on that screenshot starts the video. Images of videos are stored at https://img.youtube.com/vi and they use the same video id you find in YouTube URLs, so The Gift of Time is `https://youtu.be/rN7cmb1K2yA`. To embed, insert this into markdown:
 
     [![The Gift of Time](https://img.youtube.com/vi/rN7cmb1K2yA/0.jpg)](https://youtu.be/rN7cmb1K2yA "Click to see The Gift of Time")
 
@@ -171,6 +174,32 @@ You can check what branch and what commit is reflected by going to
 
 
 
+## Viewing Test Builds
+
+There are two ways to view changes to the wiki (that have not been pushed to the `main` branch) without building the site yourself (for that, see the next section).
+
+The first way is to view the [preview site](#automated-deployment). This has some limitations, as described in that link.
+
+The other way is to download a build artifact, which is a zip file containing the static, rendered pages of the site.
+
+These artifacts are only produced when there is a *successful* build of the site on any branch.
+
+You can access the build artifacts [here](https://wiki-artifact-app.fredhutch.org/) (within the Fred Hutch network only).
+This will show recent builds of the CI/CD pipeline, starting with the most recent. It gives information about the commit and who created it. You can download the associated build artifact by clicking "Download static files". This will download a file called `artifact.zip` to your local machine.
+
+Unzip the file. You will see that it contains an `html` directory at the top level.
+
+In order to view the site properly, you must use a web server. if you just try to open the `index.html` file inside the `html` directory in your browser, the site will not render properly.
+
+One easy way to serve the site with a web server is to use Python. If you are in the directory where you downloaded and unzipped `artifact.zip`, you can just run this command:
+
+```bash
+python3 -m http.server -d html
+```
+
+That will make the site available at the URL `http://localhost:8000`.
+
+Note that build artifacts expire after 2 weeks, at which point they can't be downloaded.
 
 ## Building the site locally
 
@@ -196,7 +225,7 @@ If you have Docker installed, run:
 1. Install Ruby (version 1.9.2 or later).
 **Note**: most modern Mac computers already have Ruby installed. If you still need Ruby,
 it can be found [here](https://www.ruby-lang.org/en/downloads/).
-1. On Mac, install xcode commandline tools `xcode-select --install`
+1. On Mac, install xcode command line tools `xcode-select --install`
 1. You may need to install `bundler`. Type
    `which bundler` to see if it is already
    installed. If nothing is returned, then

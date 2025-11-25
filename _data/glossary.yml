@@ -2,22 +2,22 @@
   definition: Secure Shell
   url: https://en.wikipedia.org/wiki/Secure_Shell
 - term: Batch job
-  definition: A non-interactive process that occurs on a remote machine. 
+  definition: A non-interactive process that occurs on a remote machine.
 - term: Shell
   definition: A command line user interface for Unix-like operating systems.
 - term: Scripts
   definition: A script is set of commands that are executed by an operating system or application.
 - term: Session
-  definition:  A temporary and interactive information interchange between two or more communicating devices, or between a computer and user.
+  definition: A temporary and interactive information interchange between two or more communicating devices, or between a computer and user.
 - term: Workload manager
-  definition: Software that coordinates job submission to nodes on a cluster. 
+  definition: Software that coordinates job submission to nodes on a cluster.
 - term: SLURM
   definition: A type of workload manager used at the Fred Hutch's gizmo computing cluster.
   url: https://slurm.schedmd.com/
-- term: HutchNet ID 
-  definition: A user ID specific to the Fred Hutch. 
+- term: HutchNet ID
+  definition: A user ID specific to the Fred Hutch.
 - term: Workflow manager
-  definition: Software that coordinates the submission of jobs, inputs and outputs of individual jobs in a scientific workflow.  
+  definition: Software that coordinates the submission of jobs, inputs and outputs of individual jobs in a scientific workflow.
 - term: rhino
   definition: The login node (actually several nodes) of the Fred Hutch high performance computing cluster.
 - term: gizmo
@@ -27,9 +27,9 @@
 - term: Fast File
   definition: The primary storage location for research data. Often available via the "X:" drive or "\\center\fh\fast"
   url: https://sciwiki.fredhutch.org/scicomputing/store_posix/#fast
-- term: Scratch
-  definition: Scratch storage is a working space primarily for use in the Rhino/Gizmo compute environment. This storage is not backed up
-  url: https://sciwiki.fredhutch.org/scicomputing/store_posix/#secure
+- term: Temp
+  definition: Temp storage is a working space primarily for use in the Rhino/Gizmo compute environment. This storage is not backed up
+  url: https://sciwiki.fredhutch.org/scicomputing/store_temp/
 - term: Economy Cloud
   definition: Economy Cloud is a term for the managed buckets in AWS S3- the "fh-pi-eco" and "fh-pi-eco-public"
   url: https://sciwiki.fredhutch.org/scicomputing/store_objectstore/
@@ -40,7 +40,7 @@
 - term: db4sci
   definition: An [opensource project](https://github.com/FredHutch/DB4SCI) managing database services on-demand. A Database as a Service system.
 - term: mydb
-  definition: mydb [here](https://mydb.fredhutch.org) is the SciComp maintained implementation of db4sci.
+  definition: mydb [here](https://mydb.fredhutch.org/login) is the SciComp maintained implementation of db4sci.
 - term: Singularity
   definition: Singularity is the original name for the Apptainer project
 - term: Apptainer
@@ -51,3 +51,20 @@
   definition: All versions of R that share the same `y` of the `x.y.z` version number. For example, R-4.2.1 and R-4.2.2 share the same minor version number. R-4.1.1 and R-4.2.2 do not.
 - term: Prompt
   definition: A "prompt" indicates that the terminal session is ready for input.  Prompts typically have a structure indicating the username and host, followed by a blinking square. AKA "command prompt".
+- term: VPN
+  definition: A Virtual Private Network that allows secure access to the Fred Hutch network from off-campus.
+  url: https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn
+- term: AWS
+  definition: Amazon Web Services – a cloud platform used to store and access research data and tools.
+  url: https://sciwiki.fredhutch.org/scicomputing/access_aws/
+- term: S3
+  definition: Amazon S3 (Simple Storage Service) is a cloud-based object storage service used to store and retrieve data.
+  url: https://sciwiki.fredhutch.org/scicomputing/store_objectstore/#s3-buckets
+- term: IRB
+  definition: Institutional Review Board – a committee that reviews and approves research involving human subjects to ensure ethical standards are met.
+  url: https://extranet.fredhutch.org/en/u/irb.html
+- term: backup
+  definition: a backup is a copy of data taken and stored elsewhere so that it may be used to restore the original after a data loss event
+  url: https://en.wikipedia.org/wiki/Backup
+- term: snapshot
+  definition: A snapshot is a point-in-time image of a file system that is accessible from within the file system.  Snapshots are not substitutes for backups.
