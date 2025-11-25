@@ -9,15 +9,14 @@ There are two main clusters in the Fred Hutch System. They differ in the node ty
 The following diagram shows the main differences between the two cluster types:
 
 - Gizmo Cluster
-	- Contains General Purpose Compute Nodes
-	- Use if you don't need to run GPU enabled software
-- Harmony Cluster
-	- Contains GPU enabled nodes
-	- Use if you need to run GPU-enabled software (PyTorch, etc.)
+	- Contains general purpose compute nodes
+	- Contains consumer-grade GPUs
+- Chorus Cluster
+	- Contains more capable GPUs
 
 ```mermaid
 graph TD
-A[Need a GPU?] --yes--> B[Harmony Nodes]
+A[Need a GPU?] --yes--> B[Chorus Nodes]
 A -- no --> C[Gizmo Nodes]
 B --> D[Software Environments]
 B --> G[Storage]
@@ -35,9 +34,7 @@ C --> J[Policies]
 
 ### Policies
 
-
-
-## Harmony Nodes
+## Chorus Nodes
 
 ### Software Environments Available
 
