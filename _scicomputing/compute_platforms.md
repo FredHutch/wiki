@@ -13,10 +13,10 @@ Often reasons to move to these high performance computing (HPC) resources includ
 
 ## Overview of On-Premise Resources
 
-Compute Resource | About |
---- |--- |
+|Compute Resource | About |
+|-----------------|-------|
 {%- for resource in site.data.cluster_nodes %}
-{{ resource.cluster_name }}|{{ resource.description }}
+|{{ resource.cluster_name }}|{{ resource.description }}|
 {%- endfor %}
 
 If you're new to remote cluster usage, please see [this tutorial](/pathways/path-interactive/) for step-by-step instructions for logging on to `rhino` and `gizmo`.
