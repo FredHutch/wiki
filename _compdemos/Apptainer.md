@@ -175,7 +175,7 @@ R --no-echo -e 'install.packages("devtools", repos="https://cloud.r-project.org/
 
 This file indicates that `docker` is used to build the container from a Docker image named `r-base`.  The `%post` section defines the steps we want to take to modify that original container- in this case using R to install the _devtools_ package.
 
-More information about Apptainer definition files is available [here.](https://apptainer.org/docs/user/latest/quick_start.html#apptainer-definition-files) 
+More information about Apptainer definition files is available [here.](https://apptainer.org/docs/user/latest/quick_start.html#apptainer-definition-files)
 
 #### Build
 
@@ -292,4 +292,3 @@ $ apptainer build --tmpdir=${HOME}/tmp my.r.apptainer.build.def
 The environment variables `APPTAINER_TMPDIR` and `TMPDIR` are used if the command line option isn't set.  `APPTAINER_TMPDIR` takes precedence over `TMPDIR`.
 
 >IMPORTANT:  If you set this build directory path to a location in the Scratch file system you may encounter errors like "operation not permitted" when building the container.  This file system does not support file operations used by some container builds (e.g. hard links and some attributes).
-
