@@ -13,11 +13,11 @@ Often reasons to move to these high performance computing (HPC) resources includ
 
 ## Overview of On-Premise Resources
 
-Compute Resource | Access Interface | Connection to FH Data Storage
---- | --- | --- | ---
-Rhino | CLI, FH credentials on campus/VPN off campus | Direct to all local storage types
-NoMachine | NX Client, FH credentials on campus/VPN off campus | Direct to all local storage types
-Gizmo | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Direct to all local storage types
+Compute Resource | About |
+--- |--- |
+{%- for resource in site.data.cluster_nodes %}
+{{ resource.cluster_name }}|{{ resource.description }}
+{%- endfor %}
 
 If you're new to remote cluster usage, please see [this tutorial](/pathways/path-interactive/) for step-by-step instructions for logging on to `rhino` and `gizmo`.
 
