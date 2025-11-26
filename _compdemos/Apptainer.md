@@ -7,19 +7,6 @@ primary_reviewers: bmcgough, atombaby
 
 ## What is Apptainer
 
-{% capture widget_summary %}
-Read More
-{% endcapture %}
-
-{% capture widget_details %}
-## Secret Info
-
-This is the **detailed** information you wanted to hide.
-{% endcapture %}
-
-{% include details-widget.html summary=widget_summary details=widget_details %}
-
-
 **Note**: {% glossary Apptainer %} was formerly known as {% glossary Singularity %}.
 
 From `apptainer.org`'s [introduction](https://apptainer.org/docs/user/main/):
