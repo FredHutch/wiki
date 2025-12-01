@@ -1,7 +1,7 @@
 ---
 - cluster_name: gizmo
   type: HPC
-  location: FHCRC
+  location: Day Campus, E2-222
   description: >-
     A general-purpose compute cluster based on Ubuntu Bionic. Has
     some GPU capabilities
@@ -137,7 +137,7 @@
       min_per_job: none
 - cluster_name: chorus
   type: HPC
-  location: Day Campus
+  location: Day Campus, E2-222
   description: >-
     A compute cluster with greater GPU capabilities, include the latest
     generation of GPUs for machine learning algorithms
