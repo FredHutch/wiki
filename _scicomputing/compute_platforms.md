@@ -16,7 +16,7 @@ Often reasons to move to these high performance computing (HPC) resources includ
 |Compute Resource | About | How To       |
 |-----------------|-------|--------------|
 {%- for resource in site.data.cluster_nodes %}
-|{{ resource.cluster_name }}|{{ resource.description }}|[link](/scicomputing/{{resource.cluster_name}}/using.md)|
+|{{ resource.cluster_name }}|{{ resource.description }}|[link](/scicomputing/{{resource.cluster_name}}/using/)|
 {%- endfor %}
 
 If you're new to remote cluster usage, please see [this tutorial](/pathways/path-interactive/) for step-by-step instructions.
