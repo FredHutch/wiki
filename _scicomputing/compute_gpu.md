@@ -8,12 +8,12 @@ There are currently two capabilities available for GPUs in the gizmo.  The _J_ a
 
 ### GPU Nodes
 
-|Location|Partition|Node Name|GPU|
+|Cluster|Node Name|Partition(s)|GPU|
 |---|:---:|:---:|---:|
 {%- for resource in site.data.cluster_nodes %}
 {%- for node in resource.nodes %}
 {%- if node.gpu != 'none' %}
-{{resource.name}}|{{ node.partition }}|{{ node.node_name }}|{{ node.gpu }}
+{{resource.cluster_name}}|{{ node.node_name }}|{{ node.partition }}|{{ node.gpu }}
 {%- endif %}
 {%- endfor %}
 {%- endfor %}
