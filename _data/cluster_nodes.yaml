@@ -153,6 +153,25 @@
       version: 1
   nodes:
     -
+      node_name: medley
+      cores: 31
+      sockets: 1
+      memory_gb: 1536
+      processor_model: AMD
+      processor_manufacturer: AMD
+      manufacturer: SuperMicro
+      vendor: Silicon Mechanics
+      model: 6029U 2U Ultra NVMe Server
+      os: Ubuntu 24.04 LTS
+      local_storage: "3TB @ /loc"
+      network: 100G
+      gpu: none
+      gpu_count: 0
+      gpu_memory: 0
+      gpu_compute_capability: 0
+      node_count: 8
+      partition: medley
+    -
       node_name: harmony
       cores: 31
       sockets: 1
@@ -191,7 +210,7 @@
       node_count: 4
       partition: canto
     -
-      node_name: harmony
+      node_name: forza
       cores: 32
       sockets: 1
       memory_gb: 1536
@@ -203,12 +222,12 @@
       os: Ubuntu 24.04 LTS
       local_storage: "3TB @ /loc"
       network: 10G (up to 1GB/s throughput)
-      gpu: NVIDIA L40S
-      gpu_count: 4
+      gpu: NVIDIA H200
+      gpu_count: 8
       gpu_memory: 44 GB
       gpu_compute_capability: 8.9
       node_count: 8
-      partition: harmony
+      partition: forza
     -
       node_name: maestro
       cores: 24
@@ -231,6 +250,18 @@
   partitions:
     -
       partition_name: canto
+      max_per_acct: 1 node
+      default_per_job: 1 day
+      max_per_job: 36 cpus, 768000MB memory (effective)
+      min_per_job: 1 CPU, 1 GPU
+    -
+      partition_name: forza
+      max_per_acct: 1 node
+      default_per_job: 1 day
+      max_per_job: 36 cpus, 768000MB memory (effective)
+      min_per_job: 1 CPU, 1 GPU
+    -
+      partition_name: medley
       max_per_acct: 1 node
       default_per_job: 1 day
       max_per_job: 36 cpus, 768000MB memory (effective)
