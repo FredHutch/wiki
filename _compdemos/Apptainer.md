@@ -24,7 +24,6 @@ Using Apptainer on Gizmo
 {% endcapture %}
 
 {% capture widget_details %}
-## Using Apptainer on Gizmo
 
 Apptainer is available on the rhino and gizmo compute hosts.  Please use a gizmo node if your task will be computationally intensive.  Apptainer containers can be run interactively (via grabnode) and in batch processing
 
@@ -45,9 +44,7 @@ Using Apptainer on Chorus
 {% endcapture %}
 
 {% capture widget_details %}
-## Using Apptainer on Chorus
-
-Apptainer is installed into the OS on Chorus nodes (including _maestro_).  Note that this restricts the version of Apptainer that is available.
+Apptainer is installed into the OS on Chorus nodes (including _maestro_).  This restricts the version of Apptainer that is available.
 
 No additional steps (e.g. using `module load`) are necessary.
 
@@ -55,6 +52,7 @@ No additional steps (e.g. using `module load`) are necessary.
 
 {% include details-widget.html summary=widget_summary details=widget_details %}
 
+The most basic use of Apptainer is to run a Docker container image:
 
 ```ShellSession
 $ apptainer pull docker://ghcr.io/apptainer/lolcow
