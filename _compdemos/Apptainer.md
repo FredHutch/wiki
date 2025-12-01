@@ -19,7 +19,14 @@ Apptainer is maintained and deployed in our environment using environment module
 
 ## Using Apptainer
 
-> Apptainer is available on the rhino and gizmo compute hosts.  Please use a gizmo node if your task will be computationally intensive.  Apptainer containers can be run interactively (via grabnode) and in batch processing
+{% capture widget_summary %}
+Using Apptainer on Gizmo
+{% endcapture %}
+
+{% capture widget_details %}
+## Using Apptainer on Gizmo
+
+Apptainer is available on the rhino and gizmo compute hosts.  Please use a gizmo node if your task will be computationally intensive.  Apptainer containers can be run interactively (via grabnode) and in batch processing
 
 Apptainer is a module- load it with `ml`:
 
@@ -28,6 +35,26 @@ $ ml Apptainer
 ```
 
 Use `ml spider` to see available versions.  You can download ("pull") any Docker image and it will be converted to Apptainer format:
+
+{% endcapture %}
+
+{% include details-widget.html summary=widget_summary details=widget_details %}
+
+{% capture widget_summary %}
+Using Apptainer on Chorus
+{% endcapture %}
+
+{% capture widget_details %}
+## Using Apptainer on Chorus
+
+Apptainer is installed into the OS on Chorus nodes (including _maestro_).  Note that this restricts the version of Apptainer that is available.
+
+No additional steps (e.g. using `module load`) are necessary.
+
+{% endcapture %}
+
+{% include details-widget.html summary=widget_summary details=widget_details %}
+
 
 ```ShellSession
 $ apptainer pull docker://ghcr.io/apptainer/lolcow
@@ -80,7 +107,6 @@ $ apptainer run lolcow_latest.sif
                 ||----w |
                 ||     ||
 ```
-
 
 
 
