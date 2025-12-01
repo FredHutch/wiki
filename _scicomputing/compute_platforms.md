@@ -21,8 +21,6 @@ Often reasons to move to these high performance computing (HPC) resources includ
 
 If you're new to remote cluster usage, please see [this tutorial](/pathways/path-interactive/) for step-by-step instructions.
 
-{% include_relative gizmo/using.md %}
-
 ## Resource and Node Description information
 
 Below we describe the current basic configurations available for node types, numbers, and memory for a variety of `scicomp` supported computing resources.  These tables are useful when deciding on what type of resources you need to request when using HPC resources.  These tables are auto-generated and are a work in progress so that we can provide the most up to date information on the Wiki for your use.  Please file an Issue in our [GitHub repository](https://github.com/FredHutch/wiki/issues) if you notice something amiss or need clarification.
