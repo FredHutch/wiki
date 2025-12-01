@@ -1,3 +1,8 @@
+---
+title: Using the Gizmo Cluster
+primary_reviewers: atombaby
+---
+
 ### Rhino
 
 `Rhino`, or more specifically the `Rhinos`, are three locally managed HPC servers all accessed via the name `rhino`. Together, they function as a data and compute hub for a variety of data storage resources and high performance computing (HPC) such as those in the table above. The specific guidance for the use of each of the approaches to HPC access are slightly different, but will all require the user to learn how to access and interact with `rhino`.
