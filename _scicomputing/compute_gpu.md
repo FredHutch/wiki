@@ -13,7 +13,7 @@ There are currently two capabilities available for GPUs in the gizmo.  The _J_ a
 {%- for resource in site.data.cluster_nodes %}
 {%- for node in resource.nodes %}
 {%- if node.gpu != 'none' %}
-{{resource.location}}|{{ node.partition }}|{{ node.node_name }}|{{ node.gpu }}
+{{resource.name}}|{{ node.partition }}|{{ node.node_name }}|{{ node.gpu }}
 {%- endif %}
 {%- endfor %}
 {%- endfor %}
