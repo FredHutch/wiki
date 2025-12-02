@@ -44,6 +44,12 @@ collections:
   scicomputing:
     output: true
     permalink: /:collection/:path/
+  scicomputing/chorus:
+    output: true
+    permalink: /:collection/:path/
+  scicomputing/gizmo:
+    output: true
+    permalink: /:collection/:path/
   pathways:
     output: true
     permalink: /:collection/:path/
