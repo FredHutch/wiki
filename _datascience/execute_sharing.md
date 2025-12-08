@@ -16,7 +16,7 @@ The type of data, your funder's requirements, and your field of research will al
 
 ## Data Repositories
 
-#### NIH and NCI collections:
+### NIH and NCI collections:
 
 - [NIH-Supported Data Sharing Resources](https://www.nlm.nih.gov/NIHbmic/generalist_repositories.html) - a curated list of domain-specific (e.g. dbGaP, GTEx) and generalist (e.g. Zenodo, Figshare, Dryad) repositories
 
