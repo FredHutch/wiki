@@ -22,7 +22,7 @@ The type of data, your funder's requirements, and your field of research will al
 
 - [NCI Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/explore/data-commons) - NCI-funded researchers are encouraged to share their data through the CRDC, in line with NIH’s Data Management and Sharing Policy
 
-#### Other well-established public repositories:
+### Other well-established public repositories:
 
 - [cBioPortal](https://www.cbioportal.org/) - An great way to view and access cancer genomics data
   - Note: Fred Hutch has its own [instance of cBioPortal](/datascience/cbioportal/)
