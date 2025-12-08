@@ -61,6 +61,14 @@ When sharing genomic and phenotypic data, investigators should:
 - Strive for harmonization of data collection and archiving methods to ensure scientific quality and validation
 - Adhere to computer security practices that ensure only authorized individuals can access data files and otherwise meet institutional security requirements
 
+>**Questions?**
+>
+>Consortium members (Fred Hutch, UW, Children's) can schedule a free, 30-minute Data House Call with one of our team members:
+>
+>- Governance questions around data sharing: [AI and Research Data Policy Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#ai-and-research-data-policy)
+>- Technical questions around data upload: [Research Computing and Data Management Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management)
+
+
 ### dbGaP Specific Guidance
 
 See the dbGaP [Study Submission Guide](https://www.ncbi.nlm.nih.gov/gap/docs/submissionguide/)
