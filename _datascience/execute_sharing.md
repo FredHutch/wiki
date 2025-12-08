@@ -24,7 +24,7 @@ The type of data, your funder's requirements, and your field of research will al
 
 ### Other well-established public repositories:
 
-- [cBioPortal](https://www.cbioportal.org/) - An great way to view and access cancer genomics data
+- [cBioPortal](https://www.cbioportal.org/) - A great way to view and access cancer genomics data
   - Note: Fred Hutch has its own [instance of cBioPortal](/datascience/cbioportal/)
 - [dbGaP](https://www.ncbi.nlm.nih.gov/gap/) - NIH's database of Genotypes and Phenotypes, offering both public and controlled-access individual-level genomic data
 - [GEO](https://www.ncbi.nlm.nih.gov/geo/) - Gene Expression Omnibus, a public functional genomics data repository for array- and sequence-based data
