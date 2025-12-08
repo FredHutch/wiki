@@ -23,13 +23,13 @@ The exact dates are:
 | Week | Date | Nodes|
 |------|------|------|
 | 1 | 6  January | rhino01, canto[1-2], gizmoj[1-11], gizmok[12,19,22-24,32-35,37,39-44,46-50], harmony06 |
-| 2 | 13 January | Nodes=gizmok[63-76,78-85], harmony03 |
-| 3 | 20 January | Nodes=rhino02, gizmoj[12,15-22,35-40], gizmok[29,36], harmony[01,07] |
-| 4 | 27 January | Nodes=gizmok[87-94,96-98,135-146], harmony08 |
-| 5 | 3  February| Nodes=rhio03, gizmoj[23-33], gizmok[51-62] |
-| 6 | 10 February| Nodes=gizmok[147-169], harmony05 |
-| 7 | 17 February| Nodes=gizmok[1-11,13-18,20-21,25-27,30,38] |
-| 8 | 24 February| Nodes=maestro, gizmok[99-118,120-122], harmony[02,04] |
+| 2 | 13 January | gizmok[63-76,78-85], harmony03 |
+| 3 | 20 January | rhino02, gizmoj[12,15-22,35-40], gizmok[29,36], harmony[01,07] |
+| 4 | 27 January | gizmok[87-94,96-98,135-146], harmony08 |
+| 5 | 3  February| rhino03, gizmoj[23-33], gizmok[51-62] |
+| 6 | 10 February| gizmok[147-169], harmony05 |
+| 7 | 17 February| gizmok[1-11,13-18,20-21,25-27,30,38] |
+| 8 | 24 February| maestro, gizmok[99-118,120-122], harmony[02,04] |
 
 Work is planned to start around 10:00AM and should be done by early afternoon.
 
