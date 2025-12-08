@@ -6,11 +6,11 @@ In coordination with the Network Engineering group we are replacing network swit
 
 ## What We're Doing
 
-The “top of rack” switches have reached end-of-life and need to be refreshed with the supported versions.  We will aso be replacing the power distribution gear in these cabinets as these units have fault with the monitoring firmware and require replacement
+The “top of rack” switches have reached end-of-life and need to be refreshed with the supported versions.  We will aso be replacing the power distribution gear in these cabinets as these units have a fault in the firmware and require replacement.
 
-As this requires we power down the nodes, we'll be putting reservations in place to keep jobs off of those nodes during their designated maintenance time.  We are also reducing the over-time allowance for jobs in the campus-new and interactive partitions from 36 hours to 3 hours.
+Because this requires we power down the nodes, we'll be putting reservations in place to keep jobs off of those nodes during their designated maintenance time.  We are also reducing the over-time allowance for jobs in the campus-new and interactive partitions from 36 hours to 3 hours.
 
-If the backlog grows we may reduce limits.
+If the backlog grows or if allocation times increase too much we may reduce limits.
 
 ## When We're Doing it
 
@@ -27,9 +27,11 @@ The exact dates are:
  - 17 February
  - 24 February
 
-## What to Expect
+Work is planned to start around 10:00AM and should be done by early afternoon.
 
-This will result in a net decrease in overall throughput even though the nodes themselves will be up and running for most of the time.  There will be some delay of job allocations: jobs requesting larger amounts of walltime (4 days and more) will be affected the most.
+## What You Can Expect
+
+This work will result in a net decrease in overall throughput even though the nodes themselves will be up and running for most of the time.  There will be some delay of job allocations: jobs requesting larger amounts of walltime (4 days and more) will be affected the most.
 
 You may see messages indicating "Node Not Available" or "Reserved".  This is normal- your job will still be run as resources on other nodes become available.
 
