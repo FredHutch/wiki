@@ -6,7 +6,7 @@ In coordination with the Network Engineering group we are replacing network swit
 
 ## What We're Doing
 
-The “top of rack” switches servicing SciComp systems in the E2 datacenter have reached end-of-life and need to be refreshed with supported versions.  We will aso be replacing the power strips in these cabinets as these have a fault in the firmware which has caused problems with monitoring power consumption.
+The “top of rack” switches servicing SciComp systems in the E2 datacenter have reached end-of-life and need to be refreshed with supported versions.  We will also be replacing the power strips in these cabinets as these have a fault in the firmware which has caused problems with monitoring power consumption.
 
 Because this requires we power down the nodes, we'll be putting reservations in place to keep jobs off of nodes during their designated maintenance time.
 
@@ -39,7 +39,8 @@ This work will result in a net decrease in overall throughput even though the no
 
 You may see messages indicating "Node Not Available" or "Reserved".  This is normal- your job will still be run as resources on other nodes become available.
 
+You may need to shift work to a different login node ahead of the scheduled outage that affects that node.
+
 ## Would You Like to Know More?
 
 If you have any questions, please email SciComp.
-
