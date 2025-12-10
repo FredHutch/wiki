@@ -189,8 +189,8 @@ Regardless of which workflow system you choose:
 3. **Containerize** - Use Docker/Apptainer for reproducibility
 4. **Document** - Include README files and example inputs
 5. **Test** - Validate outputs before running large analyses
-6. **Share** - Contribute back to community libraries
-7. **Version workflows** - Tag releases when publishing results
+6. **Version workflows** - Tag releases when publishing results
+7. **Share** - Contribute back to community libraries if your workflow is public
 
 ## Advanced Topics
 
