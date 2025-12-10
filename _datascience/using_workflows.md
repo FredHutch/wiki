@@ -98,7 +98,7 @@ Both WDL and Nextflow are excellent choices. Here's guidance on which might be b
 
 | Consideration | WDL | Nextflow |
 |--------------|-----|----------|
-| **Learning curve** | Gentle - simple, declarative syntax | Moderate - requires Groovy knowledge |
+| **Learning curve** | Gentle - simple, declarative syntax | Moderate - Groovy/Java-like syntax |
 | **Fred Hutch integration** | Excellent via PROOF | Excellent via direct execution |
 | **Community resources** | Growing (WILDS, Broad, Terra) | Extensive (nf-core, global community) |
 | **Execution options** | Multiple engines (Sprocket, miniWDL, Cromwell) | Nextflow runtime |
