@@ -155,8 +155,6 @@ Both WDL and Nextflow are excellent choices. Here's guidance on which might be b
 
 - **[WILDS WDL Library](/datascience/wilds_wdl/)** - Tested WDL modules and workflows for bioinformatics
 - **[Nextflow Catalog](/datascience/nextflow_catalog)** - Fred Hutch curated Nextflow workflows
-- **[nf-core](https://nf-co.re/pipelines)** - Community-maintained Nextflow workflows (500+ pipelines)
-- **[GATK Workflows](https://github.com/gatk-workflows)** - Production genomics pipelines in WDL
 - **[Fred Hutch Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=)** - Community workflows
 
 ### Execution Platforms
