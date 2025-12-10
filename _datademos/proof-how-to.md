@@ -48,7 +48,7 @@ The following diagram shows basic usage of PROOF once you have done the prelimin
 Before you begin using PROOF, make sure you have the following:
 - [Valid Fred Hutch credentials](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
 - Access to the Fred Hutch network
-    - If on-campus, make sure you are connected to the Marconi network.
+    - If on-campus, make sure you are connected to the "Research-Staff" network.
     - If off-campus, make sure you connect via [VPN](https://sciwiki.fredhutch.org/scicomputing/access_methods/#vpn).
 - [Access to the rhino cluster of Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#accessing-slurm-clusters)
 - [AWS credentials (if needed for S3 file storage for your workflows)](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
