@@ -204,8 +204,6 @@ Once comfortable with basic workflows:
 
 ## Common Questions
 
-**Q: Can I convert between WDL and Nextflow?**
-A: Not directly. While both accomplish similar goals, their syntaxes are fundamentally different. Choose based on your needs and stick with it for a given project.
 
 **Q: Which is faster?**
 A: Performance depends more on your workflow design and resource allocation than the workflow system itself. Both are highly optimized.
