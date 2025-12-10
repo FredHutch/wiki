@@ -104,7 +104,6 @@ Both WDL and Nextflow are excellent choices. Here's guidance on which might be b
 | **Execution options** | Multiple engines (Sprocket, miniWDL, Cromwell) | Nextflow runtime |
 | **Local testing** | Easy with Sprocket/miniWDL | Easy with Nextflow |
 | **Pre-built workflows** | WILDS WDL Library, GATK workflows | nf-core (500+ workflows) |
-| **Language style** | Declarative (what to do) | Imperative (how to do it) |
 | **Best for beginners** | Yes | Moderate |
 
 ### Decision Guide
