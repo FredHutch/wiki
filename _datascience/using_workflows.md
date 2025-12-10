@@ -214,7 +214,7 @@ A: Performance depends more on your workflow design and resource allocation than
 A: Yes! You can use Sprocket, miniWDL, or Cromwell directly. See the [WDL Execution Engines guide](/datascience/wdl_execution_engines/).
 
 **Q: Do I need to learn Docker?**
-A: Basic Docker knowledge is helpful but not required. Both WILDS WDL Library and nf-core provide pre-built containers. Workflow engines handle container pulling automatically.
+A: Basic Docker knowledge is very helpful. If you start writing workflows you will likely need to install and run Docker at some point. There are many pre-built Docker containers for both WDL and Nextflow so you may not need to create new containers yourself.
 
 **Q: Where should I store my workflow data?**
 A: See our [data storage guide](/scicomputing/store_overview/) for recommendations. Use `/fh/scratch` for intermediate files and long-term storage for inputs/outputs.
