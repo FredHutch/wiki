@@ -67,17 +67,10 @@ When you submit a workflow via PROOF, Cromwell handles several important tasks a
 
 ### Why Choose Sprocket?
 
-**Advantages:**
 - **Simple installation**: Single binary download, no dependencies
 - **Clear error messages**: Helpful, actionable feedback when things go wrong
-- **Modern architecture**: Built with recent WDL specifications in mind
 - **Active development**: Regularly updated with new features and improvements from St. Jude
 - **Cloud-native design**: Good AWS/Azure integration
-- **Lightweight**: Fast execution with minimal overhead
-
-**Considerations:**
-- Younger project with smaller community than Cromwell
-- Less third-party documentation compared to more established tools
 
 ### Getting Started with Sprocket
 
@@ -114,16 +107,9 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with Spro
 
 ### Why Choose miniWDL?
 
-**Advantages:**
 - **Simple setup**: Install with `pip install miniwdl`
 - **Fast execution**: Minimal overhead for local workflows
-- **Good error messages**: Clear, actionable feedback when things go wrong
-- **Local-first**: Designed for running on your own machine
-
-**Considerations:**
-- Less feature-rich than Cromwell
-- Primarily focused on local execution
-- Limited backend options compared to Cromwell
+- **Local-first**: Designed for local development and testing
 
 ### Getting Started with miniWDL
 
