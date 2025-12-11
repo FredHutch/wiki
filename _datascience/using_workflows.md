@@ -25,35 +25,30 @@ At Fred Hutch, we support two primary workflow systems:
 
 **Best for:**
 - Users who want a simple, human-readable workflow language
-- Workflows that need to run on multiple platforms (local, HPC, cloud)
 - Integration with Fred Hutch infrastructure via PROOF
-- Projects that would benefit from growing bioinformatics task libraries
 
 **Key features:**
 - Open-source language developed by the Broad Institute
-- Multiple execution engine options (Sprocket, miniWDL, Cromwell)
-- Strong focus on reproducibility via containerization
-- [WILDS WDL Library](/datascience/wilds_wdl/) provides tested, reusable components
+- [WILDS WDL Library](/datascience/wilds_wdl/) provides tested, reusable WDLs built by and for Fred Hutch scientists
 - [PROOF](/datascience/proof/) platform for easy execution on Fred Hutch cluster
 
 **Learn more:**
 - [WDL Workflows Guide](/datascience/wdl_workflows/) - Language fundamentals
 - [WDL Execution Engines](/datascience/wdl_execution_engines/) - How to run WDL workflows
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Ready-to-use modules and workflows
+- [GATK Workflows](https://github.com/gatk-workflows)
 - [PROOF](/datascience/proof/) - User-friendly workflow submission at Fred Hutch
 
 ### Nextflow
 
 **Best for:**
 - Users comfortable with Groovy/Java-like syntax
-- Workflows requiring complex logic or custom operations
-- Integration with nf-core community workflows
+- Integration with [nf-core](https://nf-co.re/pipelines) community workflows
 - Projects needing fine-grained control over execution
 
 **Key features:**
 - Mature ecosystem with extensive community support
 - Native support for containers, conda, and modules
-- Powerful DSL (Domain Specific Language) for complex workflows
 - Large collection of pre-built workflows via [nf-core](https://nf-co.re/pipelines)
 - Active Fred Hutch community
 
