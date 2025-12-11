@@ -79,26 +79,19 @@ When you submit a workflow via PROOF, Cromwell handles several important tasks a
 - Younger project with smaller community than Cromwell
 - Less third-party documentation compared to more established tools
 
-### Installing Sprocket
+### Getting Started with Sprocket
 
 Sprocket is distributed as a single binary with no dependencies. For installation instructions, see the [Sprocket Installation Guide](https://sprocket.bio/installation.html).
 
-### Running WILDS WDL Library with Sprocket
-
 ```bash
-# Clone the library
-git clone https://github.com/getwilds/wilds-wdl-library.git
-cd wilds-wdl-library
+# Run a workflow
+sprocket workflow.wdl inputs.json --entrypoint workflow_name
 
-# Run a vignette (update values in inputs.json as needed)
-cd vignettes/ww-sra-star
-sprocket ww-sra-star.wdl --inputs inputs.json
+# Lint a WDL file
+sprocket lint workflow.wdl
 ```
 
-Sprocket automatically:
-- Pulls required Docker containers
-- Manages input/output files
-- Creates run directories with results and logs
+For more details on Sprocket commands and options, see the [Sprocket Guided Tour](https://sprocket.bio/guided-tour.html) in their documentation.
 
 ### Sprocket at Fred Hutch
 
