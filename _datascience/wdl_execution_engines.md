@@ -4,9 +4,9 @@ last_modified_at: 2025-11-11
 ---
 ## What is an Execution Engine?
 
-A workflow execution engine is software that reads your WDL file and actually runs it. The engine handles the complex behind-the-scenes work of determining which tasks can run in parallel, managing where computations happen, tracking inputs and outputs, and dealing with failures. Essentially, it's the interpreter that transforms your workflow into real computational work.
+A workflow execution engine is software that reads your [WDL](/datascience/wdl_workflows/) file and actually runs it. The engine handles the complex behind-the-scenes work of determining which tasks can run in parallel, managing where computations happen, tracking inputs and outputs, and dealing with failures. Essentially, it's the interpreter that transforms your workflow into real computational work.
 
-This guide covers the three major WDL execution engines (Cromwell, Sprocket, MiniWDL) and how to use them, with specific guidance for Fred Hutch researchers.
+This guide covers the three major WDL execution engines ([Cromwell](#cromwell), [Sprocket](#sprocket), [miniWDL](#miniwdl)) and how to use them, with specific guidance for Fred Hutch researchers.
 
 > **New to WDL?** Start with our [WDL Workflow guide](/datascience/wdl_workflows/) to learn about the language itself before diving into execution engines.
 
