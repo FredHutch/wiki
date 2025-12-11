@@ -10,19 +10,6 @@ This guide covers the three major WDL execution engines ([Cromwell](#cromwell), 
 
 > **New to WDL?** Start with our [WDL Workflow guide](/datascience/wdl_workflows/) to learn about the language itself before diving into execution engines.
 
-## Execution Engine Comparison
-
-| Feature | Cromwell | Sprocket | miniWDL |
-|---------|----------|----------|---------|
-| **Best For** | Shared HPC systems, production pipelines | Local execution, development and testing | Alternative for local testing |
-| **Ease of Setup** | Complex (server mode recommended) | Simple (single binary) | Simple (single command install) |
-| **Key Features** | Call caching, server mode, extensive backend support | Lightweight, modern architecture, active development | Fast local execution, good error messages |
-| **Fred Hutch Support** | Full (PROOF, dedicated configs) | Community support | Community support |
-| **Learning Curve** | Steeper | Gentle | Gentle |
-| **When to Use** | Running on Gizmo, AWS Batch; production workflows | Local testing and development; actively maintained | Local testing when Sprocket isn't available |
-
-All three engines follow the [WDL specification](https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md), so workflows written for one should work on others with minimal changes.
-
 ## Cromwell
 
 [Cromwell](https://cromwell.readthedocs.io/) is a mature workflow execution engine developed by the Broad Institute. It powers platforms like [Terra](https://terra.bio/) and is the most feature-rich option for production environments.
@@ -228,6 +215,17 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with mini
 - [Getting Started Guide](https://miniwdl.readthedocs.io/en/latest/getting_started.html)
 
 ## Choosing the Right Engine
+
+| Feature | Cromwell | Sprocket | miniWDL |
+|---------|----------|----------|---------|
+| **Best For** | Shared HPC systems, production pipelines | Local execution, development and testing | Alternative for local testing |
+| **Ease of Setup** | Complex (server mode recommended) | Simple (single binary) | Simple (single command install) |
+| **Key Features** | Call caching, server mode, extensive backend support | Lightweight, modern architecture, active development | Fast local execution, good error messages |
+| **Fred Hutch Support** | Full (PROOF, dedicated configs) | Community support | Community support |
+| **Learning Curve** | Steeper | Gentle | Gentle |
+| **When to Use** | Running on Gizmo, AWS Batch; production workflows | Local testing and development; actively maintained | Local testing when Sprocket isn't available |
+
+All three engines follow the [WDL specification](https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md), so workflows written for one should work on others with minimal changes.
 
 ### Decision Guide
 
