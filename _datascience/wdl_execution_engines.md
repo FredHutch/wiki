@@ -131,7 +131,7 @@ For more installation options, see the [miniWDL Installation Guide](https://mini
 - [miniWDL GitHub Repository](https://github.com/chanzuckerberg/miniwdl)
 - [Getting Started Guide](https://miniwdl.readthedocs.io/en/latest/getting_started.html)
 
-## Choosing the Right Engine
+## Summary
 
 | Feature | Cromwell | Sprocket | miniWDL |
 |---------|----------|----------|---------|
@@ -142,10 +142,6 @@ For more installation options, see the [miniWDL Installation Guide](https://mini
 | **Learning Curve** | Steeper | Gentle | Gentle |
 | **When to Use** | Running on Gizmo, AWS Batch; production workflows | Local testing and development; actively maintained | Local testing when Sprocket isn't available |
 
-All three engines follow the [WDL specification](https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md), so workflows written for one should work on others with minimal changes.
-
-### Decision Guide
-
 **For Fred Hutch researchers running on Gizmo or AWS Batch:**
 - Use **PROOF** (Cromwell backend) for workflow submission with all features managed for you
 - Use **Sprocket or miniWDL** locally to test before scaling up
@@ -153,11 +149,6 @@ All three engines follow the [WDL specification](https://github.com/openwdl/wdl/
 **For local workflow development and testing:**
 - Use **Sprocket** for easy installation, clear error messages, and actively maintained modern execution
 - Use **miniWDL** as an alternative if Sprocket doesn't meet your needs
-- Consider testing locally before submitting to PROOF/Cromwell
-
-**For production pipelines:**
-- Use **Cromwell** for call caching, server mode, and robust HPC integration
-- Leverage PROOF if you want infrastructure managed for you
 
 ### Workflow Portability
 
