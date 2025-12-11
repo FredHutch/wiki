@@ -39,6 +39,8 @@ The same workflow file runs identically across all these environments without mo
 
 ## WDL Fundamentals
 
+Let's start with a high-level overview of WDL syntax (for more comprehensive instruction, see our [online WDL course](https://hutchdatascience.org/Developing_WDL_Workflows/)).
+
 ### Structure Overview
 
 A WDL workflow consists of three main components:
