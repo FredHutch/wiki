@@ -38,3 +38,35 @@ html {
 code.language-plaintext.highlighter-rouge {
   background: #afb8c133; // originally #fafafa
 }
+
+/* Styling for the main container */
+.disclosure-box {
+    /* Create the box */
+    border: 1px solid #ccc; /* A light grey border */
+    border-radius: 5px;     /* Rounded corners */
+    padding: 1em;           /* Space inside the box */
+    margin: 1.5em 0;        /* Space above and below the box */
+    background-color: #f9f9f9; /* A slight background color for contrast */
+}
+
+/* Styling for the summary line (the clickable part) */
+.disclosure-box summary {
+    cursor: pointer;      /* Changes the cursor to indicate it's clickable */
+    font-weight: bold;    /* Makes the title stand out */
+    padding-bottom: 0.5em; /* Space between the title and the content */
+    list-style: none;     /* Removes the default triangle/arrow icon */
+}
+
+/* Re-adding the expand/collapse indicator (optional, but good for UX) */
+.disclosure-box summary::before {
+    content: '▶'; /* Unicode character for a right-pointing arrow */
+    display: inline-block;
+    width: 1em;
+    margin-right: 0.5em;
+    transition: transform 0.2s ease; /* Smooth rotation */
+}
+
+/* Rotate the arrow when the box is open */
+.disclosure-box[open] summary::before {
+    transform: rotate(90deg); /* Rotate the arrow 90 degrees to point down */
+}
