@@ -150,15 +150,7 @@ For more installation options, see the [miniWDL Installation Guide](https://mini
 - Use **Sprocket** for easy installation, clear error messages, and actively maintained modern execution
 - Use **miniWDL** as an alternative if Sprocket doesn't meet your needs
 
-### Workflow Portability
-
-A key benefit of WDL is that workflows written for one engine generally work on others. The [WILDS WDL Library](/datascience/wilds_wdl/) ensures portability by testing all components on Cromwell, miniWDL, and Sprocket.
-
-**Tips for portability:**
-- Use WDL version 1.0 (required for PROOF)
-- Specify Docker containers (not institution-specific modules)
-- Use standard WDL features, avoiding engine-specific extensions
-- Test on multiple engines if sharing workflows broadly
+**All WDLs in the [WILDS WDL Library](/datascience/wilds_wdl/) have been tested on Cromwell, miniWDL, and Sprocket.** We recommend starting with these workflows to get up to speed with WDL execution via any of these engines.
 
 ## Getting Help
 
