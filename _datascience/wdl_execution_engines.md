@@ -49,8 +49,9 @@ At Fred Hutch, Cromwell is the primary execution engine for WDL workflows on our
 1. Connect to the Fred Hutch network
 2. Navigate to [proof.fredhutch.org](https://proof.fredhutch.org)
 3. Log in with your Hutch credentials
-4. Upload your WDL file and inputs JSON
-5. Submit and monitor your workflow through the dashboard
+4. Start a PROOF server with a click of a button
+5. Upload your WDL file and inputs JSON
+6. Submit and monitor your workflow through the dashboard
 
 PROOF handles all Cromwell server setup, configuration, and job scheduling automatically.
 
