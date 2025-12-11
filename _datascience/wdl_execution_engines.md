@@ -132,52 +132,19 @@ All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with Spro
 - Primarily focused on local execution
 - Limited backend options compared to Cromwell
 
-### Installing miniWDL
+### Getting Started with miniWDL
 
 ```bash
 # Install via pip
 pip install miniwdl
 
-# Verify installation
-miniwdl --version
-
-# Check WDL syntax
-miniwdl check workflow.wdl
-```
-
-### Running Workflows with miniWDL
-
-Basic execution:
-
-```bash
 # Run a workflow
 miniwdl run workflow.wdl -i inputs.json
-
-# Run with specific inputs on command line
-miniwdl run workflow.wdl input_file=/path/to/file.fastq sample_name=sample1
 
 # Validate WDL without running
 miniwdl check workflow.wdl
 ```
-
-### Running WILDS WDL Library with miniWDL
-
-```bash
-# Clone the library
-git clone https://github.com/getwilds/wilds-wdl-library.git
-cd wilds-wdl-library
-
-# Run a vignette (update values in inputs.json as needed)
-cd vignettes/ww-sra-star
-miniwdl run ww-sra-star.wdl -i inputs.json
-```
-
-miniWDL automatically:
-- Pulls required Docker containers
-- Manages input/output files
-- Creates run directories with results and logs
-
-All [WILDS WDL Library](/datascience/wilds_wdl/) components are tested with miniWDL and work identically on PROOF/Cromwell.
+For more installation options, see the [miniWDL Installation Guide](https://miniwdl.readthedocs.io/en/latest/getting_started.html#install-miniwdl). For more details on WDL script execution options with miniWDL, see miniWDL's documentation on [running workflows](https://miniwdl.readthedocs.io/en/latest/runner_cli.html).
 
 ### miniWDL Documentation
 
