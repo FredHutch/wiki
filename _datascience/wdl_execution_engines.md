@@ -263,7 +263,6 @@ A key benefit of WDL is that workflows written for one engine generally work on 
 
 - [OpenWDL Community](https://openwdl.org/)
 - [WDL Slack Workspace](https://join.slack.com/t/openwdl/shared_invite/zt-ctmj4mhf-cFBNxIiZYs6SY9HgM9UAVw)
-- Engine-specific GitHub repositories (linked above)
 
 ## Next Steps
 
