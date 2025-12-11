@@ -26,9 +26,10 @@ At Fred Hutch, we support two primary workflow systems:
 **Best for:**
 - Users who want a simple, human-readable workflow language
 - Integration with Fred Hutch infrastructure via PROOF
+- Projects that would benefit from collaborative Fred Hutch workflow development
 
 **Key features:**
-- Open-source language developed by the Broad Institute
+- Open-source language originally developed by Broad Institute, now maintained by [OpenWDL](https://openwdl.org/)
 - [WILDS WDL Library](/datascience/wilds_wdl/) provides tested, reusable WDLs built by and for Fred Hutch scientists
 - [PROOF](/datascience/proof/) platform for easy execution on Fred Hutch cluster
 
@@ -48,7 +49,6 @@ At Fred Hutch, we support two primary workflow systems:
 
 **Key features:**
 - Mature ecosystem with extensive community support
-- Native support for containers, conda, and modules
 - Large collection of pre-built workflows via [nf-core](https://nf-co.re/pipelines)
 - Active Fred Hutch community
 
