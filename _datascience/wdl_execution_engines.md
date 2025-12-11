@@ -12,23 +12,20 @@ This guide covers the three major WDL execution engines ([Cromwell](#cromwell), 
 
 ## Cromwell
 
-[Cromwell](https://cromwell.readthedocs.io/) is a mature workflow execution engine developed by the Broad Institute. It powers platforms like [Terra](https://terra.bio/) and is the most feature-rich option for production environments.
-
-### Why Choose Cromwell?
-
-**Advantages:**
-- **Call caching**: Reuses results from previous identical tasks, saving compute time
-- **Server mode**: Manages multiple workflows simultaneously
-- **Robust backend support**: SLURM, AWS Batch, Google Cloud, Azure, local execution
-- **Production-tested**: Used by major research institutions worldwide
-- **API-driven**: Programmatic workflow submission and monitoring
-
-**Considerations:**
-- More complex setup than miniWDL or Sprocket
-- Requires database configuration for full features
-- Better suited for shared HPC systems than individual workstations
+[Cromwell](https://cromwell.readthedocs.io/) is a production-grade workflow execution engine developed by the Broad Institute. It powers platforms like [Terra](https://terra.bio/) and is the engine behind Fred Hutch's [PROOF](/datascience/proof/) platform.
 
 ### Cromwell at Fred Hutch
+
+**Key features for HPC execution:**
+- **Call caching** - reuses results from previous identical tasks
+- **Server mode** - manages multiple workflows simultaneously via PROOF
+- **SLURM integration** - optimized for Fred Hutch's Gizmo cluster
+- **Production-tested** - used by major research institutions worldwide
+
+**When to use Cromwell:**
+- Running workflows on Fred Hutch's HPC cluster via PROOF
+- Large-scale production pipelines requiring call caching
+- Advanced users who need to run their own Cromwell server
 
 At Fred Hutch, Cromwell is the primary execution engine for WDL workflows on our HPC infrastructure. We provide custom configurations and tools to make it easier to use.
 
@@ -43,45 +40,19 @@ At Fred Hutch, Cromwell is the primary execution engine for WDL workflows on our
 5. Upload your WDL file and inputs JSON
 6. Submit and monitor your workflow through the dashboard
 
-PROOF handles all Cromwell server setup, configuration, and job scheduling automatically.
+PROOF handles all Cromwell server setup, configuration, and job scheduling automatically - the "server" is just a background process that coordinates your workflow execution.
 
 It is possible to set up and run your own Cromwell server on Fred Hutch's Gizmo cluster, however this requires more advanced configuration and maintenance. We recommend using PROOF for most users, but for more details on manually running your own Cromwell server, see the [diy-cromwell-server](https://github.com/FredHutch/diy-cromwell-server) for instructions and corresponding configuration files.
 
-#### Cromwell Key Features
+#### What Cromwell Does Behind the Scenes
 
-##### Call Caching
+When you submit a workflow via PROOF, Cromwell handles several important tasks automatically:
 
-One of Cromwell's most powerful features is call caching. For each task, Cromwell creates a unique identifier based on:
-- Input files (and their content/checksums)
-- Command to execute
-- Docker container and version
-- Runtime requirements
+**Call caching** - Cromwell remembers previously completed tasks and skips re-running them if inputs haven't changed. Enable this in PROOF using `write_to_cache` and `read_from_cache` in your options JSON. This saves time when restarting workflows or testing parameter changes.
 
-If Cromwell finds an exact match in its database, it reuses the previous output instead of re-running the task. This is invaluable when:
-- A workflow fails partway through - restart without re-computing completed tasks
-- Testing parameter changes - only affected tasks re-run
-- Running similar analyses - shared preprocessing steps are cached
+**Automatic retries** - Failed tasks can be automatically retried by adding `maxRetries` to your WDL runtime section. Combined with call caching, you can restart workflows without losing progress on completed tasks.
 
-PROOF is pre-configured to enable call caching when requested via the `write_to_cache` and `read_from_cache` arguments in the options json.
-
-##### Workflow Restarts and Retries
-
-Cromwell can automatically retry failed tasks and restart workflows from the point of failure:
-
-```wdl
-runtime {
-  maxRetries: 3
-  docker: "getwilds/bwa:0.7.17"
-}
-```
-
-Combined with call caching, this means you can restart a complex workflow after fixing an error without losing progress.
-
-##### Using Scratch Space
-
-When submitted through a Cromwell server via PROOF, workflows are automatically configured to use `/fh/scratch` for intermediate files. This allows large intermediate files to stay in temporary storage while final outputs can be copied to your long-term storage location via the `final_workflow_outputs_dir` argument in the options json. This reduces storage costs and cleanup burden, while also abiding by [Fred Hutch's scratch storage policies](/scicomputing/store_scratch/).
-
-This approach is critical for genomics workflows that generate terabytes of intermediate data but only need gigabytes of final results.
+**Scratch space management** - PROOF automatically uses `/fh/scratch` for intermediate files, keeping final outputs in your specified location via `final_workflow_outputs_dir`. This is essential for genomics workflows that generate large temporary files.
 
 ### Cromwell Documentation
 
