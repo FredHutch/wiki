@@ -155,18 +155,7 @@ Regardless of which workflow system you choose:
 6. **Version workflows** - Tag releases when publishing results
 7. **Share** - Contribute back to community libraries if your workflow is public
 
-## Advanced Topics
-
-Once comfortable with basic workflows:
-
-- **Cloud computing** - Scale to AWS Batch or other cloud platforms
-- **Custom containers** - Build your own Docker images with [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library)
-- **Workflow optimization** - Fine-tune resource requests and parallelization
-- **CI/CD** - Automate workflow testing with GitHub Actions
-- **Publishing** - Share workflows via GitHub for reproducible research
-
 ## Common Questions
-
 
 **Q: Which is faster?**
 A: Performance depends more on your workflow design and resource allocation than the workflow system itself. Both are highly optimized.
