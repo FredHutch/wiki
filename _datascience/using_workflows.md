@@ -17,36 +17,6 @@ Workflow management systems are specialized software tools designed to:
 - **Provide resilience** - Automatically retry failed tasks and resume interrupted workflows
 - **Track provenance** - Record what was run, when, and with what parameters
 
-## Why Use Workflows?
-
-### Without Workflows
-
-A typical bioinformatics analysis might involve:
-1. Quality control on raw sequencing reads
-2. Alignment to a reference genome
-3. Variant calling
-4. Variant annotation
-5. Statistical analysis
-
-Managing this manually requires:
-- Writing custom shell scripts for each step
-- Manually tracking which samples completed which steps
-- Re-running entire analyses when one step fails
-- Coordinating resource requests for different tools
-- Ensuring consistent software versions across runs
-- Managing intermediate file storage
-
-This approach is error-prone, time-consuming, and difficult to reproduce.
-
-### With Workflows
-
-Workflow systems handle all of this automatically:
-- Define your analysis once in a workflow language
-- The workflow manager handles job scheduling, retries, and data management
-- Easily scale from one sample to thousands
-- Share workflows with collaborators who can reproduce your exact analysis
-- Update workflows incrementally as your analysis evolves
-
 ## Workflow Systems at Fred Hutch
 
 At Fred Hutch, we support two primary workflow systems:
