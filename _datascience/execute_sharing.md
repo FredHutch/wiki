@@ -13,16 +13,11 @@ The type of data, your funder's requirements, and your field of research will al
 
 - [Selecting a Data Repository](https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/dms/selecting-a-data-repository) - Guidelines for choosing the appropriate repository based on your data type, discipline, and funder requirements
 - [Data management and sharing policies](https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/accessing-data/scientific) - Information on NIH data sharing policies and procedures for accessing shared scientific data
-
-## Data Repositories
-
-### NIH and NCI collections:
-
 - [NIH-Supported Data Sharing Resources](https://www.nlm.nih.gov/NIHbmic/generalist_repositories.html) - a curated list of domain-specific (e.g. dbGaP, GTEx) and generalist (e.g. Zenodo, Figshare, Dryad) repositories
 
 - [NCI Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/explore/data-commons) - NCI-funded researchers are encouraged to share their data through the CRDC, in line with NIH’s Data Management and Sharing Policy
 
-### Other well-established public repositories:
+## Common Data Repositories
 
 - [cBioPortal](https://www.cbioportal.org/) - A great way to view and access cancer genomics data
   - Note: Fred Hutch has its own [instance of cBioPortal](/datascience/cbioportal/)
@@ -36,6 +31,17 @@ The type of data, your funder's requirements, and your field of research will al
 - [dbSNP](https://www.ncbi.nlm.nih.gov/snp) - Database of single nucleotide variations, microsatellites, and small-scale insertions and deletions along with population frequency and other information.
 - [UK Biobank](https://www.ukbiobank.ac.uk) - Prospective cohort study with genetic and health data on 500,000 participants
 - [Sage's Synapse.org](https://www.synapse.org/) - Platform for sharing research data privately or publicly, hosting [several open datasets](https://www.synapse.org/#!StandaloneWiki:OpenResearchProjects) and [DREAM Challenges](https://dreamchallenges.org/)
+
+- ### dbGaP Specific Guidance
+
+See the dbGaP [Study Submission Guide](https://www.ncbi.nlm.nih.gov/gap/docs/submissionguide/)
+
+The NIH is committed to respecting the privacy and intentions of research participants. Data access is intended only for scientific investigators pursuing research questions consistent with informed consent agreements. Investigators must utilize appropriate controls and abide by Data Use Limitations.
+
+NIH repositories like dbGaP provide two access levels:
+
+- **Public Access**: Non-individual genomic data can be publicly accessed through repository websites
+- **Controlled Access**: Individual-level data submitted to NIH repositories must be de-identified (no names or identifiable information). However, genetic fingerprints are embedded in genotype data and cannot be de-identified. Therefore, all individual-level data is distributed only through the NIH Authorized Access System
 
 ## Data Sharing Best Practices
 
@@ -63,19 +69,9 @@ When sharing genomic and phenotypic data, investigators should:
 
 >**Questions?**
 >
->Consortium members (Fred Hutch, UW, Children's) can schedule a free, 30-minute Data House Call with one of our team members:
->
->- Governance questions around data sharing: [AI and Research Data Policy Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#ai-and-research-data-policy)
->- Technical questions around data upload: [Research Computing and Data Management Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management)
+>Consortium members (Fred Hutch, UW, Children's) can schedule Data House Calls for suppport:
+>- Governance questions around research data sharing: [AI and Research Data Policy Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#ai-and-research-data-policy)
+>- Technical questions around research data sharing: [Research Computing and Data Management Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management)
 
 
-### dbGaP Specific Guidance
 
-See the dbGaP [Study Submission Guide](https://www.ncbi.nlm.nih.gov/gap/docs/submissionguide/)
-
-The NIH is committed to respecting the privacy and intentions of research participants. Data access is intended only for scientific investigators pursuing research questions consistent with informed consent agreements. Investigators must utilize appropriate controls and abide by Data Use Limitations.
-
-NIH repositories like dbGaP provide two access levels:
-
-- **Public Access**: Non-individual genomic data can be publicly accessed through repository websites
-- **Controlled Access**: Individual-level data submitted to NIH repositories must be de-identified (no names or identifiable information). However, genetic fingerprints are embedded in genotype data and cannot be de-identified. Therefore, all individual-level data is distributed only through the NIH Authorized Access System
