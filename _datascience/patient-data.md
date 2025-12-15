@@ -28,7 +28,7 @@ stewardship policies. DaSL and its partners at Fred Hutch Cancer Center have ini
 infrastructure approach and a new data governance approach for clinical data.
 This new approach envisions a future Fred Hutch Cancer Center with multimodal data integration and
 democratized data access. For more information and to stay up-to-date with new
-developments, visit DaSL’s [home page](https://hutchdatascience.org) and [CenterNet page](https://centernet.fredhutch.org/u/data-science-lab.html). 
+developments, visit DaSL’s [home page](https://ocdo.fredhutch.org/) and [CenterNet page](https://centernet.fredhutch.org/u/data-science-lab.html). 
 
 ## Medical Record Data
 

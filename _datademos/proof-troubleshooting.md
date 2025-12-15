@@ -117,5 +117,5 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 - [WILDS Docker Library](https://github.com/orgs/getwilds/packages)
 - [Using Docker at Fred Hutch](/compdemos/Docker/)
 - [DaSL Research Computing Data House Calls](https://calendly.com/data-house-calls/computing)
-- [DaSL Community Studios](https://hutchdatascience.org/communitystudios/)
+- [DaSL Learning Communities](https://ocdo.fredhutch.org/dasl/community/)
 

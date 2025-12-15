@@ -169,7 +169,7 @@ module purge
 
 ## What if I Inherited a script or workflow?
 
-Your future self (and future lab mates) will thank you for taking the time to disentangle the code and solve the dependency nightmare once and for all. If you need help, be sure to schedule a [Data House Call](https://calendly.com/data-house-calls/computing) with the Data Science Lab and [Join the Fred Hutch Data Slack](https://www.notion.so/hutchdatascience-org-14048b387dcd48b5907189afe139a4af?pvs=21) and join the #workflow-managers channel. 
+Your future self (and future lab mates) will thank you for taking the time to disentangle the code and solve the dependency nightmare once and for all. If you need help, be sure to schedule a [Data House Call](https://calendly.com/data-house-calls/computing) with the Data Science Lab and [Join the Fred Hutch Data Slack](https://ocdo.fredhutch.org/resources.html#communication) and join the #workflow-managers channel. 
 
 For community support (you’re not doing this alone!), consider joining the [Research Informatics Community Studios](https://www.notion.so/DMPtool-org-Support-b204d4960e384ef09edd048106903519?pvs=21).
 
