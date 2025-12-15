@@ -7,6 +7,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-archives
+  - jekyll-last-modified-at
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -14,6 +15,7 @@ whitelist:
   - jekyll-gist
   - jemoji
   - jekyll-include-cache
+  - jekyll-last-modified-at
 
 
 remote_theme: mmistakes/minimal-mistakes@4.26.2
@@ -262,6 +264,10 @@ webrick:
     Access-Control-Allow_Credentials: "true"
     Access-Control-Allow-Headers: "Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range"
     Access-Control-Allow-Methods: "GET,POST,OPTIONS,PUT,DELETE,PATCH"
+
+# Optional configuration for jekyll-last-modified-at
+last-modified-at:
+  date-format: '%B %-d, %Y'
 
 after_footer_scripts:
   - https://cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.js

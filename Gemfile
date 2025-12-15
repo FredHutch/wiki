@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 group :jekyll_plugins do
   gem 'jekyll-glossary_tooltip', '~> 1.4.0'
+  gem 'jekyll-last-modified-at', '~> 1.3.2'
 end
 group :development, :test do
   gem "github-pages", '~> 227', group: :jekyll_plugins
@@ -18,4 +19,3 @@ group :development, :test do
   gem 'faraday', '~> 2.3.0'
   gem 'webrick', '~> 1.8.1'
 end
-
