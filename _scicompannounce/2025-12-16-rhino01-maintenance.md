@@ -11,4 +11,5 @@ to limit access to those users with existing sessions.
 - If you have an existing session on `rhino01`, you will still be able to log in until the system is shut
 down on January 6. Any running processes, connections, NoMachine sessions, grabnode, or tmux/screen sessions
 you may have running will be closed at that time.
+- During this maintenance, NoMachine will be upgraded from v8 to v9
 - As a reminder, `rhino02` will be offline on January 20 followed by `rhino03` on February 3
