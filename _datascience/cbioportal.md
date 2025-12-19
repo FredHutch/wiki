@@ -98,6 +98,7 @@ Once your study files are formatted correctly follow there [upload steps](/datad
 🎉 Once uploaded, [start exploring](https://cbioportal.fredhutch.org/)!
 > 📝 *Note:*
 > *Currently there is a study limit size that is 4Gb. If your study folder is greater than 4Gb please reach out to us for guidance*
+
 ---
 ## 📎 Quick Links
 
