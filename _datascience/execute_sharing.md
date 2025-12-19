@@ -3,97 +3,75 @@ title: Data Sharing
 primary_reviewers: vortexing
 ---
 
-More to come here.  We will develop and share guidance and information about useful tools, approaches, software and strategies for sharing data, be it as a requirement from a funding source, a publication, or during the course of your research with collaborators.  
+This page provides guidance on sharing research data for publication or as required by funding agencies. Many journals have data and code availability requirements where data must be promptly available and accessible to readers upon publication.
 
-Data Sharing in the realm of genomics and large scale datasets has highlighted some specific new challenges and possibilities. The sharing of large scale research data has potential to strengthen academic medical research, the
-practice of medicine, and the integrity of the clinical trial system. Some benefits are obvious: when researchers have access to complete data, they can answer new questions, explore different lines of analysis, and more efficiently
-conduct large-scale analyses across trials or projects. However, our evolving collective understanding of data sharing practices when large-scale datasets are involved can tend to result in an unnecessary burden on the
-research(ers) that is actually both counterproductive and may not necessarily make the patient or researcher any safer. This section can help guide decision making and actions to successfully share and manage research data to allow for the most productivity and facilitation of the original research itself while balancing the data privacy and security needs of those involved.
+> For information about the 2023 NIH Data Management and Sharing Policy see: [NIH Data Sharing](/datascience/nih_data_sharing/)
 
+## Choosing a Data Repository (NIH Guidance)
 
+The type of data, your funder's requirements, and your field of research will all influence which repository is right for your project.
 
-## Data Repositories
+- [Selecting a Data Repository](https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/dms/selecting-a-data-repository) - Guidelines for choosing the appropriate repository based on your data type, discipline, and funder requirements
+- [Data management and sharing policies](https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/accessing-data/scientific) - Information on NIH data sharing policies and procedures for accessing shared scientific data
+- [NIH-Supported Data Sharing Resources](https://www.nlm.nih.gov/NIHbmic/generalist_repositories.html) - a curated list of domain-specific (e.g. dbGaP, GTEx) and generalist (e.g. Zenodo, Figshare, Dryad) repositories
 
-### Public Repositories
+- [NCI Cancer Research Data Commons (CRDC)](https://datacommons.cancer.gov/explore/data-commons) - NCI-funded researchers are encouraged to share their data through the CRDC, in line with NIH’s Data Management and Sharing Policy
 
-We here provide some details on a few (by no mean exhaustive) public repositories. If you know of another repository that would like to see added to this page please contact us. Some of these repositories do require IRB approval to download the data. Please correspond with the proper administration authority. 
+## Common Data Repositories
 
-- [GTEx](https://gtexportal.org/home/): The Genotype-Tissue Expression  project is aiming to understand the difference and regulation of gene expression by tissue across 53 different tissues.
-- [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga): The Cancer Genome Atlas is a joint effort by the NCI and the NHGRI to moleculary characterize approximately 20000 primary cancer in comparison to matched normal over 33 cancer types. 
-- [1000 genomes](https://www.internationalgenome.org/home): The 1000 genomes project sequenced 1000 genomes to find genetic variants with at least 1% variation in the human population. A useful source
-- [GEO](https://www.ncbi.nlm.nih.gov/geo/): Gene expression Omnbinus  is a public genomics data repository. 
-- [gnomAD](https://gnomad.broadinstitute.org): The genotype aggression database  is working to aggregate and harmonize sequencing data across multiple studies. 
-- [TOPMed](https://www.nhlbiwgs.org): TOPMed is brought to you by NIH and NHLBI. Trans-Omics for Precision Medicine (TOPmed) aims to "understand of the fundamental biological processes that underlie heart, lung, blood, and sleep (HLBS) disorders." 
-- [dbsnp](https://www.ncbi.nlm.nih.gov/snp): Provides information about single nuclotide polymorphisms (SNPs), as well as tracking these SNPs publication history. 
-- [UK Biobank](https://www.ukbiobank.ac.uk): Prospective cohort study with a wealth of genetic and health data on 500,000 participants. 
-- [cBioPortal](https://www.cbioportal.org/):  This is an excellent resource for viewing/accessing TCGA cancer genomics data.  
-- [Sage's Synapse.org](https://www.synapse.org/) is not only useful for sharing (privately or publicly) your own research data, but also where [several open datasets are hosted](https://www.synapse.org/#!StandaloneWiki:OpenResearchProjects), and also interact with the various [DREAM Challenges they host](https://dreamchallenges.org/).
+- [cBioPortal](https://www.cbioportal.org/) - A great way to view and access cancer genomics data
+  - Note: Fred Hutch has its own [instance of cBioPortal](/datascience/cbioportal/)
+- [dbGaP](https://www.ncbi.nlm.nih.gov/gap/) - NIH's database of Genotypes and Phenotypes, offering both public and controlled-access individual-level genomic data
+- [GEO](https://www.ncbi.nlm.nih.gov/geo/) - Gene Expression Omnibus, a public functional genomics data repository for array- and sequence-based data
+- [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) - The Cancer Genome Atlas, providing molecular characterization of approximately 20,000 primary cancers across 33 cancer types
+- [GTEx](https://gtexportal.org/home/) - The Genotype-Tissue Expression project, studying tissue and cell-specific gene expression and regulation
+- [1000 Genomes](https://www.internationalgenome.org/home) - A resource for genetic variants in human populations
+- [gnomAD](https://gnomad.broadinstitute.org) - The Genome Aggregation Database, aggregating and harmonizing exome and genome sequencing data across multiple studies
+- [TOPMed](https://www.nhlbiwgs.org) - Trans-Omics for Precision Medicine, an NIH/NHLBI program focused on heart, lung, blood, and sleep (HLBS) disorders
+- [dbSNP](https://www.ncbi.nlm.nih.gov/snp) - Database of single nucleotide variations, microsatellites, and small-scale insertions and deletions along with population frequency and other information.
+- [UK Biobank](https://www.ukbiobank.ac.uk) - Prospective cohort study with genetic and health data on 500,000 participants
+- [Sage's Synapse.org](https://www.synapse.org/) - Platform for sharing research data privately or publicly, hosting [several open datasets](https://www.synapse.org/#!StandaloneWiki:OpenResearchProjects) and [DREAM Challenges](https://dreamchallenges.org/)
 
+- ### dbGaP Specific Guidance
 
+See the dbGaP [Study Submission Guide](https://www.ncbi.nlm.nih.gov/gap/docs/submissionguide/)
 
-## Genomic Data Sharing
+The NIH is committed to respecting the privacy and intentions of research participants. Data access is intended only for scientific investigators pursuing research questions consistent with informed consent agreements. Investigators must utilize appropriate controls and abide by Data Use Limitations.
 
-As noted by the NIH and others, the nature of genomic data requires several specific considerations be kept in mind. In addition to being personal and unique to each individual, genomic data may, for example:
+NIH repositories like dbGaP provide two access levels:
 
--   Be stored and used indefinitely.
+- **Public Access**: Non-individual genomic data can be publicly accessed through repository websites
+- **Controlled Access**: Individual-level data submitted to NIH repositories must be de-identified (no names or identifiable information). However, genetic fingerprints are embedded in genotype data and cannot be de-identified. Therefore, all individual-level data is distributed only through the NIH Authorized Access System
 
--   Inform individuals about susceptibility to a broad range of conditions (some of which are unexpected given personal or family history).
+## Data Sharing Best Practices
 
--   Carry with them risks that are uncertain or unclear.
-
--   Be reinterpreted and change in relevance over time.
-
--   Raise privacy concerns (in part because of the risk of re-identification).
-
--   Be relevant for family members and reproductive decision-making.
-
--   Transform the personal decision of sharing genetic data into one with
--   familial current and future ramifications.
-
-There are many challenges to sharing phenotypic and genotypic data. As such,
-some genomic data sharing best practices are listed below:
-
--   Investigator(s) should use requested datasets solely in connection with
-    the research project described in the approved data request, protocol or
-    other vehicle that bounds the use and disclosure of the data.
-
--   Investigator(s) will make no attempt to identify or contact individual
-    participants from whom these data were collected without appropriate
-    approvals from the relevant IRBs.
-
--   Investigator(s) will use informed consent documents with specific language
-    addressing the potential persistent harms identified data can carry, the
-    rights of patients to withdraw consent, the type of data involved and the
-    respect and trust of participants who give researchers the right to use
-    their data and samples for "future unspecified research."
-
--   Investigator(s) will not distribute these data to any entity or individual
-    beyond those specified in the approved data request, protocol or other
-    vehicle which bounds the use and disclosure of the data.
-
--   Investigator(s) will by default share de-identified data.
-
--   Investigator(s) will strive to harmonization of data collection and archiving methods (storage) tools and representation to ensure validation of scientific quality.
-
--   Investigator(s) will adhere to computer security practices that ensure only authorized individuals can gain access to data files, minimizes unintended access and otherwise adhere to institutional security requirements.
+Genomic data requires special considerations due to its personal nature and unique characteristics.
+Genomic data:
+- Is often stored indefinitely
+- Changes in relevance over time
+- Carries uncertain risks
+- Raises privacy concerns due to re-identification risks
+- Can reveal unexpected health susceptibilities
+- Has implications for family members and reproductive decisions
 
 
-### NIH Public Genomic Data Repositories
+>**Please consult with the appropriate administrative authority (e.g. an IRB) before submitting or accessing controlled-access data.**
 
-NIH is committed to respecting the privacy and intentions of research
-participants with regard to how data pertaining to their individual
-information is used. Data access is therefore intended only for
-scientific investigators pursuing research questions that are consistent
-with the informed consent agreements provided by individual research
-participants. Furthermore, investigators provided access will be
-expected to utilize appropriate controls and abide by Data Use
-Limitation.
+When sharing genomic and phenotypic data, investigators should:
 
-The dbGAP, for example, has two repositories into which researchers can deposit or
-withdraw de-identified data:
+- Use [informed consent](/datascience/consent_IRB/) documents with appropriate language regarding data sharing and future use
+- Share [de-identified](/datascience/deidentification/) data by default
+- Use requested datasets solely for the research project described in the approved data request or protocol
+- Make no attempt to identify or contact individual participants without appropriate IRB approvals
+- Not distribute data to any entity or individual beyond those specified in the approved data request or protocol
+- Strive for harmonization of data collection and archiving methods to ensure scientific quality and validation
+- Adhere to computer security practices that ensure only authorized individuals can access data files and otherwise meet institutional security requirements
 
--   Public Access: Non-individual genomic data can be publicly accessed through the dbGAP website.
+>**Questions?**
+>
+>Consortium members (Fred Hutch, UW, Children's) can schedule Data House Calls for suppport:
+>- Governance questions around research data sharing: [AI and Research Data Policy Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#ai-and-research-data-policy)
+>- Technical questions around research data sharing: [Research Computing and Data Management Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management)
 
--   Controlled Access (Individual-level data): Individual-level data submitted to the dbGaP is required to be de-identified. No names or identifiable information is attached to the data. The genetic fingerprint however is embedded in individual's genotype data, which is not de-identifiable. That is why, to protect individuals privacy, all individual level data is only distributed through the NIH Authorized Access System.
 
-Additional information regarding the process of depositing data into NIH Public Repositories can be found from [NCBI](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/GetPdf.cgi?document_name=HowToSubmit.pdf) and from the [NCI](https://datascience.cancer.gov/data-sharing/submitting-data#expectations).  
+

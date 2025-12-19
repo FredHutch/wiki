@@ -2,7 +2,7 @@
 
 This curated Wiki relies upon the Fred Hutch research community itself to improve, expand and evolve over time.  Because the Wiki's content spans many research areas, we need and welcome contributions from a similarly wide range of researchers and Fred Hutch staff.  Whether this contribution is as novice reviewers for a topic outside of their expertise or as expert contributors for those topics of most interest to them, no contribution is too little (or too large).
 
-To contribute to the Wiki you only need to have your GitHub username added to the Fred Hutch Github Institution (and the AllFredHutchTeam).  Email `scicomp` and provide your GitHub username and request to be added.  If you are interested in being part of the Wiki Reviewers Team (see below for their role), please email `apaguiri` and Amy will add you to the GitHub team for that.  
+To contribute to the Wiki you only need to have your GitHub username added to the Fred Hutch Github Institution (and the AllFredHutchTeam).  Email `scicomp` and provide your GitHub username and request to be added.  If you are interested in being part of the Wiki Reviewers Team (see below for their role), please email `apaguiri` and Amy will add you to the GitHub team for that.
 
 # Outline of this document:
 [Content Contribution and Review Process](#content-contribution-and-review-process)
@@ -12,6 +12,8 @@ To contribute to the Wiki you only need to have your GitHub username added to th
 [Wiki content style guide](#wiki-content-style-guide)
 
 [Repository structure](#repo-structure)
+
+[Custom Includes](#custom-includes)
 
 [Viewing rendered changes to non-`main` branches](#viewing-test-builds)
 
@@ -27,15 +29,15 @@ To contribute to the Wiki you only need to have your GitHub username added to th
 ### Content Types
 We manage the content of this site via a set of markdown files that contain long, article-style text (our main pages in the site) and a handful of focused cookbook/demo-style documents (Resource Libraries).
 
-Articles use an outline structure to allow graduated content, starting from basic information and progressing to more detailed content for expert users/readers. Using headers (H2 through H4) in the text allows the automatically rendered Table of Contents to facilitate readers' ability to jump around the documents to get to needed content as well as the creation of anchors to allow for linking directly to portions of content in a longer page.  By keeping related text together in a small number of pages, it allows us to provide more context for people who are learning about a topic, allows finding of other related information a reader might not have known to look for, AND allows content providers to manage content in ONE PLACE rather than spread throughout the site.  
+Articles use an outline structure to allow graduated content, starting from basic information and progressing to more detailed content for expert users/readers. Using headers (H2 through H4) in the text allows the automatically rendered Table of Contents to facilitate readers' ability to jump around the documents to get to needed content as well as the creation of anchors to allow for linking directly to portions of content in a longer page.  By keeping related text together in a small number of pages, it allows us to provide more context for people who are learning about a topic, allows finding of other related information a reader might not have known to look for, AND allows content providers to manage content in ONE PLACE rather than spread throughout the site.
 
-> Note: This site is created by researchers and staff who are not web designers nor technical writers by training!  Thus, we have opted for a relatively flat organizational structure to keep it simpler for content curators and to reduce the risk of information becoming stale and irrelevant as much as possible.  
+> Note: This site is created by researchers and staff who are not web designers nor technical writers by training!  Thus, we have opted for a relatively flat organizational structure to keep it simpler for content curators and to reduce the risk of information becoming stale and irrelevant as much as possible.
 
-The more focused, how-to style, Resource Library entries in both the Data Generation and Scientific Computing domains can use headers as well to populate a Table of Contents for each of these pages.  These documents are intended to be fairly detailed examples or content that is linked to by Articles, but address a specific use case or example scenario that may be only intended for advanced users/readers.  Once a number of related Resource library entries are created, Editors may consider consolidating the information and moving it into the main site as a full Article to highlight the content to new readers.  
+The more focused, how-to style, Resource Library entries in both the Data Generation and Scientific Computing domains can use headers as well to populate a Table of Contents for each of these pages.  These documents are intended to be fairly detailed examples or content that is linked to by Articles, but address a specific use case or example scenario that may be only intended for advanced users/readers.  Once a number of related Resource library entries are created, Editors may consider consolidating the information and moving it into the main site as a full Article to highlight the content to new readers.
 
-Both Articles and Resource Library entries are full-text searchable using the search feature (the magnifying glass in the header).  This search ability is the primary strength behind this Wiki and will be the primary way people will find content, as, again, no web designers or technical writers are involved in this grassroots project.  
+Both Articles and Resource Library entries are full-text searchable using the search feature (the magnifying glass in the header).  This search ability is the primary strength behind this Wiki and will be the primary way people will find content, as, again, no web designers or technical writers are involved in this grassroots project.
 
-**NEW (as of March 2022)** - Introducing **Pathways**!  Pathways are a new approach we are incorporating which can be found by following the [Pathways link](https://sciwiki.fredhutch.org/pathways/) in the sidebar from any domain.  This Pathways page will host individual pages that provide users who want to do a commonly requested set of tasks, a list of pages/links in the order they'll want to read them, that will guide them along the pathway to doing what they want.  We hope this might be an alternate mode for finding content in the Wiki that the community finds useful.  If you have ideas for new Pathways, please [file an issue](https://github.com/FredHutch/wiki/issues) and tell us about it.  
+**NEW (as of March 2022)** - Introducing **Pathways**!  Pathways are a new approach we are incorporating which can be found by following the [Pathways link](https://sciwiki.fredhutch.org/pathways/) in the sidebar from any domain.  This Pathways page will host individual pages that provide users who want to do a commonly requested set of tasks, a list of pages/links in the order they'll want to read them, that will guide them along the pathway to doing what they want.  We hope this might be an alternate mode for finding content in the Wiki that the community finds useful.  If you have ideas for new Pathways, please [file an issue](https://github.com/FredHutch/wiki/issues) and tell us about it.
 
 ### Adding/Editing Content
 
@@ -51,14 +53,14 @@ For larger edits, multi-page edits, structural changes or expert users of git/Gi
 #### General Editing Process
 To edit one of the content-containing markdowns (see below regarding Repo structure for more info about where these markdowns are) from GitHub, follow these steps:
 
-1. Create a branch off the main branch for your edits. Do *not* fork the repo or others cannot submit additional edits to your content.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with names that don't attempt to describe the types of changes made whenever possible. For your content to be merged into the main branch, it will likely need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.  
-2. Commit your edits to existing markdowns as you go, and update from the main branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the main branch and committing frequently.  
+1. Create a branch off the main branch for your edits. Do *not* fork the repo or others cannot submit additional edits to your content.  Consider naming the branch in such a way that indicates what domain the edits will primarily be in (such as "generation-typos" or "intro-to-rhino").  Avoid making branches with names that don't attempt to describe the types of changes made whenever possible. For your content to be merged into the main branch, it will likely need to be edited by others, and it is possible that others may have substantial content to add to your edits.  If the branches are named according to content being added (generally) then others can contribute to that content too.
+2. Commit your edits to existing markdowns as you go, and update from the main branch before continuing to work on your branch.  You will reduce future conflicts if you get in the habit of updating from the main branch and committing frequently.
 3. Publish/push your branch to GitHub to share your edits with the group.
-4. When you are done editing, create a pull request from your branch. This pull request step highlights your branch for consideration by potential contributors and editors! Suggest reviewers based on the content of the edits if you'd like by tagging their GitHub usernames (using @...).  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).  
+4. When you are done editing, create a pull request from your branch. This pull request step highlights your branch for consideration by potential contributors and editors! Suggest reviewers based on the content of the edits if you'd like by tagging their GitHub usernames (using @...).  Request admin assistance if your content may be new and need to be hooked up to the sidebar or other web-specific needs (this is currently done by tagging `vortexing` or `bmcgough` for a review).
 
-    >Note: If you are editing existing content and the page has a listing for the Primary Reviewers like this:  `primary_reviewers: somegithubusername` then when you submit the pull request please request a review from those usernames.  
+    >Note: If you are editing existing content and the page has a listing for the Primary Reviewers like this:  `primary_reviewers: somegithubusername` then when you submit the pull request please request a review from those usernames.
 
-5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  If there is a `primary_reviewers` listed for content then one of the reviews must be from one of those members.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.  
+5. Reviewers will sign off on edits by approving or providing comments on a pull request, ideally one "expert" and one "novice" based on field of expertise.  If there is a `primary_reviewers` listed for content then one of the reviews must be from one of those members.  Others may move your content to combine it with other work, or make edits that you may want to review as well.  Keep an eye on your pull requests and comments on it in order to check back in if someone's edits need your review as well.
 6. Once approving reviews have been obtained, the pull request can be merged into the main branch and then any edits go live to the site [here.](/)
 
 ### The Review Process
@@ -73,11 +75,11 @@ Changes to the Wiki are assessed via [pull requests to this GitHub repository](h
 When a pull request is made, it automatically requests a pull request review from any member of the [Wiki Reviewer Team](https://github.com/orgs/FredHutch/teams/wiki-reviewers). While reviews from other experts is welcomed, a review from a Wiki Reviewer Team member approving the changes is *required* prior to merging the pull request (this is enforced by [protection of the main branch](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews#required-reviews)). In addition to regular communication among the Wiki Reviewer Team, we work with the the Hutch's Information Security Office to ensure published content maintains agreed upon standards for information security.
 
 ### Getting Credit
-Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/main/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.  
+Please remember to make a [markdown for yourself](https://github.com/FredHutch/wiki/blob/main/contributorTemplate.md) in our `_contributors` directory so that we can give you credit for your contributions publicly on the site if you would like to.
 
 ## Contributing via an external text editor
 You can also contribute to the wiki from external editors that can interoperate with GitHub. We
-recommend [VSCode](https://code.visualstudio.com/) because it has good GitHub integration, and we have prepared a VSCode [tutorial](/compdemos/vscode_markdown_howto/) which you should reference if you plan to contribute screenshots or other images.  
+recommend [VSCode](https://code.visualstudio.com/) because it has good GitHub integration, and we have prepared a VSCode [tutorial](/compdemos/vscode_markdown_howto/) which you should reference if you plan to contribute screenshots or other images.
 
 ## Wiki Content Style Guide
 ### Github-Flavored Markdown
@@ -85,27 +87,27 @@ The content of this site is generated using GitHub "flavored" markdown.  A cheat
 
 ### Inserting Links
 
-If you would like to insert a link to another page in our site, please use:  
+If you would like to insert a link to another page in our site, please use:
 ```
 [text you want to have highlighted](/domain/markdownfile_name/)
 ```
 
-If it is a link to an external site use:  
+If it is a link to an external site use:
 ```
 [text you want to have highlighted](https://my.url.com)
 ```
 
 
 ### In-text Images
-If you'd like to add images to your entry, some text editors (eg. VSCode via its respective plugins) allow for copy-and-pasting of images.  You can read some instructions on how to get set up with VSCode in one of the Computing Demo's.  
+If you'd like to add images to your entry, some text editors (eg. VSCode via its respective plugins) allow for copy-and-pasting of images.  You can read some instructions on how to get set up with VSCode in one of the Computing Demo's.
 
 One edit is that in order for Jekyll to correctly render the images in a page, they should be placed in the `assets` subdirectory of the directory containing the page being edited. The following text is the example format that the call to the image needs to be in for a markdown in the **_compdemos** folder:
 ```
 ![](/compdemos/assets/2018-06-13-16-47-59.png)
 ```
-If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is; please leave out the underscore at the beginning of the folder name.  
+If the markdown you are editing is in one of the other folders you'll need to change the `compdemos` string to whatever the text of your folder is; please leave out the underscore at the beginning of the folder name.
 
-VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.  
+VSCode will make a directory called `assets` in the directory where the markdown is, and then will copy your in-text image file there so you can commit it all to the repo.
 
 #### Custom sized images
 If you want to adjust the size of your image, you can add your image using HTML syntax. Be sure to include the `alt` attribute.
@@ -144,7 +146,29 @@ Please if you need to reference a Fred Hutch username, do not write the entire e
 ```
 
 ## Repo structure
-The general contributor should likely have no reason/need to edit any of the files in the main directory of the repository, nor files in any other subfolders besides the ones described below.  The folders below contain the content portions of the site, while the other folders and files contain all the necessary information to actually BUILD the website itself.  
+The general contributor should likely have no reason/need to edit any of the files in the main directory of the repository, nor files in any other subfolders besides the ones described below.  The folders below contain the content portions of the site, while the other folders and files contain all the necessary information to actually BUILD the website itself.
+
+
+## Custom Includes
+
+At present there is just one custom include, for creating disclosure widgets.
+
+You can create a disclosure widget with code like the following:
+
+```
+{% capture widget_summary %}
+Read More
+{% endcapture %}
+
+{% capture widget_details %}
+## Secret Info
+
+This is the **detailed** information you wanted to hide.
+{% endcapture %}
+
+{% include details-widget.html summary=widget_summary details=widget_details %}
+
+```
 
 ### Content-Housing Folders
 
@@ -169,7 +193,7 @@ Everything merged into the `main` branch will be automatically deployed to [http
 Everything in any *other* branch pushed to GitHub will be deployed to [https://sciwiki-preview.fredhutch.org/](https://sciwiki-preview.fredhutch.org) ,
 which is only accessible inside the Fred Hutch network.
 This will always reflect the last (non-`main`) commit/push to the repository.
-You can check what branch and what commit is reflected by going to 
+You can check what branch and what commit is reflected by going to
 [https://sciwiki-preview.fredhutch.org/info.txt](https://sciwiki-preview.fredhutch.org/info.txt).
 
 
@@ -298,7 +322,7 @@ Point your browser at your current hostname on the port you specified in the `se
 
 ## Glossary terms
 
-The site contains functionality allowing 
+The site contains functionality allowing
 content authors to define words such that a tooltip with the definition (and optional URL) appears when the mouse hovers over the word(s).
 
 You can set this up using the following formatting:
@@ -318,30 +342,30 @@ Then in the file `_data/glossary.yml` you can add a definition like this:
 
 Note that the `url` is optional. Is there is no relevant URL you can leave it out.
 
-This functionality is possible by using the [jekyll-glossary_tooltip](https://github.com/erikw/jekyll-glossary_tooltip) plugin (see [demo](https://erikw.github.io/jekyll-glossary_tooltip/)). 
+This functionality is possible by using the [jekyll-glossary_tooltip](https://github.com/erikw/jekyll-glossary_tooltip) plugin (see [demo](https://erikw.github.io/jekyll-glossary_tooltip/)).
 
 Note that this plugin is *not* one of the plugins approved by GitHub to be used with GitHub Pages, so this site is no longer hosted by Pages. Instead we build it ourselves using our CI/CD pipeline.
 
 ## For Admins (everyone else, please do not edit these as your edits will be ignored/removed)
 
 ### Pages that run Demo and Contributors Collection pages:
-Data Science resource library collection page:  
+Data Science resource library collection page:
 https://github.com/FredHutch/wiki/blob/main/datademos.md
 
-Computing resource library collection page:  
+Computing resource library collection page:
 https://github.com/FredHutch/wiki/blob/main/computingdemos.md
 
-SciComp Announcement resource library collection page:  
+SciComp Announcement resource library collection page:
 https://github.com/FredHutch/wiki/blob/main/scicompannounce.md
 
-Contributors list collection page: 
+Contributors list collection page:
 https://github.com/FredHutch/wiki/blob/main/contributorslist.md
 
-Pathways collection page:  
+Pathways collection page:
 https://github.com/FredHutch/wiki/blob/main/pathways.md
 
 ### Folders containing website configuration files
-Main website configuration file: 
+Main website configuration file:
 https://github.com/FredHutch/wiki/blob/main/_config.yml
 
 Navigation yml:
@@ -358,4 +382,3 @@ https://github.com/FredHutch/wiki/blob/main/_data/glossary.yml
 
 ### Other pages:
 Our index page: https://github.com/FredHutch/wiki/blob/main/index.md
-
