@@ -96,6 +96,8 @@ Once your study files are formatted correctly follow there [upload steps](/datad
 > *📩 If upload fails, you’ll receive a "validation report" with error details. Didn’t get an email? [Contact us](https://fhdata.slack.com/archives/C088E41ARV3).*
 
 🎉 Once uploaded, [start exploring](https://cbioportal.fredhutch.org/)!
+> 📝 *Note:*
+> *Currently there is a study limit size that is 4Gb. If your study folder is greater than 4Gb please reach out to us for guidance*
 
 ---
 ## 📎 Quick Links
