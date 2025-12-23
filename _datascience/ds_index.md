@@ -26,7 +26,7 @@ The OCDO provides support in these core areas:
 - Data Science Outreach & Support: Training, community engagement, and cross-team advising
 
 ### Resources
-If you are part of the Cancer Consortium (Fred Hutch, University of Washington, Seattle Children's Hospital), you can also connect with us in the [Fred Hutch Data Slack workspace](https://hutchdatascience.org/joinslack/) (Note: this is limited to Consortium staff so please use your work email).  
+If you are part of the Cancer Consortium (Fred Hutch, University of Washington, Seattle Children's Hospital), you can also connect with us in the [Fred Hutch Data Slack workspace](https://ocdo.fredhutch.org/resources.html#communication) (Note: this is limited to Consortium staff so please use your work email).  
 
 You can now schedule a consultation with OCDO staff on variety of data oriented questions. [Schedule a Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) with our staff to get your questions answered on a variety of data related topics from AI and data policy, to clinical data access, to research analysis support and large scale computing.  
 
@@ -47,7 +47,7 @@ The Data Science Lab (DaSL) is the outreach arm of the OCDO and provides direct-
 - Open-source tool building
 - Workshops and training sessions
 
-You can find more about what training and data science education and community learning events at [hutchdatascience.org](https://hutchdatascience.org/).  Also our Fred Hutch-focused events can be found on our internal [CenterNet page](https://centernet.fredhutch.org/u/data-science-lab.html).
+You can find more about what training and data science education and community learning events at [ocdo.fredhutch.org/dasl/](https://ocdo.fredhutch.org/dasl/).  Also our Fred Hutch-focused events can be found on our internal [CenterNet page](https://centernet.fredhutch.org/u/data-science-lab.html).
 
 
 

@@ -20,7 +20,7 @@ The Data Science Lab has also created a guide you can [find here](https://hutchd
 >If you take this course and want to give us feedback or would like to learn more about it, you can share your thoughts in [the FH Data Slack in the #ask-dasl channel](https://fhdata.slack.com/archives/C043ZVCBY9Z)) or you can file an issue on [the course's GitHub repository](https://github.com/fhdsl/NIH_Data_Sharing) or email us at `data@fredhutch.org`. 
 
 ### Data House Calls
-Fred Hutch staff can always schedule a "Study Planning, Data Sharing and Grants" [Data House Call](https://hutchdatascience.org/datahousecalls/) with the Data Science Lab for a quick consultation about your specific project.  
+Fred Hutch staff can always schedule a "Study Planning, Data Sharing and Grants" [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) with the Data Science Lab for a quick consultation about your specific project.  
 
 
 ### Other DaSL Resources

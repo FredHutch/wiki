@@ -127,5 +127,5 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 
 ### Get Help
 - [DaSL Research Computing Data House Calls](https://calendly.com/data-house-calls/computing)
-- [DaSL Community Studios](https://hutchdatascience.org/communitystudios/)
+- [DaSL Learning Communities](https://ocdo.fredhutch.org/dasl/community/)
 

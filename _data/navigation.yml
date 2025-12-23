@@ -41,7 +41,7 @@ datascience:
       - title: Pathways
         url: /pathways/
       - title: Data Science Training
-        url: https://hutchdatascience.org/courses/
+        url: https://ocdo.fredhutch.org/dasl/courses/
   - title: General
     children:
       - title: Data Science Lifecycle
@@ -186,4 +186,3 @@ scicomputing:
         url: /scicomputing/compute_cloud/
       - title: Computing with GPU
         url: /scicomputing/compute_gpu/
-

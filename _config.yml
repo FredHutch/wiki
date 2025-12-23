@@ -101,7 +101,6 @@ footer:
 
 # Reading Files
 include:
-  - _data
   - assets
 
 exclude:
