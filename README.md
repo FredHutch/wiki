@@ -273,6 +273,8 @@ With both methods, you should be able to see the
 built site (once the build is done) by going to
 [http://localhost:7979](http://localhost:7979) in your browser.
 
+> **Note:** The `build.sh` script automatically generates "What Links Here" backlinks as part of the build process. These backlinks show which pages link to each page, accessible via the 🔗 link in the footer of each page. By default, `./build.sh` serves the site locally - use `./build.sh build` to build without serving. See `BACKLINKS.md` for more details.
+
 
 ## Checking for broken links
 To check for broken links, you can type
