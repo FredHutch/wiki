@@ -5,7 +5,7 @@ primary_reviewers: vortexing, abbywall
 
 [proof.fredhutch.org](https://proof.fredhutch.org) on the Fred Hutch Network
 
-**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](https://docs.openwdl.org/) (Workflow Description Language) workflows using the [**Cromwell**](https://cromwell.readthedocs.io/en/stable/) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
+**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](/datascience/wdl_workflows/) (Workflow Description Language) workflows using the [**Cromwell**](/datascience/wdl_execution_engines/#cromwell) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
 
 - Automate all the backend configurations necessary to run your workflows instantly.
 
@@ -20,6 +20,7 @@ primary_reviewers: vortexing, abbywall
 - Explore more advanced troubleshooting capabilities in our [PROOF Troubleshooting Guide](/datademos/proof-troubleshooting/)
 - Using regulated data or data covered under a DUA? Read about running [PROOF with regulated data](/datascience/proof_regulated/).
 - Learn more about developing WDL workflows using our [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/)
+- New to PROOF and looking for a workflow to try? Explore the [WILDS WDL Library](/datascience/wilds_wdl/) for tested, ready-to-use workflows and vignettes
 
 ### Technical Documentation and Repositories
 - [PROOF Shiny App](https://github.com/getwilds/shiny-cromwell)

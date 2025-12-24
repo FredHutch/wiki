@@ -96,7 +96,7 @@ batch1_sampleD,batch1_sampleD_R1.fastq.gz,batch1_sampleD_R2.fastq.gz,control
 ### Adding Custom Workflows (WDL / Nextflow)
 
 In addition to a catalog of [pre-configured workflows](https://docs.cirro.bio/pipelines/overview/#pipelines-in-cirro),
-Cirro can be used to run custom [WDL](/compdemos/Cromwell/) or [Nextflow](https://www.nextflow.io/) workflows.
+Cirro can be used to run custom [WDL workflows](/datascience/wdl_workflows/) or [Nextflow](https://www.nextflow.io/) workflows.
 The code for those workflows can be used from public or private GitHub repositories,
 including official repositories from projects like GATK.
 
