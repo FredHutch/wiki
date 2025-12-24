@@ -281,7 +281,8 @@ runtime {
 
 **Fred Hutch Resources:**
 - [DaSL Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive course
-- [PROOF](/datascience/proof/) - User-friendly WDL execution platform
+- [PROOF How To](/datademos/proof-how-to.md) - User-friendly WDL execution platform
+- [PROOF Troubleshooting](/datademos/proof-troubleshooting/) - Common issues and solutions using PROOF
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Ready-to-use tasks and workflows
 - [WILDS Docker Library](/datascience/wilds_docker/) - Pre-built containers for bioinformatics tools
 
