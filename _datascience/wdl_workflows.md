@@ -309,7 +309,7 @@ WDL workflows require an execution engine to run. See our guide on [WDL Executio
 - **miniWDL** - Lightweight, easy local execution
 - **Sprocket** - Modern alternative with easy setup
 
-At Fred Hutch, you can also use [PROOF](/datascience/proof/) for a user-friendly interface to submit WDL workflows to our cluster.
+At Fred Hutch, you can also use [PROOF](/datascience/proof/) for a user-friendly interface to submit WDL workflows to our cluster as well as [Cirro](/datascience/cirro/) for cloud-based execution.
 
 ## Utilizing the WILDS WDL Library
 
