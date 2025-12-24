@@ -38,7 +38,8 @@ At Fred Hutch, we support two primary workflow systems:
 - [WDL Execution Engines](/datascience/wdl_execution_engines/) - How to run WDL workflows
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Ready-to-use modules and workflows
 - [GATK Workflows](https://github.com/gatk-workflows)
-- [PROOF](/datascience/proof/) - User-friendly workflow submission at Fred Hutch
+- [PROOF How To](/datademos/proof_howto/) - Step-by-step guide to using PROOF
+- [PROOF Troubleshooting](/datademo/proof_troubleshooting/) - Common issues and solutions using PROOF
 
 ### Nextflow
 
@@ -127,7 +128,8 @@ Both WDL and Nextflow are excellent choices. Here's guidance on which might be b
 - **[PROOF](/datascience/proof/)** - User-friendly interface for WDL workflows on Fred Hutch cluster
 - **[Gizmo](/scicomputing/compute_platforms/)** - Fred Hutch SLURM cluster for direct Nextflow execution
 - **Local execution** - Sprocket, miniWDL, or Nextflow on your workstation
-- **Cloud platforms** - AWS Batch, Terra, Cirro (via WDL or Nextflow)
+- **[Cirro](/datascience/cirro/)** - Managed cloud environment for storing large datasets and running workflows
+- **Cloud platforms** - [AWS](https://aws.amazon.com/blogs/industries/running-wdl-workflows-at-scale-with-amazon-genomics-cli-and-miniwdl/), [Terra](https://terra.bio/), [GCP](https://github.com/broadinstitute/wdl-runner) (via WDL or Nextflow)
 
 ## Training and Learning Resources
 
