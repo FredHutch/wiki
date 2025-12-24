@@ -39,7 +39,7 @@ At Fred Hutch, we support two primary workflow systems:
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Ready-to-use modules and workflows
 - [GATK Workflows](https://github.com/gatk-workflows)
 - [PROOF How To](/datademos/proof_howto/) - Step-by-step guide to using PROOF
-- [PROOF Troubleshooting](/datademo/proof_troubleshooting/) - Common issues and solutions using PROOF
+- [PROOF Troubleshooting](/datademos/proof_troubleshooting/) - Common issues and solutions using PROOF
 
 ### Nextflow
 
@@ -65,20 +65,20 @@ Both WDL and Nextflow are excellent choices. Here's guidance on which might be b
 | Consideration | WDL | Nextflow |
 |--------------|-----|----------|
 | **Learning curve** | Gentle - simple, declarative syntax | Moderate - Groovy/Java-like syntax |
-| **Fred Hutch integration** | Excellent via PROOF | Excellent via direct execution |
+| **Fred Hutch integration** | Excellent via [PROOF](/datascience/proof/) and [Cirro](/datascience/cirro/) | Excellent via direct execution and [Cirro](/datascience/cirro/) |
 | **Community resources** | Growing (WILDS, Broad, Terra) | Extensive (nf-core, global community) |
 | **Execution options** | Multiple engines (Sprocket, miniWDL, Cromwell) | Nextflow runtime |
 | **Local testing** | Easy with Sprocket/miniWDL | Easy with Nextflow |
-| **Pre-built workflows** | WILDS WDL Library, [GATK workflows](https://github.com/gatk-workflows) | nf-core (500+ workflows) |
+| **Pre-built workflows** | [WILDS WDL Library](/datascience/wilds_wdl/), [GATK workflows](https://github.com/gatk-workflows), [BioWDL](https://biowdl.github.io/) | [nf-core](https://nf-co.re/) (500+ workflows) |
 | **Best for** | All skill levels | Intermediate+ users |
 
 ### Decision Guide
 
 **Choose WDL if you:**
 - Are new to workflow systems
-- Want to use PROOF for easy cluster submission
+- Want to use [PROOF](/datascience/proof/) for easy cluster submission
 - Prefer straightforward, readable workflow definitions
-- Want to leverage WILDS WDL Library components
+- Want to leverage [WILDS WDL Library](/datascience/wilds_wdl/) components
 
 **Choose Nextflow if you:**
 - Have programming experience (especially Java/Groovy)
@@ -151,7 +151,7 @@ Regardless of which workflow system you choose:
 
 1. **Start small** - Test with small datasets before scaling up
 2. **Use version control** - Track your workflows in Git
-3. **Containerize** - Use Docker/Apptainer for reproducibility
+3. **Containerize** - Use [Docker](compdemos/Docker/)/[Apptainer](/compdemos/Apptainer/) for reproducibility
 4. **Document** - Include README files and example inputs
 5. **Test** - Validate outputs before running large analyses
 6. **Version workflows** - Tag releases when publishing results
@@ -166,7 +166,7 @@ A: Performance depends more on your workflow design and resource allocation than
 A: Yes! You can use Sprocket, miniWDL, or Cromwell directly. See the [WDL Execution Engines guide](/datascience/wdl_execution_engines/).
 
 **Q: Do I need to learn Docker?**
-A: Basic Docker knowledge is very helpful. If you start writing workflows you will likely need to install and run Docker at some point. There are many pre-built Docker containers for both WDL and Nextflow so you may not need to create new containers yourself.
+A: Basic Docker knowledge is very helpful. If you start writing workflows you will likely need to install and run Docker at some point. There are many pre-built Docker containers for both WDL and Nextflow (e.g. [WILDS Docker Library](/datascience/wilds_wdl/)) so you may not need to create new containers yourself.
 
 **Q: Where should I store my workflow data?**
 A: See our [data storage guide](/scicomputing/store_overview/) for recommendations. Use `/fh/scratch` for intermediate files and long-term storage for inputs/outputs.
