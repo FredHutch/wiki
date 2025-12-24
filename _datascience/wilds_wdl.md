@@ -1,6 +1,5 @@
 ---
 title: WILDS WDL Library
-last_modified_at: 2025-09-17
 main_authors: tefirman, emjbishop
 ---
 
@@ -46,12 +45,12 @@ Complete, publication-ready analysis pipelines.
 
 All WILDS WDLs undergo rigorous testing with real-world bioinformatics data to ensure production readiness:
 
-### Automated Testing
+**Automated Testing**
 - **Cross-platform validation**: All modules are automatically tested using Cromwell, miniWDL, and Sprocket executors
 - **Continuous integration**: Every code change triggers [automated test runs](https://github.com/getwilds/wilds-wdl-library/actions) before merging
 - **Real data requirements**: Tests use authentic bioinformatics datasets from the [ww-testdata](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-testdata) module
 
-### Validation by Component Type
+**Validation by Component Type**
 - **Modules**: Unit tests with real sequencing files (FASTQ, BAM, VCF) verify each task functions correctly
 - **Vignettes**: Integration tests confirm modules work together using representative analysis datasets
 - **Workflows**: End-to-end validation with realistic research datasets suitable for publication-quality analyses
@@ -65,7 +64,7 @@ We recommend users start their exploration at the vignette level to learn how ta
 
 **Once you have a WDL that you like, you can run it several ways:**
 
-### Fred Hutch Users
+**Fred Hutch Users**
 
 You can use **[PROOF](/datascience/proof/)** to submit WDL workflows to the cluster through a user-friendly interface:
 
@@ -75,7 +74,7 @@ You can use **[PROOF](/datascience/proof/)** to submit WDL workflows to the clus
 4. Upload a WDL and its accompanying JSON files
 5. Submit and monitor your job through the PROOF dashboard
 
-### Everyone
+**Everyone**
 
 You can run WDLs locally if you have a WDL executor and Docker/Apptainer installed:
 
@@ -164,18 +163,18 @@ If there's a tool you'd like to see or a task you want written you can file an [
 
 ## Key Features of the WILDS WDL Library
 
-### **Quality Assurance**
+**Quality Assurance**
 - **Automated Testing**: all scripts automatically execute full test runs before merging to main
 - **Multi-Executor Support**: Compatible with Cromwell, miniWDL, and Sprocket
 - **Real Data Validation**: Tested with realistic bioinformatics datasets
 
 Different research institutions use different [WDL execution engines](https://docs.openwdl.org/getting-started/ecosystem.html#execution-engines) (e.g., St. Jude's uses Sprocket, CZI uses miniWDL, Broad Institute uses Cromwell). While these engines follow the same WDL specification, they have subtle differences in how they handle file paths and other execution details. The WILDS WDL Library is designed and tested to work seamlessly across all three major engines, ensuring your workflows remain portable regardless of which platform you or your collaborators use. This is particularly valuable as the WDL ecosystem continues to evolve, with institutions gradually migrating from Cromwell to newer engines like Sprocket and miniWDL.
 
-### **Container Management**
+**Container Management**
 - Versioned, tested Docker images from the [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library)
 - Consistent container standards across all modules
 
-### **Standards and Best Practices**
+**Standards and Best Practices**
 - Standardized structure across all components
 - Comprehensive documentation and inline comments
 - WDL 1.0 specification compliance
@@ -212,7 +211,7 @@ Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org), sch
 
 ## Release Notes
 
-### October 2025 - WILDS WDL Library v0.1.0
+**October 2025 - WILDS WDL Library v0.1.0**
 - Three-tier architecture with modules, vignettes, and workflows
 - Comprehensive automated testing with multiple WDL executors at the module level
 - Manual testing with real bioinformatics data at the vignette and workflow levels
@@ -222,23 +221,22 @@ Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org), sch
 - Example vignettes demonstrating module integration
 - Production-ready workflows for variant calling and RNA-seq analysis
 
-## Links
+## Resources
 
-### Get Started
+**Get Started**
 
 - [Browse Available Modules](https://github.com/getwilds/wilds-wdl-library/tree/main/modules)
 - [Explore Vignettes](https://github.com/getwilds/wilds-wdl-library/tree/main/vignettes)
 - [Run Complete Workflows](https://github.com/getwilds/wilds-wdl-library/tree/main/workflows)
 - [Use PROOF for Easy Execution](/datascience/proof/)
 
-### Learn More
+**Learn More**
 
 - [WDL Best Practices Guide](https://getwilds.org/guide/)
 - [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library)
 - [Contributing Guidelines](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md)
 
-## Contact Us
-
+**Get Support**
 - **Issues and Bug Reports**: [GitHub Issues](https://github.com/getwilds/wilds-wdl-library/issues)
 - **General Questions**: Email [wilds@fredhutch.org](mailto:wilds@fredhutch.org)
 - **Data House Calls**: Schedule a [30-minute consultation session](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management) with us

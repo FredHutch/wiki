@@ -1,6 +1,5 @@
 ---
 title: WILDS Docker Library
-last_modified_at: 2025-10-28
 main_authors: tefirman
 ---
 
@@ -26,57 +25,56 @@ Docker containers package software with all its dependencies into a standardized
 
 For bioinformatics workflows, containers are essential for reproducibility—they ensure your analysis produces the same results regardless of where it runs.
 
-## Available Images
-
+## Available Pre-made Container Images
 The library includes 30+ Docker images for popular bioinformatics tools:
 
-### Alignment & Mapping
+**Alignment & Mapping**
 - **BWA** (`getwilds/bwa`) - Burrows-Wheeler Aligner for DNA sequences
 - **STAR** (`getwilds/star`) - RNA-seq aligner with two-pass methodology
 - **HISAT2** (`getwilds/hisat2`) - Graph-based alignment for RNA-seq
 
-### Variant Calling & Analysis
+**Variant Calling & Analysis**
 - **GATK** (`getwilds/gatk`) - Genome Analysis Toolkit for variant discovery
 - **BCFtools** (`getwilds/bcftools`) - VCF/BCF file manipulation and calling
 - **Strelka** (`getwilds/strelka`) - Small variant calling for germline and somatic variants
 - **VarScan** (`getwilds/varscan`) - Variant detection in massively parallel sequencing
 
-### Structural Variants
+**Structural Variants**
 - **Manta** (`getwilds/manta`) - Structural variant and indel discovery
 - **DELLY** (`getwilds/delly`) - Integrated structural variant prediction
 - **Smoove** (`getwilds/smoove`) - SV calling and genotyping wrapper
 
-### Variant Annotation
+**Variant Annotation**
 - **ANNOVAR** (`getwilds/annovar`) - Functional annotation of genetic variants
 - **AnnotSV** (`getwilds/annotsv`) - Structural variant annotation and ranking
 
-### Copy Number Analysis
+**Copy Number Analysis**
 - **CNVkit** (`getwilds/cnvkit`) - Copy number variation detection from targeted DNA sequencing
 - **ichorCNA** (`getwilds/ichorcna`) - Tumor fraction and copy number alteration detection
 - **HMMcopy** (`getwilds/hmmcopy`) - Copy number prediction with correction for GC and mappability
 
-### SAM/BAM/CRAM Utilities
+**SAM/BAM/CRAM Utilities**
 - **Samtools** (`getwilds/samtools`) - Reading, writing, and manipulating SAM files
 - **Picard** (`getwilds/picard`) - Java tools for manipulating high-throughput sequencing data
 - **biobambam2** (`getwilds/biobambam2`) - Tools for BAM file processing
 
-### Single-Cell Analysis
+**Single-Cell Analysis**
 - **Cell Ranger** (`getwilds/cellranger`) - 10x Genomics single-cell analysis pipeline
 - **Scanpy** (`getwilds/scanpy`) - Single-cell analysis in Python
 - **scvi-tools** (`getwilds/scvi-tools`) - Deep generative models for single-cell omics
 
-### RNA-Seq & Expression
+**RNA-Seq & Expression**
 - **DESeq2** (`getwilds/deseq2`) - Differential gene expression analysis
 - **RNA-SeQC** (`getwilds/rnaseqc`) - RNA-seq quality control metrics
 - **combine-counts** (`getwilds/combine-counts`) - Combine count matrices from multiple samples
 
-### Data Access & Utilities
+**Data Access & Utilities**
 - **SRA-tools** (`getwilds/sra-tools`) - NCBI Sequence Read Archive toolkit
 - **AWS CLI** (`getwilds/awscli`) - Amazon Web Services command line interface
 - **BEDtools** (`getwilds/bedtools`) - Genome arithmetic and interval operations
 - **UMI-tools** (`getwilds/umi-tools`) - Tools for handling Unique Molecular Identifiers
 
-### Specialized Tools
+**Specialized Tools**
 - **sourmash** (`getwilds/sourmash`) - k-mer analysis for genomic comparisons
 - **ShapeMapper** (`getwilds/shapemapper`) - RNA structure mapping analysis
 - **gtf-smash** (`getwilds/gtf-smash`) - GTF file manipulation
@@ -84,13 +82,38 @@ The library includes 30+ Docker images for popular bioinformatics tools:
 
 [Browse all available images on Docker Hub →](https://hub.docker.com/u/getwilds) | [View Dockerfiles on GitHub →](https://github.com/getwilds/wilds-docker-library)
 
-## Getting Started
 
-### Installing Docker
+## Key Features of our Pre-made Container Images
+
+**Security & Quality Assurance**
+- **Automated vulnerability scanning**: All images scanned monthly using Docker Scout
+- **Build-time security checks**: Every new image is scanned before publication
+- **Vulnerability reports**: CVE reports available in each tool's directory
+- **Automated linting**: Dockerfiles checked for best practices and security issues
+
+**Version Management**
+- **Multiple versions available**: Most tools offer several version options
+- **Pinned dependencies**: All software versions explicitly specified for reproducibility
+- **Consistent tagging**: Clear version tags (e.g., `1.19`, `latest`) for easy reference
+
+**Distribution & Accessibility**
+- **Dual registry support**: Available on [Docker Hub](https://hub.docker.com/u/getwilds) (recommended) and GitHub Container Registry for maximum flexibility
+- **WDL integration**: Seamlessly integrated with the [WILDS WDL Library](/datascience/wilds_wdl/)
+- **Cross-platform support**: Works with Docker and Singularity/Apptainer
+- **Multi-architecture builds**: Most images support both linux/amd64 and linux/arm64 for broad hardware compatibility
+
+**Documentation & Support**
+- **Tool-specific READMEs**: Each tool directory contains comprehensive documentation
+- **Usage examples**: Practical examples for Docker, Singularity, and WDL
+- **Active maintenance**: Regular updates and community-driven improvements
+- **Contributor-friendly tooling**: Template Dockerfile and automated Makefile for easy local development and testing
+
+
+## Getting Started with Containers
+
+### Using Docker
 
 To use these images, you'll need Docker installed on your system. Download and install [Docker Desktop](https://docs.docker.com/get-docker/) for your operating system (Windows, Mac, or Linux). For HPC environments that use Singularity/Apptainer instead, see the section below.
-
-### Using with Docker
 
 Pull and run any image from Docker Hub or GitHub Container Registry:
 
@@ -128,7 +151,7 @@ apptainer run --bind /path/to/data:/data docker://getwilds/star:2.7.6a \
        --outFileNamePrefix /data/output/
 ```
 
-### Using in WDL Workflows
+### Using Containers in WDL Workflows
 
 Containers are automatically pulled when specified in WDL workflows:
 
@@ -178,7 +201,7 @@ The WILDS Docker Library welcomes contributions from the Fred Hutch community an
 
 3. **Submit a pull request**: Once tested, submit your contribution following our [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md)
 
-### Local Testing Made Easy
+
 
 Before submitting contributions, you can test Docker images locally using our automated Makefile:
 
@@ -208,30 +231,6 @@ The Makefile handles multi-platform builds, dependency checking, and cleanup aut
 
 See our [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) for detailed requirements and best practices.
 
-## Key Features
-
-### **Security & Quality Assurance**
-- **Automated vulnerability scanning**: All images scanned monthly using Docker Scout
-- **Build-time security checks**: Every new image is scanned before publication
-- **Vulnerability reports**: CVE reports available in each tool's directory
-- **Automated linting**: Dockerfiles checked for best practices and security issues
-
-### **Version Management**
-- **Multiple versions available**: Most tools offer several version options
-- **Pinned dependencies**: All software versions explicitly specified for reproducibility
-- **Consistent tagging**: Clear version tags (e.g., `1.19`, `latest`) for easy reference
-
-### **Distribution & Accessibility**
-- **Dual registry support**: Available on [Docker Hub](https://hub.docker.com/u/getwilds) (recommended) and GitHub Container Registry for maximum flexibility
-- **WDL integration**: Seamlessly integrated with the [WILDS WDL Library](/datascience/wilds_wdl/)
-- **Cross-platform support**: Works with Docker and Singularity/Apptainer
-- **Multi-architecture builds**: Most images support both linux/amd64 and linux/arm64 for broad hardware compatibility
-
-### **Documentation & Support**
-- **Tool-specific READMEs**: Each tool directory contains comprehensive documentation
-- **Usage examples**: Practical examples for Docker, Singularity, and WDL
-- **Active maintenance**: Regular updates and community-driven improvements
-- **Contributor-friendly tooling**: Template Dockerfile and automated Makefile for easy local development and testing
 
 ## Frequently Asked Questions
 
@@ -293,25 +292,25 @@ For ARM-specific support requests, file an [issue](https://github.com/getwilds/w
 
 The library uses GitHub Actions to maintain quality and security:
 
-### Docker Build & Publishing
+**Docker Build & Publishing**
 - Automatically builds and publishes images when Dockerfiles are updated
 - Pushes to both Docker Hub and GitHub Container Registry
 - Generates vulnerability reports for new builds
 - Updates registry descriptions from README files
 
-### Security Monitoring
+**Security Monitoring**
 - Monthly scans of all images for CVEs
 - Comprehensive vulnerability reports in tool directories
 - Continuous monitoring for emerging security issues
 
-### Quality Assurance
+**Quality Assurance**
 - Automated Dockerfile linting for best practices
 - Standardized formatting and optimization checks
 - Consistent labeling and documentation requirements
 
 ## Release Notes
 
-### October 2025 - WILDS Docker Library v0.1.0
+**October 2025 - WILDS Docker Library v0.1.0**
 - 30+ bioinformatics tools with multiple versions
 - Automated monthly security scanning with Docker Scout
 - Dual distribution via Docker Hub and GitHub Container Registry
@@ -320,9 +319,9 @@ The library uses GitHub Actions to maintain quality and security:
 - Comprehensive vulnerability reporting
 - Standardized Dockerfile linting and quality checks
 
-## Links
+## Resources
 
-### Get Started
+**Get Started**
 - [Browse Images on Docker Hub](https://hub.docker.com/u/getwilds)
 - [View Dockerfiles and Source Code](https://github.com/getwilds/wilds-docker-library)
 - [Dockerfile Template](https://github.com/getwilds/wilds-docker-library/blob/main/template/Dockerfile_template)
@@ -331,14 +330,13 @@ The library uses GitHub Actions to maintain quality and security:
 - [Use with WILDS WDL Library](/datascience/wilds_wdl/)
 - [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md)
 
-### Learn More
+**Learn More**
 - [Docker Documentation](https://docs.docker.com/)
 - [Singularity/Apptainer Documentation](https://apptainer.org/docs/)
 - [WDL Documentation](https://docs.openwdl.org/)
 - [PROOF Platform](/datascience/proof/)
 
-## Contact Us
-
+**Get Support**
 - **Issues and Bug Reports**: [GitHub Issues](https://github.com/getwilds/wilds-docker-library/issues)
 - **General Questions**: Email [wilds@fredhutch.org](mailto:wilds@fredhutch.org)
 - **Data House Calls**: Schedule a [30-minute consultation session](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management) with us

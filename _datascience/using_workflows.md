@@ -1,9 +1,8 @@
 ---
-title: Using Workflows
-last_modified_at: 2025-11-20
+title: Using Computational Workflows
+primary_reviewers: tefirman, sitapriyamoorthi
 ---
 
-## What Are Workflows?
 
 When performing bioinformatic or data science analysis, researchers often need to perform a series of interconnected computational transformations on raw input data. While it's possible to coordinate multiple tasks using BASH scripts or direct batch submission to a SLURM cluster, workflow management systems provide a more robust, reproducible, and maintainable approach.
 

@@ -1,5 +1,6 @@
 ---
 title: Generating Genomics Data
+primary_reviewers: vortexing, sitapriyamoorthi
 ---
 
 Multiple processes are involved in the preparation of biological materials before genomic sequencing can even begin. The details of the methods of DNA or RNA extraction and quality assessment process can have a large impact on the quality, relevance, and interpretability of the resulting genomics data. Thus, it is critical to ensure that the most appropriate set of conditions are chosen for preparing your samples before you send them for sequencing of any kind.

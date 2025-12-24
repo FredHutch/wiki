@@ -1,7 +1,6 @@
 ---
 title: Workflow Description Language (WDL)
 primary_reviewers: vortexing, tefirman
-last_modified_at: 2025-11-11
 ---
 
 The Workflow Description Language (WDL) is an open-source language for describing data processing workflows with human-readable syntax. WDL makes it straightforward to define analysis tasks, chain them together in workflows, and parallelize their execution across different computing environments.
