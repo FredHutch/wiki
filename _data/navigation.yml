@@ -86,7 +86,7 @@ datascience:
         url: /datascience/cbioportal/
       - title: Cirro
         url: /datascience/cirro/
-  - title: Hutch and Beyond Resources
+  - title: Fred Hutch Resources
     children:
       - title: Reference Genomes
         url: /datascience/refgenomes/
