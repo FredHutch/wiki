@@ -1,6 +1,5 @@
 ---
 title: Tech Hiring for Science
-main_authors: Amy Paguirigan (vortexing), monicagerber
 primary_reviewers: vortexing, seankross, monicagerber
 ---
 

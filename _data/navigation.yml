@@ -42,49 +42,38 @@ datascience:
         url: /pathways/
       - title: Data Science Training
         url: https://ocdo.fredhutch.org/dasl/courses/
-  - title: General
-    children:
       - title: Data Science Lifecycle
         url: /datascience/data_science_lifecycle/
-      - title: Data Visualization
-        url: /datascience/data_viz/
-      - title: Data Wrangling
-        url: /datascience/data_wrangling/
       - title: Tech Hiring for Science
         url: /datascience/tech_hiring/
   - title: Data Management and Sharing
     children:
       - title: Data Stewardship
         url: /datascience/stewardship/
-      - title: Consenting and the IRB
+      - title: Research Consent & IRB
         url: /datascience/consent_IRB/
-      - title: PHI and Research
-        url: /datascience/phi/
-      - title: Data Privacy and Security
-        url: /datascience/privacy_security/
-      - title: Compliance and Legal
+      - title: Data Sharing & Regulatory Compliance
         url: /datascience/compliance_legal/
-      - title: NIH Data Sharing
+      - title: NIH Data Sharing Policy
         url: /datascience/nih_data_sharing/
       - title: Data Sharing Approaches
         url: /datascience/execute_sharing/
       - title: Specimen Data Management
         url: /datascience/open_specimen/
-
   - title: Working with Biomedical Data
     children:
       - title: Real-World Data
         url: datascience/real_world_data/
-      - title: Patient Data
-        url: /datascience/patient-data/
-      - title: AI for Coding
+      - title: Healthcare Data for Research
+        url: /datascience/phi/
+      - title: Using AI in Biomedical Research
         url: /datascience/ai_coding/
-      - title: Tuning and Training LLMs
-        url: /datascience/llm_tuning/
-      - title: Data Deidentification
-        url: /datascience/deidentification/
-      - title: Using Workflows
+      - title: Using Computational Workflows
         url: /datascience/using_workflows/
+      - title: Data Visualization
+        url: /datascience/data_viz/
+      - title: Data Wrangling
+        url: /datascience/data_wrangling/
   - title: Tools and Applications
     children:
       - title: PROOF
@@ -97,14 +86,16 @@ datascience:
         url: /datascience/cbioportal/
       - title: Cirro
         url: /datascience/cirro/
-  - title: Hutch Resources
+  - title: Hutch and Beyond Resources
     children:
       - title: Reference Genomes
         url: /datascience/refgenomes/
-      - title: Generating Genomics Data
-        url: /datascience/datagen_assayPrep/
       - title: Nextflow Catalog
         url: /datascience/nextflow_catalog/
+      - title: Generating Genomics Data
+        url: /datascience/datagen_assayPrep/
+
+        
         
 
 
