@@ -1,6 +1,6 @@
 ---
 title: PROOF
-primary_reviewers: vortexing, abbywall
+primary_reviewers: seankross, tefirman, sitapriyamoorthi
 ---
 
 [proof.fredhutch.org](https://proof.fredhutch.org) on the Fred Hutch Network

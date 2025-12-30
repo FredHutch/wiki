@@ -3,8 +3,6 @@ title: PROOF Regulated
 primary_reviewers: seankross
 ---
 
-## Overview
-
 Analysis that involves data that is subject to an NIH Data Use Certification (DUC)
 often includes the creation of data and other derivative files that are also
 subject to the DUC. The Scientific Computing team can configure

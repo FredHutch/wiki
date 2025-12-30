@@ -71,9 +71,6 @@ Fred Hutch's Center IT (CIT) supports a wide range of commonly used software at 
  The FH-Data Slack, and more specifically the `#data-viz` channel, is always available as a space for researchers to ask questions and share resources about data visualization. 
 
 - Join the [FH-Data Slack](https://fhdata.slack.com/) and follow the #data-viz channel. This channel is a space to share visualization ideas, ask questions, and troubleshoot code!
-- [The Data Science Learning Community](https://dslc.io) helps data professionals learn together. Post questions in their help channels or join a book club. 
-- [The Data Visualization Center](https://viz.fredhutch.org/) is co-sponsored by Fred Hutch and Brotman Baty. They develop infrastructure and technology for visualization and analysis of data including scRNA-Seq, ATAC-Seq, and CyTOF. They focus on grant-funded collaborations involving data integration, analytical pipelines, and publishing interactive visualization websites for large-scale data.
-
 
 ## Learning resources
 
