@@ -139,6 +139,8 @@ Then you can provide custom inputs using an `inputs.json` file:
 
 ## Available WDLs
 
+> For the most current list of modules and pipelines, see the [WILDS WDL Library GitHub](https://github.com/getwilds/wilds-wdl-library).
+
 ### Modules
 
 | Module | Tool | Container | Description |
