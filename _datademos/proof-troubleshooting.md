@@ -117,7 +117,7 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 ### WDL Resources
 - [WDL Workflows Guide](/datascience/wdl_workflows/) - WDL language fundamentals
 - [WDL Execution Engines](/datascience/wdl_execution_engines/) - Understanding Cromwell and other WDL engines
-- [WILDS WDL Library](/datascience/wilds_wdl/) - Tested, ready-to-use WDL workflows and vignettes
+- [WILDS WDL Library](/datascience/wilds_wdl/) - Tested, ready-to-use WDL pipelines
 - [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive DaSL course
 - [WILDS WDL Repositories](https://github.com/getwilds?q=ww-&type=all&language=&sort=)
 
