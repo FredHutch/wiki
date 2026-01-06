@@ -12,12 +12,12 @@ You can:
 - **Build workflows faster** from reusable, tested modules without reinventing common tasks
 - **Ensure reproducibility** with versioned Docker containers and standardized components
 - **Execute workflows confidently** on multiple platforms including [PROOF](/datascience/proof/), Cromwell, miniWDL, and Sprocket
-- **Learn WDL best practices** through well-documented examples and vignettes
+- **Learn WDL best practices** through well-documented examples and pipelines
 
 
 ## Library Organization
 
-The library is organized into three complementary levels:
+The library is organized into two complementary levels:
 
 ### [**Modules**](https://github.com/getwilds/wilds-wdl-library/tree/main/modules)
 Tool-specific collections of reusable WDL tasks with comprehensive testing.
@@ -26,19 +26,20 @@ Tool-specific collections of reusable WDL tasks with comprehensive testing.
 - **Testing**: Unit tests ensure each task functions correctly over time
 - **Usage**: Import tasks into custom workflows or run demonstration workflows
 
-### [**Vignettes**](https://github.com/getwilds/wilds-wdl-library/tree/main/vignettes)
-Compact workflows demonstrating common bioinformatics patterns.
-- **Purpose**: Educational examples of module integration
-- **Content**: 2-3 modules combined into standard analysis patterns
-- **Testing**: Integration tests verify modules work together seamlessly
-- **Usage**: Templates for common workflows or learning examples
+### [**Pipelines**](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines)
+Complete analysis workflows that combine multiple modules, ranging from simple educational examples to comprehensive production-ready analyses.
+- **Purpose**: End-to-end analyses and templates for common bioinformatics patterns
+- **Content**: Workflows combining multiple modules with varying complexity levels
+- **Testing**: Integration and end-to-end tests verify modules work together seamlessly
+- **Usage**: Run as production workflows or use as templates for custom analyses
 
-### [**Workflows**](https://github.com/getwilds/wilds-wdl-library/tree/main/workflows)
-Complete, publication-ready analysis pipelines.
-- **Purpose**: End-to-end analyses suitable for research publications
-- **Content**: Complex workflows combining multiple modules and custom logic
-- **Testing**: Comprehensive validation with realistic datasets
-- **Usage**: Production analyses requiring minimal customization
+#### Pipeline Complexity Levels
+
+| Level | Modules | Typical Runtime | Description |
+|-------|---------|-----------------|-------------|
+| **Basic** | 2-3 | < 30 minutes | Simple integrations ideal for learning |
+| **Intermediate** | 4-6 | 1-4 hours | Multi-step analyses for common use cases |
+| **Advanced** | 10+ | > 4 hours | Comprehensive production pipelines |
 
 
 ## Testing & Validation
@@ -52,17 +53,35 @@ All WILDS WDLs undergo rigorous testing with real-world bioinformatics data to e
 
 **Validation by Component Type**
 - **Modules**: Unit tests with real sequencing files (FASTQ, BAM, VCF) verify each task functions correctly
-- **Vignettes**: Integration tests confirm modules work together using representative analysis datasets
-- **Workflows**: End-to-end validation with realistic research datasets suitable for publication-quality analyses
+- **Pipelines**: Integration and end-to-end tests confirm modules work together using representative analysis datasets suitable for publication-quality analyses
 
-This multi-layered testing approach ensures that WILDS WDLs perform reliably from individual tasks through complete analytical pipelines.
+This testing approach ensures that WILDS WDLs perform reliably from individual tasks through complete analytical pipelines.
 
 
 ## Getting Started
 
-We recommend users start their exploration at the vignette level to learn how tasks can be imported and strung together in a WDL workflow. From there, you can dive into task details at the module level. From there, you can customize the workflow as necessary or dive right in and create your own!
+We recommend users start their exploration with a basic-level pipeline to learn how tasks can be imported and combined in a WDL workflow. From there, you can dive into task details at the module level or explore more complex pipelines. You can customize existing pipelines as necessary or create your own from scratch!
 
-**Once you have a WDL that you like, you can run it several ways:**
+**Downloading Pipelines**
+
+No git clone required! You can download any pipeline directly from GitHub:
+
+1. Navigate to the pipeline you want in the [pipelines folder](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines)
+2. Click on the `.wdl` file, then click the download button (or "Raw" and save the page)
+3. Do the same for `inputs.json`
+4. Modify `inputs.json` as needed for your data
+
+This works because all pipelines import modules using GitHub URLs, so your WDL executor fetches dependencies automatically.
+
+Alternatively, if you prefer to have the full repository locally, you can clone it:
+
+```bash
+git clone https://github.com/getwilds/wilds-wdl-library.git
+```
+
+**Running Pipelines**
+
+Once you have a WDL that you like, you can run it several ways:
 
 **Fred Hutch Users**
 
@@ -74,24 +93,18 @@ You can use **[PROOF](/datascience/proof/)** to submit WDL workflows to the clus
 4. Upload a WDL and its accompanying JSON files
 5. Submit and monitor your job through the PROOF dashboard
 
-**Everyone**
+**Command Line**
 
-You can run WDLs locally if you have a WDL executor and Docker/Apptainer installed:
+You can run WDLs locally if you have a [WDL executor](/datascience/wdl_execution_engines/) and [Docker/Apptainer](/compdemos/Docker/) installed:
 
    - Basic WDL executor options: [miniWDL](https://miniwdl.readthedocs.io/en/latest/getting_started.html#install-miniwdl), [sprocket](https://sprocket.bio/installation.html)
    - [Docker Desktop](https://www.docker.com/get-started/) for container execution
 
 
-For example, you can run WILDS WDLs from the terminal using miniwdl like so:
+For example, you can run WILDS WDLs from the terminal using Sprocket like so:
 
 ```bash
-# Clone the WILDS WDL repository
-git clone https://github.com/getwilds/wilds-wdl-library.git
-cd wilds-wdl-library
-
-# Run a vignette (update inputs json as needed)
-cd vignettes/ww-sra-star
-miniwdl run ww-sra-star.wdl -i inputs.json
+sprocket run ww-sra-star.wdl --inputs inputs.json
 ```
 
 ### Importing into Your Workflows
@@ -126,6 +139,8 @@ Then you can provide custom inputs using an `inputs.json` file:
 
 ## Available WDLs
 
+> For the most current list of modules and pipelines, see the [WILDS WDL Library GitHub](https://github.com/getwilds/wilds-wdl-library).
+
 ### Modules
 
 | Module | Tool | Container | Description |
@@ -146,19 +161,20 @@ Then you can provide custom inputs using an `inputs.json` file:
 | [`ww-star`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-star) | STAR Aligner | `getwilds/star:2.7.6a` | RNA-seq alignment with two-pass methodology |
 | [`ww-testdata`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-testdata) | Test Data Downloader | `getwilds/awscli:2.27.49` | Download reference genomes and test datasets |
 
-### Vignettes
+### Pipelines
 
-| Vignette | Modules Used | Description |
-|----------|--------------|-------------|
-| [`ww-sra-star`](https://github.com/getwilds/wilds-wdl-library/tree/main/vignettes/ww-sra-star) | `ww-sra` + `ww-star` | Complete RNA-seq pipeline from SRA download to alignment |
+| Pipeline | Complexity | Modules Used | Description |
+|----------|------------|--------------|-------------|
+| [`ww-bwa-gatk`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-bwa-gatk) | Basic | `ww-bwa`, `ww-gatk` | DNA alignment and variant calling |
+| [`ww-ena-star`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-ena-star) | Basic | `ww-ena`, `ww-star` | ENA download and RNA-seq alignment |
+| [`ww-fastq-to-cram`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-fastq-to-cram) | Basic | `ww-bwa`, `ww-samtools` | FASTQ to CRAM conversion |
+| [`ww-sra-salmon`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-sra-salmon) | Basic | `ww-sra`, `ww-salmon` | SRA download and transcript quantification |
+| [`ww-sra-star`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-sra-star) | Basic | `ww-sra`, `ww-star` | SRA download and RNA-seq alignment |
+| [`ww-star-deseq2`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-star-deseq2) | Intermediate | `ww-star`, `ww-deseq2` | RNA-seq alignment and differential expression |
+| [`ww-saturation`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-saturation) | Intermediate | Multiple | Sequencing saturation analysis |
+| [`ww-leukemia`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-leukemia) | Advanced | Multiple | Consensus variant calling for targeted DNA sequencing |
 
-### Workflows
-
-| Workflow | Description |
-|----------|-------------|
-| [`ww-leukemia`](https://github.com/getwilds/wilds-wdl-library/tree/main/workflows/ww-leukemia) | Consensus variant calling workflow for targeted DNA sequencing |
-
-If there's a tool you'd like to see or a task you want written you can file an [issue](https://github.com/getwilds/wilds-wdl-library/issues), reach out to us directly ([see below](#contact-us)), or make a [contribution](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md)
+If there's a tool you'd like to see or a task you want written, you can file an [issue](https://github.com/getwilds/wilds-wdl-library/issues), reach out to us directly ([see below](#resources)), or make a [contribution](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md)
 
 
 ## Key Features of the WILDS WDL Library
@@ -199,8 +215,7 @@ We are very open to contributions from the Fred Hutch community and beyond! Our 
 Yes! All components undergo rigorous testing:
 
 - **Modules**: Automated unit tests run on every update using Cromwell, miniWDL, and Sprocket to ensure cross-platform compatibility. Each module is validated with authentic bioinformatics datasets.
-- **Vignettes**: Integration tests verify that modules work together seamlessly. These are manually tested with real data to ensure practical usability.
-- **Workflows**: Complete end-to-end workflows in the `workflows/` directory undergo comprehensive validation with realistic datasets and are suitable for research publications.
+- **Pipelines**: Integration and end-to-end tests verify that modules work together seamlessly. Pipelines undergo comprehensive validation with realistic datasets and are suitable for research publications.
 
 All testing is run through our [continuous integration system](https://github.com/getwilds/wilds-wdl-library/actions). Users can reproduce these tests locally using the repository [Makefile](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md#testing-requirements) and test data from the [ww-testdata](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-testdata) module.
 
@@ -211,23 +226,22 @@ Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org), sch
 
 ## Release Notes
 
-**October 2025 - WILDS WDL Library v0.1.0**
-- Three-tier architecture with modules, vignettes, and workflows
-- Comprehensive automated testing with multiple WDL executors at the module level
-- Manual testing with real bioinformatics data at the vignette and workflow levels
+**January 2026 - WILDS WDL Library v0.1.0**
+- Two-tier architecture with modules and pipelines
+- Pipelines include complexity levels (Basic, Intermediate, Advanced) to guide users
+- Comprehensive automated testing with multiple WDL executors
 - Standardized container management through the WILDS Docker Library
 - Full compatibility with the Fred Hutch PROOF platform
 - 17+ tested modules covering essential bioinformatics tools
-- Example vignettes demonstrating module integration
-- Production-ready workflows for variant calling and RNA-seq analysis
+- 8 pipelines covering common bioinformatics workflows including RNA-seq and variant calling
+- All pipelines include zero-configuration test workflows for quick demonstrations
 
 ## Resources
 
 **Get Started**
 
 - [Browse Available Modules](https://github.com/getwilds/wilds-wdl-library/tree/main/modules)
-- [Explore Vignettes](https://github.com/getwilds/wilds-wdl-library/tree/main/vignettes)
-- [Run Complete Workflows](https://github.com/getwilds/wilds-wdl-library/tree/main/workflows)
+- [Explore Pipelines](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines)
 - [Use PROOF for Easy Execution](/datascience/proof/)
 
 **Learn More**
@@ -237,6 +251,7 @@ Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org), sch
 - [Contributing Guidelines](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md)
 
 **Get Support**
+
 - **Issues and Bug Reports**: [GitHub Issues](https://github.com/getwilds/wilds-wdl-library/issues)
 - **General Questions**: Email [wilds@fredhutch.org](mailto:wilds@fredhutch.org)
 - **Data House Calls**: Schedule a [30-minute consultation session](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management) with us

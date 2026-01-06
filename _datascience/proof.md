@@ -20,7 +20,7 @@ primary_reviewers: seankross, tefirman, sitapriyamoorthi
 - Explore more advanced troubleshooting capabilities in our [PROOF Troubleshooting Guide](/datademos/proof-troubleshooting/)
 - Using regulated data or data covered under a DUA? Read about running [PROOF with regulated data](/datascience/proof_regulated/).
 - Learn more about developing WDL workflows using our [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/)
-- New to PROOF and looking for a workflow to try? Explore the [WILDS WDL Library](/datascience/wilds_wdl/) for tested, ready-to-use workflows and vignettes
+- New to PROOF and looking for a workflow to try? Explore the [WILDS WDL Library](/datascience/wilds_wdl/) for tested, ready-to-use pipelines
 
 ### Technical Documentation and Repositories
 - [PROOF Shiny App](https://github.com/getwilds/shiny-cromwell)
