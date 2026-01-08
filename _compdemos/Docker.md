@@ -1,254 +1,254 @@
 ---
 title: Using Docker at Fred Hutch
-last_modified_at: 2025-11-21
-main_author: Dirk Petersen
+last_modified_at: 2026-01-07
+main_author: Taylor Firman, Emma Bishop
+original_author: Dirk Petersen
 primary_reviewers: dtenenba, dirkpetersen, tefirman
 ---
 
 Docker containers are a fundamental tool for reproducible bioinformatics research, allowing you to package software with all its dependencies into a standardized unit that runs consistently across different computing environments. This guide will help you get started with Docker at Fred Hutch, from using pre-made containers to creating your own.
 
-## Why Docker Matters for Research
+## What is Docker?
 
-Docker containers solve several critical challenges in computational research:
+Think of a Docker container as a completely separate, self-contained computer running inside your computer. When you run a Docker container, it has:
 
-- **Reproducibility**: A containerized analysis produces identical results on your laptop, the Fred Hutch cluster, or in the cloud
-- **No installation headaches**: All software dependencies are pre-installed and configured within the container
-- **Version control**: Pin specific tool versions to ensure your analysis can be repeated years later
-- **Isolation**: Each container runs in isolation, preventing conflicts between incompatible tools or library versions
-- **Portability**: Share your complete computational environment with collaborators as easily as sharing a file
+- **Its own file system**: The container has its own directory structure that's completely separate from your computer's file system
+- **Its own software installations**: All programs, libraries, and dependencies are pre-installed inside the container and isolated from your computer
+- **Its own environment**: Environment variables, system settings, and configurations are specific to the container
+- **Isolation from your system**: Changes made inside the container don't affect your computer, and your computer's software doesn't interfere with the container
 
-For bioinformatics workflows, containers have become essential infrastructure. They ensure that complex pipelines with dozens of dependencies run reliably and reproducibly.
+For example, you might have Python 3.9 installed on your laptop, but a Docker container could run Python 3.11 without any conflict. The container operates in its own isolated environment, accessing your data only when you explicitly grant permission by mounting folders.
 
-## Getting Started with Docker
+This isolation is what makes Docker so powerful for research: you can package an entire computational environment (specific tool versions, dependencies, configurations) into a container that runs identically on any computer, anywhere.
 
-### Installing Docker
+## Docker, Apptainer, and Singularity: What's the Difference?
 
-To use Docker containers, you'll need Docker installed on your system:
+Before diving in, it's important to understand these related technologies:
 
-**On Your Local Computer:**
+- **Docker:** The original container platform. Requires administrator privileges to run, which is why it works great on your laptop but not on shared computing clusters.
+
+- **Apptainer/Singularity:** A container platform designed for scientific computing and HPC environments. **Apptainer is the new name for Singularity** (they're the same thing). It can run Docker containers but doesn't need administrator privileges, making it perfect for shared computing environments like Fred Hutch's cluster.
+
+**In practice:** You'll typically _create_ containers using Docker (because the tools are easier), then _run_ them using Apptainer on the cluster. Apptainer can pull and run Docker images directly from Docker Hub.
+
+## What Do You Want to Do?
+
+### Choose Your Path:
+
+- **[Use an existing Docker image](#using-existing-docker-images)**
+  - [Run Docker locally (on your laptop)](#running-docker-on-your-local-computer)
+  - [Run Docker on the cluster (using Apptainer)](#using-docker-on-fred-hutch-hpc-systems)
+  - [Use Docker in WDL workflows](#using-docker-with-workflow-systems)
+
+- **[Build your own Docker image](#creating-your-own-docker-images)**
+  - [Write a Dockerfile](#basic-dockerfile-structure)
+  - [Include custom files in a container](#including-custom-files)
+  - [Share your image](#sharing-docker-images)
+
+- **[Deploy a containerized application](#deploying-containerized-applications)**
+
+- **[Troubleshoot common issues](#troubleshooting-common-issues)**
+
+- **[Learn more about Docker](#learning-more-about-docker)**
+
+## Using Existing Docker Images
+
+Many bioinformatics tools are already available as pre-built containers, so you often don't need to create your own.
+
+### WILDS Docker Library
+
+The [**WILDS Docker Library**](/datascience/wilds_docker/) provides 30+ pre-built, security-scanned images for popular bioinformatics tools (STAR, GATK, BWA, Samtools, Cell Ranger, and more). Images are versioned, tested, and designed to work seamlessly with WDL and other workflow systems.
+
+- [GitHub repository](https://github.com/getwilds/wilds-docker-library) - Dockerfiles and documentation
+- [DockerHub page](https://hub.docker.com/u/getwilds) - Browse and pull images
+
+### Other Sources
+
+- **[Docker Hub](https://hub.docker.com/)**: Largest public registry. Check image popularity, update frequency, and documentation before using.
+- **[BioContainers](https://biocontainers.pro/)**: Community-driven containers automatically built from Bioconda recipes.
+- **[Fred Hutch on Docker Hub](https://hub.docker.com/u/fredhutch)**: Additional images maintained by Fred Hutch SciComp.
+
+
+## Running Docker on Your Local Computer
+
+### Installing Docker Desktop
+
+To use Docker containers on your laptop or desktop, you'll need Docker Desktop installed:
+
 - [Docker Desktop for Windows](https://www.docker.com/docker-windows)
 - [Docker Desktop for Mac](https://www.docker.com/docker-mac)
 - [Docker for Ubuntu Linux](https://www.docker.com/docker-ubuntu)
 
-**On Fred Hutch Computing Resources:**
+> ⚠️ **Common Error:** `Failed to initialize docker backend`
+>
+> This error means Docker Desktop is either not installed or not running. You need to:
+> 1. Install Docker Desktop from the links above
+> 2. **Start Docker Desktop** (it's not enough to just install it - the application must be running)
+>
+> You'll know Docker is running when you see the Docker icon in your system tray (Windows) or menu bar (Mac).
 
-Docker requires administrator privileges and cannot run directly on shared systems like `rhino` or `gizmo`. Instead, use [Apptainer](/compdemos/Apptainer/) (formerly Singularity), which can run Docker containers without special privileges. Apptainer is already installed on Fred Hutch HPC systems and can pull and run any Docker image.
+### Basic Docker Commands
 
-### Learning Docker
-
-If you're new to Docker, we highly recommend this free course from the ITCR Training Network:
-
-**[Containers for Scientists](https://hutchdatascience.org/Containers_for_Scientists/)**
-
-This comprehensive course covers everything from basic concepts to advanced techniques, including:
-- Why containers matter for reproducible research
-- Using existing containers for your work
-- Writing your own Dockerfiles
-- Best practices for sharing images
-- Troubleshooting common issues
-
-The course is available as a free website, with optional paid certification through Coursera.
-
-## Using Pre-Made Docker Images
-
-You often don't need to create your own Docker image. Many bioinformatics tools are already available as pre-built containers.
-
-### WILDS Docker Library
-
-The [**WILDS Docker Library**](/datascience/wilds_docker/) provides pre-built, tested Docker images for popular bioinformatics tools, maintained by the Fred Hutch WILDS team. These containers are:
-
-- **Versioned and tested**: Specific tool versions with verified functionality
-- **Security-scanned**: Regularly checked for vulnerabilities
-- **Well-documented**: Clear usage instructions and examples
-- **Ready for workflows**: Designed to work seamlessly with WDL and other workflow systems
-
-The library includes 30+ images for tools like STAR, GATK, BWA, Samtools, Cell Ranger, and many more.
-
-**Resources:**
-- [WILDS Docker Library SciWiki article](/datascience/wilds_docker/) - Comprehensive guide and tool catalog
-- [GitHub repository](https://github.com/getwilds/wilds-docker-library) - Dockerfiles and documentation
-- [DockerHub page](https://hub.docker.com/u/getwilds) - Browse and pull images
-
-**Example: Running STAR aligner**
+Once Docker Desktop is running, these commands will get you started:
 
 ```bash
-# Pull the STAR image from Docker Hub
-docker pull getwilds/star:2.7.6a
-
-# Run STAR to generate a genome index
-docker run --rm \
-  -v /path/to/your/data:/data \
-  getwilds/star:2.7.6a \
-  STAR --runMode genomeGenerate \
-       --genomeDir /data/genome_index \
-       --genomeFastaFiles /data/genome.fa
-```
-
-The `-v` flag mounts your local data directory into the container so STAR can access your files. The `--rm` flag automatically removes the container when it exits.
-
-### Other Docker Image Sources
-
-**[Docker Hub](https://hub.docker.com/)**: The largest public registry of Docker images. Search for specific tools or browse curated collections. Always check image popularity, update frequency, and documentation quality before using.
-
-**[BioContainers](https://biocontainers.pro/)**: A community-driven project providing containers for bioinformatics software. Automatically built from Bioconda recipes.
-
-**[Fred Hutch on Docker Hub](https://hub.docker.com/u/fredhutch)**: Additional Docker images maintained by Fred Hutch SciComp for various tools and environments.
-
-## Basic Docker Commands
-
-Once you have Docker installed, these commands will get you started:
-
-```bash
-# Search for an image
-docker search star
-
-# Pull an image from Docker Hub
-docker pull getwilds/bwa:0.7.17
-
 # List your local images
 docker images
 
-# Run a container interactively
-docker run -it getwilds/bwa:0.7.17 /bin/bash
+# Pull an image from Docker Hub to your local computer
+docker pull getwilds/samtools:1.19
 
-# Run a container with a specific command
-docker run --rm getwilds/samtools:1.19.2 samtools --version
-
-# Mount a local directory and run a command
-docker run --rm -v $(pwd):/data getwilds/samtools:1.19.2 \
-  samtools view -b /data/input.sam > /data/output.bam
+# Run a container with a specific command: samtools --version
+docker run getwilds/samtools:1.19 samtools --version
 
 # List running containers
 docker ps
 
 # List all containers (including stopped ones)
 docker ps -a
-
-# Stop a running container
-docker stop <container_id>
-
-# Remove a container
-docker rm <container_id>
-
-# Remove an image
-docker rmi <image_name>
 ```
 
 **Key flags:**
 - `-it`: Interactive mode with a terminal (useful for exploring containers)
-- `--rm`: Automatically remove the container when it exits
 - `-v`: Mount a local directory into the container
-- `-d`: Run container in detached mode (background)
-- `--name`: Give your container a specific name
+- `--rm`: Automatically remove the container when it exits
 
-## Creating Your Own Docker Images
+### Running a Container Interactively
 
-If pre-made images don't meet your needs, you can create custom Docker images using a Dockerfile.
-
-### Basic Dockerfile Structure
-
-A Dockerfile is a text file with instructions for building a Docker image. Here's a simple example:
-
-```dockerfile
-# Start from a base image
-FROM ubuntu:22.04
-
-# Add metadata about the image
-LABEL maintainer="your.email@fredhutch.org"
-LABEL description="Custom analysis environment"
-LABEL version="1.0"
-
-# Set environment variables
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
-    wget \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Python packages
-RUN pip3 install numpy pandas scipy
-
-# Set working directory
-WORKDIR /workspace
-
-# Copy analysis scripts into the container
-COPY scripts/ /workspace/scripts/
-
-# Define default command
-CMD ["/bin/bash"]
-```
-
-**Common Dockerfile Instructions:**
-
-- `FROM`: Specifies the base image to build from
-- `LABEL`: Adds metadata (author, description, version, etc.)
-- `ENV`: Sets environment variables
-- `RUN`: Executes commands during image build (install software, etc.)
-- `COPY`: Copies files from your computer into the image
-- `WORKDIR`: Sets the working directory for subsequent instructions
-- `CMD`: Specifies the default command to run when container starts
-
-### Building Your Image
-
-Save your Dockerfile and build the image:
+Sometimes you want to "look around" inside a container to check what's installed:
 
 ```bash
-# Build an image from a Dockerfile in the current directory
-docker build -t myanalysis:1.0 .
+# Start an interactive session (-it = interactive terminal)
+docker run -it getwilds/samtools:1.19
 
-# Build with a specific Dockerfile name
-docker build -f Dockerfile.custom -t myanalysis:1.0 .
+# Now you're inside the container! You can run commands such as:
+ls
+which samtools
+samtools --version
 
-# Build and tag with multiple names
-docker build -t myanalysis:1.0 -t myanalysis:latest .
+# Exit when you're done
+exit
 ```
 
-The `-t` flag tags your image with a name and optional version. The `.` at the end specifies the build context (current directory).
+### Mounting a Folder (Accessing Your Data)
 
-### Contributing to WILDS Docker Library
+To give the container access to files on your computer, you "mount" a folder using the `-v` flag:
 
-Before creating your own image from scratch, consider contributing to the WILDS Docker Library. This helps the entire Fred Hutch community and ensures your container follows best practices.
+**Example:** You have data files in `/Users/yourname/data` that you want to process:
 
-The WILDS team provides:
-- Comprehensive [Dockerfile templates](https://github.com/getwilds/wilds-docker-library/blob/main/template/Dockerfile_template) with detailed guidance
-- Automated testing and security scanning
-- Version management and DockerHub publishing
-- Documentation and usage examples
-
-See the [Contributing section](/datascience/wilds_docker/#contributing-to-the-library) of the WILDS Docker Library article for detailed instructions.
+```bash
+# Run STAR aligner on your data
+docker run -v /Users/yourname/data:/data getwilds/star:2.7.6a \
+  STAR --runMode genomeGenerate \
+       --genomeDir /data/genome_index \
+       --genomeFastaFiles /data/genome.fa
+```
 
 ## Using Docker on Fred Hutch HPC Systems
 
-Docker requires root access and doesn't run on shared computing systems like `rhino` and `gizmo`. Instead, use **Apptainer** (formerly Singularity), which can run Docker containers without special privileges.
+### Using Apptainer on the Cluster
 
-Apptainer is pre-installed on Fred Hutch HPC systems and can:
+On the Fred Hutch HPC cluster (Gizmo/Rhino), you'll use Apptainer instead of Docker to run containers. Docker requires administrator privileges which aren't available on shared computing systems, but Apptainer is designed specifically for HPC environments.
+
+Apptainer is pre-installed on the cluster and can:
 - Pull and run any Docker image directly from Docker Hub
-- Convert Docker images to Apptainer format
 - Run containers with your normal user permissions
+- Convert Docker images to the Apptainer format (.sif files)
 
-See the [Apptainer documentation](/compdemos/Apptainer/) for details on using containers in HPC environments.
+> ⚠️ **Important:** Don't build Apptainer containers on Rhino nodes (the login nodes). Building containers is resource-intensive and can slow down the system for everyone.
+>
+> **Instead:**
+> - Build on a `gizmo` compute node using an interactive session: `grabnode`
+> - Or submit a job to build the container
+>
+> You can _run_ containers on Rhino for quick tests, but for actual analysis, use compute nodes.
 
-**Example: Running a Docker container with Apptainer**
+### Basic Apptainer Commands
+
+Once you're logged into the cluster, these commands will get you started:
 
 ```bash
-# On rhino or gizmo, run a Docker image with Apptainer
-apptainer exec docker://getwilds/samtools:1.19.2 samtools --version
+# Run a Docker image directly (no conversion needed)
+apptainer exec docker://getwilds/samtools:1.19 samtools --version
 
-# Pull and convert to Apptainer format
-apptainer pull docker://getwilds/bwa:0.7.17
+# Pull and convert Docker image to Apptainer format (generates .sif file)
+apptainer pull docker://getwilds/samtools:1.19
+# Creates: samtools_1.19.sif
 
-# Run the converted image
-apptainer exec bwa_0.7.17.sif bwa mem -t 4 ...
+# Run the .sif file with a specific command
+apptainer exec samtools_1.19.sif samtools --version
+
+# List your .sif files
+ls -lh *.sif
 ```
+
+**Key flags:**
+- `exec`: Execute a command inside the container
+- `shell`: Start an interactive shell inside the container
+- `--bind`: Mount a directory into the container (similar to Docker's `-v`)
+
+### Running a Container Interactively
+
+Sometimes you want to "look around" inside a container to check what's installed:
+
+```bash
+# Start an interactive session with a .sif file
+apptainer shell samtools_1.19.sif
+
+# Now you're inside the container! You can run commands such as:
+ls
+which samtools
+samtools --version
+
+# Exit when you're done
+exit
+```
+
+### Accessing Cluster Storage (Binding Directories)
+
+By default, Apptainer automatically mounts your home directory and the current working directory. To access other cluster storage locations like `/fh/fast` or `/fh/scratch`, use the `--bind` flag to mount them inside the container.
+
+> **Note:** In these examples, we mount external directories to `/data` inside the container. This is a useful convention (not a requirement) - you can mount to any path inside the container. Using `/data` consistently makes your commands more readable and portable.
+
+**Example:** You have data files in `/fh/fast/mylab/data` that you want to process:
+
+```bash
+# Run STAR aligner on your data
+apptainer exec --bind /fh/fast/mylab/data:/data docker://getwilds/star:2.7.6a \
+  STAR --runMode genomeGenerate \
+       --genomeDir /data/genome_index \
+       --genomeFastaFiles /data/genome.fa
+```
+
+### Managing Apptainer's Cache
+
+Apptainer caches downloaded images in `~/.apptainer/cache` to speed up future runs. Over time, this cache can grow quite large (several GB), especially if you use many different containers.
+
+To check your cache size:
+```bash
+du -sh ~/.apptainer/cache
+```
+
+To clean the cache and free up space:
+```bash
+# Remove all cached images
+apptainer cache clean
+
+# Remove specific types of cached content
+apptainer cache clean --type blob  # Remove image blobs
+apptainer cache clean --days 30    # Remove items older than 30 days
+```
+
+> **Tip:** If you regularly use certain containers, consider keeping their `.sif` files in a project directory instead of relying on the cache. This makes your work more reproducible and you can clean the cache without losing frequently-used images.
+
 
 ## Using Docker with Workflow Systems
 
-Docker containers integrate seamlessly with workflow systems like WDL, Nextflow, and Snakemake. The workflow engine automatically pulls and runs containers as needed.
+Docker containers integrate seamlessly with workflow systems like WDL, Nextflow, and Snakemake. The workflow engine automatically pulls and runs containers as needed, ensuring every step of your pipeline uses the correct software versions.
 
-**WDL Example:**
+### WDL Workflows
+
+In a WDL workflow, each task can specify which Docker container to use in the `runtime` section:
 
 ```wdl
 task runSTAR {
@@ -273,29 +273,228 @@ task runSTAR {
 }
 ```
 
-The WILDS WDL Library uses WILDS Docker Library containers by default. See the [WDL workflows guide](/datascience/wdl_workflows/) for more information.
+The WDL image naming convention is:
 
-## Deploying Containerized Applications at Fred Hutch
+`docker: "[registry/]namespace/repository:tag"`
 
-### Using the Fred Hutch Container Environment
+- **registry** (optional): Defaults to Docker Hub (docker.io)
+- **namespace**: `getwilds` - The organization or user name
+- **repository**: `star` - The specific image/project name
+- **tag**: `2.7.6a` - The version identifier
+
+**Note:** The [WILDS Docker Library](/datascience/wilds_docker/) provides pre-built, tested Docker images for the [WILDS WDL Library](/datascience/wdl_workflows/)
+
+## Creating Your Own Docker Images
+
+If pre-made images don't meet your needs, you can create custom Docker images using a Dockerfile.
+
+### When to Build Your Own Container
+
+- You need specific versions of tools that aren't available in existing containers
+- You want to include custom scripts or configuration files
+- You need to ensure your exact analysis environment is reproducible by others
+
+### Basic Dockerfile Structure
+
+A Dockerfile is a recipe that tells Docker how to build your container. It's a text file named `Dockerfile` (no extension).
+
+**Simple example:**
+
+```dockerfile
+# Start from a base image
+FROM ubuntu:22.04
+
+# Add metadata about the image
+LABEL maintainer="your.email@fredhutch.org"
+LABEL description="Custom analysis environment"
+LABEL version="1.0"
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python packages
+RUN pip3 install numpy pandas scipy
+
+# Set working directory
+WORKDIR /data
+```
+
+**Common Dockerfile Instructions:**
+
+- `FROM`: Specifies the base image to build from
+- `LABEL`: Adds metadata (author, description, version, etc.)
+- `ENV`: Sets environment variables
+- `RUN`: Executes commands during image build (install software, etc.)
+- `COPY`: Copies files from your computer into the image
+- `WORKDIR`: Sets the working directory for subsequent instructions
+
+### Including Custom Files
+
+To include scripts, configuration files, or small reference files in your container:
+
+```dockerfile
+FROM python:3.9
+
+# Install dependencies
+RUN pip install pandas biopython matplotlib
+
+# Copy your analysis scripts
+COPY analysis_pipeline.py /usr/local/bin/
+COPY utils.py /usr/local/bin/
+COPY config.yaml /etc/myapp/
+
+# Make scripts executable
+RUN chmod +x /usr/local/bin/analysis_pipeline.py
+
+# You can also copy entire directories
+COPY scripts/ /opt/scripts/
+
+# Set working directory
+WORKDIR /data
+```
+
+> **Tip:** Only include small files in your container (scripts, configs, small reference files). Large datasets should be mounted when you run the container, not baked into the image. This keeps your image size manageable and makes it more reusable.
+
+### Building Your Image
+
+Save your Dockerfile and build the image:
+
+```bash
+# Build an image from a Dockerfile in the current directory
+docker build -t myanalysis:1.0 .
+
+# Build with a specific Dockerfile name
+docker build -f Dockerfile_latest -t myanalysis:2.0 .
+
+# Build and tag with multiple names
+docker build -t myanalysis:2.0 -t myanalysis:latest .
+```
+
+The `-t` flag tags your image with a name and optional version. The `.` at the end specifies the build context (current directory).
+
+### Sharing Your Image: WILDS Docker Library
+
+You can contribute your container to the [WILDS Docker Library](#contributing-to-wilds-docker-library), helping the entire Fred Hutch community.
+
+The WILDS team provides:
+- Comprehensive [Dockerfile templates](https://github.com/getwilds/wilds-docker-library/blob/main/template/Dockerfile_template) with detailed guidance
+- Automated testing and security scanning
+- Version management and DockerHub publishing
+- Documentation and usage examples
+
+See the [Contributing section](/datascience/wilds_docker/#contributing-to-the-library) of the WILDS Docker Library article for an overview, and our [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) for detailed requirements and best practices.
+
+### Sharing Your Image: Docker Hub
+
+[Docker Hub](https://hub.docker.com/) is the standard registry for sharing Docker images publicly. It's a good choice for fully open-source projects.
+
+**Basic workflow:**
+
+```bash
+# 1. Create a Docker Hub account at hub.docker.com
+
+# 2. Tag your image with your Docker Hub username
+docker tag myanalysis:1.0 yourusername/myanalysis:1.0
+
+# 3. Log in to Docker Hub
+docker login
+
+# 4. Push the image
+docker push yourusername/myanalysis:1.0
+```
+
+Now others can pull your image with:
+
+```bash
+docker pull yourusername/myanalysis:1.0
+```
+
+## Deploying Containerized Applications
 
 SciComp maintains a Docker Swarm for hosting containerized applications like Shiny apps, web services, and dashboards. Applications can be configured to be accessible only within the Fred Hutch network or available on the public internet.
 
 If you want to deploy a containerized application, please see the [Shiny deployment page](/compdemos/shiny/#request-deployment-service-from-scicomp). While the documentation uses Shiny-specific terminology, SciComp can deploy any type of application that can be containerized.
 
-### Docker Hub for Sharing Images
+## Troubleshooting Common Issues
 
-[Docker Hub](https://hub.docker.com/) is the standard registry for sharing Docker images publicly. It's a good choice for fully open-source projects and integrates well with GitHub for automated builds.
+### Docker Desktop Issues
 
-**Basic workflow:**
-1. Create a Docker Hub account
-2. Build your image locally
-3. Tag it with your Docker Hub username: `docker tag myimage:1.0 username/myimage:1.0`
-4. Push to Docker Hub: `docker push username/myimage:1.0`
+**Problem:** `docker: command not found`
 
-For Fred Hutch-supported tools, consider contributing to the [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library) instead, which handles building, testing, and publishing automatically.
+**Solution:** Docker is not installed or not in your system PATH. Install Docker Desktop from the links in [Installing Docker Desktop](#installing-docker-desktop) and restart your terminal.
 
-## Best Practices
+---
+
+**Problem:** `Cannot connect to the Docker daemon` or `Failed to initialize docker backend`
+
+**Solution:** Docker Desktop is installed but not running. Start the Docker Desktop application - you should see the Docker icon in your system tray (Windows) or menu bar (Mac). Docker must be running for any docker commands to work.
+
+---
+
+**Problem:** `permission denied while trying to connect to the Docker daemon socket`
+
+**Solution:** On Linux, your user needs to be in the `docker` group:
+```bash
+sudo usermod -aG docker $USER
+# Log out and back in for changes to take effect
+```
+
+### Apptainer Issues
+
+**Problem:** `FATAL: container creation failed: mount error`
+
+**Solution:** This is often caused by:
+- Insufficient disk space in your home directory (check with `df -h ~`)
+- Permission issues with the cache directory (try `apptainer cache clean`)
+- Trying to bind a directory that doesn't exist (verify paths with `ls`)
+
+---
+
+**Problem:** Command works locally but fails in Apptainer container
+
+**Solution:** The container may not have access to the files you need. Remember:
+- Your home directory and current working directory are automatically mounted
+- Other paths (like `/fh/fast` or `/fh/scratch`) must be explicitly bound with `--bind`
+- Check that paths inside the container exist: `apptainer exec container.sif ls /data`
+
+---
+
+**Problem:** Apptainer is very slow or hangs when pulling images
+
+**Solution:**
+- Don't pull images on Rhino login nodes - use `grabnode` to get a compute node
+- Check if your home directory quota is full: `homedu`
+- Consider pulling to `/fh/scratch` if your home directory is low on space
+
+### General Issues
+
+**Problem:** Container runs but can't find input files
+
+**Solution:** Remember that containers have their own isolated filesystem. You must:
+1. Mount the directory containing your files (using `-v` for Docker or `--bind` for Apptainer)
+2. Reference files using their path *inside* the container, not your local system path
+
+**Example:**
+```bash
+# Wrong: references local path
+docker run getwilds/samtools:1.19 samtools view /Users/me/data/sample.bam
+
+# Correct: mount directory and use container path
+docker run -v /Users/me/data:/data getwilds/samtools:1.19 samtools view /data/sample.bam
+```
+
+## Learning More About Docker
+
+If you're new to Docker, we highly recommend this free course from the ITCR Training Network: **[Containers for Scientists](https://hutchdatascience.org/Containers_for_Scientists/)**
+
+**Best Practices:**
 
 - **Pin specific versions**: Use `getwilds/star:2.7.6a` rather than `getwilds/star:latest` for reproducibility
 - **Keep images small**: Only install necessary dependencies to reduce build time and storage
@@ -304,11 +503,9 @@ For Fred Hutch-supported tools, consider contributing to the [WILDS Docker Libra
 - **Clean up regularly**: Remove unused images and containers with `docker system prune`
 - **Use .dockerignore**: Exclude unnecessary files from your build context (like .git directories)
 
-## Additional Resources
+**Additional Resources**
 
-- [Containers for Scientists Course](https://hutchdatascience.org/Containers_for_Scientists/) - Comprehensive Docker training
 - [WILDS Docker Library](/datascience/wilds_docker/) - Pre-built bioinformatics containers
-- [Apptainer at Fred Hutch](/compdemos/Apptainer/) - Using containers on HPC systems
-- [WDL Workflows](/datascience/wdl_workflows/) - Using containers in workflows
+- [Apptainer at Fred Hutch](/compdemos/Apptainer/) - Detailed Apptainer documentation
 - [Docker Official Documentation](https://docs.docker.com/) - Complete Docker reference
-- [Best Practices for Writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) - Official Docker guide
+- [WDL Workflows](/datascience/wdl_workflows/) - Using containers in workflows
