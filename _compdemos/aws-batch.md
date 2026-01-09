@@ -19,7 +19,7 @@ Please report any problems you discover with this dashboard by describing the pr
 
 ### Essential terms
 
-  * Docker image: lightweight operating system / virtual machine [see Docker documentation](https://docs.docker.com/glossary/?term=image)
+  * Docker image: lightweight operating system / virtual machine. See our [Docker SciWiki page](/compdemos/Docker/) and the [Docker documentation](https://docs.docker.com/glossary/?term=image)
   * CPU: Central processing unit, basically just a unit of computation. Your laptop probably has 4 CPUs, while large servers have dozens.
 
 ## How it works
@@ -82,8 +82,9 @@ You will need to obtain [AWS credentials](/scicomputing/access_credentials/#amaz
 
 SciComp will contact you when your access has been granted.
 
-### Create and Deploy a Docker Image
-See our detailed information in the Computing Resource Library [here](/compdemos/Docker/) about creating and deploying Docker images, as well as running your own Docker Host.  
+### Create a Docker Image
+
+See ["Build your own Docker image"](/compdemos/Docker/#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/).
 
 ### Create a Job Definition
 

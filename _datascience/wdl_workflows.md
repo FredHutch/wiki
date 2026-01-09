@@ -21,7 +21,7 @@ WDL separates the scientific logic (what to compute) from infrastructure details
 
 ### Reproducibility
 WDL workflows explicitly define every aspect of your analysis:
-- **Exact software versions** through containerization (Docker/Apptainer)
+- **Exact software versions** through containerization ([Docker](/compdemos/Docker/)/Apptainer)
 - **Deterministic execution** that produces identical results across different platforms
 - All required inputs and files clearly specified upfront
 
@@ -169,7 +169,7 @@ runtime {
 }
 ```
 
-The [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library) provides pre-built, tested containers for common bioinformatics tools. For more on using Docker at Fred Hutch, see our [Docker guide](/compdemos/Docker/).
+The [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library) provides pre-built, tested containers for common bioinformatics tools. For more detail, see the ["Use Docker in WDL workflows"](#using-docker-with-workflow-systems) section of our [Docker page](/compdemos/Docker/).
 
 ### Apptainer (formerly Singularity)
 
@@ -284,6 +284,7 @@ runtime {
 - [PROOF Troubleshooting](/datademos/proof-troubleshooting/) - Common issues and solutions using PROOF
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Ready-to-use tasks and workflows
 - [WILDS Docker Library](/datascience/wilds_docker/) - Pre-built containers for bioinformatics tools
+- [Using Docker at Fred Hutch](/compdemos/Docker/)
 
 **Community Resources:**
 - [WARP](https://broadinstitute.github.io/warp/docs/get-started) - Broad Institute's WDL workflows

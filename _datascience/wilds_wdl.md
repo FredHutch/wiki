@@ -10,7 +10,7 @@ The [**WILDS WDL Library**](https://github.com/getwilds/wilds-wdl-library) is a 
 You can:
 
 - **Build workflows faster** from reusable, tested modules without reinventing common tasks
-- **Ensure reproducibility** with versioned Docker containers and standardized components
+- **Ensure reproducibility** with versioned [Docker](/compdemos/Docker/) containers and standardized components
 - **Execute workflows confidently** on multiple platforms including [PROOF](/datascience/proof/), Cromwell, miniWDL, and Sprocket
 - **Learn WDL best practices** through well-documented examples and pipelines
 

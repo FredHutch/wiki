@@ -104,7 +104,7 @@ Inside that script, the variable `${params.first_parameter}` will be replaced wi
 Running any workflow with arguments prefixed by `--`, will provide that value as a parameter in that pattern. 
 ### Report
 Specifying `-with-report` tells Nextflow to write a summary of the complete workflow execution to a human readable summary in `nextflow_report.html`.
-Beware that running `-with-report` depends on some utilities which must be installed in the environment you are running your process in (e.g. in your Docker container); [more details in the Nextflow docs](https://www.nextflow.io/docs/latest/tracing.html#tasks).
+Beware that running `-with-report` depends on some utilities which must be installed in the environment you are running your process in (e.g. in your [Docker](/compdemos/Docker/) container); [more details in the Nextflow docs](https://www.nextflow.io/docs/latest/tracing.html#tasks).
 ### Working directory
 Specifying `-work-dir` tells Nextflow to use `s3://fh-pi-lastname-f/lab/user_name/project_name/work/` to store all temporary data (the inputs and outputs of each individual task). 
 ### Resume

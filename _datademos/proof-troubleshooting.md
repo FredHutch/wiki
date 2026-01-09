@@ -71,7 +71,7 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 - If these messages don’t provide enough information, navigate back to the “Job List” table and take a look at a few additional columns:
     - **stdout & stderr**: these columns contain the location of flat files that contain the output and error messages from the command line tools used during the task(s) in question. These will help to provide tool-specific feedback as to what might be going wrong. To access these, copy the path provided, log on to Rhino, and view the text files via `more` , `less`, or `cat`.
     - **commandLine**: this column contains the exact command that was run during this task. Check to see if anything looks off, maybe an improper string concatenation, maybe a reference to the wrong WDL variable. If so, navigate to the “command” section of the task to see what might be causing the issue.
-    - **docker**: this column contains the name of the Docker container that was used in the task. First, check for typos, but if the image name and version tag appear to be correct, try pulling the container locally using Docker (or Apptainer on Rhino/Gizmo). If it pulls successfully, try running exactly what is written in the commandLine column within the container.
+    - **docker**: this column contains the name of the [Docker](/compdemos/Docker/) container that was used in the task. First, check for typos, but if the image name and version tag appear to be correct, try pulling the container locally using Docker (or Apptainer on Rhino/Gizmo). If it pulls successfully, try running exactly what is written in the commandLine column within the container.
 
 ## Execution Issues
 
@@ -107,6 +107,7 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 
 <img src="/datademos/assets/proof_ts_singularity_cache.png" alt="singularity_cache" width="600"/>
 
+- See also ["Build your own Docker image"](#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/)
 - DaSL also has a collection of images for commonly used bioinformatics tools in the [WILDS Docker Library](https://github.com/orgs/getwilds/packages) and we are always looking to expand it. If you think the Fred Hutch community would benefit from a new tool in this container library, please feel free to reach out to us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) to talk through things in person!
 
 ## Resources and Help
