@@ -113,7 +113,7 @@ For a comprehensive introduction to Docker at Fred Hutch, see [Using Docker at F
 - [What Docker is and how it works](/compdemos/Docker/#what-is-docker)
 - [Using pre-built containers from WILDS and other sources](/compdemos/Docker/#using-existing-docker-images)
 - [Running Docker on your local computer](/compdemos/Docker/#running-docker-on-your-local-computer)
-- [Using Docker containers on the Fred Hutch cluster (via Apptainer)](/compdemos/Docker/#using-docker-on-fred-hutch-hpc-systems)
+- [Using Docker containers on the Fred Hutch cluster (via Apptainer)](/compdemos/Docker/#using-docker-on-the cluster)
 - [Creating your own Docker images](/compdemos/Docker/#creating-your-own-docker-images)
 - [Using Docker in WDL and other workflow systems](/compdemos/Docker/#using-docker-with-workflow-systems)
 
