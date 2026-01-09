@@ -27,17 +27,15 @@ Before diving in, it's important to understand these related technologies:
 
 - **Docker:** The original container platform. Requires administrator privileges to run, which is why it works great on your laptop but not on shared computing clusters.
 
-- **Apptainer/Singularity:** A container platform designed for scientific computing and HPC environments. **Apptainer is the new name for Singularity** (they're the same thing). It can run Docker containers but doesn't need administrator privileges, making it perfect for shared computing environments like Fred Hutch's cluster.
+- **Apptainer/Singularity:** A container platform designed for scientific computing and HPC environments. **[Apptainer](/compdemos/Apptainer/) is the new name for Singularity** (they're the same thing). It can run Docker containers but doesn't need administrator privileges, making it perfect for shared computing environments like Fred Hutch's cluster.
 
 **In practice:** You'll typically _create_ containers using Docker (because the tools are easier), then _run_ them using Apptainer on the cluster. Apptainer can pull and run Docker images directly from Docker Hub.
 
 ## What Do You Want to Do?
 
-### Choose Your Path:
-
 - **[Use an existing Docker image](#using-existing-docker-images)**
   - [Run Docker locally (on your laptop)](#running-docker-on-your-local-computer)
-  - [Run Docker on the cluster (using Apptainer)](#using-docker-on-fred-hutch-hpc-systems)
+  - [Run Docker on the cluster (using Apptainer)](#using-docker-on-the-cluster)
   - [Use Docker in WDL workflows](#using-docker-with-workflow-systems)
 
 - **[Build your own Docker image](#creating-your-own-docker-images)**
@@ -144,42 +142,32 @@ docker run -v /Users/yourname/data:/data getwilds/star:2.7.6a \
        --genomeFastaFiles /data/genome.fa
 ```
 
-## Using Docker on Fred Hutch HPC Systems
+## Using Docker on The Cluster
 
-### Using Apptainer on the Cluster
-
-On the Fred Hutch HPC cluster (Gizmo/Rhino), you'll use Apptainer instead of Docker to run containers. Docker requires administrator privileges which aren't available on shared computing systems, but Apptainer is designed specifically for HPC environments.
+On the Fred Hutch cluster ([Gizmo](/compdemos/grabnode/)/[Rhino](/compdemos/howtoRhino/)), you'll use [Apptainer](/compdemos/Apptainer/) instead of Docker to run containers. Docker requires administrator privileges which aren't available on shared computing systems, but Apptainer is designed specifically for HPC environments.
 
 Apptainer is pre-installed on the cluster and can:
 - Pull and run any Docker image directly from Docker Hub
 - Run containers with your normal user permissions
-- Convert Docker images to the Apptainer format (.sif files)
-
-> ⚠️ **Important:** Don't build Apptainer containers on Rhino nodes (the login nodes). Building containers is resource-intensive and can slow down the system for everyone.
->
-> **Instead:**
-> - Build on a `gizmo` compute node using an interactive session: `grabnode`
-> - Or submit a job to build the container
->
-> You can _run_ containers on Rhino for quick tests, but for actual analysis, use compute nodes.
 
 ### Basic Apptainer Commands
 
-Once you're logged into the cluster, these commands will get you started:
+Once you're logged into the cluster, the commands below will get you started.  
+
+>Note: Apptainer builds a container in its own format (`.sif`) from the Docker image automatically with `exec` and `pull`. Building containers is resource-intensive and can slow down the system for everyone. It's best to run these commands on a `gizmo` compute node using an [interactive session](/compdemos/grabnode/) or submit an SBATCH to build the container.
 
 ```bash
-# Run a Docker image directly (no conversion needed)
+# First, module load Apptainer
+ml Apptainer
+
+# Run a Docker image
 apptainer exec docker://getwilds/samtools:1.19 samtools --version
 
-# Pull and convert Docker image to Apptainer format (generates .sif file)
+# Pull and convert Docker image (ceates samtools_1.19.sif)
 apptainer pull docker://getwilds/samtools:1.19
-# Creates: samtools_1.19.sif
 
-# Run the .sif file with a specific command
+# Run a .sif with a specific command
 apptainer exec samtools_1.19.sif samtools --version
-
-# List your .sif files
-ls -lh *.sif
 ```
 
 **Key flags:**
@@ -192,6 +180,9 @@ ls -lh *.sif
 Sometimes you want to "look around" inside a container to check what's installed:
 
 ```bash
+# First, module load Apptainer
+ml Apptainer
+
 # Start an interactive session with a .sif file
 apptainer shell samtools_1.19.sif
 
@@ -206,13 +197,16 @@ exit
 
 ### Accessing Cluster Storage (Binding Directories)
 
-By default, Apptainer automatically mounts your home directory and the current working directory. To access other cluster storage locations like `/fh/fast` or `/fh/scratch`, use the `--bind` flag to mount them inside the container.
+By default, Apptainer automatically mounts your home directory and the current working directory. To access other [cluster storage](/_scicomputing/store_posix/) locations like `/fh/fast` or `/fh/scratch`, use the `--bind` flag to mount them inside the container.
 
-> **Note:** In these examples, we mount external directories to `/data` inside the container. This is a useful convention (not a requirement) - you can mount to any path inside the container. Using `/data` consistently makes your commands more readable and portable.
+> **Note:** These examples mount external directories to `/data` inside the container. This path is arbitrary, you can mount to any path that exists in the container. Check the documentation for your specific container to see what directories are available.
 
 **Example:** You have data files in `/fh/fast/mylab/data` that you want to process:
 
 ```bash
+# First, module load Apptainer
+ml Apptainer
+
 # Run STAR aligner on your data
 apptainer exec --bind /fh/fast/mylab/data:/data docker://getwilds/star:2.7.6a \
   STAR --runMode genomeGenerate \
@@ -231,24 +225,23 @@ du -sh ~/.apptainer/cache
 
 To clean the cache and free up space:
 ```bash
+# First, module load Apptainer
+ml Apptainer
+
 # Remove all cached images
 apptainer cache clean
 
-# Remove specific types of cached content
-apptainer cache clean --type blob  # Remove image blobs
-apptainer cache clean --days 30    # Remove items older than 30 days
+# Remove items older than 30 days
+apptainer cache clean --days 30    
 ```
-
-> **Tip:** If you regularly use certain containers, consider keeping their `.sif` files in a project directory instead of relying on the cache. This makes your work more reproducible and you can clean the cache without losing frequently-used images.
-
 
 ## Using Docker with Workflow Systems
 
-Docker containers integrate seamlessly with workflow systems like WDL, Nextflow, and Snakemake. The workflow engine automatically pulls and runs containers as needed, ensuring every step of your pipeline uses the correct software versions.
+Docker containers integrate seamlessly with [workflow systems](/datascience/using_workflows/) like WDL, Nextflow, and Snakemake. The workflow engine automatically pulls and runs containers as needed, ensuring every step of your pipeline uses the correct software versions.
 
 ### WDL Workflows
 
-In a WDL workflow, each task can specify which Docker container to use in the `runtime` section:
+In a [WDL workflow](/datascience/wdl_workflows/), each task can specify which Docker container to use in the `runtime` section:
 
 ```wdl
 task runSTAR {
@@ -273,14 +266,14 @@ task runSTAR {
 }
 ```
 
-The WDL image naming convention is:
+Describe the container you want to use in this way: `registry/namespace/repository:tag`
 
-`docker: "[registry/]namespace/repository:tag"`
+So for `getwilds/star:2.7.6a`:
 
-- **registry** (optional): Defaults to Docker Hub (docker.io)
-- **namespace**: `getwilds` - The organization or user name
-- **repository**: `star` - The specific image/project name
-- **tag**: `2.7.6a` - The version identifier
+- **registry** (optional, defaults to Docker Hub) = Not used
+- **namespace** (organization/user name) = `getwilds`
+- **repository** (image name) = `star`
+- **tag** (version) = `2.7.6a`
 
 **Note:** The [WILDS Docker Library](/datascience/wilds_docker/) provides pre-built, tested Docker images for the [WILDS WDL Library](/datascience/wdl_workflows/)
 
@@ -424,8 +417,6 @@ If you want to deploy a containerized application, please see the [Shiny deploym
 
 ## Troubleshooting Common Issues
 
-### Docker Desktop Issues
-
 **Problem:** `docker: command not found`
 
 **Solution:** Docker is not installed or not in your system PATH. Install Docker Desktop from the links in [Installing Docker Desktop](#installing-docker-desktop) and restart your terminal.
@@ -438,43 +429,6 @@ If you want to deploy a containerized application, please see the [Shiny deploym
 
 ---
 
-**Problem:** `permission denied while trying to connect to the Docker daemon socket`
-
-**Solution:** On Linux, your user needs to be in the `docker` group:
-```bash
-sudo usermod -aG docker $USER
-# Log out and back in for changes to take effect
-```
-
-### Apptainer Issues
-
-**Problem:** `FATAL: container creation failed: mount error`
-
-**Solution:** This is often caused by:
-- Insufficient disk space in your home directory (check with `df -h ~`)
-- Permission issues with the cache directory (try `apptainer cache clean`)
-- Trying to bind a directory that doesn't exist (verify paths with `ls`)
-
----
-
-**Problem:** Command works locally but fails in Apptainer container
-
-**Solution:** The container may not have access to the files you need. Remember:
-- Your home directory and current working directory are automatically mounted
-- Other paths (like `/fh/fast` or `/fh/scratch`) must be explicitly bound with `--bind`
-- Check that paths inside the container exist: `apptainer exec container.sif ls /data`
-
----
-
-**Problem:** Apptainer is very slow or hangs when pulling images
-
-**Solution:**
-- Don't pull images on Rhino login nodes - use `grabnode` to get a compute node
-- Check if your home directory quota is full: `homedu`
-- Consider pulling to `/fh/scratch` if your home directory is low on space
-
-### General Issues
-
 **Problem:** Container runs but can't find input files
 
 **Solution:** Remember that containers have their own isolated filesystem. You must:
@@ -483,9 +437,6 @@ sudo usermod -aG docker $USER
 
 **Example:**
 ```bash
-# Wrong: references local path
-docker run getwilds/samtools:1.19 samtools view /Users/me/data/sample.bam
-
 # Correct: mount directory and use container path
 docker run -v /Users/me/data:/data getwilds/samtools:1.19 samtools view /data/sample.bam
 ```
