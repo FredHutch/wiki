@@ -86,9 +86,9 @@ $ apptainer run lolcow_latest.sif
 
 ## Using Docker Containers with Apptainer
 
-As indicated earlier, Apptainer can run Docker container images.  However, Docker container images must first be converted to be usable by Apptainer.
+As indicated earlier, Apptainer can run Docker container images. When you pull a Docker container from the internet using Apptainer (e.g., `apptainer pull docker://image`), the conversion to Apptainer format happens automatically. You can also manually convert Docker containers to create a SIF (Singularity Image Format) file that you can reuse later without needing to pull from the internet again.
 
-> The conversion step is only necessary the first time you convert a Docker container to a Apptainer container or when you want to update your Apptainer container (e.g. to a newer version of a Docker container).
+For more detail, see the ["Run Docker on the cluster (using Apptainer)"](#using-docker-on-fred-hutch-hpc-systems) section of our [Docker](/compdemos/Docker/) page.
 
 ### Example - Convert and Run latest R Docker container with Apptainer
 
