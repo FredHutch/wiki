@@ -1,12 +1,12 @@
 ---
 title: Using Docker at Fred Hutch
-last_modified_at: 2026-01-07
+last_modified_at: 2026-01-09
 main_author: Taylor Firman, Emma Bishop
 original_author: Dirk Petersen
 primary_reviewers: dtenenba, dirkpetersen, tefirman
 ---
 
-Docker containers are a fundamental tool for reproducible bioinformatics research, allowing you to package software with all its dependencies into a standardized unit that runs consistently across different computing environments. This guide will help you get started with Docker at Fred Hutch, from using pre-made containers to creating your own.
+Docker containers package software with all dependencies into standardized units that run consistently across different computing environments. This guide covers using and creating Docker containers at Fred Hutch.
 
 ## What is Docker?
 
@@ -73,17 +73,10 @@ The [**WILDS Docker Library**](/datascience/wilds_docker/) provides 30+ pre-buil
 
 To use Docker containers on your laptop or desktop, you'll need Docker Desktop installed:
 
-- [Docker Desktop for Windows](https://www.docker.com/docker-windows)
-- [Docker Desktop for Mac](https://www.docker.com/docker-mac)
+- [Docker Desktop for Windows or Mac](https://www.docker.com/products/docker-desktop/)
 - [Docker for Ubuntu Linux](https://www.docker.com/docker-ubuntu)
 
-> ⚠️ **Common Error:** `Failed to initialize docker backend`
->
-> This error means Docker Desktop is either not installed or not running. You need to:
-> 1. Install Docker Desktop from the links above
-> 2. **Start Docker Desktop** (it's not enough to just install it - the application must be running)
->
-> You'll know Docker is running when you see the Docker icon in your system tray (Windows) or menu bar (Mac).
+Note that after installing you need to **start Docker Desktop**. It's not enough to just install it, the application must be running for Docker to work. You'll know Docker is running when you see the Docker icon in your system tray (Windows) or menu bar (Mac).
 
 ### Basic Docker Commands
 
@@ -119,12 +112,15 @@ Sometimes you want to "look around" inside a container to check what's installed
 # Start an interactive session (-it = interactive terminal)
 docker run -it getwilds/samtools:1.19
 
-# Now you're inside the container! You can run commands such as:
+# Now you're inside the container
+# Your terminal promt will now be something like root@a1b2c3d4e5f6:/
+
+# You can run bash commands such as:
 ls
 which samtools
 samtools --version
 
-# Exit when you're done
+# Type exit when you're done to go back to your terminal
 exit
 ```
 
@@ -154,10 +150,10 @@ Apptainer is pre-installed on the cluster and can:
 
 Once you're logged into the cluster, the commands below will get you started.  
 
->Note: Apptainer builds a container in its own format (`.sif`) from the Docker image automatically with `exec` and `pull`. Building containers is resource-intensive and can slow down the system for everyone. It's best to run these commands on a `gizmo` compute node using an [interactive session](/compdemos/grabnode/) or submit an SBATCH to build the container.
+>Note: Apptainer builds a container in its own format (`.sif`) from a Docker image when you run `exec` and `pull`. Building containers is resource-intensive and should be done on a `gizmo` compute node using an [interactive session](/compdemos/grabnode/) or [sbatch](_/scicomputing/compute_jobs/#submitting-jobs).
 
 ```bash
-# First, module load Apptainer
+# Module load Apptainer first
 ml Apptainer
 
 # Run a Docker image
@@ -180,7 +176,7 @@ apptainer exec samtools_1.19.sif samtools --version
 Sometimes you want to "look around" inside a container to check what's installed:
 
 ```bash
-# First, module load Apptainer
+# Module load Apptainer first
 ml Apptainer
 
 # Start an interactive session with a .sif file
@@ -204,7 +200,7 @@ By default, Apptainer automatically mounts your home directory and the current w
 **Example:** You have data files in `/fh/fast/mylab/data` that you want to process:
 
 ```bash
-# First, module load Apptainer
+# Module load Apptainer first
 ml Apptainer
 
 # Run STAR aligner on your data
@@ -225,7 +221,7 @@ du -sh ~/.apptainer/cache
 
 To clean the cache and free up space:
 ```bash
-# First, module load Apptainer
+# Module load Apptainer first
 ml Apptainer
 
 # Remove all cached images
@@ -372,7 +368,9 @@ docker build -t myanalysis:2.0 -t myanalysis:latest .
 
 The `-t` flag tags your image with a name and optional version. The `.` at the end specifies the build context (current directory).
 
-### Sharing Your Image: WILDS Docker Library
+### Sharing Docker Images
+
+#### WILDS Docker Library
 
 You can contribute your container to the [WILDS Docker Library](#contributing-to-wilds-docker-library), helping the entire Fred Hutch community.
 
@@ -382,9 +380,9 @@ The WILDS team provides:
 - Version management and DockerHub publishing
 - Documentation and usage examples
 
-See the [Contributing section](/datascience/wilds_docker/#contributing-to-the-library) of the WILDS Docker Library article for an overview, and our [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) for detailed requirements and best practices.
+See the contributig sections of the [SciWiki page](/datascience/wilds_docker/#contributing-to-the-library) and [GitHub repository](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) for details.
 
-### Sharing Your Image: Docker Hub
+#### Docker Hub
 
 [Docker Hub](https://hub.docker.com/) is the standard registry for sharing Docker images publicly. It's a good choice for fully open-source projects.
 
@@ -411,39 +409,25 @@ docker pull yourusername/myanalysis:1.0
 
 ## Deploying Containerized Applications
 
-SciComp maintains a Docker Swarm for hosting containerized applications like Shiny apps, web services, and dashboards. Applications can be configured to be accessible only within the Fred Hutch network or available on the public internet.
+SciComp maintains a Docker Swarm for hosting containerized applications like Shiny apps, web services, and dashboards. Applications can be confirgured to be accessible publicly or only within the Fred Hutch network.
 
-If you want to deploy a containerized application, please see the [Shiny deployment page](/compdemos/shiny/#request-deployment-service-from-scicomp). While the documentation uses Shiny-specific terminology, SciComp can deploy any type of application that can be containerized.
+For details, see the [Shiny deployment page](/compdemos/shiny/#request-deployment-service-from-scicomp). This page uses Shiny-specific language but SciComp can deploy other types of containerized applications.
 
 ## Troubleshooting Common Issues
 
 **Problem:** `docker: command not found`
 
-**Solution:** Docker is not installed or not in your system PATH. Install Docker Desktop from the links in [Installing Docker Desktop](#installing-docker-desktop) and restart your terminal.
+**Solution:** Docker is not installed or not in your system PATH. [Install Docker Desktop](#installing-docker-desktop) and restart your terminal.
 
 ---
 
-**Problem:** `Cannot connect to the Docker daemon` or `Failed to initialize docker backend`
+**Problem:** `Failed to initialize docker backend` **or** `Cannot connect to the Docker daemon`
 
-**Solution:** Docker Desktop is installed but not running. Start the Docker Desktop application - you should see the Docker icon in your system tray (Windows) or menu bar (Mac). Docker must be running for any docker commands to work.
-
----
-
-**Problem:** Container runs but can't find input files
-
-**Solution:** Remember that containers have their own isolated filesystem. You must:
-1. Mount the directory containing your files (using `-v` for Docker or `--bind` for Apptainer)
-2. Reference files using their path *inside* the container, not your local system path
-
-**Example:**
-```bash
-# Correct: mount directory and use container path
-docker run -v /Users/me/data:/data getwilds/samtools:1.19 samtools view /data/sample.bam
-```
+**Solution:** Docker Desktop is installed but not running. Start the Docker Desktop application. You should then see the Docker icon in your system tray (Windows) or menu bar (Mac).
 
 ## Learning More About Docker
 
-If you're new to Docker, we highly recommend this free course from the ITCR Training Network: **[Containers for Scientists](https://hutchdatascience.org/Containers_for_Scientists/)**
+We recommend this free course from the ITCR Training Network: **[Containers for Scientists](https://hutchdatascience.org/Containers_for_Scientists/)**
 
 **Best Practices:**
 
@@ -451,7 +435,6 @@ If you're new to Docker, we highly recommend this free course from the ITCR Trai
 - **Keep images small**: Only install necessary dependencies to reduce build time and storage
 - **Document your images**: Include clear README files and LABEL instructions in Dockerfiles
 - **Security scan regularly**: Use `docker scan` or similar tools to check for vulnerabilities
-- **Clean up regularly**: Remove unused images and containers with `docker system prune`
 - **Use .dockerignore**: Exclude unnecessary files from your build context (like .git directories)
 
 **Additional Resources**
