@@ -113,9 +113,9 @@ For a comprehensive introduction to Docker at Fred Hutch, see [Using Docker at F
 - [What Docker is and how it works](/compdemos/Docker/#what-is-docker)
 - [Using pre-built containers from WILDS and other sources](/compdemos/Docker/#using-existing-docker-images)
 - [Running Docker on your local computer](/compdemos/Docker/#running-docker-on-your-local-computer)
-- [Using Docker containers on the Fred Hutch cluster (via Apptainer)](/compdemos/Docker/#using-docker-on-the cluster)
+- [Using Docker containers on the Fred Hutch cluster (via Apptainer)](/compdemos/Docker/#using-docker-on-the-cluster)
 - [Creating your own Docker images](/compdemos/Docker/#creating-your-own-docker-images)
-- [Using Docker in WDL and other workflow systems](/compdemos/Docker/#using-docker-with-workflow-systems)
+- [Using Docker in WDL and other workflow systems](/compdemos/Docker/#using-docker-with-workflows)
 
 **Important:** Docker requires root access and cannot run directly on shared compute environments like `Rhino` or `Gizmo`. Instead, use [Apptainer](/compdemos/Apptainer/) to run Docker containers on the cluster. Apptainer can pull and run Docker images directly from Docker Hub without requiring administrator privileges. See the [Apptainer documentation](/compdemos/Apptainer/) for details.
 

@@ -84,7 +84,7 @@ SciComp will contact you when your access has been granted.
 
 ### Create a Docker Image
 
-See ["Build your own Docker image"](/compdemos/Docker/#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/).
+See ["Creating Your Own Docker Images"](/compdemos/Docker/#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/).
 
 ### Create a Job Definition
 

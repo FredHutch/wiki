@@ -36,16 +36,15 @@ Before diving in, it's important to understand these related technologies:
 - **[Use an existing Docker image](#using-existing-docker-images)**
   - [Run Docker locally (on your laptop)](#running-docker-on-your-local-computer)
   - [Run Docker on the cluster (using Apptainer)](#using-docker-on-the-cluster)
-  - [Use Docker in WDL workflows](#using-docker-with-workflow-systems)
+  - [Use Docker in workflows](#using-docker-with-workflows)
 
 - **[Build your own Docker image](#creating-your-own-docker-images)**
   - [Write a Dockerfile](#basic-dockerfile-structure)
-  - [Include custom files in a container](#including-custom-files)
   - [Share your image](#sharing-docker-images)
 
 - **[Deploy a containerized application](#deploying-containerized-applications)**
 
-- **[Troubleshoot common issues](#troubleshooting-common-issues)**
+- **[Troubleshoot common issues](#troubleshooting)**
 
 - **[Learn more about Docker](#learning-more-about-docker)**
 
@@ -124,7 +123,7 @@ samtools --version
 exit
 ```
 
-### Mounting a Folder (Accessing Your Data)
+### Mounting a Folder (accessing your data from the container)
 
 To give the container access to files on your computer, you "mount" a folder using the `-v` flag:
 
@@ -140,7 +139,7 @@ docker run -v /Users/yourname/data:/data getwilds/star:2.7.6a \
 
 ## Using Docker on The Cluster
 
-On the Fred Hutch cluster ([Gizmo](/compdemos/grabnode/)/[Rhino](/compdemos/howtoRhino/)), you'll use [Apptainer](/compdemos/Apptainer/) instead of Docker to run containers. Docker requires administrator privileges which aren't available on shared computing systems, but Apptainer is designed specifically for HPC environments.
+On the Fred Hutch cluster ([Gizmo](/compdemos/grabnode/)/[Rhino](/compdemos/howtoRhino/)), you'll use [Apptainer](/compdemos/Apptainer/) instead of Docker to run containers. Docker requires administrator privileges which aren't available on shared computing systems. Apptainer is designed specifically for HPC environments.
 
 Apptainer is pre-installed on the cluster and can:
 - Pull and run any Docker image directly from Docker Hub
@@ -191,9 +190,9 @@ samtools --version
 exit
 ```
 
-### Accessing Cluster Storage (Binding Directories)
+### Binding Directories (accessing your data from the container)
 
-By default, Apptainer automatically mounts your home directory and the current working directory. To access other [cluster storage](/_scicomputing/store_posix/) locations like `/fh/fast` or `/fh/scratch`, use the `--bind` flag to mount them inside the container.
+By default, Apptainer automatically mounts your home directory and the current working directory. To access other [cluster storage](/scicomputing/store_posix/) locations like `/fh/fast` or `/fh/scratch`, use the `--bind` flag to mount them inside the container.
 
 > **Note:** These examples mount external directories to `/data` inside the container. This path is arbitrary, you can mount to any path that exists in the container. Check the documentation for your specific container to see what directories are available.
 
@@ -231,9 +230,9 @@ apptainer cache clean
 apptainer cache clean --days 30    
 ```
 
-## Using Docker with Workflow Systems
+## Using Docker with Workflows
 
-Docker containers integrate seamlessly with [workflow systems](/datascience/using_workflows/) like WDL, Nextflow, and Snakemake. The workflow engine automatically pulls and runs containers as needed, ensuring every step of your pipeline uses the correct software versions.
+Docker containers integrate seamlessly with [workflow systems](/datascience/using_workflows/) like WDL, [Nextflow](/compdemos/nextflow/), and Snakemake. The workflow engine automatically pulls and runs containers as needed, ensuring every step of your pipeline uses the correct software versions. Here, we'll focus on WDL as an example.
 
 ### WDL Workflows
 
@@ -271,7 +270,7 @@ So for `getwilds/star:2.7.6a`:
 - **repository** (image name) = `star`
 - **tag** (version) = `2.7.6a`
 
-**Note:** The [WILDS Docker Library](/datascience/wilds_docker/) provides pre-built, tested Docker images for the [WILDS WDL Library](/datascience/wdl_workflows/)
+**Note:** The [WILDS Docker Library](/datascience/wilds_docker/) provides pre-built, tested Docker images for the [WILDS WDL Library](/datascience/wilds_wdl/) which can also be used for other things.
 
 ## Creating Your Own Docker Images
 
@@ -372,7 +371,7 @@ The `-t` flag tags your image with a name and optional version. The `.` at the e
 
 #### WILDS Docker Library
 
-You can contribute your container to the [WILDS Docker Library](#contributing-to-wilds-docker-library), helping the entire Fred Hutch community.
+You can contribute your container to the [WILDS Docker Library](/datascience/wilds_docker/), helping the entire Fred Hutch community.
 
 The WILDS team provides:
 - Comprehensive [Dockerfile templates](https://github.com/getwilds/wilds-docker-library/blob/main/template/Dockerfile_template) with detailed guidance
@@ -380,7 +379,7 @@ The WILDS team provides:
 - Version management and DockerHub publishing
 - Documentation and usage examples
 
-See the contributig sections of the [SciWiki page](/datascience/wilds_docker/#contributing-to-the-library) and [GitHub repository](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) for details.
+See the contributig sections of the [SciWiki page](/datascience/wilds_docker/#contributing-&-development) and [GitHub repository](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) for details.
 
 #### Docker Hub
 

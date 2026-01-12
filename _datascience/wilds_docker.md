@@ -113,9 +113,9 @@ The library includes 30+ Docker images for popular bioinformatics tools:
 
 See these helpful sections from our [Docker](/compdemos/Docker/) page:
 
-  - [Run Docker locally (on your laptop)](/compdemos/Docker/#running-docker-on-your-local-computer)
-  - [Run Docker on the cluster (using Apptainer)](/compdemos/Docker/#using-docker-on-fred-hutch-hpc-systems)
-  - [Use Docker in WDL workflows](/compdemos/Docker/#using-docker-with-workflow-systems)
+  - [Running Docker on Your Local Computer](/compdemos/Docker/#running-docker-on-your-local-computer)
+  - [Using Docker on The Cluster](/compdemos/Docker/#using-docker-on-the-cluster)
+  - [Using Docker with Workflows](/compdemos/Docker/#using-docker-with-workflows)
 
 ## Contributing & Development
 
