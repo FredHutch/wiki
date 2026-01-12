@@ -149,8 +149,6 @@ Apptainer is pre-installed on the cluster and can:
 
 Once you're logged into the cluster, the commands below will get you started.  
 
->Note: Apptainer builds a container in its own format (`.sif`) from a Docker image when you run `exec` and `pull`. Building containers is resource-intensive and should be done on a `gizmo` compute node using an [interactive session](/compdemos/grabnode/) or [sbatch](_/scicomputing/compute_jobs/#submitting-jobs).
-
 ```bash
 # Module load Apptainer first
 ml Apptainer
@@ -164,6 +162,8 @@ apptainer pull docker://getwilds/samtools:1.19
 # Run a .sif with a specific command
 apptainer exec samtools_1.19.sif samtools --version
 ```
+
+>Note: Apptainer builds a container in its own format (`.sif`) from a Docker image when you run `exec` and `pull`. Building containers is resource-intensive and should be done on a `gizmo` compute node using an [interactive session](/compdemos/grabnode/) or [sbatch](/scicomputing/compute_jobs/#submitting-jobs).
 
 **Key flags:**
 - `exec`: Execute a command inside the container
@@ -279,7 +279,7 @@ If pre-made images don't meet your needs, you can create custom Docker images us
 ### When to Build Your Own Container
 
 - You need specific versions of tools that aren't available in existing containers
-- You want to include custom scripts or configuration files
+- You want to include custom scripts or configuration files in the container
 - You need to ensure your exact analysis environment is reproducible by others
 
 ### Basic Dockerfile Structure
@@ -297,52 +297,19 @@ LABEL maintainer="your.email@fredhutch.org"
 LABEL description="Custom analysis environment"
 LABEL version="1.0"
 
-# Set environment variables
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Install system dependencies
+# Install software dependencies
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python packages
+# Install additional packages
 RUN pip3 install numpy pandas scipy
 
-# Set working directory
-WORKDIR /data
-```
-
-**Common Dockerfile Instructions:**
-
-- `FROM`: Specifies the base image to build from
-- `LABEL`: Adds metadata (author, description, version, etc.)
-- `ENV`: Sets environment variables
-- `RUN`: Executes commands during image build (install software, etc.)
-- `COPY`: Copies files from your computer into the image
-- `WORKDIR`: Sets the working directory for subsequent instructions
-
-### Including Custom Files
-
-To include scripts, configuration files, or small reference files in your container:
-
-```dockerfile
-FROM python:3.9
-
-# Install dependencies
-RUN pip install pandas biopython matplotlib
-
-# Copy your analysis scripts
+# Copy spedific files from your computer
 COPY analysis_pipeline.py /usr/local/bin/
 COPY utils.py /usr/local/bin/
-COPY config.yaml /etc/myapp/
-
-# Make scripts executable
-RUN chmod +x /usr/local/bin/analysis_pipeline.py
-
-# You can also copy entire directories
-COPY scripts/ /opt/scripts/
 
 # Set working directory
 WORKDIR /data
@@ -350,19 +317,22 @@ WORKDIR /data
 
 > **Tip:** Only include small files in your container (scripts, configs, small reference files). Large datasets should be mounted when you run the container, not baked into the image. This keeps your image size manageable and makes it more reusable.
 
+**Common Dockerfile Instructions:**
+
+- `FROM`: Specifies the base image to build from
+- `LABEL`: Adds metadata (author, description, version, etc.)
+- `RUN`: Executes commands during image build (install software, etc.)
+- `COPY`: Copies files from your computer into the image
+- `WORKDIR`: Sets the working directory for subsequent instructions
+
+
 ### Building Your Image
 
 Save your Dockerfile and build the image:
 
 ```bash
-# Build an image from a Dockerfile in the current directory
-docker build -t myanalysis:1.0 .
-
-# Build with a specific Dockerfile name
+# Build a specific Dockerfile and give the image a specific tag
 docker build -f Dockerfile_latest -t myanalysis:2.0 .
-
-# Build and tag with multiple names
-docker build -t myanalysis:2.0 -t myanalysis:latest .
 ```
 
 The `-t` flag tags your image with a name and optional version. The `.` at the end specifies the build context (current directory).
@@ -412,29 +382,28 @@ SciComp maintains a Docker Swarm for hosting containerized applications like Shi
 
 For details, see the [Shiny deployment page](/compdemos/shiny/#request-deployment-service-from-scicomp). This page uses Shiny-specific language but SciComp can deploy other types of containerized applications.
 
-## Troubleshooting Common Issues
+## Troubleshooting
 
-**Problem:** `docker: command not found`
+`docker: command not found`
 
 **Solution:** Docker is not installed or not in your system PATH. [Install Docker Desktop](#installing-docker-desktop) and restart your terminal.
 
 ---
 
-**Problem:** `Failed to initialize docker backend` **or** `Cannot connect to the Docker daemon`
+`Failed to initialize docker backend` **or** `Cannot connect to the Docker daemon`
 
 **Solution:** Docker Desktop is installed but not running. Start the Docker Desktop application. You should then see the Docker icon in your system tray (Windows) or menu bar (Mac).
 
 ## Learning More About Docker
 
-We recommend this free course from the ITCR Training Network: **[Containers for Scientists](https://hutchdatascience.org/Containers_for_Scientists/)**
+We recommend this free course from the ITCR Training Network: ["Containers for Scientists"](https://hutchdatascience.org/Containers_for_Scientists/)
 
 **Best Practices:**
 
-- **Pin specific versions**: Use `getwilds/star:2.7.6a` rather than `getwilds/star:latest` for reproducibility
+- **Use specific versions**: Use `getwilds/star:2.7.6a` rather than `getwilds/star:latest` for reproducibility
 - **Keep images small**: Only install necessary dependencies to reduce build time and storage
-- **Document your images**: Include clear README files and LABEL instructions in Dockerfiles
-- **Security scan regularly**: Use `docker scan` or similar tools to check for vulnerabilities
-- **Use .dockerignore**: Exclude unnecessary files from your build context (like .git directories)
+- **Document your images**: Include clear README files and Dockerfile LABEL information
+- **Use .dockerignore in git directories**: Exclude unnecessary files if you're building from a cloned repo
 
 **Additional Resources**
 
