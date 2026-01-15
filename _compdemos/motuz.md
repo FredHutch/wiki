@@ -92,7 +92,10 @@ button provided, and in your Motuz window, paste it into
 the `KMS Encrytion key ARN` field. Then save your cloud 
 connection.
 
-
+If for any reason you do not have access to the 
+AWS Console, please contact the Cloud Team at
+`helpdesk@` and request they send you the 
+KMS Encryption key ARN for your bucket.
 
 ## Copying Files to Cloud Locations
 
