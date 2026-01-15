@@ -64,6 +64,35 @@ In the `Basic` section, set `Type` to `Amazon Simple Storage Service (s3)`. Give
 
 Click on `Verify Connection` to make sure the connection works. Then click `Create Cloud Connection`, or (if you are modifying an existing connection) `Update Connection`. 
 
+#### Setting KMS Encryption Key
+
+If you get "corrupted on transfer" errors that say 
+"corrupted on transfer: md5 hash differ", it is likely
+that your S3 bucket uses KMS encryption. 
+
+In this case, you need to fill in the `KMS Encryption key ARN`
+field in the cloud connection dialog:
+
+![alt text](/assets/motuz/kms-config.png)
+
+
+To find the correct value for the encryption key ARN,
+go to the [AWS SSO Portal](https://d-92674cb6d7.awsapps.com/start/#/?tab=accounts),
+find your account as described above, and click on the link 
+to the left of `Access keys`. Navigate to the S3 service, 
+click on your bucket's name, then click the `Properties`
+tab. Scroll down to `Default Encryption` and verify
+that the encryption type is set to `SSE-KMS`.
+
+![alt text](/assets/motuz/kms-arn.png)
+
+
+Copy the Encryption key ARN to your clipboard using the
+button provided, and in your Motuz window, paste it into
+the `KMS Encrytion key ARN` field. Then save your cloud 
+connection.
+
+
 
 ## Copying Files to Cloud Locations
 
