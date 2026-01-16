@@ -245,4 +245,8 @@ If you want to install or build a standalone software package, you are also welc
   - Specify the full Module name when loading, especially in scripts (see above for scripting information).
   - Avoid mixing Modules from different toolchains at the same time (unloading one and loading another mid-script works well if you need to).
   - If you can't find a package you want, send an email us or file an [issue](https://github.com/FredHutch/easybuild-life-sciences) requesting a new or updated package.
+1. *How do I load a module in my Rstudio/VSCode/Jupyter lab session*
+  - Loading modules in these tools can be challenging.  The process can be very dependent on your specific use-case
+  - In many cases the module may already be loaded, so make sure you are missing the functionality before loading anything else
+  - If you still need functionality from a module and it doesn't seem to be available, contact SciComp
 
