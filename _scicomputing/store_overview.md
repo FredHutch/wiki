@@ -2,6 +2,8 @@
 title: Overview of Data Storage at Fred Hutch
 last_modified_at: 2023-03-24
 primary_reviewers: 
+layout: single_with_categories
+categories: ["data_storage", "access_credentials"]
 ---
 
 The Hutch provides many platforms for storing, using, moving, and sharing your data- relational databases, block-based network file storage, and cloud object datastores.  Each of these platforms have options as well- these options to address the diverse needs of modern biomedical and bioinformatic research.  The platform you use will depend on the nature of the data and how you plan to use it.

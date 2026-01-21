@@ -1,6 +1,8 @@
 ---
 title: R and RStudio
 primary_reviewers: ptvan, vortexing
+layout: single_with_categories
+categories: ["software_development", "data_science"]
 ---
 R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or [CRAN](https://cran.r-project.org/), or via the FH Center IT's Self Service Tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.  
 
