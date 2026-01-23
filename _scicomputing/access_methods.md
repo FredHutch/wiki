@@ -11,6 +11,11 @@ For help with mobile devices, please see Center IT pages for more information on
 
 Using these desktop computing resources, the following describes how to access additional computing resources at the Hutch.  
 
+## Open OnDemand
+
+Open OnDemand provides a user-friendly web interface to the cluster. It features file management, a browser-based terminal, and interactive applications such as RStudio and Jupyter.
+See [Open OnDemand](/scicomputing/access_openondemand/) for details.
+
 ## SSH Clients for Remote Computing Resources
 
 We use two common protocols to access remote compute resources. The first is the Hypertext Transfer Protocol (HTTP). This is the way your browser communicates with remote web servers. The second common protocol is Secure SHell (SSH). This is the method used to run a program on a remote server. Typically the program run is a `shell` that gives you an interactive command line on the remote host.
