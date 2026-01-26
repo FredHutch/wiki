@@ -83,16 +83,7 @@ The following section will describe how to test and use your credentials.
 
 
 ### Configure Motuz and AWS CLI for Single Sign-on (SSO)
-To access an AWS account using SSO authentication, a user signs in to the AWS access portal URL provided, IAM Identity Center redirects the request to an authentication service. 
-
-After authentication with a HutchNet ID, the user will have SSO access to all AWS account and applications without additional sign-in requirements (Username and Password)  
-
-
-## Using Motuz with SSO:
-
-To use [Motuz](/compdemos/motuz/) with SSO credentials, click `Access keys` in the SSO portal for your account. Scroll down to the bottom where it says `Option 3`. 
-In Motuz, create a new Cloud Connection. Be sure and change `S3 Connection Type` to `Temporary Security Credentials (STS)`. Copy and paste the values for Access Key ID, Secret Access Key, and Session Token from the SSO portal to the corresponding fields in Motuz. 
-You will need to update these fields each time you use motuz, as the credentials expire after 8 hours. 
+For a detailed explanation of using Motuz with the AWS CLI, please refer to the CenterNet documentation [here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
 
 ## Using the AWS CLI with SSO: 
 
