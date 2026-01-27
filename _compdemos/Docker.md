@@ -1,6 +1,6 @@
 ---
 title: Using Docker at Fred Hutch
-last_modified_at: 2026-01-09
+last_modified_at: 2026-01-27
 main_author: Taylor Firman, Emma Bishop
 original_author: Dirk Petersen
 primary_reviewers: dtenenba, dirkpetersen, tefirman
