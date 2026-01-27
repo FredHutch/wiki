@@ -374,7 +374,7 @@ Now others can pull your image with:
 docker pull yourusername/myanalysis:1.0
 ```
 
-## Deploying Containerized Applications
+## Deploying Containerized Applications with Docker
 
 SciComp maintains a Docker Swarm for hosting containerized applications like Shiny apps, web services, and dashboards. Applications can be confirgured to be accessible publicly or only within the Fred Hutch network.
 
