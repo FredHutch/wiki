@@ -15,12 +15,15 @@ You can access the portal at:
 ## Key Features
 
 ### Interactive Apps
-Launch graphical applications such as RStudio Server and Jupyter Lab directly in your browser. These sessions run on the hpc cluster, providing access to our computational resources.
+Launch graphical applications such as RStudio Server and Jupyter Lab directly in your browser. These sessions run on the HPC cluster, providing access to our computational resources.
 
 ![](/scicomputing/assets/ood_rstudio.png)
 
 ### Shell Access
 Open a terminal window in your browser to run command-line tools and scripts on the cluster, similar to using SSH but with zero configuration.
+
+Shell sessions expire after a maximum of 8 hours (and may be shorter when using the Island Browser). We recommend using [tmux](/scicomputing/access_methods/#screen-and-tmux) to keep your sessions active.
+{: .notice--info}
 
 ![](/scicomputing/assets/ood_shell.png)
 
@@ -37,4 +40,4 @@ View, monitor, and manage your active Slurm jobs through the Active Jobs dashboa
 ## Prerequisites
 
 *   **HutchNet ID**: You need a valid HutchNet ID and password.
-*   **Cluster Access**: Ensure your account is provisioned for cluster access.
+*   **Cluster Access**: Ensure your account is provisioned for [cluster access](/scicomputing/access_credentials/).
