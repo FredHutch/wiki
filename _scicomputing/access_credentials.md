@@ -54,7 +54,7 @@ Once you have working credentials, you can read more about [AWS Storage](/scicom
 
 ### Configure AWS CLI and Motuz
 
-For a detailed explanation of using setting up you AWS CLI and using Motuz with the AWS CLI, please refer to the CenterNet documentation [here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
+For a detailed explanation of setting up your AWS CLI and using Motuz with the AWS CLI, please refer to the CenterNet documentation [here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
 
 
 ## Important point to remember: 
