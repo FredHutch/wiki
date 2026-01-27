@@ -21,7 +21,7 @@ WDL separates the scientific logic (what to compute) from infrastructure details
 
 ### Reproducibility
 WDL workflows explicitly define every aspect of your analysis:
-- **Exact software versions** through containerization ([Docker](/compdemos/Docker/)/Apptainer)
+- **Exact software versions** through containerization ([Docker](/compdemos/Docker/)/[Apptainer](/compdemos/Apptainer/))
 - **Deterministic execution** that produces identical results across different platforms
 - All required inputs and files clearly specified upfront
 
