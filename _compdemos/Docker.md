@@ -137,6 +137,8 @@ docker run -v /Users/yourname/data:/data getwilds/star:2.7.6a \
        --genomeFastaFiles /data/genome.fa
 ```
 
+In this example, `genome_index` and `genome.fa` are located in `/Users/yourname/data` on your computer. Because we mounted that folder to `/data` inside the container, we reference them as `/data/genome_index` and `/data/genome.fa` in the command.
+
 ## Using Docker on The Cluster
 
 On the Fred Hutch cluster ([Gizmo](/compdemos/grabnode/)/[Rhino](/compdemos/howtoRhino/)), you'll use [Apptainer](/compdemos/Apptainer/) instead of Docker to run containers. Docker requires administrator privileges which aren't available on shared computing systems. Apptainer is designed specifically for HPC environments.
