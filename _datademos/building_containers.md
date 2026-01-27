@@ -32,7 +32,7 @@ The two files which should be added to the GitHub repository are:
 For instructions on writing your `Dockerfile`, see:
 - [Docker for Beginners] (https://docker-curriculum.com/)
 - [Official Documentation](https://docs.docker.com/engine/reference/builder/)
-- ["Build your own Docker image"](#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/)
+- ["Build your own Docker image"](/compdemos/Docker/#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/)
 
 Any additional files committed to the repository will be made available during the automated
 build process.
