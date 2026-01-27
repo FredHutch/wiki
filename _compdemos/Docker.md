@@ -141,11 +141,7 @@ In this example, `genome_index` and `genome.fa` are located in `/Users/yourname/
 
 ## Using Docker on The Cluster
 
-On the Fred Hutch cluster ([Gizmo](/compdemos/grabnode/)/[Rhino](/compdemos/howtoRhino/)), you'll use [Apptainer](/compdemos/Apptainer/) instead of Docker to run containers. Docker requires administrator privileges which aren't available on shared computing systems. Apptainer is designed specifically for HPC environments.
-
-Apptainer is pre-installed on the cluster and can:
-- Pull and run any Docker image directly from Docker Hub
-- Run containers with your normal user permissions
+On the Fred Hutch cluster ([Gizmo](/compdemos/grabnode/)/[Rhino](/compdemos/howtoRhino/)), you'll use [Apptainer](/compdemos/Apptainer/) instead of Docker to run containers. Apptainer is pre-installed on the cluster and can pull and run any Docker image directly from Docker Hub.
 
 ### Basic Apptainer Commands
 
