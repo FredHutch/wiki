@@ -347,7 +347,7 @@ The WILDS team provides:
 - Version management and DockerHub publishing
 - Documentation and usage examples
 
-See the contributig sections of the [SciWiki page](/datascience/wilds_docker/#contributing-&-development) and [GitHub repository](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) for details.
+See the contributing sections of the library's [GitHub repository](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) and [SciWiki page](/datascience/wilds_docker/#contributing-&-development) for details.
 
 #### Docker Hub
 
