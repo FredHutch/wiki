@@ -91,21 +91,21 @@ docker pull getwilds/samtools:1.19
 # Run a container with a specific command: samtools --version
 docker run getwilds/samtools:1.19 samtools --version
 
+# Automatically remove the container (--rm) when it exits
+docker run --rm getwilds/samtools:1.19 samtools --version
+
 # List running containers
 docker ps
 
-# List all containers (including stopped ones)
+# List all containers including stopped ones
 docker ps -a
 ```
 
-**Key flags:**
-- `-it`: Interactive mode with a terminal (useful for exploring containers)
-- `-v`: Mount a local directory into the container
-- `--rm`: Automatically remove the container when it exits
-
 ### Running a Container Interactively
 
-Sometimes you want to "look around" inside a container to check what's installed:
+Sometimes you want to "look around" inside a container to check what's installed. 
+
+Use the `-it` flag (interactive mode with a terminal).
 
 ```bash
 # Start an interactive session (-it = interactive terminal)
@@ -125,7 +125,9 @@ exit
 
 ### Mounting a Folder (accessing your data from the container)
 
-To give the container access to files on your computer, you "mount" a folder using the `-v` flag:
+To give the container access to files on your computer, you "mount" a folder.
+
+Use the `-v` flag.
 
 **Example:** You have data files in `/Users/yourname/data` that you want to process:
 
@@ -145,13 +147,13 @@ On the Fred Hutch cluster ([Gizmo](/compdemos/grabnode/)/[Rhino](/compdemos/howt
 
 ### Basic Apptainer Commands
 
-Once you're logged into the cluster, the commands below will get you started.  
+Once you're logged into the cluster, the commands below will get you started.
 
 ```bash
 # Module load Apptainer first
 ml Apptainer
 
-# Run a Docker image
+# Run a Docker image and execute a command: samtools --version
 apptainer exec docker://getwilds/samtools:1.19 samtools --version
 
 # Pull and convert Docker image (ceates samtools_1.19.sif)
@@ -161,51 +163,21 @@ apptainer pull docker://getwilds/samtools:1.19
 apptainer exec samtools_1.19.sif samtools --version
 ```
 
->Note: Apptainer builds a container in its own format (`.sif`) from a Docker image when you run `exec` and `pull`. Building containers is resource-intensive and should be done on a `gizmo` compute node using an [interactive session](/compdemos/grabnode/) or [sbatch](/scicomputing/compute_jobs/#submitting-jobs).
-
-**Key flags:**
-- `exec`: Execute a command inside the container
-- `shell`: Start an interactive shell inside the container
-- `--bind`: Mount a directory into the container (similar to Docker's `-v`)
-
-### Running a Container Interactively
-
-Sometimes you want to "look around" inside a container to check what's installed:
+As with Docker, you can run containers interactively (`shell`) and mount folders (`--bind`).
 
 ```bash
-# Module load Apptainer first
-ml Apptainer
-
-# Start an interactive session with a .sif file
+# Run interactively
 apptainer shell samtools_1.19.sif
 
-# Now you're inside the container! You can run commands such as:
-ls
-which samtools
-samtools --version
-
-# Exit when you're done
-exit
+# Mount local folder to container
+apptainer exec --bind /fh/fast/mylab/data:/data \
+  docker://getwilds/samtools:1.19 \
+  samtools --version
 ```
 
-### Binding Directories (accessing your data from the container)
+>Note: Apptainer builds a container in its own format (`.sif`) from a Docker image when you run `exec` and `pull`. Building containers is resource-intensive and should be done on a `gizmo` compute node using an [interactive session](/compdemos/grabnode/) or [sbatch](/scicomputing/compute_jobs/#submitting-jobs).
 
-By default, Apptainer automatically mounts your home directory and the current working directory. To access other [cluster storage](/scicomputing/store_posix/) locations like `/fh/fast` or `/fh/scratch`, use the `--bind` flag to mount them inside the container.
 
-> **Note:** These examples mount external directories to `/data` inside the container. This path is arbitrary, you can mount to any path that exists in the container. Check the documentation for your specific container to see what directories are available.
-
-**Example:** You have data files in `/fh/fast/mylab/data` that you want to process:
-
-```bash
-# Module load Apptainer first
-ml Apptainer
-
-# Run STAR aligner on your data
-apptainer exec --bind /fh/fast/mylab/data:/data docker://getwilds/star:2.7.6a \
-  STAR --runMode genomeGenerate \
-       --genomeDir /data/genome_index \
-       --genomeFastaFiles /data/genome.fa
-```
 
 ### Managing Apptainer's Cache
 
