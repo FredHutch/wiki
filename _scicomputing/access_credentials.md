@@ -52,56 +52,10 @@ This will take you to a screen called `AWS accounts`. You should see your accoun
 
 Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
 
-### Configure AWS CLI
+### Configure AWS CLI and Motuz
 
-You should be on the `Get credentials` page as described in the previous section,
-and you should have a terminal window connected to one of the `rhino` machines via [ssh](https://sciwiki.fredhutch.org/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources). 
+For a detailed explanation of using setting up you AWS CLI and using Motuz with the AWS CLI, please refer to the CenterNet documentation [here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
 
-Load the `awscli` module (with the `ml awscli` command), then run `aws configure sso`.
-For `SSO session name` you can enter any string. For `SSO start URL`, enter the `SSO start URL` shown in your browser. For `SSO region`, enter `us-west-2`. For `SSO registration scopes`, press Enter. 
-
-You will now see a URL and a code displayed. Copy and paste the URL into your browser, and enter the code on the resulting page. Click `Allow Access`. 
-
-If you have access to more than one AWS account, you should now choose the same account
-you choose in the last step, then press Enter. 
-For `CLI default client Region`, press Enter. For `CLI default output format`, press Enter.
-
-The next and final piece of information to fill in is the `CLI profile name`. 
-If you have not set up AWS credentials before, you should use the value `default`.
-
-The terminal will now display the following:
-
-```
-To use this profile, specify the profile name using --profile, as shown:
-
-aws s3 ls --profile default
-```
-
-The `--profile default` flag is not necessary if you are using the default profile.
-
-The following section will describe how to test and use your credentials.
-
-
-### Configure Motuz and AWS CLI for Single Sign-on (SSO)
-For a detailed explanation of using Motuz with the AWS CLI, please refer to the CenterNet documentation [here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
-
-## Using the AWS CLI with SSO: 
-
-1. Configure SSO profile: Use the command
-
-```bash
-aws configure sso 
-```
-
-to set up your SSO profile locally on your machine. [More information here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-configure  
-).
-
-2. Login with SSO: 
-
-Run `aws sso login` in your terminal to initiate an SSO session and retrieve temporary credentials. 
-3. Access AWS services:
-
-Once logged in, use the AWS CLI commands as usual, utilizing the temporary credentials obtained through SSO. 
 
 ## Important point to remember: 
 
