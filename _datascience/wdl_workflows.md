@@ -169,7 +169,7 @@ runtime {
 }
 ```
 
-The [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library) provides pre-built, tested containers for common bioinformatics tools. For more detail, see the ["Use Docker in WDL workflows"](#using-docker-with-workflow-systems) section of our [Docker page](/compdemos/Docker/).
+The [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library) provides pre-built, tested containers for common bioinformatics tools. For more detail, see the ["Use Docker in WDL workflows"](/compdemos/Docker/#using-docker-with-workflow-systems) section of our [Docker page](/compdemos/Docker/).
 
 ### Apptainer (formerly Singularity)
 
