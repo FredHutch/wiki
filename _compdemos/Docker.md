@@ -401,7 +401,6 @@ We recommend this free course from the ITCR Training Network: ["Containers for S
 - **Use specific versions**: Use `getwilds/star:2.7.6a` rather than `getwilds/star:latest` for reproducibility
 - **Keep images small**: Only install necessary dependencies to reduce build time and storage
 - **Document your images**: Include clear README files and Dockerfile LABEL information
-- **Use .dockerignore in git directories**: Exclude unnecessary files if you're building from a cloned repo
 
 **Additional Resources**
 
