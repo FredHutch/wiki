@@ -282,7 +282,7 @@ If pre-made images don't meet your needs, you can create custom Docker images us
 
 ### Basic Dockerfile Structure
 
-A Dockerfile is a recipe that tells Docker how to build your container. It's a text file named `Dockerfile` (no extension).
+A Dockerfile is a recipe that tells Docker how to build your container. It's usually a text file named `Dockerfile` (no extension), but can technically take any name.
 
 **Simple example:**
 
