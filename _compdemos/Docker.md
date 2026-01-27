@@ -351,9 +351,7 @@ See the contributing sections of the library's [GitHub repository](https://githu
 
 **Docker Hub**
 
-[Docker Hub](https://hub.docker.com/) is the standard registry for sharing Docker images publicly. It's a good choice for fully open-source projects.
-
-**Basic workflow:**
+[Docker Hub](https://hub.docker.com/) is the standard registry for sharing Docker images publicly. It's a good choice for fully open-source projects. To push your own image to DockerHub:
 
 ```bash
 # 1. Create a Docker Hub account at hub.docker.com
