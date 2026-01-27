@@ -175,8 +175,10 @@ apptainer exec --bind /fh/fast/mylab/data:/data \
   samtools --version
 ```
 
->Note: Apptainer builds a container in its own format (`.sif`) from a Docker image when you run `exec` and `pull`. Building containers is resource-intensive, so it is best practice to do this on a `gizmo` compute node instead of the shared `rhino` node. You can use `gizmo` via an [interactive session](/compdemos/grabnode/) or [sbatch](/scicomputing/compute_jobs/#submitting-jobs).
+These commands are explained in detail in the [container section](https://bashforbio.netlify.app/testing.html#pulling-a-docker-container) of our Bash for Bioinformatics course.
 
+
+>Note: Apptainer builds a container in its own format (`.sif`) from a Docker image when you run `exec` and `pull`. Building containers is resource-intensive, so it is best practice to do this on a `gizmo` compute node instead of the shared `rhino` node. You can use `gizmo` via an [interactive session](/compdemos/grabnode/) or [sbatch](/scicomputing/compute_jobs/#submitting-jobs).
 
 
 ### Managing Apptainer's Cache
@@ -378,3 +380,4 @@ We recommend this free course from the ITCR Training Network: ["Containers for S
 - [Apptainer at Fred Hutch](/compdemos/Apptainer/) - Detailed Apptainer documentation
 - [Docker Official Documentation](https://docs.docker.com/) - Complete Docker reference
 - [WDL Workflows](/datascience/wdl_workflows/) - Using containers in workflows
+- [Bash for Bioinformatics](https://bashforbio.netlify.app/testing.html#pulling-a-docker-container) - Container related materials from our course
