@@ -12,7 +12,7 @@ You can:
 - **Ensure reproducibility** with versioned, tested containers that provide consistent environments
 - **Run workflows confidently** knowing all images are regularly scanned for security vulnerabilities
 - **Access popular tools** without complex installation or dependency management
-- **Use containers anywhere** with support for [Docker](/compdemos/Docker/), Singularity/Apptainer, and WDL workflows
+- **Use containers anywhere** with support for [Docker](/compdemos/Docker/), [Singularity/Apptainer](/compdemos/Apptainer/), and [WDL workflows](/datascience/wdl_workflows/)
 
 ## What Are Docker Containers?
 
