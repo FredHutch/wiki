@@ -333,7 +333,7 @@ Save your Dockerfile and build the image:
 docker build -f Dockerfile_latest -t myanalysis:2.0 .
 ```
 
-The `-t` flag tags your image with a name and optional version. The `.` at the end specifies the build context (current directory).
+The `-f` flag points to the location of the Dockerfile and `-t` flag tags your image with a name and optional version. The `.` at the end specifies the build context (current directory).
 
 ### Sharing Docker Images
 
