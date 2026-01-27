@@ -337,7 +337,7 @@ The `-t` flag tags your image with a name and optional version. The `.` at the e
 
 ### Sharing Docker Images
 
-#### WILDS Docker Library
+**WILDS Docker Library**
 
 You can contribute your container to the [WILDS Docker Library](/datascience/wilds_docker/), helping the entire Fred Hutch community.
 
