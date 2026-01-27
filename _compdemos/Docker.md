@@ -230,7 +230,7 @@ apptainer cache clean --days 30
 
 ## Using Docker with Workflows
 
-Docker containers integrate seamlessly with [workflow systems](/datascience/using_workflows/) like WDL, [Nextflow](/compdemos/nextflow/), and Snakemake. The workflow engine automatically pulls and runs containers as needed, ensuring every step of your pipeline uses the correct software versions. Here, we'll focus on WDL as an example.
+Docker containers integrate seamlessly with [workflow systems](/datascience/using_workflows/) like [WDL](/datascience/wdl_workflows/), [Nextflow](/compdemos/nextflow/), and Snakemake. The workflow engine automatically pulls and runs containers as needed, ensuring every step of your pipeline uses the correct software versions. Here, we'll focus on WDL as an example.
 
 ### WDL Workflows
 
