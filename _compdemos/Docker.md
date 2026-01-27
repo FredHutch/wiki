@@ -175,7 +175,7 @@ apptainer exec --bind /fh/fast/mylab/data:/data \
   samtools --version
 ```
 
->Note: Apptainer builds a container in its own format (`.sif`) from a Docker image when you run `exec` and `pull`. Building containers is resource-intensive and should be done on a `gizmo` compute node using an [interactive session](/compdemos/grabnode/) or [sbatch](/scicomputing/compute_jobs/#submitting-jobs).
+>Note: Apptainer builds a container in its own format (`.sif`) from a Docker image when you run `exec` and `pull`. Building containers is resource-intensive, so it is best practice to do this on a `gizmo` compute node instead of the shared `rhino` node. You can use `gizmo` via an [interactive session](/compdemos/grabnode/) or [sbatch](/scicomputing/compute_jobs/#submitting-jobs).
 
 
 
