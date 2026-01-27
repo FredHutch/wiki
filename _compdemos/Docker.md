@@ -349,7 +349,7 @@ The WILDS team provides:
 
 See the contributing sections of the library's [GitHub repository](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md) and [SciWiki page](/datascience/wilds_docker/#contributing-&-development) for details.
 
-#### Docker Hub
+**Docker Hub**
 
 [Docker Hub](https://hub.docker.com/) is the standard registry for sharing Docker images publicly. It's a good choice for fully open-source projects.
 
