@@ -111,7 +111,7 @@ on-premise computing at Fred Hutch. For robust software versioning across instit
 software containers are an extremely useful approach. Conveniently, software containers can also be used
 with on-premise resources.
 
-When referring to software containers, people usually use the term "[Docker](/compdemos/Docker/)" or "Apptainer" (formerly known as Singularity). While there are
+When referring to software containers, people usually use the term "[Docker](/compdemos/Docker/)" or "[Apptainer](/compdemos/Apptainer/)" (formerly known as Singularity). While there are
 nuanced differences to these two systems, the general summary is that Apptainer is a system which allows
 users to run Docker images inside shared computing systems. Docker is more commonly used in local execution,
 cloud computing, or any setting in which a user can assume root access (which is not allowed in a shared setting).
