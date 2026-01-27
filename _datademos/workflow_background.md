@@ -61,7 +61,7 @@ After parsing the workflow, configuration, and parameters, Nextflow will begin t
 which have been specified by the workflow. When an individual task is run, it will:
 
 1. Establish a connection to the input data files (if any). When running on a local filesystem or SLURM, those files are symlinked to the working directory for the process. When running on a cloud computing service, the files are downloaded from object storage into the working directory for the running task.
-2. Run the command specified for the task, either (a) in the local environment, (b) in a [Docker](/compdemos/Docker/) container, or (c) in an Apptainer image. Local execution on your individual computer can be performed with or without Docker or Apptainer. Execution on SLURM (gizmo) can be done with or without Apptainer. Execution on cloud services (i.e. AWS) is natively performed within a specified Docker image.
+2. Run the command specified for the task, either (a) in the local environment, (b) in a [Docker](/compdemos/Docker/) container, or (c) in an [Apptainer](/compdemos/Apptainer/) image. Local execution on your individual computer can be performed with or without Docker or Apptainer. Execution on SLURM (gizmo) can be done with or without Apptainer. Execution on cloud services (i.e. AWS) is natively performed within a specified Docker image.
 3. After execution, all outputs are reported back to the head node which is running the workflow. Those outputs include any files produced as well as the logs or errors that may have been encountered.
 4. After parsing the output of a task, the workflow may then specify that a downstream task is launched, in which case the process is repeated.
 
