@@ -24,7 +24,7 @@ A typical `workDir` may be `/hpc/temp/delete30/lastname_f/nextflow/work/`.
 ## Using Apptainer
 
 If you would like to use Apptainer (formerly Singularity) to run each individual step of a workflow
-inside a container (which also supports native execution of Docker containers),
+inside a container (which also supports native execution of [Docker](/compdemos/Docker/) containers),
 then you will need to specify a `cacheDir` location for those images to be stored.
 
 Due to the large size of Apptainer containers, we strongly recommend that
