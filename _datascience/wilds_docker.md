@@ -3,7 +3,7 @@ title: WILDS Docker Library
 main_authors: tefirman
 ---
 
-<img src="/datascience/assets/wildsdocker/wdlib_logo_raw.jpeg" alt="WILDS Docker Library Logo" width="200" align="right" style="margin-left: 20px;">
+<img src="/datascience/assets/wildsdocker/WILDSDockerLogo.png" alt="WILDS Docker Library Logo" width="200" align="right" style="margin-left: 20px;">
 
 The [**WILDS Docker Library**](https://github.com/getwilds/wilds-docker-library) is a curated collection of [Docker images](#what-are-docker-containers) for reproducible bioinformatics workflows, providing versioned, security-scanned containers for many popular bioinformatics tools.
 
