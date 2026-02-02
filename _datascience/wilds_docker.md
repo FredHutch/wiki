@@ -26,7 +26,7 @@ Docker containers package software with all its dependencies into a standardized
 For bioinformatics workflows, containers are essential for reproducibility—they ensure your analysis produces the same results regardless of where it runs.
 
 ## Available Pre-made Container Images
-The library includes 30+ Docker images for popular bioinformatics tools:
+The library includes 48+ Docker images for popular bioinformatics tools:
 
 **Alignment & Mapping**
 - **BWA** (`getwilds/bwa`) - Burrows-Wheeler Aligner for DNA sequences
@@ -38,6 +38,7 @@ The library includes 30+ Docker images for popular bioinformatics tools:
 - **BCFtools** (`getwilds/bcftools`) - VCF/BCF file manipulation and calling
 - **Strelka** (`getwilds/strelka`) - Small variant calling for germline and somatic variants
 - **VarScan** (`getwilds/varscan`) - Variant detection in massively parallel sequencing
+- **GLIMPSE2** (`getwilds/glimpse2`) - Low-coverage whole genome sequencing imputation
 
 **Structural Variants**
 - **Manta** (`getwilds/manta`) - Structural variant and indel discovery
@@ -65,20 +66,44 @@ The library includes 30+ Docker images for popular bioinformatics tools:
 
 **RNA-Seq & Expression**
 - **DESeq2** (`getwilds/deseq2`) - Differential gene expression analysis
+- **Salmon** (`getwilds/salmon`) - Transcript quantification
 - **RNA-SeQC** (`getwilds/rnaseqc`) - RNA-seq quality control metrics
+- **RSeQC** (`getwilds/rseqc`) - RNA-seq quality control package
 - **combine-counts** (`getwilds/combine-counts`) - Combine count matrices from multiple samples
+
+**Alternative Splicing**
+- **rMATS-turbo** (`getwilds/rmats-turbo`) - Alternative splicing analysis
+- **JCAST** (`getwilds/jcast`) - Alternative splicing proteomics
+
+**Sequence Quality Control**
+- **FastQC** (`getwilds/fastqc`) - Sequence quality control
+
+**Metagenomics & Assembly**
+- **MEGAHIT** (`getwilds/megahit`) - Ultra-fast metagenome assembler
+- **SPAdes** (`getwilds/spades`) - Genome assembler
+- **DIAMOND** (`getwilds/diamond`) - Accelerated BLAST-compatible sequence aligner
+
+**Deep Learning & Machine Learning**
+- **python-dl** (`getwilds/python-dl`) - Python deep learning environment
+- **RTorch** (`getwilds/rtorch`) - R interface to PyTorch
 
 **Data Access & Utilities**
 - **SRA-tools** (`getwilds/sra-tools`) - NCBI Sequence Read Archive toolkit
+- **ENA-tools** (`getwilds/ena-tools`) - ENA FTP downloader
+- **GDC-client** (`getwilds/gdc-client`) - TCGA GDC Data Transfer Tool
 - **AWS CLI** (`getwilds/awscli`) - Amazon Web Services command line interface
+
+**Genomic Interval & BED Tools**
 - **BEDtools** (`getwilds/bedtools`) - Genome arithmetic and interval operations
-- **UMI-tools** (`getwilds/umi-tools`) - Tools for handling Unique Molecular Identifiers
+- **BEDOPS** (`getwilds/bedops`) - High-performance genomic interval operations toolkit
+- **bedparse** (`getwilds/bedparse`) - Python module and CLI tool for BED file operations
 
 **Specialized Tools**
+- **UMI-tools** (`getwilds/umi-tools`) - Tools for handling Unique Molecular Identifiers
 - **sourmash** (`getwilds/sourmash`) - k-mer analysis for genomic comparisons
 - **ShapeMapper** (`getwilds/shapemapper`) - RNA structure mapping analysis
 - **gtf-smash** (`getwilds/gtf-smash`) - GTF file manipulation
-- **ArcPy** (`getwilds/arcpy`) - Python package for spatial analysis
+- **consensus** (`getwilds/consensus`) - Consensus sequence generation
 
 [Browse all available images on Docker Hub →](https://hub.docker.com/u/getwilds) | [View Dockerfiles on GitHub →](https://github.com/getwilds/wilds-docker-library)
 
@@ -217,7 +242,7 @@ Docker Hub provides more robust infrastructure for container distribution and is
 Most WILDS Docker images support both linux/amd64 (Intel/AMD) and linux/arm64 (ARM) architectures, so they'll work natively on Apple Silicon Macs and ARM-based HPC systems. However, some tools have platform-specific limitations:
 
 **AMD64-only images** (won't run natively on ARM):
-- BWA, DESeq2, HISAT2, python-dl, RTorch, scvi-tools, SRA-tools
+- BWA, Cell Ranger, DESeq2, DIAMOND, GLIMPSE2, HISAT2, Manta, MEGAHIT, python-dl, rMATS-turbo, RTorch, scvi-tools, ShapeMapper, Smoove, SPAdes, SRA-tools, Strelka
 
 These limitations are due to architecture-specific code optimizations, compilation issues, or build resource constraints. Each tool's README includes a "Platform Availability" section when restrictions apply. Docker Desktop on Apple Silicon can run AMD64 images through emulation, though with reduced performance.
 
@@ -245,8 +270,8 @@ The library uses GitHub Actions to maintain quality and security:
 
 ## Release Notes
 
-**October 2025 - WILDS Docker Library v0.1.0**
-- 30+ bioinformatics tools with multiple versions
+**February 2026 - WILDS Docker Library v0.1.0**
+- 48+ bioinformatics tools with multiple versions
 - Automated monthly security scanning with Docker Scout
 - Dual distribution via Docker Hub and GitHub Container Registry
 - Full integration with WILDS WDL Library
@@ -260,7 +285,7 @@ The library uses GitHub Actions to maintain quality and security:
 - [Browse Images on Docker Hub](https://hub.docker.com/u/getwilds)
 - [View Dockerfiles and Source Code](https://github.com/getwilds/wilds-docker-library)
 - [Dockerfile Template](https://github.com/getwilds/wilds-docker-library/blob/main/template/Dockerfile_template)
-- [Local Testing Makefile](https://github.com/getwilds/wilds-docker-library/blob/main/Makefile_Docker)
+- [Local Testing Makefile](https://github.com/getwilds/wilds-docker-library/blob/main/Makefile)
 - [View Security Reports](https://github.com/getwilds/wilds-docker-library/tree/main)
 - [Use with WILDS WDL Library](/datascience/wilds_wdl/)
 - [Contributing Guidelines](https://github.com/getwilds/wilds-docker-library/blob/main/.github/CONTRIBUTING.md)
