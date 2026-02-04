@@ -189,7 +189,7 @@ See more about accessing AWS S3 via the command line [here](/compdemos/aws-s3/).
 
 ### Resources
 
-- [Fred Hutch Cloud Access Documentation]([https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
+- [Fred Hutch Cloud Access Documentation](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
 - [AWS S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 - [AWS Command Line Interface (CLI) Documentation](https://docs.aws.amazon.com/cli/)
 - [AWS documentation to configure SSO in CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-configure)
