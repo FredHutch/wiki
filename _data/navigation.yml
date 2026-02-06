@@ -82,6 +82,8 @@ datascience:
         url: /datascience/wilds_wdl/
       - title: WILDS Docker Library
         url: /datascience/wilds_docker/
+      - title: WILDS Workflow Development Program
+        url: /datascience/wilds_workflow_dev/
       - title: cBioPortal
         url: /datascience/cbioportal/
       - title: Cirro
