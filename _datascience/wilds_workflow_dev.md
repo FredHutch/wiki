@@ -3,6 +3,8 @@ title: WILDS Workflow Development Program
 main_authors: tefirman
 ---
 
+<img src="/datascience/assets/wildswdl/WILDSWDLLogo.jpeg" alt="WILDS WDL Logo" width="200" align="right" style="margin-left: 20px;">
+
 The Research Informatics team of Fred Hutch's [Office of the Chief Data Officer](https://ocdo.fredhutch.org/) (OCDO) offers free, collaborative support to help Fred Hutch researchers develop [WDL (Workflow Description Language)](/datascience/wdl_workflows/) workflows for scalable, reproducible computational analyses. In exchange, completed workflows are contributed to the open-source [WILDS WDL Library](/datascience/wilds_wdl/) for the broader research community.
 
 ## What We Do
