@@ -71,7 +71,7 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 - If these messages don’t provide enough information, navigate back to the “Job List” table and take a look at a few additional columns:
     - **stdout & stderr**: these columns contain the location of flat files that contain the output and error messages from the command line tools used during the task(s) in question. These will help to provide tool-specific feedback as to what might be going wrong. To access these, copy the path provided, log on to Rhino, and view the text files via `more` , `less`, or `cat`.
     - **commandLine**: this column contains the exact command that was run during this task. Check to see if anything looks off, maybe an improper string concatenation, maybe a reference to the wrong WDL variable. If so, navigate to the “command” section of the task to see what might be causing the issue.
-    - **docker**: this column contains the name of the Docker container that was used in the task. First, check for typos, but if the image name and version tag appear to be correct, try pulling the container locally using Docker (or Apptainer on Rhino/Gizmo). If it pulls successfully, try running exactly what is written in the commandLine column within the container.
+    - **docker**: this column contains the name of the [Docker](/compdemos/Docker/) container that was used in the task. First, check for typos, but if the image name and version tag appear to be correct, try pulling the container locally using Docker (or Apptainer on Rhino/Gizmo). If it pulls successfully, try running exactly what is written in the commandLine column within the container.
 
 ## Execution Issues
 
@@ -107,15 +107,26 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 
 <img src="/datademos/assets/proof_ts_singularity_cache.png" alt="singularity_cache" width="600"/>
 
+- See also ["Build your own Docker image"](/compdemos/Docker/#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/)
 - DaSL also has a collection of images for commonly used bioinformatics tools in the [WILDS Docker Library](https://github.com/orgs/getwilds/packages) and we are always looking to expand it. If you think the Fred Hutch community would benefit from a new tool in this container library, please feel free to reach out to us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) to talk through things in person!
 
 ## Resources and Help
 
+### PROOF Documentation
 - [PROOF How-To documentation](/datademos/proof-how-to/)
-- [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/)
+
+### WDL Resources
+- [WDL Workflows Guide](/datascience/wdl_workflows/) - WDL language fundamentals
+- [WDL Execution Engines](/datascience/wdl_execution_engines/) - Understanding Cromwell and other WDL engines
+- [WILDS WDL Library](/datascience/wilds_wdl/) - Tested, ready-to-use WDL pipelines
+- [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive DaSL course
 - [WILDS WDL Repositories](https://github.com/getwilds?q=ww-&type=all&language=&sort=)
+
+### Docker Resources
 - [WILDS Docker Library](https://github.com/orgs/getwilds/packages)
 - [Using Docker at Fred Hutch](/compdemos/Docker/)
+
+### Get Help
 - [DaSL Research Computing Data House Calls](https://calendly.com/data-house-calls/computing)
-- [DaSL Community Studios](https://hutchdatascience.org/communitystudios/)
+- [DaSL Learning Communities](https://ocdo.fredhutch.org/dasl/community/)
 

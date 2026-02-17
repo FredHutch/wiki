@@ -1,6 +1,6 @@
 ---
 title: Data Sharing
-primary_reviewers: vortexing
+primary_reviewers: tefirman, emjbishop, vortexing
 ---
 
 This page provides guidance on sharing research data for publication or as required by funding agencies. Many journals have data and code availability requirements where data must be promptly available and accessible to readers upon publication.

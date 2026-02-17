@@ -1,6 +1,6 @@
 ---
 title: Computing Environments and Containers
-last_modified_at: 2019-04-26
+last_modified_at: 2025-11-11
 primary_reviewers: bmcgough
 ---
 
@@ -94,95 +94,45 @@ The above line will load a different version of the software package over time a
 
 #### With Workflow Managers
 
-If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
+If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a [workflow manager](/datascience/using_workflows/).  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
 
 - sending the jobs to the compute resources
 - deciding what tasks can be done in parallel
 - staging data for use and keeping track of inputs and outputs
-- environment management (via docker containers or environment modules)
+- environment management (via [Docker](/compdemos/Docker/) containers or environment modules)
 - monitoring jobs and providing you with metadata about them and the workflow itself
 
-Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.  
-
+At Fred Hutch, [Nextflow](/compdemos/nextflow/) and [WDL workflows](/datascience/wdl_workflows/) are the primary workflow systems in use. WDL workflows can be executed using [multiple engines](/datascience/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket, while Nextflow has its own execution engine. Users are actively curating shared support and resources, with the [WILDS WDL Library](/datascience/wilds_wdl/) being a key resource for WDL workflows, and the [Fred Hutch NextFlow catalog](/datascience/nextflow_catalog/) being a key resource for Nextflow workflows. See the [Using Workflows](/datascience/using_workflows/) page for more information on workflow systems.
 
 ## Docker Containers
 
-At its core, Docker is a tool that lets you run code inside a totally fixed and reproducible computational environment. If you have used virtual machines, then you can think of a Docker container as being a lightweight, portable, intuitive system for building and running virtual machines. The major difference between a Docker container and virtual machine is that Docker doesn't come with operating system, which makes it more lightweight and portable.  However, Docker containers do require the Docker engine to run them, which is a client-side application.
+Docker containers package software and all dependencies into a standardized, reproducible computational environment. They enable scientists to run tools using the exact same configuration across different computing platforms, ensuring reproducible results. Docker containers isolate the computational environment without the overhead of full virtual machines.
 
-The folks at Docker are probably the best ones to answer the
-question, ["What is Docker?"](https://www.docker.com/what-docker).
+For a comprehensive introduction to Docker at Fred Hutch, see [Using Docker at Fred Hutch](/compdemos/Docker/), which covers:
 
-For more documentation and background on Docker, see [Docker for Beginners](https://docker-curriculum.com/).
+- [What Docker is and how it works](/compdemos/Docker/#what-is-docker)
+- [Using pre-built containers from WILDS and other sources](/compdemos/Docker/#using-existing-docker-images)
+- [Running Docker on your local computer](/compdemos/Docker/#running-docker-on-your-local-computer)
+- [Using Docker containers on the Fred Hutch cluster (via Apptainer)](/compdemos/Docker/#using-docker-on-the-cluster)
+- [Creating your own Docker images](/compdemos/Docker/#creating-your-own-docker-images)
+- [Using Docker in WDL and other workflow systems](/compdemos/Docker/#using-docker-with-workflows)
 
-The reason that scientists use Docker is that it allows them
-to run computational tools using the exact same computational
-environment as another scientist, so that the same input data
-will (by definition) yield the exact same set of results. This
-is a level of reproducibility that is essentially impossible
-to achieve with any other tool apart from full virtual machines.
-It also neatly solves the problem of having to install dependencies
-in order to run a new tool in the right way.
+**Important:** Docker requires root access and cannot run directly on shared compute environments like `Rhino` or `Gizmo`. Instead, use [Apptainer](/compdemos/Apptainer/) to run Docker containers on the cluster. Apptainer can pull and run Docker images directly from Docker Hub without requiring administrator privileges. See the [Apptainer documentation](/compdemos/Apptainer/) for details.
 
-Although you cannot run Docker on our HPC cluster or on the `rhino` machines,
-you can work with Docker containers in those environments using
-[Apptainer](/compdemos/Apptainer/).
+Cloud computing platforms like [AWS Batch](/scicomputing/compute_cloud/) are built on Docker, using containers to ensure consistent execution environments across distributed computing resources.
 
-### Common Terms
+### Docker Resources
 
-There are a few basic terms that will make it easier to learn
-about Docker:
+#### Fred Hutch Resources
 
-#### Image
+  * **WILDS Docker Library ([GitHub](https://github.com/getwilds/wilds-docker-library), [DockerHub](https://hub.docker.com/u/getwilds))** - Tested, versioned Docker containers for bioinformatics tools, built and maintained by the WILDS team at Fred Hutch. These containers are designed to work seamlessly with WDL workflows and other workflow systems.
+  * **[Fred Hutch DockerHub](https://hub.docker.com/u/fredhutch)** - Additional containers available for Fred Hutch researchers.
 
-A Docker image is basically a file that is built from a [Dockerfile](https://docs.docker.com/engine/reference/builder/). The image functions like a recipe for the process you want to have the Docker container execute. It specifies all the details, such as tools, processes and parameters needed for the process to occur in the Docker container that could be created from it.  
+#### Community Resources
 
-#### Container
-
-A Docker container is a Docker image that is being executed or actively applied. Once you launch an image and start doing things (writing files,
-running commands, etc.) it becomes a container. The useful reason
-behind the distinction between images and containers is that once
-you are done using a container, you usually delete it. However,
-the image that you launched the container from remains untouched,
-and can be used to launch more containers in the future should the same exact process be needed again for different data sets.  
-
-#### Mount Point
-
-By default, Docker containers do not have access to the file system
-for the computer that they are being run on. In order to pass
-files back and forth between the running Docker container and the host
-filesystem, you must make a "mount point." The mount point is a folder
-that is shared between the Docker container and the host filesystem,
-allowing you to read and write data.
-
-#### Pull / Push
-
-Docker images can be stored either locally (on your laptop or desktop)
-or on a remote Docker server (such as [Docker Hub](https://hub.docker.com/)). Moving the Docker image to and from a remote server is called "pushing" and
-"pulling." The nice thing about this feature is that you can pull
-down an image that was used by another scientist and run all of
-the same commands that they did using the exact same computational
-environment.
-
-### Using Docker at Fred Hutch
-
-The best page to get started at the Hutch is the [Computing Resource Library](/compdemos/Docker/) about Docker.
-
-Because Docker requires root access, it cannot be run on shared
-compute environments such as `Rhino` / `Gizmo`. Instead,
-developers at LBL have developed a utility called Apptainer (formerly Singularity) which can be used to run Docker images within an environment
-like `Rhino` / `Gizmo` at Fred Hutch. Additional information on using Apptainer can be found at the
-[apptainer.org](https://apptainer.org/docs/) site and more [details about using Apptainer at Fred Hutch](/compdemos/Apptainer/) on `Gizmo`.
-
-**Words of Wisdom:** Apptainer also has its own image format, however we do not recommend to use it and instead import Docker containers as they can be used more universally, e.g. in cloud computing.
-
-Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/scicomputing/compute_cloud/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
-executed with that system.
-
-### Other Docker Resources
-
-  * The most commonly used server to share Docker images is called [Docker Hub](https://hub.docker.com/).
-  * Another commonly used server to share Docker images is called [Quay](https://quay.io/).
-  * [BioContainers](https://biocontainers.pro/) is a free and open source project to collect a set of images that contain useful bioinformatics tools.
+  * **[Docker Hub](https://hub.docker.com/)** - The most commonly used server to share Docker images.
+  * **[Quay](https://quay.io/)** - Another commonly used server to share Docker images.
+  * **[BioContainers](https://biocontainers.pro/)** - A free and open source project to collect a set of images that contain useful bioinformatics tools.
 
 
 ## Installing Custom Software Packages

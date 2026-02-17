@@ -1,6 +1,5 @@
 ---
 title: Specimen Data Management System
-main_authors: Cleavon Joseph
 primary_reviewers: crcjoseph, mwgerber
 ---
 

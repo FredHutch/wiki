@@ -10,7 +10,7 @@ SciComp provides direct access to AWS Batch in two ways:
 * Via the [AWS Command Line Interface (CLI)](https://docs.aws.amazon.com/cli/latest/reference/batch/index.html).
 * Via programmatic interfaces such as Python's [boto3](https://boto3.readthedocs.io/en/latest/reference/services/batch.html#client). 
 
->Note:  For the great majority of users, using AWS Batch is best done by using a workflow manager such as [Cromwell](/compdemos/Cromwell/) or[Nextflow](/compdemos/nextflow/) both of which are supported at the Hutch and can allow you to leverage cloud computing resources such as AWS Batch without creating a workflow that will ONLY work on AWS Batch.  
+>Note: For the great majority of users, using AWS Batch is best done by using a workflow manager such as [WDL workflows](/datascience/wdl_workflows/) (executed via [Cromwell or other engines](/datascience/wdl_execution_engines/)) or [Nextflow](/compdemos/nextflow/), both of which are supported at the Hutch and can allow you to leverage cloud computing resources such as AWS Batch without creating a workflow that will ONLY work on AWS Batch.  
 
 ## AWS Console
 Access to the AWS Management Console (the web/GUI interface), is now available to end users at the Center.  You can use the AWS Batch service within the console to see your jobs, job queues, compute environments, and job configurations.  Additionally, you will be able to see the outputs and any errors using CloudTrail.  Typically, the job itself will have a link to the CloudTrail Logstream.  Please be aware that debug output can sometimes substantially increase the cost of running a job, since all output must also be processed by CloudTrail and CloudWatch.  Outputting some debug statements or a few values from calculations within a job is fine, however outputing an entire BAM file on every task would be extremely bad.  Once you're confident that your job runs correctly, it is strongly recommended to remove all output statements except those which are absolutely necessary such as error handling.
@@ -19,7 +19,7 @@ Please report any problems you discover with this dashboard by describing the pr
 
 ### Essential terms
 
-  * Docker image: lightweight operating system / virtual machine [see Docker documentation](https://docs.docker.com/glossary/?term=image)
+  * Docker image: lightweight operating system / virtual machine. See our [Docker SciWiki page](/compdemos/Docker/) and the [Docker documentation](https://docs.docker.com/glossary/?term=image)
   * CPU: Central processing unit, basically just a unit of computation. Your laptop probably has 4 CPUs, while large servers have dozens.
 
 ## How it works
@@ -82,8 +82,9 @@ You will need to obtain [AWS credentials](/scicomputing/access_credentials/#amaz
 
 SciComp will contact you when your access has been granted.
 
-### Create and Deploy a Docker Image
-See our detailed information in the Computing Resource Library [here](/compdemos/Docker/) about creating and deploying Docker images, as well as running your own Docker Host.  
+### Create a Docker Image
+
+See ["Creating Your Own Docker Images"](/compdemos/Docker/#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/).
 
 ### Create a Job Definition
 

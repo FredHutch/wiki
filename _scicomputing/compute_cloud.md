@@ -3,10 +3,10 @@ title: AWS Cloud Computing at Fred Hutch
 primary_reviewers: dtenenba, jefftucker, sminot, vorting
 ---
 
-There are multiple methods by which you might leverage AWS cloud computing here at the Hutch.  For less experienced cloud computing users, a workflow manager such as Cromwell or Nextflow may be of interest.  These tools abstract away the actual running of the jobs in the cloud or on Gizmo, and for very new users, Cromwell may be a simple place to start as it abstracts away the most about where the jobs actually run.  For more advanced users or for those who are more adept at programming or know they need to run primarily jobs in AWS (not in multiple locations), Nextflow may be ideal for you.  For those with needs that do not focus on the running of workflows, such as genomic analyses, AWS Batch itself may be the ideal service.  
+There are multiple methods by which you might leverage AWS cloud computing here at the Hutch. For less experienced cloud computing users, a workflow manager such as WDL or Nextflow may be of interest. These tools abstract away the actual running of the jobs in the cloud or on Gizmo. For those with needs that do not focus on the running of workflows, AWS Batch itself may be the ideal service.
 
-## [Cromwell at Fred Hutch](/compdemos/Cromwell/)
-Cromwell is a workflow manager software that is in use at the Hutch that works more like a work management tool than just a way to run individual workflows as it can run multiple workflows at a time and on multiple compute infrastructures (e.g., primarily both Gizmo and AWS at the Hutch, but also GCP and Azure).  It can interpret WDL and CWL based workflow languages, which are open source specifications for workflow definitions used widely.  A configuration for Hutch users that will allow for a Cromwell server to run on Gizmo, but submit workflow jobs to either Gizmo or AWS as defined by the user at the time of workflow submission is available.  More about this resource can be found in the documentation for [Cromwell at Fred Hutch](/compdemos/Cromwell/).
+## [WDL Workflows at Fred Hutch](/datascience/wdl_workflows/)
+[WDL (Workflow Description Language)](/datascience/wdl_workflows/) is an open-source workflow language that works across multiple compute infrastructures including Gizmo and AWS. WDL workflows can be executed using [various execution engines](/datascience/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket. At Fred Hutch, you can run WDL workflows using [PROOF](/datascience/proof/), which provides a user-friendly interface and handles Cromwell server configuration automatically. Cromwell can be configured to run on Gizmo but submit workflow jobs to either Gizmo or AWS as defined by the user at workflow submission time.
 
 ## [Nextflow at Fred Hutch](/compdemos/nextflow/)
 
@@ -19,7 +19,7 @@ Ultimately, Nextflow will reduce the amount of backend retooling required when t
 [AWS Batch](https://aws.amazon.com/batch/): a service which wraps around AWS EC2 resources such that researchers can more easily do computing processes with EC2 instances on data stored in S3.  
 For more information on using AWS Batch, please see [this entry in the Resource Library](/compdemos/aws-batch/). 
 
-AWS _Batch_ is an AWS service that uses Docker containers to build a batch
+AWS _Batch_ is an AWS service that uses [Docker](/compdemos/Docker/) containers to build a batch
 computing system.  Batch is made up of a queueing system where jobs are defined
 and queued, and a computational resource made up of Docker containers to
 process those jobs.  Resources are provisioned when there are jobs to be

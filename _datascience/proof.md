@@ -1,11 +1,11 @@
 ---
 title: PROOF
-primary_reviewers: vortexing, abbywall
+primary_reviewers: seankross, tefirman, sitapriyamoorthi
 ---
 
 [proof.fredhutch.org](https://proof.fredhutch.org) on the Fred Hutch Network
 
-**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](https://docs.openwdl.org/) (Workflow Description Language) workflows using the [**Cromwell**](https://cromwell.readthedocs.io/en/stable/) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
+**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](/datascience/wdl_workflows/) (Workflow Description Language) workflows using the [**Cromwell**](/datascience/wdl_execution_engines/#cromwell) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
 
 - Automate all the backend configurations necessary to run your workflows instantly.
 
@@ -20,6 +20,7 @@ primary_reviewers: vortexing, abbywall
 - Explore more advanced troubleshooting capabilities in our [PROOF Troubleshooting Guide](/datademos/proof-troubleshooting/)
 - Using regulated data or data covered under a DUA? Read about running [PROOF with regulated data](/datascience/proof_regulated/).
 - Learn more about developing WDL workflows using our [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/)
+- New to PROOF and looking for a workflow to try? Explore the [WILDS WDL Library](/datascience/wilds_wdl/) for tested, ready-to-use pipelines
 
 ### Technical Documentation and Repositories
 - [PROOF Shiny App](https://github.com/getwilds/shiny-cromwell)
@@ -42,7 +43,7 @@ See our release notes in the PROOF repo for more details:
 
 - **Cromwell Scratch Directory**: In anticipation of the [retirement](https://sciwiki.fredhutch.org/scicompannounce/2019-11-01-scratch-upgrade/) of the `/fh/scratch/` directories of the Fred Hutch Rhino cluster, the default value for a user's Cromwell scratch directory will now be set to `/hpc/temp/` whenever possible.
 - **Zombie Tasks**: On rare occassions, tasks are cancelled by the Slurm job scheduler and Cromwell has [trouble](https://github.com/broadinstitute/cromwell/issues/1499) recognizing these cancellations. This results in the task being marked as "Running" indefinitely in the "Track Jobs" tab. We have added functionality in PROOF to identify these "zombie" tasks and correctly update their status to "Cancelled".
-- **Concurrent Docker Pulls**: Measures were taken to ensure that tasks running in parallel do not interfere with each other when pulling down the same Docker image.
+- **Concurrent Docker Pulls**: Measures were taken to ensure that tasks running in parallel do not interfere with each other when pulling down the same [Docker](/compdemos/Docker/) image.
 - **Other Minor Improvements**:
     - Wording clarifications in documentation
     - Linting corrections identified by the linting GitHub Action

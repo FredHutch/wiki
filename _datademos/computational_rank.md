@@ -12,7 +12,7 @@ After reading this page, you will be able to
 
 - **Describe** what the dependency nightmare is for software
 - **Utilize** software environment modules on `rhino`/`gizmo` and integrate them into your scripts
-- **Utilize** Docker containers and integrate them into your scripts
+- **Utilize** [Docker](/compdemos/Docker/) containers and integrate them into your scripts
 - **Utilize** `conda` to install software on `rhino`/`gizmo` to your home directory
 - **Discuss** Why compiling software is difficult and who to talk to
 - **Describe** first steps to reproducible computing with easymodules
@@ -169,7 +169,7 @@ module purge
 
 ## What if I Inherited a script or workflow?
 
-Your future self (and future lab mates) will thank you for taking the time to disentangle the code and solve the dependency nightmare once and for all. If you need help, be sure to schedule a [Data House Call](https://calendly.com/data-house-calls/computing) with the Data Science Lab and [Join the Fred Hutch Data Slack](https://www.notion.so/hutchdatascience-org-14048b387dcd48b5907189afe139a4af?pvs=21) and join the #workflow-managers channel. 
+Your future self (and future lab mates) will thank you for taking the time to disentangle the code and solve the dependency nightmare once and for all. If you need help, be sure to schedule a [Data House Call](https://calendly.com/data-house-calls/computing) with the Data Science Lab and [Join the Fred Hutch Data Slack](https://ocdo.fredhutch.org/resources.html#communication) and join the #workflow-managers channel. 
 
 For community support (you’re not doing this alone!), consider joining the [Research Informatics Community Studios](https://www.notion.so/DMPtool-org-Support-b204d4960e384ef09edd048106903519?pvs=21).
 

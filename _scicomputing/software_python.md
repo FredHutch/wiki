@@ -431,8 +431,7 @@ roll back to a specific commit before your last merge.
   
 **Installing plugins**  
 From the top toolbar, select **PyCharm > Preferences > Plugins**. There are a myriad of plugins to help smooth out your development experience,
-such as database connectors, AWS log and CLI plugins, Docker management tools, various language support plugins, hotkey 
-keymap setups, color schemes and more.  
+such as database connectors, AWS log and CLI plugins, [Docker](/compdemos/Docker/) management tools, various language support plugins, hotkey keymap setups, color schemes and more.
 
 **Jupyter Notebook extension**  
 

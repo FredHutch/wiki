@@ -1,105 +1,121 @@
 ---
-title: Data Use and Material Transfer Agreements
-editor_options: 
-  markdown: 
-    wrap: 72
+title: Data Sharing & Regulatory Compliance
+primary_reviewers: vortexing
 ---
 
-Data Use Agreements (DUAs) are contractual documents used for the
-transfer of nonpublic data that is subject to restrictions on its use.
-DUAs typically address important issues such as limitations on use of
-the data, obligations to safeguard the data, liability for harm arising
-from the use of the data, publication, data destruction or return and
-privacy rights that are associated with transfers of confidential or
-protected data.
+Data sharing via collaborations, from research data repositories, and from government entities can be a valuable addition to biomedical research.  When using data that come from these types of sharing relationships often there are specific regulations, requirements or security concerns that are specific to the dataset and may differ from the other data used in a research setting.  Responsible data stewardship for these data require you to be informed about what requirements might influence how you use the data or where you store it.  At Fred Hutch, Data Governance supports the communication of unique dataset requirements with our IT partners during the process of reviews of these agreements to support researchers in understanding their data stewardship responsibliities.  
 
-Material Transfer Agreement (MTA) is a contract used to govern the
-exchange of research data or materials between organizations. Examples
-include:
 
-> Cell lines, cultures, bacteria, nucleotides, proteins, transgenic
-> animals, pharmaceuticals, and chemicals, or data cell lines, cultures,
-> bacteria, nucleotides, proteins, transgenic animals, pharmaceuticals,
-> and chemicals, or data software, models, robots tangible research
-> material or raw datasets (but not databases, which are protected by
-> copyright)
+## Data Privacy & Protection Laws
 
-## Data Use Agreements (DUA)
+Many shared datasets are subject to **privacy and data protection laws based on where the data originate, who the data describe, and how the data can be used**. These requirements may apply *in addition to* Fred Hutch policies and IRB requirements and can directly affect where data are stored, who can access them, how long they can be retained, and what analyses are permitted.
 
-Data Use Agreements (DUA) are contractual documents used for the
-transfer of nonpublic data that is subject to restrictions on its use.
-The data provider typically originates DUAs. Contact Fred Hutch Business
-Development to initiate a DUA or review a received DUA, using this
-[questionnaire](https://centernet.fredhutch.org/cn/u/business-dev/form-questionnaire.html).
-DUAs serve to outline the terms and conditions of the transfer.
-Specifically, DUAs address important issues such as limitations on use
-of the data, obligations to safeguard the data, liability for harm
-arising from the use of the data, publication, data destruction or
-return and privacy rights that are associated with transfers of
-confidential or protected data.
+Below are some regulatory frameworks that can apply to biomedical research data as examples but not an exhaustive list.  Note for your particular dataset we encourage you to schedule a
+[AI and Research Data Policy Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#ai-and-research-data-policy) to get support and guidance from a Data Governance Specialist.
 
--   DUAs serve to outline the terms and conditions of the transfer.
+### Example Regulatory Frameworks
 
--   DUAs are used most commonly for sharing data within research and/or
-    collaboration. DUAs are most often used when transferring data
-    between Fred Hutch and an external entity (outside of the UW/Cancer
-    Consortium) and may be used for transferring sensitive information
-    between Fred Hutch and its consortium partners.
+**HIPAA (United States)**
+  Applies to *Protected Health Information (PHI)* originating from covered entities.
+- Determines whether data must be de-identified, treated as a Limited Data Set, or handled as fully identifiable PHI (see our page on working with [healthcare data](/phi/)).
+- May restrict storage locations, access controls, and data sharing
+- Commonly paired with Data Use Agreements (DUAs) for research use
+- Requires IRB oversight to use these data for research and accounting of an institutions disclosures
 
--   DUAs typically originate with the sender. DUAs may be specific, such
-    as those incorporated into the context of a Clinical Trial Agreement
-    or a sponsored research agreement, or they can be general.
 
--   If a Fred Hutch clinical trial is part of a multi-site trial, DUAs
-    may be required to conduct the trial.
+**GDPR (European Union / European Economic Area)**
+  Applies to data about individuals residing in the EU/EEA, regardless of where the research is conducted.
 
--   Most data sharing involves de-identified data. Less common is
-    sharing research data with individually identifiable health
-    information for which patient informed consent and HIPAA
-    authorization has been signed. Both types of data are required by
-    Fred Hutch to have a DUA when sharing data.
+- Grants strong individual rights (e.g., access, correction, erasure)
+- Can apply to coded or pseudonymized data
+- May restrict international data transfer and cloud storage locations
 
--   The Privacy Rule permits sharing of a Limited Data Set (‘LDS’),
-    which includes some identifiers. An LDS may be disclosed for
-    research activities if the disclosing entity and the LDS recipient
-    enter into a data use agreement. Limited Data Sets may be used or
-    disclosed only for purposes of research, public health, or health
-    care operation.
+**State or National Privacy Laws**
+  Examples include:
+- **California Consumer Privacy Act / California Privacy Rights Act (CCPA/CPRA)**
+- **Washington My Health My Data Act**
+- **Canadian Privacy Laws such as PIPEDA (federal) or other provincial laws**
 
-Various departments, including Business Developmnet, InfoSec,
-Compliance, Data Governance, and the Office of the General Counsel
-(OGC), may review DUAs. Currently, Business Development initiates DUAs
-for Fred Hutch. Use [this
-questionnaire](https://centernet.fredhutch.org/u/business-dev/form-questionnaire.html)
-to determine if a DUA is suitable for your needs.
+These laws may:
+  * Impose additional consent, transparency, or deletion requirements
+  * Apply to health-related data that are not covered by HIPAA
+  * Affect secondary data use, AI/ML development, and data sharing
+  * Limit cross-border data transfer
+  * Require specific safeguards or data residency
+  * Impose retention and destruction obligations
 
-## Material Transfer Agreement (MTA)
+**Other Country-Specific, Indigenous, or Funder-Imposed Requirements**
+  Some datasets are governed by:
+- National health data laws
+- Indigenous data sovereignty principles
+- Government agency or consortium policies
+- Funder-specific data use conditions
 
-A Material Transfer Agreement (MTA) is a contract used to govern the
-exchange of research data or materials between organizations.
 
-The Fred Hutch Business Development & Strategy (BD&S) is responsible for
-negotiating and signing all MTAs with outside organizations. Fred Hutch
-BD&S is responsible for:
+## Data Use Clauses That Can Impact Research
 
--   transferring materials from Fred Hutch (as Provider) to another
-    academic or non-profit organization as Recipient), or
+In addition to high-level laws, **specific clauses in Data Use Agreements (DUAs), Material Transfer Agreements (MTAs), or repository terms of use often place concrete obligations on how data can be used**. These clauses can affect both raw and derived data and may apply long after data ingestion.
 
--   receiving materials from another organization or company.
+Below are common clauses researchers should be aware of, with examples of how they affect day-to-day data stewardship work.  These clauses often apply not only to the original dataset but also to **derived data products, analytic outputs, and models** created using the data.
 
-BD receives requests to review MTAs; they partner with other stakeholder
-departemtns to review all agreements to ensure contractual obligations
-are consistent with Fred Hutch policy and/or federal law.
 
-Whether for inbound or outbound materials, MTAs are critical documents
-that require signatures from the Provider(s) and Recipient
-institution(s) to ensure that each party will comply with the terms of
-the agreement. Fred Hutch investigators cannot sign MTAs on behalf of
-the Fred Hutch. If the MTA is embedded in a Sponsored Research
-Agreement, is linked to a clinical trial, or is for clinical use or
-clinical studies in humans, the investigator should contact Business
-Development.
 
-If you are unsure what type of agreement you require, please see
-Business Development's [Agreement Form
-Questionnaire](https://centernet.fredhutch.org/u/business-dev/form-questionnaire.html).
+**Right to Be Forgotten / Right of Erasure**
+  Individuals may request deletion of their data.
+
+- Requires the ability to identify, track, and delete both raw and derived data
+- Impacts feature tables, analytic outputs, trained models, and cached results
+- May require documentation of deletion actions
+
+**Purpose Limitation**
+  Data may only be used for specific, approved research purposes.
+
+- Reuse for secondary analyses, method development, or AI/ML training may be restricted
+- New research questions may require amendment, re-approval, or a new agreement
+
+**Data Retention Limits**
+  Data may only be retained for a defined period.
+
+- Requires planning for secure destruction or return of data
+- May affect reproducibility timelines and model retraining as well as publication requirements around data sharing
+
+**Restrictions on Data Sharing or Redistribution**
+  Data may not be shared outside the approved research team or institution.
+
+- Limits posting to shared repositories, collaboration platforms, or external compute environments
+- May prohibit onward sharing of derived datasets
+
+**Storage and Security Requirements**
+  Data may need to be stored:
+
+- In specific geographic regions or on specific approved institutional systems
+- With defined encryption, access logging, and audit controls that may not be common to all data storage resources at your institution
+
+**Publication and Disclosure Requirements**
+  Some agreements require:
+
+- Pre-publication or pre-disclosure review
+- Suppression of small cell sizes or sensitive attributes
+- Restrictions on releasing model parameters, weights, or intermediate outputs
+
+**Prohibitions on Re-identification or Data Linkage**
+  Data may not be linked with other datasets or used to attempt re-identification.
+
+- Affects data integration, enrichment, and external validation workflows
+
+**Restrictions on AI / Machine Learning Use**
+  Some datasets explicitly restrict or prohibit:
+
+- Training machine learning or AI models
+- Commercial use or derivative tool development
+- Generalizable model release
+
+
+
+## Fred Hutch Regulated Data Supports
+
+The data governance team provides support for [leveraging restricted use research data and facilitating compliant data sharing](https://centernet.fredhutch.org/u/data-science-lab/data-governance/research.html). In addition to our supports we work with Business Development and a range of departments to support expanded researcher access to data covered by Data Use Agreements.  
+
+Data Use Agreements (DUAs) are contractual documents used for the transfer of nonpublic data that is subject to some restriction on its use. DUAs can be initiated to either send data to another institution or receive data from an institution. DUAs serve to outline the terms and conditions of the transfer. Specifically, DUAs address important issues such as limitations on use of the data, obligations to safeguard the data, liability for harm arising from the use of the data, publication, data destruction or return and privacy rights that are associated with transfers of confidential or protected data. 
+
+Many departments like Business Development, InfoSec, Compliance, Data Governance, and Office of the General Counsel (OGC) may have a role in reviewing the terms of a DUA. Currently Business Development manages the initiation of DUAs for Fred Hutch. To understand if a DUA is the right agreement you need you can utilize [this questionnaire](https://centernet.fredhutch.org/u/business-dev/form-questionnaire.html) to help you decide.
