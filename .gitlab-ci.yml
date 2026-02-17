@@ -21,6 +21,8 @@ stages:
 
 build:
   stage: build
+  variables:
+    GIT_DEPTH: 0
   tags: # TODO REMOVE after shell runner is disabled
     - sc-swarm
   artifacts:
