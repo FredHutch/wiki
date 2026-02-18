@@ -1,6 +1,5 @@
 ---
 title: How to upload your study into the Fred Hutch instance of cBioPortal
-last_modified_at: 2025-04-18
 main_authors: sitapriyamoorthi
 primary_reviewers: tfirman, laderast  
 ---

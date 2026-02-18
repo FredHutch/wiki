@@ -1,6 +1,5 @@
 ---
 title: Creating Guest Collections in HutchGO
-last_modified_at: 2024-07-01
 primary_reviewers: atombaby
 ---
 

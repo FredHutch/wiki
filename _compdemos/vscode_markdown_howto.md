@@ -1,6 +1,5 @@
 ---
 title: Using Markdown with Visual Studio Code
-last_modified_at: 2018-06-07
 main_author: Robert McDermott
 ---
 

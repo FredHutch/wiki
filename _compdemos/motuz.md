@@ -1,6 +1,5 @@
 ---
 title: Using Motuz to Move Large Data
-last_modified_at: 2019-08-22
 main_author: Dan Tenenbaum
 primary_reviewers: dtenenba
 ---

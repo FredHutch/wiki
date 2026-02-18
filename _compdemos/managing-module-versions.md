@@ -1,6 +1,5 @@
 ---
 title: Managing Module Versions
-last_modified_at: 2023-05-24
 main_author: Michael Gutteridge
 primary_reviewers: atombaby
 ---

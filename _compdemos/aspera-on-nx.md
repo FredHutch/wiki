@@ -1,6 +1,5 @@
 ---
 title: Managing Aspera Connect on NoMachine
-last_modified_at: 2021-05-25
 main_author: Michael Gutteridge
 primary_reviewers: atombaby
 ---

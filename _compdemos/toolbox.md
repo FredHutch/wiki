@@ -1,6 +1,5 @@
 ---
 title: Using Toolbox to Get Hutch Master Data 
-last_modified_at: 2019-01-13
 main_author: Dirk Petersen
 primary_reviewers: mrg, dirkpetersen
 ---

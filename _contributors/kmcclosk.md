@@ -1,6 +1,5 @@
 ---
 title: Kylie McCloskey
-last_modified_at: 2018-09-06
 ---
 ## Affiliation
 

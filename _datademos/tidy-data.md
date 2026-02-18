@@ -1,6 +1,5 @@
 ---
 title: Guidance for Making "Tidy" Data
-last_modified_at: 2019-11-06
 main_author:
 primary_reviewers: ptvan
 ---
