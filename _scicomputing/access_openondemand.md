@@ -30,6 +30,8 @@ Shell sessions expire after a maximum of 8 hours (and may be shorter when using 
 ### File Management
 Use the File Explorer to upload, download, and organize files in cluster storage locations (including your Home directory, Fast, Temp & Working) via a drag-and-drop interface.
 
+> **Note:** If you are using Island Browser on a device NOT managed by Fred Hutch, there are some [policy restrictions](https://centernet.fredhutch.org/u/it/help-desk/island-secure-enterprise-browser.html#accordion-c33c6a5ebb-item-f5acaa8755) that will block access to some features in Open OnDemand like uploading/downloading files.
+
 ![](/scicomputing/assets/ood_files.png)
 
 ### Job Management
