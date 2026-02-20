@@ -147,11 +147,7 @@ Yes, the CLD team can create buckets in regions: `us-east-1`, `us-west-2`, and `
 
 Yes, all access to your S3 buckets will be logged to a centralized location however you will not be able to access this log data by default.  This includes all buckets in all regions of your account regardless of how those buckets got created, when they were created, or who created them, and it is impossible to disable this logging.  If you have a specific concern about access to your bucket, please submit a ticket to the CLD team.
 
-> I accidentally deleted something in my scratch bucket.  Is it gone forever?
-
-Yes, it is gone forever.  There is no way to recover that data.
-
-> I accidentally deleted something in my public or private economy cloud bucket (or another bucket that has "eco" in the name).  Can I get this data back?
+> I accidentally deleted something in my bucket (or another bucket that has "eco" in the name).  Can I get this data back?
 
 Yes, deleted data can be un-deleted for up to 60 days immediately following the time that the object was deleted.  Submit a helpdesk ticket immediately and we will be able to assist you with data recovery.
 
