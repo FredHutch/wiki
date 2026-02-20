@@ -59,8 +59,7 @@ You would want to do this because:
 - once configured, you will not need to manage access keys manually
 - a single session can last up to 24 hrs (as opposed to 12 hours if you signed in via the console)
 
-[Go here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html) for more detailed instructions on how to access AWS using Single Sign-On (SSO). 
-
+[Go here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html) for more detailed instructions on how to access AWS using Single Sign-On (SSO).
 
 #### Before You Start
 
@@ -150,7 +149,7 @@ You will need to update these fields each time you use motuz, as the credentials
 
 ### Testing Your Credentials
 
-To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your local computer to your PI's bucket. 
+To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your local computer to your PI's bucket.
 
 In these examples, please replace `lastname-f` with the last name and first initial of your PI.
 
