@@ -247,4 +247,4 @@ SSH does not do DNS resolution before consulting the config file, so typing `ssh
 
 The campus network is protected by a firewall which prevents connections from the wider Internet to FHCC compute resources.  For remote connections FHCC IT provides a VPN agent that creates a tunnel from your workstation into the campus network allowing you to use FHCC compute resources as if you were connected to the campus network.
 
-The VPN client is only available on Hutch managed (imaged and installed) devices and requires a HutchNet ID to log in.  For assistance and help with the VPN you can contact the IT Service Desk (see also the [VPN page on CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html))
+The VPN client is only available on Hutch managed (imaged and installed) devices and requires a HutchNet ID to log in.  For assistance and help with the VPN you can contact the IT Service Desk (see also the [VPN page on CenterNet.](https://centernet.fredhutch.org/u/it/help-desk/vpn-access.html))
