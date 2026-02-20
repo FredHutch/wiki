@@ -65,18 +65,17 @@ You would want to do this because:
 #### Before You Start
 
 You will need:
-- A valid [HutchNet ID](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#hutchnet-id)
-- Access to the AWS SSO portal [MyApps](https://myapps.microsoft.com) and credentials for at least one [AWS account and role](https://sciwiki.fredhutch.org/scicomputing/access_credentials/#amazon-web-services-aws)
-- Able to[SSH into rhino](https://sciwiki.fredhutch.org/scicomputing/access_methods/#mac-os) 
+- A valid [HutchNet ID](/scicomputing/access_credentials/#hutchnet-id)
+- Access to the AWS SSO portal [MyApps](https://myapps.microsoft.com) and credentials for at least one [AWS account and role](/scicomputing/access_credentials/#amazon-web-services-aws)
+- Able to [SSH into rhino](/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources)
 
-
-#### Step 1. [SSH](https://sciwiki.fredhutch.org/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources) into Rhino. 
-```ml
+#### Step 1. [SSH](/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources) into Rhino.
+```
 ssh <your-username>@rhino
 user@rhino's password: <enter the HutchNet ID password>
 ```
 
-#### Step 2. Load the AWS CLI [module](https://sciwiki.fredhutch.org/scicomputing/compute_scientificSoftware/)
+#### Step 2. Load the AWS CLI [module](/scicomputing/compute_scientificSoftware/)
 ```
 ml awscli
 ```
@@ -105,7 +104,7 @@ You will then see:
 #### Step 4. Authenticate in Your Browser
 Do the following:
 1. Copy the URL into your browser
-2. Enter the verification code and press Confirm and Continue
+2. Enter the verification code then press Confirm and Continue
 3. Click Allow access
 4. The page will refresh and say "Request approve". You can close this window and return to your terminal window.
 
@@ -135,20 +134,19 @@ aws s3 ls --profile default
 
 The `--profile default` flag is not necessary if you are using the default profile.
 
-#### 6. Re-Logging In
-Your SSO credentials expire automatically (this is expected). To re-login for a profile you have already configured (using the steps above) simply run the command below after doing step 1 and 2 above :
+#### 6. Refresh Credentials
+Your SSO credentials expire automatically (this is expected). To refresh your credentials, just re-login to a profile you have already configured. Assuming you have already completed steps 1 and 2 above, you would just need to run the following command:
 
 ```
 aws sso login --profile <profile-name>
 ```
-You will then be asked to repeat only Step 4 from above and your authentication will be complete. 
-
+You will then be asked to repeat only Step 4 from above and your authentication will be complete.
 
 ### Configure Motuz for AWS Single Sign-on (SSO)
 
 To use [Motuz](/compdemos/motuz/) with SSO credentials, click `Access keys` in the SSO portal for your account. Scroll down to the bottom where it says `Option 3`. 
-In Motuz, create a new Cloud Connection. Be sure and change `S3 Connection Type` to `Temporary Security Credentials (STS)`. Copy and paste the values for Access Key ID, Secret Access Key, and Session Token from the SSO portal to the corresponding fields in Motuz. 
-You will need to update these fields each time you use motuz, as the credentials expire after 8 hours. 
+In Motuz, create a new Cloud Connection. Leave the `Type` set to `Amazon Simple Storage Service (s3)` but change `S3 Connection Type` to `Temporary Security Credentials (STS)`. Copy and paste the values for Access Key ID, Secret Access Key, and Session Token from the SSO portal to the corresponding fields in Motuz. 
+You will need to update these fields each time you use motuz, as the credentials expire after 8 hours.
 
 ### Testing Your Credentials
 
@@ -177,7 +175,6 @@ cat hello.txt
 If you notice any errors with these, please email the commands you executed and the output to `scicomp` for assistance with your AWS S3 credentials.
 
 #### Delete the file from S3
-
 
 Once you have confirmed your credentials, remember to remove the test file:
 
