@@ -34,7 +34,7 @@ Batch computing resources require that your local computer be connected to the c
 
 [When on campus](https://centernet.fredhutch.org/cn/u/center-it/help-desk/connecting-to-wifi.html)
 
-[When off campus](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html)
+[When off campus](https://centernet.fredhutch.org/u/it/help-desk/vpn-access.html)
 
 ### Start a Terminal
 
