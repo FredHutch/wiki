@@ -88,6 +88,8 @@ datascience:
         url: /datascience/cirro/
   - title: Fred Hutch Resources
     children:
+      - title: WDL Development Support
+        url: /datascience/wilds_workflow_dev/
       - title: Reference Genomes
         url: /datascience/refgenomes/
       - title: Nextflow Catalog
