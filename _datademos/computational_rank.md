@@ -12,7 +12,7 @@ After reading this page, you will be able to
 
 - **Describe** what the dependency nightmare is for software
 - **Utilize** software environment modules on `rhino`/`gizmo` and integrate them into your scripts
-- **Utilize** Docker containers and integrate them into your scripts
+- **Utilize** [Docker](/compdemos/Docker/) containers and integrate them into your scripts
 - **Utilize** `conda` to install software on `rhino`/`gizmo` to your home directory
 - **Discuss** Why compiling software is difficult and who to talk to
 - **Describe** first steps to reproducible computing with easymodules

@@ -89,7 +89,7 @@ that the encryption type is set to `SSE-KMS`.
 
 Copy the Encryption key ARN to your clipboard using the
 button provided, and in your Motuz window, paste it into
-the `KMS Encrytion key ARN` field. Then save your cloud 
+the `KMS Encryption key ARN` field. Then save your cloud 
 connection.
 
 If for any reason you do not have access to the 

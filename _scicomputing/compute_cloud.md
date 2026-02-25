@@ -19,7 +19,7 @@ Ultimately, Nextflow will reduce the amount of backend retooling required when t
 [AWS Batch](https://aws.amazon.com/batch/): a service which wraps around AWS EC2 resources such that researchers can more easily do computing processes with EC2 instances on data stored in S3.  
 For more information on using AWS Batch, please see [this entry in the Resource Library](/compdemos/aws-batch/). 
 
-AWS _Batch_ is an AWS service that uses Docker containers to build a batch
+AWS _Batch_ is an AWS service that uses [Docker](/compdemos/Docker/) containers to build a batch
 computing system.  Batch is made up of a queueing system where jobs are defined
 and queued, and a computational resource made up of Docker containers to
 process those jobs.  Resources are provisioned when there are jobs to be

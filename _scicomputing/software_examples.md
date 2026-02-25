@@ -42,8 +42,8 @@ These repositories were created by Fred Hutch researchers and staff, and contain
 - [Slurm examples](https://github.com/FredHutch/slurm-examples): Examples of using Slurm (the [job management system](/scicomputing/compute_overview/#job-management) used on our cluster) for life sciences research tasks.
 - [Batch pipeline](https://github.com/FredHutch/batch_pipeline): Example workflows for a multi-step array job on AWS Batch (cloud computing)
 - [Nextflow examples](https://github.com/FredHutch?utf8=✓&q=nf&type=&language=): this link shows all repositories containing Nextflow (`nf`) examples in the Fred Hutch GitHub organization. Each repository represents a different kind of analysis.  
-- [WDL examples](https://github.com/FredHutch?q=wdl&type=all&language=wdl&sort=)this link shows all public repositories containing WDL examples in the Fred Hutch GitHub organization. 
-- [WILDS WDLs](https://getwilds.org/projects.html#wdls): a collection of pre-written WDL workflows you can fork and customize for your own use developed by Fred Hutch staff. 
+- [WILDS WDL Library](/datascience/wilds_wdl/) ([GitHub](https://github.com/getwilds/wilds-wdl-library), [Documentation](https://getwilds.org/wilds-wdl-library/)): a collection of pre-written WDL workflows you can fork and customize for your own use developed by Fred Hutch staff.
+- [WILDS Docker Library](/datascience/wilds_docker/) ([GitHub](https://github.com/getwilds/wilds-docker-library), [DockerHub](https://hub.docker.com/u/getwilds)): a collection of pre-built Docker images developed by Fred Hutch staff that you can harness for reproducibility and portability.
 - Older repositories involving workflows that are useful for reference:
   - [Single Cell RNAseq workflows](https://github.com/FredHutch/scrnaseq-workflows): basic outline of different approaches to workflows used in scRNAseq. Includes some perspective on why some approaches may be more effective.
   - [Reproducible Workflows](https://github.com/FredHutch/reproducible-workflows): examples of various workflows (Cromwell, WDL, AWS), with guidance for use of each.

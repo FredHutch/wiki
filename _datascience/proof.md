@@ -43,7 +43,7 @@ See our release notes in the PROOF repo for more details:
 
 - **Cromwell Scratch Directory**: In anticipation of the [retirement](https://sciwiki.fredhutch.org/scicompannounce/2019-11-01-scratch-upgrade/) of the `/fh/scratch/` directories of the Fred Hutch Rhino cluster, the default value for a user's Cromwell scratch directory will now be set to `/hpc/temp/` whenever possible.
 - **Zombie Tasks**: On rare occassions, tasks are cancelled by the Slurm job scheduler and Cromwell has [trouble](https://github.com/broadinstitute/cromwell/issues/1499) recognizing these cancellations. This results in the task being marked as "Running" indefinitely in the "Track Jobs" tab. We have added functionality in PROOF to identify these "zombie" tasks and correctly update their status to "Cancelled".
-- **Concurrent Docker Pulls**: Measures were taken to ensure that tasks running in parallel do not interfere with each other when pulling down the same Docker image.
+- **Concurrent Docker Pulls**: Measures were taken to ensure that tasks running in parallel do not interfere with each other when pulling down the same [Docker](/compdemos/Docker/) image.
 - **Other Minor Improvements**:
     - Wording clarifications in documentation
     - Linting corrections identified by the linting GitHub Action

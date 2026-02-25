@@ -34,7 +34,10 @@ When using R/RStudio locally, you have the option to install a number of differe
 
 
 ## Remote (`Rhino` and `Gizmo`) Use
-If computing resources beyond what is available via your desktop are required, you may consider running R scripts from the `rhinos` or `gizmo`.  `SciComp` makes pre-built R modules available for your use in order to facilitate more reproducible and reliable use of software on the local cluster.  
+If computing resources beyond what is available via your desktop are required, you may consider running R scripts from the `rhinos` or `gizmo`.  `SciComp` makes pre-built R modules available for your use in order to facilitate more reproducible and reliable use of software on the local cluster.
+
+### Open OnDemand
+[Open OnDemand](/scicomputing/access_openondemand/) is the easiest way to access RStudio on the cluster. It provides a web-based interface that handles the connection and resource allocation for you.
 
 ### Current R Modules on `Rhino`/`Gizmo`
 SciComp maintains a range of various builds of R on `Rhino` and `Gizmo` for use by researchers. Each build has different packages installed and versions of R itself, thus identifying if an existing R build matches your needs is a first step to using R on `Rhino` or `Gizmo`.  Specific information about which R Modules are available- including more information about packages installed in them- can be found on our dedicated [R Module page](/rModules/).  If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.
@@ -81,7 +84,9 @@ To run `R` on a gizmo node, you can follow the same instructions as for `rhino` 
 
 ### Run RStudio Server on an HPC machine
 
-To run RStudio Server on the `gizmo` compute cluster, simply open a browser and go to
+> **Recommended:** Use [Open OnDemand](/scicomputing/access_openondemand/) for the easiest way to launch RStudio.
+
+To run RStudio Server on the `gizmo` compute cluster via the legacy launcher, go to
 [https://rstudio-launcher.fredhutch.org](https://rstudio-launcher.fredhutch.org).   You will be prompted to log in with your  Fred Hutch HutchNet ID and password.  This requires that you be on campus or using VPN.
 
 This site will help you launch, manage and kill RStudio sessions on `gizmo` without having to do so manually via terminal/`rhino`.  When you create new RStudio sessions via  the application, this single site will manage the launch process given the parameters you specify.  It will return the information you'll need to access and manage your sessions to the table in the site.  You can have mulitple RStudio sessions running simultaneously, and each session will have its own specific URL where you will be able to use RStudio through your browser. 
@@ -109,6 +114,8 @@ knitr::opts_chunk$set(dev="CairoPNG")
 ```
 
 ### Run a Jupyter Notebook or Lab on a cluster node
+
+> **Recommended:** Use [Open OnDemand](/scicomputing/access_openondemand/) for a much simpler way to launch Jupyter Lab.
 
 You can run a [Jupyter](https://jupyter.org/) Lab on a cluster node, with the R language (go [here](/scicomputing/software_python/#using-jupyter-on-rhino) if you want to use Jupyter with Python).
 
