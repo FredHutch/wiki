@@ -36,6 +36,7 @@ Here are some links to learn more. Keep in mind that tools provided by AWS will 
 •	[AWS Pricing Calculator](https://calculator.aws/#/?nc2=pr)
 
 ## Accessing via SSO
+In 2024 Fred Hutch undertook a large migration to move all PI and Divisional AWS account to a new, more secure architecture. One of the benefits of this is integration with our Fred Hutch domain, meaning a user can now log into their AWS account using their Fred Hutch credentials.
 
 Please refer to CenterNet Documentation [here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
 
