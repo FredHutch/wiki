@@ -11,6 +11,11 @@ For help with mobile devices, please see Center IT pages for more information on
 
 Using these desktop computing resources, the following describes how to access additional computing resources at the Hutch.  
 
+## Open OnDemand
+
+Open OnDemand provides a user-friendly web interface to the cluster. It features file management, a browser-based terminal, and interactive applications such as RStudio and Jupyter.
+See [Open OnDemand](/scicomputing/access_openondemand/) for details.
+
 ## SSH Clients for Remote Computing Resources
 
 We use two common protocols to access remote compute resources. The first is the Hypertext Transfer Protocol (HTTP). This is the way your browser communicates with remote web servers. The second common protocol is Secure SHell (SSH). This is the method used to run a program on a remote server. Typically the program run is a `shell` that gives you an interactive command line on the remote host.
@@ -247,4 +252,4 @@ SSH does not do DNS resolution before consulting the config file, so typing `ssh
 
 The campus network is protected by a firewall which prevents connections from the wider Internet to FHCC compute resources.  For remote connections FHCC IT provides a VPN agent that creates a tunnel from your workstation into the campus network allowing you to use FHCC compute resources as if you were connected to the campus network.
 
-The VPN client is only available on Hutch managed (imaged and installed) devices and requires a HutchNet ID to log in.  For assistance and help with the VPN you can contact the IT Service Desk (see also the [VPN page on CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html))
+The VPN client is only available on Hutch managed (imaged and installed) devices and requires a HutchNet ID to log in.  For assistance and help with the VPN you can contact the IT Service Desk (see also the [VPN page on CenterNet.](https://centernet.fredhutch.org/u/it/help-desk/vpn-access.html))

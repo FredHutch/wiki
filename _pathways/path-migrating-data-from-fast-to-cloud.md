@@ -29,7 +29,7 @@ This process requires that you are connected to the campus network.
 
 [When on campus](https://centernet.fredhutch.org/cn/u/center-it/help-desk/connecting-to-wifi.html)
 
-[When off campus](https://centernet.fredhutch.org/cn/u/center-it/help-desk/vpn.html)
+[When off campus](https://centernet.fredhutch.org/u/it/help-desk/vpn-access.html)
 
 ### Connect to Motuz
 
