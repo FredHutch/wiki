@@ -163,9 +163,37 @@ are queued on the cluster.
 
 ## Understanding Blueprints and PROOF Servers
 
-Blueprints are specifications for types of PROOF servers that you can start. A
-blueprint is a desciption of a PROOF server that you could run, 
+Blueprints are specifications for types of PROOF servers that you can start.
+You can start a PROOF server with the default settings by clicking the 
+**Quick Start** option under the **Start a server** menu on the Home page.
+If you want to start a server with options other than the default, you will 
+need to create a blueprint. With blueprints you can specify different 
+attributes of a PROOF server:
 
+- The **Slurm account** that you wish to use with PROOF. Every cluster user
+automatically has a default Slurm account, however you might need to use a
+specific, non-default Slurm account if you work with multiple PIs, if you need
+to access different private storage spaces on the Fred Hutch cluster, or if
+you need to access [*regulated* storxage][wiki-reg].
+- Whether or not you want to use a **regulated** PROOF server. For more information about regulated PROOF servers and regulated storage, see our article dedicated to [PROOF Regulated][wiki-preg].
+
+To create a blueprint, go to the **Account** page and click **Create new blueprint**. You can then give that blueprint a name that's easy for you to remember, you can specify the Slurm account you want to use, and you can select whether you want to use a regulated PROOF server. 
+
+![create blueprint](/datademos/assets/pwb-tutorial/create-blueprint.png)
+
+Click **Create**, then you can see your saved blueprints on the Account page.
+
+To start a PROOF server with a specific blueprint, first make sure you stop your server if you have one running. In the **Start a server** menu, you should see your blueprint listed. Click it to start a PROOF server with the settings you specified.
+
+![start blueprint](/datademos/assets/pwb-tutorial/start-regulated.png)
+
+## Next Steps
+
+Now that you've completed your first PROOF workflow, you're ready to explore more advanced features and expand your computational capabilities:
+- Consider exploring the [WILDS WDL Library][wiki-wilds-wdl] to find pre-built workflows for common bioinformatics tasks. 
+- Take the [Developing WDL Workflows][dww] course to learn how to create your own custom workflows. 
+- For hands-on support, the OCDO offers the [WILDS WDL Development Program][cnet-wwdp] where you can partner with experts to build workflows tailored to your research needs. 
+- Get live help via [Research Computing Data House Calls][dhc-rc] for workflow debugging assistance, and [Code & Software Data House Calls][dhc-code] for help with any PROOF Workbench questions or feedback.
 
 <!--- Always keep this block of links at the bottom --->
 [wiki-wilds-wdl]: /datascience/wilds_wdl/
@@ -178,3 +206,5 @@ blueprint is a desciption of a PROOF server that you could run,
 [dhc-rc]: https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management
 [dhc-code]: https://ocdo.fredhutch.org/programs/dhc.html#code-and-software-r-python-and-beyond
 [user-test-wdls]: https://github.com/FredHutch/user-test-wdls/archive/refs/heads/main.zip
+[wiki-reg]: /scicomputing/store_regulated/
+[wiki-preg]: /datascience/proof_regulated/

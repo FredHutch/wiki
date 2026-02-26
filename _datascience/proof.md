@@ -73,6 +73,7 @@ by sending an email to [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 ## Technical Documentation and Repositories
 - PROOF Legacy is based on an open-source R Shiny application. Browse the source code [on GitHub](https://github.com/getwilds/shiny-cromwell).
 - The open source R packages [proofr](https://github.com/getwilds/proofr) and [rcromwell](https://github.com/getwilds/rcromwell) power the PROOF Legacy application.
+- Read the [release notes][proof-notes] for PROOF Workbench and PROOF Legacy.
 
 <!--- Always keep this block of links at the bottom --->
 [wiki-wdl]: /datascience/wdl_workflows/
@@ -90,3 +91,4 @@ by sending an email to [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 [dhc-code]: https://ocdo.fredhutch.org/programs/dhc.html#code-and-software-r-python-and-beyond
 [pwb-tutorial]: /datademos/pwb-tutorial/
 [pwb-trouble]: /datademos/pwb-troubleshooting/
+[proof-notes]: /datascience/proof-release-notes/
