@@ -87,7 +87,7 @@ is free from several types of syntax and implementation errors. WDL validation
 increases the likelihood the WDL will run as expected. This can be done using 
 the **Validate** page in PROOF Workbench.
 
-Let's validadte our first WDL. [Click here][user-test-wdls] to download a 
+Let's validate our first WDL. [Click here][user-test-wdls] to download a 
 collection of WDL files that you can validate and run on PROOF Workbench. Unzip 
 the downloaded file, and make note of where you have saved these files on your 
 computer. 
@@ -148,7 +148,7 @@ run with PROOF.
 
 ![all workflows](/datademos/assets/pwb-tutorial/track-workflows.png)
 
-On this page you can navigate between multiple workflows that may be running simultaneously, you can filter workflows based on their status, and you can search for workflows based on the workflow name, the workflow ID, or labels that you haev assigned to the workflow.
+On this page you can navigate between multiple workflows that may be running simultaneously, you can filter workflows based on their status, and you can search for workflows based on the workflow name, the workflow ID, or labels that you have assigned to the workflow.
 
 ## Stopping a PROOF Server
 
@@ -174,7 +174,7 @@ attributes of a PROOF server:
 automatically has a default Slurm account, however you might need to use a
 specific, non-default Slurm account if you work with multiple PIs, if you need
 to access different private storage spaces on the Fred Hutch cluster, or if
-you need to access [*regulated* storxage][wiki-reg].
+you need to access [*regulated* storage][wiki-reg].
 - Whether or not you want to use a **regulated** PROOF server. For more information about regulated PROOF servers and regulated storage, see our article dedicated to [PROOF Regulated][wiki-preg].
 
 To create a blueprint, go to the **Account** page and click **Create new blueprint**. You can then give that blueprint a name that's easy for you to remember, you can specify the Slurm account you want to use, and you can select whether you want to use a regulated PROOF server. 
