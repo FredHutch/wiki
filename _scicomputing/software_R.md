@@ -86,14 +86,14 @@ To run `R` on a gizmo node, you can follow the same instructions as for `rhino` 
 
 > **Recommended:** Use [Open OnDemand](/scicomputing/access_openondemand/) for the easiest way to launch RStudio.
 
-To run RStudio Server on the `gizmo` compute cluster via the legacy launcher, go to
-[https://rstudio-launcher.fredhutch.org](https://rstudio-launcher.fredhutch.org).   You will be prompted to log in with your  Fred Hutch HutchNet ID and password.  This requires that you be on campus or using VPN.
-
 This site will help you launch, manage and kill RStudio sessions on `gizmo` without having to do so manually via terminal/`rhino`.  When you create new RStudio sessions via  the application, this single site will manage the launch process given the parameters you specify.  It will return the information you'll need to access and manage your sessions to the table in the site.  You can have mulitple RStudio sessions running simultaneously, and each session will have its own specific URL where you will be able to use RStudio through your browser. 
 
 When starting a new RStudio session, you can choose which version of R to run (beginning in April 2022 all new versions of R will be supported, but the only older version that will work is `R-4.0.2`). You can also specify how many CPU cores and how many GB of memory you want, as well as whether you need a GPU and how long you want the server to run if the defaults specified do not meet your needs.  These parameters can be different for each RStudio session you create. Keep in mind that the larger the resources requested are, the longer it will take for your server to start up. 
 
-If you have issues or questions in using this application, please email `helpdesk` and describe the issues you're having.  
+Note that Open OnDemand provides two "flavors" of RStudio Server: the first is [Fred Hutch RStudio Server](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server/session_contexts/new) which uses the [EasyBuild modules](/scicomputing/compute_scientificSoftware/) on the cluster. 
+The second is [RStudio Server/Apptainer](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server_apptainer/session_contexts/new) which provides access to several containerized versions of RStudio via [Apptainer](/compdemos/Apptainer/). This flavor currently has slightly newer versions of R and a newer operating system which supports the [Posit Package Manager](https://packagemanager.posit.co/client/#/) for fast package installs.
+
+If you have issues or questions in using these versions of RStudio Server, please email `helpdesk` and describe the issues you're having.  
 
 #### Plotting in RStudio
 

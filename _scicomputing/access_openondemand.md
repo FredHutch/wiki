@@ -3,7 +3,7 @@ title: Open OnDemand
 primary_reviewers: cbianche
 ---
 
-Open OnDemand (OOD) provides a web-based portal to the Fred Hutch high-performance computing (HPC) environment. It allows you to manage files, get shell access, and run interactive applications like RStudio and Jupyter directly from your browser, without needing to install client software or configure SSH.
+Open OnDemand (OOD) provides a web-based portal to the Fred Hutch high-performance computing (HPC) environment. It allows you to manage files, get shell access, and run interactive applications like [RStudio](/scicomputing/software_R/#run-rstudio-server-on-an-hpc-machine) and Jupyter directly from your browser, without needing to install client software or configure SSH.
 
 ## Accessing Open OnDemand
 
@@ -15,7 +15,7 @@ You can access the portal at:
 ## Key Features
 
 ### Interactive Apps
-Launch graphical applications such as RStudio Server and Jupyter Lab directly in your browser. These sessions run on the HPC cluster, providing access to our computational resources.
+Launch graphical applications such as [RStudio Server](/scicomputing/software_R/#run-rstudio-server-on-an-hpc-machine) and [Jupyter Lab](/scicomputing/software_R/#run-a-jupyter-notebook-or-lab-on-a-cluster-node) directly in your browser. These sessions run on the HPC cluster, providing access to our computational resources.
 
 ![](/scicomputing/assets/ood_rstudio.png)
 
