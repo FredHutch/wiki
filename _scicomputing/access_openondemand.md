@@ -8,7 +8,7 @@ Open OnDemand (OOD) provides a web-based portal to the Fred Hutch high-performan
 ## Accessing Open OnDemand
 
 You can access the portal at:
-[https://ondemand.fredhutch.org](https://ondemand.fredhutch.org)
+[https://openondemand.fredhutch.org](https://openondemand.fredhutch.org)
 
 > **Note:** If you are accessing Open OnDemand from outside the campus network, you must first connect via [VPN](https://centernet.fredhutch.org/u/it/help-desk/vpn-access.html) or use the [Island Browser](https://centernet.fredhutch.org/u/it/help-desk/island-secure-enterprise-browser.html).
 
