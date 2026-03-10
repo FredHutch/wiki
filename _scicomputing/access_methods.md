@@ -13,7 +13,7 @@ Using these desktop computing resources, the following describes how to access a
 
 ## Open OnDemand
 
-Open OnDemand provides a user-friendly web interface to the cluster. It features file management, a browser-based terminal, and interactive applications such as RStudio and Jupyter.
+Open OnDemand provides a user-friendly web interface to the cluster. It features file management, a browser-based terminal, and interactive applications such as [RStudio](/scicomputing/software_R/#run-rstudio-server-on-an-hpc-machine) and [Jupyter](/scicomputing/software_R/#run-a-jupyter-notebook-or-lab-on-a-cluster-node).
 See [Open OnDemand](/scicomputing/access_openondemand/) for details.
 
 ## SSH Clients for Remote Computing Resources
