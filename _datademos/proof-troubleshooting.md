@@ -1,5 +1,5 @@
 ---
-title: PROOF Troubleshooting
+title: PROOF Legacy Troubleshooting
 ---
 
 [proof.fredhutch.org](https://proof.fredhutch.org) on the Fred Hutch Network
@@ -86,7 +86,7 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 
 - Let's say you realize in the middle of a running workflow that you forgot to update one of the values in your input json. The rest of the run will produce inaccurate/irrelevant results and you want to cancel that run so as not to waste time and resources.
 - Navigate to the "Workflows Run" table in the "Track Jobs" tab and copy the workflow ID number via the "copyId" column. Then switch to the ["Troubleshoot" tab of PROOF](/datademos/proof-how-to#troubleshooting), paste the workflow ID into the "Abort a Workflow" section, and click "Abort Workflow".
-- You should see a message pop up describing the workflow's status as "Aborting" (see screenshot below for example) and the status for the job in the "Workflows Run" table should change from "Running" to "Aborting" to "Aborted", signaling that the run in question has been successfully cancelled.
+- You should see a message pop up describing the workflow's status as "Aborting" (see screenshot below for example) and the status for the job in the "Workflows Run" table should change from "Running" to "Aborting" to "Aborted", signaling that the run in question has been successfully canceled.
 
 ![aborting](/datademos/assets/proof_ts_aborting.png)
 
