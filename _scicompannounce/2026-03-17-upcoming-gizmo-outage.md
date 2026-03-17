@@ -1,6 +1,7 @@
 ---
-Title: Scheduled Gizmo Outage on March 22
+Title: Upcoming Gizmo Outage
 ---
+> Note this was originally scheduled for March 22 but has been pushed back. New date TBD.
 
 On March 22nd Scientific Computing will be taking down the Gizmo cluster (including Canto and Harmony nodes), and the Rhino and Maestro login nodes. We'll begin work at 1:00PM and anticipate a four-hour outage. A reservation is in place on the Gizmo cluster that will prevent jobs that would run into this maintenance period.  As we get closer to the date, your jobs may be held in the "pending" state if the job would not complete before the maintenance window begins.
 
