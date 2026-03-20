@@ -60,7 +60,7 @@ Genomic data:
 When sharing genomic and phenotypic data, investigators should:
 
 - Use [informed consent](/datascience/consent_IRB/) documents with appropriate language regarding data sharing and future use
-- Share [de-identified](/datascience/deidentification/) data by default
+- Share [de-identified](/datascience/phi/) data by default
 - Use requested datasets solely for the research project described in the approved data request or protocol
 - Make no attempt to identify or contact individual participants without appropriate IRB approvals
 - Not distribute data to any entity or individual beyond those specified in the approved data request or protocol
