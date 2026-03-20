@@ -207,4 +207,4 @@ Now that you've completed your first PROOF workflow, you're ready to explore mor
 [dhc-code]: https://ocdo.fredhutch.org/programs/dhc.html#code-and-software-r-python-and-beyond
 [user-test-wdls]: https://github.com/FredHutch/user-test-wdls/archive/refs/heads/main.zip
 [wiki-reg]: /scicomputing/store_regulated/
-[wiki-preg]: /datascience/proof_regulated/
+[wiki-preg]: /datademos/proof-regulated/
