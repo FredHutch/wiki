@@ -58,4 +58,4 @@ Examples of best practices for using OneDrive include:
   * Once a file is shared with someone and they download it to their device, they can share it with others.  File protection may also remain an appropriate practice.
   * Links that share documents do NOT expire.  Remember to remove ability to share when no longer needed.
 
-> [See additional Best Practices in CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/iso/o365-information-security-guidelines.html)
+> [See additional Best Practices on CenterNet.](https://centernet.fredhutch.org/u/it/infosec/engineering-and-operations/o365-information-security-guidelines.html)
