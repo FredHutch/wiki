@@ -5,11 +5,11 @@ primary_reviewer: scicomp
 
 File keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools.  These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
-There are multiple file storage resources available to researchers including:
+There are multiple file storage resources available to researchers (PIs/labs) including:
 - `Home` for personal files
-- `Fast` for shared data, including the majority of large scale research data
+- `Fast` for shared data, including data delivered from our Shared Resources Division- backed up offsite- numerous snapshots
 - [`Temp`](/scicomputing/store_temp/) for temporary storage of files when using the cluster- not backed up
-- [`Working`](/scicomputing/store_working/) for secondary (working) copies of data- not backed up
+- [`Working`](/scicomputing/store_working/) for secondary (working) copies of data- not backed up- limited snapshots
 - [`Regulated`](/scicomputing/store_regulated/) for data sets covered by regulation or agreement (e.g. NIH GDS)
 - `Secure` for data with higher-level security needs
 

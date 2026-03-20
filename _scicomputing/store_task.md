@@ -37,7 +37,7 @@ The Data Science Lab and Scientific Computing teams are available to help you id
 
 ### Working
 
-The [Working](/scicomputing/store_working) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/fh/working`.  This file system is not backed up, though snapshots are available.  There is a quota applied at the top level of the PI directory- the default is 20TB but can be increased to 50TB- note that quota increases will incur costs.
+The [Working](/scicomputing/store_working) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/fh/working`.  This file system is not backed up, though snapshots are available.  There is a quota applied at the top level of the PI directory- the default is 20TB but can be increased to 50TB- note that quota increases will incur costs. Working is intended for local copies of datasets backed up elsewhere and is available for use by PI/lab researchers only.
 
 | feature                 | availability |
 |-------------------------|--------------|
