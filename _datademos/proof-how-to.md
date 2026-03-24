@@ -4,7 +4,7 @@ title: How to Use PROOF Legacy
 
 [proof.fredhutch.org](https://proof.fredhutch.org) on the Fred Hutch Network
 
-**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](/datascience/wdl_workflows/) (Workflow Description Language) workflows using the [**Cromwell**](/datascience/wdl_execution_engines/#cromwell) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
+**PROOF** (**PR**oduction **O**n-ramp for **O**ptimization and **F**easibility) is a user-friendly tool designed for managing and executing [**WDL**](/datascience/wdl_workflows/) (Workflow Description Language) workflows using the [**Cromwell**](/datademos/wdl_execution_engines/#cromwell) workflow manager, configured to run on the [**Fred Hutch cluster**](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/). PROOF allows users to:
 
 - Automate all the backend configurations necessary to run your workflows instantly.
 
@@ -20,11 +20,11 @@ Before diving into PROOF, it helps to understand the underlying technologies:
 
 - **[WDL (Workflow Description Language)](/datascience/wdl_workflows/)** - A standardized, modular language for defining computational workflows. WDL offers platform independence, parallel execution support, and explicit data type definitions.
 
-- **[Cromwell](/datascience/wdl_execution_engines/#cromwell)** - The WDL execution engine used by PROOF. Cromwell orchestrates multi-step workflows, handles job monitoring, and integrates with the Fred Hutch cluster.
+- **[Cromwell](/datademos/wdl_execution_engines/#cromwell)** - The WDL execution engine used by PROOF. Cromwell orchestrates multi-step workflows, handles job monitoring, and integrates with the Fred Hutch cluster.
 
 - **[WILDS WDL Library](/datascience/wilds_wdl/)** - Looking for a workflow to try? Browse our collection of tested, ready-to-use WDL pipelines.
 
-For a deeper dive into WDL concepts, see our [WDL Workflows Guide](/datascience/wdl_workflows/). To learn about other WDL execution options beyond Cromwell, see [WDL Execution Engines](/datascience/wdl_execution_engines/).
+For a deeper dive into WDL concepts, see our [WDL Workflows Guide](/datascience/wdl_workflows/). To learn about other WDL execution options beyond Cromwell, see [WDL Execution Engines](/datademos/wdl_execution_engines/).
 
 ### How PROOF Uses Cromwell
 
@@ -300,7 +300,7 @@ If you find something is not working with the app or you find a bug, please help
 
 #### Building WDL workflows
 - [WDL Workflows Guide](/datascience/wdl_workflows/) - Fred Hutch wiki guide to WDL fundamentals
-- [WDL Execution Engines](/datascience/wdl_execution_engines/) - Understanding Cromwell and other WDL engines
+- [WDL Execution Engines](/datademos/wdl_execution_engines/) - Understanding Cromwell and other WDL engines
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Tested, ready-to-use WDL pipelines
 - [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive DaSL course
 - [Open WDL Documentation](https://docs.openwdl.org/en/latest/) - Official WDL specification
