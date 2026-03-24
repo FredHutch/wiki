@@ -77,7 +77,7 @@ by sending an email to [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 
 <!--- Always keep this block of links at the bottom --->
 [wiki-wdl]: /datascience/wdl_workflows/
-[wiki-cromwell]: /datascience/wdl_execution_engines/#cromwell
+[wiki-cromwell]: /datademos/wdl_execution_engines/#cromwell
 [wiki-cluster]: /scicomputing/compute_jobs/
 [pwb]: https://pwb.fredhutch.org/
 [dev-ww]: https://hutchdatascience.org/Developing_WDL_Workflows/

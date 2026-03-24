@@ -102,6 +102,6 @@ sure your WDLs are compliant if you schedule a
 [dg-centernet]: https://centernet.fredhutch.org/u/data-science-lab/data-governance.html
 [ocdodg-nihrda]: https://centernet.fredhutch.org/u/data-science-lab/data-governance/data-access-request-data-use-certification-agreement.html
 [wdl-workflows]: /datascience/wdl_workflows/
-[wdl-engines]: /datascience/wdl_execution_engines/
+[wdl-engines]: /datademos/wdl_execution_engines/
 [wilds-wdl]: /datascience/wilds_wdl/
 [pwb-tutorial]: /datademos/pwb-tutorial/
