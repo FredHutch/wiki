@@ -74,15 +74,3 @@ More documentation on using this storage is available [here](/compdemos/store_jo
 | offsite replication/dr | no |
 | charges | none |
 | purged when unused | yes |
-
-### Cloud Scratch
-
-The bucket "fh-pi- _lastname-f_ -nextflow-scratch" is configured as part of the standard cloud account.  This bucket is described in greater detail [here](/scicomputing/store_objectstore/#scratch-s3-bucket).
-
-| feature | availability |
-|---------|--------------|
-| backups | no           |
-| snapshots | no         |
-| offsite replication/dr | limited |
-| charges | yes |
-| purged when unused | yes |
