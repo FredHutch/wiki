@@ -95,7 +95,7 @@ You can use **[PROOF](/datascience/proof/)** to submit WDL workflows to the clus
 
 **Command Line**
 
-You can run WDLs locally if you have a [WDL executor](/datascience/wdl_execution_engines/) and [Docker/Apptainer](/compdemos/Docker/) installed:
+You can run WDLs locally if you have a [WDL executor](/datademos/wdl_execution_engines/) and [Docker/Apptainer](/compdemos/Docker/) installed:
 
    - Basic WDL executor options: [miniWDL](https://miniwdl.readthedocs.io/en/latest/getting_started.html#install-miniwdl), [sprocket](https://sprocket.bio/installation.html)
    - [Docker Desktop](https://www.docker.com/get-started/) for container execution

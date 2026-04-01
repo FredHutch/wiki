@@ -305,7 +305,7 @@ runtime {
 
 ## Running WDL Workflows
 
-WDL workflows require an execution engine to run. See our guide on [WDL Execution Engines](/datascience/wdl_execution_engines/) for details on:
+WDL workflows require an execution engine to run. See our guide on [WDL Execution Engines](/datademos/wdl_execution_engines/) for details on:
 - **Cromwell** - Best for shared HPC systems with advanced features
 - **miniWDL** - Lightweight, easy local execution
 - **Sprocket** - Modern alternative with easy setup
@@ -365,6 +365,6 @@ This approach lets you build complex workflows quickly without writing every tas
 
 1. **Learn the basics** with [Data Science Lab's WDL course](https://hutchdatascience.org/Developing_WDL_Workflows/)
 2. **Explore examples** in the [WILDS WDL Library](/datascience/wilds_wdl/)
-3. **Choose an execution engine** - see [WDL Execution Engines](/datascience/wdl_execution_engines/)
+3. **Choose an execution engine** - see [WDL Execution Engines](/datademos/wdl_execution_engines/)
 4. **Run your first workflow** using [PROOF](/datascience/proof/) or a local executor
 5. **Join the community** in [#workflow-managers Slack](https://fhdata.slack.com/archives/CJFP1NYSZ)
