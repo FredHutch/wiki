@@ -108,7 +108,7 @@ can be found [in the Cirro documentation](https://docs.cirro.bio/pipelines/addin
 - Many WILDS WDL Library [pipelines](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines) are integrated with Cirro, and you can use these as examples
 - Your WDL must be able to handle AWS S3 URIs
 - Your WDL must not use `ftp` for file transfer (`http` is ok)
-- Your WDL must not use a Docker image that is based on Alpine Linux (Ubunut is ok)
+- Your WDL must not use a Docker image that is based on Alpine Linux (Ubuntu is ok)
 
 If you'd like to contribute your WDL to the WILDS WDL Library, we provide Cirro validation automatically. The validation checks that all required files are present (`preprocess.py`, `process-form.json`, `process-input.json`, `process-output.json`, `process-compute.config`), JSON files are valid, and `preprocess.py` has no syntax errors. You can run this locally with `make lint_cirro` from within the cloned GitHub repo. Reach out to us at `wilds at fredhutch.org`.
 
