@@ -41,4 +41,4 @@ Under current guidance, code that is purely AI-generated generally cannot be cop
 
 - **If you have proprietary methods or IP you want to protect**, be cautious about providing that code or detailed descriptions of it to public AI tools. Content you submit may be used for model training, and the AI-generated output may not be eligible for copyright protection.
 - **If you are comfortable with your code being fully open source** (e.g., released under an MIT license), then the copyright limitation is largely a non-issue, and AI-assisted development can be used freely (subject to the data-protection and review requirements above).
-- **When in doubt**, consult with the [Data Protection group](https://centernet.fredhutch.org/u/data-science-lab/data-governance/ai.html) to understand the implications for your specific project.
+- **When in doubt**, consult with the [Data Protection group](https://centernet.fredhutch.org/u/data-science-lab/data-governance/ai.html) (dataprotection@) to understand the implications for your specific project.
