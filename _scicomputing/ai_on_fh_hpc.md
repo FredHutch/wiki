@@ -29,7 +29,7 @@ To reduce security and compliance risk, the following are not allowed:
 Code generated with the help of AI tools — once it has been thoroughly reviewed by the responsible researcher and is running in an environment with no connection to external AI services — should be treated the same as any other code. If you have used AI tools to help write code and you want to run that code on the HPC cluster with sensitive data:
 
 1. **Review the code thoroughly.** Understand what every line does. Do not run AI-generated code you haven't vetted.
-2. **Ensure the code is fully disconnected from the AI tool.** No API calls, telemetry, or dependencies that phone home to external services.
+2. **Ensure the code is fully disconnected from the AI tool.** No API calls, telemetry, or dependencies that phone home to external AI services.
 3. **Follow all standard data-classification rules** for the environment and dataset you are working with.
 4. **Request an [AI Review (AIR)](https://centernet.fredhutch.org/u/data-science-lab/data-governance/ai/artificial-intelligence-review.html)** if your use case involves protected or restricted data, as with any other workflow.
 
