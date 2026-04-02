@@ -1,5 +1,5 @@
 ---
-title: AI Usage on Fred Hutch HPC
+title: Guidelines for AI Use on Fred Hutch HPC
 main_authors: tefirman, vortexing, bmcgough
 ---
 
@@ -22,6 +22,7 @@ To reduce security and compliance risk, the following are not allowed:
 - Any use of DeepSeek (models, APIs, websites, or wrapped tools), consistent with emerging institutional and governmental bans due to surveillance and security concerns.
 - Any AI tool, application, library, or model that sends prompts, data, or metadata to external servers ("phones home"), whether via HTTP(S), telemetry, "usage analytics," auto‑update checks, or background sync processes.
 - Using public cloud AI APIs (e.g., external LLM endpoints) directly from the HPC cluster, even for "test" data, unless there is a formally approved, documented exception.
+- Using AI-enabled IDE extensions (e.g., GitHub Copilot, Cursor, Claude Code for VS Code) via a Remote-SSH session connected to the cluster, as the extension host runs on the cluster and may initiate outbound connections to external AI services from within the HPC environment.
 - Entering restricted or protected data into any AI system that has not been explicitly authorized for that data classification by your AIR or equivalent governance process.
 
 ## AI-Generated Code on Fred Hutch HPC Resources
