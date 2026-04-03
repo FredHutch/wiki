@@ -17,7 +17,7 @@ Below are some regulatory frameworks that can apply to biomedical research data 
 
 **HIPAA (United States)**
   Applies to *Protected Health Information (PHI)* originating from covered entities.
-- Determines whether data must be de-identified, treated as a Limited Data Set, or handled as fully identifiable PHI (see our page on working with [healthcare data](/phi/)).
+- Determines whether data must be de-identified, treated as a Limited Data Set, or handled as fully identifiable PHI (see our page on working with [healthcare data](/datascience/phi/)).
 - May restrict storage locations, access controls, and data sharing
 - Commonly paired with Data Use Agreements (DUAs) for research use
 - Requires IRB oversight to use these data for research and accounting of an institutions disclosures
