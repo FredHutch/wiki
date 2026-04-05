@@ -1,0 +1,91 @@
+{% comment %}
+Category Box Include Template
+Renders Wikipedia-style category boxes at the bottom of articles
+
+Usage in articles:
+1. Add to front matter: categories: ["computing_platforms", "data_storage"]
+2. Include at bottom of layout or article: {% include category_box.html %}
+
+The template will automatically render all specified categories with their
+defined links, colors, and descriptions from _data/categories.yml
+{% endcomment %}
+
+{% if page.categories and page.categories.size > 0 %}
+<div class="category-boxes-container" style="margin-top: 2em; padding-top: 1em; border-top: 1px solid #e0e0e0;">
+  <h3 style="margin-bottom: 1em; color: #666; font-size: 1.1em;">Related Categories</h3>
+  
+  {% for category_id in page.categories %}
+    {% assign category = site.data.categories[category_id] %}
+    {% if category %}
+    <div class="category-box" style="
+      background-color: {{ category.color | default: '#f5f5f5' }};
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 1em;
+      padding: 1em;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    ">
+      <div class="category-header" style="margin-bottom: 0.5em;">
+        <h4 style="
+          margin: 0;
+          color: #333;
+          font-size: 1em;
+          font-weight: bold;
+          display: inline-block;
+        ">📁 {{ category.title }}</h4>
+        {% if category.description %}
+        <p style="
+          margin: 0.3em 0 0 0;
+          color: #666;
+          font-size: 0.9em;
+          font-style: italic;
+        ">{{ category.description }}</p>
+        {% endif %}
+      </div>
+      
+      {% if category.links and category.links.size > 0 %}
+      <div class="category-links" style="margin-top: 0.8em;">
+        {% for link in category.links %}
+          <a href="{{ link.url | relative_url }}" 
+             style="
+               display: inline-block;
+               background-color: rgba(255,255,255,0.7);
+               border: 1px solid rgba(0,0,0,0.1);
+               border-radius: 3px;
+               padding: 0.3em 0.6em;
+               margin: 0.2em 0.3em 0.2em 0;
+               color: #0066cc;
+               text-decoration: none;
+               font-size: 0.85em;
+               transition: all 0.2s ease;
+             "
+             onmouseover="this.style.backgroundColor='rgba(255,255,255,0.9)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
+             onmouseout="this.style.backgroundColor='rgba(255,255,255,0.7)'; this.style.boxShadow='none'">
+            {{ link.title }}
+          </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<style>
+  .category-box a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 600px) {
+    .category-box {
+      padding: 0.8em !important;
+    }
+    
+    .category-links a {
+      display: block !important;
+      margin: 0.2em 0 !important;
+      text-align: center;
+    }
+  }
+</style>
+{% endif %}
