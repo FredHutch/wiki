@@ -79,7 +79,80 @@ R
 
 ### `Gizmo`
 
-To run `R` on a gizmo node, you can follow the same instructions as for `rhino` above.  If you want to run `RStudio`, see the next section.
+To run `R` on a gizmo node, you can follow the same instructions as for `rhino` above.  If you want to run `RStudio`, see the RStudio section.
+
+### `Containers`
+
+R is also available via [containers](https://sciwiki.fredhutch.org/scicomputing/compute_environments/#docker-containers).
+Use these if you want newer versions of R (the containers often support newer versions of R than the Easybuild modules
+described above) and want to run R on the command line. If you want to run R in a graphical interface, see the next section.
+
+Here are a few containers that SciComp provides:
+
+| R version | Bioconductor version | URL | 
+| --------- | -------------------- | --- |
+| 4.4.2     | 3.2.0                | `https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_20.sif` |
+| 4.5.0     | 3.2.1                | `https://sif-registry.fredhutch.org/bioconductor_bioconductor_docker_RELEASE_3_21.sif` |
+| 4.5.1     | 3.2.1                | `https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_21-R-4.5.1.sif` |
+| 4.5.2     | 3.2.2                | `https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_22-R-4.5.2.sif` |
+
+
+You can run them in a few ways. In the following examples we will use the container for R-4.5.2.
+In each case, you should first load the Apptainer module with the following command:
+
+```
+ml Apptainer
+```
+
+Note that this command is not needed (and will cause an error) on the newer `maestro` and `harmony`
+nodes (in the `chorus` partition).
+
+#### Run R Interactively
+
+```bash
+apptainer run https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_22-R-4.5.2.sif R
+```
+
+#### Run R Interactively with `fast` and `temp` mounted
+
+While your home directory is accessible by default inside a container, other 
+important directories (such as `/fh/fast` and `/hpc/temp`) are not. 
+Here is how to make them available:
+
+```bash
+apptainer run \
+  --bind /fh/fast:/fh/fast \
+  --bind /hpc/temp:/hpc/temp \
+  https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_22-R-4.5.2.sif \
+  R
+```
+
+#### Run R non-interactively
+
+This will run an R script in the current directory called `script.R`:
+
+```bash
+apptainer run \
+  https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_22-R-4.5.2.sif \
+  Rscript script.R
+```
+
+#### Notes about these R containers
+
+* Be sure and specify a command (such as `R` or `Rscript` as in the examples above,
+  or even `bash` if you want an interactive shell); otherwise Apptainer will attempt to
+  run RStudio and likely fail.
+* Note that these containers run a newer operating system than our cluster currently
+  does, enabling the [Posit Package Manager](https://packagemanager.posit.co/client/#/).
+  Most CRAN and Bioconductor packages will be installed from binary tarballs which will install very quickly.
+* Packages that you install within these containers are not compatible with the equivalent
+  R versions provided by EasyBuild modules. So you should not install them in the same directory.
+  Add this line to your `~/.Rprofile` file to ensure that this does not happen:
+
+
+  ```R
+  TBA...
+  ```
 
 
 ### Run RStudio Server on an HPC machine
