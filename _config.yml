@@ -178,6 +178,7 @@ defaults:
       layout: single
       toc: true
       toc_label: "On This Page"
+      toc_max_header: 3
       toc_sticky: true
       share: true
       sidebar:
