@@ -52,19 +52,104 @@ This will take you to a screen called `AWS accounts`. You should see your accoun
 
 Once you have working credentials, you can read more about [AWS Storage](/scicomputing/store_objectstore/) and [AWS Computing](/scicomputing/compute_cloud/) in our wiki pages. 
 
-### Configure AWS CLI and Motuz
+### Configure AWS CLI Using Single Sign-On (SSO)
+Fred Hutch uses AWS Single Sign-On (SSO) for all AWS access. This section walks you through how to quickly set up AWS CLI access on rhino using SSO. 
 
-For a detailed explanation of setting up your AWS CLI and using Motuz with the AWS CLI, please refer to the CenterNet documentation [here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
+You would want to do this because:
+- once configured, you will not need to manage access keys manually
+- a single session can last up to 24 hrs (as opposed to 12 hours if you signed in via the console)
 
+[Go here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html) for more detailed instructions on how to access AWS using Single Sign-On (SSO).
 
-## Important point to remember: 
+#### Before You Start
 
-The SSO session has a set expiration time, so you may need to re-authenticate periodically. 
+You will need:
+- A valid [HutchNet ID](/scicomputing/access_credentials/#hutchnet-id)
+- Access to the AWS SSO portal [MyApps](https://myapps.microsoft.com) and credentials for at least one [AWS account and role](/scicomputing/access_credentials/#amazon-web-services-aws)
+- Able to [SSH into rhino](/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources)
 
+#### Step 1. [SSH](/scicomputing/access_methods/#ssh-clients-for-remote-computing-resources) into Rhino.
+```
+ssh <your-username>@rhino
+user@rhino's password: <enter the HutchNet ID password>
+```
+
+#### Step 2. Load the AWS CLI [module](/scicomputing/compute_scientificSoftware/)
+```
+ml awscli
+```
+
+Verify that AWS CLI v2 is available:
+
+```
+aws --version
+```
+
+#### Step 3. One-time SSO configuration
+```
+aws configure sso
+```
+You will be prompted for the following:
+```
+SSO session name (Recommended): 	     Any name (e.g. fredhutch)
+SSO start URL: 	                       Copy from the AWS SSO portal for the bucket you want to authenticate (format: https://d-<id>.awsapps.com/start/#)
+SSO region:       	                   us-west-2
+SSO registration scopes:               Press Enter
+```
+You will then see:
+- A **URL**
+- A **one-time verification code**
+
+#### Step 4. Authenticate in Your Browser
+Do the following:
+1. Copy the URL into your browser
+2. Enter the verification code then press Confirm and Continue
+3. Click Allow access
+4. The page will refresh and say "Request approve". You can close this window and return to your terminal window.
+
+#### Step 5. Select Account, Role, and Profile
+Back in the terminal, you will be prompted to:
+
+1. **Choose an AWS account**
+-> Select the same account you normally use in the AWS Console
+
+2. **Choose a role**
+-> Select the role you were granted access to
+
+Then press Enter for the following prompts:
+```
+CLI default client Region:
+CLI default output format:
+CLI profile name: When prompted for CLI profile name: Use 'default' if this is your first AWS setup and is your only/defualt account (setting your default profile has implications, so choose wisely); Otherwise, choose a descriptive name (e.g. fh-research-project-1)
+```
+
+The terminal will now display the following:
+
+```
+To use this profile, specify the profile name using --profile, as shown:
+
+aws s3 ls --profile default
+```
+
+The `--profile default` flag is not necessary if you are using the default profile.
+
+#### 6. Refresh Credentials
+Your SSO credentials expire automatically (this is expected). To refresh your credentials, just re-login to a profile you have already configured. Assuming you have already completed steps 1 and 2 above, you would just need to run the following command:
+
+```
+aws sso login --profile <profile-name>
+```
+You will then be asked to repeat only Step 4 from above and your authentication will be complete.
+
+### Configure Motuz for AWS Single Sign-on (SSO)
+
+To use [Motuz](/compdemos/motuz/) with SSO credentials, click `Access keys` in the SSO portal for your account. Scroll down to the bottom where it says `Option 3`. 
+In Motuz, create a new Cloud Connection. Leave the `Type` set to `Amazon Simple Storage Service (s3)` but change `S3 Connection Type` to `Temporary Security Credentials (STS)`. Copy and paste the values for Access Key ID, Secret Access Key, and Session Token from the SSO portal to the corresponding fields in Motuz. 
+You will need to update these fields each time you use motuz, as the credentials expire after 8 hours.
 
 ### Testing Your Credentials
 
-To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your local computer to your PI's bucket. 
+To test your credentials to ensure that you have the correct permissions to your PI bucket, execute the following to copy a file from your local computer to your PI's bucket.
 
 In these examples, please replace `lastname-f` with the last name and first initial of your PI.
 
@@ -90,7 +175,6 @@ If you notice any errors with these, please email the commands you executed and 
 
 #### Delete the file from S3
 
-
 Once you have confirmed your credentials, remember to remove the test file:
 
 ```
@@ -99,8 +183,10 @@ aws s3 rm s3://fh-pi-lastname-f-eco/hello.txt
 
 See more about accessing AWS S3 via the command line [here](/compdemos/aws-s3/).
 
-## Resources
+### Resources
 
-- [Fred Hutch GitHub Organization](https://github.com/FredHutch)
+- [Fred Hutch Cloud Access Documentation](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
 - [AWS S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 - [AWS Command Line Interface (CLI) Documentation](https://docs.aws.amazon.com/cli/)
+- [AWS documentation to configure SSO in CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-configure)
+- [AWS documentation to re-login through SSO](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-login)

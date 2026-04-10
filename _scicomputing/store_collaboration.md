@@ -33,6 +33,10 @@ Aspera Shares is similar to the web interface used by Faspex but additionally of
 
 ## Data Storage for Collaboration
 
+### Collaboration Folders
+
+Collaboration folders allow access to Fast and Working storage between groups.  More information on this is available [here](/scicomputing/store_posix#collaboration-folders)
+
 ### AWS S3
 
 AWS S3 storage has a variety of useful features that make it an ideal way to securely share data with collaborators, or leverage a resource as a common storage location for users at and outside of the Hutch.  You can read more about how S3 can help support your collaborations using especially large data sets [in our AWS S3 storage documentation](/scicomputing/store_objectstore/).
@@ -58,4 +62,4 @@ Examples of best practices for using OneDrive include:
   * Once a file is shared with someone and they download it to their device, they can share it with others.  File protection may also remain an appropriate practice.
   * Links that share documents do NOT expire.  Remember to remove ability to share when no longer needed.
 
-> [See additional Best Practices in CenterNet.](https://centernet.fredhutch.org/cn/u/center-it/iso/o365-information-security-guidelines.html)
+> [See additional Best Practices on CenterNet.](https://centernet.fredhutch.org/u/it/infosec/engineering-and-operations/o365-information-security-guidelines.html)

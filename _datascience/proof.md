@@ -68,7 +68,7 @@ by sending an email to [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 [proof.fredhutch.org][proof-legacy].
 - Find out more about PROOF Legacy in our [How-To in the DaSL Resource Library](/datademos/proof-how-to/)
 - Explore more advanced troubleshooting capabilities in our [PROOF Legacy Troubleshooting Guide](/datademos/proof-troubleshooting/)
-- Using regulated data or data covered under a DUA? Read about running [PROOF Legacy with regulated data](/datascience/proof_regulated/).
+- Using regulated data or data covered under a DUA? Read about running [PROOF Legacy with regulated data](/datademos/proof-regulated/).
 
 ## Technical Documentation and Repositories
 - PROOF Legacy is based on an open-source R Shiny application. Browse the source code [on GitHub](https://github.com/getwilds/shiny-cromwell).
@@ -77,7 +77,7 @@ by sending an email to [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 
 <!--- Always keep this block of links at the bottom --->
 [wiki-wdl]: /datascience/wdl_workflows/
-[wiki-cromwell]: /datascience/wdl_execution_engines/#cromwell
+[wiki-cromwell]: /datademos/wdl_execution_engines/#cromwell
 [wiki-cluster]: /scicomputing/compute_jobs/
 [pwb]: https://pwb.fredhutch.org/
 [dev-ww]: https://hutchdatascience.org/Developing_WDL_Workflows/
@@ -91,4 +91,4 @@ by sending an email to [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 [dhc-code]: https://ocdo.fredhutch.org/programs/dhc.html#code-and-software-r-python-and-beyond
 [pwb-tutorial]: /datademos/pwb-tutorial/
 [pwb-trouble]: /datademos/pwb-troubleshooting/
-[proof-notes]: /datascience/proof-release-notes/
+[proof-notes]: /datademos/proof-release-notes/
