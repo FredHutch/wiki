@@ -151,7 +151,7 @@ apptainer run \
 
 
   ```R
-  TBA...
+  source("https://sciwiki.fredhutch.org/assets/apptainer_config.R")
   ```
 
 
