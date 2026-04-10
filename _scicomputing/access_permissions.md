@@ -6,13 +6,21 @@ primary_reviewers:
 
 ## Overview of Permissions
 
-### Permissions on the Fast Filesystem
+### Permissions on SciComp Filesystems
 
-Permissions on the fast file system are controlled using UNIX traditional access control lists (ACLs).  These ACLs provide access controls based on your role and what activities your role is allowed.
+Permissions on SciComp managed file systems (Fast, Working, and Temp) is controlled using UNIX traditional access control lists (ACLs).  These ACLs provide access controls based on your role and what activities your role is allowed.
+
+Storage on these fileystems is organized by PI: a PI folder would have the name `lastname_f`.  Each PI has a default group, typically (though not exclusively) lab members.  Within the PI folder there can be folders that have different ACLs, allowing for collaborations and other activities requiring access from others outside the PI's lab.
 
 For the purpose of determining your access to a directory of file, you will have the role of "user" (the owner of the file), "group", or "other" (for everyone else).  For each of those roles you can have one or more of read, write, and execute activities allowed.  The operating system will look at your login and use that to first determine which of those roles you have.  Once the OS has determined your role, it will look at the activities allowed for that role when accessing the directory or file and compare that to the activity you wish to perform.  Based on that, you will either be allowed or denied the desired access.
 
-Fast file data storage permissions are organized by PI: a PI folder would have the name `lastname_f`.  Each PI has a default group, typically (though not exclusively) lab members.  Within the PI folder there can be folders that have different ACLs, allowing for collaborations and other activities requiring access from others outside the PI's lab.
+## Getting Help
+
+If you do not seem to have correct permissions to a folder, email `scicomp` 
+the path to the folder you are attempting to access and any error messages
+
+> IMPORTANT: Please CC the PI or manager associated for this location with your request to `scicomp`
+
 
 ### Collaboration Folder Permissions
 
@@ -22,7 +30,11 @@ A collaboration folder is set up to allow members of other labs access. In most 
 - The path to a folder where collaboration data will be stored
 - Whether you need read-only permissions or read and write permissions for members of the group
 
-> IMPORTANT: Please CC the PI or manager associated for this location with your request to `scicomp`
+> [!IMPORTANT]
+> Please CC the PI or manager associated for this location with your request to `scicomp`
+
+> [!WARNING]
+> We will only create these collaboration folders in Fast and Working.
 
 ### Accessing Collaboration Folders
 
@@ -52,13 +64,4 @@ drwxrws---  11 api    pi_a_grp          282 Dec 15 10:12 data
 For this example, let's assume you have been given access to the path `/fh/fast/pi_a/collaboration` which you would like to mount onto your Windows or Macintosh workstation.
 
 Using the UNC path `smb://center.fhcrc.org/fh/` to then attempt to browse (or click) through to the path will result in a "Permission denied" error when you reach the PI directory (i.e. when you reach `smb://center.fhcrc.org/fh/fast/pi_a`).  In this case what you will need to do is specify the full path, either in the mount command or in the address bar of Windows explorer.  The path you would need to enter there would be something like `smb://center.fhcrc.org/fh/fast/pi_a/collaboration`.
-
-#### Getting Help
-
-If you do not seem to have correct permissions to the folder and have tested the above connection instructions, email `scicomp` the following information:
-
-- The path to the folder you are attempting to access
-- Whether you need read-only permissions or read and write permissions
-
-> IMPORTANT: Please CC the PI or manager associated for this location with your request to `scicomp`
 
