@@ -1,6 +1,7 @@
 ---
 title: R and RStudio
 primary_reviewers: ptvan, vortexing
+
 ---
 R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or [CRAN](https://cran.r-project.org/), or via the FH Center IT's Self Service Tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.  
 
@@ -107,13 +108,13 @@ ml Apptainer
 Note that this command is not needed (and will cause an error) on the newer `maestro` and `harmony`
 nodes (in the `chorus` partition).
 
-#### Run R Interactively
+**Run R Interactively**
 
 ```bash
 apptainer run https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_22-R-4.5.2.sif R
 ```
 
-#### Run R Interactively with `fast` and `temp` mounted
+**Run R Interactively with `fast` and `temp` mounted**
 
 While your home directory is accessible by default inside a container, other 
 important directories (such as `/fh/fast` and `/hpc/temp`) are not. 
@@ -127,7 +128,7 @@ apptainer run \
   R
 ```
 
-#### Run R non-interactively
+**Run R non-interactively**
 
 This will run an R script in the current directory called `script.R`:
 
@@ -137,7 +138,7 @@ apptainer run \
   Rscript script.R
 ```
 
-#### Notes about these R containers
+**Notes about these R containers**
 
 * Be sure and specify a command (such as `R` or `Rscript` as in the examples above,
   or even `bash` if you want an interactive shell); otherwise Apptainer will attempt to
@@ -151,7 +152,7 @@ apptainer run \
 
 
   ```R
-  source("https://sciwiki.fredhutch.org/assets/apptainer_config.R")
+  source("https://sciwiki.fredhutch.org/assets/apptainer_config.")
   ```
 
 
