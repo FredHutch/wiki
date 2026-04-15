@@ -27,7 +27,7 @@ To reduce security and compliance risk, the following are not allowed:
 
 ## AI-Generated Code on Fred Hutch HPC Resources
 
-Code generated with the help of AI tools — once it has been thoroughly reviewed by the responsible researcher and is running in an environment with no connection to external AI services — should be treated the same as any other code. If you have used AI tools to help write code and you want to run that code on the HPC cluster with sensitive data:
+Code generated with the [help of AI tools](/datascience/ai_coding/) — once it has been thoroughly reviewed by the responsible researcher and is running in an environment with no connection to external AI services — should be treated the same as any other code. If you have used AI tools to help write code and you want to run that code on the HPC cluster with sensitive data:
 
 1. **Review the code thoroughly.** Understand what every line does. Do not run AI-generated code you haven't vetted.
 2. **Ensure the code is fully disconnected from the AI tool.** No API calls, telemetry, or dependencies that phone home to external AI services.
