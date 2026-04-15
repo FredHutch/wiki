@@ -19,7 +19,7 @@ The following applications are generally OK on the shared on‑prem HPC cluster,
 
 To reduce security and compliance risk, the following are not allowed:
 
-- Any use of DeepSeek (models, APIs, websites, or wrapped tools), consistent with emerging institutional and governmental bans due to surveillance and security concerns.
+- Any use of DeepSeek (models, APIs, websites, or wrapped tools), consistent with emerging institutional and governmental bans due to surveillance and security concerns. See [CenterNet](https://centernet.fredhutch.org/u/data-science-lab/data-governance/ai.html#:~:text=and%20Data%20Protection-,General%20Guidance%20for%20AI%20use,-Use%20of%20AI) for the latest guidance on other AI tools that may be restricted.
 - Any AI tool, application, library, or model that sends prompts, data, or metadata to external servers ("phones home"), whether via HTTP(S), telemetry, "usage analytics," auto‑update checks, or background sync processes.
 - Using public cloud AI APIs (e.g., external LLM endpoints) directly from the HPC cluster, even for "test" data, unless there is a formally approved, documented exception.
 - Using AI-enabled IDE extensions (e.g., GitHub Copilot, Cursor, Claude Code for VS Code) via a Remote-SSH session connected to the cluster, as the extension host runs on the cluster and may initiate outbound connections to external AI services from within the HPC environment.
