@@ -74,6 +74,50 @@ For example, depending on the intended use of the datasets, it may be desirable 
 Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (/SR). Changing ownership or permissions of the ./SR folder tree will break the automated delivery of scientific data to these folders. We ask that you do not change the ownership or permissions of the ./SR folder tree.
 {: .notice--info}
 
+## Collaboration Folders
+
+A collaboration folder is set up to allow members of other labs access. In most cases, a bespoke group will be set up that includes the lab members and the members of those other labs.  Email `scicomp` to get this set up- include the following information:
+
+- The Hutchnet ID of the user(s) to be given access
+- The path to a folder where collaboration data will be stored
+- Whether you need read-only permissions or read and write permissions for members of the group
+
+> [!IMPORTANT]
+> Please CC the PI or manager associated for this location with your request to `scicomp`
+
+> [!WARNING]
+> We will only create these collaboration folders in Fast and Working.
+
+### Accessing Collaboration Folders
+
+Sometimes you can have access to a folder but not access to the folders that contain this folder. This will manifest as "permission denied" when you try to access those parent folders, either via `cd` from a shell session or if you browse through `smb://center/fh/fast`.  These parent directories are "blind", meaning you can pass through, but you cannot read or see any of the files or directories in that parent directory.
+
+If you have been told you have access to a folder but encounter a "permission denied" error when browsing through to the directory it will be necessary to specify the full path to the folder.
+
+#### At the Command Line
+
+For this example, let's assume you have been given access to the path `/fh/fast/pi_a/collaboration`.  You don't have access to `/fh/fast/pi_a` so the command `ls /fh/fast/pi_a`  fails:
+
+```
+rhino03[~]: ls -l /fh/fast/pi_a
+ls: cannot open directory '/fh/fast/pi_a': Permission denied
+```
+
+Similarly, tab-completion will not return anything for that path.  In this circumstance you will need to use the full path to the shared directory:
+
+```
+rhino03[~]: ls -l /fh/fast/pi_a/collaboration
+drwxrws---   4 api    pi_a_grp           65 Dec  4 17:20 archive
+drwxrws---  11 api    pi_a_grp          282 Dec 15 10:12 data
+```
+
+#### Desktop Mounts
+
+For this example, let's assume you have been given access to the path `/fh/fast/pi_a/collaboration` which you would like to mount onto your Windows or Macintosh workstation.
+
+Using the UNC path `smb://center.fhcrc.org/fh/` to then attempt to browse (or click) through to the path will result in a "Permission denied" error when you reach the PI directory (i.e. when you reach `smb://center.fhcrc.org/fh/fast/pi_a`).  In this case what you will need to do is specify the full path, either in the mount command or in the address bar of Windows explorer.  The path you would need to enter there would be something like `smb://center.fhcrc.org/fh/fast/pi_a/collaboration`.
+
+
 ## Secure
 
 `Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  There are no charges for data stored here but there is a limit of 750GB per PI directory in this path.  
