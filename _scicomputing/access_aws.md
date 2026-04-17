@@ -38,7 +38,7 @@ Here are some links to learn more. Keep in mind that tools provided by AWS will 
 ## Accessing via SSO
 In 2024 Fred Hutch undertook a large migration to move all PI and Divisional AWS account to a new, more secure architecture. One of the benefits of this is integration with our Fred Hutch domain, meaning a user can now log into their AWS account using their Fred Hutch credentials.
 
-Please refer to CenterNet Documentation [here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html)
+Please refer to CenterNet Documentation [here](https://centernet.fredhutch.org/u/it/cloud-engineering/cloud-access.html)
 
 ## Cost Anomaly Detection
 Within your Lab accounts, if you are a PI or a delegated account admin, you can set up [Cost Anomaly Detection](https://docs.aws.amazon.com/cost-management/latest/userguide/getting-started-ad.html) to better track costs. Exact costs charged by Fred Hutch BizOps will differ from AWS costs. For further details on chargebacks, you can join the [AWS Chargebacks Teams Channel](https://teams.microsoft.com/l/channel/19:86nu83-f_YlZdMcyP7OFIKxyW_1DmMWp3woTI90H2bM1@thread.tacv2/General?groupId=24987ba0-f4d9-4a11-8de1-150b4c971610&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) where there is further documentation on chargebacks and BizOps is available to answer more specific questions
