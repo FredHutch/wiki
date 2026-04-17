@@ -59,7 +59,7 @@ You would want to do this because:
 - once configured, you will not need to manage access keys manually
 - a single session can last up to 24 hrs (as opposed to 12 hours if you signed in via the console)
 
-[Go here](https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/cloud-access.html) for more detailed instructions on how to access AWS using Single Sign-On (SSO).
+[Go here](https://centernet.fredhutch.org/u/it/cloud-engineering/cloud-access.html) for more detailed instructions on how to access AWS using Single Sign-On (SSO).
 
 #### Before You Start
 
