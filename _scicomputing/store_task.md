@@ -45,7 +45,7 @@ The [Working](/scicomputing/store_working) file system is available on all rhino
 | snapshots               | yes          |
 | offsite replication/dr  | no           |
 | charges                 | over 20tb    |
-| purged when unused      | no           |
+| purged                  | no           |
 
 ### Temp
 
@@ -53,13 +53,13 @@ The [Temp](/scicomputing/store_temp) file system is available on all rhino/gizmo
 
 Files on _temp_ are deleted 30 days after creation- this is not tied to any of the traditional Unix attributes (atime, ctime, etc.)
 
-| feature                 | availability |
-|-------------------------|--------------|
-| backups                 | no           |
-| snapshots               | yes          |
-| offsite replication/dr  | no           |
-| charges                 | none         |
-| purged when unused      | yes          |
+| feature                 | availability         |
+|-------------------------|----------------------|
+| backups                 | no                   |
+| snapshots               | yes                  |
+| offsite replication/dr  | no                   |
+| charges                 | none                 |
+| purged                  | 30 days after create |
 
 ### Job Local Storage
 
@@ -67,10 +67,10 @@ When you submit a job to _gizmo_ and are allocated a node, you will also have ta
 
 More documentation on using this storage is available [here](/compdemos/store_job_local)
 
-| feature | availability |
-|---------|--------------|
-| backups | no           |
-| snapshots | no         |
-| offsite replication/dr | no |
-| charges | none |
-| purged when unused | yes |
+| feature                | availability   |
+|------------------------|----------------|
+| backups                | no             |
+| snapshots              | no             |
+| offsite replication/dr | no             |
+| charges                | none           |
+| purged                 | after job exit |
