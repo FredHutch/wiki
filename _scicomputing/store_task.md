@@ -57,4 +57,4 @@ Files on _temp_ are deleted 30 days after creation- this is not tied to any of t
 
 When you submit a job to _gizmo_ and are allocated a node, you will also have task storage provisioned on local disk the duration of the job.  This is local to the node (i.e. a directly-attached disk), but is removed when the job is complete (failed or successful).
 
-More documentation on using this storage is available [here](/compdemos/store_job_local)
+More documentation on using this storage is available [here](/scicomputing/store_job_local)
