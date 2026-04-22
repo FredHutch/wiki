@@ -82,3 +82,30 @@ In a Slurm job the `JAVA_TOOL_OPTIONS` environment variable is set along with `T
 GATK and Picard are based in Java and don't use the `TMPDIR` environment variable for placing temporary files.  There is a long discussion about temporary directories and paths [here](https://gatk.broadinstitute.org/hc/en-us/articles/18965297287067-How-to-setup-and-use-temporary-folder-for-GATK-local-execution) in the GATK documentation.
 
 Any command line options you use will override any values set in environment variables (either by you or by the Slurm job allocation process).
+
+### R
+
+`R` will honor the `TMPDIR` environment variable- if unset, `R` will fall back to `/tmp`.  Ultimately, `R` will use the temporary path indicated in the output of `tempdir()`:
+
+```
+# In a login session
+rhino03[~]: echo $TMPDIR
+
+rhino03[~]: R --quiet
+> tempdir()
+[1] "/tmp/Rtmp68kq6n"
+>
+```
+
+```
+# In a job environment:
+srun: job 51571908 queued and waiting for resources
+srun: job 51571908 has been allocated resources
+gizmok41[~]: echo $TMPDIR
+/loc/scratch/51571908
+gizmok41[~]: R --quiet
+> tempdir()
+[1] "/loc/scratch/51571908/RtmpXv0J0w"
+```
+
+When using large datafiles, make sure to set `TMPDIR` to a path with plenty of storage (like a path in _temp_).
