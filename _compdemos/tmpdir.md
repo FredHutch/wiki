@@ -15,8 +15,8 @@ A common convention in Linux is the `TMPDIR` environment variable for declaring 
 
 `TMPDIR`, when set, must be a path available to the running shell where you can read and write files.  When `TMPDIR` isn't set, most applications typically write to `/tmp`.
 
->[!IMPORTANT]
->This is a _convention_ and not enforced by the operating system.  It is up to applications to use the path indicated in this environment variable when creating temporary files.  Not all applications will honor TMPDIR.
+This is a _convention_ and not enforced by the operating system.  It is up to applications to use the path indicated in this environment variable when creating temporary files.  Not all applications will honor TMPDIR.
+{: .notice--warning}
 
 ## The `/tmp` File System
 
