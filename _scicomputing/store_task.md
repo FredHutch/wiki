@@ -43,6 +43,22 @@ The Data Science Lab and Scientific Computing teams are available to help you id
 | [working](#working)             | none    | 7 days    | no | over 20TB | no             |
 | [job local](#job-local-storage) | none    | none      | no | none      | after job      |
 
+### Choosing a Platform
+
+There are many variables to consider when selecting a platform for task-oriented storage.  Some considerations are:
+
+  - Lifecycle- how long the data needs to "live":
+    - Data that only needs to exist for the duration of a job, _job local_ is probably best.
+    - Data that needs to live for the duration of a workflow is probably best kept on _temp_.
+    - Data that needs to live for the duration of a paper/project should probably be kept on _working_.
+  - Volume-  how much data do you need to keep
+    - _job local_ is the smaller of the options, but usually appropriate for individual job steps when data doesn't need to be preserved after the job is complete.
+    - If you anticipate generating much more than 5TB of data during an analysis, you'll likely need to use _temp_ or _working_
+  - Collaboration- how many people need to be able to access the data produced
+    - _job local_ can't be shared at all
+    - _temp_ is (by default) shared with people in your lab.  _temp_ cannot be used for [collaboration folders](/scicomputing/store_posix/#collaboration-folders)
+    - _working_ is typically available to everyone in your lab and can be configured for collaboration folders.
+
 ### Working
 
 The [Working](/scicomputing/store_working) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/fh/working`.  This file system is not backed up, though snapshots are available.  There is a quota applied at the top level of the PI directory- the default is 20TB but can be increased to 50TB- note that quota increases will incur costs. Working is intended for local copies of datasets backed up elsewhere and is available for use by PI/lab researchers only.
