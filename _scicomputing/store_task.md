@@ -35,17 +35,17 @@ The Data Science Lab and Scientific Computing teams are available to help you id
 
 ## Storage Options for Tasks
 
+### Service Feature Comparison
+
+| Service                         | Backups | Snapshots | DR | Charges   | Purged         |
+| ------------------------------- | ------- | --------- | -- | --------- | -------------- |
+| [temp](#temp)                   | none    | 30 min    | no | none      | after 30 days  |
+| [working](#working)             | none    | 7 days    | no | over 20TB | no             |
+| [job local](#job-local-storage) | none    | none      | no | none      | after job      |
+
 ### Working
 
 The [Working](/scicomputing/store_working) file system is available on all rhino/gizmo compute nodes.  It is a high-performance storage system mounted by rhino/gizmo nodes on the path `/fh/working`.  This file system is not backed up, though snapshots are available.  There is a quota applied at the top level of the PI directory- the default is 20TB but can be increased to 50TB- note that quota increases will incur costs. Working is intended for local copies of datasets backed up elsewhere and is available for use by PI/lab researchers only.
-
-| feature                 | availability |
-|-------------------------|--------------|
-| backups                 | no           |
-| snapshots               | yes          |
-| offsite replication/dr  | no           |
-| charges                 | over 20tb    |
-| purged                  | no           |
 
 ### Temp
 
@@ -53,24 +53,8 @@ The [Temp](/scicomputing/store_temp) file system is available on all rhino/gizmo
 
 Files on _temp_ are deleted 30 days after creation- this is not tied to any of the traditional Unix attributes (atime, ctime, etc.)
 
-| feature                 | availability         |
-|-------------------------|----------------------|
-| backups                 | no                   |
-| snapshots               | yes                  |
-| offsite replication/dr  | no                   |
-| charges                 | none                 |
-| purged                  | 30 days after create |
-
 ### Job Local Storage
 
 When you submit a job to _gizmo_ and are allocated a node, you will also have task storage provisioned on local disk the duration of the job.  This is local to the node (i.e. a directly-attached disk), but is removed when the job is complete (failed or successful).
 
 More documentation on using this storage is available [here](/compdemos/store_job_local)
-
-| feature                | availability   |
-|------------------------|----------------|
-| backups                | no             |
-| snapshots              | no             |
-| offsite replication/dr | no             |
-| charges                | none           |
-| purged                 | after job exit |
