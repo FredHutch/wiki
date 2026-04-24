@@ -40,6 +40,8 @@ When using regulated data you'll need to determine how to handle temporary files
 
 Data covered by the NIH GDS needs to be stored in the _regulated_ storage service.  Temporary files generated from those datasets may be also need to be stored in _regulated_.  In those cases, there is a  `temp` subdirectory configured for storage of this data.  Each user with access to a regulated data set will have a temporary directory configured in _regulated_.
 
+PROOF can automatically handle temporary file placement for regulated data- more information on using GDS covered data in PROOF can be found [here](https://sciwiki.fredhutch.org/datademos/proof-regulated/)
+
 ## Application Specific Notes
 
 > This section describes how to configure temporary directories for applications which don't honor the TMPDIR environment variable convention.
