@@ -88,6 +88,8 @@ datascience:
         url: /datascience/cirro/
   - title: Fred Hutch Resources
     children:
+      - title: Translational Data Resources (CARDS)
+        url: /datascience/cards/
       - title: WDL Development Support
         url: /datascience/wilds_workflow_dev/
       - title: Reference Genomes
