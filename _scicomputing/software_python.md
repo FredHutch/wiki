@@ -87,7 +87,7 @@ After you have connected to `rhino`, run these commands:
 ```
     username@rhino01:~$ ml purge
     username@rhino01:~$ ml JupyterLab/4.0.3-GCCcore-12.2.0  Seaborn/0.12.2-foss-2022b scikit-learn/1.2.1-gfbf-2022b
-    username@rhino01:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+    username@rhino01:~$ jupyter lab --ip=0.0.0.0 --port=$(fhfreeport) --no-browser
 ```
 
 You will see output like this:
