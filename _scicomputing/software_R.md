@@ -177,7 +177,7 @@ You will be using Jupyter Lab, not Jupyter Notebook. This should not be a proble
 To start Jupyter Lab, run this command:
 
 ```
-jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+jupyter lab --ip=0.0.0.0 --port=$(fhfreeport) --no-browser
 ```
 
 This command will spit out several URLs.
