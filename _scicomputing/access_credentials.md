@@ -87,7 +87,7 @@ aws --version
 
 #### Step 3. One-time SSO configuration
 ```
-aws configure sso --use-device-flag
+aws configure sso --use-device-code
 ```
 You will be prompted for the following:
 ```
@@ -137,7 +137,7 @@ The `--profile default` flag is not necessary if you are using the default profi
 Your SSO credentials expire automatically (this is expected). To refresh your credentials, just re-login to a profile you have already configured. Assuming you have already completed steps 1 and 2 above, you would just need to run the following command:
 
 ```
-aws sso login --profile <profile-name> --use-device-flag
+aws sso login --profile <profile-name> --use-device-code
 ```
 You will then be asked to repeat only Step 4 from above and your authentication will be complete.
 
