@@ -86,6 +86,11 @@ aws --version
 ```
 
 #### Step 3. One-time SSO configuration
+
+
+Run the following command (omit the `--use-device-code` flag when using older versions
+of the AWS CLI).
+
 ```
 aws configure sso --use-device-code
 ```
@@ -134,7 +139,7 @@ aws s3 ls --profile default
 The `--profile default` flag is not necessary if you are using the default profile.
 
 #### 6. Refresh Credentials
-Your SSO credentials expire automatically (this is expected). To refresh your credentials, just re-login to a profile you have already configured. Assuming you have already completed steps 1 and 2 above, you would just need to run the following command:
+Your SSO credentials expire automatically (this is expected). To refresh your credentials, just re-login to a profile you have already configured. Assuming you have already completed steps 1 and 2 above, you would just need to run the following command (omit the `--use-device-code` flag for older versions of the AWS CLI):
 
 ```
 aws sso login --profile <profile-name> --use-device-code
