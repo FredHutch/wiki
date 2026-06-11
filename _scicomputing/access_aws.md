@@ -13,10 +13,6 @@ The Lab account type is granted to any PI at Fred Hutch that requests one via su
 
 A Specialized Use Account type is an AWS account that allows access to almost all AWS Services with very few restrictions or guardrails.  The primary restriction is that you will not be able to grant user access to the account, however you can create just about whatever you like in terms of AWS Services.  In general, these accounts are best suited for Software Development Teams to use for specific cloud-hosted software products.  The other typical usage for these account types is if you are currently conducting a research project that requires a hosted website, dedicated persistent AWS services, or some other similar need exists that cannot be met by the Lab type account.  Specialized Use accounts are typically only granted to a lab when every single expense that would occur in the account is always a direct and will never be an indirect.  These accounts are configured in conjunction with the Cloud and Data team in CIT, via a `helpdesk` ticket.  
 
-### Proof-of-concept Account
-
-This account type is typically used when a lab has an AWS Credit grant designated for a specific purpose related to determining if a particular technology, workflow, etc. is capable of being run effectively in AWS.  Just because you have AWS Credits does not mean that you need this account type.  These are almost always created in the Sandbox environment. These accounts are configured in conjunction with the Cloud and Data team in CIT, via a `helpdesk` ticket.  
-
 ## How do I access my AWS account resources?
 
 First, you will need [AWS credentials](/scicomputing/access_credentials/).  
