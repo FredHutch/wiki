@@ -32,6 +32,16 @@ As part of the job allocation process, Slurm will set up a bespoke temporary dir
 
 Login nodes- the rhino and maestro hosts- don't have any special handling of temporary files.  In most cases, temporary files are created in `/tmp`.  This path is larger than on the compute nodes, but is still limited in size.  Since these hosts aren't rebooted frequently, this path can fill up.  Please take care when running your applications on these nodes- considerusing  networked file systems like [temp](/scicomputing/store_temp/), particularly as the size of your datasets gets larger.
 
+## Regulated Data and TMPDIR
+
+When using regulated data you'll need to determine how to handle temporary files.  If a dataset requires storage in a specific location (as NIH GDS covered data does), you'll want to make sure to configure your environment and tools to use directories in those paths.  This isn't always necessary depending on the nature of the temporary data and the regulations covering that data.
+
+### NIH GDS Covered Data
+
+Data covered by the NIH GDS needs to be stored in the _regulated_ storage service.  Temporary files generated from those datasets may be also need to be stored in _regulated_.  In those cases, there is a  `temp` subdirectory configured for storage of this data.  Each user with access to a regulated data set will have a temporary directory configured in _regulated_.
+
+PROOF can automatically handle temporary file placement for regulated data- more information on using GDS covered data in PROOF can be found [here](https://sciwiki.fredhutch.org/datademos/proof-regulated/)
+
 ## Application Specific Notes
 
 > This section describes how to configure temporary directories for applications which don't honor the TMPDIR environment variable convention.
