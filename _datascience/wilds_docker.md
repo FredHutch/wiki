@@ -26,86 +26,12 @@ Docker containers package software with all its dependencies into a standardized
 For bioinformatics workflows, containers are essential for reproducibility—they ensure your analysis produces the same results regardless of where it runs.
 
 ## Available Pre-made Container Images
-The library includes 48+ Docker images for popular bioinformatics tools:
+The library includes dozens of Docker images for popular bioinformatics tools, spanning alignment, variant calling, structural variants, single-cell analysis, RNA-seq, deep learning, and more. New tools are added regularly, so rather than duplicate that list here (and have it go stale), browse the current set directly:
 
-**Alignment & Mapping**
-- **BWA** (`getwilds/bwa`) - Burrows-Wheeler Aligner for DNA sequences
-- **STAR** (`getwilds/star`) - RNA-seq aligner with two-pass methodology
-- **HISAT2** (`getwilds/hisat2`) - Graph-based alignment for RNA-seq
+- [**Browse all available images on Docker Hub**](https://hub.docker.com/u/getwilds)
+- [**View Dockerfiles and tool directories on GitHub**](https://github.com/getwilds/wilds-docker-library)
 
-**Variant Calling & Analysis**
-- **GATK** (`getwilds/gatk`) - Genome Analysis Toolkit for variant discovery
-- **BCFtools** (`getwilds/bcftools`) - VCF/BCF file manipulation and calling
-- **Strelka** (`getwilds/strelka`) - Small variant calling for germline and somatic variants
-- **VarScan** (`getwilds/varscan`) - Variant detection in massively parallel sequencing
-- **GLIMPSE2** (`getwilds/glimpse2`) - Low-coverage whole genome sequencing imputation
-
-**Structural Variants**
-- **Manta** (`getwilds/manta`) - Structural variant and indel discovery
-- **DELLY** (`getwilds/delly`) - Integrated structural variant prediction
-- **Smoove** (`getwilds/smoove`) - SV calling and genotyping wrapper
-
-**Variant Annotation**
-- **ANNOVAR** (`getwilds/annovar`) - Functional annotation of genetic variants
-- **AnnotSV** (`getwilds/annotsv`) - Structural variant annotation and ranking
-
-**Copy Number Analysis**
-- **CNVkit** (`getwilds/cnvkit`) - Copy number variation detection from targeted DNA sequencing
-- **ichorCNA** (`getwilds/ichorcna`) - Tumor fraction and copy number alteration detection
-- **HMMcopy** (`getwilds/hmmcopy`) - Copy number prediction with correction for GC and mappability
-
-**SAM/BAM/CRAM Utilities**
-- **Samtools** (`getwilds/samtools`) - Reading, writing, and manipulating SAM files
-- **Picard** (`getwilds/picard`) - Java tools for manipulating high-throughput sequencing data
-- **biobambam2** (`getwilds/biobambam2`) - Tools for BAM file processing
-
-**Single-Cell Analysis**
-- **Cell Ranger** (`getwilds/cellranger`) - 10x Genomics single-cell analysis pipeline
-- **Scanpy** (`getwilds/scanpy`) - Single-cell analysis in Python
-- **scvi-tools** (`getwilds/scvi-tools`) - Deep generative models for single-cell omics
-
-**RNA-Seq & Expression**
-- **DESeq2** (`getwilds/deseq2`) - Differential gene expression analysis
-- **Salmon** (`getwilds/salmon`) - Transcript quantification
-- **RNA-SeQC** (`getwilds/rnaseqc`) - RNA-seq quality control metrics
-- **RSeQC** (`getwilds/rseqc`) - RNA-seq quality control package
-- **combine-counts** (`getwilds/combine-counts`) - Combine count matrices from multiple samples
-
-**Alternative Splicing**
-- **rMATS-turbo** (`getwilds/rmats-turbo`) - Alternative splicing analysis
-- **JCAST** (`getwilds/jcast`) - Alternative splicing proteomics
-
-**Sequence Quality Control**
-- **FastQC** (`getwilds/fastqc`) - Sequence quality control
-
-**Metagenomics & Assembly**
-- **MEGAHIT** (`getwilds/megahit`) - Ultra-fast metagenome assembler
-- **SPAdes** (`getwilds/spades`) - Genome assembler
-- **DIAMOND** (`getwilds/diamond`) - Accelerated BLAST-compatible sequence aligner
-
-**Deep Learning & Machine Learning**
-- **python-dl** (`getwilds/python-dl`) - Python deep learning environment
-- **RTorch** (`getwilds/rtorch`) - R interface to PyTorch
-
-**Data Access & Utilities**
-- **SRA-tools** (`getwilds/sra-tools`) - NCBI Sequence Read Archive toolkit
-- **ENA-tools** (`getwilds/ena-tools`) - ENA FTP downloader
-- **GDC-client** (`getwilds/gdc-client`) - TCGA GDC Data Transfer Tool
-- **AWS CLI** (`getwilds/awscli`) - Amazon Web Services command line interface
-
-**Genomic Interval & BED Tools**
-- **BEDtools** (`getwilds/bedtools`) - Genome arithmetic and interval operations
-- **BEDOPS** (`getwilds/bedops`) - High-performance genomic interval operations toolkit
-- **bedparse** (`getwilds/bedparse`) - Python module and CLI tool for BED file operations
-
-**Specialized Tools**
-- **UMI-tools** (`getwilds/umi-tools`) - Tools for handling Unique Molecular Identifiers
-- **sourmash** (`getwilds/sourmash`) - k-mer analysis for genomic comparisons
-- **ShapeMapper** (`getwilds/shapemapper`) - RNA structure mapping analysis
-- **gtf-smash** (`getwilds/gtf-smash`) - GTF file manipulation
-- **consensus** (`getwilds/consensus`) - Consensus sequence generation
-
-[Browse all available images on Docker Hub →](https://hub.docker.com/u/getwilds) | [View Dockerfiles on GitHub →](https://github.com/getwilds/wilds-docker-library)
+Each tool's directory on GitHub includes a README with usage examples, available versions, and platform support.
 
 
 ## Key Features of our Pre-made Container Images
@@ -239,12 +165,9 @@ Docker Hub provides more robust infrastructure for container distribution and is
 
 **Do these containers work on Apple Silicon (M1/M2/M3) Macs or ARM-based systems?**
 
-Most WILDS Docker images support both linux/amd64 (Intel/AMD) and linux/arm64 (ARM) architectures, so they'll work natively on Apple Silicon Macs and ARM-based HPC systems. However, some tools have platform-specific limitations:
+Most WILDS Docker images support both linux/amd64 (Intel/AMD) and linux/arm64 (ARM) architectures, so they'll work natively on Apple Silicon Macs and ARM-based HPC systems. However, some tools have platform-specific limitations due to architecture-specific code optimizations, compilation issues, or build resource constraints.
 
-**AMD64-only images** (won't run natively on ARM):
-- BWA, Cell Ranger, DESeq2, DIAMOND, GLIMPSE2, HISAT2, Manta, MEGAHIT, python-dl, rMATS-turbo, RTorch, scvi-tools, ShapeMapper, Smoove, SPAdes, SRA-tools, Strelka
-
-These limitations are due to architecture-specific code optimizations, compilation issues, or build resource constraints. Each tool's README includes a "Platform Availability" section when restrictions apply. Docker Desktop on Apple Silicon can run AMD64 images through emulation, though with reduced performance.
+The current list of AMD64-only tools is tracked in [`amd64_only_tools.txt`](https://github.com/getwilds/wilds-docker-library/blob/main/amd64_only_tools.txt) in the repository. Each affected tool's README also includes a "Platform Availability" section noting the restriction. Docker Desktop on Apple Silicon can run AMD64 images through emulation, though with reduced performance.
 
 For ARM-specific support requests, file an [issue](https://github.com/getwilds/wilds-docker-library/issues) or contact [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 
@@ -270,14 +193,10 @@ The library uses GitHub Actions to maintain quality and security:
 
 ## Release Notes
 
-**February 2026 - WILDS Docker Library v0.1.0**
-- 48+ bioinformatics tools with multiple versions
-- Automated monthly security scanning with Docker Scout
-- Dual distribution via Docker Hub and GitHub Container Registry
-- Full integration with WILDS WDL Library
-- Automated build and publishing workflows
-- Comprehensive vulnerability reporting
-- Standardized Dockerfile linting and quality checks
+For detailed release notes, see the [WILDS Docker Library releases page on GitHub](https://github.com/getwilds/wilds-docker-library/releases):
+
+- [v0.2.0](https://github.com/getwilds/wilds-docker-library/releases/tag/v0.2.0) - July 2026
+- [v0.1.0](https://github.com/getwilds/wilds-docker-library/releases/tag/v0.1.0) - February 2026
 
 ## Resources
 
