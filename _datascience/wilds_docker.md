@@ -26,7 +26,7 @@ Docker containers package software with all its dependencies into a standardized
 For bioinformatics workflows, containers are essential for reproducibility—they ensure your analysis produces the same results regardless of where it runs.
 
 ## Available Pre-made Container Images
-The library includes dozens of Docker images for popular bioinformatics tools, spanning alignment, variant calling, structural variants, single-cell analysis, RNA-seq, deep learning, and more. New tools are added regularly, so rather than duplicate that list here (and have it go stale), browse the current set directly:
+The library includes dozens of Docker images for popular bioinformatics tools, spanning alignment (BWA, STAR), variant calling (GATK, BCFtools), structural variants (Manta, DELLY), single-cell analysis (Cell Ranger, Scanpy), RNA-seq (DESeq2, Salmon), deep learning (Flax, RTorch), and more. New tools are added regularly, so rather than duplicate that list here (and have it go stale), browse the current set directly:
 
 - [**Browse all available images on Docker Hub**](https://hub.docker.com/u/getwilds)
 - [**View Dockerfiles and tool directories on GitHub**](https://github.com/getwilds/wilds-docker-library)

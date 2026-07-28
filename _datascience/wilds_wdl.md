@@ -141,7 +141,7 @@ Then you can provide custom inputs using an `inputs.json` file:
 
 The library now includes dozens of modules and pipelines, growing regularly as new tools and workflows are contributed. Rather than duplicate that list here (and have it go stale), browse the current set directly on GitHub:
 
-- [**Modules**](https://github.com/getwilds/wilds-wdl-library/tree/main/modules) - tool-specific, reusable WDL tasks (e.g., BWA, GATK, STAR, SRA download, structural variant callers)
+- [**Modules**](https://github.com/getwilds/wilds-wdl-library/tree/main/modules) - tool-specific, reusable WDL tasks for alignment (BWA, STAR), variant calling (GATK, BCFtools), structural variants (Manta, DELLY), and more
 - [**Pipelines**](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines) - complete workflows combining multiple modules, from basic educational examples to advanced production pipelines
 
 Each module and pipeline folder includes its own README with usage details, container information, and testing status.
