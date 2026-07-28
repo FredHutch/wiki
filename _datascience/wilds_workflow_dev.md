@@ -1,5 +1,5 @@
 ---
-title: WILDS Workflow Development Program
+title: WILDS WDL Development Program
 main_authors: tefirman
 ---
 
