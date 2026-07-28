@@ -198,11 +198,8 @@ Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org), sch
 
 ## Release Notes
 
-For detailed release notes, see the [WILDS WDL Library releases page on GitHub](https://github.com/getwilds/wilds-wdl-library/releases):
+For detailed release notes, see the [WILDS WDL Library releases page on GitHub](https://github.com/getwilds/wilds-wdl-library/releases).
 
-- [v0.3.0](https://github.com/getwilds/wilds-wdl-library/releases/tag/v0.3.0) - July 2026
-- [v0.2.0](https://github.com/getwilds/wilds-wdl-library/releases/tag/v0.2.0) - March 2026
-- [v0.1.0](https://github.com/getwilds/wilds-wdl-library/releases/tag/v0.1.0) - January 2026
 
 ## Resources
 

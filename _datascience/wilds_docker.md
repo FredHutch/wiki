@@ -193,10 +193,8 @@ The library uses GitHub Actions to maintain quality and security:
 
 ## Release Notes
 
-For detailed release notes, see the [WILDS Docker Library releases page on GitHub](https://github.com/getwilds/wilds-docker-library/releases):
+For detailed release notes, see the [WILDS Docker Library releases page on GitHub](https://github.com/getwilds/wilds-docker-library/releases).
 
-- [v0.2.0](https://github.com/getwilds/wilds-docker-library/releases/tag/v0.2.0) - July 2026
-- [v0.1.0](https://github.com/getwilds/wilds-docker-library/releases/tag/v0.1.0) - February 2026
 
 ## Resources
 
