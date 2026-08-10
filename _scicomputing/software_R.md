@@ -146,14 +146,6 @@ apptainer run \
 * Note that these containers run a newer operating system than our cluster currently
   does, enabling the [Posit Package Manager](https://packagemanager.posit.co/client/#/).
   Most CRAN and Bioconductor packages will be installed from binary tarballs which will install very quickly.
-* Packages that you install within these containers are not compatible with the equivalent
-  R versions provided by EasyBuild modules. So you should not install them in the same directory.
-  Add this line to your `~/.Rprofile` file to ensure that this does not happen:
-
-
-  ```R
-  source("https://sciwiki.fredhutch.org/assets/apptainer_config.")
-  ```
 
 
 ### Run RStudio Server on an HPC machine
