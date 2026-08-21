@@ -92,18 +92,21 @@ The above line will load a different version of the software package over time a
 
 > Note: This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
 
-#### With Workflow Managers
+#### With WDL
 
-If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a [workflow manager](/datascience/using_workflows/).  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
+WDL and Nextflow commonly use [Docker](/compdemos/Docker/) contiainers to access required packages. You can also use our Environment Modules instead of Docker.
 
-- sending the jobs to the compute resources
-- deciding what tasks can be done in parallel
-- staging data for use and keeping track of inputs and outputs
-- environment management (via [Docker](/compdemos/Docker/) containers or environment modules)
-- monitoring jobs and providing you with metadata about them and the workflow itself
+Instead of specifying a `docker` image in a task's `runtime` section, you can specify a `modules` attribute naming the Environment Module(s) to load:
 
-At Fred Hutch, [Nextflow](/compdemos/nextflow/) and [WDL workflows](/datascience/wdl_workflows/) are the primary workflow systems in use. WDL workflows can be executed using [multiple engines](/datademos/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket, while Nextflow has its own execution engine. Users are actively curating shared support and resources, with the [WILDS WDL Library](/datascience/wilds_wdl/) being a key resource for WDL workflows, and the [Fred Hutch NextFlow catalog](/datascience/nextflow_catalog/) being a key resource for Nextflow workflows. See the [Using Workflows](/datascience/using_workflows/) page for more information on workflow systems.
+```wdl
+runtime {
+  modules: "SAMtools/1.11-GCC-10.2.0"
+}
+```
 
+This requires an execution engine that has been configured to support Environment Modules. 
+
+See the [Environment Modules (HPC-specific)](/datascience/wdl_workflows/#environment-modules-hpc-specific) section of our [WDL Workflows](/datascience/wdl_workflows/) page for more detail.
 
 #### With VSCode
 
