@@ -34,7 +34,7 @@ At Fred Hutch, we support two primary workflow systems:
 
 **Learn more:**
 - [WDL Workflows Guide](/datascience/wdl_workflows/) - Language fundamentals
-- [WDL Execution Engines](/datascience/wdl_execution_engines/) - How to run WDL workflows
+- [WDL Execution Engines](/datademos/wdl_execution_engines/) - How to run WDL workflows
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Ready-to-use modules and workflows
 - [GATK Workflows](https://github.com/gatk-workflows)
 - [PROOF How To](/datademos/proof_howto/) - Step-by-step guide to using PROOF
@@ -162,7 +162,7 @@ Regardless of which workflow system you choose:
 A: Performance depends more on your workflow design and resource allocation than the workflow system itself. Both are highly optimized.
 
 **Q: Can I run WDL workflows without PROOF?**
-A: Yes! You can use Sprocket, miniWDL, or Cromwell directly. See the [WDL Execution Engines guide](/datascience/wdl_execution_engines/).
+A: Yes! You can use Sprocket, miniWDL, or Cromwell directly. See the [WDL Execution Engines guide](/datademos/wdl_execution_engines/).
 
 **Q: Do I need to learn Docker?**
 A: Basic Docker knowledge is very helpful. If you start writing workflows you will likely need to install and run Docker at some point. There are many pre-built Docker containers for both WDL and Nextflow (e.g. [WILDS Docker Library](/datascience/wilds_wdl/)) so you may not need to create new containers yourself.
