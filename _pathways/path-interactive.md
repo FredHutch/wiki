@@ -40,7 +40,7 @@ Batch computing resources require that your local computer be connected to the c
 
 A terminal provides a text-based interface to computers (the "command line").
 
-Apple OSX has a built in terminal application. It can be found in _Applications->Utilities->Terminal_.  Other options are available that are more full featured such as [iterm2](https://iterm2.com/), which is one free option (please consider [donating](https://iterm2.com/donate.html)!)
+Apple OSX has a built in terminal application. It can be found in _Applications->Utilities->Terminal_.
 
 Windows has a few different terminals built in, but many of these are unsuitable for accessing Linux systems.  Two easy options are the Microsoft Terminal app (available in the App Store) and [PuTTY](/scicomputing/access_methods/#windows).
 

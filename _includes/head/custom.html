@@ -2,3 +2,21 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="/assets/css/jekyll-glossary_tooltip.css">
+<script>
+  // Track Lunr search queries in GA4
+  document.addEventListener('DOMContentLoaded', function () {
+    var searchInput = document.querySelector('input#search');
+    if (!searchInput) return;
+
+    var debounceTimer;
+    searchInput.addEventListener('input', function () {
+      clearTimeout(debounceTimer);
+      var query = this.value.trim();
+      debounceTimer = setTimeout(function () {
+        if (query.length > 2 && typeof gtag === 'function') {
+          gtag('event', 'search', { search_term: query });
+        }
+      }, 1000);
+    });
+  });
+</script>
