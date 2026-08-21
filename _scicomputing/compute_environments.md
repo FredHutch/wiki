@@ -123,7 +123,16 @@ See [R and RStudio](/scicomputing/software_R/#run-rstudio-server-on-an-hpc-machi
 
 #### With Jupyter
 
-To use environment modules with jupyter...
+We supply a `JupyterLab` module you can load along with whichever other modules you need. On the command line, load these additional Environment Modules at the same time as JupyterLab. For example, to load Seaborn with Jupyter:
+
+```
+ml purge
+
+ml JupyterLab/4.0.3-GCCcore-12.2.0 Seaborn/0.12.2-foss-2022b 
+jupyter lab --ip=0.0.0.0 --port=$(fhfreeport) --no-browser
+```
+
+See [Using Jupyter on rhino](/scicomputing/software_python/#using-jupyter-on-rhino) for the full instructions, or use [Open OnDemand](/scicomputing/access_openondemand/) for the easiest way to launch Jupyter Lab without loading modules yourself.
 
 ## Docker Containers
 
