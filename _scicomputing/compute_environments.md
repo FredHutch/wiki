@@ -115,9 +115,15 @@ See [Using Modules with VS Code](/compdemos/VS-Code_lmod/) for the workaround.
 
 #### With RStudio
 
-To use environment modules with rstudio...
+The easiest way to use Environment Modules with RStudio is through [Open OnDemand](/scicomputing/access_openondemand/), which launches RStudio Server for you and lets you pick which modules to use when starting a session.
+
+Be sure to use the [Fred Hutch RStudio Server](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server/session_contexts/new), which uses the modules on the cluster, not [RStudio Server/Apptainer](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server_apptainer/session_contexts/new).
+
+See [R and RStudio](/scicomputing/software_R/#run-rstudio-server-on-an-hpc-machine) for more on both options.
 
 #### With Jupyter
+
+To use environment modules with jupyter...
 
 ## Docker Containers
 
