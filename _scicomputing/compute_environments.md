@@ -105,7 +105,7 @@ See the [Environment Modules (HPC-specific)](/datascience/wdl_workflows/#environ
 
 We recommend creating a Python virtual environment that captures your currently loaded modules and reloads them automatically whenever the environment is activated. 
 
-This is becuase VSCode's Remote SSH extension can't load cluster Environment Modules when you connect to it. The remote session starts before your shell would normally load modules from `.bashrc` or `.profile`.
+This is because VSCode's Remote SSH extension can't load cluster Environment Modules when you connect to it. The remote session starts before your shell would normally load modules from `.bashrc` or `.profile`.
 
 See [Using Modules with VS Code](/compdemos/VS-Code_lmod/) for the workaround.
 
