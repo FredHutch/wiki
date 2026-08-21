@@ -94,7 +94,7 @@ The above line will load a different version of the software package over time a
 
 #### With WDL
 
-WDL and Nextflow commonly use [Docker](/compdemos/Docker/) contiainers to access required packages. You can also use our Environment Modules instead of Docker.
+WDL commonly uses [Docker](/compdemos/Docker/) contiainers to access required packages. You can use our Environment Modules instead of Docker.
 
 Instead of specifying a `docker` image in a task's `runtime` section, you can specify a `modules` attribute naming the Environment Module(s) to load:
 
@@ -104,7 +104,7 @@ runtime {
 }
 ```
 
-This requires an execution engine that has been configured to support Environment Modules. 
+This requires an execution engine that has been configured to support Environment Modules (e.g., Cromwell on our cluster). 
 
 See the [Environment Modules (HPC-specific)](/datascience/wdl_workflows/#environment-modules-hpc-specific) section of our [WDL Workflows](/datascience/wdl_workflows/) page for more detail.
 
