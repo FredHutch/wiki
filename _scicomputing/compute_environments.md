@@ -4,27 +4,26 @@ last_modified_at: 2025-11-11
 primary_reviewers: bmcgough
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which resource might be best suited to their particular computing needs.
 
-The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
+The Scientific Computing group supports software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
 Reasons to use scientific software maintained by SciComp include:
 - packages are often faster due to compiler optimizations
 - packages are reproducible in or outside Fred Hutch
 - rapid access to many software packages and package versions
 
-
 ## Environment Modules
 
-On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.  For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.  
+On the command line and in scripts, we use the [TACC Lmod Environment Modules](https://tacc.utexas.edu/research/tacc-research/lmod/) to make software versions available in a modular and malleable way. Environment Modules provide access to one version of one or more software packages to help improve reproducibility.
 
+For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.
+{: .notice--info}
 
 ### How to Use Environment Modules
-As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
-
-The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.  
 
 #### Interactively
+
 When you log in to any SciComp managed server, your terminal session has **Lmod** pre-loaded. Commonly used shell commands around Environment Modules include:
 
 Command | Action
@@ -57,10 +56,7 @@ $ which python
 /app/easybuild/software/Python/2.7.15-foss-2016b-fh1/bin/python
 ```
 
-#### Scripting with Environment Modules
-To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work. 
-
-##### Best Practice 1
+#### In a Shell Script
 
 Interactive shell session have the required `module` commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the `module` command. Add the follow lines to the top of your script:
 
@@ -79,20 +75,22 @@ module load R/3.5.1-foss-2016b-fh1
 
 This would load that specific Environment Module for use in your script.
 
-##### Best Practice 2
-Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
-```
-module load Python/3.5.1-foss-2016b-fh1
-```
-Rather than:
-```
-module load Python
-```
-The above line will load a different version of the software package over time as the "pointer" to a specific version is changed.
+### Specifying a Module Version
 
-> Note: This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
+When requesting a module you will get the default version unless you specifically request a version using the version tag.  For example:
 
-#### With Workflow Managers
+```
+module load R
+```
+will load whatever is the default version of R at any particular time.  To avoid this behavior, specify a version along with the module name:
+
+```
+module load R/4.3.3-gfbf-2023b
+```
+
+Requesting a specific version is recommended in most cases.  This will reduce problems over time as the version of your software won't change until you're ready to make that change.  This habit also helps with reproducibility as it makes the requirements of your script clear to anyone else using them.
+
+## Workflow Managers
 
 If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a [workflow manager](/datascience/using_workflows/).  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
 
@@ -135,14 +133,15 @@ Cloud computing platforms like [AWS Batch](/scicomputing/compute_cloud/) are bui
   * **[BioContainers](https://biocontainers.pro/)** - A free and open source project to collect a set of images that contain useful bioinformatics tools.
 
 
-## Installing Custom Software Packages
-If you do not find the software you need, a support package or library, or the specific version you need, you have two options:
+## Building and Installing Yourself
 
-1. Request the software be built: file an issue in our [software repo](https://github.com/FredHutch/easybuild-life-sciences) and we will work with you to build a module for any software or version. This Environment Module will then be available to all.
+Having SciComp build a module is typically the better approach- email _scicomp_ and we will work with you to build a module for any software or version.
+{: .notice--info}
 
-2. If you cannot wait for the software to be built, you may be able to install it yourself. This is primarily supported for language (Python/R) packages.
+If you can't find the software module you need and you cannot wait for the software to be built, you can try to install it yourself. This is easiest with (Python/R) packages with built-in ways of package installation.
 
 ### Packages/Modules for Python and R
+
 Normal install methods will work after loading an Environment Module:
 
 - R: `install.packages("<pkgname>")`
@@ -153,10 +152,11 @@ Any package you install this way will be installed into your home directory.
 Remember that the environment module you have loaded will be used to install the package/module. For example, if you load `Python/3.6.9` and use `pip install --user <newpkg>` then you will need to load `Python/3.6.9` every time you wish to use `newpkg`. Using a different version of the language module may or may not work.
 
 ### Other software installs and builds
+
 If you want to install or build a standalone software package, you are also welcome to install into your home directory, with the following caveats:
 
 - We cannot install OS package dependencies (if your software has many dependencies, please file an issue [here](https://github.com/FredHutch/easybuild-life-sciences) and we will be happy to work with you to offer a package build with all dependencies.
-- Ubuntu compilers are not optimized. We recommend loading a 'toolchain' module:
+- Ubuntu compilers are not optimized and usually lag behind several versions. Using a 'toolchain' module will give you access to newer versions of compilers and libraries:
 
   ```
   module load foss/2019b
@@ -165,7 +165,8 @@ If you want to install or build a standalone software package, you are also welc
 - If you loaded a toolchain module when installing or building new software, you will must load that toolchain module before running that software, or you will get library errors.
 
 ## Frequently Asked Questions
-> Note:  For announcements from Scientific Computing, please see the [Announcements page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the Events page in CenterNet for current Office Hours.  
+
+> Note:  For announcements from Scientific Computing, please see the [Announcements page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the Events page in CenterNet for current Office Hours.
 
 1. *Something weird is going on with my shell and/or job!?!*
   - "Reset" your shell by logging out and back in. This will clear your environment. Users using screen or tmux will need to exit their session to clear their environment.
