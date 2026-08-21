@@ -4,19 +4,12 @@ last_modified_at: 2025-11-11
 primary_reviewers: bmcgough
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
+Beyond what's available on local workstations, Scientific Computing maintains a large library of pre-compiled software packages on our HPC cluster and Linux systems. Reasons to use software maintained by SciComp include:
+- Packages are often faster due to compiler optimizations
+- Packages are reproducible in or outside Fred Hutch
+- Rapid access to many software packages and versions
 
-The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
-
-Reasons to use scientific software maintained by SciComp include:
-- packages are often faster due to compiler optimizations
-- packages are reproducible in or outside Fred Hutch
-- rapid access to many software packages and package versions
-
-
-## Environment Modules
-
-On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.  For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.  
+We use **Lmod**, an Environment Module system built with EasyBuild, to make specific software versions available on the command line and in scripts - over a thousand modules are already available. Use the `module` or `ml` commands to interact with them. See [Scientific Software](/scicomputing/compute_scientificSoftware/) for the R, Python, and other modules available on `rhino` and `gizmo`.
 
 
 ### How to Use Environment Modules
