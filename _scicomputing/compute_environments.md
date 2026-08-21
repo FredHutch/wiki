@@ -75,7 +75,7 @@ module load R/3.5.1-foss-2016b-fh1
 
 This would load that specific Environment Module for use in your script.
 
-#### With Workflow Managers
+## Workflow Managers
 
 If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a [workflow manager](/datascience/using_workflows/).  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
 
@@ -151,7 +151,7 @@ If you want to install or build a standalone software package, you are also welc
 
 ## Frequently Asked Questions
 
-> Note:  For announcements from Scientific Computing, please see the [Announcements page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the Events page in CenterNet for current Office Hours.  
+> Note:  For announcements from Scientific Computing, please see the [Announcements page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the Events page in CenterNet for current Office Hours.
 
 1. *Something weird is going on with my shell and/or job!?!*
   - "Reset" your shell by logging out and back in. This will clear your environment. Users using screen or tmux will need to exit their session to clear their environment.
