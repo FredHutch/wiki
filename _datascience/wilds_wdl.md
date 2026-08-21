@@ -139,42 +139,14 @@ Then you can provide custom inputs using an `inputs.json` file:
 
 ## Available WDLs
 
-> For the most current list of modules and pipelines, see the [WILDS WDL Library GitHub](https://github.com/getwilds/wilds-wdl-library).
+The library now includes dozens of modules and pipelines, growing regularly as new tools and workflows are contributed. Rather than duplicate that list here (and have it go stale), browse the current set directly on GitHub:
 
-### Modules
+- [**Modules**](https://github.com/getwilds/wilds-wdl-library/tree/main/modules) - tool-specific, reusable WDL tasks for alignment (BWA, STAR), variant calling (GATK, BCFtools), structural variants (Manta, DELLY), and more
+- [**Pipelines**](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines) - complete workflows combining multiple modules, from basic educational examples to advanced production pipelines
 
-| Module | Tool | Container | Description |
-|--------|------|-----------|-------------|
-| [`ww-annovar`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-annovar) | Variant Annotator | `getwilds/annovar:GRCh38` | Annotate genetic variants with ANNOVAR |
-| [`ww-annotsv`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-annotsv) | Structural Variant Annotator | `getwilds/annotsv:3.4.4` | Annotate structural variants with AnnotSV |
-| [`ww-aws-sso`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-aws-sso) | AWS Operations | `getwilds/awscli:2.27.49` | AWS S3 operations with SSO and temporary credential support |
-| [`ww-bcftools`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-bcftools) | Utilities for Variant Calls | `getwilds/bcftools:1.19` | Call and analyze variants with BCFtools |
-| [`ww-bedtools`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-bedtools) | Utilities for Genomic Intervals | `getwilds/bedtools:2.31.1` | Work with genomic intervals |
-| [`ww-bwa`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-bwa) | BWA Aligner | `getwilds/bwa:0.7.17` | Alignment with the Burrows-Wheeler Aligner |
-| [`ww-delly`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-delly) | Structural Variant Caller | `getwilds/delly:1.2.9` | Call structural variants with Delly |
-| [`ww-gatk`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-gatk) | GATK Variant Calling | `getwilds/gatk:4.6.1.0` | Variant calling and processing with GATK |
-| [`ww-ichorcna`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-ichorcna) | Tumor Fraction Estimator | `getwilds/ichorcna:0.2.0` | Estimate tumor fraction with ichorCNA |
-| [`ww-manta`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-manta) | Structural Variant Caller | `getwilds/manta:1.6.0` | Call structural variants with Manta |
-| [`ww-samtools`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-samtools) | Utilities for SAM/BAM/CRAM Files | `getwilds/samtools:1.11` | Work with Sequence Alignment/Map (SAM) format files |
-| [`ww-smoove`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-smoove) | Structural Variant Caller | `brentp/smoove:latest` | Call structural variants with Smoove |
-| [`ww-sra`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-sra) | SRA Toolkit | `getwilds/sra-tools:3.1.1` | Download sequencing data from NCBI SRA |
-| [`ww-star`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-star) | STAR Aligner | `getwilds/star:2.7.6a` | RNA-seq alignment with two-pass methodology |
-| [`ww-testdata`](https://github.com/getwilds/wilds-wdl-library/tree/main/modules/ww-testdata) | Test Data Downloader | `getwilds/awscli:2.27.49` | Download reference genomes and test datasets |
+Each module and pipeline folder includes its own README with usage details, container information, and testing status.
 
-### Pipelines
-
-| Pipeline | Complexity | Modules Used | Description |
-|----------|------------|--------------|-------------|
-| [`ww-bwa-gatk`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-bwa-gatk) | Basic | `ww-bwa`, `ww-gatk` | DNA alignment and variant calling |
-| [`ww-ena-star`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-ena-star) | Basic | `ww-ena`, `ww-star` | ENA download and RNA-seq alignment |
-| [`ww-fastq-to-cram`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-fastq-to-cram) | Basic | `ww-bwa`, `ww-samtools` | FASTQ to CRAM conversion |
-| [`ww-sra-salmon`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-sra-salmon) | Basic | `ww-sra`, `ww-salmon` | SRA download and transcript quantification |
-| [`ww-sra-star`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-sra-star) | Basic | `ww-sra`, `ww-star` | SRA download and RNA-seq alignment |
-| [`ww-star-deseq2`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-star-deseq2) | Intermediate | `ww-star`, `ww-deseq2` | RNA-seq alignment and differential expression |
-| [`ww-saturation`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-saturation) | Intermediate | Multiple | Sequencing saturation analysis |
-| [`ww-leukemia`](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines/ww-leukemia) | Advanced | Multiple | Consensus variant calling for targeted DNA sequencing |
-
-If there's a tool you'd like to see or a task you want written, you can file an [issue](https://github.com/getwilds/wilds-wdl-library/issues), reach out to us directly ([see below](#resources)), or make a [contribution](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md)
+If there's a tool you'd like to see or a task you want written, you can file an [issue](https://github.com/getwilds/wilds-wdl-library/issues), reach out to us directly ([see below](#resources)), or make a [contribution](https://github.com/getwilds/wilds-wdl-library/blob/main/.github/CONTRIBUTING.md).
 
 
 ## Key Features of the WILDS WDL Library
@@ -226,15 +198,8 @@ Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org), sch
 
 ## Release Notes
 
-**January 2026 - WILDS WDL Library v0.1.0**
-- Two-tier architecture with modules and pipelines
-- Pipelines include complexity levels (Basic, Intermediate, Advanced) to guide users
-- Comprehensive automated testing with multiple WDL executors
-- Standardized container management through the WILDS Docker Library
-- Full compatibility with the Fred Hutch PROOF platform
-- 17+ tested modules covering essential bioinformatics tools
-- 8 pipelines covering common bioinformatics workflows including RNA-seq and variant calling
-- All pipelines include zero-configuration test workflows for quick demonstrations
+For detailed release notes, see the [WILDS WDL Library releases page on GitHub](https://github.com/getwilds/wilds-wdl-library/releases).
+
 
 ## Resources
 
