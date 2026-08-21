@@ -13,7 +13,7 @@ From `apptainer.org`'s [introduction](https://apptainer.org/docs/user/main/):
 
 > Apptainer is a *container* platform. It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible. You can build a container using Apptainer on your laptop, and then run it on many of the largest HPC clusters in the world, local university or company clusters, a single server, in the cloud, or on a workstation down the hall. Your container is a single file, and you don’t have to worry about how to install all the software you need on each different operating system and system.
 
-Apptainer allows us to run containers- including [Docker](/scicomputing/compute_environments/#docker-containers) containers- on our shared systems.  Docker requires a number of adminstrative privileges which makes it unusable in shared multi-user environments with networked storage.  [Apptainer] remedies these problems allowing individual, non-root, users to run containers.
+Apptainer allows us to run containers - including [Docker](/compdemos/Docker/) containers - on our shared systems.  Docker requires a number of adminstrative privileges which makes it unusable in shared multi-user environments with networked storage. Apptainer remedies these problems allowing individual, non-root, users to run containers.
 
 Apptainer is maintained and deployed in our environment using environment modules (lmod).  You will need to load this module before running any commands.
 
@@ -86,9 +86,9 @@ $ apptainer run lolcow_latest.sif
 
 ## Using Docker Containers with Apptainer
 
-As indicated earlier, Apptainer can run Docker container images.  However, Docker container images must first be converted to be usable by Apptainer.
+As indicated earlier, Apptainer can run Docker container images. When you pull a Docker container from the internet using Apptainer (e.g., `apptainer pull docker://image`), the conversion to Apptainer format happens automatically. You can also manually convert Docker containers to create a SIF (Singularity Image Format) file that you can reuse later without needing to pull from the internet again.
 
-> The conversion step is only necessary the first time you convert a Docker container to a Apptainer container or when you want to update your Apptainer container (e.g. to a newer version of a Docker container).
+For more detail, see the ["Using Docker on The Cluster"](/compdemos/Docker/#using-docker-on-the-cluster) section of our [Docker](/compdemos/Docker/) page.
 
 ### Example - Convert and Run latest R Docker container with Apptainer
 

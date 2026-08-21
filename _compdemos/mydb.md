@@ -33,7 +33,7 @@ In many cases the defaults are sufficient- if you have a question as to whether 
 
 #### DB/Container Name
 
-MyDB databases are hosted in a docker container- the name cannot match an existing container name, must be less than 128 characters, and be made up of _only_ alphanumeric characters (A-z, 0-9), underscore, period, or dash.
+MyDB databases are hosted in a [Docker](/compdemos/Docker/) container- the name cannot match an existing container name, must be less than 128 characters, and be made up of _only_ alphanumeric characters (A-z, 0-9), underscore, period, or dash.
 
 This is not used in the connection string but only identifies the container on the host system. As such, make it significant to you and easy to pick out in a long list.
 

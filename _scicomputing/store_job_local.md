@@ -17,6 +17,4 @@ In the _gizmo_ compute cluster the environment variable `$TMPDIR` will be set to
 
 > We recommend that you use the environment variable in your scripts rather than generating this path as the path to the job local storage may change.  Using the environment variable will "future proof" your scripts.
 
-## Note for Java, GATK, and Picard Users
-
-As Java (and by extension GATK and Picard) does not follow the _TMPDIR_ convention we set the Java property `java.io.tmpdir` using the environment variable _JAVA_TOOL_OPTIONS_.  This updates the default value- if you are using GATK or Picard specific options to set the temporary directory, that option value will be used.
+There is a longer discussion about temporary files available [here](/compdemos/tmpdir/) on the wiki.

@@ -3,7 +3,7 @@ title: Linux, Unix and Bash
 primary_reviewers: atombaby
 ---
 
-Linux is an operating system that has been developed over the past 27 years as a Unix-like operating system.  From hobbyist/student beginnings it has grown to be a versitile, mature, and fairly robust technology.
+Linux is an operating system that has been developed over the past 27 years as a Unix-like operating system.  From hobbyist/student beginnings it has grown to be a versatile, mature, and fairly robust technology.
 
 However, calling what we use "Linux" today glosses over what are many of the most important tools that make Linux useful: the GNU project. GNU, a recursive acronym for 
 *G*nu's *N*ot *U*nix, is where most of the tools we use on Linux come from.

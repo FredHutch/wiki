@@ -64,6 +64,8 @@ or to create a virtual Python environment, for example:
 
 ### Using Jupyter on `rhino`
 
+> **Recommended:** Use [Open OnDemand](/scicomputing/access_openondemand/) for the easiest way to launch Jupyter Lab.
+
 There have been many iterations of Python Labs (or Notebooks), starting with IPython. SciComp currently supports
 [Jupyter](https://jupyter.org). The Jupyter user interfaces offer a foundation of interactive
 computing environments where scientific computing, data science, and analytics can be performed
@@ -85,7 +87,7 @@ After you have connected to `rhino`, run these commands:
 ```
     username@rhino01:~$ ml purge
     username@rhino01:~$ ml JupyterLab/4.0.3-GCCcore-12.2.0  Seaborn/0.12.2-foss-2022b scikit-learn/1.2.1-gfbf-2022b
-    username@rhino01:~$ jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+    username@rhino01:~$ jupyter lab --ip=0.0.0.0 --port=$(fhfreeport) --no-browser
 ```
 
 You will see output like this:
@@ -431,8 +433,7 @@ roll back to a specific commit before your last merge.
   
 **Installing plugins**  
 From the top toolbar, select **PyCharm > Preferences > Plugins**. There are a myriad of plugins to help smooth out your development experience,
-such as database connectors, AWS log and CLI plugins, Docker management tools, various language support plugins, hotkey 
-keymap setups, color schemes and more.  
+such as database connectors, AWS log and CLI plugins, [Docker](/compdemos/Docker/) management tools, various language support plugins, hotkey keymap setups, color schemes and more.
 
 **Jupyter Notebook extension**  
 

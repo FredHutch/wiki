@@ -30,17 +30,31 @@ Key features:
   
 **Sensitive data allowed** – IRB-approved studies with identifiable data can be included
 
+## Pre-requisites before you begin
+
+-  You should have Fred Hutch credentials or [HutchNet ID](/scicomputing/access_credentials/#hutchnet-id)
+
+-  You should be logged in to the Fred Hutch network or if off-campus, connect via [VPN](/scicomputing/access_methods/#vpn).
+
+## First-Time Login to Fred Hutch cBioPortal
+To begin the access process for the Fred Hutch instance of cBioPortal, all users must first log in using their Fred Hutch credentials into the [Fred Hutch instance of cBioPortal](https://cbioportal.fredhutch.org/)
+
+Logging in will automatically create your user profile within our authentication system, which is required for us to give you access. Once you have successfully logged in, please notify the Data Science Lab team so that we can provision access to:
+- Fred Hutch–hosted public datasets
+- Approved internal project datasets (as applicable)
+
+You can let usknow by :
+💬 Posting in the #cbioportal-support Slack channel
+📧 Emailing datascience@fredhutch.org
+
+This initial login also gives you the opportunity to explore publicly available studies on the Fred Hutch instance of cBioPortal, including mirrored public datasets that remain accessible even when the public cBioPortal site may be unavailable, for instance.
+
+> *Note:* Access to internal datasets will be granted following the appropriate data approval processes.
 
 
 ## Uploading Your Own Data
 
 Follow [these](/pathways/path-cbio-fh-instance/) steps to upload your own data into the [Fred Hutch insance of cBioPortal](https://cbioportal.fredhutch.org/) 
-
-### Pre-requisites
-
--  You should have Fred Hutch credentials or [HutchNet ID](/scicomputing/access_credentials/#hutchnet-id)
-
--  You should be logged in to the Fred Hutch network or if off-campus, connect via [VPN](/scicomputing/access_methods/#vpn).
 
 ### 1. Request Upload Access
 

@@ -6,7 +6,7 @@ primary_reviewers: dtenenba, jefftucker, sminot, vorting
 There are multiple methods by which you might leverage AWS cloud computing here at the Hutch. For less experienced cloud computing users, a workflow manager such as WDL or Nextflow may be of interest. These tools abstract away the actual running of the jobs in the cloud or on Gizmo. For those with needs that do not focus on the running of workflows, AWS Batch itself may be the ideal service.
 
 ## [WDL Workflows at Fred Hutch](/datascience/wdl_workflows/)
-[WDL (Workflow Description Language)](/datascience/wdl_workflows/) is an open-source workflow language that works across multiple compute infrastructures including Gizmo and AWS. WDL workflows can be executed using [various execution engines](/datascience/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket. At Fred Hutch, you can run WDL workflows using [PROOF](/datascience/proof/), which provides a user-friendly interface and handles Cromwell server configuration automatically. Cromwell can be configured to run on Gizmo but submit workflow jobs to either Gizmo or AWS as defined by the user at workflow submission time.
+[WDL (Workflow Description Language)](/datascience/wdl_workflows/) is an open-source workflow language that works across multiple compute infrastructures including Gizmo and AWS. WDL workflows can be executed using [various execution engines](/datademos/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket. At Fred Hutch, you can run WDL workflows using [PROOF](/datascience/proof/), which provides a user-friendly interface and handles Cromwell server configuration automatically. Cromwell can be configured to run on Gizmo but submit workflow jobs to either Gizmo or AWS as defined by the user at workflow submission time.
 
 ## [Nextflow at Fred Hutch](/compdemos/nextflow/)
 
@@ -19,7 +19,7 @@ Ultimately, Nextflow will reduce the amount of backend retooling required when t
 [AWS Batch](https://aws.amazon.com/batch/): a service which wraps around AWS EC2 resources such that researchers can more easily do computing processes with EC2 instances on data stored in S3.  
 For more information on using AWS Batch, please see [this entry in the Resource Library](/compdemos/aws-batch/). 
 
-AWS _Batch_ is an AWS service that uses Docker containers to build a batch
+AWS _Batch_ is an AWS service that uses [Docker](/compdemos/Docker/) containers to build a batch
 computing system.  Batch is made up of a queueing system where jobs are defined
 and queued, and a computational resource made up of Docker containers to
 process those jobs.  Resources are provisioned when there are jobs to be

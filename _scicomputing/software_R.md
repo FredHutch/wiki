@@ -1,6 +1,7 @@
 ---
 title: R and RStudio
 primary_reviewers: ptvan, vortexing
+
 ---
 R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or [CRAN](https://cran.r-project.org/), or via the FH Center IT's Self Service Tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.  
 
@@ -34,7 +35,10 @@ When using R/RStudio locally, you have the option to install a number of differe
 
 
 ## Remote (`Rhino` and `Gizmo`) Use
-If computing resources beyond what is available via your desktop are required, you may consider running R scripts from the `rhinos` or `gizmo`.  `SciComp` makes pre-built R modules available for your use in order to facilitate more reproducible and reliable use of software on the local cluster.  
+If computing resources beyond what is available via your desktop are required, you may consider running R scripts from the `rhinos` or `gizmo`.  `SciComp` makes pre-built R modules available for your use in order to facilitate more reproducible and reliable use of software on the local cluster.
+
+### Open OnDemand
+[Open OnDemand](/scicomputing/access_openondemand/) is the easiest way to access RStudio on the cluster. It provides a web-based interface that handles the connection and resource allocation for you.
 
 ### Current R Modules on `Rhino`/`Gizmo`
 SciComp maintains a range of various builds of R on `Rhino` and `Gizmo` for use by researchers. Each build has different packages installed and versions of R itself, thus identifying if an existing R build matches your needs is a first step to using R on `Rhino` or `Gizmo`.  Specific information about which R Modules are available- including more information about packages installed in them- can be found on our dedicated [R Module page](/rModules/).  If you do not see the software you are looking for, email `scicomp` to request it or add your own GitHub issue in the [easybuild-life-sciences repo](https://github.com/FredHutch/easybuild-life-sciences).  Either way, please be specific about the source and version of the software you are interested in.
@@ -76,19 +80,94 @@ R
 
 ### `Gizmo`
 
-To run `R` on a gizmo node, you can follow the same instructions as for `rhino` above.  If you want to run `RStudio`, see the next section.
+To run `R` on a gizmo node, you can follow the same instructions as for `rhino` above.  If you want to run `RStudio`, see the RStudio section.
+
+### `Containers`
+
+R is also available via [containers](https://sciwiki.fredhutch.org/scicomputing/compute_environments/#docker-containers).
+Use these if you want newer versions of R (the containers often support newer versions of R than the Easybuild modules
+described above) and want to run R on the command line. If you want to run R in a graphical interface, see the next section.
+
+Here are a few containers that SciComp provides:
+
+| R version | Bioconductor version | URL | 
+| --------- | -------------------- | --- |
+| 4.4.2     | 3.2.0                | `https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_20.sif` |
+| 4.5.0     | 3.2.1                | `https://sif-registry.fredhutch.org/bioconductor_bioconductor_docker_RELEASE_3_21.sif` |
+| 4.5.1     | 3.2.1                | `https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_21-R-4.5.1.sif` |
+| 4.5.2     | 3.2.2                | `https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_22-R-4.5.2.sif` |
+
+
+You can run them in a few ways. In the following examples we will use the container for R-4.5.2.
+In each case, you should first load the Apptainer module with the following command:
+
+```
+ml Apptainer
+```
+
+Note that this command is not needed (and will cause an error) on the newer `maestro` and `harmony`
+nodes (in the `chorus` partition).
+
+**Run R Interactively**
+
+```bash
+apptainer run https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_22-R-4.5.2.sif R
+```
+
+**Run R Interactively with `fast` and `temp` mounted**
+
+While your home directory is accessible by default inside a container, other 
+important directories (such as `/fh/fast` and `/hpc/temp`) are not. 
+Here is how to make them available:
+
+```bash
+apptainer run \
+  --bind /fh/fast:/fh/fast \
+  --bind /hpc/temp:/hpc/temp \
+  https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_22-R-4.5.2.sif \
+  R
+```
+
+**Run R non-interactively**
+
+This will run an R script in the current directory called `script.R`:
+
+```bash
+apptainer run \
+  https://sif-registry.fredhutch.org/bioconductor_docker_RELEASE_3_22-R-4.5.2.sif \
+  Rscript script.R
+```
+
+**Notes about these R containers**
+
+* Be sure and specify a command (such as `R` or `Rscript` as in the examples above,
+  or even `bash` if you want an interactive shell); otherwise Apptainer will attempt to
+  run RStudio and likely fail.
+* Note that these containers run a newer operating system than our cluster currently
+  does, enabling the [Posit Package Manager](https://packagemanager.posit.co/client/#/).
+  Most CRAN and Bioconductor packages will be installed from binary tarballs which will install very quickly.
+* Packages that you install within these containers are not compatible with the equivalent
+  R versions provided by EasyBuild modules. So you should not install them in the same directory.
+  Add this line to your `~/.Rprofile` file to ensure that this does not happen:
+
+
+  ```R
+  source("https://sciwiki.fredhutch.org/assets/apptainer_config.")
+  ```
 
 
 ### Run RStudio Server on an HPC machine
 
-To run RStudio Server on the `gizmo` compute cluster, simply open a browser and go to
-[https://rstudio-launcher.fredhutch.org](https://rstudio-launcher.fredhutch.org).   You will be prompted to log in with your  Fred Hutch HutchNet ID and password.  This requires that you be on campus or using VPN.
+> **Recommended:** Use [Open OnDemand](/scicomputing/access_openondemand/) for the easiest way to launch RStudio.
 
 This site will help you launch, manage and kill RStudio sessions on `gizmo` without having to do so manually via terminal/`rhino`.  When you create new RStudio sessions via  the application, this single site will manage the launch process given the parameters you specify.  It will return the information you'll need to access and manage your sessions to the table in the site.  You can have mulitple RStudio sessions running simultaneously, and each session will have its own specific URL where you will be able to use RStudio through your browser. 
 
 When starting a new RStudio session, you can choose which version of R to run (beginning in April 2022 all new versions of R will be supported, but the only older version that will work is `R-4.0.2`). You can also specify how many CPU cores and how many GB of memory you want, as well as whether you need a GPU and how long you want the server to run if the defaults specified do not meet your needs.  These parameters can be different for each RStudio session you create. Keep in mind that the larger the resources requested are, the longer it will take for your server to start up. 
 
-If you have issues or questions in using this application, please email `helpdesk` and describe the issues you're having.  
+Note that Open OnDemand provides two "flavors" of RStudio Server: the first is [Fred Hutch RStudio Server](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server/session_contexts/new) which uses the [EasyBuild modules](/scicomputing/compute_scientificSoftware/) on the cluster. 
+The second is [RStudio Server/Apptainer](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server_apptainer/session_contexts/new) which provides access to several containerized versions of RStudio via [Apptainer](/compdemos/Apptainer/). This flavor currently has slightly newer versions of R and a newer operating system which supports the [Posit Package Manager](https://packagemanager.posit.co/client/#/) for fast package installs.
+
+If you have issues or questions in using these versions of RStudio Server, please email `helpdesk` and describe the issues you're having.  
 
 #### Plotting in RStudio
 
@@ -109,6 +188,8 @@ knitr::opts_chunk$set(dev="CairoPNG")
 ```
 
 ### Run a Jupyter Notebook or Lab on a cluster node
+
+> **Recommended:** Use [Open OnDemand](/scicomputing/access_openondemand/) for a much simpler way to launch Jupyter Lab.
 
 You can run a [Jupyter](https://jupyter.org/) Lab on a cluster node, with the R language (go [here](/scicomputing/software_python/#using-jupyter-on-rhino) if you want to use Jupyter with Python).
 
@@ -170,7 +251,7 @@ You will be using Jupyter Lab, not Jupyter Notebook. This should not be a proble
 To start Jupyter Lab, run this command:
 
 ```
-jupyter lab --ip=$(hostname) --port=$(fhfreeport) --no-browser
+jupyter lab --ip=0.0.0.0 --port=$(fhfreeport) --no-browser
 ```
 
 This command will spit out several URLs.

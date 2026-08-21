@@ -88,6 +88,10 @@ datascience:
         url: /datascience/cirro/
   - title: Fred Hutch Resources
     children:
+      - title: Translational Data Resources (CARDS)
+        url: /datascience/cards/
+      - title: WDL Development Support
+        url: /datascience/wilds_workflow_dev/
       - title: Reference Genomes
         url: /datascience/refgenomes/
       - title: Nextflow Catalog
@@ -167,6 +171,8 @@ scicomputing:
         url: /scicomputing/compute_platforms/
       - title: Computing Environments and Containers
         url: /scicomputing/compute_environments/
+      - title: AI on Fred Hutch HPC
+        url: /scicomputing/ai_on_fh_hpc/
       - title: Scientific Software, R and Python Modules
         url: /scicomputing/compute_scientificSoftware/
       - title: Job Management
