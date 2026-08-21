@@ -142,7 +142,7 @@ using information from long-read sequencing. You can refer to
 [the documentation](https://sanger-pathogens.github.io/circlator/) for more details.
 
 Because this tool has a number of dependencies, it may be helpful to use this tool with
-Nextflow, which executes each step in a Docker container with all of the required
+Nextflow, which executes each step in a [Docker](/compdemos/Docker/) container with all of the required
 dependencies. The workflow for this tool can be found
 [in this repository](https://github.com/FredHutch/circulator-nf), which also has all
 of the necessary details for running the workflow.

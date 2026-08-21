@@ -14,6 +14,8 @@ This guide provides an overview of the process and links to examples, validation
 
 - Create a folder to store your study files.  
   **The folder name must match the study ID** given by the cBioPortal team. This ID must also appear in your meta files under `cancer_study_identifier`.
+  > 📝 *Note:*
+  > *Currently there is a study limit size that is 4Gb. If your study folder is greater than 4Gb please reach out to us for guidance*
   
 > 📝 *Note: If you’d like to request a new or updated study ID, email the [Data Governance team](mailto:dataprotection@fredhutch.org).*  
 

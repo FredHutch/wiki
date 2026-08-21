@@ -28,7 +28,7 @@ hutch_highlights:
     alt: "placeholder image dasl"
     title: "Data Science Lab"
     excerpt: 'The Fred Hutch Data Science Laboratory is an emerging, collaborative effort at the Fred Hutch which provides a variety of training, community and consulting support for data science related topics.'
-    url: "https://hutchdatascience.org"
+    url: "https://ocdo.fredhutch.org/dasl/"
     btn_label: "Learn More"
     btn_class: "btn--primary"
   - image_path: /images/190423-steam-plant-westside-007cc-crop-web.png

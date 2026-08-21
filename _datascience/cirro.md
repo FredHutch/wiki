@@ -1,6 +1,6 @@
 ---
 title: Cirro.bio
-
+primary_reviewers: sminot
 ---
 
 
@@ -96,12 +96,22 @@ batch1_sampleD,batch1_sampleD_R1.fastq.gz,batch1_sampleD_R2.fastq.gz,control
 ### Adding Custom Workflows (WDL / Nextflow)
 
 In addition to a catalog of [pre-configured workflows](https://docs.cirro.bio/pipelines/overview/#pipelines-in-cirro),
-Cirro can be used to run custom [WDL](/compdemos/Cromwell/) or [Nextflow](https://www.nextflow.io/) workflows.
+Cirro can be used to run custom [WDL workflows](/datascience/wdl_workflows/) or [Nextflow](https://www.nextflow.io/) workflows.
 The code for those workflows can be used from public or private GitHub repositories,
 including official repositories from projects like GATK.
 
 Guidance on adding an existing WDL or Nextflow workflow to Cirro
 can be found [in the Cirro documentation](https://docs.cirro.bio/pipelines/adding-pipelines/).
+
+**Tips for adding WDL workflows to Cirro**
+
+- Many WILDS WDL Library [pipelines](https://github.com/getwilds/wilds-wdl-library/tree/main/pipelines) are integrated with Cirro, and you can use these as examples
+- Your WDL must be able to handle AWS S3 URIs
+- Your WDL must not use `ftp` for file transfer (`http` is ok)
+- Your WDL must not use a Docker image that is based on Alpine Linux (Ubuntu is ok)
+
+If you'd like to contribute your WDL to the WILDS WDL Library, we provide Cirro validation automatically. The validation checks that all required files are present (`preprocess.py`, `process-form.json`, `process-input.json`, `process-output.json`, `process-compute.config`), JSON files are valid, and `preprocess.py` has no syntax errors. You can run this locally with `make lint_cirro` from within the cloned GitHub repo. Reach out to us at `wilds at fredhutch.org`.
+
 
 **Need Help?**  
 Need help using the Cirro platform for data management and analysis?

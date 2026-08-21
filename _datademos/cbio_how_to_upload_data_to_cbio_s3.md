@@ -10,6 +10,8 @@ Once your study files are formatted and validated, follow these steps to upload 
 ### ✅ Step 1: Zip Your Study Folder
 
 Before uploading, compress your study folder into a `.zip` file.
+> 📝 *Note:*
+> *Currently there is a study limit size that is 4Gb. If your study folder is greater than 4Gb please reach out to us for guidance*
 
 - **On Mac:** Right-click → **Compress**  
 - **On Windows:** Right-click → **Send to** → **Compressed (zipped) folder**

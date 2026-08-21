@@ -9,7 +9,7 @@ with no information on what they contain. Instead, this guide walks through the 
 for definiting the contents of a software container as code, and then setting up a process
 which will automatically transform that versioned code into the corresponding container.
 
-The terminology used throughout this guide will be "Docker image" and "Docker container",
+The terminology used throughout this guide will be "[Docker](/compdemos/Docker/) image" and "Docker container",
 but keep in mind that any Docker image can be converted into an Apptainer (formerly Singularity) image.
 
 ## Step 1: Set up a GitHub repository
@@ -32,6 +32,7 @@ The two files which should be added to the GitHub repository are:
 For instructions on writing your `Dockerfile`, see:
 - [Docker for Beginners] (https://docker-curriculum.com/)
 - [Official Documentation](https://docs.docker.com/engine/reference/builder/)
+- ["Build your own Docker image"](/compdemos/Docker/#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/)
 
 Any additional files committed to the repository will be made available during the automated
 build process.

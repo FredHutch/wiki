@@ -60,5 +60,5 @@ Another way to start is by writing down and sharing your lab culture, philosophy
 
 - [Faylab Lab Manual](https://thefaylab.github.io/lab-manual/02-lab-culture-philosophy.html)
 - [Matsen Lab: Expectations of group members](https://matsen.fhcrc.org/expectations.html)
-- [DaSL Culture and Values](https://hutchdatascience.org/news/dasl-culture/)
+- [DaSL Culture and Values](https://ocdo.fredhutch.org/pages/values.html)
 - [DaSL Code of Conduct](https://github.com/fhdsl/coc)
