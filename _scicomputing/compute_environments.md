@@ -104,6 +104,21 @@ If desired, one way to manage jobs, environments, and data transfers particularl
 
 At Fred Hutch, [Nextflow](/compdemos/nextflow/) and [WDL workflows](/datascience/wdl_workflows/) are the primary workflow systems in use. WDL workflows can be executed using [multiple engines](/datademos/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket, while Nextflow has its own execution engine. Users are actively curating shared support and resources, with the [WILDS WDL Library](/datascience/wilds_wdl/) being a key resource for WDL workflows, and the [Fred Hutch NextFlow catalog](/datascience/nextflow_catalog/) being a key resource for Nextflow workflows. See the [Using Workflows](/datascience/using_workflows/) page for more information on workflow systems.
 
+
+#### With VSCode
+
+We recommend creating a Python virtual environment that captures your currently loaded modules and reloads them automatically whenever the environment is activated. 
+
+This is becuase VSCode's Remote SSH extension can't load cluster Environment Modules when you connect to it. The remote session starts before your shell would normally load modules from `.bashrc` or `.profile`.
+
+See [Using Modules with VS Code](/compdemos/VS-Code_lmod/) for the workaround.
+
+#### With RStudio
+
+To use environment modules with rstudio...
+
+#### With Jupyter
+
 ## Docker Containers
 
 Docker containers package software and all dependencies into a standardized, reproducible computational environment. They enable scientists to run tools using the exact same configuration across different computing platforms, ensuring reproducible results. Docker containers isolate the computational environment without the overhead of full virtual machines.
