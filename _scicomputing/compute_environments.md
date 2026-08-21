@@ -132,7 +132,7 @@ See [Using Jupyter on rhino](/scicomputing/software_python/#using-jupyter-on-rhi
 
 ## Docker Containers
 
-Docker containers package software and all dependencies into a standardized, reproducible computational environment. They are different from Environment Modules. Read more about Docke here: [Using Docker at Fred Hutch](/compdemos/Docker/).
+Docker containers package software and all dependencies into a standardized, reproducible computational environment. They are different from Environment Modules. Read more about Docker here: [Using Docker at Fred Hutch](/compdemos/Docker/).
 
 ## Installing Custom Software Packages
 If you do not find the software you need, a support package or library, or the specific version you need, you have two options:
