@@ -31,10 +31,9 @@ SLURM is the workload manager for our `gizmo` computing cluster.  Review the doc
 
 ### Create a Script
 
-For the purpose of this pathway we will use a pre-existing script [in this template GitHub repository](https://raw.githubusercontent.com/FredHutch/slurm-examples/refs/heads/main/01-introduction/1-hello-world/01.sh
- ). Copy this file to a location you can access from `rhino` by using:
+For the purpose of this pathway we will use a pre-existing script [in this template GitHub repository](https://github.com/FredHutch/slurm-examples/blob/main/01-introduction/1-hello-world/01.sh). Copy this file to a location you can access from `rhino` by using:
 ```
-wget https://github.com/FredHutch/slurm-examples/blob/main/01-introduction/1-hello-world/01.sh
+wget  https://raw.githubusercontent.com/FredHutch/slurm-examples/refs/heads/main/01-introduction/1-hello-world/01.sh
 ```
 
 ### Submit the Script
