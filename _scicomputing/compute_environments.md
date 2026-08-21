@@ -75,6 +75,21 @@ module load R/3.5.1-foss-2016b-fh1
 
 This would load that specific Environment Module for use in your script.
 
+### Specifying a Module Version
+
+When requesting a module you will get the default version unless you specifically request a version using the version tag.  For example:
+
+```
+module load R
+```
+will load whatever is the default version of R at any particular time.  To avoid this behavior, specify a version along with the module name:
+
+```
+module load R/4.3.3-gfbf-2023b
+```
+
+Requesting a specific version is recommended in most cases.  This will reduce problems over time as the version of your software won't change until you're ready to make that change.  This habit also helps with reproducibility as it makes the requirements of your script clear to anyone else using them.
+
 ## Workflow Managers
 
 If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a [workflow manager](/datascience/using_workflows/).  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
