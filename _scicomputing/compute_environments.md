@@ -133,13 +133,12 @@ Cloud computing platforms like [AWS Batch](/scicomputing/compute_cloud/) are bui
   * **[BioContainers](https://biocontainers.pro/)** - A free and open source project to collect a set of images that contain useful bioinformatics tools.
 
 
-## Installing Custom Software Packages
+## Building and Installing Yourself
 
-If you do not find the software you need, a support package or library, or the specific version you need, you have two options:
+Having SciComp build a module is typically the better approach- email _scicomp_ and we will work with you to build a module for any software or version.
+{: .notice--info}
 
-1. Request the software be built: file an issue in our [software repo](https://github.com/FredHutch/easybuild-life-sciences) and we will work with you to build a module for any software or version. This Environment Module will then be available to all.
-
-2. If you cannot wait for the software to be built, you may be able to install it yourself. This is primarily supported for language (Python/R) packages.
+If you can't find the software module you need and you cannot wait for the software to be built, you can try to install it yourself. This is easiest with (Python/R) packages with built-in ways of package installation.
 
 ### Packages/Modules for Python and R
 
@@ -153,10 +152,11 @@ Any package you install this way will be installed into your home directory.
 Remember that the environment module you have loaded will be used to install the package/module. For example, if you load `Python/3.6.9` and use `pip install --user <newpkg>` then you will need to load `Python/3.6.9` every time you wish to use `newpkg`. Using a different version of the language module may or may not work.
 
 ### Other software installs and builds
+
 If you want to install or build a standalone software package, you are also welcome to install into your home directory, with the following caveats:
 
 - We cannot install OS package dependencies (if your software has many dependencies, please file an issue [here](https://github.com/FredHutch/easybuild-life-sciences) and we will be happy to work with you to offer a package build with all dependencies.
-- Ubuntu compilers are not optimized. We recommend loading a 'toolchain' module:
+- Ubuntu compilers are not optimized and usually lag behind several versions. Using a 'toolchain' module will give you access to newer versions of compilers and libraries:
 
   ```
   module load foss/2019b
