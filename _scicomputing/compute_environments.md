@@ -4,9 +4,9 @@ last_modified_at: 2025-11-11
 primary_reviewers: bmcgough
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which resource might be best suited to their particular computing needs.
 
-The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
+The Scientific Computing group supports software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
 Reasons to use scientific software maintained by SciComp include:
 - packages are often faster due to compiler optimizations
@@ -15,13 +15,12 @@ Reasons to use scientific software maintained by SciComp include:
 
 ## Environment Modules
 
-On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.  For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.
+On the command line and in scripts, we use the [TACC Lmod Environment Modules](https://tacc.utexas.edu/research/tacc-research/lmod/) to make software versions available in a modular and malleable way. Environment Modules provide access to one version of one or more software packages to help improve reproducibility.
+
+For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.
+{: .notice--info}
 
 ### How to Use Environment Modules
-
-As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
-
-The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.
 
 #### Interactively
 
@@ -57,11 +56,7 @@ $ which python
 /app/easybuild/software/Python/2.7.15-foss-2016b-fh1/bin/python
 ```
 
-#### Scripting with Environment Modules
-
-To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work. 
-
-##### Best Practice 1
+#### In a Shell Script
 
 Interactive shell session have the required `module` commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the `module` command. Add the follow lines to the top of your script:
 
@@ -79,19 +74,6 @@ module load R/3.5.1-foss-2016b-fh1
 ```
 
 This would load that specific Environment Module for use in your script.
-
-##### Best Practice 2
-Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
-```
-module load Python/3.5.1-foss-2016b-fh1
-```
-Rather than:
-```
-module load Python
-```
-The above line will load a different version of the software package over time as the "pointer" to a specific version is changed.
-
-> Note: This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
 
 #### With Workflow Managers
 
