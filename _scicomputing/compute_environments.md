@@ -136,34 +136,7 @@ See [Using Jupyter on rhino](/scicomputing/software_python/#using-jupyter-on-rhi
 
 ## Docker Containers
 
-Docker containers package software and all dependencies into a standardized, reproducible computational environment. They enable scientists to run tools using the exact same configuration across different computing platforms, ensuring reproducible results. Docker containers isolate the computational environment without the overhead of full virtual machines.
-
-For a comprehensive introduction to Docker at Fred Hutch, see [Using Docker at Fred Hutch](/compdemos/Docker/), which covers:
-
-- [What Docker is and how it works](/compdemos/Docker/#what-is-docker)
-- [Using pre-built containers from WILDS and other sources](/compdemos/Docker/#using-existing-docker-images)
-- [Running Docker on your local computer](/compdemos/Docker/#running-docker-on-your-local-computer)
-- [Using Docker containers on the Fred Hutch cluster (via Apptainer)](/compdemos/Docker/#using-docker-on-the-cluster)
-- [Creating your own Docker images](/compdemos/Docker/#creating-your-own-docker-images)
-- [Using Docker in WDL and other workflow systems](/compdemos/Docker/#using-docker-with-workflows)
-
-**Important:** Docker requires root access and cannot run directly on shared compute environments like `Rhino` or `Gizmo`. Instead, use [Apptainer](/compdemos/Apptainer/) to run Docker containers on the cluster. Apptainer can pull and run Docker images directly from Docker Hub without requiring administrator privileges. See the [Apptainer documentation](/compdemos/Apptainer/) for details.
-
-Cloud computing platforms like [AWS Batch](/scicomputing/compute_cloud/) are built on Docker, using containers to ensure consistent execution environments across distributed computing resources.
-
-### Docker Resources
-
-#### Fred Hutch Resources
-
-  * **WILDS Docker Library ([GitHub](https://github.com/getwilds/wilds-docker-library), [DockerHub](https://hub.docker.com/u/getwilds))** - Tested, versioned Docker containers for bioinformatics tools, built and maintained by the WILDS team at Fred Hutch. These containers are designed to work seamlessly with WDL workflows and other workflow systems.
-  * **[Fred Hutch DockerHub](https://hub.docker.com/u/fredhutch)** - Additional containers available for Fred Hutch researchers.
-
-#### Community Resources
-
-  * **[Docker Hub](https://hub.docker.com/)** - The most commonly used server to share Docker images.
-  * **[Quay](https://quay.io/)** - Another commonly used server to share Docker images.
-  * **[BioContainers](https://biocontainers.pro/)** - A free and open source project to collect a set of images that contain useful bioinformatics tools.
-
+Docker containers package software and all dependencies into a standardized, reproducible computational environment. They are different from Environment Modules. Read more about Docke here: [Using Docker at Fred Hutch](/compdemos/Docker/).
 
 ## Installing Custom Software Packages
 If you do not find the software you need, a support package or library, or the specific version you need, you have two options:
