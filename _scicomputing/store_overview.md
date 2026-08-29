@@ -1,6 +1,5 @@
 ---
 title: Overview of Data Storage at Fred Hutch
-last_modified_at: 2023-03-24
 primary_reviewers: 
 ---
 

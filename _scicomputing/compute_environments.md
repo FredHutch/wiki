@@ -1,6 +1,5 @@
 ---
 title: Computing Environments and Containers
-last_modified_at: 2025-11-11
 primary_reviewers: bmcgough
 ---
 

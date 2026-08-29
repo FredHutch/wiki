@@ -1,6 +1,5 @@
 ---
 title: Training, Community and Finding Help
-last_modified_at: 2020-06-02
 primary_reviewers: k8hertweck, vortexing
 ---
 There are a variety of resources for training on various aspects of bioinformatics, analytics and data skills available at the Fred Hutch, in the Seattle area and on the web.  

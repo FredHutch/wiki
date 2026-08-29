@@ -1,6 +1,5 @@
 ---
 title: Configuring Databases on MyDB
-last_modified_at: 2023-02-02
 primary_reviewers: fizwit, atombaby
 ---
 

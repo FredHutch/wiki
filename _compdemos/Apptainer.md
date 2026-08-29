@@ -1,6 +1,5 @@
 ---
 title: Using Apptainer Containers
-last_modified_at: 2021-07-30
 main_author: Michael Gutteridge
 primary_reviewers: bmcgough, atombaby
 ---

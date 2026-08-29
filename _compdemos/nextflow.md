@@ -1,6 +1,5 @@
 ---
 title: Nextflow - an Emerging Service for Workflow Management
-last_modified_at: 2021-04-14
 primary_reviewers: sminot
 ---
 

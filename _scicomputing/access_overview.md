@@ -1,6 +1,5 @@
 ---
 title: Computing Access Overview
-last_modified_at: 2019-09-05
 primary_reviewers: vortexing
 ---
 This overview describes what types of credentials are needed for [various Fred Hutch computing resources](/compdemos/) and provides instructions for accessing those supported computing resources.

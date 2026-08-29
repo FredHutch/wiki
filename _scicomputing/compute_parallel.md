@@ -1,6 +1,5 @@
 ---
 title: Parallel Computing on Slurm Clusters
-last_modified_at: 2019-05-02
 primary_reviewer: atombaby
 ---
 

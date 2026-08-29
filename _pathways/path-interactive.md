@@ -1,6 +1,5 @@
 ---
 title: Getting and Using Interactive Sessions
-last_modified_at: 2024-05-29
 primary_reviewers: atombaby
 ---
 
