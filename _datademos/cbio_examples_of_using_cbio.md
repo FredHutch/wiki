@@ -69,4 +69,4 @@ cBioPortal offers countless ways to explore and interpret cancer genomics data�
 
 ---
 
-↩️ [Back to: What is cBioPortal?](/datascience/cbioportal#what-is-cbioportal)
+↩️ [Back to:cBioPortal](/datascience/cbioportal)
