@@ -2,12 +2,12 @@
 title: How you can use cBioPortal
 last_modified_at: 2025-04-18
 main_authors: sitapriyamoorthi
-primary_reviewers: tfirman, laderast  
+primary_reviewers: tfirman, emjbishop  
 ---
 
 cBioPortal offers countless ways to explore and interpret cancer genomics data—**without needing to code**. Below, we walk through a series of research questions using *KRAS* as an example gene to show how to use public datasets to uncover meaningful insights.
 
-> 📝 *Note: These examples use the public cBioPortal instance but can be replicated on the [Fred Hutch instance](https://cbioportal.fredhutch.org/) as well.*
+> 📝 *Note: These examples use the public cBioPortal instance but can be replicated on any instance of cBioPortal as well.*
 
 ### Example: Investigating KRAS in Cancer
 
@@ -69,4 +69,4 @@ cBioPortal offers countless ways to explore and interpret cancer genomics data�
 
 ---
 
-↩️ [Back to: What is cBioPortal?](/datascience/cbioportal#what-is-cbioportal)
+↩️ [Back to:cBioPortal](/datascience/cbioportal)
