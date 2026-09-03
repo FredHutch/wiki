@@ -2,26 +2,12 @@
 title: Helpful tips on how to prepare files for cBioPortal
 last_modified_at: 2025-04-18
 main_authors: sitapriyamoorthi
-primary_reviewers: tfirman, laderast  
+primary_reviewers: tfirman, emjbishop  
 ---
 
 Preparing your files for upload to cBioPortal requires careful formatting and planning. 
 This guide provides an overview of the process and links to examples, validation tools, and helper scripts.
 
----
-
-## 🧰 Before You Begin
-
-- Create a folder to store your study files.  
-  **The folder name must match the study ID** given by the cBioPortal team. This ID must also appear in your meta files under `cancer_study_identifier`.
-  > 📝 *Note:*
-  > *Currently there is a study limit size that is 4Gb. If your study folder is greater than 4Gb please reach out to us for guidance*
-  
-> 📝 *Note: If you’d like to request a new or updated study ID, email the [Data Governance team](mailto:dataprotection@fredhutch.org).*  
-
-- Once your files are nearly ready, validate them:
-  1. **Approved studies**: Upload to the `fh-dasl-cbio` bucket. You’ll receive a validation report by email.
-  2. **Testing locally**: Try [running a local instance](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/03_launch_local) of cBioPortal and validate your study manually.
 
 ---
 
@@ -33,13 +19,12 @@ To be accepted for upload, your study must contain some required files. Others a
 
 > 📝 *Note: Version 6 of cBioPortal requires at least one non-clinical file.*  
 
-
 ---
 ## 📄 Panel files
 
-If you have generated data using a panel, your panel should be uploaded into the FH instance of cBioPortal before you upload your data. 
+If you have generated data using a panel, your panel should be uploaded into the instance of cBioPortal by an application administrator before you upload your data. 
 
-👉 Checkout the available panels on the FH instance [here](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/06_available_panels_on_fh_cbio_instance)
+👉 Checkout the available panels on the FH hosted instance of cBioPortal [here](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/06_available_panels_on_fh_cbio_instance)
 👉 Learn more about gene panel formatting [here](https://docs.cbioportal.org/import-gene-panels/#gene-panel-file-format)
 
 ---
@@ -61,6 +46,6 @@ For more details, explore the full formatting documentation and helper tools her
 
 ---
 
-↩️ [Back to: Prepare & Upload Your Study](/datascience/cbioportal#4-prepare--upload-your-study)
+↩️ [Back to :cBioPortal](/datascience/cbioportal)
 
 
