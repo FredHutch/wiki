@@ -23,6 +23,10 @@ We'll be updating Slurm from its current version (25.11) to 26.05.  This will ke
 
 We will be installing the latest NoMachine version (8.27.1) to keep us current on fixes and support.  No changes to how you use NoMachine are expected.
 
+### Open OnDemand
+
+We will update [Open OnDemand](https://openondemand.fredhutch.org) to version 4.2.4. This update brings improved accessibility, smoother keyboard navigation, and key usability fixes across the file manager and interactive apps.
+
 ### Linux Updates
 
 We're going to install any missing OS updates and update the kernel to the latest version (5.4.0.238.258~18.04.1 at the time of writing).  These are bug and security fixes that won't affect how you use these systems.
