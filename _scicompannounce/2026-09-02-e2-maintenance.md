@@ -4,8 +4,8 @@ Title: October Gizmo Outage
 
 Maintenance of the E2 data center power distribution systems will require that we take the cluster out of service over two weekends in October of 2026.  The power distribution units supplying power to the racks need replacement which requires we power down systems for the duration of the work.
 
-Sunday, 10/18 09:00 AM to Monday, 10/19 12:00 PM
-Sunday, 10/25 12:00 PM to Sunday, 10/25 9:00 PM
+ - Sunday, 10/18 09:00 AM to Monday, 10/19 12:00 PM
+ - Sunday, 10/25 12:00 PM to Sunday, 10/25 9:00 PM
 
 Our hope is that we can complete this work in the first maintenance window- if we are able to complete everything on the weekend of the 18th we will release the second reservation.
 
