@@ -2,7 +2,7 @@
 Title: October Gizmo Outage
 ---
 
-Maintenance of the E2 data center power distribution systems will require that we take the cluster out of service in October of 2026.  The power distribution units supplying power to the racks need replacement which requires we power down systems for the duration of the work.  This work has been scheduled for two weekends in October:
+Maintenance of the E2 data center power distribution systems will require that we take the cluster out of service over two weekends in October of 2026.  The power distribution units supplying power to the racks need replacement which requires we power down systems for the duration of the work.
 
 Sunday, 10/18 09:00 AM to Monday, 10/19 12:00 PM
 Sunday, 10/25 12:00 PM to Sunday, 10/25 9:00 PM
@@ -17,7 +17,7 @@ With the cluster nodes all being rebooted, we are going to take advantage of thi
 
 ### Slurm Update
 
-We'll be updating Slurm from it's current version (25.11) to 26.05.  This will keep us current with bug and security fixes as well as on the supported track.  This won't change how you submit jobs or manage workload on the cluster.
+We'll be updating Slurm from its current version (25.11) to 26.05.  This will keep us current with bug and security fixes as well as on the supported track.  This won't change how you submit jobs or manage workload on the cluster.
 
 ### NoMachine Update
 
