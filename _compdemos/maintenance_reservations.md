@@ -5,9 +5,7 @@ main_author: Michael Gutteridge
 
 ---
 
-When it's necessary to interrupt cluster services (typically for maintenance reasons), we want to keep jobs from starting if the job would run into a maintance window.  Our maintenance typically involves actions like rebooting and powering down nodes and taking key services (like Slurm) offline, actions that would cause running jobs to fail or otherwise malfunction.
-
-Because of this, when we plan a major outage we place a _maintenance reservation_ on affected cluster nodes.  This reservation prevents jobs from starting when the expected job run time overlaps with the maintenance reservation.
+Occasionally we will need to interrupt cluster services for maintenance. Maintenance typically involves actions like rebooting and powering down nodes and taking key services (like Slurm) offline, actions that will cause running jobs to fail or otherwise malfunction. Ahead of these maintenance windows, we want to keep new jobs from starting until maintenance is complete to shield it from any sort of disruption. We do by placing a maintenance reservation on affected cluster nodes. This reservation prevents jobs from starting when the expected job run time overlaps with the maintenance reservation.
 
 ## What To Expect
 
