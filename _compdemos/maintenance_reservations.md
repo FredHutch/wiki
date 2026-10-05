@@ -47,5 +47,5 @@ JOBID               TIME_LIMIT          STATE               REASON
 
 By adjusting the timelimit from seven days to one, we've reduced the run time to a point where the job will finish before the reservation starts.
 
-Your job could still be running when the maintenance window starts when the partition allows jobs to run over their time.  _campus-new_ is such a partition.  If this happens your job may be cancelled.  The maintenance notice Scientific Computing sends out will indicate how running jobs will be handled.
+Your job could still be running when the maintenance window starts if the partition allows jobs to run over their time.  _campus-new_ is such a partition.  If this happens your job may be cancelled.  The maintenance notice Scientific Computing sends out will indicate how running jobs will be handled.
 {: .notice--info}
