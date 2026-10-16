@@ -1,7 +1,7 @@
 ---
 title: De-identification of Structured Data
 main_authors: Monica Gerber (monicagerber)
-primary_reviewers: vortexing, carriewright11
+primary_reviewers: vortexing, carriewright11, sitapriyamoorthi
 ---
 
 This pages outlines methods and tools that may be helpful for de-identifying structured data. 
@@ -11,7 +11,7 @@ This pages outlines methods and tools that may be helpful for de-identifying str
 > nuances regarding privacy that you may miss without ample experience.
 
 For information about policies and regulations related to de-identification, see
-[De-identification of Data and Specimens](/datasciece/deidentification/).
+[De-identification of Data and Specimens](https://centernet.fredhutch.org/u/irb/special-topics/hipaa-compliance.html).
 
 The R language and the tidyverse packages, especially {dplyr}, can handle many
 of the tasks of de-identification of structured data. Below are some ways you

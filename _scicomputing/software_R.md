@@ -152,7 +152,7 @@ apptainer run \
 
 
   ```R
-  source("https://sciwiki.fredhutch.org/assets/apptainer_config.")
+  source("https://sciwiki.fredhutch.org/assets/apptainer_config.R")
   ```
 
 
