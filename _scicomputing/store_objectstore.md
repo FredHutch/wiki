@@ -52,7 +52,7 @@ A specialized client is required to upload data into S3 storage. [Mountain Duck]
 
 Once you have [obtained S3 credentials](/scicomputing/access_credentials/#amazon-web-services-aws), you can use them to transfer files from/to the PI S3 buckets.
 
-It is possible to create additional restrictions if necessary.  For example, if a lab needs to store confidential PHI data such as for a clinical trial and only a certain subset of users in the lab are authorized to access that data, a specific prefix can be created that restricts access to only those authorized users.  Please submit a helpdesk ticket for assistance in setting this up.
+It is possible to create additional restrictions if necessary.  For example, if a lab needs to store confidential PHI data such as for a clinical trial and only a certain subset of users in the lab are authorized to access that data, a specific prefix can be created that restricts access to only those authorized users.  Please submit an IT Service Desk ticket for assistance in setting this up.
 
 #### Backup and Retention
 
@@ -125,13 +125,13 @@ We have a number of demos in our Resource Library related to how to interact wit
 
 > I need an additional S3 bucket created in my account.  Can I create one?
 
-No- you will need to contact us via helpdesk to have a new bucket created.
+No- you will need to contact us via itsd to have a new bucket created.
 
 While it is possible to have additional S3 buckets created in your lab account, additional buckets are discouraged as most use cases are satisfied by the standard managed buckets.  Note too that additional buckets are not subsidised (i.e. you will pay for the full cost of data stored in these extra buckets).
 
 > I need a bucket in a location other than `us-west-2`, can this be done?
 
-Yes, the Cloud team can create buckets in regions: `us-east-1`, `us-west-2`, and `eu-west-2`, if you have a need for this. However, in most cases this is not necessary.  If you have a specific need that would require buckets in other regions than `us-west-2` (our default), please submit a ticket to the helpdesk.
+Yes, the Cloud team can create buckets in regions: `us-east-1`, `us-west-2`, and `eu-west-2`, if you have a need for this. However, in most cases this is not necessary.  If you have a specific need that would require buckets in other regions than `us-west-2` (our default), please submit a ticket to the IT Service Desk.
 
 > Is it possible to see who is using the data in my lab buckets?
 
@@ -140,19 +140,19 @@ Yes, all access to your S3 buckets will be logged to a centralized location howe
 
 > I accidentally deleted something in my public or private economy cloud bucket (or another bucket that has "eco" in the name).  Can I get this data back?
 
-Yes, deleted data can be un-deleted for up to 60 days immediately following the time that the object was deleted.  Submit a helpdesk ticket immediately and we will be able to assist you with data recovery.
+Yes, deleted data can be un-deleted for up to 60 days immediately following the time that the object was deleted.  Submit an IT Service Desk ticket immediately and we will be able to assist you with data recovery.
 
 > I accidentally uploaded a file to the wrong path and it overwrote an existing file.  Can I get the original contents of the file back?
 
-Yes, this is effectively the same scenario as if you had deleted the file instead of overwriting it.  Submit a ticket to the helpdesk immediately for assistance.
+Yes, this is effectively the same scenario as if you had deleted the file instead of overwriting it.  Submit a ticket to the IT Service Desk immediately for assistance.
 
 > I have a file in my S3 bucket that I need to permanently delete immediately instead of waiting 60 days.  Is this possible?
 
-Yes, it is possible to permanently remove the backup copy of a file that was modified or deleted prior to the 60-day period.  This is typically only necessary for regulatory compliance and in general is extremely rare, however should it be necessary then please submit a ticket to the helpdesk and we can assist you with this.
+Yes, it is possible to permanently remove the backup copy of a file that was modified or deleted prior to the 60-day period.  This is typically only necessary for regulatory compliance and in general is extremely rare, however should it be necessary then please submit a ticket to the IT Service Desk and we can assist you with this.
 
-> I already have extensive knowledge of S3 and have been working with it for years.  Do I really need to contact the helpdesk for everything?
+> I already have extensive knowledge of S3 and have been working with it for years.  Do I really need to contact the IT Service Desk for everything?
 
-It depends.  Certain restrictions exist in the account that cannot be overridden so you will not be able to delete an AWS S3 bucket, modify the resource policy, enable object locks or legal holds (unless this has been granted on your account; contact helpdesk for more info), adjust the object lifecycle policies, or enable an object or bucket ACL other than bucket-owner-full-control on any bucket except the public bucket.  Admins and Data Managers are able to recover non-current versions of objects, initiate Glacier retrieval requests, and submit S3 Batch jobs (depending on the circumstances, other guardrails may prevent you from running an S3 Batch job, especially if it involves invoking other AWS Service such as Lambda functions).  If you are certain that you know what you are doing, then you may proceed entirely at your own risk.
+It depends.  Certain restrictions exist in the account that cannot be overridden so you will not be able to delete an AWS S3 bucket, modify the resource policy, enable object locks or legal holds (unless this has been granted on your account; contact itsd for more info), adjust the object lifecycle policies, or enable an object or bucket ACL other than bucket-owner-full-control on any bucket except the public bucket.  Admins and Data Managers are able to recover non-current versions of objects, initiate Glacier retrieval requests, and submit S3 Batch jobs (depending on the circumstances, other guardrails may prevent you from running an S3 Batch job, especially if it involves invoking other AWS Service such as Lambda functions).  If you are certain that you know what you are doing, then you may proceed entirely at your own risk.
 
 ### How do I access my other AWS account resources?
 
