@@ -23,7 +23,7 @@ scontrol update jobid=<jobid> timelimit=1-0
 
 ## Updates to the Gizmo Environment
 
-We are making a few changes to the gizmo/rhino computing environment.  These are described below.  Contact Scientific Computing by filing a helpdesk ticket (`scicomp@`) if you need assistance or have further questions.
+We are making a few changes to the gizmo/rhino computing environment.  These are described below.  Contact Scientific Computing by filing a ticket (`scicomp@`) if you need assistance or have further questions.
 
 ### Slurm Upgrade
 
