@@ -1,6 +1,5 @@
 ---
 title: Data Storage in Databases
-last_modified_at: 2018-04-01
 primary_reviewers: vortexing
 ---
 
@@ -29,7 +28,7 @@ Recorded trainings are available on the <a target="blank" href="https://www.fred
 
 ## MS SQL Server
 
-Groups needing MS SQL Server Database Administration services should contact IT Helpdesk or create a ticket in Cherwell.
+Groups needing MS SQL Server Database Administration services should contact the IT Service Desk or create a ticket.
 
 ## MyDB
 

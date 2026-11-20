@@ -17,7 +17,7 @@ This convenience comes with a significant downside: Mountain duck is really quit
 
 It will only copy data at about 5MB/s for uploads and no more than 20MB/s for downloads. This is ok for small files but becomes prohibitive as data sizes get larger.  
 
-Email `helpdesk` or your divisional IT support and ask for an installation of Mountain Duck on Windows or Mac.  
+Email `itsd` or your divisional IT support and ask for an installation of Mountain Duck on Windows or Mac.  
 
 ### Installing Mountain Duck
 
@@ -60,7 +60,7 @@ If you are having problems please check How to troubleshoot MountainDuck and Cyb
 
 ### Installing Cyberduck
 
-If required ask the Helpdesk or your divisional IT support to be added to the security group lastname_f_grp of your PI (e.g. lynch_t_grp). Make sure you CC your PI or Manager to let them know that you are requesting access.
+If required ask the IT Service Desk or your divisional IT support to be added to the security group lastname_f_grp of your PI (e.g. lynch_t_grp). Make sure you CC your PI or Manager to let them know that you are requesting access.
 
 
 If you have permission to install software yourself install it from https://cyberduck.io/. Please use the download links below the yellow duck and install the software. You do not need to pay for the software through the Mac App store. 

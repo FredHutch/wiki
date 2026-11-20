@@ -20,7 +20,7 @@ In order to run jobs on AWS Batch and access data in AWS S3, Nextflow can
 directly use the credentials set up for you by the Cloud and Data team.
 
 You should have received an encrypted email containing your 
-AWS credentials (if not contact `helpdesk`).
+AWS credentials (if not contact `itsd`).
 Those credentials will be used by Nextflow when executing a workflow.
 
 

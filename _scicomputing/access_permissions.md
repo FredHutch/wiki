@@ -1,6 +1,5 @@
 ---
 title: Permissions
-last_modified_at: 2019-09-05
 primary_reviewers:
 ---
 

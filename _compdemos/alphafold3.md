@@ -1,6 +1,5 @@
 ---
 title: AlphaFold-3
-last_modified_at: 2024-12-19
 main_author: John Dey
 primary_reviewers: 
 ---
