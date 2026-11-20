@@ -22,7 +22,7 @@ It can be difficult to track who has access via a pre-signed URL, once it is cre
 
 Pre-signed URLs are also time-barred and will become inactive after a period of time- the longest a URL will be valid is 7 days.  The URL will expire and it will be necessary to create a new signed URL.
 
-For more systematic collaboration between groups, a better route would be to contact your IT (Information Technology) Helpdesk and ask for an S3 bucket policy to be created that will allow for collaborator access.
+For more systematic collaboration between groups, a better route would be to contact your IT (Information Technology) Service Desk and ask for an S3 bucket policy to be created that will allow for collaborator access.
 
 ## How do I get started using pre-signed URLs? 
 

@@ -22,7 +22,7 @@ Anyone with a HutchNetID can login to Aspera Faspex.
 
 ### Support
 
-If you are unable to log in, contact HelpDesk. If you are able to log in but have other questions, contact SciComp.
+If you are unable to log in, contact the IT Service Desk. If you are able to log in but have other questions, contact SciComp.
 
 ## Sending Files to External Collaborators
 
@@ -48,7 +48,7 @@ The recipients will receive an email with a link to download the files. If they 
  - This system is for file transfers only and storage space is temporary. Packages are deleted after all recipients have downloaded the package. Unreserved packages are deleted after 7 days.
  - Packages are transferred through a secure SSH tunnel.
  - If you send a package to an external collaborator the link can only be used once to download the package; however, the collaborator could share the link with another person and that person could download the file.
- - If you're transferring sensitive data, please make sure the recipient has a Faspex user account. This will require them to login to Faspex before retrieving the package. If the recipient doesn't have a HutchNetID, contact the HelpDesk and we'll create a Faspex account.
+ - If you're transferring sensitive data, please make sure the recipient has a Faspex user account. This will require them to login to Faspex before retrieving the package. If the recipient doesn't have a HutchNetID, contact the IT Service Desk and we'll create a Faspex account.
 
 ## Receiving Files from External Collaborators
 

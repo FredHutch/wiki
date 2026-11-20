@@ -3,7 +3,7 @@ title: R and RStudio
 primary_reviewers: ptvan, vortexing
 
 ---
-R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or [CRAN](https://cran.r-project.org/), or via the FH Center IT's Self Service Tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Call the IT Helpdesk if you do not have permissions to install or update R on your local computer.  
+R is a common statistical and computing language used in a variety of biomedical data analyses, visualizations and computing settings.  R itself can be downloaded to install it on your local computer from the Comprehensive R Archive Network project, or [CRAN](https://cran.r-project.org/), or via the FH Center IT's Self Service Tools (on [Macs](https://centernet.fredhutch.org/cn/u/center-it/help-desk/mac-support/jamf-pro.html) or on PCs).  Call the IT Service Desk if you do not have permissions to install or update R on your local computer.  
 
 
 ## RStudio
@@ -159,7 +159,7 @@ When starting a new RStudio session, you can choose which version of R to run (b
 Note that Open OnDemand provides two "flavors" of RStudio Server: the first is [Fred Hutch RStudio Server](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server/session_contexts/new) which uses the [EasyBuild modules](/scicomputing/compute_scientificSoftware/) on the cluster. 
 The second is [RStudio Server/Apptainer](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server_apptainer/session_contexts/new) which provides access to several containerized versions of RStudio via [Apptainer](/compdemos/Apptainer/). This flavor currently has slightly newer versions of R and a newer operating system which supports the [Posit Package Manager](https://packagemanager.posit.co/client/#/) for fast package installs.
 
-If you have issues or questions in using these versions of RStudio Server, please email `helpdesk` and describe the issues you're having.  
+If you have issues or questions in using these versions of RStudio Server, please email `itsd` and describe the issues you're having.  
 
 #### Plotting in RStudio
 
