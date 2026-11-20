@@ -12,7 +12,7 @@ The Resource Library is a growing collection of step-by-step demonstrations, min
 While SciWiki content is organized by topic, many real-world tasks require following a sequence of steps across multiple topics. The Pathways section is designed to guide users through common workflows in biomedical data science by providing curated walkthroughs that connect the dots across the Wiki.These pathways are especially useful for new users or for anyone tackling a task they haven't done before — from setting up a project to analyzing a dataset.
 
 
-## [Translational Data Accelerator](https://ocdo.fredhutch.org/) Supports
+## [Translational Data Accelerator](https://accelerator.fredhutch.org/) Supports
 
 The Translational Data Accelerator (TDA) leads Fred Hutch’s strategic vision for data. Its mission is to support all staff who use data — from clinicians to researchers to administrators — by advancing a coordinated, ethical, and effective data ecosystem. TDA collaborates closely with teams across Fred Hutch, including the Office of Translational Research, Shared Resources, and Scientific Computing.
 
