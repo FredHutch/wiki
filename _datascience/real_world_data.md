@@ -57,7 +57,7 @@ The [Hutch Institute for Cancer Outcomes Research](https://www.fredhutch.org/en/
 - [SEER Medicaid](https://healthcaredelivery.cancer.gov/seermedicaid/) linked data resource
 - [Health Economics Research On Cancer](https://healthcaredelivery.cancer.gov/heroic) (HEROiC) 
 
-The [Office of the Chief Data Officer](https://centernet.fredhutch.org/u/data-science-lab/patient-data.html) at Fred Hutch manages data access for Fred Hutch patient data for research. 
+The [Translational Data Accelerator](https://centernet.fredhutch.org/u/data-science-lab/patient-data.html) at Fred Hutch manages data access for Fred Hutch patient data for research. 
 
 ## Resources to Learn More
 

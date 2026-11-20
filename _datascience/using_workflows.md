@@ -134,7 +134,7 @@ Both WDL and Nextflow are excellent choices. Here's guidance on which might be b
 
 ### WDL
 
-- **[Data Science Lab: Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/)** - Comprehensive course
+- **[Translational Data Accelerator: Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/)** - Comprehensive course
 - **[OpenWDL Learn WDL](https://github.com/openwdl/learn-wdl)** - Official tutorials
 - **[WDL Documentation](https://wdl-docs.readthedocs.io/)** - Language reference
 
@@ -179,7 +179,7 @@ The Fred Hutch workflow community is active and collaborative:
 
 - **Join [#workflow-managers](https://fhdata.slack.com/archives/CJFP1NYSZ)** - Share tips and get help
 - **Contribute workflows** - Add to [WILDS WDL Library](https://github.com/getwilds/wilds-wdl-library) or create Fred Hutch repos
-- **Attend trainings** - Watch for [Data Science Lab courses](https://hutchdatascience.org/courses/)
+- **Attend trainings** - Watch for [Translational Data Accelerator courses](https://hutchdatascience.org/courses/)
 - **Schedule consultations** - Get personalized help via [Data House Calls](https://calendly.com/data-house-calls/computing?month=2025-11)
 
 Whether you're just starting with workflows or looking to optimize existing pipelines, the Fred Hutch community is here to help you succeed!

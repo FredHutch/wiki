@@ -38,15 +38,15 @@ By the end of this tutorial, learners will be able to:
 1. Fred Hutch network access. User can connect to the Fred Hutch network on
 campus, or via the [VPN][cnet-vpn].
 2. Access to the Fred Hutch Cluster. We recommend getting access by completing
-the [Cluster 101][cluster-101] course from the [Data Science Lab][dasl].
+the [Cluster 101][cluster-101] course from the [Translational Data Accelerator][dasl].
 
 ### Suggested Prerequisites
 
 1. Familiarity with WDL workflows. We recommend the 
-[Developing WDL Workflows][dww] course from the [Data Science Lab][dasl].
+[Developing WDL Workflows][dww] course from the [Translational Data Accelerator][dasl].
 2. Familiarity with the command line. We recommend the 
 [Bash for Bioinformatics][bash-for-bio] course from the 
-[Data Science Lab][dasl]. Check their website to register for a hybrid, 
+[Translational Data Accelerator][dasl]. Check their website to register for a hybrid, 
 synchronous version of the course.
 
 ### Related Resources

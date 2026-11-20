@@ -363,7 +363,7 @@ This approach lets you build complex workflows quickly without writing every tas
 
 ## Next Steps
 
-1. **Learn the basics** with [Data Science Lab's WDL course](https://hutchdatascience.org/Developing_WDL_Workflows/)
+1. **Learn the basics** with [Translational Data Accelerator's WDL course](https://hutchdatascience.org/Developing_WDL_Workflows/)
 2. **Explore examples** in the [WILDS WDL Library](/datascience/wilds_wdl/)
 3. **Choose an execution engine** - see [WDL Execution Engines](/datademos/wdl_execution_engines/)
 4. **Run your first workflow** using [PROOF](/datascience/proof/) or a local executor

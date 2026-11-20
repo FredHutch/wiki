@@ -10,10 +10,10 @@ You can learn more about "FAIR" (Findable, Accessible, Interoperable, Reusable) 
 You can find more information about specific [data repositories](/execute_sharing/) you may consider using to comply with the NIH Data Sharing requirements.  
 
 ## DMPtool.org
-In response to this new, expanded scope of data sharing requirements as well as from other funding agencies, the Data Science Lab has begun customizing [dmptool.org](https://dmptool.org/) for Fred Hutch investigators.  You can learn more about this free tool on our [dmptool page](/datademos/dmptool/).
+In response to this new, expanded scope of data sharing requirements as well as from other funding agencies, the Translational Data Accelerator has begun customizing [dmptool.org](https://dmptool.org/) for Fred Hutch investigators.  You can learn more about this free tool on our [dmptool page](/datademos/dmptool/).
 
 ## NIH Data Sharing Guide
-The Data Science Lab has also created a guide you can [find here](https://hutchdatascience.org/NIH_Data_Sharing/) that walks you through the process of complying with the new 2023 NIH Data Sharing Policy. 
+The Translational Data Accelerator has also created a guide you can [find here](https://hutchdatascience.org/NIH_Data_Sharing/) that walks you through the process of complying with the new 2023 NIH Data Sharing Policy. 
 >If you take this course and want to give us feedback or would like to learn more about it, you can share your thoughts in [the FH Data Slack in the #ask-dasl channel](https://fhdata.slack.com/archives/C043ZVCBY9Z)) or you can file an issue on [the course's GitHub repository](https://github.com/fhdsl/NIH_Data_Sharing).
 
 

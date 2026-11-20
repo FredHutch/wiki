@@ -12,7 +12,7 @@ boundaries and limitations.
 
 PROOF is a collaborative partnership between 
 [Scientific Computing][cnet-scicomp] and the 
-[Office of the Chief Data Officer (OCDO)][cnet-dasl], and we are eager to help
+[Translational Data Accelerator (OCDO)][cnet-dasl], and we are eager to help
 PROOF users with troubleshooting. You can get live help with PROOF through
 several avenues:
 

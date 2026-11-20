@@ -6,9 +6,9 @@ primary_reviewers:
 
 The Hutch provides many platforms for storing, using, moving, and sharing your data- relational databases, block-based network file storage, and cloud object datastores.  Each of these platforms have options as well- these options to address the diverse needs of modern biomedical and bioinformatic research.  The platform you use will depend on the nature of the data and how you plan to use it.
 
-This article is an overview of the available storage platforms and options and provides some guidance for selecting the option best for your need. More detailed information- including setup instructions and limitations- can be found in the pages and articles linked in the sidebar.  There are multiple resources at the Fred Hutch to help you design and implement a data management plan for your research.  The Fred Hutch [Data Science Lab](https://ocdo.fredhutch.org/) offers a [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html) service to get a consultation to discuss your data needs and how you might design a plan, and Scientific Computing can help you with the tools and resources you need to implement that plan (email `scicomp` for help).
+This article is an overview of the available storage platforms and options and provides some guidance for selecting the option best for your need. More detailed information- including setup instructions and limitations- can be found in the pages and articles linked in the sidebar.  There are multiple resources at the Fred Hutch to help you design and implement a data management plan for your research.  The Fred Hutch [Translational Data Accelerator](https://ocdo.fredhutch.org/) offers a [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html) service to get a consultation to discuss your data needs and how you might design a plan, and Scientific Computing can help you with the tools and resources you need to implement that plan (email `scicomp` for help).
 
-For more guidance about how to think about Reserach Data Stewardship and designing a data storage strategy for your research, you can find the Data Science Lab's [data stewardship page](/datascience/stewardship/).
+For more guidance about how to think about Reserach Data Stewardship and designing a data storage strategy for your research, you can find the Translational Data Accelerator's [data stewardship page](/datascience/stewardship/).
 
 ## Data Storage Types
 
@@ -96,4 +96,4 @@ The Fred Hutch IRB's [information on HIPAA compliance](https://centernet.fredhut
 
   - For consulting about how to handle large amounts of externally or internally generated data email `scicomp`.
   - For additional assistance regarding data generated via the Fred Hutch Genomics Shared Resource, email `bioinformatics`.
-  - For consultation about data management and strategies, schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) with the Data Science Lab. 
+  - For consultation about data management and strategies, schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) with the Translational Data Accelerator. 

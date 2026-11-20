@@ -26,7 +26,7 @@ wiki_sections:
 hutch_highlights:
   - image_path: /images/Cherrytrees-web.png
     alt: "placeholder image dasl"
-    title: "Data Science Lab"
+    title: "Translational Data Accelerator"
     excerpt: 'The Fred Hutch Data Science Laboratory is an emerging, collaborative effort at the Fred Hutch which provides a variety of training, community and consulting support for data science related topics.'
     url: "https://ocdo.fredhutch.org/dasl/"
     btn_label: "Learn More"

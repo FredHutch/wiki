@@ -70,7 +70,7 @@ Python is also widely used for data wrangling, particularly for handling complex
 The FH-Data Slack is always available as a space for researchers to ask questions and share resources about data wrangling.
 
 -   You can join the `#question-answer` channel on the FH-Data Slack to ask questions, share resources, and discuss strategies for managing complex biomedical data.
--   The Data Science Lab offers a variety of learning communities, providing spaces for biomedical data professionals to learn together, ask for help, and share best practices for wrangling large and complex datasets.
+-   The Translational Data Accelerator offers a variety of learning communities, providing spaces for biomedical data professionals to learn together, ask for help, and share best practices for wrangling large and complex datasets.
 -   The Fred Hutch Bioinformatics Core provides services to support the wrangling and analysis of high-throughput biological data such as genomic and proteomic datasets.
 
 # **Learning Resources**

@@ -17,7 +17,7 @@ This Slack workspace is a place for Hutch researchers to ask questions, get upda
 These groups can help you identify and use compute resources at the Hutch:
 
 [Scientific Computing (SciComp)](https://centernet.fredhutch.org/cn/u/center-it/scicomp.html)
-Fred Hutch's [Office of the Chief Data Officer (OCDO)](https://ocdo.fredhutch.org/) and [Data Science Lab (DaSL)](https://ocdo.fredhutch.org/dasl/)
+Fred Hutch's [Translational Data Accelerator (OCDO)](https://ocdo.fredhutch.org/) and [Translational Data Accelerator (DaSL)](https://ocdo.fredhutch.org/dasl/)
 [IT Service Desk](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html)
 
 ## Events and Meetings

@@ -2,7 +2,7 @@
 title: Chris Lo
 ---
 ## Affiliation
-Data Science Lab
+Translational Data Accelerator
 
 
 ## Title
@@ -11,7 +11,7 @@ Data Science Trainer
 
 ## Contribution Domain and Type
 
-Data Science Lab - editing
+Translational Data Accelerator - editing
 
 
 ## Github

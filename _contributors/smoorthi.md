@@ -2,7 +2,7 @@
 title: Sitapriya Moorthi
 ---
 ## Affiliation
-Office of the Chief Data Officer
+Translational Data Accelerator
 
 ## Title
 Staff Scientist

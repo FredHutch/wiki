@@ -12,11 +12,11 @@ The Resource Library is a growing collection of step-by-step demonstrations, min
 While SciWiki content is organized by topic, many real-world tasks require following a sequence of steps across multiple topics. The Pathways section is designed to guide users through common workflows in biomedical data science by providing curated walkthroughs that connect the dots across the Wiki.These pathways are especially useful for new users or for anyone tackling a task they haven't done before — from setting up a project to analyzing a dataset.
 
 
-## [Office of the Chief Data Officer](https://ocdo.fredhutch.org/) Supports
+## [Translational Data Accelerator](https://ocdo.fredhutch.org/) Supports
 
-The Office of the Chief Data Officer (OCDO) leads Fred Hutch’s strategic vision for data. Its mission is to support all staff who use data — from clinicians to researchers to administrators — by advancing a coordinated, ethical, and effective data ecosystem. OCDO collaborates closely with teams across Fred Hutch, including the Office of Translational Research, Shared Resources, and Scientific Computing.
+The Translational Data Accelerator (OCDO) leads Fred Hutch’s strategic vision for data. Its mission is to support all staff who use data — from clinicians to researchers to administrators — by advancing a coordinated, ethical, and effective data ecosystem. OCDO collaborates closely with teams across Fred Hutch, including the Office of Translational Research, Shared Resources, and Scientific Computing.
 
-The Data Science Lab (DaSL) is the outreach arm of the OCDO and provides direct-to-community support in the form of:
+The Translational Data Accelerator (DaSL) is the outreach arm of the OCDO and provides direct-to-community support in the form of:
 - Consultations and technical guidance
 - Workflow and software development
 - Open-source tool building

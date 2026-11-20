@@ -18,7 +18,7 @@ enables quick iterations.
 
 PROOF is a collaborative partnership between 
 [Scientific Computing][cnet-scicomp] and the 
-[Office of the Chief Data Officer (OCDO)][cnet-dasl]. PROOF is only available
+[Translational Data Accelerator (OCDO)][cnet-dasl]. PROOF is only available
 on the Fred Hutch network at this time.
 
 ## PROOF Workbench
@@ -37,10 +37,10 @@ recreating them.
 - Consult the troubleshooting guide: 
 [Troubleshooting PROOF Workbench][pwb-trouble].
 - Learn more about developing WDL workflows: 
-[*Developing WDL Workflows* by the Fred Hutch Data Science Lab ][dev-ww].
+[*Developing WDL Workflows* by the Fred Hutch Translational Data Accelerator ][dev-ww].
 - Explore the [WILDS WDL Library][wiki-wilds-wdl] for tested, ready-to-use WDL
 workflows, developed and maintained by the 
-[Office of the Chief Data Officer (OCDO)][cnet-dasl].
+[Translational Data Accelerator (OCDO)][cnet-dasl].
 - Partner with the OCDO to build workflows for your research via the 
 [WILDS WDL Development Program][cnet-wwdp].
 - Need help debugging a workflow? Get live help by scheduling a 

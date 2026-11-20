@@ -31,7 +31,7 @@ Some general guidelines for using task storage:
 **DO** consider using a workflow manager to manage data in task storage.  Workflow managers can be set up with targets to ensure data is present in task storage before the task begins as well as staging out generated data after successful completion of a task
 {: .notice--info}
 
-The Data Science Lab and Scientific Computing teams are available to help you identify and mitigate these risks- please reach out to us with any questions or to help with your plans.
+The Translational Data Accelerator and Scientific Computing teams are available to help you identify and mitigate these risks- please reach out to us with any questions or to help with your plans.
 
 ## Storage Options for Tasks
 

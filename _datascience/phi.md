@@ -199,7 +199,7 @@ public benefits of secondary research.[^4]<sup>, </sup>[^5]<sup>,
 
 - ITCR Training Network: Ethical Data Handling for Cancer Research course, [Chapter 3: De-identification](https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-security.html#de-identification).
 
-- Fred Hutch Data Science Lab [Data Policy & Governance Using Healthcare Data](https://centernet.fredhutch.org/u/data-science-lab/data-governance/patient-data.html) page on CenterNet.
+- Fred Hutch Translational Data Accelerator [Data Policy & Governance Using Healthcare Data](https://centernet.fredhutch.org/u/data-science-lab/data-governance/patient-data.html) page on CenterNet.
 - Fred Hutch [Institutional Review Board](https://centernet.fredhutch.org/u/irb.html)
 - Fred Hutch [Privacy Office](https://centernet.fredhutch.org/u/privacy.html)
 - U.S. Department of Health and Human Services, [HIPAA Special Topics: Research](https://www.hhs.gov/hipaa/for-professionals/special-topics/research/index.html). 

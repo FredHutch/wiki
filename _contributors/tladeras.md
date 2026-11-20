@@ -2,7 +2,7 @@
 title: Ted Laderas
 ---
 ## Affiliation
-Data Science Lab 
+Translational Data Accelerator 
 
 
 ## Title
@@ -11,7 +11,7 @@ Data Scientist
 
 ## Contribution Domain and Type
 
-Data Science Lab - writing and editing
+Translational Data Accelerator - writing and editing
 
 
 ## Github

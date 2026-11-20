@@ -2,7 +2,7 @@
 title: Taylor Firman
 ---
 ## Affiliation
-Data Science Lab 
+Translational Data Accelerator 
 
 
 ## Title
@@ -11,7 +11,7 @@ Research Informatics Lead
 
 ## Contribution Domain and Type
 
-Data Science Lab - editing
+Translational Data Accelerator - editing
 
 
 ## Github

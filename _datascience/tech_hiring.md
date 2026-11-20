@@ -5,14 +5,14 @@ primary_reviewers: vortexing, seankross, monicagerber
 
 Finding and recruiting talent for technical roles in a biomedical or scientific
 institution can feel like a difficult task! The institutions are complex and the
-technical roles are nuanced. Members of the Data Science Lab began to share
+technical roles are nuanced. Members of the Translational Data Accelerator began to share
 resources and best practices with each other, which evolved into pages on
 the Biomedical Data Science Wiki. 
 
 These pages are intended to provide guidance on hiring for technical positions,
 such as data scientists, programmers, and bioinformaticians, in scientific
 institutions like Fred Hutch Cancer Center. They draw on the personal
-experience of staff and faculty in the Data Science Lab, and they are not
+experience of staff and faculty in the Translational Data Accelerator, and they are not
 intended to be an authoritative or exhaustive resource. We've linked to other
 sources, research, and evidence-based practices whenever possible. If you have
 experience, links, or comments to add, please open a pull request or an issue on

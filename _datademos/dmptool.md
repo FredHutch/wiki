@@ -3,9 +3,9 @@ title: DMPtool.org
 primary_reviewers: vortexing
 ---
 
-[DMPtool.org](https://dmptool.org/) is a free, open-source, online tool that supports researchers in creating, sharing and maintaining their data sharing plans related to many funding agencies.  The project has been supported by the University of California since 2011 and the Data Science Lab has joined the effort to provide Fred Hutch investigators support and guidance through the tool.  
+[DMPtool.org](https://dmptool.org/) is a free, open-source, online tool that supports researchers in creating, sharing and maintaining their data sharing plans related to many funding agencies.  The project has been supported by the University of California since 2011 and the Translational Data Accelerator has joined the effort to provide Fred Hutch investigators support and guidance through the tool.  
 
-If you create an account at [dmptool.org](https://dmptool.org/) using your fredhutch.org email address, you'll be able to use the evolving Fred Hutch guidance, and connect to the Data Science Lab for reviews and support through the tool.  
+If you create an account at [dmptool.org](https://dmptool.org/) using your fredhutch.org email address, you'll be able to use the evolving Fred Hutch guidance, and connect to the Translational Data Accelerator for reviews and support through the tool.  
 
 Investigators have their own dashboard where they can see all the plans they have created in the tool.  It maintains all your in-progress and past plans, lets you share them publicly and reuse them in the future.
 > ![](/datascience/assets/dmptool/dashboard.png)
@@ -23,13 +23,13 @@ Look up requirements for plans from various funding agencies and find sample pla
 The tool hosts plans that investigators have made public for you to read and leverage for your own work.  
 > ![](/datascience/assets/dmptool/templates.png)
 
-While writing your own plan, dmptool and Fred Hutch (in progress), along with other institutions have provided guidance on many of the common templates that you can use to help streamline the creation of your plans.  Additionally, you can collaborate with others at Fred Hutch or other institutions by sharing the plan in the tool itself (no more emailing back and forth!).  You can request feedback on your plan by staff at the Data Science lab in the tool, as well as download your plan at any time.  
+While writing your own plan, dmptool and Fred Hutch (in progress), along with other institutions have provided guidance on many of the common templates that you can use to help streamline the creation of your plans.  Additionally, you can collaborate with others at Fred Hutch or other institutions by sharing the plan in the tool itself (no more emailing back and forth!).  You can request feedback on your plan by staff at the Translational Data Accelerator in the tool, as well as download your plan at any time.  
 
 > ![](/datascience/assets/dmptool/guidance.png)
 
 
 
-Additionally, dmptool has provided fill-in-the-blank type support and the Data Science Lab will continue to port over our guidance from various sources into the tool so you can find it directly next to each section in the plan.  
+Additionally, dmptool has provided fill-in-the-blank type support and the Translational Data Accelerator will continue to port over our guidance from various sources into the tool so you can find it directly next to each section in the plan.  
 > ![](/datascience/assets/dmptool/fill-in-blank.png)
 
 
