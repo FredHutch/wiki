@@ -1,22 +1,29 @@
 ---
 title: Computing Environments and Containers
+last_modified_at: 2025-11-11
 primary_reviewers: bmcgough
 ---
 
-Beyond what's available on local workstations, Scientific Computing maintains a large library of pre-compiled software packages on our HPC cluster and Linux systems. Reasons to use software maintained by SciComp include:
-- Packages are often faster due to compiler optimizations
-- Packages are reproducible in or outside Fred Hutch
-- Rapid access to many software packages and versions
+The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which resource might be best suited to their particular computing needs.
 
-We use **Lmod**, an Environment Module system built with EasyBuild, to make specific software versions available on the command line and in scripts - over a thousand modules are already available. Use the `module` or `ml` commands to interact with them. See [Scientific Software](/scicomputing/compute_scientificSoftware/) for the R, Python, and other modules available on `rhino` and `gizmo`.
+The Scientific Computing group supports software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
 
+Reasons to use scientific software maintained by SciComp include:
+- packages are often faster due to compiler optimizations
+- packages are reproducible in or outside Fred Hutch
+- rapid access to many software packages and package versions
+
+## Environment Modules
+
+On the command line and in scripts, we use the [TACC Lmod Environment Modules](https://tacc.utexas.edu/research/tacc-research/lmod/) to make software versions available in a modular and malleable way. Environment Modules provide access to one version of one or more software packages to help improve reproducibility.
+
+For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.
+{: .notice--info}
 
 ### How to Use Environment Modules
-As you will learn below, Environment Modules can be referred to in two ways - generic and specific. Often the generic method is fastest, and this is an acceptable way to load Environment Modules when using a shell interactively. When using the generic method, you refer simply to the software package name you want to load (ex: `module load Python`). This is fast, but circumvents one of the reproduciblity supporting features of Environment Modules. 
-
-The default version of `Python` loaded using the generic reference will change as the `Python` package versions are updated. When using the specific method, you specify the verison of the software package you want to load (ex: `module load R/3.5.1-foss-2016b-fh1`). When you specify the version of a module, you will always load exactly the same version of the software package regardless of what new or different versions might also be available. For scripts, we recommend always using a specific Environment Module reference to ensure both reproducibility of your processes as well as making sure your process continues to work over time.  
 
 #### Interactively
+
 When you log in to any SciComp managed server, your terminal session has **Lmod** pre-loaded. Commonly used shell commands around Environment Modules include:
 
 Command | Action
@@ -49,10 +56,7 @@ $ which python
 /app/easybuild/software/Python/2.7.15-foss-2016b-fh1/bin/python
 ```
 
-#### Scripting with Environment Modules
-To use Environment Modules in a bash script, there are two Best Practices we highly recommend you integrate into your work. 
-
-##### Best Practice 1
+#### In a Shell Script
 
 Interactive shell session have the required `module` commands activated, but scripts can often be run in non-interactive shells, so it is best to explicitly activate the `module` command. Add the follow lines to the top of your script:
 
@@ -71,76 +75,73 @@ module load R/3.5.1-foss-2016b-fh1
 
 This would load that specific Environment Module for use in your script.
 
-##### Best Practice 2
-Scripts are expected to be reproducible, so using a specific Environment Module reference is recommended:
-```
-module load Python/3.5.1-foss-2016b-fh1
-```
-Rather than:
-```
-module load Python
-```
-The above line will load a different version of the software package over time as the "pointer" to a specific version is changed.
+### Specifying a Module Version
 
-> Note: This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
-
-#### With WDL
-
-WDL commonly uses [Docker](/compdemos/Docker/) contiainers to access required packages. You can use our Environment Modules instead of Docker.
-
-Instead of specifying a `docker` image in a task's `runtime` section, you can specify a `modules` attribute naming the Environment Module(s) to load:
-
-```wdl
-runtime {
-  modules: "SAMtools/1.11-GCC-10.2.0"
-}
-```
-
-This requires an execution engine that has been configured to support Environment Modules (e.g., Cromwell on our cluster). 
-
-See the [Environment Modules (HPC-specific)](/datascience/wdl_workflows/#environment-modules-hpc-specific) section of our [WDL Workflows](/datascience/wdl_workflows/) page for more detail.
-
-#### With VSCode
-
-We recommend creating a Python virtual environment that captures your currently loaded modules and reloads them automatically whenever the environment is activated. 
-
-This is because VSCode's Remote SSH extension can't load cluster Environment Modules when you connect to it. The remote session starts before your shell would normally load modules from `.bashrc` or `.profile`.
-
-See [Using Modules with VS Code](/compdemos/VS-Code_lmod/) for the workaround.
-
-#### With RStudio
-
-The easiest way to use Environment Modules with RStudio is through [Open OnDemand](/scicomputing/access_openondemand/), which launches RStudio Server for you and lets you pick which modules to use when starting a session.
-
-Be sure to use the [Fred Hutch RStudio Server](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server/session_contexts/new), which uses the modules on the cluster, not [RStudio Server/Apptainer](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server_apptainer/session_contexts/new).
-
-See [R and RStudio](/scicomputing/software_R/#run-rstudio-server-on-an-hpc-machine) for more on both options.
-
-#### With Jupyter
-
-We supply a `JupyterLab` module you can load along with whichever other modules you need. On the command line, load these additional Environment Modules at the same time as JupyterLab. For example, to load Seaborn with Jupyter:
+When requesting a module you will get the default version unless you specifically request a version using the version tag.  For example:
 
 ```
-ml purge
+module load R
+```
+will load whatever is the default version of R at any particular time.  To avoid this behavior, specify a version along with the module name:
 
-ml JupyterLab/4.0.3-GCCcore-12.2.0 Seaborn/0.12.2-foss-2022b 
-jupyter lab --ip=0.0.0.0 --port=$(fhfreeport) --no-browser
+```
+module load R/4.3.3-gfbf-2023b
 ```
 
-See [Using Jupyter on rhino](/scicomputing/software_python/#using-jupyter-on-rhino) for the full instructions, or use [Open OnDemand](/scicomputing/access_openondemand/) for the easiest way to launch Jupyter Lab without loading modules yourself.
+Requesting a specific version is recommended in most cases.  This will reduce problems over time as the version of your software won't change until you're ready to make that change.  This habit also helps with reproducibility as it makes the requirements of your script clear to anyone else using them.
+
+## Workflow Managers
+
+If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a [workflow manager](/datascience/using_workflows/).  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
+
+- sending the jobs to the compute resources
+- deciding what tasks can be done in parallel
+- staging data for use and keeping track of inputs and outputs
+- environment management (via [Docker](/compdemos/Docker/) containers or environment modules)
+- monitoring jobs and providing you with metadata about them and the workflow itself
+
+At Fred Hutch, [Nextflow](/compdemos/nextflow/) and [WDL workflows](/datascience/wdl_workflows/) are the primary workflow systems in use. WDL workflows can be executed using [multiple engines](/datademos/wdl_execution_engines/) including Cromwell, miniWDL, and Sprocket, while Nextflow has its own execution engine. Users are actively curating shared support and resources, with the [WILDS WDL Library](/datascience/wilds_wdl/) being a key resource for WDL workflows, and the [Fred Hutch NextFlow catalog](/datascience/nextflow_catalog/) being a key resource for Nextflow workflows. See the [Using Workflows](/datascience/using_workflows/) page for more information on workflow systems.
 
 ## Docker Containers
 
-Docker containers package software and all dependencies into a standardized, reproducible computational environment. They are different from Environment Modules. Read more about Docker here: [Using Docker at Fred Hutch](/compdemos/Docker/).
+Docker containers package software and all dependencies into a standardized, reproducible computational environment. They enable scientists to run tools using the exact same configuration across different computing platforms, ensuring reproducible results. Docker containers isolate the computational environment without the overhead of full virtual machines.
 
-## Installing Custom Software Packages
-If you do not find the software you need, a support package or library, or the specific version you need, you have two options:
+For a comprehensive introduction to Docker at Fred Hutch, see [Using Docker at Fred Hutch](/compdemos/Docker/), which covers:
 
-1. Request the software be built: file an issue in our [software repo](https://github.com/FredHutch/easybuild-life-sciences) and we will work with you to build a module for any software or version. This Environment Module will then be available to all.
+- [What Docker is and how it works](/compdemos/Docker/#what-is-docker)
+- [Using pre-built containers from WILDS and other sources](/compdemos/Docker/#using-existing-docker-images)
+- [Running Docker on your local computer](/compdemos/Docker/#running-docker-on-your-local-computer)
+- [Using Docker containers on the Fred Hutch cluster (via Apptainer)](/compdemos/Docker/#using-docker-on-the-cluster)
+- [Creating your own Docker images](/compdemos/Docker/#creating-your-own-docker-images)
+- [Using Docker in WDL and other workflow systems](/compdemos/Docker/#using-docker-with-workflows)
 
-2. If you cannot wait for the software to be built, you may be able to install it yourself. This is primarily supported for language (Python/R) packages.
+**Important:** Docker requires root access and cannot run directly on shared compute environments like `Rhino` or `Gizmo`. Instead, use [Apptainer](/compdemos/Apptainer/) to run Docker containers on the cluster. Apptainer can pull and run Docker images directly from Docker Hub without requiring administrator privileges. See the [Apptainer documentation](/compdemos/Apptainer/) for details.
+
+Cloud computing platforms like [AWS Batch](/scicomputing/compute_cloud/) are built on Docker, using containers to ensure consistent execution environments across distributed computing resources.
+
+### Docker Resources
+
+#### Fred Hutch Resources
+
+  * **WILDS Docker Library ([GitHub](https://github.com/getwilds/wilds-docker-library), [DockerHub](https://hub.docker.com/u/getwilds))** - Tested, versioned Docker containers for bioinformatics tools, built and maintained by the WILDS team at Fred Hutch. These containers are designed to work seamlessly with WDL workflows and other workflow systems.
+  * **[Fred Hutch DockerHub](https://hub.docker.com/u/fredhutch)** - Additional containers available for Fred Hutch researchers.
+
+#### Community Resources
+
+  * **[Docker Hub](https://hub.docker.com/)** - The most commonly used server to share Docker images.
+  * **[Quay](https://quay.io/)** - Another commonly used server to share Docker images.
+  * **[BioContainers](https://biocontainers.pro/)** - A free and open source project to collect a set of images that contain useful bioinformatics tools.
+
+
+## Building and Installing Yourself
+
+Having SciComp build a module is typically the better approach- email _scicomp_ and we will work with you to build a module for any software or version.
+{: .notice--info}
+
+If you can't find the software module you need and you cannot wait for the software to be built, you can try to install it yourself. This is easiest with (Python/R) packages with built-in ways of package installation.
 
 ### Packages/Modules for Python and R
+
 Normal install methods will work after loading an Environment Module:
 
 - R: `install.packages("<pkgname>")`
@@ -151,10 +152,11 @@ Any package you install this way will be installed into your home directory.
 Remember that the environment module you have loaded will be used to install the package/module. For example, if you load `Python/3.6.9` and use `pip install --user <newpkg>` then you will need to load `Python/3.6.9` every time you wish to use `newpkg`. Using a different version of the language module may or may not work.
 
 ### Other software installs and builds
+
 If you want to install or build a standalone software package, you are also welcome to install into your home directory, with the following caveats:
 
 - We cannot install OS package dependencies (if your software has many dependencies, please file an issue [here](https://github.com/FredHutch/easybuild-life-sciences) and we will be happy to work with you to offer a package build with all dependencies.
-- Ubuntu compilers are not optimized. We recommend loading a 'toolchain' module:
+- Ubuntu compilers are not optimized and usually lag behind several versions. Using a 'toolchain' module will give you access to newer versions of compilers and libraries:
 
   ```
   module load foss/2019b
@@ -163,7 +165,8 @@ If you want to install or build a standalone software package, you are also welc
 - If you loaded a toolchain module when installing or building new software, you will must load that toolchain module before running that software, or you will get library errors.
 
 ## Frequently Asked Questions
-> Note:  For announcements from Scientific Computing, please see the [Announcements page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the Events page in CenterNet for current Office Hours.  
+
+> Note:  For announcements from Scientific Computing, please see the [Announcements page](/scicompannounce/), and for assistance email `scicomp`.  Also, see the Events page in CenterNet for current Office Hours.
 
 1. *Something weird is going on with my shell and/or job!?!*
   - "Reset" your shell by logging out and back in. This will clear your environment. Users using screen or tmux will need to exit their session to clear their environment.
