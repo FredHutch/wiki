@@ -131,5 +131,5 @@ Here are some resources:
 | **Qubit Reader Access** | Researchers can email the `reagents` listserv to find nearby labs with a Qubit reader. | N/A |  
 | **Genomics Core** | Fred Hutch provides multiple shared resource groups, from specimen processing to genomics. | [Genomics Core Site](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics.html) |  
 | **Bioinformatics Core** | Offers to discuss experimental design, choice of data analysis strategies and software tools via fee-for-service. | [Bioinformatics Core Site](https://www.fredhutch.org/en/research/shared-resources/core-facilities/genomics-bioinformatics/bioinformatics-services.html) |  
-| **Data House Calls** | Offers free consultations to discuss effective data science and bioinformatics strategies available to all Fred Hutch staff. | [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html) |  
+| **Data House Calls** | Offers free consultations to discuss effective data science and bioinformatics strategies available to all Fred Hutch staff. | [Data House Calls](https://accelerator.fredhutch.org/dhc/) |  
 

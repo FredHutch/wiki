@@ -122,7 +122,7 @@ Using the UNC path `smb://center.fhcrc.org/fh/` to then attempt to browse (or cl
 
 `Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  There are no charges for data stored here but there is a limit of 750GB per PI directory in this path.  
 
-If you think you need secure storage, please contact OCDO and request a [data housecall](https://ocdo.fredhutch.org/programs/dhc.html) to confirm that this platform is appropriate for the data you are storing.
+If you think you need secure storage, please contact OCDO and request a [data housecall](https://accelerator.fredhutch.org/dhc/) to confirm that this platform is appropriate for the data you are storing.
 
 ## How to access Fred Hutch storage
 

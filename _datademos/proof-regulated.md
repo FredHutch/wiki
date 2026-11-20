@@ -98,7 +98,7 @@ sure your WDLs are compliant if you schedule a
 <!--- Always keep this block of links at the bottom --->
 [wiki-reg]: /scicomputing/store_regulated
 [how-to-proof]: /datademos/proof-how-to
-[dhc]: https://ocdo.fredhutch.org/programs/dhc.html
+[dhc]: https://accelerator.fredhutch.org/dhc/
 [dg-centernet]: https://centernet.fredhutch.org/u/data-science-lab/data-governance.html
 [ocdodg-nihrda]: https://centernet.fredhutch.org/u/data-science-lab/data-governance/data-access-request-data-use-certification-agreement.html
 [wdl-workflows]: /datascience/wdl_workflows/

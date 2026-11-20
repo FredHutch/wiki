@@ -76,8 +76,8 @@ It is also wise to check the workflow logs for more granular debugging. You can 
 [proof-legacy-trouble]: _datademos/proof-troubleshooting/
 [cnet-scicomp]: https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/scicomp.html
 [cnet-dasl]: https://centernet.fredhutch.org/u/data-science-lab.html
-[dhc-rc]: https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management
-[dhc-code]: https://ocdo.fredhutch.org/programs/dhc.html#code-and-software-r-python-and-beyond
+[dhc-rc]: https://accelerator.fredhutch.org/dhc/#research-computing-and-data-management
+[dhc-code]: https://accelerator.fredhutch.org/dhc/#code-and-software-r-python-and-beyond
 [pug]: https://teams.microsoft.com/l/team/19%3A8dMC1Joe-eP9Q_VPiA0fsfuTMlHZIrV1w3cCyzTXens1%40thread.tacv2/conversations?groupId=f1eb8b59-8250-4d36-9543-6718a77bda1f&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6
 [fh-slack]: https://ocdo.fredhutch.org/resources.html#peer-to-peer-support
 [wiki-proof]: _datascience/proof.md

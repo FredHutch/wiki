@@ -23,7 +23,7 @@ The Research Informatics team of Fred Hutch's [Office of the Chief Data Officer]
 ## What to Expect
 
 1. **Submit a request** using our [intake form](https://forms.office.com/r/TXmB0qaTTa)
-2. **Initial meeting** - We'll schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) to discuss your project, assess fit, and scope the work
+2. **Initial meeting** - We'll schedule a [Data House Call](https://accelerator.fredhutch.org/dhc/) to discuss your project, assess fit, and scope the work
 3. **Development** - The WILDS team writes the WDL workflow
 4. **Testing & feedback** - You test the workflow with your data and provide feedback
 5. **Publication** - The workflow is added to the [WILDS WDL Library](https://github.com/getwilds/wilds-wdl-library) with appropriate attribution
@@ -47,4 +47,4 @@ Questions? Contact the WILDS team at [wilds@fredhutch.org] or on the [#workflow-
 - [WILDS WDL Library GitHub](https://github.com/getwilds/wilds-wdl-library) - Source code
 - [WILDS WDL Library Documentation](https://getwilds.org/wilds-wdl-library/) - Documentation site
 - [WDL Workflows](/datascience/wdl_workflows/) - Introduction to the Workflow Description Language
-- [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html) - Schedule a consultation with the OCDO team
+- [Data House Calls](https://accelerator.fredhutch.org/dhc/) - Schedule a consultation with the OCDO team

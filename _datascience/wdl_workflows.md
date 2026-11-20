@@ -354,7 +354,7 @@ This approach lets you build complex workflows quickly without writing every tas
 **Fred Hutch Resources:**
 - [WILDS Team](mailto:wilds@fredhutch.org) - WDL workflow support
 - [#workflow-managers Slack](https://fhdata.slack.com/archives/CJFP1NYSZ) - Community discussion
-- [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management) - One-on-one consultations
+- [Data House Calls](https://accelerator.fredhutch.org/dhc/#research-computing-and-data-management) - One-on-one consultations
 
 **Broader Community:**
 - [OpenWDL Community](https://openwdl.org/) - Language specification and governance

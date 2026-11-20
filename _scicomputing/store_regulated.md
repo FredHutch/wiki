@@ -80,5 +80,5 @@ This will change- the exact parameters have not been determined at this time (Se
 <!--- Always keep this block of links at the bottom --->
 [gds-policy]: https://grants.nih.gov/grants/guide/notice-files/not-od-14-124.html
 [nih-notice]: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-24-157.html
-[dhc]: https://ocdo.fredhutch.org/programs/dhc.html
+[dhc]: https://accelerator.fredhutch.org/dhc/
 [ocdodg-nihrda]: https://centernet.fredhutch.org/u/data-science-lab/data-governance/data-access-request-data-use-certification-agreement.html

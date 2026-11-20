@@ -193,7 +193,7 @@ All testing is run through our [continuous integration system](https://github.co
 
 **How do I get help with a specific workflow?**
 
-Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org), schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management) with us, post on the [#workflow-managers channel](https://fhdata.slack.com/archives/CJFP1NYSZ) in FH-Data Slack, or open an issue on [GitHub](https://github.com/getwilds/wilds-wdl-library/issues).
+Contact the WILDS team at [wilds@fredhutch.org](mailto:wilds@fredhutch.org), schedule a [Data House Call](https://accelerator.fredhutch.org/dhc/#research-computing-and-data-management) with us, post on the [#workflow-managers channel](https://fhdata.slack.com/archives/CJFP1NYSZ) in FH-Data Slack, or open an issue on [GitHub](https://github.com/getwilds/wilds-wdl-library/issues).
 
 
 ## Release Notes
@@ -219,5 +219,5 @@ For detailed release notes, see the [WILDS WDL Library releases page on GitHub](
 
 - **Issues and Bug Reports**: [GitHub Issues](https://github.com/getwilds/wilds-wdl-library/issues)
 - **General Questions**: Email [wilds@fredhutch.org](mailto:wilds@fredhutch.org)
-- **Data House Calls**: Schedule a [30-minute consultation session](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management) with us
+- **Data House Calls**: Schedule a [30-minute consultation session](https://accelerator.fredhutch.org/dhc/#research-computing-and-data-management) with us
 - **Slack**: Join the [#workflow-managers channel](https://fhdata.slack.com/archives/CJFP1NYSZ) in FH-Data Slack
