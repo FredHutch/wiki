@@ -31,7 +31,7 @@ Storage mounted on all rhino nodes comes in four basic flavors:
 - `fast`
 - `economy`
 - `secure`
-- `scratch`
+- `temp`
 
 You can read more about Data Storage options on our [Storage pages.](/scicomputing/store_overview/)
 
@@ -75,7 +75,7 @@ A useful 'test' of the X forwarding is a simple program invoked with the command
 
 If you want to run a computationally-intensive X/GUI app, you should grab your own node to do so. This will not impact other users of the `rhino` systems. This method can also be used to run non-GUI apps interactively.
 
-"Grab" a node using one of the grab commands, you can read more about how to do this both [here](/compdemos/first_rhino/#logging-on-to-gizmo-via-grabnode) and [here.](/scicomputing/compute_platforms/#gizmo-cluster) Once done, the grab command you used will have created an ssh session to the remote node you have reserved, and you are now ready to run your app. Use the same commands as you would on a rhino (see above).
+"Grab" a node using one of the grab commands, you can read more about how to do this both [here](/compdemos/grabnode/) and [here.](/scicomputing/compute_platforms/#gizmo-cluster) Once done, the grab command you used will have created an ssh session to the remote node you have reserved, and you are now ready to run your app. Use the same commands as you would on a rhino (see above).
 
 
 

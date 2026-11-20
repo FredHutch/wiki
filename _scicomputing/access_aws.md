@@ -7,15 +7,11 @@ Each lab can be granted their own individual AWS account, giving the members of 
 ## AWS Account Types
 ### Lab Account
 
-The Lab account type is granted to any PI at Fred Hutch that requests one via submitting a ticket to the `helpdesk`.  This account comes pre-configured with AWS S3 buckets with appropriate security rules enforced for private research data storage and a default AWS Batch compute environment suitable for running many compute workflows. In general, this account type should be suitable for almost all cases where a lab needs to use AWS.  
+The Lab account type is granted to any PI at Fred Hutch that requests one via submitting a ticket to the `itsd`.  This account comes pre-configured with AWS S3 buckets with appropriate security rules enforced for private research data storage and a default AWS Batch compute environment suitable for running many compute workflows. In general, this account type should be suitable for almost all cases where a lab needs to use AWS.  
 
 ### Specialized Use Account
 
-A Specialized Use Account type is an AWS account that allows access to almost all AWS Services with very few restrictions or guardrails.  The primary restriction is that you will not be able to grant user access to the account, however you can create just about whatever you like in terms of AWS Services.  In general, these accounts are best suited for Software Development Teams to use for specific cloud-hosted software products.  The other typical usage for these account types is if you are currently conducting a research project that requires a hosted website, dedicated persistent AWS services, or some other similar need exists that cannot be met by the Lab type account.  Specialized Use accounts are typically only granted to a lab when every single expense that would occur in the account is always a direct and will never be an indirect.  These accounts are configured in conjunction with the Cloud and Data team in CIT, via a `helpdesk` ticket.  
-
-### Proof-of-concept Account
-
-This account type is typically used when a lab has an AWS Credit grant designated for a specific purpose related to determining if a particular technology, workflow, etc. is capable of being run effectively in AWS.  Just because you have AWS Credits does not mean that you need this account type.  These are almost always created in the Sandbox environment. These accounts are configured in conjunction with the Cloud and Data team in CIT, via a `helpdesk` ticket.  
+A Specialized Use Account type is an AWS account that allows access to almost all AWS Services with very few restrictions or guardrails.  The primary restriction is that you will not be able to grant user access to the account, however you can create just about whatever you like in terms of AWS Services.  In general, these accounts are best suited for Software Development Teams to use for specific cloud-hosted software products.  The other typical usage for these account types is if you are currently conducting a research project that requires a hosted website, dedicated persistent AWS services, or some other similar need exists that cannot be met by the Lab type account.  Specialized Use accounts are typically only granted to a lab when every single expense that would occur in the account is always a direct and will never be an indirect.  These accounts are configured in conjunction with the Cloud and Data team in CIT, via a `itsd` ticket.  
 
 ## How do I access my AWS account resources?
 
@@ -36,9 +32,9 @@ Here are some links to learn more. Keep in mind that tools provided by AWS will 
 •	[AWS Pricing Calculator](https://calculator.aws/#/?nc2=pr)
 
 ## Accessing via SSO
-In 2024 Fred Hutch undertook a large migration to move all PI and Divisional AWS account to a new, more secure architecture. One of the benefits of this is integration with our Fred Hutch domain, meaning a user can now log into their AWS account using their Fred Hutch credentials. To access your account using your Fred Hutch credentials, naviagte to the [SSO Landing Page](https://d-92674cb6d7.awsapps.com/start). Once authenticated you should see all the accounts to which you have access, you may then login and use the console normally. 
+In 2024 Fred Hutch undertook a large migration to move all PI and Divisional AWS account to a new, more secure architecture. One of the benefits of this is integration with our Fred Hutch domain, meaning a user can now log into their AWS account using their Fred Hutch credentials.
 
-For secret/access key access you can provision temporary credentials through the webpage, or [configure your AWS CLI to use SSO](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html)
+Please refer to CenterNet Documentation [here](https://centernet.fredhutch.org/u/it/cloud-engineering/cloud-access.html)
 
 ## Cost Anomaly Detection
 Within your Lab accounts, if you are a PI or a delegated account admin, you can set up [Cost Anomaly Detection](https://docs.aws.amazon.com/cost-management/latest/userguide/getting-started-ad.html) to better track costs. Exact costs charged by Fred Hutch BizOps will differ from AWS costs. For further details on chargebacks, you can join the [AWS Chargebacks Teams Channel](https://teams.microsoft.com/l/channel/19:86nu83-f_YlZdMcyP7OFIKxyW_1DmMWp3woTI90H2bM1@thread.tacv2/General?groupId=24987ba0-f4d9-4a11-8de1-150b4c971610&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) where there is further documentation on chargebacks and BizOps is available to answer more specific questions

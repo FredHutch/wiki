@@ -1,29 +1,33 @@
 ---
 title: Data Storage in File Storage Systems
-primary_reviewer: dirkpetersen
+primary_reviewer: scicomp
 ---
 
 File keeps your data on disks and allows access to your data using familiar tools you're used to: Unix commands like `cat`, `cp`, `ls`, and `rm`,  browser tools like Windows Explorer or OSX's Finder (to browse drives mapped to your local workstation), and most common Bioinformatic tools.  These storage systems are similar to the hard drive on your computer, just typically larger and faster.
 
-There are multiple file storage resources available to researchers including:
+There are multiple file storage resources available to researchers (PIs/labs) including:
 - `Home` for personal files
-- `Fast` for shared data, including the majority of large scale research data
-- [`Temp`](/scicomputing/store_temp/) for temporary storage of files when using the cluster
-- [`Scratch`](/scicomputing/store_scratch/) for personal and shared temporary data
-- `Secure` for data with higher-level security needs (PHI/encryption/auditing)
+- `Fast` for shared data, including data delivered from our Shared Resources Division- backed up offsite- numerous snapshots
+- [`Temp`](/scicomputing/store_temp/) for temporary storage of files when using the cluster- not backed up
+- [`Working`](/scicomputing/store_working/) for secondary (working) copies of data- not backed up- limited snapshots
+- [`Regulated`](/scicomputing/store_regulated/) for data sets covered by regulation or agreement (e.g. NIH GDS)
+- `Secure` for data with higher-level security needs
 
->Note:  Currently it is recommended to use a combination of [AWS S3](/scicomputing/store_objectstore/), [`Temp`](/scicomputing/store_temp/) and `Fast`.  Please see our other storage pages for more information about what storage locations are best for what type of data and uses.  
-
-A tool that is useful for moving data between these systems is [Motuz](https://motuz.fredhutch.org).  `Motuz` facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Scratch` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/
-). 
-
-
+A tool that is useful for moving data between these systems is [Motuz](https://motuz.fredhutch.org).  `Motuz` facilitates the transfer of small or large data between Fred Hutch storage locations (such as `Temp` and `Fast`) and cloud storage locations such as AWS S3 buckets among others.  You can find some basic how-to guidance to get started with Motuz in our [Resource Library](/compdemos/motuz/). 
 
 ## Home
 
 `Home` storage is your own personal file storage space at the Fred Hutch.  It is a default place for your [shell login files](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) as well as an appropriate place to store your own private information.
 
-While you are allowed up to 100GB of storage in this home directory, it is not tailored for heavy use and won't accommodate large data sets- the 100GB limit cannot be extended.  Also, data in this file system cannot be shared with others.
+While you are allowed up to 1TB of storage in this home directory, it is not tailored for heavy use and won't accommodate large data sets- the 1TB limit cannot be extended.  Also, data in this file system cannot be shared with others.
+
+### A Note on "Homelink"
+
+`homelink` enables the use of links from your `home` directory into the `fast` and `secure` file systems.  It functions by collecting these file systems onto a single mount and then sharing that via the SMB workstation protocol.  `homelink` itself stores no data.
+
+`homelink` is most commonly used when you have a shortcut into your lab's shared directory in `fast`.
+
+In general you should avoid `homelink` where possible and use the `home`, `fast`, and `secure` file servers directly as [described below](#how-to-access-fred-hutch-storage).  `homelink` is a small Linux-based host without the failover features or the performance capabilities of the underlying file systems it re-shares.
 
 ## Fast
 
@@ -65,41 +69,89 @@ To summarize: the folder structure on fast file looks like this: `/fh/fast/(leve
 
 For data made by Fred Hutch researchers via the Genomics Shared Resource, the default data deposition is currently managed directly by Genomics, and will result in the data being made available to the researchers via their `Fast` storage ( e.g., at path `/fh/fast/lastname_f/SR/ngs` for sequencing data).  Other types of datasets are transferred to researchers in either a `dnaarray` directory or via other forms of transfer specific to the platform type or data source.  This allows for rapid access to recently generated datasets.  This folder structure `/fh/fast/lastname_f/SR/` has special permissions which permit Shared Resource cores to save data in these folders.  If the permissions of this folder tree are altered, SR cores will be unable to deliver data to your folder until the permissions are corrected.  Once data generated via the Genomics Core becomes of primary interest to archive for occasional use, it is a good idea to consider implementing the active data management scheme described above with the assistance of Scientific Computing.  
 
-For example, depending on the intended use of the datasets, it may be desirable once data is generated by the Genomics Shared Resource to archive the data to the researcher's `Economy` storage space (AWS S3), with a copy put in `Scratch` for immediate processing.  The specific organization of archive and working copies of data will depend on the particular project involved.  
+For example, depending on the intended use of the datasets, it may be desirable once data is generated by the Genomics Shared Resource to archive the data to the researcher's `Economy` storage space (AWS S3), with a copy put in `Temp` for immediate processing.  The specific organization of archive and working copies of data will depend on the particular project involved.  
 
-<div class=".notice">
 Additionally, links to other data sources can appear here, such as data from the Fred Hutch Genomics Shared Resource (/SR). Changing ownership or permissions of the ./SR folder tree will break the automated delivery of scientific data to these folders. We ask that you do not change the ownership or permissions of the ./SR folder tree.
-</div>
+{: .notice--info}
+
+## Collaboration Folders
+
+A collaboration folder is set up to allow members of other labs access. In most cases, a bespoke group will be set up that includes the lab members and the members of those other labs.  Email `scicomp` to get this set up- include the following information:
+
+- The Hutchnet ID of the user(s) to be given access
+- The path to a folder where collaboration data will be stored
+- Whether you need read-only permissions or read and write permissions for members of the group
+
+> [!IMPORTANT]
+> Please CC the PI or manager associated for this location with your request to `scicomp`
+
+> [!WARNING]
+> We will only create these collaboration folders in Fast and Working.
+
+### Accessing Collaboration Folders
+
+Sometimes you can have access to a folder but not access to the folders that contain this folder. This will manifest as "permission denied" when you try to access those parent folders, either via `cd` from a shell session or if you browse through `smb://center/fh/fast`.  These parent directories are "blind", meaning you can pass through, but you cannot read or see any of the files or directories in that parent directory.
+
+If you have been told you have access to a folder but encounter a "permission denied" error when browsing through to the directory it will be necessary to specify the full path to the folder.
+
+#### At the Command Line
+
+For this example, let's assume you have been given access to the path `/fh/fast/pi_a/collaboration`.  You don't have access to `/fh/fast/pi_a` so the command `ls /fh/fast/pi_a`  fails:
+
+```
+rhino03[~]: ls -l /fh/fast/pi_a
+ls: cannot open directory '/fh/fast/pi_a': Permission denied
+```
+
+Similarly, tab-completion will not return anything for that path.  In this circumstance you will need to use the full path to the shared directory:
+
+```
+rhino03[~]: ls -l /fh/fast/pi_a/collaboration
+drwxrws---   4 api    pi_a_grp           65 Dec  4 17:20 archive
+drwxrws---  11 api    pi_a_grp          282 Dec 15 10:12 data
+```
+
+#### Desktop Mounts
+
+For this example, let's assume you have been given access to the path `/fh/fast/pi_a/collaboration` which you would like to mount onto your Windows or Macintosh workstation.
+
+Using the UNC path `smb://center.fhcrc.org/fh/` to then attempt to browse (or click) through to the path will result in a "Permission denied" error when you reach the PI directory (i.e. when you reach `smb://center.fhcrc.org/fh/fast/pi_a`).  In this case what you will need to do is specify the full path, either in the mount command or in the address bar of Windows explorer.  The path you would need to enter there would be something like `smb://center.fhcrc.org/fh/fast/pi_a/collaboration`.
+
 
 ## Secure
 
 `Secure` storage provides a higher-level of security controls than available on other services- the key difference is access auditing.  There are no charges for data stored here but there is a limit of 750GB per PI directory in this path.  
 
-This storage platform can be used for storing PHI.  It must be noted, however, that many connected systems may not be appropriate for analysis of PHI data.  
+If you think you need secure storage, please contact OCDO and request a [data housecall](https://ocdo.fredhutch.org/programs/dhc.html) to confirm that this platform is appropriate for the data you are storing.
 
 ## How to access Fred Hutch storage
 
 The following is a summary of how to access these storage systems from PC, Mac or Linux command line. For all of these you must either be on campus and connected to the wired network or the Marconi wireless network. If you are off-site, you must be connected to the VPN. If you frequently work both on and off site, ensure that you are disconnected from the VPN if on the campus network.
 
+_Regulated_ is not currently available for access via your desktop workstation
+{: .notice--info}
+
 **Fred Hutch PC:** 
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `\\homelink\homes` |
 | Fast | `X:\fast` |
-| Scratch | `X:\scratch` |
 | Secure | `X:\secure` |
+| Working | `X:\working` |
 | HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
+| Homes | `H:\\` |
+| Homes via Homelink | `\\homelink\homes` |
 
-**Non-Fred Hutch PC:**
+**Hutch PC without drive mapping:**
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `\\homelink.fhcrc.org\homes` |
 | Fast | `\\center.fhcrc.org\fh\fast` |
-| Scratch | `\\center.fhcrc.org\fh\scratch` |
 | Secure | `\\center.fhcrc.org\fh\secure` |
+| Working | `\\center.fhcrc.org\fh\working` |
 | HPC Temp | `\\hpc.chromium.fhcrc.org\temp.chromium` |
+| Homelink | `\\home.fhcrc.org\homes` |
+| Homes via Homelink | `\\homelink\homes` |
 
 **Mac:**
 
@@ -107,27 +159,35 @@ For these paths, replace HUTCHID with your hutchid.
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `smb://fhcrc.org;HUTCHID@homelink.fhcrc.org/homes` |
 | Fast | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/fast` |
-| Scratch | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/scratch` |
 | Secure | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/secure` |
+| Working | `smb://fhcrc.org;HUTCHID@center.fhcrc.org/fh/working` |
 | HPC Temp | `smb://fhcrc.org;HUTCHID@hpc.chromium.fhcrc.org/temp.chromium` |
+| Homes | `smb://fhcrc.org;HUTCHID@home.fhcrc.org/homes` |
+| Homes via Homelink | `smb://fhcrc.org;HUTCHID@homelink.fhcrc.org/homes` |
 
 Note: Drive mapping with Macs can be very slow for large volumes due to the Mac wanting to index every file in a volume. Turn off volume indexing to improve the speed of drive mapping. 
 From a terminal window on your Mac, turn off all drive mapping.
-```sudo mdutil -a -i off```
+```
+sudo mdutil -a -i off 
+```
 Turn indexing back on for your local drive:
-```sudo mdutil -i on /Volumes/mac-name```
+
+```
+sudo mdutil -i on /Volumes/mac-name
+```
+
 The sudo command will ask for your Mac login password. Often Mac volume names have spaces; a backslash can be used to quote spaces. `Macintosh\ HD`
 
 **Linux command line:**
 
 | Location | Path |
 | --- | ----------- |
-| Homelink | `~/` or `/home/HUTCHID` |
+| Home | `~/` or `/home/HUTCHID` |
 | Fast | `/fh/fast` |
 | Temp | `/hpc/temp` |
-| Scratch | `/fh/scratch` |
+| Working | `/fh/working` |
+| Regulated | `/fh/regulated` |
 | Secure | `/fh/secure` |
 
 

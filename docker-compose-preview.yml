@@ -17,17 +17,6 @@ services:
         - "traefik.http.routers.sciwiki-preview.tls=true"
 
 
-  elasticsearch:
-    networks:
-      - proxy
-    image: sc-registry.fredhutch.org/wiki_elasticsearch-preview:latest
-    stdin_open: true
-    environment:
-      - discovery.type=single-node
-      - xpack.security.enabled=false
-      - ingest.geoip.downloader.enabled=false
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-
 networks:
   proxy:
     external: true

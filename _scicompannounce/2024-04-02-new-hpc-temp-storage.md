@@ -19,3 +19,5 @@ The storage platform is available now.
 Our previous temporary storage platform (scratch) is end of life. It is also an older generation of hardware with deteriorating reliability. It will be retired very soon.
 
 ## Errata
+
+A description of all task-optimized storage options can be found [here](/scicomputing/store_task/).

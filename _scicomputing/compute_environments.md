@@ -1,22 +1,15 @@
 ---
 title: Computing Environments and Containers
-last_modified_at: 2019-04-26
+last_modified_at: 2025-11-11
 primary_reviewers: bmcgough
 ---
 
-The Fred Hutch provides researchers on campus access to high performance computing using on-premise resources.  The various technologies provided are outlined on our [Technologies](/scicomputing/compute_platforms/) page along with the basic information required for researchers to identify which FH resource might be best suited to their particular computing needs.
+Beyond what's available on local workstations, Scientific Computing maintains a large library of pre-compiled software packages on our HPC cluster and Linux systems. Reasons to use software maintained by SciComp include:
+- Packages are often faster due to compiler optimizations
+- Packages are reproducible in or outside Fred Hutch
+- Rapid access to many software packages and versions
 
-The Scientific Computing group supports additional software used in scientific research beyond those available on local workstations. A large number of pre-compiled packages are already available on our high performance computing (HPC) cluster and Linux systems. Individual user installation of packages and language modules is also supported.
-
-Reasons to use scientific software maintained by SciComp include:
-- packages are often faster due to compiler optimizations
-- packages are reproducible in or outside Fred Hutch
-- rapid access to many software packages and package versions
-
-
-## Environment Modules
-
-On the command line and in scripts, we use the Environment Module system to make software versions available in a modular and malleable way. Environment Modules provide modular access to one version of one or more software packages to help improve reproducibility. We use a system called EasyBuild to create modules for everyone to use - there are over a thousand modules already available. The implementation of Environment Modules we use is **Lmod**, and the commands you use to interact with Environment Modules are `module` or `ml`.  For more information on what modules we have available for use on `rhino` and `gizmo` see our [Scientific Software](/scicomputing/compute_scientificSoftware/) page.  This page details available modules of R, python and all other life sciences oriented software modules available.  
+We use **Lmod**, an Environment Module system built with EasyBuild, to make specific software versions available on the command line and in scripts - over a thousand modules are already available. Use the `module` or `ml` commands to interact with them. See [Scientific Software](/scicomputing/compute_scientificSoftware/) for the R, Python, and other modules available on `rhino` and `gizmo`.
 
 
 ### How to Use Environment Modules
@@ -92,98 +85,54 @@ The above line will load a different version of the software package over time a
 
 > Note: This does mean that your script will only work in environments with the specific Environment Module version you are loading. That environment module may not be initially available on systems outside Fred Hutch or on internal systems follow upgrades. You can either request the specific version be added, or edit your script to load an available package version.
 
-#### With Workflow Managers
+#### With WDL
 
-If desired, one way to manage jobs, environments, and data transfers particularly in a series of linked tasks or jobs is to use a workflow manager.  Workflow managers allow you to describe a workflow as a series of individual tasks.  Then the workflow manager software does the work of:
+WDL commonly uses [Docker](/compdemos/Docker/) contiainers to access required packages. You can use our Environment Modules instead of Docker.
 
-- sending the jobs to the compute resources
-- deciding what tasks can be done in parallel
-- staging data for use and keeping track of inputs and outputs
-- environment management (via docker containers or environment modules)
-- monitoring jobs and providing you with metadata about them and the workflow itself
+Instead of specifying a `docker` image in a task's `runtime` section, you can specify a `modules` attribute naming the Environment Module(s) to load:
 
-Two workflow managers in use on the Fred Hutch campus are [Nextflow](/compdemos/nextflow/) and [Cromwell](/compdemos/Cromwell/) and users are actively curating more shared support and resources at those pages as well as in GitHub.  Workflow manager related information is collected as a GitHub [Workflow Manager Project](https://github.com/orgs/FredHutch/projects/8) as well as specific [Nextflow repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=nf+OR+nextflow&type=&language=) or [Cromwell/WDL repos](https://github.com/FredHutch?utf8=%E2%9C%93&q=wdl+OR+cromwell&type=&language=) which often contain shared workflows or configuration information.  
+```wdl
+runtime {
+  modules: "SAMtools/1.11-GCC-10.2.0"
+}
+```
 
+This requires an execution engine that has been configured to support Environment Modules (e.g., Cromwell on our cluster). 
+
+See the [Environment Modules (HPC-specific)](/datascience/wdl_workflows/#environment-modules-hpc-specific) section of our [WDL Workflows](/datascience/wdl_workflows/) page for more detail.
+
+#### With VSCode
+
+We recommend creating a Python virtual environment that captures your currently loaded modules and reloads them automatically whenever the environment is activated. 
+
+This is because VSCode's Remote SSH extension can't load cluster Environment Modules when you connect to it. The remote session starts before your shell would normally load modules from `.bashrc` or `.profile`.
+
+See [Using Modules with VS Code](/compdemos/VS-Code_lmod/) for the workaround.
+
+#### With RStudio
+
+The easiest way to use Environment Modules with RStudio is through [Open OnDemand](/scicomputing/access_openondemand/), which launches RStudio Server for you and lets you pick which modules to use when starting a session.
+
+Be sure to use the [Fred Hutch RStudio Server](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server/session_contexts/new), which uses the modules on the cluster, not [RStudio Server/Apptainer](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/sys/ood_rstudio_server_apptainer/session_contexts/new).
+
+See [R and RStudio](/scicomputing/software_R/#run-rstudio-server-on-an-hpc-machine) for more on both options.
+
+#### With Jupyter
+
+We supply a `JupyterLab` module you can load along with whichever other modules you need. On the command line, load these additional Environment Modules at the same time as JupyterLab. For example, to load Seaborn with Jupyter:
+
+```
+ml purge
+
+ml JupyterLab/4.0.3-GCCcore-12.2.0 Seaborn/0.12.2-foss-2022b 
+jupyter lab --ip=0.0.0.0 --port=$(fhfreeport) --no-browser
+```
+
+See [Using Jupyter on rhino](/scicomputing/software_python/#using-jupyter-on-rhino) for the full instructions, or use [Open OnDemand](/scicomputing/access_openondemand/) for the easiest way to launch Jupyter Lab without loading modules yourself.
 
 ## Docker Containers
 
-At its core, Docker is a tool that lets you run code inside a totally fixed and reproducible computational environment. If you have used virtual machines, then you can think of a Docker container as being a lightweight, portable, intuitive system for building and running virtual machines. The major difference between a Docker container and virtual machine is that Docker doesn't come with operating system, which makes it more lightweight and portable.  However, Docker containers do require the Docker engine to run them, which is a client-side application.
-
-The folks at Docker are probably the best ones to answer the
-question, ["What is Docker?"](https://www.docker.com/what-docker).
-
-For more documentation and background on Docker, see [Docker for Beginners](https://docker-curriculum.com/).
-
-The reason that scientists use Docker is that it allows them
-to run computational tools using the exact same computational
-environment as another scientist, so that the same input data
-will (by definition) yield the exact same set of results. This
-is a level of reproducibility that is essentially impossible
-to achieve with any other tool apart from full virtual machines.
-It also neatly solves the problem of having to install dependencies
-in order to run a new tool in the right way.
-
-Although you cannot run Docker on our HPC cluster or on the `rhino` machines,
-you can work with Docker containers in those environments using
-[Apptainer](/compdemos/Apptainer/).
-
-### Common Terms
-
-There are a few basic terms that will make it easier to learn
-about Docker:
-
-#### Image
-
-A Docker image is basically a file that is built from a [Dockerfile](https://docs.docker.com/engine/reference/builder/). The image functions like a recipe for the process you want to have the Docker container execute. It specifies all the details, such as tools, processes and parameters needed for the process to occur in the Docker container that could be created from it.  
-
-#### Container
-
-A Docker container is a Docker image that is being executed or actively applied. Once you launch an image and start doing things (writing files,
-running commands, etc.) it becomes a container. The useful reason
-behind the distinction between images and containers is that once
-you are done using a container, you usually delete it. However,
-the image that you launched the container from remains untouched,
-and can be used to launch more containers in the future should the same exact process be needed again for different data sets.  
-
-#### Mount Point
-
-By default, Docker containers do not have access to the file system
-for the computer that they are being run on. In order to pass
-files back and forth between the running Docker container and the host
-filesystem, you must make a "mount point." The mount point is a folder
-that is shared between the Docker container and the host filesystem,
-allowing you to read and write data.
-
-#### Pull / Push
-
-Docker images can be stored either locally (on your laptop or desktop)
-or on a remote Docker server (such as [Docker Hub](https://hub.docker.com/)). Moving the Docker image to and from a remote server is called "pushing" and
-"pulling." The nice thing about this feature is that you can pull
-down an image that was used by another scientist and run all of
-the same commands that they did using the exact same computational
-environment.
-
-### Using Docker at Fred Hutch
-
-The best page to get started at the Hutch is the [Computing Resource Library](/compdemos/Docker/) about Docker.
-
-Because Docker requires root access, it cannot be run on shared
-compute environments such as `Rhino` / `Gizmo`. Instead,
-developers at LBL have developed a utility called Apptainer (formerly Singularity) which can be used to run Docker images within an environment
-like `Rhino` / `Gizmo` at Fred Hutch. Additional information on using Apptainer can be found at the
-[apptainer.org](https://apptainer.org/docs/) site and more [details about using Apptainer at Fred Hutch](/compdemos/Apptainer/) on `Gizmo`.
-
-**Words of Wisdom:** Apptainer also has its own image format, however we do not recommend to use it and instead import Docker containers as they can be used more universally, e.g. in cloud computing.
-
-Some cloud computing platforms are built explicitly on top of Docker. For example, [AWS Batch](/scicomputing/compute_cloud/) works by running code within Docker containers on AWS EC2 instances. As AWS Batch gets rolled out at Fred Hutch, Docker images can be used to save and version the code that is
-executed with that system.
-
-### Other Docker Resources
-
-  * The most commonly used server to share Docker images is called [Docker Hub](https://hub.docker.com/).
-  * Another commonly used server to share Docker images is called [Quay](https://quay.io/).
-  * [BioContainers](https://biocontainers.pro/) is a free and open source project to collect a set of images that contain useful bioinformatics tools.
-
+Docker containers package software and all dependencies into a standardized, reproducible computational environment. They are different from Environment Modules. Read more about Docker here: [Using Docker at Fred Hutch](/compdemos/Docker/).
 
 ## Installing Custom Software Packages
 If you do not find the software you need, a support package or library, or the specific version you need, you have two options:

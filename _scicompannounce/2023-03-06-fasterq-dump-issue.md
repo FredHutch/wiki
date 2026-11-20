@@ -2,7 +2,9 @@
 Title: fasterq-dump Causes Nodes to Hang and Require Reboot
 ---
 
-> Updated information is available [here](/scicompannounce/2023-09-01-fasterq-dump-issue/)
+## Update 26 Aug 2025:
+
+The scratch file system has been retired: this announcement no longer applies. `fasterq-dump` can be used on any file system.
 
 `fasterq-dump` is a command-line utility used to extract FASTQ or FASTA data from SRA-accessions. 
 

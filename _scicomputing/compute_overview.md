@@ -23,7 +23,7 @@ You will have the same file system access as your cluster account has.
 
 Compute Resource | Access Interface | Resource |
 --- | --- | --- | ---
-[RStudio Server](https://rstudio-launcher.fredhutch.org) | web, FH credentials | Web IDE for R Programming |
+[RStudio Server](https://openondemand.fredhutch.org/pun/sys/dashboard/batch_connect/dev/ood_rstudio_server/session_contexts/new) | web, FH credentials | Web IDE for R Programming |
 [Jupyter Lab](/scicomputing/software_python/#jupyter) | web, FH credentials | Web IDE for (Python, R). Python Notebooks |
 
 ### Interactive Computing: Command Line Interface (CLI), Moderate to High Capability

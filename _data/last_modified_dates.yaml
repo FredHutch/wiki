@@ -29,7 +29,7 @@
 - dlm: July 20, 2022
   url: contributorTemplate.md
 - dlm: July 21, 2023
-  url: dasldemos.md
+  url: datademos.md
 - dlm: July 14, 2022
   url: _hdc/datagen_platformsData.md
 - dlm: April 21, 2023
@@ -459,4 +459,4 @@
 - dlm: August 19, 2023
   url: _datascience/tech_hiring/tech_hiring_finding_candidates.md
 - dlm: July 25, 2023
-  url: _dasldemos/deidentification_methods_structured.md
+  url: _datademos/deidentification_methods_structured.md

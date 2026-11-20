@@ -263,7 +263,7 @@ Note that the `aws sso login` step will require you to copy a URL into your brow
 ```
 ml purge
 ml awscli
-aws sso login
+aws sso login --use-device-code # omit this flag when using older versions of the AWS CLI
 ml fhR
 R
 ```

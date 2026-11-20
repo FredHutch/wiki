@@ -22,6 +22,9 @@ These are the changes we'll be making to the cluster during this work:
 
 As part of the process of decommissioning the scratch file system, we will be removing access to the Scratch file system from the rhino and gizmo compute nodes.  Scratch will still be available via Motuz for data transfers.  You will also still be able to access Scratch from your workstation.
 
+Removing _scratch_ from the rhino nodes may require that we terminate processes that are accessing _scratch_.
+{: .notice--warning}
+
 If you are still using scratch, you will need to get your lab migrated to one of the Fast, Temp, or Working storage platforms. Both DaSL and SciComp are available to assist with migrating your data and workflows.
 
 ### Revising Grabnode Limits and Prioritization

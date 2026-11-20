@@ -1,8 +1,6 @@
 ---
 title: Consenting and Large Scale Data
-last_modified_at: 2018-10-25
-main_authors: Jason Major, Jennifer Kogut, Karen Hansen
-primary_reviewers: JasonMajor1
+primary_reviewers: vortexing
 ---
 Before beginning a study and during the proposal preparation process, an
 important issue to consider is whether the proposed research qualifies

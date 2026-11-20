@@ -33,7 +33,7 @@ SLURM is the workload manager for our `gizmo` computing cluster.  Review the doc
 
 For the purpose of this pathway we will use a pre-existing script [in this template GitHub repository](https://github.com/FredHutch/slurm-examples/blob/main/01-introduction/1-hello-world/01.sh). Copy this file to a location you can access from `rhino` by using:
 ```
-wget https://github.com/FredHutch/slurm-examples/blob/main/01-introduction/1-hello-world/01.sh
+wget  https://raw.githubusercontent.com/FredHutch/slurm-examples/refs/heads/main/01-introduction/1-hello-world/01.sh
 ```
 
 ### Submit the Script
@@ -58,4 +58,4 @@ This was a simple script - you'll need more advanced scripts to run workload on 
 We've described a single job - when your work requires many jobs or many steps, more advanced tools are necessary, and you begin to delve into [parallel computing](/scicomputing/compute_parallel/).  Two commonly used approaches at the Fred Hutch include:
 
  - SLURM job arrays provide an easy mechanism for submitting thousands of homogenous jobs
- - [Workflow managers](/scicomputing/compute_parallel/#workflow-managers) are the gold-standard for managing computational workflows, particularly valuable for managing multi-step analyses.  [Cromwell](/compdemos/Cromwell/) and [Nextflow](/compdemos/nextflow/) are the two preferred workflow manager tools at the Hutch.
+ - [Workflow managers](/datascience/using_workflows/) are the gold-standard for managing computational workflows, particularly valuable for managing multi-step analyses. [WDL workflows](/datascience/wdl_workflows/) (executed via [Sprocket, Cromwell, or other engines](/datademos/wdl_execution_engines/)) and [Nextflow](/compdemos/nextflow/) are the two preferred workflow systems at the Hutch.

@@ -19,16 +19,13 @@ Rhino | CLI, FH credentials on campus/VPN off campus | Direct to all local stora
 NoMachine | NX Client, FH credentials on campus/VPN off campus | Direct to all local storage types
 Gizmo | Via Rhino or NoMachine hosts (CLI, FH credentials on campus/VPN off campus) | Direct to all local storage types
 
-If you're new to remote cluster usage, 
-please see [this tutorial](/compdemos/first_rhino/)
-for step-by-step instructions for logging on to `rhino` and `gizmo`,
+If you're new to remote cluster usage, please see [this tutorial](/pathways/path-interactive/) for step-by-step instructions for logging on to `rhino` and `gizmo`.
 
 ### Rhino
 
 `Rhino`, or more specifically the `Rhinos`, are three locally managed HPC servers all accessed via the name `rhino`. Together, they function as a data and compute hub for a variety of data storage resources and high performance computing (HPC) such as those in the table above. The specific guidance for the use of each of the approaches to HPC access are slightly different, but will all require the user to learn how to access and interact with `rhino`.
 
-More information on the topic of ssh configurations for access to `rhino` can be found [here.](/scicomputing/access_methods/)
-More information on specific guidance for using `rhino` are in our Resource Library for [the basics](/compdemos/first_rhino/) and [for more detailed descriptions](/compdemos/howtoRhino/).
+More information on the topic of ssh configurations for access to `rhino` can be found [here](/scicomputing/access_methods/). More information on specific guidance for using `rhino` is in our [Resource Library](/compdemos/howtoRhino/).
 
 
 ### Gizmo Cluster

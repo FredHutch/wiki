@@ -9,7 +9,7 @@ Other workflow managers that people may recognize are Snakemake, Cromwell and To
 Generally speaking, workflow managers are software tools that make it easier to run complex bioinformatic analyses that involve multiple steps, each of which may invoke a different piece of software with different environmental dependencies or resource requirements. 
 The benefits of a workflow manager like Nextflow is that it should make it easier to run your analysis while transparently managing all of the issues that tend to crop up when running a shell script (missing dependencies, not enough resources, hard to tell where failures are coming from, not easily published or transferred to collaborators).
 
-For more details on Nextflow and workflow managers overall, please visit the workflow documentation available [here](/hdc/hdc_workflows).
+For more details on Nextflow and workflow managers overall, please visit the workflow documentation available [here](/datascience/using_workflows/).
 
 ### Example workflows
 Fred Hutch researchers are building and maintaining a set of Nextflow workflows for use by the general community [here](https://github.com/FredHutch/reproducible-workflows/tree/master/nextflow), while also providing an example of how to write your own workflows.
@@ -104,7 +104,7 @@ Inside that script, the variable `${params.first_parameter}` will be replaced wi
 Running any workflow with arguments prefixed by `--`, will provide that value as a parameter in that pattern. 
 ### Report
 Specifying `-with-report` tells Nextflow to write a summary of the complete workflow execution to a human readable summary in `nextflow_report.html`.
-Beware that running `-with-report` depends on some utilities which must be installed in the environment you are running your process in (e.g. in your Docker container); [more details in the Nextflow docs](https://www.nextflow.io/docs/latest/tracing.html#tasks).
+Beware that running `-with-report` depends on some utilities which must be installed in the environment you are running your process in (e.g. in your [Docker](/compdemos/Docker/) container); [more details in the Nextflow docs](https://www.nextflow.io/docs/latest/tracing.html#tasks).
 ### Working directory
 Specifying `-work-dir` tells Nextflow to use `s3://fh-pi-lastname-f/lab/user_name/project_name/work/` to store all temporary data (the inputs and outputs of each individual task). 
 ### Resume

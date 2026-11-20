@@ -1,47 +1,65 @@
 ---
-title: Fred Hutch cBioPortal
-authors: tefirman, sitapriyamoorthi
-primary_reviewers: vortexing, abbywall
+title: cBioPortal
+primary_reviewers: sitapriyamoorthi, tfirman
 ---
 
-[**cBioPortal**](https://www.cbioportal.org/) is an open-access, open-source resource for interactive exploration of multidimensional cancer genomics data sets developed by Memorial Sloan Kettering (MSK). The Data Science Lab (DaSL) in conjunction with the Scientific Computing Group (SciComp) at Fred Hutch have integrated a Fred Hutch instance of cBioPortal for research use only. 
+[**cBioPortal**](https://www.cbioportal.org/) is a free, user-friendly platform for exploring publicly available cancer genomics data—**no coding required**. It lets you explore **genomic and clinical data** across multiple studies in a highly visual and interactive way.
 
-The [Fred Hutch deployment of cBioPortal](https://cbioportal.fredhutch.org/) provides:
+You can:
 
-- **Interim Visualization**: The Fred Hutch instance of cBioPortal allows for the visualization of clinical and genomic data both published and unpublished.
-- **Facilitated Sharing**: Hosting your data enables sharing and comparison to other datasets from the Fred Hutch community and beyond.
-- **Controlled Access**: Study data is restricted to authorized personnel approved by the study lead or principal investigator (PI), thus protecting your research data
-- **Inclusion of Sensitive Data**: cBioportal has been reviewed and approved by InfoSec to include up to individually identifiable research data. 
-
-
-## Getting Started
-
-### Training and Courses
-- Find out more about the Fred Hutch instance of cBioPortal and how to upload your study [in the DaSL Resource Library](/dasldemos/fh-cbio-intro/).
-- Read more the data formats required for upload and explore a selection of tools that will help with this formatting in the Fred Hutch [cbioportal-data-formatting](https://github.com/FredHutch/cbioportal-data-formatting) repository.
-- The creators of cBioPortal at [MSK](https://docs.cbioportal.org/about-us/) provide a great series of [video tutorials](https://www.youtube.com/@cbioportal) that will guide you through how to use the cBioPortal interface.
-- Check out the recording below of our Fred Hutch cBioPortal Demo Day demonstrating how to use cBioPortal in general, the benefits of the Fred-Hutch-specific instance, and how to safely and securely upload your own study data. (_Note: some of the processes discussed in this video are specific to Fred Hutch and do not apply to all instances of cBioPortal._)
-
-<iframe src="https://fredhutch.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1e1ae5d3-8b2f-4be7-acc6-b2290121babc&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="FredHutchcBioPortalDemoDay_111424" ></iframe>
+- **[Visualize](/datademos/cbio_examples_of_using_cbio#q1-how-often-is-kras-mutated-in-cancer)**
+ mutations, gene expression, copy number changes, and more
+  
+- **[Compare](/datademos/cbio_examples_of_using_cbio#q2-are-kras-mutations-associated-with-clinical-factors)** genetic data with clinical factors like stage, survival, and diagnosis age
+  
+- Generate **[publication-ready plots](/datademos/cbio_examples_of_using_cbio#q4-do-kras-mutations-affect-survival)** like oncoprints and Kaplan-Meier survival curves
+  
+[Explore more usage examples here](/datademos/cbio_examples_of_using_cbio/)
 
 
-### Technical Documentation and Repositories
-- [Public cBioPortal Documentation](https://docs.cbioportal.org/)
-- [Fred Hutch cBioPortal GitHub Repository](https://github.com/FredHutch/cbioportal-fredhutch-automation) (contact the [cBioPortal team](https://fhdata.slack.com/archives/C088E41ARV3) for access)
+### What is the Fred Hutch hosted instance of cBioPortal?
+The [Translational Data Accelerator](https://accelerator.fredhutch.org/) supports a **Fred Hutch-hosted cBioPortal environment**, bringing cBioPortal’s exploration and visualization capabilities into a secure, institutionally supported research environment connected to Fred Hutch data resources and governance processes. Read more about the Fred Hutch hosted instance of cBioPortal [here](https://accelerator.fredhutch.org/applications/#cbioportal)
 
-## Release Notes
+### Helpful Links
 
-### September 2024
-**What's New**
+#### Explore cBioPortal
 
-- Fred Hutch cBioPortal deployment with user documentation
-- Updated to [v5.4.10](https://github.com/cBioPortal/cbioportal/releases/tag/v5.4.10)
+- [Visualize mutations, gene expression, and CNVs](/datademos/cbio_examples_of_using_cbio#q1-how-often-is-kras-mutated-in-cancer)
+- [Compare mutations to clinical factors](/datademos/cbio_examples_of_using_cbio#q2-are-kras-mutations-associated-with-clinical-factors)
+- [Generate publication-ready plots](/datademos/cbio_examples_of_using_cbio#q4-do-kras-mutations-affect-survival)
+- [Explore more usage examples](/datademos/cbio_examples_of_using_cbio/)
+
+#### Upload Your Data
+
+- [Prepare Your Files for Upload](/datademos/cbio_how_to_prepare_files/)
+
+#### Learn by Example
+
+**Fred Hutch cBioPortal Demo Day**
+Check out the recording to see how to use the portal, upload data, and more.
+- [Watch the recording (Panopto)](https://fredhutch.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1e1ae5d3-8b2f-4be7-acc6-b2290121babc&autoplay=false)
+
+
+### Release Notes
+#### September 2026
+* The Fred Hutch instance of cBioPortal is moving to CARDS!
+
+#### September 2024
+
+* First release of Fred Hutch cBioPortal instance
+* Deployed with user documentation
+* Running version [v5.4.10](https://github.com/cBioPortal/cbioportal/releases/tag/v5.4.10)
 
 **Fixes**
 
-- No fixes yet, just releasing this product
+* No fixes yet.
 
-## Contact Us
-The cBioPortal team can be contacted via the [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3) channel on [FH-Data Slack](https://fhdata.slack.com/). Please feel free to schedule a [Data House Call](https://calendly.com/data-house-calls/resources) with us to go over any questions you may have.
+---
+
+### Contact Us
+
+* Slack: [#cbioportal-support](https://fhdata.slack.com/archives/C088E41ARV3)
+* Email: [datascience@fredhutch.org](mailto:datascience@fredhutch.org)
+* Book a [Data House Call](https://accelerator.fredhutch.org/dhc/#using-and-uploading-to-the-fred-hutch-cbioportal) for personalized help
 
 

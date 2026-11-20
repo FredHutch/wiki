@@ -40,7 +40,7 @@ When using the restart partition it's important to note a few things:
 
 #### Slurm doesn't necessarily remove intermediate files
 
-If your task is writing a file into fast, scratch, or some other non-transient storage, that partial output isn't removed when the job is preempted.  Restarting that task later with the same output file specified may cause problems.
+If your task is writing a file into fast, temp, or some other non-transient storage, that partial output isn't removed when the job is preempted.  Restarting that task later with the same output file specified may cause problems.
 
 This can be circumvented by using the local job temporary directory specified by $TMPDIR in the job environment.  That directory and its contents are removed when the job is preempted.
 
