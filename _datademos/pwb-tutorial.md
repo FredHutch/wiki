@@ -38,21 +38,21 @@ By the end of this tutorial, learners will be able to:
 1. Fred Hutch network access. User can connect to the Fred Hutch network on
 campus, or via the [VPN][cnet-vpn].
 2. Access to the Fred Hutch Cluster. We recommend getting access by completing
-the [Cluster 101][cluster-101] course from the [Translational Data Accelerator][dasl].
+the [Cluster 101][cluster-101] course from the [Translational Data Accelerator][TDA].
 
 ### Suggested Prerequisites
 
 1. Familiarity with WDL workflows. We recommend the 
-[Developing WDL Workflows][dww] course from the [Translational Data Accelerator][dasl].
+[Developing WDL Workflows][dww] course from the [Translational Data Accelerator][TDA].
 2. Familiarity with the command line. We recommend the 
 [Bash for Bioinformatics][bash-for-bio] course from the 
-[Translational Data Accelerator][dasl]. Check their website to register for a hybrid, 
+[Translational Data Accelerator][TDA]. Check their website to register for a hybrid, 
 synchronous version of the course.
 
 ### Related Resources
 
 - Find pre-made workflows in the [WILDS WDL Library][wiki-wilds-wdl].
-- Partner with the OCDO to build workflows for your research via the 
+- Partner with the TDA to build workflows for your research via the 
 [WILDS WDL Development Program][cnet-wwdp].
 - Need help debugging a workflow? Get live help by scheduling a 
 [Research Computing Data House Call][dhc-rc].
@@ -192,14 +192,14 @@ To start a PROOF server with a specific blueprint, first make sure you stop your
 Now that you've completed your first PROOF workflow, you're ready to explore more advanced features and expand your computational capabilities:
 - Consider exploring the [WILDS WDL Library][wiki-wilds-wdl] to find pre-built workflows for common bioinformatics tasks. 
 - Take the [Developing WDL Workflows][dww] course to learn how to create your own custom workflows. 
-- For hands-on support, the OCDO offers the [WILDS WDL Development Program][cnet-wwdp] where you can partner with experts to build workflows tailored to your research needs. 
+- For hands-on support, the TDA offers the [WILDS WDL Development Program][cnet-wwdp] where you can partner with experts to build workflows tailored to your research needs. 
 - Get live help via [Research Computing Data House Calls][dhc-rc] for workflow debugging assistance, and [Code & Software Data House Calls][dhc-code] for help with any PROOF Workbench questions or feedback.
 
 <!--- Always keep this block of links at the bottom --->
 [wiki-wilds-wdl]: /datascience/wilds_wdl/
 [cnet-vpn]:  https://centernet.fredhutch.org/u/it/help-desk/vpn-access.html
 [cluster-101]: https://hutchdatascience.org/FH_Cluster_101/
-[dasl]: https://ocdo.fredhutch.org/dasl/
+[TDA]: https://ocdo.fredhutch.org/dasl/
 [dww]: https://hutchdatascience.org/Developing_WDL_Workflows/
 [bash-for-bio]: https://hutchdatascience.org/bash_for_bio/
 [cnet-wwdp]: https://centernet.fredhutch.org/u/data-science-lab/data-science/wilds-wdl.html

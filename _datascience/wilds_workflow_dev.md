@@ -5,7 +5,7 @@ main_authors: tefirman
 
 <img src="/datascience/assets/wildswdl/WILDSWDLLogo.jpeg" alt="WILDS WDL Logo" width="200" align="right" style="margin-left: 20px;">
 
-The Research Informatics team of Fred Hutch's [Translational Data Accelerator](https://ocdo.fredhutch.org/) (OCDO) offers free, collaborative support to help Fred Hutch researchers develop [WDL (Workflow Description Language)](/datascience/wdl_workflows/) workflows for scalable, reproducible computational analyses. In exchange, completed workflows are contributed to the open-source [WILDS WDL Library](/datascience/wilds_wdl/) for the broader research community.
+The Research Informatics team of Fred Hutch's [Translational Data Accelerator](https://ocdo.fredhutch.org/) (TDA) offers free, collaborative support to help Fred Hutch researchers develop [WDL (Workflow Description Language)](/datascience/wdl_workflows/) workflows for scalable, reproducible computational analyses. In exchange, completed workflows are contributed to the open-source [WILDS WDL Library](/datascience/wilds_wdl/) for the broader research community.
 
 ## What We Do
 
@@ -47,4 +47,4 @@ Questions? Contact the WILDS team at [wilds@fredhutch.org] or on the [#workflow-
 - [WILDS WDL Library GitHub](https://github.com/getwilds/wilds-wdl-library) - Source code
 - [WILDS WDL Library Documentation](https://getwilds.org/wilds-wdl-library/) - Documentation site
 - [WDL Workflows](/datascience/wdl_workflows/) - Introduction to the Workflow Description Language
-- [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html) - Schedule a consultation with the OCDO team
+- [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html) - Schedule a consultation with the TDA team

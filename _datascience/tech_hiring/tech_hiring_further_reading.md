@@ -4,7 +4,7 @@ main_authors: monicagerber
 primary_reviewers: vortexing, seankross
 ---
 
-Below are some resources gathered by the DaSL team. Please send us your own recommendations by opening a PR or issue on the wiki [GitHub repo](https://github.com/FredHutch/wiki).
+Below are some resources gathered by the TDA team. Please send us your own recommendations by opening a PR or issue on the wiki [GitHub repo](https://github.com/FredHutch/wiki).
 
 ## Articles
 

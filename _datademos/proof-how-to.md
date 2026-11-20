@@ -302,7 +302,7 @@ If you find something is not working with the app or you find a bug, please help
 - [WDL Workflows Guide](/datascience/wdl_workflows/) - Fred Hutch wiki guide to WDL fundamentals
 - [WDL Execution Engines](/datademos/wdl_execution_engines/) - Understanding Cromwell and other WDL engines
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Tested, ready-to-use WDL pipelines
-- [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive DaSL course
+- [Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive TDA course
 - [Open WDL Documentation](https://docs.openwdl.org/en/latest/) - Official WDL specification
 
 #### PROOF mechanics

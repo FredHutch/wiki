@@ -14,16 +14,16 @@ While SciWiki content is organized by topic, many real-world tasks require follo
 
 ## [Translational Data Accelerator](https://ocdo.fredhutch.org/) Supports
 
-The Translational Data Accelerator (OCDO) leads Fred Hutch’s strategic vision for data. Its mission is to support all staff who use data — from clinicians to researchers to administrators — by advancing a coordinated, ethical, and effective data ecosystem. OCDO collaborates closely with teams across Fred Hutch, including the Office of Translational Research, Shared Resources, and Scientific Computing.
+The Translational Data Accelerator (TDA) leads Fred Hutch’s strategic vision for data. Its mission is to support all staff who use data — from clinicians to researchers to administrators — by advancing a coordinated, ethical, and effective data ecosystem. TDA collaborates closely with teams across Fred Hutch, including the Office of Translational Research, Shared Resources, and Scientific Computing.
 
-The Translational Data Accelerator (DaSL) is the outreach arm of the OCDO and provides direct-to-community support in the form of:
+The Translational Data Accelerator (TDA) is the outreach arm of the TDA and provides direct-to-community support in the form of:
 - Consultations and technical guidance
 - Workflow and software development
 - Open-source tool building
 - Workshops and training sessions
 - This Wiki!!
 
-You can find more about what training and data science education and community learning events at [ocdo.fredhutch.org/dasl/](https://ocdo.fredhutch.org/dasl/), schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) with our staff or find Fred Hutch-focused events in [CenterNet](https://centernet.fredhutch.org/u/data-science-lab.html).
+You can find more about what training and data science education and community learning events at [TDA.fredhutch.org/TDA/](https://ocdo.fredhutch.org/dasl/), schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) with our staff or find Fred Hutch-focused events in [CenterNet](https://centernet.fredhutch.org/u/data-science-lab.html).
 
 
 ### FH Data Slack Community
@@ -31,13 +31,13 @@ If you are part of the Cancer Consortium (Fred Hutch, University of Washington, 
 
 
 ### Support for Grant Writers
-The OCDO supports Fred Hutch investigators and teams in developing grant proposals that involve data, data infrastructure, or data science expertise. Whether you're preparing a new submission or updating a renewal, we can help ensure that your data-related language reflects institutional resources, best practices, and future-ready capabilities.
+The TDA supports Fred Hutch investigators and teams in developing grant proposals that involve data, data infrastructure, or data science expertise. Whether you're preparing a new submission or updating a renewal, we can help ensure that your data-related language reflects institutional resources, best practices, and future-ready capabilities.
 
 We can provide you and your team with:
 - **Letter of support**: We are happy to work with you to tailor this specific to your grant
 - **Facilities & Resources Document**: A description of the services that can support the execution of your grant. 
 
-To request a current version of the OCDO/DaSL facilities and resources document, please email: [data@fredhutch.org](mailto:data@fredhutch.org)
+To request a current version of the TDA/TDA facilities and resources document, please email: [data@fredhutch.org](mailto:data@fredhutch.org)
 
 
 

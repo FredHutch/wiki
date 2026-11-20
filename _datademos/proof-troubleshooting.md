@@ -43,7 +43,7 @@ For users that have a well-tested and established WDL workflow, the [PROOF How-T
     
     <img src="/datademos/assets/proof_ts_missing_bracket.png" alt="missing_bracket" width="650"/>
     
-    - If you see any unique messages besides these ones, please send us a screenshot at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a Research Computing DHC with the DaSL staff. We’ll help work through it with you and add it to the list!
+    - If you see any unique messages besides these ones, please send us a screenshot at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a Research Computing DHC with the TDA staff. We’ll help work through it with you and add it to the list!
 
 ### Workflow aborted unexpectedly
 If you encounter a scenario where your validated workflow is unexpectedly aborted here is how you would troubleshoot for different use-cases:
@@ -108,7 +108,7 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 <img src="/datademos/assets/proof_ts_singularity_cache.png" alt="singularity_cache" width="600"/>
 
 - See also ["Build your own Docker image"](/compdemos/Docker/#creating-your-own-docker-images) on our [Docker page](/compdemos/Docker/)
-- DaSL also has a collection of images for commonly used bioinformatics tools in the [WILDS Docker Library](https://github.com/orgs/getwilds/packages) and we are always looking to expand it. If you think the Fred Hutch community would benefit from a new tool in this container library, please feel free to reach out to us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) to talk through things in person!
+- TDA also has a collection of images for commonly used bioinformatics tools in the [WILDS Docker Library](https://github.com/orgs/getwilds/packages) and we are always looking to expand it. If you think the Fred Hutch community would benefit from a new tool in this container library, please feel free to reach out to us at [wilds@fredhutch.org](mailto:wilds@fredhutch.org) or schedule a [Research Computing Data House Call](https://calendly.com/data-house-calls/computing?back=1&month=2024-04) to talk through things in person!
 
 ## Resources and Help
 
@@ -119,7 +119,7 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 - [WDL Workflows Guide](/datascience/wdl_workflows/) - WDL language fundamentals
 - [WDL Execution Engines](/datademos/wdl_execution_engines/) - Understanding Cromwell and other WDL engines
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Tested, ready-to-use WDL pipelines
-- [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive DaSL course
+- [Developing WDL Workflows Guide](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive TDA course
 - [WILDS WDL Repositories](https://github.com/getwilds?q=ww-&type=all&language=&sort=)
 
 ### Docker Resources
@@ -127,6 +127,6 @@ If you encounter a scenario where your validated workflow is unexpectedly aborte
 - [Using Docker at Fred Hutch](/compdemos/Docker/)
 
 ### Get Help
-- [DaSL Research Computing Data House Calls](https://calendly.com/data-house-calls/computing)
-- [DaSL Learning Communities](https://ocdo.fredhutch.org/dasl/community/)
+- [TDA Research Computing Data House Calls](https://calendly.com/data-house-calls/computing)
+- [TDA Learning Communities](https://ocdo.fredhutch.org/dasl/community/)
 

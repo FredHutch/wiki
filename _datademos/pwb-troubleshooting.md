@@ -12,7 +12,7 @@ boundaries and limitations.
 
 PROOF is a collaborative partnership between 
 [Scientific Computing][cnet-scicomp] and the 
-[Translational Data Accelerator (OCDO)][cnet-dasl], and we are eager to help
+[Translational Data Accelerator (TDA)][cnet-TDA], and we are eager to help
 PROOF users with troubleshooting. You can get live help with PROOF through
 several avenues:
 
@@ -75,7 +75,7 @@ It is also wise to check the workflow logs for more granular debugging. You can 
 <!--- Always keep this block of links at the bottom --->
 [proof-legacy-trouble]: _datademos/proof-troubleshooting/
 [cnet-scicomp]: https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/scicomp.html
-[cnet-dasl]: https://centernet.fredhutch.org/u/data-science-lab.html
+[cnet-TDA]: https://centernet.fredhutch.org/u/data-science-lab.html
 [dhc-rc]: https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management
 [dhc-code]: https://ocdo.fredhutch.org/programs/dhc.html#code-and-software-r-python-and-beyond
 [pug]: https://teams.microsoft.com/l/team/19%3A8dMC1Joe-eP9Q_VPiA0fsfuTMlHZIrV1w3cCyzTXens1%40thread.tacv2/conversations?groupId=f1eb8b59-8250-4d36-9543-6718a77bda1f&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6

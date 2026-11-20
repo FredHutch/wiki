@@ -18,7 +18,7 @@ enables quick iterations.
 
 PROOF is a collaborative partnership between 
 [Scientific Computing][cnet-scicomp] and the 
-[Translational Data Accelerator (OCDO)][cnet-dasl]. PROOF is only available
+[Translational Data Accelerator (TDA)][cnet-TDA]. PROOF is only available
 on the Fred Hutch network at this time.
 
 ## PROOF Workbench
@@ -40,8 +40,8 @@ recreating them.
 [*Developing WDL Workflows* by the Fred Hutch Translational Data Accelerator ][dev-ww].
 - Explore the [WILDS WDL Library][wiki-wilds-wdl] for tested, ready-to-use WDL
 workflows, developed and maintained by the 
-[Translational Data Accelerator (OCDO)][cnet-dasl].
-- Partner with the OCDO to build workflows for your research via the 
+[Translational Data Accelerator (TDA)][cnet-TDA].
+- Partner with the TDA to build workflows for your research via the 
 [WILDS WDL Development Program][cnet-wwdp].
 - Need help debugging a workflow? Get live help by scheduling a 
 [Research Computing Data House Call][dhc-rc].
@@ -66,7 +66,7 @@ by sending an email to [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 
 - Access PROOF Legacy on the Fred Hutch network at: 
 [proof.fredhutch.org][proof-legacy].
-- Find out more about PROOF Legacy in our [How-To in the DaSL Resource Library](/datademos/proof-how-to/)
+- Find out more about PROOF Legacy in our [How-To in the TDA Resource Library](/datademos/proof-how-to/)
 - Explore more advanced troubleshooting capabilities in our [PROOF Legacy Troubleshooting Guide](/datademos/proof-troubleshooting/)
 - Using regulated data or data covered under a DUA? Read about running [PROOF Legacy with regulated data](/datademos/proof-regulated/).
 
@@ -84,7 +84,7 @@ by sending an email to [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 [wiki-wilds-wdl]: /datascience/wilds_wdl/
 [pug]: https://teams.microsoft.com/l/team/19%3A8dMC1Joe-eP9Q_VPiA0fsfuTMlHZIrV1w3cCyzTXens1%40thread.tacv2/conversations?groupId=f1eb8b59-8250-4d36-9543-6718a77bda1f&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6
 [cnet-scicomp]: https://centernet.fredhutch.org/u/it/research-it-and-scientific-computing/scicomp.html
-[cnet-dasl]: https://centernet.fredhutch.org/u/data-science-lab.html
+[cnet-TDA]: https://centernet.fredhutch.org/u/data-science-lab.html
 [proof-legacy]: https://proof.fredhutch.org/
 [cnet-wwdp]: https://centernet.fredhutch.org/u/data-science-lab/data-science/wilds-wdl.html
 [dhc-rc]: https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management

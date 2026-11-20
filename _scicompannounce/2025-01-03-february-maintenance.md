@@ -25,7 +25,7 @@ As part of the process of decommissioning the scratch file system, we will be re
 Removing _scratch_ from the rhino nodes may require that we terminate processes that are accessing _scratch_.
 {: .notice--warning}
 
-If you are still using scratch, you will need to get your lab migrated to one of the Fast, Temp, or Working storage platforms. Both DaSL and SciComp are available to assist with migrating your data and workflows.
+If you are still using scratch, you will need to get your lab migrated to one of the Fast, Temp, or Working storage platforms. Both TDA and SciComp are available to assist with migrating your data and workflows.
 
 ### Revising Grabnode Limits and Prioritization
 

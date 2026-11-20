@@ -43,7 +43,7 @@ purposes only. Use at your own risk.
 ### June 2024 - v1.0
 **What's New**
 - Users can now interact with data stored in S3 buckets within WDL workflows executed in PROOF! Just make sure to have your AWS CLI credentials [established in Rhino](/scicomputing/access_credentials/#configure-aws-cli) and you can use the S3 path just like any other input.
-- GPU analysis is now possible via the `gpu` argument in your WDL task's runtime section! For an example, try running [this example script](https://github.com/getwilds/ww-test-workflows/blob/main/gpuMatrixMult/gpuMatrixMult.wdl) in the [ww-test-workflows](https://github.com/getwilds/ww-test-workflows) repo of the [DaSL WILDS](https://github.com/getwilds).
+- GPU analysis is now possible via the `gpu` argument in your WDL task's runtime section! For an example, try running [this example script](https://github.com/getwilds/ww-test-workflows/blob/main/gpuMatrixMult/gpuMatrixMult.wdl) in the [ww-test-workflows](https://github.com/getwilds/ww-test-workflows) repo of the [TDA WILDS](https://github.com/getwilds).
 - Additional features have been introduced to increase transparency in terms of the functionality of PROOF:
     - New `/info` API endpoint provides details on which code base is being used.
     - Server start date and time is now available on the "PROOF Server" tab.

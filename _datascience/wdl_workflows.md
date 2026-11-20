@@ -279,7 +279,7 @@ runtime {
 - [WDL Docs](https://wdl-docs.readthedocs.io/) - Additional documentation and guides
 
 **Fred Hutch Resources:**
-- [DaSL Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive course
+- [TDA Developing WDL Workflows](https://hutchdatascience.org/Developing_WDL_Workflows/) - Comprehensive course
 - [PROOF How To](/datademos/proof-how-to.md) - User-friendly WDL execution platform
 - [PROOF Troubleshooting](/datademos/proof-troubleshooting/) - Common issues and solutions using PROOF
 - [WILDS WDL Library](/datascience/wilds_wdl/) - Ready-to-use tasks and workflows

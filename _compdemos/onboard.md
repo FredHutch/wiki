@@ -17,14 +17,14 @@ This Slack workspace is a place for Hutch researchers to ask questions, get upda
 These groups can help you identify and use compute resources at the Hutch:
 
 [Scientific Computing (SciComp)](https://centernet.fredhutch.org/cn/u/center-it/scicomp.html)
-Fred Hutch's [Translational Data Accelerator (OCDO)](https://ocdo.fredhutch.org/) and [Translational Data Accelerator (DaSL)](https://ocdo.fredhutch.org/dasl/)
+Fred Hutch's [Translational Data Accelerator (TDA)](https://ocdo.fredhutch.org/) and [Translational Data Accelerator (TDA)](https://ocdo.fredhutch.org/dasl/)
 [IT Service Desk](https://centernet.fredhutch.org/cn/u/center-it/help-desk.html)
 
 ## Events and Meetings
 
 Got questions on managing, using, and analysing data?  [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html) may be for you!  Schedule some time with the Data Science team to discuss your specific needs on a variety of data oriented topics from NIH data sharing plans to writing code or doing data analysis. 
 
-Drop in [Effective Computing](https://teams.microsoft.com/l/channel/19%3a7128526d3409428c969260d7dcce2f6b%40thread.skype/Effective%2520Computing%2520Drop%2520In?groupId=1b968d63-dc19-460f-9e6d-cdbd539d1bc6&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) is a biweekly Teams meeting where DaSL, Scientific Computing and Data Core team members are available to help you effectively use the computational and data resources at the Hutch to make your computing more effective, regardless of the scale. 
+Drop in [Effective Computing](https://teams.microsoft.com/l/channel/19%3a7128526d3409428c969260d7dcce2f6b%40thread.skype/Effective%2520Computing%2520Drop%2520In?groupId=1b968d63-dc19-460f-9e6d-cdbd539d1bc6&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) is a biweekly Teams meeting where TDA, Scientific Computing and Data Core team members are available to help you effectively use the computational and data resources at the Hutch to make your computing more effective, regardless of the scale. 
 
 Drop in [SciComp Office hours](https://teams.microsoft.com/l/channel/19%3abe85aa58c3624fb79c1590342ec75c63%40thread.skype/DaSL%2520Data%2520House%2520Calls?groupId=1b968d63-dc19-460f-9e6d-cdbd539d1bc6&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) is a weekly Teams meeting where the members of Scientific Computing are available to help with your research computing needs.
 

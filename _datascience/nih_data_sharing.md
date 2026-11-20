@@ -14,7 +14,7 @@ In response to this new, expanded scope of data sharing requirements as well as 
 
 ## NIH Data Sharing Guide
 The Translational Data Accelerator has also created a guide you can [find here](https://hutchdatascience.org/NIH_Data_Sharing/) that walks you through the process of complying with the new 2023 NIH Data Sharing Policy. 
->If you take this course and want to give us feedback or would like to learn more about it, you can share your thoughts in [the FH Data Slack in the #ask-dasl channel](https://fhdata.slack.com/archives/C043ZVCBY9Z)) or you can file an issue on [the course's GitHub repository](https://github.com/fhdsl/NIH_Data_Sharing).
+>If you take this course and want to give us feedback or would like to learn more about it, you can share your thoughts in [the FH Data Slack in the #ask-TDA channel](https://fhdata.slack.com/archives/C043ZVCBY9Z)) or you can file an issue on [the course's GitHub repository](https://github.com/fhdsl/NIH_Data_Sharing).
 
 
 ### What does this policy change mean for me?
@@ -66,7 +66,7 @@ You are not expected to share:
 - physical objects (such as biospecimens)
 
 ## Essential Components of a DMS Plan
-We outline these essential components in more depth in our DaSL developed resources described below, however there are 6 elements that will be required in your data management plan.  
+We outline these essential components in more depth in our TDA developed resources described below, however there are 6 elements that will be required in your data management plan.  
 
 
 1. **Data type** - describe what data (amount and type) will be generated over the course of funding and what data will or will not be shared
