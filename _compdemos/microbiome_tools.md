@@ -1,6 +1,5 @@
 ---
 title: Bioinformatics Tools for Microbiome Analysis
-last_modified_at: 2020-03-25
 primary_reviewers: sminot
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Snapshots
-last_modified_at: 2018-12-10
 main_author: Ben McGough
 primary_reviewers:
 ---

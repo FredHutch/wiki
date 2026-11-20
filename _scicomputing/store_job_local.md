@@ -1,6 +1,5 @@
 ---
 title: Job Local Storage
-last_modified_at: 2023-04-28
 main_author: Michael Gutteridge
 primary_reviewers: atombaby
 ---

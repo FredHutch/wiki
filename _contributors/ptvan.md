@@ -1,6 +1,5 @@
 ---
 title: Phu T. Van
-last_modified_at: 2018-06-06
 ---
 ## Affiliation
 Vaccine & Infectious Disease Division

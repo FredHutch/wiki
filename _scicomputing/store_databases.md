@@ -1,6 +1,5 @@
 ---
 title: Data Storage in Databases
-last_modified_at: 2018-04-01
 primary_reviewers: vortexing
 ---
 
