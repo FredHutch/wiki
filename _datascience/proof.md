@@ -87,8 +87,8 @@ by sending an email to [wilds@fredhutch.org](mailto:wilds@fredhutch.org).
 [cnet-dasl]: https://centernet.fredhutch.org/u/data-science-lab.html
 [proof-legacy]: https://proof.fredhutch.org/
 [cnet-wwdp]: https://centernet.fredhutch.org/u/data-science-lab/data-science/wilds-wdl.html
-[dhc-rc]: https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management
-[dhc-code]: https://ocdo.fredhutch.org/programs/dhc.html#code-and-software-r-python-and-beyond
+[dhc-rc]: https://accelerator.fredhutch.org/dhc/#research-computing-and-data-management
+[dhc-code]: https://accelerator.fredhutch.org/dhc/#code-and-software-r-python-and-beyond
 [pwb-tutorial]: /datademos/pwb-tutorial/
 [pwb-trouble]: /datademos/pwb-troubleshooting/
 [proof-notes]: /datademos/proof-release-notes/

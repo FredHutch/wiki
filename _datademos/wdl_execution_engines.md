@@ -156,7 +156,7 @@ For more installation options, see the [miniWDL Installation Guide](https://mini
 ### Fred Hutch Support
 
 - Email [wilds@fredhutch.org](mailto:wilds@fredhutch.org)
-- Schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management)
+- Schedule a [Data House Call](https://accelerator.fredhutch.org/dhc/#research-computing-and-data-management)
 - Join [#workflow-managers Slack](https://fhdata.slack.com/archives/CJFP1NYSZ)
 
 ### Community Resources

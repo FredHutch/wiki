@@ -22,7 +22,7 @@ Fred Hutch's [Office of the Chief Data Officer (OCDO)](https://ocdo.fredhutch.or
 
 ## Events and Meetings
 
-Got questions on managing, using, and analysing data?  [Data House Calls](https://ocdo.fredhutch.org/programs/dhc.html) may be for you!  Schedule some time with the Data Science team to discuss your specific needs on a variety of data oriented topics from NIH data sharing plans to writing code or doing data analysis. 
+Got questions on managing, using, and analysing data?  [Data House Calls](https://accelerator.fredhutch.org/dhc/) may be for you!  Schedule some time with the Data Science team to discuss your specific needs on a variety of data oriented topics from NIH data sharing plans to writing code or doing data analysis. 
 
 Drop in [Effective Computing](https://teams.microsoft.com/l/channel/19%3a7128526d3409428c969260d7dcce2f6b%40thread.skype/Effective%2520Computing%2520Drop%2520In?groupId=1b968d63-dc19-460f-9e6d-cdbd539d1bc6&tenantId=0054a3ea-b394-418b-ad1a-174138231fd6) is a biweekly Teams meeting where DaSL, Scientific Computing and Data Core team members are available to help you effectively use the computational and data resources at the Hutch to make your computing more effective, regardless of the scale. 
 

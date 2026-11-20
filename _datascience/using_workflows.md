@@ -113,7 +113,7 @@ Both WDL and Nextflow are excellent choices. Here's guidance on which might be b
 ### Getting Help
 
 - **#workflow-managers Slack** - [FH-Data Slack channel](https://fhdata.slack.com/archives/CJFP1NYSZ) for community support
-- **Data House Calls** - [Schedule a consultation](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management) with the WILDS team
+- **Data House Calls** - [Schedule a consultation](https://accelerator.fredhutch.org/dhc/#research-computing-and-data-management) with the WILDS team
 - **Email support** - [wilds@fredhutch.org](mailto:wilds@fredhutch.org) for WDL questions
 
 ### Workflow Libraries

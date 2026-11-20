@@ -11,7 +11,7 @@ Data sharing via collaborations, from research data repositories, and from gover
 Many shared datasets are subject to **privacy and data protection laws based on where the data originate, who the data describe, and how the data can be used**. These requirements may apply *in addition to* Fred Hutch policies and IRB requirements and can directly affect where data are stored, who can access them, how long they can be retained, and what analyses are permitted.
 
 Below are some regulatory frameworks that can apply to biomedical research data as examples but not an exhaustive list.  Note for your particular dataset we encourage you to schedule a
-[AI and Research Data Policy Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#ai-and-research-data-policy) to get support and guidance from a Data Governance Specialist.
+[AI and Research Data Policy Data House Call](https://accelerator.fredhutch.org/dhc/#ai-and-research-data-policy) to get support and guidance from a Data Governance Specialist.
 
 ### Example Regulatory Frameworks
 

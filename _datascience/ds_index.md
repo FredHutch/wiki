@@ -23,7 +23,7 @@ The Data Science Lab (DaSL) is the outreach arm of the OCDO and provides direct-
 - Workshops and training sessions
 - This Wiki!!
 
-You can find more about what training and data science education and community learning events at [ocdo.fredhutch.org/dasl/](https://ocdo.fredhutch.org/dasl/), schedule a [Data House Call](https://ocdo.fredhutch.org/programs/dhc.html) with our staff or find Fred Hutch-focused events in [CenterNet](https://centernet.fredhutch.org/u/data-science-lab.html).
+You can find more about what training and data science education and community learning events at [ocdo.fredhutch.org/dasl/](https://ocdo.fredhutch.org/dasl/), schedule a [Data House Call](https://accelerator.fredhutch.org/dhc/) with our staff or find Fred Hutch-focused events in [CenterNet](https://centernet.fredhutch.org/u/data-science-lab.html).
 
 
 ### FH Data Slack Community

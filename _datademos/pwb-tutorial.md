@@ -203,8 +203,8 @@ Now that you've completed your first PROOF workflow, you're ready to explore mor
 [dww]: https://hutchdatascience.org/Developing_WDL_Workflows/
 [bash-for-bio]: https://hutchdatascience.org/bash_for_bio/
 [cnet-wwdp]: https://centernet.fredhutch.org/u/data-science-lab/data-science/wilds-wdl.html
-[dhc-rc]: https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management
-[dhc-code]: https://ocdo.fredhutch.org/programs/dhc.html#code-and-software-r-python-and-beyond
+[dhc-rc]: https://accelerator.fredhutch.org/dhc/#research-computing-and-data-management
+[dhc-code]: https://accelerator.fredhutch.org/dhc/#code-and-software-r-python-and-beyond
 [user-test-wdls]: https://github.com/FredHutch/user-test-wdls/archive/refs/heads/main.zip
 [wiki-reg]: /scicomputing/store_regulated/
 [wiki-preg]: /datademos/proof-regulated/

@@ -70,8 +70,8 @@ When sharing genomic and phenotypic data, investigators should:
 >**Questions?**
 >
 >Consortium members (Fred Hutch, UW, Children's) can schedule Data House Calls for suppport:
->- Governance questions around research data sharing: [AI and Research Data Policy Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#ai-and-research-data-policy)
->- Technical questions around research data sharing: [Research Computing and Data Management Data House Call](https://ocdo.fredhutch.org/programs/dhc.html#research-computing-and-data-management)
+>- Governance questions around research data sharing: [AI and Research Data Policy Data House Call](https://accelerator.fredhutch.org/dhc/#ai-and-research-data-policy)
+>- Technical questions around research data sharing: [Research Computing and Data Management Data House Call](https://accelerator.fredhutch.org/dhc/#research-computing-and-data-management)
 
 
 
